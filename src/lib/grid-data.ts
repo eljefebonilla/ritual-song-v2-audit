@@ -149,6 +149,28 @@ function getSeasonSortOrder(season: string): number {
 }
 
 /**
+ * Find the index of the first occasion whose next date is >= the next upcoming Sunday.
+ * Used by the planner's "hide past weeks" feature.
+ */
+export function findNextUpcomingSundayIndex(
+  occasions: LiturgicalOccasion[]
+): number {
+  const today = new Date();
+  const dayOfWeek = today.getDay(); // 0=Sun
+  const daysUntilSunday = dayOfWeek === 0 ? 0 : 7 - dayOfWeek;
+  const nextSunday = new Date(today);
+  nextSunday.setDate(today.getDate() + daysUntilSunday);
+  const nextSundayISO = nextSunday.toISOString().split("T")[0];
+
+  for (let i = 0; i < occasions.length; i++) {
+    const occ = occasions[i];
+    const futureDate = occ.dates.find((d) => d.date >= nextSundayISO);
+    if (futureDate) return i;
+  }
+  return 0; // fallback: show from beginning
+}
+
+/**
  * Get nearest future date string for an occasion, or the first available date.
  */
 export function getOccasionDisplayDate(occasion: LiturgicalOccasion): string {

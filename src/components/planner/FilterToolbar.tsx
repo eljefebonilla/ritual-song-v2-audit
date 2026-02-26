@@ -18,6 +18,8 @@ interface FilterToolbarProps {
   setRangeEnd: (v: number) => void;
   totalOccasions: number;
   occasions: LiturgicalOccasion[];
+  hidePastWeeks: boolean;
+  setHidePastWeeks: (v: boolean) => void;
 }
 
 const YEAR_CYCLES: { id: YearCycleFilter; label: string }[] = [
@@ -46,6 +48,8 @@ export default function FilterToolbar({
   setRangeStart,
   setRangeEnd,
   totalOccasions,
+  hidePastWeeks,
+  setHidePastWeeks,
 }: FilterToolbarProps) {
   const { role, setRole } = useUser();
 
@@ -219,6 +223,19 @@ export default function FilterToolbar({
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><polyline points="9 18 15 12 9 6" /></svg>
           </button>
         </div>
+
+        <div className="w-px h-6 bg-stone-200" />
+
+        {/* Hide past weeks toggle */}
+        <label className="flex items-center gap-1.5 cursor-pointer select-none">
+          <input
+            type="checkbox"
+            checked={hidePastWeeks}
+            onChange={(e) => setHidePastWeeks(e.target.checked)}
+            className="rounded border-stone-300 text-parish-burgundy focus:ring-parish-burgundy"
+          />
+          <span className="text-xs text-stone-600">Hide past weeks</span>
+        </label>
       </div>
     </div>
   );
