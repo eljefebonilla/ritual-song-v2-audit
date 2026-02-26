@@ -1,0 +1,245 @@
+{
+  "id": "ordinary-time-19-b",
+  "name": "ORDINARY TIME 19 [B]",
+  "year": "B",
+  "season": "ordinary",
+  "seasonLabel": "Ordinary Time",
+  "seasonOrder": 19,
+  "dates": [
+    {
+      "date": "2024-08-11",
+      "label": "Year B — Aug 11, 2024 (Sun)",
+      "dayOfWeek": "Sun"
+    },
+    {
+      "date": "2036-08-10",
+      "label": "Year B — Aug 10, 2036 (Sun)",
+      "dayOfWeek": "Sun"
+    },
+    {
+      "date": "2033-08-07",
+      "label": "Year B — Aug 07, 2033 (Sun)",
+      "dayOfWeek": "Sun"
+    },
+    {
+      "date": "2030-08-11",
+      "label": "Year B — Aug 11, 2030 (Sun)",
+      "dayOfWeek": "Sun"
+    },
+    {
+      "date": "2027-08-08",
+      "label": "Year B — Aug 08, 2027 (Sun)",
+      "dayOfWeek": "Sun"
+    }
+  ],
+  "lectionary": {
+    "number": "116•B",
+    "gospelTitle": "Bread from Heaven",
+    "thematicTag": "Bread Life 3/5: Murmuring"
+  },
+  "readings": [
+    {
+      "type": "first",
+      "citation": "1 Kgs 19:4-8",
+      "summary": "Elijah is strengthened to walk forty days and nights to Mount Horeb."
+    },
+    {
+      "type": "psalm",
+      "citation": "Ps 34:2-3, 4-5, 6-7, 8-9, R. v.9a\nTaste and see the goodness of the Lord.",
+      "summary": "",
+      "antiphon": "Ps 34:2-3, 4-5, 6-7, 8-9, R. v.9a\nTaste and see the goodness of the Lord."
+    },
+    {
+      "type": "second",
+      "citation": "Eph 4:30–5:2",
+      "summary": "Imitate Christ."
+    },
+    {
+      "type": "gospel_verse",
+      "citation": "Jn 6:51",
+      "summary": "I am the living bread that came down from heaven,\nsays the Lord; whoever eats this bread will live forever."
+    },
+    {
+      "type": "gospel",
+      "citation": "Jn 6:41-51",
+      "summary": "Jesus is the living bread."
+    }
+  ],
+  "antiphons": [
+    {
+      "type": "entrance",
+      "option": 1,
+      "citation": "Cf. Ps 74 (73):20, 19, 22, 23",
+      "text": "Look to your covenant, O Lord,\nand forget not the life of your poor ones for ever.\nArise, O God, and defend your cause,\nand forget not the cries of those who seek you."
+    },
+    {
+      "type": "communion",
+      "option": 1,
+      "citation": "Ps 147:12, 14",
+      "text": "O Jerusalem, glorify the Lord,\nwho gives you your fill of finest wheat."
+    },
+    {
+      "type": "communion",
+      "option": 2,
+      "citation": "Roman Missal — Cf. Jn 6:51",
+      "text": "The bread that I will give, says the Lord,\nis my flesh for the life of the world."
+    }
+  ],
+  "planningNotes": [],
+  "musicPlans": [
+    {
+      "community": "Reflections",
+      "communityId": "reflections",
+      "date": "Year B — Aug 07, 2027 (Sat)",
+      "presider": "NOT THIS YEAR",
+      "penitentialAct": {
+        "title": "Kyrie • Misa Del Mundo",
+        "composer": "Only if needed. Talk to presider!"
+      },
+      "gloria": {
+        "title": "Glory to God (Through-composed Setting)",
+        "composer": "Mass of Renewal • Curtis Stephan"
+      },
+      "gospelAcclamation": {
+        "title": "Alleluia (Mass of Joy & Peace)",
+        "composer": "Song Title"
+      },
+      "offertory": {
+        "title": "Jesus, Living Bread",
+        "composer": "Tom Booth",
+        "description": "✪ 17B"
+      },
+      "lordsPrayer": {
+        "title": "Chanted Our Father (Snow)",
+        "composer": "Jennings/Paregorius"
+      },
+      "fractionRite": {
+        "title": "Lamb of God Setting"
+      }
+    },
+    {
+      "community": "Foundations",
+      "communityId": "foundations",
+      "date": "Year B — Aug 08, 2027 (Sun)",
+      "presider": "NOT THIS YEAR",
+      "penitentialAct": {
+        "title": "Kyrie (Gift of God) • Adapted Version",
+        "composer": "Marty Haugen • Arranged by David Locwood"
+      },
+      "gloria": {
+        "title": "Glory to God (Mass of Joy & Peace)",
+        "composer": "Alonso • Arr. by Houze OR Arr. by Lockwood"
+      },
+      "offertory": {
+        "title": "Jesus, Living Bread",
+        "composer": "Tom Booth",
+        "description": "✪ 19B"
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "Mass of Glory • Bob Hurd • Arr. by Dan Houze"
+      },
+      "lordsPrayer": {
+        "title": "Chanted Our Father (Snow)",
+        "composer": "Jennings • Paregorius"
+      },
+      "fractionRite": {
+        "title": "Lamb of God (Mass of Glory)"
+      }
+    },
+    {
+      "community": "Generations",
+      "communityId": "generations",
+      "date": "Year B — Aug 08, 2027 (Sun)",
+      "presider": "NOT THIS YEAR",
+      "penitentialAct": {
+        "title": "Kyrie • Misa Del Mundo",
+        "composer": "If needed. Talk to presider!"
+      },
+      "gloria": {
+        "title": "Glory, Glory, Gloria!",
+        "composer": "Tony Alonso • Arr. by Dan Houze"
+      },
+      "gospelAcclamation": {
+        "title": "Setting from Mass of ???",
+        "composer": "Song Title"
+      },
+      "offertory": {
+        "title": "Jesus, Living Bread",
+        "composer": "Tom Booth",
+        "description": "✪ 17B"
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "Mass of Restoration",
+        "composer": "Joshua Blakesley"
+      },
+      "lordsPrayer": {
+        "title": "(Echo) Our Father",
+        "composer": "Jerome Andrews • Arranged by Dan Houze"
+      },
+      "fractionRite": {
+        "title": "Lamb of God (Resoration)"
+      }
+    },
+    {
+      "community": "Heritage",
+      "communityId": "heritage",
+      "date": "Year B — Aug 08, 2027 (Sun)",
+      "presider": "NOT THIS YEAR",
+      "penitentialAct": {
+        "title": "Kyrie • Misa Del Mundo",
+        "composer": "Only if needed. Talk to presider!"
+      },
+      "gloria": {
+        "title": "Glory to God (Mass of Christ the Savior)",
+        "composer": "Dan Schutte"
+      },
+      "offertory": {
+        "title": "Jesus, Living Bread",
+        "composer": "Tom Booth",
+        "description": "✪ 17B"
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "Mass of Christ the Savior - Dan Schutte"
+      },
+      "lordsPrayer": {
+        "title": "Echo Our Father",
+        "composer": "Andrews, Arr. Bonilla • Lockwood • Fajardo"
+      },
+      "fractionRite": {
+        "title": "Lamb of God (Mass of Christ the Savior)"
+      }
+    },
+    {
+      "community": "Elevations",
+      "communityId": "elevations",
+      "date": "Year B — Aug 08, 2027 (Sun)",
+      "presider": "NOT THIS YEAR",
+      "penitentialAct": {
+        "title": "Kyrie • Misa Del Mundo",
+        "composer": "Only if needed. Talk to presider!"
+      },
+      "gloria": {
+        "title": "Glory, Glory, Gloria!"
+      },
+      "gospelAcclamation": {
+        "title": "Setting from Mass of ???",
+        "verse": "Song Title"
+      },
+      "offertory": {
+        "title": "Jesus, Living Bread",
+        "composer": "Tom Booth",
+        "description": "✪ 17B"
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "Mass of Restoration • Joshua Blakesley"
+      },
+      "lordsPrayer": {
+        "title": "Echo Our Father",
+        "composer": "Andrews, Arr. Bonilla • Lockwood • Fajardo"
+      },
+      "fractionRite": {
+        "title": "Lamb of God (Resoration)"
+      }
+    }
+  ]
+}

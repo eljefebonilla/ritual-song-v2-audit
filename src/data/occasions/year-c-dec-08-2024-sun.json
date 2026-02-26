@@ -1,0 +1,382 @@
+{
+  "id": "year-c-dec-08-2024-sun",
+  "name": "Year C — Dec 08, 2024 (Sun)",
+  "year": "ABC",
+  "season": "ordinary",
+  "seasonLabel": "Ordinary Time",
+  "seasonOrder": 8,
+  "dates": [],
+  "lectionary": {
+    "number": "Year C — Dec 04, 2039 (Sun)",
+    "gospelTitle": "Year C — Dec 07, 2036 (Sun)",
+    "thematicTag": "Year C — Dec 04, 2033 (Sun)",
+    "thematicDetail": "Year C — Dec 08, 2030 (Sun)"
+  },
+  "readings": [
+    {
+      "type": "psalm",
+      "citation": "Baptist Advent 1/2 – Isaiah Prep",
+      "summary": "",
+      "antiphon": "Planning Reminders"
+    },
+    {
+      "type": "gospel_verse",
+      "citation": "O people of Sion, behold,\nthe Lord will come to save the nations,\nand the Lord will make the glory of his voice heard\nin the joy of your heart.",
+      "summary": "Entrance Antiphon • Option II"
+    },
+    {
+      "type": "gospel",
+      "citation": "Reading I | Bar 5:1-9",
+      "summary": "Take off your robe of mourning, put on the splendor of glory."
+    }
+  ],
+  "antiphons": [
+    {
+      "type": "entrance",
+      "option": 1,
+      "citation": "Verse before the Gospel | Lk 3:4, 6",
+      "text": "Prepare the way of the Lord, make straight his paths:\nall flesh shall see the salvation of God."
+    },
+    {
+      "type": "communion",
+      "option": 2,
+      "citation": "Communion Antiphon | Bar 5:5; 4:36",
+      "text": "Jerusalem, arise and stand upon the heights,\nand behold the joy which comes to you from God."
+    }
+  ],
+  "planningNotes": [
+    "Communion Antiphon • Option II",
+    "N/A"
+  ],
+  "musicPlans": [
+    {
+      "community": "Reflections",
+      "communityId": "reflections",
+      "date": "Year C — Dec 04, 2027 (Sat)",
+      "presider": "NOT THIS YEAR",
+      "prelude": {
+        "title": "8 – Second Sunday of Advent",
+        "composer": "Let Us All REJOICE! Angrisano, Hart, & Stephan"
+      },
+      "penitentialAct": {
+        "title": "Bob Hurd · Craig Kingsbury",
+        "description": "Penitential Act"
+      },
+      "gloria": {
+        "title": "Warm the Time of WInter",
+        "composer": "Lori True",
+        "description": "Gloria"
+      },
+      "gospelAcclamation": {
+        "title": "The Lyric Psalter • Tony Alonso & Marty Haugen",
+        "composer": "Gospel Acclamation",
+        "verse": "Advent/Christmas 2 — Missa Pacem"
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "Say to the Frightened Heart",
+        "composer": "Bob Hurd"
+      },
+      "lordsPrayer": {
+        "title": "Eucharistic Acclamations",
+        "composer": "Mass of the Incarnate Word",
+        "description": "Bob Hurd • Arr. Lockwood"
+      },
+      "fractionRite": {
+        "title": "Holy",
+        "composer": "Mystery of Faith",
+        "description": "Amen"
+      },
+      "communionSongs": [
+        {
+          "title": "The Lord's Prayer",
+          "composer": "Chanted Our Father (Snow)",
+          "description": "Jennings • Paregorius"
+        },
+        {
+          "title": "Fraction Rite",
+          "composer": "Missa Veni Emmanuel",
+          "description": "Ed Archer"
+        },
+        {
+          "title": "Communion Songs",
+          "composer": "Bread of Life (Advent/Christmas)",
+          "description": "Bernadette Farrell"
+        },
+        {
+          "title": "Comfort My People",
+          "composer": "Ian Callanan"
+        }
+      ]
+    },
+    {
+      "community": "Foundations",
+      "communityId": "foundations",
+      "date": "Year C — Dec 05, 2027 (Sun)",
+      "presider": "NOT THIS YEAR",
+      "prelude": {
+        "title": "N/A"
+      },
+      "penitentialAct": {
+        "title": "James Moore",
+        "composer": "Description",
+        "description": "Penitential Act"
+      },
+      "gloria": {
+        "title": "Warm the Time of WInter",
+        "composer": "Lori True",
+        "description": "Gloria"
+      },
+      "gospelAcclamation": {
+        "title": "The Lyric Psalter • Tony Alonso & Marty Haugen",
+        "composer": "Gospel Acclamation",
+        "verse": "Hallelujah, Hallelu!"
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "To You, O God, I Lift Up My Soul",
+        "composer": "Bob Hurd"
+      },
+      "lordsPrayer": {
+        "title": "Eucharistic Acclamations",
+        "composer": "Mass of the Incarnate Word"
+      },
+      "fractionRite": {
+        "title": "Holy",
+        "composer": "Mystery of Faith",
+        "description": "Amen"
+      },
+      "communionSongs": [
+        {
+          "title": "The Lord's Prayer",
+          "composer": "Chanted Our Father (Snow)",
+          "description": "Jennings • Paregorius"
+        },
+        {
+          "title": "Fraction Rite",
+          "composer": "Missa Veni Emmanuel"
+        },
+        {
+          "title": "Communion Songs",
+          "composer": "Bread of Life (Advent/Christmas)",
+          "description": "Bernadette Farrell"
+        },
+        {
+          "title": "Description",
+          "composer": "Find Us Ready",
+          "description": "Tom Booth"
+        }
+      ],
+      "sending": {
+        "title": "Andrae Crouch and the Disciples",
+        "composer": "Description"
+      }
+    },
+    {
+      "community": "Generations",
+      "communityId": "generations",
+      "date": "Year C — Dec 05, 2027 (Sun)",
+      "presider": "NOT THIS YEAR",
+      "prelude": {
+        "title": "Song Title",
+        "composer": "Composer/s"
+      },
+      "penitentialAct": {
+        "title": "B. Farrell · Adapted by J. Bonilla & D. Lockwood",
+        "description": "Penitential Act"
+      },
+      "gloria": {
+        "title": "Warm the Time of WInter",
+        "composer": "Lori True"
+      },
+      "gospelAcclamation": {
+        "title": "Spirit & Psalm • Chris Muglia",
+        "composer": "Gospel Acclamation",
+        "verse": "Hallelujah (adapted for Liturgy)"
+      },
+      "offertory": {
+        "title": "Choir Practice Tracks",
+        "description": "Offertory Song"
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "The King Shall Come",
+        "composer": "Trevor Thomson"
+      },
+      "lordsPrayer": {
+        "title": "Eucharistic Acclamations",
+        "composer": "Mass of the Incarnate Word"
+      },
+      "fractionRite": {
+        "title": "Holy",
+        "composer": "Mystery of Faith",
+        "description": "Amen"
+      },
+      "communionSongs": [
+        {
+          "title": "The Lord's Prayer",
+          "composer": "Chanted Our Father (Snow)",
+          "description": "Jennings • Paregorius"
+        },
+        {
+          "title": "Fraction Rite",
+          "composer": "Advent Lamb of God"
+        },
+        {
+          "title": "Communion Songs",
+          "composer": "There Is A Longing",
+          "description": "Anne Quigley"
+        },
+        {
+          "title": "Description",
+          "composer": "Song Title",
+          "description": "Composer/s"
+        },
+        {
+          "title": "Description",
+          "composer": "Creator of the Stars of Night",
+          "description": "Ed Bolduc · Karen Bolduc · John Carrozza"
+        },
+        {
+          "title": "Description",
+          "composer": "Goodness of God",
+          "description": "Msgr's homily"
+        }
+      ],
+      "sending": {
+        "title": "Prepare Ye the Way",
+        "composer": "John Angotti"
+      }
+    },
+    {
+      "community": "Heritage",
+      "communityId": "heritage",
+      "date": "Year C — Dec 05, 2027 (Sun)",
+      "presider": "NOT THIS YEAR",
+      "prelude": {
+        "title": "N/A"
+      },
+      "penitentialAct": {
+        "title": "Bob Hurd · Craig Kingsbury",
+        "description": "Penitential Act"
+      },
+      "gloria": {
+        "title": "Warm the Time of WInter",
+        "composer": "Lori True"
+      },
+      "gospelAcclamation": {
+        "title": "The Lyric Psalter • Tony Alonso & Marty Haugen",
+        "composer": "Gospel Acclamation",
+        "verse": "Advent/Christmas 2 — Missa Pacem"
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "Say to the Frightened Heart",
+        "composer": "Bob Hurd"
+      },
+      "lordsPrayer": {
+        "title": "Eucharistic Acclamations",
+        "composer": "Mass of the Incarnate Word"
+      },
+      "fractionRite": {
+        "title": "Holy",
+        "composer": "Mystery of Faith",
+        "description": "Amen"
+      },
+      "communionSongs": [
+        {
+          "title": "The Lord's Prayer",
+          "composer": "Chanted Our Father (Snow)",
+          "description": "Jennings • Paregorius"
+        },
+        {
+          "title": "Fraction Rite",
+          "composer": "Missa Veni Emmanuel"
+        },
+        {
+          "title": "Communion Songs",
+          "composer": "Bread of Life (Advent/Christmas)",
+          "description": "Bernadette Farrell"
+        },
+        {
+          "title": "Description",
+          "composer": "Comfort My People",
+          "description": "Ian Callanan"
+        },
+        {
+          "title": "Description",
+          "composer": "There Is A Longing",
+          "description": "Anne Quigley"
+        }
+      ],
+      "sending": {
+        "title": "WINCHESTER NEW",
+        "composer": "Description"
+      }
+    },
+    {
+      "community": "Elevations",
+      "communityId": "elevations",
+      "date": "Year C — Dec 05, 2027 (Sun)",
+      "presider": "NOT THIS YEAR",
+      "prelude": {
+        "title": "N/A"
+      },
+      "penitentialAct": {
+        "title": "John Angotti",
+        "composer": "Description",
+        "description": "Penitential Act"
+      },
+      "gloria": {
+        "title": "Warm the Time of WInter",
+        "composer": "Lori True"
+      },
+      "gospelAcclamation": {
+        "title": "Spirit & Psalm • Chris Muglia",
+        "composer": "Gospel Acclamation",
+        "verse": "Hallelujah, Hallelu!"
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "The King Shall Come",
+        "composer": "Trevor Thomson"
+      },
+      "lordsPrayer": {
+        "title": "Eucharistic Acclamations",
+        "composer": "Incarnate Word • Bob Hurd , Arr. by Lockwood",
+        "description": "Bob Hurd , Arr. by Lockwood"
+      },
+      "fractionRite": {
+        "title": "Holy",
+        "composer": "Mystery of Faith",
+        "description": "Amen"
+      },
+      "communionSongs": [
+        {
+          "title": "The Lord's Prayer",
+          "composer": "Chanted Our Father (Snow)",
+          "description": "Jennings • Paregorius"
+        },
+        {
+          "title": "Fraction Rite",
+          "composer": "Advent Lamb of God"
+        },
+        {
+          "title": "Communion Songs",
+          "composer": "Bethlehem (House of Bread)",
+          "description": "Alan J. Hommerding · Ed Bolduc"
+        },
+        {
+          "title": "Description",
+          "composer": "Creator of the Stars of Night",
+          "description": "Ed Bolduc · Karen Bolduc · John Carrozza"
+        },
+        {
+          "title": "Description",
+          "composer": "There Is A Longing",
+          "description": "Anne Quigley"
+        }
+      ],
+      "sending": {
+        "title": "Sending Song",
+        "composer": "Even So Come",
+        "description": "Chris Tomlin"
+      }
+    }
+  ]
+}

@@ -1,0 +1,413 @@
+{
+  "id": "year-c-jul-20-2025-sun",
+  "name": "Year C — Jul 20, 2025 (Sun)",
+  "year": "ABC",
+  "season": "ordinary",
+  "seasonLabel": "Ordinary Time",
+  "seasonOrder": 20,
+  "dates": [],
+  "lectionary": {
+    "number": "Year C — Jul 22, 2040 (Sun)",
+    "gospelTitle": "Year C — Jul 19, 2037 (Sun)",
+    "thematicTag": "Year C — Jul 23, 2034 (Sun)",
+    "thematicDetail": "Year C — Jul 20, 2031 (Sun)"
+  },
+  "readings": [
+    {
+      "type": "psalm",
+      "citation": "Travel Disc. (Journey to Jerusalem) 3/4",
+      "summary": "",
+      "antiphon": "Planning Reminders"
+    },
+    {
+      "type": "gospel_verse",
+      "citation": "See, I have God for my help.\nThe Lord sustains my soul.\nI will sacrifice to you with willing heart,\nand praise your name, O Lord, for it is good.",
+      "summary": ""
+    },
+    {
+      "type": "gospel",
+      "citation": "Reading I | Gen 18:1-10a",
+      "summary": "Abraham meets the Lord, is promised a son."
+    }
+  ],
+  "antiphons": [
+    {
+      "type": "entrance",
+      "option": 1,
+      "citation": "Verse before the Gospel | cf. Luke 8:15",
+      "text": "Blessed are they who have kept the word with a generous heart and yield a harvest through perseverance."
+    },
+    {
+      "type": "communion",
+      "option": 2,
+      "citation": "Communion Antiphon • Option I | Ps 111 (110):4–5",
+      "text": "The Lord, the gracious, the merciful,\nhas made a memorial of his wonders;\nhe gives food to those who fear him."
+    }
+  ],
+  "planningNotes": [
+    "Roman Missal — Rev 3:20",
+    "Behold, I stand at the door and knock, says the Lord.\nIf anyone hears my voice and opens the door to me,\nI will enter his house and dine with him, and he with me."
+  ],
+  "musicPlans": [
+    {
+      "community": "Reflections",
+      "communityId": "reflections",
+      "date": "Year C — Jul 19, 2025 (Sat)",
+      "presider": "NOT THIS YEAR",
+      "prelude": {
+        "title": "Jesus I Trust In You",
+        "composer": "Josh Blakesley • Sarah Kroger • Sarah Hart",
+        "description": "Quiet trust in the Lord who “sustains my soul” (antiphon)"
+      },
+      "penitentialAct": {
+        "title": "TWO OAKS • Marty Haugen",
+        "composer": "Vs 4 - Rubato Intro \"...Here the outcast and the stranger...\"",
+        "description": "Penitential Act"
+      },
+      "gloria": {
+        "title": "Kyrie • Misa Del Mundo",
+        "composer": "Only if needed. Talk to presider!",
+        "description": "Gloria"
+      },
+      "gospelAcclamation": {
+        "title": "The Lyric Psalter • Tony Alonso & Marty Haugen",
+        "composer": "Gospel Acclamation",
+        "verse": "Alleluia (Mass of Joy & Peace)"
+      },
+      "offertory": {
+        "title": "The Lyric Gospel Acclamations • Tony Alonso",
+        "description": "Offertory Song"
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "Be Still and Know That I Am God",
+        "composer": "Christopher Walker • Sr. Paule Freeburg, DC"
+      },
+      "lordsPrayer": {
+        "title": "Eucharistic Acclamations",
+        "composer": "Mass of the Holy Family",
+        "description": "Chris de Silva"
+      },
+      "fractionRite": {
+        "title": "Holy, Holy, Holy",
+        "composer": "When We Eat This Bread",
+        "description": "Amen"
+      },
+      "communionSongs": [
+        {
+          "title": "The Lord's Prayer",
+          "composer": "Chanted Our Father (Snow)",
+          "description": "Jennings/Paregorius"
+        },
+        {
+          "title": "Fraction Rite",
+          "composer": "Lamb of God (Mass of the Holy Family)",
+          "description": "Chris de Silva"
+        },
+        {
+          "title": "Communion Songs",
+          "composer": "Here At This Table",
+          "description": "Janet Sullivan Whitaker"
+        },
+        {
+          "title": "Vss 1-2, 3-5",
+          "composer": "I Am Yours (Consume Me, Completely)",
+          "description": "Danielle Rose Hesley • Trevor Thomson"
+        }
+      ]
+    },
+    {
+      "community": "Foundations",
+      "communityId": "foundations",
+      "date": "Year C — Jul 20, 2025 (Sun)",
+      "presider": "NOT THIS YEAR",
+      "prelude": {
+        "title": "Jesus I Trust In You",
+        "composer": "Josh Blakesley • Sarah Kroger • Sarah Hart",
+        "description": "Quiet trust in the Lord who “sustains my soul” (antiphon)"
+      },
+      "penitentialAct": {
+        "title": "TWO OAKS • Marty Haugen",
+        "composer": "Vs 4 - Rubato Intro \"...Here the outcast and the stranger...\"",
+        "description": "Penitential Act"
+      },
+      "gloria": {
+        "title": "Kyrie (Gift of God) • Adapted Version",
+        "composer": "Marty Haugen • Arranged by David Locwood",
+        "description": "Gloria"
+      },
+      "gospelAcclamation": {
+        "title": "Spirit & Psalm • Ken Canedo",
+        "composer": "Gospel Acclamation",
+        "verse": "Song Title"
+      },
+      "offertory": {
+        "title": "Verse Audio Example",
+        "description": "Offertory Song"
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "Be Still and Know That I Am God",
+        "composer": "Christopher Walker • Sr. Paule Freeburg, DC"
+      },
+      "lordsPrayer": {
+        "title": "Eucharistic Acclamations",
+        "composer": "Mass of Glory • Bob Hurd • Arr. by Dan Houze"
+      },
+      "fractionRite": {
+        "title": "Holy, Holy",
+        "composer": "We Proclaim Your Death",
+        "description": "Amen"
+      },
+      "communionSongs": [
+        {
+          "title": "The Lord's Prayer",
+          "composer": "Chanted Our Father (Snow)",
+          "description": "Jennings • Paregorius"
+        },
+        {
+          "title": "Fraction Rite",
+          "composer": "Lamb of God (Mass of Glory)"
+        },
+        {
+          "title": "Communion Songs",
+          "composer": "Here At This Table",
+          "description": "Janet Sullivan Whitaker"
+        },
+        {
+          "title": "Vss 1-2, 3-5",
+          "composer": "I Will Choose Christ",
+          "description": "Tom Booth"
+        }
+      ],
+      "sending": {
+        "title": "KINGSFOLD • Horatius Bonar",
+        "composer": "\"Come unto me and rest; Lay down, thou weary one, lay down\""
+      }
+    },
+    {
+      "community": "Generations",
+      "communityId": "generations",
+      "date": "Year C — Jul 20, 2025 (Sun)",
+      "presider": "NOT THIS YEAR",
+      "prelude": {
+        "title": "Jesus I Trust In You",
+        "composer": "Josh Blakesley • Sarah Kroger • Sarah Hart",
+        "description": "Quiet trust in the Lord who “sustains my soul” (antiphon)"
+      },
+      "penitentialAct": {
+        "title": "TWO OAKS • Marty Haugen",
+        "composer": "Vs 4 - Rubato Intro \"...Here the outcast and the stranger...\"",
+        "description": "Penitential Act"
+      },
+      "gloria": {
+        "title": "Kyrie • Misa Del Mundo",
+        "composer": "Only if needed. Talk to presider!",
+        "description": "Gloria"
+      },
+      "gospelAcclamation": {
+        "title": "Spirit & Psalm • Ken Canedo",
+        "composer": "Gospel Acclamation",
+        "verse": "Setting from Mass of Restoration"
+      },
+      "offertory": {
+        "title": "Spirit & Ps • Josh Blakesley & Grae McCullough",
+        "description": "Offertory Song"
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "Restless",
+        "composer": "Audrey Assad"
+      },
+      "lordsPrayer": {
+        "title": "Eucharistic Acclamations",
+        "composer": "Mass of Restoration",
+        "description": "Joshua Blakesley"
+      },
+      "fractionRite": {
+        "title": "Holy, Holy, Holy",
+        "composer": "Save Us Savior of the World",
+        "description": "Amen"
+      },
+      "communionSongs": [
+        {
+          "title": "The Lord's Prayer",
+          "composer": "(Echo) Our Father",
+          "description": "Jerome Andrews • Arranged by Dan Houze"
+        },
+        {
+          "title": "Fraction Rite",
+          "composer": "Lamb of God (Resoration)"
+        },
+        {
+          "title": "Communion Songs",
+          "composer": "Here At This Table",
+          "description": "Janet Sullivan Whitaker"
+        },
+        {
+          "title": "Vss 1-2, 3-5",
+          "composer": "Pan de Vida (4/4)",
+          "description": "Bob Hurd • Arranged by Ed Archer"
+        },
+        {
+          "title": "\"...at this table the last shall be first",
+          "composer": "I Am Yours (Consume Me, Completely)",
+          "description": "Danielle Rose Hesley • Trevor Thomson"
+        },
+        {
+          "title": "Love song to Jesus (Mary in Gospel Reading)",
+          "composer": "Make Me a Channel of Your Peace",
+          "description": "John Angotti"
+        }
+      ],
+      "sending": {
+        "title": "A Rightful Place",
+        "composer": "Steve Angrisano",
+        "description": "\"...our hearts are restless till they rest in thee.\" (Gospel)"
+      }
+    },
+    {
+      "community": "Heritage",
+      "communityId": "heritage",
+      "date": "Year C — Jul 20, 2025 (Sun)",
+      "presider": "NOT THIS YEAR",
+      "prelude": {
+        "title": "Song Title",
+        "composer": "Composer/s"
+      },
+      "penitentialAct": {
+        "title": "TWO OAKS • Marty Haugen",
+        "composer": "Vs 4 - Rubato Intro \"...Here the outcast and the stranger...\"",
+        "description": "Penitential Act"
+      },
+      "gloria": {
+        "title": "Kyrie • Misa Del Mundo",
+        "composer": "Only if needed. Talk to presider!",
+        "description": "Gloria"
+      },
+      "gospelAcclamation": {
+        "title": "The Lyric Psalter • Tony Alonso & Marty Haugen",
+        "composer": "Gospel Acclamation",
+        "verse": "Alleluia (Mass of Joy & Peace)"
+      },
+      "offertory": {
+        "title": "The Lyric Gospel Acclamations • Tony Alonso",
+        "description": "Offertory Song"
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "Be Still and Know That I Am God",
+        "composer": "Christopher Walker • Sr. Paule Freeburg, DC"
+      },
+      "lordsPrayer": {
+        "title": "Eucharistic Acclamations",
+        "composer": "Mass of Christ the Savior - Dan Schutte"
+      },
+      "fractionRite": {
+        "title": "Holy",
+        "composer": "When We Eat This Bread",
+        "description": "Amen"
+      },
+      "communionSongs": [
+        {
+          "title": "The Lord's Prayer",
+          "composer": "Echo Our Father",
+          "description": "Andrews, Arr. Bonilla • Lockwood • Fajardo"
+        },
+        {
+          "title": "Fraction Rite",
+          "composer": "Lamb of God (Mass of Christ the Savior)"
+        },
+        {
+          "title": "Communion Songs",
+          "composer": "Here At This Table",
+          "description": "Janet Sullivan Whitaker"
+        },
+        {
+          "title": "Vss 1-2, 3-5",
+          "composer": "Christ Before Us",
+          "description": "Janèt Sullivan Whitaker • Mark J. Sullivan"
+        },
+        {
+          "title": "Verse 4: \"sent to labor..., restless till we rest in you.\" (Gospel)",
+          "composer": "Age to Age",
+          "description": "Janet Vogt • Jeff McLemore • Skip Kroner"
+        }
+      ],
+      "sending": {
+        "title": "KINGSFOLD • Horatius Bonar",
+        "composer": "\"Come unto me and rest; Lay down, thou weary one, lay down\""
+      }
+    },
+    {
+      "community": "Elevations",
+      "communityId": "elevations",
+      "date": "Year C — Jul 20, 2025 (Sun)",
+      "presider": "NOT THIS YEAR",
+      "prelude": {
+        "title": "Jesus I Trust In You",
+        "composer": "Josh Blakesley • Sarah Kroger • Sarah Hart",
+        "description": "Quiet trust in the Lord who “sustains my soul” (antiphon)"
+      },
+      "penitentialAct": {
+        "title": "TWO OAKS • Marty Haugen",
+        "composer": "Vs 4 - Rubato Intro \"...Here the outcast and the stranger...\"",
+        "description": "Penitential Act"
+      },
+      "gloria": {
+        "title": "Kyrie • Misa Del Mundo",
+        "composer": "Only if needed. Talk to presider!",
+        "description": "Gloria"
+      },
+      "gospelAcclamation": {
+        "title": "Spirit & Psalm • Ken Canedo",
+        "composer": "Gospel Acclamation",
+        "verse": "Setting from Mass of Restoration"
+      },
+      "offertory": {
+        "title": "Spirit & Ps • Josh Blakesley & Grae McCullough",
+        "description": "Offertory Song"
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "Restless",
+        "composer": "Audrey Assad"
+      },
+      "lordsPrayer": {
+        "title": "Eucharistic Acclamations",
+        "composer": "Mass of Restoration • Joshua Blakesley"
+      },
+      "fractionRite": {
+        "title": "Holy, Holy, Holy",
+        "composer": "Save Us Savior of the World",
+        "description": "Amen"
+      },
+      "communionSongs": [
+        {
+          "title": "The Lord's Prayer",
+          "composer": "Echo Our Father",
+          "description": "Andrews, Arr. Bonilla • Lockwood • Fajardo"
+        },
+        {
+          "title": "Fraction Rite",
+          "composer": "Lamb of God (Resoration)"
+        },
+        {
+          "title": "Communion Songs",
+          "composer": "Here At This Table",
+          "description": "Janet Sullivan Whitaker"
+        },
+        {
+          "title": "Vss 1-2, 3-5",
+          "composer": "Pan de Vida (4/4)",
+          "description": "Bob Hurd • Arranged by Ed Archer"
+        },
+        {
+          "title": "\"...at this table the last shall be first",
+          "composer": "Make Me a Channel of Your Peace",
+          "description": "John Angotti"
+        }
+      ],
+      "sending": {
+        "title": "Sending Song",
+        "composer": "A Rightful Place",
+        "description": "Steve Angrisano"
+      }
+    }
+  ]
+}

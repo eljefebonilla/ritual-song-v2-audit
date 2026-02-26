@@ -1,0 +1,414 @@
+{
+  "id": "year-c-sep-14-2025-sun",
+  "name": "Year C — Sep 14, 2025 (Sun)",
+  "year": "ABC",
+  "season": "ordinary",
+  "seasonLabel": "Ordinary Time",
+  "seasonOrder": 14,
+  "dates": [],
+  "lectionary": {
+    "number": "Year B — Sep 14, 2030 (Sat)",
+    "gospelTitle": "Year A — Sep 14, 2029 (Fri)",
+    "thematicTag": "Year C — Sep 14, 2028 (Thu)",
+    "thematicDetail": "Year B — Sep 14, 2027 (Tue)"
+  },
+  "readings": [
+    {
+      "type": "psalm",
+      "citation": "Lifted Up for Life",
+      "summary": "",
+      "antiphon": "Planning Reminders"
+    },
+    {
+      "type": "second",
+      "citation": "Catechetical Sunday",
+      "summary": "Theme -\"Always be ready to give an explanation.."
+    },
+    {
+      "type": "gospel_verse",
+      "citation": "We should glory in the Cross of our Lord Jesus Christ,\nin whom is our salvation, life and resurrection,\nthrough whom we are saved and delivered.",
+      "summary": ""
+    },
+    {
+      "type": "gospel",
+      "citation": "Reading I | Nm 21:4b-9",
+      "summary": "The Israelites are delivered from the fiery serpents."
+    }
+  ],
+  "antiphons": [
+    {
+      "type": "entrance",
+      "option": 1,
+      "citation": "Verse before the Gospel |",
+      "text": "We adore you, O Christ, and we bless you,\nbecause by your Cross you have redeemed the world."
+    },
+    {
+      "type": "communion",
+      "option": 2,
+      "citation": "Communion Antiphon | Jn 12:32",
+      "text": "When I am lifted up from the earth,\nI will draw everyone to myself, says the Lord."
+    }
+  ],
+  "planningNotes": [
+    "Communion Antiphon • Option II",
+    "N/A"
+  ],
+  "musicPlans": [
+    {
+      "community": "Reflections",
+      "communityId": "reflections",
+      "date": "Year C — Sep 13, 2025 (Sat)",
+      "presider": "Fr. Thomas Park",
+      "prelude": {
+        "title": "You Are Welcome Here",
+        "composer": "Chris Muglia",
+        "description": "Optional"
+      },
+      "penitentialAct": {
+        "title": "Marty Haugen • Arr. by David Lockwood",
+        "composer": "Season of Creation",
+        "description": "Penitential Act"
+      },
+      "gloria": {
+        "title": "Kyrie • Misa Del Mundo",
+        "composer": "Only if needed. Talk to presider!",
+        "description": "Gloria"
+      },
+      "gospelAcclamation": {
+        "title": "The Lyric Psalter • Tony Alonso & Marty Haugen",
+        "composer": "Gospel Acclamation",
+        "verse": "Alleluia (Mass of Joy & Peace)"
+      },
+      "offertory": {
+        "title": "The Lyric Gospel Acclamations • Tony Alonso",
+        "description": "Offertory Song"
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "Only This I Want",
+        "composer": "Dan Schutte"
+      },
+      "lordsPrayer": {
+        "title": "Eucharistic Acclamations",
+        "composer": "Mass for the Healing of the World",
+        "description": "Trevor Thomson"
+      },
+      "fractionRite": {
+        "title": "Holy",
+        "composer": "When We Eat This Bread",
+        "description": "Amen"
+      },
+      "communionSongs": [
+        {
+          "title": "The Lord's Prayer",
+          "composer": "Chanted Our Father (Snow)",
+          "description": "Jennings/Paregorius"
+        },
+        {
+          "title": "Fraction Rite",
+          "composer": "Lamb of God (Mass for the Healing of the World)",
+          "description": "Trevor Thomson"
+        },
+        {
+          "title": "Communion Songs",
+          "composer": "Crux Fidelis",
+          "description": "Steven C. Warner"
+        },
+        {
+          "title": "Holy Cross Song",
+          "composer": "Glory in the Cross",
+          "description": "Dan Schutte"
+        }
+      ]
+    },
+    {
+      "community": "Foundations",
+      "communityId": "foundations",
+      "date": "Year C — Sep 14, 2025 (Sun)",
+      "presider": "Fr. Vince Kuna",
+      "prelude": {
+        "title": "N/A"
+      },
+      "penitentialAct": {
+        "title": "SLANE • Arranged by Assad",
+        "composer": "Jesus teachus us the way of the law through a new lens.",
+        "description": "Penitential Act (If presider wants led by cantor)"
+      },
+      "gloria": {
+        "title": "Kyrie (Gift of God) • Adapted Version",
+        "composer": "Marty Haugen • Arranged by David Locwood",
+        "description": "Gloria"
+      },
+      "gospelAcclamation": {
+        "title": "The Lyric Psalter • Tony Alonso & Marty Haugen",
+        "composer": "Gospel Acclamation",
+        "verse": "Alleluia! Give the Glory (Mass of Glory)"
+      },
+      "offertory": {
+        "title": "Verse Audio Example",
+        "description": "Offertory Song"
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "I Will Choose Christ",
+        "composer": "Tom Booth"
+      },
+      "lordsPrayer": {
+        "title": "Eucharistic Acclamations",
+        "composer": "Mass of Glory"
+      },
+      "fractionRite": {
+        "title": "Holy",
+        "composer": "Mystery of Faith",
+        "description": "Amen"
+      },
+      "communionSongs": [
+        {
+          "title": "The Lord's Prayer",
+          "composer": "Chanted Our Father (Snow)",
+          "description": "Jennings • Paregorius"
+        },
+        {
+          "title": "Fraction Rite",
+          "composer": "Lamb of God (Mass of Glory)"
+        },
+        {
+          "title": "Communion Songs",
+          "composer": "I Lift My Soul to You",
+          "description": "Lori True"
+        },
+        {
+          "title": "Verses are all about following the law.",
+          "composer": "Precious Lord, Take My Hand",
+          "description": "Thomas A. Dorsey"
+        }
+      ],
+      "sending": {
+        "title": "Leon C. Roberts",
+        "composer": "Black History Month"
+      }
+    },
+    {
+      "community": "Generations",
+      "communityId": "generations",
+      "date": "Year C — Sep 14, 2025 (Sun)",
+      "presider": "Msgr. Lloyd Torgerson",
+      "prelude": {
+        "title": "You Are Welcome Here",
+        "composer": "Chris Muglia",
+        "description": "Optional"
+      },
+      "penitentialAct": {
+        "title": "Marty Haugen • Arr. by David Lockwood",
+        "composer": "Season of Creation",
+        "description": "Penitential Act"
+      },
+      "gloria": {
+        "title": "Kyrie • Misa Del Mundo",
+        "composer": "Only if needed. Talk to presider!",
+        "description": "Gloria"
+      },
+      "gospelAcclamation": {
+        "title": "Spirit & Psalm • Paul Hillebrand & Tom Booth",
+        "composer": "Gospel Acclamation",
+        "verse": "Setting from Mass of St. Kilian"
+      },
+      "offertory": {
+        "title": "Spirit & Psalm • Curtis Stephan",
+        "description": "Offertory Song"
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "Build a Family",
+        "composer": "Ed Bolduc • Arranged by Daniel Houze"
+      },
+      "lordsPrayer": {
+        "title": "Eucharistic Acclamations",
+        "composer": "Mass of Restoration",
+        "description": "Joshua Blakesley"
+      },
+      "fractionRite": {
+        "title": "Holy, Holy, Holy",
+        "composer": "Save Us Savior of the World",
+        "description": "Amen"
+      },
+      "communionSongs": [
+        {
+          "title": "The Lord's Prayer",
+          "composer": "(Echo) Our Father",
+          "description": "Jerome Andrews • Arranged by Dan Houze"
+        },
+        {
+          "title": "Fraction Rite",
+          "composer": "Lamb of God (Resoration)"
+        },
+        {
+          "title": "Communion Songs",
+          "composer": "One Bread, One Cup",
+          "description": "Fisher • Canedo • Lee • Aven"
+        },
+        {
+          "title": "Table Song",
+          "composer": "Pan del Cielo / Bread from Heaven",
+          "description": "Iván Díaz • Tom Booth • Estela García"
+        },
+        {
+          "title": "\"...strength for all who journey\"",
+          "composer": "Strength for the Journey",
+          "description": "Michael John Poirier"
+        },
+        {
+          "title": "\"...there is a cross meant for you alone...\"",
+          "composer": "At The Cross (Love Ran Red)",
+          "description": "Chris Tomlin"
+        }
+      ],
+      "sending": {
+        "title": "Lift High the Cross [NEW]",
+        "composer": "CRUCIFER • Nicholson • Arr. by David Lockwood"
+      }
+    },
+    {
+      "community": "Heritage",
+      "communityId": "heritage",
+      "date": "Year C — Sep 14, 2025 (Sun)",
+      "presider": "\"Fr. David Guffey, CSC\"",
+      "prelude": {
+        "title": "N/A"
+      },
+      "penitentialAct": {
+        "title": "LOBE DEN HERREN • Gesangbuch • Ed Archer",
+        "composer": "\"Surely his goodness and mercy shall daily atteend us\"",
+        "description": "Penitential Act"
+      },
+      "gloria": {
+        "title": "Kyrie • Misa Del Mundo",
+        "composer": "Only if needed. Talk to presider!",
+        "description": "Gloria"
+      },
+      "gospelAcclamation": {
+        "title": "The Lyric Psalter • Tony Alonso & Marty Haugen",
+        "composer": "Gospel Acclamation",
+        "verse": "Alleluia (Mass of Joy & Peace)"
+      },
+      "offertory": {
+        "title": "The Lyric Gospel Acclamations • Tony Alonso",
+        "description": "Offertory Song"
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "Only This I Want",
+        "composer": "Dan Schutte"
+      },
+      "lordsPrayer": {
+        "title": "Eucharistic Acclamations",
+        "composer": "Mass of Christ the Savior - Dan Schutte"
+      },
+      "fractionRite": {
+        "title": "Holy",
+        "composer": "When We Eat This Bread",
+        "description": "Amen"
+      },
+      "communionSongs": [
+        {
+          "title": "The Lord's Prayer",
+          "composer": "Echo Our Father",
+          "description": "Andrews, Arr. Bonilla • Lockwood • Fajardo"
+        },
+        {
+          "title": "Fraction Rite",
+          "composer": "Lamb of God (Mass of Christ the Savior)"
+        },
+        {
+          "title": "Communion Songs",
+          "composer": "Crux Fidelis",
+          "description": "Steven C. Warner"
+        },
+        {
+          "title": "Holy Cross Song",
+          "composer": "We Remember",
+          "description": "Marty Haugen"
+        },
+        {
+          "title": "\"We remember how you loved us to your death\"",
+          "composer": "Jesus the Lord",
+          "description": "Roc O’Connor SJ  • John Foley SJ"
+        }
+      ],
+      "sending": {
+        "title": "CRUCIFER • Sydney H. Nicholson",
+        "composer": "Feast of the Exaltation of the Holy Cross"
+      }
+    },
+    {
+      "community": "Elevations",
+      "communityId": "elevations",
+      "date": "Year C — Sep 14, 2025 (Sun)",
+      "presider": "Fr. Eusebio Llonoso",
+      "prelude": {
+        "title": "You Are Welcome Here",
+        "composer": "Chris Muglia",
+        "description": "Optional"
+      },
+      "penitentialAct": {
+        "title": "Marty Haugen • Arr. by David Lockwood",
+        "composer": "Season of Creation",
+        "description": "Penitential Act"
+      },
+      "gloria": {
+        "title": "Kyrie • Misa Del Mundo",
+        "composer": "Only if needed. Talk to presider!",
+        "description": "Gloria"
+      },
+      "gospelAcclamation": {
+        "title": "Spirit & Psalm • Paul Hillebrand & Tom Booth",
+        "composer": "Gospel Acclamation",
+        "verse": "Setting from Mass of St. Kilian"
+      },
+      "offertory": {
+        "title": "Spirit & Psalm • Curtis Stephan",
+        "description": "Offertory Song"
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "In Christ Alone",
+        "composer": "Keith & Kristyn Getty • Arr. by Micah Jones"
+      },
+      "lordsPrayer": {
+        "title": "Eucharistic Acclamations",
+        "composer": "Mass of Restoration • Joshua Blakesley"
+      },
+      "fractionRite": {
+        "title": "Holy, Holy, Holy",
+        "composer": "Save Us Savior of the World",
+        "description": "Amen"
+      },
+      "communionSongs": [
+        {
+          "title": "The Lord's Prayer",
+          "composer": "Echo Our Father",
+          "description": "Andrews, Arr. Bonilla • Lockwood • Fajardo"
+        },
+        {
+          "title": "Fraction Rite",
+          "composer": "Lamb of God (Resoration)"
+        },
+        {
+          "title": "Communion Songs",
+          "composer": "Pan del Cielo / Bread from Heaven",
+          "description": "Iván Díaz • Tom Booth • Estela García"
+        },
+        {
+          "title": "\"...strength for all who journey\"",
+          "composer": "At The Cross (Love Ran Red)",
+          "description": "Chris Tomlin"
+        },
+        {
+          "title": "\"...mercy reigns and never dies\"",
+          "composer": "What A Beautiful Name (Gospel Version)",
+          "description": "Hillsong Worship"
+        }
+      ],
+      "sending": {
+        "title": "Sending Song",
+        "composer": "Lift High the Cross [NEW]",
+        "description": "CRUCIFER • Nicholson • Arr. by David Lockwood"
+      }
+    }
+  ]
+}

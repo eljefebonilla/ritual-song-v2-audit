@@ -1,0 +1,407 @@
+{
+  "id": "year-a-aug-20-2023-sun",
+  "name": "Year A — Aug 20, 2023 (Sun)",
+  "year": "ABC",
+  "season": "ordinary",
+  "seasonLabel": "Ordinary Time",
+  "seasonOrder": 20,
+  "dates": [],
+  "lectionary": {
+    "number": "N/A in 2038",
+    "gospelTitle": "Year A — Aug 19, 2035 (Sun)",
+    "thematicTag": "N/A in 2032",
+    "thematicDetail": "Year A — Aug 19, 2029 (Sun)"
+  },
+  "readings": [
+    {
+      "type": "psalm",
+      "citation": "Gentile Outreach",
+      "summary": "",
+      "antiphon": "Planning Reminders"
+    },
+    {
+      "type": "gospel_verse",
+      "citation": "Turn your eyes, O God, our shield;\nand look on the face of your anointed one;\none day within your courts is better than a thousand elsewhere.",
+      "summary": ""
+    },
+    {
+      "type": "gospel",
+      "citation": "Reading I | Is 56:1, 6-7",
+      "summary": "The Lord's justice is about to be revealed."
+    }
+  ],
+  "antiphons": [
+    {
+      "type": "entrance",
+      "option": 1,
+      "citation": "Verse before the Gospel | See Mt 4:23",
+      "text": "Jesus proclaimed the Gospel of the kingdom\nand cured every disease among the people."
+    },
+    {
+      "type": "communion",
+      "option": 2,
+      "citation": "Communion Antiphon I | Ps 130 (129):7",
+      "text": "With the Lord there is mercy;\nin him is plentiful redemption."
+    }
+  ],
+  "planningNotes": [
+    "Roman Missal — Jn 6:51–52",
+    "I am the living bread that came down from heaven,\nsays the Lord.\nWhoever eats of this bread will live for ever."
+  ],
+  "musicPlans": [
+    {
+      "community": "Reflections",
+      "communityId": "reflections",
+      "date": "Year A — Aug 15, 2026 (Sat)",
+      "presider": "TBD",
+      "prelude": {
+        "title": "Song Title",
+        "composer": "Composer/s"
+      },
+      "penitentialAct": {
+        "title": "Composer/s",
+        "composer": "Description",
+        "description": "Penitential Act"
+      },
+      "gloria": {
+        "title": "Kyrie • Misa Del Mundo",
+        "composer": "Only if needed. Talk to presider!",
+        "description": "Gloria"
+      },
+      "gospelAcclamation": {
+        "title": "The Lyric Psalter • Tony Alonso & Marty Haugen",
+        "composer": "Gospel Acclamation",
+        "verse": "Alleluia (Mass of Joy & Peace)"
+      },
+      "offertory": {
+        "title": "The Lyric Gospel Acclamations • Tony Alonso",
+        "description": "Offertory Song"
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "Song Title",
+        "composer": "Composer/s"
+      },
+      "lordsPrayer": {
+        "title": "Eucharistic Acclamations",
+        "composer": "Mass Setting",
+        "description": "Composer"
+      },
+      "fractionRite": {
+        "title": "Holy",
+        "composer": "Mystery of Faith",
+        "description": "Amen"
+      },
+      "communionSongs": [
+        {
+          "title": "The Lord's Prayer",
+          "composer": "Chanted Our Father (Snow)",
+          "description": "Jennings/Paregorius"
+        },
+        {
+          "title": "Fraction Rite",
+          "composer": "Lamb of God Setting",
+          "description": "Composer"
+        },
+        {
+          "title": "Communion Songs",
+          "composer": "Song Title",
+          "description": "Composer/s"
+        },
+        {
+          "title": "Description",
+          "composer": "Song Title",
+          "description": "Composer/s"
+        }
+      ]
+    },
+    {
+      "community": "Foundations",
+      "communityId": "foundations",
+      "date": "Year A — Aug 16, 2026 (Sun)",
+      "presider": "TBD",
+      "prelude": {
+        "title": "N/A"
+      },
+      "penitentialAct": {
+        "title": "SLANE • Arranged by Assad",
+        "composer": "Jesus teachus us the way of the law through a new lens.",
+        "description": "Penitential Act (If presider wants led by cantor)"
+      },
+      "gloria": {
+        "title": "Kyrie (Gift of God) • Adapted Version",
+        "composer": "Marty Haugen • Arranged by David Locwood",
+        "description": "Gloria"
+      },
+      "gospelAcclamation": {
+        "title": "The Lyric Psalter • Tony Alonso & Marty Haugen",
+        "composer": "Gospel Acclamation",
+        "verse": "Alleluia! Give the Glory (Mass of Glory)"
+      },
+      "offertory": {
+        "title": "Verse Audio Example",
+        "description": "Offertory Song"
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "I Will Choose Christ",
+        "composer": "Tom Booth"
+      },
+      "lordsPrayer": {
+        "title": "Eucharistic Acclamations",
+        "composer": "Mass of Glory"
+      },
+      "fractionRite": {
+        "title": "Holy",
+        "composer": "Mystery of Faith",
+        "description": "Amen"
+      },
+      "communionSongs": [
+        {
+          "title": "The Lord's Prayer",
+          "composer": "Chanted Our Father (Snow)",
+          "description": "Jennings • Paregorius"
+        },
+        {
+          "title": "Fraction Rite",
+          "composer": "Lamb of God (Mass of Glory)"
+        },
+        {
+          "title": "Communion Songs",
+          "composer": "I Lift My Soul to You",
+          "description": "Lori True"
+        },
+        {
+          "title": "Verses are all about following the law.",
+          "composer": "Precious Lord, Take My Hand",
+          "description": "Thomas A. Dorsey"
+        }
+      ],
+      "sending": {
+        "title": "Leon C. Roberts",
+        "composer": "Black History Month"
+      }
+    },
+    {
+      "community": "Generations",
+      "communityId": "generations",
+      "date": "Year A — Aug 16, 2026 (Sun)",
+      "presider": "TBD",
+      "prelude": {
+        "title": "Song Title",
+        "composer": "Composer/s"
+      },
+      "penitentialAct": {
+        "title": "Composer/s",
+        "composer": "Description",
+        "description": "Penitential Act"
+      },
+      "gloria": {
+        "title": "Kyrie • Misa Del Mundo",
+        "composer": "If needed. Talk to presider!",
+        "description": "Gloria"
+      },
+      "gospelAcclamation": {
+        "title": "Spirit & Psalm • Composer/s",
+        "composer": "Gospel Acclamation",
+        "verse": "Setting from Mass of ???"
+      },
+      "offertory": {
+        "title": "Spirit & Psalm • Composer/s",
+        "description": "Offertory Song"
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "Song Title",
+        "composer": "Composer/s"
+      },
+      "lordsPrayer": {
+        "title": "Eucharistic Acclamations",
+        "composer": "Mass of Restoration",
+        "description": "Joshua Blakesley"
+      },
+      "fractionRite": {
+        "title": "Holy, Holy, Holy",
+        "composer": "Save Us Savior of the World",
+        "description": "Amen"
+      },
+      "communionSongs": [
+        {
+          "title": "The Lord's Prayer",
+          "composer": "(Echo) Our Father",
+          "description": "Jerome Andrews • Arranged by Dan Houze"
+        },
+        {
+          "title": "Fraction Rite",
+          "composer": "Lamb of God (Resoration)"
+        },
+        {
+          "title": "Communion Songs",
+          "composer": "Song Title",
+          "description": "Composer/s"
+        },
+        {
+          "title": "Description",
+          "composer": "Song Title",
+          "description": "Composer/s"
+        },
+        {
+          "title": "Description",
+          "composer": "Song Title",
+          "description": "Composer/s"
+        },
+        {
+          "title": "Description",
+          "composer": "Song Title",
+          "description": "Composer/s"
+        }
+      ],
+      "sending": {
+        "title": "Song Title",
+        "composer": "Composer/s"
+      }
+    },
+    {
+      "community": "Heritage",
+      "communityId": "heritage",
+      "date": "Year A — Aug 16, 2026 (Sun)",
+      "presider": "TBD",
+      "prelude": {
+        "title": "Song Title",
+        "composer": "Composer/s"
+      },
+      "penitentialAct": {
+        "title": "Composer/s",
+        "composer": "Description",
+        "description": "Penitential Act"
+      },
+      "gloria": {
+        "title": "Kyrie • Misa Del Mundo",
+        "composer": "Only if needed. Talk to presider!",
+        "description": "Gloria"
+      },
+      "gospelAcclamation": {
+        "title": "The Lyric Psalter • Tony Alonso & Marty Haugen",
+        "composer": "Gospel Acclamation",
+        "verse": "Song Title"
+      },
+      "offertory": {
+        "title": "Composer/s",
+        "description": "Offertory Song"
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "Song Title",
+        "composer": "Composer/s"
+      },
+      "lordsPrayer": {
+        "title": "Eucharistic Acclamations",
+        "composer": "Mass of Christ the Savior - Dan Schutte"
+      },
+      "fractionRite": {
+        "title": "Holy",
+        "composer": "When We Eat This Bread",
+        "description": "Amen"
+      },
+      "communionSongs": [
+        {
+          "title": "The Lord's Prayer",
+          "composer": "Echo Our Father",
+          "description": "Andrews, Arr. Bonilla • Lockwood • Fajardo"
+        },
+        {
+          "title": "Fraction Rite",
+          "composer": "Lamb of God (Mass of Christ the Savior)"
+        },
+        {
+          "title": "Communion Songs",
+          "composer": "Song Title",
+          "description": "Composer/s"
+        },
+        {
+          "title": "Description",
+          "composer": "Song Title",
+          "description": "Composer/s"
+        },
+        {
+          "title": "Description",
+          "composer": "Song Title",
+          "description": "Composer/s"
+        }
+      ],
+      "sending": {
+        "title": "Composer/s",
+        "composer": "Description"
+      }
+    },
+    {
+      "community": "Elevations",
+      "communityId": "elevations",
+      "date": "Year A — Aug 16, 2026 (Sun)",
+      "presider": "TBD",
+      "prelude": {
+        "title": "Song Title",
+        "composer": "Composer/s"
+      },
+      "penitentialAct": {
+        "title": "Composer/s",
+        "composer": "Description",
+        "description": "Penitential Act"
+      },
+      "gloria": {
+        "title": "Kyrie • Misa Del Mundo",
+        "composer": "Only if needed. Talk to presider!",
+        "description": "Gloria"
+      },
+      "gospelAcclamation": {
+        "title": "Spirit & Psalm • Composer/s",
+        "composer": "Gospel Acclamation",
+        "verse": "Setting from Mass of ???"
+      },
+      "offertory": {
+        "title": "Spirit & Psalm • Composer/s",
+        "description": "Offertory Song"
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "Song Title",
+        "composer": "Composer/s"
+      },
+      "lordsPrayer": {
+        "title": "Eucharistic Acclamations",
+        "composer": "Mass of Restoration • Joshua Blakesley"
+      },
+      "fractionRite": {
+        "title": "Holy, Holy, Holy",
+        "composer": "Save Us Savior of the World",
+        "description": "Amen"
+      },
+      "communionSongs": [
+        {
+          "title": "The Lord's Prayer",
+          "composer": "Echo Our Father",
+          "description": "Andrews, Arr. Bonilla • Lockwood • Fajardo"
+        },
+        {
+          "title": "Fraction Rite",
+          "composer": "Lamb of God (Resoration)"
+        },
+        {
+          "title": "Communion Songs",
+          "composer": "Song Title",
+          "description": "Composer/s"
+        },
+        {
+          "title": "Description",
+          "composer": "Song Title",
+          "description": "Composer/s"
+        },
+        {
+          "title": "Description",
+          "composer": "Song Title",
+          "description": "Composer/s"
+        }
+      ],
+      "sending": {
+        "title": "Sending Song",
+        "composer": "Song Title",
+        "description": "Composer/s"
+      }
+    }
+  ]
+}

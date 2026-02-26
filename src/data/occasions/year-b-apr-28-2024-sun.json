@@ -1,0 +1,414 @@
+{
+  "id": "year-b-apr-28-2024-sun",
+  "name": "Year B — Apr 28, 2024 (Sun)",
+  "year": "ABC",
+  "season": "ordinary",
+  "seasonLabel": "Ordinary Time",
+  "seasonOrder": 28,
+  "dates": [],
+  "lectionary": {
+    "number": "Year B — May 08, 2039 (Sun)",
+    "gospelTitle": "Year B — May 11, 2036 (Sun)",
+    "thematicTag": "Year B — May 15, 2033 (Sun)",
+    "thematicDetail": "Year B — May 19, 2030 (Sun)"
+  },
+  "readings": [
+    {
+      "type": "psalm",
+      "citation": "Farewell Disc. 1/2",
+      "summary": "",
+      "antiphon": "Planning Reminders"
+    },
+    {
+      "type": "gospel_verse",
+      "citation": "O sing a new song to the Lord,\nfor he has worked wonders;\nin the sight of the nations\nhe has shown his deliverance, alleluia.",
+      "summary": ""
+    },
+    {
+      "type": "gospel",
+      "citation": "Reading I | Acts 9:26-31",
+      "summary": "Saul joins the apostles."
+    }
+  ],
+  "antiphons": [
+    {
+      "type": "entrance",
+      "option": 1,
+      "citation": "Verse before the Gospel | Jn 15:4a, 5b",
+      "text": "Remain in me as I remain in you, says the Lord.\nWhoever remains in me will bear much fruit."
+    },
+    {
+      "type": "communion",
+      "option": 2,
+      "citation": "Communion Antiphon | Cf. Jn 15:1, 5",
+      "text": "I am the true vine and you are the branches, \nSays the Lord. Whoever remains in me,\nand I in him, bears fruit in plenty, alleluia."
+    }
+  ],
+  "planningNotes": [
+    "Communion Antiphon • Option II",
+    "N/A"
+  ],
+  "musicPlans": [
+    {
+      "community": "Reflections",
+      "communityId": "reflections",
+      "date": "Year B — Apr 24, 2027 (Sat)",
+      "presider": "NOT THIS YEAR",
+      "prelude": {
+        "title": "Regina Caeli / O Queen of Heaven",
+        "composer": "Mode VI Latin • 12th C",
+        "description": "Pope Leo XIV singing Regina Caeli"
+      },
+      "penitentialAct": {
+        "title": "Composer/s",
+        "composer": "Description",
+        "description": "Penitential Act"
+      },
+      "gloria": {
+        "title": "Setting",
+        "composer": "Composer/s",
+        "description": "Gloria"
+      },
+      "gospelAcclamation": {
+        "title": "The Lyric Psalter • Tony Alonso & Marty Haugen",
+        "composer": "Gospel Acclamation",
+        "verse": "Easter Alleluia (Refrain)"
+      },
+      "offertory": {
+        "title": "E • 5 | B — \"...\"",
+        "description": "Offertory Song"
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "Song Title",
+        "composer": "Composer/s"
+      },
+      "lordsPrayer": {
+        "title": "Eucharistic Acclamations",
+        "composer": "Mass of the Holy Family",
+        "description": "Chris de Silva"
+      },
+      "fractionRite": {
+        "title": "Holy, Holy, Holy",
+        "composer": "When We Eat This Bread",
+        "description": "Amen"
+      },
+      "communionSongs": [
+        {
+          "title": "The Lord's Prayer",
+          "composer": "Chanted Our Father (Snow)",
+          "description": "Jennings/Paregorius"
+        },
+        {
+          "title": "Fraction Rite",
+          "composer": "Lamb of God (Mass of the Holy Family)",
+          "description": "Chris de Silva"
+        },
+        {
+          "title": "Communion Songs",
+          "composer": "Song Title",
+          "description": "Composer/s"
+        },
+        {
+          "title": "Description",
+          "composer": "Song Title",
+          "description": "Composer/s"
+        }
+      ]
+    },
+    {
+      "community": "Foundations",
+      "communityId": "foundations",
+      "date": "Year B — Apr 25, 2027 (Sun)",
+      "presider": "NOT THIS YEAR",
+      "prelude": {
+        "title": "Regina Caeli / O Queen of Heaven",
+        "composer": "Mode VI Latin • 12th C",
+        "description": "Pope Leo XIV singing Regina Caeli"
+      },
+      "penitentialAct": {
+        "title": "Composer/s",
+        "composer": "Description",
+        "description": "Penitential Act"
+      },
+      "gloria": {
+        "title": "Kyrie (Gift of God) • Adapted Version",
+        "composer": "Marty Haugen • Arranged by David Locwood",
+        "description": "Gloria"
+      },
+      "gospelAcclamation": {
+        "title": "Composer/s",
+        "composer": "Gospel Acclamation",
+        "verse": "Easter Alleluia (Refrain)"
+      },
+      "offertory": {
+        "title": "Verse Audio Example",
+        "description": "Offertory Song"
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "Song Title",
+        "composer": "Composer/s"
+      },
+      "lordsPrayer": {
+        "title": "Eucharistic Acclamations",
+        "composer": "Mass of Glory",
+        "description": "Bob Hurd & Ken Canedo"
+      },
+      "fractionRite": {
+        "title": "Holy, Holy",
+        "composer": "We Proclaim Your Death",
+        "description": "Amen"
+      },
+      "communionSongs": [
+        {
+          "title": "The Lord's Prayer",
+          "composer": "Chanted Our Father (Snow)",
+          "description": "Jennings • Paregorius"
+        },
+        {
+          "title": "Fraction Rite",
+          "composer": "Lamb of God (Mass of Glory)",
+          "description": "Bob Hurd & Ken Canedo"
+        },
+        {
+          "title": "Communion Songs",
+          "composer": "Song Title",
+          "description": "Composer/s"
+        },
+        {
+          "title": "Description",
+          "composer": "Song Title",
+          "description": "Composer/s"
+        }
+      ],
+      "sending": {
+        "title": "Composer/s",
+        "composer": "Description"
+      }
+    },
+    {
+      "community": "Generations",
+      "communityId": "generations",
+      "date": "Year B — Apr 25, 2027 (Sun)",
+      "presider": "NOT THIS YEAR",
+      "prelude": {
+        "title": "Song Title",
+        "composer": "Composer/s"
+      },
+      "penitentialAct": {
+        "title": "Composer/s",
+        "composer": "Description",
+        "description": "Penitential Act"
+      },
+      "gloria": {
+        "title": "Kyrie • Misa Del Mundo",
+        "composer": "If needed. Talk to presider!",
+        "description": "Gloria"
+      },
+      "gospelAcclamation": {
+        "title": "Spirit & Psalm • Ben Walther",
+        "composer": "Gospel Acclamation",
+        "verse": "Easter Alleluia (Refrain)"
+      },
+      "offertory": {
+        "title": "Verse Audio Example",
+        "description": "Offertory Song"
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "Song Title",
+        "composer": "Composer/s"
+      },
+      "lordsPrayer": {
+        "title": "Eucharistic Acclamations",
+        "composer": "Mass of Glory",
+        "description": "Bob Hurd • Arr. by Dan Houze"
+      },
+      "fractionRite": {
+        "title": "Holy",
+        "composer": "Mystery of Faith",
+        "description": "Amen"
+      },
+      "communionSongs": [
+        {
+          "title": "The Lord's Prayer",
+          "composer": "(Echo) Our Father",
+          "description": "Jerome Andrews • Arranged by Dan Houze"
+        },
+        {
+          "title": "Fraction Rite",
+          "composer": "Lamb of God (Mass of Glory)"
+        },
+        {
+          "title": "Communion Songs",
+          "composer": "Song Title",
+          "description": "Composer/s"
+        },
+        {
+          "title": "Description",
+          "composer": "Song Title",
+          "description": "Composer/s"
+        },
+        {
+          "title": "Description",
+          "composer": "Song Title",
+          "description": "Composer/s"
+        },
+        {
+          "title": "Description",
+          "composer": "Song Title",
+          "description": "Composer/s"
+        }
+      ],
+      "sending": {
+        "title": "Song Title",
+        "composer": "Composer/s"
+      }
+    },
+    {
+      "community": "Heritage",
+      "communityId": "heritage",
+      "date": "Year B — Apr 25, 2027 (Sun)",
+      "presider": "NOT THIS YEAR",
+      "prelude": {
+        "title": "Regina Caeli / O Queen of Heaven",
+        "composer": "Mode VI Latin • 12th C",
+        "description": "Pope Leo XIV singing Regina Caeli"
+      },
+      "penitentialAct": {
+        "title": "Composer/s",
+        "composer": "Description",
+        "description": "Penitential Act"
+      },
+      "gloria": {
+        "title": "Song Title",
+        "composer": "Composer/s",
+        "description": "Gloria"
+      },
+      "gospelAcclamation": {
+        "title": "The Lyric Psalter • Tony Alonso & Marty Haugen",
+        "composer": "Gospel Acclamation",
+        "verse": "Easter Alleluia (Refrain)"
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "Song Title",
+        "composer": "Composer/s"
+      },
+      "lordsPrayer": {
+        "title": "Eucharistic Acclamations",
+        "composer": "Mass of Joy & Peace",
+        "description": "Tony Alonso"
+      },
+      "fractionRite": {
+        "title": "Holy, Holy, Holy",
+        "composer": "When We Eat This Bread",
+        "description": "Amen"
+      },
+      "communionSongs": [
+        {
+          "title": "The Lord's Prayer",
+          "composer": "Chanted Our Father (Snow)",
+          "description": "Jennings/Paregorius"
+        },
+        {
+          "title": "Fraction Rite",
+          "composer": "Lamb of God (Mass of Joy & Peace)",
+          "description": "Tony Alonso"
+        },
+        {
+          "title": "Communion Songs",
+          "composer": "Song Title",
+          "description": "Composer/s"
+        },
+        {
+          "title": "Description",
+          "composer": "Song Title",
+          "description": "Composer/s"
+        },
+        {
+          "title": "Description",
+          "composer": "Song Title",
+          "description": "Composer/s"
+        }
+      ],
+      "sending": {
+        "title": "Composer/s",
+        "composer": "Description"
+      }
+    },
+    {
+      "community": "Elevations",
+      "communityId": "elevations",
+      "date": "Year B — Apr 25, 2027 (Sun)",
+      "presider": "NOT THIS YEAR",
+      "prelude": {
+        "title": "Regina Caeli / O Queen of Heaven",
+        "composer": "Mode VI Latin • 12th C",
+        "description": "Pope Leo XIV singing Regina Caeli"
+      },
+      "penitentialAct": {
+        "title": "Composer/s",
+        "composer": "Description",
+        "description": "Penitential Act"
+      },
+      "gloria": {
+        "title": "Kyrie (Misa Del Mundo)",
+        "composer": "Jesse Manibusan — If needed.",
+        "description": "Gloria"
+      },
+      "gospelAcclamation": {
+        "title": "Spirit & Psalm • Ben Walther",
+        "composer": "Gospel Acclamation",
+        "verse": "Easter Alleluia (Refrain)"
+      },
+      "offertory": {
+        "title": "Verse Audio Example",
+        "description": "Offertory Song"
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "Song Title",
+        "composer": "Composer/s"
+      },
+      "lordsPrayer": {
+        "title": "Eucharistic Acclamations",
+        "composer": "Mass of Restoration",
+        "description": "Joshua Blakesley"
+      },
+      "fractionRite": {
+        "title": "Holy, Holy, Holy",
+        "composer": "Save Us Savior of the World",
+        "description": "Amen"
+      },
+      "communionSongs": [
+        {
+          "title": "The Lord's Prayer",
+          "composer": "Echo Our Father",
+          "description": "Andrews, Arr. Bonilla • Lockwood • Fajardo"
+        },
+        {
+          "title": "Fraction Rite",
+          "composer": "Lamb of God (Mass of Restoration)",
+          "description": "Joshua Blakesley"
+        },
+        {
+          "title": "Communion Songs",
+          "composer": "Song Title",
+          "description": "Composer/s"
+        },
+        {
+          "title": "Description",
+          "composer": "Song Title",
+          "description": "Composer/s"
+        },
+        {
+          "title": "Description",
+          "composer": "Song Title",
+          "description": "Composer/s"
+        }
+      ],
+      "sending": {
+        "title": "Sending Song",
+        "composer": "Song Title",
+        "description": "Composer/s"
+      }
+    }
+  ]
+}

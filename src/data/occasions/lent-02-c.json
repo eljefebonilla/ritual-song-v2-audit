@@ -1,0 +1,401 @@
+{
+  "id": "lent-02-c",
+  "name": "LENT 02 [C]",
+  "year": "C",
+  "season": "lent",
+  "seasonLabel": "Lent",
+  "seasonOrder": 2,
+  "dates": [
+    {
+      "date": "2025-03-16",
+      "label": "Year C — Mar 16, 2025 (Sun)",
+      "dayOfWeek": "Sun"
+    },
+    {
+      "date": "2037-03-01",
+      "label": "Year C — Mar 01, 2037 (Sun)",
+      "dayOfWeek": "Sun"
+    },
+    {
+      "date": "2034-03-05",
+      "label": "Year C — Mar 05, 2034 (Sun)",
+      "dayOfWeek": "Sun"
+    },
+    {
+      "date": "2031-03-09",
+      "label": "Year C — Mar 09, 2031 (Sun)",
+      "dayOfWeek": "Sun"
+    },
+    {
+      "date": "2028-03-12",
+      "label": "Year C — Mar 12, 2028 (Sun)",
+      "dayOfWeek": "Sun"
+    }
+  ],
+  "lectionary": {
+    "number": "027•C",
+    "gospelTitle": "Jesus Is Transfigured",
+    "thematicTag": "Glory Preview of Cross"
+  },
+  "readings": [
+    {
+      "type": "first",
+      "citation": "Gen 15:5-12, 17-18",
+      "summary": "The Lord establishes a covenant with Abraham."
+    },
+    {
+      "type": "psalm",
+      "citation": "Ps 27:1, 7-8, 8-9, 13-14, R. v.1a\nThe Lord is my light and my salvation.",
+      "summary": "",
+      "antiphon": "Ps 27:1, 7-8, 8-9, 13-14, R. v.1a\nThe Lord is my light and my salvation."
+    },
+    {
+      "type": "second",
+      "citation": "Phil 3:17 – 4:1 (Shorter - 3:20 – 4:1)",
+      "summary": "Our citizenship is in heaven."
+    },
+    {
+      "type": "gospel_verse",
+      "citation": "Mt 17:5",
+      "summary": "From the shining cloud the Father’s voice is heard:\nThis is my beloved Son, hear him."
+    },
+    {
+      "type": "gospel",
+      "citation": "Lk 9:28b-36",
+      "summary": "Jesus is transfigured before Peter, James, and John."
+    }
+  ],
+  "antiphons": [
+    {
+      "type": "entrance",
+      "option": 1,
+      "citation": "Cf. Ps 27 (26):8–9]",
+      "text": "Of you my heart has spoken: Seek his face.\nIt is your face, O Lord, that I seek;\nhide not your face from me."
+    },
+    {
+      "type": "entrance",
+      "option": 2,
+      "citation": "Entrance Antiphon • Option II | Ps 25 (24):6, 2, 22",
+      "text": "Remember your compassion, O Lord,\nand your merciful love, for they are from of old.\nLet not our enemies exult over us.\nRedeem us, O God of Israel, from all our distress."
+    },
+    {
+      "type": "communion",
+      "option": 1,
+      "citation": "Cf. Mt 17:5",
+      "text": "This is my beloved Son,\nwith whom I am well pleased;\nlisten to him."
+    }
+  ],
+  "planningNotes": [
+    "⏰ DST - 2028 - MAR 12 - LOSE HOUR"
+  ],
+  "musicPlans": [
+    {
+      "community": "Reflections",
+      "communityId": "reflections",
+      "date": "Year C — Mar 11, 2028 (Sat)",
+      "presider": "NOT THIS YEAR",
+      "prelude": {
+        "title": "The Lord Is My Light"
+      },
+      "gathering": {
+        "title": "Be Though My Vision",
+        "composer": "SLANE • Arranged by Assad",
+        "description": "☘️ St. Patricks Day"
+      },
+      "penitentialAct": {
+        "title": "Kyrie (Mass of Colour) — optional tropes",
+        "composer": "Jeffrey Bonilla & David Lockwood"
+      },
+      "responsorialPsalm": {
+        "psalm": "Ps 27 The Lord is my light and my salvation.",
+        "setting": "The Lyric Psalter • Tony Alonso & Marty Haugen"
+      },
+      "gospelAcclamation": {
+        "title": "Mass of Joy & Peace Lenten G.A. (Refrain)",
+        "composer": "The Lyric Gospel Acclamations • Tony Alonso",
+        "verse": "From the shining cloud the Father’s voice is heard:\nThis is my beloved Son, hear him."
+      },
+      "offertory": {
+        "title": "Transfigure Us, O Lord",
+        "composer": "Bob Hurd",
+        "description": "Gospel Reading - Transfiguration"
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "Mass of Creation",
+        "composer": "Marty Haugen • Arr. by Lockwood & Phan"
+      },
+      "lordsPrayer": {
+        "title": "Chanted Our Father (Snow)",
+        "composer": "Jennings/Paregorius"
+      },
+      "fractionRite": {
+        "title": "Lamb of God (Mass of Creation)",
+        "composer": "Marty Haugen • Arr. by Lockwood & Phan"
+      },
+      "communionSongs": [
+        {
+          "title": "Hosea (Choral)",
+          "composer": "Gregory Norbet • Arranged by Ed Archer",
+          "description": "Lenten Song"
+        },
+        {
+          "title": "God of Mercy",
+          "composer": "Ricky Manalo, CSP • Bob Hurd",
+          "description": "Lenten Communion"
+        },
+        {
+          "title": "Breastplate",
+          "composer": "Liam Lawton • Arranged by Chris de Silva",
+          "description": "☘️ St. Patricks Day"
+        }
+      ],
+      "sending": {
+        "title": "God of Day and God of Darkness",
+        "composer": "BEACH SPRING • Marty Haugen",
+        "description": "\"creation... groaning for the dawning of your might\""
+      }
+    },
+    {
+      "community": "Foundations",
+      "communityId": "foundations",
+      "date": "Year C — Mar 12, 2028 (Sun)",
+      "presider": "NOT THIS YEAR",
+      "gathering": {
+        "title": "Be Though My Vision",
+        "composer": "SLANE • Arranged by Assad",
+        "description": "☘️ St. Patricks Day"
+      },
+      "penitentialAct": {
+        "title": "Kyrie (Mass of Colour) — optional tropes",
+        "composer": "Jeffrey Bonilla & David Lockwood"
+      },
+      "responsorialPsalm": {
+        "psalm": "Ps 27 The Lord is my light and my salvation.",
+        "setting": "Spirit & Psalm • Cooper Ray"
+      },
+      "gospelAcclamation": {
+        "title": "Praise to You, Lord Jesus Christ",
+        "composer": "Ed Archer",
+        "verse": "From the shining cloud the Father’s voice is heard:\nThis is my beloved Son, hear him."
+      },
+      "offertory": {
+        "title": "Transfigure Us, O Lord",
+        "composer": "Bob Hurd",
+        "description": "Gospel Reading - Transfiguration"
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "Mass of a Firm Foundation"
+      },
+      "lordsPrayer": {
+        "title": "Chanted Our Father (Snow)",
+        "composer": "Jennings • Paregorius"
+      },
+      "fractionRite": {
+        "title": "Lamb of God (Mass of a Firm Foundation)"
+      },
+      "communionSongs": [
+        {
+          "title": "Hosea",
+          "composer": "Weston Priory • Gregory Norbet",
+          "description": "Lenten Song"
+        },
+        {
+          "title": "You Are the Light",
+          "composer": "Sarah Hart",
+          "description": "\"Sweet mystery, how true you guide.\""
+        }
+      ],
+      "sending": {
+        "title": "How Great Thou Art",
+        "composer": "Stuart  K. Hine",
+        "description": "Transfiguration — \"...when I in awsome wonder...\""
+      }
+    },
+    {
+      "community": "Generations",
+      "communityId": "generations",
+      "date": "Year C — Mar 12, 2028 (Sun)",
+      "presider": "NOT THIS YEAR",
+      "gathering": {
+        "title": "Be Though My Vision",
+        "composer": "SLANE • Arranged by Assad",
+        "description": "☘️ St. Patricks Day"
+      },
+      "penitentialAct": {
+        "title": "Kyrie (Mass of Colour) — optional tropes",
+        "composer": "Jeffrey Bonilla & David Lockwood"
+      },
+      "responsorialPsalm": {
+        "psalm": "Ps 27 The Lord is my light and my salvation.",
+        "setting": "Spirit & Psalm • Cooper Ray"
+      },
+      "gospelAcclamation": {
+        "title": "Praise to You, Lord Jesus Christ",
+        "composer": "Ed Archer",
+        "verse": "From the shining cloud the Father’s voice is heard:\nThis is my beloved Son, hear him."
+      },
+      "offertory": {
+        "title": "Transfigure Us, O Lord",
+        "composer": "Bob Hurd",
+        "description": "Gospel Reading - Transfiguration"
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "Mass of Colour",
+        "composer": "Jeffrey Bonilla & David Lockwood"
+      },
+      "lordsPrayer": {
+        "title": "Spoken during Season of Lent"
+      },
+      "fractionRite": {
+        "title": "Lamb of God (Mass of Colour)"
+      },
+      "communionSongs": [
+        {
+          "title": "Hosea (Choral)",
+          "composer": "Gregory Norbet • Arranged by Ed Archer",
+          "description": "Lenten Song"
+        },
+        {
+          "title": "You Are the Light",
+          "composer": "Sarah Hart",
+          "description": "\"Sweet mystery, how true you guide.\""
+        },
+        {
+          "title": "This Is My Beloved Son",
+          "composer": "John Angotti",
+          "description": "Sing alternate text — Transfiguration"
+        }
+      ],
+      "sending": {
+        "title": "How Great Thou Art",
+        "composer": "Paul Baloche",
+        "description": "Transfiguration!"
+      }
+    },
+    {
+      "community": "Heritage",
+      "communityId": "heritage",
+      "date": "Year C — Mar 12, 2028 (Sun)",
+      "presider": "NOT THIS YEAR",
+      "gathering": {
+        "title": "Be Though My Vision",
+        "composer": "SLANE • Arranged by Assad",
+        "description": "☘️ St. Patricks Day"
+      },
+      "penitentialAct": {
+        "title": "Kyrie (Mass of Colour) — optional tropes",
+        "composer": "Jeffrey Bonilla & David Lockwood"
+      },
+      "responsorialPsalm": {
+        "psalm": "Ps 27 The Lord is my light and my salvation.",
+        "setting": "The Lyric Psalter • Tony Alonso & Marty Haugen"
+      },
+      "gospelAcclamation": {
+        "title": "Mass of Joy & Peace Lenten G.A. (Refrain)",
+        "composer": "The Lyric Gospel Acclamations • Tony Alonso",
+        "verse": "From the shining cloud the Father’s voice is heard:\nThis is my beloved Son, hear him."
+      },
+      "offertory": {
+        "title": "Transfigure Us, O Lord",
+        "composer": "Bob Hurd",
+        "description": "Gospel Reading - Transfiguration"
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "Mass of Creation - Rev. 2010",
+        "composer": "Marty Haugen"
+      },
+      "lordsPrayer": {
+        "title": "Chanted Our Father (Snow)",
+        "composer": "Jennings/Paregorius"
+      },
+      "fractionRite": {
+        "title": "Lamb of God (Mass of Creation)"
+      },
+      "communionSongs": [
+        {
+          "title": "Hosea (Choral)",
+          "composer": "Gregory Norbet • Arranged by Ed Archer",
+          "description": "Lenten Song"
+        },
+        {
+          "title": "You Are the Light",
+          "composer": "Sarah Hart",
+          "description": "\"Sweet mystery, how true you guide.\""
+        },
+        {
+          "title": "Jesus, the Lord",
+          "composer": "Roc O’Connor, SJ",
+          "description": "Transfiguration"
+        }
+      ],
+      "sending": {
+        "title": "Song of St. Patrick",
+        "composer": "Marty Haugen",
+        "description": "☘️ \"Let us be God's light in the darkness\""
+      }
+    },
+    {
+      "community": "Elevations",
+      "communityId": "elevations",
+      "date": "Year C — Mar 12, 2028 (Sun)",
+      "presider": "NOT THIS YEAR",
+      "gathering": {
+        "title": "Be Though My Vision",
+        "composer": "SLANE • Arranged by Assad",
+        "description": "☘️ St. Patricks Day"
+      },
+      "penitentialAct": {
+        "title": "Kyrie (Mass of Colour) — optional tropes",
+        "composer": "Jeffrey Bonilla & David Lockwood"
+      },
+      "responsorialPsalm": {
+        "psalm": "Ps 27 The Lord is my light and my salvation.",
+        "setting": "Spirit & Psalm • Cooper Ray"
+      },
+      "gospelAcclamation": {
+        "title": "Praise to You, Lord Jesus Christ",
+        "composer": "Ed Archer",
+        "verse": "From the shining cloud the Father’s voice is heard:\nThis is my beloved Son, hear him."
+      },
+      "offertory": {
+        "title": "Transfigure Us, O Lord",
+        "composer": "Bob Hurd",
+        "description": "Gospel Reading - Transfiguration"
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "Mass of Colour",
+        "composer": "Bonilla & Lockwood"
+      },
+      "lordsPrayer": {
+        "title": "Chanted Our Father (Snow)",
+        "composer": "Jennings/Paregorius — if requested by Presider"
+      },
+      "fractionRite": {
+        "title": "Lamb of God (Mass of Colour)",
+        "composer": "Jeffrey Bonilla & David Lockwood"
+      },
+      "communionSongs": [
+        {
+          "title": "Hosea (Choral)",
+          "composer": "Gregory Norbet • Arranged by Ed Archer",
+          "description": "Lenten Song"
+        },
+        {
+          "title": "You Are the Light",
+          "composer": "Sarah Hart",
+          "description": "\"Sweet mystery, how true you guide.\""
+        },
+        {
+          "title": "This Is My Beloved Son",
+          "composer": "John Angotti",
+          "description": "Sing alternate text — Transfiguration"
+        }
+      ],
+      "sending": {
+        "title": "How Great Thou Art",
+        "composer": "Paul Baloche",
+        "description": "Transfiguration!"
+      }
+    }
+  ]
+}

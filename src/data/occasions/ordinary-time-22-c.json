@@ -1,0 +1,434 @@
+{
+  "id": "ordinary-time-22-c",
+  "name": "ORDINARY TIME 22 [C]",
+  "year": "C",
+  "season": "ordinary",
+  "seasonLabel": "Ordinary Time",
+  "seasonOrder": 22,
+  "dates": [
+    {
+      "date": "2025-08-31",
+      "label": "Year C — Aug 31, 2025 (Sun)",
+      "dayOfWeek": "Sun"
+    },
+    {
+      "date": "2037-08-30",
+      "label": "Year C — Aug 30, 2037 (Sun)",
+      "dayOfWeek": "Sun"
+    },
+    {
+      "date": "2034-09-03",
+      "label": "Year C — Sep 03, 2034 (Sun)",
+      "dayOfWeek": "Sun"
+    },
+    {
+      "date": "2031-08-31",
+      "label": "Year C — Aug 31, 2031 (Sun)",
+      "dayOfWeek": "Sun"
+    },
+    {
+      "date": "2028-09-03",
+      "label": "Year C — Sep 03, 2028 (Sun)",
+      "dayOfWeek": "Sun"
+    }
+  ],
+  "lectionary": {
+    "number": "126•C",
+    "gospelTitle": "Banquet Seating",
+    "thematicTag": "Table Ethics 1/2"
+  },
+  "readings": [
+    {
+      "type": "first",
+      "citation": "Sir 3:17-18, 20, 28-29",
+      "summary": "Be humble, find favor with God."
+    },
+    {
+      "type": "psalm",
+      "citation": "Ps 68:4-5, 6-7, 10-11, R. see v.11b\nGod, in your goodness,\nyou have made a home for the poor.",
+      "summary": "",
+      "antiphon": "Ps 68:4-5, 6-7, 10-11, R. see v.11b\nGod, in your goodness,\nyou have made a home for the poor."
+    },
+    {
+      "type": "second",
+      "citation": "Heb 12:18-19, 22-24a",
+      "summary": "We are drawn to the heavenly Jerusalem."
+    },
+    {
+      "type": "gospel_verse",
+      "citation": "Mt 11:29ab",
+      "summary": "Take my yoke upon you, says the Lord,\nand learn from me, for I am meek and humble of heart."
+    },
+    {
+      "type": "gospel",
+      "citation": "Lk 14:1, 7-14",
+      "summary": "Humble yourself and be exalted."
+    }
+  ],
+  "antiphons": [
+    {
+      "type": "entrance",
+      "option": 1,
+      "citation": "Roman Missal — Cf. Ps 86 (85):3, 5",
+      "text": "Have mercy on me, O Lord, for I cry to you all the day long.\nO Lord, you are good and forgiving,\nfull of mercy to all who call to you."
+    },
+    {
+      "type": "communion",
+      "option": 1,
+      "citation": "Ps 31 (30):20",
+      "text": "How great is the goodness, Lord,\nthat you keep for those who fear you."
+    },
+    {
+      "type": "communion",
+      "option": 2,
+      "citation": "Communion Antiphon • Option II |  Mt 5:9–10",
+      "text": "Blessed are the peacemakers,\nfor they shall be called children of God.\nBlessed are they who are persecuted\nfor the sake of righteousness,\nfor theirs is the Kingdom of Heaven."
+    }
+  ],
+  "planningNotes": [],
+  "musicPlans": [
+    {
+      "community": "Reflections",
+      "communityId": "reflections",
+      "date": "Year C — Aug 30, 2025 (Sat)",
+      "presider": "NOT THIS YEAR",
+      "prelude": {
+        "title": "God of Peace",
+        "composer": "Jeffrey Bonilla & David Lockwood",
+        "description": "Prayer for Peace"
+      },
+      "gathering": {
+        "title": "Christ Be Our Light",
+        "composer": "Bernadette Farrell • Arr, by Jeffrey Bonilla",
+        "description": "“Longing for peace... longing for hope, many despair.\""
+      },
+      "penitentialAct": {
+        "title": "Kyrie • Misa Del Mundo",
+        "composer": "Only if needed. Talk to presider!"
+      },
+      "gloria": {
+        "title": "Glory to God (Through-composed Setting)",
+        "composer": "Mass of Renewal • Curtis Stephan"
+      },
+      "responsorialPsalm": {
+        "psalm": "Ps 68 God, in your goodness, you have...",
+        "setting": "The Lyric Psalter • Tony Alonso & Marty Haugen"
+      },
+      "gospelAcclamation": {
+        "title": "Alleluia (Mass of Joy & Peace)",
+        "composer": "O.T. • 22 | C — \"Take my yoke upon you...\""
+      },
+      "offertory": {
+        "title": "Jesus I Trust In You",
+        "composer": "Sarah Hart • Josh Blakesley • Sarah Kroger",
+        "description": "\"...in the long dark night...\""
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "Mass of the Holy Family",
+        "composer": "Chris de Silva"
+      },
+      "lordsPrayer": {
+        "title": "Chanted Our Father (Snow)",
+        "composer": "Jennings/Paregorius"
+      },
+      "fractionRite": {
+        "title": "Lamb of God (Mass of the Holy Family)",
+        "composer": "Chris de Silva"
+      },
+      "communionSongs": [
+        {
+          "title": "Here At This Table",
+          "composer": "Janet Sullivan Whitaker",
+          "description": "Gospel Connention"
+        },
+        {
+          "title": "On Eagle's Wings",
+          "composer": "Michael Joncas • Craig Kingsbury",
+          "description": "\" ...and he will raise you up...\""
+        },
+        {
+          "title": "In Every Age",
+          "composer": "Janèt Sullivan Whitaker",
+          "description": "Song of consolation."
+        }
+      ],
+      "sending": {
+        "title": "We Place Our Trust In You",
+        "composer": "THAXTED (O God Beyond All Praising) • Jeff Bonilla",
+        "description": "Tragedy in Minneapolis"
+      }
+    },
+    {
+      "community": "Foundations",
+      "communityId": "foundations",
+      "date": "Year C — Aug 31, 2025 (Sun)",
+      "presider": "NOT THIS YEAR",
+      "prelude": {
+        "title": "Hold On",
+        "composer": "Adam Tice • Arranged by Sally Ann Morris",
+        "description": "Song of consolation."
+      },
+      "gathering": {
+        "title": "As We Gather at Your Table",
+        "composer": "NETTLETON • Carl P. Daw • Arr. by J. Bonilla",
+        "description": "\"help us summon other guests to share that feast\""
+      },
+      "penitentialAct": {
+        "title": "Kyrie (Gift of God) • Adapted Version",
+        "composer": "Marty Haugen • Arranged by David Locwood"
+      },
+      "gloria": {
+        "title": "Glory to God (Mass of Joy & Peace)",
+        "composer": "Alonso • Arr. by Houze OR Arr. by Lockwood"
+      },
+      "responsorialPsalm": {
+        "psalm": "Ps 68 God, in your goodness...",
+        "setting": "Spirit & Psalm • Chris Muglia"
+      },
+      "offertory": {
+        "title": "Jesus I Trust In You",
+        "composer": "Sarah Hart • Josh Blakesley • Sarah Kroger",
+        "description": "\"...in the long dark night...\""
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "Mass of Glory • Bob Hurd • Arr. by Dan Houze"
+      },
+      "lordsPrayer": {
+        "title": "Chanted Our Father (Snow)",
+        "composer": "Jennings • Paregorius"
+      },
+      "fractionRite": {
+        "title": "Lamb of God (Mass of Glory)"
+      },
+      "communionSongs": [
+        {
+          "title": "On Eagle's Wings",
+          "composer": "Michael Joncas • Craig Kingsbury",
+          "description": "\" ...and he will raise you up...\""
+        },
+        {
+          "title": "Hold on to Love",
+          "composer": "Jesse Manibusan",
+          "description": "\"When violence seeks to destroy us...\""
+        }
+      ],
+      "sending": {
+        "title": "We Place Our Trust In You",
+        "composer": "THAXTED (O God Beyond All Praising) • Jeff Bonilla",
+        "description": "Tragedy in Minneapolis"
+      }
+    },
+    {
+      "community": "Generations",
+      "communityId": "generations",
+      "date": "Year C — Aug 31, 2025 (Sun)",
+      "presider": "NOT THIS YEAR",
+      "prelude": {
+        "title": "God of Peace",
+        "composer": "Jeffrey Bonilla & David Lockwood",
+        "description": "Prayer for Peace"
+      },
+      "gathering": {
+        "title": "Christ Be Our Light",
+        "composer": "Bernadette Farrell • Arr, by Jeffrey Bonilla",
+        "description": "“Longing for peace... longing for hope, many despair.\""
+      },
+      "penitentialAct": {
+        "title": "Kyrie • Misa Del Mundo",
+        "composer": "Only if needed. Talk to presider!"
+      },
+      "gloria": {
+        "title": "Glory, Glory, Gloria!",
+        "composer": "Jeffrey Bonilla & Drew Wilson"
+      },
+      "responsorialPsalm": {
+        "psalm": "Ps 68 God, in your goodness...",
+        "setting": "Spirit & Psalm • Chris Muglia"
+      },
+      "gospelAcclamation": {
+        "title": "Setting from Mass of Restoration",
+        "composer": "O.T. • 22 | C — \"Take my yoke upon you...\""
+      },
+      "offertory": {
+        "title": "Jesus I Trust In You",
+        "composer": "Sarah Hart • Josh Blakesley • Sarah Kroger",
+        "description": "\"...in the long dark night...\""
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "Mass of Restoration",
+        "composer": "Joshua Blakesley"
+      },
+      "lordsPrayer": {
+        "title": "(Echo) Our Father",
+        "composer": "Jerome Andrews • Arranged by Dan Houze"
+      },
+      "fractionRite": {
+        "title": "Lamb of God (Resoration)"
+      },
+      "communionSongs": [
+        {
+          "title": "On Eagle's Wings",
+          "composer": "Michael Joncas • Craig Kingsbury",
+          "description": "\" ...and he will raise you up...\""
+        },
+        {
+          "title": "A Place At Your Table",
+          "composer": "Ben Walther",
+          "description": "\"the saint and the sinner, your friends\""
+        },
+        {
+          "title": "Hold on to Love",
+          "composer": "Jesse Manibusan",
+          "description": "\"When violence seeks to destroy us...\""
+        },
+        {
+          "title": "In Every Age",
+          "composer": "Janèt Sullivan Whitaker",
+          "description": "Song of consolation."
+        }
+      ],
+      "sending": {
+        "title": "We Place Our Trust In You",
+        "composer": "THAXTED (O God Beyond All Praising) • Jeff Bonilla",
+        "description": "Tragedy in Minneapolis"
+      }
+    },
+    {
+      "community": "Heritage",
+      "communityId": "heritage",
+      "date": "Year C — Aug 31, 2025 (Sun)",
+      "presider": "NOT THIS YEAR",
+      "prelude": {
+        "title": "God of Peace",
+        "composer": "Jeffrey Bonilla & David Lockwood",
+        "description": "Prayer for Peace"
+      },
+      "gathering": {
+        "title": "Christ Be Our Light",
+        "composer": "Bernadette Farrell • Arr, by Jeffrey Bonilla",
+        "description": "“Longing for peace... longing for hope, many despair.\""
+      },
+      "penitentialAct": {
+        "title": "Kyrie • Misa Del Mundo",
+        "composer": "Only if needed. Talk to presider!"
+      },
+      "gloria": {
+        "title": "Glory to God (Mass of Christ the Savior)",
+        "composer": "Dan Schutte"
+      },
+      "responsorialPsalm": {
+        "psalm": "Ps 68 God, in your goodness, you have...",
+        "setting": "The Lyric Psalter • Tony Alonso & Marty Haugen"
+      },
+      "gospelAcclamation": {
+        "title": "Alleluia (Mass of Joy & Peace)",
+        "composer": "O.T. • 22 | C — \"Take my yoke upon you...\""
+      },
+      "offertory": {
+        "title": "In Every Age",
+        "composer": "Janèt Sullivan Whitaker",
+        "description": "Song of consolation."
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "Mass of Christ the Savior - Dan Schutte"
+      },
+      "lordsPrayer": {
+        "title": "Echo Our Father",
+        "composer": "Andrews, Arr. Bonilla • Lockwood • Fajardo"
+      },
+      "fractionRite": {
+        "title": "Lamb of God (Mass of Christ the Savior)"
+      },
+      "communionSongs": [
+        {
+          "title": "Here At This Table",
+          "composer": "Janet Sullivan Whitaker",
+          "description": "Gospel Connention"
+        },
+        {
+          "title": "On Eagle's Wings",
+          "composer": "Michael Joncas • Craig Kingsbury",
+          "description": "\" ...and he will raise you up...\""
+        },
+        {
+          "title": "Hold On",
+          "composer": "Adam Tice • Arranged by Sally Ann Morris",
+          "description": "Song of consolation."
+        }
+      ],
+      "sending": {
+        "title": "We Place Our Trust In You",
+        "composer": "THAXTED (O God Beyond All Praising) • Jeff Bonilla",
+        "description": "Tragedy in Minneapolis"
+      }
+    },
+    {
+      "community": "Elevations",
+      "communityId": "elevations",
+      "date": "Year C — Aug 31, 2025 (Sun)",
+      "presider": "NOT THIS YEAR",
+      "prelude": {
+        "title": "God of Peace",
+        "composer": "Jeffrey Bonilla & David Lockwood",
+        "description": "Prayer for Peace"
+      },
+      "gathering": {
+        "title": "Christ Be Our Light",
+        "composer": "Bernadette Farrell • Arr, by Jeffrey Bonilla",
+        "description": "“Longing for peace... longing for hope, many despair.\""
+      },
+      "penitentialAct": {
+        "title": "Kyrie • Misa Del Mundo",
+        "composer": "Only if needed. Talk to presider!"
+      },
+      "gloria": {
+        "title": "Glory, Glory, Gloria!"
+      },
+      "responsorialPsalm": {
+        "psalm": "Ps 68 God, in your goodness...",
+        "setting": "Spirit & Psalm • Chris Muglia"
+      },
+      "gospelAcclamation": {
+        "title": "Setting from Mass of Restoration",
+        "verse": "O.T. • 22 | C — \"Take my yoke upon you...\""
+      },
+      "offertory": {
+        "title": "Hold on to Love",
+        "composer": "Jesse Manibusan",
+        "description": "\"When violence seeks to destroy us...\""
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "Mass of Restoration • Joshua Blakesley"
+      },
+      "lordsPrayer": {
+        "title": "Echo Our Father",
+        "composer": "Andrews, Arr. Bonilla • Lockwood • Fajardo"
+      },
+      "fractionRite": {
+        "title": "Lamb of God (Restoration)"
+      },
+      "communionSongs": [
+        {
+          "title": "On Eagle's Wings",
+          "composer": "Michael Joncas • Craig Kingsbury",
+          "description": "\" ...and he will raise you up...\""
+        },
+        {
+          "title": "A Place At Your Table",
+          "composer": "Ben Walther",
+          "description": "\"the saint and the sinner, your friends\""
+        },
+        {
+          "title": "In Every Age",
+          "composer": "Janèt Sullivan Whitaker",
+          "description": "Song of consolation."
+        }
+      ],
+      "sending": {
+        "title": "We Place Our Trust In You",
+        "composer": "THAXTED (O God Beyond All Praising) • Jeff Bonilla",
+        "description": "Tragedy in Minneapolis"
+      }
+    }
+  ]
+}

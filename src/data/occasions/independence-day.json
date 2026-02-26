@@ -1,0 +1,46 @@
+{
+  "id": "independence-day",
+  "name": "INDEPENDENCE DAY",
+  "year": "ABC",
+  "season": "ordinary",
+  "seasonLabel": "Ordinary Time",
+  "seasonOrder": 0,
+  "dates": [
+    {
+      "date": "2025-07-04",
+      "label": "Year C — Jul 04, 2025 (Fri)",
+      "dayOfWeek": "Fri"
+    },
+    {
+      "date": "2029-07-04",
+      "label": "Year A — Jul 04, 2029 (Wed)",
+      "dayOfWeek": "Wed"
+    },
+    {
+      "date": "2028-07-04",
+      "label": "Year C — Jul 04, 2028 (Tue)",
+      "dayOfWeek": "Tue"
+    },
+    {
+      "date": "2027-07-04",
+      "label": "Year B — Jul 04, 2027 (Sun)",
+      "dayOfWeek": "Sun"
+    },
+    {
+      "date": "2026-07-04",
+      "label": "Year A — Jul 04, 2026 (Sat)",
+      "dayOfWeek": "Sat"
+    }
+  ],
+  "lectionary": {
+    "number": "SEE SHEET",
+    "gospelTitle": "",
+    "thematicTag": "FRIDAY"
+  },
+  "readings": [],
+  "antiphons": [],
+  "planningNotes": [
+    "46207"
+  ],
+  "musicPlans": []
+}

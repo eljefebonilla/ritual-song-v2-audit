@@ -1,0 +1,434 @@
+{
+  "id": "ordinary-time-20-c",
+  "name": "ORDINARY TIME 20 [C]",
+  "year": "C",
+  "season": "ordinary",
+  "seasonLabel": "Ordinary Time",
+  "seasonOrder": 20,
+  "dates": [
+    {
+      "date": "2025-08-17",
+      "label": "Year C — Aug 17, 2025 (Sun)",
+      "dayOfWeek": "Sun"
+    },
+    {
+      "date": "2037-08-16",
+      "label": "Year C — Aug 16, 2037 (Sun)",
+      "dayOfWeek": "Sun"
+    },
+    {
+      "date": "2034-08-20",
+      "label": "Year C — Aug 20, 2034 (Sun)",
+      "dayOfWeek": "Sun"
+    },
+    {
+      "date": "2031-08-17",
+      "label": "Year C — Aug 17, 2031 (Sun)",
+      "dayOfWeek": "Sun"
+    },
+    {
+      "date": "2028-08-20",
+      "label": "Year C — Aug 20, 2028 (Sun)",
+      "dayOfWeek": "Sun"
+    }
+  ],
+  "lectionary": {
+    "number": "120•C",
+    "gospelTitle": "Fire on Earth",
+    "thematicTag": "Radical Commitment"
+  },
+  "readings": [
+    {
+      "type": "first",
+      "citation": "Jer 38:4-6, 8-10",
+      "summary": "Jeremiah saved from the cistern."
+    },
+    {
+      "type": "psalm",
+      "citation": "Ps 40:2, 3, 4, 18. R. v.14b\nLord, come to my aid!",
+      "summary": "",
+      "antiphon": "Ps 40:2, 3, 4, 18. R. v.14b\nLord, come to my aid!"
+    },
+    {
+      "type": "second",
+      "citation": "Heb 12:1-4",
+      "summary": "Keep your eyes fixed on Jesus."
+    },
+    {
+      "type": "gospel_verse",
+      "citation": "Jn 10:27",
+      "summary": "My sheep hear my voice, says the Lord;\nI know them, and they follow me."
+    },
+    {
+      "type": "gospel",
+      "citation": "Lk 12:49-53",
+      "summary": "Jesus brings division, not peace."
+    }
+  ],
+  "antiphons": [
+    {
+      "type": "entrance",
+      "option": 1,
+      "citation": "Ps 84 (83):10–11",
+      "text": "Turn your eyes, O God, our shield;\nand look on the face of your anointed one;\none day within your courts is better than a thousand elsewhere."
+    },
+    {
+      "type": "communion",
+      "option": 1,
+      "citation": "Ps 130 (129):7",
+      "text": "With the Lord there is mercy;\nin him is plentiful redemption."
+    },
+    {
+      "type": "communion",
+      "option": 2,
+      "citation": "Communion Antiphon II |  Jn 6:51–52",
+      "text": "I am the living bread that came down from heaven,\nsays the Lord. Whoever eats of this bread will live for ever."
+    }
+  ],
+  "planningNotes": [
+    "Mission Cooperative Appeal: Holy Cross Mission Center"
+  ],
+  "musicPlans": [
+    {
+      "community": "Reflections",
+      "communityId": "reflections",
+      "date": "Year C — Aug 16, 2025 (Sat)",
+      "presider": "NOT THIS YEAR",
+      "prelude": {
+        "title": "You Are Welcome Here",
+        "composer": "Chris Muglia",
+        "description": "Teaching to community for Feast Day!"
+      },
+      "gathering": {
+        "title": "Make Us True Servants",
+        "composer": "SLANE • Susan G Wente",
+        "description": "\"Loving our neighbor whatever the cost\""
+      },
+      "penitentialAct": {
+        "title": "Kyrie • Misa Del Mundo",
+        "composer": "Only if needed. Talk to presider!"
+      },
+      "gloria": {
+        "title": "Glory to God (Through-composed Setting)",
+        "composer": "Mass of Renewal • Curtis Stephan"
+      },
+      "responsorialPsalm": {
+        "psalm": "Ps 40 Lord, come to my aid!",
+        "setting": "The Lyric Psalter • Tony Alonso & Marty Haugen"
+      },
+      "gospelAcclamation": {
+        "title": "Alleluia (Mass of Joy & Peace)",
+        "composer": "O.T. • 20 | C — \"My sheep hear my voice...\""
+      },
+      "offertory": {
+        "title": "By Our Love",
+        "composer": "Tom Kendzia",
+        "description": "Mission Co-Op Appeal"
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "Mass of the Holy Family",
+        "composer": "Chris de Silva"
+      },
+      "lordsPrayer": {
+        "title": "Chanted Our Father (Snow)",
+        "composer": "Jennings/Paregorius"
+      },
+      "fractionRite": {
+        "title": "Lamb of God (Mass of the Holy Family)",
+        "composer": "Chris de Silva"
+      },
+      "communionSongs": [
+        {
+          "title": "Christians, Let Us Love One Another",
+          "composer": "PICARDY • Claudia Foltz, SNJM • Armand Nigro SJ",
+          "description": "Communion Antiphon, Mission Co-Op"
+        },
+        {
+          "title": "The King of Love My Shepherd Is (Hymn)",
+          "composer": "LOCH LOMOND • Baker • Edward Eicker",
+          "description": "Gospel Verse - \"My sheep hear my voice\""
+        },
+        {
+          "title": "Bread for the World",
+          "composer": "Bernadette Farrell",
+          "description": "Communion Antiphon, Mission Co-Op"
+        }
+      ],
+      "sending": {
+        "title": "Bring Forth the Kingdom",
+        "composer": "Marty Haugen",
+        "description": "Mission Co-Op Appeal"
+      }
+    },
+    {
+      "community": "Foundations",
+      "communityId": "foundations",
+      "date": "Year C — Aug 17, 2025 (Sun)",
+      "presider": "NOT THIS YEAR",
+      "prelude": {
+        "title": "You Are Welcome Here",
+        "composer": "Chris Muglia",
+        "description": "Teaching to community for Feast Day!"
+      },
+      "gathering": {
+        "title": "We Are Marching (Siyahamba)",
+        "composer": "South African Hymn",
+        "description": "Mission Co-Op - with Zulu verse to begin."
+      },
+      "penitentialAct": {
+        "title": "Kyrie (Gift of God) • Adapted Version",
+        "composer": "Marty Haugen • Arranged by David Locwood"
+      },
+      "gloria": {
+        "title": "Glory to God (Mass of Joy & Peace)",
+        "composer": "Alonso • Arr. by Houze OR Arr. by Lockwood"
+      },
+      "responsorialPsalm": {
+        "psalm": "Ps 40 Lord, come to my aid!",
+        "setting": "Spirit & Psalm • Curtis Stephan"
+      },
+      "offertory": {
+        "title": "By Our Love",
+        "composer": "Tom Kendzia",
+        "description": "Mission Co-Op Appeal"
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "Mass of Glory • Bob Hurd • Arr. by Dan Houze"
+      },
+      "lordsPrayer": {
+        "title": "Chanted Our Father (Snow)",
+        "composer": "Jennings • Paregorius"
+      },
+      "fractionRite": {
+        "title": "Lamb of God (Mass of Glory)"
+      },
+      "communionSongs": [
+        {
+          "title": "Jesus, the Bread of Life",
+          "composer": "Grayson Warren Brown",
+          "description": "Communion Antiphon"
+        },
+        {
+          "title": "Go into the World",
+          "composer": "Tom Booth",
+          "description": "Mission Co-Op Appeal"
+        }
+      ],
+      "sending": {
+        "title": "As Christ to the World",
+        "composer": "Tom Kendzia",
+        "description": "\"Called to love one another, as Christ to the World\""
+      }
+    },
+    {
+      "community": "Generations",
+      "communityId": "generations",
+      "date": "Year C — Aug 17, 2025 (Sun)",
+      "presider": "NOT THIS YEAR",
+      "prelude": {
+        "title": "You Are Welcome Here",
+        "composer": "Chris Muglia",
+        "description": "Teaching to community for Feast Day"
+      },
+      "gathering": {
+        "title": "We Are Marching (Siyahamba)",
+        "composer": "South African Hymn",
+        "description": "Mission Co-Op - with Zulu verse to begin."
+      },
+      "penitentialAct": {
+        "title": "Kyrie • Misa Del Mundo",
+        "composer": "Only if needed. Talk to presider!"
+      },
+      "gloria": {
+        "title": "Glory, Glory, Gloria!",
+        "composer": "Jeffrey Bonilla & Drew Wilson"
+      },
+      "responsorialPsalm": {
+        "psalm": "Ps 40 Lord, come to my aid!",
+        "setting": "Spirit & Psalm • Curtis Stephan"
+      },
+      "gospelAcclamation": {
+        "title": "Setting from Mass of Restoration",
+        "composer": "O.T. • 20 | C — \"My sheep hear my voice...\""
+      },
+      "offertory": {
+        "title": "By Our Love",
+        "composer": "Tom Kendzia",
+        "description": "Mission Co-Op Appeal"
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "Mass of Restoration",
+        "composer": "Joshua Blakesley"
+      },
+      "lordsPrayer": {
+        "title": "(Echo) Our Father",
+        "composer": "Jerome Andrews • Arranged by Dan Houze"
+      },
+      "fractionRite": {
+        "title": "Lamb of God (Resoration)"
+      },
+      "communionSongs": [
+        {
+          "title": "Loved (NEW SONG)",
+          "composer": "Ben Smith, Pat Barrett",
+          "description": "\"No greater treasure than knowing I am yours and you are mine\""
+        },
+        {
+          "title": "Pan del Cielo / Bread from Heaven",
+          "composer": "Iván Díaz"
+        },
+        {
+          "title": "We Are Many Parts",
+          "composer": "Marty Haugen • Arr. by Dan Houze",
+          "description": "\"Let us be your love to all the world\""
+        },
+        {
+          "title": "Go into the World",
+          "composer": "Tom Booth",
+          "description": "Mission Co-Op Appeal"
+        }
+      ],
+      "sending": {
+        "title": "Act Justly, Love Mercy, Walk Humbly",
+        "composer": "Pat Barrett",
+        "description": "Good News to all the world!"
+      }
+    },
+    {
+      "community": "Heritage",
+      "communityId": "heritage",
+      "date": "Year C — Aug 17, 2025 (Sun)",
+      "presider": "NOT THIS YEAR",
+      "prelude": {
+        "title": "You Are Welcome Here",
+        "composer": "Chris Muglia",
+        "description": "Teaching to community for Feast Day"
+      },
+      "gathering": {
+        "title": "Praise To the Lord, the Almighty",
+        "composer": "LOBE DEN HERREN • Gesangbuch • Ed Archer",
+        "description": "\"Surely his goodness and mercy shall daily atteend us\""
+      },
+      "penitentialAct": {
+        "title": "Kyrie • Misa Del Mundo",
+        "composer": "Only if needed. Talk to presider!"
+      },
+      "gloria": {
+        "title": "Glory to God (Mass of Christ the Savior)",
+        "composer": "Dan Schutte"
+      },
+      "responsorialPsalm": {
+        "psalm": "Ps 40 Lord, come to my aid!",
+        "setting": "The Lyric Psalter • Tony Alonso & Marty Haugen"
+      },
+      "gospelAcclamation": {
+        "title": "Alleluia (Mass of Joy & Peace)",
+        "composer": "O.T. • 20 | C — \"My sheep hear my voice...\""
+      },
+      "offertory": {
+        "title": "By Our Love",
+        "composer": "Tom Kendzia",
+        "description": "Mission Co-Op Appeal"
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "Mass of Christ the Savior - Dan Schutte"
+      },
+      "lordsPrayer": {
+        "title": "Echo Our Father",
+        "composer": "Andrews, Arr. Bonilla • Lockwood • Fajardo"
+      },
+      "fractionRite": {
+        "title": "Lamb of God (Mass of Christ the Savior)"
+      },
+      "communionSongs": [
+        {
+          "title": "Christians, Let Us Love One Another",
+          "composer": "PICARDY • Claudia Foltz, SNJM • Armand Nigro SJ",
+          "description": "Communion Antiphon, Mission Co-Op"
+        },
+        {
+          "title": "The King of Love My Shepherd Is (Hymn)",
+          "composer": "LOCH LOMOND • Baker • Edward Eicker",
+          "description": "Gospel Verse - \"My sheep hear my voice\""
+        },
+        {
+          "title": "Bread for the World",
+          "composer": "Bernadette Farrell",
+          "description": "Communion Antiphon, Mission Co-Op"
+        }
+      ],
+      "sending": {
+        "title": "Forth in the Peace of Christ We Go",
+        "composer": "Luke D. Rosen • James Quinn, SJ",
+        "description": "Mission Co-Op Appeal"
+      }
+    },
+    {
+      "community": "Elevations",
+      "communityId": "elevations",
+      "date": "Year C — Aug 17, 2025 (Sun)",
+      "presider": "NOT THIS YEAR",
+      "prelude": {
+        "title": "You Are Welcome Here",
+        "composer": "Chris Muglia",
+        "description": "Teaching to community for Feast Day"
+      },
+      "gathering": {
+        "title": "We Are Marching (Siyahamba)",
+        "composer": "South African Hymn",
+        "description": "Mission Co-Op - with Zulu verse to begin."
+      },
+      "penitentialAct": {
+        "title": "Kyrie • Misa Del Mundo",
+        "composer": "Only if needed. Talk to presider!"
+      },
+      "gloria": {
+        "title": "Glory, Glory, Gloria!"
+      },
+      "responsorialPsalm": {
+        "psalm": "Ps 40 Lord, come to my aid!",
+        "setting": "Spirit & Psalm • Curtis Stephan"
+      },
+      "gospelAcclamation": {
+        "title": "Setting from Mass of Restoration",
+        "verse": "O.T. • 20 | C — \"My sheep hear my voice...\""
+      },
+      "offertory": {
+        "title": "By Our Love",
+        "composer": "Tom Kendzia",
+        "description": "Mission Co-Op Appeal"
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "Mass of Restoration • Joshua Blakesley"
+      },
+      "lordsPrayer": {
+        "title": "Echo Our Father",
+        "composer": "Andrews, Arr. Bonilla • Lockwood • Fajardo"
+      },
+      "fractionRite": {
+        "title": "Lamb of God (Resoration)"
+      },
+      "communionSongs": [
+        {
+          "title": "Pan del Cielo / Bread from Heaven",
+          "composer": "Iván Díaz"
+        },
+        {
+          "title": "We Are Many Parts",
+          "composer": "Marty Haugen • Arr. by Dan Houze",
+          "description": "\"Let us be your love to all the world\""
+        },
+        {
+          "title": "Go into the World",
+          "composer": "Tom Booth",
+          "description": "Mission Co-Op Appeal"
+        }
+      ],
+      "sending": {
+        "title": "Act Justly, Love Mercy, Walk Humbly",
+        "composer": "Pat Barrett",
+        "description": "Good News to all the world!"
+      }
+    }
+  ]
+}

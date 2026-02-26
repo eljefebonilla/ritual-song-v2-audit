@@ -1,0 +1,215 @@
+{
+  "id": "ordinary-time-23-a",
+  "name": "ORDINARY TIME 23 [A]",
+  "year": "A",
+  "season": "ordinary",
+  "seasonLabel": "Ordinary Time",
+  "seasonOrder": 23,
+  "dates": [
+    {
+      "date": "2023-09-10",
+      "label": "Year A — Sep 10, 2023 (Sun)",
+      "dayOfWeek": "Sun"
+    },
+    {
+      "date": "2035-09-09",
+      "label": "Year A — Sep 09, 2035 (Sun)",
+      "dayOfWeek": "Sun"
+    },
+    {
+      "date": "2032-09-05",
+      "label": "Year A — Sep 05, 2032 (Sun)",
+      "dayOfWeek": "Sun"
+    },
+    {
+      "date": "2029-09-09",
+      "label": "Year A — Sep 09, 2029 (Sun)",
+      "dayOfWeek": "Sun"
+    },
+    {
+      "date": "2026-09-06",
+      "label": "Year A — Sep 06, 2026 (Sun)",
+      "dayOfWeek": "Sun"
+    }
+  ],
+  "lectionary": {
+    "number": "127•A",
+    "gospelTitle": "Carry Your Cross",
+    "thematicTag": "Community Ethics 2/2"
+  },
+  "readings": [
+    {
+      "type": "first",
+      "citation": "Ez 33:7-9",
+      "summary": "Ezekiel is to be the watchman for Israel."
+    },
+    {
+      "type": "psalm",
+      "citation": "Ps 95:1-2, 6-7, 8-9, R. v.8\nIf today you hear his voice, harden not your hearts.",
+      "summary": "",
+      "antiphon": "Ps 95:1-2, 6-7, 8-9, R. v.8\nIf today you hear his voice, harden not your hearts."
+    },
+    {
+      "type": "second",
+      "citation": "Rom 13:8-10",
+      "summary": "Love your neighbor."
+    },
+    {
+      "type": "gospel_verse",
+      "citation": "2 Cor 5:19",
+      "summary": "God was reconciling the world to himself in Christ\nand entrusting to us the message of reconciliation."
+    },
+    {
+      "type": "gospel",
+      "citation": "Mt 18:15-20",
+      "summary": "Find ways to win others over; prayer shall be answered."
+    }
+  ],
+  "antiphons": [
+    {
+      "type": "entrance",
+      "option": 1,
+      "citation": "Ps 119 (118):137, 124",
+      "text": "You are just, O Lord, and your judgment is right;\ntreat your servant in accord with your merciful love."
+    },
+    {
+      "type": "communion",
+      "option": 1,
+      "citation": "Cf. Ps 42 (41):2–3",
+      "text": "Like the deer that yearns for running streams,\nso my soul is yearning for you, my God;\nmy soul is thirsting for God, the living God."
+    },
+    {
+      "type": "communion",
+      "option": 2,
+      "citation": "Roman Missal — Jn 8:12",
+      "text": "I am the light of the world, says the Lord;\nwhoever follows me will not walk in darkness,\nbut will have the light of life."
+    }
+  ],
+  "planningNotes": [
+    "SEASON OF CREATION (9/1 - 10/4)"
+  ],
+  "musicPlans": [
+    {
+      "community": "Reflections",
+      "communityId": "reflections",
+      "date": "Year A — Sep 05, 2026 (Sat)",
+      "presider": "NOT THIS YEAR",
+      "penitentialAct": {
+        "title": "Kyrie • Misa Del Mundo",
+        "composer": "Only if needed. Talk to presider!"
+      },
+      "gloria": {
+        "title": "Glory to God (Through-composed Setting)",
+        "composer": "Mass of Renewal • Curtis Stephan"
+      },
+      "gospelAcclamation": {
+        "title": "Alleluia (Mass of Joy & Peace)",
+        "composer": "Song Title"
+      },
+      "lordsPrayer": {
+        "title": "Chanted Our Father (Snow)",
+        "composer": "Jennings/Paregorius"
+      },
+      "fractionRite": {
+        "title": "Lamb of God Setting"
+      }
+    },
+    {
+      "community": "Foundations",
+      "communityId": "foundations",
+      "date": "Year A — Sep 06, 2026 (Sun)",
+      "presider": "NOT THIS YEAR",
+      "penitentialAct": {
+        "title": "Kyrie (Gift of God) • Adapted Version",
+        "composer": "Marty Haugen • Arranged by David Locwood"
+      },
+      "gloria": {
+        "title": "Glory to God (Mass of Joy & Peace)",
+        "composer": "Alonso • Arr. by Houze OR Arr. by Lockwood"
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "Mass of ?"
+      },
+      "lordsPrayer": {
+        "title": "Chanted Our Father (Snow)",
+        "composer": "Jennings • Paregorius"
+      },
+      "fractionRite": {
+        "title": "Lamb of God (Mass of ???)"
+      }
+    },
+    {
+      "community": "Generations",
+      "communityId": "generations",
+      "date": "Year A — Sep 06, 2026 (Sun)",
+      "presider": "NOT THIS YEAR",
+      "penitentialAct": {
+        "title": "Kyrie • Misa Del Mundo",
+        "composer": "If needed. Talk to presider!"
+      },
+      "gloria": {
+        "title": "Glory, Glory, Gloria!",
+        "composer": "Tony Alonso • Arr. by Dan Houze"
+      },
+      "gospelAcclamation": {
+        "title": "Setting from Mass of ???",
+        "composer": "Song Title"
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "Mass of Restoration",
+        "composer": "Joshua Blakesley"
+      },
+      "lordsPrayer": {
+        "title": "(Echo) Our Father",
+        "composer": "Jerome Andrews • Arranged by Dan Houze"
+      },
+      "fractionRite": {
+        "title": "Lamb of God (Resoration)"
+      }
+    },
+    {
+      "community": "Heritage",
+      "communityId": "heritage",
+      "date": "Year A — Sep 06, 2026 (Sun)",
+      "presider": "NOT THIS YEAR",
+      "penitentialAct": {
+        "title": "Kyrie • Misa Del Mundo",
+        "composer": "Only if needed. Talk to presider!"
+      },
+      "gloria": {
+        "title": "Glory to God (Mass of Christ the Savior)",
+        "composer": "Dan Schutte"
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "Mass of Christ the Savior - Dan Schutte"
+      },
+      "lordsPrayer": {
+        "title": "Echo Our Father",
+        "composer": "Andrews, Arr. Bonilla • Lockwood • Fajardo"
+      },
+      "fractionRite": {
+        "title": "Lamb of God (Mass of Christ the Savior)"
+      }
+    },
+    {
+      "community": "Elevations",
+      "communityId": "elevations",
+      "date": "Year A — Sep 06, 2026 (Sun)",
+      "presider": "NOT THIS YEAR",
+      "gospelAcclamation": {
+        "title": "Setting from Mass of ???",
+        "verse": "Song Title"
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "Mass of Restoration • Joshua Blakesley"
+      },
+      "lordsPrayer": {
+        "title": "Echo Our Father",
+        "composer": "Andrews, Arr. Bonilla • Lockwood • Fajardo"
+      },
+      "fractionRite": {
+        "title": "Lamb of God (Resoration)"
+      }
+    }
+  ]
+}

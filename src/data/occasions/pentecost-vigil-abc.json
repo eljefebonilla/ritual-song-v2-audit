@@ -1,0 +1,159 @@
+{
+  "id": "pentecost-vigil-abc",
+  "name": "PENTECOST VIGIL [ABC]",
+  "year": "ABC",
+  "season": "easter",
+  "seasonLabel": "Easter",
+  "seasonOrder": 0,
+  "dates": [
+    {
+      "date": "2025-06-07",
+      "label": "Year C — Jun 07, 2025 (Sat)",
+      "dayOfWeek": "Sat"
+    },
+    {
+      "date": "2029-05-19",
+      "label": "Year A — May 19, 2029 (Sat)",
+      "dayOfWeek": "Sat"
+    },
+    {
+      "date": "2028-06-03",
+      "label": "Year C — Jun 03, 2028 (Sat)",
+      "dayOfWeek": "Sat"
+    },
+    {
+      "date": "2027-05-15",
+      "label": "Year B — May 15, 2027 (Sat)",
+      "dayOfWeek": "Sat"
+    },
+    {
+      "date": "2026-05-23",
+      "label": "Year A — May 23, 2026 (Sat)",
+      "dayOfWeek": "Sat"
+    }
+  ],
+  "lectionary": {
+    "number": "062•ABC",
+    "gospelTitle": "Living Water, Spirit Flow",
+    "thematicTag": "Spirit Promised as Water"
+  },
+  "readings": [
+    {
+      "type": "first",
+      "citation": "Reading I",
+      "summary": "MULTIPLE OPTIONS - See Lectionary"
+    },
+    {
+      "type": "psalm",
+      "citation": "Ps 104:1–2, 24, 35, 27–30\nLord, send out your Spirit, and renew the face of the earth.",
+      "summary": "",
+      "antiphon": "Ps 104:1–2, 24, 35, 27–30\nLord, send out your Spirit, and renew the face of the earth."
+    },
+    {
+      "type": "second",
+      "citation": "Romans 8:22–27",
+      "summary": "MULTIPLE OPTIONS - See Lectionary"
+    },
+    {
+      "type": "gospel_verse",
+      "citation": "Lectionary",
+      "summary": "Come, Holy Spirit, fill the hearts of your faithful\nand kindle in them the fire of your love."
+    },
+    {
+      "type": "gospel",
+      "citation": "Jn 7:37–39",
+      "summary": "Jesus calls those who thirst."
+    }
+  ],
+  "antiphons": [
+    {
+      "type": "entrance",
+      "option": 1,
+      "citation": "Cf. Rom 5:5; cf. 8:11",
+      "text": "The love of God has been poured into our hearts\nthrough the Spirit of God dwelling within us, alleluia."
+    },
+    {
+      "type": "communion",
+      "option": 1,
+      "citation": "Jn 7:37",
+      "text": "On the last day of the festival, Jesus stood and cried out:\nIf anyone is thirsty, let him come to me and drink, alleluia."
+    }
+  ],
+  "planningNotes": [
+    "SEQUENCE!!!"
+  ],
+  "musicPlans": [
+    {
+      "community": "Reflections",
+      "communityId": "reflections",
+      "date": "Year A — May 23, 2026 (Sat)",
+      "presider": "TBD",
+      "prelude": {
+        "title": "Regina Caeli / O Queen of Heaven",
+        "composer": "Mode VI Latin • 12th C",
+        "description": "Pope Leo XIV singing Regina Caeli"
+      },
+      "gathering": {
+        "title": "Veni, Creator Spiritus",
+        "composer": "John Angotti",
+        "description": "Translation: Come, Holy Spirit, Creator blest..."
+      },
+      "penitentialAct": {
+        "title": "Kyrie • Misa Del Mundo",
+        "composer": "Only if needed. Talk to presider!"
+      },
+      "gloria": {
+        "title": "Glory to God (Through-composed Setting)",
+        "composer": "Mass of Renewal • Curtis Stephan"
+      },
+      "responsorialPsalm": {
+        "psalm": "Ps 104 Lord, send out your Spirit, and renew...",
+        "setting": "The Lyric Psalter • Tony Alonso & Marty Haugen"
+      },
+      "gospelAcclamation": {
+        "title": "Pentecost Sequence (Archer)",
+        "composer": "The Lyric Gospel Acclamations • Tony Alonso",
+        "verse": "Come, Holy Spirit, fill the hearts of your faithful\nand kindle in them the fire of your love."
+      },
+      "offertory": {
+        "title": "Send out Your Spirit",
+        "composer": "Bernadette Farrell • Jo Routh • Kevin Walsh",
+        "description": "Based on Psalm 104"
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "Mass of the Holy Family",
+        "composer": "Chris de Silva"
+      },
+      "lordsPrayer": {
+        "title": "Chanted Our Father (Snow)",
+        "composer": "Jennings/Paregorius"
+      },
+      "fractionRite": {
+        "title": "Lamb of God (Mass of the Holy Family)",
+        "composer": "Chris de Silva"
+      },
+      "communionSongs": [
+        {
+          "title": "Spirit and Grace",
+          "composer": "Ricky Manalo, CSP",
+          "description": "You are wind that breathes through the field"
+        },
+        {
+          "title": "I, The Lord",
+          "composer": "Tom Kendzia",
+          "description": "\"I will lead you home... follow me\""
+        },
+        {
+          "title": "Come, Holy Spirit",
+          "composer": "Tom Booth • Robert Feduccia",
+          "description": "Pentecost"
+        }
+      ],
+      "sending": {
+        "title": "O Breathe on Me, O Breath of God",
+        "composer": "ST COLUMBA (Traditional Irish) • Edwin Hatch",
+        "description": "\"Fill me with life anew,\r\""
+      }
+    }
+  ]
+}

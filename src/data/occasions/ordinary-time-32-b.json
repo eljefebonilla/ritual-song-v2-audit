@@ -1,0 +1,216 @@
+{
+  "id": "ordinary-time-32-b",
+  "name": "ORDINARY TIME 32 [B]",
+  "year": "B",
+  "season": "ordinary",
+  "seasonLabel": "Ordinary Time",
+  "seasonOrder": 32,
+  "dates": [
+    {
+      "date": "2024-11-10",
+      "label": "Year B — Nov 10, 2024 (Sun)",
+      "dayOfWeek": "Sun"
+    },
+    {
+      "date": "2033-11-06",
+      "label": "Year B — Nov 06, 2033 (Sun)",
+      "dayOfWeek": "Sun"
+    },
+    {
+      "date": "2030-11-10",
+      "label": "Year B — Nov 10, 2030 (Sun)",
+      "dayOfWeek": "Sun"
+    },
+    {
+      "date": "2027-11-07",
+      "label": "Year B — Nov 07, 2027 (Sun)",
+      "dayOfWeek": "Sun"
+    }
+  ],
+  "lectionary": {
+    "number": "155•B",
+    "gospelTitle": "Resurrection Question",
+    "thematicTag": "Jerusalem Debates 2/3"
+  },
+  "readings": [
+    {
+      "type": "first",
+      "citation": "1 Kgs 17:10-16",
+      "summary": "Elijah and the widow at Zarephath."
+    },
+    {
+      "type": "psalm",
+      "citation": "Praise the Lord, my soul!",
+      "summary": "",
+      "antiphon": "Praise the Lord, my soul!"
+    },
+    {
+      "type": "second",
+      "citation": "Heb 9:24-28",
+      "summary": "Christ will appear again to bring salvation."
+    },
+    {
+      "type": "gospel_verse",
+      "citation": "Mt 5:3",
+      "summary": "Blessed are the poor in spirit,\nfor theirs is the kingdom of heaven."
+    },
+    {
+      "type": "gospel",
+      "citation": "Mk 12:38-44 (Shorter - Mk 12:41-44)",
+      "summary": "The widow's mite."
+    }
+  ],
+  "antiphons": [
+    {
+      "type": "entrance",
+      "option": 1,
+      "citation": "Cf. Ps 88 (87):3",
+      "text": "Let my prayer come into your presence.\nIncline your ear to my cry for help, O Lord."
+    },
+    {
+      "type": "communion",
+      "option": 1,
+      "citation": "Cf. Ps 23 (22):1–2",
+      "text": "The Lord is my shepherd; there is nothing I shall want.\nFresh and green are the pastures where he gives me repose,\nnear restful waters he leads me."
+    },
+    {
+      "type": "communion",
+      "option": 2,
+      "citation": "Roman Missal — Cf. Lk 24:35",
+      "text": "The disciples recognized the Lord Jesus\nin the breaking of bread."
+    }
+  ],
+  "planningNotes": [
+    "Black Catholic History Month",
+    "Month of Remembrance"
+  ],
+  "musicPlans": [
+    {
+      "community": "Reflections",
+      "communityId": "reflections",
+      "date": "Year B — Nov 06, 2027 (Sat)",
+      "presider": "NOT THIS YEAR",
+      "gospelAcclamation": {
+        "title": "Alleluia (Mass of Joy & Peace)",
+        "composer": "Song Title"
+      },
+      "lordsPrayer": {
+        "title": "Chanted Our Father (Snow)",
+        "composer": "Jennings/Paregorius"
+      },
+      "fractionRite": {
+        "title": "Lamb of God Setting"
+      },
+      "communionSongs": [
+        {
+          "title": "Psalm 23: Shepherd Me, O God",
+          "composer": "Marty Haugen",
+          "description": "OT32B"
+        }
+      ]
+    },
+    {
+      "community": "Foundations",
+      "communityId": "foundations",
+      "date": "Year B — Nov 07, 2027 (Sun)",
+      "presider": "NOT THIS YEAR",
+      "penitentialAct": {
+        "title": "Kyrie (Gift of God) • Adapted Version",
+        "composer": "Marty Haugen • Arranged by David Locwood"
+      },
+      "gloria": {
+        "title": "Glory to God (Mass of Joy & Peace)",
+        "composer": "Alonso • Arr. by Houze OR Arr. by Lockwood"
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "Mass of ?"
+      },
+      "lordsPrayer": {
+        "title": "Chanted Our Father (Snow)",
+        "composer": "Jennings • Paregorius"
+      },
+      "fractionRite": {
+        "title": "Lamb of God (Mass of ???)"
+      }
+    },
+    {
+      "community": "Generations",
+      "communityId": "generations",
+      "date": "Year B — Nov 07, 2027 (Sun)",
+      "presider": "NOT THIS YEAR",
+      "penitentialAct": {
+        "title": "Kyrie • Misa Del Mundo",
+        "composer": "If needed. Talk to presider!"
+      },
+      "gloria": {
+        "title": "Glory, Glory, Gloria!",
+        "composer": "Tony Alonso • Arr. by Dan Houze"
+      },
+      "gospelAcclamation": {
+        "title": "Setting from Mass of ???",
+        "composer": "Song Title"
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "Mass of ?"
+      },
+      "lordsPrayer": {
+        "title": "(Echo) Our Father",
+        "composer": "Jerome Andrews • Arranged by Dan Houze"
+      },
+      "fractionRite": {
+        "title": "Lamb of God (Mass Setting?)"
+      }
+    },
+    {
+      "community": "Heritage",
+      "communityId": "heritage",
+      "date": "Year B — Nov 07, 2027 (Sun)",
+      "presider": "NOT THIS YEAR",
+      "penitentialAct": {
+        "title": "Kyrie • Misa Del Mundo",
+        "composer": "Only if needed. Talk to presider!"
+      },
+      "gloria": {
+        "title": "Glory to God (Mass of Christ the Savior)",
+        "composer": "Dan Schutte"
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "Mass of Christ the Savior - Dan Schutte"
+      },
+      "lordsPrayer": {
+        "title": "Echo Our Father",
+        "composer": "Andrews, Arr. Bonilla • Lockwood • Fajardo"
+      },
+      "fractionRite": {
+        "title": "Lamb of God (Mass of Christ the Savior)"
+      }
+    },
+    {
+      "community": "Elevations",
+      "communityId": "elevations",
+      "date": "Year B — Nov 07, 2027 (Sun)",
+      "presider": "NOT THIS YEAR",
+      "gospelAcclamation": {
+        "title": "Setting from Mass of ???",
+        "verse": "Song Title"
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "Mass of Restoration • Joshua Blakesley"
+      },
+      "lordsPrayer": {
+        "title": "Echo Our Father",
+        "composer": "Andrews, Arr. Bonilla • Lockwood • Fajardo"
+      },
+      "fractionRite": {
+        "title": "Lamb of God (Resoration)"
+      },
+      "communionSongs": [
+        {
+          "title": "This Is the Kingdom",
+          "composer": "Elevation Worship • Pat Barrett",
+          "description": "✪ OT - 32 B (Beatitudes - Gospel Verse)"
+        }
+      ]
+    }
+  ]
+}

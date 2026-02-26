@@ -1,0 +1,353 @@
+{
+  "id": "advent-02-b",
+  "name": "ADVENT 02 [B]",
+  "year": "B",
+  "season": "advent",
+  "seasonLabel": "Advent",
+  "seasonOrder": 2,
+  "dates": [
+    {
+      "date": "2023-12-10",
+      "label": "Year B — Dec 10, 2023 (Sun)",
+      "dayOfWeek": "Sun"
+    },
+    {
+      "date": "2035-12-09",
+      "label": "Year B — Dec 09, 2035 (Sun)",
+      "dayOfWeek": "Sun"
+    },
+    {
+      "date": "2032-12-05",
+      "label": "Year B — Dec 05, 2032 (Sun)",
+      "dayOfWeek": "Sun"
+    },
+    {
+      "date": "2029-12-09",
+      "label": "Year B — Dec 09, 2029 (Sun)",
+      "dayOfWeek": "Sun"
+    },
+    {
+      "date": "2026-12-06",
+      "label": "Year B — Dec 06, 2026 (Sun)",
+      "dayOfWeek": "Sun"
+    }
+  ],
+  "lectionary": {
+    "number": "005•B",
+    "gospelTitle": "John the Baptist Prepares the Way",
+    "thematicTag": "Baptist Prologue 1/2"
+  },
+  "readings": [
+    {
+      "type": "first",
+      "citation": "Is 40:1–5, 9–11",
+      "summary": "In the desert make ready the way of the Lord."
+    },
+    {
+      "type": "psalm",
+      "citation": "Ps 85:9-10, 11-12, 13-14. R. v.8\nLord, let us see your kindness, and grant us your salvation.",
+      "summary": "",
+      "antiphon": "Ps 85:9-10, 11-12, 13-14. R. v.8\nLord, let us see your kindness, and grant us your salvation."
+    },
+    {
+      "type": "second",
+      "citation": "2 Pt 3:8-14",
+      "summary": "The Lord shows great patience."
+    },
+    {
+      "type": "gospel_verse",
+      "citation": "Lk 3:4, 6",
+      "summary": "Prepare the way of the Lord, make straight his paths:\nall flesh shall see the salvation of God."
+    },
+    {
+      "type": "gospel",
+      "citation": "Mk 1:1-8",
+      "summary": "John the Baptist proclaims the coming of the Messiah."
+    }
+  ],
+  "antiphons": [
+    {
+      "type": "entrance",
+      "option": 1,
+      "citation": "Cf. Is 30:19, 30",
+      "text": "O people of Sion, behold,\nthe Lord will come to save the nations,\nand the Lord will make the glory of his voice heard\nin the joy of your heart."
+    },
+    {
+      "type": "communion",
+      "option": 1,
+      "citation": "Bar 5:5; 4:36",
+      "text": "Jerusalem, arise and stand upon the heights,\nand behold the joy which comes to you from God."
+    }
+  ],
+  "planningNotes": [],
+  "musicPlans": [
+    {
+      "community": "Reflections",
+      "communityId": "reflections",
+      "date": "Year B — Dec 05, 2026 (Sat)",
+      "presider": "NOT THIS YEAR",
+      "prelude": {
+        "title": "8 – Second Sunday of Advent",
+        "composer": "Let Us All REJOICE! Angrisano, Hart, & Stephan"
+      },
+      "gathering": {
+        "title": "Ready The Way",
+        "composer": "Bob Hurd · Craig Kingsbury"
+      },
+      "penitentialAct": {
+        "title": "Warm the Time of WInter",
+        "composer": "Lori True"
+      },
+      "responsorialPsalm": {
+        "psalm": "Ps 85 Lord, let us see your kindness....",
+        "setting": "The Lyric Psalter • Tony Alonso & Marty Haugen"
+      },
+      "gospelAcclamation": {
+        "title": "Advent/Christmas 2 — Missa Pacem",
+        "composer": "L. Randolph Babin"
+      },
+      "offertory": {
+        "title": "Say to the Frightened Heart",
+        "composer": "Bob Hurd"
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "Mass of the Incarnate Word",
+        "composer": "Bob Hurd • Arr. Lockwood"
+      },
+      "lordsPrayer": {
+        "title": "Chanted Our Father (Snow)",
+        "composer": "Jennings • Paregorius"
+      },
+      "fractionRite": {
+        "title": "Missa Veni Emmanuel",
+        "composer": "Ed Archer"
+      },
+      "communionSongs": [
+        {
+          "title": "Bread of Life (Advent/Christmas)",
+          "composer": "Bernadette Farrell"
+        },
+        {
+          "title": "Comfort My People",
+          "composer": "Ian Callanan"
+        },
+        {
+          "title": "There Is A Longing",
+          "composer": "Anne Quigley"
+        }
+      ],
+      "sending": {
+        "title": "In the Day of the Lord",
+        "composer": "M.D. Ridge"
+      }
+    },
+    {
+      "community": "Foundations",
+      "communityId": "foundations",
+      "date": "Year B — Dec 06, 2026 (Sun)",
+      "presider": "NOT THIS YEAR",
+      "gathering": {
+        "title": "Prepare Ye the Way of the Lord",
+        "composer": "James Moore"
+      },
+      "penitentialAct": {
+        "title": "Warm the Time of WInter",
+        "composer": "Lori True"
+      },
+      "responsorialPsalm": {
+        "psalm": "Ps 126 The Lord has done great things...",
+        "setting": "The Lyric Psalter • Tony Alonso & Marty Haugen"
+      },
+      "gospelAcclamation": {
+        "title": "Hallelujah, Hallelu!",
+        "composer": "Michael Mahler",
+        "verse": "Prepare the way of the Lord, make straight his paths:\nall flesh shall see the salvation of God."
+      },
+      "offertory": {
+        "title": "To You, O God, I Lift Up My Soul",
+        "composer": "Bob Hurd"
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "Mass of the Incarnate Word"
+      },
+      "lordsPrayer": {
+        "title": "Chanted Our Father (Snow)",
+        "composer": "Jennings • Paregorius"
+      },
+      "fractionRite": {
+        "title": "Missa Veni Emmanuel"
+      },
+      "communionSongs": [
+        {
+          "title": "Bread of Life (Advent/Christmas)",
+          "composer": "Bernadette Farrell"
+        },
+        {
+          "title": "Find Us Ready",
+          "composer": "Tom Booth"
+        }
+      ],
+      "sending": {
+        "title": "Soon and Very Soon",
+        "composer": "Andrae Crouch and the Disciples"
+      }
+    },
+    {
+      "community": "Generations",
+      "communityId": "generations",
+      "date": "Year B — Dec 06, 2026 (Sun)",
+      "presider": "NOT THIS YEAR",
+      "penitentialAct": {
+        "title": "Warm the Time of WInter",
+        "composer": "Lori True"
+      },
+      "responsorialPsalm": {
+        "psalm": "Ps",
+        "setting": "Spirit & Psalm • Composer?"
+      },
+      "gospelAcclamation": {
+        "title": "Hallelujah (adapted for Liturgy)",
+        "composer": "Leonard Cohen",
+        "verse": "Prepare the way of the Lord, make straight his paths:\nall flesh shall see the salvation of God."
+      },
+      "offertory": {
+        "title": "The King Shall Come",
+        "composer": "Trevor Thomson"
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "Mass of the Incarnate Word"
+      },
+      "lordsPrayer": {
+        "title": "Chanted Our Father (Snow)",
+        "composer": "Jennings • Paregorius"
+      },
+      "fractionRite": {
+        "title": "Advent Lamb of God"
+      },
+      "communionSongs": [
+        {
+          "title": "There Is A Longing",
+          "composer": "Anne Quigley"
+        },
+        {
+          "title": "Creator of the Stars of Night",
+          "composer": "Ed Bolduc · Karen Bolduc · John Carrozza"
+        },
+        {
+          "title": "Goodness of God",
+          "composer": "Msgr's homily"
+        }
+      ]
+    },
+    {
+      "community": "Heritage",
+      "communityId": "heritage",
+      "date": "Year B — Dec 06, 2026 (Sun)",
+      "presider": "NOT THIS YEAR",
+      "gathering": {
+        "title": "Ready The Way",
+        "composer": "Bob Hurd · Craig Kingsbury"
+      },
+      "penitentialAct": {
+        "title": "Warm the Time of WInter",
+        "composer": "Lori True"
+      },
+      "responsorialPsalm": {
+        "psalm": "Ps 126 The Lord has done great things...",
+        "setting": "The Lyric Psalter • Tony Alonso & Marty Haugen"
+      },
+      "gospelAcclamation": {
+        "title": "Advent/Christmas 2 — Missa Pacem",
+        "composer": "L. Randolph Babin"
+      },
+      "offertory": {
+        "title": "Say to the Frightened Heart",
+        "composer": "Bob Hurd"
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "Mass of the Incarnate Word"
+      },
+      "lordsPrayer": {
+        "title": "Chanted Our Father (Snow)",
+        "composer": "Jennings • Paregorius"
+      },
+      "fractionRite": {
+        "title": "Missa Veni Emmanuel"
+      },
+      "communionSongs": [
+        {
+          "title": "Bread of Life (Advent/Christmas)",
+          "composer": "Bernadette Farrell"
+        },
+        {
+          "title": "Comfort My People",
+          "composer": "Ian Callanan"
+        },
+        {
+          "title": "There Is A Longing",
+          "composer": "Anne Quigley"
+        }
+      ],
+      "sending": {
+        "title": "On Jordan's Bank",
+        "composer": "WINCHESTER NEW"
+      }
+    },
+    {
+      "community": "Elevations",
+      "communityId": "elevations",
+      "date": "Year B — Dec 06, 2026 (Sun)",
+      "presider": "NOT THIS YEAR",
+      "gathering": {
+        "title": "Prepare Ye the Way",
+        "composer": "John Angotti"
+      },
+      "penitentialAct": {
+        "title": "Warm the Time of WInter",
+        "composer": "Lori True"
+      },
+      "responsorialPsalm": {
+        "psalm": "Ps 126 The Lord has done great things...",
+        "setting": "Spirit & Psalm • Chris Muglia"
+      },
+      "gospelAcclamation": {
+        "title": "Hallelujah, Hallelu!",
+        "composer": "Michael Mahler",
+        "verse": "Prepare the way of the Lord, make straight his paths:\nall flesh shall see the salvation of God."
+      },
+      "offertory": {
+        "title": "The King Shall Come",
+        "composer": "Trevor Thomson"
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "Incarnate Word • Bob Hurd , Arr. by Lockwood",
+        "composer": "Bob Hurd , Arr. by Lockwood"
+      },
+      "lordsPrayer": {
+        "title": "Chanted Our Father (Snow)",
+        "composer": "Jennings • Paregorius"
+      },
+      "fractionRite": {
+        "title": "Advent Lamb of God"
+      },
+      "communionSongs": [
+        {
+          "title": "Bethlehem (House of Bread)",
+          "composer": "Alan J. Hommerding · Ed Bolduc"
+        },
+        {
+          "title": "Creator of the Stars of Night",
+          "composer": "Ed Bolduc · Karen Bolduc · John Carrozza"
+        },
+        {
+          "title": "There Is A Longing",
+          "composer": "Anne Quigley"
+        }
+      ],
+      "sending": {
+        "title": "Even So Come",
+        "composer": "Chris Tomlin"
+      }
+    }
+  ]
+}

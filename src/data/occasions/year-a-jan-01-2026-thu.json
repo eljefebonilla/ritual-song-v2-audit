@@ -1,0 +1,25 @@
+{
+  "id": "year-a-jan-01-2026-thu",
+  "name": "Year A — Jan 01, 2026 (Thu)",
+  "year": "ABC",
+  "season": "ordinary",
+  "seasonLabel": "Ordinary Time",
+  "seasonOrder": 1,
+  "dates": [],
+  "lectionary": {
+    "number": "Year C — Jan 01, 2031 (Wed)",
+    "gospelTitle": "Year B — Jan 01, 2030 (Tue)",
+    "thematicTag": "Year A — Jan 01, 2029 (Mon)",
+    "thematicDetail": "Year C — Jan 01, 2028 (Sat)"
+  },
+  "readings": [
+    {
+      "type": "psalm",
+      "citation": "Name of Jesus",
+      "summary": ""
+    }
+  ],
+  "antiphons": [],
+  "planningNotes": [],
+  "musicPlans": []
+}

@@ -1,0 +1,192 @@
+{
+  "id": "ordinary-time-09-a",
+  "name": "ORDINARY TIME 09 [A]",
+  "year": "A",
+  "season": "ordinary",
+  "seasonLabel": "Ordinary Time",
+  "seasonOrder": 9,
+  "dates": [
+    {
+      "date": "2035-06-03",
+      "label": "Year A — Jun 03, 2035 (Sun)",
+      "dayOfWeek": "Sun"
+    }
+  ],
+  "lectionary": {
+    "number": "085•A",
+    "gospelTitle": "House Built on Rock",
+    "thematicTag": "Sermon Mount 6/6"
+  },
+  "readings": [
+    {
+      "type": "first",
+      "citation": "Dt 11:18, 26–28, 32",
+      "summary": "I set before you here this day a blessing and a curse."
+    },
+    {
+      "type": "psalm",
+      "citation": "Ps 31:2–3, 3–4, 17, 25\nLord, be my rock of safety.",
+      "summary": "",
+      "antiphon": "Ps 31:2–3, 3–4, 17, 25\nLord, be my rock of safety."
+    },
+    {
+      "type": "second",
+      "citation": "Rom 3:21–25, 28",
+      "summary": "A person is justified by faith apart from works of the law."
+    },
+    {
+      "type": "gospel_verse",
+      "citation": "Jn 15:5",
+      "summary": "I am the vine, you are the branches, says the Lord;\nwhoever remains in me and I in him will bear much fruit."
+    },
+    {
+      "type": "gospel",
+      "citation": "Mt 7:21–27",
+      "summary": "The house built on rock, and the house built on sand."
+    }
+  ],
+  "antiphons": [
+    {
+      "type": "entrance",
+      "option": 1,
+      "citation": "Cf. Ps 25 (24):16, 18",
+      "text": "Turn to me and have mercy on me, O Lord,\nfor I am alone and poor.\nSee my lowliness and suffering\nand take away all my sins, my God"
+    },
+    {
+      "type": "communion",
+      "option": 1,
+      "citation": "Cf. Ps 17 (16):6]",
+      "text": "To you I call, for you will surely heed me, O God;\nturn your ear to me; hear my words."
+    },
+    {
+      "type": "communion",
+      "option": 2,
+      "citation": "Communion Antiphon • Option II | Mk 11:23, 24",
+      "text": "Amen, I say to you: Whatever you ask for in prayer,\nbelieve you will receive it,\nand it will be yours, says the Lord."
+    }
+  ],
+  "planningNotes": [],
+  "musicPlans": [
+    {
+      "community": "Reflections",
+      "communityId": "reflections",
+      "date": "Year A — Sep 12, 2026 (Sat)",
+      "presider": "TBD",
+      "penitentialAct": {
+        "title": "Kyrie • Misa Del Mundo",
+        "composer": "Only if needed. Talk to presider!"
+      },
+      "gloria": {
+        "title": "Glory to God (Through-composed Setting)",
+        "composer": "Mass of Renewal • Curtis Stephan"
+      },
+      "responsorialPsalm": {
+        "psalm": "Ps 31 Lord, be my rock of safety.",
+        "setting": "The Lyric Psalter • Tony Alonso & Marty Haugen"
+      },
+      "gospelAcclamation": {
+        "title": "Alleluia (Mass of Joy & Peace)",
+        "composer": "Song Title",
+        "verse": "I am the vine, you are the branches, says the Lord;\nwhoever remains in me and I in him will bear much fruit."
+      },
+      "lordsPrayer": {
+        "title": "Chanted Our Father (Snow)",
+        "composer": "Jennings/Paregorius"
+      },
+      "fractionRite": {
+        "title": "Lamb of God Setting"
+      }
+    },
+    {
+      "community": "Foundations",
+      "communityId": "foundations",
+      "date": "Year A — Sep 13, 2026 (Sun)",
+      "presider": "TBD",
+      "penitentialAct": {
+        "title": "Kyrie (Gift of God) • Adapted Version",
+        "composer": "Marty Haugen • Arranged by David Locwood"
+      },
+      "gloria": {
+        "title": "Glory to God (Mass of Joy & Peace)",
+        "composer": "Alonso • Arr. by Houze OR Arr. by Lockwood"
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "Mass of Glory • Bob Hurd • Arr. by Dan Houze"
+      },
+      "lordsPrayer": {
+        "title": "Chanted Our Father (Snow)",
+        "composer": "Jennings • Paregorius"
+      },
+      "fractionRite": {
+        "title": "Lamb of God (Mass of Glory)"
+      }
+    },
+    {
+      "community": "Generations",
+      "communityId": "generations",
+      "date": "Year A — Sep 13, 2026 (Sun)",
+      "presider": "TBD",
+      "penitentialAct": {
+        "title": "Kyrie • Misa Del Mundo",
+        "composer": "If needed. Talk to presider!"
+      },
+      "gloria": {
+        "title": "Glory, Glory, Gloria!",
+        "composer": "Tony Alonso • Arr. by Dan Houze"
+      },
+      "gospelAcclamation": {
+        "title": "Setting from Mass of ???",
+        "composer": "Song Title"
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "Mass of Restoration",
+        "composer": "Joshua Blakesley"
+      },
+      "lordsPrayer": {
+        "title": "(Echo) Our Father",
+        "composer": "Jerome Andrews • Arranged by Dan Houze"
+      },
+      "fractionRite": {
+        "title": "Lamb of God (Resoration)"
+      }
+    },
+    {
+      "community": "Heritage",
+      "communityId": "heritage",
+      "date": "Year A — Sep 13, 2026 (Sun)",
+      "presider": "TBD",
+      "gloria": {
+        "title": "Glory to God (Mass of Joy & Peace)",
+        "composer": "Tony Alonso, Thru Composed"
+      },
+      "lordsPrayer": {
+        "title": "Echo Our Father",
+        "composer": "Andrews, Arr. Bonilla • Lockwood • Fajardo"
+      }
+    },
+    {
+      "community": "Elevations",
+      "communityId": "elevations",
+      "date": "Year A — Sep 13, 2026 (Sun)",
+      "presider": "TBD",
+      "penitentialAct": {
+        "title": "Kyrie • Misa Del Mundo",
+        "composer": "Only if needed. Talk to presider!"
+      },
+      "gloria": {
+        "title": "Glory, Glory, Gloria!"
+      },
+      "gospelAcclamation": {
+        "title": "Setting from Mass of ???",
+        "verse": "Song Title"
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "Mass of ? • Composer"
+      },
+      "lordsPrayer": {
+        "title": "Echo Our Father",
+        "composer": "Andrews, Arr. Bonilla • Lockwood • Fajardo"
+      }
+    }
+  ]
+}

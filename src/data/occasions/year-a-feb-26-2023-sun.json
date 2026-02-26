@@ -1,0 +1,417 @@
+{
+  "id": "year-a-feb-26-2023-sun",
+  "name": "Year A — Feb 26, 2023 (Sun)",
+  "year": "ABC",
+  "season": "ordinary",
+  "seasonLabel": "Ordinary Time",
+  "seasonOrder": 26,
+  "dates": [],
+  "lectionary": {
+    "number": "Year A — Mar 14, 2038 (Sun)",
+    "gospelTitle": "Year A — Feb 11, 2035 (Sun)",
+    "thematicTag": "Year A — Feb 15, 2032 (Sun)",
+    "thematicDetail": "Year A — Feb 18, 2029 (Sun)"
+  },
+  "readings": [
+    {
+      "type": "psalm",
+      "citation": "New Adam Tested",
+      "summary": "",
+      "antiphon": "Planning Reminders"
+    },
+    {
+      "type": "second",
+      "citation": "RECONGRESS | FEB 19 - FEB 22, 2026",
+      "summary": ""
+    },
+    {
+      "type": "gospel_verse",
+      "citation": "When he calls on me, I will answer him;\nI will deliver him and give him glory,\nI will grant him length of days.",
+      "summary": "Entrance Antiphon • Option II"
+    },
+    {
+      "type": "gospel",
+      "citation": "Reading I | Gen 2:7-9; 3:1-7",
+      "summary": "The Lord creates man and the garden of Eden."
+    }
+  ],
+  "antiphons": [
+    {
+      "type": "entrance",
+      "option": 1,
+      "citation": "Verse before the Gospel | Mt 4:4b",
+      "text": "One does not live on bread alone, but on every word\nthat comes forth from the mouth of God."
+    },
+    {
+      "type": "communion",
+      "option": 2,
+      "citation": "Communion Antiphon • Option I | Cf. Mt 4:4",
+      "text": "One does not live by bread alone, but by every word\nthat comes forth from the mouth of God."
+    }
+  ],
+  "planningNotes": [
+    "Communion Antiphon • Option II | Cf. Ps 91 (90):4",
+    "The Lord will conceal you with his pinions,\nand under his wings you will trust."
+  ],
+  "musicPlans": [
+    {
+      "community": "Reflections",
+      "communityId": "reflections",
+      "date": "Year A — Feb 21, 2026 (Sat)",
+      "presider": "TBD",
+      "prelude": {
+        "title": "Kyrie Litany",
+        "composer": "Luke D. Rose",
+        "description": "Also, see Taizé Setlist"
+      },
+      "penitentialAct": {
+        "title": "Gabe Huck • Adapted and Arr. by Tony Alonso",
+        "composer": "Description",
+        "description": "Penitential Act"
+      },
+      "gloria": {
+        "title": "Kyrie (Mass of Colour) — optional tropes",
+        "composer": "Jeffrey Bonilla & David Lockwood",
+        "description": "Gloria"
+      },
+      "gospelAcclamation": {
+        "title": "The Lyric Psalter • Tony Alonso & Marty Haugen",
+        "composer": "Gospel Acclamation",
+        "verse": "Mass of Joy & Peace Lenten G.A. (Refrain)"
+      },
+      "offertory": {
+        "title": "Verse LENT • 01ABC",
+        "description": "Offertory Song"
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "Be Not Afraid",
+        "composer": "Robert J. Dufford, SJ"
+      },
+      "lordsPrayer": {
+        "title": "Eucharistic Acclamations",
+        "composer": "Mass of Creation",
+        "description": "Marty Haugen • Arr. by Lockwood & Phan"
+      },
+      "fractionRite": {
+        "title": "Holy",
+        "composer": "Mystery of Faith",
+        "description": "Amen"
+      },
+      "communionSongs": [
+        {
+          "title": "The Lord's Prayer",
+          "composer": "Chanted Our Father (Snow)",
+          "description": "Jennings/Paregorius"
+        },
+        {
+          "title": "Fraction Rite",
+          "composer": "Lamb of God (Mass of Creation)",
+          "description": "Marty Haugen • Arr. by Lockwood & Phan"
+        },
+        {
+          "title": "Communion Songs",
+          "composer": "Beyond the Days",
+          "description": "Ricky Manalo, CSP"
+        },
+        {
+          "title": "\"Not by bread alone are we to walk this journey\"",
+          "composer": "Turn To Me",
+          "description": "John Foley SJ"
+        }
+      ]
+    },
+    {
+      "community": "Foundations",
+      "communityId": "foundations",
+      "date": "Year A — Feb 22, 2026 (Sun)",
+      "presider": "TBD",
+      "prelude": {
+        "title": "N/A"
+      },
+      "penitentialAct": {
+        "title": "Robert J. Dufford, SJ",
+        "composer": "\"You shall cross the barren desert...\"",
+        "description": "Penitential Act"
+      },
+      "gloria": {
+        "title": "Kyrie (Mass of Colour) — optional tropes",
+        "composer": "Jeffrey Bonilla & David Lockwood",
+        "description": "Gloria"
+      },
+      "gospelAcclamation": {
+        "title": "Spirit & Psalm • Cyrtus Stephan",
+        "composer": "Gospel Acclamation",
+        "verse": "Praise to You, Lord Jesus Christ"
+      },
+      "offertory": {
+        "title": "Verse - LENT • 01ABC",
+        "description": "Offertory Song"
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "Lead Me to the Desert",
+        "composer": "Sarah Hart • Dwight Liles"
+      },
+      "lordsPrayer": {
+        "title": "Eucharistic Acclamations",
+        "composer": "Mass of a Firm Foundation",
+        "description": "David Lockwood"
+      },
+      "fractionRite": {
+        "title": "Holy",
+        "composer": "Mystery of Faith",
+        "description": "Amen"
+      },
+      "communionSongs": [
+        {
+          "title": "The Lord's Prayer",
+          "composer": "Chanted Our Father (Snow)",
+          "description": "Jennings • Paregorius"
+        },
+        {
+          "title": "Fraction Rite",
+          "composer": "Lamb of God (Mass of a Firm Foundation)",
+          "description": "David Lockwood"
+        },
+        {
+          "title": "Communion Songs",
+          "composer": "Beyond the Days",
+          "description": "Ricky Manalo, CSP"
+        },
+        {
+          "title": "\"Not by bread alone are we to walk this journey\"",
+          "composer": "Change Our Hearts",
+          "description": "Rory Cooney"
+        }
+      ],
+      "sending": {
+        "title": "Matt Maher",
+        "composer": "General"
+      }
+    },
+    {
+      "community": "Generations",
+      "communityId": "generations",
+      "date": "Year A — Feb 22, 2026 (Sun)",
+      "presider": "TBD",
+      "prelude": {
+        "title": "N/A"
+      },
+      "penitentialAct": {
+        "title": "Robert J. Dufford, SJ",
+        "composer": "\"You shall cross the barren desert...\"",
+        "description": "Penitential Act"
+      },
+      "gloria": {
+        "title": "Kyrie (Mass of Colour) — optional tropes",
+        "composer": "Jeffrey Bonilla & David Lockwood",
+        "description": "Gloria"
+      },
+      "gospelAcclamation": {
+        "title": "Spirit & Psalm • Cyrtus Stephan",
+        "composer": "Gospel Acclamation",
+        "verse": "Praise to You, Lord Jesus Christ"
+      },
+      "offertory": {
+        "title": "Verse - LENT • 01ABC",
+        "description": "Offertory Song"
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "Lead Me to the Desert",
+        "composer": "Sarah Hart • Dwight Liles"
+      },
+      "lordsPrayer": {
+        "title": "Eucharistic Acclamations",
+        "composer": "Mass of Colour",
+        "description": "Jeffrey Bonilla & David Lockwood"
+      },
+      "fractionRite": {
+        "title": "Holy",
+        "composer": "Mystery of Faith",
+        "description": "Amen"
+      },
+      "communionSongs": [
+        {
+          "title": "The Lord's Prayer",
+          "composer": "Spoken during Season of Lent"
+        },
+        {
+          "title": "Fraction Rite",
+          "composer": "Lamb of God (Mass of Colour)",
+          "description": "Jeffrey Bonilla & David Lockwood"
+        },
+        {
+          "title": "Communion Songs",
+          "composer": "Beyond the Days",
+          "description": "Ricky Manalo, CSP"
+        },
+        {
+          "title": "\"Not by bread alone are we to walk this journey\"",
+          "composer": "Blessed Be Your Name",
+          "description": "Matt Redman"
+        },
+        {
+          "title": "\"...when I'm found in the desert place...\"",
+          "composer": "In Every Age",
+          "description": "Janèt Sullivan Whitaker"
+        },
+        {
+          "title": "General",
+          "composer": "Lord I Need You",
+          "description": "Matt Maher"
+        }
+      ],
+      "sending": {
+        "title": "40 Days",
+        "composer": "Matt Maher",
+        "description": "Lenten Sending"
+      }
+    },
+    {
+      "community": "Heritage",
+      "communityId": "heritage",
+      "date": "Year A — Feb 22, 2026 (Sun)",
+      "presider": "TBD",
+      "prelude": {
+        "title": "N/A"
+      },
+      "penitentialAct": {
+        "title": "Gabe Huck • Adapted and Arr. by Tony Alonso",
+        "composer": "Description",
+        "description": "Penitential Act"
+      },
+      "gloria": {
+        "title": "Kyrie (Mass of Colour) — optional tropes",
+        "composer": "Jeffrey Bonilla & David Lockwood",
+        "description": "Gloria"
+      },
+      "gospelAcclamation": {
+        "title": "The Lyric Psalter • Tony Alonso & Marty Haugen",
+        "composer": "Gospel Acclamation",
+        "verse": "Mass of Joy & Peace Lenten G.A. (Refrain)"
+      },
+      "offertory": {
+        "title": "Verse - LENT • 01ABC",
+        "description": "Offertory Song"
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "Be Not Afraid",
+        "composer": "Robert J. Dufford, SJ"
+      },
+      "lordsPrayer": {
+        "title": "Eucharistic Acclamations",
+        "composer": "Mass of Creation - Rev. 2010",
+        "description": "Marty Haugen"
+      },
+      "fractionRite": {
+        "title": "Holy",
+        "composer": "Mystery of Faith",
+        "description": "Amen"
+      },
+      "communionSongs": [
+        {
+          "title": "The Lord's Prayer",
+          "composer": "Chanted Our Father (Snow)",
+          "description": "Jennings/Paregorius"
+        },
+        {
+          "title": "Fraction Rite",
+          "composer": "Lamb of God (Mass of Creation)",
+          "description": "Tony Alonso"
+        },
+        {
+          "title": "Communion Songs",
+          "composer": "Beyond the Days",
+          "description": "Ricky Manalo, CSP"
+        },
+        {
+          "title": "\"Not by bread alone are we to walk this journey\"",
+          "composer": "Turn To Me",
+          "description": "John Foley SJ"
+        },
+        {
+          "title": "Description",
+          "composer": "Be Still and Know That I Am God",
+          "description": "Christopher Walker • Sr. Paule Freeburg, DC"
+        }
+      ],
+      "sending": {
+        "title": "KINGSFOLD • Bob Hurd",
+        "composer": "Lenten Sending Song"
+      }
+    },
+    {
+      "community": "Elevations",
+      "communityId": "elevations",
+      "date": "Year A — Feb 22, 2026 (Sun)",
+      "presider": "TBD",
+      "prelude": {
+        "title": "N/A"
+      },
+      "penitentialAct": {
+        "title": "Gabe Huck • Adapted and Arr. by Tony Alonso",
+        "composer": "Lenten Gathering Song",
+        "description": "Penitential Act"
+      },
+      "gloria": {
+        "title": "Kyrie (Mass of Colour) — optional tropes",
+        "composer": "Jeffrey Bonilla & David Lockwood",
+        "description": "Gloria"
+      },
+      "gospelAcclamation": {
+        "title": "Spirit & Psalm • Cyrtus Stephan",
+        "composer": "Gospel Acclamation",
+        "verse": "Praise to You, Lord Jesus Christ"
+      },
+      "offertory": {
+        "title": "Verse - LENT • 01ABC",
+        "description": "Offertory Song"
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "Be Not Afraid",
+        "composer": "Robert J. Dufford, SJ"
+      },
+      "lordsPrayer": {
+        "title": "Eucharistic Acclamations",
+        "composer": "Mass of Colour",
+        "description": "Bonilla & Lockwood"
+      },
+      "fractionRite": {
+        "title": "Holy",
+        "composer": "Mystery of Faith",
+        "description": "Amen"
+      },
+      "communionSongs": [
+        {
+          "title": "The Lord's Prayer",
+          "composer": "Chanted Our Father (Snow)",
+          "description": "Andrews, Arr. Bonilla • Lockwood • Fajardo"
+        },
+        {
+          "title": "Fraction Rite",
+          "composer": "Lamb of God (Mass of Colour)",
+          "description": "Jeffrey Bonilla & David Lockwood"
+        },
+        {
+          "title": "Communion Songs",
+          "composer": "Into the Desert",
+          "description": "Curtis Stephan · Sarah Hart"
+        },
+        {
+          "title": "\"Here in the silence my word will speak\"",
+          "composer": "Beyond the Days",
+          "description": "Ricky Manalo, CSP"
+        },
+        {
+          "title": "\"Not by bread alone are we to walk this journey\"",
+          "composer": "Lord I Need You",
+          "description": "Matt Maher"
+        }
+      ],
+      "sending": {
+        "title": "Sending Song",
+        "composer": "40 Days",
+        "description": "Matt Maher"
+      }
+    }
+  ]
+}

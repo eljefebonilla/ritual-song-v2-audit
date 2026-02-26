@@ -1,0 +1,414 @@
+{
+  "id": "year-c-aug-10-2025-sun",
+  "name": "Year C — Aug 10, 2025 (Sun)",
+  "year": "ABC",
+  "season": "ordinary",
+  "seasonLabel": "Ordinary Time",
+  "seasonOrder": 10,
+  "dates": [],
+  "lectionary": {
+    "number": "Year C — Aug 12, 2040 (Sun)",
+    "gospelTitle": "Year C — Aug 09, 2037 (Sun)",
+    "thematicTag": "Year C — Aug 13, 2034 (Sun)",
+    "thematicDetail": "Year C — Aug 10, 2031 (Sun)"
+  },
+  "readings": [
+    {
+      "type": "psalm",
+      "citation": "Vigil Parables 1/2",
+      "summary": "",
+      "antiphon": "Planning Reminders"
+    },
+    {
+      "type": "gospel_verse",
+      "citation": "Look to your covenant, O Lord,\nand forget not the life of your poor ones for ever.\nArise, O God, and defend your cause,\nand forget not the cries of those who seek you.",
+      "summary": ""
+    },
+    {
+      "type": "gospel",
+      "citation": "Reading I | Wis 18:6-9",
+      "summary": "Passover vigil: communal memory fuels courage and fidelity."
+    }
+  ],
+  "antiphons": [
+    {
+      "type": "entrance",
+      "option": 1,
+      "citation": "Verse before the Gospel | Mt 24:42a, 44",
+      "text": "Stay awake and be ready!\nFor you do not know on what day your Lord will come."
+    },
+    {
+      "type": "communion",
+      "option": 2,
+      "citation": "Communion Antiphon • Option I | Ps 147:12, 14",
+      "text": "O Jerusalem, glorify the Lord,\nwho gives you your fill of finest wheat."
+    }
+  ],
+  "planningNotes": [
+    "Communion Antiphon • Option II |  Cf. Jn 6:51",
+    "The bread that I will give, says the Lord,\nis my flesh for the life of the world."
+  ],
+  "musicPlans": [
+    {
+      "community": "Reflections",
+      "communityId": "reflections",
+      "date": "Year C — Aug 09, 2025 (Sat)",
+      "presider": "NOT THIS YEAR",
+      "prelude": {
+        "title": "You Are Welcome Here",
+        "composer": "Chris Muglia",
+        "description": "Teaching to community for Feast Day!"
+      },
+      "penitentialAct": {
+        "title": "Bernadette Farrell",
+        "composer": "“Shine in our hearts” pairs beautifully with “lamps lit” (Gospel)",
+        "description": "Penitential Act"
+      },
+      "gloria": {
+        "title": "Kyrie • Misa Del Mundo",
+        "composer": "Only if needed. Talk to presider!",
+        "description": "Gloria"
+      },
+      "gospelAcclamation": {
+        "title": "The Lyric Psalter • Tony Alonso & Marty Haugen",
+        "composer": "Gospel Acclamation",
+        "verse": "Alleluia (Mass of Joy & Peace)"
+      },
+      "offertory": {
+        "title": "The Lyric Gospel Acclamations • Tony Alonso",
+        "description": "Offertory Song"
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "Do Not Be Afraid",
+        "composer": "Jeanne Cotter"
+      },
+      "lordsPrayer": {
+        "title": "Eucharistic Acclamations",
+        "composer": "Mass of the Holy Family",
+        "description": "Chris de Silva"
+      },
+      "fractionRite": {
+        "title": "Holy, Holy, Holy",
+        "composer": "When We Eat This Bread",
+        "description": "Amen"
+      },
+      "communionSongs": [
+        {
+          "title": "The Lord's Prayer",
+          "composer": "Chanted Our Father (Snow)",
+          "description": "Jennings/Paregorius"
+        },
+        {
+          "title": "Fraction Rite",
+          "composer": "Lamb of God (Mass of the Holy Family)",
+          "description": "Chris de Silva"
+        },
+        {
+          "title": "Communion Songs",
+          "composer": "Gift of Finest Wheat",
+          "description": "BICENTENNIAL • Robert Kreutz • Omer Westendorf"
+        },
+        {
+          "title": "Communion Antiphon",
+          "composer": "The Supper of the Lord",
+          "description": "Laurence Rosania"
+        }
+      ]
+    },
+    {
+      "community": "Foundations",
+      "communityId": "foundations",
+      "date": "Year C — Aug 10, 2025 (Sun)",
+      "presider": "NOT THIS YEAR",
+      "prelude": {
+        "title": "You Are Welcome Here",
+        "composer": "Chris Muglia",
+        "description": "Teaching to community for Feast Day!"
+      },
+      "penitentialAct": {
+        "title": "Tom Booth",
+        "composer": "” Keep lamps lit; the Master may arrive at an unexpected hour.\"",
+        "description": "Penitential Act"
+      },
+      "gloria": {
+        "title": "Kyrie (Gift of God) • Adapted Version",
+        "composer": "Marty Haugen • Arranged by David Locwood",
+        "description": "Gloria"
+      },
+      "gospelAcclamation": {
+        "title": "Spirit & Psalm • Jackie François",
+        "composer": "Gospel Acclamation",
+        "verse": "Song Title"
+      },
+      "offertory": {
+        "title": "Verse Audio Example",
+        "description": "Offertory Song"
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "Be Not Afraid",
+        "composer": "Bob Dufford, SJ"
+      },
+      "lordsPrayer": {
+        "title": "Eucharistic Acclamations",
+        "composer": "Mass of Glory • Bob Hurd • Arr. by Dan Houze"
+      },
+      "fractionRite": {
+        "title": "Holy, Holy",
+        "composer": "We Proclaim Your Death",
+        "description": "Amen"
+      },
+      "communionSongs": [
+        {
+          "title": "The Lord's Prayer",
+          "composer": "Chanted Our Father (Snow)",
+          "description": "Jennings • Paregorius"
+        },
+        {
+          "title": "Fraction Rite",
+          "composer": "Lamb of God (Mass of Glory)"
+        },
+        {
+          "title": "Communion Songs",
+          "composer": "Gift of Finest Wheat",
+          "description": "BICENTENNIAL • Robert Kreutz • Omer Westendorf"
+        },
+        {
+          "title": "Communion Antiphon",
+          "composer": "Christ Be Our Light",
+          "description": "Bernadette Farrell"
+        }
+      ],
+      "sending": {
+        "title": "Spiritual",
+        "composer": "Gospel | “lamps lit”"
+      }
+    },
+    {
+      "community": "Generations",
+      "communityId": "generations",
+      "date": "Year C — Aug 10, 2025 (Sun)",
+      "presider": "NOT THIS YEAR",
+      "prelude": {
+        "title": "You Are Welcome Here",
+        "composer": "Chris Muglia",
+        "description": "Teaching to community for Feast Day"
+      },
+      "penitentialAct": {
+        "title": "Bernadette Farrell",
+        "composer": "“Shine in our hearts” pairs beautifully with “lamps lit” (Gospel)",
+        "description": "Penitential Act"
+      },
+      "gloria": {
+        "title": "Kyrie • Misa Del Mundo",
+        "composer": "Only if needed. Talk to presider!",
+        "description": "Gloria"
+      },
+      "gospelAcclamation": {
+        "title": "Spirit & Psalm • Jackie François",
+        "composer": "Gospel Acclamation",
+        "verse": "Setting from Mass of Renewal"
+      },
+      "offertory": {
+        "title": "Spirit & Psalm • Curtis Stephan",
+        "description": "Offertory Song"
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "Be Not Afraid",
+        "composer": "Bob Dufford, SJ"
+      },
+      "lordsPrayer": {
+        "title": "Eucharistic Acclamations",
+        "composer": "Mass of Restoration",
+        "description": "Joshua Blakesley"
+      },
+      "fractionRite": {
+        "title": "Holy, Holy, Holy",
+        "composer": "Save Us Savior of the World",
+        "description": "Amen"
+      },
+      "communionSongs": [
+        {
+          "title": "The Lord's Prayer",
+          "composer": "(Echo) Our Father",
+          "description": "Jerome Andrews • Arranged by Dan Houze"
+        },
+        {
+          "title": "Fraction Rite",
+          "composer": "Lamb of God (Resoration)"
+        },
+        {
+          "title": "Communion Songs",
+          "composer": "Come to the Feast | Ven al Banquete",
+          "description": "Bob Hurd • Arranged by David Lockwood"
+        },
+        {
+          "title": "\"Here the hungry find plenty, here the thirsty shall drink.\"",
+          "composer": "I Am the Bread of Life",
+          "description": "Sr. Suzanne Toolan RSM, Arr. by Dan Houze"
+        },
+        {
+          "title": "Communion Antiphon",
+          "composer": "A Place At Your Table",
+          "description": "Ben Walther"
+        },
+        {
+          "title": "Table Song",
+          "composer": "Jesus, Living Bread",
+          "description": "Tom Booth"
+        }
+      ],
+      "sending": {
+        "title": "This Little Light of Mine",
+        "composer": "Spiritual",
+        "description": "Gospel | “lamps lit”"
+      }
+    },
+    {
+      "community": "Heritage",
+      "communityId": "heritage",
+      "date": "Year C — Aug 10, 2025 (Sun)",
+      "presider": "NOT THIS YEAR",
+      "prelude": {
+        "title": "You Are Welcome Here",
+        "composer": "Chris Muglia",
+        "description": "Teaching to community for Feast Day"
+      },
+      "penitentialAct": {
+        "title": "Bernadette Farrell",
+        "composer": "“Shine in our hearts” pairs beautifully with “lamps lit” (Gospel)",
+        "description": "Penitential Act"
+      },
+      "gloria": {
+        "title": "Kyrie • Misa Del Mundo",
+        "composer": "Only if needed. Talk to presider!",
+        "description": "Gloria"
+      },
+      "gospelAcclamation": {
+        "title": "The Lyric Psalter • Tony Alonso & Marty Haugen",
+        "composer": "Gospel Acclamation",
+        "verse": "Alleluia (Mass of Joy & Peace)"
+      },
+      "offertory": {
+        "title": "The Lyric Gospel Acclamations • Tony Alonso",
+        "description": "Offertory Song"
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "Be Not Afraid",
+        "composer": "Bob Dufford, SJ"
+      },
+      "lordsPrayer": {
+        "title": "Eucharistic Acclamations",
+        "composer": "Mass of Christ the Savior - Dan Schutte"
+      },
+      "fractionRite": {
+        "title": "Holy",
+        "composer": "When We Eat This Bread",
+        "description": "Amen"
+      },
+      "communionSongs": [
+        {
+          "title": "The Lord's Prayer",
+          "composer": "Echo Our Father",
+          "description": "Andrews, Arr. Bonilla • Lockwood • Fajardo"
+        },
+        {
+          "title": "Fraction Rite",
+          "composer": "Lamb of God (Mass of Christ the Savior)"
+        },
+        {
+          "title": "Communion Songs",
+          "composer": "I Am the Bread of Life",
+          "description": "Sr. Suzanne Toolan RSM, Arr. by Dan Houze"
+        },
+        {
+          "title": "Communion Antiphon",
+          "composer": "Gift of Finest Wheat",
+          "description": "BICENTENNIAL • Robert Kreutz • Omer Westendorf"
+        },
+        {
+          "title": "Communion Antiphon",
+          "composer": "The Supper of the Lord",
+          "description": "Laurence Rosania"
+        }
+      ],
+      "sending": {
+        "title": "ELLACOMBE • Leon M. Adkins",
+        "composer": "Stewardship and readiness to serve until the Master returns."
+      }
+    },
+    {
+      "community": "Elevations",
+      "communityId": "elevations",
+      "date": "Year C — Aug 10, 2025 (Sun)",
+      "presider": "NOT THIS YEAR",
+      "prelude": {
+        "title": "You Are Welcome Here",
+        "composer": "Chris Muglia",
+        "description": "Teaching to community for Feast Day"
+      },
+      "penitentialAct": {
+        "title": "Bernadette Farrell",
+        "composer": "“Shine in our hearts” pairs beautifully with “lamps lit” (Gospel)",
+        "description": "Penitential Act"
+      },
+      "gloria": {
+        "title": "Kyrie • Misa Del Mundo",
+        "composer": "Only if needed. Talk to presider!",
+        "description": "Gloria"
+      },
+      "gospelAcclamation": {
+        "title": "Spirit & Psalm • Jackie François",
+        "composer": "Gospel Acclamation",
+        "verse": "Setting from Mass of Renewal"
+      },
+      "offertory": {
+        "title": "Spirit & Psalm • Curtis Stephan",
+        "description": "Offertory Song"
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "Be Not Afraid",
+        "composer": "Bob Dufford, SJ"
+      },
+      "lordsPrayer": {
+        "title": "Eucharistic Acclamations",
+        "composer": "Mass of Restoration • Joshua Blakesley"
+      },
+      "fractionRite": {
+        "title": "Holy, Holy, Holy",
+        "composer": "Save Us Savior of the World",
+        "description": "Amen"
+      },
+      "communionSongs": [
+        {
+          "title": "The Lord's Prayer",
+          "composer": "Echo Our Father",
+          "description": "Andrews, Arr. Bonilla • Lockwood • Fajardo"
+        },
+        {
+          "title": "Fraction Rite",
+          "composer": "Lamb of God (Resoration)"
+        },
+        {
+          "title": "Communion Songs",
+          "composer": "Come to the Feast | Ven al Banquete",
+          "description": "Bob Hurd • Arranged by David Lockwood"
+        },
+        {
+          "title": "\"Here the hungry find plenty, here the thirsty shall drink.\"",
+          "composer": "I Am the Bread of Life",
+          "description": "Sr. Suzanne Toolan RSM, Arr. by Dan Houze"
+        },
+        {
+          "title": "\"...you who come to me shall not hunger.\"",
+          "composer": "Jesus, Living Bread",
+          "description": "Tom Booth"
+        }
+      ],
+      "sending": {
+        "title": "Sending Song",
+        "composer": "This Little Light of Mine",
+        "description": "Spiritual"
+      }
+    }
+  ]
+}

@@ -1,0 +1,414 @@
+{
+  "id": "year-c-aug-31-2025-sun",
+  "name": "Year C — Aug 31, 2025 (Sun)",
+  "year": "ABC",
+  "season": "ordinary",
+  "seasonLabel": "Ordinary Time",
+  "seasonOrder": 31,
+  "dates": [],
+  "lectionary": {
+    "number": "Year C — Sep 02, 2040 (Sun)",
+    "gospelTitle": "Year C — Aug 30, 2037 (Sun)",
+    "thematicTag": "Year C — Sep 03, 2034 (Sun)",
+    "thematicDetail": "Year C — Aug 31, 2031 (Sun)"
+  },
+  "readings": [
+    {
+      "type": "psalm",
+      "citation": "Table Ethics 1/2",
+      "summary": "",
+      "antiphon": "Planning Reminders"
+    },
+    {
+      "type": "gospel_verse",
+      "citation": "Have mercy on me, O Lord, for I cry to you all the day long.\nO Lord, you are good and forgiving,\nfull of mercy to all who call to you.",
+      "summary": ""
+    },
+    {
+      "type": "gospel",
+      "citation": "Reading I | Sir 3:17-18, 20, 28-29",
+      "summary": "Be humble, find favor with God."
+    }
+  ],
+  "antiphons": [
+    {
+      "type": "entrance",
+      "option": 1,
+      "citation": "Verse before the Gospel | Mt 11:29ab",
+      "text": "Take my yoke upon you, says the Lord,\nand learn from me, for I am meek and humble of heart."
+    },
+    {
+      "type": "communion",
+      "option": 2,
+      "citation": "Communion Antiphon • Option I | Ps 31 (30):20",
+      "text": "How great is the goodness, Lord,\nthat you keep for those who fear you."
+    }
+  ],
+  "planningNotes": [
+    "Communion Antiphon • Option II |  Mt 5:9–10",
+    "Blessed are the peacemakers,\nfor they shall be called children of God.\nBlessed are they who are persecuted\nfor the sake of righteousness,\nfor theirs is the Kingdom of Heaven."
+  ],
+  "musicPlans": [
+    {
+      "community": "Reflections",
+      "communityId": "reflections",
+      "date": "Year C — Aug 30, 2025 (Sat)",
+      "presider": "NOT THIS YEAR",
+      "prelude": {
+        "title": "God of Peace",
+        "composer": "Jeffrey Bonilla & David Lockwood",
+        "description": "Prayer for Peace"
+      },
+      "penitentialAct": {
+        "title": "Bernadette Farrell • Arr, by Jeffrey Bonilla",
+        "composer": "“Longing for peace... longing for hope, many despair.\"",
+        "description": "Penitential Act"
+      },
+      "gloria": {
+        "title": "Kyrie • Misa Del Mundo",
+        "composer": "Only if needed. Talk to presider!",
+        "description": "Gloria"
+      },
+      "gospelAcclamation": {
+        "title": "The Lyric Psalter • Tony Alonso & Marty Haugen",
+        "composer": "Gospel Acclamation",
+        "verse": "Alleluia (Mass of Joy & Peace)"
+      },
+      "offertory": {
+        "title": "The Lyric Gospel Acclamations • Tony Alonso",
+        "description": "Offertory Song"
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "Jesus I Trust In You",
+        "composer": "Sarah Hart • Josh Blakesley • Sarah Kroger"
+      },
+      "lordsPrayer": {
+        "title": "Eucharistic Acclamations",
+        "composer": "Mass of the Holy Family",
+        "description": "Chris de Silva"
+      },
+      "fractionRite": {
+        "title": "Holy, Holy, Holy",
+        "composer": "When We Eat This Bread",
+        "description": "Amen"
+      },
+      "communionSongs": [
+        {
+          "title": "The Lord's Prayer",
+          "composer": "Chanted Our Father (Snow)",
+          "description": "Jennings/Paregorius"
+        },
+        {
+          "title": "Fraction Rite",
+          "composer": "Lamb of God (Mass of the Holy Family)",
+          "description": "Chris de Silva"
+        },
+        {
+          "title": "Communion Songs",
+          "composer": "Here At This Table",
+          "description": "Janet Sullivan Whitaker"
+        },
+        {
+          "title": "Gospel Connention",
+          "composer": "On Eagle's Wings",
+          "description": "Michael Joncas • Craig Kingsbury"
+        }
+      ]
+    },
+    {
+      "community": "Foundations",
+      "communityId": "foundations",
+      "date": "Year C — Aug 31, 2025 (Sun)",
+      "presider": "NOT THIS YEAR",
+      "prelude": {
+        "title": "Hold On",
+        "composer": "Adam Tice • Arranged by Sally Ann Morris",
+        "description": "Song of consolation."
+      },
+      "penitentialAct": {
+        "title": "NETTLETON • Carl P. Daw • Arr. by J. Bonilla",
+        "composer": "\"help us summon other guests to share that feast\"",
+        "description": "Penitential Act"
+      },
+      "gloria": {
+        "title": "Kyrie (Gift of God) • Adapted Version",
+        "composer": "Marty Haugen • Arranged by David Locwood",
+        "description": "Gloria"
+      },
+      "gospelAcclamation": {
+        "title": "Spirit & Psalm • Chris Muglia",
+        "composer": "Gospel Acclamation",
+        "verse": "Song Title"
+      },
+      "offertory": {
+        "title": "Verse Audio Example",
+        "description": "Offertory Song"
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "Jesus I Trust In You",
+        "composer": "Sarah Hart • Josh Blakesley • Sarah Kroger"
+      },
+      "lordsPrayer": {
+        "title": "Eucharistic Acclamations",
+        "composer": "Mass of Glory • Bob Hurd • Arr. by Dan Houze"
+      },
+      "fractionRite": {
+        "title": "Holy, Holy",
+        "composer": "We Proclaim Your Death",
+        "description": "Amen"
+      },
+      "communionSongs": [
+        {
+          "title": "The Lord's Prayer",
+          "composer": "Chanted Our Father (Snow)",
+          "description": "Jennings • Paregorius"
+        },
+        {
+          "title": "Fraction Rite",
+          "composer": "Lamb of God (Mass of Glory)"
+        },
+        {
+          "title": "Communion Songs",
+          "composer": "On Eagle's Wings",
+          "description": "Michael Joncas • Craig Kingsbury"
+        },
+        {
+          "title": "\" ...and he will raise you up...\"",
+          "composer": "Hold on to Love",
+          "description": "Jesse Manibusan"
+        }
+      ],
+      "sending": {
+        "title": "THAXTED (O God Beyond All Praising) • Jeff Bonilla",
+        "composer": "Tragedy in Minneapolis"
+      }
+    },
+    {
+      "community": "Generations",
+      "communityId": "generations",
+      "date": "Year C — Aug 31, 2025 (Sun)",
+      "presider": "NOT THIS YEAR",
+      "prelude": {
+        "title": "God of Peace",
+        "composer": "Jeffrey Bonilla & David Lockwood",
+        "description": "Prayer for Peace"
+      },
+      "penitentialAct": {
+        "title": "Bernadette Farrell • Arr, by Jeffrey Bonilla",
+        "composer": "“Longing for peace... longing for hope, many despair.\"",
+        "description": "Penitential Act"
+      },
+      "gloria": {
+        "title": "Kyrie • Misa Del Mundo",
+        "composer": "Only if needed. Talk to presider!",
+        "description": "Gloria"
+      },
+      "gospelAcclamation": {
+        "title": "Spirit & Psalm • Chris Muglia",
+        "composer": "Gospel Acclamation",
+        "verse": "Setting from Mass of Restoration"
+      },
+      "offertory": {
+        "title": "Spirit & Ps • Josh Blakesley & Grae McCullough",
+        "description": "Offertory Song"
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "Jesus I Trust In You",
+        "composer": "Sarah Hart • Josh Blakesley • Sarah Kroger"
+      },
+      "lordsPrayer": {
+        "title": "Eucharistic Acclamations",
+        "composer": "Mass of Restoration",
+        "description": "Joshua Blakesley"
+      },
+      "fractionRite": {
+        "title": "Holy, Holy, Holy",
+        "composer": "Save Us Savior of the World",
+        "description": "Amen"
+      },
+      "communionSongs": [
+        {
+          "title": "The Lord's Prayer",
+          "composer": "(Echo) Our Father",
+          "description": "Jerome Andrews • Arranged by Dan Houze"
+        },
+        {
+          "title": "Fraction Rite",
+          "composer": "Lamb of God (Resoration)"
+        },
+        {
+          "title": "Communion Songs",
+          "composer": "On Eagle's Wings",
+          "description": "Michael Joncas • Craig Kingsbury"
+        },
+        {
+          "title": "\" ...and he will raise you up...\"",
+          "composer": "A Place At Your Table",
+          "description": "Ben Walther"
+        },
+        {
+          "title": "\"the saint and the sinner, your friends\"",
+          "composer": "Hold on to Love",
+          "description": "Jesse Manibusan"
+        },
+        {
+          "title": "\"When violence seeks to destroy us...\"",
+          "composer": "In Every Age",
+          "description": "Janèt Sullivan Whitaker"
+        }
+      ],
+      "sending": {
+        "title": "We Place Our Trust In You",
+        "composer": "THAXTED (O God Beyond All Praising) • Jeff Bonilla",
+        "description": "Tragedy in Minneapolis"
+      }
+    },
+    {
+      "community": "Heritage",
+      "communityId": "heritage",
+      "date": "Year C — Aug 31, 2025 (Sun)",
+      "presider": "NOT THIS YEAR",
+      "prelude": {
+        "title": "God of Peace",
+        "composer": "Jeffrey Bonilla & David Lockwood",
+        "description": "Prayer for Peace"
+      },
+      "penitentialAct": {
+        "title": "Bernadette Farrell • Arr, by Jeffrey Bonilla",
+        "composer": "“Longing for peace... longing for hope, many despair.\"",
+        "description": "Penitential Act"
+      },
+      "gloria": {
+        "title": "Kyrie • Misa Del Mundo",
+        "composer": "Only if needed. Talk to presider!",
+        "description": "Gloria"
+      },
+      "gospelAcclamation": {
+        "title": "The Lyric Psalter • Tony Alonso & Marty Haugen",
+        "composer": "Gospel Acclamation",
+        "verse": "Alleluia (Mass of Joy & Peace)"
+      },
+      "offertory": {
+        "title": "The Lyric Gospel Acclamations • Tony Alonso",
+        "description": "Offertory Song"
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "In Every Age",
+        "composer": "Janèt Sullivan Whitaker"
+      },
+      "lordsPrayer": {
+        "title": "Eucharistic Acclamations",
+        "composer": "Mass of Christ the Savior - Dan Schutte"
+      },
+      "fractionRite": {
+        "title": "Holy",
+        "composer": "When We Eat This Bread",
+        "description": "Amen"
+      },
+      "communionSongs": [
+        {
+          "title": "The Lord's Prayer",
+          "composer": "Echo Our Father",
+          "description": "Andrews, Arr. Bonilla • Lockwood • Fajardo"
+        },
+        {
+          "title": "Fraction Rite",
+          "composer": "Lamb of God (Mass of Christ the Savior)"
+        },
+        {
+          "title": "Communion Songs",
+          "composer": "Here At This Table",
+          "description": "Janet Sullivan Whitaker"
+        },
+        {
+          "title": "Gospel Connention",
+          "composer": "On Eagle's Wings",
+          "description": "Michael Joncas • Craig Kingsbury"
+        },
+        {
+          "title": "\" ...and he will raise you up...\"",
+          "composer": "Hold On",
+          "description": "Adam Tice • Arranged by Sally Ann Morris"
+        }
+      ],
+      "sending": {
+        "title": "THAXTED (O God Beyond All Praising) • Jeff Bonilla",
+        "composer": "Tragedy in Minneapolis"
+      }
+    },
+    {
+      "community": "Elevations",
+      "communityId": "elevations",
+      "date": "Year C — Aug 31, 2025 (Sun)",
+      "presider": "NOT THIS YEAR",
+      "prelude": {
+        "title": "God of Peace",
+        "composer": "Jeffrey Bonilla & David Lockwood",
+        "description": "Prayer for Peace"
+      },
+      "penitentialAct": {
+        "title": "Bernadette Farrell • Arr, by Jeffrey Bonilla",
+        "composer": "“Longing for peace... longing for hope, many despair.\"",
+        "description": "Penitential Act"
+      },
+      "gloria": {
+        "title": "Kyrie • Misa Del Mundo",
+        "composer": "Only if needed. Talk to presider!",
+        "description": "Gloria"
+      },
+      "gospelAcclamation": {
+        "title": "Spirit & Psalm • Chris Muglia",
+        "composer": "Gospel Acclamation",
+        "verse": "Setting from Mass of Restoration"
+      },
+      "offertory": {
+        "title": "Spirit & Ps • Josh Blakesley & Grae McCullough",
+        "description": "Offertory Song"
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "Hold on to Love",
+        "composer": "Jesse Manibusan"
+      },
+      "lordsPrayer": {
+        "title": "Eucharistic Acclamations",
+        "composer": "Mass of Restoration • Joshua Blakesley"
+      },
+      "fractionRite": {
+        "title": "Holy, Holy, Holy",
+        "composer": "Save Us Savior of the World",
+        "description": "Amen"
+      },
+      "communionSongs": [
+        {
+          "title": "The Lord's Prayer",
+          "composer": "Echo Our Father",
+          "description": "Andrews, Arr. Bonilla • Lockwood • Fajardo"
+        },
+        {
+          "title": "Fraction Rite",
+          "composer": "Lamb of God (Restoration)"
+        },
+        {
+          "title": "Communion Songs",
+          "composer": "On Eagle's Wings",
+          "description": "Michael Joncas • Craig Kingsbury"
+        },
+        {
+          "title": "\" ...and he will raise you up...\"",
+          "composer": "A Place At Your Table",
+          "description": "Ben Walther"
+        },
+        {
+          "title": "\"the saint and the sinner, your friends\"",
+          "composer": "In Every Age",
+          "description": "Janèt Sullivan Whitaker"
+        }
+      ],
+      "sending": {
+        "title": "Sending Song",
+        "composer": "We Place Our Trust In You",
+        "description": "THAXTED (O God Beyond All Praising) • Jeff Bonilla"
+      }
+    }
+  ]
+}

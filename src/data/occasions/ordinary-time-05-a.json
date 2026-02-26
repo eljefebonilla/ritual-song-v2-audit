@@ -1,0 +1,449 @@
+{
+  "id": "ordinary-time-05-a",
+  "name": "ORDINARY TIME 05 [A]",
+  "year": "A",
+  "season": "ordinary",
+  "seasonLabel": "Ordinary Time",
+  "seasonOrder": 5,
+  "dates": [
+    {
+      "date": "2023-02-05",
+      "label": "Year A — Feb 05, 2023 (Sun)",
+      "dayOfWeek": "Sun"
+    },
+    {
+      "date": "2035-02-04",
+      "label": "Year A — Feb 04, 2035 (Sun)",
+      "dayOfWeek": "Sun"
+    },
+    {
+      "date": "2032-02-08",
+      "label": "Year A — Feb 08, 2032 (Sun)",
+      "dayOfWeek": "Sun"
+    },
+    {
+      "date": "2029-02-04",
+      "label": "Year A — Feb 04, 2029 (Sun)",
+      "dayOfWeek": "Sun"
+    },
+    {
+      "date": "2026-02-08",
+      "label": "Year A — Feb 08, 2026 (Sun)",
+      "dayOfWeek": "Sun"
+    }
+  ],
+  "lectionary": {
+    "number": "073•A",
+    "gospelTitle": "Salt and Light",
+    "thematicTag": "Sermon Mount 2/6"
+  },
+  "readings": [
+    {
+      "type": "first",
+      "citation": "Is 58:7-10",
+      "summary": "Share with those in need and you will be rewarded."
+    },
+    {
+      "type": "psalm",
+      "citation": "Ps 112:4-5, 6-7, 8-9, R. v.4a\nThe just man is a light in darkness to the upright.",
+      "summary": "",
+      "antiphon": "Ps 112:4-5, 6-7, 8-9, R. v.4a\nThe just man is a light in darkness to the upright."
+    },
+    {
+      "type": "second",
+      "citation": "1 Cor 2:1-5",
+      "summary": "Faith is a gift from God."
+    },
+    {
+      "type": "gospel_verse",
+      "citation": "Jn 8:12",
+      "summary": "I am the light of the world, says the Lord;\nwhoever follows me will have the light of life."
+    },
+    {
+      "type": "gospel",
+      "citation": "Mt 5:13-16",
+      "summary": "Salt of the earth, light of the world."
+    }
+  ],
+  "antiphons": [
+    {
+      "type": "entrance",
+      "option": 1,
+      "citation": "Cf. Ps 95 (94):6–7",
+      "text": "O come, let us worship God\nand bow low before the God who made us,\nfor he is the Lord our God."
+    },
+    {
+      "type": "communion",
+      "option": 1,
+      "citation": "Cf. Ps 107 (106):8–9",
+      "text": "Let them thank the Lord for his mercy,\nhis wonders for the children of men,\nfor he satisfies the thirsty soul,\nand the hungry he fills with good things."
+    },
+    {
+      "type": "communion",
+      "option": 2,
+      "citation": "Communion Antiphon • Option II | Cf. Mt 5:5–6",
+      "text": "Blessed are those who mourn, for they shall be consoled.\nBlessed are those who hunger and thirst for righteousness,\nfor they shall have their fill."
+    }
+  ],
+  "planningNotes": [
+    "FEB - Black History Month",
+    "World Marriage Day"
+  ],
+  "musicPlans": [
+    {
+      "community": "Reflections",
+      "communityId": "reflections",
+      "date": "Year A — Feb 07, 2026 (Sat)",
+      "presider": "Fr. Thomas Park",
+      "prelude": {
+        "title": "Love Never Fails",
+        "composer": "Brandon Heath",
+        "description": "World Marriage Day"
+      },
+      "gathering": {
+        "title": "Gather Us In",
+        "composer": "Marty Haugen",
+        "description": "V3 - \"call us anew to be salt for the earth.\""
+      },
+      "penitentialAct": {
+        "title": "Kyrie • Misa Del Mundo",
+        "composer": "Jesse Manibusan"
+      },
+      "gloria": {
+        "title": "Glory to God (Through-composed Setting)",
+        "composer": "Mass of Renewal • Curtis Stephan"
+      },
+      "responsorialPsalm": {
+        "psalm": "Ps 112 The just man is a light in darkness...",
+        "setting": "The Lyric Psalter • Tony Alonso & Marty Haugen"
+      },
+      "gospelAcclamation": {
+        "title": "Alleluia (Mass of Joy & Peace)",
+        "composer": "The Lyric Gospel Acclamations • Tony Alonso",
+        "verse": "I am the light of the world, says the Lord;\nwhoever follows me will have the light of life."
+      },
+      "offertory": {
+        "title": "What You Have Done for Me",
+        "composer": "Tony Alonso",
+        "description": "\"Come all you blessed, come and rejoice\""
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "Mass for the Healing of the World",
+        "composer": "Trevor Thomson"
+      },
+      "lordsPrayer": {
+        "title": "Chanted Our Father (Snow)",
+        "composer": "Jennings/Paregorius"
+      },
+      "fractionRite": {
+        "title": "Lamb of God (Mass for the Healing of the World)",
+        "composer": "Trevor Thomson"
+      },
+      "communionSongs": [
+        {
+          "title": "Lux Mundi",
+          "composer": "Trevor Thomson",
+          "description": "Light of the World"
+        },
+        {
+          "title": "I Am Yours",
+          "composer": "Trevor Thomson",
+          "description": "“Let your light shine,…let me be your light in this world.”"
+        },
+        {
+          "title": "Jesus Christ, Yesterday, Today, and Forever",
+          "composer": "Suzanne Toolan, RSM",
+          "description": "No verses / Only Ostinato Refrain"
+        }
+      ],
+      "sending": {
+        "title": "Bring Forth the Kingdom",
+        "composer": "Marty Haugen",
+        "description": "Living out God’s reign through justice, mercy, and discipleship."
+      }
+    },
+    {
+      "community": "Foundations",
+      "communityId": "foundations",
+      "date": "Year A — Feb 08, 2026 (Sun)",
+      "presider": "Fr. Vince Kuna",
+      "prelude": {
+        "title": "Lift Every Voice",
+        "composer": "James Weldon Johnson & John Rosamond Johnson",
+        "description": "Black History Month"
+      },
+      "gathering": {
+        "title": "Gather Your People",
+        "composer": "Bob Hurd",
+        "description": "General"
+      },
+      "penitentialAct": {
+        "title": "Kyrie (Gift of God) • Adapted Version",
+        "composer": "Marty Haugen • Arranged by David Locwood"
+      },
+      "gloria": {
+        "title": "Mass of Joy & Peace (Gospel Version)",
+        "composer": "Tony Alonso • Arrangement by David Lockwood"
+      },
+      "responsorialPsalm": {
+        "psalm": "Ps 112 The just man is a light in darkness...",
+        "setting": "Spirit & Psalm • Steve Angrisano"
+      },
+      "gospelAcclamation": {
+        "title": "Alleluia! Give the Glory (Mass of Glory)",
+        "composer": "Bob Hurd •  Ken Canedo • Craig Kingsbury",
+        "verse": "I am the light of the world, says the Lord;\nwhoever follows me will have the light of life."
+      },
+      "offertory": {
+        "title": "Give Thanks With A Grateful Heart",
+        "composer": "Cece Winans",
+        "description": "General"
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "Mass of Glory",
+        "composer": "Bob Hurd & Ken Canedo"
+      },
+      "lordsPrayer": {
+        "title": "Chanted Our Father (Snow)",
+        "composer": "Jennings • Paregorius"
+      },
+      "fractionRite": {
+        "title": "Lamb of God (Mass of Glory)",
+        "composer": "Bob Hurd & Ken Canedo"
+      },
+      "communionSongs": [
+        {
+          "title": "Taste and See (Gospel Version)",
+          "composer": "James E. Moore • ValLimar Jansen",
+          "description": "African American Sacred Songs"
+        },
+        {
+          "title": "Gift of Finest Wheat",
+          "composer": "BICENTENNIAL • Robert Kreutz • Omer Westendorf",
+          "description": "Communion Antiphon"
+        }
+      ],
+      "sending": {
+        "title": "Where He Leads Me",
+        "composer": "Ernest W. Blandy",
+        "description": "First Reading | , Gospel"
+      }
+    },
+    {
+      "community": "Generations",
+      "communityId": "generations",
+      "date": "Year A — Feb 08, 2026 (Sun)",
+      "presider": "Msgr. Lloyd Torgerson",
+      "prelude": {
+        "title": "Love Never Fails",
+        "composer": "Brandon Heath",
+        "description": "World Marriage Day"
+      },
+      "gathering": {
+        "title": "We Are Marching (Siyahamba)",
+        "composer": "South African Hymn",
+        "description": "Light"
+      },
+      "penitentialAct": {
+        "title": "Kyrie • Misa Del Mundo",
+        "composer": "Jesse Manibusan"
+      },
+      "gloria": {
+        "title": "Glory, Glory, Gloria!",
+        "composer": "Bonilla & Wilson • Vocal Arr. by Lockwood & Phan"
+      },
+      "responsorialPsalm": {
+        "psalm": "Ps 112 The just man is a light in darkness...",
+        "setting": "Spirit & Psalm • Steve Angrisano"
+      },
+      "gospelAcclamation": {
+        "title": "Hallelujah (adapted for Liturgy)",
+        "composer": "Leonard Cohen",
+        "verse": "I am the light of the world, says the Lord;\nwhoever follows me will have the light of life."
+      },
+      "offertory": {
+        "title": "Give Thanks With A Grateful Heart",
+        "composer": "Henry Smith • Arr. Joel Mott",
+        "description": "Shane & Shane (Key of E)"
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "Mass of St. Anne",
+        "composer": "Ed Bolduc"
+      },
+      "lordsPrayer": {
+        "title": "Echo Our Father",
+        "composer": "Jerome Andrews • Arranged by Dan Houze"
+      },
+      "fractionRite": {
+        "title": "Lamb of God (Mass of Holy Cross)",
+        "composer": "David Clark Isele"
+      },
+      "communionSongs": [
+        {
+          "title": "I Am Yours",
+          "composer": "Trevor Thomson",
+          "description": "“Let your light shine,…let me be your light in this world.”"
+        },
+        {
+          "title": "Taste and See",
+          "composer": "Bob Hurd",
+          "description": "Fun Groove Version"
+        },
+        {
+          "title": "I Am the Bread of Life (Come and Follow Me)",
+          "composer": "Steve Angrisano • Tom Booth",
+          "description": "\"...I am the Truth and Light...\""
+        },
+        {
+          "title": "Lord, I Need You",
+          "composer": "Matt Maher",
+          "description": "\"he one that guides my heart\", \"my one defense...rightousness\""
+        }
+      ],
+      "sending": {
+        "title": "This Little Light of Mine",
+        "composer": "Spiritual",
+        "description": "Gospel | “lamps lit”"
+      }
+    },
+    {
+      "community": "Heritage",
+      "communityId": "heritage",
+      "date": "Year A — Feb 08, 2026 (Sun)",
+      "presider": "\"Fr. David Guffey, CSC\"",
+      "gathering": {
+        "title": "Gather Us In",
+        "composer": "Marty Haugen",
+        "description": "V3 - \"call us anew to be salt for the earth.\""
+      },
+      "penitentialAct": {
+        "title": "Kyrie • Misa Del Mundo",
+        "composer": "Jesse Manibusan"
+      },
+      "gloria": {
+        "title": "Glory to God (Mass of Christ the Savior)",
+        "composer": "Dan Schutte"
+      },
+      "responsorialPsalm": {
+        "psalm": "Ps 112 The just man is a light in darkness...",
+        "setting": "The Lyric Psalter • Tony Alonso & Marty Haugen"
+      },
+      "gospelAcclamation": {
+        "title": "Alleluia (Mass of Joy & Peace)",
+        "composer": "The Lyric Gospel Acclamations • Tony Alonso",
+        "verse": "I am the light of the world, says the Lord;\nwhoever follows me will have the light of life."
+      },
+      "offertory": {
+        "title": "What You Have Done for Me",
+        "composer": "Tony Alonso",
+        "description": "\"Come all you blessed, come and rejoice...\""
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "Mass of Joy & Peace",
+        "composer": "Tony Alonso"
+      },
+      "lordsPrayer": {
+        "title": "Chanted Our Father (Snow)",
+        "composer": "Jennings/Paregorius"
+      },
+      "fractionRite": {
+        "title": "Lamb of God (Mass of Joy & Peace)",
+        "composer": "Tony Alonso"
+      },
+      "communionSongs": [
+        {
+          "title": "Here I Am Lord",
+          "composer": "Dan Schutte • Arranged by Jack Schrader",
+          "description": "Basic arrangement if choir is small."
+        },
+        {
+          "title": "Take, O Take Me As I Am",
+          "composer": "John Bell",
+          "description": "First Reading | , Gospel"
+        },
+        {
+          "title": "Only This I Want",
+          "composer": "Dan Schutte",
+          "description": "\"Only this I want: but to know the Lord\""
+        }
+      ],
+      "sending": {
+        "title": "Word of Our God",
+        "composer": "Dan Schutte",
+        "description": "\"...send us forth as salt for the earth\""
+      }
+    },
+    {
+      "community": "Elevations",
+      "communityId": "elevations",
+      "date": "Year A — Feb 08, 2026 (Sun)",
+      "presider": "Fr. Eusebio Llonoso",
+      "prelude": {
+        "title": "Love Never Fails",
+        "composer": "Brandon Heath",
+        "description": "World Marriage Day"
+      },
+      "gathering": {
+        "title": "Christ Be Our Light",
+        "composer": "Bernadette Farrell • Arr. Bonilla",
+        "description": "Gospel - \"...light for the world to see.\""
+      },
+      "penitentialAct": {
+        "title": "Kyrie (Misa Del Mundo)",
+        "composer": "Jesse Manibusan — If needed."
+      },
+      "gloria": {
+        "title": "Glory, Glory, Gloria! (Mass of the Setting Sun)",
+        "composer": "Bonilla & Wilson • Vocal Arr. by Lockwood & Phan"
+      },
+      "responsorialPsalm": {
+        "psalm": "Ps 112 The just man is a light in darkness...",
+        "setting": "Spirit & Psalm • Steve Angrisano"
+      },
+      "gospelAcclamation": {
+        "title": "Hallelujah (adapted for Liturgy)",
+        "composer": "Leonard Cohen",
+        "verse": "I am the light of the world, says the Lord;\nwhoever follows me will have the light of life."
+      },
+      "offertory": {
+        "title": "Give Thanks With A Grateful Heart",
+        "composer": "Henry Smith • Arr. Joel Mott",
+        "description": "Shane & Shane (Key of E)"
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "Mass of Communion (Lower Key)",
+        "composer": "Matt Maher"
+      },
+      "lordsPrayer": {
+        "title": "Echo Our Father",
+        "composer": "Andrews • Arr. by Bonilla • Lockwood • Fajardo"
+      },
+      "fractionRite": {
+        "title": "Lamb of God (Mass of Holy Cross)",
+        "composer": "David Clark Isele"
+      },
+      "communionSongs": [
+        {
+          "title": "Simple Kingdom",
+          "composer": "Bryan & Katie Torwaltwith with Cody Carnes",
+          "description": "Sermon on the Mount"
+        },
+        {
+          "title": "I Am Yours",
+          "composer": "Trevor Thomson",
+          "description": "“Let your light shine,…let me be your light in this world.”"
+        },
+        {
+          "title": "Lord, I Need You",
+          "composer": "Matt Maher",
+          "description": "\"he one that guides my heart\", \"my one defense...rightousness\""
+        }
+      ],
+      "sending": {
+        "title": "This Little Light of Mine",
+        "composer": "Spiritual",
+        "description": "Gospel | “lamps lit”"
+      }
+    }
+  ]
+}

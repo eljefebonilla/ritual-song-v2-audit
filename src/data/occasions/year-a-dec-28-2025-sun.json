@@ -1,0 +1,407 @@
+{
+  "id": "year-a-dec-28-2025-sun",
+  "name": "Year A — Dec 28, 2025 (Sun)",
+  "year": "ABC",
+  "season": "ordinary",
+  "seasonLabel": "Ordinary Time",
+  "seasonOrder": 28,
+  "dates": [],
+  "lectionary": {
+    "number": "",
+    "gospelTitle": "Year A — Dec 27, 2037 (Sun)",
+    "thematicTag": "Year A — Dec 31, 2034 (Sun)",
+    "thematicDetail": "Year A — Dec 28, 2031 (Sun)"
+  },
+  "readings": [
+    {
+      "type": "psalm",
+      "citation": "Infancy: Protection",
+      "summary": "",
+      "antiphon": "Planning Reminders"
+    },
+    {
+      "type": "gospel_verse",
+      "citation": "The shepherds went in haste, and found Mary and Joseph and the Infant lying in a manger.",
+      "summary": "Entrance Antiphon • Option II"
+    },
+    {
+      "type": "gospel",
+      "citation": "Reading I | Sir 3:2-6, 12-14",
+      "summary": "Kindness and respect for parents is urged."
+    }
+  ],
+  "antiphons": [
+    {
+      "type": "entrance",
+      "option": 1,
+      "citation": "Verse before the Gospel | Col 3:15a, 16a",
+      "text": "Let the peace of Christ control your hearts;\nLet the word of Christ dwell in you richly."
+    },
+    {
+      "type": "communion",
+      "option": 2,
+      "citation": "Communion Antiphon | Bar 3:38",
+      "text": "Our God has appeared on the earth, and lived among us."
+    }
+  ],
+  "planningNotes": [
+    "Communion Antiphon • Option II",
+    "N/A"
+  ],
+  "musicPlans": [
+    {
+      "community": "Reflections",
+      "communityId": "reflections",
+      "date": "Year A — Dec 27, 2025 (Sat)",
+      "presider": "Fr. Eusebio Llonoso",
+      "prelude": {
+        "title": "Of the Father's Love Begotten",
+        "composer": "DIVINUM MYSTERIUM, 12th C.; Mode V",
+        "description": "Can be chanted by David - in Breaking Bread"
+      },
+      "penitentialAct": {
+        "title": "MENDELSSOHN • Arranged by Tony Alonso",
+        "composer": "\"Guitar Edition\" from GIA",
+        "description": "Penitential Act (Only if presider wants led by cantor)"
+      },
+      "gloria": {
+        "title": "Kyrie • Misa Del Mundo",
+        "composer": "Jesse Manibusan",
+        "description": "Gloria"
+      },
+      "gospelAcclamation": {
+        "title": "The Lyric Psalter • Tony Alonso & Marty Haugen",
+        "composer": "Gospel Acclamation",
+        "verse": "Advent and Christmastide Gospel Acclamation"
+      },
+      "offertory": {
+        "title": "The Lyric Gospel Acclamations • Tony Alonso",
+        "description": "Offertory Song"
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "O Little Town of Bethlehem",
+        "composer": "Praise Charts & OCP Arrangements"
+      },
+      "lordsPrayer": {
+        "title": "Eucharistic Acclamations",
+        "composer": "Mass of the Incarnate Word",
+        "description": "Bob Hurd • Traditional Arrangement"
+      },
+      "fractionRite": {
+        "title": "Holy",
+        "composer": "Mystery of Faith",
+        "description": "Amen"
+      },
+      "communionSongs": [
+        {
+          "title": "The Lord's Prayer",
+          "composer": "Chanted Our Father (Snow)",
+          "description": "Jennings/Paregorius"
+        },
+        {
+          "title": "Fraction Rite",
+          "composer": "Lamb of God",
+          "description": "Jeffrey Bonilla"
+        },
+        {
+          "title": "Communion Songs",
+          "composer": "Bread of Life (Advent/Christmas)",
+          "description": "Bernadette Farrell"
+        },
+        {
+          "title": "Christmas Verses",
+          "composer": "It Came Upon A Midnight Clear",
+          "description": "Praise Charts & OCP Arrangements"
+        }
+      ]
+    },
+    {
+      "community": "Foundations",
+      "communityId": "foundations",
+      "date": "Year A — Dec 28, 2025 (Sun)",
+      "presider": "Fr. Thomas Park",
+      "prelude": {
+        "title": "Of the Father's Love Begotten",
+        "composer": "DIVINUM MYSTERIUM, 12th C.; Mode V",
+        "description": "Can be chanted by David - in Breaking Bread"
+      },
+      "penitentialAct": {
+        "title": "MENDELSSOHN • Arranged by Tony Alonso",
+        "composer": "\"Guitar Edition\" from GIA",
+        "description": "Penitential Act (If presider wants led by cantor)"
+      },
+      "gloria": {
+        "title": "Kyrie (Gift of God) • Adapted Version",
+        "composer": "Marty Haugen • Arranged by David Locwood",
+        "description": "Gloria"
+      },
+      "gospelAcclamation": {
+        "title": "Spirit & Psalm • Steve Angrisano",
+        "composer": "Gospel Acclamation",
+        "verse": "Hallelujah (adapted for Liturgy)"
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "O Little Town of Bethlehem",
+        "composer": "Praise Charts & OCP Arrangements"
+      },
+      "lordsPrayer": {
+        "title": "Eucharistic Acclamations",
+        "composer": "Mass of Glory (Christmas Intro)"
+      },
+      "fractionRite": {
+        "title": "Holy",
+        "composer": "Mystery of Faith",
+        "description": "Amen"
+      },
+      "communionSongs": [
+        {
+          "title": "The Lord's Prayer",
+          "composer": "Chanted Our Father (Snow)",
+          "description": "Jennings • Paregorius"
+        },
+        {
+          "title": "Fraction Rite",
+          "composer": "Lamb of God (Mass of Glory)"
+        },
+        {
+          "title": "Communion Songs",
+          "composer": "Bread of Life (Advent/Christmas)",
+          "description": "Bernadette Farrell"
+        },
+        {
+          "title": "Christmas Verses",
+          "composer": "It Came Upon A Midnight Clear",
+          "description": "Praise Charts & OCP Arrangements"
+        }
+      ],
+      "sending": {
+        "title": "Praise Charts & OCP Arrangements",
+        "composer": "Two traditional arrangement options."
+      }
+    },
+    {
+      "community": "Generations",
+      "communityId": "generations",
+      "date": "Year A — Dec 28, 2025 (Sun)",
+      "presider": "Msgr. Lloyd Torgrson & Fr. Bob Dowd",
+      "prelude": {
+        "title": "Song Title",
+        "composer": "Composer/s"
+      },
+      "penitentialAct": {
+        "title": "MENDELSSOHN • Arranged by Tony Alonso",
+        "composer": "\"Guitar Edition\" from GIA",
+        "description": "Penitential Act"
+      },
+      "gloria": {
+        "title": "Kyrie • Misa Del Mundo",
+        "composer": "If needed. Talk to presider!",
+        "description": "Gloria"
+      },
+      "gospelAcclamation": {
+        "title": "Spirit & Psalm • Steve Angrisano",
+        "composer": "Gospel Acclamation",
+        "verse": "Hallelujah (adapted for Liturgy)"
+      },
+      "offertory": {
+        "title": "Choir Practice Tracks",
+        "description": "Offertory Song"
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "O Little Town of Bethlehem",
+        "composer": "Praise Charts & OCP Arrangements"
+      },
+      "lordsPrayer": {
+        "title": "Eucharistic Acclamations",
+        "composer": "Mass of Glory (Lockwood Christmas Intro)",
+        "description": "Bob Hurd • Arr. by Dan Houze"
+      },
+      "fractionRite": {
+        "title": "Holy",
+        "composer": "Mystery of Faith",
+        "description": "Amen"
+      },
+      "communionSongs": [
+        {
+          "title": "The Lord's Prayer",
+          "composer": "Echo Our Father",
+          "description": "Jerome Andrews, Arranged by Dan Houze"
+        },
+        {
+          "title": "Fraction Rite",
+          "composer": "Lamb of God (Mass of Glory)"
+        },
+        {
+          "title": "Communion Songs",
+          "composer": "Bread of Life (Advent/Christmas)",
+          "description": "Bernadette Farrell"
+        },
+        {
+          "title": "Christmas Verses",
+          "composer": "It Came Upon A Midnight Clear",
+          "description": "Praise Charts & OCP Arrangements"
+        },
+        {
+          "title": "Two traditional arrangement options.",
+          "composer": "Away in a Manger",
+          "description": "Praise Charts & OCP Arrangements"
+        },
+        {
+          "title": "Two traditional arrangement options.",
+          "composer": "Silent Night",
+          "description": "Arrangement by Chris Tomlin"
+        }
+      ],
+      "sending": {
+        "title": "Angels We Have Heard On High",
+        "composer": "Praise Charts & OCP Arrangements",
+        "description": "Two traditional arrangement options."
+      }
+    },
+    {
+      "community": "Heritage",
+      "communityId": "heritage",
+      "date": "Year A — Dec 28, 2025 (Sun)",
+      "presider": "Fr. Vince Kuna",
+      "prelude": {
+        "title": "Of the Father's Love Begotten",
+        "composer": "DIVINUM MYSTERIUM, 12th C.; Mode V",
+        "description": "Can be chanted by David - in Breaking Bread"
+      },
+      "penitentialAct": {
+        "title": "MENDELSSOHN • Arranged by Tony Alonso",
+        "composer": "\"Guitar Edition\" from GIA",
+        "description": "Penitential Act"
+      },
+      "gloria": {
+        "title": "Warm the Time of WInter",
+        "composer": "Lori True"
+      },
+      "gospelAcclamation": {
+        "title": "The Lyric Psaltes • Tony Alonso & Marty Haugen",
+        "composer": "Gospel Acclamation",
+        "verse": "Advent and Christmastide Gospel Acclamation"
+      },
+      "offertory": {
+        "title": "The Lyric Gospel Acclamations • Tony Alonso",
+        "description": "Offertory Song"
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "O Little Town of Bethlehem",
+        "composer": "Praise Charts & OCP Arrangements"
+      },
+      "lordsPrayer": {
+        "title": "Eucharistic Acclamations",
+        "composer": "Mass of the Incarnate Word",
+        "description": "Bob Hurd • Traditional Arrangement"
+      },
+      "fractionRite": {
+        "title": "Holy",
+        "composer": "Mystery of Faith",
+        "description": "Amen"
+      },
+      "communionSongs": [
+        {
+          "title": "The Lord's Prayer",
+          "composer": "Chanted Our Father (Snow)",
+          "description": "Jennings/Paregorius"
+        },
+        {
+          "title": "Fraction Rite",
+          "composer": "Lamb of God (Mass of Holy Cross)"
+        },
+        {
+          "title": "Communion Songs",
+          "composer": "Bread of Life (Advent/Christmas)",
+          "description": "Bernadette Farrell"
+        },
+        {
+          "title": "Christmas Verses",
+          "composer": "It Came Upon A Midnight Clear",
+          "description": "Praise Charts & OCP Arrangements"
+        },
+        {
+          "title": "Two traditional arrangement options.",
+          "composer": "Away in a Manger",
+          "description": "Praise Charts & OCP Arrangements"
+        }
+      ],
+      "sending": {
+        "title": "Praise Charts & OCP Arrangements",
+        "composer": "Two traditional arrangement options."
+      }
+    },
+    {
+      "community": "Elevations",
+      "communityId": "elevations",
+      "date": "Year A — Dec 28, 2025 (Sun)",
+      "presider": "Fr. Eusebio Llonoso",
+      "prelude": {
+        "title": "N/A"
+      },
+      "penitentialAct": {
+        "title": "MENDELSSOHN • Arranged by Tony Alonso",
+        "composer": "\"Guitar Edition\" from GIA",
+        "description": "Penitential Act"
+      },
+      "gloria": {
+        "title": "Kyrie (Misa Del Mundo)",
+        "composer": "Jesse Manibusan — If needed.",
+        "description": "Gloria"
+      },
+      "gospelAcclamation": {
+        "title": "Spirit & Psalm • Iván Díaz",
+        "composer": "Gospel Acclamation",
+        "verse": "Hallelujah (adapted for Liturgy)"
+      },
+      "offertory": {
+        "title": "Choir Practice Tracks",
+        "description": "Offertory Song"
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "O Little Town of Bethlehem",
+        "composer": "Praise Charts & OCP Arrangements"
+      },
+      "lordsPrayer": {
+        "title": "Eucharistic Acclamations",
+        "composer": "Mass of Glory (Christmas Intro)"
+      },
+      "fractionRite": {
+        "title": "Holy",
+        "composer": "Mystery of Faith",
+        "description": "Amen"
+      },
+      "communionSongs": [
+        {
+          "title": "The Lord's Prayer",
+          "composer": "Echo Our Father",
+          "description": "Jerome Andrews, Arranged by Dan Houze"
+        },
+        {
+          "title": "Fraction Rite",
+          "composer": "Lamb of God (Mass of Glory)"
+        },
+        {
+          "title": "Communion Songs",
+          "composer": "Bread of Life (Advent/Christmas)",
+          "description": "Bernadette Farrell"
+        },
+        {
+          "title": "Christmas Verses",
+          "composer": "It Came Upon A Midnight Clear",
+          "description": "Praise Charts & OCP Arrangements"
+        },
+        {
+          "title": "Two traditional arrangement options.",
+          "composer": "Away in a Manger",
+          "description": "Praise Charts & OCP Arrangements"
+        }
+      ],
+      "sending": {
+        "title": "Sending",
+        "composer": "Angels We Have Heard On High",
+        "description": "Praise Charts & OCP Arrangements"
+      }
+    }
+  ]
+}

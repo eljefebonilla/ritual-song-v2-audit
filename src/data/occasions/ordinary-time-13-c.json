@@ -1,0 +1,206 @@
+{
+  "id": "ordinary-time-13-c",
+  "name": "ORDINARY TIME 13 [C]",
+  "year": "C",
+  "season": "ordinary",
+  "seasonLabel": "Ordinary Time",
+  "seasonOrder": 13,
+  "dates": [
+    {
+      "date": "2037-06-28",
+      "label": "Year B — Jun 28, 2037 (Sun)",
+      "dayOfWeek": "Sun"
+    },
+    {
+      "date": "2034-07-02",
+      "label": "Year C — Jul 02, 2034 (Sun)",
+      "dayOfWeek": "Sun"
+    },
+    {
+      "date": "2028-07-02",
+      "label": "Year C — Jul 02, 2028 (Sun)",
+      "dayOfWeek": "Sun"
+    }
+  ],
+  "lectionary": {
+    "number": "099•C",
+    "gospelTitle": "Cost of Following",
+    "thematicTag": "Turn toward Jerusalem"
+  },
+  "readings": [
+    {
+      "type": "first",
+      "citation": "1 Kgs 19:16b, 19-21",
+      "summary": "Elijah anoints Elisha to succeed him."
+    },
+    {
+      "type": "psalm",
+      "citation": "Ps 16:1-2, 5, 7-8, 9-10, 11, R. see v.5a\nYou are my inheritance, O Lord.",
+      "summary": "",
+      "antiphon": "Ps 16:1-2, 5, 7-8, 9-10, 11, R. see v.5a\nYou are my inheritance, O Lord."
+    },
+    {
+      "type": "second",
+      "citation": "Gal 5:1, 13-18",
+      "summary": "Be guided by the Spirit."
+    },
+    {
+      "type": "gospel_verse",
+      "citation": "1 Sm 3:9; Jn 6:68c",
+      "summary": "Speak, Lord, your servant is listening;\nyou have the words of everlasting life."
+    },
+    {
+      "type": "gospel",
+      "citation": "Lk 9:51-62",
+      "summary": "You cannot look back with your hand to the plow."
+    }
+  ],
+  "antiphons": [
+    {
+      "type": "entrance",
+      "option": 1,
+      "citation": "Ps 47 (46):2",
+      "text": "All peoples, clap your hands.\nCry to God with shouts of joy!"
+    },
+    {
+      "type": "communion",
+      "option": 1,
+      "citation": "Cf. Ps 103 (102):1",
+      "text": "Bless the Lord, O my soul,\nand all within me, his holy name."
+    },
+    {
+      "type": "communion",
+      "option": 2,
+      "citation": "Communion Antiphon • Option II | Jn 17:20–21",
+      "text": "O Father, I pray for them, that they may be one in us,\nthat the world may believe that you have sent me, says the Lord."
+    }
+  ],
+  "planningNotes": [],
+  "musicPlans": [
+    {
+      "community": "Reflections",
+      "communityId": "reflections",
+      "date": "Year C — Sep 16, 2028 (Sat)",
+      "presider": "NOT THIS YEAR",
+      "penitentialAct": {
+        "title": "Kyrie • Misa Del Mundo",
+        "composer": "Only if needed. Talk to presider!"
+      },
+      "gloria": {
+        "title": "Glory to God (Through-composed Setting)",
+        "composer": "Mass of Renewal • Curtis Stephan"
+      },
+      "responsorialPsalm": {
+        "psalm": "Ps 16 You are my inheritance, O Lord.",
+        "setting": "The Lyric Psalter • Tony Alonso & Marty Haugen"
+      },
+      "gospelAcclamation": {
+        "title": "Alleluia (Mass of Joy & Peace)",
+        "composer": "Song Title",
+        "verse": "Speak, Lord, your servant is listening;\nyou have the words of everlasting life."
+      },
+      "lordsPrayer": {
+        "title": "Chanted Our Father (Snow)",
+        "composer": "Jennings/Paregorius"
+      },
+      "fractionRite": {
+        "title": "Lamb of God Setting"
+      }
+    },
+    {
+      "community": "Foundations",
+      "communityId": "foundations",
+      "date": "Year C — Sep 17, 2028 (Sun)",
+      "presider": "NOT THIS YEAR",
+      "penitentialAct": {
+        "title": "Kyrie (Gift of God) • Adapted Version",
+        "composer": "Marty Haugen • Arranged by David Locwood"
+      },
+      "gloria": {
+        "title": "Glory to God (Mass of Joy & Peace)",
+        "composer": "Alonso • Arr. by Houze OR Arr. by Lockwood"
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "Mass of Glory • Bob Hurd • Arr. by Dan Houze"
+      },
+      "lordsPrayer": {
+        "title": "Chanted Our Father (Snow)",
+        "composer": "Jennings • Paregorius"
+      },
+      "fractionRite": {
+        "title": "Lamb of God (Mass of Glory)"
+      }
+    },
+    {
+      "community": "Generations",
+      "communityId": "generations",
+      "date": "Year C — Sep 17, 2028 (Sun)",
+      "presider": "NOT THIS YEAR",
+      "penitentialAct": {
+        "title": "Kyrie • Misa Del Mundo",
+        "composer": "If needed. Talk to presider!"
+      },
+      "gloria": {
+        "title": "Glory, Glory, Gloria!",
+        "composer": "Tony Alonso • Arr. by Dan Houze"
+      },
+      "gospelAcclamation": {
+        "title": "Setting from Mass of ???",
+        "composer": "Song Title"
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "Mass of Restoration",
+        "composer": "Joshua Blakesley"
+      },
+      "lordsPrayer": {
+        "title": "(Echo) Our Father",
+        "composer": "Jerome Andrews • Arranged by Dan Houze"
+      },
+      "fractionRite": {
+        "title": "Lamb of God (Resoration)"
+      }
+    },
+    {
+      "community": "Heritage",
+      "communityId": "heritage",
+      "date": "Year C — Sep 17, 2028 (Sun)",
+      "presider": "NOT THIS YEAR",
+      "penitentialAct": {
+        "title": "Kyrie • Misa Del Mundo",
+        "composer": "Only if needed. Talk to presider!"
+      },
+      "gloria": {
+        "title": "Glory to God (Mass of Christ the Savior)",
+        "composer": "Dan Schutte"
+      },
+      "lordsPrayer": {
+        "title": "Echo Our Father",
+        "composer": "Andrews, Arr. Bonilla • Lockwood • Fajardo"
+      }
+    },
+    {
+      "community": "Elevations",
+      "communityId": "elevations",
+      "date": "Year C — Sep 17, 2028 (Sun)",
+      "presider": "NOT THIS YEAR",
+      "penitentialAct": {
+        "title": "Kyrie • Misa Del Mundo",
+        "composer": "Only if needed. Talk to presider!"
+      },
+      "gloria": {
+        "title": "Glory, Glory, Gloria!"
+      },
+      "gospelAcclamation": {
+        "title": "Setting from Mass of ???",
+        "verse": "Song Title"
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "Mass of ? • Composer"
+      },
+      "lordsPrayer": {
+        "title": "Echo Our Father",
+        "composer": "Andrews, Arr. Bonilla • Lockwood • Fajardo"
+      }
+    }
+  ]
+}

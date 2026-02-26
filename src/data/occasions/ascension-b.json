@@ -1,0 +1,387 @@
+{
+  "id": "ascension-b",
+  "name": "ASCENSION [B]",
+  "year": "B",
+  "season": "easter",
+  "seasonLabel": "Easter",
+  "seasonOrder": 0,
+  "dates": [
+    {
+      "date": "2024-05-12",
+      "label": "Year B — May 12, 2024 (Sun)",
+      "dayOfWeek": "Sun"
+    },
+    {
+      "date": "2036-05-25",
+      "label": "Year B — May 25, 2036 (Sun)",
+      "dayOfWeek": "Sun"
+    },
+    {
+      "date": "2033-05-29",
+      "label": "Year B — May 29, 2033 (Sun)",
+      "dayOfWeek": "Sun"
+    },
+    {
+      "date": "2030-06-02",
+      "label": "Year B — Jun 02, 2030 (Sun)",
+      "dayOfWeek": "Sun"
+    },
+    {
+      "date": "2027-05-09",
+      "label": "Year B — May 09, 2027 (Sun)",
+      "dayOfWeek": "Sun"
+    }
+  ],
+  "lectionary": {
+    "number": "058•B",
+    "gospelTitle": "Preach; Lord Ascends",
+    "thematicTag": "Mission Mandate"
+  },
+  "readings": [
+    {
+      "type": "first",
+      "citation": "Acts 1:1-11 (Years ABC)",
+      "summary": "Jesus is taken up into heaven."
+    },
+    {
+      "type": "psalm",
+      "citation": "Ps 47:2-3, 6-7, 8-9\nGod mounts his throne to shouts of joy:\na blare of trumpets for the Lord.",
+      "summary": "",
+      "antiphon": "Ps 47:2-3, 6-7, 8-9\nGod mounts his throne to shouts of joy:\na blare of trumpets for the Lord."
+    },
+    {
+      "type": "second",
+      "citation": "Eph 4:1-13 (Short version and Year A opt. too)",
+      "summary": "Paul’s extended prayer for the Ephesians."
+    },
+    {
+      "type": "gospel_verse",
+      "citation": "Mt 28:19a, 20b",
+      "summary": "Go and teach all nations, says the Lord;\nI am with you always, until the end of the world."
+    },
+    {
+      "type": "gospel",
+      "citation": "Mk 16:15-20",
+      "summary": "Go and proclaim the Gospel."
+    }
+  ],
+  "antiphons": [
+    {
+      "type": "entrance",
+      "option": 1,
+      "citation": "Cf. Ps 68 (67):33, 35 (At the Vigil)",
+      "text": "You kingdoms of the earth, sing to God;\npraise the Lord, who ascends above the highest heavens;\nhis majesty and might are in the skies, alleluia."
+    },
+    {
+      "type": "entrance",
+      "option": 2,
+      "citation": "Acts 1:11 — At the Mass during the Day",
+      "text": "Men of Galilee, why gaze in wonder at the heavens?\nThis Jesus whom you saw ascending into heaven\nwill return as you saw him go, alleluia."
+    },
+    {
+      "type": "communion",
+      "option": 1,
+      "citation": "Cf. Heb 10:12 (At the Vigil)",
+      "text": "Christ, offering a single sacrifice for sins,\nis seated for ever at God’s right hand, alleluia."
+    },
+    {
+      "type": "communion",
+      "option": 2,
+      "citation": "Communion Antiphon | Mt 28:20 (At Mass during the Day)",
+      "text": "Behold, I am with you always,\neven to the end of the age, alleluia."
+    }
+  ],
+  "planningNotes": [
+    "MAY - MONTH OF MARY",
+    "MOTHER'S DAY (2027)"
+  ],
+  "musicPlans": [
+    {
+      "community": "Reflections",
+      "communityId": "reflections",
+      "date": "Year B — May 08, 2027 (Sat)",
+      "presider": "NOT THIS YEAR",
+      "prelude": {
+        "title": "Regina Caeli / O Queen of Heaven",
+        "composer": "Mode VI Latin • 12th C",
+        "description": "Pope Leo XIV singing Regina Caeli"
+      },
+      "gathering": {
+        "title": "Hail the Day That Sees Him Rise",
+        "composer": "LLANFAIR • Trevor Thomson",
+        "description": "Ascension of the Lord"
+      },
+      "penitentialAct": {
+        "title": "Kyrie • Misa Del Mundo",
+        "composer": "Only if needed. Talk to presider!"
+      },
+      "gloria": {
+        "title": "Glory to God (Through-composed Setting)",
+        "composer": "Mass of Renewal • Curtis Stephan"
+      },
+      "responsorialPsalm": {
+        "psalm": "Ps 47 God mounts his throne to shouts...",
+        "setting": "The Lyric Psalter • Tony Alonso & Marty Haugen"
+      },
+      "gospelAcclamation": {
+        "title": "Easter Alleluia (Refrain)",
+        "composer": "The Lyric Gospel Acclamations • Tony Alonso",
+        "verse": "Go and teach all nations, says the Lord;\nI am with you always, until the end of the world."
+      },
+      "offertory": {
+        "title": "Where My Father Lives",
+        "composer": "M.D. Ridge",
+        "description": "Ascension of the Lord"
+      },
+      "lordsPrayer": {
+        "title": "Chanted Our Father (Snow)",
+        "composer": "Jennings/Paregorius"
+      },
+      "fractionRite": {
+        "title": "Lamb of God Setting"
+      },
+      "communionSongs": [
+        {
+          "title": "Be Not Afraid",
+          "composer": "Bob Dufford, SJ",
+          "description": "\"I go before you always\""
+        },
+        {
+          "title": "Every Mother, Every Father",
+          "composer": "Andy Bast & Bruce Benedict",
+          "description": "Mother's Day"
+        }
+      ],
+      "sending": {
+        "title": "Go Make of All Disciples",
+        "composer": "ELLACOMBE • Leon M. Adkins",
+        "description": "Gospel"
+      }
+    },
+    {
+      "community": "Foundations",
+      "communityId": "foundations",
+      "date": "Year B — May 09, 2027 (Sun)",
+      "presider": "NOT THIS YEAR",
+      "prelude": {
+        "title": "Regina Caeli / O Queen of Heaven",
+        "composer": "Mode VI Latin • 12th C",
+        "description": "Pope Leo XIV singing Regina Caeli"
+      },
+      "gathering": {
+        "title": "Hail the Day That Sees Him Rise",
+        "composer": "LLANFAIR • Trevor Thomson",
+        "description": "Ascension of the Lord"
+      },
+      "penitentialAct": {
+        "title": "Kyrie (Gift of God) • Adapted Version",
+        "composer": "Marty Haugen • Arranged by David Locwood"
+      },
+      "gloria": {
+        "title": "Glory to God (Mass of Joy & Peace)",
+        "composer": "Tony Alonso • Arr. by David Lockwood"
+      },
+      "gospelAcclamation": {
+        "title": "Easter Alleluia (Refrain)",
+        "composer": "The Lyric Gospel Acclamations • Tony Alonso",
+        "verse": "Go and teach all nations, says the Lord;\nI am with you always, until the end of the world."
+      },
+      "offertory": {
+        "title": "Where My Father Lives",
+        "composer": "M.D. Ridge",
+        "description": "Ascension"
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "Mass of Glory",
+        "composer": "Bob Hurd & Ken Canedo"
+      },
+      "lordsPrayer": {
+        "title": "Chanted Our Father (Snow)",
+        "composer": "Jennings • Paregorius"
+      },
+      "fractionRite": {
+        "title": "Lamb of God (Mass of Glory)",
+        "composer": "Bob Hurd & Ken Canedo"
+      },
+      "communionSongs": [
+        {
+          "title": "Be Not Afraid",
+          "composer": "Bob Dufford, SJ",
+          "description": "\"I go before you always\""
+        },
+        {
+          "title": "Go into the World",
+          "composer": "Tom Booth",
+          "description": "\"Let your presence light new light in others...\""
+        }
+      ],
+      "sending": {
+        "title": "At the Name of Jesus",
+        "composer": "KING'S WESTON, Ralph Vaughan Williams",
+        "description": "\"Jesus is Lord, King of glory now\"!"
+      }
+    },
+    {
+      "community": "Generations",
+      "communityId": "generations",
+      "date": "Year B — May 09, 2027 (Sun)",
+      "presider": "NOT THIS YEAR",
+      "penitentialAct": {
+        "title": "Kyrie • Misa Del Mundo",
+        "composer": "If needed. Talk to presider!"
+      },
+      "gloria": {
+        "title": "Glory to God (Mass of Joy & Peace)",
+        "composer": "Tony Alonso • Arr. by Dan Houze"
+      },
+      "responsorialPsalm": {
+        "psalm": "Ps 47 God mounts his throne to shouts...",
+        "setting": "Spirit & Psalm • Josh Blakesley"
+      },
+      "gospelAcclamation": {
+        "title": "Easter Alleluia (Refrain)",
+        "composer": "The Lyric Gospel Acclamations • Tony Alonso",
+        "verse": "Go and teach all nations, says the Lord;\nI am with you always, until the end of the world."
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "Mass of Glory",
+        "composer": "Bob Hurd • Arr. by Dan Houze"
+      },
+      "lordsPrayer": {
+        "title": "(Echo) Our Father",
+        "composer": "Jerome Andrews • Arranged by Dan Houze"
+      },
+      "fractionRite": {
+        "title": "Lamb of God (Mass of Glory)"
+      },
+      "communionSongs": [
+        {
+          "title": "Be Not Afraid",
+          "composer": "Bob Dufford, SJ",
+          "description": "\"I go before you always\""
+        },
+        {
+          "title": "One Sacrifice of Christ",
+          "composer": "Rick Modlin • Robert Feduccia",
+          "description": "\"Jesus... died and rose, and ascended to the throne.\""
+        }
+      ],
+      "sending": {
+        "title": "Go Out, Go Out",
+        "composer": "Curtis Stephan"
+      }
+    },
+    {
+      "community": "Heritage",
+      "communityId": "heritage",
+      "date": "Year B — May 09, 2027 (Sun)",
+      "presider": "NOT THIS YEAR",
+      "prelude": {
+        "title": "Regina Caeli / O Queen of Heaven",
+        "composer": "Mode VI Latin • 12th C",
+        "description": "Pope Leo XIV singing Regina Caeli"
+      },
+      "gathering": {
+        "title": "Hail the Day That Sees Him Rise",
+        "composer": "LLANFAIR • Charles Wesley • Robert Williams",
+        "description": "Ascension of the Lord"
+      },
+      "penitentialAct": {
+        "title": "Kyrie • Misa Del Mundo",
+        "composer": "Only if needed. Talk to presider!"
+      },
+      "gloria": {
+        "title": "Glory to God (Mass of Joy & Peace)",
+        "composer": "Tony Alonso, Thru Composed"
+      },
+      "responsorialPsalm": {
+        "psalm": "Ps 47 God mounts his throne to shouts...",
+        "setting": "The Lyric Psalter • Tony Alonso & Marty Haugen"
+      },
+      "gospelAcclamation": {
+        "title": "Easter Alleluia (Refrain)",
+        "composer": "The Lyric Gospel Acclamations • Tony Alonso",
+        "verse": "Go and teach all nations, says the Lord;\nI am with you always, until the end of the world."
+      },
+      "offertory": {
+        "title": "Where My Father Lives",
+        "composer": "M.D. Ridge",
+        "description": "Ascension"
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "Mass of Joy & Peace",
+        "composer": "Tony Alonso"
+      },
+      "lordsPrayer": {
+        "title": "Chanted Our Father (Snow)",
+        "composer": "Jennings/Paregorius"
+      },
+      "fractionRite": {
+        "title": "Lamb of God (Mass of Joy & Peace)",
+        "composer": "Tony Alonso"
+      },
+      "communionSongs": [
+        {
+          "title": "Be Not Afraid",
+          "composer": "Bob Dufford, SJ",
+          "description": "\"I go before you always\""
+        }
+      ],
+      "sending": {
+        "title": "Go Make of All Disciples",
+        "composer": "ELLACOMBE • Leon M. Adkins",
+        "description": "Gospel"
+      }
+    },
+    {
+      "community": "Elevations",
+      "communityId": "elevations",
+      "date": "Year B — May 09, 2027 (Sun)",
+      "presider": "NOT THIS YEAR",
+      "prelude": {
+        "title": "Regina Caeli / O Queen of Heaven",
+        "composer": "Mode VI Latin • 12th C",
+        "description": "Pope Leo XIV singing Regina Caeli"
+      },
+      "penitentialAct": {
+        "title": "Kyrie (Misa Del Mundo)",
+        "composer": "Jesse Manibusan — If needed."
+      },
+      "gloria": {
+        "title": "Glory to God (Joy & Peace)"
+      },
+      "responsorialPsalm": {
+        "psalm": "Ps 47 God mounts his throne to shouts...",
+        "setting": "Spirit & Psalm • Josh Blakesley"
+      },
+      "gospelAcclamation": {
+        "title": "Easter Alleluia (Refrain)",
+        "composer": "The Lyric Gospel Acclamations • Tony Alonso",
+        "verse": "Go and teach all nations, says the Lord;\nI am with you always, until the end of the world."
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "Mass of Restoration",
+        "composer": "Joshua Blakesley"
+      },
+      "lordsPrayer": {
+        "title": "Echo Our Father",
+        "composer": "Andrews, Arr. Bonilla • Lockwood • Fajardo"
+      },
+      "fractionRite": {
+        "title": "Lamb of God (Mass of Restoration)",
+        "composer": "Joshua Blakesley"
+      },
+      "communionSongs": [
+        {
+          "title": "Be Not Afraid",
+          "composer": "Bob Dufford, SJ",
+          "description": "\"I go before you always\""
+        }
+      ],
+      "sending": {
+        "title": "Go out, Go Out",
+        "composer": "Curtis Stephan"
+      }
+    }
+  ]
+}

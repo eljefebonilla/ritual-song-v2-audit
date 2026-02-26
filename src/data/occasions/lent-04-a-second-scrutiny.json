@@ -1,0 +1,412 @@
+{
+  "id": "lent-04-a-second-scrutiny",
+  "name": "LENT 04 [A]\nSecond Scrutiny",
+  "year": "A",
+  "season": "lent",
+  "seasonLabel": "Lent",
+  "seasonOrder": 4,
+  "dates": [
+    {
+      "date": "2023-03-19",
+      "label": "Year A — Mar 19, 2023 (Sun)",
+      "dayOfWeek": "Sun"
+    },
+    {
+      "date": "2035-03-04",
+      "label": "Year A — Mar 04, 2035 (Sun)",
+      "dayOfWeek": "Sun"
+    },
+    {
+      "date": "2032-03-07",
+      "label": "Year A — Mar 07, 2032 (Sun)",
+      "dayOfWeek": "Sun"
+    },
+    {
+      "date": "2029-03-11",
+      "label": "Year A — Mar 11, 2029 (Sun)",
+      "dayOfWeek": "Sun"
+    },
+    {
+      "date": "2026-03-15",
+      "label": "Year A — Mar 15, 2026 (Sun)",
+      "dayOfWeek": "Sun"
+    }
+  ],
+  "lectionary": {
+    "number": "031•A",
+    "gospelTitle": "A Man Born Blind Is Healed",
+    "thematicTag": "Scrutiny 2/3 – New Light"
+  },
+  "readings": [
+    {
+      "type": "first",
+      "citation": "1 Sm 16:1b, 6-7, 10-13a",
+      "summary": "Samuel anoints David king."
+    },
+    {
+      "type": "psalm",
+      "citation": "Ps 23: 1-3a, 3b-4, 5, 6. R. v.1\nThe Lord is my shepherd; there is nothing I shall want.",
+      "summary": "",
+      "antiphon": "Ps 23: 1-3a, 3b-4, 5, 6. R. v.1\nThe Lord is my shepherd; there is nothing I shall want."
+    },
+    {
+      "type": "second",
+      "citation": "Eph 5:8-14",
+      "summary": "Live in the light."
+    },
+    {
+      "type": "gospel_verse",
+      "citation": "Jn 8:12",
+      "summary": "I am the light of the world, says the Lord;\nwhoever follows me will have the light of life."
+    },
+    {
+      "type": "gospel",
+      "citation": "Jn 9:1-41 (Shorter - Jn 9:1, 6-9, 13-17, 34-38)",
+      "summary": "Jesus cures a blind man on the sabbath."
+    }
+  ],
+  "antiphons": [
+    {
+      "type": "entrance",
+      "option": 1,
+      "citation": "Cf. Is 66:10–11",
+      "text": "Rejoice, Jerusalem, and all who love her.\nBe joyful, all who were in mourning;\nexult and be satisfied at her consoling breast."
+    },
+    {
+      "type": "communion",
+      "option": 1,
+      "citation": "For Jn 9:11, 38 (Man Born Blind)",
+      "text": "The Lord anointed my eyes: I went, I washed,\nI saw and I believed in God."
+    }
+  ],
+  "planningNotes": [
+    "🍀  ST. PATRICK'S DAY | MAR 17  🍀",
+    "Ask Ross for Tin Whistle",
+    "Laetare Sunday - Choir wear rose pink!"
+  ],
+  "musicPlans": [
+    {
+      "community": "Reflections",
+      "communityId": "reflections",
+      "date": "Year A — Mar 14, 2026 (Sat)",
+      "presider": "TBD",
+      "prelude": {
+        "title": "Open My Eyes",
+        "composer": "Jesse Manibusan, Arr. David Lockwood",
+        "description": "Also, see Taizé Setlist"
+      },
+      "gathering": {
+        "title": "Be Though My Vision",
+        "composer": "SLANE • Arranged by Assad",
+        "description": "☘️ St. Patricks Day / Vision for the Blind Man"
+      },
+      "penitentialAct": {
+        "title": "Kyrie (Mass of Colour) — optional tropes",
+        "composer": "Jeffrey Bonilla & David Lockwood"
+      },
+      "responsorialPsalm": {
+        "psalm": "Ps 23 The Lord is my shepherd there is nothing...",
+        "setting": "Spirit & Psalm • Sarah Hart 🍀"
+      },
+      "gospelAcclamation": {
+        "title": "Mass of Joy & Peace Lenten G.A. (Refrain)",
+        "composer": "The Lyric Gospel Acclamations • Tony Alonso",
+        "verse": "I am the light of the world, says the Lord;\nwhoever follows me will have the light of life."
+      },
+      "offertory": {
+        "title": "Breastplate",
+        "composer": "Liam Lawton • Arranged by Chris de Silva",
+        "description": "☘️ St. Patricks Day"
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "Mass of Creation",
+        "composer": "Marty Haugen • Arr. by Lockwood & Phan"
+      },
+      "lordsPrayer": {
+        "title": "Chanted Our Father (Snow)",
+        "composer": "Jennings/Paregorius"
+      },
+      "fractionRite": {
+        "title": "Lamb of God (Mass of Creation)",
+        "composer": "Marty Haugen • Arr. by Lockwood & Phan"
+      },
+      "communionSongs": [
+        {
+          "title": "Broken Vessels",
+          "composer": "Hillsong Worship",
+          "description": "\"I once was blind, but now I see...\""
+        },
+        {
+          "title": "Psalm 23: Shepherd Me, O God",
+          "composer": "Marty Haugen",
+          "description": "Lent 4A"
+        },
+        {
+          "title": "Christ In Me Arise",
+          "composer": "Trevor Thomson",
+          "description": "\"Be now my vision, open these eyes...\""
+        }
+      ],
+      "sending": {
+        "title": "Save Your People",
+        "composer": "Jim Farrell",
+        "description": "General"
+      }
+    },
+    {
+      "community": "Foundations",
+      "communityId": "foundations",
+      "date": "Year A — Mar 15, 2026 (Sun)",
+      "presider": "TBD",
+      "gathering": {
+        "title": "Be Though My Vision",
+        "composer": "SLANE • Arranged by Assad",
+        "description": "☘️ St. Patricks Day / Vision for the Blind Man"
+      },
+      "penitentialAct": {
+        "title": "Kyrie (Mass of Colour) — optional tropes",
+        "composer": "Jeffrey Bonilla & David Lockwood"
+      },
+      "responsorialPsalm": {
+        "psalm": "Ps 23 The Lord is my shepherd there is nothing...",
+        "setting": "Spirit & Psalm • Sarah Hart 🍀"
+      },
+      "gospelAcclamation": {
+        "title": "Praise to You, Lord Jesus Christ",
+        "composer": "Ed Archer",
+        "verse": "I am the light of the world, says the Lord;\nwhoever follows me will have the light of life."
+      },
+      "offertory": {
+        "title": "Open My Eyes",
+        "composer": "Jesse Manibusan",
+        "description": "Blindman"
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "Mass of a Firm Foundation",
+        "composer": "David Lockwood"
+      },
+      "lordsPrayer": {
+        "title": "Chanted Our Father (Snow)",
+        "composer": "Jennings • Paregorius"
+      },
+      "fractionRite": {
+        "title": "Lamb of God (Mass of a Firm Foundation)",
+        "composer": "David Lockwood"
+      },
+      "communionSongs": [
+        {
+          "title": "I Have Loved You",
+          "composer": "Michael Joncas",
+          "description": "\"I have called you, and you are mine\""
+        },
+        {
+          "title": "Turn Our Hearts Around",
+          "composer": "Trevor Thomson",
+          "description": "\"We have wondered, and lost our way...\""
+        }
+      ],
+      "sending": {
+        "title": "How Great Thou Art",
+        "composer": "Stuart  K. Hine",
+        "description": "Verse 5: \"...and take me home...\""
+      }
+    },
+    {
+      "community": "Generations",
+      "communityId": "generations",
+      "date": "Year A — Mar 15, 2026 (Sun)",
+      "presider": "TBD",
+      "gathering": {
+        "title": "Be Though My Vision",
+        "composer": "SLANE • Arranged by Assad",
+        "description": "☘️ St. Patricks Day / Vision for the Blind Man"
+      },
+      "penitentialAct": {
+        "title": "Kyrie (Mass of Colour) — optional tropes",
+        "composer": "Jeffrey Bonilla & David Lockwood"
+      },
+      "responsorialPsalm": {
+        "psalm": "Ps 23 The Lord is my shepherd there is nothing...",
+        "setting": "Spirit & Psalm • Sarah Hart 🍀"
+      },
+      "gospelAcclamation": {
+        "title": "Praise to You, Lord Jesus Christ",
+        "composer": "Ed Archer",
+        "verse": "I am the light of the world, says the Lord;\nwhoever follows me will have the light of life."
+      },
+      "offertory": {
+        "title": "Amazing Grace (My Chains Are Gone)",
+        "composer": "Chris Tomlin • Louie Giglio • John Newton",
+        "description": "Gospel - Blind Man Healed"
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "Mass of Colour",
+        "composer": "Jeffrey Bonilla & David Lockwood"
+      },
+      "lordsPrayer": {
+        "title": "Spoken during Season of Lent"
+      },
+      "fractionRite": {
+        "title": "Lamb of God (Mass of Colour)",
+        "composer": "Jeffrey Bonilla & David Lockwood"
+      },
+      "communionSongs": [
+        {
+          "title": "Healed In Christ",
+          "composer": "Sarag Hart",
+          "description": "Gospel - Healing of the man born blind"
+        },
+        {
+          "title": "Build My Life",
+          "composer": "Pat Barrett",
+          "description": "\"Open up my eyes in wonder\""
+        },
+        {
+          "title": "Open My Eyes",
+          "composer": "Jesse Manibusan",
+          "description": "Blindman"
+        },
+        {
+          "title": "Christ In Me Arise",
+          "composer": "Trevor Thomson",
+          "description": "\"Be now my vision, open these eyes...\""
+        }
+      ],
+      "sending": {
+        "title": "How Great Thou Art",
+        "composer": "Paul Baloche",
+        "description": "\"when I in awesom wonder\""
+      }
+    },
+    {
+      "community": "Heritage",
+      "communityId": "heritage",
+      "date": "Year A — Mar 15, 2026 (Sun)",
+      "presider": "TBD",
+      "gathering": {
+        "title": "Be Though My Vision",
+        "composer": "SLANE • Arranged by Assad",
+        "description": "☘️ St. Patricks Day / Vision for the Blind Man"
+      },
+      "penitentialAct": {
+        "title": "Kyrie (Mass of Colour) — optional tropes",
+        "composer": "Jeffrey Bonilla & David Lockwood"
+      },
+      "responsorialPsalm": {
+        "psalm": "Ps 23 The Lord is my shepherd there is nothing...",
+        "setting": "Spirit & Psalm • Sarah Hart 🍀"
+      },
+      "gospelAcclamation": {
+        "title": "Mass of Joy & Peace Lenten G.A. (Refrain)",
+        "composer": "The Lyric Gospel Acclamations • Tony Alonso",
+        "verse": "I am the light of the world, says the Lord;\nwhoever follows me will have the light of life."
+      },
+      "offertory": {
+        "title": "Open My Eyes",
+        "composer": "Jesse Manibusan",
+        "description": "Blindman"
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "Mass of Creation - Rev. 2010",
+        "composer": "Marty Haugen"
+      },
+      "lordsPrayer": {
+        "title": "Chanted Our Father (Snow)",
+        "composer": "Jennings/Paregorius"
+      },
+      "fractionRite": {
+        "title": "Lamb of God (Mass of Creation)",
+        "composer": "Tony Alonso"
+      },
+      "communionSongs": [
+        {
+          "title": "Hosea (Choral)",
+          "composer": "Gregory Norbet • Arranged by Ed Archer",
+          "description": "No audio reference available yet."
+        },
+        {
+          "title": "May We See You",
+          "composer": "Gerard Chiusano"
+        },
+        {
+          "title": "Christ In Me Arise",
+          "composer": "Trevor Thomson",
+          "description": "\"Be now my vision, open these eyes...\""
+        }
+      ],
+      "sending": {
+        "title": "Healing River of the Spirit",
+        "composer": "Ruth Duck",
+        "description": "Gospel - Healing of the man born blind"
+      }
+    },
+    {
+      "community": "Elevations",
+      "communityId": "elevations",
+      "date": "Year A — Mar 15, 2026 (Sun)",
+      "presider": "TBD",
+      "prelude": {
+        "title": "Open My Eyes",
+        "composer": "Jesse Manibusan, Arr. David Lockwood",
+        "description": "Blind Man"
+      },
+      "gathering": {
+        "title": "Be Though My Vision",
+        "composer": "SLANE • Arranged by Assad",
+        "description": "☘️ St. Patricks Day"
+      },
+      "penitentialAct": {
+        "title": "Kyrie (Mass of Colour) — optional tropes",
+        "composer": "Jeffrey Bonilla & David Lockwood"
+      },
+      "responsorialPsalm": {
+        "psalm": "Ps 23 The Lord is my shepherd there is nothing...",
+        "setting": "Spirit & Psalm • Sarah Hart 🍀"
+      },
+      "gospelAcclamation": {
+        "title": "Praise to You, Lord Jesus Christ",
+        "composer": "Ed Archer",
+        "verse": "I am the light of the world, says the Lord;\nwhoever follows me will have the light of life."
+      },
+      "offertory": {
+        "title": "Amazing Grace (My Chains Are Gone)",
+        "composer": "Chris Tomlin • Louie Giglio • John Newton",
+        "description": "Gospel - Blind Man Healed"
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "Mass of Colour",
+        "composer": "Bonilla & Lockwood"
+      },
+      "lordsPrayer": {
+        "title": "Echo Our Father",
+        "composer": "Andrews, Arr. Bonilla • Lockwood • Fajardo"
+      },
+      "fractionRite": {
+        "title": "Lamb of God (Mass of Colour)",
+        "composer": "Jeffrey Bonilla & David Lockwood"
+      },
+      "communionSongs": [
+        {
+          "title": "Healed In Christ",
+          "composer": "Sarag Hart",
+          "description": "Gospel - Healing of the man born blind"
+        },
+        {
+          "title": "Build My Life",
+          "composer": "Pat Barrett",
+          "description": "\"Open up my eyes in wonder\""
+        },
+        {
+          "title": "Christ In Me Arise",
+          "composer": "Trevor Thomson",
+          "description": "\"Be now my vision, open these eyes...\""
+        }
+      ],
+      "sending": {
+        "title": "How Great Thou Art",
+        "composer": "Paul Baloche",
+        "description": "\"when I in awesom wonder\""
+      }
+    }
+  ]
+}

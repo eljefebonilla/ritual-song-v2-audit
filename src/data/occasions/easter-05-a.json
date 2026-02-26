@@ -1,0 +1,267 @@
+{
+  "id": "easter-05-a",
+  "name": "EASTER 05 [A]",
+  "year": "A",
+  "season": "easter",
+  "seasonLabel": "Easter",
+  "seasonOrder": 5,
+  "dates": [
+    {
+      "date": "2023-05-07",
+      "label": "Year A — May 07, 2023 (Sun)",
+      "dayOfWeek": "Sun"
+    },
+    {
+      "date": "2035-04-22",
+      "label": "Year A — Apr 22, 2035 (Sun)",
+      "dayOfWeek": "Sun"
+    },
+    {
+      "date": "2032-04-25",
+      "label": "Year A — Apr 25, 2032 (Sun)",
+      "dayOfWeek": "Sun"
+    },
+    {
+      "date": "2029-04-29",
+      "label": "Year A — Apr 29, 2029 (Sun)",
+      "dayOfWeek": "Sun"
+    },
+    {
+      "date": "2026-05-03",
+      "label": "Year A — May 03, 2026 (Sun)",
+      "dayOfWeek": "Sun"
+    }
+  ],
+  "lectionary": {
+    "number": "052•A",
+    "gospelTitle": "Way, Truth and Life",
+    "thematicTag": "Farewell Disc. 1/3"
+  },
+  "readings": [
+    {
+      "type": "first",
+      "citation": "Acts 6:1-7",
+      "summary": "Stephen is chosen as the first deacon."
+    },
+    {
+      "type": "psalm",
+      "citation": "Ps 33:1-2, 4-5, 18-19, R. v.22\nLord, let your mercy be on us, as we place our trust in you.",
+      "summary": "",
+      "antiphon": "Ps 33:1-2, 4-5, 18-19, R. v.22\nLord, let your mercy be on us, as we place our trust in you."
+    },
+    {
+      "type": "second",
+      "citation": "1 Pt 2:4-9",
+      "summary": "Jesus, a living cornerstone."
+    },
+    {
+      "type": "gospel_verse",
+      "citation": "Jn 14:6",
+      "summary": "I am the way, the truth and the life, says the Lord;\nno one comes to the Father, except through me."
+    },
+    {
+      "type": "gospel",
+      "citation": "Jn 14:1-12",
+      "summary": "Jesus the way, truth, and life."
+    }
+  ],
+  "antiphons": [
+    {
+      "type": "entrance",
+      "option": 1,
+      "citation": "Cf. Ps 98 (97):1–2",
+      "text": "O sing a new song to the Lord,\nfor he has worked wonders;\nin the sight of the nations\nhe has shown his deliverance, alleluia."
+    },
+    {
+      "type": "communion",
+      "option": 1,
+      "citation": "Cf. Jn 15:1, 5",
+      "text": "I am the true vine and you are the branches, \nSays the Lord. Whoever remains in me,\nand I in him, bears fruit in plenty, alleluia."
+    }
+  ],
+  "planningNotes": [
+    "MAY - MONTH OF MARY"
+  ],
+  "musicPlans": [
+    {
+      "community": "Reflections",
+      "communityId": "reflections",
+      "date": "Year A — May 02, 2026 (Sat)",
+      "presider": "TBD",
+      "prelude": {
+        "title": "Regina Caeli / O Queen of Heaven",
+        "composer": "Mode VI Latin • 12th C",
+        "description": "Pope Leo XIV singing Regina Caeli"
+      },
+      "gloria": {
+        "title": "Glory to God (Through-composed Setting)",
+        "composer": "Mass of Renewal • Curtis Stephan"
+      },
+      "gospelAcclamation": {
+        "title": "Easter Alleluia (Refrain)",
+        "composer": "The Lyric Gospel Acclamations • Tony Alonso",
+        "verse": "I am the way, the truth and the life, says the Lord;\nno one comes to the Father, except through me."
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "Mass of the Holy Family",
+        "composer": "Chris de Silva"
+      },
+      "lordsPrayer": {
+        "title": "Chanted Our Father (Snow)",
+        "composer": "Jennings/Paregorius"
+      },
+      "fractionRite": {
+        "title": "Lamb of God (Mass of the Holy Family)",
+        "composer": "Chris de Silva"
+      }
+    },
+    {
+      "community": "Foundations",
+      "communityId": "foundations",
+      "date": "Year A — May 03, 2026 (Sun)",
+      "presider": "TBD",
+      "prelude": {
+        "title": "Regina Caeli / O Queen of Heaven",
+        "composer": "Mode VI Latin • 12th C",
+        "description": "Pope Leo XIV singing Regina Caeli"
+      },
+      "penitentialAct": {
+        "title": "Kyrie (Gift of God) • Adapted Version",
+        "composer": "Marty Haugen • Arranged by David Locwood"
+      },
+      "gloria": {
+        "title": "Glory to God (Mass of Joy & Peace)",
+        "composer": "Alonso • Arr. by Houze OR Arr. by Lockwood"
+      },
+      "gospelAcclamation": {
+        "title": "Easter Alleluia (Refrain)",
+        "composer": "The Lyric Gospel Acclamations • Tony Alonso",
+        "verse": "I am the way, the truth and the life, says the Lord;\nno one comes to the Father, except through me."
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "Mass of Glory",
+        "composer": "Bob Hurd & Ken Canedo"
+      },
+      "lordsPrayer": {
+        "title": "Chanted Our Father (Snow)",
+        "composer": "Jennings • Paregorius"
+      },
+      "fractionRite": {
+        "title": "Lamb of God (Mass of Glory)",
+        "composer": "Bob Hurd & Ken Canedo"
+      },
+      "communionSongs": [
+        {
+          "title": "One Bread, One Body",
+          "composer": "John Foley SJ — Upbeat!",
+          "description": "✪ E - 05 A"
+        }
+      ]
+    },
+    {
+      "community": "Generations",
+      "communityId": "generations",
+      "date": "Year A — May 03, 2026 (Sun)",
+      "presider": "TBD",
+      "penitentialAct": {
+        "title": "Kyrie • Misa Del Mundo",
+        "composer": "If needed. Talk to presider!"
+      },
+      "gloria": {
+        "title": "Glory to God (Mass of Joy & Peace)",
+        "composer": "Tony Alonso • Arr. by Dan Houze"
+      },
+      "responsorialPsalm": {
+        "psalm": "Ps 145 I will praise your name for ever...",
+        "setting": "Spirit & Psalm • Ben Walther"
+      },
+      "gospelAcclamation": {
+        "title": "Easter Alleluia (Refrain)",
+        "composer": "The Lyric Gospel Acclamations • Tony Alonso",
+        "verse": "I am the way, the truth and the life, says the Lord;\nno one comes to the Father, except through me."
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "Mass of Glory",
+        "composer": "Bob Hurd • Arr. by Dan Houze"
+      },
+      "lordsPrayer": {
+        "title": "(Echo) Our Father",
+        "composer": "Jerome Andrews • Arranged by Dan Houze"
+      },
+      "fractionRite": {
+        "title": "Lamb of God (Mass of Glory)"
+      }
+    },
+    {
+      "community": "Heritage",
+      "communityId": "heritage",
+      "date": "Year A — May 03, 2026 (Sun)",
+      "presider": "TBD",
+      "prelude": {
+        "title": "Regina Caeli / O Queen of Heaven",
+        "composer": "Mode VI Latin • 12th C",
+        "description": "Pope Leo XIV singing Regina Caeli"
+      },
+      "gloria": {
+        "title": "Glory to God (Mass of Joy & Peace)",
+        "composer": "Tony Alonso, Thru Composed"
+      },
+      "gospelAcclamation": {
+        "title": "Easter Alleluia (Refrain)",
+        "composer": "The Lyric Gospel Acclamations • Tony Alonso",
+        "verse": "I am the way, the truth and the life, says the Lord;\nno one comes to the Father, except through me."
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "Mass of Joy & Peace",
+        "composer": "Tony Alonso"
+      },
+      "lordsPrayer": {
+        "title": "Chanted Our Father (Snow)",
+        "composer": "Jennings/Paregorius"
+      },
+      "fractionRite": {
+        "title": "Lamb of God (Mass of Joy & Peace)",
+        "composer": "Tony Alonso"
+      }
+    },
+    {
+      "community": "Elevations",
+      "communityId": "elevations",
+      "date": "Year A — May 03, 2026 (Sun)",
+      "presider": "TBD",
+      "prelude": {
+        "title": "Regina Caeli / O Queen of Heaven",
+        "composer": "Mode VI Latin • 12th C",
+        "description": "Pope Leo XIV singing Regina Caeli"
+      },
+      "penitentialAct": {
+        "title": "Kyrie (Misa Del Mundo)",
+        "composer": "Jesse Manibusan — If needed."
+      },
+      "gloria": {
+        "title": "Glory to God (Joy & Peace)"
+      },
+      "responsorialPsalm": {
+        "psalm": "Ps 145 I will praise your name for ever...",
+        "setting": "Spirit & Psalm • Ben Walther"
+      },
+      "gospelAcclamation": {
+        "title": "Easter Alleluia (Refrain)",
+        "composer": "The Lyric Gospel Acclamations • Tony Alonso",
+        "verse": "I am the way, the truth and the life, says the Lord;\nno one comes to the Father, except through me."
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "Mass of Restoration",
+        "composer": "Joshua Blakesley"
+      },
+      "lordsPrayer": {
+        "title": "Echo Our Father",
+        "composer": "Andrews, Arr. Bonilla • Lockwood • Fajardo"
+      },
+      "fractionRite": {
+        "title": "Lamb of God (Mass of Restoration)",
+        "composer": "Joshua Blakesley"
+      }
+    }
+  ]
+}

@@ -1,0 +1,398 @@
+{
+  "id": "year-b-jan-21-2024-sun",
+  "name": "Year B — Jan 21, 2024 (Sun)",
+  "year": "ABC",
+  "season": "ordinary",
+  "seasonLabel": "Ordinary Time",
+  "seasonOrder": 21,
+  "dates": [],
+  "lectionary": {
+    "number": "Year B — Jan 23, 2039 (Sun)",
+    "gospelTitle": "Year B — Jan 27, 2036 (Sun)",
+    "thematicTag": "Year B — Jan 23, 2033 (Sun)",
+    "thematicDetail": "Year B — Jan 27, 2030 (Sun)"
+  },
+  "readings": [
+    {
+      "type": "psalm",
+      "citation": "Galilean Call",
+      "summary": "",
+      "antiphon": "Planning Reminders"
+    },
+    {
+      "type": "second",
+      "citation": "Word of God Sunday",
+      "summary": ""
+    },
+    {
+      "type": "gospel_verse",
+      "citation": "O sing a new song to the Lord;\nsing to the Lord, all the earth.\nIn his presence are majesty and splendor,\nstrength and honor in his holy place.",
+      "summary": "Entrance Antiphon • Option II"
+    }
+  ],
+  "antiphons": [
+    {
+      "type": "communion",
+      "option": 2,
+      "citation": "Communion Antiphon • Option I | Cf. Ps 34 (33):6",
+      "text": "Look toward the Lord and be radiant;\nlet your faces not be abashed."
+    }
+  ],
+  "planningNotes": [
+    "Communion Antiphon • Option II | Cf. Jn 8:12",
+    "I am the light of the world, says the Lord;\nwhoever follows me will not walk in darkness,\nbut will have the light of life."
+  ],
+  "musicPlans": [
+    {
+      "community": "Reflections",
+      "communityId": "reflections",
+      "date": "Year B — Jan 23, 2027 (Sat)",
+      "presider": "NOT THIS YEAR",
+      "prelude": {
+        "title": "The Word Became Flesh",
+        "composer": "Orin Johnson",
+        "description": "Word of God Sunday - Post Christmas (Incarnation)"
+      },
+      "penitentialAct": {
+        "title": "Bernadette Farrell",
+        "composer": "Word of God Sunday",
+        "description": "Penitential Act (Only if presider wants led by cantor)"
+      },
+      "gloria": {
+        "title": "Kyrie • Misa Del Mundo",
+        "composer": "Jesse Manibusan",
+        "description": "Gloria"
+      },
+      "gospelAcclamation": {
+        "title": "The Lyric Psalter • Tony Alonso & Marty Haugen",
+        "composer": "Gospel Acclamation",
+        "verse": "Alleluia (Mass of Joy & Peace)"
+      },
+      "offertory": {
+        "title": "The Lyric Gospel Acclamations • Tony Alonso",
+        "description": "Offertory Song"
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "O Word of God",
+        "composer": "Ricky Manalo, CSP"
+      },
+      "lordsPrayer": {
+        "title": "Eucharistic Acclamations",
+        "composer": "Mass for the Healing of the World",
+        "description": "Trevor Thomson"
+      },
+      "fractionRite": {
+        "title": "Holy",
+        "composer": "When We Eat This Bread",
+        "description": "Amen"
+      },
+      "communionSongs": [
+        {
+          "title": "The Lord's Prayer",
+          "composer": "Chanted Our Father (Snow)",
+          "description": "Jennings/Paregorius"
+        },
+        {
+          "title": "Fraction Rite",
+          "composer": "Lamb of God (Mass for the Healing of the World)",
+          "description": "Trevor Thomson"
+        },
+        {
+          "title": "Communion Songs",
+          "composer": "Many and Great",
+          "description": "Ricky Manalo, CSP"
+        },
+        {
+          "title": "\"the word of goodness and HOPE\"",
+          "composer": "Psalm 23: Shepherd Me, O God",
+          "description": "Marty Haugen"
+        }
+      ]
+    },
+    {
+      "community": "Foundations",
+      "communityId": "foundations",
+      "date": "Year B — Jan 24, 2027 (Sun)",
+      "presider": "NOT THIS YEAR",
+      "prelude": {
+        "title": "N/A"
+      },
+      "penitentialAct": {
+        "title": "Jaime Cortez",
+        "composer": "“Faithful and true is the Word of our God.”",
+        "description": "Penitential Act (If presider wants led by cantor)"
+      },
+      "gloria": {
+        "title": "Kyrie (Gift of God) • Adapted Version",
+        "composer": "Marty Haugen • Arranged by David Locwood",
+        "description": "Gloria"
+      },
+      "gospelAcclamation": {
+        "title": "Composer/s",
+        "composer": "Gospel Acclamation",
+        "verse": "Alleluia! Give the Glory (Mass of Glory)"
+      },
+      "offertory": {
+        "title": "Hurd •  Canedo • Kingsbury",
+        "description": "Offertory Song"
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "Song Title",
+        "composer": "Composer/s"
+      },
+      "lordsPrayer": {
+        "title": "Eucharistic Acclamations",
+        "composer": "Mass of Glory"
+      },
+      "fractionRite": {
+        "title": "Holy",
+        "composer": "Mystery of Faith",
+        "description": "Amen"
+      },
+      "communionSongs": [
+        {
+          "title": "The Lord's Prayer",
+          "composer": "Chanted Our Father (Snow)",
+          "description": "Jennings • Paregorius"
+        },
+        {
+          "title": "Fraction Rite",
+          "composer": "Lamb of God (Mass of Glory)"
+        },
+        {
+          "title": "Communion Songs",
+          "composer": "Song Title",
+          "description": "Composer/s"
+        },
+        {
+          "title": "Description",
+          "composer": "Song Title",
+          "description": "Composer/s"
+        }
+      ],
+      "sending": {
+        "title": "Composer/s",
+        "composer": "Description"
+      }
+    },
+    {
+      "community": "Generations",
+      "communityId": "generations",
+      "date": "Year B — Jan 24, 2027 (Sun)",
+      "presider": "NOT THIS YEAR",
+      "prelude": {
+        "title": "Song Title",
+        "composer": "Composer/s"
+      },
+      "penitentialAct": {
+        "title": "Composer/s",
+        "composer": "Description",
+        "description": "Penitential Act (Only if presider wants led by cantor)"
+      },
+      "gloria": {
+        "title": "Kyrie • Misa Del Mundo",
+        "composer": "Jesse Manibusan",
+        "description": "Gloria"
+      },
+      "gospelAcclamation": {
+        "title": "Spirit & Psalm • ?",
+        "composer": "Gospel Acclamation",
+        "verse": "Mass Setting"
+      },
+      "offertory": {
+        "title": "Spirit & Psalm •",
+        "description": "Offertory Song"
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "Song Title",
+        "composer": "Composer/s"
+      },
+      "lordsPrayer": {
+        "title": "Eucharistic Acclamations",
+        "composer": "Mass of St. Anne",
+        "description": "Ed Bolduc"
+      },
+      "fractionRite": {
+        "title": "Holy",
+        "composer": "Mystery of Faith",
+        "description": "Amen"
+      },
+      "communionSongs": [
+        {
+          "title": "The Lord's Prayer",
+          "composer": "Echo Our Father",
+          "description": "Jerome Andrews • Arranged by Dan Houze"
+        },
+        {
+          "title": "Fraction Rite",
+          "composer": "Lamb of God (Mass of Holy Cross)"
+        },
+        {
+          "title": "Communion Songs",
+          "composer": "Song Title",
+          "description": "Composer/s"
+        },
+        {
+          "title": "Description",
+          "composer": "Song Title",
+          "description": "Composer/s"
+        },
+        {
+          "title": "Description",
+          "composer": "Song Title",
+          "description": "Composer/s"
+        },
+        {
+          "title": "Description",
+          "composer": "Bread of Life",
+          "description": "Michael John Poirier"
+        }
+      ],
+      "sending": {
+        "title": "Song Title",
+        "composer": "Composer/s"
+      }
+    },
+    {
+      "community": "Heritage",
+      "communityId": "heritage",
+      "date": "Year B — Jan 24, 2027 (Sun)",
+      "presider": "NOT THIS YEAR",
+      "prelude": {
+        "title": "Song Title",
+        "composer": "Composer/s"
+      },
+      "penitentialAct": {
+        "title": "Composer/s",
+        "composer": "Description",
+        "description": "Penitential Act (If presider wants led by cantor)"
+      },
+      "gloria": {
+        "title": "Kyrie • Misa Del Mundo",
+        "composer": "Jesse Manibusan",
+        "description": "Gloria"
+      },
+      "gospelAcclamation": {
+        "title": "Composer/s",
+        "composer": "Gospel Acclamation",
+        "verse": "Setting"
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "O Word of God",
+        "composer": "Ricky Manalo, CSP"
+      },
+      "lordsPrayer": {
+        "title": "Eucharistic Acclamations",
+        "composer": "Mass of Creation - Rev. 2010"
+      },
+      "fractionRite": {
+        "title": "Holy",
+        "composer": "Mystery of Faith",
+        "description": "Amen"
+      },
+      "communionSongs": [
+        {
+          "title": "The Lord's Prayer",
+          "composer": "Chanted Our Father (Snow)",
+          "description": "Jennings/Paregorius"
+        },
+        {
+          "title": "Fraction Rite",
+          "composer": "Lamb of God (Mass of Creation)"
+        },
+        {
+          "title": "Communion Songs",
+          "composer": "Song Title",
+          "description": "Composer/s"
+        },
+        {
+          "title": "Description",
+          "composer": "Song Title",
+          "description": "Composer/s"
+        },
+        {
+          "title": "Description",
+          "composer": "Song Title",
+          "description": "Composer/s"
+        }
+      ],
+      "sending": {
+        "title": "Dan Schutte",
+        "composer": "Description"
+      }
+    },
+    {
+      "community": "Elevations",
+      "communityId": "elevations",
+      "date": "Year B — Jan 24, 2027 (Sun)",
+      "presider": "NOT THIS YEAR",
+      "prelude": {
+        "title": "Song Title",
+        "composer": "Composer/s"
+      },
+      "penitentialAct": {
+        "title": "Composer/s",
+        "composer": "Description",
+        "description": "Penitential Act"
+      },
+      "gloria": {
+        "title": "Kyrie (Misa Del Mundo)",
+        "composer": "Jesse Manibusan — If needed.",
+        "description": "Gloria"
+      },
+      "gospelAcclamation": {
+        "title": "Spirit & Psalm • ?",
+        "composer": "Gospel Acclamation",
+        "verse": "Setting"
+      },
+      "offertory": {
+        "title": "Composer/s",
+        "description": "Offertory Song"
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "Song Title",
+        "composer": "Composer/s"
+      },
+      "lordsPrayer": {
+        "title": "Eucharistic Acclamations",
+        "composer": "Mass of Communion (Lower Key) • Matt Maher"
+      },
+      "fractionRite": {
+        "title": "Holy",
+        "composer": "Mystery of Faith",
+        "description": "Amen"
+      },
+      "communionSongs": [
+        {
+          "title": "The Lord's Prayer",
+          "composer": "Echo Our Father",
+          "description": "Andrews, Arr. Bonilla • Lockwood • Fajardo"
+        },
+        {
+          "title": "Fraction Rite",
+          "composer": "Lamb of God (Mass of Holy Cross)"
+        },
+        {
+          "title": "Communion Songs",
+          "composer": "Bread of Life",
+          "description": "Michael John Poirier"
+        },
+        {
+          "title": "\"Word of God, O Light eternal... foundation strong\"",
+          "composer": "Song Title",
+          "description": "Composer/s"
+        },
+        {
+          "title": "Description",
+          "composer": "What A Beautiful Name (Gospel Version)",
+          "description": "Hillsong Worship"
+        }
+      ],
+      "sending": {
+        "title": "Sending Song",
+        "composer": "Song Title",
+        "description": "Composer/s"
+      }
+    }
+  ]
+}

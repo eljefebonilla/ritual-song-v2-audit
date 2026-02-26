@@ -1,0 +1,48 @@
+{
+  "id": "solemnity-nov-1-all-saints-abc",
+  "name": "SOLEMNITY (NOV 1) \nALL SAINTS [ABC]",
+  "year": "ABC",
+  "season": "solemnity",
+  "seasonLabel": "Solemnity",
+  "seasonOrder": 1,
+  "dates": [
+    {
+      "date": "2025-11-01",
+      "label": "Year C — Nov 01, 2025 (Sat)",
+      "dayOfWeek": "Sat"
+    },
+    {
+      "date": "2029-11-01",
+      "label": "Year A — Nov 01, 2029 (Thu)",
+      "dayOfWeek": "Thu"
+    },
+    {
+      "date": "2028-11-01",
+      "label": "Year C — Nov 01, 2028 (Wed)",
+      "dayOfWeek": "Wed"
+    },
+    {
+      "date": "2027-11-01",
+      "label": "Year B — Nov 01, 2027 (Mon)",
+      "dayOfWeek": "Mon"
+    },
+    {
+      "date": "2026-11-01",
+      "label": "Year A — Nov 01, 2026 (Sun)",
+      "dayOfWeek": "Sun"
+    }
+  ],
+  "lectionary": {
+    "number": "667•ABC",
+    "gospelTitle": "Rejoice, Reward Awaits",
+    "thematicTag": "SEE SHEET"
+  },
+  "readings": [],
+  "antiphons": [],
+  "planningNotes": [
+    "Black Catholic History Month",
+    "Month of Remembrance",
+    "NO OBLIGATION THIS YEAR"
+  ],
+  "musicPlans": []
+}

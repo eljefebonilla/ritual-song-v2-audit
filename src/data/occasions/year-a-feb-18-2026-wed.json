@@ -1,0 +1,40 @@
+{
+  "id": "year-a-feb-18-2026-wed",
+  "name": "Year A — Feb 18, 2026 (Wed)",
+  "year": "ABC",
+  "season": "ordinary",
+  "seasonLabel": "Ordinary Time",
+  "seasonOrder": 18,
+  "dates": [],
+  "lectionary": {
+    "number": "",
+    "gospelTitle": "",
+    "thematicTag": ""
+  },
+  "readings": [
+    {
+      "type": "gospel",
+      "citation": "Reading I |",
+      "summary": "Text"
+    }
+  ],
+  "antiphons": [
+    {
+      "type": "entrance",
+      "option": 1,
+      "citation": "Verse before the Gospel |",
+      "text": "Text"
+    },
+    {
+      "type": "communion",
+      "option": 2,
+      "citation": "Communion Antiphon • Option I | Cf. Ps 13 (12):6",
+      "text": "I will sing to the Lord who has been bountiful with me,\nsing psalms to the name of the Lord Most High."
+    }
+  ],
+  "planningNotes": [
+    "Communion Antiphon • Option II | Cf. Mt 28:20",
+    "Behold, I am with you always,\neven to the end of the age, says the Lord."
+  ],
+  "musicPlans": []
+}

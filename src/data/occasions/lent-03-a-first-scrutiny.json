@@ -1,0 +1,407 @@
+{
+  "id": "lent-03-a-first-scrutiny",
+  "name": "LENT 03 [A]\nFirst Scrutiny",
+  "year": "A",
+  "season": "lent",
+  "seasonLabel": "Lent",
+  "seasonOrder": 3,
+  "dates": [
+    {
+      "date": "2023-03-12",
+      "label": "Year A — Mar 12, 2023 (Sun)",
+      "dayOfWeek": "Sun"
+    },
+    {
+      "date": "2035-02-25",
+      "label": "Year A — Feb 25, 2035 (Sun)",
+      "dayOfWeek": "Sun"
+    },
+    {
+      "date": "2032-02-29",
+      "label": "Year A — Feb 29, 2032 (Sun)",
+      "dayOfWeek": "Sun"
+    },
+    {
+      "date": "2029-03-04",
+      "label": "Year A — Mar 04, 2029 (Sun)",
+      "dayOfWeek": "Sun"
+    },
+    {
+      "date": "2026-03-08",
+      "label": "Year A — Mar 08, 2026 (Sun)",
+      "dayOfWeek": "Sun"
+    }
+  ],
+  "lectionary": {
+    "number": "028•A",
+    "gospelTitle": "Samaritan Woman at the Well",
+    "thematicTag": "Scrutiny 1/3 – Living Water"
+  },
+  "readings": [
+    {
+      "type": "first",
+      "citation": "Ex 17:3-7",
+      "summary": "The Israelites complain to Moses in the desert."
+    },
+    {
+      "type": "psalm",
+      "citation": "Ps 95:1-2, 6-7, 8-9. R. v.8\nIf today you hear his voice, harden not your hearts.",
+      "summary": "",
+      "antiphon": "Ps 95:1-2, 6-7, 8-9. R. v.8\nIf today you hear his voice, harden not your hearts."
+    },
+    {
+      "type": "second",
+      "citation": "Rom 5:1-2, 5-8",
+      "summary": "Christ laid down his life for us."
+    },
+    {
+      "type": "gospel_verse",
+      "citation": "See Jn 4:42, 15",
+      "summary": "Lord, you are truly the Savior of the world;\ngive me living water, that I may never thirst again."
+    },
+    {
+      "type": "gospel",
+      "citation": "Jn 4:5-42 (Shorter - 4:5-15, 19b-26, 39a, 40-42)",
+      "summary": "Jesus meets the Samaritan woman at the well."
+    }
+  ],
+  "antiphons": [
+    {
+      "type": "entrance",
+      "option": 1,
+      "citation": "Cf. Ps 25 (24):15–16]",
+      "text": "My eyes are always on the Lord,\nfor he rescues my feet from the snare.\nTurn to me and have mercy on me,\nfor I am alone and poor."
+    },
+    {
+      "type": "entrance",
+      "option": 2,
+      "citation": "Entrance Antiphon • Option II | Cf. Ez 36:23–26",
+      "text": "When I prove my holiness among you,\nI will gather you from all the foreign lands;\nand I will pour clean water upon you\nand cleanse you from all your impurities,\nand I will give you a new spirit, says the Lord."
+    },
+    {
+      "type": "communion",
+      "option": 1,
+      "citation": "Year A and Scrutiny - Jn 4:13–14",
+      "text": "For anyone who drinks it, says the Lord,\nthe water I shall give will become in him\na spring welling up to eternal life."
+    }
+  ],
+  "planningNotes": [
+    "⏰ DST 2026 - MAR 08 - LOSE HOUR"
+  ],
+  "musicPlans": [
+    {
+      "community": "Reflections",
+      "communityId": "reflections",
+      "date": "Year A — Mar 07, 2026 (Sat)",
+      "presider": "TBD",
+      "prelude": {
+        "title": "See Taizé Setlist"
+      },
+      "gathering": {
+        "title": "Come to the Water",
+        "composer": "John B. Foley, SJ • Arranged by Arielle Phan",
+        "description": "Gospel — Woman at the Well"
+      },
+      "penitentialAct": {
+        "title": "Kyrie (Mass of Colour) — optional tropes",
+        "composer": "Jeffrey Bonilla & David Lockwood"
+      },
+      "responsorialPsalm": {
+        "psalm": "Ps 95 If today you hear his voice harden not...",
+        "setting": "The Lyric Psalter • Tony Alonso & Marty Haugen"
+      },
+      "gospelAcclamation": {
+        "title": "Mass of Joy & Peace Lenten G.A. (Refrain)",
+        "composer": "The Lyric Gospel Acclamations • Tony Alonso",
+        "verse": "Lord, you are truly the Savior of the world;\ngive me living water, that I may never thirst again."
+      },
+      "offertory": {
+        "title": "Turn Our Hearts Around",
+        "description": "\"Wash us in your love.\""
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "Mass of Creation",
+        "composer": "Marty Haugen • Arr. by Lockwood & Phan"
+      },
+      "lordsPrayer": {
+        "title": "Chanted Our Father (Snow)",
+        "composer": "Jennings/Paregorius"
+      },
+      "fractionRite": {
+        "title": "Lamb of God (Mass of Creation)",
+        "composer": "Marty Haugen • Arr. by Lockwood & Phan"
+      },
+      "communionSongs": [
+        {
+          "title": "Beyond the Days",
+          "composer": "Ricky Manalo, CSP",
+          "description": "Lenten Song"
+        },
+        {
+          "title": "Turn To Me",
+          "composer": "John Foley SJ",
+          "description": "Lenten Song"
+        },
+        {
+          "title": "Belovedness",
+          "composer": "Sarah Kroger",
+          "description": "\"He says you're mine, I smiled when I made you\""
+        }
+      ],
+      "sending": {
+        "title": "Led by the Spirit",
+        "composer": "KINGSFOLD • Bob Hurd",
+        "description": "Lenten Sending"
+      }
+    },
+    {
+      "community": "Foundations",
+      "communityId": "foundations",
+      "date": "Year A — Mar 08, 2026 (Sun)",
+      "presider": "TBD",
+      "gathering": {
+        "title": "Come to the Water",
+        "composer": "John B. Foley, SJ • Arranged by Arielle Phan",
+        "description": "Gospel — Woman at the Well"
+      },
+      "penitentialAct": {
+        "title": "Kyrie (Mass of Colour) — optional tropes",
+        "composer": "Jeffrey Bonilla & David Lockwood"
+      },
+      "responsorialPsalm": {
+        "psalm": "Ps 95 If today you hear his voice harden not...",
+        "setting": "The Lyric Psalter • Tony Alonso & Marty Haugen"
+      },
+      "gospelAcclamation": {
+        "title": "Praise to You, Lord Jesus Christ",
+        "composer": "Ed Archer",
+        "verse": "Lord, you are truly the Savior of the world;\ngive me living water, that I may never thirst again."
+      },
+      "offertory": {
+        "title": "Turn Our Hearts Around",
+        "description": "\"Wash us in your love.\""
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "Mass of a Firm Foundation",
+        "composer": "David Lockwood"
+      },
+      "lordsPrayer": {
+        "title": "Chanted Our Father (Snow)",
+        "composer": "Jennings • Paregorius"
+      },
+      "fractionRite": {
+        "title": "Lamb of God (Mass of a Firm Foundation)",
+        "composer": "David Lockwood"
+      },
+      "communionSongs": [
+        {
+          "title": "Beyond the Days",
+          "composer": "Ricky Manalo, CSP"
+        },
+        {
+          "title": "Change Our Hearts",
+          "composer": "Rory Cooney",
+          "description": "Lenten Song"
+        }
+      ],
+      "sending": {
+        "title": "40 Days",
+        "composer": "Matt Maher",
+        "description": "Lenten Sending"
+      }
+    },
+    {
+      "community": "Generations",
+      "communityId": "generations",
+      "date": "Year A — Mar 08, 2026 (Sun)",
+      "presider": "TBD",
+      "gathering": {
+        "title": "Come to the Water",
+        "composer": "John B. Foley, SJ • Arranged by Arielle Phan",
+        "description": "Year A Gospel — Woman at the Well"
+      },
+      "penitentialAct": {
+        "title": "Kyrie (Mass of Colour) — optional tropes",
+        "composer": "Jeffrey Bonilla & David Lockwood"
+      },
+      "responsorialPsalm": {
+        "psalm": "Ps 95 If today you hear his voice harden not...",
+        "setting": "Spirit & Psalm • Ben Walther"
+      },
+      "gospelAcclamation": {
+        "title": "Praise to You, Lord Jesus Christ",
+        "composer": "Ed Archer",
+        "verse": "Lord, you are truly the Savior of the world;\ngive me living water, that I may never thirst again."
+      },
+      "offertory": {
+        "title": "O God, You Search Me",
+        "composer": "Bernadette Farrell",
+        "description": "\"ever the maker and keeper of my days\""
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "Mass of Colour",
+        "composer": "Jeffrey Bonilla & David Lockwood"
+      },
+      "lordsPrayer": {
+        "title": "Spoken during Season of Lent"
+      },
+      "fractionRite": {
+        "title": "Lamb of God (Mass of Colour)",
+        "composer": "Jeffrey Bonilla & David Lockwood"
+      },
+      "communionSongs": [
+        {
+          "title": "O Come to the Altar (NO BRIDGE!!!)",
+          "composer": "Elevation Worship — David begins solo.",
+          "description": "“Do you thirst for a drink from the well? ”"
+        },
+        {
+          "title": "Be Forgiven",
+          "composer": "Tom Booth",
+          "description": "Bridge: Woman at the Well"
+        },
+        {
+          "title": "Beyond the Days",
+          "composer": "Ricky Manalo, CSP",
+          "description": "\"we see the dawn of a new day\""
+        },
+        {
+          "title": "Belovedness",
+          "composer": "Sarah Kroger",
+          "description": "\"He says you're mine, I smiled when I made you\""
+        }
+      ],
+      "sending": {
+        "title": "The Lord's Prayer (It's Yours)",
+        "composer": "Matt Maher",
+        "description": "\"Forgive us, Forgive us\""
+      }
+    },
+    {
+      "community": "Heritage",
+      "communityId": "heritage",
+      "date": "Year A — Mar 08, 2026 (Sun)",
+      "presider": "TBD",
+      "gathering": {
+        "title": "Come to the Water",
+        "composer": "John B. Foley, SJ • Arranged by Arielle Phan",
+        "description": "Gospel — Woman at the Well"
+      },
+      "penitentialAct": {
+        "title": "Kyrie (Mass of Colour) — optional tropes",
+        "composer": "Jeffrey Bonilla & David Lockwood"
+      },
+      "responsorialPsalm": {
+        "psalm": "Ps 95 If today you hear his voice harden not...",
+        "setting": "The Lyric Psalter • Tony Alonso & Marty Haugen"
+      },
+      "gospelAcclamation": {
+        "title": "Mass of Joy & Peace Lenten G.A. (Refrain)",
+        "composer": "The Lyric Gospel Acclamations • Tony Alonso",
+        "verse": "Lord, you are truly the Savior of the world;\ngive me living water, that I may never thirst again."
+      },
+      "offertory": {
+        "title": "O God, You Search Me",
+        "composer": "Bernadette Farrell",
+        "description": "\"ever the maker and keeper of my days\""
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "Mass of Creation - Rev. 2010",
+        "composer": "Marty Haugen"
+      },
+      "lordsPrayer": {
+        "title": "Chanted Our Father (Snow)",
+        "composer": "Jennings/Paregorius"
+      },
+      "fractionRite": {
+        "title": "Lamb of God (Mass of Creation)",
+        "composer": "Tony Alonso"
+      },
+      "communionSongs": [
+        {
+          "title": "Beyond the Days",
+          "composer": "Ricky Manalo, CSP",
+          "description": "\"in your hands... the touch of your guidance\""
+        },
+        {
+          "title": "Turn To Me",
+          "composer": "John Foley SJ",
+          "description": "Lenten Song"
+        },
+        {
+          "title": "As the Deer Longs",
+          "composer": "Bob Hurd",
+          "description": "\"...so I long, so I long for you\""
+        }
+      ],
+      "sending": {
+        "title": "In These Days of Lenten Journey",
+        "composer": "Ricky Manalo CSP • Gerard Chiusano",
+        "description": "Lenten Sending Song"
+      }
+    },
+    {
+      "community": "Elevations",
+      "communityId": "elevations",
+      "date": "Year A — Mar 08, 2026 (Sun)",
+      "presider": "TBD",
+      "gathering": {
+        "title": "Come to the Water",
+        "composer": "John B. Foley, SJ • Arranged by Arielle Phan",
+        "description": "Gospel — Woman at the Well"
+      },
+      "penitentialAct": {
+        "title": "Kyrie (Mass of Colour) — optional tropes",
+        "composer": "Jeffrey Bonilla & David Lockwood"
+      },
+      "responsorialPsalm": {
+        "psalm": "Ps 95 If today you hear his voice harden not...",
+        "setting": "Spirit & Psalm • Ben Walther"
+      },
+      "gospelAcclamation": {
+        "title": "Praise to You, Lord Jesus Christ",
+        "composer": "Ed Archer",
+        "verse": "Lord, you are truly the Savior of the world;\ngive me living water, that I may never thirst again."
+      },
+      "offertory": {
+        "title": "Turn Our Hearts Around",
+        "composer": "Trevor Thomson",
+        "description": "\"Hold us in your mercy\""
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "Mass of Colour",
+        "composer": "Bonilla & Lockwood"
+      },
+      "lordsPrayer": {
+        "title": "Chanted Our Father (Snow)",
+        "composer": "Jennings/Paregorius — if requested by Presider"
+      },
+      "fractionRite": {
+        "title": "Lamb of God (Mass of Colour)",
+        "composer": "Jeffrey Bonilla & David Lockwood"
+      },
+      "communionSongs": [
+        {
+          "title": "Beyond the Days",
+          "composer": "Ricky Manalo, CSP",
+          "description": "Lenten Communion"
+        },
+        {
+          "title": "Turn To Me",
+          "composer": "John Foley SJ",
+          "description": "Lenten Song"
+        },
+        {
+          "title": "Belovedness",
+          "composer": "Sarah Kroger",
+          "description": "\"He says you're mine, I smiled when I made you\""
+        }
+      ],
+      "sending": {
+        "title": "The Lord's Prayer (It's Yours)",
+        "composer": "Matt Maher",
+        "description": "\"Forgive us, Forgive us\""
+      }
+    }
+  ]
+}

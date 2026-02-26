@@ -1,0 +1,282 @@
+{
+  "id": "lent-04-b",
+  "name": "LENT 04 [B]",
+  "year": "B",
+  "season": "lent",
+  "seasonLabel": "Lent",
+  "seasonOrder": 4,
+  "dates": [
+    {
+      "date": "2024-03-10",
+      "label": "Year B — Mar 10, 2024 (Sun)",
+      "dayOfWeek": "Sun"
+    },
+    {
+      "date": "2036-03-23",
+      "label": "Year B — Mar 23, 2036 (Sun)",
+      "dayOfWeek": "Sun"
+    },
+    {
+      "date": "2033-03-27",
+      "label": "Year B — Mar 27, 2033 (Sun)",
+      "dayOfWeek": "Sun"
+    },
+    {
+      "date": "2030-03-31",
+      "label": "Year B — Mar 31, 2030 (Sun)",
+      "dayOfWeek": "Sun"
+    },
+    {
+      "date": "2027-03-07",
+      "label": "Year B — Mar 07, 2027 (Sun)",
+      "dayOfWeek": "Sun"
+    }
+  ],
+  "lectionary": {
+    "number": "032•B",
+    "gospelTitle": "For God So Loved the World",
+    "thematicTag": "Gospel Core (“Jn 3:16”)"
+  },
+  "readings": [
+    {
+      "type": "first",
+      "citation": "2 Chr 36:14-16, 19-23",
+      "summary": "After seventy years, the Israelites are released to rebuild the temple."
+    },
+    {
+      "type": "psalm",
+      "citation": "Ps 137:1-2, 3, 4-5, 6, R. v.6ab\nLet my tongue be silenced, if I ever forget you!",
+      "summary": "",
+      "antiphon": "Ps 137:1-2, 3, 4-5, 6, R. v.6ab\nLet my tongue be silenced, if I ever forget you!"
+    },
+    {
+      "type": "second",
+      "citation": "Eph 2:4-10",
+      "summary": "Salvation is not earned but a gift from God."
+    },
+    {
+      "type": "gospel_verse",
+      "citation": "Jn 3:16",
+      "summary": "God so loved the world that he gave his only Son,\nso everyone who believes in him might have eternal life."
+    },
+    {
+      "type": "gospel",
+      "citation": "Jn 3:14-21",
+      "summary": "Jesus converses with Nicodemus."
+    }
+  ],
+  "antiphons": [
+    {
+      "type": "entrance",
+      "option": 1,
+      "citation": "Cf. Is 66:10–11",
+      "text": "Rejoice, Jerusalem, and all who love her.\nBe joyful, all who were in mourning;\nexult and be satisfied at her consoling breast."
+    },
+    {
+      "type": "communion",
+      "option": 1,
+      "citation": "Cf. Ps 122 (121):3–4",
+      "text": "Jerusalem is built as a city bonded as one together.\nIt is there that the tribes go up, the tribes of the Lord,\nto praise the name of the Lord."
+    },
+    {
+      "type": "communion",
+      "option": 2,
+      "citation": "Communion Antiphon | For Jn 9:11, 38 (Man Born Blind)",
+      "text": "The Lord anointed my eyes: I went, I washed,\nI saw and I believed in God."
+    }
+  ],
+  "planningNotes": [
+    "Laetare Sunday - Choir wear rose pink!"
+  ],
+  "musicPlans": [
+    {
+      "community": "Reflections",
+      "communityId": "reflections",
+      "date": "Year B — Mar 06, 2027 (Sat)",
+      "presider": "NOT THIS YEAR",
+      "prelude": {
+        "title": "See Taizé Setlist"
+      },
+      "penitentialAct": {
+        "title": "Kyrie (Mass of Colour) — optional tropes",
+        "composer": "Jeffrey Bonilla & David Lockwood"
+      },
+      "responsorialPsalm": {
+        "psalm": "Ps 137 Let my tongue be silenced, if I ever forget you!",
+        "setting": "The Lyric Psalter • Tony Alonso & Marty Haugen"
+      },
+      "gospelAcclamation": {
+        "title": "Mass of Joy & Peace Lenten G.A. (Refrain)",
+        "composer": "The Lyric Gospel Acclamations • Tony Alonso",
+        "verse": "God so loved the world that he gave his only Son,\nso everyone who believes in him might have eternal life."
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "Mass of Creation",
+        "composer": "Marty Haugen • Arr. by Lockwood & Phan"
+      },
+      "lordsPrayer": {
+        "title": "Chanted Our Father (Snow)",
+        "composer": "Jennings/Paregorius"
+      },
+      "fractionRite": {
+        "title": "Lamb of God (Mass of Creation)",
+        "composer": "Marty Haugen • Arr. by Lockwood & Phan"
+      },
+      "communionSongs": [
+        {
+          "title": "Psalm 23: Shepherd Me, O God",
+          "composer": "Marty Haugen",
+          "description": "Lent 4B"
+        }
+      ]
+    },
+    {
+      "community": "Foundations",
+      "communityId": "foundations",
+      "date": "Year B — Mar 07, 2027 (Sun)",
+      "presider": "NOT THIS YEAR",
+      "penitentialAct": {
+        "title": "Kyrie (Mass of Colour) — optional tropes",
+        "composer": "Jeffrey Bonilla & David Lockwood"
+      },
+      "responsorialPsalm": {
+        "psalm": "Ps 137 Let my tongue be silenced, if I ever forget you!",
+        "setting": "Spirit & Psalm • Rick Modlin"
+      },
+      "gospelAcclamation": {
+        "title": "Praise to You, Lord Jesus Christ",
+        "composer": "Ed Archer",
+        "verse": "God so loved the world that he gave his only Son,\nso everyone who believes in him might have eternal life."
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "Mass of a Firm Foundation",
+        "composer": "David Lockwood"
+      },
+      "lordsPrayer": {
+        "title": "Chanted Our Father (Snow)",
+        "composer": "Jennings • Paregorius"
+      },
+      "fractionRite": {
+        "title": "Lamb of God (Mass of a Firm Foundation)",
+        "composer": "David Lockwood"
+      },
+      "communionSongs": [
+        {
+          "title": "I Have Loved You",
+          "composer": "Michael Joncas",
+          "description": "\"I have called you, and you are mine\""
+        },
+        {
+          "title": "Turn Our Hearts Around",
+          "composer": "Trevor Thomson",
+          "description": "\"We have wondered, and lost our way...\""
+        }
+      ],
+      "sending": {
+        "title": "How Great Thou Art",
+        "composer": "Stuart  K. Hine",
+        "description": "Verse 5: \"...and take me home...\""
+      }
+    },
+    {
+      "community": "Generations",
+      "communityId": "generations",
+      "date": "Year B — Mar 07, 2027 (Sun)",
+      "presider": "NOT THIS YEAR",
+      "penitentialAct": {
+        "title": "Kyrie (Mass of Colour) — optional tropes",
+        "composer": "Jeffrey Bonilla & David Lockwood"
+      },
+      "responsorialPsalm": {
+        "psalm": "Ps 137 Let my tongue be silenced, if I ever forget you!",
+        "setting": "Spirit & Psalm • Rick Modlin"
+      },
+      "gospelAcclamation": {
+        "title": "Praise to You, Lord Jesus Christ",
+        "composer": "Ed Archer",
+        "verse": "God so loved the world that he gave his only Son,\nso everyone who believes in him might have eternal life."
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "Mass of Colour",
+        "composer": "Jeffrey Bonilla & David Lockwood"
+      },
+      "lordsPrayer": {
+        "title": "Spoken during Season of Lent"
+      },
+      "fractionRite": {
+        "title": "Lamb of God (Mass of Colour)"
+      },
+      "sending": {
+        "title": "40 Days",
+        "composer": "Matt Maher",
+        "description": "Lenten Sending"
+      }
+    },
+    {
+      "community": "Heritage",
+      "communityId": "heritage",
+      "date": "Year B — Mar 07, 2027 (Sun)",
+      "presider": "NOT THIS YEAR",
+      "penitentialAct": {
+        "title": "Kyrie (Mass of Colour) — optional tropes",
+        "composer": "Jeffrey Bonilla & David Lockwood"
+      },
+      "responsorialPsalm": {
+        "psalm": "Ps 137 Let my tongue be silenced, if I ever forget you!",
+        "setting": "The Lyric Psalter • Tony Alonso & Marty Haugen"
+      },
+      "gospelAcclamation": {
+        "title": "Mass of Joy & Peace Lenten G.A. (Refrain)",
+        "composer": "The Lyric Gospel Acclamations • Tony Alonso",
+        "verse": "God so loved the world that he gave his only Son,\nso everyone who believes in him might have eternal life."
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "Mass of Creation - Rev. 2010",
+        "composer": "Marty Haugen"
+      },
+      "lordsPrayer": {
+        "title": "Chanted Our Father (Snow)",
+        "composer": "Jennings/Paregorius"
+      },
+      "fractionRite": {
+        "title": "Lamb of God (Mass of Creation)"
+      }
+    },
+    {
+      "community": "Elevations",
+      "communityId": "elevations",
+      "date": "Year B — Mar 07, 2027 (Sun)",
+      "presider": "NOT THIS YEAR",
+      "penitentialAct": {
+        "title": "Kyrie (Mass of Colour) — optional tropes",
+        "composer": "Jeffrey Bonilla & David Lockwood"
+      },
+      "responsorialPsalm": {
+        "psalm": "Ps 137 Let my tongue be silenced, if I ever forget you!",
+        "setting": "Spirit & Psalm • Rick Modlin"
+      },
+      "gospelAcclamation": {
+        "title": "Praise to You, Lord Jesus Christ",
+        "composer": "Ed Archer",
+        "verse": "God so loved the world that he gave his only Son,\nso everyone who believes in him might have eternal life."
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "Mass of Colour",
+        "composer": "Bonilla & Lockwood"
+      },
+      "lordsPrayer": {
+        "title": "Echo Our Father",
+        "composer": "Andrews, Arr. Bonilla • Lockwood • Fajardo"
+      },
+      "fractionRite": {
+        "title": "Lamb of God (Mass of Colour)",
+        "composer": "Jeffrey Bonilla & David Lockwood"
+      },
+      "sending": {
+        "title": "40 Days",
+        "composer": "Matt Maher",
+        "description": "Lenten Sending"
+      }
+    }
+  ]
+}

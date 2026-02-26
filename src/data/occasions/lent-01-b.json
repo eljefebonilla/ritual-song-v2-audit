@@ -1,0 +1,397 @@
+{
+  "id": "lent-01-b",
+  "name": "LENT 01 [B]",
+  "year": "B",
+  "season": "lent",
+  "seasonLabel": "Lent",
+  "seasonOrder": 1,
+  "dates": [
+    {
+      "date": "2024-02-18",
+      "label": "Year B — Feb 18, 2024 (Sun)",
+      "dayOfWeek": "Sun"
+    },
+    {
+      "date": "2036-03-02",
+      "label": "Year B — Mar 02, 2036 (Sun)",
+      "dayOfWeek": "Sun"
+    },
+    {
+      "date": "2033-03-06",
+      "label": "Year B — Mar 06, 2033 (Sun)",
+      "dayOfWeek": "Sun"
+    },
+    {
+      "date": "2030-03-10",
+      "label": "Year B — Mar 10, 2030 (Sun)",
+      "dayOfWeek": "Sun"
+    },
+    {
+      "date": "2027-02-14",
+      "label": "Year B — Feb 14, 2027 (Sun)",
+      "dayOfWeek": "Sun"
+    }
+  ],
+  "lectionary": {
+    "number": "023•B",
+    "gospelTitle": "Jesus Is Tempted in the Desert",
+    "thematicTag": "New Adam Tested"
+  },
+  "readings": [
+    {
+      "type": "first",
+      "citation": "Gen 9:8-15",
+      "summary": "God establishes a covenant with Noah and his descendants."
+    },
+    {
+      "type": "psalm",
+      "citation": "Ps 25:4-5, 6-7, 8-9, R. see v.10\nYour ways, O Lord, are love and truth\nto those who keep your covenant",
+      "summary": "",
+      "antiphon": "Ps 25:4-5, 6-7, 8-9, R. see v.10\nYour ways, O Lord, are love and truth\nto those who keep your covenant"
+    },
+    {
+      "type": "second",
+      "citation": "1 Pt 3:18-22",
+      "summary": "As life was saved by the ark,\nso are our lives saved in Baptism."
+    },
+    {
+      "type": "gospel_verse",
+      "citation": "Mt 4:4b",
+      "summary": "One does not live on bread alone, but on every word\nthat comes forth from the mouth of God."
+    },
+    {
+      "type": "gospel",
+      "citation": "Mk 1:12-15",
+      "summary": "After forty days in the desert, Jesus proclaims the reign of God."
+    }
+  ],
+  "antiphons": [
+    {
+      "type": "entrance",
+      "option": 1,
+      "citation": "Cf. Ps 91 (90):15–16",
+      "text": "When he calls on me, I will answer him;\nI will deliver him and give him glory,\nI will grant him length of days."
+    },
+    {
+      "type": "communion",
+      "option": 1,
+      "citation": "Cf. Mt 4:4",
+      "text": "One does not live by bread alone, but by every word\nthat comes forth from the mouth of God."
+    },
+    {
+      "type": "communion",
+      "option": 2,
+      "citation": "Communion Antiphon • Option II | Cf. Ps 91 (90):4",
+      "text": "The Lord will conceal you with his pinions,\nand under his wings you will trust."
+    }
+  ],
+  "planningNotes": [
+    "FEB - Black History Month"
+  ],
+  "musicPlans": [
+    {
+      "community": "Reflections",
+      "communityId": "reflections",
+      "date": "Year B — Feb 13, 2027 (Sat)",
+      "presider": "NOT THIS YEAR",
+      "prelude": {
+        "title": "Kyrie Litany",
+        "composer": "Luke D. Rose"
+      },
+      "gathering": {
+        "title": "Gather Us in Mercy, Lord",
+        "composer": "Gabe Huck • Adapted and Arr. by Tony Alonso"
+      },
+      "penitentialAct": {
+        "title": "Kyrie (Mass of Colour) — optional tropes",
+        "composer": "Jeffrey Bonilla & David Lockwood"
+      },
+      "responsorialPsalm": {
+        "psalm": "Ps 25 Your ways, O Lord, are love and truth to those...",
+        "setting": "The Lyric Psalter • Tony Alonso & Marty Haugen"
+      },
+      "gospelAcclamation": {
+        "title": "Mass of Joy & Peace Lenten G.A. (Refrain)",
+        "composer": "The Lyric Gospel Acclamations • Tony Alonso",
+        "verse": "One does not live on bread alone, but on every word\nthat comes forth from the mouth of God."
+      },
+      "offertory": {
+        "title": "Be Not Afraid",
+        "composer": "Robert J. Dufford, SJ",
+        "description": "\"You shall cross the barren desert...\""
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "Mass of Creation",
+        "composer": "Marty Haugen • Arr. by Lockwood & Phan"
+      },
+      "lordsPrayer": {
+        "title": "Chanted Our Father (Snow)",
+        "composer": "Jennings/Paregorius"
+      },
+      "fractionRite": {
+        "title": "Lamb of God (Mass of Creation)",
+        "composer": "Marty Haugen • Arr. by Lockwood & Phan"
+      },
+      "communionSongs": [
+        {
+          "title": "Beyond the Days",
+          "composer": "Ricky Manalo, CSP",
+          "description": "\"Not by bread alone are we to walk this journey\""
+        },
+        {
+          "title": "Turn To Me",
+          "composer": "John Foley SJ",
+          "description": "Lenten Song"
+        },
+        {
+          "title": "From Dust We Came, to Dust Return",
+          "composer": "Scot Crandal • Michael Joncas",
+          "description": "Simple leadsheet or choral octavo"
+        }
+      ],
+      "sending": {
+        "title": "Led by the Spirit",
+        "composer": "KINGSFOLD • Bob Hurd",
+        "description": "Lenten Sending"
+      }
+    },
+    {
+      "community": "Foundations",
+      "communityId": "foundations",
+      "date": "Year B — Feb 14, 2027 (Sun)",
+      "presider": "NOT THIS YEAR",
+      "gathering": {
+        "title": "Be Not Afraid",
+        "composer": "Robert J. Dufford, SJ",
+        "description": "\"You shall cross the barren desert...\""
+      },
+      "penitentialAct": {
+        "title": "Kyrie (Mass of Colour) — optional tropes",
+        "composer": "Jeffrey Bonilla & David Lockwood"
+      },
+      "responsorialPsalm": {
+        "psalm": "Ps 25 Your ways, O Lord, are love and truth to those...",
+        "setting": "The Lyric Psalter • Tony Alonso & Marty Haugen"
+      },
+      "gospelAcclamation": {
+        "title": "Praise to You, Lord Jesus Christ",
+        "composer": "Ed Archer",
+        "verse": "One does not live on bread alone, but on every word\nthat comes forth from the mouth of God."
+      },
+      "offertory": {
+        "title": "Lead Me to the Desert",
+        "composer": "Sarah Hart • Dwight Liles",
+        "description": "\"Lead me to the desert where I thirst no more\""
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "Mass of a Firm Foundation"
+      },
+      "lordsPrayer": {
+        "title": "Chanted Our Father (Snow)",
+        "composer": "Jennings • Paregorius"
+      },
+      "fractionRite": {
+        "title": "Lamb of God (Mass of a Firm Foundation)"
+      },
+      "communionSongs": [
+        {
+          "title": "Beyond the Days",
+          "composer": "Ricky Manalo, CSP",
+          "description": "\"Not by bread alone are we to walk this journey\""
+        },
+        {
+          "title": "Change Our Hearts",
+          "composer": "Rory Cooney",
+          "description": "General"
+        }
+      ],
+      "sending": {
+        "title": "40 Days",
+        "composer": "Matt Maher",
+        "description": "General"
+      }
+    },
+    {
+      "community": "Generations",
+      "communityId": "generations",
+      "date": "Year B — Feb 14, 2027 (Sun)",
+      "presider": "NOT THIS YEAR",
+      "gathering": {
+        "title": "Be Not Afraid",
+        "composer": "Robert J. Dufford, SJ",
+        "description": "\"You shall cross the barren desert...\""
+      },
+      "penitentialAct": {
+        "title": "Kyrie (Mass of Colour) — optional tropes",
+        "composer": "Jeffrey Bonilla & David Lockwood"
+      },
+      "responsorialPsalm": {
+        "psalm": "Ps 25 Your ways, O Lord, are love and truth to those...",
+        "setting": "Spirit & Psalm • Santiago Fernández"
+      },
+      "gospelAcclamation": {
+        "title": "Praise to You, Lord Jesus Christ",
+        "composer": "Ed Archer",
+        "verse": "One does not live on bread alone, but on every word\nthat comes forth from the mouth of God."
+      },
+      "offertory": {
+        "title": "Lead Me to the Desert",
+        "composer": "Sarah Hart • Dwight Liles",
+        "description": "\"...where I thirst no more\""
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "Mass of Colour",
+        "composer": "Jeffrey Bonilla & David Lockwood"
+      },
+      "lordsPrayer": {
+        "title": "Spoken during Season of Lent"
+      },
+      "fractionRite": {
+        "title": "Lamb of God (Mass of Colour)"
+      },
+      "communionSongs": [
+        {
+          "title": "Beyond the Days",
+          "composer": "Ricky Manalo, CSP",
+          "description": "\"Not by bread alone are we to walk this journey\""
+        },
+        {
+          "title": "In Every Age",
+          "composer": "Janèt Sullivan Whitaker"
+        },
+        {
+          "title": "Lord I Need You",
+          "composer": "Matt Maher",
+          "description": "“... when temptation comes my way\""
+        }
+      ],
+      "sending": {
+        "title": "40 Days",
+        "composer": "Matt Maher",
+        "description": "Lenten Sending"
+      }
+    },
+    {
+      "community": "Heritage",
+      "communityId": "heritage",
+      "date": "Year B — Feb 14, 2027 (Sun)",
+      "presider": "NOT THIS YEAR",
+      "gathering": {
+        "title": "Gather Us in Mercy, Lord",
+        "composer": "Gabe Huck • Adapted and Arr. by Tony Alonso"
+      },
+      "penitentialAct": {
+        "title": "Kyrie (Mass of Colour) — optional tropes",
+        "composer": "Jeffrey Bonilla & David Lockwood"
+      },
+      "responsorialPsalm": {
+        "psalm": "Ps 25 Your ways, O Lord, are love and truth to those...",
+        "setting": "The Lyric Psalter • Tony Alonso & Marty Haugen"
+      },
+      "gospelAcclamation": {
+        "title": "Mass of Joy & Peace Lenten G.A. (Refrain)",
+        "composer": "The Lyric Gospel Acclamations • Tony Alonso",
+        "verse": "One does not live on bread alone, but on every word\nthat comes forth from the mouth of God."
+      },
+      "offertory": {
+        "title": "Be Not Afraid",
+        "composer": "Robert J. Dufford, SJ",
+        "description": "\"You shall cross the barren desert...\""
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "Mass of Creation - Rev. 2010",
+        "composer": "Marty Haugen"
+      },
+      "lordsPrayer": {
+        "title": "Chanted Our Father (Snow)",
+        "composer": "Jennings/Paregorius"
+      },
+      "fractionRite": {
+        "title": "Lamb of God (Mass of Creation)"
+      },
+      "communionSongs": [
+        {
+          "title": "Beyond the Days",
+          "composer": "Ricky Manalo, CSP",
+          "description": "\"Not by bread alone are we to walk this journey\""
+        },
+        {
+          "title": "Turn To Me",
+          "composer": "John Foley SJ"
+        },
+        {
+          "title": "Be Still and Know That I Am God",
+          "composer": "Christopher Walker • Sr. Paule Freeburg, DC"
+        }
+      ],
+      "sending": {
+        "title": "Led by the Spirit",
+        "composer": "KINGSFOLD • Bob Hurd",
+        "description": "Lenten Sending Song"
+      }
+    },
+    {
+      "community": "Elevations",
+      "communityId": "elevations",
+      "date": "Year B — Feb 14, 2027 (Sun)",
+      "presider": "NOT THIS YEAR",
+      "gathering": {
+        "title": "Gather Us in Mercy, Lord",
+        "composer": "Gabe Huck • Adapted and Arr. by Tony Alonso",
+        "description": "Lenten Gathering Song"
+      },
+      "penitentialAct": {
+        "title": "Kyrie (Mass of Colour) — optional tropes",
+        "composer": "Jeffrey Bonilla & David Lockwood"
+      },
+      "responsorialPsalm": {
+        "psalm": "Ps 25 Your ways, O Lord, are love and truth to those...",
+        "setting": "Spirit & Psalm • Santiago Fernández"
+      },
+      "gospelAcclamation": {
+        "title": "Praise to You, Lord Jesus Christ",
+        "composer": "Ed Archer",
+        "verse": "One does not live on bread alone, but on every word\nthat comes forth from the mouth of God."
+      },
+      "offertory": {
+        "title": "Be Not Afraid",
+        "composer": "Robert J. Dufford, SJ",
+        "description": "\"You shall cross the barren desert...\""
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "Mass of Colour",
+        "composer": "Bonilla & Lockwood"
+      },
+      "lordsPrayer": {
+        "title": "Chanted Our Father (Snow)",
+        "composer": "Andrews, Arr. Bonilla • Lockwood • Fajardo"
+      },
+      "fractionRite": {
+        "title": "Lamb of God (Mass of Colour)",
+        "composer": "Jeffrey Bonilla & David Lockwood"
+      },
+      "communionSongs": [
+        {
+          "title": "Into the Desert",
+          "composer": "Curtis Stephan · Sarah Hart",
+          "description": "\"Here in the silence my word will speak\""
+        },
+        {
+          "title": "Beyond the Days",
+          "composer": "Ricky Manalo, CSP",
+          "description": "\"Not by bread alone are we to walk this journey\""
+        },
+        {
+          "title": "Lord I Need You",
+          "composer": "Matt Maher",
+          "description": "“... when temptation comes my way\""
+        }
+      ],
+      "sending": {
+        "title": "40 Days",
+        "composer": "Matt Maher",
+        "description": "Lenten Sending"
+      }
+    }
+  ]
+}

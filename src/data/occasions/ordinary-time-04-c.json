@@ -1,0 +1,238 @@
+{
+  "id": "ordinary-time-04-c",
+  "name": "ORDINARY TIME 04 [C]",
+  "year": "C",
+  "season": "ordinary",
+  "seasonLabel": "Ordinary Time",
+  "seasonOrder": 4,
+  "dates": [
+    {
+      "date": "2037-02-01",
+      "label": "Year C — Feb 01, 2037 (Sun)",
+      "dayOfWeek": "Sun"
+    },
+    {
+      "date": "2034-01-29",
+      "label": "Year C — Jan 29, 2034 (Sun)",
+      "dayOfWeek": "Sun"
+    },
+    {
+      "date": "2028-01-30",
+      "label": "Year C — Jan 30, 2028 (Sun)",
+      "dayOfWeek": "Sun"
+    }
+  ],
+  "lectionary": {
+    "number": "072•C",
+    "gospelTitle": "Prophet Rejected",
+    "thematicTag": "Nazareth Rejection"
+  },
+  "readings": [
+    {
+      "type": "first",
+      "citation": "Jer 1:4-5, 17-19",
+      "summary": "Jeremiah is given his mission and promised protection."
+    },
+    {
+      "type": "psalm",
+      "citation": "I will sing of your salvation.",
+      "summary": "",
+      "antiphon": "I will sing of your salvation."
+    },
+    {
+      "type": "second",
+      "citation": "1 Cor 12:31-13:13 (Shorter - 13:4-13)",
+      "summary": "Love is patient...."
+    },
+    {
+      "type": "gospel_verse",
+      "citation": "Lk 4:18",
+      "summary": "The Lord sent me to bring glad tidings to the poor,\nto proclaim liberty to captives."
+    },
+    {
+      "type": "gospel",
+      "citation": "Lk 4:21-30",
+      "summary": "No prophet gains acceptance in his own land."
+    }
+  ],
+  "antiphons": [
+    {
+      "type": "entrance",
+      "option": 1,
+      "citation": "Ps 106 (105):47",
+      "text": "Save us, O Lord our God!\nAnd gather us from the nations,\nto give thanks to your holy name,\nand make it our glory to praise you."
+    },
+    {
+      "type": "communion",
+      "option": 1,
+      "citation": "Cf. Ps 31 (30):17–18",
+      "text": "Let your face shine on your servant.\nSave me in your merciful love.\nO Lord, let me never be put to shame, for I call on you."
+    },
+    {
+      "type": "communion",
+      "option": 2,
+      "citation": "Communion Antiphon • Option II | Mt 5:3–4",
+      "text": "Blessed are the poor in spirit,\nfor theirs is the Kingdom of Heaven.\nBlessed are the meek, for they shall possess the land."
+    }
+  ],
+  "planningNotes": [
+    "FEB - Black History Month"
+  ],
+  "musicPlans": [
+    {
+      "community": "Reflections",
+      "communityId": "reflections",
+      "date": "Year C — Jan 29, 2028 (Sat)",
+      "presider": "NOT THIS YEAR",
+      "penitentialAct": {
+        "title": "Kyrie • Misa Del Mundo",
+        "composer": "Jesse Manibusan"
+      },
+      "gloria": {
+        "title": "Glory to God (Through-composed Setting)",
+        "composer": "Mass of Renewal • Curtis Stephan"
+      },
+      "responsorialPsalm": {
+        "psalm": "Ps 71 I will sing of your salvation.",
+        "setting": "The Lyric Psalter • Tony Alonso & Marty Haugen"
+      },
+      "gospelAcclamation": {
+        "title": "Alleluia (Mass of Joy & Peace)",
+        "composer": "ORDINARY TIME • 04C"
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "Mass for the Healing of the World",
+        "composer": "Trevor Thomson"
+      },
+      "lordsPrayer": {
+        "title": "Chanted Our Father (Snow)",
+        "composer": "Jennings/Paregorius"
+      },
+      "fractionRite": {
+        "title": "Lamb of God (Mass for the Healing of the World)",
+        "composer": "Trevor Thomson"
+      }
+    },
+    {
+      "community": "Foundations",
+      "communityId": "foundations",
+      "date": "Year C — Jan 30, 2028 (Sun)",
+      "presider": "NOT THIS YEAR",
+      "penitentialAct": {
+        "title": "Kyrie (Gift of God) • Adapted Version",
+        "composer": "Marty Haugen • Arranged by David Locwood"
+      },
+      "gloria": {
+        "title": "Mass of Joy & Peace (Gospel Version)",
+        "composer": "Tony Alonso • Arrangement by David Lockwood"
+      },
+      "responsorialPsalm": {
+        "psalm": "Ps 71 I will sing of your salvation.",
+        "setting": "Composer/s"
+      },
+      "gospelAcclamation": {
+        "title": "Alleluia! Give the Glory (Mass of Glory)",
+        "verse": "The Lord sent me to bring glad tidings to the poor,\nto proclaim liberty to captives."
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "Mass of Glory"
+      },
+      "lordsPrayer": {
+        "title": "Chanted Our Father (Snow)",
+        "composer": "Jennings • Paregorius"
+      },
+      "fractionRite": {
+        "title": "Lamb of God (Mass of Glory)"
+      }
+    },
+    {
+      "community": "Generations",
+      "communityId": "generations",
+      "date": "Year C — Jan 30, 2028 (Sun)",
+      "presider": "NOT THIS YEAR",
+      "penitentialAct": {
+        "title": "Kyrie • Misa Del Mundo",
+        "composer": "Jesse Manibusan"
+      },
+      "gloria": {
+        "title": "Glory, Glory, Gloria! (Mass of the Setting Sun)",
+        "composer": "Bonilla & Wilson • Vocal Arr. by Lockwood & Phan"
+      },
+      "responsorialPsalm": {
+        "psalm": "Ps 71 I will sing of your salvation.",
+        "setting": "Spirit & Psalm • ?"
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "Mass of St. Anne",
+        "composer": "Ed Bolduc"
+      },
+      "lordsPrayer": {
+        "title": "Echo Our Father",
+        "composer": "Jerome Andrews • Arranged by Dan Houze"
+      },
+      "fractionRite": {
+        "title": "Lamb of God (Mass of Holy Cross)"
+      }
+    },
+    {
+      "community": "Heritage",
+      "communityId": "heritage",
+      "date": "Year C — Jan 30, 2028 (Sun)",
+      "presider": "NOT THIS YEAR",
+      "penitentialAct": {
+        "title": "Kyrie • Misa Del Mundo",
+        "composer": "Jesse Manibusan"
+      },
+      "gloria": {
+        "title": "Glory to God (Mass of Christ the Savior)",
+        "composer": "Dan Schutte"
+      },
+      "responsorialPsalm": {
+        "psalm": "Ps 71 I will sing of your salvation.",
+        "setting": "Composer/s"
+      },
+      "offertory": {
+        "title": "O Word of God",
+        "composer": "Ricky Manalo, CSP",
+        "description": "Word of God Sunday"
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "Mass of Creation - Rev. 2010"
+      },
+      "lordsPrayer": {
+        "title": "Chanted Our Father (Snow)",
+        "composer": "Jennings/Paregorius"
+      },
+      "fractionRite": {
+        "title": "Lamb of God (Mass of Creation)"
+      }
+    },
+    {
+      "community": "Elevations",
+      "communityId": "elevations",
+      "date": "Year C — Jan 30, 2028 (Sun)",
+      "presider": "NOT THIS YEAR",
+      "penitentialAct": {
+        "title": "Kyrie (Misa Del Mundo)",
+        "composer": "Jesse Manibusan — If needed."
+      },
+      "gloria": {
+        "title": "Glory, Glory, Gloria! (Mass of the Setting Sun)"
+      },
+      "responsorialPsalm": {
+        "psalm": "Ps 71 I will sing of your salvation.",
+        "setting": "Spirit & Psalm • ?"
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "Mass of Communion (Lower Key) • Matt Maher"
+      },
+      "lordsPrayer": {
+        "title": "Echo Our Father",
+        "composer": "Andrews, Arr. Bonilla • Lockwood • Fajardo"
+      },
+      "fractionRite": {
+        "title": "Lamb of God (Mass of Holy Cross)"
+      }
+    }
+  ]
+}

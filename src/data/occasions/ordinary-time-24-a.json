@@ -1,0 +1,251 @@
+{
+  "id": "ordinary-time-24-a",
+  "name": "ORDINARY TIME 24 [A]",
+  "year": "A",
+  "season": "ordinary",
+  "seasonLabel": "Ordinary Time",
+  "seasonOrder": 24,
+  "dates": [
+    {
+      "date": "2023-09-17",
+      "label": "Year A — Sep 17, 2023 (Sun)",
+      "dayOfWeek": "Sun"
+    },
+    {
+      "date": "2035-09-16",
+      "label": "Year A — Sep 16, 2035 (Sun)",
+      "dayOfWeek": "Sun"
+    },
+    {
+      "date": "2032-09-12",
+      "label": "Year A — Sep 12, 2032 (Sun)",
+      "dayOfWeek": "Sun"
+    },
+    {
+      "date": "2029-09-16",
+      "label": "Year A — Sep 16, 2029 (Sun)",
+      "dayOfWeek": "Sun"
+    },
+    {
+      "date": "2026-09-13",
+      "label": "Year A — Sep 13, 2026 (Sun)",
+      "dayOfWeek": "Sun"
+    }
+  ],
+  "lectionary": {
+    "number": "130•A",
+    "gospelTitle": "Forgiving Servant",
+    "thematicTag": "Community Discourse"
+  },
+  "readings": [
+    {
+      "type": "first",
+      "citation": "Sir 27:30–28:7",
+      "summary": "Hate and anger lead to death;\nlove and forgiveness to the kingdom."
+    },
+    {
+      "type": "psalm",
+      "citation": "Ps 103:1-2, 3-4, 9-10, 11-12. R. v.8\nThe Lord is kind and merciful, slow to anger, \nand rich in compassion.",
+      "summary": "",
+      "antiphon": "Ps 103:1-2, 3-4, 9-10, 11-12. R. v.8\nThe Lord is kind and merciful, slow to anger, \nand rich in compassion."
+    },
+    {
+      "type": "second",
+      "citation": "Rom 14:7-9",
+      "summary": "Christ is Lord of the living and the dead."
+    },
+    {
+      "type": "gospel_verse",
+      "citation": "Jn 13:34",
+      "summary": "I give you a new commandment, says the Lord;\nlove one another as I have loved you."
+    },
+    {
+      "type": "gospel",
+      "citation": "Mt 18:21-35",
+      "summary": "Parable of official who does not show the mercy he received."
+    }
+  ],
+  "antiphons": [
+    {
+      "type": "entrance",
+      "option": 1,
+      "citation": "Cf. Sir 36:18",
+      "text": "Give peace, O Lord, to those who wait for you,\nthat your prophets be found true.\nHear the prayers of your servant, and of your people Israel."
+    },
+    {
+      "type": "communion",
+      "option": 1,
+      "citation": "Cf. Ps 36 (35):8",
+      "text": "How precious is your mercy, O God!\nThe children of men seek shelter in the shadow of your wings."
+    },
+    {
+      "type": "communion",
+      "option": 2,
+      "citation": "Roman Missal — Cf. 1 Cor 10:16",
+      "text": "The chalice of blessing that we bless\nis a communion in the Blood of Christ;\nand the bread that we break\nis a sharing in the Body of the Lord."
+    }
+  ],
+  "planningNotes": [
+    "SEASON OF CREATION (9/1 - 10/4)"
+  ],
+  "musicPlans": [
+    {
+      "community": "Reflections",
+      "communityId": "reflections",
+      "date": "Year A — Sep 12, 2026 (Sat)",
+      "presider": "NOT THIS YEAR",
+      "penitentialAct": {
+        "title": "Kyrie • Misa Del Mundo",
+        "composer": "Only if needed. Talk to presider!"
+      },
+      "gloria": {
+        "title": "Glory to God (Through-composed Setting)",
+        "composer": "Mass of Renewal • Curtis Stephan"
+      },
+      "gospelAcclamation": {
+        "title": "Alleluia (Mass of Joy & Peace)",
+        "composer": "Song Title"
+      },
+      "lordsPrayer": {
+        "title": "Chanted Our Father (Snow)",
+        "composer": "Jennings/Paregorius"
+      },
+      "fractionRite": {
+        "title": "Lamb of God Setting"
+      }
+    },
+    {
+      "community": "Foundations",
+      "communityId": "foundations",
+      "date": "Year A — Sep 13, 2026 (Sun)",
+      "presider": "NOT THIS YEAR",
+      "gathering": {
+        "title": "Be Though My Vision",
+        "composer": "SLANE • Arranged by Assad",
+        "description": "Jesus teachus us the way of the law through a new lens."
+      },
+      "penitentialAct": {
+        "title": "Kyrie (Gift of God) • Adapted Version",
+        "composer": "Marty Haugen • Arranged by David Locwood"
+      },
+      "gloria": {
+        "title": "Mass of Joy & Peace (Gospel Version)",
+        "composer": "Tony Alonso • Arrangement by David Lockwood"
+      },
+      "responsorialPsalm": {
+        "psalm": "Ps 1 Blessed are they who hope in the Lord.",
+        "setting": "The Lyric Psalter • Tony Alonso & Marty Haugen"
+      },
+      "gospelAcclamation": {
+        "title": "Alleluia! Give the Glory (Mass of Glory)",
+        "composer": "Bob Hurd •  Ken Canedo • Craig Kingsbury",
+        "verse": "Blessed are you, Father, Lord of heaven and earth;\nyou have revealed to little ones\nthe mysteries of the kingdom."
+      },
+      "offertory": {
+        "title": "I Will Choose Christ",
+        "composer": "Tom Booth",
+        "description": "\"...and as I walk this road with you teach me to love.\""
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "Mass of Glory"
+      },
+      "lordsPrayer": {
+        "title": "Chanted Our Father (Snow)",
+        "composer": "Jennings • Paregorius"
+      },
+      "fractionRite": {
+        "title": "Lamb of God (Mass of Glory)"
+      },
+      "communionSongs": [
+        {
+          "title": "I Lift My Soul to You",
+          "composer": "Lori True",
+          "description": "Verses are all about following the law."
+        },
+        {
+          "title": "Precious Lord, Take My Hand",
+          "composer": "Thomas A. Dorsey",
+          "description": "Black History Month • Wildfires • Fr Prosper"
+        }
+      ],
+      "sending": {
+        "title": "Give Us Peace",
+        "composer": "Leon C. Roberts",
+        "description": "Black History Month"
+      }
+    },
+    {
+      "community": "Generations",
+      "communityId": "generations",
+      "date": "Year A — Sep 13, 2026 (Sun)",
+      "presider": "NOT THIS YEAR",
+      "penitentialAct": {
+        "title": "Kyrie • Misa Del Mundo",
+        "composer": "If needed. Talk to presider!"
+      },
+      "gloria": {
+        "title": "Glory, Glory, Gloria!",
+        "composer": "Tony Alonso • Arr. by Dan Houze"
+      },
+      "gospelAcclamation": {
+        "title": "Setting from Mass of ???",
+        "composer": "Song Title"
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "Mass of Restoration",
+        "composer": "Joshua Blakesley"
+      },
+      "lordsPrayer": {
+        "title": "(Echo) Our Father",
+        "composer": "Jerome Andrews • Arranged by Dan Houze"
+      },
+      "fractionRite": {
+        "title": "Lamb of God (Resoration)"
+      }
+    },
+    {
+      "community": "Heritage",
+      "communityId": "heritage",
+      "date": "Year A — Sep 13, 2026 (Sun)",
+      "presider": "NOT THIS YEAR",
+      "penitentialAct": {
+        "title": "Kyrie • Misa Del Mundo",
+        "composer": "Only if needed. Talk to presider!"
+      },
+      "gloria": {
+        "title": "Glory to God (Mass of Christ the Savior)",
+        "composer": "Dan Schutte"
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "Mass of Christ the Savior - Dan Schutte"
+      },
+      "lordsPrayer": {
+        "title": "Echo Our Father",
+        "composer": "Andrews, Arr. Bonilla • Lockwood • Fajardo"
+      },
+      "fractionRite": {
+        "title": "Lamb of God (Mass of Christ the Savior)"
+      }
+    },
+    {
+      "community": "Elevations",
+      "communityId": "elevations",
+      "date": "Year A — Sep 13, 2026 (Sun)",
+      "presider": "NOT THIS YEAR",
+      "gospelAcclamation": {
+        "title": "Setting from Mass of ???",
+        "verse": "Song Title"
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "Mass of Restoration • Joshua Blakesley"
+      },
+      "lordsPrayer": {
+        "title": "Echo Our Father",
+        "composer": "Andrews, Arr. Bonilla • Lockwood • Fajardo"
+      },
+      "fractionRite": {
+        "title": "Lamb of God (Resoration)"
+      }
+    }
+  ]
+}

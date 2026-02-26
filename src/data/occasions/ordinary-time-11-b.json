@@ -1,0 +1,201 @@
+{
+  "id": "ordinary-time-11-b",
+  "name": "ORDINARY TIME 11 [B]",
+  "year": "B",
+  "season": "ordinary",
+  "seasonLabel": "Ordinary Time",
+  "seasonOrder": 11,
+  "dates": [
+    {
+      "date": "2024-06-16",
+      "label": "Year B — Jun 16, 2024 (Sun)",
+      "dayOfWeek": "Sun"
+    },
+    {
+      "date": "2027-06-13",
+      "label": "Year B — Jun 13, 2027 (Sun)",
+      "dayOfWeek": "Sun"
+    }
+  ],
+  "lectionary": {
+    "number": "092•B",
+    "gospelTitle": "Seed Parables",
+    "thematicTag": "Kingdom Seeds 1/2"
+  },
+  "readings": [
+    {
+      "type": "first",
+      "citation": "Ez 17:22-24",
+      "summary": "The Lord will plant the crest of the cedar."
+    },
+    {
+      "type": "psalm",
+      "citation": "Ps 92:2-3, 13-14, 15-16, R. see v.2a\nLord, it is good to give thanks to you.",
+      "summary": "",
+      "antiphon": "Ps 92:2-3, 13-14, 15-16, R. see v.2a\nLord, it is good to give thanks to you."
+    },
+    {
+      "type": "second",
+      "citation": "2 Cor 5:6-10",
+      "summary": "While in the body we are away from the Lord."
+    },
+    {
+      "type": "gospel_verse",
+      "citation": "Lectionary",
+      "summary": "The seed is the word of God, Christ is the sower.\nAll who come to him will live for ever."
+    },
+    {
+      "type": "gospel",
+      "citation": "Mk 4:26-34",
+      "summary": "Parable of the mustard seed."
+    }
+  ],
+  "antiphons": [
+    {
+      "type": "entrance",
+      "option": 1,
+      "citation": "Cf. Ps 27 (26):7, 9",
+      "text": "O Lord, hear my voice, for I have called to you; be my help.\nDo not abandon or forsake me, O God, my Savior!"
+    },
+    {
+      "type": "communion",
+      "option": 1,
+      "citation": "Ps 27 (26):4",
+      "text": "There is one thing I ask of the Lord, only this do I seek:\nto live in the house of the Lord all the days of my life."
+    },
+    {
+      "type": "communion",
+      "option": 2,
+      "citation": "Communion Antiphon • Option II | Jn 17:11",
+      "text": "Holy Father, keep in your name those you have given me,\nthat they may be one as we are one, says the Lord."
+    }
+  ],
+  "planningNotes": [],
+  "musicPlans": [
+    {
+      "community": "Reflections",
+      "communityId": "reflections",
+      "date": "Year B — Sep 11, 2027 (Sat)",
+      "presider": "NOT THIS YEAR",
+      "penitentialAct": {
+        "title": "Kyrie • Misa Del Mundo",
+        "composer": "Only if needed. Talk to presider!"
+      },
+      "gloria": {
+        "title": "Glory to God (Through-composed Setting)",
+        "composer": "Mass of Renewal • Curtis Stephan"
+      },
+      "responsorialPsalm": {
+        "psalm": "Ps 92 Lord, it is good to give thanks to you.",
+        "setting": "The Lyric Psalter • Tony Alonso & Marty Haugen"
+      },
+      "gospelAcclamation": {
+        "title": "Alleluia (Mass of Joy & Peace)",
+        "composer": "Song Title",
+        "verse": "The seed is the word of God, Christ is the sower.\nAll who come to him will live for ever."
+      },
+      "lordsPrayer": {
+        "title": "Chanted Our Father (Snow)",
+        "composer": "Jennings/Paregorius"
+      },
+      "fractionRite": {
+        "title": "Lamb of God Setting"
+      }
+    },
+    {
+      "community": "Foundations",
+      "communityId": "foundations",
+      "date": "Year B — Sep 12, 2027 (Sun)",
+      "presider": "NOT THIS YEAR",
+      "penitentialAct": {
+        "title": "Kyrie (Gift of God) • Adapted Version",
+        "composer": "Marty Haugen • Arranged by David Locwood"
+      },
+      "gloria": {
+        "title": "Glory to God (Mass of Joy & Peace)",
+        "composer": "Alonso • Arr. by Houze OR Arr. by Lockwood"
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "Mass of Glory • Bob Hurd • Arr. by Dan Houze"
+      },
+      "lordsPrayer": {
+        "title": "Chanted Our Father (Snow)",
+        "composer": "Jennings • Paregorius"
+      },
+      "fractionRite": {
+        "title": "Lamb of God (Mass of Glory)"
+      }
+    },
+    {
+      "community": "Generations",
+      "communityId": "generations",
+      "date": "Year B — Sep 12, 2027 (Sun)",
+      "presider": "NOT THIS YEAR",
+      "penitentialAct": {
+        "title": "Kyrie • Misa Del Mundo",
+        "composer": "If needed. Talk to presider!"
+      },
+      "gloria": {
+        "title": "Glory, Glory, Gloria!",
+        "composer": "Tony Alonso • Arr. by Dan Houze"
+      },
+      "gospelAcclamation": {
+        "title": "Setting from Mass of ???",
+        "composer": "Song Title"
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "Mass of Restoration",
+        "composer": "Joshua Blakesley"
+      },
+      "lordsPrayer": {
+        "title": "(Echo) Our Father",
+        "composer": "Jerome Andrews • Arranged by Dan Houze"
+      },
+      "fractionRite": {
+        "title": "Lamb of God (Resoration)"
+      }
+    },
+    {
+      "community": "Heritage",
+      "communityId": "heritage",
+      "date": "Year B — Sep 12, 2027 (Sun)",
+      "presider": "NOT THIS YEAR",
+      "penitentialAct": {
+        "title": "Kyrie • Misa Del Mundo",
+        "composer": "Only if needed. Talk to presider!"
+      },
+      "gloria": {
+        "title": "Glory to God (Mass of Christ the Savior)",
+        "composer": "Dan Schutte"
+      },
+      "lordsPrayer": {
+        "title": "Echo Our Father",
+        "composer": "Andrews, Arr. Bonilla • Lockwood • Fajardo"
+      }
+    },
+    {
+      "community": "Elevations",
+      "communityId": "elevations",
+      "date": "Year B — Sep 12, 2027 (Sun)",
+      "presider": "NOT THIS YEAR",
+      "penitentialAct": {
+        "title": "Kyrie • Misa Del Mundo",
+        "composer": "Only if needed. Talk to presider!"
+      },
+      "gloria": {
+        "title": "Glory, Glory, Gloria!"
+      },
+      "gospelAcclamation": {
+        "title": "Setting from Mass of ???",
+        "verse": "Song Title"
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "Mass of ? • Composer"
+      },
+      "lordsPrayer": {
+        "title": "Echo Our Father",
+        "composer": "Andrews, Arr. Bonilla • Lockwood • Fajardo"
+      }
+    }
+  ]
+}

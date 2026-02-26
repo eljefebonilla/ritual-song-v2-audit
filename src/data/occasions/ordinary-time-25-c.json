@@ -1,0 +1,436 @@
+{
+  "id": "ordinary-time-25-c",
+  "name": "ORDINARY TIME 25 [C]",
+  "year": "C",
+  "season": "ordinary",
+  "seasonLabel": "Ordinary Time",
+  "seasonOrder": 25,
+  "dates": [
+    {
+      "date": "2025-09-21",
+      "label": "Year C — Sep 21, 2025 (Sun)",
+      "dayOfWeek": "Sun"
+    },
+    {
+      "date": "2037-09-20",
+      "label": "Year C — Sep 20, 2037 (Sun)",
+      "dayOfWeek": "Sun"
+    },
+    {
+      "date": "2034-09-24",
+      "label": "Year C — Sep 24, 2034 (Sun)",
+      "dayOfWeek": "Sun"
+    },
+    {
+      "date": "2031-09-21",
+      "label": "Year C — Sep 21, 2031 (Sun)",
+      "dayOfWeek": "Sun"
+    },
+    {
+      "date": "2028-09-24",
+      "label": "Year C — Sep 24, 2028 (Sun)",
+      "dayOfWeek": "Sun"
+    }
+  ],
+  "lectionary": {
+    "number": "135•C",
+    "gospelTitle": "First and Last",
+    "thematicTag": "Riches Teaching 1/2"
+  },
+  "readings": [
+    {
+      "type": "first",
+      "citation": "Am 8:4-7",
+      "summary": "The Lord will forget nothing that the wicked do."
+    },
+    {
+      "type": "psalm",
+      "citation": "Ps 113:1-2, 4-6, 7-8, R. see v.1a, 7b\nPraise the Lord who lifts up the poor.",
+      "summary": "",
+      "antiphon": "Ps 113:1-2, 4-6, 7-8, R. see v.1a, 7b\nPraise the Lord who lifts up the poor."
+    },
+    {
+      "type": "second",
+      "citation": "1 Tm 2:1-8",
+      "summary": "Pray often, free of anger and dissension."
+    },
+    {
+      "type": "gospel_verse",
+      "citation": "See 2 Cor 8:9",
+      "summary": "Though our Lord Jesus Christ was rich, he became poor,\nso that by his poverty you might become rich."
+    },
+    {
+      "type": "gospel",
+      "citation": "Lk 16:1-13 (Shorter - 16:10-13)",
+      "summary": "Parable of the wise manager."
+    }
+  ],
+  "antiphons": [
+    {
+      "type": "entrance",
+      "option": 1,
+      "citation": "Roman Missal",
+      "text": "I am the salvation of the people, says the Lord.\nShould they cry to me in any distress,\nI will hear them, and I will be their Lord for ever."
+    },
+    {
+      "type": "communion",
+      "option": 1,
+      "citation": "Ps 119 (118):4–5",
+      "text": "You have laid down your precepts to be carefully kept;\nmay my ways be firm in keeping your statutes."
+    },
+    {
+      "type": "communion",
+      "option": 2,
+      "citation": "Communion Antiphon • Option II |  Jn 10:14",
+      "text": "I am the Good Shepherd, says the Lord;\nI know my sheep, and mine know me."
+    }
+  ],
+  "planningNotes": [
+    "SEASON OF CREATION (9/1 - 10/4)"
+  ],
+  "musicPlans": [
+    {
+      "community": "Reflections",
+      "communityId": "reflections",
+      "date": "Year C — Sep 20, 2025 (Sat)",
+      "presider": "Fr. Eusebio Llonoso",
+      "prelude": {
+        "title": "God of Peace",
+        "composer": "Jeffrey Bonilla & David Lockwood",
+        "description": "Prayer for Peace"
+      },
+      "gathering": {
+        "title": "All Creatures of Our God and King",
+        "composer": "LASST UNS ERFREUEN",
+        "description": "Season of Creation"
+      },
+      "penitentialAct": {
+        "title": "Kyrie • Misa Del Mundo",
+        "composer": "Only if needed. Talk to presider!"
+      },
+      "gloria": {
+        "title": "Glory to God (Through-composed Setting)",
+        "composer": "Mass of Renewal • Curtis Stephan"
+      },
+      "responsorialPsalm": {
+        "psalm": "Ps 113 Praise the Lord who lifts up the poor.",
+        "setting": "The Lyric Psalter • Tony Alonso & Marty Haugen"
+      },
+      "gospelAcclamation": {
+        "title": "Alleluia (Mass of Joy & Peace)",
+        "composer": "O.T. • 25 | C — \"Though our Lord Jesus...\""
+      },
+      "offertory": {
+        "title": "Center of My Life",
+        "composer": "Paul Inwood • Arranged by David Lockwood",
+        "description": "God vs mammon - \"...I will always serve you...\""
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "Mass for the Healing of the World",
+        "composer": "Trevor Thomson"
+      },
+      "lordsPrayer": {
+        "title": "Chanted Our Father (Snow)",
+        "composer": "Jennings/Paregorius"
+      },
+      "fractionRite": {
+        "title": "Lamb of God (Mass for the Healing of the World)",
+        "composer": "Trevor Thomson"
+      },
+      "communionSongs": [
+        {
+          "title": "God of the Hungry",
+          "composer": "Scott Soper",
+          "description": "Gospel Reading"
+        },
+        {
+          "title": "Gift of Finest Wheat",
+          "composer": "BICENTENNIAL • Robert Kreutz • Omer Westendorf",
+          "description": "Communion Antiphon"
+        },
+        {
+          "title": "Psalm 23: Shepherd Me, O God",
+          "composer": "Marty Haugen",
+          "description": "OT25C"
+        }
+      ],
+      "sending": {
+        "title": "Bring Forth the Kingdom",
+        "composer": "Marty Haugen",
+        "description": "Living out God’s reign through justice, mercy, and discipleship."
+      }
+    },
+    {
+      "community": "Foundations",
+      "communityId": "foundations",
+      "date": "Year C — Sep 21, 2025 (Sun)",
+      "presider": "Fr. Vince Kuna",
+      "prelude": {
+        "title": "Peace Is Flowing Like a River",
+        "composer": "Carey Landry",
+        "description": "Optional Prayer for Peace"
+      },
+      "gathering": {
+        "title": "All Creatures of Our God and King",
+        "composer": "LASST UNS ERFREUEN",
+        "description": "Season of Creation"
+      },
+      "penitentialAct": {
+        "title": "Kyrie (Gift of God) • Adapted Version",
+        "composer": "Marty Haugen • Arranged by David Locwood"
+      },
+      "gloria": {
+        "title": "Glory to God (Mass of Joy & Peace)",
+        "composer": "Alonso • Arr. by Houze OR Arr. by Lockwood"
+      },
+      "responsorialPsalm": {
+        "psalm": "Ps 113 Praise the Lord who lifts up the poor.",
+        "setting": "Spirit & Psalm • Tom Booth"
+      },
+      "offertory": {
+        "title": "Center of My Life",
+        "composer": "Paul Inwood",
+        "description": "God vs mammon - \"...I will always serve you...\""
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "Mass of Glory • Bob Hurd • Arr. by Dan Houze"
+      },
+      "lordsPrayer": {
+        "title": "Chanted Our Father (Snow)",
+        "composer": "Jennings • Paregorius"
+      },
+      "fractionRite": {
+        "title": "Lamb of God (Mass of Glory)"
+      },
+      "communionSongs": [
+        {
+          "title": "Gift of Finest Wheat",
+          "composer": "BICENTENNIAL • Robert Kreutz • Omer Westendorf",
+          "description": "Communion Antiphon"
+        },
+        {
+          "title": "Bread of Life",
+          "composer": "Bernadette Farrell",
+          "description": "\"...hope of the world” | God’s true wealth versus mammon"
+        }
+      ],
+      "sending": {
+        "title": "I Want to Walk as a Child of the Light",
+        "composer": "HOUSTON • Kathleen Thomerson",
+        "description": "Reminds us to walk with Christ’s light as our guide, not wealth."
+      }
+    },
+    {
+      "community": "Generations",
+      "communityId": "generations",
+      "date": "Year C — Sep 21, 2025 (Sun)",
+      "presider": "Msgr. Lloyd Torgerson",
+      "prelude": {
+        "title": "God of Peace",
+        "composer": "Jeffrey Bonilla & David Lockwood",
+        "description": "Prayer for Peace"
+      },
+      "gathering": {
+        "title": "All Creatures of Our God and King",
+        "composer": "LASST UNS ERFREUEN • Arr. by David Lockwood",
+        "description": "Christ the King"
+      },
+      "penitentialAct": {
+        "title": "Kyrie • Misa Del Mundo",
+        "composer": "Only if needed. Talk to presider!"
+      },
+      "gloria": {
+        "title": "Glory, Glory, Gloria!",
+        "composer": "Jeffrey Bonilla & Drew Wilson"
+      },
+      "responsorialPsalm": {
+        "psalm": "Ps 113 Praise the Lord who lifts up the poor.",
+        "setting": "Spirit & Psalm • Tom Booth"
+      },
+      "gospelAcclamation": {
+        "title": "Setting from Mass of Renewal",
+        "composer": "O.T. • 25 | C — \"Though our Lord Jesus...\""
+      },
+      "offertory": {
+        "title": "Center of My Life",
+        "composer": "Paul Inwood • Arranged by David Lockwood",
+        "description": "God vs mammon - \"...I will always serve you...\""
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "Mass of Restoration",
+        "composer": "Joshua Blakesley"
+      },
+      "lordsPrayer": {
+        "title": "(Echo) Our Father",
+        "composer": "Jerome Andrews • Arranged by Dan Houze"
+      },
+      "fractionRite": {
+        "title": "Lamb of God (Resoration)"
+      },
+      "communionSongs": [
+        {
+          "title": "Ps 23 The Lord Is My Shepherd",
+          "composer": "Joshua Blakesley",
+          "description": "Communion Antiphon |  Jn 10:14 - \"I am the Good Shepherd\""
+        },
+        {
+          "title": "Pan de Vida (4/4)",
+          "composer": "Bob Hurd • Arranged by Ed Archer",
+          "description": "\"...at this table the last shall be first"
+        },
+        {
+          "title": "This Is the Kingdom [NEW]",
+          "composer": "Elevation Worship • Pat Barrett • Arr. by E. Fajardo",
+          "description": "\"Seek first the Kingdom\""
+        },
+        {
+          "title": "Loved",
+          "composer": "Ben Smith, Pat Barrett",
+          "description": "Communion Antiphon |  Jn 10:14 \"...I am yours and you are mine\""
+        }
+      ],
+      "sending": {
+        "title": "Go Make a Difference",
+        "composer": "Steve Angrisano • Tom Tomaszek",
+        "description": "Serving God over mammon."
+      }
+    },
+    {
+      "community": "Heritage",
+      "communityId": "heritage",
+      "date": "Year C — Sep 21, 2025 (Sun)",
+      "presider": "Fr. Thomas Park",
+      "prelude": {
+        "title": "God of Peace",
+        "composer": "Jeffrey Bonilla & David Lockwood",
+        "description": "Prayer for Peace"
+      },
+      "gathering": {
+        "title": "All Creatures of Our God and King",
+        "composer": "LASST UNS ERFREUEN",
+        "description": "Season of Creation"
+      },
+      "penitentialAct": {
+        "title": "Kyrie • Misa Del Mundo",
+        "composer": "Only if needed. Talk to presider!"
+      },
+      "gloria": {
+        "title": "Glory to God (Mass of Christ the Savior)",
+        "composer": "Dan Schutte"
+      },
+      "responsorialPsalm": {
+        "psalm": "Ps 113 Praise the Lord who lifts up the poor.",
+        "setting": "The Lyric Psalter • Tony Alonso & Marty Haugen"
+      },
+      "gospelAcclamation": {
+        "title": "Alleluia (Mass of Joy & Peace)",
+        "composer": "O.T. • 25 | C — \"Though our Lord Jesus...\""
+      },
+      "offertory": {
+        "title": "Center of My Life",
+        "composer": "Paul Inwood",
+        "description": "God vs mammon - \"...I will always serve you...\""
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "Mass of Christ the Savior - Dan Schutte"
+      },
+      "lordsPrayer": {
+        "title": "Echo Our Father",
+        "composer": "Andrews, Arr. Bonilla • Lockwood • Fajardo"
+      },
+      "fractionRite": {
+        "title": "Lamb of God (Mass of Christ the Savior)"
+      },
+      "communionSongs": [
+        {
+          "title": "God of the Hungry",
+          "composer": "Scott Soper",
+          "description": "Gospel Reading"
+        },
+        {
+          "title": "Gift of Finest Wheat",
+          "composer": "BICENTENNIAL • Robert Kreutz • Omer Westendorf",
+          "description": "Communion Antiphon"
+        },
+        {
+          "title": "Bread of Life",
+          "composer": "Bernadette Farrell",
+          "description": "\"...hope of the world” | God’s true wealth versus mammon"
+        }
+      ],
+      "sending": {
+        "title": "I Want to Walk as a Child of the Light",
+        "composer": "HOUSTON • Kathleen Thomerson",
+        "description": "Reminds us to walk with Christ’s light as our guide, not wealth."
+      }
+    },
+    {
+      "community": "Elevations",
+      "communityId": "elevations",
+      "date": "Year C — Sep 21, 2025 (Sun)",
+      "presider": "\"Fr. David Guffey, CSC\"",
+      "prelude": {
+        "title": "God of Peace",
+        "composer": "Jeffrey Bonilla & David Lockwood",
+        "description": "Prayer for Peace"
+      },
+      "gathering": {
+        "title": "All Creatures of Our God and King",
+        "composer": "LASST UNS ERFREUEN • Arr. by David Lockwood",
+        "description": "Christ the King"
+      },
+      "penitentialAct": {
+        "title": "Kyrie • Misa Del Mundo",
+        "composer": "Only if needed. Talk to presider!"
+      },
+      "gloria": {
+        "title": "Glory, Glory, Gloria!"
+      },
+      "responsorialPsalm": {
+        "psalm": "Ps 113 Praise the Lord who lifts up the poor.",
+        "setting": "Spirit & Psalm • Tom Booth"
+      },
+      "gospelAcclamation": {
+        "title": "Setting from Mass of Renewal",
+        "verse": "O.T. • 25 | C — \"Though our Lord Jesus...\""
+      },
+      "offertory": {
+        "title": "Center of My Life",
+        "composer": "Paul Inwood • Arranged by David Lockwood",
+        "description": "God vs mammon - \"...I will always serve you...\""
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "Mass of Restoration • Joshua Blakesley"
+      },
+      "lordsPrayer": {
+        "title": "Echo Our Father",
+        "composer": "Andrews, Arr. Bonilla • Lockwood • Fajardo"
+      },
+      "fractionRite": {
+        "title": "Lamb of God (Resoration)"
+      },
+      "communionSongs": [
+        {
+          "title": "This Is the Kingdom",
+          "composer": "Elevation Worship • Pat Barrett • Arr. by E. Fajardo",
+          "description": "\"Seek first the Kingdom\""
+        },
+        {
+          "title": "Pan de Vida (4/4)",
+          "composer": "Bob Hurd • Arranged by Ed Archer",
+          "description": "\"...at this table the last shall be first"
+        },
+        {
+          "title": "Loved",
+          "composer": "Ben Smith, Pat Barrett",
+          "description": "Communion Antiphon |  Jn 10:14 \"...I am yours and you are mine\""
+        }
+      ],
+      "sending": {
+        "title": "Your Grace Is Enough",
+        "composer": "Matt Maher",
+        "description": "Highlights God's grace as sufficient beyond earthly needs ."
+      }
+    }
+  ]
+}

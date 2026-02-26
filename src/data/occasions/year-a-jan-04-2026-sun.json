@@ -1,0 +1,412 @@
+{
+  "id": "year-a-jan-04-2026-sun",
+  "name": "Year A — Jan 04, 2026 (Sun)",
+  "year": "ABC",
+  "season": "ordinary",
+  "seasonLabel": "Ordinary Time",
+  "seasonOrder": 4,
+  "dates": [],
+  "lectionary": {
+    "number": "Year C — Jan 05, 2031 (Sun)",
+    "gospelTitle": "Year B — Jan 06, 2030 (Sun)",
+    "thematicTag": "Year A — Jan 07, 2029 (Sun)",
+    "thematicDetail": "Year C — Jan 02, 2028 (Sun)"
+  },
+  "readings": [
+    {
+      "type": "psalm",
+      "citation": "Light for All Nations",
+      "summary": "",
+      "antiphon": "Planning Reminders"
+    },
+    {
+      "type": "gospel_verse",
+      "citation": "Arise, Jerusalem, and look to the East and see your children\ngathered from the rising to the setting of the sun.",
+      "summary": "Cf. Mal 3:1; 1 Chr 29:12 (At Mass during the Day)"
+    },
+    {
+      "type": "gospel",
+      "citation": "Reading I | Is 60:1-6",
+      "summary": "Jerusalem is exalted."
+    }
+  ],
+  "antiphons": [
+    {
+      "type": "entrance",
+      "option": 1,
+      "citation": "Verse before the Gospel | Mt 2:2",
+      "text": "We saw his star at its rising\nand have come to do him homage."
+    },
+    {
+      "type": "communion",
+      "option": 2,
+      "citation": "Communion Antiphon | Cf. Rev 21:23 (At the Vigil Mass)",
+      "text": "The brightness of God illumined the holy city Jerusalem,\nand the nations will walk by its light."
+    }
+  ],
+  "planningNotes": [
+    "Communion Antiphon | Cf. Mt 2:2 (At Mass during the Day)",
+    "We have seen his star in the East,\nand have come with gifts to adore the Lord."
+  ],
+  "musicPlans": [
+    {
+      "community": "Reflections",
+      "communityId": "reflections",
+      "date": "Year A — Jan 03, 2026 (Sat)",
+      "presider": "Fr. Thomas Park",
+      "prelude": {
+        "title": "All Glory Be To Christ",
+        "composer": "AULD LANG SYNE • Kings Kaleidoscope",
+        "description": "Optional Prelude or Meditation Song"
+      },
+      "penitentialAct": {
+        "title": "REGENT SQUARE, Smart • Montgomery",
+        "composer": "Verses 1, 3, and 4",
+        "description": "Penitential Act (Only if presider wants led by cantor)"
+      },
+      "gloria": {
+        "title": "Kyrie • Misa Del Mundo",
+        "composer": "Jesse Manibusan",
+        "description": "Gloria"
+      },
+      "gospelAcclamation": {
+        "title": "The Lyric Psalter • Tony Alonso & Marty Haugen",
+        "composer": "Gospel Acclamation",
+        "verse": "Alleluia (Mass of Joy & Peace)"
+      },
+      "offertory": {
+        "title": "The Lyric Gospel Acclamations • Tony Alonso",
+        "description": "Offertory Song"
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "What Child Is This",
+        "composer": "GREENSLEEVES • William Dix • Arr. by Alonso"
+      },
+      "lordsPrayer": {
+        "title": "Eucharistic Acclamations",
+        "composer": "Mass of the Incarnate Word",
+        "description": "Bob Hurd • Traditional Arrangement"
+      },
+      "fractionRite": {
+        "title": "Holy",
+        "composer": "Mystery of Faith",
+        "description": "Amen"
+      },
+      "communionSongs": [
+        {
+          "title": "The Lord's Prayer",
+          "composer": "Chanted Our Father (Snow)",
+          "description": "Jennings/Paregorius"
+        },
+        {
+          "title": "Fraction Rite",
+          "composer": "Lamb of God (Mass of Holy Cross)",
+          "description": "David Clark Isele"
+        },
+        {
+          "title": "Communion Songs",
+          "composer": "Christ the Lord",
+          "description": "Sarah Hart • Robert Feduccia"
+        },
+        {
+          "title": "VERSE 1 - 3",
+          "composer": "The First Nowell",
+          "description": "English Melody and Carol, 17th C."
+        }
+      ]
+    },
+    {
+      "community": "Foundations",
+      "communityId": "foundations",
+      "date": "Year A — Jan 04, 2026 (Sun)",
+      "presider": "Fr. Vince Kuna",
+      "prelude": {
+        "title": "All Glory Be To Christ",
+        "composer": "AULD LANG SYNE • Kings Kaleidoscope",
+        "description": "Optional Prelude or Meditation Song"
+      },
+      "penitentialAct": {
+        "title": "REGENT SQUARE, Smart • Montgomery",
+        "composer": "Verses 1, 3, and 4",
+        "description": "Penitential Act (If presider wants led by cantor)"
+      },
+      "gloria": {
+        "title": "Kyrie (Gift of God) • Adapted Version",
+        "composer": "Marty Haugen • Arranged by David Locwood",
+        "description": "Gloria"
+      },
+      "gospelAcclamation": {
+        "title": "Spirit & Psalm • Scott Soper",
+        "composer": "Gospel Acclamation",
+        "verse": "Hallelujah (adapted for Liturgy)"
+      },
+      "offertory": {
+        "title": "Choir Practice Tracks",
+        "description": "Offertory Song"
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "What Child Is This?",
+        "composer": "GREENSLEEVES • William Dix • Arr. by Haugen"
+      },
+      "lordsPrayer": {
+        "title": "Eucharistic Acclamations",
+        "composer": "Mass of Glory (Lockwood Christmas Intro)"
+      },
+      "fractionRite": {
+        "title": "Holy",
+        "composer": "Mystery of Faith",
+        "description": "Amen"
+      },
+      "communionSongs": [
+        {
+          "title": "The Lord's Prayer",
+          "composer": "Chanted Our Father (Snow)",
+          "description": "Jennings • Paregorius"
+        },
+        {
+          "title": "Fraction Rite",
+          "composer": "Lamb of God (Mass of Glory)"
+        },
+        {
+          "title": "Communion Songs",
+          "composer": "The First Noel (Nowell)",
+          "description": "Arranged by Matt Maher • Adapt. by Arielle Phan"
+        },
+        {
+          "title": "Wisemen Verses - Coda optional",
+          "composer": "We Three Kings",
+          "description": "John H. Hopkins, Jr. • Arranged by Tom Booth"
+        }
+      ],
+      "sending": {
+        "title": "BEACH SPRING • Patrick O’Brien",
+        "composer": "Same tune as Healing 'River of the Spirit'"
+      }
+    },
+    {
+      "community": "Generations",
+      "communityId": "generations",
+      "date": "Year A — Jan 04, 2026 (Sun)",
+      "presider": "Msgr. Lloyd Torgerson",
+      "prelude": {
+        "title": "All Glory Be To Christ",
+        "composer": "AULD LANG SYNE • Kings Kaleidoscope",
+        "description": "Optional Prelude or Meditation Song"
+      },
+      "penitentialAct": {
+        "title": "John H. Hopkins, Jr. • Arranged by Tom Booth",
+        "composer": "Verses 1 & 5",
+        "description": "Penitential Act (Only if presider wants led by cantor)"
+      },
+      "gloria": {
+        "title": "Kyrie • Misa Del Mundo",
+        "composer": "Jesse Manibusan",
+        "description": "Gloria"
+      },
+      "gospelAcclamation": {
+        "title": "Spirit & Psalm • Scott Soper",
+        "composer": "Gospel Acclamation",
+        "verse": "Hallelujah (adapted for Liturgy)"
+      },
+      "offertory": {
+        "title": "Choir Practice Tracks",
+        "description": "Offertory Song"
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "What Child Is This",
+        "composer": "GREENSLEEVES • William Dix • Arr. by Alonso"
+      },
+      "lordsPrayer": {
+        "title": "Eucharistic Acclamations",
+        "composer": "Mass of Glory (Lockwood Christmas Intro)",
+        "description": "Bob Hurd • Arr. by Dan Houze"
+      },
+      "fractionRite": {
+        "title": "Holy",
+        "composer": "Mystery of Faith",
+        "description": "Amen"
+      },
+      "communionSongs": [
+        {
+          "title": "The Lord's Prayer",
+          "composer": "Echo Our Father",
+          "description": "Jerome Andrews, Arranged by Dan Houze"
+        },
+        {
+          "title": "Fraction Rite",
+          "composer": "Lamb of God (Mass of Glory)"
+        },
+        {
+          "title": "Communion Songs",
+          "composer": "Christ the Lord",
+          "description": "Sarah Hart • Robert Feduccia"
+        },
+        {
+          "title": "VERSE 1 - 3",
+          "composer": "The First Noel (Nowell)",
+          "description": "Arranged by Matt Maher • Adapt. by Arielle Phan"
+        },
+        {
+          "title": "Wisemen Verses - Coda optional",
+          "composer": "Jesus, Living Bread",
+          "description": "Tom Booth"
+        },
+        {
+          "title": "\"Light for all the world\"",
+          "composer": "Glory (Let There Be Peace)",
+          "description": "Matt Maher"
+        }
+      ],
+      "sending": {
+        "title": "Go Tell It On the Mountain",
+        "composer": "Arrangement by David Lockwood",
+        "description": "Simplified Version as backup!"
+      }
+    },
+    {
+      "community": "Heritage",
+      "communityId": "heritage",
+      "date": "Year A — Jan 04, 2026 (Sun)",
+      "presider": "Fr. Eusebio Llonoso",
+      "prelude": {
+        "title": "All Glory Be To Christ",
+        "composer": "AULD LANG SYNE • Kings Kaleidoscope",
+        "description": "Optional Prelude or Meditation Song"
+      },
+      "penitentialAct": {
+        "title": "REGENT SQUARE, Smart • Montgomery",
+        "composer": "Verses 1, 3, and 4",
+        "description": "Penitential Act (If presider wants led by cantor)"
+      },
+      "gloria": {
+        "title": "Kyrie • Misa Del Mundo",
+        "composer": "Jesse Manibusan",
+        "description": "Gloria"
+      },
+      "gospelAcclamation": {
+        "title": "The Lyric Psalter • Tony Alonso & Marty Haugen",
+        "composer": "Gospel Acclamation",
+        "verse": "CHRISTMAS — Epiphany • ABC"
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "What Child Is This",
+        "composer": "GREENSLEEVES • William Dix • Arr. by Alonso"
+      },
+      "lordsPrayer": {
+        "title": "Eucharistic Acclamations",
+        "composer": "Mass of the Incarnate Word",
+        "description": "Bob Hurd • Traditional Arrangement"
+      },
+      "fractionRite": {
+        "title": "Holy",
+        "composer": "Mystery of Faith",
+        "description": "Amen"
+      },
+      "communionSongs": [
+        {
+          "title": "The Lord's Prayer",
+          "composer": "Chanted Our Father (Snow)",
+          "description": "Jennings/Paregorius"
+        },
+        {
+          "title": "Fraction Rite",
+          "composer": "Lamb of God (Mass of Holy Cross)"
+        },
+        {
+          "title": "Communion Songs",
+          "composer": "Christ the Lord",
+          "description": "Sarah Hart • Robert Feduccia"
+        },
+        {
+          "title": "VERSE 1 - 3",
+          "composer": "The First Nowell",
+          "description": "English Melody and Carol, 17th C."
+        },
+        {
+          "title": "Wisemen Verses",
+          "composer": "We Three Kings",
+          "description": "John H. Hopkins, Jr. • Arranged by Tom Booth"
+        }
+      ],
+      "sending": {
+        "title": "BEACH SPRING • Patrick O’Brien",
+        "composer": "Same tune as Healing 'River of the Spirit'"
+      }
+    },
+    {
+      "community": "Elevations",
+      "communityId": "elevations",
+      "date": "Year A — Jan 04, 2026 (Sun)",
+      "presider": "\"Fr. David Guffey, CSC\"",
+      "prelude": {
+        "title": "All Glory Be To Christ",
+        "composer": "AULD LANG SYNE • Kings Kaleidoscope",
+        "description": "Optional Prelude or Meditation Song"
+      },
+      "penitentialAct": {
+        "title": "John H. Hopkins, Jr. • Arranged by Tom Booth",
+        "composer": "Verses 1 & 5",
+        "description": "Penitential Act (If presider wants led by cantor)"
+      },
+      "gloria": {
+        "title": "Kyrie (Misa Del Mundo)",
+        "composer": "Jesse Manibusan — If needed.",
+        "description": "Gloria"
+      },
+      "gospelAcclamation": {
+        "title": "Spirit & Psalm • Scott Soper",
+        "composer": "Gospel Acclamation",
+        "verse": "Hallelujah (adapted for Liturgy)"
+      },
+      "offertory": {
+        "title": "Choir Practice Tracks",
+        "description": "Offertory Song"
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "What Child Is This?",
+        "composer": "GREENSLEEVES • William Dix • Arr. by Haugen"
+      },
+      "lordsPrayer": {
+        "title": "Eucharistic Acclamations",
+        "composer": "Mass of Glory (Christmas Intro)",
+        "description": "Bob Hurd • Ken Canedo"
+      },
+      "fractionRite": {
+        "title": "Holy",
+        "composer": "Mystery of Faith",
+        "description": "Amen"
+      },
+      "communionSongs": [
+        {
+          "title": "The Lord's Prayer",
+          "composer": "Echo Our Father",
+          "description": "Andrews • Arr. by Bonilla • Lockwood • Fajardo"
+        },
+        {
+          "title": "Fraction Rite",
+          "composer": "Lamb of God (Mass of Glory)"
+        },
+        {
+          "title": "Communion Songs",
+          "composer": "Christ the Lord",
+          "description": "Sarah Hart • Robert Feduccia"
+        },
+        {
+          "title": "VERSE 1 - 3",
+          "composer": "The First Noel (Nowell)",
+          "description": "Arr. by Matt Maher • Adapt. by Arielle Phan"
+        },
+        {
+          "title": "Wisemen Verses - Coda optional",
+          "composer": "Glory (Let There Be Peace)",
+          "description": "Matt Maher"
+        }
+      ],
+      "sending": {
+        "title": "Sending",
+        "composer": "Go Tell It On the Mountain",
+        "description": "Arrangement by David Lockwood"
+      }
+    }
+  ]
+}

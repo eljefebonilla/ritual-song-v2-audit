@@ -1,0 +1,430 @@
+{
+  "id": "palm-sunday-a",
+  "name": "Palm Sunday [A]",
+  "year": "A",
+  "season": "lent",
+  "seasonLabel": "Lent",
+  "seasonOrder": 0,
+  "dates": [
+    {
+      "date": "2023-04-02",
+      "label": "Year A — Apr 02, 2023 (Sun)",
+      "dayOfWeek": "Sun"
+    },
+    {
+      "date": "2035-03-18",
+      "label": "Year A — Mar 18, 2035 (Sun)",
+      "dayOfWeek": "Sun"
+    },
+    {
+      "date": "2032-03-21",
+      "label": "Year A — Mar 21, 2032 (Sun)",
+      "dayOfWeek": "Sun"
+    },
+    {
+      "date": "2029-03-25",
+      "label": "Year A — Mar 25, 2029 (Sun)",
+      "dayOfWeek": "Sun"
+    },
+    {
+      "date": "2026-03-29",
+      "label": "Year A — Mar 29, 2026 (Sun)",
+      "dayOfWeek": "Sun"
+    }
+  ],
+  "lectionary": {
+    "number": "037•PALMS A",
+    "gospelTitle": "Entry into Jerusalem",
+    "thematicTag": "038•ABC | Matthew's Passion Narrative"
+  },
+  "readings": [
+    {
+      "type": "first",
+      "citation": "Is 50:4-7",
+      "summary": "Despite rejection, Isaiah does not abandon his call."
+    },
+    {
+      "type": "psalm",
+      "citation": "Ps 22:8-9, 17-18, 19-20, 23-24. R. v.2a\nMy God, my God, why have you abandoned me?",
+      "summary": "",
+      "antiphon": "Ps 22:8-9, 17-18, 19-20, 23-24. R. v.2a\nMy God, my God, why have you abandoned me?"
+    },
+    {
+      "type": "second",
+      "citation": "Phil 2:6-11",
+      "summary": "Jesus made himself lowly and was exalted."
+    },
+    {
+      "type": "gospel_verse",
+      "citation": "Phil 2:8-9",
+      "summary": "Christ became obedient to the point of death,\neven death on a cross.\nbecause of this, God greatly exalted him\nand bestowed on him the name which is above every name."
+    },
+    {
+      "type": "gospel",
+      "citation": "26:14-27:66 (Shorter - Mt 27:11-54)",
+      "summary": "The Passion of our Lord Jesus Christ."
+    }
+  ],
+  "antiphons": [
+    {
+      "type": "entrance",
+      "option": 1,
+      "citation": "Cf. Jn 12:1, 12–13; Ps 24 (23):9–10",
+      "text": "Six days before the Passover,\nwhen the Lord came into the city of Jerusalem,\nthe children ran to meet him;\nin their hands they carried palm branches\nand with a loud voice cried out:\n*Hosanna in the highest!"
+    },
+    {
+      "type": "entrance",
+      "option": 2,
+      "citation": "Part 2 of Antiphon",
+      "text": "Blessed are you, who have come in your abundant mercy!\nO gates, lift high your heads; grow higher, ancient doors.\nLet him enter, the king of glory! Who is this king of glory?\nHe, the Lord of hosts, he is the king of glory.\n*Hosanna in the highest!\n\nBlessed are you, who have come in your abundant mercy!"
+    },
+    {
+      "type": "communion",
+      "option": 1,
+      "citation": "Mt 26:42",
+      "text": "Father, if this chalice cannot pass without my drinking it,\nyour will be done."
+    }
+  ],
+  "planningNotes": [
+    "Next year..."
+  ],
+  "musicPlans": [
+    {
+      "community": "Reflections",
+      "communityId": "reflections",
+      "date": "Year A — Mar 28, 2026 (Sat)",
+      "presider": "TBD",
+      "prelude": {
+        "title": "No Prelude music.",
+        "composer": "Reading on the Church Steps followed by",
+        "description": "enhanced Gathering Procession with palms."
+      },
+      "gathering": {
+        "title": "Hosanna!",
+        "composer": "Francis Patrick O'Brien",
+        "description": "Palm Sunday Processional"
+      },
+      "penitentialAct": {
+        "title": "Kyrie (Mass of Colour) — optional tropes",
+        "composer": "Jeffrey Bonilla & David Lockwood"
+      },
+      "responsorialPsalm": {
+        "psalm": "Ps 22 My God... why have you abandoned me?",
+        "setting": "The Lyric Psalter • Tony Alonso & Marty Haugen"
+      },
+      "gospelAcclamation": {
+        "title": "Mass of Joy & Peace Lenten G.A. (Refrain)",
+        "composer": "The Lyric Gospel Acclamations • Tony Alonso",
+        "verse": "Christ became obedient to the point of death, even death\non a cross. because of this, God greatly exalted him and bestowed on him the name which is above every name."
+      },
+      "offertory": {
+        "title": "Jesus, Remember Me",
+        "composer": "Taizé — Jacques Berthier",
+        "description": "\"when you come into your kingdom\""
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "Mass of Creation",
+        "composer": "Marty Haugen • Arr. by Lockwood & Phan"
+      },
+      "lordsPrayer": {
+        "title": "Chanted Our Father (Snow)",
+        "composer": "Jennings/Paregorius"
+      },
+      "fractionRite": {
+        "title": "Lamb of God (Mass of Creation)",
+        "composer": "Marty Haugen • Arr. by Lockwood & Phan"
+      },
+      "communionSongs": [
+        {
+          "title": "Crux Fidelis",
+          "composer": "Steven C. Warner - Adapt. from",
+          "description": "of the Congregation of Holy Cross"
+        },
+        {
+          "title": "We Remember",
+          "composer": "Marty Haugen",
+          "description": "\"...and still we celebrate for you are with us here...\""
+        },
+        {
+          "title": "Unless a Grain Wheat",
+          "composer": "Bob Hurd",
+          "description": "\"...but if it die, it will yield a rich harvest\""
+        }
+      ],
+      "sending": {
+        "title": "Were You There?",
+        "composer": "Scott Soper",
+        "description": "Somber Recessional"
+      }
+    },
+    {
+      "community": "Foundations",
+      "communityId": "foundations",
+      "date": "Year A — Mar 29, 2026 (Sun)",
+      "presider": "TBD",
+      "prelude": {
+        "title": "No Prelude music.",
+        "composer": "Reading on the Church Steps followed by",
+        "description": "enhanced Gathering Procession with palms."
+      },
+      "gathering": {
+        "title": "Hosanna!",
+        "composer": "Francis Patrick O'Brien",
+        "description": "Palm Sunday Processional"
+      },
+      "penitentialAct": {
+        "title": "Kyrie (Mass of Colour) — optional tropes",
+        "composer": "Jeffrey Bonilla & David Lockwood"
+      },
+      "responsorialPsalm": {
+        "psalm": "Ps 22 My God... why have you abandoned me?",
+        "setting": "The Lyric Psalter • Sarah Hart"
+      },
+      "gospelAcclamation": {
+        "title": "Praise to You, Lord Jesus Christ",
+        "composer": "Ed Archer",
+        "verse": "Christ became obedient to the point of death, even death\non a cross. because of this, God greatly exalted him and bestowed on him the name which is above every name."
+      },
+      "offertory": {
+        "title": "Above All",
+        "composer": "Lenny LeBlanc • Paul Baloche • Arr. by Ed Bolduc",
+        "description": "\"Like a rose trampled on the ground\""
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "Mass of a Firm Foundation",
+        "composer": "David Lockwood"
+      },
+      "lordsPrayer": {
+        "title": "Chanted Our Father (Snow)",
+        "composer": "Jennings • Paregorius"
+      },
+      "fractionRite": {
+        "title": "Lamb of God (Mass of a Firm Foundation)",
+        "composer": "David Lockwood"
+      },
+      "communionSongs": [
+        {
+          "title": "We Remember",
+          "composer": "Marty Haugen",
+          "description": "\"...and still we celebrate for you are with us here...\""
+        },
+        {
+          "title": "How Beautiful",
+          "composer": "Twila Paris",
+          "description": "\"...the tender eyes that choose to forgive...\""
+        }
+      ],
+      "sending": {
+        "title": "Were You There?",
+        "composer": "Scott Soper",
+        "description": "Somber Recessional"
+      }
+    },
+    {
+      "community": "Generations",
+      "communityId": "generations",
+      "date": "Year A — Mar 29, 2026 (Sun)",
+      "presider": "TBD",
+      "prelude": {
+        "title": "No Prelude music.",
+        "composer": "Reading on the Church Steps followed by",
+        "description": "enhanced Gathering Procession with palms."
+      },
+      "gathering": {
+        "title": "Hosanna!",
+        "composer": "Francis Patrick O'Brien",
+        "description": "Palm Sunday Processional"
+      },
+      "penitentialAct": {
+        "title": "Kyrie (Mass of Colour) — optional tropes",
+        "composer": "Jeffrey Bonilla & David Lockwood"
+      },
+      "responsorialPsalm": {
+        "psalm": "Ps 22 My God... why have you abandoned me?",
+        "setting": "The Lyric Psalter • Tony Alonso & Marty Haugen"
+      },
+      "gospelAcclamation": {
+        "title": "Praise to You, Lord Jesus Christ",
+        "composer": "Ed Archer",
+        "verse": "Christ became obedient to the point of death, even death\non a cross. because of this, God greatly exalted him and bestowed on him the name which is above every name."
+      },
+      "offertory": {
+        "title": "Above All",
+        "composer": "Lenny LeBlanc • Paul Baloche • Arr. by Ed Bolduc",
+        "description": "\"Like a rose trampled on the ground\""
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "Mass of Colour",
+        "composer": "Jeffrey Bonilla & David Lockwood"
+      },
+      "lordsPrayer": {
+        "title": "Spoken during Season of Lent"
+      },
+      "fractionRite": {
+        "title": "Lamb of God (Mass of Colour)",
+        "composer": "Jeffrey Bonilla & David Lockwood"
+      },
+      "communionSongs": [
+        {
+          "title": "At The Cross (Love Ran Red)",
+          "composer": "Chris Tomlin",
+          "description": "\"...mercy reigns and never dies\""
+        },
+        {
+          "title": "In Every Age",
+          "composer": "Janèt Sullivan Whitaker",
+          "description": "General"
+        },
+        {
+          "title": "How Beautiful",
+          "description": "\"...the tender eyes that choose to forgive...\""
+        },
+        {
+          "title": "Unless A Grain Of Wheat",
+          "composer": "John Angotti",
+          "description": "\"But if it dies, it shall bear fruit in the world\""
+        }
+      ],
+      "sending": {
+        "title": "Were You There?",
+        "composer": "Scott Soper",
+        "description": "Somber Recessional"
+      }
+    },
+    {
+      "community": "Heritage",
+      "communityId": "heritage",
+      "date": "Year A — Mar 29, 2026 (Sun)",
+      "presider": "TBD",
+      "prelude": {
+        "title": "No Prelude music.",
+        "composer": "Reading on the Church Steps followed by",
+        "description": "enhanced Gathering Procession with palms."
+      },
+      "gathering": {
+        "title": "Hosanna!",
+        "composer": "Francis Patrick O'Brien",
+        "description": "Palm Sunday Processional"
+      },
+      "penitentialAct": {
+        "title": "Kyrie (Mass of Colour) — optional tropes",
+        "composer": "Jeffrey Bonilla & David Lockwood"
+      },
+      "responsorialPsalm": {
+        "psalm": "Ps 22 My God... why have you abandoned me?",
+        "setting": "The Lyric Psalter • Tony Alonso & Marty Haugen"
+      },
+      "gospelAcclamation": {
+        "title": "Mass of Joy & Peace Lenten G.A. (Refrain)",
+        "composer": "The Lyric Gospel Acclamations • Tony Alonso",
+        "verse": "Christ became obedient to the point of death, even death\non a cross. because of this, God greatly exalted him and bestowed on him the name which is above every name."
+      },
+      "offertory": {
+        "title": "Jesus, Remember Me",
+        "composer": "Taizé — Jacques Berthier",
+        "description": "\"when you come into your kingdom\""
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "Mass of Creation - Rev. 2010",
+        "composer": "Marty Haugen"
+      },
+      "lordsPrayer": {
+        "title": "Chanted Our Father (Snow)",
+        "composer": "Jennings/Paregorius"
+      },
+      "fractionRite": {
+        "title": "Lamb of God (Mass of Creation)",
+        "composer": "Tony Alonso"
+      },
+      "communionSongs": [
+        {
+          "title": "Crux Fidelis",
+          "composer": "Steven C. Warner - Adapt. from",
+          "description": "of the Congregation of Holy Cross"
+        },
+        {
+          "title": "We Remember",
+          "composer": "Marty Haugen",
+          "description": "\"...and still we celebrate for you are with us here...\""
+        },
+        {
+          "title": "Unless a Grain Wheat",
+          "composer": "Bob Hurd",
+          "description": "\"...but if it die, it will yield a rich harvest\""
+        }
+      ],
+      "sending": {
+        "title": "Were You There?",
+        "composer": "Scott Soper",
+        "description": "Somber Recessional"
+      }
+    },
+    {
+      "community": "Elevations",
+      "communityId": "elevations",
+      "date": "Year A — Mar 29, 2026 (Sun)",
+      "presider": "TBD",
+      "prelude": {
+        "title": "No Prelude music.",
+        "composer": "Reading on the Church Steps followed by",
+        "description": "enhanced Gathering Procession with palms."
+      },
+      "gathering": {
+        "title": "Hosanna",
+        "composer": "Micah Jones",
+        "description": "Palm Sunday Processional"
+      },
+      "penitentialAct": {
+        "title": "Kyrie (Mass of Colour) — optional tropes",
+        "composer": "Jeffrey Bonilla & David Lockwood"
+      },
+      "responsorialPsalm": {
+        "psalm": "Ps 22 My God... why have you abandoned me?",
+        "setting": "Micah Jones"
+      },
+      "gospelAcclamation": {
+        "title": "Praise to You, Lord Jesus Christ",
+        "composer": "Ed Archer",
+        "verse": "Christ became obedient to the point of death, even deathon a cross. because of this,  God greatly exalted him and bestowed on him the name which is above every name."
+      },
+      "offertory": {
+        "title": "Above All",
+        "composer": "Lenny LeBlanc • Paul Baloche • Arr. by Ed Bolduc",
+        "description": "\"Like a rose trampled on the ground\""
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "Mass of Colour",
+        "composer": "Bonilla & Lockwood"
+      },
+      "lordsPrayer": {
+        "title": "Echo Our Father",
+        "composer": "Andrews, Arr. Bonilla • Lockwood • Fajardo"
+      },
+      "fractionRite": {
+        "title": "Lamb of God (Mass of Colour)",
+        "composer": "Jeffrey Bonilla & David Lockwood"
+      },
+      "communionSongs": [
+        {
+          "title": "At The Cross (Love Ran Red)",
+          "composer": "Chris Tomlin",
+          "description": "\"...mercy reigns and never dies\""
+        },
+        {
+          "title": "How Beautiful",
+          "description": "\"...the tender eyes that choose to forgive...\""
+        },
+        {
+          "title": "Unless A Grain Of Wheat",
+          "composer": "John Angotti",
+          "description": "\"But if it dies, it shall bear fruit in the world\""
+        }
+      ],
+      "sending": {
+        "title": "Were You There?",
+        "composer": "Scott Soper",
+        "description": "Somber Recessional"
+      }
+    }
+  ]
+}

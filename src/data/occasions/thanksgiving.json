@@ -1,0 +1,104 @@
+{
+  "id": "thanksgiving",
+  "name": "THANKSGIVING",
+  "year": "ABC",
+  "season": "ordinary",
+  "seasonLabel": "Ordinary Time",
+  "seasonOrder": 0,
+  "dates": [
+    {
+      "date": "2025-11-27",
+      "label": "Year C — Nov 27, 2025 (Thu)",
+      "dayOfWeek": "Thu"
+    },
+    {
+      "date": "2029-11-22",
+      "label": "Year A — Nov 22, 2029 (Thu)",
+      "dayOfWeek": "Thu"
+    },
+    {
+      "date": "2028-11-23",
+      "label": "Year C — Nov 23, 2028 (Thu)",
+      "dayOfWeek": "Thu"
+    },
+    {
+      "date": "2027-11-25",
+      "label": "Year B — Nov 25, 2027 (Thu)",
+      "dayOfWeek": "Thu"
+    },
+    {
+      "date": "2026-11-26",
+      "label": "Year A — Nov 26, 2026 (Thu)",
+      "dayOfWeek": "Thu"
+    }
+  ],
+  "lectionary": {
+    "number": "SEE SHEET",
+    "gospelTitle": "",
+    "thematicTag": ""
+  },
+  "readings": [],
+  "antiphons": [],
+  "planningNotes": [],
+  "musicPlans": [
+    {
+      "community": "Generations",
+      "communityId": "generations",
+      "date": "Year C — Nov 23, 2025 (Sun)",
+      "presider": "Msgr. Lloyd Torgerson",
+      "gathering": {
+        "title": "Malo! Malo! Thanks be to God [NEW]",
+        "composer": "Jesse Manibusan",
+        "description": "Gather in gratitude!"
+      },
+      "penitentialAct": {
+        "title": "Kyrie • Misa Del Mundo",
+        "composer": "Only if needed. Talk to presider!"
+      },
+      "responsorialPsalm": {
+        "psalm": "Ps 145 I will praise your name for ever...",
+        "setting": "Collection • Composer"
+      },
+      "gospelAcclamation": {
+        "title": "Hallelujah",
+        "composer": "Leonard Cohen adapt. for Liturgy"
+      },
+      "offertory": {
+        "title": "Give Thanks With A Grateful Heart",
+        "composer": "Henry Smith • Arr. Joel Mott",
+        "description": "Shane & Shane (Key of E)"
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "Mass of Restoration",
+        "composer": "Joshua Blakesley"
+      },
+      "lordsPrayer": {
+        "title": "(Echo) Our Father",
+        "composer": "Jerome Andrews • Arranged by Dan Houze"
+      },
+      "fractionRite": {
+        "title": "Lamb of God (Resoration)"
+      },
+      "communionSongs": [
+        {
+          "title": "The Feast Meant for Everyone",
+          "composer": "Tom Booth & Sarah Hart",
+          "description": "Table Song"
+        },
+        {
+          "title": "A Place At Your Table",
+          "composer": "Ben Walther",
+          "description": "\"the saint and the sinner, your friends\""
+        },
+        {
+          "title": "TUNE • Author • Arr.",
+          "composer": "Notes"
+        },
+        {
+          "title": "TUNE • Author • Arr.",
+          "composer": "Notes"
+        }
+      ]
+    }
+  ]
+}

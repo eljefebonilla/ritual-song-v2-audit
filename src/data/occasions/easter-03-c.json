@@ -1,0 +1,451 @@
+{
+  "id": "easter-03-c",
+  "name": "EASTER 03 [C]",
+  "year": "C",
+  "season": "easter",
+  "seasonLabel": "Easter",
+  "seasonOrder": 3,
+  "dates": [
+    {
+      "date": "2025-05-04",
+      "label": "Year C — May 04, 2025 (Sun)",
+      "dayOfWeek": "Sun"
+    },
+    {
+      "date": "2037-04-19",
+      "label": "Year C — Apr 19, 2037 (Sun)",
+      "dayOfWeek": "Sun"
+    },
+    {
+      "date": "2034-04-23",
+      "label": "Year C — Apr 23, 2034 (Sun)",
+      "dayOfWeek": "Sun"
+    },
+    {
+      "date": "2031-04-27",
+      "label": "Year C — Apr 27, 2031 (Sun)",
+      "dayOfWeek": "Sun"
+    },
+    {
+      "date": "2028-04-30",
+      "label": "Year C — Apr 30, 2028 (Sun)",
+      "dayOfWeek": "Sun"
+    }
+  ],
+  "lectionary": {
+    "number": "048•C",
+    "gospelTitle": "Breakfast by the Sea",
+    "thematicTag": "Res Appearance 3/3"
+  },
+  "readings": [
+    {
+      "type": "first",
+      "citation": "Acts 5:27-32, 40b-41",
+      "summary": "The Sanhedrin tells the apostles not to mention Jesus."
+    },
+    {
+      "type": "psalm",
+      "citation": "Ps 30:2, 4, 5-6, 11-12, 13, R. v.2a\nI will praise you, Lord, for you have rescued me.",
+      "summary": "",
+      "antiphon": "Ps 30:2, 4, 5-6, 11-12, 13, R. v.2a\nI will praise you, Lord, for you have rescued me."
+    },
+    {
+      "type": "second",
+      "citation": "Rv 5:11-14",
+      "summary": "John hears the voices of angels."
+    },
+    {
+      "type": "gospel_verse",
+      "citation": "Lectionary",
+      "summary": "Christ is risen, creator of all;\nhe has shown pity on all people."
+    },
+    {
+      "type": "gospel",
+      "citation": "Jn 21:1-19 (Shorter - 21:1-14)",
+      "summary": "Jesus questions Peter."
+    }
+  ],
+  "antiphons": [
+    {
+      "type": "entrance",
+      "option": 1,
+      "citation": "Cf. Ps 66 (65):1–2",
+      "text": "Cry out with joy to God, all the earth;\nO sing to the glory of his name.\nO render him glorious praise, alleluia."
+    },
+    {
+      "type": "communion",
+      "option": 1,
+      "citation": "Lk 24:35",
+      "text": "The disciples recognized the Lord Jesus\nin the breaking of the bread, alleluia."
+    },
+    {
+      "type": "communion",
+      "option": 2,
+      "citation": "Communion Antiphon • Optional for Year C | Jn 21:12–13",
+      "text": "Jesus said to his disciples: Come and eat.\nAnd he took bread and gave it to them, alleluia."
+    }
+  ],
+  "planningNotes": [
+    "🌲 APR - Earth Month🌲"
+  ],
+  "musicPlans": [
+    {
+      "community": "Reflections",
+      "communityId": "reflections",
+      "date": "Year C — Apr 29, 2028 (Sat)",
+      "presider": "NOT THIS YEAR",
+      "prelude": {
+        "title": "Regina Caeli / O Queen of Heaven",
+        "composer": "Mode VI Latin • 12th C",
+        "description": "Pope Leo XIV singing Regina Caeli"
+      },
+      "gathering": {
+        "title": "Holy Is His Name",
+        "composer": "John Michael Talbot",
+        "description": "Month of Mary • Mary's song of praise!"
+      },
+      "penitentialAct": {
+        "title": "Kyrie • Misa Del Mundo",
+        "composer": "Only if needed. Talk to presider!"
+      },
+      "gloria": {
+        "title": "Glory to God (Through-composed Setting)",
+        "composer": "Mass of Renewal • Curtis Stephan"
+      },
+      "responsorialPsalm": {
+        "psalm": "Ps 30 I will praise you, Lord, for you have...",
+        "setting": "The Lyric Psalter • Tony Alonso & Marty Haugen"
+      },
+      "gospelAcclamation": {
+        "title": "Easter Alleluia (Refrain)",
+        "composer": "The Lyric Gospel Acclamations • Tony Alonso",
+        "verse": "Christ is risen, creator of all;\nhe has shown pity on all people."
+      },
+      "offertory": {
+        "title": "Our Life Is Hidden with Christ",
+        "composer": "Bob Hurd • Arranged by Rick Modlin",
+        "description": "Verses 1,2, 4, and 5. (verse 3 is Communion only)"
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "Mass of the Holy Family",
+        "composer": "Chris de Silva"
+      },
+      "lordsPrayer": {
+        "title": "Chanted Our Father (Snow)",
+        "composer": "Jennings/Paregorius"
+      },
+      "fractionRite": {
+        "title": "Lamb of God (Mass of the Holy Family)",
+        "composer": "Chris de Silva"
+      },
+      "communionSongs": [
+        {
+          "title": "We Remember",
+          "composer": "Marty Haugen",
+          "description": "\"...how you loved us to your death...\""
+        },
+        {
+          "title": "Age to Age",
+          "composer": "Janet Vogt • Jeff McLemore • Skip Kroner",
+          "description": "\"We will love you age to age\""
+        },
+        {
+          "title": "Jesus Christ, Yesterday, Today, and Forever",
+          "composer": "Suzanne Toolan, RSM",
+          "description": "No verses / Only Ostinato Refrain"
+        }
+      ],
+      "sending": {
+        "title": "Jesus Is Risen",
+        "composer": "LASST UNS ERFREUEN, LM with alleluias",
+        "description": "\"Praise to the everliving King!\""
+      }
+    },
+    {
+      "community": "Foundations",
+      "communityId": "foundations",
+      "date": "Year C — Apr 30, 2028 (Sun)",
+      "presider": "NOT THIS YEAR",
+      "prelude": {
+        "title": "Regina Caeli / O Queen of Heaven",
+        "composer": "Mode VI Latin • 12th C",
+        "description": "Pope Leo XIV singing Regina Caeli"
+      },
+      "gathering": {
+        "title": "Holy Is His Name",
+        "composer": "John Michael Talbot",
+        "description": "Month of Mary • Mary's song of praise!"
+      },
+      "penitentialAct": {
+        "title": "Kyrie (Gift of God) • Adapted Version",
+        "composer": "Marty Haugen • Arranged by David Locwood"
+      },
+      "gloria": {
+        "title": "Glory to God (Mass of Joy & Peace)",
+        "composer": "Alonso • Arr. by Houze OR Arr. by Lockwood"
+      },
+      "responsorialPsalm": {
+        "psalm": "Ps 30 I will praise you, Lord, for you have...",
+        "setting": "Spirit & Psalm • Rick Modlin"
+      },
+      "gospelAcclamation": {
+        "title": "Easter Alleluia (Refrain)",
+        "composer": "The Lyric Gospel Acclamations • Tony Alonso",
+        "verse": "Christ is risen, creator of all;\nhe has shown pity on all people."
+      },
+      "offertory": {
+        "title": "Age to Age",
+        "composer": "Janet Vogt • Jeff McLemore • Skip Kroner",
+        "description": "\"We will love you age to age\""
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "Mass of Glory",
+        "composer": "Bob Hurd & Ken Canedo"
+      },
+      "lordsPrayer": {
+        "title": "Chanted Our Father (Snow)",
+        "composer": "Jennings • Paregorius"
+      },
+      "fractionRite": {
+        "title": "Lamb of God (Mass of Glory)",
+        "composer": "Bob Hurd & Ken Canedo"
+      },
+      "communionSongs": [
+        {
+          "title": "By Our Love",
+          "composer": "Tom Kendzia",
+          "description": "Peter, do you love me? Feed my sheep."
+        },
+        {
+          "title": "Jesus, the Bread of Life",
+          "composer": "Grayson Warren Brown",
+          "description": "Easter Themes"
+        }
+      ],
+      "sending": {
+        "title": "Alleluia! Alleluia! Let the Holy Anthem Rise",
+        "composer": "Traditional",
+        "description": "\"...to our savior and our king!\""
+      }
+    },
+    {
+      "community": "Generations",
+      "communityId": "generations",
+      "date": "Year C — Apr 30, 2028 (Sun)",
+      "presider": "NOT THIS YEAR",
+      "prelude": {
+        "title": "Regina Caeli / O Queen of Heaven",
+        "composer": "Mode VI Latin • 12th C",
+        "description": "Pope Leo XIV singing Regina Caeli"
+      },
+      "gathering": {
+        "title": "Age to Age",
+        "composer": "Vogt • Arr. by David Lockwood",
+        "description": "\"We will love you age to age\""
+      },
+      "penitentialAct": {
+        "title": "Kyrie • Misa Del Mundo",
+        "composer": "Only if needed. Talk to presider!"
+      },
+      "gloria": {
+        "title": "Glory to God (Mass of Joy & Peace)",
+        "composer": "Tony Alonso • Arr. by Dan Houze"
+      },
+      "responsorialPsalm": {
+        "psalm": "Ps 30 I will praise you, Lord, for you have...",
+        "setting": "Spirit & Psalm • Rick Modlin"
+      },
+      "gospelAcclamation": {
+        "title": "Easter Alleluia (Refrain)",
+        "composer": "The Lyric Gospel Acclamations • Tony Alonso",
+        "verse": "Christ is risen, creator of all;\nhe has shown pity on all people."
+      },
+      "offertory": {
+        "title": "I Love You Lord",
+        "composer": "Steffany Gretzinger",
+        "description": "God accepts the love we are able to give."
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "Mass of Glory",
+        "composer": "Bob Hurd • Arr. by Dan Houze"
+      },
+      "lordsPrayer": {
+        "title": "(Echo) Our Father",
+        "composer": "Jerome Andrews • Arranged by Dan Houze"
+      },
+      "fractionRite": {
+        "title": "Lamb of God (Mass of Glory)"
+      },
+      "communionSongs": [
+        {
+          "title": "Remembrance",
+          "composer": "Hillsong",
+          "description": "\"If ever I should lose my way...\" (Peter 👀  )"
+        },
+        {
+          "title": "Our New Day",
+          "composer": "Sarah Hart",
+          "description": "Rehabilitation of Peter"
+        },
+        {
+          "title": "Hallelujah Is Our Song",
+          "composer": "Sarah Hart & Sarah Kroger",
+          "description": "\"What hope we have\""
+        },
+        {
+          "title": "New Creation",
+          "composer": "Jackie François",
+          "description": "Simon, Son of John — Renewal of Vocation"
+        }
+      ],
+      "sending": {
+        "title": "Alleluia! Love Is Alive",
+        "composer": "Steve Angrisano • Jesse Manibusan • Sarah Hart",
+        "description": "\"He is alive!\""
+      }
+    },
+    {
+      "community": "Heritage",
+      "communityId": "heritage",
+      "date": "Year C — Apr 30, 2028 (Sun)",
+      "presider": "NOT THIS YEAR",
+      "prelude": {
+        "title": "Regina Caeli / O Queen of Heaven",
+        "composer": "Mode VI Latin • 12th C",
+        "description": "Pope Leo XIV singing Regina Caeli"
+      },
+      "gathering": {
+        "title": "Three Days",
+        "composer": "Gustav T. Holst • M.D. Ridge • Jeffrey Honoré",
+        "description": "\"we’ve seen him at this table\""
+      },
+      "penitentialAct": {
+        "title": "Kyrie • Misa Del Mundo",
+        "composer": "Only if needed. Talk to presider!"
+      },
+      "gloria": {
+        "title": "Glory to God (Mass of Joy & Peace)",
+        "composer": "Tony Alonso, Thru Composed"
+      },
+      "responsorialPsalm": {
+        "psalm": "Ps 30 I will praise you, Lord, for you have...",
+        "setting": "The Lyric Psalter • Tony Alonso & Marty Haugen"
+      },
+      "gospelAcclamation": {
+        "title": "Easter Alleluia (Refrain)",
+        "composer": "The Lyric Gospel Acclamations • Tony Alonso",
+        "verse": "Christ is risen, creator of all;\nhe has shown pity on all people."
+      },
+      "offertory": {
+        "title": "Our Life Is Hidden with Christ",
+        "composer": "Bob Hurd • Arranged by Rick Modlin",
+        "description": "Verses 1,2, 4, and 5. (verse 3 is Communion only)"
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "Mass of Joy & Peace",
+        "composer": "Tony Alonso"
+      },
+      "lordsPrayer": {
+        "title": "Chanted Our Father (Snow)",
+        "composer": "Jennings/Paregorius"
+      },
+      "fractionRite": {
+        "title": "Lamb of God (Mass of Joy & Peace)",
+        "composer": "Tony Alonso"
+      },
+      "communionSongs": [
+        {
+          "title": "We Remember",
+          "composer": "Marty Haugen",
+          "description": "\"...how you loved us to your death...\""
+        },
+        {
+          "title": "Age to Age",
+          "composer": "Janet Vogt • Jeff McLemore • Skip Kroner",
+          "description": "\"We will love you age to age\""
+        },
+        {
+          "title": "Jesus Christ, Yesterday, Today, and Forever",
+          "composer": "Suzanne Toolan, RSM",
+          "description": "No verses / Only Ostinato Refrain"
+        }
+      ],
+      "sending": {
+        "title": "Jesus Is Risen",
+        "composer": "LASST UNS ERFREUEN, LM with alleluias",
+        "description": "\"Praise to the everliving King!\""
+      }
+    },
+    {
+      "community": "Elevations",
+      "communityId": "elevations",
+      "date": "Year C — Apr 30, 2028 (Sun)",
+      "presider": "NOT THIS YEAR",
+      "prelude": {
+        "title": "Regina Caeli / O Queen of Heaven",
+        "composer": "Mode VI Latin • 12th C",
+        "description": "Pope Leo XIV singing Regina Caeli"
+      },
+      "gathering": {
+        "title": "Age to Age",
+        "composer": "Vogt • Arr. by David Lockwood",
+        "description": "\"We will love you age to age\""
+      },
+      "penitentialAct": {
+        "title": "Kyrie (Misa Del Mundo)",
+        "composer": "Jesse Manibusan — If needed."
+      },
+      "gloria": {
+        "title": "Glory to God (Joy & Peace)"
+      },
+      "responsorialPsalm": {
+        "psalm": "Ps 30 I will praise you, Lord, for you have...",
+        "setting": "Spirit & Psalm • Rick Modlin"
+      },
+      "gospelAcclamation": {
+        "title": "Easter Alleluia (Refrain)",
+        "composer": "The Lyric Gospel Acclamations • Tony Alonso",
+        "verse": "Christ is risen, creator of all;\nhe has shown pity on all people."
+      },
+      "offertory": {
+        "title": "I Love You Lord",
+        "composer": "Steffany Gretzinger",
+        "description": "God accepts the love we are able to give."
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "Mass of Restoration",
+        "composer": "Joshua Blakesley"
+      },
+      "lordsPrayer": {
+        "title": "Echo Our Father",
+        "composer": "Andrews, Arr. Bonilla • Lockwood • Fajardo"
+      },
+      "fractionRite": {
+        "title": "Lamb of God (Mass of Restoration)",
+        "composer": "Joshua Blakesley"
+      },
+      "communionSongs": [
+        {
+          "title": "Remembrance",
+          "composer": "Hillsong",
+          "description": "\"If ever I should lose my way...\" (Peter 👀  )"
+        },
+        {
+          "title": "Our New Day",
+          "composer": "Sarah Hart",
+          "description": "Rehabilitation of Peter"
+        },
+        {
+          "title": "New Creation",
+          "composer": "Jackie François",
+          "description": "Simon, Son of John — Renewal of Vocation"
+        }
+      ],
+      "sending": {
+        "title": "Alleluia! Love Is Alive",
+        "composer": "Steve Angrisano • Jesse Manibusan • Sarah Hart",
+        "description": "\"He is alive!\""
+      }
+    }
+  ]
+}

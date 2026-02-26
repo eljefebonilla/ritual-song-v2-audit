@@ -1,0 +1,409 @@
+{
+  "id": "ordinary-time-15-c",
+  "name": "ORDINARY TIME 15 [C]",
+  "year": "C",
+  "season": "ordinary",
+  "seasonLabel": "Ordinary Time",
+  "seasonOrder": 15,
+  "dates": [
+    {
+      "date": "2025-07-13",
+      "label": "Year C — Jul 13, 2025 (Sun)",
+      "dayOfWeek": "Sun"
+    },
+    {
+      "date": "2037-07-12",
+      "label": "Year C — Jul 12, 2037 (Sun)",
+      "dayOfWeek": "Sun"
+    },
+    {
+      "date": "2034-07-16",
+      "label": "Year C — Jul 16, 2034 (Sun)",
+      "dayOfWeek": "Sun"
+    },
+    {
+      "date": "2031-07-13",
+      "label": "Year C — Jul 13, 2031 (Sun)",
+      "dayOfWeek": "Sun"
+    },
+    {
+      "date": "2028-07-16",
+      "label": "Year C — Jul 16, 2028 (Sun)",
+      "dayOfWeek": "Sun"
+    }
+  ],
+  "lectionary": {
+    "number": "105•C",
+    "gospelTitle": "Good Samaritan",
+    "thematicTag": "Travel Disc. (Journey to Jerusalem) 2/4"
+  },
+  "readings": [
+    {
+      "type": "first",
+      "citation": "Dt 30:10-14",
+      "summary": "The law of the Lord is near to you."
+    },
+    {
+      "type": "psalm",
+      "citation": "Ps 69:14, 17, 30-31, 33-34, 36, 37\nTurn to the Lord in your need, and you will live.\n\nPs 19:8, 9, 10, 11, R. v.9a\nYour words, Lord, are Spirit and life.",
+      "summary": "",
+      "antiphon": "Ps 69:14, 17, 30-31, 33-34, 36, 37\nTurn to the Lord in your need, and you will live.\n\nPs 19:8, 9, 10, 11, R. v.9a\nYour words, Lord, are Spirit and life."
+    },
+    {
+      "type": "second",
+      "citation": "Col 1:15-20",
+      "summary": "Christ is God made visible."
+    },
+    {
+      "type": "gospel_verse",
+      "citation": "cf. John 6:63c, 68c",
+      "summary": "Your words, Lord, are Spirit and life;\nyou have the words of everlasting life."
+    },
+    {
+      "type": "gospel",
+      "citation": "Lk 10:25-37",
+      "summary": "The Good Samaritan."
+    }
+  ],
+  "antiphons": [
+    {
+      "type": "entrance",
+      "option": 1,
+      "citation": "Cf. Ps 17 (16):15",
+      "text": "As for me, in justice I shall behold your face;\nI shall be filled with the vision of your glory."
+    },
+    {
+      "type": "communion",
+      "option": 1,
+      "citation": "Cf. Ps 84 (83):4–5",
+      "text": "The sparrow finds a home, and the swallow a nest for her young: by your altars, O Lord of hosts, my King and my God. Blessed are they who dwell in your house, for ever singing your praise."
+    },
+    {
+      "type": "communion",
+      "option": 2,
+      "citation": "Roman Missal — Jn 6:57",
+      "text": "Whoever eats my flesh and drinks my blood\nremains in me and I in him, says the Lord."
+    }
+  ],
+  "planningNotes": [],
+  "musicPlans": [
+    {
+      "community": "Reflections",
+      "communityId": "reflections",
+      "date": "Year C — Jul 12, 2025 (Sat)",
+      "presider": "NOT THIS YEAR",
+      "gathering": {
+        "title": "Make Us True Servants",
+        "composer": "SLANE • Susan G Wente",
+        "description": "\"Loving our neighbor whatever the cost\""
+      },
+      "penitentialAct": {
+        "title": "Kyrie • Misa Del Mundo",
+        "composer": "Only if needed. Talk to presider!"
+      },
+      "gloria": {
+        "title": "Glory to God (Through-composed Setting)",
+        "composer": "Mass of Renewal • Curtis Stephan"
+      },
+      "responsorialPsalm": {
+        "psalm": "Ps 69 Turn to the Lord in your need...",
+        "setting": "The Lyric Psalter • Tony Alonso & Marty Haugen"
+      },
+      "gospelAcclamation": {
+        "title": "Alleluia (Mass of Joy & Peace)",
+        "composer": "O.T. • 15 | C — \"Your words, Lord, are...\""
+      },
+      "offertory": {
+        "title": "A Generous Heart",
+        "composer": "Chris de Silva",
+        "description": "Based on Prayer for Generosity, St. Ignatius of Loyola."
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "Mass of the Holy Family",
+        "composer": "Chris de Silva"
+      },
+      "lordsPrayer": {
+        "title": "Chanted Our Father (Snow)",
+        "composer": "Jennings/Paregorius"
+      },
+      "fractionRite": {
+        "title": "Lamb of God (Mass of the Holy Family)",
+        "composer": "Chris de Silva"
+      },
+      "communionSongs": [
+        {
+          "title": "The Feast Meant for Everyone",
+          "composer": "Tom Booth & Sarah Hart",
+          "description": "\"Bread for the immigrant, bread for the poor\""
+        },
+        {
+          "title": "Prayer of St Francis",
+          "composer": "Sebastian Temple • Arranged by Ed Archer",
+          "description": "\"Where there's despair in life let me bring hope\""
+        },
+        {
+          "title": "Partners in the Mission",
+          "composer": "BEAMS OF LOVE • Peter Fisher Hesed",
+          "description": "\"May we recognize the our Savior in the stranger on the road\""
+        }
+      ],
+      "sending": {
+        "title": "They'll Know We Are Christians",
+        "composer": "Peter Scholtes • Arr. Mark Hayes",
+        "description": "OCP Arrangement"
+      }
+    },
+    {
+      "community": "Foundations",
+      "communityId": "foundations",
+      "date": "Year C — Jul 13, 2025 (Sun)",
+      "presider": "NOT THIS YEAR",
+      "gathering": {
+        "title": "Make Us True Servants",
+        "composer": "SLANE • Susan G Wente",
+        "description": "\"Loving our neighbor whatever the cost\""
+      },
+      "penitentialAct": {
+        "title": "Kyrie (Gift of God) • Adapted Version",
+        "composer": "Marty Haugen • Arranged by David Locwood"
+      },
+      "gloria": {
+        "title": "Glory to God (Mass of Joy & Peace)",
+        "composer": "Alonso • Arr. by Houze OR Arr. by Lockwood"
+      },
+      "responsorialPsalm": {
+        "psalm": "Ps 69 Turn to the Lord in your need...",
+        "setting": "Spirit & Psalm • Casey McKinley"
+      },
+      "offertory": {
+        "title": "Act Justly",
+        "composer": "Bernadette Farrell",
+        "description": "\"show us the way to live\""
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "Mass of Glory • Bob Hurd • Arr. by Dan Houze"
+      },
+      "lordsPrayer": {
+        "title": "Chanted Our Father (Snow)",
+        "composer": "Jennings • Paregorius"
+      },
+      "fractionRite": {
+        "title": "Lamb of God (Mass of Glory)"
+      },
+      "communionSongs": [
+        {
+          "title": "The Feast Meant for Everyone",
+          "composer": "Tom Booth & Sarah Hart",
+          "description": "Table Song"
+        },
+        {
+          "title": "By Our Love",
+          "composer": "Tom Kendzia",
+          "description": "Good Samaritan"
+        }
+      ],
+      "sending": {
+        "title": "As Christ to the World",
+        "composer": "Tom Kendzia",
+        "description": "\"Called to love one another, as Christ to the World\""
+      }
+    },
+    {
+      "community": "Generations",
+      "communityId": "generations",
+      "date": "Year C — Jul 13, 2025 (Sun)",
+      "presider": "NOT THIS YEAR",
+      "gathering": {
+        "title": "In This Place",
+        "composer": "Trevor Thomson",
+        "description": "\"We are one in our hurting, we are one in our pain\""
+      },
+      "penitentialAct": {
+        "title": "Kyrie • Misa Del Mundo",
+        "composer": "Only if needed. Talk to presider!"
+      },
+      "gloria": {
+        "title": "Glory, Glory, Gloria!",
+        "composer": "Jeffrey Bonilla & Drew Wilson"
+      },
+      "responsorialPsalm": {
+        "psalm": "Ps 69 Turn to the Lord in your need...",
+        "setting": "Spirit & Psalm • Casey McKinley"
+      },
+      "gospelAcclamation": {
+        "title": "Setting from Mass of Endless Mercy",
+        "composer": "O.T. • 15 | C — \"Your words, Lord, are...\""
+      },
+      "offertory": {
+        "title": "Prayer of St Francis",
+        "composer": "Sebastian Temple • Arranged by Ed Archer",
+        "description": "\"Where there's despair in life let me bring hope\""
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "Mass of Restoration",
+        "composer": "Joshua Blakesley"
+      },
+      "lordsPrayer": {
+        "title": "(Echo) Our Father",
+        "composer": "Jerome Andrews • Arranged by Dan Houze"
+      },
+      "fractionRite": {
+        "title": "Lamb of God (Resoration)"
+      },
+      "communionSongs": [
+        {
+          "title": "The Feast Meant for Everyone",
+          "composer": "Tom Booth & Sarah Hart",
+          "description": "Table Song"
+        },
+        {
+          "title": "Caminemos con Jesús",
+          "composer": "Tony Alonso",
+          "description": "\"with the ones the world has turned away\" (Good Samaritan)"
+        },
+        {
+          "title": "A Place At Your Table",
+          "composer": "Ben Walther",
+          "description": "\"the saint and the sinner, your friends\""
+        },
+        {
+          "title": "Hold on to Love",
+          "composer": "Jesse Manibusan",
+          "description": "\"...acts of compassion restore us\""
+        }
+      ],
+      "sending": {
+        "title": "Make the Love of God Known",
+        "composer": "Rick Modlin • Arranged by David Lockwood",
+        "description": "Verse 6 - \"Love your neighbor in need\""
+      }
+    },
+    {
+      "community": "Heritage",
+      "communityId": "heritage",
+      "date": "Year C — Jul 13, 2025 (Sun)",
+      "presider": "NOT THIS YEAR",
+      "gathering": {
+        "title": "Make Us True Servants",
+        "composer": "SLANE • Susan G Wente",
+        "description": "\"Loving our neighbor whatever the cost\""
+      },
+      "penitentialAct": {
+        "title": "Kyrie • Misa Del Mundo",
+        "composer": "Only if needed. Talk to presider!"
+      },
+      "gloria": {
+        "title": "Glory to God (Mass of Christ the Savior)",
+        "composer": "Dan Schutte"
+      },
+      "responsorialPsalm": {
+        "psalm": "Ps 69 Turn to the Lord in your need...",
+        "setting": "The Lyric Psalter • Tony Alonso & Marty Haugen"
+      },
+      "gospelAcclamation": {
+        "title": "Alleluia (Mass of Joy & Peace)",
+        "composer": "O.T. • 15 | C — \"Your words, Lord, are...\""
+      },
+      "offertory": {
+        "title": "Heart of Jesus",
+        "composer": "Bob Hurd",
+        "description": "Compassion and hope for those in need."
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "Mass of Christ the Savior - Dan Schutte"
+      },
+      "lordsPrayer": {
+        "title": "Echo Our Father",
+        "composer": "Andrews, Arr. Bonilla • Lockwood • Fajardo"
+      },
+      "fractionRite": {
+        "title": "Lamb of God (Mass of Christ the Savior)"
+      },
+      "communionSongs": [
+        {
+          "title": "The Feast Meant for Everyone",
+          "composer": "Tom Booth & Sarah Hart",
+          "description": "\"Bread for the immigrant, bread for the poor\""
+        },
+        {
+          "title": "Prayer of St Francis",
+          "composer": "Sebastian Temple • Arranged by Ed Archer",
+          "description": "\"Where there's despair in life let me bring hope\""
+        },
+        {
+          "title": "Partners in the Mission",
+          "composer": "BEAMS OF LOVE • Peter Fisher Hesed",
+          "description": "\"May we recognize the our Savior in the stranger on the road\""
+        }
+      ],
+      "sending": {
+        "title": "They'll Know We Are Christians",
+        "composer": "Peter Scholtes • Arr. Mark Hayes",
+        "description": "OCP Arrangement"
+      }
+    },
+    {
+      "community": "Elevations",
+      "communityId": "elevations",
+      "date": "Year C — Jul 13, 2025 (Sun)",
+      "presider": "NOT THIS YEAR",
+      "gathering": {
+        "title": "In This Place",
+        "composer": "Trevor Thomson",
+        "description": "\"We are one in our hurting, we are one in our pain\""
+      },
+      "penitentialAct": {
+        "title": "Kyrie • Misa Del Mundo",
+        "composer": "Only if needed. Talk to presider!"
+      },
+      "gloria": {
+        "title": "Glory, Glory, Gloria!"
+      },
+      "responsorialPsalm": {
+        "psalm": "Ps 69 Turn to the Lord in your need...",
+        "setting": "Spirit & Psalm • Casey McKinley"
+      },
+      "gospelAcclamation": {
+        "title": "Setting from Mass of Endless Mercy",
+        "verse": "O.T. • 15 | C — \"Your words, Lord, are...\""
+      },
+      "offertory": {
+        "title": "Prayer of St Francis",
+        "composer": "Sebastian Temple • Arranged by Ed Archer",
+        "description": "\"Where there's despair in life let me bring hope\""
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "Mass of Restoration • Joshua Blakesley"
+      },
+      "lordsPrayer": {
+        "title": "Echo Our Father",
+        "composer": "Andrews, Arr. Bonilla • Lockwood • Fajardo"
+      },
+      "fractionRite": {
+        "title": "Lamb of God (Resoration)"
+      },
+      "communionSongs": [
+        {
+          "title": "The Feast Meant for Everyone",
+          "composer": "Tom Booth & Sarah Hart",
+          "description": "Table Song"
+        },
+        {
+          "title": "Caminemos con Jesús",
+          "composer": "Tony Alonso",
+          "description": "\"with the ones the world has turned away\" (Good Samaritan)"
+        },
+        {
+          "title": "Hold on to Love",
+          "composer": "Jesse Manibusan",
+          "description": "\"...acts of compassion restore us\""
+        }
+      ],
+      "sending": {
+        "title": "Make the Love of God Known",
+        "composer": "Rick Modlin • Arranged by David Lockwood",
+        "description": "Verse 6 - \"Love your neighbor in need\""
+      }
+    }
+  ]
+}

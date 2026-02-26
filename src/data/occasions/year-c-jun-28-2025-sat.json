@@ -1,0 +1,119 @@
+{
+  "id": "year-c-jun-28-2025-sat",
+  "name": "Year C — Jun 28, 2025 (Sat)",
+  "year": "ABC",
+  "season": "ordinary",
+  "seasonLabel": "Ordinary Time",
+  "seasonOrder": 28,
+  "dates": [],
+  "lectionary": {
+    "number": "Year B — Jun 28, 2031 (Sat)",
+    "gospelTitle": "Year A — Jun 28, 2029 (Thu)",
+    "thematicTag": "Year C — Jun 28, 2028 (Wed)",
+    "thematicDetail": "Year B — Jun 28, 2027 (Mon)"
+  },
+  "readings": [
+    {
+      "type": "psalm",
+      "citation": "“Feed My Sheep”",
+      "summary": "",
+      "antiphon": "Planning Reminders"
+    },
+    {
+      "type": "gospel_verse",
+      "citation": "Peter the Apostle, and Paul the teacher of the Gentiles,\nthese have taught us your law, O Lord.",
+      "summary": ""
+    },
+    {
+      "type": "gospel",
+      "citation": "Reading I | At the Vigil Mass — Acts 3:1-10",
+      "summary": "Get up and walk in the name of Christ."
+    }
+  ],
+  "antiphons": [
+    {
+      "type": "entrance",
+      "option": 1,
+      "citation": "At the Vigil Mass — Verse before the Gospel | Jn 21:17",
+      "text": "Lord, you know everything: you know that I love you."
+    },
+    {
+      "type": "communion",
+      "option": 2,
+      "citation": "Communion Antiphon | Roman Missal",
+      "text": "Simon, Son of John, do you love me more than these?\nLord, you know everything; you know that I love you."
+    }
+  ],
+  "planningNotes": [
+    "Communion Antiphon • Option II",
+    "N/A"
+  ],
+  "musicPlans": [
+    {
+      "community": "Reflections",
+      "communityId": "reflections",
+      "date": "Year C — Jun 28, 2025 (Sat)",
+      "presider": "NOT THIS YEAR",
+      "prelude": {
+        "title": "God of Peace",
+        "composer": "Jeffrey Bonilla & David Lockwood",
+        "description": "Prayer for Peace"
+      },
+      "penitentialAct": {
+        "title": "Bernadette Farrell",
+        "composer": "Ss Peter & Paul",
+        "description": "Penitential Act"
+      },
+      "gloria": {
+        "title": "Kyrie • Misa Del Mundo",
+        "composer": "Only if needed. Talk to presider!",
+        "description": "Gloria"
+      },
+      "gospelAcclamation": {
+        "title": "The Lyric Psalter • Tony Alonso & Marty Haugen",
+        "composer": "Gospel Acclamation",
+        "verse": "Alleluia (Mass of Joy & Peace)"
+      },
+      "offertory": {
+        "title": "The Lyric Gospel Acclamations • Tony Alonso",
+        "description": "Offertory Song"
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "Christ In Me Arise",
+        "composer": "Trevor Thomson"
+      },
+      "lordsPrayer": {
+        "title": "Eucharistic Acclamations",
+        "composer": "Mass of the Holy Family",
+        "description": "Chris de Silva"
+      },
+      "fractionRite": {
+        "title": "Holy, Holy, Holy",
+        "composer": "When We Eat This Bread",
+        "description": "Amen"
+      },
+      "communionSongs": [
+        {
+          "title": "The Lord's Prayer",
+          "composer": "Chanted Our Father (Snow)",
+          "description": "Jennings/Paregorius"
+        },
+        {
+          "title": "Fraction Rite",
+          "composer": "Lamb of God (Mass of the Holy Family)",
+          "description": "Chris de Silva"
+        },
+        {
+          "title": "Communion Songs",
+          "composer": "The King of Love My Shepherd Is",
+          "description": "LOCH LOMOND • Baker • Edward Eicker"
+        },
+        {
+          "title": "✅  HYMN VERSION  - 🚫  CHORAL VERSION",
+          "composer": "Age to Age",
+          "description": "Janet Vogt • Jeff McLemore • Skip Kroner"
+        }
+      ]
+    }
+  ]
+}

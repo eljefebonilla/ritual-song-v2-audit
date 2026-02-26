@@ -1,0 +1,394 @@
+{
+  "id": "year-c-jun-22-2025-sun",
+  "name": "Year C — Jun 22, 2025 (Sun)",
+  "year": "ABC",
+  "season": "ordinary",
+  "seasonLabel": "Ordinary Time",
+  "seasonOrder": 22,
+  "dates": [],
+  "lectionary": {
+    "number": "Year C — Jun 03, 2040 (Sun)",
+    "gospelTitle": "Year C — Jun 07, 2037 (Sun)",
+    "thematicTag": "Year C — Jun 11, 2034 (Sun)",
+    "thematicDetail": "Year C — Jun 15, 2031 (Sun)"
+  },
+  "readings": [
+    {
+      "type": "psalm",
+      "citation": "Bread of Life Solemnity",
+      "summary": "",
+      "antiphon": "Planning Reminders"
+    },
+    {
+      "type": "gospel_verse",
+      "citation": "He fed them with the finest wheat\nand satisfied them with honey from the rock.",
+      "summary": ""
+    },
+    {
+      "type": "gospel",
+      "citation": "Reading I | Gen 14:18-20",
+      "summary": "Melchizedek blesses Abram."
+    }
+  ],
+  "antiphons": [
+    {
+      "type": "entrance",
+      "option": 1,
+      "citation": "Verse before the Gospel | Jn 6:51",
+      "text": "I am the living bread that came down from heaven,\nsays the Lord; whoever eats this bread will live forever."
+    },
+    {
+      "type": "communion",
+      "option": 2,
+      "citation": "Communion Antiphon | Jn 6:57",
+      "text": "Whoever eats my flesh and drinks my blood\nremains in me and I in him, says the Lord."
+    }
+  ],
+  "planningNotes": [
+    "Communion Antiphon • Option II",
+    "N/A"
+  ],
+  "musicPlans": [
+    {
+      "community": "Reflections",
+      "communityId": "reflections",
+      "date": "Year C — Jun 17, 2028 (Sat)",
+      "presider": "NOT THIS YEAR",
+      "prelude": {
+        "title": "Song Title",
+        "composer": "Composer/s"
+      },
+      "penitentialAct": {
+        "title": "John Michael Talbot",
+        "composer": "\"No one who comes to me shall hunger again\"",
+        "description": "Penitential Act"
+      },
+      "gloria": {
+        "title": "Kyrie • Misa Del Mundo",
+        "composer": "Only if needed. Talk to presider!",
+        "description": "Gloria"
+      },
+      "gospelAcclamation": {
+        "title": "The Lyric Psalter • Tony Alonso & Marty Haugen",
+        "composer": "Gospel Acclamation",
+        "verse": "Corpus Christi Sequence"
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "Jesus, Living Bread",
+        "composer": "Tom Booth"
+      },
+      "lordsPrayer": {
+        "title": "Eucharistic Acclamations",
+        "composer": "Mass of the Holy Family",
+        "description": "Chris de Silva"
+      },
+      "fractionRite": {
+        "title": "Holy, Holy, Holy",
+        "composer": "When We Eat This Bread",
+        "description": "Amen"
+      },
+      "communionSongs": [
+        {
+          "title": "The Lord's Prayer",
+          "composer": "Chanted Our Father (Snow)",
+          "description": "Jennings/Paregorius"
+        },
+        {
+          "title": "Fraction Rite",
+          "composer": "Lamb of God (Mass of the Holy Family)",
+          "description": "Chris de Silva"
+        },
+        {
+          "title": "Communion Songs",
+          "composer": "Make Us One",
+          "description": "Jeffrey Bonilla & David Lockwood"
+        },
+        {
+          "title": "\"Body of Christ...Blood of Christ...\"",
+          "composer": "Eat This Bread",
+          "description": "Taizé • Jacques Berthier"
+        }
+      ]
+    },
+    {
+      "community": "Foundations",
+      "communityId": "foundations",
+      "date": "Year C — Jun 18, 2028 (Sun)",
+      "presider": "NOT THIS YEAR",
+      "prelude": {
+        "title": "N/A"
+      },
+      "penitentialAct": {
+        "title": "NETTLETON • Carl P. Daw • Arr. by J. Bonilla",
+        "composer": "\"help us summon other guests to share that feast\"",
+        "description": "Penitential Act"
+      },
+      "gloria": {
+        "title": "Kyrie (Gift of God) • Adapted Version",
+        "composer": "Marty Haugen • Arranged by David Locwood",
+        "description": "Gloria"
+      },
+      "gospelAcclamation": {
+        "title": "Francesca LaRosa",
+        "composer": "Gospel Acclamation",
+        "verse": "Corpus Christi Sequence"
+      },
+      "offertory": {
+        "title": "Verse Audio Example",
+        "description": "Offertory Song"
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "Jesus, Living Bread",
+        "composer": "Tom Booth"
+      },
+      "lordsPrayer": {
+        "title": "Eucharistic Acclamations",
+        "composer": "Mass of Glory • Bob Hurd • Arr. by Dan Houze"
+      },
+      "fractionRite": {
+        "title": "Holy, Holy",
+        "composer": "We Proclaim Your Death",
+        "description": "Amen"
+      },
+      "communionSongs": [
+        {
+          "title": "The Lord's Prayer",
+          "composer": "Chanted Our Father (Snow)",
+          "description": "Jennings • Paregorius"
+        },
+        {
+          "title": "Fraction Rite",
+          "composer": "Lamb of God (Mass of Glory)"
+        },
+        {
+          "title": "Communion Songs",
+          "composer": "One Bread, One Body",
+          "description": "John Foley, SJ"
+        },
+        {
+          "title": "✪ Body & Blood C",
+          "composer": "I Am the Bread of Life",
+          "description": "Sr. Suzanne Toolan RSM"
+        }
+      ],
+      "sending": {
+        "title": "THAXTED • Jeffrey Bonilla",
+        "composer": "Vss 3 & 4 | Lowered Key (Ab) Finale File - \"We Place...\""
+      }
+    },
+    {
+      "community": "Generations",
+      "communityId": "generations",
+      "date": "Year C — Jun 18, 2028 (Sun)",
+      "presider": "NOT THIS YEAR",
+      "prelude": {
+        "title": "Song Title",
+        "composer": "Composer/s"
+      },
+      "penitentialAct": {
+        "title": "Sr. Suzanne Toolan RSM, Arr. by Dan Houze",
+        "composer": "\"...you who come to me shall not hunger.\"",
+        "description": "Penitential Act"
+      },
+      "gloria": {
+        "title": "Kyrie • Misa Del Mundo",
+        "composer": "Only if needed. Talk to presider!",
+        "description": "Gloria"
+      },
+      "gospelAcclamation": {
+        "title": "Francesca LaRosa",
+        "composer": "Gospel Acclamation",
+        "verse": "Corpus Christi Sequence"
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "Jesus, Living Bread",
+        "composer": "Tom Booth"
+      },
+      "lordsPrayer": {
+        "title": "Eucharistic Acclamations",
+        "composer": "Mass of Glory",
+        "description": "Bob Hurd • Arr. by Dan Houze"
+      },
+      "fractionRite": {
+        "title": "Holy",
+        "composer": "Mystery of Faith",
+        "description": "Amen"
+      },
+      "communionSongs": [
+        {
+          "title": "The Lord's Prayer",
+          "composer": "(Echo) Our Father",
+          "description": "Jerome Andrews • Arranged by Dan Houze"
+        },
+        {
+          "title": "Fraction Rite",
+          "composer": "Lamb of God (Mass of Glory)"
+        },
+        {
+          "title": "Communion Songs",
+          "composer": "Here At This Table",
+          "description": "Janet Sullivan Whitaker"
+        },
+        {
+          "title": "\"... drink for all who thirst\"",
+          "composer": "I Am Yours - Consume Me Completely",
+          "description": "Trevor Thomson"
+        },
+        {
+          "title": "“O Bread of Life, you will answer all our needs…”",
+          "composer": "A Place At Your Table",
+          "description": "Ben Walther"
+        },
+        {
+          "title": "\"the saint and the sinner, your friends\"",
+          "composer": "Remembrance",
+          "description": "Hillsong"
+        }
+      ],
+      "sending": {
+        "title": "Bread for the World",
+        "composer": "Bernadette Farrell",
+        "description": "\"broken to reach and heal the wounds of human pain\""
+      }
+    },
+    {
+      "community": "Heritage",
+      "communityId": "heritage",
+      "date": "Year C — Jun 18, 2028 (Sun)",
+      "presider": "NOT THIS YEAR",
+      "prelude": {
+        "title": "Ave Verum Corpus (Hail, True Body)",
+        "composer": "Wolfgang Amadeus Mozart",
+        "description": "The motet was composed for Corpus Christi!"
+      },
+      "penitentialAct": {
+        "title": "Sr. Suzanne Toolan RSM",
+        "composer": "\"...you who come to me shall not hunger.\"",
+        "description": "Penitential Act"
+      },
+      "gloria": {
+        "title": "Kyrie • Misa Del Mundo",
+        "composer": "Only if needed. Talk to presider!",
+        "description": "Gloria"
+      },
+      "gospelAcclamation": {
+        "title": "Lyric Psalter • Tony Alonso & Marty Haugen",
+        "composer": "Gospel Acclamation",
+        "verse": "Corpus Christi Sequence"
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "Jesus, Living Bread",
+        "composer": "Tom Booth"
+      },
+      "lordsPrayer": {
+        "title": "Eucharistic Acclamations",
+        "composer": "Mass of Joy & Peace • Tony Alonso"
+      },
+      "fractionRite": {
+        "title": "Holy, Holy, Holy",
+        "composer": "When We Eat This Bread",
+        "description": "Amen"
+      },
+      "communionSongs": [
+        {
+          "title": "The Lord's Prayer",
+          "composer": "Chanted Our Father (Snow)",
+          "description": "Jennings/Paregorius"
+        },
+        {
+          "title": "Fraction Rite",
+          "composer": "Lamb of God (Mass of Joy & Peace)"
+        },
+        {
+          "title": "Communion Songs",
+          "composer": "Eat This Bread",
+          "description": "Taizé • Jacques Berthier"
+        },
+        {
+          "title": "Communion Antiphon",
+          "composer": "Bread of Angels",
+          "description": "Curtis Stephan"
+        },
+        {
+          "title": "Body and Blood",
+          "composer": "I Received the Living God",
+          "description": "Traditional"
+        }
+      ],
+      "sending": {
+        "title": "THAXTED • Jeffrey Bonilla",
+        "composer": "Vss 3 & 4 | Lowered Key (Ab) Finale File - \"We Place...\""
+      }
+    },
+    {
+      "community": "Elevations",
+      "communityId": "elevations",
+      "date": "Year C — Jun 18, 2028 (Sun)",
+      "presider": "NOT THIS YEAR",
+      "prelude": {
+        "title": "Song Title",
+        "composer": "Composer/s"
+      },
+      "penitentialAct": {
+        "title": "Sr. Suzanne Toolan RSM",
+        "composer": "\"...you who come to me shall not hunger.\"",
+        "description": "Penitential Act"
+      },
+      "gloria": {
+        "title": "Kyrie • Misa Del Mundo",
+        "composer": "Only if needed. Talk to presider!",
+        "description": "Gloria"
+      },
+      "gospelAcclamation": {
+        "title": "Francesca LaRosa",
+        "composer": "Gospel Acclamation",
+        "verse": "Corpus Christi Sequence"
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "Jesus, Living Bread",
+        "composer": "Tom Booth"
+      },
+      "lordsPrayer": {
+        "title": "Eucharistic Acclamations",
+        "composer": "Mass of Restoration",
+        "description": "Joshua Blakesley"
+      },
+      "fractionRite": {
+        "title": "Holy, Holy, Holy",
+        "composer": "Save Us Savior of the World",
+        "description": "Amen"
+      },
+      "communionSongs": [
+        {
+          "title": "The Lord's Prayer",
+          "composer": "Echo Our Father",
+          "description": "Andrews, Arr. Bonilla • Lockwood • Fajardo"
+        },
+        {
+          "title": "Fraction Rite",
+          "composer": "Lamb of God (Resoration)"
+        },
+        {
+          "title": "Communion Songs",
+          "composer": "Make Us One",
+          "description": "Jeffrey Bonilla & David Lockwood"
+        },
+        {
+          "title": "\"Body of Christ...Blood of Christ...\"",
+          "composer": "I Am Yours - Consume Me Completely",
+          "description": "Trevor Thomson"
+        },
+        {
+          "title": "“O Bread of Life, you will answer all our needs…”",
+          "composer": "Here At This Table",
+          "description": "Janet Sullivan Whitaker"
+        }
+      ],
+      "sending": {
+        "title": "Sending Song",
+        "composer": "Bread for the World",
+        "description": "Bernadette Farrell"
+      }
+    }
+  ]
+}

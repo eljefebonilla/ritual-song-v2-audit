@@ -1,0 +1,44 @@
+{
+  "id": "jan-1-mary-mother-of-god-abc",
+  "name": "Jan 1 • MARY, MOTHER OF GOD [ABC]",
+  "year": "ABC",
+  "season": "ordinary",
+  "seasonLabel": "Ordinary Time",
+  "seasonOrder": 1,
+  "dates": [
+    {
+      "date": "2026-01-01",
+      "label": "Year A — Jan 01, 2026 (Thu)",
+      "dayOfWeek": "Thu"
+    },
+    {
+      "date": "2030-01-01",
+      "label": "Year B — Jan 01, 2030 (Tue)",
+      "dayOfWeek": "Tue"
+    },
+    {
+      "date": "2029-01-01",
+      "label": "Year A — Jan 01, 2029 (Mon)",
+      "dayOfWeek": "Mon"
+    },
+    {
+      "date": "2028-01-01",
+      "label": "Year C — Jan 01, 2028 (Sat)",
+      "dayOfWeek": "Sat"
+    },
+    {
+      "date": "2027-01-01",
+      "label": "Year B — Jan 01, 2027 (Fri)",
+      "dayOfWeek": "Fri"
+    }
+  ],
+  "lectionary": {
+    "number": "018•ABC",
+    "gospelTitle": "Mary Treasures All Things",
+    "thematicTag": "Name of Jesus"
+  },
+  "readings": [],
+  "antiphons": [],
+  "planningNotes": [],
+  "musicPlans": []
+}

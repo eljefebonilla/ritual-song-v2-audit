@@ -1,0 +1,445 @@
+{
+  "id": "easter-06-c",
+  "name": "EASTER 06 [C]",
+  "year": "C",
+  "season": "easter",
+  "seasonLabel": "Easter",
+  "seasonOrder": 6,
+  "dates": [
+    {
+      "date": "2025-05-25",
+      "label": "Year C — May 25, 2025 (Sun)",
+      "dayOfWeek": "Sun"
+    },
+    {
+      "date": "2037-05-10",
+      "label": "Year C — May 10, 2037 (Sun)",
+      "dayOfWeek": "Sun"
+    },
+    {
+      "date": "2034-05-14",
+      "label": "Year C — May 14, 2034 (Sun)",
+      "dayOfWeek": "Sun"
+    },
+    {
+      "date": "2031-05-18",
+      "label": "Year C — May 18, 2031 (Sun)",
+      "dayOfWeek": "Sun"
+    },
+    {
+      "date": "2028-05-21",
+      "label": "Year C — May 21, 2028 (Sun)",
+      "dayOfWeek": "Sun"
+    }
+  ],
+  "lectionary": {
+    "number": "057•C",
+    "gospelTitle": "Spirit Will Teach You (or 61C)",
+    "thematicTag": "Farewell Disc. 2/2"
+  },
+  "readings": [
+    {
+      "type": "first",
+      "citation": "Acts 15:1-2, 22-29",
+      "summary": "The Apostles decide not to burden the Gentiles unnecessarily."
+    },
+    {
+      "type": "psalm",
+      "citation": "Ps 67:2-3, 5, 6, 8, R. v.4\nO God, let all the nations praise you!",
+      "summary": "",
+      "antiphon": "Ps 67:2-3, 5, 6, 8, R. v.4\nO God, let all the nations praise you!"
+    },
+    {
+      "type": "second",
+      "citation": "Rv 21:10-14, 22-23",
+      "summary": "An angel shows John the new Jerusalem."
+    },
+    {
+      "type": "gospel_verse",
+      "citation": "Jn 14:23",
+      "summary": "Whoever loves me will keep my word, says the Lord,\nand my Father will love him and we will come to him."
+    },
+    {
+      "type": "gospel",
+      "citation": "Jn 14:23-29",
+      "summary": "Jesus leaves peace as his farewell."
+    }
+  ],
+  "antiphons": [
+    {
+      "type": "entrance",
+      "option": 1,
+      "citation": "Cf. Is 48:20",
+      "text": "Proclaim a joyful sound and let it be heard;\nproclaim to the ends of the earth:\nThe Lord has freed his people, alleluia."
+    },
+    {
+      "type": "communion",
+      "option": 1,
+      "citation": "Jn 14:15–16",
+      "text": "If you love me, keep my commandments,\nsays the Lord, and I will ask the Father\nand he will send you another Paraclete,\nto abide with you for ever, alleluia."
+    }
+  ],
+  "planningNotes": [
+    "MAY - MONTH OF MARY"
+  ],
+  "musicPlans": [
+    {
+      "community": "Reflections",
+      "communityId": "reflections",
+      "date": "Year C — May 20, 2028 (Sat)",
+      "presider": "NOT THIS YEAR",
+      "prelude": {
+        "title": "Regina Caeli / O Queen of Heaven",
+        "composer": "Mode VI Latin • 12th C",
+        "description": "Pope Leo XIV singing Regina Caeli"
+      },
+      "gathering": {
+        "title": "Your Peace Will Make Us One",
+        "composer": "Audrey Assad",
+        "description": "\"Peace I leave with you; my peace I give to you.\""
+      },
+      "penitentialAct": {
+        "title": "Kyrie • Misa Del Mundo",
+        "composer": "Only if needed. Talk to presider!"
+      },
+      "gloria": {
+        "title": "Glory to God (Through-composed Setting)",
+        "composer": "Mass of Renewal • Curtis Stephan"
+      },
+      "responsorialPsalm": {
+        "psalm": "Ps 67 O God, let all the nations praise you!",
+        "setting": "The Lyric Psalter • Tony Alonso & Marty Haugen"
+      },
+      "gospelAcclamation": {
+        "title": "Easter Alleluia (Refrain)",
+        "composer": "The Lyric Gospel Acclamations • Tony Alonso",
+        "verse": "Whoever loves me will keep my word, says the Lord,\nand my Father will love him and we will come to him."
+      },
+      "offertory": {
+        "title": "Peace I Leave with You",
+        "composer": "Barbara Bridge",
+        "description": "\"Peace I leave with you; my peace I give to you.\""
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "Mass of the Holy Family",
+        "composer": "Chris de Silva"
+      },
+      "lordsPrayer": {
+        "title": "Chanted Our Father (Snow)",
+        "composer": "Jennings/Paregorius"
+      },
+      "fractionRite": {
+        "title": "Lamb of God (Mass of the Holy Family)",
+        "composer": "Chris de Silva"
+      },
+      "communionSongs": [
+        {
+          "title": "Remembrance of You",
+          "composer": "Sarah Hart & Sarah Kroger",
+          "description": "From Last Supper to the joy of Easter."
+        },
+        {
+          "title": "Do Not Be Afraid",
+          "composer": "Jeanne Cotter",
+          "description": "Gospel"
+        },
+        {
+          "title": "Where My Father Lives",
+          "composer": "M.D. Ridge",
+          "description": "Ascension"
+        }
+      ],
+      "sending": {
+        "title": "Hail the Day That Sees Him Rise",
+        "composer": "LLANFAIR • Trevor Thomson",
+        "description": "Season of Easter | Looking towards Ascension"
+      }
+    },
+    {
+      "community": "Foundations",
+      "communityId": "foundations",
+      "date": "Year C — May 21, 2028 (Sun)",
+      "presider": "NOT THIS YEAR",
+      "prelude": {
+        "title": "Regina Caeli / O Queen of Heaven",
+        "composer": "Mode VI Latin • 12th C",
+        "description": "Pope Leo XIV singing Regina Caeli"
+      },
+      "gathering": {
+        "title": "Your Peace Will Make Us One",
+        "composer": "Audrey Assad",
+        "description": "\"Peace I leave with you; my peace I give to you.\""
+      },
+      "penitentialAct": {
+        "title": "Kyrie (Gift of God) • Adapted Version",
+        "composer": "Marty Haugen • Arranged by David Locwood"
+      },
+      "gloria": {
+        "title": "Glory to God (Mass of Joy & Peace)",
+        "composer": "Alonso • Arr. by Houze OR Arr. by Lockwood"
+      },
+      "responsorialPsalm": {
+        "psalm": "Ps 67 O God, let all the nations praise you!",
+        "setting": "Spirit & Psalm • Thomas Muglia"
+      },
+      "gospelAcclamation": {
+        "title": "Easter Alleluia (Refrain)",
+        "composer": "The Lyric Gospel Acclamations • Tony Alonso",
+        "verse": "Whoever loves me will keep my word, says the Lord,\nand my Father will love him and we will come to him."
+      },
+      "offertory": {
+        "title": "Holy Spirit, Flow Through Me",
+        "composer": "Walt Mills • Lead Me Guide Me 2",
+        "description": "...rest on me, flow out of me..."
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "Mass of Glory",
+        "composer": "Bob Hurd & Ken Canedo"
+      },
+      "lordsPrayer": {
+        "title": "Chanted Our Father (Snow)",
+        "composer": "Jennings • Paregorius"
+      },
+      "fractionRite": {
+        "title": "Lamb of God (Mass of Glory)",
+        "composer": "Bob Hurd & Ken Canedo"
+      },
+      "communionSongs": [
+        {
+          "title": "Peace I Leave with You",
+          "composer": "Barbara Bridge",
+          "description": "\"Peace I leave with you; my peace I give to you.\""
+        },
+        {
+          "title": "Where My Father Lives",
+          "composer": "M.D. Ridge",
+          "description": "Verse 4 — \"Peace I leave...\""
+        }
+      ],
+      "sending": {
+        "title": "Hail the Day That Sees Him Rise",
+        "composer": "LLANFAIR • Trevor Thomson",
+        "description": "Season of Easter | Looking towards Ascension"
+      }
+    },
+    {
+      "community": "Generations",
+      "communityId": "generations",
+      "date": "Year C — May 21, 2028 (Sun)",
+      "presider": "NOT THIS YEAR",
+      "prelude": {
+        "title": "Regina Caeli / O Queen of Heaven",
+        "composer": "Mode VI Latin • 12th C",
+        "description": "Pope Leo XIV singing Regina Caeli"
+      },
+      "gathering": {
+        "title": "Your Peace Will Make Us One",
+        "composer": "Audrey Assad",
+        "description": "\"Peace I leave with you; my peace I give to you.\""
+      },
+      "penitentialAct": {
+        "title": "Kyrie • Misa Del Mundo",
+        "composer": "Only if needed. Talk to presider!"
+      },
+      "gloria": {
+        "title": "Glory to God (Mass of Joy & Peace)",
+        "composer": "Tony Alonso • Arr. by Dan Houze"
+      },
+      "responsorialPsalm": {
+        "psalm": "Ps 67 O God, let all the nations praise you!",
+        "setting": "Spirit & Psalm • Thomas Muglia"
+      },
+      "gospelAcclamation": {
+        "title": "Easter Alleluia (Refrain)",
+        "composer": "The Lyric Gospel Acclamations • Tony Alonso",
+        "verse": "Whoever loves me will keep my word, says the Lord,\nand my Father will love him and we will come to him."
+      },
+      "offertory": {
+        "title": "Give Us Your Peace",
+        "composer": "Jesse Manibusan • Sarah Hart",
+        "description": "\"Peace I leave with you; my peace I give to you.\""
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "Mass of Glory",
+        "composer": "Bob Hurd • Arr. by Dan Houze"
+      },
+      "lordsPrayer": {
+        "title": "(Echo) Our Father",
+        "composer": "Jerome Andrews • Arranged by Dan Houze"
+      },
+      "fractionRite": {
+        "title": "Lamb of God (Mass of Glory)"
+      },
+      "communionSongs": [
+        {
+          "title": "Holy Spirit",
+          "composer": "Bryan & Katie Torwalt",
+          "description": "\"The Advocate... will teach you everything...\""
+        },
+        {
+          "title": "Remembrance of You",
+          "composer": "Sarah Hart & Sarah Kroger",
+          "description": "From Last Supper to the joy of Easter."
+        },
+        {
+          "title": "Where My Father Lives",
+          "composer": "M.D. Ridge",
+          "description": "Verse 4 — \"Peace I leave...\""
+        },
+        {
+          "title": "Abba! Father!",
+          "composer": "Carey Landry • Arr. by David Lockwood",
+          "description": "Gospel"
+        }
+      ],
+      "sending": {
+        "title": "Hail the Day That Sees Him Rise",
+        "composer": "LLANFAIR • Trevor Thomson",
+        "description": "Season of Easter | Looking towards Ascension"
+      }
+    },
+    {
+      "community": "Heritage",
+      "communityId": "heritage",
+      "date": "Year C — May 21, 2028 (Sun)",
+      "presider": "NOT THIS YEAR",
+      "prelude": {
+        "title": "Regina Caeli / O Queen of Heaven",
+        "composer": "Mode VI Latin • 12th C",
+        "description": "Pope Leo XIV singing Regina Caeli"
+      },
+      "gathering": {
+        "title": "Your Peace Will Make Us One",
+        "composer": "Audrey Assad",
+        "description": "\"Peace I leave with you; my peace I give to you.\""
+      },
+      "penitentialAct": {
+        "title": "Kyrie • Misa Del Mundo",
+        "composer": "Only if needed. Talk to presider!"
+      },
+      "gloria": {
+        "title": "Glory to God (Mass of Joy & Peace)",
+        "composer": "Tony Alonso, Thru Composed"
+      },
+      "responsorialPsalm": {
+        "psalm": "Ps 67 O God, let all the nations praise you!",
+        "setting": "The Lyric Psalter • Tony Alonso & Marty Haugen"
+      },
+      "gospelAcclamation": {
+        "title": "Easter Alleluia (Refrain)",
+        "composer": "The Lyric Gospel Acclamations • Tony Alonso",
+        "verse": "Whoever loves me will keep my word, says the Lord,\nand my Father will love him and we will come to him."
+      },
+      "offertory": {
+        "title": "Peace I Leave with You",
+        "composer": "Barbara Bridge",
+        "description": "\"Peace I leave with you; my peace I give to you.\""
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "Mass of Joy & Peace",
+        "composer": "Tony Alonso"
+      },
+      "lordsPrayer": {
+        "title": "Chanted Our Father (Snow)",
+        "composer": "Jennings/Paregorius"
+      },
+      "fractionRite": {
+        "title": "Lamb of God (Mass of Joy & Peace)",
+        "composer": "Tony Alonso"
+      },
+      "communionSongs": [
+        {
+          "title": "Remembrance of You",
+          "composer": "Sarah Hart & Sarah Kroger",
+          "description": "From Last Supper to the joy of Easter."
+        },
+        {
+          "title": "Where My Father Lives",
+          "composer": "M.D. Ridge",
+          "description": "Verse 4 — \"Peace I leave...\""
+        },
+        {
+          "title": "Abba! Father!",
+          "composer": "Carey Landry • Arr. by David Lockwood",
+          "description": "Gospel"
+        }
+      ],
+      "sending": {
+        "title": "Hail the Day That Sees Him Rise",
+        "composer": "LLANFAIR • Charles Wesley • Robert Williams",
+        "description": "Season of Easter | Looking towards Ascension"
+      }
+    },
+    {
+      "community": "Elevations",
+      "communityId": "elevations",
+      "date": "Year C — May 21, 2028 (Sun)",
+      "presider": "NOT THIS YEAR",
+      "prelude": {
+        "title": "Where My Father Lives",
+        "composer": "M.D. Ridge",
+        "description": "Verse 4 — \"Peace I leave...\""
+      },
+      "gathering": {
+        "title": "Your Peace Will Make Us One",
+        "composer": "Audrey Assad",
+        "description": "\"Peace I leave with you; my peace I give to you.\""
+      },
+      "penitentialAct": {
+        "title": "Kyrie (Misa Del Mundo)",
+        "composer": "Jesse Manibusan — If needed."
+      },
+      "gloria": {
+        "title": "Glory to God (Joy & Peace)"
+      },
+      "responsorialPsalm": {
+        "psalm": "Ps 67 O God, let all the nations praise you!",
+        "setting": "Spirit & Psalm • Thomas Muglia"
+      },
+      "gospelAcclamation": {
+        "title": "Easter Alleluia (Refrain)",
+        "composer": "The Lyric Gospel Acclamations • Tony Alonso",
+        "verse": "Whoever loves me will keep my word, says the Lord,\nand my Father will love him and we will come to him."
+      },
+      "offertory": {
+        "title": "Give Us Your Peace",
+        "composer": "Jesse Manibusan • Sarah Hart",
+        "description": "\"Peace I leave with you; my peace I give to you.\""
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "Mass of Restoration",
+        "composer": "Joshua Blakesley"
+      },
+      "lordsPrayer": {
+        "title": "Echo Our Father",
+        "composer": "Andrews, Arr. Bonilla • Lockwood • Fajardo"
+      },
+      "fractionRite": {
+        "title": "Lamb of God (Mass of Restoration)",
+        "composer": "Joshua Blakesley"
+      },
+      "communionSongs": [
+        {
+          "title": "Remembrance of You",
+          "composer": "Sarah Hart & Sarah Kroger",
+          "description": "From Last Supper to the joy of Easter."
+        },
+        {
+          "title": "Holy Spirit",
+          "composer": "Bryan & Katie Torwalt",
+          "description": "\"The Advocate... will teach you everything...\""
+        },
+        {
+          "title": "Abba! Father!",
+          "composer": "Carey Landry • Arr. by David Lockwood",
+          "description": "Gospel"
+        }
+      ],
+      "sending": {
+        "title": "Hail the Day That Sees Him Rise",
+        "composer": "LLANFAIR • Trevor Thomson",
+        "description": "Season of Easter | Looking towards Ascension"
+      }
+    }
+  ]
+}

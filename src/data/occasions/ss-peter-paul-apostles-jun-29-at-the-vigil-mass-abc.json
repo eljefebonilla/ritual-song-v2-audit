@@ -1,0 +1,152 @@
+{
+  "id": "ss-peter-paul-apostles-jun-29-at-the-vigil-mass-abc",
+  "name": "Ss PETER & PAUL, APOSTLES (JUN 29) \nAT THE VIGIL MASS [ABC]",
+  "year": "ABC",
+  "season": "ordinary",
+  "seasonLabel": "Ordinary Time",
+  "seasonOrder": 29,
+  "dates": [
+    {
+      "date": "2025-06-28",
+      "label": "Year C — Jun 28, 2025 (Sat)",
+      "dayOfWeek": "Sat"
+    },
+    {
+      "date": "2029-06-28",
+      "label": "Year A — Jun 28, 2029 (Thu)",
+      "dayOfWeek": "Thu"
+    },
+    {
+      "date": "2028-06-28",
+      "label": "Year C — Jun 28, 2028 (Wed)",
+      "dayOfWeek": "Wed"
+    },
+    {
+      "date": "2027-06-28",
+      "label": "Year B — Jun 28, 2027 (Mon)",
+      "dayOfWeek": "Mon"
+    }
+  ],
+  "lectionary": {
+    "number": "590•ABC",
+    "gospelTitle": "Feed My Lambs; Follow",
+    "thematicTag": "“Feed My Sheep”"
+  },
+  "readings": [
+    {
+      "type": "first",
+      "citation": "At the Vigil Mass — Acts 3:1-10",
+      "summary": "Get up and walk in the name of Christ."
+    },
+    {
+      "type": "psalm",
+      "citation": "At the Vigil Mass — Ps 19:2-3, 4-5, R. v.5\nTheir message goes out through all the earth.",
+      "summary": "",
+      "antiphon": "At the Vigil Mass — Ps 19:2-3, 4-5, R. v.5\nTheir message goes out through all the earth."
+    },
+    {
+      "type": "second",
+      "citation": "At the Vigil Mass — Gal 1:11-20",
+      "summary": "Paul describes his conversion and mission."
+    },
+    {
+      "type": "gospel_verse",
+      "citation": "Jn 21:17",
+      "summary": "Lord, you know everything: you know that I love you."
+    },
+    {
+      "type": "gospel",
+      "citation": "At the Vigil Mass — Jn 21:15-19",
+      "summary": "Paul tells Simon to tend his sheep."
+    }
+  ],
+  "antiphons": [
+    {
+      "type": "entrance",
+      "option": 1,
+      "citation": "Roman Missal",
+      "text": "Peter the Apostle, and Paul the teacher of the Gentiles,\nthese have taught us your law, O Lord."
+    },
+    {
+      "type": "communion",
+      "option": 1,
+      "citation": "Roman Missal",
+      "text": "Simon, Son of John, do you love me more than these?\nLord, you know everything; you know that I love you."
+    }
+  ],
+  "planningNotes": [],
+  "musicPlans": [
+    {
+      "community": "Reflections",
+      "communityId": "reflections",
+      "date": "Year C — Jun 28, 2025 (Sat)",
+      "presider": "NOT THIS YEAR",
+      "prelude": {
+        "title": "God of Peace",
+        "composer": "Jeffrey Bonilla & David Lockwood",
+        "description": "Prayer for Peace"
+      },
+      "gathering": {
+        "title": "Christ Be Our Light",
+        "composer": "Bernadette Farrell",
+        "description": "Ss Peter & Paul"
+      },
+      "penitentialAct": {
+        "title": "Kyrie • Misa Del Mundo",
+        "composer": "Only if needed. Talk to presider!"
+      },
+      "gloria": {
+        "title": "Glory to God (Through-composed Setting)",
+        "composer": "Mass of Renewal • Curtis Stephan"
+      },
+      "responsorialPsalm": {
+        "psalm": "Ps 19 Their message goes out through all...",
+        "setting": "The Lyric Psalter • Tony Alonso & Marty Haugen"
+      },
+      "gospelAcclamation": {
+        "title": "Alleluia (Mass of Joy & Peace)",
+        "composer": "Ss Peter & Paul (V) | ABC — \"Lord, you know...\"",
+        "verse": "Lord, you know everything: you know that I love you."
+      },
+      "offertory": {
+        "title": "Christ In Me Arise",
+        "composer": "Trevor Thomson",
+        "description": "“Be now my footsteps... taking me where I must go.”"
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "Mass of the Holy Family",
+        "composer": "Chris de Silva"
+      },
+      "lordsPrayer": {
+        "title": "Chanted Our Father (Snow)",
+        "composer": "Jennings/Paregorius"
+      },
+      "fractionRite": {
+        "title": "Lamb of God (Mass of the Holy Family)",
+        "composer": "Chris de Silva"
+      },
+      "communionSongs": [
+        {
+          "title": "The King of Love My Shepherd Is",
+          "composer": "LOCH LOMOND • Baker • Edward Eicker",
+          "description": "✅  HYMN VERSION  - 🚫  CHORAL VERSION"
+        },
+        {
+          "title": "Age to Age",
+          "composer": "Janet Vogt • Jeff McLemore • Skip Kroner",
+          "description": "\"We will love you age to age\""
+        },
+        {
+          "title": "For All the Saints Who’ve Shown Your Love",
+          "composer": "O WALY WALY • John L. Bell (GIA)",
+          "description": "Optional Accompinament for Congregational Singing (Page 7)"
+        }
+      ],
+      "sending": {
+        "title": "We Belong To You",
+        "composer": "Trevor Thomson",
+        "description": "\"we are his people, the flock that he shepherds...\""
+      }
+    }
+  ]
+}

@@ -1,0 +1,425 @@
+{
+  "id": "year-a-apr-02-2023-sun",
+  "name": "Year A — Apr 02, 2023 (Sun)",
+  "year": "ABC",
+  "season": "ordinary",
+  "seasonLabel": "Ordinary Time",
+  "seasonOrder": 2,
+  "dates": [],
+  "lectionary": {
+    "number": "Year A — Apr 18, 2038 (Sun)",
+    "gospelTitle": "Year A — Mar 18, 2035 (Sun)",
+    "thematicTag": "Year A — Mar 21, 2032 (Sun)",
+    "thematicDetail": "Year A — Mar 25, 2029 (Sun)"
+  },
+  "readings": [
+    {
+      "type": "psalm",
+      "citation": "038•ABC | Matthew's Passion Narrative",
+      "summary": "",
+      "antiphon": "Planning Reminders"
+    },
+    {
+      "type": "second",
+      "citation": "Next year...",
+      "summary": ""
+    },
+    {
+      "type": "gospel_verse",
+      "citation": "Six days before the Passover,\nwhen the Lord came into the city of Jerusalem,\nthe children ran to meet him;\nin their hands they carried palm branches\nand with a loud voice cried out:\n*Hosanna in the highest!",
+      "summary": "Part 2 of Antiphon"
+    },
+    {
+      "type": "gospel",
+      "citation": "Reading I | Is 50:4-7",
+      "summary": "Despite rejection, Isaiah does not abandon his call."
+    }
+  ],
+  "antiphons": [
+    {
+      "type": "entrance",
+      "option": 1,
+      "citation": "Verse before the Gospel | Phil 2:8-9",
+      "text": "Christ became obedient to the point of death,\neven death on a cross.\nbecause of this, God greatly exalted him\nand bestowed on him the name which is above every name."
+    },
+    {
+      "type": "communion",
+      "option": 2,
+      "citation": "Communion Antiphon | Mt 26:42",
+      "text": "Father, if this chalice cannot pass without my drinking it,\nyour will be done."
+    }
+  ],
+  "planningNotes": [
+    "Communion Antiphon • Option II",
+    "N/A"
+  ],
+  "musicPlans": [
+    {
+      "community": "Reflections",
+      "communityId": "reflections",
+      "date": "Year A — Mar 28, 2026 (Sat)",
+      "presider": "TBD",
+      "prelude": {
+        "title": "No Prelude music.",
+        "composer": "Reading on the Church Steps followed by",
+        "description": "enhanced Gathering Procession with palms."
+      },
+      "penitentialAct": {
+        "title": "Francis Patrick O'Brien",
+        "composer": "Palm Sunday Processional",
+        "description": "Penitential Act"
+      },
+      "gloria": {
+        "title": "Kyrie (Mass of Colour) — optional tropes",
+        "composer": "Jeffrey Bonilla & David Lockwood",
+        "description": "Gloria"
+      },
+      "gospelAcclamation": {
+        "title": "The Lyric Psalter • Tony Alonso & Marty Haugen",
+        "composer": "Gospel Acclamation",
+        "verse": "Mass of Joy & Peace Lenten G.A. (Refrain)"
+      },
+      "offertory": {
+        "title": "Verse - Palm Sunday & Good Friday  • A B C",
+        "description": "Offertory Song"
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "Jesus, Remember Me",
+        "composer": "Taizé — Jacques Berthier"
+      },
+      "lordsPrayer": {
+        "title": "Eucharistic Acclamations",
+        "composer": "Mass of Creation",
+        "description": "Marty Haugen • Arr. by Lockwood & Phan"
+      },
+      "fractionRite": {
+        "title": "Holy",
+        "composer": "Mystery of Faith",
+        "description": "Amen"
+      },
+      "communionSongs": [
+        {
+          "title": "The Lord's Prayer",
+          "composer": "Chanted Our Father (Snow)",
+          "description": "Jennings/Paregorius"
+        },
+        {
+          "title": "Fraction Rite",
+          "composer": "Lamb of God (Mass of Creation)",
+          "description": "Marty Haugen • Arr. by Lockwood & Phan"
+        },
+        {
+          "title": "Communion Songs",
+          "composer": "Crux Fidelis",
+          "description": "Steven C. Warner - Adapt. from"
+        },
+        {
+          "title": "of the Congregation of Holy Cross",
+          "composer": "We Remember",
+          "description": "Marty Haugen"
+        }
+      ]
+    },
+    {
+      "community": "Foundations",
+      "communityId": "foundations",
+      "date": "Year A — Mar 29, 2026 (Sun)",
+      "presider": "TBD",
+      "prelude": {
+        "title": "No Prelude music.",
+        "composer": "Reading on the Church Steps followed by",
+        "description": "enhanced Gathering Procession with palms."
+      },
+      "penitentialAct": {
+        "title": "Francis Patrick O'Brien",
+        "composer": "Palm Sunday Processional",
+        "description": "Penitential Act"
+      },
+      "gloria": {
+        "title": "Kyrie (Mass of Colour) — optional tropes",
+        "composer": "Jeffrey Bonilla & David Lockwood",
+        "description": "Gloria"
+      },
+      "gospelAcclamation": {
+        "title": "The Lyric Psalter • Sarah Hart",
+        "composer": "Gospel Acclamation",
+        "verse": "Praise to You, Lord Jesus Christ"
+      },
+      "offertory": {
+        "title": "Verse - Palm Sunday & Good Friday  • A B C",
+        "description": "Offertory Song"
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "Above All",
+        "composer": "Lenny LeBlanc • Paul Baloche • Arr. by Ed Bolduc"
+      },
+      "lordsPrayer": {
+        "title": "Eucharistic Acclamations",
+        "composer": "Mass of a Firm Foundation",
+        "description": "David Lockwood"
+      },
+      "fractionRite": {
+        "title": "Holy",
+        "composer": "Mystery of Faith",
+        "description": "Amen"
+      },
+      "communionSongs": [
+        {
+          "title": "The Lord's Prayer",
+          "composer": "Chanted Our Father (Snow)",
+          "description": "Jennings • Paregorius"
+        },
+        {
+          "title": "Fraction Rite",
+          "composer": "Lamb of God (Mass of a Firm Foundation)",
+          "description": "David Lockwood"
+        },
+        {
+          "title": "Communion Songs",
+          "composer": "We Remember",
+          "description": "Marty Haugen"
+        },
+        {
+          "title": "\"...and still we celebrate for you are with us here...\"",
+          "composer": "How Beautiful",
+          "description": "Twila Paris"
+        }
+      ],
+      "sending": {
+        "title": "Scott Soper",
+        "composer": "Somber Recessional"
+      }
+    },
+    {
+      "community": "Generations",
+      "communityId": "generations",
+      "date": "Year A — Mar 29, 2026 (Sun)",
+      "presider": "TBD",
+      "prelude": {
+        "title": "No Prelude music.",
+        "composer": "Reading on the Church Steps followed by",
+        "description": "enhanced Gathering Procession with palms."
+      },
+      "penitentialAct": {
+        "title": "Francis Patrick O'Brien",
+        "composer": "Palm Sunday Processional",
+        "description": "Penitential Act"
+      },
+      "gloria": {
+        "title": "Kyrie (Mass of Colour) — optional tropes",
+        "composer": "Jeffrey Bonilla & David Lockwood",
+        "description": "Gloria"
+      },
+      "gospelAcclamation": {
+        "title": "The Lyric Psalter • Tony Alonso & Marty Haugen",
+        "composer": "Gospel Acclamation",
+        "verse": "Praise to You, Lord Jesus Christ"
+      },
+      "offertory": {
+        "title": "Verse - Palm Sunday & Good Friday  • A B C",
+        "description": "Offertory Song"
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "Above All",
+        "composer": "Lenny LeBlanc • Paul Baloche • Arr. by Ed Bolduc"
+      },
+      "lordsPrayer": {
+        "title": "Eucharistic Acclamations",
+        "composer": "Mass of Colour",
+        "description": "Jeffrey Bonilla & David Lockwood"
+      },
+      "fractionRite": {
+        "title": "Holy",
+        "composer": "Mystery of Faith",
+        "description": "Amen"
+      },
+      "communionSongs": [
+        {
+          "title": "The Lord's Prayer",
+          "composer": "Spoken during Season of Lent"
+        },
+        {
+          "title": "Fraction Rite",
+          "composer": "Lamb of God (Mass of Colour)",
+          "description": "Jeffrey Bonilla & David Lockwood"
+        },
+        {
+          "title": "Communion Songs",
+          "composer": "At The Cross (Love Ran Red)",
+          "description": "Chris Tomlin"
+        },
+        {
+          "title": "\"...mercy reigns and never dies\"",
+          "composer": "In Every Age",
+          "description": "Janèt Sullivan Whitaker"
+        },
+        {
+          "title": "General",
+          "composer": "How Beautiful",
+          "description": "Composer/s"
+        },
+        {
+          "title": "\"...the tender eyes that choose to forgive...\"",
+          "composer": "Unless A Grain Of Wheat",
+          "description": "John Angotti"
+        }
+      ],
+      "sending": {
+        "title": "Were You There?",
+        "composer": "Scott Soper",
+        "description": "Somber Recessional"
+      }
+    },
+    {
+      "community": "Heritage",
+      "communityId": "heritage",
+      "date": "Year A — Mar 29, 2026 (Sun)",
+      "presider": "TBD",
+      "prelude": {
+        "title": "No Prelude music.",
+        "composer": "Reading on the Church Steps followed by",
+        "description": "enhanced Gathering Procession with palms."
+      },
+      "penitentialAct": {
+        "title": "Francis Patrick O'Brien",
+        "composer": "Palm Sunday Processional",
+        "description": "Penitential Act"
+      },
+      "gloria": {
+        "title": "Kyrie (Mass of Colour) — optional tropes",
+        "composer": "Jeffrey Bonilla & David Lockwood",
+        "description": "Gloria"
+      },
+      "gospelAcclamation": {
+        "title": "The Lyric Psalter • Tony Alonso & Marty Haugen",
+        "composer": "Gospel Acclamation",
+        "verse": "Mass of Joy & Peace Lenten G.A. (Refrain)"
+      },
+      "offertory": {
+        "title": "Verse - Palm Sunday & Good Friday  • A B C",
+        "description": "Offertory Song"
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "Jesus, Remember Me",
+        "composer": "Taizé — Jacques Berthier"
+      },
+      "lordsPrayer": {
+        "title": "Eucharistic Acclamations",
+        "composer": "Mass of Creation - Rev. 2010",
+        "description": "Marty Haugen"
+      },
+      "fractionRite": {
+        "title": "Holy",
+        "composer": "Mystery of Faith",
+        "description": "Amen"
+      },
+      "communionSongs": [
+        {
+          "title": "The Lord's Prayer",
+          "composer": "Chanted Our Father (Snow)",
+          "description": "Jennings/Paregorius"
+        },
+        {
+          "title": "Fraction Rite",
+          "composer": "Lamb of God (Mass of Creation)",
+          "description": "Tony Alonso"
+        },
+        {
+          "title": "Communion Songs",
+          "composer": "Crux Fidelis",
+          "description": "Steven C. Warner - Adapt. from"
+        },
+        {
+          "title": "of the Congregation of Holy Cross",
+          "composer": "We Remember",
+          "description": "Marty Haugen"
+        },
+        {
+          "title": "\"...and still we celebrate for you are with us here...\"",
+          "composer": "Unless a Grain Wheat",
+          "description": "Bob Hurd"
+        }
+      ],
+      "sending": {
+        "title": "Scott Soper",
+        "composer": "Somber Recessional"
+      }
+    },
+    {
+      "community": "Elevations",
+      "communityId": "elevations",
+      "date": "Year A — Mar 29, 2026 (Sun)",
+      "presider": "TBD",
+      "prelude": {
+        "title": "No Prelude music.",
+        "composer": "Reading on the Church Steps followed by",
+        "description": "enhanced Gathering Procession with palms."
+      },
+      "penitentialAct": {
+        "title": "Micah Jones",
+        "composer": "Palm Sunday Processional",
+        "description": "Penitential Act"
+      },
+      "gloria": {
+        "title": "Kyrie (Mass of Colour) — optional tropes",
+        "composer": "Jeffrey Bonilla & David Lockwood",
+        "description": "Gloria"
+      },
+      "gospelAcclamation": {
+        "title": "Micah Jones",
+        "composer": "Gospel Acclamation",
+        "verse": "Praise to You, Lord Jesus Christ"
+      },
+      "offertory": {
+        "title": "Verse - Palm Sunday & Good Friday  • A B C",
+        "description": "Offertory Song"
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "Above All",
+        "composer": "Lenny LeBlanc • Paul Baloche • Arr. by Ed Bolduc"
+      },
+      "lordsPrayer": {
+        "title": "Eucharistic Acclamations",
+        "composer": "Mass of Colour",
+        "description": "Bonilla & Lockwood"
+      },
+      "fractionRite": {
+        "title": "Holy",
+        "composer": "Mystery of Faith",
+        "description": "Amen"
+      },
+      "communionSongs": [
+        {
+          "title": "The Lord's Prayer",
+          "composer": "Echo Our Father",
+          "description": "Andrews, Arr. Bonilla • Lockwood • Fajardo"
+        },
+        {
+          "title": "Fraction Rite",
+          "composer": "Lamb of God (Mass of Colour)",
+          "description": "Jeffrey Bonilla & David Lockwood"
+        },
+        {
+          "title": "Communion Songs",
+          "composer": "At The Cross (Love Ran Red)",
+          "description": "Chris Tomlin"
+        },
+        {
+          "title": "\"...mercy reigns and never dies\"",
+          "composer": "How Beautiful",
+          "description": "Composer/s"
+        },
+        {
+          "title": "\"...the tender eyes that choose to forgive...\"",
+          "composer": "Unless A Grain Of Wheat",
+          "description": "John Angotti"
+        }
+      ],
+      "sending": {
+        "title": "Sending Song",
+        "composer": "Were You There?",
+        "description": "Scott Soper"
+      }
+    }
+  ]
+}

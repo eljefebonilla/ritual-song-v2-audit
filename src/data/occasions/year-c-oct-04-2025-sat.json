@@ -1,0 +1,26 @@
+{
+  "id": "year-c-oct-04-2025-sat",
+  "name": "Year C — Oct 04, 2025 (Sat)",
+  "year": "ABC",
+  "season": "ordinary",
+  "seasonLabel": "Ordinary Time",
+  "seasonOrder": 4,
+  "dates": [],
+  "lectionary": {
+    "number": "Year C — Oct 04, 2031 (Sat)",
+    "gospelTitle": "Year B — Oct 04, 2030 (Fri)",
+    "thematicTag": "Year A — Oct 04, 2029 (Thu)",
+    "thematicDetail": "Year C — Oct 04, 2028 (Wed)"
+  },
+  "readings": [
+    {
+      "type": "psalm",
+      "citation": "Humble Joy; Poverty and Peace.",
+      "summary": "",
+      "antiphon": "Planning Reminders"
+    }
+  ],
+  "antiphons": [],
+  "planningNotes": [],
+  "musicPlans": []
+}

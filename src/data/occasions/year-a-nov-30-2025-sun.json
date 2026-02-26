@@ -1,0 +1,396 @@
+{
+  "id": "year-a-nov-30-2025-sun",
+  "name": "Year A — Nov 30, 2025 (Sun)",
+  "year": "ABC",
+  "season": "ordinary",
+  "seasonLabel": "Ordinary Time",
+  "seasonOrder": 30,
+  "dates": [],
+  "lectionary": {
+    "number": "",
+    "gospelTitle": "Year A — Nov 29, 2037 (Sun)",
+    "thematicTag": "Year A — Dec 03, 2034 (Sun)",
+    "thematicDetail": "Year A — Nov 30, 2031 (Sun)"
+  },
+  "readings": [
+    {
+      "type": "psalm",
+      "citation": "Apocalyptic Watch (Mt 24)",
+      "summary": "",
+      "antiphon": "Planning Reminders"
+    },
+    {
+      "type": "gospel_verse",
+      "citation": "To you, I lift up my soul, O my God.\nIn you, I have trusted; let me not be put to shame.\nNor let my enemies exult over me; and let none who hope in you be put to shame.",
+      "summary": "Entrance Antiphon • Option II"
+    },
+    {
+      "type": "gospel",
+      "citation": "Reading I | Is 2:1–5",
+      "summary": "All nations shall stream to the mountain of the Lord."
+    }
+  ],
+  "antiphons": [
+    {
+      "type": "entrance",
+      "option": 1,
+      "citation": "Verse before the Gospel | cf. Ps 85:8",
+      "text": "Lord, show us your love; and grant us your salvation."
+    },
+    {
+      "type": "communion",
+      "option": 2,
+      "citation": "Communion Antiphon | Ps 85 (84):13]",
+      "text": "The Lord will bestow his bounty,\nand our earth shall yield its increase."
+    }
+  ],
+  "planningNotes": [
+    "Communion Antiphon • Option II",
+    "N/A"
+  ],
+  "musicPlans": [
+    {
+      "community": "Reflections",
+      "communityId": "reflections",
+      "date": "Year A — Nov 29, 2025 (Sat)",
+      "presider": "Fr. Thomas Park",
+      "prelude": {
+        "title": "Song Title",
+        "composer": "Composer/s"
+      },
+      "penitentialAct": {
+        "title": "Bernadette Farrell",
+        "composer": "Advent",
+        "description": "Penitential Act"
+      },
+      "gloria": {
+        "title": "Warm the Time of WInter",
+        "composer": "Lori True",
+        "description": "Gloria"
+      },
+      "gospelAcclamation": {
+        "title": "The Lyric Psalter • Tony Alonso & Marty Haugen",
+        "composer": "Gospel Acclamation",
+        "verse": "Advent/Christmas 2 — Missa Pacem"
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "Wait for the Lord",
+        "composer": "Jacques Berthier · Taizé Community"
+      },
+      "lordsPrayer": {
+        "title": "Eucharistic Acclamations",
+        "composer": "Mass of the Incarnate Word",
+        "description": "Bob Hurd • Traditional Arrangement"
+      },
+      "fractionRite": {
+        "title": "Holy",
+        "composer": "Mystery of Faith",
+        "description": "Amen"
+      },
+      "communionSongs": [
+        {
+          "title": "The Lord's Prayer",
+          "composer": "Chanted Our Father (Snow)",
+          "description": "Jennings • Paregorius"
+        },
+        {
+          "title": "Fraction Rite",
+          "composer": "Missa Veni Emmanuel",
+          "description": "Ed Archer"
+        },
+        {
+          "title": "Communion Songs",
+          "composer": "In Days to Come",
+          "description": "Sarah Hart"
+        },
+        {
+          "title": "Advent",
+          "composer": "Bethlehem (House of Bread)",
+          "description": "Alan J. Hommerding • Ed Bolduc"
+        }
+      ]
+    },
+    {
+      "community": "Foundations",
+      "communityId": "foundations",
+      "date": "Year A — Nov 30, 2025 (Sun)",
+      "presider": "Fr. Vince Kuna",
+      "prelude": {
+        "title": "N/A"
+      },
+      "penitentialAct": {
+        "title": "Bob Hurd",
+        "composer": "Entrance Antiphon",
+        "description": "Penitential Act"
+      },
+      "gloria": {
+        "title": "Warm the Time of WInter",
+        "composer": "Lori True",
+        "description": "Gloria"
+      },
+      "gospelAcclamation": {
+        "title": "Spirit & Psalm • Sarah Hart",
+        "composer": "Gospel Acclamation",
+        "verse": "Hallelujah, Hallelu!"
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "Your Light Will Come, Jerusalem",
+        "composer": "Bob Hurd"
+      },
+      "lordsPrayer": {
+        "title": "Eucharistic Acclamations",
+        "composer": "Mass of the Incarnate Word"
+      },
+      "fractionRite": {
+        "title": "Holy",
+        "composer": "Mystery of Faith",
+        "description": "Amen"
+      },
+      "communionSongs": [
+        {
+          "title": "The Lord's Prayer",
+          "composer": "Chanted Our Father (Snow)",
+          "description": "Jennings • Paregorius"
+        },
+        {
+          "title": "Fraction Rite",
+          "composer": "Missa Veni Emmanuel",
+          "description": "Ed Archer"
+        },
+        {
+          "title": "Communion Songs",
+          "composer": "Find Us Ready",
+          "description": "Tom Booth"
+        },
+        {
+          "title": "Advent",
+          "composer": "Bethlehem (House of Bread)",
+          "description": "Alan J. Hommerding · Ed Bolduc"
+        }
+      ],
+      "sending": {
+        "title": "BEACH SPRING · Marty Haugen",
+        "composer": "Description"
+      }
+    },
+    {
+      "community": "Generations",
+      "communityId": "generations",
+      "date": "Year A — Nov 30, 2025 (Sun)",
+      "presider": "Msgr. Lloyd Torgerson",
+      "prelude": {
+        "title": "Song Title",
+        "composer": "Composer/s"
+      },
+      "penitentialAct": {
+        "title": "Bob Hurd",
+        "composer": "Entrance Antiphon",
+        "description": "Penitential Act"
+      },
+      "gloria": {
+        "title": "Warm the Time of WInter",
+        "composer": "Lori True",
+        "description": "Gloria"
+      },
+      "gospelAcclamation": {
+        "title": "Spirit & Psalm • Sarah Hart",
+        "composer": "Gospel Acclamation",
+        "verse": "Hallelujah (adapted for Liturgy)"
+      },
+      "offertory": {
+        "title": "Choir Practice Tracks",
+        "description": "Offertory Song"
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "Dwell in the Midst of Us",
+        "composer": "Jeffrey Bonilla & David Lockwood"
+      },
+      "lordsPrayer": {
+        "title": "Eucharistic Acclamations",
+        "composer": "Mass of the Incarnate Word",
+        "description": "Bob Hurd • Arr. by Lockwood"
+      },
+      "fractionRite": {
+        "title": "Holy",
+        "composer": "Mystery of Faith",
+        "description": "Amen"
+      },
+      "communionSongs": [
+        {
+          "title": "The Lord's Prayer",
+          "composer": "Echo Our Father",
+          "description": "Jerome Andrews, Arranged by Dan Houze"
+        },
+        {
+          "title": "Fraction Rite",
+          "composer": "Lamb of God (Mass of Glory)",
+          "description": "Bob Hurd  • Ken Canedo"
+        },
+        {
+          "title": "Communion Songs",
+          "composer": "O Come, O Come Emmanuel",
+          "description": "Grayson Warren Brown"
+        },
+        {
+          "title": "Advent",
+          "composer": "Bread of Life (Advent/Christmas)",
+          "description": "Bernadette Farrell"
+        },
+        {
+          "title": "Advent",
+          "composer": "Bethlehem (House of Bread)",
+          "description": "Alan J. Hommerding · Ed Bolduc"
+        },
+        {
+          "title": "Advent",
+          "composer": "Glory (Let There Be Peace)",
+          "description": "Matt Maher"
+        }
+      ],
+      "sending": {
+        "title": "Awake To The Day",
+        "composer": "Ed Bolduc",
+        "description": "Gospel"
+      }
+    },
+    {
+      "community": "Heritage",
+      "communityId": "heritage",
+      "date": "Year A — Nov 30, 2025 (Sun)",
+      "presider": "Fr. Eusebio Llonoso",
+      "prelude": {
+        "title": "N/A"
+      },
+      "penitentialAct": {
+        "title": "Jeffrey Bonilla & David Lockwood",
+        "composer": "Advent",
+        "description": "Penitential Act"
+      },
+      "gloria": {
+        "title": "Warm the Time of WInter",
+        "composer": "Lori True",
+        "description": "Gloria"
+      },
+      "gospelAcclamation": {
+        "title": "The Lyric Psalter • Tony Alonso & Marty Haugen",
+        "composer": "Gospel Acclamation",
+        "verse": "Advent/Christmas 2 — Missa Pacem"
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "Your Light Will Come, Jerusalem",
+        "composer": "Bob Hurd"
+      },
+      "lordsPrayer": {
+        "title": "Eucharistic Acclamations",
+        "composer": "Mass of the Incarnate Word",
+        "description": "Bob Hurd • Traditional Arrangement"
+      },
+      "fractionRite": {
+        "title": "Holy",
+        "composer": "Mystery of Faith",
+        "description": "Amen"
+      },
+      "communionSongs": [
+        {
+          "title": "The Lord's Prayer",
+          "composer": "Chanted Our Father (Snow)",
+          "description": "Jennings • Paregorius"
+        },
+        {
+          "title": "Fraction Rite",
+          "composer": "Missa Veni Emmanuel",
+          "description": "Ed Archer"
+        },
+        {
+          "title": "Communion Songs",
+          "composer": "In Days to Come",
+          "description": "Sarah Hart"
+        },
+        {
+          "title": "Advent",
+          "composer": "Bethlehem (House of Bread)",
+          "description": "Alan J. Hommerding • Ed Bolduc"
+        },
+        {
+          "title": "Advent",
+          "composer": "Waiting in Silence",
+          "description": "Carey Landry"
+        }
+      ],
+      "sending": {
+        "title": "BEACH SPRING • Marty Haugen",
+        "composer": "Description"
+      }
+    },
+    {
+      "community": "Elevations",
+      "communityId": "elevations",
+      "date": "Year A — Nov 30, 2025 (Sun)",
+      "presider": "\"Fr. David Guffey, CSC\"",
+      "prelude": {
+        "title": "N/A"
+      },
+      "penitentialAct": {
+        "title": "Bob Hurd",
+        "composer": "Entrance Antiphon",
+        "description": "Penitential Act"
+      },
+      "gloria": {
+        "title": "Warm the Time of WInter",
+        "composer": "Lori True",
+        "description": "Gloria"
+      },
+      "gospelAcclamation": {
+        "title": "Spirit & Psalm • Sarah Hart",
+        "composer": "Gospel Acclamation",
+        "verse": "Hallelujah, Hallelu!"
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "Dwell in the Midst of Us",
+        "composer": "Jeffrey Bonilla & David Lockwood"
+      },
+      "lordsPrayer": {
+        "title": "Eucharistic Acclamations",
+        "composer": "Mass of the Incarnate Word",
+        "description": "Bob Hurd , Arr. by Lockwood"
+      },
+      "fractionRite": {
+        "title": "Holy",
+        "composer": "Mystery of Faith",
+        "description": "Amen"
+      },
+      "communionSongs": [
+        {
+          "title": "The Lord's Prayer",
+          "composer": "Chanted Our Father (Snow)",
+          "description": "Jennings • Paregorius"
+        },
+        {
+          "title": "Fraction Rite",
+          "composer": "Advent Lamb of God",
+          "description": "Jeffrey Bonilla"
+        },
+        {
+          "title": "Communion Songs",
+          "composer": "Jesus, Hope of The World",
+          "description": "Paul Tate"
+        },
+        {
+          "title": "Advent",
+          "composer": "Glory (Let There Be Peace)",
+          "description": "Matt Maher"
+        },
+        {
+          "title": "Description",
+          "composer": "Bethlehem (House of Bread)",
+          "description": "Alan J. Hommerding · Ed Bolduc"
+        }
+      ],
+      "sending": {
+        "title": "Sending Song",
+        "composer": "Awake To The Day",
+        "description": "Ed Bolduc"
+      }
+    }
+  ]
+}

@@ -1,0 +1,425 @@
+{
+  "id": "ordinary-time-04-a",
+  "name": "ORDINARY TIME 04 [A]",
+  "year": "A",
+  "season": "ordinary",
+  "seasonLabel": "Ordinary Time",
+  "seasonOrder": 4,
+  "dates": [
+    {
+      "date": "2023-01-29",
+      "label": "Year A — Jan 29, 2023 (Sun)",
+      "dayOfWeek": "Sun"
+    },
+    {
+      "date": "2035-01-28",
+      "label": "Year A — Jan 28, 2035 (Sun)",
+      "dayOfWeek": "Sun"
+    },
+    {
+      "date": "2032-02-01",
+      "label": "Year A — Feb 01, 2032 (Sun)",
+      "dayOfWeek": "Sun"
+    },
+    {
+      "date": "2029-01-28",
+      "label": "Year A — Jan 28, 2029 (Sun)",
+      "dayOfWeek": "Sun"
+    },
+    {
+      "date": "2026-02-01",
+      "label": "Year A — Feb 01, 2026 (Sun)",
+      "dayOfWeek": "Sun"
+    }
+  ],
+  "lectionary": {
+    "number": "070•A",
+    "gospelTitle": "Beatitudes",
+    "thematicTag": "Sermon Mount 1/6"
+  },
+  "readings": [
+    {
+      "type": "first",
+      "citation": "Zep 2:3; 3:12-13",
+      "summary": "The remnant of Israel will take refuge in the Lord."
+    },
+    {
+      "type": "psalm",
+      "citation": "Ps 146:6-7, 8-9, 9-10, R. Mt 5:3\nBlessed the poor in spirit; the kingdom of heaven is theirs!",
+      "summary": "",
+      "antiphon": "Ps 146:6-7, 8-9, 9-10, R. Mt 5:3\nBlessed the poor in spirit; the kingdom of heaven is theirs!"
+    },
+    {
+      "type": "second",
+      "citation": "1 Cor 1:26-31",
+      "summary": "The Lord chooses the lowly."
+    },
+    {
+      "type": "gospel_verse",
+      "citation": "Mt 5:12a",
+      "summary": "Rejoice and be glad;\nyour reward will be great in heaven."
+    },
+    {
+      "type": "gospel",
+      "citation": "Mt 5:1-12a",
+      "summary": "The Beatitudes."
+    }
+  ],
+  "antiphons": [
+    {
+      "type": "entrance",
+      "option": 1,
+      "citation": "Ps 106 (105):47",
+      "text": "Save us, O Lord our God!\nAnd gather us from the nations,\nto give thanks to your holy name,\nand make it our glory to praise you."
+    },
+    {
+      "type": "communion",
+      "option": 1,
+      "citation": "Cf. Ps 31 (30):17–18",
+      "text": "Let your face shine on your servant.\nSave me in your merciful love.\nO Lord, let me never be put to shame, for I call on you."
+    },
+    {
+      "type": "communion",
+      "option": 2,
+      "citation": "Communion Antiphon • Option II | Mt 5:3–4",
+      "text": "Blessed are the poor in spirit,\nfor theirs is the Kingdom of Heaven.\nBlessed are the meek, for they shall possess the land."
+    }
+  ],
+  "planningNotes": [
+    "FEB - Black History Month"
+  ],
+  "musicPlans": [
+    {
+      "community": "Reflections",
+      "communityId": "reflections",
+      "date": "Year A — Jan 31, 2026 (Sat)",
+      "presider": "Fr. Thomas Park",
+      "gathering": {
+        "title": "All Are Welcome (Vss 1, 2, 4)",
+        "composer": "TWO OAKS • Marty Haugen",
+        "description": "General / Vs 4 -\"...Here the outcast and the stranger...\""
+      },
+      "penitentialAct": {
+        "title": "Kyrie • Misa Del Mundo",
+        "composer": "Jesse Manibusan"
+      },
+      "gloria": {
+        "title": "Glory to God (Through-composed Setting)",
+        "composer": "Mass of Renewal • Curtis Stephan"
+      },
+      "responsorialPsalm": {
+        "psalm": "Ps 146 Blessed the poor in spirit...",
+        "setting": "The Lyric Psalter • Tony Alonso & Marty Haugen"
+      },
+      "gospelAcclamation": {
+        "title": "Alleluia (Mass of Joy & Peace)",
+        "composer": "The Lyric Gospel Acclamations • Tony Alonso",
+        "verse": "Rejoice and be glad;\nyour reward will be great in heaven."
+      },
+      "offertory": {
+        "title": "We Are the Light of the World",
+        "composer": "Jean Anthony Greif (Traditional Arrangement)",
+        "description": "Beattitudes • Together In Mission"
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "Mass for the Healing of the World",
+        "composer": "Trevor Thomson"
+      },
+      "lordsPrayer": {
+        "title": "Chanted Our Father (Snow)",
+        "composer": "Jennings/Paregorius"
+      },
+      "fractionRite": {
+        "title": "Lamb of God (Mass for the Healing of the World)",
+        "composer": "Trevor Thomson"
+      },
+      "communionSongs": [
+        {
+          "title": "Be Not Afraid",
+          "composer": "Bob Dufford, SJ",
+          "description": "Comm Ant / Gospel (Beatitudes Verse)"
+        },
+        {
+          "title": "Jesus, Living Bread",
+          "composer": "Tom Booth",
+          "description": "\"...source of endless love, Mercy’s hope unfurled...\""
+        },
+        {
+          "title": "What You Have Done for Me",
+          "composer": "Tony Alonso",
+          "description": "\"Come all you blessed, come and rejoice...\""
+        }
+      ],
+      "sending": {
+        "title": "They'll Know We Are Christians",
+        "composer": "Peter Scholtes • Arr. Mark Hayes",
+        "description": "OCP Arrangement"
+      }
+    },
+    {
+      "community": "Foundations",
+      "communityId": "foundations",
+      "date": "Year A — Feb 01, 2026 (Sun)",
+      "presider": "Fr. Eusebio Llonoso",
+      "gathering": {
+        "title": "All Who Enter Here",
+        "composer": "John Angotti • Dan Houze",
+        "description": "\"...God’s loving mercy…the stranger in this land…”"
+      },
+      "penitentialAct": {
+        "title": "Kyrie (Gift of God) • Adapted Version",
+        "composer": "Marty Haugen • Arranged by David Locwood"
+      },
+      "gloria": {
+        "title": "Mass of Joy & Peace (Gospel Version)",
+        "composer": "Tony Alonso • Arrangement by David Lockwood"
+      },
+      "responsorialPsalm": {
+        "psalm": "Ps 146 Blessed the poor in spirit...",
+        "setting": "Spirit & Psalm • Mary Kate Westrich"
+      },
+      "gospelAcclamation": {
+        "title": "Alleluia! Give the Glory (Mass of Glory)",
+        "composer": "Bob Hurd •  Ken Canedo • Craig Kingsbury",
+        "verse": "Rejoice and be glad;\nyour reward will be great in heaven."
+      },
+      "offertory": {
+        "title": "Where Your Treasure Is",
+        "composer": "Mary Haugen",
+        "description": "Gospel Reading"
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "Mass of Glory"
+      },
+      "lordsPrayer": {
+        "title": "Chanted Our Father (Snow)",
+        "composer": "Jennings • Paregorius"
+      },
+      "fractionRite": {
+        "title": "Lamb of God (Mass of Glory)"
+      },
+      "communionSongs": [
+        {
+          "title": "Be Not Afraid",
+          "composer": "Bob Dufford, SJ",
+          "description": "Comm Ant / Gospel (Beatitudes Verse)"
+        },
+        {
+          "title": "Jesus, Living Bread",
+          "composer": "Tom Booth",
+          "description": "\"...source of endless love, Mercy’s hope unfurled...\""
+        }
+      ],
+      "sending": {
+        "title": "As Christ to the World",
+        "composer": "Tom Kendzia",
+        "description": "\"Called to love one another, as Christ to the World\""
+      }
+    },
+    {
+      "community": "Generations",
+      "communityId": "generations",
+      "date": "Year A — Feb 01, 2026 (Sun)",
+      "presider": "Msgr. Lloyd Torgerson",
+      "gathering": {
+        "title": "All Who Enter Here",
+        "composer": "John Angotti • Dan Houze",
+        "description": "\"...God’s loving mercy…the stranger in this land…”"
+      },
+      "penitentialAct": {
+        "title": "Kyrie • Misa Del Mundo",
+        "composer": "Jesse Manibusan"
+      },
+      "gloria": {
+        "title": "Glory, Glory, Gloria!",
+        "composer": "Bonilla & Wilson • Vocal Arr. by Lockwood & Phan"
+      },
+      "responsorialPsalm": {
+        "psalm": "Ps 146 Blessed the poor in spirit...",
+        "setting": "Spirit & Psalm • Mary Kate Westrich"
+      },
+      "gospelAcclamation": {
+        "title": "Hallelujah (adapted for Liturgy)",
+        "composer": "Leonard Cohen",
+        "verse": "Rejoice and be glad;\nyour reward will be great in heaven."
+      },
+      "offertory": {
+        "title": "Hold on to Love",
+        "composer": "Jesse Manibusan",
+        "description": "\"acts of compassion restore us\""
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "Mass of St. Anne",
+        "composer": "Ed Bolduc"
+      },
+      "lordsPrayer": {
+        "title": "Echo Our Father",
+        "composer": "Jerome Andrews • Arranged by Dan Houze"
+      },
+      "fractionRite": {
+        "title": "Lamb of God (Mass of Holy Cross)",
+        "composer": "David Clark Isele"
+      },
+      "communionSongs": [
+        {
+          "title": "Be Not Afraid",
+          "composer": "Bob Dufford, SJ",
+          "description": "Comm Ant / Gospel (Beatitudes Verse)"
+        },
+        {
+          "title": "Caminemos con Jesús",
+          "composer": "Tony Alonso",
+          "description": "\"With the ones the world has turned away...\""
+        },
+        {
+          "title": "Jesus, Living Bread",
+          "composer": "Tom Booth",
+          "description": "\"...source of endless love, Mercy’s hope unfurled...\""
+        },
+        {
+          "title": "Simple Kingdom",
+          "composer": "Bryan & Katie Torwaltwith with Cody Carnes",
+          "description": "Sermon on the Mount"
+        }
+      ],
+      "sending": {
+        "title": "Act Justly, Love Mercy, Walk Humbly",
+        "composer": "Pat Barrett",
+        "description": "...love my neighbor as myself...good news to all the world..."
+      }
+    },
+    {
+      "community": "Heritage",
+      "communityId": "heritage",
+      "date": "Year A — Feb 01, 2026 (Sun)",
+      "presider": "\"Fr. David Guffey, CSC\"",
+      "gathering": {
+        "title": "All Are Welcome (Vss 1, 2, 4)",
+        "composer": "TWO OAKS • Marty Haugen",
+        "description": "General / Vs 4 -\"...Here the outcast and the stranger...\""
+      },
+      "penitentialAct": {
+        "title": "Kyrie • Misa Del Mundo",
+        "composer": "Jesse Manibusan"
+      },
+      "gloria": {
+        "title": "Glory to God (Mass of Christ the Savior)",
+        "composer": "Dan Schutte"
+      },
+      "responsorialPsalm": {
+        "psalm": "Ps 146 Blessed the poor in spirit...",
+        "setting": "The Lyric Psalter • Tony Alonso & Marty Haugen"
+      },
+      "gospelAcclamation": {
+        "title": "Alleluia (Mass of Joy & Peace)",
+        "composer": "The Lyric Gospel Acclamations • Tony Alonso",
+        "verse": "Rejoice and be glad;\nyour reward will be great in heaven."
+      },
+      "offertory": {
+        "title": "The Road of Mercy",
+        "composer": "Maureen Briare",
+        "description": "\"how can we serve as hope...\""
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "Mass of Joy & Peace",
+        "composer": "Tony Alonso"
+      },
+      "lordsPrayer": {
+        "title": "Chanted Our Father (Snow)",
+        "composer": "Jennings/Paregorius"
+      },
+      "fractionRite": {
+        "title": "Lamb of God (Mass of Joy & Peace)",
+        "composer": "Tony Alonso"
+      },
+      "communionSongs": [
+        {
+          "title": "The Supper of the Lord",
+          "composer": "Laurence Rosania",
+          "description": "\"Bread of Love is broken now...\""
+        },
+        {
+          "title": "What You Have Done for Me",
+          "composer": "Tony Alonso",
+          "description": "\"Come all you blessed, come and rejoice...\""
+        },
+        {
+          "title": "We Are the Light of the World",
+          "composer": "Jean Anthony Greif",
+          "description": "Beattitudes - Breaking Bread Arrangement"
+        }
+      ],
+      "sending": {
+        "title": "In Christ There Is No East or West",
+        "composer": "William A. Dunkerley",
+        "description": "Black History Month"
+      }
+    },
+    {
+      "community": "Elevations",
+      "communityId": "elevations",
+      "date": "Year A — Feb 01, 2026 (Sun)",
+      "presider": "Fr. Vince Kuna",
+      "gathering": {
+        "title": "All Who Enter Here",
+        "composer": "John Angotti • Dan Houze",
+        "description": "\"...God’s loving mercy…the stranger in this land…”"
+      },
+      "penitentialAct": {
+        "title": "Kyrie (Misa Del Mundo)",
+        "composer": "Jesse Manibusan — If needed."
+      },
+      "gloria": {
+        "title": "Glory, Glory, Gloria! (Mass of the Setting Sun)",
+        "composer": "Bonilla & Wilson • Vocal Arr. by Lockwood & Phan"
+      },
+      "responsorialPsalm": {
+        "psalm": "Ps 146 Blessed the poor in spirit...",
+        "setting": "Spirit & Psalm • Mary Kate Westrich"
+      },
+      "gospelAcclamation": {
+        "title": "Hallelujah (adapted for Liturgy)",
+        "composer": "Leonard Cohen",
+        "verse": "Rejoice and be glad;\nyour reward will be great in heaven."
+      },
+      "offertory": {
+        "title": "Simple Kingdom",
+        "composer": "Bryan & Katie Torwaltwith with Cody Carnes",
+        "description": "\"Your kingdom is humble as humble as death\""
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "Mass of Communion (Lower Key)",
+        "composer": "Matt Maher"
+      },
+      "lordsPrayer": {
+        "title": "Echo Our Father",
+        "composer": "Andrews • Arr. by Bonilla • Lockwood • Fajardo"
+      },
+      "fractionRite": {
+        "title": "Lamb of God (Mass of Holy Cross)",
+        "composer": "David Clark Isele"
+      },
+      "communionSongs": [
+        {
+          "title": "Be Not Afraid",
+          "composer": "Bob Dufford, SJ",
+          "description": "Comm Ant / Gospel (Beatitudes Verse)"
+        },
+        {
+          "title": "Caminemos con Jesús",
+          "composer": "Tony Alonso",
+          "description": "\"With the ones the world has turned away...\""
+        },
+        {
+          "title": "This Is the Kingdom",
+          "composer": "Elevation Worship • Pat Barrett • Arr. by E. Fajardo"
+        }
+      ],
+      "sending": {
+        "title": "Act Justly, Love Mercy, Walk Humbly",
+        "composer": "Pat Barrett",
+        "description": "...love my neighbor as myself...good news to all the world..."
+      }
+    }
+  ]
+}

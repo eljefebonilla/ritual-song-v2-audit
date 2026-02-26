@@ -1,0 +1,98 @@
+{
+  "id": "year-c-nov-27-2025-thu",
+  "name": "Year C — Nov 27, 2025 (Thu)",
+  "year": "ABC",
+  "season": "ordinary",
+  "seasonLabel": "Ordinary Time",
+  "seasonOrder": 27,
+  "dates": [],
+  "lectionary": {
+    "number": "Year B — Nov 28, 2030 (Thu)",
+    "gospelTitle": "Year A — Nov 22, 2029 (Thu)",
+    "thematicTag": "Year C — Nov 23, 2028 (Thu)",
+    "thematicDetail": "Year B — Nov 25, 2027 (Thu)"
+  },
+  "readings": [],
+  "antiphons": [],
+  "planningNotes": [],
+  "musicPlans": [
+    {
+      "community": "Generations",
+      "communityId": "generations",
+      "date": "Year C — Nov 23, 2025 (Sun)",
+      "presider": "Msgr. Lloyd Torgerson",
+      "prelude": {
+        "title": "N/A"
+      },
+      "penitentialAct": {
+        "title": "Jesse Manibusan",
+        "composer": "Gather in gratitude!",
+        "description": "Penitential Act"
+      },
+      "gloria": {
+        "title": "Kyrie • Misa Del Mundo",
+        "composer": "Only if needed. Talk to presider!",
+        "description": "Gloria"
+      },
+      "gospelAcclamation": {
+        "title": "Collection • Composer",
+        "composer": "Gospel Acclamation",
+        "verse": "Hallelujah"
+      },
+      "offertory": {
+        "title": "Verse by Gary Denk",
+        "description": "Offertory Song"
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "Give Thanks With A Grateful Heart",
+        "composer": "Henry Smith • Arr. Joel Mott"
+      },
+      "lordsPrayer": {
+        "title": "Eucharistic Acclamations",
+        "composer": "Mass of Restoration",
+        "description": "Joshua Blakesley"
+      },
+      "fractionRite": {
+        "title": "Holy, Holy, Holy",
+        "composer": "Save Us Savior of the World",
+        "description": "Amen"
+      },
+      "communionSongs": [
+        {
+          "title": "The Lord's Prayer",
+          "composer": "(Echo) Our Father",
+          "description": "Jerome Andrews • Arranged by Dan Houze"
+        },
+        {
+          "title": "Fraction Rite",
+          "composer": "Lamb of God (Resoration)"
+        },
+        {
+          "title": "Communion Songs",
+          "composer": "The Feast Meant for Everyone",
+          "description": "Tom Booth & Sarah Hart"
+        },
+        {
+          "title": "Table Song",
+          "composer": "A Place At Your Table",
+          "description": "Ben Walther"
+        },
+        {
+          "title": "\"the saint and the sinner, your friends\"",
+          "composer": "Song Title",
+          "description": "TUNE • Author • Arr."
+        },
+        {
+          "title": "Notes",
+          "composer": "Song Title",
+          "description": "TUNE • Author • Arr."
+        }
+      ],
+      "sending": {
+        "title": "Song Title",
+        "composer": "TUNE • Author • Arr.",
+        "description": "Notes"
+      }
+    }
+  ]
+}

@@ -1,0 +1,84 @@
+{
+  "id": "solemnity-immaculate-conception",
+  "name": "Solemnity\nIMMACULATE CONCEPTION",
+  "year": "ABC",
+  "season": "solemnity",
+  "seasonLabel": "Solemnity",
+  "seasonOrder": 0,
+  "dates": [
+    {
+      "date": "2025-12-08",
+      "label": "Year A — Dec 08, 2025 (Mon)",
+      "dayOfWeek": "Mon"
+    },
+    {
+      "date": "2029-12-08",
+      "label": "Year B — Dec 08, 2029 (Sat)",
+      "dayOfWeek": "Sat"
+    },
+    {
+      "date": "2028-12-08",
+      "label": "Year A — Dec 08, 2028 (Fri)",
+      "dayOfWeek": "Fri"
+    },
+    {
+      "date": "2027-12-08",
+      "label": "Year C — Dec 08, 2027 (Wed)",
+      "dayOfWeek": "Wed"
+    },
+    {
+      "date": "2026-12-08",
+      "label": "Year B — Dec 08, 2026 (Tue)",
+      "dayOfWeek": "Tue"
+    }
+  ],
+  "lectionary": {
+    "number": "689•ABC",
+    "gospelTitle": "Hail, Full of Grace",
+    "thematicTag": "Full of Grace"
+  },
+  "readings": [
+    {
+      "type": "first",
+      "citation": "Verse",
+      "summary": "Text"
+    },
+    {
+      "type": "psalm",
+      "citation": "Responsorial Psalm Verse and Text",
+      "summary": "",
+      "antiphon": "Responsorial Psalm Verse and Text"
+    },
+    {
+      "type": "second",
+      "citation": "Verse",
+      "summary": "Text"
+    },
+    {
+      "type": "gospel_verse",
+      "citation": "Verse",
+      "summary": "Text"
+    },
+    {
+      "type": "gospel",
+      "citation": "Verse",
+      "summary": "Text"
+    }
+  ],
+  "antiphons": [
+    {
+      "type": "entrance",
+      "option": 1,
+      "citation": "Verse",
+      "text": "Text"
+    },
+    {
+      "type": "communion",
+      "option": 1,
+      "citation": "Verse",
+      "text": "Text"
+    }
+  ],
+  "planningNotes": [],
+  "musicPlans": []
+}

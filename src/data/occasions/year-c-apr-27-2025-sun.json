@@ -1,0 +1,424 @@
+{
+  "id": "year-c-apr-27-2025-sun",
+  "name": "Year C — Apr 27, 2025 (Sun)",
+  "year": "ABC",
+  "season": "ordinary",
+  "seasonLabel": "Ordinary Time",
+  "seasonOrder": 27,
+  "dates": [],
+  "lectionary": {
+    "number": "Year C — Apr 08, 2040 (Sun)",
+    "gospelTitle": "Year C — Apr 12, 2037 (Sun)",
+    "thematicTag": "Year C — Apr 16, 2034 (Sun)",
+    "thematicDetail": "Year C — Apr 20, 2031 (Sun)"
+  },
+  "readings": [
+    {
+      "type": "psalm",
+      "citation": "Res Appearance 2/3",
+      "summary": "",
+      "antiphon": "Planning Reminders"
+    },
+    {
+      "type": "second",
+      "citation": "DIVINE MERCY SUNDAY",
+      "summary": ""
+    },
+    {
+      "type": "gospel_verse",
+      "citation": "Like newborn infants, you must long for the pure,\nspiritual milk, that in him you may grow to salvation, alleluia.",
+      "summary": "Entrance Antiphon • Option II | 4 Esdr 2:36–37"
+    },
+    {
+      "type": "gospel",
+      "citation": "Reading I | Acts 5:12-16",
+      "summary": "The Apostles perform many signs."
+    }
+  ],
+  "antiphons": [
+    {
+      "type": "entrance",
+      "option": 1,
+      "citation": "Verse before the Gospel | Jn 20:29",
+      "text": "You believe in me, Thomas,\nbecause you have seen me, says the Lord;\nblessed are those who have not seen me, but still believe!"
+    },
+    {
+      "type": "communion",
+      "option": 2,
+      "citation": "Communion Antiphon | Jn 20:27",
+      "text": "Bring your hand and feel the place of the nails,\nand do not be unbelieving but believing, alleluia."
+    }
+  ],
+  "planningNotes": [
+    "Communion Antiphon • Option II",
+    "N/A"
+  ],
+  "musicPlans": [
+    {
+      "community": "Reflections",
+      "communityId": "reflections",
+      "date": "Year C — Apr 22, 2028 (Sat)",
+      "presider": "NOT THIS YEAR",
+      "prelude": {
+        "title": "Regina Caeli / O Queen of Heaven",
+        "composer": "Mode VI Latin • 12th C",
+        "description": "Pope Leo XIV singing Regina Caeli"
+      },
+      "penitentialAct": {
+        "title": "Curtis Stephan • Based on Laudato Si",
+        "composer": "Earth Month • Pope Francis",
+        "description": "Penitential Act"
+      },
+      "gloria": {
+        "title": "Kyrie • Misa Del Mundo",
+        "composer": "Only if needed. Talk to presider!",
+        "description": "Gloria"
+      },
+      "gospelAcclamation": {
+        "title": "The Lyric Psalter • Tony Alonso & Marty Haugen",
+        "composer": "Gospel Acclamation",
+        "verse": "Easter Alleluia (Refrain)"
+      },
+      "offertory": {
+        "title": "Verse - EASTER • 2 | ABC",
+        "description": "Offertory Song"
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "We Walk By Faith",
+        "composer": "Marty Haugen  • Arranged by David Lockwood"
+      },
+      "lordsPrayer": {
+        "title": "Eucharistic Acclamations",
+        "composer": "Mass of the Holy Family",
+        "description": "Chris de Silva"
+      },
+      "fractionRite": {
+        "title": "Holy, Holy, Holy",
+        "composer": "When We Eat This Bread",
+        "description": "Amen"
+      },
+      "communionSongs": [
+        {
+          "title": "The Lord's Prayer",
+          "composer": "Chanted Our Father (Snow)",
+          "description": "Jennings/Paregorius"
+        },
+        {
+          "title": "Fraction Rite",
+          "composer": "Lamb of God (Mass of the Holy Family)",
+          "description": "Chris de Silva"
+        },
+        {
+          "title": "Communion Songs",
+          "composer": "God of Mercy",
+          "description": "Rick Manalo, CSP &  Bob Hurd"
+        },
+        {
+          "title": "Mercy Sunday",
+          "composer": "Song Title",
+          "description": "Composer/s"
+        }
+      ]
+    },
+    {
+      "community": "Foundations",
+      "communityId": "foundations",
+      "date": "Year C — Apr 23, 2028 (Sun)",
+      "presider": "NOT THIS YEAR",
+      "prelude": {
+        "title": "Regina Caeli / O Queen of Heaven",
+        "composer": "Mode VI Latin • 12th C",
+        "description": "Pope Leo XIV singing Regina Caeli"
+      },
+      "penitentialAct": {
+        "title": "Curtis Stephan • Based on Laudato Si",
+        "composer": "Earth Month • Popel Francis",
+        "description": "Penitential Act"
+      },
+      "gloria": {
+        "title": "Kyrie (Gift of God) • Adapted Version",
+        "composer": "Marty Haugen • Arranged by David Locwood",
+        "description": "Gloria"
+      },
+      "gospelAcclamation": {
+        "title": "Spirit & Psalm • Tom Kendzia",
+        "composer": "Gospel Acclamation",
+        "verse": "Easter Alleluia (Refrain)"
+      },
+      "offertory": {
+        "title": "Verse - EASTER • 2 | ABC",
+        "description": "Offertory Song"
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "We Walk By Faith",
+        "composer": "Marty Haugen • Original Arrangement"
+      },
+      "lordsPrayer": {
+        "title": "Eucharistic Acclamations",
+        "composer": "Mass of Glory",
+        "description": "Bob Hurd & Ken Canedo"
+      },
+      "fractionRite": {
+        "title": "Holy, Holy",
+        "composer": "We Proclaim Your Death",
+        "description": "Amen"
+      },
+      "communionSongs": [
+        {
+          "title": "The Lord's Prayer",
+          "composer": "Chanted Our Father (Snow)",
+          "description": "Jennings • Paregorius"
+        },
+        {
+          "title": "Fraction Rite",
+          "composer": "Lamb of God (Mass of Glory)",
+          "description": "Bob Hurd & Ken Canedo"
+        },
+        {
+          "title": "Communion Songs",
+          "composer": "Jesus, Living Bread",
+          "description": "Tom Booth"
+        },
+        {
+          "title": "“Have mercy on me, Lord…Help my unbelief…”",
+          "composer": "Prayer of St Francis",
+          "description": "Sebastian Temple • Arranged by Ed Archer"
+        }
+      ],
+      "sending": {
+        "title": "HYFRYDOL • Pritchard • Wesley",
+        "composer": "Gospel"
+      }
+    },
+    {
+      "community": "Generations",
+      "communityId": "generations",
+      "date": "Year C — Apr 23, 2028 (Sun)",
+      "presider": "NOT THIS YEAR",
+      "prelude": {
+        "title": "Regina Caeli / O Queen of Heaven",
+        "composer": "Mode VI Latin • 12th C",
+        "description": "Pope Leo XIV singing Regina Caeli"
+      },
+      "penitentialAct": {
+        "title": "Curtis Stephan • Based on Laudato Si",
+        "composer": "Earth Month • Popel Francis",
+        "description": "Penitential Act"
+      },
+      "gloria": {
+        "title": "Kyrie • Misa Del Mundo",
+        "composer": "Only if needed. Talk to presider!",
+        "description": "Gloria"
+      },
+      "gospelAcclamation": {
+        "title": "Spirit & Psalm • Tom Kendzia",
+        "composer": "Gospel Acclamation",
+        "verse": "Easter Alleluia (Refrain)"
+      },
+      "offertory": {
+        "title": "E•2 | ABC — \"You believe in me, Thomas...\"",
+        "description": "Offertory Song"
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "Give Me Ears to Listen",
+        "composer": "Timothy R. Smith"
+      },
+      "lordsPrayer": {
+        "title": "Eucharistic Acclamations",
+        "composer": "Mass of Glory",
+        "description": "Bob Hurd • Arr. by Dan Houze"
+      },
+      "fractionRite": {
+        "title": "Holy",
+        "composer": "Mystery of Faith",
+        "description": "Amen"
+      },
+      "communionSongs": [
+        {
+          "title": "The Lord's Prayer",
+          "composer": "(Echo) Our Father",
+          "description": "Jerome Andrews • Arranged by Dan Houze"
+        },
+        {
+          "title": "Fraction Rite",
+          "composer": "Lamb of God (Mass of Glory)"
+        },
+        {
+          "title": "Communion Songs",
+          "composer": "Jesus, Living Bread",
+          "description": "Tom Booth"
+        },
+        {
+          "title": "“Have mercy on me, Lord…Help my unbelief…”",
+          "composer": "We Walk By Faith",
+          "description": "Marty Haugen • Arranged by David Lockwood"
+        },
+        {
+          "title": "Gospel: \"We may not touch his hands and side...\"",
+          "composer": "Jesus I Trust In You",
+          "description": "Josh Blakesley • Sarah Kroger • Sarah Hart"
+        },
+        {
+          "title": "Inspired by the Chaplet of Divine Mercy",
+          "composer": "Prayer of St Francis",
+          "description": "Sebastian Temple • Arranged by Ed Archer"
+        }
+      ],
+      "sending": {
+        "title": "Our New Day",
+        "composer": "Sarah Hart",
+        "description": "\"Mercy makes a way, this is our new day\""
+      }
+    },
+    {
+      "community": "Heritage",
+      "communityId": "heritage",
+      "date": "Year C — Apr 23, 2028 (Sun)",
+      "presider": "NOT THIS YEAR",
+      "prelude": {
+        "title": "Regina Caeli / O Queen of Heaven",
+        "composer": "Mode VI Latin • 12th C",
+        "description": "Pope Leo XIV singing Regina Caeli"
+      },
+      "penitentialAct": {
+        "title": "Curtis Stephan • Based on Laudato Si",
+        "composer": "Earth Month • Popel Francis",
+        "description": "Penitential Act"
+      },
+      "gloria": {
+        "title": "N/A",
+        "description": "Gloria"
+      },
+      "gospelAcclamation": {
+        "title": "The Lyric Psalter • Tony Alonso & Marty Haugen",
+        "composer": "Gospel Acclamation",
+        "verse": "Easter Alleluia (Refrain)"
+      },
+      "offertory": {
+        "title": "E•2 | ABC — \"You believe in me, Thomas...\"",
+        "description": "Offertory Song"
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "Now the Green Blade Rises",
+        "composer": "NOEL NOUVELET • John M.C. Crum"
+      },
+      "lordsPrayer": {
+        "title": "Eucharistic Acclamations",
+        "composer": "Mass of Joy & Peace",
+        "description": "Tony Alonso"
+      },
+      "fractionRite": {
+        "title": "Holy, Holy, Holy",
+        "composer": "When We Eat This Bread",
+        "description": "Amen"
+      },
+      "communionSongs": [
+        {
+          "title": "The Lord's Prayer",
+          "composer": "Chanted Our Father (Snow)",
+          "description": "Jennings/Paregorius"
+        },
+        {
+          "title": "Fraction Rite",
+          "composer": "Lamb of God (Mass of Joy & Peace)",
+          "description": "Tony Alonso"
+        },
+        {
+          "title": "Communion Songs",
+          "composer": "God of Mercy",
+          "description": "Rick Manalo, CSP &  Bob Hurd"
+        },
+        {
+          "title": "Mercy Sunday",
+          "composer": "We Walk By Faith",
+          "description": "Marty Haugen • Original Arrangement"
+        },
+        {
+          "title": "Gospel: \"We may not touch his hands and side...\"",
+          "composer": "Prayer of St Francis",
+          "description": "Sebastian Temple • Arranged by Ed Archer"
+        }
+      ],
+      "sending": {
+        "title": "HYFRYDOL • Rowland Pritchard • Charles Wesley",
+        "composer": "Gospel"
+      }
+    },
+    {
+      "community": "Elevations",
+      "communityId": "elevations",
+      "date": "Year C — Apr 23, 2028 (Sun)",
+      "presider": "NOT THIS YEAR",
+      "prelude": {
+        "title": "Regina Caeli / O Queen of Heaven",
+        "composer": "Mode VI Latin • 12th C",
+        "description": "Pope Leo XIV singing Regina Caeli"
+      },
+      "penitentialAct": {
+        "title": "Curtis Stephan • Based on Laudato Si",
+        "composer": "Earth Month • Popel Francis",
+        "description": "Penitential Act"
+      },
+      "gloria": {
+        "title": "Kyrie (Misa Del Mundo)",
+        "composer": "Jesse Manibusan — If needed.",
+        "description": "Gloria"
+      },
+      "gospelAcclamation": {
+        "title": "Spirit & Psalm • Tom Kendzia",
+        "composer": "Gospel Acclamation",
+        "verse": "Easter Alleluia (Refrain)"
+      },
+      "offertory": {
+        "title": "E•2 | ABC — \"You believe in me, Thomas...\"",
+        "description": "Offertory Song"
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "We Walk By Faith",
+        "composer": "Marty Haugen  • Arranged by David Lockwood"
+      },
+      "lordsPrayer": {
+        "title": "Eucharistic Acclamations",
+        "composer": "Mass of Restoration",
+        "description": "Joshua Blakesley"
+      },
+      "fractionRite": {
+        "title": "Holy, Holy, Holy",
+        "composer": "Save Us Savior of the World",
+        "description": "Amen"
+      },
+      "communionSongs": [
+        {
+          "title": "The Lord's Prayer",
+          "composer": "Echo Our Father",
+          "description": "Andrews, Arr. Bonilla • Lockwood • Fajardo"
+        },
+        {
+          "title": "Fraction Rite",
+          "composer": "Lamb of God (Mass of Restoration)",
+          "description": "Joshua Blakesley"
+        },
+        {
+          "title": "Communion Songs",
+          "composer": "Jesus, Living Bread",
+          "description": "Tom Booth"
+        },
+        {
+          "title": "“Have mercy on me, Lord…Help my unbelief…”",
+          "composer": "Jesus I Trust In You",
+          "description": "Sarah Hart • Josh Blakesley • Sarah Kroger"
+        },
+        {
+          "title": "Inspired by the Chaplet of Divine Mercy",
+          "composer": "Prayer of St Francis",
+          "description": "Sebastian Temple • Arranged by Ed Archer"
+        }
+      ],
+      "sending": {
+        "title": "Sending Song",
+        "composer": "Our New Day",
+        "description": "Sarah Hart"
+      }
+    }
+  ]
+}

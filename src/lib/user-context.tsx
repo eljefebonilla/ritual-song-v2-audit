@@ -1,0 +1,155 @@
+"use client";
+
+import {
+  createContext,
+  useContext,
+  useState,
+  useEffect,
+  type ReactNode,
+} from "react";
+import { createClient } from "@/lib/supabase/client";
+import type { User } from "@supabase/supabase-js";
+import type { UserRole } from "./grid-types";
+
+interface Profile {
+  id: string;
+  full_name: string;
+  email: string;
+  phone: string | null;
+  voice_part: string | null;
+  instrument: string | null;
+  community_id: string | null;
+  role: UserRole;
+  avatar_url: string | null;
+}
+
+interface UserContextType {
+  role: UserRole;
+  setRole: (role: UserRole) => void;
+  displayName: string;
+  user: User | null;
+  profile: Profile | null;
+  isAuthenticated: boolean;
+  isAdmin: boolean;
+  signOut: () => Promise<void>;
+}
+
+const UserContext = createContext<UserContextType>({
+  role: "member",
+  setRole: () => {},
+  displayName: "Guest",
+  user: null,
+  profile: null,
+  isAuthenticated: false,
+  isAdmin: false,
+  signOut: async () => {},
+});
+
+export function UserProvider({ children }: { children: ReactNode }) {
+  const [user, setUser] = useState<User | null>(null);
+  const [profile, setProfile] = useState<Profile | null>(null);
+  const [roleOverride, setRoleOverride] = useState<UserRole | null>(null);
+  const [loading, setLoading] = useState(true);
+
+  const supabase = createClient();
+
+  useEffect(() => {
+    // Get initial session
+    supabase.auth.getUser().then(({ data: { user } }) => {
+      setUser(user);
+      if (user) {
+        fetchProfile(user.id);
+      }
+      setLoading(false);
+    });
+
+    // Listen for auth changes
+    const {
+      data: { subscription },
+    } = supabase.auth.onAuthStateChange((_event, session) => {
+      const newUser = session?.user ?? null;
+      setUser(newUser);
+      if (newUser) {
+        fetchProfile(newUser.id);
+      } else {
+        setProfile(null);
+        setRoleOverride(null);
+      }
+    });
+
+    return () => subscription.unsubscribe();
+  }, []); // eslint-disable-line react-hooks/exhaustive-deps
+
+  async function fetchProfile(userId: string) {
+    const { data } = await supabase
+      .from("profiles")
+      .select("*")
+      .eq("id", userId)
+      .single();
+    if (data) {
+      setProfile(data as Profile);
+    }
+  }
+
+  async function signOut() {
+    await supabase.auth.signOut();
+    setUser(null);
+    setProfile(null);
+    setRoleOverride(null);
+  }
+
+  // Determine effective role
+  const dbRole = profile?.role ?? "member";
+  const isAdmin = dbRole === "admin";
+  const role: UserRole = roleOverride ?? (user ? dbRole : "member");
+
+  // setRole only works for admins (to preview member view)
+  function setRole(newRole: UserRole) {
+    if (isAdmin) {
+      setRoleOverride(newRole);
+    }
+  }
+
+  const displayName = profile?.full_name ?? (user ? "Member" : "Guest");
+  const isAuthenticated = !!user;
+
+  if (loading) {
+    return (
+      <UserContext.Provider
+        value={{
+          role: "member",
+          setRole: () => {},
+          displayName: "Loading...",
+          user: null,
+          profile: null,
+          isAuthenticated: false,
+          isAdmin: false,
+          signOut: async () => {},
+        }}
+      >
+        {children}
+      </UserContext.Provider>
+    );
+  }
+
+  return (
+    <UserContext.Provider
+      value={{
+        role,
+        setRole,
+        displayName,
+        user,
+        profile,
+        isAuthenticated,
+        isAdmin,
+        signOut,
+      }}
+    >
+      {children}
+    </UserContext.Provider>
+  );
+}
+
+export function useUser() {
+  return useContext(UserContext);
+}

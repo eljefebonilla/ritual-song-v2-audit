@@ -1,0 +1,410 @@
+{
+  "id": "year-a-mar-26-2023-sun",
+  "name": "Year A — Mar 26, 2023 (Sun)",
+  "year": "ABC",
+  "season": "ordinary",
+  "seasonLabel": "Ordinary Time",
+  "seasonOrder": 26,
+  "dates": [],
+  "lectionary": {
+    "number": "Year A — Apr 11, 2038 (Sun)",
+    "gospelTitle": "Year A — Mar 11, 2035 (Sun)",
+    "thematicTag": "Year A — Mar 14, 2032 (Sun)",
+    "thematicDetail": "Year A — Mar 18, 2029 (Sun)"
+  },
+  "readings": [
+    {
+      "type": "psalm",
+      "citation": "Scrutiny 3/3 – New Life",
+      "summary": "",
+      "antiphon": "Planning Reminders"
+    },
+    {
+      "type": "gospel_verse",
+      "citation": "Give me justice, O God,\nand plead my cause against a nation that is faithless.\nFrom the deceitful and cunning rescue me,\nfor you, O God, are my strength.",
+      "summary": "Entrance Antiphon • Option II"
+    },
+    {
+      "type": "gospel",
+      "citation": "Reading I | Ez 37:12-14",
+      "summary": "The Lord promises to raise his people from the dead."
+    }
+  ],
+  "antiphons": [
+    {
+      "type": "entrance",
+      "option": 1,
+      "citation": "Verse before the Gospel | Jn 11:25a, 26",
+      "text": "I am the resurrection and the life, says the Lord;\nwhoever believes in me, even if he dies, will never die."
+    },
+    {
+      "type": "communion",
+      "option": 2,
+      "citation": "Communion Antiphon | For Jn 11:26 (Lazarus)",
+      "text": "Everyone who lives and believes in me\nwill not die for ever, says the Lord."
+    }
+  ],
+  "planningNotes": [
+    "Communion Antiphon • Option II",
+    "N/A"
+  ],
+  "musicPlans": [
+    {
+      "community": "Reflections",
+      "communityId": "reflections",
+      "date": "Year A — Mar 21, 2026 (Sat)",
+      "presider": "TBD",
+      "prelude": {
+        "title": "See Taizé Setlist"
+      },
+      "penitentialAct": {
+        "title": "Gabe Huck • Adapted and Arr. by Tony Alonso",
+        "composer": "Description",
+        "description": "Penitential Act"
+      },
+      "gloria": {
+        "title": "Kyrie (Mass of Colour) — optional tropes",
+        "composer": "Jeffrey Bonilla & David Lockwood",
+        "description": "Gloria"
+      },
+      "gospelAcclamation": {
+        "title": "The Lyric Psalter • Tony Alonso & Marty Haugen",
+        "composer": "Gospel Acclamation",
+        "verse": "Mass of Joy & Peace Lenten G.A. (Refrain)"
+      },
+      "offertory": {
+        "title": "Verse LENT • 05A",
+        "description": "Offertory Song"
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "On Eagle's Wings",
+        "composer": "Michael Joncas • Arranged by David Lockwood"
+      },
+      "lordsPrayer": {
+        "title": "Eucharistic Acclamations",
+        "composer": "Mass of Creation",
+        "description": "Marty Haugen • Arr. by Lockwood & Phan"
+      },
+      "fractionRite": {
+        "title": "Holy",
+        "composer": "Mystery of Faith",
+        "description": "Amen"
+      },
+      "communionSongs": [
+        {
+          "title": "The Lord's Prayer",
+          "composer": "Chanted Our Father (Snow)",
+          "description": "Jennings/Paregorius"
+        },
+        {
+          "title": "Fraction Rite",
+          "composer": "Lamb of God (Mass of Creation)",
+          "description": "Marty Haugen • Arr. by Lockwood & Phan"
+        },
+        {
+          "title": "Communion Songs",
+          "composer": "I Am the Bread of Life",
+          "description": "Sr. Suzanne Toolan RSM"
+        },
+        {
+          "title": "\"...and I will raise you up on the last day.\"",
+          "composer": "Psalm 23: Shepherd Me, O God",
+          "description": "Marty Haugen"
+        }
+      ]
+    },
+    {
+      "community": "Foundations",
+      "communityId": "foundations",
+      "date": "Year A — Mar 22, 2026 (Sun)",
+      "presider": "TBD",
+      "prelude": {
+        "title": "N/A"
+      },
+      "penitentialAct": {
+        "title": "Sr. Suzanne Toolan RSM, Arr. by Dan Houze",
+        "composer": "\"...and I will raise you up on the last day.\"",
+        "description": "Penitential Act"
+      },
+      "gloria": {
+        "title": "Kyrie (Mass of Colour) — optional tropes",
+        "composer": "Jeffrey Bonilla & David Lockwood",
+        "description": "Gloria"
+      },
+      "gospelAcclamation": {
+        "title": "Spirit & Psalm • Jesse Manibusan",
+        "composer": "Gospel Acclamation",
+        "verse": "Praise to You, Lord Jesus Christ"
+      },
+      "offertory": {
+        "title": "Verse - LENT • 05A",
+        "description": "Offertory Song"
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "On Eagle's Wings",
+        "composer": "Michael Joncas • Arranged by David Lockwood"
+      },
+      "lordsPrayer": {
+        "title": "Eucharistic Acclamations",
+        "composer": "Mass of a Firm Foundation",
+        "description": "David Lockwood"
+      },
+      "fractionRite": {
+        "title": "Holy",
+        "composer": "Mystery of Faith",
+        "description": "Amen"
+      },
+      "communionSongs": [
+        {
+          "title": "The Lord's Prayer",
+          "composer": "Chanted Our Father (Snow)",
+          "description": "Jennings • Paregorius"
+        },
+        {
+          "title": "Fraction Rite",
+          "composer": "Lamb of God (Mass of a Firm Foundation)",
+          "description": "David Lockwood"
+        },
+        {
+          "title": "Communion Songs",
+          "composer": "Beyond the Days",
+          "description": "Ricky Manalo, CSP"
+        },
+        {
+          "title": "Description",
+          "composer": "Change Our Hearts",
+          "description": "Rory Cooney"
+        }
+      ],
+      "sending": {
+        "title": "Matt Maher",
+        "composer": "Lenten Sending"
+      }
+    },
+    {
+      "community": "Generations",
+      "communityId": "generations",
+      "date": "Year A — Mar 22, 2026 (Sun)",
+      "presider": "TBD",
+      "prelude": {
+        "title": "N/A"
+      },
+      "penitentialAct": {
+        "title": "Sr. Suzanne Toolan RSM",
+        "composer": "\"...and I will raise you up on the last day.\"",
+        "description": "Penitential Act"
+      },
+      "gloria": {
+        "title": "Kyrie (Mass of Colour) — optional tropes",
+        "composer": "Jeffrey Bonilla & David Lockwood",
+        "description": "Gloria"
+      },
+      "gospelAcclamation": {
+        "title": "Spirit & Psalm • Jesse Manibusan",
+        "composer": "Gospel Acclamation",
+        "verse": "Praise to You, Lord Jesus Christ"
+      },
+      "offertory": {
+        "title": "Verse - LENT • 05A",
+        "description": "Offertory Song"
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "On Eagle's Wings",
+        "composer": "Michael Joncas • Arranged by David Lockwood"
+      },
+      "lordsPrayer": {
+        "title": "Eucharistic Acclamations",
+        "composer": "Mass of Colour",
+        "description": "Jeffrey Bonilla & David Lockwood"
+      },
+      "fractionRite": {
+        "title": "Holy",
+        "composer": "Mystery of Faith",
+        "description": "Amen"
+      },
+      "communionSongs": [
+        {
+          "title": "The Lord's Prayer",
+          "composer": "Spoken during Season of Lent"
+        },
+        {
+          "title": "Fraction Rite",
+          "composer": "Lamb of God (Mass of Colour)",
+          "description": "Jeffrey Bonilla & David Lockwood"
+        },
+        {
+          "title": "Communion Songs",
+          "composer": "Beyond the Days",
+          "description": "Ricky Manalo, CSP"
+        },
+        {
+          "title": "Lenton Communion Song",
+          "composer": "All That Is Hidden",
+          "description": "Bernadette Farrell"
+        },
+        {
+          "title": "\"If you would rise with me...\"",
+          "composer": "We Belong to You",
+          "description": "Trevor Thomson • Victoria Thomson"
+        },
+        {
+          "title": "\"In our daily living, dying, and rising...\"",
+          "composer": "Be Forgiven",
+          "description": "Tom Booth"
+        }
+      ],
+      "sending": {
+        "title": "The Lord's Prayer (It's Yours)",
+        "composer": "Matt Maher",
+        "description": "\"Forgive us, Forgive us\""
+      }
+    },
+    {
+      "community": "Heritage",
+      "communityId": "heritage",
+      "date": "Year A — Mar 22, 2026 (Sun)",
+      "presider": "TBD",
+      "prelude": {
+        "title": "N/A"
+      },
+      "penitentialAct": {
+        "title": "Gabe Huck • Adapted and Arr. by Tony Alonso",
+        "composer": "Lentan Gathering Song",
+        "description": "Penitential Act"
+      },
+      "gloria": {
+        "title": "Kyrie (Mass of Colour) — optional tropes",
+        "composer": "Jeffrey Bonilla & David Lockwood",
+        "description": "Gloria"
+      },
+      "gospelAcclamation": {
+        "title": "Ed Archer",
+        "composer": "Gospel Acclamation",
+        "verse": "Mass of Joy & Peace Lenten G.A. (Refrain)"
+      },
+      "offertory": {
+        "title": "Verse - LENT • 05A",
+        "description": "Offertory Song"
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "All That Is Hidden",
+        "composer": "Bernadette Farrell"
+      },
+      "lordsPrayer": {
+        "title": "Eucharistic Acclamations",
+        "composer": "Mass of Creation - Rev. 2010",
+        "description": "Marty Haugen"
+      },
+      "fractionRite": {
+        "title": "Holy",
+        "composer": "Mystery of Faith",
+        "description": "Amen"
+      },
+      "communionSongs": [
+        {
+          "title": "The Lord's Prayer",
+          "composer": "Chanted Our Father (Snow)",
+          "description": "Jennings/Paregorius"
+        },
+        {
+          "title": "Fraction Rite",
+          "composer": "Lamb of God (Mass of Creation)",
+          "description": "Tony Alonso"
+        },
+        {
+          "title": "Communion Songs",
+          "composer": "Beyond the Days",
+          "description": "Ricky Manalo, CSP"
+        },
+        {
+          "title": "Description",
+          "composer": "Eat This Bread",
+          "description": "Taizé • Jacques Berthier"
+        },
+        {
+          "title": "Lenten Communion",
+          "composer": "On Eagle's Wings",
+          "description": "Michael Joncas • Arranged by David Lockwood"
+        }
+      ],
+      "sending": {
+        "title": "BEACH SPRING • Marty Haugen",
+        "composer": "Lenten Sending"
+      }
+    },
+    {
+      "community": "Elevations",
+      "communityId": "elevations",
+      "date": "Year A — Mar 22, 2026 (Sun)",
+      "presider": "TBD",
+      "prelude": {
+        "title": "N/A"
+      },
+      "penitentialAct": {
+        "title": "Sr. Suzanne Toolan RSM, Arr. by Dan Houze",
+        "composer": "\"...and I will raise you up on the last day.\"",
+        "description": "Penitential Act"
+      },
+      "gloria": {
+        "title": "Kyrie (Mass of Colour) — optional tropes",
+        "composer": "Jeffrey Bonilla & David Lockwood",
+        "description": "Gloria"
+      },
+      "gospelAcclamation": {
+        "title": "Spirit & Psalm • Jesse Manibusan",
+        "composer": "Gospel Acclamation",
+        "verse": "Praise to You, Lord Jesus Christ"
+      },
+      "offertory": {
+        "title": "Verse - LENT • 05A",
+        "description": "Offertory Song"
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "On Eagle's Wings",
+        "composer": "Michael Joncas • Arranged by David Lockwood"
+      },
+      "lordsPrayer": {
+        "title": "Eucharistic Acclamations",
+        "composer": "Mass of Colour",
+        "description": "Bonilla & Lockwood"
+      },
+      "fractionRite": {
+        "title": "Holy",
+        "composer": "Mystery of Faith",
+        "description": "Amen"
+      },
+      "communionSongs": [
+        {
+          "title": "The Lord's Prayer",
+          "composer": "Echo Our Father",
+          "description": "Andrews, Arr. Bonilla • Lockwood • Fajardo"
+        },
+        {
+          "title": "Fraction Rite",
+          "composer": "Lamb of God (Mass of Colour)",
+          "description": "Jeffrey Bonilla & David Lockwood"
+        },
+        {
+          "title": "Communion Songs",
+          "composer": "We Belong to You",
+          "description": "Trevor Thomson • Victoria Thomson"
+        },
+        {
+          "title": "\"In our daily living, dying, and rising...\"",
+          "composer": "Beyond the Days",
+          "description": "Ricky Manalo, CSP"
+        },
+        {
+          "title": "Lenten Communion",
+          "composer": "Great Are You Lord",
+          "description": "All Sons & Daughters"
+        }
+      ],
+      "sending": {
+        "title": "Sending Song",
+        "composer": "The Lord's Prayer (It's Yours)",
+        "description": "Matt Maher"
+      }
+    }
+  ]
+}

@@ -1,0 +1,285 @@
+{
+  "id": "ordinary-time-07-b",
+  "name": "ORDINARY TIME 07 [B]",
+  "year": "B",
+  "season": "ordinary",
+  "seasonLabel": "Ordinary Time",
+  "seasonOrder": 7,
+  "dates": [
+    {
+      "date": "2024-02-04",
+      "label": "Year B — Feb 04, 2024 (Sun)",
+      "dayOfWeek": "Sun"
+    }
+  ],
+  "lectionary": {
+    "number": "080•B",
+    "gospelTitle": "Jesus Forgives Sins",
+    "thematicTag": "Authority to Forgive"
+  },
+  "readings": [
+    {
+      "type": "first",
+      "citation": "Cf. Ps 13 (12):11",
+      "summary": "Entrance Antiphon | Cf. Ps 13 (12):12"
+    },
+    {
+      "type": "psalm",
+      "citation": "Entrance Antiphon | Cf. Ps 13 (12):13",
+      "summary": "",
+      "antiphon": "Entrance Antiphon | Cf. Ps 13 (12):13"
+    },
+    {
+      "type": "second",
+      "citation": "Cf. Ps 13 (12):14",
+      "summary": "Entrance Antiphon | Cf. Ps 13 (12):15"
+    },
+    {
+      "type": "gospel_verse",
+      "citation": "Cf. Ps 13 (12):17",
+      "summary": "The Lord sent me to bring glad tidings to the poor,\nand to proclaim liberty to captives."
+    },
+    {
+      "type": "gospel",
+      "citation": "Mk 1:40-45",
+      "summary": "Jesus cures a leper."
+    }
+  ],
+  "antiphons": [
+    {
+      "type": "entrance",
+      "option": 1,
+      "citation": "Cf. Ps 13 (12):6",
+      "text": "Entrance Antiphon | Cf. Ps 13 (12):7"
+    },
+    {
+      "type": "entrance",
+      "option": 2,
+      "citation": "Entrance Antiphon | Cf. Ps 13 (12):8",
+      "text": "Entrance Antiphon | Cf. Ps 13 (12):9"
+    },
+    {
+      "type": "communion",
+      "option": 1,
+      "citation": "Cf. Ps 9:2–3",
+      "text": "I will recount all your wonders,\nI will rejoice in you and be glad,\nand sing psalms to your name, O Most High."
+    },
+    {
+      "type": "communion",
+      "option": 2,
+      "citation": "Communion Antiphon • Option II | Cf. Jn 11:27",
+      "text": "Lord, I have come to believe that you are the Christ,\nthe Son of the living God, who is coming into this world."
+    }
+  ],
+  "planningNotes": [
+    "RECONGRESS | ?"
+  ],
+  "musicPlans": [
+    {
+      "community": "Reflections",
+      "communityId": "reflections",
+      "date": "N/A in 2027",
+      "presider": "NOT THIS YEAR",
+      "prelude": {
+        "title": "Lift Every Voice and Sing"
+      },
+      "gathering": {
+        "title": "Christ in Me Arise",
+        "composer": "Trevor Thomson",
+        "description": "\"Be now my footsteps, leading the way...\""
+      },
+      "penitentialAct": {
+        "title": "Kyrie • Misa Del Mundo",
+        "composer": "Jesse Manibusan"
+      },
+      "gloria": {
+        "title": "Glory to God (Through-composed Setting)",
+        "composer": "Mass of Renewal • Curtis Stephan"
+      },
+      "gospelAcclamation": {
+        "title": "Alleluia (Mass of Joy & Peace)",
+        "composer": "ORDINARY TIME • 07B"
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "Mass for the Healing of the World",
+        "composer": "Trevor Thomson"
+      },
+      "lordsPrayer": {
+        "title": "Chanted Our Father (Snow)",
+        "composer": "Jennings/Paregorius"
+      },
+      "fractionRite": {
+        "title": "Lamb of God (Mass for the Healing of the World)",
+        "composer": "Trevor Thomson"
+      }
+    },
+    {
+      "community": "Foundations",
+      "communityId": "foundations",
+      "date": "N/A in 2027",
+      "presider": "NOT THIS YEAR",
+      "prelude": {
+        "title": "Lift Every Voice and Sing",
+        "composer": "James Weldon Johnson • John Rosamond Johnson",
+        "description": "Entrance Antiphon • Black History Month"
+      },
+      "penitentialAct": {
+        "title": "Kyrie (Gift of God) • Adapted Version",
+        "composer": "Marty Haugen • Arranged by David Locwood"
+      },
+      "gloria": {
+        "title": "Mass of Joy & Peace (Gospel Version)",
+        "composer": "Tony Alonso • Arrangement by David Lockwood"
+      },
+      "responsorialPsalm": {
+        "psalm": "Ps 103 The Lord is kind and merciful.",
+        "setting": "The Lyric Psalter • Tony Alonso & Marty Haugen"
+      },
+      "gospelAcclamation": {
+        "title": "Alleluia! Give the Glory (Mass of Glory)"
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "Mass of Glory"
+      },
+      "lordsPrayer": {
+        "title": "Chanted Our Father (Snow)",
+        "composer": "Jennings • Paregorius"
+      },
+      "fractionRite": {
+        "title": "Lamb of God (Mass of Glory)"
+      },
+      "communionSongs": [
+        {
+          "title": "Jesus, the Bread of Life",
+          "composer": "Grayson Warren Brown",
+          "description": "Black History Month"
+        },
+        {
+          "title": "Prayer of St Francis",
+          "composer": "Sebastian Temple • Arranged by Ed Archer",
+          "description": "Choral reference not available"
+        }
+      ],
+      "sending": {
+        "title": "As Christ to the World",
+        "composer": "Tom Kendzia",
+        "description": "\"Called to love one another, as Christ to the World\""
+      }
+    },
+    {
+      "community": "Generations",
+      "communityId": "generations",
+      "date": "N/A in 2027",
+      "presider": "NOT THIS YEAR",
+      "penitentialAct": {
+        "title": "Kyrie • Misa Del Mundo",
+        "composer": "Jesse Manibusan"
+      },
+      "gloria": {
+        "title": "Glory, Glory, Gloria! (Mass of the Setting Sun)",
+        "composer": "Bonilla & Wilson • Vocal Arr. by Lockwood & Phan"
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "Mass of St. Anne",
+        "composer": "Ed Bolduc"
+      },
+      "lordsPrayer": {
+        "title": "Echo Our Father",
+        "composer": "Jerome Andrews • Arranged by Dan Houze"
+      },
+      "fractionRite": {
+        "title": "Lamb of God (Mass of Holy Cross)"
+      }
+    },
+    {
+      "community": "Heritage",
+      "communityId": "heritage",
+      "date": "N/A in 2027",
+      "presider": "NOT THIS YEAR",
+      "prelude": {
+        "title": "Lift Every Voice and Sing"
+      },
+      "gathering": {
+        "title": "As We Gather at Your Table",
+        "composer": "NETTLETON  • Carl P. Daw Jr.",
+        "description": "\"Give us,...compassion to forgive as you forgave\""
+      },
+      "penitentialAct": {
+        "title": "Kyrie • Misa Del Mundo",
+        "composer": "Jesse Manibusan"
+      },
+      "gloria": {
+        "title": "Glory to God (Mass of Christ the Savior)",
+        "composer": "Dan Schutte"
+      },
+      "responsorialPsalm": {
+        "psalm": "Ps 103 The Lord is kind and merciful.",
+        "setting": "The Lyric Psalter • Tony Alonso & Marty Haugen"
+      },
+      "offertory": {
+        "title": "The Servant Song",
+        "composer": "Richard Gillard • Arranged by Ed Archer",
+        "description": "\"...let me be as Christ to you\""
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "Mass of Creation - Rev. 2010"
+      },
+      "lordsPrayer": {
+        "title": "Chanted Our Father (Snow)",
+        "composer": "Jennings/Paregorius"
+      },
+      "fractionRite": {
+        "title": "Lamb of God (Mass of Creation)"
+      },
+      "communionSongs": [
+        {
+          "title": "Eat This Bread",
+          "composer": "Taizé — Jacques Berthier",
+          "description": "Communion Antiphon"
+        },
+        {
+          "title": "Ubi Caritas",
+          "composer": "Bob Hurd",
+          "description": "\"Love one another as I have loved you\""
+        },
+        {
+          "title": "Prayer of St Francis",
+          "composer": "Sebastian Temple • Arranged by Ed Archer",
+          "description": "Choral reference not available"
+        }
+      ],
+      "sending": {
+        "title": "Lord, You Give the Great Commission",
+        "composer": "ABBOT’S LEIGH • Taylor • Rowthorn",
+        "description": "Vs 4 \"Lord, you show us love's true measure...\""
+      }
+    },
+    {
+      "community": "Elevations",
+      "communityId": "elevations",
+      "date": "N/A in 2027",
+      "presider": "NOT THIS YEAR",
+      "penitentialAct": {
+        "title": "Kyrie (Misa Del Mundo)",
+        "composer": "Jesse Manibusan — If needed."
+      },
+      "gloria": {
+        "title": "Glory, Glory, Gloria! (Mass of the Setting Sun)"
+      },
+      "gospelAcclamation": {
+        "title": "Misa del Mundo",
+        "verse": "ORDINARY TIME • 07C"
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "Mass of Communion (Lower Key) • Matt Maher"
+      },
+      "lordsPrayer": {
+        "title": "Echo Our Father",
+        "composer": "Andrews, Arr. Bonilla • Lockwood • Fajardo"
+      },
+      "fractionRite": {
+        "title": "Lamb of God (Mass of Holy Cross)"
+      }
+    }
+  ]
+}

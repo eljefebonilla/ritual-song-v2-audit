@@ -1,0 +1,334 @@
+{
+  "id": "lent-03-b",
+  "name": "LENT 03 [B]",
+  "year": "B",
+  "season": "lent",
+  "seasonLabel": "Lent",
+  "seasonOrder": 3,
+  "dates": [
+    {
+      "date": "2024-03-03",
+      "label": "Year B — Mar 03, 2024 (Sun)",
+      "dayOfWeek": "Sun"
+    },
+    {
+      "date": "2036-03-16",
+      "label": "Year B — Mar 16, 2036 (Sun)",
+      "dayOfWeek": "Sun"
+    },
+    {
+      "date": "2033-03-20",
+      "label": "Year B — Mar 20, 2033 (Sun)",
+      "dayOfWeek": "Sun"
+    },
+    {
+      "date": "2030-03-24",
+      "label": "Year B — Mar 24, 2030 (Sun)",
+      "dayOfWeek": "Sun"
+    },
+    {
+      "date": "2027-02-28",
+      "label": "Year B — Feb 28, 2027 (Sun)",
+      "dayOfWeek": "Sun"
+    }
+  ],
+  "lectionary": {
+    "number": "029•B",
+    "gospelTitle": "Jesus Cleanses the Temple",
+    "thematicTag": "Passover Cleansing"
+  },
+  "readings": [
+    {
+      "type": "first",
+      "citation": "Ex 20:1-17 (Shorter - Ex 20:1-3, 7-8, 12-17",
+      "summary": "The Lord delivers the Ten Commandments."
+    },
+    {
+      "type": "psalm",
+      "citation": "Ps 19:8, 9, 10, 11, R. Jn 6:68\nLord, you have the words of everlasting life.",
+      "summary": "",
+      "antiphon": "Ps 19:8, 9, 10, 11, R. Jn 6:68\nLord, you have the words of everlasting life."
+    },
+    {
+      "type": "second",
+      "citation": "1 Cor 1:22-25",
+      "summary": "Understand the power of Christ crucified."
+    },
+    {
+      "type": "gospel_verse",
+      "citation": "Jn 3:16",
+      "summary": "God so loved the world that he gave his only Son,\nso everyone who believes in him might have eternal life."
+    },
+    {
+      "type": "gospel",
+      "citation": "Jn 2:13-25",
+      "summary": "Jesus drives the money-changers from the temple."
+    }
+  ],
+  "antiphons": [
+    {
+      "type": "entrance",
+      "option": 1,
+      "citation": "Cf. Ps 25 (24):15–16]",
+      "text": "My eyes are always on the Lord,\nfor he rescues my feet from the snare.\nTurn to me and have mercy on me,\nfor I am alone and poor."
+    },
+    {
+      "type": "entrance",
+      "option": 2,
+      "citation": "Entrance Antiphon • Option II | Cf. Ez 36:23–26",
+      "text": "When I prove my holiness among you,\nI will gather you from all the foreign lands;\nand I will pour clean water upon you\nand cleanse you from all your impurities,\nand I will give you a new spirit, says the Lord."
+    },
+    {
+      "type": "communion",
+      "option": 1,
+      "citation": "Years B & C - Ps 84 (83):4–5",
+      "text": "The sparrow finds a home, and the swallow a nest for her young: by your altars, O Lord of hosts, my King and my God. Blessed are they who dwell in your house, for ever singing your praise."
+    }
+  ],
+  "planningNotes": [
+    "FEB - BLACKHISTORYMONTH"
+  ],
+  "musicPlans": [
+    {
+      "community": "Reflections",
+      "communityId": "reflections",
+      "date": "Year B — Feb 27, 2027 (Sat)",
+      "presider": "NOT THIS YEAR",
+      "prelude": {
+        "title": "See Taizé Setlist"
+      },
+      "gathering": {
+        "title": "Gather Us in Mercy, Lord",
+        "composer": "Gabe Huck • Adapted and Arr. by Tony Alonso"
+      },
+      "penitentialAct": {
+        "title": "Kyrie (Mass of Colour) — optional tropes",
+        "composer": "Jeffrey Bonilla & David Lockwood"
+      },
+      "responsorialPsalm": {
+        "psalm": "Ps 19 Lord, you have the words of everlasting life.",
+        "setting": "The Lyric Psalter • Tony Alonso & Marty Haugen"
+      },
+      "gospelAcclamation": {
+        "title": "Mass of Joy & Peace Lenten G.A. (Refrain)",
+        "composer": "The Lyric Gospel Acclamations • Tony Alonso",
+        "verse": "God so loved the world that he gave his only Son,\nso everyone who believes in him might have eternal life."
+      },
+      "offertory": {
+        "title": "Turn Our Hearts Around",
+        "description": "\"Wash us in your love.\""
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "Mass of Creation",
+        "composer": "Marty Haugen • Arr. by Lockwood & Phan"
+      },
+      "lordsPrayer": {
+        "title": "Chanted Our Father (Snow)",
+        "composer": "Jennings/Paregorius"
+      },
+      "fractionRite": {
+        "title": "Lamb of God (Mass of Creation)",
+        "composer": "Marty Haugen • Arr. by Lockwood & Phan"
+      },
+      "communionSongs": [
+        {
+          "title": "Beyond the Days",
+          "composer": "Ricky Manalo, CSP",
+          "description": "Lenten Song"
+        },
+        {
+          "title": "Turn To Me",
+          "composer": "John Foley SJ",
+          "description": "Lenten Song"
+        }
+      ],
+      "sending": {
+        "title": "Led by the Spirit",
+        "composer": "KINGSFOLD • Bob Hurd",
+        "description": "Lenten Sending"
+      }
+    },
+    {
+      "community": "Foundations",
+      "communityId": "foundations",
+      "date": "Year B — Feb 28, 2027 (Sun)",
+      "presider": "NOT THIS YEAR",
+      "penitentialAct": {
+        "title": "Kyrie (Mass of Colour) — optional tropes",
+        "composer": "Jeffrey Bonilla & David Lockwood"
+      },
+      "responsorialPsalm": {
+        "psalm": "Ps 19 Lord, you have the words of everlasting life.",
+        "setting": "Spirit & Psalm • Jeff Thomas"
+      },
+      "gospelAcclamation": {
+        "title": "Praise to You, Lord Jesus Christ",
+        "composer": "Ed Archer",
+        "verse": "God so loved the world that he gave his only Son,\nso everyone who believes in him might have eternal life."
+      },
+      "offertory": {
+        "title": "Turn Our Hearts Around",
+        "description": "\"Wash us in your love.\""
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "Mass of a Firm Foundation"
+      },
+      "lordsPrayer": {
+        "title": "Chanted Our Father (Snow)",
+        "composer": "Jennings • Paregorius"
+      },
+      "fractionRite": {
+        "title": "Lamb of God (Mass of a Firm Foundation)"
+      },
+      "communionSongs": [
+        {
+          "title": "Beyond the Days",
+          "composer": "Ricky Manalo, CSP"
+        },
+        {
+          "title": "Change Our Hearts",
+          "composer": "Rory Cooney",
+          "description": "Lenten Song"
+        }
+      ],
+      "sending": {
+        "title": "40 Days",
+        "composer": "Matt Maher",
+        "description": "Lenten Sending"
+      }
+    },
+    {
+      "community": "Generations",
+      "communityId": "generations",
+      "date": "Year B — Feb 28, 2027 (Sun)",
+      "presider": "NOT THIS YEAR",
+      "penitentialAct": {
+        "title": "Kyrie (Mass of Colour) — optional tropes",
+        "composer": "Jeffrey Bonilla & David Lockwood"
+      },
+      "responsorialPsalm": {
+        "psalm": "Ps 19 Lord, you have the words of everlasting life.",
+        "setting": "Spirit & Psalm • Jeff Thomas"
+      },
+      "gospelAcclamation": {
+        "title": "Praise to You, Lord Jesus Christ",
+        "composer": "Ed Archer",
+        "verse": "God so loved the world that he gave his only Son,\nso everyone who believes in him might have eternal life."
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "Mass of Colour",
+        "composer": "Jeffrey Bonilla & David Lockwood"
+      },
+      "lordsPrayer": {
+        "title": "Spoken during Season of Lent"
+      },
+      "fractionRite": {
+        "title": "Lamb of God (Mass of Colour)"
+      },
+      "communionSongs": [
+        {
+          "title": "Beyond the Days",
+          "composer": "Ricky Manalo, CSP"
+        }
+      ],
+      "sending": {
+        "title": "Create In Me",
+        "composer": "Rend Collective",
+        "description": "Psalm 51"
+      }
+    },
+    {
+      "community": "Heritage",
+      "communityId": "heritage",
+      "date": "Year B — Feb 28, 2027 (Sun)",
+      "presider": "NOT THIS YEAR",
+      "penitentialAct": {
+        "title": "Kyrie (Mass of Colour) — optional tropes",
+        "composer": "Jeffrey Bonilla & David Lockwood"
+      },
+      "responsorialPsalm": {
+        "psalm": "Ps 19 Lord, you have the words of everlasting life.",
+        "setting": "The Lyric Psalter • Tony Alonso & Marty Haugen"
+      },
+      "gospelAcclamation": {
+        "title": "Mass of Joy & Peace Lenten G.A. (Refrain)",
+        "composer": "The Lyric Gospel Acclamations • Tony Alonso",
+        "verse": "God so loved the world that he gave his only Son,\nso everyone who believes in him might have eternal life."
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "Mass of Creation - Rev. 2010",
+        "composer": "Marty Haugen"
+      },
+      "lordsPrayer": {
+        "title": "Chanted Our Father (Snow)",
+        "composer": "Jennings/Paregorius"
+      },
+      "fractionRite": {
+        "title": "Lamb of God (Mass of Creation)"
+      },
+      "sending": {
+        "title": "In These Days of Lenten Journey",
+        "composer": "Ricky Manalo CSP • Gerard Chiusano",
+        "description": "Lenten Sending Song"
+      }
+    },
+    {
+      "community": "Elevations",
+      "communityId": "elevations",
+      "date": "Year B — Feb 28, 2027 (Sun)",
+      "presider": "NOT THIS YEAR",
+      "penitentialAct": {
+        "title": "Kyrie (Mass of Colour) — optional tropes",
+        "composer": "Jeffrey Bonilla & David Lockwood"
+      },
+      "responsorialPsalm": {
+        "psalm": "Ps 19 Lord, you have the words of everlasting life.",
+        "setting": "Spirit & Psalm • Jeff Thomas"
+      },
+      "gospelAcclamation": {
+        "title": "Praise to You, Lord Jesus Christ",
+        "composer": "Ed Archer",
+        "verse": "God so loved the world that he gave his only Son,\nso everyone who believes in him might have eternal life."
+      },
+      "offertory": {
+        "title": "Turn Our Hearts Around",
+        "composer": "Trevor Thomson",
+        "description": "\"Hold us in your mercy\""
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "Mass of Colour",
+        "composer": "Bonilla & Lockwood"
+      },
+      "lordsPrayer": {
+        "title": "Chanted Our Father (Snow)",
+        "composer": "Jennings/Paregorius — if requested by Presider"
+      },
+      "fractionRite": {
+        "title": "Lamb of God (Mass of Colour)",
+        "composer": "Jeffrey Bonilla & David Lockwood"
+      },
+      "communionSongs": [
+        {
+          "title": "Beyond the Days",
+          "composer": "Ricky Manalo, CSP",
+          "description": "Lenten Communion"
+        },
+        {
+          "title": "Turn To Me",
+          "composer": "John Foley SJ",
+          "description": "Lenten Song"
+        },
+        {
+          "title": "Lord I Need You",
+          "composer": "Matt Maher",
+          "description": "“... when temptation comes my way\""
+        }
+      ],
+      "sending": {
+        "title": "Create In Me",
+        "composer": "Rend Collective",
+        "description": "Psalm 51"
+      }
+    }
+  ]
+}

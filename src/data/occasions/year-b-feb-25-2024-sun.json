@@ -1,0 +1,406 @@
+{
+  "id": "year-b-feb-25-2024-sun",
+  "name": "Year B — Feb 25, 2024 (Sun)",
+  "year": "ABC",
+  "season": "ordinary",
+  "seasonLabel": "Ordinary Time",
+  "seasonOrder": 25,
+  "dates": [],
+  "lectionary": {
+    "number": "Year B — Mar 06, 2039 (Sun)",
+    "gospelTitle": "Year B — Mar 09, 2036 (Sun)",
+    "thematicTag": "Year B — Mar 13, 2033 (Sun)",
+    "thematicDetail": "Year B — Mar 17, 2030 (Sun)"
+  },
+  "readings": [
+    {
+      "type": "psalm",
+      "citation": "Glory Preview of Cross",
+      "summary": "",
+      "antiphon": "Planning Reminders"
+    },
+    {
+      "type": "gospel_verse",
+      "citation": "Of you my heart has spoken: Seek his face.\nIt is your face, O Lord, that I seek;\nhide not your face from me.",
+      "summary": "Entrance Antiphon • Option II | Ps 25 (24):6, 2, 22"
+    },
+    {
+      "type": "gospel",
+      "citation": "Reading I | Gen 22:1-2, 9a-18",
+      "summary": "God put Abraham to the test."
+    }
+  ],
+  "antiphons": [
+    {
+      "type": "entrance",
+      "option": 1,
+      "citation": "Verse before the Gospel | Mt 17:5",
+      "text": "From the shining cloud the Father’s voice is heard:\nThis is my beloved Son, hear him."
+    },
+    {
+      "type": "communion",
+      "option": 2,
+      "citation": "Communion Antiphon | Cf. Mt 17:5",
+      "text": "This is my beloved Son, with whom I am well pleased;\nlisten to him."
+    }
+  ],
+  "planningNotes": [
+    "Communion Antiphon • Option II",
+    "N/A"
+  ],
+  "musicPlans": [
+    {
+      "community": "Reflections",
+      "communityId": "reflections",
+      "date": "Year B — Feb 20, 2027 (Sat)",
+      "presider": "NOT THIS YEAR",
+      "prelude": {
+        "title": "See Taizé Setlist"
+      },
+      "penitentialAct": {
+        "title": "Composer/s",
+        "composer": "Description",
+        "description": "Penitential Act"
+      },
+      "gloria": {
+        "title": "Kyrie (Mass of Colour) — optional tropes",
+        "composer": "Jeffrey Bonilla & David Lockwood",
+        "description": "Gloria"
+      },
+      "gospelAcclamation": {
+        "title": "The Lyric Psalter • Tony Alonso & Marty Haugen",
+        "composer": "Gospel Acclamation",
+        "verse": "Mass of Joy & Peace Lenten G.A. (Refrain)"
+      },
+      "offertory": {
+        "title": "Verse LENT • 02ABC",
+        "description": "Offertory Song"
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "Transfigure Us, O Lord",
+        "composer": "Bob Hurd"
+      },
+      "lordsPrayer": {
+        "title": "Eucharistic Acclamations",
+        "composer": "Mass of Creation",
+        "description": "Marty Haugen • Arr. by Lockwood & Phan"
+      },
+      "fractionRite": {
+        "title": "Holy",
+        "composer": "Mystery of Faith",
+        "description": "Amen"
+      },
+      "communionSongs": [
+        {
+          "title": "The Lord's Prayer",
+          "composer": "Chanted Our Father (Snow)",
+          "description": "Jennings/Paregorius"
+        },
+        {
+          "title": "Fraction Rite",
+          "composer": "Lamb of God (Mass of Creation)",
+          "description": "Marty Haugen • Arr. by Lockwood & Phan"
+        },
+        {
+          "title": "Communion Songs",
+          "composer": "Hosea (Choral)",
+          "description": "Gregory Norbet • Arranged by Ed Archer"
+        },
+        {
+          "title": "Lenten Song",
+          "composer": "God of Mercy",
+          "description": "Ricky Manalo, CSP • Bob Hurd"
+        }
+      ]
+    },
+    {
+      "community": "Foundations",
+      "communityId": "foundations",
+      "date": "Year B — Feb 21, 2027 (Sun)",
+      "presider": "NOT THIS YEAR",
+      "prelude": {
+        "title": "N/A"
+      },
+      "penitentialAct": {
+        "title": "Composer(s) • Arranger(s)",
+        "composer": "Description",
+        "description": "Penitential Act"
+      },
+      "gloria": {
+        "title": "Kyrie (Mass of Colour) — optional tropes",
+        "composer": "Jeffrey Bonilla & David Lockwood",
+        "description": "Gloria"
+      },
+      "gospelAcclamation": {
+        "title": "Spirit & Psalm • Composer",
+        "composer": "Gospel Acclamation",
+        "verse": "Praise to You, Lord Jesus Christ"
+      },
+      "offertory": {
+        "title": "Verse - LENT • 02ABC",
+        "description": "Offertory Song"
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "—",
+        "composer": "Composer/s"
+      },
+      "lordsPrayer": {
+        "title": "Eucharistic Acclamations",
+        "composer": "Mass of a Firm Foundation"
+      },
+      "fractionRite": {
+        "title": "Holy",
+        "composer": "Mystery of Faith",
+        "description": "Amen"
+      },
+      "communionSongs": [
+        {
+          "title": "The Lord's Prayer",
+          "composer": "Chanted Our Father (Snow)",
+          "description": "Jennings • Paregorius"
+        },
+        {
+          "title": "Fraction Rite",
+          "composer": "Lamb of God (Mass of a Firm Foundation)"
+        },
+        {
+          "title": "Communion Songs",
+          "composer": "Hosea",
+          "description": "Weston Priory • Gregory Norbet"
+        },
+        {
+          "title": "Lenten Song",
+          "composer": "You Are the Light",
+          "description": "Sarah Hart"
+        }
+      ],
+      "sending": {
+        "title": "Stuart  K. Hine",
+        "composer": "Transfiguration — \"...when I in awsome wonder...\""
+      }
+    },
+    {
+      "community": "Generations",
+      "communityId": "generations",
+      "date": "Year B — Feb 21, 2027 (Sun)",
+      "presider": "NOT THIS YEAR",
+      "prelude": {
+        "title": "N/A"
+      },
+      "penitentialAct": {
+        "title": "SLANE • Arranged by Assad",
+        "composer": "☘️ St. Patricks Day",
+        "description": "Penitential Act"
+      },
+      "gloria": {
+        "title": "Kyrie (Mass of Colour) — optional tropes",
+        "composer": "Jeffrey Bonilla & David Lockwood",
+        "description": "Gloria"
+      },
+      "gospelAcclamation": {
+        "title": "Spirit & Psalm • Dana Catherine",
+        "composer": "Gospel Acclamation",
+        "verse": "Praise to You, Lord Jesus Christ"
+      },
+      "offertory": {
+        "title": "Verse - LENT • 02ABC",
+        "description": "Offertory Song"
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "Transfigure Us, O Lord",
+        "composer": "Bob Hurd"
+      },
+      "lordsPrayer": {
+        "title": "Eucharistic Acclamations",
+        "composer": "Mass of Colour",
+        "description": "Jeffrey Bonilla & David Lockwood"
+      },
+      "fractionRite": {
+        "title": "Holy",
+        "composer": "Mystery of Faith",
+        "description": "Amen"
+      },
+      "communionSongs": [
+        {
+          "title": "The Lord's Prayer",
+          "composer": "Spoken during Season of Lent"
+        },
+        {
+          "title": "Fraction Rite",
+          "composer": "Lamb of God (Mass of Colour)"
+        },
+        {
+          "title": "Communion Songs",
+          "composer": "Hosea (Choral)",
+          "description": "Gregory Norbet • Arranged by Ed Archer"
+        },
+        {
+          "title": "Lenten Song",
+          "composer": "Song Title",
+          "description": "Composer/s"
+        },
+        {
+          "title": "Description",
+          "composer": "You Are the Light",
+          "description": "Sarah Hart"
+        },
+        {
+          "title": "\"Sweet mystery, how true you guide.\"",
+          "composer": "This Is My Beloved Son",
+          "description": "John Angotti"
+        }
+      ],
+      "sending": {
+        "title": "How Great Thou Art",
+        "composer": "Paul Baloche",
+        "description": "Transfiguration!"
+      }
+    },
+    {
+      "community": "Heritage",
+      "communityId": "heritage",
+      "date": "Year B — Feb 21, 2027 (Sun)",
+      "presider": "NOT THIS YEAR",
+      "prelude": {
+        "title": "N/A"
+      },
+      "penitentialAct": {
+        "title": "SWABIA • Joseph A. Robinson",
+        "composer": "Transfigured Christ, behold your God",
+        "description": "Penitential Act"
+      },
+      "gloria": {
+        "title": "Kyrie (Mass of Colour) — optional tropes",
+        "composer": "Jeffrey Bonilla & David Lockwood",
+        "description": "Gloria"
+      },
+      "gospelAcclamation": {
+        "title": "The Lyric Psalter • Tony Alonso & Marty Haugen",
+        "composer": "Gospel Acclamation",
+        "verse": "Mass of Joy & Peace Lenten G.A. (Refrain)"
+      },
+      "offertory": {
+        "title": "Verse - LENT • 02ABC",
+        "description": "Offertory Song"
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "Transfigure Us, O Lord",
+        "composer": "Bob Hurd"
+      },
+      "lordsPrayer": {
+        "title": "Eucharistic Acclamations",
+        "composer": "Mass of Creation - Rev. 2010",
+        "description": "Marty Haugen"
+      },
+      "fractionRite": {
+        "title": "Holy",
+        "composer": "Mystery of Faith",
+        "description": "Amen"
+      },
+      "communionSongs": [
+        {
+          "title": "The Lord's Prayer",
+          "composer": "Chanted Our Father (Snow)",
+          "description": "Jennings/Paregorius"
+        },
+        {
+          "title": "Fraction Rite",
+          "composer": "Lamb of God (Mass of Creation)"
+        },
+        {
+          "title": "Communion Songs",
+          "composer": "Hosea (Choral)",
+          "description": "Gregory Norbet • Arranged by Ed Archer"
+        },
+        {
+          "title": "No audio reference available yet.",
+          "composer": "You Are the Light",
+          "description": "Sarah Hart"
+        },
+        {
+          "title": "\"Sweet mystery, how true you guide.\"",
+          "composer": "Jesus, the Lord",
+          "description": "Roc O’Connor, SJ"
+        }
+      ],
+      "sending": {
+        "title": "Composer/s",
+        "composer": "Description"
+      }
+    },
+    {
+      "community": "Elevations",
+      "communityId": "elevations",
+      "date": "Year B — Feb 21, 2027 (Sun)",
+      "presider": "NOT THIS YEAR",
+      "prelude": {
+        "title": "N/A"
+      },
+      "penitentialAct": {
+        "title": "Composer/s",
+        "composer": "Description",
+        "description": "Penitential Act"
+      },
+      "gloria": {
+        "title": "Kyrie (Mass of Colour) — optional tropes",
+        "composer": "Jeffrey Bonilla & David Lockwood",
+        "description": "Gloria"
+      },
+      "gospelAcclamation": {
+        "title": "Spirit & Psalm • Dana Catherine",
+        "composer": "Gospel Acclamation",
+        "verse": "Praise to You, Lord Jesus Christ"
+      },
+      "offertory": {
+        "title": "Verse - LENT • 02ABC",
+        "description": "Offertory Song"
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "Transfigure Us, O Lord",
+        "composer": "Bob Hurd"
+      },
+      "lordsPrayer": {
+        "title": "Eucharistic Acclamations",
+        "composer": "Mass of Colour",
+        "description": "Bonilla & Lockwood"
+      },
+      "fractionRite": {
+        "title": "Holy",
+        "composer": "Mystery of Faith",
+        "description": "Amen"
+      },
+      "communionSongs": [
+        {
+          "title": "The Lord's Prayer",
+          "composer": "Chanted Our Father (Snow)",
+          "description": "Jennings/Paregorius — if requested by Presider"
+        },
+        {
+          "title": "Fraction Rite",
+          "composer": "Lamb of God (Mass of Colour)",
+          "description": "Jeffrey Bonilla & David Lockwood"
+        },
+        {
+          "title": "Communion Songs",
+          "composer": "Hosea (Choral)",
+          "description": "Gregory Norbet • Arranged by Ed Archer"
+        },
+        {
+          "title": "No audio reference available yet.",
+          "composer": "You Are the Light",
+          "description": "Sarah Hart"
+        },
+        {
+          "title": "\"Sweet mystery, how true you guide.\"",
+          "composer": "This Is My Beloved Son",
+          "description": "John Angotti"
+        }
+      ],
+      "sending": {
+        "title": "Sending Song",
+        "composer": "How Great Thou Art",
+        "description": "Paul Baloche"
+      }
+    }
+  ]
+}

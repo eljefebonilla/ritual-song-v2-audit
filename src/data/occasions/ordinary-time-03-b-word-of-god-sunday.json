@@ -1,0 +1,292 @@
+{
+  "id": "ordinary-time-03-b-word-of-god-sunday",
+  "name": "ORDINARY TIME 03 [B]\nWORD OF GOD Sunday",
+  "year": "B",
+  "season": "ordinary",
+  "seasonLabel": "Ordinary Time",
+  "seasonOrder": 3,
+  "dates": [
+    {
+      "date": "2024-01-21",
+      "label": "Year B — Jan 21, 2024 (Sun)",
+      "dayOfWeek": "Sun"
+    },
+    {
+      "date": "2036-01-27",
+      "label": "Year B — Jan 27, 2036 (Sun)",
+      "dayOfWeek": "Sun"
+    },
+    {
+      "date": "2033-01-23",
+      "label": "Year B — Jan 23, 2033 (Sun)",
+      "dayOfWeek": "Sun"
+    },
+    {
+      "date": "2030-01-27",
+      "label": "Year B — Jan 27, 2030 (Sun)",
+      "dayOfWeek": "Sun"
+    },
+    {
+      "date": "2027-01-24",
+      "label": "Year B — Jan 24, 2027 (Sun)",
+      "dayOfWeek": "Sun"
+    }
+  ],
+  "lectionary": {
+    "number": "068•B",
+    "gospelTitle": "Kingdom Is at Hand",
+    "thematicTag": "Galilean Call"
+  },
+  "readings": [
+    {
+      "type": "gospel",
+      "citation": "Mk 1:14-20",
+      "summary": "Jesus begins his ministry in Galilee, calls the Apostles."
+    }
+  ],
+  "antiphons": [
+    {
+      "type": "entrance",
+      "option": 1,
+      "citation": "Cf. Ps 96 (95):1, 6",
+      "text": "O sing a new song to the Lord;\nsing to the Lord, all the earth.\nIn his presence are majesty and splendor,\nstrength and honor in his holy place."
+    },
+    {
+      "type": "communion",
+      "option": 1,
+      "citation": "Cf. Ps 34 (33):6",
+      "text": "Look toward the Lord and be radiant;\nlet your faces not be abashed."
+    },
+    {
+      "type": "communion",
+      "option": 2,
+      "citation": "Communion Antiphon • Option II | Cf. Jn 8:12",
+      "text": "I am the light of the world, says the Lord;\nwhoever follows me will not walk in darkness,\nbut will have the light of life."
+    }
+  ],
+  "planningNotes": [
+    "Word of God Sunday"
+  ],
+  "musicPlans": [
+    {
+      "community": "Reflections",
+      "communityId": "reflections",
+      "date": "Year B — Jan 23, 2027 (Sat)",
+      "presider": "NOT THIS YEAR",
+      "prelude": {
+        "title": "The Word Became Flesh",
+        "composer": "Orin Johnson",
+        "description": "Word of God Sunday - Post Christmas (Incarnation)"
+      },
+      "gathering": {
+        "title": "Praise to You, O Christ Our Savior",
+        "composer": "Bernadette Farrell",
+        "description": "Word of God Sunday"
+      },
+      "penitentialAct": {
+        "title": "Kyrie • Misa Del Mundo",
+        "composer": "Jesse Manibusan"
+      },
+      "gloria": {
+        "title": "Glory to God (Through-composed Setting)",
+        "composer": "Mass of Renewal • Curtis Stephan"
+      },
+      "responsorialPsalm": {
+        "psalm": "Ps 25 Teach me your ways, O Lord.",
+        "setting": "The Lyric Psalter • Tony Alonso & Marty Haugen"
+      },
+      "gospelAcclamation": {
+        "title": "Alleluia (Mass of Joy & Peace)",
+        "composer": "ORDINARY TIME • 03B"
+      },
+      "offertory": {
+        "title": "O Word of God",
+        "composer": "Ricky Manalo, CSP",
+        "description": "Word of God Sunday"
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "Mass for the Healing of the World",
+        "composer": "Trevor Thomson"
+      },
+      "lordsPrayer": {
+        "title": "Chanted Our Father (Snow)",
+        "composer": "Jennings/Paregorius"
+      },
+      "fractionRite": {
+        "title": "Lamb of God (Mass for the Healing of the World)",
+        "composer": "Trevor Thomson"
+      },
+      "communionSongs": [
+        {
+          "title": "Many and Great",
+          "composer": "Ricky Manalo, CSP",
+          "description": "\"the word of goodness and HOPE\""
+        },
+        {
+          "title": "Psalm 23: Shepherd Me, O God",
+          "composer": "Marty Haugen",
+          "description": "OT3B"
+        },
+        {
+          "title": "O Word of God",
+          "composer": "Ricky Manalo, CSP",
+          "description": "Word of God Sunday"
+        }
+      ],
+      "sending": {
+        "title": "Take the Word of God with You",
+        "composer": "Christopher Walker • James Harrison",
+        "description": "Word of God Sunday"
+      }
+    },
+    {
+      "community": "Foundations",
+      "communityId": "foundations",
+      "date": "Year B — Jan 24, 2027 (Sun)",
+      "presider": "NOT THIS YEAR",
+      "gathering": {
+        "title": "Rain Down",
+        "composer": "Jaime Cortez",
+        "description": "“Faithful and true is the Word of our God.”"
+      },
+      "penitentialAct": {
+        "title": "Kyrie (Gift of God) • Adapted Version",
+        "composer": "Marty Haugen • Arranged by David Locwood"
+      },
+      "gloria": {
+        "title": "Mass of Joy & Peace (Gospel Version)",
+        "composer": "Tony Alonso • Arrangement by David Lockwood"
+      },
+      "responsorialPsalm": {
+        "psalm": "Ps 25 Teach me your ways, O Lord.",
+        "setting": "Composer/s"
+      },
+      "gospelAcclamation": {
+        "title": "Alleluia! Give the Glory (Mass of Glory)",
+        "verse": "The kingdom of God is at hand.\nRepent and believe in the Gospel."
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "Mass of Glory"
+      },
+      "lordsPrayer": {
+        "title": "Chanted Our Father (Snow)",
+        "composer": "Jennings • Paregorius"
+      },
+      "fractionRite": {
+        "title": "Lamb of God (Mass of Glory)"
+      }
+    },
+    {
+      "community": "Generations",
+      "communityId": "generations",
+      "date": "Year B — Jan 24, 2027 (Sun)",
+      "presider": "NOT THIS YEAR",
+      "penitentialAct": {
+        "title": "Kyrie • Misa Del Mundo",
+        "composer": "Jesse Manibusan"
+      },
+      "gloria": {
+        "title": "Glory, Glory, Gloria! (Mass of the Setting Sun)",
+        "composer": "Bonilla & Wilson • Vocal Arr. by Lockwood & Phan"
+      },
+      "responsorialPsalm": {
+        "psalm": "Ps 25 Teach me your ways, O Lord.",
+        "setting": "Spirit & Psalm • ?"
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "Mass of St. Anne",
+        "composer": "Ed Bolduc"
+      },
+      "lordsPrayer": {
+        "title": "Echo Our Father",
+        "composer": "Jerome Andrews • Arranged by Dan Houze"
+      },
+      "fractionRite": {
+        "title": "Lamb of God (Mass of Holy Cross)"
+      },
+      "communionSongs": [
+        {
+          "title": "Bread of Life",
+          "composer": "Michael John Poirier",
+          "description": "\"Word of God, O Light eternal... foundation strong\""
+        }
+      ]
+    },
+    {
+      "community": "Heritage",
+      "communityId": "heritage",
+      "date": "Year B — Jan 24, 2027 (Sun)",
+      "presider": "NOT THIS YEAR",
+      "penitentialAct": {
+        "title": "Kyrie • Misa Del Mundo",
+        "composer": "Jesse Manibusan"
+      },
+      "gloria": {
+        "title": "Glory to God (Mass of Christ the Savior)",
+        "composer": "Dan Schutte"
+      },
+      "responsorialPsalm": {
+        "psalm": "Ps 25 Teach me your ways, O Lord.",
+        "setting": "Composer/s"
+      },
+      "offertory": {
+        "title": "O Word of God",
+        "composer": "Ricky Manalo, CSP",
+        "description": "Word of God Sunday"
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "Mass of Creation - Rev. 2010"
+      },
+      "lordsPrayer": {
+        "title": "Chanted Our Father (Snow)",
+        "composer": "Jennings/Paregorius"
+      },
+      "fractionRite": {
+        "title": "Lamb of God (Mass of Creation)"
+      },
+      "sending": {
+        "title": "Word of Our God",
+        "composer": "Dan Schutte"
+      }
+    },
+    {
+      "community": "Elevations",
+      "communityId": "elevations",
+      "date": "Year B — Jan 24, 2027 (Sun)",
+      "presider": "NOT THIS YEAR",
+      "penitentialAct": {
+        "title": "Kyrie (Misa Del Mundo)",
+        "composer": "Jesse Manibusan — If needed."
+      },
+      "gloria": {
+        "title": "Glory, Glory, Gloria! (Mass of the Setting Sun)"
+      },
+      "responsorialPsalm": {
+        "psalm": "Ps 25 Teach me your ways, O Lord.",
+        "setting": "Spirit & Psalm • ?"
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "Mass of Communion (Lower Key) • Matt Maher"
+      },
+      "lordsPrayer": {
+        "title": "Echo Our Father",
+        "composer": "Andrews, Arr. Bonilla • Lockwood • Fajardo"
+      },
+      "fractionRite": {
+        "title": "Lamb of God (Mass of Holy Cross)"
+      },
+      "communionSongs": [
+        {
+          "title": "Bread of Life",
+          "composer": "Michael John Poirier",
+          "description": "\"Word of God, O Light eternal... foundation strong\""
+        },
+        {
+          "title": "What A Beautiful Name (Gospel Version)",
+          "composer": "Hillsong Worship",
+          "description": "\"You were the Word in the beginning...\""
+        }
+      ]
+    }
+  ]
+}

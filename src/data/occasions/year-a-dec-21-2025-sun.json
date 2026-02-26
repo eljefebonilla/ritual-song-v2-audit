@@ -1,0 +1,390 @@
+{
+  "id": "year-a-dec-21-2025-sun",
+  "name": "Year A — Dec 21, 2025 (Sun)",
+  "year": "ABC",
+  "season": "ordinary",
+  "seasonLabel": "Ordinary Time",
+  "seasonOrder": 21,
+  "dates": [],
+  "lectionary": {
+    "number": "",
+    "gospelTitle": "Year A — Dec 20, 2037 (Sun)",
+    "thematicTag": "Year A — Dec 24, 2034 (Sun)",
+    "thematicDetail": "Year A — Dec 21, 2031 (Sun)"
+  },
+  "readings": [
+    {
+      "type": "psalm",
+      "citation": "Infancy: Joseph’s Dream",
+      "summary": "",
+      "antiphon": "Planning Reminders"
+    },
+    {
+      "type": "gospel_verse",
+      "citation": "Drop down dew from above, you heavens,\nand let the clouds rain down the Just One;\nlet the earth be opened and bring forth a Savior.",
+      "summary": "Entrance Antiphon • Option II"
+    },
+    {
+      "type": "gospel",
+      "citation": "Reading I | Is 7:10-14",
+      "summary": "Prediction of Emmanuel, born of a virgin."
+    }
+  ],
+  "antiphons": [
+    {
+      "type": "entrance",
+      "option": 1,
+      "citation": "Verse before the Gospel | Mt 1:23",
+      "text": "The virgin shall conceive, and bear a son,\nand they shall name him Emmanuel."
+    },
+    {
+      "type": "communion",
+      "option": 2,
+      "citation": "Communion Antiphon | Is 7:14",
+      "text": "Behold, a Virgin shall conceive and bear a son;\nand his name will be called Emmanuel."
+    }
+  ],
+  "planningNotes": [
+    "Communion Antiphon • Option II",
+    "N/A"
+  ],
+  "musicPlans": [
+    {
+      "community": "Reflections",
+      "communityId": "reflections",
+      "date": "Year A — Dec 20, 2025 (Sat)",
+      "presider": "Fr. Thomas Park",
+      "prelude": {
+        "title": "Song Title",
+        "composer": "Composer/s"
+      },
+      "penitentialAct": {
+        "title": "GABRIEL'S MESSAGE • Basque Carol",
+        "composer": "Gospel",
+        "description": "Penitential Act"
+      },
+      "gloria": {
+        "title": "Warm the Time of WInter",
+        "composer": "Lori True",
+        "description": "Gloria"
+      },
+      "gospelAcclamation": {
+        "title": "The Lyric Psalter • Tony Alonso & Marty Haugen",
+        "composer": "Gospel Acclamation",
+        "verse": "Advent/Christmas 2 — Missa Pacem"
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "Holy Is His Name",
+        "composer": "John Michael Talbot"
+      },
+      "lordsPrayer": {
+        "title": "Eucharistic Acclamations",
+        "composer": "Mass of the Incarnate Word",
+        "description": "Bob Hurd • Traditional Arrangement"
+      },
+      "fractionRite": {
+        "title": "Holy",
+        "composer": "Mystery of Faith",
+        "description": "Amen"
+      },
+      "communionSongs": [
+        {
+          "title": "The Lord's Prayer",
+          "composer": "Chanted Our Father (Snow)",
+          "description": "Jennings • Paregorius"
+        },
+        {
+          "title": "Fraction Rite",
+          "composer": "Missa Veni Emmanuel",
+          "description": "Ed Archer"
+        },
+        {
+          "title": "Communion Songs",
+          "composer": "O Come, O Come Emmanuel",
+          "description": "\"Veni, veni Emmanuel\"; Latin 9th C;"
+        },
+        {
+          "title": "Communion Antiphon - Desire of Nations Verse!",
+          "composer": "Waiting in Silence",
+          "description": "Carey Landry"
+        }
+      ]
+    },
+    {
+      "community": "Foundations",
+      "communityId": "foundations",
+      "date": "Year A — Dec 21, 2025 (Sun)",
+      "presider": "Fr. Vince Kuna",
+      "prelude": {
+        "title": "N/A"
+      },
+      "penitentialAct": {
+        "title": "Tom Booth",
+        "composer": "Advent",
+        "description": "Penitential Act"
+      },
+      "gloria": {
+        "title": "Warm the Time of WInter",
+        "composer": "Lori True",
+        "description": "Gloria"
+      },
+      "gospelAcclamation": {
+        "title": "The Lyric Psalter • Tony Alonso & Marty Haugen",
+        "composer": "Gospel Acclamation",
+        "verse": "Hallelujah, Hallelu!"
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "Hail Mary: Gentle Woman",
+        "composer": "Carey Landrey"
+      },
+      "lordsPrayer": {
+        "title": "Eucharistic Acclamations",
+        "composer": "Mass of the Incarnate Word"
+      },
+      "fractionRite": {
+        "title": "Holy",
+        "composer": "Mystery of Faith",
+        "description": "Amen"
+      },
+      "communionSongs": [
+        {
+          "title": "The Lord's Prayer",
+          "composer": "Chanted Our Father (Snow)",
+          "description": "Jennings • Paregorius"
+        },
+        {
+          "title": "Fraction Rite",
+          "composer": "Missa Veni Emmanuel"
+        },
+        {
+          "title": "Communion Songs",
+          "composer": "O Come, O Come Emmanuel",
+          "description": "\"Veni, veni Emmanuel\"; Latin 9th C;"
+        },
+        {
+          "title": "Communion Antiphon",
+          "composer": "Bread of Life (Advent/Christmas)",
+          "description": "Bernadette Farrell"
+        }
+      ],
+      "sending": {
+        "title": "Andrae Crouch and the Disciples"
+      }
+    },
+    {
+      "community": "Generations",
+      "communityId": "generations",
+      "date": "Year A — Dec 21, 2025 (Sun)",
+      "presider": "Msgr. Lloyd Torgerson",
+      "prelude": {
+        "title": "Song Title",
+        "composer": "Composer/s"
+      },
+      "penitentialAct": {
+        "title": "John Angotti",
+        "composer": "Gospel",
+        "description": "Penitential Act"
+      },
+      "gloria": {
+        "title": "Warm the Time of WInter",
+        "composer": "Lori True"
+      },
+      "gospelAcclamation": {
+        "title": "Spirit & Psalm • Ben Walther",
+        "composer": "Gospel Acclamation",
+        "verse": "Hallelujah (adapted for Liturgy)"
+      },
+      "offertory": {
+        "title": "Choir Practice Tracks",
+        "description": "Offertory Song"
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "Hail Mary: Gentle Woman",
+        "composer": "Carey Landrey"
+      },
+      "lordsPrayer": {
+        "title": "Eucharistic Acclamations",
+        "composer": "Mass of the Incarnate Word",
+        "description": "Bob Hurd • Arr. by Lockwood"
+      },
+      "fractionRite": {
+        "title": "Holy",
+        "composer": "Mystery of Faith",
+        "description": "Amen"
+      },
+      "communionSongs": [
+        {
+          "title": "The Lord's Prayer",
+          "composer": "Chanted Our Father (Snow)",
+          "description": "Jennings • Paregorius"
+        },
+        {
+          "title": "Fraction Rite",
+          "composer": "Advent Lamb of God (Bonilla)"
+        },
+        {
+          "title": "Communion Songs",
+          "composer": "O Come, O Come Emmanuel",
+          "description": "For King + Country (Cm)"
+        },
+        {
+          "title": "O Antiphons - Desire of Nations Verse!",
+          "composer": "The King Shall Come",
+          "description": "Trevor Thomson"
+        },
+        {
+          "title": "Advent",
+          "composer": "Make Your Home In Me",
+          "description": "Ben Walther"
+        },
+        {
+          "title": "Gospel",
+          "composer": "Always Carry You",
+          "description": "Matt Maher"
+        }
+      ],
+      "sending": {
+        "title": "Come Lord Jesus",
+        "composer": "John Angotti",
+        "description": "Advent"
+      }
+    },
+    {
+      "community": "Heritage",
+      "communityId": "heritage",
+      "date": "Year A — Dec 21, 2025 (Sun)",
+      "presider": "\"Fr. David Guffey, CSC\"",
+      "prelude": {
+        "title": "Hail Mary: Gentle Woman",
+        "composer": "Carey Landrey",
+        "description": "Post Communion Med. if Ave Maria is too much"
+      },
+      "penitentialAct": {
+        "title": "trad. Basque Carol • tr. by Sabine Baring-Gould",
+        "composer": "GABRIEL’S MESSAGE",
+        "description": "Penitential Act"
+      },
+      "gloria": {
+        "title": "Warm the Time of WInter",
+        "composer": "Lori True"
+      },
+      "gospelAcclamation": {
+        "title": "The Lyric Psalter • Tony Alonso & Marty Haugen",
+        "composer": "Gospel Acclamation",
+        "verse": "Advent/Christmas 2 — Missa Pacem"
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "Holy Is His Name",
+        "composer": "John Michael Talbot"
+      },
+      "lordsPrayer": {
+        "title": "Eucharistic Acclamations",
+        "composer": "Mass of the Incarnate Word",
+        "description": "Bob Hurd • Traditional Arrangement"
+      },
+      "fractionRite": {
+        "title": "Holy",
+        "composer": "Mystery of Faith",
+        "description": "Amen"
+      },
+      "communionSongs": [
+        {
+          "title": "The Lord's Prayer",
+          "composer": "Chanted Our Father (Snow)",
+          "description": "Jennings • Paregorius"
+        },
+        {
+          "title": "Fraction Rite",
+          "composer": "Missa Veni Emmanuel"
+        },
+        {
+          "title": "Communion Songs",
+          "composer": "O Come, O Come Emmanuel",
+          "description": "VENI, VENI, EMMANUEL"
+        },
+        {
+          "title": "Communion Antiphon",
+          "composer": "Waiting in Silence",
+          "description": "Carey Landry"
+        },
+        {
+          "title": "Only if needed!",
+          "composer": "Ave Maria",
+          "description": "Franz Schubert"
+        }
+      ],
+      "sending": {
+        "title": "Eleanor Farjeon • Arr. by Marty Haugen",
+        "composer": "BESANCON"
+      }
+    },
+    {
+      "community": "Elevations",
+      "communityId": "elevations",
+      "date": "Year A — Dec 21, 2025 (Sun)",
+      "presider": "Fr. Eusebio Llonoso",
+      "prelude": {
+        "title": "N/A"
+      },
+      "penitentialAct": {
+        "title": "John Angotti",
+        "composer": "Advent",
+        "description": "Penitential Act"
+      },
+      "gloria": {
+        "title": "Warm the Time of WInter",
+        "composer": "Lori True"
+      },
+      "gospelAcclamation": {
+        "title": "Spirit & Psalm • Ben Walther",
+        "composer": "Gospel Acclamation",
+        "verse": "Hallelujah, Hallelu!"
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "Hail Mary: Gentle Woman",
+        "composer": "Carey Landrey"
+      },
+      "lordsPrayer": {
+        "title": "Eucharistic Acclamations",
+        "composer": "Incarnate Word • Bob Hurd , Arr. by Lockwood",
+        "description": "Bob Hurd , Arr. by Lockwood"
+      },
+      "fractionRite": {
+        "title": "Holy",
+        "composer": "Mystery of Faith",
+        "description": "Amen"
+      },
+      "communionSongs": [
+        {
+          "title": "The Lord's Prayer",
+          "composer": "Chanted Our Father (Snow)",
+          "description": "Jennings • Paregorius"
+        },
+        {
+          "title": "Fraction Rite",
+          "composer": "Advent Lamb of God"
+        },
+        {
+          "title": "Communion Songs",
+          "composer": "O Come, O Come Emmanuael",
+          "description": "For King + Country (Cm)"
+        },
+        {
+          "title": "O Antiphons - Desire of Nations Verse!",
+          "composer": "Make Your Home In Me",
+          "description": "Ben Walther"
+        },
+        {
+          "title": "Gospel",
+          "composer": "Always Carry You",
+          "description": "Matt Maher"
+        }
+      ],
+      "sending": {
+        "title": "Sending Song",
+        "composer": "Come Lord Jesus",
+        "description": "John Angotti"
+      }
+    }
+  ]
+}

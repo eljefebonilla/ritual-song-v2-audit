@@ -1,0 +1,420 @@
+{
+  "id": "year-c-may-04-2025-sun",
+  "name": "Year C — May 04, 2025 (Sun)",
+  "year": "ABC",
+  "season": "ordinary",
+  "seasonLabel": "Ordinary Time",
+  "seasonOrder": 4,
+  "dates": [],
+  "lectionary": {
+    "number": "Year C — Apr 15, 2040 (Sun)",
+    "gospelTitle": "Year C — Apr 19, 2037 (Sun)",
+    "thematicTag": "Year C — Apr 23, 2034 (Sun)",
+    "thematicDetail": "Year C — Apr 27, 2031 (Sun)"
+  },
+  "readings": [
+    {
+      "type": "psalm",
+      "citation": "Res Appearance 3/3",
+      "summary": "",
+      "antiphon": "Planning Reminders"
+    },
+    {
+      "type": "gospel_verse",
+      "citation": "Cry out with joy to God, all the earth;\nO sing to the glory of his name.\nO render him glorious praise, alleluia.",
+      "summary": ""
+    },
+    {
+      "type": "gospel",
+      "citation": "Reading I | Acts 5:27-32, 40b-41",
+      "summary": "The Sanhedrin tells the apostles not to mention Jesus."
+    }
+  ],
+  "antiphons": [
+    {
+      "type": "entrance",
+      "option": 1,
+      "citation": "Verse before the Gospel | Lectionary",
+      "text": "Christ is risen, creator of all;\nhe has shown pity on all people."
+    },
+    {
+      "type": "communion",
+      "option": 2,
+      "citation": "Communion Antiphon • Option I | Lk 24:35",
+      "text": "The disciples recognized the Lord Jesus\nin the breaking of the bread, alleluia."
+    }
+  ],
+  "planningNotes": [
+    "Communion Antiphon • Optional for Year C | Jn 21:12–13",
+    "Jesus said to his disciples: Come and eat.\nAnd he took bread and gave it to them, alleluia."
+  ],
+  "musicPlans": [
+    {
+      "community": "Reflections",
+      "communityId": "reflections",
+      "date": "Year C — Apr 29, 2028 (Sat)",
+      "presider": "NOT THIS YEAR",
+      "prelude": {
+        "title": "Regina Caeli / O Queen of Heaven",
+        "composer": "Mode VI Latin • 12th C",
+        "description": "Pope Leo XIV singing Regina Caeli"
+      },
+      "penitentialAct": {
+        "title": "John Michael Talbot",
+        "composer": "Month of Mary • Mary's song of praise!",
+        "description": "Penitential Act"
+      },
+      "gloria": {
+        "title": "Kyrie • Misa Del Mundo",
+        "composer": "Only if needed. Talk to presider!",
+        "description": "Gloria"
+      },
+      "gospelAcclamation": {
+        "title": "The Lyric Psalter • Tony Alonso & Marty Haugen",
+        "composer": "Gospel Acclamation",
+        "verse": "Easter Alleluia (Refrain)"
+      },
+      "offertory": {
+        "title": "E • 3 | C — \"Christ is risen, creator of all...\"",
+        "description": "Offertory Song"
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "Our Life Is Hidden with Christ",
+        "composer": "Bob Hurd • Arranged by Rick Modlin"
+      },
+      "lordsPrayer": {
+        "title": "Eucharistic Acclamations",
+        "composer": "Mass of the Holy Family",
+        "description": "Chris de Silva"
+      },
+      "fractionRite": {
+        "title": "Holy, Holy, Holy",
+        "composer": "When We Eat This Bread",
+        "description": "Amen"
+      },
+      "communionSongs": [
+        {
+          "title": "The Lord's Prayer",
+          "composer": "Chanted Our Father (Snow)",
+          "description": "Jennings/Paregorius"
+        },
+        {
+          "title": "Fraction Rite",
+          "composer": "Lamb of God (Mass of the Holy Family)",
+          "description": "Chris de Silva"
+        },
+        {
+          "title": "Communion Songs",
+          "composer": "We Remember",
+          "description": "Marty Haugen"
+        },
+        {
+          "title": "\"...how you loved us to your death...\"",
+          "composer": "Age to Age",
+          "description": "Janet Vogt • Jeff McLemore • Skip Kroner"
+        }
+      ]
+    },
+    {
+      "community": "Foundations",
+      "communityId": "foundations",
+      "date": "Year C — Apr 30, 2028 (Sun)",
+      "presider": "NOT THIS YEAR",
+      "prelude": {
+        "title": "Regina Caeli / O Queen of Heaven",
+        "composer": "Mode VI Latin • 12th C",
+        "description": "Pope Leo XIV singing Regina Caeli"
+      },
+      "penitentialAct": {
+        "title": "John Michael Talbot",
+        "composer": "Month of Mary • Mary's song of praise!",
+        "description": "Penitential Act"
+      },
+      "gloria": {
+        "title": "Kyrie (Gift of God) • Adapted Version",
+        "composer": "Marty Haugen • Arranged by David Locwood",
+        "description": "Gloria"
+      },
+      "gospelAcclamation": {
+        "title": "Spirit & Psalm • Rick Modlin",
+        "composer": "Gospel Acclamation",
+        "verse": "Easter Alleluia (Refrain)"
+      },
+      "offertory": {
+        "title": "E • 3 | C — \"Christ is risen, creator of all...\"",
+        "description": "Offertory Song"
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "Age to Age",
+        "composer": "Janet Vogt • Jeff McLemore • Skip Kroner"
+      },
+      "lordsPrayer": {
+        "title": "Eucharistic Acclamations",
+        "composer": "Mass of Glory",
+        "description": "Bob Hurd & Ken Canedo"
+      },
+      "fractionRite": {
+        "title": "Holy, Holy",
+        "composer": "We Proclaim Your Death",
+        "description": "Amen"
+      },
+      "communionSongs": [
+        {
+          "title": "The Lord's Prayer",
+          "composer": "Chanted Our Father (Snow)",
+          "description": "Jennings • Paregorius"
+        },
+        {
+          "title": "Fraction Rite",
+          "composer": "Lamb of God (Mass of Glory)",
+          "description": "Bob Hurd & Ken Canedo"
+        },
+        {
+          "title": "Communion Songs",
+          "composer": "By Our Love",
+          "description": "Tom Kendzia"
+        },
+        {
+          "title": "Peter, do you love me? Feed my sheep.",
+          "composer": "Jesus, the Bread of Life",
+          "description": "Grayson Warren Brown"
+        }
+      ],
+      "sending": {
+        "title": "Traditional",
+        "composer": "\"...to our savior and our king!\""
+      }
+    },
+    {
+      "community": "Generations",
+      "communityId": "generations",
+      "date": "Year C — Apr 30, 2028 (Sun)",
+      "presider": "NOT THIS YEAR",
+      "prelude": {
+        "title": "Regina Caeli / O Queen of Heaven",
+        "composer": "Mode VI Latin • 12th C",
+        "description": "Pope Leo XIV singing Regina Caeli"
+      },
+      "penitentialAct": {
+        "title": "Vogt • Arr. by David Lockwood",
+        "composer": "\"We will love you age to age\"",
+        "description": "Penitential Act"
+      },
+      "gloria": {
+        "title": "Kyrie • Misa Del Mundo",
+        "composer": "Only if needed. Talk to presider!",
+        "description": "Gloria"
+      },
+      "gospelAcclamation": {
+        "title": "Spirit & Psalm • Rick Modlin",
+        "composer": "Gospel Acclamation",
+        "verse": "Easter Alleluia (Refrain)"
+      },
+      "offertory": {
+        "title": "E• 3 | C — \"Christ is risen, creator of all...\"",
+        "description": "Offertory Song"
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "I Love You Lord",
+        "composer": "Steffany Gretzinger"
+      },
+      "lordsPrayer": {
+        "title": "Eucharistic Acclamations",
+        "composer": "Mass of Glory",
+        "description": "Bob Hurd • Arr. by Dan Houze"
+      },
+      "fractionRite": {
+        "title": "Holy",
+        "composer": "Mystery of Faith",
+        "description": "Amen"
+      },
+      "communionSongs": [
+        {
+          "title": "The Lord's Prayer",
+          "composer": "(Echo) Our Father",
+          "description": "Jerome Andrews • Arranged by Dan Houze"
+        },
+        {
+          "title": "Fraction Rite",
+          "composer": "Lamb of God (Mass of Glory)"
+        },
+        {
+          "title": "Communion Songs",
+          "composer": "Remembrance",
+          "description": "Hillsong"
+        },
+        {
+          "title": "\"If ever I should lose my way...\" (Peter 👀  )",
+          "composer": "Our New Day",
+          "description": "Sarah Hart"
+        },
+        {
+          "title": "Rehabilitation of Peter",
+          "composer": "Hallelujah Is Our Song",
+          "description": "Sarah Hart & Sarah Kroger"
+        },
+        {
+          "title": "\"What hope we have\"",
+          "composer": "New Creation",
+          "description": "Jackie François"
+        }
+      ],
+      "sending": {
+        "title": "Alleluia! Love Is Alive",
+        "composer": "Steve Angrisano • Jesse Manibusan • Sarah Hart",
+        "description": "\"He is alive!\""
+      }
+    },
+    {
+      "community": "Heritage",
+      "communityId": "heritage",
+      "date": "Year C — Apr 30, 2028 (Sun)",
+      "presider": "NOT THIS YEAR",
+      "prelude": {
+        "title": "Regina Caeli / O Queen of Heaven",
+        "composer": "Mode VI Latin • 12th C",
+        "description": "Pope Leo XIV singing Regina Caeli"
+      },
+      "penitentialAct": {
+        "title": "Gustav T. Holst • M.D. Ridge • Jeffrey Honoré",
+        "composer": "\"we’ve seen him at this table\"",
+        "description": "Penitential Act"
+      },
+      "gloria": {
+        "title": "Kyrie • Misa Del Mundo",
+        "composer": "Only if needed. Talk to presider!",
+        "description": "Gloria"
+      },
+      "gospelAcclamation": {
+        "title": "The Lyric Psalter • Tony Alonso & Marty Haugen",
+        "composer": "Gospel Acclamation",
+        "verse": "Easter Alleluia (Refrain)"
+      },
+      "offertory": {
+        "title": "E• 3 | C — \"Christ is risen, creator of all...\"",
+        "description": "Offertory Song"
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "Our Life Is Hidden with Christ",
+        "composer": "Bob Hurd • Arranged by Rick Modlin"
+      },
+      "lordsPrayer": {
+        "title": "Eucharistic Acclamations",
+        "composer": "Mass of Joy & Peace",
+        "description": "Tony Alonso"
+      },
+      "fractionRite": {
+        "title": "Holy, Holy, Holy",
+        "composer": "When We Eat This Bread",
+        "description": "Amen"
+      },
+      "communionSongs": [
+        {
+          "title": "The Lord's Prayer",
+          "composer": "Chanted Our Father (Snow)",
+          "description": "Jennings/Paregorius"
+        },
+        {
+          "title": "Fraction Rite",
+          "composer": "Lamb of God (Mass of Joy & Peace)",
+          "description": "Tony Alonso"
+        },
+        {
+          "title": "Communion Songs",
+          "composer": "We Remember",
+          "description": "Marty Haugen"
+        },
+        {
+          "title": "\"...how you loved us to your death...\"",
+          "composer": "Age to Age",
+          "description": "Janet Vogt • Jeff McLemore • Skip Kroner"
+        },
+        {
+          "title": "\"We will love you age to age\"",
+          "composer": "Jesus Christ, Yesterday, Today, and Forever",
+          "description": "Suzanne Toolan, RSM"
+        }
+      ],
+      "sending": {
+        "title": "LASST UNS ERFREUEN, LM with alleluias",
+        "composer": "\"Praise to the everliving King!\""
+      }
+    },
+    {
+      "community": "Elevations",
+      "communityId": "elevations",
+      "date": "Year C — Apr 30, 2028 (Sun)",
+      "presider": "NOT THIS YEAR",
+      "prelude": {
+        "title": "Regina Caeli / O Queen of Heaven",
+        "composer": "Mode VI Latin • 12th C",
+        "description": "Pope Leo XIV singing Regina Caeli"
+      },
+      "penitentialAct": {
+        "title": "Vogt • Arr. by David Lockwood",
+        "composer": "\"We will love you age to age\"",
+        "description": "Penitential Act"
+      },
+      "gloria": {
+        "title": "Kyrie (Misa Del Mundo)",
+        "composer": "Jesse Manibusan — If needed.",
+        "description": "Gloria"
+      },
+      "gospelAcclamation": {
+        "title": "Spirit & Psalm • Rick Modlin",
+        "composer": "Gospel Acclamation",
+        "verse": "Easter Alleluia (Refrain)"
+      },
+      "offertory": {
+        "title": "E• 3 | C — \"Christ is risen, creator of all...\"",
+        "description": "Offertory Song"
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "I Love You Lord",
+        "composer": "Steffany Gretzinger"
+      },
+      "lordsPrayer": {
+        "title": "Eucharistic Acclamations",
+        "composer": "Mass of Restoration",
+        "description": "Joshua Blakesley"
+      },
+      "fractionRite": {
+        "title": "Holy, Holy, Holy",
+        "composer": "Save Us Savior of the World",
+        "description": "Amen"
+      },
+      "communionSongs": [
+        {
+          "title": "The Lord's Prayer",
+          "composer": "Echo Our Father",
+          "description": "Andrews, Arr. Bonilla • Lockwood • Fajardo"
+        },
+        {
+          "title": "Fraction Rite",
+          "composer": "Lamb of God (Mass of Restoration)",
+          "description": "Joshua Blakesley"
+        },
+        {
+          "title": "Communion Songs",
+          "composer": "Remembrance",
+          "description": "Hillsong"
+        },
+        {
+          "title": "\"If ever I should lose my way...\" (Peter 👀  )",
+          "composer": "Our New Day",
+          "description": "Sarah Hart"
+        },
+        {
+          "title": "Rehabilitation of Peter",
+          "composer": "New Creation",
+          "description": "Jackie François"
+        }
+      ],
+      "sending": {
+        "title": "Sending Song",
+        "composer": "Alleluia! Love Is Alive",
+        "description": "Steve Angrisano • Jesse Manibusan • Sarah Hart"
+      }
+    }
+  ]
+}

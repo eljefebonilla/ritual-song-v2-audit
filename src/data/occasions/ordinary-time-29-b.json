@@ -1,0 +1,224 @@
+{
+  "id": "ordinary-time-29-b",
+  "name": "ORDINARY TIME 29 [B]",
+  "year": "B",
+  "season": "ordinary",
+  "seasonLabel": "Ordinary Time",
+  "seasonOrder": 29,
+  "dates": [
+    {
+      "date": "2024-10-20",
+      "label": "Year B — Oct 20, 2024 (Sun)",
+      "dayOfWeek": "Sun"
+    },
+    {
+      "date": "2036-10-19",
+      "label": "Year B — Oct 19, 2036 (Sun)",
+      "dayOfWeek": "Sun"
+    },
+    {
+      "date": "2033-10-16",
+      "label": "Year B — Oct 16, 2033 (Sun)",
+      "dayOfWeek": "Sun"
+    },
+    {
+      "date": "2030-10-20",
+      "label": "Year B — Oct 20, 2030 (Sun)",
+      "dayOfWeek": "Sun"
+    },
+    {
+      "date": "2027-10-17",
+      "label": "Year B — Oct 17, 2027 (Sun)",
+      "dayOfWeek": "Sun"
+    }
+  ],
+  "lectionary": {
+    "number": "146•B",
+    "gospelTitle": "Pharisee, Tax Collector",
+    "thematicTag": "Prayer Parables 2/2"
+  },
+  "readings": [
+    {
+      "type": "first",
+      "citation": "Is 53:10-11",
+      "summary": "Through suffering, the Lord offers his life."
+    },
+    {
+      "type": "psalm",
+      "citation": "Ps 33:4-5, 18-19, 20, 22, R. v.22\nLord, let your mercy be on us, as we place our trust in you.",
+      "summary": "",
+      "antiphon": "Ps 33:4-5, 18-19, 20, 22, R. v.22\nLord, let your mercy be on us, as we place our trust in you."
+    },
+    {
+      "type": "second",
+      "citation": "Heb 4:14-16",
+      "summary": "Jesus faced the same temptations as us."
+    },
+    {
+      "type": "gospel_verse",
+      "citation": "Mk 10:45",
+      "summary": "The Son of Man came to serve\nand to give his life as a ransom for many."
+    },
+    {
+      "type": "gospel",
+      "citation": "Mk 10:35-45 (Shorter - Mk 10:42-45)",
+      "summary": "Whoever aspires to greatness must serve the rest."
+    }
+  ],
+  "antiphons": [
+    {
+      "type": "entrance",
+      "option": 1,
+      "citation": "Cf. Ps 17 (16):6, 8",
+      "text": "To you I call; for you will surely heed me, O God;\nturn your ear to me; hear my words.\nGuard me as the apple of your eye;\nin the shadow of your wings protect me."
+    },
+    {
+      "type": "communion",
+      "option": 1,
+      "citation": "Cf. Ps 33 (32):18–19",
+      "text": "Behold, the eyes of the Lord are on those who fear him,\nwho hope in his merciful love, to rescue their souls from death,\nto keep them alive in famine."
+    },
+    {
+      "type": "communion",
+      "option": 2,
+      "citation": "Roman Missal — Mk 10:45",
+      "text": "The Son of Man has come\nto give his life as a ransom for many."
+    }
+  ],
+  "planningNotes": [
+    "OCT - Holy Rosary",
+    "OCT - Respect Life",
+    "OCT - Catholic Social Teaching"
+  ],
+  "musicPlans": [
+    {
+      "community": "Reflections",
+      "communityId": "reflections",
+      "date": "Year B — Oct 16, 2027 (Sat)",
+      "presider": "NOT THIS YEAR",
+      "penitentialAct": {
+        "title": "Kyrie • Misa Del Mundo",
+        "composer": "Only if needed. Talk to presider!"
+      },
+      "gloria": {
+        "title": "Glory to God (Through-composed Setting)",
+        "composer": "Mass of Renewal • Curtis Stephan"
+      },
+      "gospelAcclamation": {
+        "title": "Alleluia (Mass of Joy & Peace)",
+        "composer": "Song Title"
+      },
+      "lordsPrayer": {
+        "title": "Chanted Our Father (Snow)",
+        "composer": "Jennings/Paregorius"
+      },
+      "fractionRite": {
+        "title": "Lamb of God Setting"
+      },
+      "communionSongs": [
+        {
+          "title": "Psalm 23: Shepherd Me, O God",
+          "composer": "Marty Haugen",
+          "description": "OT29B"
+        }
+      ]
+    },
+    {
+      "community": "Foundations",
+      "communityId": "foundations",
+      "date": "Year B — Oct 17, 2027 (Sun)",
+      "presider": "NOT THIS YEAR",
+      "penitentialAct": {
+        "title": "Kyrie (Gift of God) • Adapted Version",
+        "composer": "Marty Haugen • Arranged by David Locwood"
+      },
+      "gloria": {
+        "title": "Glory to God (Mass of Joy & Peace)",
+        "composer": "Alonso • Arr. by Houze OR Arr. by Lockwood"
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "Mass of ?"
+      },
+      "lordsPrayer": {
+        "title": "Chanted Our Father (Snow)",
+        "composer": "Jennings • Paregorius"
+      },
+      "fractionRite": {
+        "title": "Lamb of God (Mass of ???)"
+      }
+    },
+    {
+      "community": "Generations",
+      "communityId": "generations",
+      "date": "Year B — Oct 17, 2027 (Sun)",
+      "presider": "NOT THIS YEAR",
+      "penitentialAct": {
+        "title": "Kyrie • Misa Del Mundo",
+        "composer": "If needed. Talk to presider!"
+      },
+      "gloria": {
+        "title": "Glory, Glory, Gloria!",
+        "composer": "Tony Alonso • Arr. by Dan Houze"
+      },
+      "gospelAcclamation": {
+        "title": "Setting from Mass of ???",
+        "composer": "Song Title"
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "Mass of Restoration",
+        "composer": "Joshua Blakesley"
+      },
+      "lordsPrayer": {
+        "title": "(Echo) Our Father",
+        "composer": "Jerome Andrews • Arranged by Dan Houze"
+      },
+      "fractionRite": {
+        "title": "Lamb of God (Resoration)"
+      }
+    },
+    {
+      "community": "Heritage",
+      "communityId": "heritage",
+      "date": "Year B — Oct 17, 2027 (Sun)",
+      "presider": "NOT THIS YEAR",
+      "penitentialAct": {
+        "title": "Kyrie • Misa Del Mundo",
+        "composer": "Only if needed. Talk to presider!"
+      },
+      "gloria": {
+        "title": "Glory to God (Mass of Christ the Savior)",
+        "composer": "Dan Schutte"
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "Mass of Christ the Savior - Dan Schutte"
+      },
+      "lordsPrayer": {
+        "title": "Echo Our Father",
+        "composer": "Andrews, Arr. Bonilla • Lockwood • Fajardo"
+      },
+      "fractionRite": {
+        "title": "Lamb of God (Mass of Christ the Savior)"
+      }
+    },
+    {
+      "community": "Elevations",
+      "communityId": "elevations",
+      "date": "Year B — Oct 17, 2027 (Sun)",
+      "presider": "NOT THIS YEAR",
+      "gospelAcclamation": {
+        "title": "Setting from Mass of ???",
+        "verse": "Song Title"
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "Mass of Restoration • Joshua Blakesley"
+      },
+      "lordsPrayer": {
+        "title": "Echo Our Father",
+        "composer": "Andrews, Arr. Bonilla • Lockwood • Fajardo"
+      },
+      "fractionRite": {
+        "title": "Lamb of God (Resoration)"
+      }
+    }
+  ]
+}

@@ -1,0 +1,416 @@
+{
+  "id": "year-a-feb-12-2023-sun",
+  "name": "Year A — Feb 12, 2023 (Sun)",
+  "year": "ABC",
+  "season": "ordinary",
+  "seasonLabel": "Ordinary Time",
+  "seasonOrder": 12,
+  "dates": [],
+  "lectionary": {
+    "number": "Year A — Feb 14, 2038 (Sun)",
+    "gospelTitle": "N/A in 2035",
+    "thematicTag": "N/A in 2032",
+    "thematicDetail": "Year A — Feb 11, 2029 (Sun)"
+  },
+  "readings": [
+    {
+      "type": "first",
+      "citation": "NEXT WEEK",
+      "summary": ""
+    },
+    {
+      "type": "psalm",
+      "citation": "Sermon Mount 3/6",
+      "summary": "",
+      "antiphon": "Planning Reminders"
+    },
+    {
+      "type": "gospel_verse",
+      "citation": "Be my protector, O God,\na mighty stronghold to save me.\nFor you are my rock, my stronghold!\nLead me, guide me, for the sake of your name.",
+      "summary": "Entrance Antiphon • Option II"
+    },
+    {
+      "type": "gospel",
+      "citation": "Reading I | Sir 15:15-20",
+      "summary": "We may choose life or death."
+    }
+  ],
+  "antiphons": [
+    {
+      "type": "entrance",
+      "option": 1,
+      "citation": "Verse before the Gospel | See Mt 11:25",
+      "text": "Blessed are you, Father, Lord of heaven and earth;\nyou have revealed to little ones the mysteries of the kingdom."
+    },
+    {
+      "type": "communion",
+      "option": 2,
+      "citation": "Communion Antiphon • Option I | Cf. Ps 78 (77):29–30",
+      "text": "They ate and had their fill,\nand what they craved the Lord gave them;\nthey were not disappointed in what they craved."
+    }
+  ],
+  "planningNotes": [
+    "Communion Antiphon • Option II | Cf. Jn 3:16",
+    "God so loved the world\nthat he gave his Only Begotten Son,\nso that all who believe in him may not perish,\nbut may have eternal life."
+  ],
+  "musicPlans": [
+    {
+      "community": "Reflections",
+      "communityId": "reflections",
+      "date": "Year A — Feb 14, 2026 (Sat)",
+      "presider": "TBD",
+      "prelude": {
+        "title": "N/A"
+      },
+      "penitentialAct": {
+        "title": "John Michael Talbot",
+        "composer": "Second Reading",
+        "description": "Penitential Act (Only if presider wants led by cantor)"
+      },
+      "gloria": {
+        "title": "Kyrie • Misa Del Mundo",
+        "composer": "Jesse Manibusan",
+        "description": "Gloria"
+      },
+      "gospelAcclamation": {
+        "title": "The Lyric Psalter • Tony Alonso & Marty Haugen",
+        "composer": "Gospel Acclamation",
+        "verse": "Alleluia (Mass of Joy & Peace)"
+      },
+      "offertory": {
+        "title": "Verse ORDINARY TIME • 06A",
+        "description": "Offertory Song"
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "We Are the Light of the World",
+        "composer": "Jean Anthony Greif (Traditional Arrangement)"
+      },
+      "lordsPrayer": {
+        "title": "Eucharistic Acclamations",
+        "composer": "Mass for the Healing of the World",
+        "description": "Trevor Thomson"
+      },
+      "fractionRite": {
+        "title": "Holy",
+        "composer": "When We Eat This Bread",
+        "description": "Amen"
+      },
+      "communionSongs": [
+        {
+          "title": "The Lord's Prayer",
+          "composer": "Chanted Our Father (Snow)",
+          "description": "Jennings/Paregorius"
+        },
+        {
+          "title": "Fraction Rite",
+          "composer": "Lamb of God (Mass for the Healing of the World)",
+          "description": "Trevor Thomson"
+        },
+        {
+          "title": "Communion Songs",
+          "composer": "Jesus, Living Bread",
+          "description": "Tom Booth"
+        },
+        {
+          "title": "\"... I'm open to your ways..\"",
+          "composer": "Precious Lord, Take My Hand",
+          "description": "Thomas A. Dorsey"
+        }
+      ]
+    },
+    {
+      "community": "Foundations",
+      "communityId": "foundations",
+      "date": "Year A — Feb 15, 2026 (Sun)",
+      "presider": "TBD",
+      "prelude": {
+        "title": "N/A"
+      },
+      "penitentialAct": {
+        "title": "SLANE • Arranged by Assad",
+        "composer": "Jesus teachus us the way of the law through a new lens.",
+        "description": "Penitential Act (If presider wants led by cantor)"
+      },
+      "gloria": {
+        "title": "Kyrie (Gift of God) • Adapted Version",
+        "composer": "Marty Haugen • Arranged by David Locwood",
+        "description": "Gloria"
+      },
+      "gospelAcclamation": {
+        "title": "The Lyric Psalter • Tony Alonso & Marty Haugen",
+        "composer": "Gospel Acclamation",
+        "verse": "Alleluia! Give the Glory (Mass of Glory)"
+      },
+      "offertory": {
+        "title": "Verse Audio Example",
+        "description": "Offertory Song"
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "I Will Choose Christ",
+        "composer": "Tom Booth"
+      },
+      "lordsPrayer": {
+        "title": "Eucharistic Acclamations",
+        "composer": "Mass of Glory",
+        "description": "Bob Hurd & Ken Canedo"
+      },
+      "fractionRite": {
+        "title": "Holy",
+        "composer": "Mystery of Faith",
+        "description": "Amen"
+      },
+      "communionSongs": [
+        {
+          "title": "The Lord's Prayer",
+          "composer": "Chanted Our Father (Snow)",
+          "description": "Jennings • Paregorius"
+        },
+        {
+          "title": "Fraction Rite",
+          "composer": "Lamb of God (Mass of Glory)",
+          "description": "Bob Hurd & Ken Canedo"
+        },
+        {
+          "title": "Communion Songs",
+          "composer": "I Lift My Soul to You",
+          "description": "Lori True"
+        },
+        {
+          "title": "Verses are all about following the law.",
+          "composer": "Precious Lord, Take My Hand",
+          "description": "Thomas A. Dorsey"
+        }
+      ],
+      "sending": {
+        "title": "Leon C. Roberts",
+        "composer": "Black History Month"
+      }
+    },
+    {
+      "community": "Generations",
+      "communityId": "generations",
+      "date": "Year A — Feb 15, 2026 (Sun)",
+      "presider": "TBD",
+      "prelude": {
+        "title": "N/A"
+      },
+      "penitentialAct": {
+        "title": "SLANE • Arranged by Assad",
+        "composer": "Jesus teachus us the way of the law through a new lens.",
+        "description": "Penitential Act (Only if presider wants led by cantor)"
+      },
+      "gloria": {
+        "title": "Kyrie • Misa Del Mundo",
+        "composer": "Jesse Manibusan",
+        "description": "Gloria"
+      },
+      "gospelAcclamation": {
+        "title": "Spirit & Psalm • Josh Blakesley",
+        "composer": "Gospel Acclamation",
+        "verse": "Hallelujah (adapted for Liturgy)"
+      },
+      "offertory": {
+        "title": "Choir Practice Tracks",
+        "description": "Offertory Song"
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "Simple Kingdom",
+        "composer": "Bryan & Katie Torwaltwith with Cody Carnes"
+      },
+      "lordsPrayer": {
+        "title": "Eucharistic Acclamations",
+        "composer": "Mass of St. Anne",
+        "description": "Ed Bolduc"
+      },
+      "fractionRite": {
+        "title": "Holy",
+        "composer": "Mystery of Faith",
+        "description": "Amen"
+      },
+      "communionSongs": [
+        {
+          "title": "The Lord's Prayer",
+          "composer": "Echo Our Father",
+          "description": "Jerome Andrews • Arranged by Dan Houze"
+        },
+        {
+          "title": "Fraction Rite",
+          "composer": "Lamb of God (Mass of Holy Cross)",
+          "description": "David Clark Isele"
+        },
+        {
+          "title": "Communion Songs",
+          "composer": "Jesus, Living Bread",
+          "description": "Tom Booth"
+        },
+        {
+          "title": "\"... I'm open to your ways..\"",
+          "composer": "I Will Choose Christ",
+          "description": "Tom Booth"
+        },
+        {
+          "title": "\"...and as I walk this road with you teach me to love.\"",
+          "composer": "Build My Life",
+          "description": "Pat Barrett"
+        },
+        {
+          "title": "“And I will build my life upon your love. It is a firm foundation.”",
+          "composer": "Remembrance",
+          "description": "Hillsong"
+        }
+      ],
+      "sending": {
+        "title": "Act Justly, Love Mercy, Walk Humbly",
+        "composer": "Pat Barrett",
+        "description": "...love my neighbor as myself...good news to all the world..."
+      }
+    },
+    {
+      "community": "Heritage",
+      "communityId": "heritage",
+      "date": "Year A — Feb 15, 2026 (Sun)",
+      "presider": "TBD",
+      "prelude": {
+        "title": "N/A"
+      },
+      "penitentialAct": {
+        "title": "John Michael Talbot",
+        "composer": "Second Reading",
+        "description": "Penitential Act (If presider wants led by cantor)"
+      },
+      "gloria": {
+        "title": "Kyrie • Misa Del Mundo",
+        "composer": "Jesse Manibusan",
+        "description": "Gloria"
+      },
+      "gospelAcclamation": {
+        "title": "The Lyric Psalter • Tony Alonso & Marty Haugen",
+        "composer": "Gospel Acclamation",
+        "verse": "Alleluia (Mass of Joy & Peace)"
+      },
+      "offertory": {
+        "title": "Verse - ORDINARY TIME • 06A",
+        "description": "Offertory Song"
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "We Are the Light of the World",
+        "composer": "Jean Anthony Greif"
+      },
+      "lordsPrayer": {
+        "title": "Eucharistic Acclamations",
+        "composer": "Mass of Joy & Peace",
+        "description": "Tony Alonso"
+      },
+      "fractionRite": {
+        "title": "Holy, Holy, Holy",
+        "composer": "When We Eat This Bread",
+        "description": "Amen"
+      },
+      "communionSongs": [
+        {
+          "title": "The Lord's Prayer",
+          "composer": "Chanted Our Father (Snow)",
+          "description": "Jennings/Paregorius"
+        },
+        {
+          "title": "Fraction Rite",
+          "composer": "Lamb of God (Mass of Joy & Peace)",
+          "description": "Tony Alonso"
+        },
+        {
+          "title": "Communion Songs",
+          "composer": "In Every Age",
+          "description": "Janèt Sullivan Whitaker"
+        },
+        {
+          "title": "General",
+          "composer": "Many and Great",
+          "description": "Ricky Manalo, CSP"
+        },
+        {
+          "title": "General / \"the Christ speaks, the heart seeks\"",
+          "composer": "Act Justly",
+          "description": "Bernadette Farrell"
+        }
+      ],
+      "sending": {
+        "title": "William A. Dunkerley",
+        "composer": "Black History Month"
+      }
+    },
+    {
+      "community": "Elevations",
+      "communityId": "elevations",
+      "date": "Year A — Feb 15, 2026 (Sun)",
+      "presider": "TBD",
+      "prelude": {
+        "title": "N/A"
+      },
+      "penitentialAct": {
+        "title": "SLANE • Arranged by Assad",
+        "composer": "Gospel Theme \"Riches I head not...\"",
+        "description": "Penitential Act (If presider wants led by cantor)"
+      },
+      "gloria": {
+        "title": "Kyrie (Misa Del Mundo)",
+        "composer": "Jesse Manibusan — If needed.",
+        "description": "Gloria"
+      },
+      "gospelAcclamation": {
+        "title": "Spirit & Psalm • Josh Blakesley",
+        "composer": "Gospel Acclamation",
+        "verse": "Hallelujah (adapted for Liturgy)"
+      },
+      "offertory": {
+        "title": "Choir Practice Tracks",
+        "description": "Offertory Song"
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "Give Us Your Peace",
+        "composer": "Jesse Manibusan • Sarah Hart"
+      },
+      "lordsPrayer": {
+        "title": "Eucharistic Acclamations",
+        "composer": "Mass of Communion (Lower Key)",
+        "description": "Matt Maher"
+      },
+      "fractionRite": {
+        "title": "Holy",
+        "composer": "Mystery of Faith",
+        "description": "Amen"
+      },
+      "communionSongs": [
+        {
+          "title": "The Lord's Prayer",
+          "composer": "Echo Our Father",
+          "description": "Andrews • Arr. by Bonilla • Lockwood • Fajardo"
+        },
+        {
+          "title": "Fraction Rite",
+          "composer": "Lamb of God (Mass of Holy Cross)",
+          "description": "David Clark Isele"
+        },
+        {
+          "title": "Communion Songs",
+          "composer": "Jesus, Living Bread",
+          "description": "Tom Booth"
+        },
+        {
+          "title": "\"... I'm open to your ways..\"",
+          "composer": "Build My Life",
+          "description": "Pat Barrett"
+        },
+        {
+          "title": "“And I will build my life upon your love. It is a firm foundation.”",
+          "composer": "Remembrance",
+          "description": "Hillsong"
+        }
+      ],
+      "sending": {
+        "title": "Sending Song",
+        "composer": "Act Justly, Love Mercy, Walk Humbly",
+        "description": "Pat Barrett"
+      }
+    }
+  ]
+}

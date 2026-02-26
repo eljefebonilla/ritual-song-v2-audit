@@ -1,0 +1,198 @@
+{
+  "id": "solemnity-christ-the-king-b",
+  "name": "SOLEMNITY\nCHRIST THE KING [B]",
+  "year": "B",
+  "season": "solemnity",
+  "seasonLabel": "Solemnity",
+  "seasonOrder": 0,
+  "dates": [
+    {
+      "date": "2024-11-24",
+      "label": "Year B — Nov 24, 2024 (Sun)",
+      "dayOfWeek": "Sun"
+    },
+    {
+      "date": "2036-11-23",
+      "label": "Year B — Nov 23, 2036 (Sun)",
+      "dayOfWeek": "Sun"
+    },
+    {
+      "date": "2033-11-20",
+      "label": "Year B — Nov 20, 2033 (Sun)",
+      "dayOfWeek": "Sun"
+    },
+    {
+      "date": "2030-11-24",
+      "label": "Year B — Nov 24, 2030 (Sun)",
+      "dayOfWeek": "Sun"
+    },
+    {
+      "date": "2027-11-21",
+      "label": "Year B — Nov 21, 2027 (Sun)",
+      "dayOfWeek": "Sun"
+    }
+  ],
+  "lectionary": {
+    "number": "161•B",
+    "gospelTitle": "Kingdom, Not Worldly",
+    "thematicTag": "Kingship at Cross"
+  },
+  "readings": [
+    {
+      "type": "first",
+      "citation": "Dn 7:13-14",
+      "summary": "Vision of the son receiving kingship, dominion and glory."
+    },
+    {
+      "type": "psalm",
+      "citation": "The Lord is king; he is robed in majesty.",
+      "summary": "",
+      "antiphon": "The Lord is king; he is robed in majesty."
+    },
+    {
+      "type": "second",
+      "citation": "Rv 1:5-8",
+      "summary": "The Lord is the Alpha and the Omega."
+    },
+    {
+      "type": "gospel_verse",
+      "citation": "Mk 11:9, 10",
+      "summary": "Blessed is he who comes in the name of the Lord!\nBlessed is the kingdom of our father David that is to come!"
+    },
+    {
+      "type": "gospel",
+      "citation": "Jn 18:33b-37",
+      "summary": "Pilate questions Jesus about his identity."
+    }
+  ],
+  "antiphons": [
+    {
+      "type": "entrance",
+      "option": 1,
+      "citation": "Rev 5:12; 1:6",
+      "text": "How worthy is the Lamb who was slain,\nto receive power and divinity,\nand wisdom and strength and honor.\nTo him belong glory and power for ever and ever."
+    },
+    {
+      "type": "communion",
+      "option": 1,
+      "citation": "Ps 29 (28):10–11",
+      "text": "The Lord sits as King for ever.\nThe Lord will bless his people with peace."
+    }
+  ],
+  "planningNotes": [
+    "Black Catholic History Month",
+    "Month of Remembrance"
+  ],
+  "musicPlans": [
+    {
+      "community": "Reflections",
+      "communityId": "reflections",
+      "date": "Year B — Nov 20, 2027 (Sat)",
+      "presider": "NOT THIS YEAR",
+      "gospelAcclamation": {
+        "title": "Alleluia (Mass of Joy & Peace)",
+        "composer": "Song Title"
+      },
+      "lordsPrayer": {
+        "title": "Chanted Our Father (Snow)",
+        "composer": "Jennings/Paregorius"
+      },
+      "fractionRite": {
+        "title": "Lamb of God Setting"
+      }
+    },
+    {
+      "community": "Foundations",
+      "communityId": "foundations",
+      "date": "Year B — Nov 21, 2027 (Sun)",
+      "presider": "NOT THIS YEAR",
+      "penitentialAct": {
+        "title": "Kyrie (Gift of God) • Adapted Version",
+        "composer": "Marty Haugen • Arranged by David Locwood"
+      },
+      "gloria": {
+        "title": "Glory to God (Mass of Joy & Peace)",
+        "composer": "Alonso • Arr. by Houze OR Arr. by Lockwood"
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "Mass of ?"
+      },
+      "lordsPrayer": {
+        "title": "Chanted Our Father (Snow)",
+        "composer": "Jennings • Paregorius"
+      },
+      "fractionRite": {
+        "title": "Lamb of God (Mass of ???)"
+      }
+    },
+    {
+      "community": "Generations",
+      "communityId": "generations",
+      "date": "Year B — Nov 21, 2027 (Sun)",
+      "presider": "NOT THIS YEAR",
+      "penitentialAct": {
+        "title": "Kyrie • Misa Del Mundo",
+        "composer": "If needed. Talk to presider!"
+      },
+      "gloria": {
+        "title": "Glory, Glory, Gloria!",
+        "composer": "Tony Alonso • Arr. by Dan Houze"
+      },
+      "gospelAcclamation": {
+        "title": "Setting from Mass of ???",
+        "composer": "Song Title"
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "Mass of ?"
+      },
+      "lordsPrayer": {
+        "title": "(Echo) Our Father",
+        "composer": "Jerome Andrews • Arranged by Dan Houze"
+      },
+      "fractionRite": {
+        "title": "Lamb of God (Mass Setting?)"
+      }
+    },
+    {
+      "community": "Heritage",
+      "communityId": "heritage",
+      "date": "Year B — Nov 21, 2027 (Sun)",
+      "presider": "NOT THIS YEAR",
+      "penitentialAct": {
+        "title": "Kyrie • Misa Del Mundo",
+        "composer": "Only if needed. Talk to presider!"
+      },
+      "gloria": {
+        "title": "Glory to God (Mass of Christ the Savior)",
+        "composer": "Dan Schutte"
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "Mass of Christ the Savior - Dan Schutte"
+      },
+      "lordsPrayer": {
+        "title": "Echo Our Father",
+        "composer": "Andrews, Arr. Bonilla • Lockwood • Fajardo"
+      },
+      "fractionRite": {
+        "title": "Lamb of God (Mass of Christ the Savior)"
+      }
+    },
+    {
+      "community": "Elevations",
+      "communityId": "elevations",
+      "date": "Year B — Nov 21, 2027 (Sun)",
+      "presider": "NOT THIS YEAR",
+      "gospelAcclamation": {
+        "title": "Setting from Mass of ???",
+        "verse": "Song Title"
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "Mass of ? • Composer"
+      },
+      "lordsPrayer": {
+        "title": "Echo Our Father",
+        "composer": "Andrews, Arr. Bonilla • Lockwood • Fajardo"
+      }
+    }
+  ]
+}

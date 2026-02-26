@@ -1,0 +1,410 @@
+{
+  "id": "ordinary-time-07-c",
+  "name": "ORDINARY TIME 07 [C]",
+  "year": "C",
+  "season": "ordinary",
+  "seasonLabel": "Ordinary Time",
+  "seasonOrder": 7,
+  "dates": [
+    {
+      "date": "2025-02-09",
+      "label": "Year C — Feb 09, 2025 (Sun)",
+      "dayOfWeek": "Sun"
+    }
+  ],
+  "lectionary": {
+    "number": "081•C",
+    "gospelTitle": "Measure You Give",
+    "thematicTag": "Sermon Plain 2/3"
+  },
+  "readings": [
+    {
+      "type": "first",
+      "citation": "Cf. Ps 13 (12):11",
+      "summary": "Entrance Antiphon | Cf. Ps 13 (12):12"
+    },
+    {
+      "type": "psalm",
+      "citation": "Entrance Antiphon | Cf. Ps 13 (12):13",
+      "summary": "",
+      "antiphon": "Entrance Antiphon | Cf. Ps 13 (12):13"
+    },
+    {
+      "type": "second",
+      "citation": "Cf. Ps 13 (12):14",
+      "summary": "Entrance Antiphon | Cf. Ps 13 (12):15"
+    },
+    {
+      "type": "gospel_verse",
+      "citation": "Cf. Ps 13 (12):17",
+      "summary": "I give you a new commandment, says the Lord:\nlove one another as I have loved you."
+    },
+    {
+      "type": "gospel",
+      "citation": "Lk 6:27-38",
+      "summary": "Love your enemy."
+    }
+  ],
+  "antiphons": [
+    {
+      "type": "entrance",
+      "option": 1,
+      "citation": "Cf. Ps 13 (12):6",
+      "text": "Entrance Antiphon | Cf. Ps 13 (12):7"
+    },
+    {
+      "type": "entrance",
+      "option": 2,
+      "citation": "Entrance Antiphon | Cf. Ps 13 (12):8",
+      "text": "Entrance Antiphon | Cf. Ps 13 (12):9"
+    },
+    {
+      "type": "communion",
+      "option": 1,
+      "citation": "Cf. Ps 9:2–3",
+      "text": "I will recount all your wonders,\nI will rejoice in you and be glad,\nand sing psalms to your name, O Most High."
+    },
+    {
+      "type": "communion",
+      "option": 2,
+      "citation": "Communion Antiphon • Option II | Cf. Jn 11:27",
+      "text": "Lord, I have come to believe that you are the Christ,\nthe Son of the living God, who is coming into this world."
+    }
+  ],
+  "planningNotes": [
+    "FEB - BLACKHISTORYMONTH",
+    "RECONGRESS | FEB 20 - FEB 23"
+  ],
+  "musicPlans": [
+    {
+      "community": "Reflections",
+      "communityId": "reflections",
+      "date": "Year C — Feb 05, 2028 (Sat)",
+      "presider": "NOT THIS YEAR",
+      "prelude": {
+        "title": "Lift Every Voice and Sing"
+      },
+      "gathering": {
+        "title": "Christ in Me Arise",
+        "composer": "Trevor Thomson",
+        "description": "\"Be now my footsteps, leading the way...\""
+      },
+      "penitentialAct": {
+        "title": "Kyrie • Misa Del Mundo",
+        "composer": "Jesse Manibusan"
+      },
+      "gloria": {
+        "title": "Glory to God (Through-composed Setting)",
+        "composer": "Mass of Renewal • Curtis Stephan"
+      },
+      "responsorialPsalm": {
+        "psalm": "Ps 103 The Lord is kind and merciful.",
+        "setting": "The Lyric Psalter • Tony Alonso & Marty Haugen"
+      },
+      "gospelAcclamation": {
+        "title": "Alleluia (Mass of Joy & Peace)",
+        "composer": "ORDINARY TIME • 07C"
+      },
+      "offertory": {
+        "title": "A Generous Heart",
+        "composer": "Chris de Silva",
+        "description": "Gospel - Love your enemy"
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "Mass for the Healing of the World",
+        "composer": "Trevor Thomson"
+      },
+      "lordsPrayer": {
+        "title": "Chanted Our Father (Snow)",
+        "composer": "Jennings/Paregorius"
+      },
+      "fractionRite": {
+        "title": "Lamb of God (Mass for the Healing of the World)",
+        "composer": "Trevor Thomson"
+      },
+      "communionSongs": [
+        {
+          "title": "Eat This Bread",
+          "composer": "Taizé — Jacques Berthier",
+          "description": "Communion Antiphon"
+        },
+        {
+          "title": "Ubi Caritas",
+          "composer": "Bob Hurd",
+          "description": "\"Love one another as I have loved you\""
+        },
+        {
+          "title": "The Servant Song",
+          "composer": "Richard Gillard • Arranged by Ed Archer",
+          "description": "\"...let me be as Christ to you\""
+        }
+      ],
+      "sending": {
+        "title": "They'll Know We Are Christians",
+        "composer": "Peter Scholtes",
+        "description": "Love your enemy!"
+      }
+    },
+    {
+      "community": "Foundations",
+      "communityId": "foundations",
+      "date": "Year C — Feb 06, 2028 (Sun)",
+      "presider": "NOT THIS YEAR",
+      "prelude": {
+        "title": "Lift Every Voice and Sing",
+        "composer": "James Weldon Johnson • John Rosamond Johnson",
+        "description": "Entrance Antiphon • Black History Month"
+      },
+      "gathering": {
+        "title": "Gather Your People",
+        "composer": "Bob Hurd",
+        "description": "\"...one spirit of love\""
+      },
+      "penitentialAct": {
+        "title": "Kyrie (Gift of God) • Adapted Version",
+        "composer": "Marty Haugen • Arranged by David Locwood"
+      },
+      "gloria": {
+        "title": "Mass of Joy & Peace (Gospel Version)",
+        "composer": "Tony Alonso • Arrangement by David Lockwood"
+      },
+      "responsorialPsalm": {
+        "psalm": "Ps 103 The Lord is kind and merciful.",
+        "setting": "The Lyric Psalter • Tony Alonso & Marty Haugen"
+      },
+      "gospelAcclamation": {
+        "title": "Alleluia! Give the Glory (Mass of Glory)"
+      },
+      "offertory": {
+        "title": "The Servant Song",
+        "composer": "Richard Gillard • Arranged by Ed Archer",
+        "description": "\"...let me be as Christ to you\""
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "Mass of Glory"
+      },
+      "lordsPrayer": {
+        "title": "Chanted Our Father (Snow)",
+        "composer": "Jennings • Paregorius"
+      },
+      "fractionRite": {
+        "title": "Lamb of God (Mass of Glory)"
+      },
+      "communionSongs": [
+        {
+          "title": "Jesus, the Bread of Life",
+          "composer": "Grayson Warren Brown",
+          "description": "Black History Month"
+        },
+        {
+          "title": "Prayer of St Francis",
+          "composer": "Sebastian Temple • Arranged by Ed Archer",
+          "description": "Choral reference not available"
+        }
+      ],
+      "sending": {
+        "title": "As Christ to the World",
+        "composer": "Tom Kendzia",
+        "description": "\"Called to love one another, as Christ to the World\""
+      }
+    },
+    {
+      "community": "Generations",
+      "communityId": "generations",
+      "date": "Year C — Feb 06, 2028 (Sun)",
+      "presider": "NOT THIS YEAR",
+      "prelude": {
+        "title": "Lift Every Voice and Sing"
+      },
+      "gathering": {
+        "title": "All Are Welcome (All Belong)",
+        "composer": "Jesse Manibusan • Jennah Manibusan",
+        "description": "\"Mercy flows and love redeems\""
+      },
+      "penitentialAct": {
+        "title": "Kyrie • Misa Del Mundo",
+        "composer": "Jesse Manibusan"
+      },
+      "gloria": {
+        "title": "Glory, Glory, Gloria! (Mass of the Setting Sun)",
+        "composer": "Bonilla & Wilson • Vocal Arr. by Lockwood & Phan"
+      },
+      "responsorialPsalm": {
+        "psalm": "Ps 103 The Lord is kind and merciful.",
+        "setting": "Craig & Kristen Colson"
+      },
+      "gospelAcclamation": {
+        "title": "Misa del Mundo",
+        "composer": "ORDINARY TIME • 07C"
+      },
+      "offertory": {
+        "title": "The Servant Song",
+        "composer": "Richard Gillard • Arranged by Ed Archer",
+        "description": "\"...let me be as Christ to you\""
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "Mass of St. Anne",
+        "composer": "Ed Bolduc"
+      },
+      "lordsPrayer": {
+        "title": "Echo Our Father",
+        "composer": "Jerome Andrews • Arranged by Dan Houze"
+      },
+      "fractionRite": {
+        "title": "Lamb of God (Mass of Holy Cross)"
+      },
+      "communionSongs": [
+        {
+          "title": "I Am the Bread of Life",
+          "composer": "Suzanne Toolan, SM • Arrranged by Dan Houze",
+          "description": "Communion Antiphon"
+        },
+        {
+          "title": "Ubi Caritas",
+          "composer": "Bob Hurd",
+          "description": "\"Love one another as I have loved you\""
+        },
+        {
+          "title": "Make Me a Channel of Your Peace",
+          "composer": "John Angotti",
+          "description": "\"Where there is hatred let me bring your love\""
+        }
+      ],
+      "sending": {
+        "title": "A Rightful Place",
+        "composer": "Steve Angrisano",
+        "description": "\"So that all might know they have a rightful place\""
+      }
+    },
+    {
+      "community": "Heritage",
+      "communityId": "heritage",
+      "date": "Year C — Feb 06, 2028 (Sun)",
+      "presider": "NOT THIS YEAR",
+      "prelude": {
+        "title": "Lift Every Voice and Sing"
+      },
+      "gathering": {
+        "title": "As We Gather at Your Table",
+        "composer": "NETTLETON  • Carl P. Daw Jr.",
+        "description": "\"Give us,...compassion to forgive as you forgave\""
+      },
+      "penitentialAct": {
+        "title": "Kyrie • Misa Del Mundo",
+        "composer": "Jesse Manibusan"
+      },
+      "gloria": {
+        "title": "Glory to God (Mass of Christ the Savior)",
+        "composer": "Dan Schutte"
+      },
+      "responsorialPsalm": {
+        "psalm": "Ps 103 The Lord is kind and merciful.",
+        "setting": "The Lyric Psalter • Tony Alonso & Marty Haugen"
+      },
+      "offertory": {
+        "title": "The Servant Song",
+        "composer": "Richard Gillard • Arranged by Ed Archer",
+        "description": "\"...let me be as Christ to you\""
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "Mass of Creation - Rev. 2010"
+      },
+      "lordsPrayer": {
+        "title": "Chanted Our Father (Snow)",
+        "composer": "Jennings/Paregorius"
+      },
+      "fractionRite": {
+        "title": "Lamb of God (Mass of Creation)"
+      },
+      "communionSongs": [
+        {
+          "title": "Eat This Bread",
+          "composer": "Taizé — Jacques Berthier",
+          "description": "Communion Antiphon"
+        },
+        {
+          "title": "Ubi Caritas",
+          "composer": "Bob Hurd",
+          "description": "\"Love one another as I have loved you\""
+        },
+        {
+          "title": "Prayer of St Francis",
+          "composer": "Sebastian Temple • Arranged by Ed Archer"
+        }
+      ],
+      "sending": {
+        "title": "Lord, You Give the Great Commission",
+        "composer": "ABBOT’S LEIGH • Taylor • Rowthorn",
+        "description": "Vs 4 \"Lord, you show us love's true measure...\""
+      }
+    },
+    {
+      "community": "Elevations",
+      "communityId": "elevations",
+      "date": "Year C — Feb 06, 2028 (Sun)",
+      "presider": "NOT THIS YEAR",
+      "prelude": {
+        "title": "Lift Every Voice and Sing",
+        "composer": "James Weldon Johnson • John Rosamond Johnson",
+        "description": "Entrance Antiphon • Black History Month"
+      },
+      "gathering": {
+        "title": "All Are Welcome (All Belong)",
+        "composer": "Jesse Manibusan • Jennah Manibusan",
+        "description": "\"Mercy flows and love redeems\""
+      },
+      "penitentialAct": {
+        "title": "Kyrie (Misa Del Mundo)",
+        "composer": "Jesse Manibusan — If needed."
+      },
+      "gloria": {
+        "title": "Glory, Glory, Gloria! (Mass of the Setting Sun)"
+      },
+      "responsorialPsalm": {
+        "psalm": "Ps 103 The Lord is kind and merciful.",
+        "setting": "Craig & Kristen Colson"
+      },
+      "gospelAcclamation": {
+        "title": "Misa del Mundo",
+        "verse": "ORDINARY TIME • 07C"
+      },
+      "offertory": {
+        "title": "The Servant Song",
+        "composer": "Richard Gillard • Arranged by Ed Archer",
+        "description": "\"...let me be as Christ to you\""
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "Mass of Communion (Lower Key) • Matt Maher"
+      },
+      "lordsPrayer": {
+        "title": "Echo Our Father",
+        "composer": "Andrews, Arr. Bonilla • Lockwood • Fajardo"
+      },
+      "fractionRite": {
+        "title": "Lamb of God (Mass of Holy Cross)"
+      },
+      "communionSongs": [
+        {
+          "title": "I Am the Bread of Life",
+          "composer": "Suzanne Toolan, SM • Arrranged by Dan Houze",
+          "description": "Communion Antiphon"
+        },
+        {
+          "title": "Ubi Caritas",
+          "composer": "Bob Hurd",
+          "description": "\"Love one another as I have loved you\""
+        },
+        {
+          "title": "Make Me a Channel of Your Peace",
+          "composer": "John Angotti",
+          "description": "\"Where there is hatred let me bring your love\""
+        }
+      ],
+      "sending": {
+        "title": "A Rightful Place",
+        "composer": "Steve Angrisano",
+        "description": "\"So that all might know they have a rightful place\""
+      }
+    }
+  ]
+}

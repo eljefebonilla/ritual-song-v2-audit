@@ -1,0 +1,434 @@
+{
+  "id": "ordinary-time-17-c",
+  "name": "ORDINARY TIME 17 [C]",
+  "year": "C",
+  "season": "ordinary",
+  "seasonLabel": "Ordinary Time",
+  "seasonOrder": 17,
+  "dates": [
+    {
+      "date": "2025-07-27",
+      "label": "Year C — Jul 27, 2025 (Sun)",
+      "dayOfWeek": "Sun"
+    },
+    {
+      "date": "2037-07-26",
+      "label": "Year C — Jul 26, 2037 (Sun)",
+      "dayOfWeek": "Sun"
+    },
+    {
+      "date": "2034-07-30",
+      "label": "Year C — Jul 30, 2034 (Sun)",
+      "dayOfWeek": "Sun"
+    },
+    {
+      "date": "2031-07-27",
+      "label": "Year C — Jul 27, 2031 (Sun)",
+      "dayOfWeek": "Sun"
+    },
+    {
+      "date": "2028-07-30",
+      "label": "Year C — Jul 30, 2028 (Sun)",
+      "dayOfWeek": "Sun"
+    }
+  ],
+  "lectionary": {
+    "number": "111•C",
+    "gospelTitle": "Teach Us to Pray",
+    "thematicTag": "Travel Disc. (Journey to Jerusalem) 4/4"
+  },
+  "readings": [
+    {
+      "type": "first",
+      "citation": "Gen 18:20-32",
+      "summary": "Abraham pleads mercy for Sodom."
+    },
+    {
+      "type": "psalm",
+      "citation": "Ps 138:1-2, 2-3, 6-7, 7-8, R. v.3a\nLord, on the day I called for help, you answered me.",
+      "summary": "",
+      "antiphon": "Ps 138:1-2, 2-3, 6-7, 7-8, R. v.3a\nLord, on the day I called for help, you answered me."
+    },
+    {
+      "type": "second",
+      "citation": "Col 2:12-14",
+      "summary": "Through Christ, God forgave our sins."
+    },
+    {
+      "type": "gospel_verse",
+      "citation": "Rom 8:15bc",
+      "summary": "You have received a Spirit of adoption,\nthrough which we cry, Abba, Father."
+    },
+    {
+      "type": "gospel",
+      "citation": "Lk 11:1-13",
+      "summary": "Jesus instructs his followers in persistent prayer."
+    }
+  ],
+  "antiphons": [
+    {
+      "type": "entrance",
+      "option": 1,
+      "citation": "Cf. Ps 68 (67):6–7, 36",
+      "text": "God is in his holy place,\nGod who unites those who dwell in his house;\nhe himself gives might and strength to his people."
+    },
+    {
+      "type": "communion",
+      "option": 1,
+      "citation": "Ps 103 (102):2",
+      "text": "Bless the Lord, O my soul,\nand never forget all his benefits."
+    },
+    {
+      "type": "communion",
+      "option": 2,
+      "citation": "Roman Missal — Mt 5:7–8",
+      "text": "Blessed are the merciful, for they shall receive mercy.\nBlessed are the clean of heart, for they shall see God."
+    }
+  ],
+  "planningNotes": [],
+  "musicPlans": [
+    {
+      "community": "Reflections",
+      "communityId": "reflections",
+      "date": "Year C — Jul 26, 2025 (Sat)",
+      "presider": "NOT THIS YEAR",
+      "prelude": {
+        "title": "The Kingdom of God",
+        "composer": "Taizé • Jacques Berthier",
+        "description": "Thy kingdom come, thy will be done."
+      },
+      "gathering": {
+        "title": "Holy Is His Name",
+        "composer": "John Michael Talbot",
+        "description": "Hallowed be Thy name."
+      },
+      "penitentialAct": {
+        "title": "Kyrie • Misa Del Mundo",
+        "composer": "Only if needed. Talk to presider!"
+      },
+      "gloria": {
+        "title": "Glory to God (Through-composed Setting)",
+        "composer": "Mass of Renewal • Curtis Stephan"
+      },
+      "responsorialPsalm": {
+        "psalm": "Ps 138 Lord, on the day I called for help...",
+        "setting": "The Lyric Psalter • Tony Alonso & Marty Haugen"
+      },
+      "gospelAcclamation": {
+        "title": "Alleluia (Mass of Joy & Peace)",
+        "composer": "O.T. • 17 | C — \"You have reveived a Spirit...\""
+      },
+      "offertory": {
+        "title": "Jesus I Trust In You",
+        "composer": "Josh Blakesley • Sarah Kroger • Sarah Hart",
+        "description": "Thy will be done."
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "Mass of the Holy Family",
+        "composer": "Chris de Silva"
+      },
+      "lordsPrayer": {
+        "title": "Chanted Our Father (Snow)",
+        "composer": "Jennings/Paregorius"
+      },
+      "fractionRite": {
+        "title": "Lamb of God (Mass of the Holy Family)",
+        "composer": "Chris de Silva"
+      },
+      "communionSongs": [
+        {
+          "title": "Make Us One",
+          "composer": "Jeffrey Bonilla & David Lockwood",
+          "description": "\"Not our will but yours be done...Pray within us Lord\""
+        },
+        {
+          "title": "The Feast Meant for Everyone",
+          "composer": "Tom Booth & Sarah Hart",
+          "description": "Gospe: \"bread for the hungry who beg at our door\""
+        },
+        {
+          "title": "Abba! Father!",
+          "composer": "Carey Landry • Arr. by David Lockwood",
+          "description": "Praying to the Father"
+        }
+      ],
+      "sending": {
+        "title": "Take the Word of God with You",
+        "composer": "Christopher Walker • James Harrison",
+        "description": "General Sending"
+      }
+    },
+    {
+      "community": "Foundations",
+      "communityId": "foundations",
+      "date": "Year C — Jul 27, 2025 (Sun)",
+      "presider": "NOT THIS YEAR",
+      "prelude": {
+        "title": "I Need Thee Every Hour",
+        "composer": "Robert Lowry • Annie S. Hawks",
+        "description": "A prayer for closeness to God."
+      },
+      "gathering": {
+        "title": "Holy Is His Name",
+        "composer": "John Michael Talbot",
+        "description": "Hallowed be Thy name."
+      },
+      "penitentialAct": {
+        "title": "Kyrie (Gift of God) • Adapted Version",
+        "composer": "Marty Haugen • Arranged by David Locwood"
+      },
+      "gloria": {
+        "title": "Glory to God (Mass of Joy & Peace)",
+        "composer": "Alonso • Arr. by Houze OR Arr. by Lockwood"
+      },
+      "responsorialPsalm": {
+        "psalm": "Ps 138 Lord, on the day I called for help...",
+        "setting": "Spirit & Psalm • Steve Angrisano"
+      },
+      "offertory": {
+        "title": "Teach Us How To Pray",
+        "composer": "John Angotti",
+        "description": "Gospel Reading (simplified and lowered)"
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "Mass of Glory • Bob Hurd • Arr. by Dan Houze"
+      },
+      "lordsPrayer": {
+        "title": "Chanted Our Father (Snow)",
+        "composer": "Jennings • Paregorius"
+      },
+      "fractionRite": {
+        "title": "Lamb of God (Mass of Glory)"
+      },
+      "communionSongs": [
+        {
+          "title": "The Feast Meant for Everyone",
+          "composer": "Tom Booth & Sarah Hart",
+          "description": "Gospel: \"bread for the hungry who beg at our door\""
+        },
+        {
+          "title": "Abba! Father!",
+          "composer": "Carey Landry • Arr. by David Lockwood",
+          "description": "Praying to the Father"
+        }
+      ],
+      "sending": {
+        "title": "In Christ There Is No East Or West",
+        "composer": "Adapt. by Burleigh • Oxenham • Arr. by Lockwood",
+        "description": "General Sending"
+      }
+    },
+    {
+      "community": "Generations",
+      "communityId": "generations",
+      "date": "Year C — Jul 27, 2025 (Sun)",
+      "presider": "NOT THIS YEAR",
+      "prelude": {
+        "title": "Daily Bread",
+        "composer": "Pat Barrett • Kari Jobe",
+        "description": "NEW SONG"
+      },
+      "gathering": {
+        "title": "Holy Is Your Name",
+        "composer": "Chris Tomlin",
+        "description": "\"...hallowed be Thy name\""
+      },
+      "penitentialAct": {
+        "title": "Kyrie • Misa Del Mundo",
+        "composer": "Only if needed. Talk to presider!"
+      },
+      "gloria": {
+        "title": "Glory, Glory, Gloria!",
+        "composer": "Jeffrey Bonilla & Drew Wilson"
+      },
+      "responsorialPsalm": {
+        "psalm": "Ps 138 Lord, on the day I called for help...",
+        "setting": "Spirit & Psalm • Steve Angrisano"
+      },
+      "gospelAcclamation": {
+        "title": "Setting from Mass of Renewal",
+        "composer": "O.T. • 17 | C — \"You have reveived a Spirit...\""
+      },
+      "offertory": {
+        "title": "Lord, I Need You",
+        "composer": "Matt Maher",
+        "description": "Lead us not nito temptation — \"where sin rus deep...\""
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "Mass of Restoration",
+        "composer": "Joshua Blakesley"
+      },
+      "lordsPrayer": {
+        "title": "(Echo) Our Father",
+        "composer": "Jerome Andrews • Arranged by Dan Houze"
+      },
+      "fractionRite": {
+        "title": "Lamb of God (Resoration)"
+      },
+      "communionSongs": [
+        {
+          "title": "Breathe",
+          "composer": "Hillsong Worship",
+          "description": "Gospel: \"Give us this day our daily bread...\""
+        },
+        {
+          "title": "Pan del Cielo / Bread from Heaven",
+          "composer": "Iván Díaz",
+          "description": "Forgive us our trespasses — \"ocean of God’s mercy\""
+        },
+        {
+          "title": "The Feast Meant for Everyone",
+          "composer": "Tom Booth & Sarah Hart",
+          "description": "Gospe: \"bread for the hungry who beg at our door\""
+        },
+        {
+          "title": "Abba! Father!",
+          "composer": "Carey Landry • Arr. by David Lockwood",
+          "description": "Praying to the Father"
+        }
+      ],
+      "sending": {
+        "title": "Father, Let Your Kingdom Come",
+        "composer": "The Porter's Gate • Urban Doxology",
+        "description": "Thy Kingdom come, Thy will be done"
+      }
+    },
+    {
+      "community": "Heritage",
+      "communityId": "heritage",
+      "date": "Year C — Jul 27, 2025 (Sun)",
+      "presider": "NOT THIS YEAR",
+      "prelude": {
+        "title": "Holy Is His Name",
+        "composer": "John Michael Talbot",
+        "description": "Hallowed be Thy name."
+      },
+      "gathering": {
+        "title": "Praise To the Lord, the Almighty",
+        "composer": "LOBE DEN HERREN • Gesangbuch • Ed Archer",
+        "description": "\"Surely his goodness and mercy shall daily atteend us\""
+      },
+      "penitentialAct": {
+        "title": "Kyrie • Misa Del Mundo",
+        "composer": "Only if needed. Talk to presider!"
+      },
+      "gloria": {
+        "title": "Glory to God (Mass of Christ the Savior)",
+        "composer": "Dan Schutte"
+      },
+      "responsorialPsalm": {
+        "psalm": "Ps 138 Lord, on the day I called for help...",
+        "setting": "The Lyric Psalter • Tony Alonso & Marty Haugen"
+      },
+      "gospelAcclamation": {
+        "title": "Alleluia (Mass of Joy & Peace)",
+        "composer": "O.T. • 17 | C — \"You have reveived a Spirit...\""
+      },
+      "offertory": {
+        "title": "The Kingdom of God",
+        "composer": "Taizé • Jacques Berthier",
+        "description": "Thy kingdom come, thy will be done."
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "Mass of Christ the Savior - Dan Schutte"
+      },
+      "lordsPrayer": {
+        "title": "Echo Our Father",
+        "composer": "Andrews, Arr. Bonilla • Lockwood • Fajardo"
+      },
+      "fractionRite": {
+        "title": "Lamb of God (Mass of Christ the Savior)"
+      },
+      "communionSongs": [
+        {
+          "title": "The Feast Meant for Everyone",
+          "composer": "Tom Booth & Sarah Hart",
+          "description": "Gospel: \"bread for the hungry who beg at our door\""
+        },
+        {
+          "title": "We Remember",
+          "composer": "Marty Haugen",
+          "description": "Verse 3: \"...Christ, the Father's great \"Amen\"...\""
+        },
+        {
+          "title": "Abba! Father!",
+          "composer": "Carey Landry • Arr. by David Lockwood",
+          "description": "Praying to the Father"
+        }
+      ],
+      "sending": {
+        "title": "In Christ There Is No East or West",
+        "composer": "William A. Dunkerley",
+        "description": "General Sending"
+      }
+    },
+    {
+      "community": "Elevations",
+      "communityId": "elevations",
+      "date": "Year C — Jul 27, 2025 (Sun)",
+      "presider": "NOT THIS YEAR",
+      "prelude": {
+        "title": "This Is the Kingdom",
+        "composer": "Elevation Worship • Pat Barrett • (Fajardo-Jones Arr.)",
+        "description": "✪ OT - 17 C (Communion Antiphon)"
+      },
+      "gathering": {
+        "title": "Holy Is Your Name",
+        "composer": "Chris Tomlin",
+        "description": "\"...hallowed be Thy name\""
+      },
+      "penitentialAct": {
+        "title": "Kyrie • Misa Del Mundo",
+        "composer": "Only if needed. Talk to presider!"
+      },
+      "gloria": {
+        "title": "Glory, Glory, Gloria!"
+      },
+      "responsorialPsalm": {
+        "psalm": "Ps 138 Lord, on the day I called for help...",
+        "setting": "Spirit & Psalm • Steve Angrisano"
+      },
+      "gospelAcclamation": {
+        "title": "Setting from Mass of Renewal",
+        "verse": "O.T. • 17 | C — \"You have reveived a Spirit...\""
+      },
+      "offertory": {
+        "title": "Lord, I Need You",
+        "composer": "Matt Maher",
+        "description": "Lead us not nito temptation — \"where sin rus deep...\""
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "Mass of Restoration • Joshua Blakesley"
+      },
+      "lordsPrayer": {
+        "title": "Echo Our Father",
+        "composer": "Andrews, Arr. Bonilla • Lockwood • Fajardo"
+      },
+      "fractionRite": {
+        "title": "Lamb of God (Resoration)"
+      },
+      "communionSongs": [
+        {
+          "title": "Breathe",
+          "composer": "Hillsong Worship",
+          "description": "Gospel: \"Give us this day our daily bread...\""
+        },
+        {
+          "title": "Pan del Cielo / Bread from Heaven",
+          "composer": "Iván Díaz",
+          "description": "Forgive us our trespasses — \"ocean of God’s mercy\""
+        },
+        {
+          "title": "Abba! Father!",
+          "composer": "Carey Landry • Arr. by David Lockwood",
+          "description": "Praying to the Father"
+        }
+      ],
+      "sending": {
+        "title": "Father, Let Your Kingdom Come",
+        "composer": "The Porter's Gate • Urban Doxology",
+        "description": "Gospel: \"...Thy Kingdom come, Thy will be done...\""
+      }
+    }
+  ]
+}

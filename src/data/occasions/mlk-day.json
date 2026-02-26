@@ -1,0 +1,44 @@
+{
+  "id": "mlk-day",
+  "name": "MLK DAY",
+  "year": "ABC",
+  "season": "ordinary",
+  "seasonLabel": "Ordinary Time",
+  "seasonOrder": 0,
+  "dates": [
+    {
+      "date": "2026-01-19",
+      "label": "Year A — Jan 19, 2026 (Mon)",
+      "dayOfWeek": "Mon"
+    },
+    {
+      "date": "2030-01-21",
+      "label": "Year B — Jan 21, 2030 (Mon)",
+      "dayOfWeek": "Mon"
+    },
+    {
+      "date": "2029-01-15",
+      "label": "Year A — Jan 15, 2029 (Mon)",
+      "dayOfWeek": "Mon"
+    },
+    {
+      "date": "2028-01-17",
+      "label": "Year C — Jan 17, 2028 (Mon)",
+      "dayOfWeek": "Mon"
+    },
+    {
+      "date": "2027-01-18",
+      "label": "Year B — Jan 18, 2027 (Mon)",
+      "dayOfWeek": "Mon"
+    }
+  ],
+  "lectionary": {
+    "number": "SEE SHEET",
+    "gospelTitle": "",
+    "thematicTag": ""
+  },
+  "readings": [],
+  "antiphons": [],
+  "planningNotes": [],
+  "musicPlans": []
+}

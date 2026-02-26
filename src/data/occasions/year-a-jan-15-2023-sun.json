@@ -1,0 +1,419 @@
+{
+  "id": "year-a-jan-15-2023-sun",
+  "name": "Year A — Jan 15, 2023 (Sun)",
+  "year": "ABC",
+  "season": "ordinary",
+  "seasonLabel": "Ordinary Time",
+  "seasonOrder": 15,
+  "dates": [],
+  "lectionary": {
+    "number": "Year A — Jan 17, 2038 (Sun)",
+    "gospelTitle": "Year A — Jan 14, 2035 (Sun)",
+    "thematicTag": "Year A — Jan 18, 2032 (Sun)",
+    "thematicDetail": "Year A — Jan 14, 2029 (Sun)"
+  },
+  "readings": [
+    {
+      "type": "psalm",
+      "citation": "First Disciples (John)",
+      "summary": "",
+      "antiphon": "Planning Reminders"
+    },
+    {
+      "type": "gospel_verse",
+      "citation": "All the earth shall bow down before you, O God,\nand shall sing to you, shall sing to your name, O Most High!",
+      "summary": "Entrance Antiphon • Option II"
+    },
+    {
+      "type": "gospel",
+      "citation": "Reading I | Is 49:3, 5-6",
+      "summary": "Israel, a light to the nations."
+    }
+  ],
+  "antiphons": [
+    {
+      "type": "entrance",
+      "option": 1,
+      "citation": "Verse before the Gospel | Jn 1:14a, 12a",
+      "text": "The Word of God became flesh and dwelt among us.\nTo those who accepted him,\nhe gave power to become children of God."
+    },
+    {
+      "type": "communion",
+      "option": 2,
+      "citation": "Communion Antiphon • Option I | Cf. Ps 23 (22):5",
+      "text": "You have prepared a table before me,\nand how precious is the chalice that quenches my thirst."
+    }
+  ],
+  "planningNotes": [
+    "Communion Antiphon • Option II | 1 Jn 4:16",
+    "We have come to know and to believe\nin the love that God has for us."
+  ],
+  "musicPlans": [
+    {
+      "community": "Reflections",
+      "communityId": "reflections",
+      "date": "Year A — Jan 17, 2026 (Sat)",
+      "presider": "Fr. Thomas Park",
+      "prelude": {
+        "title": "Lift Every Voice",
+        "composer": "James Weldon Johnson & John Rosamond Johnson",
+        "description": "🇺🇸  MLK Weekend 🇺🇸"
+      },
+      "penitentialAct": {
+        "title": "John Michael Talbot",
+        "composer": "Comm Ant - \"we are his people, the flock that he shepherds...\"",
+        "description": "Penitential Act (Only if presider wants led by cantor)"
+      },
+      "gloria": {
+        "title": "Kyrie • Misa Del Mundo",
+        "composer": "Jesse Manibusan",
+        "description": "Gloria"
+      },
+      "gospelAcclamation": {
+        "title": "The Lyric Psalter • Tony Alonso & Marty Haugen",
+        "composer": "Gospel Acclamation",
+        "verse": "Alleluia (Mass of Joy & Peace)"
+      },
+      "offertory": {
+        "title": "ORDINARY TIME • 02A",
+        "description": "Offertory Song"
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "God of Peace",
+        "composer": "Jeffrey Bonilla & David Lockwood"
+      },
+      "lordsPrayer": {
+        "title": "Eucharistic Acclamations",
+        "composer": "Mass for the Healing of the World",
+        "description": "Trevor Thomson"
+      },
+      "fractionRite": {
+        "title": "Holy",
+        "composer": "When We Eat This Bread",
+        "description": "Amen"
+      },
+      "communionSongs": [
+        {
+          "title": "The Lord's Prayer",
+          "composer": "Chanted Our Father (Snow)",
+          "description": "Jennings/Paregorius"
+        },
+        {
+          "title": "Fraction Rite",
+          "composer": "Lamb of God (Mass for the Healing of the World)",
+          "description": "Trevor Thomson"
+        },
+        {
+          "title": "Communion Songs",
+          "composer": "Psalm 23: Shepherd Me, O God",
+          "description": "Marty Haugen"
+        },
+        {
+          "title": "Com Ant. - You have prepared a table before me...",
+          "composer": "Worthy Is the Lamb",
+          "description": "Ricky Manalo CSP"
+        }
+      ]
+    },
+    {
+      "community": "Foundations",
+      "communityId": "foundations",
+      "date": "Year A — Jan 18, 2026 (Sun)",
+      "presider": "Fr. Vince Kuna",
+      "prelude": {
+        "title": "Lift Every Voice",
+        "composer": "James Weldon Johnson & John Rosamond Johnson",
+        "description": "🇺🇸  MLK Weekend 🇺🇸"
+      },
+      "penitentialAct": {
+        "title": "Bob Hurd",
+        "composer": "Comm Ant -  Imagery of God our Shepherd",
+        "description": "Penitential Act (If presider wants led by cantor)"
+      },
+      "gloria": {
+        "title": "Kyrie (Gift of God) • Adapted Version",
+        "composer": "Marty Haugen • Arranged by David Locwood",
+        "description": "Gloria"
+      },
+      "gospelAcclamation": {
+        "title": "Spirit & Psalm • Paul Hillebrand",
+        "composer": "Gospel Acclamation",
+        "verse": "Alleluia! Give the Glory (Mass of Glory)"
+      },
+      "offertory": {
+        "title": "Verse Audio Example",
+        "description": "Offertory Song"
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "Jesus I Trust In You",
+        "composer": "Sarah Hart • Josh Blakesley • Sarah Kroger"
+      },
+      "lordsPrayer": {
+        "title": "Eucharistic Acclamations",
+        "composer": "Mass of Glory"
+      },
+      "fractionRite": {
+        "title": "Holy",
+        "composer": "Mystery of Faith",
+        "description": "Amen"
+      },
+      "communionSongs": [
+        {
+          "title": "The Lord's Prayer",
+          "composer": "Chanted Our Father (Snow)",
+          "description": "Jennings • Paregorius"
+        },
+        {
+          "title": "Fraction Rite",
+          "composer": "Lamb of God (Mass of Glory)"
+        },
+        {
+          "title": "Communion Songs",
+          "composer": "One Bread, One Body",
+          "description": "John Foley SJ — Upbeat!"
+        },
+        {
+          "title": "✪ OT - 02 A",
+          "composer": "Give Me Jesus",
+          "description": "Spiritual • Sara Watkins"
+        }
+      ],
+      "sending": {
+        "title": "Adapt. by Burleigh • Oxenham • Arr. by Lockwood",
+        "composer": "MLK • Christian Unity • Isaiah 49 - ...light to nations."
+      }
+    },
+    {
+      "community": "Generations",
+      "communityId": "generations",
+      "date": "Year A — Jan 18, 2026 (Sun)",
+      "presider": "Msgr. Lloyd Torgerson",
+      "prelude": {
+        "title": "Lift Every Voice",
+        "composer": "James Weldon Johnson & John Rosamond Johnson",
+        "description": "🇺🇸  MLK Weekend 🇺🇸"
+      },
+      "penitentialAct": {
+        "title": "Bob Hurd",
+        "composer": "Communion Antiphon imagery of God our Shepherd",
+        "description": "Penitential Act (Only if presider wants led by cantor)"
+      },
+      "gloria": {
+        "title": "Kyrie • Misa Del Mundo",
+        "composer": "Jesse Manibusan",
+        "description": "Gloria"
+      },
+      "gospelAcclamation": {
+        "title": "Spirit & Psalm • Paul Hillebrand",
+        "composer": "Gospel Acclamation",
+        "verse": "Hallelujah (adapted for Liturgy)"
+      },
+      "offertory": {
+        "title": "Choir Practice Tracks",
+        "description": "Offertory Song"
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "Prayer of St Francis",
+        "composer": "Sebastian Temple • Arranged by Ed Archer"
+      },
+      "lordsPrayer": {
+        "title": "Eucharistic Acclamations",
+        "composer": "Mass of St. Anne",
+        "description": "Ed Bolduc"
+      },
+      "fractionRite": {
+        "title": "Holy",
+        "composer": "Mystery of Faith",
+        "description": "Amen"
+      },
+      "communionSongs": [
+        {
+          "title": "The Lord's Prayer",
+          "composer": "Echo Our Father",
+          "description": "Jerome Andrews • Arranged by Dan Houze"
+        },
+        {
+          "title": "Fraction Rite",
+          "composer": "Lamb of God (Mass of Holy Cross)",
+          "description": "David Clark Isele"
+        },
+        {
+          "title": "Communion Songs",
+          "composer": "Ps 23 The Lord Is My Shepherd",
+          "description": "Joshua Blakesley (Subtle Reharm Version)"
+        },
+        {
+          "title": "Com Ant. - You have prepared a table before me...",
+          "composer": "Bread of Life",
+          "description": "Michael John Poirier"
+        },
+        {
+          "title": "\"Lamb of God, you'll come in glory...to lead us home\"",
+          "composer": "Jesus I Trust In You",
+          "description": "Sarah Hart • Josh Blakesley • Sarah Kroger"
+        },
+        {
+          "title": "\"...so I shall not want, Jesus I trust...\"",
+          "composer": "Day of Peace",
+          "description": "Janèt Sullivan Whitaker"
+        }
+      ],
+      "sending": {
+        "title": "In Christ There Is No East Or West",
+        "composer": "Adapt. by Burleigh • Oxenham • Arr. by Lockwood",
+        "description": "MLK • Christian Unity • Isaiah 49 - ...light to nations."
+      }
+    },
+    {
+      "community": "Heritage",
+      "communityId": "heritage",
+      "date": "Year A — Jan 18, 2026 (Sun)",
+      "presider": "\"Fr. David Guffey, CSC\"",
+      "prelude": {
+        "title": "Lift Every Voice",
+        "composer": "James Weldon Johnson & John Rosamond Johnson",
+        "description": "🇺🇸  MLK Weekend 🇺🇸"
+      },
+      "penitentialAct": {
+        "title": "John Michael Talbot",
+        "composer": "Comm Ant - \"we are his people, the flock that he shepherds...\"",
+        "description": "Penitential Act (If presider wants led by cantor)"
+      },
+      "gloria": {
+        "title": "Kyrie • Misa Del Mundo",
+        "composer": "Jesse Manibusan",
+        "description": "Gloria"
+      },
+      "gospelAcclamation": {
+        "title": "The Lyric Psalter • Tony Alonso & Marty Haugen",
+        "composer": "Gospel Acclamation",
+        "verse": "Alleluia (Mass of Joy & Peace)"
+      },
+      "offertory": {
+        "title": "ORDINARY TIME • 02A",
+        "description": "Offertory Song"
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "Peace on Earth (Larghetto)",
+        "composer": "Dvořák adapted by Bob Hurd"
+      },
+      "lordsPrayer": {
+        "title": "Eucharistic Acclamations",
+        "composer": "Mass of Joy & Peace",
+        "description": "Tony Alonso"
+      },
+      "fractionRite": {
+        "title": "Holy, Holy, Holy",
+        "composer": "When We Eat This Bread",
+        "description": "Amen"
+      },
+      "communionSongs": [
+        {
+          "title": "The Lord's Prayer",
+          "composer": "Chanted Our Father (Snow)",
+          "description": "Jennings • Paregorius"
+        },
+        {
+          "title": "Fraction Rite",
+          "composer": "Lamb of God (Mass of Joy & Peace)",
+          "description": "Tony Alonso"
+        },
+        {
+          "title": "Communion Songs",
+          "composer": "Psalm 23: Shepherd Me, O God",
+          "description": "Marty Haugen"
+        },
+        {
+          "title": "Com Ant. - You have prepared a table before me...",
+          "composer": "Ubi Caritas",
+          "description": "Bob Hurd"
+        },
+        {
+          "title": "Christian Love and Unity",
+          "composer": "Lamb of God, What Wondrous Love",
+          "description": "Faure • Kane • arr. Allan Robert Petker"
+        }
+      ],
+      "sending": {
+        "title": "Jill Jackson • Sy Miller",
+        "composer": "MLK • Christian Unity • Prayer for Peace"
+      }
+    },
+    {
+      "community": "Elevations",
+      "communityId": "elevations",
+      "date": "Year A — Jan 18, 2026 (Sun)",
+      "presider": "Fr. Eusebio Llonoso",
+      "prelude": {
+        "title": "Lift Every Voice",
+        "composer": "James Weldon Johnson & John Rosamond Johnson",
+        "description": "🇺🇸  MLK Weekend 🇺🇸"
+      },
+      "penitentialAct": {
+        "title": "Bernadette Farrell • Arr. Bonilla",
+        "composer": "General",
+        "description": "Penitential Act (If presider wants led by cantor)"
+      },
+      "gloria": {
+        "title": "Kyrie (Misa Del Mundo)",
+        "composer": "Jesse Manibusan — If needed.",
+        "description": "Gloria"
+      },
+      "gospelAcclamation": {
+        "title": "Spirit & Psalm • Paul Hillebrand",
+        "composer": "Gospel Acclamation",
+        "verse": "Hallelujah (adapted for Liturgy)"
+      },
+      "offertory": {
+        "title": "Choir Practice Tracks",
+        "description": "Offertory Song"
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "Prayer of St Francis",
+        "composer": "Sebastian Temple • Arranged by Ed Archer"
+      },
+      "lordsPrayer": {
+        "title": "Eucharistic Acclamations",
+        "composer": "Mass of Communion (Lower Key)",
+        "description": "Matt Maher"
+      },
+      "fractionRite": {
+        "title": "Holy",
+        "composer": "Mystery of Faith",
+        "description": "Amen"
+      },
+      "communionSongs": [
+        {
+          "title": "The Lord's Prayer",
+          "composer": "Echo Our Father",
+          "description": "Andrews • Arr. by Bonilla • Lockwood • Fajardo"
+        },
+        {
+          "title": "Fraction Rite",
+          "composer": "Lamb of God (Mass of Holy Cross)",
+          "description": "David Clark Isele"
+        },
+        {
+          "title": "Communion Songs",
+          "composer": "Ps 23 The Lord Is My Shepherd",
+          "description": "Joshua Blakesley (Subtle Reharm Version)"
+        },
+        {
+          "title": "Com Ant. - You have prepared a table before me...",
+          "composer": "Bread of Life",
+          "description": "Michael John Poirier"
+        },
+        {
+          "title": "\"Lamb of God, you'll come in glory...to lead us home\"",
+          "composer": "Day of Peace",
+          "description": "Janèt Sullivan Whitaker"
+        }
+      ],
+      "sending": {
+        "title": "Sending Song",
+        "composer": "In Christ There Is No East Or West",
+        "description": "Adapt. by Burleigh • Oxenham • Arr. by Lockwood"
+      }
+    }
+  ]
+}

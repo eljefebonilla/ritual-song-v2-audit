@@ -1,0 +1,439 @@
+{
+  "id": "ordinary-time-27-c",
+  "name": "ORDINARY TIME 27 [C]",
+  "year": "C",
+  "season": "ordinary",
+  "seasonLabel": "Ordinary Time",
+  "seasonOrder": 27,
+  "dates": [
+    {
+      "date": "2025-10-05",
+      "label": "Year C — Oct 05, 2025 (Sun)",
+      "dayOfWeek": "Sun"
+    },
+    {
+      "date": "2037-10-04",
+      "label": "Year C — Oct 04, 2037 (Sun)",
+      "dayOfWeek": "Sun"
+    },
+    {
+      "date": "2034-10-08",
+      "label": "Year C — Oct 08, 2034 (Sun)",
+      "dayOfWeek": "Sun"
+    },
+    {
+      "date": "2031-10-05",
+      "label": "Year C — Oct 05, 2031 (Sun)",
+      "dayOfWeek": "Sun"
+    },
+    {
+      "date": "2028-10-08",
+      "label": "Year C — Oct 08, 2028 (Sun)",
+      "dayOfWeek": "Sun"
+    }
+  ],
+  "lectionary": {
+    "number": "141•C",
+    "gospelTitle": "Faith Like a Mustard Seed",
+    "thematicTag": "Faith & Duty"
+  },
+  "readings": [
+    {
+      "type": "first",
+      "citation": "Hab 1:2-3; 2:2-4",
+      "summary": "The just one shall live."
+    },
+    {
+      "type": "psalm",
+      "citation": "Ps 95:1-2, 6-7, 8-9, R. v.8\nIf today you hear his voice, harden not your hearts.",
+      "summary": "",
+      "antiphon": "Ps 95:1-2, 6-7, 8-9, R. v.8\nIf today you hear his voice, harden not your hearts."
+    },
+    {
+      "type": "second",
+      "citation": "2 Tm 1:6-8, 13-14",
+      "summary": "The Spirit makes us strong."
+    },
+    {
+      "type": "gospel_verse",
+      "citation": "1 Pt 1:25",
+      "summary": "The word of the Lord remains forever.\nThis is the word that has been proclaimed to you."
+    },
+    {
+      "type": "gospel",
+      "citation": "Lk 17:5-10",
+      "summary": "The apostles ask for increased faith."
+    }
+  ],
+  "antiphons": [
+    {
+      "type": "entrance",
+      "option": 1,
+      "citation": "Cf. Est 4:17",
+      "text": "Within your will, O Lord, all things are established,\nand there is none that can resist your will.\nFor you have made all things, the heaven and the earth,\nand all that is held within the circle of heaven;\nyou are the Lord of all."
+    },
+    {
+      "type": "communion",
+      "option": 1,
+      "citation": "Lam 3:25",
+      "text": "The Lord is good to those who hope in him,\nto the soul that seeks him."
+    },
+    {
+      "type": "communion",
+      "option": 2,
+      "citation": "Communion Antiphon • Option II |  Cf. 1 Cor 10:17",
+      "text": "Though many, we are one bread, one body,\nfor we all partake of the one Bread and one Chalice."
+    }
+  ],
+  "planningNotes": [
+    "OCT - Holy Rosary",
+    "OCT - Respect Life",
+    "OCT - Catholic Social Teaching",
+    "Stewardship Renewal"
+  ],
+  "musicPlans": [
+    {
+      "community": "Reflections",
+      "communityId": "reflections",
+      "date": "Year C — Oct 04, 2025 (Sat)",
+      "presider": "Fr. Vince Kuna",
+      "prelude": {
+        "title": "Immaculate Mary (Lowered)",
+        "composer": "LOURDES HYMN • Arr. by Randall DeBruyn",
+        "description": "Month of the Holy Rosary • Additional Arr. by Jeffrey Bonilla"
+      },
+      "gathering": {
+        "title": "The House that Love Is Building",
+        "composer": "Sarah Hart • Arranged by Arielle Phan",
+        "description": "\"...endless welcome in her rafters...\""
+      },
+      "penitentialAct": {
+        "title": "Kyrie • Misa Del Mundo",
+        "composer": "Only if needed. Talk to presider!"
+      },
+      "gloria": {
+        "title": "Glory to God (Through-composed Setting)",
+        "composer": "Mass of Renewal • Curtis Stephan"
+      },
+      "responsorialPsalm": {
+        "psalm": "Ps 95 If today you hear his voice...",
+        "setting": "The Lyric Psalter • Tony Alonso & Marty Haugen"
+      },
+      "gospelAcclamation": {
+        "title": "Alleluia (Mass of Joy & Peace)",
+        "composer": "O.T. • 27 | C — \"The word of the Lord...\""
+      },
+      "offertory": {
+        "title": "We Walk By Faith",
+        "composer": "Marty Haugen • Arranged by David Lockwood",
+        "description": "Gospel | Faith like a mustard seed."
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "Mass for the Healing of the World",
+        "composer": "Trevor Thomson"
+      },
+      "lordsPrayer": {
+        "title": "Chanted Our Father (Snow)",
+        "composer": "Jennings/Paregorius"
+      },
+      "fractionRite": {
+        "title": "Lamb of God (Mass for the Healing of the World)",
+        "composer": "Trevor Thomson"
+      },
+      "communionSongs": [
+        {
+          "title": "Jesus I Trust In You",
+          "composer": "Josh Blakesley • Sarah Kroger • Sarah Hart",
+          "description": "Gospel | Faith like a mustard seed."
+        },
+        {
+          "title": "O God, You Search Me",
+          "composer": "Bernadette Farrell",
+          "description": "Respect Life Month"
+        },
+        {
+          "title": "Come, Holy Spirit",
+          "composer": "Tom Booth • Robert Feduccia",
+          "description": "2 Tm | \"Guard this rich trust with the help of the Holy Spirit...\""
+        }
+      ],
+      "sending": {
+        "title": "Take the Word of God with You",
+        "composer": "Christopher Walker • James Harrison",
+        "description": "General Sending"
+      }
+    },
+    {
+      "community": "Foundations",
+      "communityId": "foundations",
+      "date": "Year C — Oct 05, 2025 (Sun)",
+      "presider": "Fr. Thomas Park",
+      "prelude": {
+        "title": "Immaculate Mary (Lowered)",
+        "composer": "LOURDES HYMN • Arr. by Randall DeBruyn",
+        "description": "Month of the Holy Rosar • Additional Arr. by Jeffrey Bonilla"
+      },
+      "gathering": {
+        "title": "As We Gather at Your Table",
+        "composer": "NETTLETON • Carl P. Daw • Arr. by J. Bonilla",
+        "description": "\"help us summon other guests to share that feast\""
+      },
+      "penitentialAct": {
+        "title": "Kyrie (Gift of God) • Adapted Version",
+        "composer": "Marty Haugen • Arranged by David Locwood"
+      },
+      "gloria": {
+        "title": "Glory to God (Mass of Joy & Peace)",
+        "composer": "Alonso • Arr. by Houze OR Arr. by Lockwood"
+      },
+      "responsorialPsalm": {
+        "psalm": "Ps 95 If today you hear his voice...",
+        "setting": "Spirit & Psalm • Ben Walther"
+      },
+      "offertory": {
+        "title": "We Walk By Faith",
+        "composer": "Marty Haugen • Arranged by David Lockwood",
+        "description": "Gospel | Faith like a mustard seed."
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "Mass of Glory • Bob Hurd • Arr. by Dan Houze"
+      },
+      "lordsPrayer": {
+        "title": "Chanted Our Father (Snow)",
+        "composer": "Jennings • Paregorius"
+      },
+      "fractionRite": {
+        "title": "Lamb of God (Mass of Glory)"
+      },
+      "communionSongs": [
+        {
+          "title": "O God, You Search Me",
+          "composer": "Bernadette Farrell",
+          "description": "Respect Life Month"
+        },
+        {
+          "title": "Jesus I Trust In You",
+          "composer": "Josh Blakesley • Sarah Kroger • Sarah Hart",
+          "description": "Gospel | Faith like a mustard seed."
+        }
+      ],
+      "sending": {
+        "title": "God, We Praise You",
+        "composer": "NETTLETON • Christopher Idle",
+        "description": "\"All creation shows your glory...\""
+      }
+    },
+    {
+      "community": "Generations",
+      "communityId": "generations",
+      "date": "Year C — Oct 05, 2025 (Sun)",
+      "presider": "Msgr. Lloyd Torgerson",
+      "prelude": {
+        "title": "Immaculate Mary (Lowered)",
+        "composer": "LOURDES HYMN • Arr. by Randall DeBruyn",
+        "description": "Month of the Holy Rosar • Additional Arr. by Jeffrey Bonilla"
+      },
+      "gathering": {
+        "title": "You Are Welcome Here",
+        "composer": "Chris Muglia",
+        "description": "\"Open your heart, discover your place and your purpose\""
+      },
+      "penitentialAct": {
+        "title": "Kyrie • Misa Del Mundo",
+        "composer": "Only if needed. Talk to presider!"
+      },
+      "gloria": {
+        "title": "Glory, Glory, Gloria!",
+        "composer": "Jeffrey Bonilla & Drew Wilson"
+      },
+      "responsorialPsalm": {
+        "psalm": "Ps 95 If today you hear his voice...",
+        "setting": "Spirit & Psalm • Ben Walther"
+      },
+      "gospelAcclamation": {
+        "title": "Setting from Mass of Restoration",
+        "composer": "O.T. • 27 | C — \"The word of the Lord...\""
+      },
+      "offertory": {
+        "title": "We Walk By Faith",
+        "composer": "Marty Haugen • Arranged by David Lockwood",
+        "description": "Gospel | Faith like a mustard seed."
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "Mass of Restoration",
+        "composer": "Joshua Blakesley"
+      },
+      "lordsPrayer": {
+        "title": "(Echo) Our Father",
+        "composer": "Jerome Andrews • Arranged by Dan Houze"
+      },
+      "fractionRite": {
+        "title": "Lamb of God (Resoration)"
+      },
+      "communionSongs": [
+        {
+          "title": "O God, You Search Me",
+          "composer": "Bernadette Farrell",
+          "description": "Respect Life Month"
+        },
+        {
+          "title": "Seed, Scattered and Sown",
+          "composer": "Dan Feiten • Arranged by David Lockwood",
+          "description": "Communion Antiphon | \"...we are one bread, one body...\""
+        },
+        {
+          "title": "Loved",
+          "composer": "Ben Smith, Pat Barrett",
+          "description": "\"No greater treasure than knowing I am yours and you are mine\""
+        },
+        {
+          "title": "Jesus I Trust In You",
+          "composer": "Josh Blakesley • Sarah Kroger • Sarah Hart",
+          "description": "Gospel | Faith like a mustard seed."
+        }
+      ],
+      "sending": {
+        "title": "Father, Let Your Kingdom Come",
+        "composer": "The Porter's Gate • Urban Doxology",
+        "description": "\"May the words of my mouth speak your peace...\""
+      }
+    },
+    {
+      "community": "Heritage",
+      "communityId": "heritage",
+      "date": "Year C — Oct 05, 2025 (Sun)",
+      "presider": "Fr. Eusebio Llonoso",
+      "prelude": {
+        "title": "Immaculate Mary (Lowered)",
+        "composer": "LOURDES HYMN • Arr. by Randall DeBruyn",
+        "description": "Month of the Holy Rosar • Additional Arr. by Jeffrey Bonilla"
+      },
+      "gathering": {
+        "title": "The House that Love Is Building",
+        "composer": "Sarah Hart • Arranged by Arielle Phan",
+        "description": "\"...endless welcome in her rafters...\""
+      },
+      "penitentialAct": {
+        "title": "Kyrie • Misa Del Mundo",
+        "composer": "Only if needed. Talk to presider!"
+      },
+      "gloria": {
+        "title": "Glory to God (Mass of Christ the Savior)",
+        "composer": "Dan Schutte"
+      },
+      "responsorialPsalm": {
+        "psalm": "Ps 95 If today you hear his voice...",
+        "setting": "The Lyric Psalter • Tony Alonso & Marty Haugen"
+      },
+      "gospelAcclamation": {
+        "title": "Alleluia (Mass of Joy & Peace)",
+        "composer": "O.T. • 27 | C — \"The word of the Lord...\""
+      },
+      "offertory": {
+        "title": "We Walk By Faith",
+        "composer": "Marty Haugen",
+        "description": "Gospel | Faith like a mustard seed."
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "Mass of Christ the Savior - Dan Schutte"
+      },
+      "lordsPrayer": {
+        "title": "Echo Our Father",
+        "composer": "Andrews, Arr. Bonilla • Lockwood • Fajardo"
+      },
+      "fractionRite": {
+        "title": "Lamb of God (Mass of Christ the Savior)"
+      },
+      "communionSongs": [
+        {
+          "title": "Gift of Finest Wheat",
+          "composer": "BICENTENNIAL • Robert Kreutz • Omer Westendorf",
+          "description": "Communion Antiphon"
+        },
+        {
+          "title": "Seed, Scattered and Sown",
+          "composer": "Dan Feiten",
+          "description": "Communion Antiphon | \"...we are one bread, one body...\""
+        },
+        {
+          "title": "O God, You Search Me",
+          "composer": "Bernadette Farrell",
+          "description": "Respect Life Month"
+        }
+      ],
+      "sending": {
+        "title": "God, We Praise You",
+        "composer": "NETTLETON • Christopher Idle",
+        "description": "\"All creation shows your glory...\""
+      }
+    },
+    {
+      "community": "Elevations",
+      "communityId": "elevations",
+      "date": "Year C — Oct 05, 2025 (Sun)",
+      "presider": "\"Fr. David Guffey, CSC\"",
+      "prelude": {
+        "title": "Immaculate Mary (Lowered)",
+        "composer": "LOURDES HYMN • Arr. by Randall DeBruyn",
+        "description": "Month of the Holy Rosar • Additional Arr. by Jeffrey Bonilla"
+      },
+      "gathering": {
+        "title": "You Are Welcome Here",
+        "composer": "Chris Muglia",
+        "description": "\"Open your heart, discover your place and your purpose\""
+      },
+      "penitentialAct": {
+        "title": "Kyrie • Misa Del Mundo",
+        "composer": "Only if needed. Talk to presider!"
+      },
+      "gloria": {
+        "title": "Glory, Glory, Gloria!"
+      },
+      "responsorialPsalm": {
+        "psalm": "Ps 95 If today you hear his voice...",
+        "setting": "Spirit & Psalm • Ben Walther"
+      },
+      "gospelAcclamation": {
+        "title": "Setting from Mass of Restoration",
+        "verse": "O.T. • 27 | C — \"The word of the Lord...\""
+      },
+      "offertory": {
+        "title": "We Walk By Faith",
+        "composer": "Marty Haugen • Arranged by David Lockwood",
+        "description": "Gospel | Faith like a mustard seed."
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "Mass of Restoration • Joshua Blakesley"
+      },
+      "lordsPrayer": {
+        "title": "Echo Our Father",
+        "composer": "Andrews, Arr. Bonilla • Lockwood • Fajardo"
+      },
+      "fractionRite": {
+        "title": "Lamb of God (Resoration)"
+      },
+      "communionSongs": [
+        {
+          "title": "Seed, Scattered and Sown",
+          "composer": "Dan Feiten • Arranged by David Lockwood",
+          "description": "Communion Antiphon | \"...we are one bread, one body...\""
+        },
+        {
+          "title": "O God, You Search Me",
+          "composer": "Bernadette Farrell",
+          "description": "Respect Life Month"
+        },
+        {
+          "title": "Jesus I Trust In You",
+          "composer": "Josh Blakesley • Sarah Kroger • Sarah Hart",
+          "description": "Gospel | Faith like a mustard seed."
+        }
+      ],
+      "sending": {
+        "title": "Father, Let Your Kingdom Come",
+        "composer": "The Porter's Gate • Urban Doxology",
+        "description": "\"May the words of my mouth speak your peace...\""
+      }
+    }
+  ]
+}

@@ -1,0 +1,398 @@
+{
+  "id": "year-c-jan-26-2025-sun",
+  "name": "Year C — Jan 26, 2025 (Sun)",
+  "year": "ABC",
+  "season": "ordinary",
+  "seasonLabel": "Ordinary Time",
+  "seasonOrder": 26,
+  "dates": [],
+  "lectionary": {
+    "number": "Year C — Jan 22, 2040 (Sun)",
+    "gospelTitle": "Year C — Jan 25, 2037 (Sun)",
+    "thematicTag": "Year C — Jan 22, 2034 (Sun)",
+    "thematicDetail": "Year C — Jan 26, 2031 (Sun)"
+  },
+  "readings": [
+    {
+      "type": "psalm",
+      "citation": "Programmatic Scroll",
+      "summary": "",
+      "antiphon": "Planning Reminders"
+    },
+    {
+      "type": "second",
+      "citation": "Word of God Sunday",
+      "summary": "Catholic Schools Week"
+    },
+    {
+      "type": "gospel_verse",
+      "citation": "O sing a new song to the Lord;\nsing to the Lord, all the earth.\nIn his presence are majesty and splendor,\nstrength and honor in his holy place.",
+      "summary": "Entrance Antiphon • Option II"
+    }
+  ],
+  "antiphons": [
+    {
+      "type": "communion",
+      "option": 2,
+      "citation": "Communion Antiphon • Option I | Cf. Ps 34 (33):6",
+      "text": "Look toward the Lord and be radiant;\nlet your faces not be abashed."
+    }
+  ],
+  "planningNotes": [
+    "Communion Antiphon • Option II | Cf. Jn 8:12",
+    "I am the light of the world, says the Lord;\nwhoever follows me will not walk in darkness,\nbut will have the light of life."
+  ],
+  "musicPlans": [
+    {
+      "community": "Reflections",
+      "communityId": "reflections",
+      "date": "Year C — Jan 22, 2028 (Sat)",
+      "presider": "NOT THIS YEAR",
+      "prelude": {
+        "title": "The Word Became Flesh",
+        "composer": "Orin Johnson",
+        "description": "Word of God Sunday - Post Christmas (Incarnation)"
+      },
+      "penitentialAct": {
+        "title": "Bernadette Farrell",
+        "composer": "Word of God Sunday",
+        "description": "Penitential Act (Only if presider wants led by cantor)"
+      },
+      "gloria": {
+        "title": "Kyrie • Misa Del Mundo",
+        "composer": "Jesse Manibusan",
+        "description": "Gloria"
+      },
+      "gospelAcclamation": {
+        "title": "The Lyric Psalter • Tony Alonso & Marty Haugen",
+        "composer": "Gospel Acclamation",
+        "verse": "Alleluia (Mass of Joy & Peace)"
+      },
+      "offertory": {
+        "title": "The Lyric Gospel Acclamations • Tony Alonso",
+        "description": "Offertory Song"
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "Heart of Jesus",
+        "composer": "Bob Hurd"
+      },
+      "lordsPrayer": {
+        "title": "Eucharistic Acclamations",
+        "composer": "Mass for the Healing of the World",
+        "description": "Trevor Thomson"
+      },
+      "fractionRite": {
+        "title": "Holy",
+        "composer": "When We Eat This Bread",
+        "description": "Amen"
+      },
+      "communionSongs": [
+        {
+          "title": "The Lord's Prayer",
+          "composer": "Chanted Our Father (Snow)",
+          "description": "Jennings/Paregorius"
+        },
+        {
+          "title": "Fraction Rite",
+          "composer": "Lamb of God (Mass for the Healing of the World)",
+          "description": "Trevor Thomson"
+        },
+        {
+          "title": "Communion Songs",
+          "composer": "Many and Great",
+          "description": "Ricky Manalo, CSP"
+        },
+        {
+          "title": "\"the word of goodness and HOPE\"",
+          "composer": "Christ Before Us",
+          "description": "Janèt Sullivan Whitaker • Mark J. Sullivan"
+        }
+      ]
+    },
+    {
+      "community": "Foundations",
+      "communityId": "foundations",
+      "date": "Year C — Jan 23, 2028 (Sun)",
+      "presider": "NOT THIS YEAR",
+      "prelude": {
+        "title": "N/A"
+      },
+      "penitentialAct": {
+        "title": "Jaime Cortez",
+        "composer": "“Faithful and true is the Word of our God.”",
+        "description": "Penitential Act (If presider wants led by cantor)"
+      },
+      "gloria": {
+        "title": "Kyrie (Gift of God) • Adapted Version",
+        "composer": "Marty Haugen • Arranged by David Locwood",
+        "description": "Gloria"
+      },
+      "gospelAcclamation": {
+        "title": "Spirit & Psalm • Scot Crandal",
+        "composer": "Gospel Acclamation",
+        "verse": "Alleluia! Give the Glory (Mass of Glory)"
+      },
+      "offertory": {
+        "title": "Bob Hurd •  Ken Canedo • Craig Kingsbury",
+        "description": "Offertory Song"
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "Only in God",
+        "composer": "John Michael Talbot"
+      },
+      "lordsPrayer": {
+        "title": "Eucharistic Acclamations",
+        "composer": "Mass of Glory"
+      },
+      "fractionRite": {
+        "title": "Holy",
+        "composer": "Mystery of Faith",
+        "description": "Amen"
+      },
+      "communionSongs": [
+        {
+          "title": "The Lord's Prayer",
+          "composer": "Chanted Our Father (Snow)",
+          "description": "Jennings • Paregorius"
+        },
+        {
+          "title": "Fraction Rite",
+          "composer": "Lamb of God (Mass of Glory)"
+        },
+        {
+          "title": "Communion Songs",
+          "composer": "One Bread, One Body",
+          "description": "John Foley SJ — Upbeat!"
+        },
+        {
+          "title": "✪ OT - 03 C | 2nd Reading - One body, many members",
+          "composer": "Be Not Afraid",
+          "description": "Robert J. Dufford, SJ"
+        }
+      ],
+      "sending": {
+        "title": "Doris Akers • Richard Smallwood",
+        "composer": "Word of God Sunday"
+      }
+    },
+    {
+      "community": "Generations",
+      "communityId": "generations",
+      "date": "Year C — Jan 23, 2028 (Sun)",
+      "presider": "NOT THIS YEAR",
+      "prelude": {
+        "title": "N/A"
+      },
+      "penitentialAct": {
+        "title": "Janet Vogt • Arr. by Lockwood",
+        "composer": "V3 - Weary/Rest • V4 - \"only say the WORD\"",
+        "description": "Penitential Act (Only if presider wants led by cantor)"
+      },
+      "gloria": {
+        "title": "Kyrie • Misa Del Mundo",
+        "composer": "Jesse Manibusan",
+        "description": "Gloria"
+      },
+      "gospelAcclamation": {
+        "title": "Spirit & Psalm • Scot Crandal",
+        "composer": "Gospel Acclamation",
+        "verse": "Setting from Mass of Endless Mercy"
+      },
+      "offertory": {
+        "title": "Spirit & Psalm • Steve Angrisano",
+        "description": "Offertory Song"
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "Hold On to Love",
+        "composer": "Jesse Manibusan"
+      },
+      "lordsPrayer": {
+        "title": "Eucharistic Acclamations",
+        "composer": "Mass of St. Anne",
+        "description": "Ed Bolduc"
+      },
+      "fractionRite": {
+        "title": "Holy",
+        "composer": "Mystery of Faith",
+        "description": "Amen"
+      },
+      "communionSongs": [
+        {
+          "title": "The Lord's Prayer",
+          "composer": "Echo Our Father",
+          "description": "Jerome Andrews • Arranged by Dan Houze"
+        },
+        {
+          "title": "Fraction Rite",
+          "composer": "Lamb of God (Mass of Holy Cross)"
+        },
+        {
+          "title": "Communion Songs",
+          "composer": "The Feast Meant for Everyone",
+          "description": "Tom Booth • Sarah Hart"
+        },
+        {
+          "title": "\"Bread for the immigrant,...poor,...outcast...\"",
+          "composer": "Song Title",
+          "description": "Composer/s"
+        },
+        {
+          "title": "Description",
+          "composer": "One Bread, One Body",
+          "description": "John Foley SJ — Upbeat!"
+        },
+        {
+          "title": "2nd Reading - One body, many members",
+          "composer": "Bread of Life",
+          "description": "Michael John Poirier"
+        }
+      ],
+      "sending": {
+        "title": "We Place Our Trust In You",
+        "composer": "THAXTED • Jeffrey Bonilla",
+        "description": "Wildfires"
+      }
+    },
+    {
+      "community": "Heritage",
+      "communityId": "heritage",
+      "date": "Year C — Jan 23, 2028 (Sun)",
+      "presider": "NOT THIS YEAR",
+      "prelude": {
+        "title": "Song Title",
+        "composer": "Composer/s"
+      },
+      "penitentialAct": {
+        "title": "NETTLETON • Delores Dufner, OSB",
+        "composer": "Verses 1, 4, and 5 (Second Reading)",
+        "description": "Penitential Act (If presider wants led by cantor)"
+      },
+      "gloria": {
+        "title": "Kyrie • Misa Del Mundo",
+        "composer": "Jesse Manibusan",
+        "description": "Gloria"
+      },
+      "gospelAcclamation": {
+        "title": "The Lyric Psalter • Tony Alonso & Marty Haugen",
+        "composer": "Gospel Acclamation",
+        "verse": "ORDINARY TIME • 03C"
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "O Word of God",
+        "composer": "Ricky Manalo, CSP"
+      },
+      "lordsPrayer": {
+        "title": "Eucharistic Acclamations",
+        "composer": "Mass of Creation - Rev. 2010"
+      },
+      "fractionRite": {
+        "title": "Holy",
+        "composer": "Mystery of Faith",
+        "description": "Amen"
+      },
+      "communionSongs": [
+        {
+          "title": "The Lord's Prayer",
+          "composer": "Chanted Our Father (Snow)",
+          "description": "Jennings/Paregorius"
+        },
+        {
+          "title": "Fraction Rite",
+          "composer": "Lamb of God (Mass of Creation)"
+        },
+        {
+          "title": "Communion Songs",
+          "composer": "Many and Great",
+          "description": "Ricky Manalo, CSP"
+        },
+        {
+          "title": "\"the WORD of goodness and HOPE\"",
+          "composer": "Heart of Jesus",
+          "description": "Bob Hurd"
+        },
+        {
+          "title": "Compassion and hope for those in need.",
+          "composer": "I Received the Living God",
+          "description": "Anonymous"
+        }
+      ],
+      "sending": {
+        "title": "THAXTED • Jeffrey Bonilla",
+        "composer": "Wildfires"
+      }
+    },
+    {
+      "community": "Elevations",
+      "communityId": "elevations",
+      "date": "Year C — Jan 23, 2028 (Sun)",
+      "presider": "NOT THIS YEAR",
+      "prelude": {
+        "title": "Song Title",
+        "composer": "Composer/s"
+      },
+      "penitentialAct": {
+        "title": "Janet Vogt • Arr. by Lockwood",
+        "composer": "V3 - Weary/Rest • V4 - \"only say the WORD\"",
+        "description": "Penitential Act"
+      },
+      "gloria": {
+        "title": "Kyrie (Misa Del Mundo)",
+        "composer": "Jesse Manibusan — If needed.",
+        "description": "Gloria"
+      },
+      "gospelAcclamation": {
+        "title": "Spirit & Psalm • Scot Crandal",
+        "composer": "Gospel Acclamation",
+        "verse": "Setting from Mass of Endless Mercy"
+      },
+      "offertory": {
+        "title": "Spirit & Psalm • Steve Angrisano",
+        "description": "Offertory Song"
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "Hold On to Love",
+        "composer": "Jesse Manibusan"
+      },
+      "lordsPrayer": {
+        "title": "Eucharistic Acclamations",
+        "composer": "Mass of Communion (Lower Key) • Matt Maher"
+      },
+      "fractionRite": {
+        "title": "Holy",
+        "composer": "Mystery of Faith",
+        "description": "Amen"
+      },
+      "communionSongs": [
+        {
+          "title": "The Lord's Prayer",
+          "composer": "Echo Our Father",
+          "description": "Andrews, Arr. Bonilla • Lockwood • Fajardo"
+        },
+        {
+          "title": "Fraction Rite",
+          "composer": "Lamb of God (Mass of Holy Cross)"
+        },
+        {
+          "title": "Communion Songs",
+          "composer": "Bread of Life",
+          "description": "Michael John Poirier"
+        },
+        {
+          "title": "\"Word of God, O Light eternal... foundation strong\"",
+          "composer": "One Bread, One Body",
+          "description": "John Foley SJ — Upbeat!"
+        },
+        {
+          "title": "2nd Reading - One body, many members",
+          "composer": "What A Beautiful Name (Gospel Version)",
+          "description": "Hillsong Worship"
+        }
+      ],
+      "sending": {
+        "title": "Sending Song",
+        "composer": "We Place Our Trust In You",
+        "description": "THAXTED • Jeffrey Bonilla"
+      }
+    }
+  ]
+}

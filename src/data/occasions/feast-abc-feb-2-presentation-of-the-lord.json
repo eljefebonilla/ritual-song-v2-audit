@@ -1,0 +1,424 @@
+{
+  "id": "feast-abc-feb-2-presentation-of-the-lord",
+  "name": "Feast [ABC]\nFeb 2 • PRESENTATION OF THE LORD",
+  "year": "ABC",
+  "season": "feast",
+  "seasonLabel": "Feast",
+  "seasonOrder": 2,
+  "dates": [
+    {
+      "date": "2026-02-02",
+      "label": "Year A — Feb 02, 2026 (Mon)",
+      "dayOfWeek": "Mon"
+    },
+    {
+      "date": "2030-02-02",
+      "label": "Year B — Feb 02, 2030 (Sat)",
+      "dayOfWeek": "Sat"
+    },
+    {
+      "date": "2029-02-02",
+      "label": "Year A — Feb 02, 2029 (Fri)",
+      "dayOfWeek": "Fri"
+    },
+    {
+      "date": "2028-02-02",
+      "label": "Year C — Feb 02, 2028 (Wed)",
+      "dayOfWeek": "Wed"
+    },
+    {
+      "date": "2027-02-02",
+      "label": "Year B — Feb 02, 2027 (Tue)",
+      "dayOfWeek": "Tue"
+    }
+  ],
+  "lectionary": {
+    "number": "524•ABC",
+    "gospelTitle": "Simeon Sees Salvation",
+    "thematicTag": "Light to the Nations"
+  },
+  "readings": [
+    {
+      "type": "first",
+      "citation": "Mal 3:1-4",
+      "summary": "The Lord will send his messenger."
+    },
+    {
+      "type": "psalm",
+      "citation": "Who is this king of glory? It is the Lord!",
+      "summary": "",
+      "antiphon": "Who is this king of glory? It is the Lord!"
+    },
+    {
+      "type": "second",
+      "citation": "Heb 2:14-18",
+      "summary": "Jesus was fully human."
+    },
+    {
+      "type": "gospel_verse",
+      "citation": "Jn 8:12",
+      "summary": "A light of revelation to the Gentiles,\nand glory for your people Israel."
+    },
+    {
+      "type": "gospel",
+      "citation": "Lk 2:22-40 (Lk 2:22-32 - Shorter)",
+      "summary": "Jesus is brought to the Temple by Mary and Joseph."
+    }
+  ],
+  "antiphons": [
+    {
+      "type": "entrance",
+      "option": 1,
+      "citation": "Cf. Ps 48 (47):10–11",
+      "text": "Your merciful love, O God,\nwe have received in the midst of your temple.\nYour praise, O God, like your name,\nreaches the ends of the earth;\nyour right hand is filled with saving justice."
+    },
+    {
+      "type": "communion",
+      "option": 1,
+      "citation": "Cf. Lk 2:30–31",
+      "text": "My eyes have seen your salvation,\nwhich you prepared in the sight of all the peoples."
+    }
+  ],
+  "planningNotes": [
+    "FEB - Black History Month"
+  ],
+  "musicPlans": [
+    {
+      "community": "Reflections",
+      "communityId": "reflections",
+      "date": "Year A — Feb 02, 2026 (Mon)",
+      "presider": "ON A WEEKDAY THIS YEAR",
+      "prelude": {
+        "title": "Jesus Your Light",
+        "composer": "Taizé — Jacques Berthier",
+        "description": "\"A light of revelation to the Gentiles...\""
+      },
+      "gathering": {
+        "title": "Christ Be Our Light",
+        "composer": "Bernadette Farrell",
+        "description": "\"A light of revelation to the Gentiles...\" (Presentation)"
+      },
+      "penitentialAct": {
+        "title": "Kyrie • Misa Del Mundo",
+        "composer": "Jesse Manibusan"
+      },
+      "gloria": {
+        "title": "Glory to God (Through-composed Setting)",
+        "composer": "Mass of Renewal • Curtis Stephan"
+      },
+      "responsorialPsalm": {
+        "psalm": "Ps 24 Who is this king of glory? It is the Lord!",
+        "setting": "The Lyric Psalter • Tony Alonso & Marty Haugen"
+      },
+      "gospelAcclamation": {
+        "title": "Alleluia (Mass of Joy & Peace)",
+        "composer": "FEBRUARY 2: PRESENTATION OF THE LORD"
+      },
+      "offertory": {
+        "title": "Song of Simeon",
+        "composer": "Janét Sullivan Whitaker",
+        "description": "\"A light of revelation to the Gentiles...\""
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "Mass for the Healing of the World",
+        "composer": "Trevor Thomson"
+      },
+      "lordsPrayer": {
+        "title": "Chanted Our Father (Snow)",
+        "composer": "Jennings/Paregorius"
+      },
+      "fractionRite": {
+        "title": "Lamb of God (Mass for the Healing of the World)",
+        "composer": "Trevor Thomson"
+      },
+      "communionSongs": [
+        {
+          "title": "Light of Christ, Burn Bright",
+          "composer": "Text by John T. Kyler • Music by Orin Johnson",
+          "description": "\"May all those who come \rrejoice in hope...\""
+        },
+        {
+          "title": "Christ in Me Arise",
+          "composer": "Trevor Thomson",
+          "description": "“Christ in me arise and dispel all the darkness.”"
+        },
+        {
+          "title": "In His Temple Now Behold Him",
+          "composer": "ST THOMAS • Wade  • Pye • Cooke • DeBruyn",
+          "description": "Only if needed."
+        }
+      ],
+      "sending": {
+        "title": "Take the Word of God With You",
+        "composer": "Walker • Harrison • Arr. by Lockwood",
+        "description": "General Song for Sending"
+      }
+    },
+    {
+      "community": "Foundations",
+      "communityId": "foundations",
+      "date": "Year A — Feb 02, 2026 (Mon)",
+      "presider": "ON A WEEKDAY THIS YEAR",
+      "gathering": {
+        "title": "Christ Be Our Light",
+        "composer": "Bernadette Farrell",
+        "description": "\"A light of revelation to the Gentiles...\""
+      },
+      "penitentialAct": {
+        "title": "Kyrie (Gift of God) • Adapted Version",
+        "composer": "Marty Haugen • Arranged by David Locwood"
+      },
+      "gloria": {
+        "title": "Mass of Joy & Peace (Gospel Version)",
+        "composer": "Tony Alonso • Arrangement by David Lockwood"
+      },
+      "responsorialPsalm": {
+        "psalm": "Ps 24 Who is this king of glory? It is the Lord!",
+        "setting": "Spirit & Psalm • Josh Blakesley"
+      },
+      "gospelAcclamation": {
+        "title": "Alleluia! Give the Glory (Mass of Glory)",
+        "verse": "A light of revelation to the Gentiles,\nand glory for your people Israel."
+      },
+      "offertory": {
+        "title": "Precious Lord, Take My Hand",
+        "composer": "Thomas A. Dorsey",
+        "description": "BHM • Wildfires • Simeon • \"Lead me on to the Light\""
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "Mass of Glory"
+      },
+      "lordsPrayer": {
+        "title": "Chanted Our Father (Snow)",
+        "composer": "Jennings • Paregorius"
+      },
+      "fractionRite": {
+        "title": "Lamb of God (Mass of Glory)"
+      },
+      "communionSongs": [
+        {
+          "title": "Jesus, the Bread of Life",
+          "composer": "Grayson Warren Brown",
+          "description": "Black History Month"
+        },
+        {
+          "title": "Give Us Your Peace",
+          "composer": "Jesse Manibusan • Sarah Hart",
+          "description": "\"...show us the way back home into your light...\""
+        }
+      ],
+      "sending": {
+        "title": "This Little Light of Mine",
+        "composer": "Spiritual • Black History Month",
+        "description": "\"A light of revelation to the Gentiles...\""
+      }
+    },
+    {
+      "community": "Generations",
+      "communityId": "generations",
+      "date": "Year A — Feb 02, 2026 (Mon)",
+      "presider": "ON A WEEKDAY THIS YEAR",
+      "prelude": {
+        "title": "Come, Bring Your Burdens to God",
+        "composer": "South African (Xhosa) • Iona Community",
+        "description": "Woza Nomethwalo Wakho"
+      },
+      "gathering": {
+        "title": "We Are Marching (Siyahamba)",
+        "composer": "South African Hymn",
+        "description": "\"A light of revelation to the Gentiles...\""
+      },
+      "penitentialAct": {
+        "title": "Kyrie • Misa Del Mundo",
+        "composer": "Jesse Manibusan"
+      },
+      "gloria": {
+        "title": "Glory, Glory, Gloria! (Mass of the Setting Sun)",
+        "composer": "Bonilla & Wilson • Vocal Arr. by Lockwood & Phan"
+      },
+      "responsorialPsalm": {
+        "psalm": "Ps 24 Who is this king of glory? It is the Lord!",
+        "setting": "Spirit & Psalm • Josh Blakesley"
+      },
+      "gospelAcclamation": {
+        "title": "Mass of St. Mary Magdalene",
+        "verse": "A light of revelation to the Gentiles,\nand glory for your people Israel."
+      },
+      "offertory": {
+        "title": "Precious Lord, Take My Hand",
+        "composer": "Thomas A. Dorsey",
+        "description": "Black History Month • Wildfires • Gospel (Simeon)"
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "Mass of St. Anne",
+        "composer": "Ed Bolduc"
+      },
+      "lordsPrayer": {
+        "title": "Echo Our Father",
+        "composer": "Jerome Andrews • Arranged by Dan Houze"
+      },
+      "fractionRite": {
+        "title": "Lamb of God (Mass of Holy Cross)"
+      },
+      "communionSongs": [
+        {
+          "title": "I Am Yours (Consume Me, Completely)",
+          "composer": "Danielle Rose Hesley • Trevor Thomson",
+          "description": "“Let your light shine, let it shine in my heart…”"
+        },
+        {
+          "title": "Bread of Life",
+          "composer": "Michael John Poirier",
+          "description": "\"Word of God, O Light eternal...\""
+        },
+        {
+          "title": "Christ in Me Arise",
+          "composer": "Trevor Thomson",
+          "description": "“Christ in me arise and dispel all the darkness.”"
+        },
+        {
+          "title": "Give Us Your Peace",
+          "composer": "Jesse Manibusan • Sarah Hart",
+          "description": "\"...show us the way back home into your light...\""
+        }
+      ],
+      "sending": {
+        "title": "This Little Light of Mine",
+        "composer": "Spiritual • Black History Month",
+        "description": "\"A light of revelation to the Gentiles...\""
+      }
+    },
+    {
+      "community": "Heritage",
+      "communityId": "heritage",
+      "date": "Year A — Feb 02, 2026 (Mon)",
+      "presider": "ON A WEEKDAY THIS YEAR",
+      "prelude": {
+        "title": "In His Temple Now Behold Him",
+        "composer": "ST THOMAS • Wade  • Pye • Cooke • DeBruyn",
+        "description": "\"God has now fulfilled his word\""
+      },
+      "gathering": {
+        "title": "Christ Be Our Light",
+        "composer": "Bernadette Farrell",
+        "description": "\"A light of revelation to the Gentiles...\""
+      },
+      "penitentialAct": {
+        "title": "Kyrie • Misa Del Mundo",
+        "composer": "Jesse Manibusan"
+      },
+      "gloria": {
+        "title": "Glory to God (Mass of Christ the Savior)",
+        "composer": "Dan Schutte"
+      },
+      "responsorialPsalm": {
+        "psalm": "Ps 24 Who is this king of glory? It is the Lord!",
+        "setting": "The Lyric Psalter • Tony Alonso & Marty Haugen"
+      },
+      "gospelAcclamation": {
+        "title": "FEBRUARY 2: PRESENTATION OF THE LORD",
+        "composer": "The Lyric Gospel Acclamations • Tony Alonso"
+      },
+      "offertory": {
+        "title": "Song of Simeon",
+        "composer": "Janét Sullivan Whitaker",
+        "description": "\"A light of revelation to the Gentiles...\""
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "Mass of Creation - Rev. 2010"
+      },
+      "lordsPrayer": {
+        "title": "Chanted Our Father (Snow)",
+        "composer": "Jennings/Paregorius"
+      },
+      "fractionRite": {
+        "title": "Lamb of God (Mass of Creation)"
+      },
+      "communionSongs": [
+        {
+          "title": "All That Is Hidden",
+          "composer": "Bernadette Farrell",
+          "description": "\"All that is dark now will be revealed.\""
+        },
+        {
+          "title": "Light of Christ, Burn Bright",
+          "composer": "Text by John T. Kyler • Music by Orin Johnson",
+          "description": "\"May all those who come \rrejoice in hope...\""
+        },
+        {
+          "title": "In His Temple Now Behold Him",
+          "composer": "ST THOMAS • Wade  • Pye • Cooke • DeBruyn",
+          "description": "Only if needed."
+        }
+      ],
+      "sending": {
+        "title": "Forth in the Peace of Christ We Go",
+        "composer": "Luke D. Rosen • James Quinn, SJ"
+      }
+    },
+    {
+      "community": "Elevations",
+      "communityId": "elevations",
+      "date": "Year A — Feb 02, 2026 (Mon)",
+      "presider": "ON A WEEKDAY THIS YEAR",
+      "gathering": {
+        "title": "Christ Be Our Light",
+        "composer": "Bernadette Farrell",
+        "description": "\"A light of revelation to the Gentiles...\""
+      },
+      "penitentialAct": {
+        "title": "Kyrie (Misa Del Mundo)",
+        "composer": "Jesse Manibusan — If needed."
+      },
+      "gloria": {
+        "title": "Glory, Glory, Gloria! (Mass of the Setting Sun)"
+      },
+      "responsorialPsalm": {
+        "psalm": "Ps 24 Who is this king of glory? It is the Lord!",
+        "setting": "Spirit & Psalm • Josh Blakesley"
+      },
+      "gospelAcclamation": {
+        "title": "Hallelujah (adapted for Liturgy)",
+        "composer": "Leonard Cohen",
+        "verse": "A light of revelation to the Gentiles,\nand glory for your people Israel."
+      },
+      "offertory": {
+        "title": "Precious Lord, Take My Hand",
+        "composer": "Thomas A. Dorsey",
+        "description": "Black History Month • Wildfires • Gospel (Simeon)"
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "Mass of Communion (Lower Key) • Matt Maher"
+      },
+      "lordsPrayer": {
+        "title": "Echo Our Father",
+        "composer": "Andrews • Arr. by Bonilla • Lockwood • Fajardo"
+      },
+      "fractionRite": {
+        "title": "Lamb of God (Mass of Holy Cross)"
+      },
+      "communionSongs": [
+        {
+          "title": "I Am Yours (Consume Me, Completely)",
+          "composer": "Danielle Rose Hesley • Trevor Thomson",
+          "description": "“Let your light shine, let it shine in my heart…”"
+        },
+        {
+          "title": "Christ in Me Arise",
+          "composer": "Trevor Thomson",
+          "description": "“Christ in me arise and dispel all the darkness.”"
+        },
+        {
+          "title": "Give Us Your Peace",
+          "composer": "Jesse Manibusan • Sarah Hart",
+          "description": "\"...show us the way back home into your light...\""
+        }
+      ],
+      "sending": {
+        "title": "This Little Light of Mine",
+        "composer": "Spiritual • Black History Month",
+        "description": "\"A light of revelation to the Gentiles...\""
+      }
+    }
+  ]
+}

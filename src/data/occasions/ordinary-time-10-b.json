@@ -1,0 +1,197 @@
+{
+  "id": "ordinary-time-10-b",
+  "name": "ORDINARY TIME 10 [B]",
+  "year": "B",
+  "season": "ordinary",
+  "seasonLabel": "Ordinary Time",
+  "seasonOrder": 10,
+  "dates": [
+    {
+      "date": "2024-06-09",
+      "label": "Year B — Jun 09, 2024 (Sun)",
+      "dayOfWeek": "Sun"
+    },
+    {
+      "date": "2027-06-06",
+      "label": "Year B — Jun 06, 2027 (Sun)",
+      "dayOfWeek": "Sun"
+    }
+  ],
+  "lectionary": {
+    "number": "089•B",
+    "gospelTitle": "Blasphemy Forgiven",
+    "thematicTag": "True Family Discourse"
+  },
+  "readings": [
+    {
+      "type": "first",
+      "citation": "Gen 3:9–15",
+      "summary": "I will put enmity between your offspring and her offspring."
+    },
+    {
+      "type": "psalm",
+      "citation": "Ps 130:1–2, 3–4, 5–6, 7–8\nWith the Lord there is mercy, and fullness of redemption.",
+      "summary": "",
+      "antiphon": "Ps 130:1–2, 3–4, 5–6, 7–8\nWith the Lord there is mercy, and fullness of redemption."
+    },
+    {
+      "type": "second",
+      "citation": "2 Cor 4:13–5:1",
+      "summary": "We too believe and therefore we speak."
+    },
+    {
+      "type": "gospel_verse",
+      "citation": "Jn 12:31b–32",
+      "summary": "Now the ruler of this world will be driven out, says the Lord;\nand when I am lifted up from the earth, I will draw everyone to myself."
+    },
+    {
+      "type": "gospel",
+      "citation": "Mk 3:20–35",
+      "summary": "It is the end of Satan."
+    }
+  ],
+  "antiphons": [
+    {
+      "type": "entrance",
+      "option": 1,
+      "citation": "Cf. Ps 27 (26):1–2",
+      "text": "The Lord is my light and my salvation; whom shall I fear?\nThe Lord is the stronghold of my life; whom should I dread?\nWhen those who do evil draw near, they stumble and fall."
+    },
+    {
+      "type": "communion",
+      "option": 1,
+      "citation": "Ps 18 (17):3",
+      "text": "The Lord is my rock, my fortress, and my deliverer;\nmy God is my saving strength."
+    },
+    {
+      "type": "communion",
+      "option": 2,
+      "citation": "Communion Antiphon • Option II | 1 Jn 4:16",
+      "text": "God is love, and whoever abides in love\nabides in God, and God in him."
+    }
+  ],
+  "planningNotes": [],
+  "musicPlans": [
+    {
+      "community": "Reflections",
+      "communityId": "reflections",
+      "date": "Year B — Sep 11, 2027 (Sat)",
+      "presider": "NOT THIS YEAR",
+      "penitentialAct": {
+        "title": "Kyrie • Misa Del Mundo",
+        "composer": "Only if needed. Talk to presider!"
+      },
+      "gloria": {
+        "title": "Glory to God (Through-composed Setting)",
+        "composer": "Mass of Renewal • Curtis Stephan"
+      },
+      "responsorialPsalm": {
+        "psalm": "Ps 130 With the Lord there is mercy, and fullness...",
+        "setting": "The Lyric Psalter • Tony Alonso & Marty Haugen"
+      },
+      "gospelAcclamation": {
+        "title": "Alleluia (Mass of Joy & Peace)",
+        "composer": "Song Title",
+        "verse": "Now the ruler of this world will be driven out, says the Lord;\nand when I am lifted up from the earth, I will draw everyone to myself."
+      },
+      "lordsPrayer": {
+        "title": "Chanted Our Father (Snow)",
+        "composer": "Jennings/Paregorius"
+      },
+      "fractionRite": {
+        "title": "Lamb of God Setting"
+      }
+    },
+    {
+      "community": "Foundations",
+      "communityId": "foundations",
+      "date": "Year B — Sep 12, 2027 (Sun)",
+      "presider": "NOT THIS YEAR",
+      "penitentialAct": {
+        "title": "Kyrie (Gift of God) • Adapted Version",
+        "composer": "Marty Haugen • Arranged by David Locwood"
+      },
+      "gloria": {
+        "title": "Glory to God (Mass of Joy & Peace)",
+        "composer": "Alonso • Arr. by Houze OR Arr. by Lockwood"
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "Mass of Glory • Bob Hurd • Arr. by Dan Houze"
+      },
+      "lordsPrayer": {
+        "title": "Chanted Our Father (Snow)",
+        "composer": "Jennings • Paregorius"
+      },
+      "fractionRite": {
+        "title": "Lamb of God (Mass of Glory)"
+      }
+    },
+    {
+      "community": "Generations",
+      "communityId": "generations",
+      "date": "Year B — Sep 12, 2027 (Sun)",
+      "presider": "NOT THIS YEAR",
+      "penitentialAct": {
+        "title": "Kyrie • Misa Del Mundo",
+        "composer": "If needed. Talk to presider!"
+      },
+      "gloria": {
+        "title": "Glory, Glory, Gloria!",
+        "composer": "Tony Alonso • Arr. by Dan Houze"
+      },
+      "gospelAcclamation": {
+        "title": "Setting from Mass of ???",
+        "composer": "Song Title"
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "Mass of Restoration",
+        "composer": "Joshua Blakesley"
+      },
+      "lordsPrayer": {
+        "title": "(Echo) Our Father",
+        "composer": "Jerome Andrews • Arranged by Dan Houze"
+      },
+      "fractionRite": {
+        "title": "Lamb of God (Resoration)"
+      }
+    },
+    {
+      "community": "Heritage",
+      "communityId": "heritage",
+      "date": "Year B — Sep 12, 2027 (Sun)",
+      "presider": "NOT THIS YEAR",
+      "gloria": {
+        "title": "Glory to God (Mass of Joy & Peace)",
+        "composer": "Tony Alonso, Thru Composed"
+      },
+      "lordsPrayer": {
+        "title": "Echo Our Father",
+        "composer": "Andrews, Arr. Bonilla • Lockwood • Fajardo"
+      }
+    },
+    {
+      "community": "Elevations",
+      "communityId": "elevations",
+      "date": "Year B — Sep 12, 2027 (Sun)",
+      "presider": "NOT THIS YEAR",
+      "penitentialAct": {
+        "title": "Kyrie • Misa Del Mundo",
+        "composer": "Only if needed. Talk to presider!"
+      },
+      "gloria": {
+        "title": "Glory, Glory, Gloria!"
+      },
+      "gospelAcclamation": {
+        "title": "Setting from Mass of ???",
+        "verse": "Song Title"
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "Mass of ? • Composer"
+      },
+      "lordsPrayer": {
+        "title": "Echo Our Father",
+        "composer": "Andrews, Arr. Bonilla • Lockwood • Fajardo"
+      }
+    }
+  ]
+}

@@ -1,0 +1,285 @@
+{
+  "id": "easter-03-b",
+  "name": "EASTER 03 [B]",
+  "year": "B",
+  "season": "easter",
+  "seasonLabel": "Easter",
+  "seasonOrder": 3,
+  "dates": [
+    {
+      "date": "2024-04-14",
+      "label": "Year B — Apr 14, 2024 (Sun)",
+      "dayOfWeek": "Sun"
+    },
+    {
+      "date": "2036-04-27",
+      "label": "Year B — Apr 27, 2036 (Sun)",
+      "dayOfWeek": "Sun"
+    },
+    {
+      "date": "2033-05-01",
+      "label": "Year B — May 01, 2033 (Sun)",
+      "dayOfWeek": "Sun"
+    },
+    {
+      "date": "2030-05-05",
+      "label": "Year B — May 05, 2030 (Sun)",
+      "dayOfWeek": "Sun"
+    },
+    {
+      "date": "2027-04-11",
+      "label": "Year B — Apr 11, 2027 (Sun)",
+      "dayOfWeek": "Sun"
+    }
+  ],
+  "lectionary": {
+    "number": "047•B",
+    "gospelTitle": "Appears; Eats Fish",
+    "thematicTag": "Res Appearance 3/3"
+  },
+  "readings": [
+    {
+      "type": "first",
+      "citation": "Acts 3:13-15, 17-19",
+      "summary": "Peter calls the people to reform."
+    },
+    {
+      "type": "psalm",
+      "citation": "Ps 4:2, 4, 7-8, 9, R. v.7a\nLord, let your face shine upon us.",
+      "summary": "",
+      "antiphon": "Ps 4:2, 4, 7-8, 9, R. v.7a\nLord, let your face shine upon us."
+    },
+    {
+      "type": "second",
+      "citation": "1 Jn 2:1-5a",
+      "summary": "To know Jesus, keep his commandments."
+    },
+    {
+      "type": "gospel_verse",
+      "citation": "Lk 24:32",
+      "summary": "Lord Jesus, open the Scriptures to us;\nmake our hearts burn while you speak to us."
+    },
+    {
+      "type": "gospel",
+      "citation": "Lk 24:35-48",
+      "summary": "Jesus appears to the disciples and says, “Peace be with you.”"
+    }
+  ],
+  "antiphons": [
+    {
+      "type": "entrance",
+      "option": 1,
+      "citation": "Cf. Ps 66 (65):1–2",
+      "text": "Cry out with joy to God, all the earth;\nO sing to the glory of his name.\nO render him glorious praise, alleluia."
+    },
+    {
+      "type": "communion",
+      "option": 1,
+      "citation": "Lk 24:35",
+      "text": "The disciples recognized the Lord Jesus\nin the breaking of the bread, alleluia."
+    },
+    {
+      "type": "communion",
+      "option": 2,
+      "citation": "Communion Antiphon • Optional for Year B | Lk 24:46–47",
+      "text": "The Christ had to suffer\nand on the third day rise from the dead;\nin his name repentance and remission of sins\nmust be preached to all the nations, alleluia."
+    }
+  ],
+  "planningNotes": [
+    "🌲 APR - Earth Month🌲"
+  ],
+  "musicPlans": [
+    {
+      "community": "Reflections",
+      "communityId": "reflections",
+      "date": "Year B — Apr 10, 2027 (Sat)",
+      "presider": "NOT THIS YEAR",
+      "prelude": {
+        "title": "Regina Caeli / O Queen of Heaven",
+        "composer": "Mode VI Latin • 12th C",
+        "description": "Pope Leo XIV singing Regina Caeli"
+      },
+      "gloria": {
+        "title": "Glory to God (Through-composed Setting)",
+        "composer": "Mass of Renewal • Curtis Stephan"
+      },
+      "gospelAcclamation": {
+        "title": "Easter Alleluia (Refrain)",
+        "composer": "The Lyric Gospel Acclamations • Tony Alonso",
+        "verse": "Lord Jesus, open the Scriptures to us;\nmake our hearts burn while you speak to us."
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "Mass of the Holy Family",
+        "composer": "Chris de Silva"
+      },
+      "lordsPrayer": {
+        "title": "Chanted Our Father (Snow)",
+        "composer": "Jennings/Paregorius"
+      },
+      "fractionRite": {
+        "title": "Lamb of God (Mass of the Holy Family)",
+        "composer": "Chris de Silva"
+      },
+      "communionSongs": [
+        {
+          "title": "Jesus Christ, Yesterday, Today, and Forever",
+          "composer": "Suzanne Toolan, RSM",
+          "description": "No verses / Only Ostinato Refrain"
+        }
+      ]
+    },
+    {
+      "community": "Foundations",
+      "communityId": "foundations",
+      "date": "Year B — Apr 11, 2027 (Sun)",
+      "presider": "NOT THIS YEAR",
+      "prelude": {
+        "title": "Regina Caeli / O Queen of Heaven",
+        "composer": "Mode VI Latin • 12th C",
+        "description": "Pope Leo XIV singing Regina Caeli"
+      },
+      "penitentialAct": {
+        "title": "Kyrie (Gift of God) • Adapted Version",
+        "composer": "Marty Haugen • Arranged by David Locwood"
+      },
+      "gloria": {
+        "title": "Glory to God (Mass of Joy & Peace)",
+        "composer": "Alonso • Arr. by Houze OR Arr. by Lockwood"
+      },
+      "responsorialPsalm": {
+        "psalm": "Ps 30 I will praise you, Lord, for you have...",
+        "setting": "Spirit & Psalm • Rick Modlin"
+      },
+      "gospelAcclamation": {
+        "title": "Easter Alleluia (Refrain)",
+        "composer": "The Lyric Gospel Acclamations • Tony Alonso",
+        "verse": "Lord Jesus, open the Scriptures to us;\nmake our hearts burn while you speak to us."
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "Mass of Glory",
+        "composer": "Bob Hurd & Ken Canedo"
+      },
+      "lordsPrayer": {
+        "title": "Chanted Our Father (Snow)",
+        "composer": "Jennings • Paregorius"
+      },
+      "fractionRite": {
+        "title": "Lamb of God (Mass of Glory)",
+        "composer": "Bob Hurd & Ken Canedo"
+      }
+    },
+    {
+      "community": "Generations",
+      "communityId": "generations",
+      "date": "Year B — Apr 11, 2027 (Sun)",
+      "presider": "NOT THIS YEAR",
+      "penitentialAct": {
+        "title": "Kyrie • Misa Del Mundo",
+        "composer": "If needed. Talk to presider!"
+      },
+      "gloria": {
+        "title": "Glory to God (Mass of Joy & Peace)",
+        "composer": "Tony Alonso • Arr. by Dan Houze"
+      },
+      "responsorialPsalm": {
+        "psalm": "Ps 4 Lord, let your face shine on us ...",
+        "setting": "David Lockwood"
+      },
+      "gospelAcclamation": {
+        "title": "Easter Alleluia (Refrain)",
+        "composer": "The Lyric Gospel Acclamations • Tony Alonso",
+        "verse": "Lord Jesus, open the Scriptures to us;\nmake our hearts burn while you speak to us."
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "Mass of Glory",
+        "composer": "Bob Hurd • Arr. by Dan Houze"
+      },
+      "lordsPrayer": {
+        "title": "(Echo) Our Father",
+        "composer": "Jerome Andrews • Arranged by Dan Houze"
+      },
+      "fractionRite": {
+        "title": "Lamb of God (Mass of Glory)"
+      },
+      "sending": {
+        "title": "Alleluia! Love Is Alive",
+        "composer": "Steve Angrisano • Jesse Manibusan • Sarah Hart",
+        "description": "\"He is alive!\""
+      }
+    },
+    {
+      "community": "Heritage",
+      "communityId": "heritage",
+      "date": "Year B — Apr 11, 2027 (Sun)",
+      "presider": "NOT THIS YEAR",
+      "prelude": {
+        "title": "Regina Caeli / O Queen of Heaven",
+        "composer": "Mode VI Latin • 12th C",
+        "description": "Pope Leo XIV singing Regina Caeli"
+      },
+      "gloria": {
+        "title": "Glory to God (Mass of Joy & Peace)",
+        "composer": "Tony Alonso, Thru Composed"
+      },
+      "gospelAcclamation": {
+        "title": "Easter Alleluia (Refrain)",
+        "composer": "The Lyric Gospel Acclamations • Tony Alonso",
+        "verse": "Lord Jesus, open the Scriptures to us;\nmake our hearts burn while you speak to us."
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "Mass of Joy & Peace",
+        "composer": "Tony Alonso"
+      },
+      "lordsPrayer": {
+        "title": "Chanted Our Father (Snow)",
+        "composer": "Jennings/Paregorius"
+      },
+      "fractionRite": {
+        "title": "Lamb of God (Mass of Joy & Peace)",
+        "composer": "Tony Alonso"
+      },
+      "communionSongs": [
+        {
+          "title": "Jesus Christ, Yesterday, Today, and Forever",
+          "composer": "Suzanne Toolan, RSM",
+          "description": "No verses / Only Ostinato Refrain"
+        }
+      ]
+    },
+    {
+      "community": "Elevations",
+      "communityId": "elevations",
+      "date": "Year B — Apr 11, 2027 (Sun)",
+      "presider": "NOT THIS YEAR",
+      "prelude": {
+        "title": "Regina Caeli / O Queen of Heaven",
+        "composer": "Mode VI Latin • 12th C",
+        "description": "Pope Leo XIV singing Regina Caeli"
+      },
+      "penitentialAct": {
+        "title": "Kyrie (Misa Del Mundo)",
+        "composer": "Jesse Manibusan — If needed."
+      },
+      "gloria": {
+        "title": "Glory to God (Joy & Peace)"
+      },
+      "gospelAcclamation": {
+        "title": "Easter Alleluia (Refrain)",
+        "composer": "The Lyric Gospel Acclamations • Tony Alonso",
+        "verse": "Lord Jesus, open the Scriptures to us;\nmake our hearts burn while you speak to us."
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "Mass of Restoration",
+        "composer": "Joshua Blakesley"
+      },
+      "lordsPrayer": {
+        "title": "Echo Our Father",
+        "composer": "Andrews, Arr. Bonilla • Lockwood • Fajardo"
+      },
+      "fractionRite": {
+        "title": "Lamb of God (Mass of Restoration)",
+        "composer": "Joshua Blakesley"
+      }
+    }
+  ]
+}

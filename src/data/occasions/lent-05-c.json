@@ -1,0 +1,370 @@
+{
+  "id": "lent-05-c",
+  "name": "LENT 05 [C]",
+  "year": "C",
+  "season": "lent",
+  "seasonLabel": "Lent",
+  "seasonOrder": 5,
+  "dates": [
+    {
+      "date": "2025-04-06",
+      "label": "Year C — Apr 06, 2025 (Sun)",
+      "dayOfWeek": "Sun"
+    },
+    {
+      "date": "2037-03-22",
+      "label": "Year C — Mar 22, 2037 (Sun)",
+      "dayOfWeek": "Sun"
+    },
+    {
+      "date": "2034-03-26",
+      "label": "Year C — Mar 26, 2034 (Sun)",
+      "dayOfWeek": "Sun"
+    },
+    {
+      "date": "2031-03-30",
+      "label": "Year C — Mar 30, 2031 (Sun)",
+      "dayOfWeek": "Sun"
+    },
+    {
+      "date": "2028-04-02",
+      "label": "Year C — Apr 02, 2028 (Sun)",
+      "dayOfWeek": "Sun"
+    }
+  ],
+  "lectionary": {
+    "number": "036•C",
+    "gospelTitle": "Woman Caught in Adultery Forgiven",
+    "thematicTag": "Mercy Sunday"
+  },
+  "readings": [
+    {
+      "type": "first",
+      "citation": "Is 43:16-21",
+      "summary": "God has done and will continue to do great things."
+    },
+    {
+      "type": "psalm",
+      "citation": "Ps 126:1-2, 2-3, 4-5, 6, R. v.3\nThe Lord has done great things for us;\nwe are filled with joy.",
+      "summary": "",
+      "antiphon": "Ps 126:1-2, 2-3, 4-5, 6, R. v.3\nThe Lord has done great things for us;\nwe are filled with joy."
+    },
+    {
+      "type": "second",
+      "citation": "Phil 3:8-14",
+      "summary": "Paul forfeits all for Christ."
+    },
+    {
+      "type": "gospel_verse",
+      "citation": "Jl 2:12-13",
+      "summary": "Even now, says the Lord,\nreturn to me with your whole heart;\nfor I am gracious and merciful."
+    },
+    {
+      "type": "gospel",
+      "citation": "Jn 8:1-11",
+      "summary": "The Pharisees confront Jesus with an adulteress."
+    }
+  ],
+  "antiphons": [
+    {
+      "type": "entrance",
+      "option": 1,
+      "citation": "Cf. Ps 43 (42):1–2",
+      "text": "Give me justice, O God,\nand plead my cause against a nation that is faithless.\nFrom the deceitful and cunning rescue me,\nfor you, O God, are my strength."
+    },
+    {
+      "type": "communion",
+      "option": 1,
+      "citation": "For Jn 8:10–11 (Adulterous Woma)",
+      "text": "Has no one condemned you, woman? No one, Lord.\nNeither shall I condemn you. From now on, sin no more."
+    }
+  ],
+  "planningNotes": [],
+  "musicPlans": [
+    {
+      "community": "Reflections",
+      "communityId": "reflections",
+      "date": "Year C — Apr 01, 2028 (Sat)",
+      "presider": "NOT THIS YEAR",
+      "prelude": {
+        "title": "See Taizé Setlist"
+      },
+      "gathering": {
+        "title": "Gather Us in Mercy, Lord",
+        "composer": "Gabe Huck • Adapted and Arr. by Tony Alonso"
+      },
+      "penitentialAct": {
+        "title": "Kyrie (Mass of Colour) — optional tropes",
+        "composer": "Jeffrey Bonilla & David Lockwood"
+      },
+      "responsorialPsalm": {
+        "psalm": "Ps 126 The Lord has done great things...",
+        "setting": "The Lyric Psalter • Tony Alonso & Marty Haugen"
+      },
+      "gospelAcclamation": {
+        "title": "Mass of Joy & Peace Lenten G.A. (Refrain)",
+        "composer": "The Lyric Gospel Acclamations • Tony Alonso",
+        "verse": "Even now, says the Lord,\nreturn to me with your whole heart;\nfor I am gracious and merciful."
+      },
+      "offertory": {
+        "title": "Endless Is Your Love",
+        "composer": "Tom Kendzia",
+        "description": "\"wonderful your works\""
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "Mass of Creation",
+        "composer": "Marty Haugen • Arr. by Lockwood & Phan"
+      },
+      "lordsPrayer": {
+        "title": "Chanted Our Father (Snow)",
+        "composer": "Jennings/Paregorius"
+      },
+      "fractionRite": {
+        "title": "Lamb of God (Mass of Creation)",
+        "composer": "Marty Haugen • Arr. by Lockwood & Phan"
+      },
+      "communionSongs": [
+        {
+          "title": "Beyond the Days",
+          "composer": "Ricky Manalo, CSP"
+        },
+        {
+          "title": "God of Mercy",
+          "composer": "Ricky Manalo, CSP • Bob Hurd",
+          "description": "Lenten Communion"
+        },
+        {
+          "title": "Jesus, Living Bread",
+          "composer": "Tom Booth",
+          "description": "\"Lord, just say the word... my soul shall be healed\""
+        }
+      ],
+      "sending": {
+        "title": "God of Day and God of Darkness",
+        "composer": "BEACH SPRING • Marty Haugen",
+        "description": "Lenten Sending"
+      }
+    },
+    {
+      "community": "Foundations",
+      "communityId": "foundations",
+      "date": "Year C — Apr 02, 2028 (Sun)",
+      "presider": "NOT THIS YEAR",
+      "gathering": {
+        "title": "You Are the Healing",
+        "composer": "Scott Soper",
+        "description": "\"...you are the freedom...\""
+      },
+      "penitentialAct": {
+        "title": "Kyrie (Mass of Colour) — optional tropes",
+        "composer": "Jeffrey Bonilla & David Lockwood"
+      },
+      "responsorialPsalm": {
+        "psalm": "Ps 126 The Lord has done great things...",
+        "setting": "The Lyric Psalter • Tony Alonso & Marty Haugen"
+      },
+      "gospelAcclamation": {
+        "title": "Praise to You, Lord Jesus Christ",
+        "composer": "Ed Archer",
+        "verse": "Even now, says the Lord,\nreturn to me with your whole heart;\nfor I am gracious and merciful."
+      },
+      "offertory": {
+        "title": "Endless Is Your Love",
+        "composer": "Tom Kendzia",
+        "description": "\"wonderful your works\""
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "Mass of a Firm Foundation",
+        "composer": "David Lockwood"
+      },
+      "lordsPrayer": {
+        "title": "Chanted Our Father (Snow)",
+        "composer": "Jennings • Paregorius"
+      },
+      "fractionRite": {
+        "title": "Lamb of God (Mass of a Firm Foundation)"
+      },
+      "communionSongs": [
+        {
+          "title": "Beyond the Days",
+          "composer": "Ricky Manalo, CSP"
+        },
+        {
+          "title": "Change Our Hearts",
+          "composer": "Rory Cooney",
+          "description": "Lenten Song"
+        }
+      ],
+      "sending": {
+        "title": "40 Days",
+        "composer": "Matt Maher",
+        "description": "Lenten Sending"
+      }
+    },
+    {
+      "community": "Generations",
+      "communityId": "generations",
+      "date": "Year C — Apr 02, 2028 (Sun)",
+      "presider": "NOT THIS YEAR",
+      "gathering": {
+        "title": "All Who Enter Here",
+        "composer": "John Angotti • Dan Houze",
+        "description": "\"God's loving mercy\""
+      },
+      "penitentialAct": {
+        "title": "Kyrie (Mass of Colour) — optional tropes",
+        "composer": "Jeffrey Bonilla & David Lockwood"
+      },
+      "responsorialPsalm": {
+        "psalm": "Ps 126 The Lord has done great things...",
+        "setting": "Francesca LaRosa"
+      },
+      "gospelAcclamation": {
+        "title": "Praise to You, Lord Jesus Christ",
+        "composer": "Ed Archer",
+        "verse": "Even now, says the Lord,\nreturn to me with your whole heart;\nfor I am gracious and merciful."
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "Mass of Colour",
+        "composer": "Jeffrey Bonilla & David Lockwood"
+      },
+      "lordsPrayer": {
+        "title": "Spoken during Season of Lent"
+      },
+      "fractionRite": {
+        "title": "Lamb of God (Mass of Colour)"
+      },
+      "communionSongs": [
+        {
+          "title": "Beyond the Days",
+          "composer": "Ricky Manalo, CSP",
+          "description": "\"we see the dawn of a new day\""
+        }
+      ]
+    },
+    {
+      "community": "Heritage",
+      "communityId": "heritage",
+      "date": "Year C — Apr 02, 2028 (Sun)",
+      "presider": "NOT THIS YEAR",
+      "gathering": {
+        "title": "Gather Us in Mercy, Lord",
+        "composer": "Gabe Huck • Adapted and Arr. by Tony Alonso",
+        "description": "Lentan Gathering Song"
+      },
+      "penitentialAct": {
+        "title": "Kyrie (Mass of Colour) — optional tropes",
+        "composer": "Jeffrey Bonilla & David Lockwood"
+      },
+      "responsorialPsalm": {
+        "psalm": "Ps 126 The Lord has done great things...",
+        "setting": "The Lyric Psalter • Tony Alonso & Marty Haugen"
+      },
+      "gospelAcclamation": {
+        "title": "Mass of Joy & Peace Lenten G.A. (Refrain)",
+        "composer": "The Lyric Gospel Acclamations • Tony Alonso",
+        "verse": "Even now, says the Lord,\nreturn to me with your whole heart;\nfor I am gracious and merciful."
+      },
+      "offertory": {
+        "title": "Endless Is Your Love",
+        "composer": "Tom Kendzia",
+        "description": "\"wonderful your works\""
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "Mass of Creation - Rev. 2010",
+        "composer": "Marty Haugen"
+      },
+      "lordsPrayer": {
+        "title": "Chanted Our Father (Snow)",
+        "composer": "Jennings/Paregorius"
+      },
+      "fractionRite": {
+        "title": "Lamb of God (Mass of Creation)"
+      },
+      "communionSongs": [
+        {
+          "title": "Beyond the Days",
+          "composer": "Ricky Manalo, CSP"
+        },
+        {
+          "title": "Eat This Bread",
+          "composer": "Taizé • Jacques Berthier",
+          "description": "Lenten Communion"
+        },
+        {
+          "title": "Be Still and Know That I Am God",
+          "composer": "Christopher Walker • Sr. Paule Freeburg, DC",
+          "description": "Meditation Song"
+        }
+      ],
+      "sending": {
+        "title": "God of Day and God of Darkness",
+        "composer": "BEACH SPRING • Marty Haugen",
+        "description": "Lenten Sending"
+      }
+    },
+    {
+      "community": "Elevations",
+      "communityId": "elevations",
+      "date": "Year C — Apr 02, 2028 (Sun)",
+      "presider": "NOT THIS YEAR",
+      "gathering": {
+        "title": "All Who Enter Here",
+        "composer": "John Angotti • Dan Houze",
+        "description": "\"God's loving mercy\""
+      },
+      "penitentialAct": {
+        "title": "Kyrie (Mass of Colour) — optional tropes",
+        "composer": "Jeffrey Bonilla & David Lockwood"
+      },
+      "responsorialPsalm": {
+        "psalm": "Ps 126 The Lord has done great things...",
+        "setting": "Francesca LaRosa"
+      },
+      "gospelAcclamation": {
+        "title": "Praise to You, Lord Jesus Christ",
+        "composer": "Ed Archer",
+        "verse": "Even now, says the Lord,\nreturn to me with your whole heart;\nfor I am gracious and merciful."
+      },
+      "offertory": {
+        "title": "Endless Is Your Love",
+        "composer": "Tom Kendzia",
+        "description": "\"wonderful your works\""
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "Mass of Colour",
+        "composer": "Bonilla & Lockwood"
+      },
+      "lordsPrayer": {
+        "title": "Echo Our Father",
+        "composer": "Andrews, Arr. Bonilla • Lockwood • Fajardo"
+      },
+      "fractionRite": {
+        "title": "Lamb of God (Mass of Colour)",
+        "composer": "Jeffrey Bonilla & David Lockwood"
+      },
+      "communionSongs": [
+        {
+          "title": "Be Forgiven",
+          "composer": "Tom Booth",
+          "description": "“Neither do I condemn you...” - Jesus"
+        },
+        {
+          "title": "Beyond the Days",
+          "composer": "Ricky Manalo, CSP",
+          "description": "Lenten Communion"
+        },
+        {
+          "title": "Belovedness",
+          "composer": "Sarah Kroger • Arranged by Arielle Phan",
+          "description": "Gospel"
+        }
+      ],
+      "sending": {
+        "title": "How Great Thou Art",
+        "composer": "Paul Baloche",
+        "description": "\"when I in awesome wonder\""
+      }
+    }
+  ]
+}

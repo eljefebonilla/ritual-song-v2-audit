@@ -1,0 +1,318 @@
+{
+  "id": "year-a-apr-05-2026-sun",
+  "name": "Year A — Apr 05, 2026 (Sun)",
+  "year": "ABC",
+  "season": "ordinary",
+  "seasonLabel": "Ordinary Time",
+  "seasonOrder": 5,
+  "dates": [],
+  "lectionary": {
+    "number": "Year C — Apr 13, 2031 (Sun)",
+    "gospelTitle": "Year B — Apr 21, 2030 (Sun)",
+    "thematicTag": "Year A — Apr 01, 2029 (Sun)",
+    "thematicDetail": "Year C — Apr 16, 2028 (Sun)"
+  },
+  "readings": [
+    {
+      "type": "psalm",
+      "citation": "First Day of New Creation",
+      "summary": ""
+    }
+  ],
+  "antiphons": [],
+  "planningNotes": [],
+  "musicPlans": [
+    {
+      "community": "Foundations",
+      "communityId": "foundations",
+      "date": "Year C — Apr 23, 2028 (Sun)",
+      "presider": "NOT THIS YEAR",
+      "prelude": {
+        "title": "Regina Caeli / O Queen of Heaven",
+        "composer": "Mode VI Latin • 12th C",
+        "description": "Pope Leo XIV singing Regina Caeli"
+      },
+      "penitentialAct": {
+        "title": "Composer(s) • Arranger(s)",
+        "composer": "Description",
+        "description": "Sprinkling Rite"
+      },
+      "gloria": {
+        "title": "Song Title",
+        "composer": "Composer(s) • Arranger(s)",
+        "description": "Gloria"
+      },
+      "gospelAcclamation": {
+        "title": "Spirit & Psalm • Composer",
+        "composer": "Gospel Acclamation",
+        "verse": "Song Title"
+      },
+      "offertory": {
+        "title": "Verse Audio Example",
+        "description": "Offertory Song"
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "Song Title",
+        "composer": "Composer(s) • Arranger(s)"
+      },
+      "lordsPrayer": {
+        "title": "Eucharistic Acclamations",
+        "composer": "Mass of Glory",
+        "description": "Bob Hurd & Ken Canedo"
+      },
+      "fractionRite": {
+        "title": "Holy, Holy",
+        "composer": "We Proclaim Your Death",
+        "description": "Amen"
+      },
+      "communionSongs": [
+        {
+          "title": "The Lord's Prayer",
+          "composer": "Chanted Our Father (Snow)",
+          "description": "Jennings • Paregorius"
+        },
+        {
+          "title": "Fraction Rite",
+          "composer": "Lamb of God (Mass of Glory)",
+          "description": "Bob Hurd & Ken Canedo"
+        },
+        {
+          "title": "Communion Songs",
+          "composer": "Song Title",
+          "description": "Composer(s) • Arranger(s)"
+        },
+        {
+          "title": "Description",
+          "composer": "Song Title",
+          "description": "Composer(s) • Arranger(s)"
+        }
+      ],
+      "sending": {
+        "title": "Composer(s) • Arranger(s)",
+        "composer": "Description"
+      }
+    },
+    {
+      "community": "Generations",
+      "communityId": "generations",
+      "date": "Year C — Apr 23, 2028 (Sun)",
+      "presider": "NOT THIS YEAR",
+      "prelude": {
+        "title": "Regina Caeli / O Queen of Heaven",
+        "composer": "Mode VI Latin • 12th C",
+        "description": "Pope Leo XIV singing Regina Caeli"
+      },
+      "penitentialAct": {
+        "title": "Composer(s) • Arranger(s)",
+        "composer": "Description",
+        "description": "Sprinkling Rite"
+      },
+      "gloria": {
+        "title": "Song Title",
+        "composer": "Composer(s) • Arranger(s)",
+        "description": "Gloria"
+      },
+      "gospelAcclamation": {
+        "title": "Collection • Composer(s)",
+        "composer": "Gospel Acclamation",
+        "verse": "Song Title"
+      },
+      "offertory": {
+        "title": "Verse Audio Example",
+        "description": "Offertory Song"
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "Song Title",
+        "composer": "Composer(s) • Arranger(s)"
+      },
+      "lordsPrayer": {
+        "title": "Eucharistic Acclamations",
+        "composer": "Mass of Glory",
+        "description": "Jeffrey Bonilla & David Lockwood"
+      },
+      "fractionRite": {
+        "title": "Holy, Holy",
+        "composer": "We Proclaim Your Death",
+        "description": "Amen"
+      },
+      "communionSongs": [
+        {
+          "title": "The Lord's Prayer",
+          "composer": "(Echo) Our Father",
+          "description": "Jerome Andrews • Arranged by Dan Houze"
+        },
+        {
+          "title": "Fraction Rite",
+          "composer": "Lamb of God (Mass of Glory)"
+        },
+        {
+          "title": "Communion Songs",
+          "composer": "Song Title",
+          "description": "Composer(s) • Arranger(s)"
+        },
+        {
+          "title": "Description",
+          "composer": "Song Title",
+          "description": "Composer(s) • Arranger(s)"
+        },
+        {
+          "title": "Description",
+          "composer": "Song Title",
+          "description": "Composer(s) • Arranger(s)"
+        },
+        {
+          "title": "Description",
+          "composer": "Song Title",
+          "description": "Composer(s) • Arranger(s)"
+        }
+      ],
+      "sending": {
+        "title": "Song Title",
+        "composer": "Composer(s) • Arranger(s)"
+      }
+    },
+    {
+      "community": "Heritage",
+      "communityId": "heritage",
+      "date": "Year C — Apr 23, 2028 (Sun)",
+      "presider": "NOT THIS YEAR",
+      "prelude": {
+        "title": "Regina Caeli / O Queen of Heaven",
+        "composer": "Mode VI Latin • 12th C",
+        "description": "Pope Leo XIV singing Regina Caeli"
+      },
+      "penitentialAct": {
+        "title": "Composer(s) • Arranger(s)",
+        "composer": "Description",
+        "description": "Sprinkling Rite"
+      },
+      "gloria": {
+        "title": "Song Title",
+        "composer": "Composer(s) • Arranger(s)",
+        "description": "Gloria"
+      },
+      "gospelAcclamation": {
+        "title": "Composer(s) • Arranger(s)",
+        "composer": "Gospel Acclamation",
+        "verse": "Song Title"
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "Song Title",
+        "composer": "Composer(s) • Arranger(s)"
+      },
+      "lordsPrayer": {
+        "title": "Eucharistic Acclamations",
+        "composer": "Mass of Joy & Peace",
+        "description": "Tony Alonso"
+      },
+      "fractionRite": {
+        "title": "Holy, Holy, Holy",
+        "composer": "When We Eat This Bread",
+        "description": "Amen"
+      },
+      "communionSongs": [
+        {
+          "title": "The Lord's Prayer",
+          "composer": "Chanted Our Father (Snow)",
+          "description": "Jennings/Paregorius"
+        },
+        {
+          "title": "Fraction Rite",
+          "composer": "Lamb of God (Mass of Joy & Peace)",
+          "description": "Tony Alonso"
+        },
+        {
+          "title": "Communion Songs",
+          "composer": "Song Title",
+          "description": "Composer(s) • Arranger(s)"
+        },
+        {
+          "title": "Description",
+          "composer": "Song Title",
+          "description": "Composer(s) • Arranger(s)"
+        },
+        {
+          "title": "Description",
+          "composer": "Song Title",
+          "description": "Composer(s) • Arranger(s)"
+        }
+      ],
+      "sending": {
+        "title": "Composer(s) • Arranger(s)",
+        "composer": "Description"
+      }
+    },
+    {
+      "community": "Elevations",
+      "communityId": "elevations",
+      "date": "Year C — Apr 23, 2028 (Sun)",
+      "presider": "NOT THIS YEAR",
+      "prelude": {
+        "title": "Regina Caeli / O Queen of Heaven",
+        "composer": "Mode VI Latin • 12th C",
+        "description": "Pope Leo XIV singing Regina Caeli"
+      },
+      "penitentialAct": {
+        "title": "Composer(s) • Arranger(s)",
+        "composer": "Description",
+        "description": "Sprinkling Rite"
+      },
+      "gloria": {
+        "title": "Song Title",
+        "composer": "Composer(s) • Arranger(s)",
+        "description": "Gloria"
+      },
+      "gospelAcclamation": {
+        "title": "Composer(s) • Arranger(s)",
+        "composer": "Gospel Acclamation",
+        "verse": "Song Title"
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "Song Title",
+        "composer": "Composer(s) • Arranger(s)"
+      },
+      "lordsPrayer": {
+        "title": "Eucharistic Acclamations",
+        "composer": "Mass of Restoration",
+        "description": "Joshua Blakesley"
+      },
+      "fractionRite": {
+        "title": "Holy, Holy, Holy",
+        "composer": "Save Us Savior of the World",
+        "description": "Amen"
+      },
+      "communionSongs": [
+        {
+          "title": "The Lord's Prayer",
+          "composer": "Echo Our Father",
+          "description": "Andrews, Arr. Bonilla • Lockwood • Fajardo"
+        },
+        {
+          "title": "Fraction Rite",
+          "composer": "Lamb of God (Mass of Restoration)",
+          "description": "Joshua Blakesley"
+        },
+        {
+          "title": "Communion Songs",
+          "composer": "Song Title",
+          "description": "Composer(s) • Arranger(s)"
+        },
+        {
+          "title": "Description",
+          "composer": "Song Title",
+          "description": "Composer(s) • Arranger(s)"
+        },
+        {
+          "title": "Description",
+          "composer": "Song Title",
+          "description": "Composer(s) • Arranger(s)"
+        }
+      ],
+      "sending": {
+        "title": "Sending Song",
+        "composer": "Song Title",
+        "description": "Composer(s) • Arranger(s)"
+      }
+    }
+  ]
+}

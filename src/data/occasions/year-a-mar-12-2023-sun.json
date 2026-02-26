@@ -1,0 +1,415 @@
+{
+  "id": "year-a-mar-12-2023-sun",
+  "name": "Year A — Mar 12, 2023 (Sun)",
+  "year": "ABC",
+  "season": "ordinary",
+  "seasonLabel": "Ordinary Time",
+  "seasonOrder": 12,
+  "dates": [],
+  "lectionary": {
+    "number": "Year A — Mar 28, 2038 (Sun)",
+    "gospelTitle": "Year A — Feb 25, 2035 (Sun)",
+    "thematicTag": "Year A — Feb 29, 2032 (Sun)",
+    "thematicDetail": "Year A — Mar 04, 2029 (Sun)"
+  },
+  "readings": [
+    {
+      "type": "psalm",
+      "citation": "Scrutiny 1/3 – Living Water",
+      "summary": "",
+      "antiphon": "Planning Reminders"
+    },
+    {
+      "type": "second",
+      "citation": "⏰ DST 2026 - MAR 08 - LOSE HOUR",
+      "summary": ""
+    },
+    {
+      "type": "gospel_verse",
+      "citation": "My eyes are always on the Lord,\nfor he rescues my feet from the snare.\nTurn to me and have mercy on me,\nfor I am alone and poor.",
+      "summary": "Entrance Antiphon • Option II | Cf. Ez 36:23–26"
+    },
+    {
+      "type": "gospel",
+      "citation": "Reading I | Ex 17:3-7",
+      "summary": "The Israelites complain to Moses in the desert."
+    }
+  ],
+  "antiphons": [
+    {
+      "type": "entrance",
+      "option": 1,
+      "citation": "Verse before the Gospel | See Jn 4:42, 15",
+      "text": "Lord, you are truly the Savior of the world;\ngive me living water, that I may never thirst again."
+    },
+    {
+      "type": "communion",
+      "option": 2,
+      "citation": "Communion Antiphon | Year A and Scrutiny - Jn 4:13–14",
+      "text": "For anyone who drinks it, says the Lord,\nthe water I shall give will become in him\na spring welling up to eternal life."
+    }
+  ],
+  "planningNotes": [
+    "Communion Antiphon • Option II",
+    "N/A"
+  ],
+  "musicPlans": [
+    {
+      "community": "Reflections",
+      "communityId": "reflections",
+      "date": "Year A — Mar 07, 2026 (Sat)",
+      "presider": "TBD",
+      "prelude": {
+        "title": "See Taizé Setlist"
+      },
+      "penitentialAct": {
+        "title": "John B. Foley, SJ • Arranged by Arielle Phan",
+        "composer": "Gospel — Woman at the Well",
+        "description": "Penitential Act"
+      },
+      "gloria": {
+        "title": "Kyrie (Mass of Colour) — optional tropes",
+        "composer": "Jeffrey Bonilla & David Lockwood",
+        "description": "Gloria"
+      },
+      "gospelAcclamation": {
+        "title": "The Lyric Psalter • Tony Alonso & Marty Haugen",
+        "composer": "Gospel Acclamation",
+        "verse": "Mass of Joy & Peace Lenten G.A. (Refrain)"
+      },
+      "offertory": {
+        "title": "Verse LENT • 03A",
+        "description": "Offertory Song"
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "Turn Our Hearts Around",
+        "composer": "Composer/s"
+      },
+      "lordsPrayer": {
+        "title": "Eucharistic Acclamations",
+        "composer": "Mass of Creation",
+        "description": "Marty Haugen • Arr. by Lockwood & Phan"
+      },
+      "fractionRite": {
+        "title": "Holy",
+        "composer": "Mystery of Faith",
+        "description": "Amen"
+      },
+      "communionSongs": [
+        {
+          "title": "The Lord's Prayer",
+          "composer": "Chanted Our Father (Snow)",
+          "description": "Jennings/Paregorius"
+        },
+        {
+          "title": "Fraction Rite",
+          "composer": "Lamb of God (Mass of Creation)",
+          "description": "Marty Haugen • Arr. by Lockwood & Phan"
+        },
+        {
+          "title": "Communion Songs",
+          "composer": "Beyond the Days",
+          "description": "Ricky Manalo, CSP"
+        },
+        {
+          "title": "Lenten Song",
+          "composer": "Turn To Me",
+          "description": "John Foley SJ"
+        }
+      ]
+    },
+    {
+      "community": "Foundations",
+      "communityId": "foundations",
+      "date": "Year A — Mar 08, 2026 (Sun)",
+      "presider": "TBD",
+      "prelude": {
+        "title": "N/A"
+      },
+      "penitentialAct": {
+        "title": "John B. Foley, SJ • Arranged by Arielle Phan",
+        "composer": "Gospel — Woman at the Well",
+        "description": "Penitential Act"
+      },
+      "gloria": {
+        "title": "Kyrie (Mass of Colour) — optional tropes",
+        "composer": "Jeffrey Bonilla & David Lockwood",
+        "description": "Gloria"
+      },
+      "gospelAcclamation": {
+        "title": "The Lyric Psalter • Tony Alonso & Marty Haugen",
+        "composer": "Gospel Acclamation",
+        "verse": "Praise to You, Lord Jesus Christ"
+      },
+      "offertory": {
+        "title": "Verse - LENT • 03A",
+        "description": "Offertory Song"
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "Turn Our Hearts Around",
+        "composer": "Composer/s"
+      },
+      "lordsPrayer": {
+        "title": "Eucharistic Acclamations",
+        "composer": "Mass of a Firm Foundation",
+        "description": "David Lockwood"
+      },
+      "fractionRite": {
+        "title": "Holy",
+        "composer": "Mystery of Faith",
+        "description": "Amen"
+      },
+      "communionSongs": [
+        {
+          "title": "The Lord's Prayer",
+          "composer": "Chanted Our Father (Snow)",
+          "description": "Jennings • Paregorius"
+        },
+        {
+          "title": "Fraction Rite",
+          "composer": "Lamb of God (Mass of a Firm Foundation)",
+          "description": "David Lockwood"
+        },
+        {
+          "title": "Communion Songs",
+          "composer": "Beyond the Days",
+          "description": "Ricky Manalo, CSP"
+        },
+        {
+          "title": "Description",
+          "composer": "Change Our Hearts",
+          "description": "Rory Cooney"
+        }
+      ],
+      "sending": {
+        "title": "Matt Maher",
+        "composer": "Lenten Sending"
+      }
+    },
+    {
+      "community": "Generations",
+      "communityId": "generations",
+      "date": "Year A — Mar 08, 2026 (Sun)",
+      "presider": "TBD",
+      "prelude": {
+        "title": "N/A"
+      },
+      "penitentialAct": {
+        "title": "John B. Foley, SJ • Arranged by Arielle Phan",
+        "composer": "Year A Gospel — Woman at the Well",
+        "description": "Penitential Act"
+      },
+      "gloria": {
+        "title": "Kyrie (Mass of Colour) — optional tropes",
+        "composer": "Jeffrey Bonilla & David Lockwood",
+        "description": "Gloria"
+      },
+      "gospelAcclamation": {
+        "title": "Spirit & Psalm • Ben Walther",
+        "composer": "Gospel Acclamation",
+        "verse": "Praise to You, Lord Jesus Christ"
+      },
+      "offertory": {
+        "title": "Verse - LENT • 03A",
+        "description": "Offertory Song"
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "O God, You Search Me",
+        "composer": "Bernadette Farrell"
+      },
+      "lordsPrayer": {
+        "title": "Eucharistic Acclamations",
+        "composer": "Mass of Colour",
+        "description": "Jeffrey Bonilla & David Lockwood"
+      },
+      "fractionRite": {
+        "title": "Holy",
+        "composer": "Mystery of Faith",
+        "description": "Amen"
+      },
+      "communionSongs": [
+        {
+          "title": "The Lord's Prayer",
+          "composer": "Spoken during Season of Lent"
+        },
+        {
+          "title": "Fraction Rite",
+          "composer": "Lamb of God (Mass of Colour)",
+          "description": "Jeffrey Bonilla & David Lockwood"
+        },
+        {
+          "title": "Communion Songs",
+          "composer": "O Come to the Altar (NO BRIDGE!!!)",
+          "description": "Elevation Worship — David begins solo."
+        },
+        {
+          "title": "“Do you thirst for a drink from the well? ”",
+          "composer": "Be Forgiven",
+          "description": "Tom Booth"
+        },
+        {
+          "title": "Bridge: Woman at the Well",
+          "composer": "Beyond the Days",
+          "description": "Ricky Manalo, CSP"
+        },
+        {
+          "title": "\"we see the dawn of a new day\"",
+          "composer": "Belovedness",
+          "description": "Sarah Kroger"
+        }
+      ],
+      "sending": {
+        "title": "The Lord's Prayer (It's Yours)",
+        "composer": "Matt Maher",
+        "description": "\"Forgive us, Forgive us\""
+      }
+    },
+    {
+      "community": "Heritage",
+      "communityId": "heritage",
+      "date": "Year A — Mar 08, 2026 (Sun)",
+      "presider": "TBD",
+      "prelude": {
+        "title": "N/A"
+      },
+      "penitentialAct": {
+        "title": "John B. Foley, SJ • Arranged by Arielle Phan",
+        "composer": "Gospel — Woman at the Well",
+        "description": "Penitential Act"
+      },
+      "gloria": {
+        "title": "Kyrie (Mass of Colour) — optional tropes",
+        "composer": "Jeffrey Bonilla & David Lockwood",
+        "description": "Gloria"
+      },
+      "gospelAcclamation": {
+        "title": "The Lyric Psalter • Tony Alonso & Marty Haugen",
+        "composer": "Gospel Acclamation",
+        "verse": "Mass of Joy & Peace Lenten G.A. (Refrain)"
+      },
+      "offertory": {
+        "title": "Verse - LENT • 03A",
+        "description": "Offertory Song"
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "O God, You Search Me",
+        "composer": "Bernadette Farrell"
+      },
+      "lordsPrayer": {
+        "title": "Eucharistic Acclamations",
+        "composer": "Mass of Creation - Rev. 2010",
+        "description": "Marty Haugen"
+      },
+      "fractionRite": {
+        "title": "Holy",
+        "composer": "Mystery of Faith",
+        "description": "Amen"
+      },
+      "communionSongs": [
+        {
+          "title": "The Lord's Prayer",
+          "composer": "Chanted Our Father (Snow)",
+          "description": "Jennings/Paregorius"
+        },
+        {
+          "title": "Fraction Rite",
+          "composer": "Lamb of God (Mass of Creation)",
+          "description": "Tony Alonso"
+        },
+        {
+          "title": "Communion Songs",
+          "composer": "Beyond the Days",
+          "description": "Ricky Manalo, CSP"
+        },
+        {
+          "title": "\"in your hands... the touch of your guidance\"",
+          "composer": "Turn To Me",
+          "description": "John Foley SJ"
+        },
+        {
+          "title": "Lenten Song",
+          "composer": "As the Deer Longs",
+          "description": "Bob Hurd"
+        }
+      ],
+      "sending": {
+        "title": "Ricky Manalo CSP • Gerard Chiusano",
+        "composer": "Lenten Sending Song"
+      }
+    },
+    {
+      "community": "Elevations",
+      "communityId": "elevations",
+      "date": "Year A — Mar 08, 2026 (Sun)",
+      "presider": "TBD",
+      "prelude": {
+        "title": "N/A"
+      },
+      "penitentialAct": {
+        "title": "John B. Foley, SJ • Arranged by Arielle Phan",
+        "composer": "Gospel — Woman at the Well",
+        "description": "Penitential Act"
+      },
+      "gloria": {
+        "title": "Kyrie (Mass of Colour) — optional tropes",
+        "composer": "Jeffrey Bonilla & David Lockwood",
+        "description": "Gloria"
+      },
+      "gospelAcclamation": {
+        "title": "Spirit & Psalm • Ben Walther",
+        "composer": "Gospel Acclamation",
+        "verse": "Praise to You, Lord Jesus Christ"
+      },
+      "offertory": {
+        "title": "Verse - LENT • 03A",
+        "description": "Offertory Song"
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "Turn Our Hearts Around",
+        "composer": "Trevor Thomson"
+      },
+      "lordsPrayer": {
+        "title": "Eucharistic Acclamations",
+        "composer": "Mass of Colour",
+        "description": "Bonilla & Lockwood"
+      },
+      "fractionRite": {
+        "title": "Holy",
+        "composer": "Mystery of Faith",
+        "description": "Amen"
+      },
+      "communionSongs": [
+        {
+          "title": "The Lord's Prayer",
+          "composer": "Chanted Our Father (Snow)",
+          "description": "Jennings/Paregorius — if requested by Presider"
+        },
+        {
+          "title": "Fraction Rite",
+          "composer": "Lamb of God (Mass of Colour)",
+          "description": "Jeffrey Bonilla & David Lockwood"
+        },
+        {
+          "title": "Communion Songs",
+          "composer": "Beyond the Days",
+          "description": "Ricky Manalo, CSP"
+        },
+        {
+          "title": "Lenten Communion",
+          "composer": "Turn To Me",
+          "description": "John Foley SJ"
+        },
+        {
+          "title": "Lenten Song",
+          "composer": "Belovedness",
+          "description": "Sarah Kroger"
+        }
+      ],
+      "sending": {
+        "title": "Sending Song",
+        "composer": "The Lord's Prayer (It's Yours)",
+        "description": "Matt Maher"
+      }
+    }
+  ]
+}

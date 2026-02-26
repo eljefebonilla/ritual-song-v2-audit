@@ -1,0 +1,452 @@
+{
+  "id": "ordinary-time-02-a",
+  "name": "ORDINARY TIME 02 [A]",
+  "year": "A",
+  "season": "ordinary",
+  "seasonLabel": "Ordinary Time",
+  "seasonOrder": 2,
+  "dates": [
+    {
+      "date": "2023-01-15",
+      "label": "Year A — Jan 15, 2023 (Sun)",
+      "dayOfWeek": "Sun"
+    },
+    {
+      "date": "2035-01-14",
+      "label": "Year A — Jan 14, 2035 (Sun)",
+      "dayOfWeek": "Sun"
+    },
+    {
+      "date": "2032-01-18",
+      "label": "Year A — Jan 18, 2032 (Sun)",
+      "dayOfWeek": "Sun"
+    },
+    {
+      "date": "2029-01-14",
+      "label": "Year A — Jan 14, 2029 (Sun)",
+      "dayOfWeek": "Sun"
+    },
+    {
+      "date": "2026-01-18",
+      "label": "Year A — Jan 18, 2026 (Sun)",
+      "dayOfWeek": "Sun"
+    }
+  ],
+  "lectionary": {
+    "number": "064•A",
+    "gospelTitle": "Behold the Lamb of God",
+    "thematicTag": "First Disciples (John)"
+  },
+  "readings": [
+    {
+      "type": "first",
+      "citation": "Is 49:3, 5-6",
+      "summary": "Israel, a light to the nations."
+    },
+    {
+      "type": "psalm",
+      "citation": "Ps 40:2, 4, 7-8, 8-9, 10, R. v.8a and 9a\nHere am I, Lord; I come to do your will.",
+      "summary": "",
+      "antiphon": "Ps 40:2, 4, 7-8, 8-9, 10, R. v.8a and 9a\nHere am I, Lord; I come to do your will."
+    },
+    {
+      "type": "second",
+      "citation": "1 Cor 1:1-3",
+      "summary": "Paul sends greetings to the people of Corinth."
+    },
+    {
+      "type": "gospel_verse",
+      "citation": "Jn 1:14a, 12a",
+      "summary": "The Word of God became flesh and dwelt among us.\nTo those who accepted him,\nhe gave power to become children of God."
+    },
+    {
+      "type": "gospel",
+      "citation": "Jn 1:29-34",
+      "summary": "John the Baptist points to Jesus."
+    }
+  ],
+  "antiphons": [
+    {
+      "type": "entrance",
+      "option": 1,
+      "citation": "Ps 66 (65):4",
+      "text": "All the earth shall bow down before you, O God,\nand shall sing to you, shall sing to your name, O Most High!"
+    },
+    {
+      "type": "communion",
+      "option": 1,
+      "citation": "Cf. Ps 23 (22):5",
+      "text": "You have prepared a table before me,\nand how precious is the chalice that quenches my thirst."
+    },
+    {
+      "type": "communion",
+      "option": 2,
+      "citation": "Communion Antiphon • Option II | 1 Jn 4:16",
+      "text": "We have come to know and to believe\nin the love that God has for us."
+    }
+  ],
+  "planningNotes": [
+    "Week of Prayer for Christian Unity",
+    "🇺🇸  MLK Weekend 🇺🇸"
+  ],
+  "musicPlans": [
+    {
+      "community": "Reflections",
+      "communityId": "reflections",
+      "date": "Year A — Jan 17, 2026 (Sat)",
+      "presider": "Fr. Thomas Park",
+      "prelude": {
+        "title": "Lift Every Voice",
+        "composer": "James Weldon Johnson & John Rosamond Johnson",
+        "description": "🇺🇸  MLK Weekend 🇺🇸"
+      },
+      "gathering": {
+        "title": "Come, Worship the Lord",
+        "composer": "John Michael Talbot",
+        "description": "Comm Ant - \"we are his people, the flock that he shepherds...\""
+      },
+      "penitentialAct": {
+        "title": "Kyrie • Misa Del Mundo",
+        "composer": "Jesse Manibusan"
+      },
+      "gloria": {
+        "title": "Glory to God (Through-composed Setting)",
+        "composer": "Mass of Renewal • Curtis Stephan"
+      },
+      "responsorialPsalm": {
+        "psalm": "Ps 40 Here am I, Lord; I come to do your will.",
+        "setting": "The Lyric Psalter • Tony Alonso & Marty Haugen"
+      },
+      "gospelAcclamation": {
+        "title": "Alleluia (Mass of Joy & Peace)",
+        "composer": "The Lyric Gospel Acclamations • Tony Alonso",
+        "verse": "The Word of God became flesh and dwelt among us.\nTo those who accepted him,\nhe gave power to become children of God."
+      },
+      "offertory": {
+        "title": "God of Peace",
+        "composer": "Jeffrey Bonilla & David Lockwood",
+        "description": "Prayer for Peace"
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "Mass for the Healing of the World",
+        "composer": "Trevor Thomson"
+      },
+      "lordsPrayer": {
+        "title": "Chanted Our Father (Snow)",
+        "composer": "Jennings/Paregorius"
+      },
+      "fractionRite": {
+        "title": "Lamb of God (Mass for the Healing of the World)",
+        "composer": "Trevor Thomson"
+      },
+      "communionSongs": [
+        {
+          "title": "Psalm 23: Shepherd Me, O God",
+          "composer": "Marty Haugen",
+          "description": "Com Ant. - You have prepared a table before me..."
+        },
+        {
+          "title": "Worthy Is the Lamb",
+          "composer": "Ricky Manalo CSP",
+          "description": "\"How worthy is the Lamb who was slain...\""
+        },
+        {
+          "title": "The Word Became Flesh",
+          "composer": "Orin Johnson",
+          "description": "Gospel Verse and Forshadow for Word of God Sunday."
+        }
+      ],
+      "sending": {
+        "title": "We Belong To You",
+        "composer": "Trevor Thomson",
+        "description": "\"we are his people, the flock that he shepherds...\""
+      }
+    },
+    {
+      "community": "Foundations",
+      "communityId": "foundations",
+      "date": "Year A — Jan 18, 2026 (Sun)",
+      "presider": "Fr. Vince Kuna",
+      "prelude": {
+        "title": "Lift Every Voice",
+        "composer": "James Weldon Johnson & John Rosamond Johnson",
+        "description": "🇺🇸  MLK Weekend 🇺🇸"
+      },
+      "gathering": {
+        "title": "Gather Your People",
+        "composer": "Bob Hurd",
+        "description": "Comm Ant -  Imagery of God our Shepherd"
+      },
+      "penitentialAct": {
+        "title": "Kyrie (Gift of God) • Adapted Version",
+        "composer": "Marty Haugen • Arranged by David Locwood"
+      },
+      "gloria": {
+        "title": "Mass of Joy & Peace (Gospel Version)",
+        "composer": "Tony Alonso • Arrangement by David Lockwood"
+      },
+      "responsorialPsalm": {
+        "psalm": "Ps 40 Here am I, Lord; I come to do your will.",
+        "setting": "Spirit & Psalm • Paul Hillebrand"
+      },
+      "gospelAcclamation": {
+        "title": "Alleluia! Give the Glory (Mass of Glory)",
+        "composer": "Bob Hurd •  Ken Canedo • Craig Kingsbury",
+        "verse": "The Word of God became flesh and dwelt among us.\nTo those who accepted him,\nhe gave power to become children of God."
+      },
+      "offertory": {
+        "title": "Jesus I Trust In You",
+        "composer": "Sarah Hart • Josh Blakesley • Sarah Kroger",
+        "description": "\"...so I shall not want, Jesus I trust...\""
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "Mass of Glory"
+      },
+      "lordsPrayer": {
+        "title": "Chanted Our Father (Snow)",
+        "composer": "Jennings • Paregorius"
+      },
+      "fractionRite": {
+        "title": "Lamb of God (Mass of Glory)"
+      },
+      "communionSongs": [
+        {
+          "title": "One Bread, One Body",
+          "composer": "John Foley SJ — Upbeat!",
+          "description": "✪ OT - 02 A"
+        },
+        {
+          "title": "Give Me Jesus",
+          "composer": "Spiritual • Sara Watkins",
+          "description": "MLK Weekend"
+        }
+      ],
+      "sending": {
+        "title": "In Christ There Is No East Or West",
+        "composer": "Adapt. by Burleigh • Oxenham • Arr. by Lockwood",
+        "description": "MLK • Christian Unity • Isaiah 49 - ...light to nations."
+      }
+    },
+    {
+      "community": "Generations",
+      "communityId": "generations",
+      "date": "Year A — Jan 18, 2026 (Sun)",
+      "presider": "Msgr. Lloyd Torgerson",
+      "prelude": {
+        "title": "Lift Every Voice",
+        "composer": "James Weldon Johnson & John Rosamond Johnson",
+        "description": "🇺🇸  MLK Weekend 🇺🇸"
+      },
+      "gathering": {
+        "title": "Gather Your People",
+        "composer": "Bob Hurd",
+        "description": "Communion Antiphon imagery of God our Shepherd"
+      },
+      "penitentialAct": {
+        "title": "Kyrie • Misa Del Mundo",
+        "composer": "Jesse Manibusan"
+      },
+      "gloria": {
+        "title": "Glory, Glory, Gloria!",
+        "composer": "Bonilla & Wilson • Vocal Arr. by Lockwood & Phan"
+      },
+      "responsorialPsalm": {
+        "psalm": "Ps 40 Here am I, Lord; I come to do your will.",
+        "setting": "Spirit & Psalm • Paul Hillebrand"
+      },
+      "gospelAcclamation": {
+        "title": "Hallelujah (adapted for Liturgy)",
+        "composer": "Leonard Cohen",
+        "verse": "The Word of God became flesh and dwelt among us.\nTo those who accepted him,\nhe gave power to become children of God."
+      },
+      "offertory": {
+        "title": "Prayer of St Francis",
+        "composer": "Sebastian Temple • Arranged by Ed Archer",
+        "description": "Pope Leo XIV - \"Jubilee of St. Francis\" Holy Year"
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "Mass of St. Anne",
+        "composer": "Ed Bolduc"
+      },
+      "lordsPrayer": {
+        "title": "Echo Our Father",
+        "composer": "Jerome Andrews • Arranged by Dan Houze"
+      },
+      "fractionRite": {
+        "title": "Lamb of God (Mass of Holy Cross)",
+        "composer": "David Clark Isele"
+      },
+      "communionSongs": [
+        {
+          "title": "Ps 23 The Lord Is My Shepherd",
+          "composer": "Joshua Blakesley (Subtle Reharm Version)",
+          "description": "Com Ant. - You have prepared a table before me..."
+        },
+        {
+          "title": "Bread of Life",
+          "composer": "Michael John Poirier",
+          "description": "\"Lamb of God, you'll come in glory...to lead us home\""
+        },
+        {
+          "title": "Jesus I Trust In You",
+          "composer": "Sarah Hart • Josh Blakesley • Sarah Kroger",
+          "description": "\"...so I shall not want, Jesus I trust...\""
+        },
+        {
+          "title": "Day of Peace",
+          "composer": "Janèt Sullivan Whitaker",
+          "description": "\"I dream...\" - MLK • Prayer for Peace"
+        }
+      ],
+      "sending": {
+        "title": "In Christ There Is No East Or West",
+        "composer": "Adapt. by Burleigh • Oxenham • Arr. by Lockwood",
+        "description": "MLK • Christian Unity • Isaiah 49 - ...light to nations."
+      }
+    },
+    {
+      "community": "Heritage",
+      "communityId": "heritage",
+      "date": "Year A — Jan 18, 2026 (Sun)",
+      "presider": "\"Fr. David Guffey, CSC\"",
+      "prelude": {
+        "title": "Lift Every Voice",
+        "composer": "James Weldon Johnson & John Rosamond Johnson",
+        "description": "🇺🇸  MLK Weekend 🇺🇸"
+      },
+      "gathering": {
+        "title": "Come, Worship the Lord",
+        "composer": "John Michael Talbot",
+        "description": "Comm Ant - \"we are his people, the flock that he shepherds...\""
+      },
+      "penitentialAct": {
+        "title": "Kyrie • Misa Del Mundo",
+        "composer": "Jesse Manibusan"
+      },
+      "gloria": {
+        "title": "Glory to God (Mass of Christ the Savior)",
+        "composer": "Dan Schutte"
+      },
+      "responsorialPsalm": {
+        "psalm": "Ps 40 Here am I, Lord; I come to do your will.",
+        "setting": "The Lyric Psalter • Tony Alonso & Marty Haugen"
+      },
+      "gospelAcclamation": {
+        "title": "Alleluia (Mass of Joy & Peace)",
+        "composer": "The Lyric Gospel Acclamations • Tony Alonso",
+        "verse": "The Word of God became flesh and dwelt among us.\nTo those who accepted him,\nhe gave power to become children of God."
+      },
+      "offertory": {
+        "title": "Peace on Earth (Larghetto)",
+        "composer": "Dvořák adapted by Bob Hurd",
+        "description": "Prayer for Peace"
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "Mass of Joy & Peace",
+        "composer": "Tony Alonso"
+      },
+      "lordsPrayer": {
+        "title": "Chanted Our Father (Snow)",
+        "composer": "Jennings • Paregorius"
+      },
+      "fractionRite": {
+        "title": "Lamb of God (Mass of Joy & Peace)",
+        "composer": "Tony Alonso"
+      },
+      "communionSongs": [
+        {
+          "title": "Psalm 23: Shepherd Me, O God",
+          "composer": "Marty Haugen",
+          "description": "Com Ant. - You have prepared a table before me..."
+        },
+        {
+          "title": "Ubi Caritas",
+          "composer": "Bob Hurd",
+          "description": "Christian Love and Unity"
+        },
+        {
+          "title": "Lamb of God, What Wondrous Love",
+          "composer": "Faure • Kane • arr. Allan Robert Petker",
+          "description": "Gospel Reading \"Behold the Lamb of God\""
+        }
+      ],
+      "sending": {
+        "title": "Let There Be Peace on Earth",
+        "composer": "Jill Jackson • Sy Miller",
+        "description": "MLK • Christian Unity • Prayer for Peace"
+      }
+    },
+    {
+      "community": "Elevations",
+      "communityId": "elevations",
+      "date": "Year A — Jan 18, 2026 (Sun)",
+      "presider": "Fr. Eusebio Llonoso",
+      "prelude": {
+        "title": "Lift Every Voice",
+        "composer": "James Weldon Johnson & John Rosamond Johnson",
+        "description": "🇺🇸  MLK Weekend 🇺🇸"
+      },
+      "gathering": {
+        "title": "Christ Be Our Light",
+        "composer": "Bernadette Farrell • Arr. Bonilla",
+        "description": "General"
+      },
+      "penitentialAct": {
+        "title": "Kyrie (Misa Del Mundo)",
+        "composer": "Jesse Manibusan — If needed."
+      },
+      "gloria": {
+        "title": "Glory, Glory, Gloria! (Mass of the Setting Sun)",
+        "composer": "Bonilla & Wilson • Vocal Arr. by Lockwood & Phan"
+      },
+      "responsorialPsalm": {
+        "psalm": "Ps 40 Here am I, Lord; I come to do your will.",
+        "setting": "Spirit & Psalm • Paul Hillebrand"
+      },
+      "gospelAcclamation": {
+        "title": "Hallelujah (adapted for Liturgy)",
+        "composer": "Leonard Cohen",
+        "verse": "The Word of God became flesh and dwelt among us.\nTo those who accepted him,\nhe gave power to become children of God."
+      },
+      "offertory": {
+        "title": "Prayer of St Francis",
+        "composer": "Sebastian Temple • Arranged by Ed Archer",
+        "description": "Pope Leo XIV - \"Jubilee of St. Francis\" Holy Year"
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "Mass of Communion (Lower Key)",
+        "composer": "Matt Maher"
+      },
+      "lordsPrayer": {
+        "title": "Echo Our Father",
+        "composer": "Andrews • Arr. by Bonilla • Lockwood • Fajardo"
+      },
+      "fractionRite": {
+        "title": "Lamb of God (Mass of Holy Cross)",
+        "composer": "David Clark Isele"
+      },
+      "communionSongs": [
+        {
+          "title": "Ps 23 The Lord Is My Shepherd",
+          "composer": "Joshua Blakesley (Subtle Reharm Version)",
+          "description": "Com Ant. - You have prepared a table before me..."
+        },
+        {
+          "title": "Bread of Life",
+          "composer": "Michael John Poirier",
+          "description": "\"Lamb of God, you'll come in glory...to lead us home\""
+        },
+        {
+          "title": "Day of Peace",
+          "composer": "Janèt Sullivan Whitaker",
+          "description": "\"I dream...\" - MLK • Prayer for Peace"
+        }
+      ],
+      "sending": {
+        "title": "In Christ There Is No East Or West",
+        "composer": "Adapt. by Burleigh • Oxenham • Arr. by Lockwood",
+        "description": "MLK • Christian Unity • Isaiah 49 - ...light to nations."
+      }
+    }
+  ]
+}

@@ -1,0 +1,46 @@
+{
+  "id": "nativity",
+  "name": "Nativity",
+  "year": "ABC",
+  "season": "ordinary",
+  "seasonLabel": "Ordinary Time",
+  "seasonOrder": 0,
+  "dates": [
+    {
+      "date": "2026-12-25",
+      "label": "Year B — Dec 25, 2026 (Fri)",
+      "dayOfWeek": "Fri"
+    },
+    {
+      "date": "2030-12-25",
+      "label": "Year C — Dec 25, 2030 (Wed)",
+      "dayOfWeek": "Wed"
+    },
+    {
+      "date": "2029-12-25",
+      "label": "Year B — Dec 25, 2029 (Tue)",
+      "dayOfWeek": "Tue"
+    },
+    {
+      "date": "2028-12-25",
+      "label": "Year A — Dec 25, 2028 (Mon)",
+      "dayOfWeek": "Mon"
+    },
+    {
+      "date": "2027-12-25",
+      "label": "Year C — Dec 25, 2027 (Sat)",
+      "dayOfWeek": "Sat"
+    }
+  ],
+  "lectionary": {
+    "number": "SEE SHEET",
+    "gospelTitle": "",
+    "thematicTag": ""
+  },
+  "readings": [],
+  "antiphons": [],
+  "planningNotes": [
+    "Year C — Dec 25, 2025 (Thu)"
+  ],
+  "musicPlans": []
+}

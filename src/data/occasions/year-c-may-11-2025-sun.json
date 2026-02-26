@@ -1,0 +1,425 @@
+{
+  "id": "year-c-may-11-2025-sun",
+  "name": "Year C — May 11, 2025 (Sun)",
+  "year": "ABC",
+  "season": "ordinary",
+  "seasonLabel": "Ordinary Time",
+  "seasonOrder": 11,
+  "dates": [],
+  "lectionary": {
+    "number": "Year C — Apr 22, 2040 (Sun)",
+    "gospelTitle": "Year C — Apr 26, 2037 (Sun)",
+    "thematicTag": "Year C — Apr 30, 2034 (Sun)",
+    "thematicDetail": "Year C — Apr 15, 2040 (Sun)"
+  },
+  "readings": [
+    {
+      "type": "psalm",
+      "citation": "Good Shepherd Sunday",
+      "summary": "",
+      "antiphon": "Planning Reminders"
+    },
+    {
+      "type": "second",
+      "citation": "MOTHER'S DAY (2025)",
+      "summary": "🐏  Good Shepherd Sunday  🐏"
+    },
+    {
+      "type": "gospel_verse",
+      "citation": "The merciful love of the Lord fills the earth;\nby the word of the Lord the heavens were made, alleluia.",
+      "summary": ""
+    },
+    {
+      "type": "gospel",
+      "citation": "Reading I | Acts 13:14, 43-52",
+      "summary": "Paul and Barnabas are expelled from Antioch."
+    }
+  ],
+  "antiphons": [
+    {
+      "type": "entrance",
+      "option": 1,
+      "citation": "Verse before the Gospel | Jn 10:14",
+      "text": "I am the good shepherd, says the Lord;\nI know my sheep, and mine know me."
+    },
+    {
+      "type": "communion",
+      "option": 2,
+      "citation": "Communion Antiphon | Roman Missal",
+      "text": "The Good Shepherd has risen,\nwho laid down his life for his sheep\nand willingly died for his flock, alleluia."
+    }
+  ],
+  "planningNotes": [
+    "Communion Antiphon • Option II",
+    "N/A"
+  ],
+  "musicPlans": [
+    {
+      "community": "Reflections",
+      "communityId": "reflections",
+      "date": "Year C — May 06, 2028 (Sat)",
+      "presider": "NOT THIS YEAR",
+      "prelude": {
+        "title": "Regina Caeli / O Queen of Heaven",
+        "composer": "Mode VI Latin • 12th C",
+        "description": "Pope Leo XIV singing Regina Caeli"
+      },
+      "penitentialAct": {
+        "title": "John Michael Talbot",
+        "composer": "\"we are his people, the flock that he shepherds...\"",
+        "description": "Penitential Act"
+      },
+      "gloria": {
+        "title": "Kyrie • Misa Del Mundo",
+        "composer": "Only if needed. Talk to presider!",
+        "description": "Gloria"
+      },
+      "gospelAcclamation": {
+        "title": "The Lyric Psalter • Tony Alonso & Marty Haugen",
+        "composer": "Gospel Acclamation",
+        "verse": "Easter Alleluia (Refrain)"
+      },
+      "offertory": {
+        "title": "Leonard Cohen • Adapted for Liturgy",
+        "description": "Offertory Song"
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "Day by Day (The Porters Gate)",
+        "composer": "Lowana Wallace & Isaac Wardell"
+      },
+      "lordsPrayer": {
+        "title": "Eucharistic Acclamations",
+        "composer": "Mass of the Holy Family",
+        "description": "Chris de Silva"
+      },
+      "fractionRite": {
+        "title": "Holy, Holy, Holy",
+        "composer": "When We Eat This Bread",
+        "description": "Amen"
+      },
+      "communionSongs": [
+        {
+          "title": "The Lord's Prayer",
+          "composer": "Chanted Our Father (Snow)",
+          "description": "Jennings/Paregorius"
+        },
+        {
+          "title": "Fraction Rite",
+          "composer": "Lamb of God (Mass of the Holy Family)",
+          "description": "Chris de Silva"
+        },
+        {
+          "title": "Communion Songs",
+          "composer": "The King of Love My Shepherd Is",
+          "description": "LOCH LOMOND • Baker • Edward Eicker"
+        },
+        {
+          "title": "✅  HYMN VERSION  - 🚫  CHORAL VERSION",
+          "composer": "Every Mother, Every Father",
+          "description": "Andy Bast & Bruce Benedict"
+        }
+      ]
+    },
+    {
+      "community": "Foundations",
+      "communityId": "foundations",
+      "date": "Year C — May 07, 2028 (Sun)",
+      "presider": "NOT THIS YEAR",
+      "prelude": {
+        "title": "Hail Mary: Gentle Woman",
+        "composer": "Carey Landry & Carol Jean Kinghorn-Landry",
+        "description": "Mother's Day"
+      },
+      "penitentialAct": {
+        "title": "Bob Hurd",
+        "composer": "Good Shepherd Sunday",
+        "description": "Penitential Act"
+      },
+      "gloria": {
+        "title": "Kyrie (Gift of God) • Adapted Version",
+        "composer": "Marty Haugen • Arranged by David Locwood",
+        "description": "Gloria"
+      },
+      "gospelAcclamation": {
+        "title": "Spirit & Psalm • Sarah Hart",
+        "composer": "Gospel Acclamation",
+        "verse": "Easter Alleluia (Refrain)"
+      },
+      "offertory": {
+        "title": "Verse Audio Example",
+        "description": "Offertory Song"
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "Jesus I Trust In You",
+        "composer": "Sarah Hart • Josh Blakesley • Sarah Kroger"
+      },
+      "lordsPrayer": {
+        "title": "Eucharistic Acclamations",
+        "composer": "Mass of Glory",
+        "description": "Bob Hurd & Ken Canedo"
+      },
+      "fractionRite": {
+        "title": "Holy, Holy",
+        "composer": "We Proclaim Your Death",
+        "description": "Amen"
+      },
+      "communionSongs": [
+        {
+          "title": "The Lord's Prayer",
+          "composer": "Chanted Our Father (Snow)",
+          "description": "Jennings • Paregorius"
+        },
+        {
+          "title": "Fraction Rite",
+          "composer": "Lamb of God (Mass of Glory)",
+          "description": "Bob Hurd & Ken Canedo"
+        },
+        {
+          "title": "Communion Songs",
+          "composer": "Remembrance of You",
+          "description": "Sarah Hart & Sarah Kroger"
+        },
+        {
+          "title": "From Last Supper to the joy of Easter.",
+          "composer": "Every Mother, Every Father",
+          "description": "Andy Bast & Bruce Benedict"
+        }
+      ],
+      "sending": {
+        "title": "Doris Akers & Richard Smallwood",
+        "composer": "Good Shepherd Sunday"
+      }
+    },
+    {
+      "community": "Generations",
+      "communityId": "generations",
+      "date": "Year C — May 07, 2028 (Sun)",
+      "presider": "NOT THIS YEAR",
+      "prelude": {
+        "title": "Regina Caeli / O Queen of Heaven",
+        "composer": "Mode VI Latin • 12th C",
+        "description": "Pope Leo XIV singing Regina Caeli"
+      },
+      "penitentialAct": {
+        "title": "Phil Wickham",
+        "composer": "\"My God's still rolling stones away\"",
+        "description": "Penitential Act"
+      },
+      "gloria": {
+        "title": "Kyrie • Misa Del Mundo",
+        "composer": "Only if needed. Talk to presider!",
+        "description": "Gloria"
+      },
+      "gospelAcclamation": {
+        "title": "Spirit & Psalm • Sarah Hart",
+        "composer": "Gospel Acclamation",
+        "verse": "Easter Alleluia (Refrain)"
+      },
+      "offertory": {
+        "title": "E• 4 | ABC — \"I am the good shepherd...\"",
+        "description": "Offertory Song"
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "Jesus I Trust In You",
+        "composer": "Sarah Hart • Josh Blakesley • Sarah Kroger"
+      },
+      "lordsPrayer": {
+        "title": "Eucharistic Acclamations",
+        "composer": "Mass of Glory",
+        "description": "Bob Hurd • Arr. by Dan Houze"
+      },
+      "fractionRite": {
+        "title": "Holy",
+        "composer": "Mystery of Faith",
+        "description": "Amen"
+      },
+      "communionSongs": [
+        {
+          "title": "The Lord's Prayer",
+          "composer": "(Echo) Our Father",
+          "description": "Jerome Andrews • Arranged by Dan Houze"
+        },
+        {
+          "title": "Fraction Rite",
+          "composer": "Lamb of God (Mass of Glory)"
+        },
+        {
+          "title": "Communion Songs",
+          "composer": "I Am Yours (Consume Me Completely )",
+          "description": "Trevor Thomson"
+        },
+        {
+          "title": "We are his people!",
+          "composer": "Ps 23 The Lord Is My Shepherd",
+          "description": "Joshua Blakesley"
+        },
+        {
+          "title": "Subtle Reharm Version",
+          "composer": "Song Title",
+          "description": "Composer/s"
+        },
+        {
+          "title": "Description",
+          "composer": "Every Mother, Every Father",
+          "description": "Andy Bast & Bruce Benedict"
+        }
+      ],
+      "sending": {
+        "title": "Oh Happy Day",
+        "composer": "Edwin Hawkins • Arranged by Micah Jones",
+        "description": "Season of Easter"
+      }
+    },
+    {
+      "community": "Heritage",
+      "communityId": "heritage",
+      "date": "Year C — May 07, 2028 (Sun)",
+      "presider": "NOT THIS YEAR",
+      "prelude": {
+        "title": "Regina Caeli / O Queen of Heaven",
+        "composer": "Mode VI Latin • 12th C",
+        "description": "Pope Leo XIV singing Regina Caeli"
+      },
+      "penitentialAct": {
+        "title": "John Michael Talbot",
+        "composer": "\"we are his people, the flock that he shepherds...\"",
+        "description": "Penitential Act"
+      },
+      "gloria": {
+        "title": "Kyrie • Misa Del Mundo",
+        "composer": "Only if needed. Talk to presider!",
+        "description": "Gloria"
+      },
+      "gospelAcclamation": {
+        "title": "The Lyric Psalter • Tony Alonso & Marty Haugen",
+        "composer": "Gospel Acclamation",
+        "verse": "Easter Alleluia (Refrain)"
+      },
+      "offertory": {
+        "title": "E• 4 | ABC — \"I am the good shepherd...\"",
+        "description": "Offertory Song"
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "O God, You Search Me ·",
+        "composer": "Bernadette Farrell"
+      },
+      "lordsPrayer": {
+        "title": "Eucharistic Acclamations",
+        "composer": "Mass of Joy & Peace",
+        "description": "Tony Alonso"
+      },
+      "fractionRite": {
+        "title": "Holy, Holy, Holy",
+        "composer": "When We Eat This Bread",
+        "description": "Amen"
+      },
+      "communionSongs": [
+        {
+          "title": "The Lord's Prayer",
+          "composer": "Chanted Our Father (Snow)",
+          "description": "Jennings/Paregorius"
+        },
+        {
+          "title": "Fraction Rite",
+          "composer": "Lamb of God (Mass of Joy & Peace)",
+          "description": "Tony Alonso"
+        },
+        {
+          "title": "Communion Songs",
+          "composer": "Remembrance of You",
+          "description": "Sarah Hart & Sarah Kroger"
+        },
+        {
+          "title": "From Last Supper to the joy of Easter.",
+          "composer": "The King of Love My Shepherd Is",
+          "description": "LOCH LOMOND • Baker • Edward Eicker"
+        },
+        {
+          "title": "✅ HYMN VERSION  - 🚫 CHORAL VERSION",
+          "composer": "A Home of Grace",
+          "description": "Joseph M. Martin"
+        }
+      ],
+      "sending": {
+        "title": "Doris Akers & Richard Smallwood",
+        "composer": "Good Shepherd Sunday"
+      }
+    },
+    {
+      "community": "Elevations",
+      "communityId": "elevations",
+      "date": "Year C — May 07, 2028 (Sun)",
+      "presider": "NOT THIS YEAR",
+      "prelude": {
+        "title": "Regina Caeli / O Queen of Heaven",
+        "composer": "Mode VI Latin • 12th C",
+        "description": "Pope Leo XIV singing Regina Caeli"
+      },
+      "penitentialAct": {
+        "title": "Phil Wickham",
+        "composer": "\"My God's still rolling stones away\"",
+        "description": "Penitential Act"
+      },
+      "gloria": {
+        "title": "Kyrie (Misa Del Mundo)",
+        "composer": "Jesse Manibusan — If needed.",
+        "description": "Gloria"
+      },
+      "gospelAcclamation": {
+        "title": "Spirit & Psalm • Sarah Hart",
+        "composer": "Gospel Acclamation",
+        "verse": "Easter Alleluia (Refrain)"
+      },
+      "offertory": {
+        "title": "E• 4 | ABC — \"I am the good shepherd...\"",
+        "description": "Offertory Song"
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "Jesus I Trust In You",
+        "composer": "Sarah Hart • Josh Blakesley • Sarah Kroger"
+      },
+      "lordsPrayer": {
+        "title": "Eucharistic Acclamations",
+        "composer": "Mass of Restoration",
+        "description": "Joshua Blakesley"
+      },
+      "fractionRite": {
+        "title": "Holy, Holy, Holy",
+        "composer": "Save Us Savior of the World",
+        "description": "Amen"
+      },
+      "communionSongs": [
+        {
+          "title": "The Lord's Prayer",
+          "composer": "Echo Our Father",
+          "description": "Andrews, Arr. Bonilla • Lockwood • Fajardo"
+        },
+        {
+          "title": "Fraction Rite",
+          "composer": "Lamb of God (Mass of Restoration)",
+          "description": "Joshua Blakesley"
+        },
+        {
+          "title": "Communion Songs",
+          "composer": "I Am Yours (Consume Me Completely )",
+          "description": "Trevor Thomson"
+        },
+        {
+          "title": "We are his people!",
+          "composer": "Ps 23 The Lord Is My Shepherd",
+          "description": "Joshua Blakesley"
+        },
+        {
+          "title": "Subtle Reharm Version",
+          "composer": "Every Mother, Every Father",
+          "description": "Andy Bast & Bruce Benedict"
+        }
+      ],
+      "sending": {
+        "title": "Sending Song",
+        "composer": "Oh Happy Day",
+        "description": "Edwin Hawkins • Arranged by Micah Jones"
+      }
+    }
+  ]
+}

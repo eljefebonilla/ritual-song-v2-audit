@@ -1,0 +1,365 @@
+{
+  "id": "ss-peter-paul-apostles-jun-29-mass-during-the-day-abc",
+  "name": "Ss PETER & PAUL, APOSTLES (JUN 29) \nMASS DURING THE DAY [ABC]",
+  "year": "ABC",
+  "season": "ordinary",
+  "seasonLabel": "Ordinary Time",
+  "seasonOrder": 29,
+  "dates": [
+    {
+      "date": "2025-06-29",
+      "label": "Year C — Jun 29, 2025 (Sun)",
+      "dayOfWeek": "Sun"
+    },
+    {
+      "date": "2029-06-29",
+      "label": "Year A — Jun 29, 2029 (Fri)",
+      "dayOfWeek": "Fri"
+    },
+    {
+      "date": "2028-06-29",
+      "label": "Year C — Jun 29, 2028 (Thu)",
+      "dayOfWeek": "Thu"
+    },
+    {
+      "date": "2027-06-29",
+      "label": "Year B — Jun 29, 2027 (Tue)",
+      "dayOfWeek": "Tue"
+    },
+    {
+      "date": "2026-06-29",
+      "label": "Year A — Jun 29, 2026 (Mon)",
+      "dayOfWeek": "Mon"
+    }
+  ],
+  "lectionary": {
+    "number": "591•ABC",
+    "gospelTitle": "Peter Receives the Keys",
+    "thematicTag": "Keys of the Kingdom"
+  },
+  "readings": [
+    {
+      "type": "first",
+      "citation": "Mass During the Day — Acts 12:1-11",
+      "summary": "The Lord rescues Peter from Herod."
+    },
+    {
+      "type": "psalm",
+      "citation": "Mass During the Day — Ps 34:2-3, 4-5, 6-7, 8-9, R. v.5\nThe angel of the Lord will rescue those who fear him.",
+      "summary": "",
+      "antiphon": "Mass During the Day — Ps 34:2-3, 4-5, 6-7, 8-9, R. v.5\nThe angel of the Lord will rescue those who fear him."
+    },
+    {
+      "type": "second",
+      "citation": "Mass During the Day — 2 Tm 4:6-8, 17-18",
+      "summary": "Paul concludes his letter, ready for the Day of the Lord."
+    },
+    {
+      "type": "gospel_verse",
+      "citation": "Mt 16:18",
+      "summary": "You are Peter and upon this rock I will build my Church,\nand the gates of the netherworld shall not prevail against it."
+    },
+    {
+      "type": "gospel",
+      "citation": "Mass During the Day — Mt 16:13-19",
+      "summary": "Jesus asks, \"Who do people say I am?\""
+    }
+  ],
+  "antiphons": [
+    {
+      "type": "entrance",
+      "option": 1,
+      "citation": "Roman Missal",
+      "text": "Peter the Apostle, and Paul the teacher of the Gentiles,\nthese have taught us your law, O Lord."
+    },
+    {
+      "type": "communion",
+      "option": 1,
+      "citation": "Cf. Mt 16:16, 18",
+      "text": "Peter said to Jesus:\nYou are the Christ, the Son of the living God.\nAnd Jesus replied: You are Peter,\nand upon this rock I will build my Church."
+    }
+  ],
+  "planningNotes": [],
+  "musicPlans": [
+    {
+      "community": "Reflections",
+      "communityId": "reflections",
+      "date": "",
+      "responsorialPsalm": {
+        "psalm": "Ps 34 The angel of the Lord will rescue those...",
+        "setting": "The Lyric Psalter • Tony Alonso & Marty Haugen"
+      },
+      "gospelAcclamation": {
+        "title": "Alleluia (Mass of Joy & Peace)",
+        "verse": "You are Peter and upon this rock I will build my Church,\nand the gates of the netherworld shall not prevail against it."
+      }
+    },
+    {
+      "community": "Foundations",
+      "communityId": "foundations",
+      "date": "Year C — Jun 29, 2025 (Sun)",
+      "presider": "NOT THIS YEAR",
+      "gathering": {
+        "title": "Come to the Water",
+        "composer": "John Foley SJ • Matt Maher • Adapt by Arielle Phan",
+        "description": "\"...and let all who have nothing, let them come to the Lord\""
+      },
+      "penitentialAct": {
+        "title": "Kyrie (Gift of God) • Adapted Version",
+        "composer": "Marty Haugen • Arranged by David Locwood"
+      },
+      "gloria": {
+        "title": "Glory to God (Mass of Joy & Peace)",
+        "composer": "Alonso • Arr. by Lockwood"
+      },
+      "responsorialPsalm": {
+        "psalm": "Ps 34 The angel of the Lord will rescue those...",
+        "setting": "Francesca LaRosa"
+      },
+      "offertory": {
+        "title": "I Will Choose Christ",
+        "composer": "Tom Booth",
+        "description": "Ss Peter & Paul"
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "Mass of Glory • Bob Hurd • Arr. by Dan Houze"
+      },
+      "lordsPrayer": {
+        "title": "Chanted Our Father (Snow)",
+        "composer": "Jennings • Paregorius"
+      },
+      "fractionRite": {
+        "title": "Lamb of God (Mass of Glory)"
+      },
+      "communionSongs": [
+        {
+          "title": "One Bread, One Body",
+          "composer": "John Foley SJ — Upbeat!",
+          "description": "✪ Peter & Paul S"
+        },
+        {
+          "title": "For All the Saints Who’ve Shown Your Love",
+          "composer": "O WALY WALY • John L. Bell (GIA)",
+          "description": "Optional Accompinament for Congregational Singing (Page 7)"
+        }
+      ],
+      "sending": {
+        "title": "When the Saints Go Marching In",
+        "composer": "TRADITIONAL Arr. Bonilla (Rubato Intro)",
+        "description": "Vss 1, 2, 7 — 10 (as needed)"
+      }
+    },
+    {
+      "community": "Generations",
+      "communityId": "generations",
+      "date": "Year C — Jun 29, 2025 (Sun)",
+      "presider": "NOT THIS YEAR",
+      "prelude": {
+        "title": "God of Peace",
+        "composer": "Jeffrey Bonilla & David Lockwood",
+        "description": "Prayer for Peace"
+      },
+      "gathering": {
+        "title": "Come to the Water",
+        "composer": "John Foley SJ • Matt Maher • Adapt by Arielle Phan",
+        "description": "\"...and let all who have nothing, let them come to the Lord\""
+      },
+      "penitentialAct": {
+        "title": "Kyrie • Misa Del Mundo",
+        "composer": "Only if needed. Talk to presider!"
+      },
+      "gloria": {
+        "title": "Glory, Glory, Gloria!",
+        "composer": "Jeffrey Bonilla & Drew Wilson"
+      },
+      "responsorialPsalm": {
+        "psalm": "Ps 34 The angel of the Lord will rescue those...",
+        "setting": "Francesca LaRosa"
+      },
+      "gospelAcclamation": {
+        "title": "Setting from Mass of Renewal",
+        "composer": "Ss Peter & Paul (D) | ABC — \"You are Peter...\""
+      },
+      "offertory": {
+        "title": "Hold on to Love",
+        "composer": "Jesse Manibusan",
+        "description": "\"acts of compassion restore us\""
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "Mass of Restoration",
+        "composer": "Joshua Blakesley"
+      },
+      "lordsPrayer": {
+        "title": "(Echo) Our Father",
+        "composer": "Jerome Andrews • Arranged by Dan Houze"
+      },
+      "fractionRite": {
+        "title": "Lamb of God (Resoration)"
+      },
+      "communionSongs": [
+        {
+          "title": "Pan de Vida (4/4)",
+          "composer": "Bob Hurd • Arranged by Ed Archer",
+          "description": "\"...at this table the last shall be first"
+        },
+        {
+          "title": "Here I Am, Lord",
+          "composer": "Dan Schutte • Arranged by Lockwood & Bonilla",
+          "description": "Willingness to answer the call like the Peter and Paul."
+        },
+        {
+          "title": "We Are Many Parts",
+          "composer": "Marty Haugen",
+          "description": "\"...may the Spirit of Love make us one...\""
+        },
+        {
+          "title": "Breathe",
+          "composer": "Hillsong Worship",
+          "description": "\"I'm lost without you\""
+        }
+      ],
+      "sending": {
+        "title": "When the Saints Go Marching In",
+        "composer": "TRADITIONAL Arr. Bonilla (Rubato Intro)",
+        "description": "Vss 1, 2, 7 — 10 (as needed)"
+      }
+    },
+    {
+      "community": "Heritage",
+      "communityId": "heritage",
+      "date": "Year C — Jun 29, 2025 (Sun)",
+      "presider": "NOT THIS YEAR",
+      "prelude": {
+        "title": "God of Peace",
+        "composer": "Jeffrey Bonilla & David Lockwood",
+        "description": "Prayer for Peace"
+      },
+      "gathering": {
+        "title": "Sing a New Church",
+        "composer": "NETTLETON • Delores Dufner, OSB",
+        "description": "Verses 1, 4, and 5"
+      },
+      "penitentialAct": {
+        "title": "Kyrie • Misa Del Mundo",
+        "composer": "Only if needed. Talk to presider!"
+      },
+      "gloria": {
+        "title": "Glory to God (Mass of Christ the Savior)",
+        "composer": "Dan Schutte"
+      },
+      "responsorialPsalm": {
+        "psalm": "Ps 34 The angel of the Lord will rescue those...",
+        "setting": "The Lyric Psalter • Tony Alonso & Marty Haugen"
+      },
+      "gospelAcclamation": {
+        "title": "Alleluia (Mass of Joy & Peace)",
+        "composer": "Ss Peter & Paul (D) | ABC — \"You are Peter...\""
+      },
+      "offertory": {
+        "title": "The Road of Mercy",
+        "composer": "Maureen Briare",
+        "description": "\"how can we serve as hope...\""
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "Mass of Christ the Savior - Dan Schutte"
+      },
+      "lordsPrayer": {
+        "title": "Echo Our Father",
+        "composer": "Andrews, Arr. Bonilla • Lockwood • Fajardo"
+      },
+      "fractionRite": {
+        "title": "Lamb of God (Mass of Christ the Savior)"
+      },
+      "communionSongs": [
+        {
+          "title": "The Supper of the Lord",
+          "composer": "Laurence Rosania",
+          "description": "\"Bread of Love is broken now...\""
+        },
+        {
+          "title": "Eye Has Not Seen",
+          "composer": "Marty Haugen",
+          "description": "\"...so we return in love what love has made\""
+        },
+        {
+          "title": "For All the Saints Who’ve Shown Your Love",
+          "composer": "O WALY WALY • John L. Bell (GIA)",
+          "description": "Optional Accompinament for Congregational Singing (Page 7)"
+        }
+      ],
+      "sending": {
+        "title": "Lift High the Cross",
+        "composer": "CRUCIFER • Sydney H. Nicholson",
+        "description": "Ss Peter and Paul"
+      }
+    },
+    {
+      "community": "Elevations",
+      "communityId": "elevations",
+      "date": "Year C — Jun 29, 2025 (Sun)",
+      "presider": "NOT THIS YEAR",
+      "prelude": {
+        "title": "God of Peace",
+        "composer": "Jeffrey Bonilla & David Lockwood",
+        "description": "Prayer for Peace"
+      },
+      "gathering": {
+        "title": "Come to the Water",
+        "composer": "John Foley SJ • Matt Maher • Adapt by Arielle Phan",
+        "description": "\"...and let all who have nothing, let them come to the Lord\""
+      },
+      "penitentialAct": {
+        "title": "Kyrie • Misa Del Mundo",
+        "composer": "Only if needed. Talk to presider!"
+      },
+      "gloria": {
+        "title": "Glory, Glory, Gloria!"
+      },
+      "responsorialPsalm": {
+        "psalm": "Ps 34 The angel of the Lord will rescue those...",
+        "setting": "Francesca LaRosa"
+      },
+      "gospelAcclamation": {
+        "title": "Setting from Mass of Renewal",
+        "verse": "Ss Peter & Paul (D) | ABC — \"You are Peter...\""
+      },
+      "offertory": {
+        "title": "Hold on to Love",
+        "composer": "Jesse Manibusan",
+        "description": "\"acts of compassion restore us\""
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "Mass of Restoration • Joshua Blakesley"
+      },
+      "lordsPrayer": {
+        "title": "Echo Our Father",
+        "composer": "Andrews, Arr. Bonilla • Lockwood • Fajardo"
+      },
+      "fractionRite": {
+        "title": "Lamb of God (Resoration)"
+      },
+      "communionSongs": [
+        {
+          "title": "Pan de Vida (4/4)",
+          "composer": "Bob Hurd • Arranged by Ed Archer",
+          "description": "\"...at this table the last shall be first"
+        },
+        {
+          "title": "Here I Am, Lord",
+          "composer": "Dan Schutte • Arranged by Lockwood & Bonilla",
+          "description": "Willingness to answer the call like the Peter and Paul."
+        },
+        {
+          "title": "Breathe",
+          "composer": "Hillsong Worship",
+          "description": "\"I'm lost without you\""
+        }
+      ],
+      "sending": {
+        "title": "When the Saints Go Marching In",
+        "composer": "TRADITIONAL Arr. Bonilla (Rubato Intro)",
+        "description": "Vss 1, 2, 7 — 10 (as needed)"
+      }
+    }
+  ]
+}

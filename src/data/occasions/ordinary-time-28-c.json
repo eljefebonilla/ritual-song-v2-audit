@@ -1,0 +1,438 @@
+{
+  "id": "ordinary-time-28-c",
+  "name": "ORDINARY TIME 28 [C]",
+  "year": "C",
+  "season": "ordinary",
+  "seasonLabel": "Ordinary Time",
+  "seasonOrder": 28,
+  "dates": [
+    {
+      "date": "2025-10-12",
+      "label": "Year C — Oct 12, 2025 (Sun)",
+      "dayOfWeek": "Sun"
+    },
+    {
+      "date": "2037-10-11",
+      "label": "Year C — Oct 11, 2037 (Sun)",
+      "dayOfWeek": "Sun"
+    },
+    {
+      "date": "2034-10-15",
+      "label": "Year C — Oct 15, 2034 (Sun)",
+      "dayOfWeek": "Sun"
+    },
+    {
+      "date": "2031-10-12",
+      "label": "Year C — Oct 12, 2031 (Sun)",
+      "dayOfWeek": "Sun"
+    },
+    {
+      "date": "2028-10-15",
+      "label": "Year C — Oct 15, 2028 (Sun)",
+      "dayOfWeek": "Sun"
+    }
+  ],
+  "lectionary": {
+    "number": "144•C",
+    "gospelTitle": "Healing Ten Lepers",
+    "thematicTag": "Gratitude & Faith"
+  },
+  "readings": [
+    {
+      "type": "first",
+      "citation": "2 Kgs 5:14-17",
+      "summary": "Naaman is cured of leprosy."
+    },
+    {
+      "type": "psalm",
+      "citation": "Ps 98:1, 2-3, 3-4, R. see v.2b\nThe Lord has revealed to the nations his saving power.",
+      "summary": "",
+      "antiphon": "Ps 98:1, 2-3, 3-4, R. see v.2b\nThe Lord has revealed to the nations his saving power."
+    },
+    {
+      "type": "second",
+      "citation": "2 Tm 2:8-13",
+      "summary": "If we die with Jesus we will live with him."
+    },
+    {
+      "type": "gospel_verse",
+      "citation": "1 Thes 5:18",
+      "summary": "In all circumstances, give thanks,\nfor this is the will of God for you in Christ Jesus."
+    },
+    {
+      "type": "gospel",
+      "citation": "Lk 17:11-19",
+      "summary": "Jesus cures ten lepers, one returns with thanks."
+    }
+  ],
+  "antiphons": [
+    {
+      "type": "entrance",
+      "option": 1,
+      "citation": "Ps 130 (129):3–4",
+      "text": "If you, O Lord, should mark iniquities,\nLord, who could stand?\nBut with you is found forgiveness,\nO God of Israel."
+    },
+    {
+      "type": "communion",
+      "option": 1,
+      "citation": "Cf. Ps 34 (33):11",
+      "text": "The rich suffer want and go hungry,\nbut those who seek the Lord lack no blessing."
+    },
+    {
+      "type": "communion",
+      "option": 2,
+      "citation": "Communion Antiphon • Option II |  1 Jn 3:2",
+      "text": "When the Lord appears, we shall be like him,\nfor we shall see him as he is."
+    }
+  ],
+  "planningNotes": [
+    "Month of Holy Rosary",
+    "Respect Life Month",
+    "Catholic Social Teaching Month"
+  ],
+  "musicPlans": [
+    {
+      "community": "Reflections",
+      "communityId": "reflections",
+      "date": "Year C — Oct 11, 2025 (Sat)",
+      "presider": "Fr. Thomas Park",
+      "prelude": {
+        "title": "On This Day, O Beautiful Mother",
+        "composer": "Louis Lambillotte SJ",
+        "description": "Month of the Holy Rosary"
+      },
+      "gathering": {
+        "title": "Holy Is His Name",
+        "composer": "John Michael Talbot",
+        "description": "Mary's Song of Thanksgiving"
+      },
+      "penitentialAct": {
+        "title": "Kyrie • Misa Del Mundo",
+        "composer": "Only if needed. Talk to presider!"
+      },
+      "gloria": {
+        "title": "Glory to God (Through-composed Setting)",
+        "composer": "Mass of Renewal • Curtis Stephan"
+      },
+      "responsorialPsalm": {
+        "psalm": "Ps 98 The Lord has revealed to the nations...",
+        "setting": "The Lyric Psalter • Tony Alonso & Marty Haugen"
+      },
+      "gospelAcclamation": {
+        "title": "Alleluia (Mass of Joy & Peace)",
+        "composer": "O.T. • 28 | C — \"In all circumstances...\""
+      },
+      "offertory": {
+        "title": "Healer of My Soul",
+        "composer": "John Michael Talbot",
+        "description": "Gospel Reading"
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "Mass for the Healing of the World",
+        "composer": "Trevor Thomson"
+      },
+      "lordsPrayer": {
+        "title": "Chanted Our Father (Snow)",
+        "composer": "Jennings/Paregorius"
+      },
+      "fractionRite": {
+        "title": "Lamb of God (Mass for the Healing of the World)",
+        "composer": "Trevor Thomson"
+      },
+      "communionSongs": [
+        {
+          "title": "Christ in Me Arise",
+          "composer": "Trevor Thomson",
+          "description": "Respect Life Month: \"You who formed me in my mother's womb\""
+        },
+        {
+          "title": "We Remember",
+          "composer": "Marty Haugen",
+          "description": "\"...wounded souls are yearning ... to touch you and be healed.\""
+        },
+        {
+          "title": "The Clouds’ Veil [NEW]",
+          "composer": "Liam Lawton",
+          "description": "\"You are by my side\""
+        }
+      ],
+      "sending": {
+        "title": "We Belong To You",
+        "composer": "Trevor Thomson",
+        "description": "2 Tm 2 | \"If we have died with him we shall also live with him\""
+      }
+    },
+    {
+      "community": "Foundations",
+      "communityId": "foundations",
+      "date": "Year C — Oct 12, 2025 (Sun)",
+      "presider": "Fr. Vince Kuna",
+      "prelude": {
+        "title": "On This Day, O Beautiful Mother",
+        "composer": "Louis Lambillotte SJ",
+        "description": "Month of the Holy Rosary"
+      },
+      "gathering": {
+        "title": "Amazing Grace",
+        "composer": "Amazing Grace • John Newton",
+        "description": "\"how sweet the sound...\" (healing of the grateful leper\""
+      },
+      "penitentialAct": {
+        "title": "Kyrie (Gift of God) • Adapted Version",
+        "composer": "Marty Haugen • Arranged by David Locwood"
+      },
+      "gloria": {
+        "title": "Glory to God (Mass of Joy & Peace)",
+        "composer": "Alonso • Arr. by Houze OR Arr. by Lockwood"
+      },
+      "responsorialPsalm": {
+        "psalm": "Ps 98 The Lord has revealed to the nations...",
+        "setting": "Spirit & Psalm • Joshua Blakesley"
+      },
+      "offertory": {
+        "title": "Give Thanks With A Grateful Heart",
+        "composer": "Cece Winans",
+        "description": "Gospel Reading"
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "Mass of Glory • Bob Hurd • Arr. by Dan Houze"
+      },
+      "lordsPrayer": {
+        "title": "Chanted Our Father (Snow)",
+        "composer": "Jennings • Paregorius"
+      },
+      "fractionRite": {
+        "title": "Lamb of God (Mass of Glory)"
+      },
+      "communionSongs": [
+        {
+          "title": "We Remember",
+          "composer": "Marty Haugen",
+          "description": "\"...wounded souls are yearning ... to touch you and be healed.\""
+        },
+        {
+          "title": "Healed in Christ",
+          "composer": "Sarah Hart",
+          "description": "Gospel Reading"
+        }
+      ],
+      "sending": {
+        "title": "I Cannot Tell it All",
+        "composer": "Tom Booth • Helena Buscema",
+        "description": "Song of Gratitude"
+      }
+    },
+    {
+      "community": "Generations",
+      "communityId": "generations",
+      "date": "Year C — Oct 12, 2025 (Sun)",
+      "presider": "Msgr. Lloyd Torgerson",
+      "prelude": {
+        "title": "On This Day, O Beautiful Mother",
+        "composer": "Louis Lambillotte SJ",
+        "description": "Month of the Holy Rosary"
+      },
+      "gathering": {
+        "title": "Malo! Malo! Thanks be to God [NEW]",
+        "composer": "Jesse Manibusan",
+        "description": "Gather in gratitude!"
+      },
+      "penitentialAct": {
+        "title": "Kyrie • Misa Del Mundo",
+        "composer": "Only if needed. Talk to presider!"
+      },
+      "gloria": {
+        "title": "Glory, Glory, Gloria!",
+        "composer": "Jeffrey Bonilla & Drew Wilson"
+      },
+      "responsorialPsalm": {
+        "psalm": "Ps 98 The Lord has revealed to the nations...",
+        "setting": "Spirit & Psalm • Joshua Blakesley"
+      },
+      "gospelAcclamation": {
+        "title": "Setting from Mass of Renewal",
+        "composer": "O.T. • 28 | C — \"In all circumstances...\""
+      },
+      "offertory": {
+        "title": "Give Thanks With A Grateful Heart",
+        "composer": "Cece Winans",
+        "description": "Gospel Reading"
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "Mass of Restoration",
+        "composer": "Joshua Blakesley"
+      },
+      "lordsPrayer": {
+        "title": "(Echo) Our Father",
+        "composer": "Jerome Andrews • Arranged by Dan Houze"
+      },
+      "fractionRite": {
+        "title": "Lamb of God (Resoration)"
+      },
+      "communionSongs": [
+        {
+          "title": "Healed in Christ",
+          "composer": "Sarah Hart",
+          "description": "Gospel Reading"
+        },
+        {
+          "title": "We Remember",
+          "composer": "Marty Haugen",
+          "description": "\"...wounded souls are yearning ... to touch you and be healed.\""
+        },
+        {
+          "title": "Jesus, Living Bread",
+          "composer": "Tom Booth",
+          "description": "\"Lord, just say the word and my soul shall be healed\""
+        },
+        {
+          "title": "Remembrance",
+          "composer": "Hillsong",
+          "description": "\"You've been so, so good to me\""
+        }
+      ],
+      "sending": {
+        "title": "Oh Happy Day",
+        "composer": "Edwin Hawkins • Arranged by Micah Jones",
+        "description": "With the joy of the healed Leper."
+      }
+    },
+    {
+      "community": "Heritage",
+      "communityId": "heritage",
+      "date": "Year C — Oct 12, 2025 (Sun)",
+      "presider": "\"Fr. David Guffey, CSC\"",
+      "prelude": {
+        "title": "On This Day, O Beautiful Mother",
+        "composer": "Louis Lambillotte SJ",
+        "description": "Month of the Holy Rosary"
+      },
+      "gathering": {
+        "title": "Holy Is His Name",
+        "composer": "John Michael Talbot",
+        "description": "Mary's Song of Thanksgiving"
+      },
+      "penitentialAct": {
+        "title": "Kyrie • Misa Del Mundo",
+        "composer": "Only if needed. Talk to presider!"
+      },
+      "gloria": {
+        "title": "Glory to God (Mass of Christ the Savior)",
+        "composer": "Dan Schutte"
+      },
+      "responsorialPsalm": {
+        "psalm": "Ps 98 The Lord has revealed to the nations...",
+        "setting": "The Lyric Psalter • Tony Alonso & Marty Haugen"
+      },
+      "gospelAcclamation": {
+        "title": "Alleluia (Mass of Joy & Peace)",
+        "composer": "O.T. • 28 | C — \"In all circumstances...\""
+      },
+      "offertory": {
+        "title": "Eye Has Not Seen",
+        "composer": "Marty Haugen",
+        "description": "\"When pain and sorrow weigh us down, be near to us, O Lord\""
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "Mass of Christ the Savior - Dan Schutte"
+      },
+      "lordsPrayer": {
+        "title": "Echo Our Father",
+        "composer": "Andrews, Arr. Bonilla • Lockwood • Fajardo"
+      },
+      "fractionRite": {
+        "title": "Lamb of God (Mass of Christ the Savior)"
+      },
+      "communionSongs": [
+        {
+          "title": "Healed in Christ",
+          "composer": "Sarah Hart",
+          "description": "Gospel Reading"
+        },
+        {
+          "title": "We Remember",
+          "composer": "Marty Haugen",
+          "description": "\"...wounded souls are yearning ... to touch you and be healed.\""
+        },
+        {
+          "title": "The Clouds’ Veil [NEW]",
+          "composer": "Liam Lawton",
+          "description": "\"You are by my side\""
+        }
+      ],
+      "sending": {
+        "title": "Thanks be to God",
+        "composer": "Stephen Dean",
+        "description": "Especially verse 4"
+      }
+    },
+    {
+      "community": "Elevations",
+      "communityId": "elevations",
+      "date": "Year C — Oct 12, 2025 (Sun)",
+      "presider": "Fr. Eusebio Llonoso",
+      "prelude": {
+        "title": "On This Day, O Beautiful Mother",
+        "composer": "Louis Lambillotte SJ",
+        "description": "Month of the Holy Rosary"
+      },
+      "gathering": {
+        "title": "All Are Welcome",
+        "composer": "TWO OAKS • Marty Haugen",
+        "description": "\"Here the love of Christ shall end divisions...\""
+      },
+      "penitentialAct": {
+        "title": "Kyrie • Misa Del Mundo",
+        "composer": "Only if needed. Talk to presider!"
+      },
+      "gloria": {
+        "title": "Glory, Glory, Gloria!"
+      },
+      "responsorialPsalm": {
+        "psalm": "Ps 98 The Lord has revealed to the nations...",
+        "setting": "Spirit & Psalm • Joshua Blakesley"
+      },
+      "gospelAcclamation": {
+        "title": "Setting from Mass of Renewal",
+        "verse": "O.T. • 28 | C — \"In all circumstances...\""
+      },
+      "offertory": {
+        "title": "Give Thanks With A Grateful Heart",
+        "composer": "Cece Winans",
+        "description": "Gospel Reading"
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "Mass of Restoration • Joshua Blakesley"
+      },
+      "lordsPrayer": {
+        "title": "Echo Our Father",
+        "composer": "Andrews, Arr. Bonilla • Lockwood • Fajardo"
+      },
+      "fractionRite": {
+        "title": "Lamb of God (Resoration)"
+      },
+      "communionSongs": [
+        {
+          "title": "Healed in Christ",
+          "composer": "Sarah Hart",
+          "description": "Gospel Reading"
+        },
+        {
+          "title": "Jesus, Living Bread",
+          "composer": "Tom Booth",
+          "description": "\"Lord, just say the word and my soul shall be healed\""
+        },
+        {
+          "title": "Remembrance",
+          "composer": "Hillsong",
+          "description": "\"You've been so, so good to me\""
+        }
+      ],
+      "sending": {
+        "title": "Oh Happy Day",
+        "composer": "Edwin Hawkins • Arranged by Micah Jones",
+        "description": "With the joy of the healed Leper."
+      }
+    }
+  ]
+}

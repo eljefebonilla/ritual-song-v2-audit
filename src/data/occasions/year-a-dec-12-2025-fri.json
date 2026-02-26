@@ -1,0 +1,52 @@
+{
+  "id": "year-a-dec-12-2025-fri",
+  "name": "Year A — Dec 12, 2025 (Fri)",
+  "year": "ABC",
+  "season": "ordinary",
+  "seasonLabel": "Ordinary Time",
+  "seasonOrder": 12,
+  "dates": [],
+  "lectionary": {
+    "number": "Year A — Dec 12, 2031 (Fri)",
+    "gospelTitle": "Year C — Dec 12, 2030 (Thu)",
+    "thematicTag": "Year B — Dec 12, 2029 (Wed)",
+    "thematicDetail": "Year A — Dec 12, 2028 (Tue)"
+  },
+  "readings": [
+    {
+      "type": "psalm",
+      "citation": "Patroness of the Americas | Magnificat",
+      "summary": "",
+      "antiphon": "Planning Reminders"
+    },
+    {
+      "type": "gospel_verse",
+      "citation": "Text",
+      "summary": "Entrance Antiphon • Option II"
+    },
+    {
+      "type": "gospel",
+      "citation": "Reading I | Verse",
+      "summary": "Text"
+    }
+  ],
+  "antiphons": [
+    {
+      "type": "entrance",
+      "option": 1,
+      "citation": "Verse before the Gospel | Verse",
+      "text": "Text"
+    },
+    {
+      "type": "communion",
+      "option": 2,
+      "citation": "Communion Antiphon | Verse",
+      "text": "Text"
+    }
+  ],
+  "planningNotes": [
+    "Communion Antiphon • Option II",
+    "N/A"
+  ],
+  "musicPlans": []
+}

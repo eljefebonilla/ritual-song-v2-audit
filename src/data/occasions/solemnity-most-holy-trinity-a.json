@@ -1,0 +1,427 @@
+{
+  "id": "solemnity-most-holy-trinity-a",
+  "name": "SOLEMNITY\nMOST HOLY TRINITY [A]",
+  "year": "A",
+  "season": "solemnity",
+  "seasonLabel": "Solemnity",
+  "seasonOrder": 0,
+  "dates": [
+    {
+      "date": "2023-06-04",
+      "label": "Year A — Jun 04, 2023 (Sun)",
+      "dayOfWeek": "Sun"
+    },
+    {
+      "date": "2035-05-20",
+      "label": "Year A — May 20, 2035 (Sun)",
+      "dayOfWeek": "Sun"
+    },
+    {
+      "date": "2032-05-23",
+      "label": "Year A — May 23, 2032 (Sun)",
+      "dayOfWeek": "Sun"
+    },
+    {
+      "date": "2029-05-27",
+      "label": "Year A — May 27, 2029 (Sun)",
+      "dayOfWeek": "Sun"
+    },
+    {
+      "date": "2026-05-31",
+      "label": "Year A — May 31, 2026 (Sun)",
+      "dayOfWeek": "Sun"
+    }
+  ],
+  "lectionary": {
+    "number": "164•A",
+    "gospelTitle": "Baptize All in One Name",
+    "thematicTag": "Trinitarian Mandate"
+  },
+  "readings": [
+    {
+      "type": "first",
+      "citation": "Ex 34:4b-6, 8-9",
+      "summary": "Moses meets the Lord on Mount Sinai."
+    },
+    {
+      "type": "psalm",
+      "citation": "Dn 3:52, 53, 54, 55, 56\nGlory and praise for ever!",
+      "summary": "",
+      "antiphon": "Dn 3:52, 53, 54, 55, 56\nGlory and praise for ever!"
+    },
+    {
+      "type": "second",
+      "citation": "2 Cor 13:11-13",
+      "summary": "Live in peace with one another."
+    },
+    {
+      "type": "gospel_verse",
+      "citation": "Rev 1:8",
+      "summary": "Glory to the Father, the Son, and the Holy Spirit;\nto God who is, who was, and who is to come."
+    },
+    {
+      "type": "gospel",
+      "citation": "Jn 3:16-18",
+      "summary": "Jesus tells Nicodemus of the Father's love."
+    }
+  ],
+  "antiphons": [
+    {
+      "type": "entrance",
+      "option": 1,
+      "citation": "Roman Missal",
+      "text": "Blest be God the Father,\nand the Only Begotten Son of God,\nand also the Holy Spirit,\nfor he has shown us his merciful love."
+    },
+    {
+      "type": "communion",
+      "option": 1,
+      "citation": "Roman Missal",
+      "text": "Since you are children of God,\nGod has sent into your hearts the Spirit of his Son,\nthe Spirit who cries out: Abba, Father."
+    }
+  ],
+  "planningNotes": [
+    "FATHER'S DAY (JUN 15, 2025)"
+  ],
+  "musicPlans": [
+    {
+      "community": "Reflections",
+      "communityId": "reflections",
+      "date": "Year A — May 30, 2026 (Sat)",
+      "presider": "TBD",
+      "prelude": {
+        "title": "Make Us One",
+        "composer": "Jeffrey Bonilla & David Lockwood",
+        "description": "Letting assembly hear for the following week."
+      },
+      "gathering": {
+        "title": "Holy, Holy, Holy",
+        "composer": "Timothy Smith • Reginald Heber • Arr. by David Lockwood",
+        "description": "\"God in three persons - Blessed Trinity\""
+      },
+      "penitentialAct": {
+        "title": "Kyrie • Misa Del Mundo",
+        "composer": "Only if needed. Talk to presider!"
+      },
+      "gloria": {
+        "title": "Glory to God (Through-composed Setting)",
+        "composer": "Mass of Renewal • Curtis Stephan"
+      },
+      "responsorialPsalm": {
+        "psalm": "Ps 8 O Lord, our God, how wonderful...",
+        "setting": "The Lyric Psalter • Tony Alonso & Marty Haugen"
+      },
+      "gospelAcclamation": {
+        "title": "Alleluia (Mass of Joy & Peace)",
+        "composer": "TRINITY | C — \"Glory to the Father,...\"",
+        "verse": "Glory to the Father, the Son, and the Holy Spirit;\nto God who is, who was, and who is to come."
+      },
+      "offertory": {
+        "title": "Come, Holy Spirit",
+        "composer": "Tom Booth • Robert Feduccia",
+        "description": "\"an eternal dance between Father and Son\""
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "Mass of the Holy Family",
+        "composer": "Chris de Silva"
+      },
+      "lordsPrayer": {
+        "title": "Chanted Our Father (Snow)",
+        "composer": "Jennings/Paregorius"
+      },
+      "fractionRite": {
+        "title": "Lamb of God (Mass of the Holy Family)",
+        "composer": "Chris de Silva"
+      },
+      "communionSongs": [
+        {
+          "title": "The Feast Meant for Everyone",
+          "composer": "Tom Booth & Sarah Hart",
+          "description": "Table Song"
+        },
+        {
+          "title": "Abba! Father!",
+          "composer": "Carey Landry • Arr. by David Lockwood",
+          "description": "Father's Day (Also it's the Communion Antiphon)"
+        },
+        {
+          "title": "Every Mother, Every Father",
+          "composer": "Andy Bast & Bruce Benedict",
+          "description": "Father's Day"
+        }
+      ],
+      "sending": {
+        "title": "Jesus Is Risen",
+        "composer": "LASST UNS ERFREUEN, LM with alleluias",
+        "description": "Verse 3 — TRINITY"
+      }
+    },
+    {
+      "community": "Foundations",
+      "communityId": "foundations",
+      "date": "Year A — May 31, 2026 (Sun)",
+      "presider": "TBD",
+      "gathering": {
+        "title": "Holy, Holy, Holy",
+        "composer": "Timothy Smith • Reginald Heber • Arr. by David Lockwood",
+        "description": "\"God in three persons - Blessed Trinity\""
+      },
+      "penitentialAct": {
+        "title": "Kyrie (Gift of God) • Adapted Version",
+        "composer": "Marty Haugen • Arranged by David Locwood"
+      },
+      "gloria": {
+        "title": "Glory to God (Mass of Joy & Peace)",
+        "composer": "Tony Alonso • Arr. by David Lockwood"
+      },
+      "responsorialPsalm": {
+        "psalm": "Ps 8 O Lord, our God, how wonderful...",
+        "setting": "Spirit & Psalm • Trevor Thomson"
+      },
+      "gospelAcclamation": {
+        "title": "Alleluia! Give the Glory (Mass of Glory)",
+        "composer": "Bob Hurd •  Ken Canedo • Craig Kingsbury",
+        "verse": "Gospel Verse"
+      },
+      "offertory": {
+        "title": "Where My Father Lives",
+        "composer": "M.D. Ridge",
+        "description": "Call back to Ascension, Father's Day"
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "Mass of Glory • Bob Hurd • Arr. by Dan Houze"
+      },
+      "lordsPrayer": {
+        "title": "Chanted Our Father (Snow)",
+        "composer": "Jennings • Paregorius"
+      },
+      "fractionRite": {
+        "title": "Lamb of God (Mass of Glory)"
+      },
+      "communionSongs": [
+        {
+          "title": "The Feast Meant for Everyone",
+          "composer": "Tom Booth & Sarah Hart",
+          "description": "Table Song"
+        },
+        {
+          "title": "Every Mother, Every Father",
+          "composer": "Andy Bast & Bruce Benedict",
+          "description": "Father's Day"
+        }
+      ],
+      "sending": {
+        "title": "Holy God, We Praise Thy Name",
+        "composer": "Robert E. Kreutz",
+        "description": "Trinity Song"
+      }
+    },
+    {
+      "community": "Generations",
+      "communityId": "generations",
+      "date": "Year A — May 31, 2026 (Sun)",
+      "presider": "TBD",
+      "gathering": {
+        "title": "Holy, Holy, Holy",
+        "composer": "Timothy Smith • Reginald Heber • Arr. by David Lockwood",
+        "description": "\"God in three persons - Blessed Trinity\""
+      },
+      "penitentialAct": {
+        "title": "Kyrie • Misa Del Mundo",
+        "composer": "Only if needed. Talk to presider!"
+      },
+      "gloria": {
+        "title": "Glory, Glory, Gloria!",
+        "composer": "Tony Alonso • Arr. by Dan Houze"
+      },
+      "responsorialPsalm": {
+        "psalm": "Ps 8 O Lord, our God, how wonderful...",
+        "setting": "Spirit & Psalm • Trevor Thomson"
+      },
+      "gospelAcclamation": {
+        "title": "Setting from Mass of the Desert",
+        "composer": "TRINITY | C — \"Glory to the Father,...\""
+      },
+      "offertory": {
+        "title": "Where My Father Lives",
+        "composer": "M.D. Ridge",
+        "description": "Call back to Ascension, Father's Day"
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "Mass of Glory",
+        "composer": "Bob Hurd • Arr. by Dan Houze"
+      },
+      "lordsPrayer": {
+        "title": "(Echo) Our Father",
+        "composer": "Jerome Andrews • Arranged by Dan Houze"
+      },
+      "fractionRite": {
+        "title": "Lamb of God (Mass of Glory)"
+      },
+      "communionSongs": [
+        {
+          "title": "The Feast Meant for Everyone",
+          "composer": "Tom Booth & Sarah Hart",
+          "description": "Table Song"
+        },
+        {
+          "title": "One Bread, One Cup",
+          "composer": "Fisher • Canedo • Lee • Aven",
+          "description": "Table Song"
+        },
+        {
+          "title": "Abba! Father!",
+          "composer": "Carey Landry • Arr. by David Lockwood",
+          "description": "Father's Day (Also it's the Communion Antiphon)"
+        },
+        {
+          "title": "Every Mother, Every Father",
+          "composer": "Andy Bast & Bruce Benedict",
+          "description": "Father's Day"
+        }
+      ],
+      "sending": {
+        "title": "I Send You Out",
+        "composer": "John Angotti",
+        "description": "...in the name of Father, ...Son, ...Holy Spirit"
+      }
+    },
+    {
+      "community": "Heritage",
+      "communityId": "heritage",
+      "date": "Year A — May 31, 2026 (Sun)",
+      "presider": "TBD",
+      "prelude": {
+        "title": "Christ Before Us",
+        "composer": "Janèt Sullivan Whitaker • Mark J. Sullivan",
+        "description": "Verse 3: \"...Holy Three-in-One Immortal...\""
+      },
+      "gathering": {
+        "title": "Holy, Holy, Holy",
+        "composer": "Timothy Smith • Reginald Heber • Arr. by David Lockwood",
+        "description": "\"God in three persons - Blessed Trinity\""
+      },
+      "penitentialAct": {
+        "title": "Kyrie • Misa Del Mundo",
+        "composer": "Only if needed. Talk to presider!"
+      },
+      "gloria": {
+        "title": "Glory to God (Mass of Joy & Peace)",
+        "composer": "Tony Alonso, Thru Composed"
+      },
+      "responsorialPsalm": {
+        "psalm": "Ps 8 O Lord, our God, how wonderful...",
+        "setting": "Lyric Psalter • Tony Alonso & Marty Haugen"
+      },
+      "gospelAcclamation": {
+        "title": "Alleluia (Mass of Joy & Peace)",
+        "composer": "TRINITY | C — \"Glory to the Father,...\""
+      },
+      "offertory": {
+        "title": "Where My Father Lives",
+        "composer": "M.D. Ridge",
+        "description": "Call back to Ascension, Father's Day"
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "Mass of Joy & Peace • Tony Alonso"
+      },
+      "lordsPrayer": {
+        "title": "Chanted Our Father (Snow)",
+        "composer": "Jennings/Paregorius"
+      },
+      "fractionRite": {
+        "title": "Lamb of God (Mass of Joy & Peace)"
+      },
+      "communionSongs": [
+        {
+          "title": "The Feast Meant for Everyone",
+          "composer": "Tom Booth & Sarah Hart",
+          "description": "Table Song"
+        },
+        {
+          "title": "Abba! Father!",
+          "composer": "Carey Landry • Arr. by David Lockwood",
+          "description": "Father's Day (Also it's the Communion Antiphon)"
+        },
+        {
+          "title": "Eye Has Not Seen",
+          "composer": "Marty Haugen",
+          "description": "\"Spirit of God...mind if Jesus...wisdom of God\""
+        }
+      ],
+      "sending": {
+        "title": "Jesus Is Risen",
+        "composer": "LASST UNS ERFREUEN, LM with alleluias",
+        "description": "Verse 3 — TRINITY"
+      }
+    },
+    {
+      "community": "Elevations",
+      "communityId": "elevations",
+      "date": "Year A — May 31, 2026 (Sun)",
+      "presider": "TBD",
+      "prelude": {
+        "title": "Make Us One",
+        "composer": "Jeffrey Bonilla & David Lockwood",
+        "description": "Letting assembly hear for the following week."
+      },
+      "gathering": {
+        "title": "Holy, Holy, Holy",
+        "composer": "Timothy Smith • Reginald Heber • Arr. by David Lockwood",
+        "description": "\"God in three persons - Blessed Trinity\""
+      },
+      "penitentialAct": {
+        "title": "Kyrie • Misa Del Mundo",
+        "composer": "Only if needed. Talk to presider!"
+      },
+      "gloria": {
+        "title": "Glory to God (Mass of Joy & Peace)"
+      },
+      "responsorialPsalm": {
+        "psalm": "Ps 8 O Lord, our God, how wonderful...",
+        "setting": "Spirit & Psalm • Trevor Thomson"
+      },
+      "gospelAcclamation": {
+        "title": "Setting from Mass of the Desert",
+        "verse": "TRINITY | C — \"Glory to the Father,...\""
+      },
+      "offertory": {
+        "title": "Come, Holy Spirit",
+        "composer": "Tom Booth • Robert Feduccia",
+        "description": "\"an eternal dance between Father and Son\""
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "Mass of Restoration",
+        "composer": "Joshua Blakesley"
+      },
+      "lordsPrayer": {
+        "title": "Echo Our Father",
+        "composer": "Andrews, Arr. Bonilla • Lockwood • Fajardo"
+      },
+      "fractionRite": {
+        "title": "Lamb of God (Resoration)"
+      },
+      "communionSongs": [
+        {
+          "title": "Abba! Father!",
+          "composer": "Carey Landry • Arr. by David Lockwood",
+          "description": "Father's Day (Also it's the Communion Antiphon)"
+        },
+        {
+          "title": "The Feast Meant for Everyone",
+          "composer": "Tom Booth & Sarah Hart",
+          "description": "Table Song"
+        },
+        {
+          "title": "Every Mother, Every Father",
+          "composer": "Andy Bast & Bruce Benedict",
+          "description": "Father's Day"
+        }
+      ],
+      "sending": {
+        "title": "I Send You Out",
+        "composer": "John Angotti",
+        "description": "...in the name of Father, ...Son, ...Holy Spirit"
+      }
+    }
+  ]
+}

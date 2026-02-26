@@ -1,0 +1,412 @@
+{
+  "id": "year-c-aug-27-2025-wed",
+  "name": "Year C — Aug 27, 2025 (Wed)",
+  "year": "ABC",
+  "season": "ordinary",
+  "seasonLabel": "Ordinary Time",
+  "seasonOrder": 27,
+  "dates": [],
+  "lectionary": {
+    "number": "",
+    "gospelTitle": "",
+    "thematicTag": ""
+  },
+  "readings": [
+    {
+      "type": "psalm",
+      "citation": "Be Merciful as Your Father",
+      "summary": "",
+      "antiphon": "Planning Reminders"
+    },
+    {
+      "type": "gospel_verse",
+      "citation": "Turn your ear, O Lord, and answer me;\nsave the servant who trusts in you, my God.\nHave mercy on me, O Lord, for I cry to you all the day long.",
+      "summary": ""
+    },
+    {
+      "type": "gospel",
+      "citation": "Reading I | Is 58:6–11",
+      "summary": "God calls us to compassionate justice."
+    }
+  ],
+  "antiphons": [
+    {
+      "type": "entrance",
+      "option": 1,
+      "citation": "Verse before the Gospel | Jn 13:34",
+      "text": "I give you a new commandment:\nlove one another as I have loved you."
+    },
+    {
+      "type": "communion",
+      "option": 2,
+      "citation": "Communion Antiphon I | Cf. Ps 104 (103):13–15 (21OT)",
+      "text": "The earth is replete with the fruits of your work, O Lord;\nyou bring forth bread from the earth\nand wine to cheer the heart."
+    }
+  ],
+  "planningNotes": [
+    "Communion Antiphon II |  Cf. Jn 6:54 (21OT)",
+    "Whoever eats my flesh and drinks my blood\nhas eternal life, says the Lord,\nand I will raise him up on the last day."
+  ],
+  "musicPlans": [
+    {
+      "community": "Reflections",
+      "communityId": "reflections",
+      "date": "Year C — Aug 23, 2025 (Sat)",
+      "presider": "Fr. Eusebio Llonoso",
+      "prelude": {
+        "title": "Build A Family",
+        "composer": "Ed Bolduc • Arranged by Dan Houze",
+        "description": "Feast Day Weekend!"
+      },
+      "penitentialAct": {
+        "title": "Marty Haugen",
+        "composer": "\"Here the love of Christ shall end divisions...\"",
+        "description": "Penitential Act"
+      },
+      "gloria": {
+        "title": "Kyrie • Misa Del Mundo",
+        "composer": "Only if needed. Talk to presider!",
+        "description": "Gloria"
+      },
+      "gospelAcclamation": {
+        "title": "Marty Haugen",
+        "composer": "Gospel Acclamation",
+        "verse": "Halle, Halle, Halle"
+      },
+      "offertory": {
+        "title": "\"Lord, to whom shall we go? You alone have the words...\"",
+        "description": "Offertory Song"
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "The Servant Song",
+        "composer": "Richard Gillard • Arranged by Ed Archer"
+      },
+      "lordsPrayer": {
+        "title": "Eucharistic Acclamations",
+        "composer": "Mass of the Holy Family",
+        "description": "Chris de Silva"
+      },
+      "fractionRite": {
+        "title": "Holy, Holy, Holy",
+        "composer": "When We Eat This Bread",
+        "description": "Amen"
+      },
+      "communionSongs": [
+        {
+          "title": "The Lord's Prayer",
+          "composer": "Chanted Our Father (Snow)",
+          "description": "Jennings/Paregorius"
+        },
+        {
+          "title": "Fraction Rite",
+          "composer": "Lamb of God (Mass of the Holy Family)",
+          "description": "Chris de Silva"
+        },
+        {
+          "title": "Communion Songs",
+          "composer": "The Supper of the Lord",
+          "description": "Laurence Rosania"
+        },
+        {
+          "title": "\"Bread of Love is broken now...\"",
+          "composer": "We Remember",
+          "description": "Marty Haugen"
+        }
+      ]
+    },
+    {
+      "community": "Foundations",
+      "communityId": "foundations",
+      "date": "Year C — Aug 24, 2025 (Sun)",
+      "presider": "NOT THIS YEAR",
+      "prelude": {
+        "title": "Build A Family",
+        "composer": "Ed Bolduc • Arranged by Dan Houze",
+        "description": "Feast Day Weekend!"
+      },
+      "penitentialAct": {
+        "title": "Chris Muglia",
+        "composer": "Feast Day!",
+        "description": "Penitential Act"
+      },
+      "gloria": {
+        "title": "Kyrie (Gift of God) • Adapted Version",
+        "composer": "Marty Haugen • Arranged by David Locwood",
+        "description": "Gloria"
+      },
+      "gospelAcclamation": {
+        "title": "Marty Haugen",
+        "composer": "Gospel Acclamation",
+        "verse": "Song Title"
+      },
+      "offertory": {
+        "title": "Verse Audio Example",
+        "description": "Offertory Song"
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "The Servant Song",
+        "composer": "Richard Gillard • Arranged by Ed Archer"
+      },
+      "lordsPrayer": {
+        "title": "Eucharistic Acclamations",
+        "composer": "Mass of Glory • Bob Hurd • Arr. by Dan Houze"
+      },
+      "fractionRite": {
+        "title": "Holy, Holy",
+        "composer": "We Proclaim Your Death",
+        "description": "Amen"
+      },
+      "communionSongs": [
+        {
+          "title": "The Lord's Prayer",
+          "composer": "Chanted Our Father (Snow)",
+          "description": "Jennings • Paregorius"
+        },
+        {
+          "title": "Fraction Rite",
+          "composer": "Lamb of God (Mass of Glory)"
+        },
+        {
+          "title": "Communion Songs",
+          "composer": "The Supper of the Lord",
+          "description": "Laurence Rosania"
+        },
+        {
+          "title": "\"Bread of Love is broken now...\"",
+          "composer": "We Remember",
+          "description": "Marty Haugen"
+        }
+      ],
+      "sending": {
+        "title": "Doris Akers & Richard Smallwood",
+        "composer": "General Sending"
+      }
+    },
+    {
+      "community": "Generations",
+      "communityId": "generations",
+      "date": "Year C — Aug 24, 2025 (Sun)",
+      "presider": "TBD",
+      "prelude": {
+        "title": "You Are Welcome Here",
+        "composer": "Chris Muglia",
+        "description": "Feast Day"
+      },
+      "penitentialAct": {
+        "title": "Bob Hurd • Arranged by David Lockwood",
+        "composer": "\"Here the hungry find plenty, here the thirsty shall drink.\"",
+        "description": "Penitential Act"
+      },
+      "gloria": {
+        "title": "Kyrie • Misa Del Mundo",
+        "composer": "Only if needed. Talk to presider!",
+        "description": "Gloria"
+      },
+      "gospelAcclamation": {
+        "title": "Marty Haugen",
+        "composer": "Gospel Acclamation",
+        "verse": "Halle, Halle, Halle"
+      },
+      "offertory": {
+        "title": "\"Lord, to whom shall we go? You alone have the words...\"",
+        "description": "Offertory Song"
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "The Servant Song",
+        "composer": "Richard Gillard • Arranged by Ed Archer"
+      },
+      "lordsPrayer": {
+        "title": "Eucharistic Acclamations",
+        "composer": "Mass of Restoration",
+        "description": "Joshua Blakesley"
+      },
+      "fractionRite": {
+        "title": "Holy, Holy, Holy",
+        "composer": "Save Us Savior of the World",
+        "description": "Amen"
+      },
+      "communionSongs": [
+        {
+          "title": "The Lord's Prayer",
+          "composer": "(Echo) Our Father",
+          "description": "Jerome Andrews • Arranged by Dan Houze"
+        },
+        {
+          "title": "Fraction Rite",
+          "composer": "Lamb of God (Resoration)"
+        },
+        {
+          "title": "Communion Songs",
+          "composer": "Daily Bread",
+          "description": "Pat Barrett • Kari Jobe"
+        },
+        {
+          "title": "You are my portion",
+          "composer": "Caminemos con Jesús",
+          "description": "Tony Alonso"
+        },
+        {
+          "title": "\"with the ones the world has turned away\"",
+          "composer": "We Are Many Parts",
+          "description": "Marty Haugen • Arr. by Dan Houze"
+        },
+        {
+          "title": "\"Let us be your love to all the world\" | Second Reading",
+          "composer": "Goodness of God",
+          "description": "Bethel • Jenn Johnson"
+        }
+      ],
+      "sending": {
+        "title": "A Rightful Place",
+        "composer": "Steve Angrisano",
+        "description": "\"So that all might know they have a rightful place\""
+      }
+    },
+    {
+      "community": "Heritage",
+      "communityId": "heritage",
+      "date": "Year C — Aug 24, 2025 (Sun)",
+      "presider": "TBD",
+      "prelude": {
+        "title": "Song Title",
+        "composer": "Composer/s"
+      },
+      "penitentialAct": {
+        "title": "Marty Haugen",
+        "composer": "\"Here the love of Christ shall end divisions...\"",
+        "description": "Penitential Act"
+      },
+      "gloria": {
+        "title": "Kyrie • Misa Del Mundo",
+        "composer": "Only if needed. Talk to presider!",
+        "description": "Gloria"
+      },
+      "gospelAcclamation": {
+        "title": "Marty Haugen",
+        "composer": "Gospel Acclamation",
+        "verse": "Halle, Halle, Halle"
+      },
+      "offertory": {
+        "title": "\"Lord, to whom shall we go? You alone have the words...\"",
+        "description": "Offertory Song"
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "The Servant Song",
+        "composer": "Richard Gillard • Arranged by Ed Archer"
+      },
+      "lordsPrayer": {
+        "title": "Eucharistic Acclamations",
+        "composer": "Mass of Christ the Savior - Dan Schutte"
+      },
+      "fractionRite": {
+        "title": "Holy",
+        "composer": "When We Eat This Bread",
+        "description": "Amen"
+      },
+      "communionSongs": [
+        {
+          "title": "The Lord's Prayer",
+          "composer": "Echo Our Father",
+          "description": "Andrews, Arr. Bonilla • Lockwood • Fajardo"
+        },
+        {
+          "title": "Fraction Rite",
+          "composer": "Lamb of God (Mass of Christ the Savior)"
+        },
+        {
+          "title": "Communion Songs",
+          "composer": "The Supper of the Lord",
+          "description": "Laurence Rosania"
+        },
+        {
+          "title": "\"Bread of Love is broken now...\"",
+          "composer": "We Remember",
+          "description": "Marty Haugen"
+        },
+        {
+          "title": "\"See...Christ revealed in ev'ry person standing by your side.\"",
+          "composer": "Ubi Caritas",
+          "description": "Bob Hurd"
+        }
+      ],
+      "sending": {
+        "title": "ABBOT'S LEIGH • Jeffrey Rowthorn",
+        "composer": "\"you call us to your service\""
+      }
+    },
+    {
+      "community": "Elevations",
+      "communityId": "elevations",
+      "date": "Year C — Aug 24, 2025 (Sun)",
+      "presider": "NOT THIS YEAR",
+      "prelude": {
+        "title": "Build A Family",
+        "composer": "Ed Bolduc • Arranged by Dan Houze",
+        "description": "Feast Day Weekend!"
+      },
+      "penitentialAct": {
+        "title": "Chris Muglia",
+        "composer": "Feast Day!",
+        "description": "Penitential Act"
+      },
+      "gloria": {
+        "title": "Kyrie • Misa Del Mundo",
+        "composer": "Only if needed. Talk to presider!",
+        "description": "Gloria"
+      },
+      "gospelAcclamation": {
+        "title": "Marty Haugen",
+        "composer": "Gospel Acclamation",
+        "verse": "Halle, Halle, Halle"
+      },
+      "offertory": {
+        "title": "\"Lord, to whom shall we go? You alone have the words...\"",
+        "description": "Offertory Song"
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "The Servant Song",
+        "composer": "Richard Gillard • Arranged by Micah Jones"
+      },
+      "lordsPrayer": {
+        "title": "Eucharistic Acclamations",
+        "composer": "Mass of Restoration • Joshua Blakesley"
+      },
+      "fractionRite": {
+        "title": "Holy, Holy, Holy",
+        "composer": "Save Us Savior of the World",
+        "description": "Amen"
+      },
+      "communionSongs": [
+        {
+          "title": "The Lord's Prayer",
+          "composer": "Echo Our Father",
+          "description": "Andrews, Arr. Bonilla • Lockwood • Fajardo"
+        },
+        {
+          "title": "Fraction Rite",
+          "composer": "Lamb of God (Resoration)"
+        },
+        {
+          "title": "Communion Songs",
+          "composer": "Daily Bread",
+          "description": "Pat Barrett • Kari Jobe"
+        },
+        {
+          "title": "You are my portion",
+          "composer": "Caminemos con Jesús",
+          "description": "Tony Alonso"
+        },
+        {
+          "title": "\"with the ones the world has turned away\"",
+          "composer": "Goodness of God",
+          "description": "Bethel • Jenn Johnson"
+        }
+      ],
+      "sending": {
+        "title": "Sending Song",
+        "composer": "A Rightful Place",
+        "description": "Steve Angrisano"
+      }
+    }
+  ]
+}

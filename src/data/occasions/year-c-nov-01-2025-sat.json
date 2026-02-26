@@ -1,0 +1,26 @@
+{
+  "id": "year-c-nov-01-2025-sat",
+  "name": "Year C — Nov 01, 2025 (Sat)",
+  "year": "ABC",
+  "season": "ordinary",
+  "seasonLabel": "Ordinary Time",
+  "seasonOrder": 1,
+  "dates": [],
+  "lectionary": {
+    "number": "Year B — Nov 01, 2030 (Fri)",
+    "gospelTitle": "Year A — Nov 01, 2029 (Thu)",
+    "thematicTag": "Year C — Nov 01, 2028 (Wed)",
+    "thematicDetail": "Year B — Nov 01, 2027 (Mon)"
+  },
+  "readings": [
+    {
+      "type": "psalm",
+      "citation": "SEE SHEET",
+      "summary": "",
+      "antiphon": "Planning Reminders"
+    }
+  ],
+  "antiphons": [],
+  "planningNotes": [],
+  "musicPlans": []
+}

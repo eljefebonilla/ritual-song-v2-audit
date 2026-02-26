@@ -1,0 +1,437 @@
+{
+  "id": "ordinary-time-03-a-word-of-god-sunday",
+  "name": "ORDINARY TIME 03 [A]\nWORD OF GOD Sunday",
+  "year": "A",
+  "season": "ordinary",
+  "seasonLabel": "Ordinary Time",
+  "seasonOrder": 3,
+  "dates": [
+    {
+      "date": "2023-01-22",
+      "label": "Year A — Jan 22, 2023 (Sun)",
+      "dayOfWeek": "Sun"
+    },
+    {
+      "date": "2035-01-21",
+      "label": "Year A — Jan 21, 2035 (Sun)",
+      "dayOfWeek": "Sun"
+    },
+    {
+      "date": "2032-01-25",
+      "label": "Year A — Jan 25, 2032 (Sun)",
+      "dayOfWeek": "Sun"
+    },
+    {
+      "date": "2029-01-21",
+      "label": "Year A — Jan 21, 2029 (Sun)",
+      "dayOfWeek": "Sun"
+    },
+    {
+      "date": "2026-01-25",
+      "label": "Year A — Jan 25, 2026 (Sun)",
+      "dayOfWeek": "Sun"
+    }
+  ],
+  "lectionary": {
+    "number": "067•A",
+    "gospelTitle": "Call of Disciples",
+    "thematicTag": "Witness & Call (John)"
+  },
+  "readings": [
+    {
+      "type": "first",
+      "citation": "Is 8:23 – 9:3",
+      "summary": "The Lord brings light to the darkness."
+    },
+    {
+      "type": "psalm",
+      "citation": "Ps 27:1, 4, 13-14, R. v.1a\nThe Lord is my light and my salvation.",
+      "summary": "",
+      "antiphon": "Ps 27:1, 4, 13-14, R. v.1a\nThe Lord is my light and my salvation."
+    },
+    {
+      "type": "second",
+      "citation": "1 Cor 1:10-13, 17",
+      "summary": "Paul begs for unity."
+    },
+    {
+      "type": "gospel_verse",
+      "citation": "See Mt 4:23",
+      "summary": "Jesus proclaimed the Gospel of the kingdom\nand cured every disease among the people."
+    },
+    {
+      "type": "gospel",
+      "citation": "Mt 4:12-23 (Shorter - Mt 4:12-17)",
+      "summary": "Jesus begins his public ministry, calling the Apostles."
+    }
+  ],
+  "antiphons": [
+    {
+      "type": "entrance",
+      "option": 1,
+      "citation": "Cf. Ps 96 (95):1, 6",
+      "text": "O sing a new song to the Lord;\nsing to the Lord, all the earth.\nIn his presence are majesty and splendor,\nstrength and honor in his holy place."
+    },
+    {
+      "type": "communion",
+      "option": 1,
+      "citation": "Cf. Ps 34 (33):6",
+      "text": "Look toward the Lord and be radiant;\nlet your faces not be abashed."
+    },
+    {
+      "type": "communion",
+      "option": 2,
+      "citation": "Communion Antiphon • Option II | Cf. Jn 8:12",
+      "text": "I am the light of the world, says the Lord;\nwhoever follows me will not walk in darkness,\nbut will have the light of life."
+    }
+  ],
+  "planningNotes": [
+    "Word of God Sunday",
+    "Catholic Schools Week"
+  ],
+  "musicPlans": [
+    {
+      "community": "Reflections",
+      "communityId": "reflections",
+      "date": "Year A — Jan 24, 2026 (Sat)",
+      "presider": "Fr. Eusebio Llonoso",
+      "prelude": {
+        "title": "O Word of God",
+        "composer": "Ricky Manalo, CSP",
+        "description": "Word of God Sunday"
+      },
+      "gathering": {
+        "title": "Christ Be Our Light",
+        "composer": "Bernadette Farrell • Arr. Bonilla",
+        "description": "Light Theme in First Reading and Comm Ant"
+      },
+      "penitentialAct": {
+        "title": "Kyrie • Misa Del Mundo",
+        "composer": "Jesse Manibusan"
+      },
+      "gloria": {
+        "title": "Glory to God (Through-composed Setting)",
+        "composer": "Mass of Renewal • Curtis Stephan"
+      },
+      "responsorialPsalm": {
+        "psalm": "Ps 27 The Lord is my light and my salvation.",
+        "setting": "The Lyric Psalter • Tony Alonso & Marty Haugen"
+      },
+      "gospelAcclamation": {
+        "title": "Alleluia (Mass of Joy & Peace)",
+        "composer": "The Lyric Gospel Acclamations • Tony Alonso",
+        "verse": "Jesus proclaimed the Gospel of the kingdom\nand cured every disease among the people."
+      },
+      "offertory": {
+        "title": "The Summons",
+        "composer": "John L Bell",
+        "description": "Gospel: Calling of the disciples"
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "Mass for the Healing of the World",
+        "composer": "Trevor Thomson"
+      },
+      "lordsPrayer": {
+        "title": "Chanted Our Father (Snow)",
+        "composer": "Jennings/Paregorius"
+      },
+      "fractionRite": {
+        "title": "Lamb of God (Mass for the Healing of the World)",
+        "composer": "Trevor Thomson"
+      },
+      "communionSongs": [
+        {
+          "title": "Many and Great",
+          "composer": "Ricky Manalo, CSP",
+          "description": "\"the word of goodness and HOPE\""
+        },
+        {
+          "title": "The Feast Meant for Everyone",
+          "composer": "Tom Booth & Sarah Hart",
+          "description": "General"
+        },
+        {
+          "title": "Build A Family",
+          "composer": "Ed Bolduc • Arranged by Dan Houze",
+          "description": "Catholic Schools Week"
+        }
+      ],
+      "sending": {
+        "title": "Word of Our God",
+        "composer": "Dan Schutte",
+        "description": "Word of God Sunday"
+      }
+    },
+    {
+      "community": "Foundations",
+      "communityId": "foundations",
+      "date": "Year A — Jan 25, 2026 (Sun)",
+      "presider": "Fr. Thomas Park",
+      "gathering": {
+        "title": "Rain Down",
+        "composer": "Jaime Cortez",
+        "description": "“Faithful and true is the Word of our God.”"
+      },
+      "penitentialAct": {
+        "title": "Kyrie (Gift of God) • Adapted Version",
+        "composer": "Marty Haugen • Arranged by David Locwood"
+      },
+      "gloria": {
+        "title": "Mass of Joy & Peace (Gospel Version)",
+        "composer": "Tony Alonso • Arrangement by David Lockwood"
+      },
+      "responsorialPsalm": {
+        "psalm": "Ps 27 The Lord is my light and my salvation.",
+        "setting": "Spirit & Psalm • Cooper Ray"
+      },
+      "gospelAcclamation": {
+        "title": "Alleluia! Give the Glory (Mass of Glory)",
+        "composer": "Bob Hurd •  Ken Canedo • Craig Kingsbury",
+        "verse": "Jesus proclaimed the Gospel of the kingdom\nand cured every disease among the people."
+      },
+      "offertory": {
+        "title": "The Summons",
+        "composer": "John L Bell",
+        "description": "Gospel: Calling of the disciples"
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "Mass of Glory"
+      },
+      "lordsPrayer": {
+        "title": "Chanted Our Father (Snow)",
+        "composer": "Jennings • Paregorius"
+      },
+      "fractionRite": {
+        "title": "Lamb of God (Mass of Glory)"
+      },
+      "communionSongs": [
+        {
+          "title": "The Feast Meant for Everyone",
+          "composer": "Tom Booth & Sarah Hart",
+          "description": "General"
+        },
+        {
+          "title": "Build A Family",
+          "composer": "Ed Bolduc • Arranged by Dan Houze",
+          "description": "Catholic Schools Week"
+        }
+      ],
+      "sending": {
+        "title": "Lead Me, Guide Me",
+        "composer": "Doris Akers • Richard Smallwood",
+        "description": "Gospel: Calling of the disciples"
+      }
+    },
+    {
+      "community": "Generations",
+      "communityId": "generations",
+      "date": "Year A — Jan 25, 2026 (Sun)",
+      "presider": "Msgr. Lloyd Torgerson",
+      "gathering": {
+        "title": "Christ Be Our Light",
+        "composer": "Bernadette Farrell • Arr. Bonilla",
+        "description": "Light Theme in First Reading and Comm Ant"
+      },
+      "penitentialAct": {
+        "title": "Kyrie • Misa Del Mundo",
+        "composer": "Jesse Manibusan"
+      },
+      "gloria": {
+        "title": "Glory, Glory, Gloria!",
+        "composer": "Bonilla & Wilson • Vocal Arr. by Lockwood & Phan"
+      },
+      "responsorialPsalm": {
+        "psalm": "Ps 27 The Lord is my light and my salvation.",
+        "setting": "Spirit & Psalm • Cooper Ray"
+      },
+      "gospelAcclamation": {
+        "title": "Hallelujah (adapted for Liturgy)",
+        "composer": "Leonard Cohen",
+        "verse": "Jesus proclaimed the Gospel of the kingdom\nand cured every disease among the people."
+      },
+      "offertory": {
+        "title": "Build A Family",
+        "composer": "Ed Bolduc • Arranged by Dan Houze",
+        "description": "Catholic Schools Week"
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "Mass of St. Anne",
+        "composer": "Ed Bolduc"
+      },
+      "lordsPrayer": {
+        "title": "Echo Our Father",
+        "composer": "Jerome Andrews • Arranged by Dan Houze"
+      },
+      "fractionRite": {
+        "title": "Lamb of God (Mass of Holy Cross)",
+        "composer": "David Clark Isele"
+      },
+      "communionSongs": [
+        {
+          "title": "The Feast Meant for Everyone",
+          "composer": "Tom Booth & Sarah Hart",
+          "description": "General"
+        },
+        {
+          "title": "Loved",
+          "composer": "Ben Smith • Pat Barrett",
+          "description": "Comm Ant |  Jn 10:14 \"...I am yours and you are mine\""
+        },
+        {
+          "title": "I Am the Bread of Life (Come and Follow Me)",
+          "composer": "Steve Angrisano • Tom Booth",
+          "description": "Gospel: Calling of the disciples"
+        },
+        {
+          "title": "Bread of Life",
+          "composer": "Michael John Poirier",
+          "description": "\"Word of God, O Light eternal... foundation strong\""
+        }
+      ],
+      "sending": {
+        "title": "A Rightful Place",
+        "composer": "Steve Angrisano",
+        "description": "“...a new dawn is rising... light to all the world.”"
+      }
+    },
+    {
+      "community": "Heritage",
+      "communityId": "heritage",
+      "date": "Year A — Jan 25, 2026 (Sun)",
+      "presider": "\"Fr. David Guffey, CSC\"",
+      "prelude": {
+        "title": "O Word of God",
+        "composer": "Ricky Manalo, CSP",
+        "description": "Word of God Sunday"
+      },
+      "gathering": {
+        "title": "Christ Be Our Light",
+        "composer": "Bernadette Farrell • Arr. Bonilla",
+        "description": "Light Theme in First Reading and Comm Ant"
+      },
+      "penitentialAct": {
+        "title": "Kyrie • Misa Del Mundo",
+        "composer": "Jesse Manibusan"
+      },
+      "gloria": {
+        "title": "Glory to God (Mass of Christ the Savior)",
+        "composer": "Dan Schutte"
+      },
+      "responsorialPsalm": {
+        "psalm": "Ps 27 The Lord is my light and my salvation.",
+        "setting": "The Lyric Psalter • Tony Alonso & Marty Haugen"
+      },
+      "gospelAcclamation": {
+        "title": "Alleluia (Mass of Joy & Peace)",
+        "composer": "The Lyric Gospel Acclamations • Tony Alonso",
+        "verse": "Jesus proclaimed the Gospel of the kingdom\nand cured every disease among the people."
+      },
+      "offertory": {
+        "title": "The Summons",
+        "composer": "John L Bell",
+        "description": "Gospel: Calling of the disciples"
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "Mass of Joy & Peace",
+        "composer": "Tony Alonso"
+      },
+      "lordsPrayer": {
+        "title": "Chanted Our Father (Snow)",
+        "composer": "Jennings/Paregorius"
+      },
+      "fractionRite": {
+        "title": "Lamb of God (Mass of Joy & Peace)",
+        "composer": "Tony Alonso"
+      },
+      "communionSongs": [
+        {
+          "title": "Many and Great",
+          "composer": "Ricky Manalo, CSP",
+          "description": "\"the word of goodness and HOPE\""
+        },
+        {
+          "title": "One Bread, One Body",
+          "composer": "John Foley, SJ",
+          "description": "2nd Reading, General Communion"
+        },
+        {
+          "title": "Build A Family",
+          "composer": "Ed Bolduc • Arranged by Dan Houze",
+          "description": "Catholic Schools Week"
+        }
+      ],
+      "sending": {
+        "title": "Word of Our God",
+        "composer": "Dan Schutte",
+        "description": "Word of God Sunday"
+      }
+    },
+    {
+      "community": "Elevations",
+      "communityId": "elevations",
+      "date": "Year A — Jan 25, 2026 (Sun)",
+      "presider": "Msgr. Lloyd Torgerson",
+      "gathering": {
+        "title": "Christ Be Our Light",
+        "composer": "Bernadette Farrell • Arr. Bonilla",
+        "description": "Light Theme in First Reading and Comm Ant"
+      },
+      "penitentialAct": {
+        "title": "Kyrie (Misa Del Mundo)",
+        "composer": "Jesse Manibusan — If needed."
+      },
+      "gloria": {
+        "title": "Glory, Glory, Gloria! (Mass of the Setting Sun)",
+        "composer": "Bonilla & Wilson • Vocal Arr. by Lockwood & Phan"
+      },
+      "responsorialPsalm": {
+        "psalm": "Ps 27 The Lord is my light and my salvation.",
+        "setting": "Spirit & Psalm • Cooper Ray"
+      },
+      "gospelAcclamation": {
+        "title": "Hallelujah (adapted for Liturgy)",
+        "composer": "Leonard Cohen",
+        "verse": "Jesus proclaimed the Gospel of the kingdom\nand cured every disease among the people."
+      },
+      "offertory": {
+        "title": "Build A Family",
+        "composer": "Ed Bolduc • Arranged by Dan Houze",
+        "description": "Catholic Schools Week"
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "Mass of Communion (Lower Key)",
+        "composer": "Matt Maher"
+      },
+      "lordsPrayer": {
+        "title": "Echo Our Father",
+        "composer": "Andrews • Arr. by Bonilla • Lockwood • Fajardo"
+      },
+      "fractionRite": {
+        "title": "Lamb of God (Mass of Holy Cross)",
+        "composer": "David Clark Isele"
+      },
+      "communionSongs": [
+        {
+          "title": "Loved",
+          "composer": "Ben Smith • Pat Barrett",
+          "description": "Comm Ant |  Jn 10:14 \"...I am yours and you are mine\""
+        },
+        {
+          "title": "The Feast Meant for Everyone",
+          "composer": "Tom Booth • Sarah Hart",
+          "description": "General"
+        },
+        {
+          "title": "What A Beautiful Name (Gospel Version)",
+          "composer": "Hillsong Worship",
+          "description": "\"You were the Word in the beginning...\""
+        }
+      ],
+      "sending": {
+        "title": "A Rightful Place",
+        "composer": "Steve Angrisano",
+        "description": "“...a new dawn is rising... light to all the world.”"
+      }
+    }
+  ]
+}

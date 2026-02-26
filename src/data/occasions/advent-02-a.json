@@ -1,0 +1,386 @@
+{
+  "id": "advent-02-a",
+  "name": "ADVENT 02 [A]",
+  "year": "A",
+  "season": "advent",
+  "seasonLabel": "Advent",
+  "seasonOrder": 2,
+  "dates": [
+    {
+      "date": "2025-12-07",
+      "label": "Year A — Dec 07, 2025 (Sun)",
+      "dayOfWeek": "Sun"
+    },
+    {
+      "date": "2037-12-06",
+      "label": "Year A — Dec 06, 2037 (Sun)",
+      "dayOfWeek": "Sun"
+    },
+    {
+      "date": "2034-12-10",
+      "label": "Year A — Dec 10, 2034 (Sun)",
+      "dayOfWeek": "Sun"
+    },
+    {
+      "date": "2031-12-07",
+      "label": "Year A — Dec 07, 2031 (Sun)",
+      "dayOfWeek": "Sun"
+    },
+    {
+      "date": "2028-12-10",
+      "label": "Year A — Dec 10, 2028 (Sun)",
+      "dayOfWeek": "Sun"
+    }
+  ],
+  "lectionary": {
+    "number": "004•A",
+    "gospelTitle": "Prepare the Way: John the Baptist",
+    "thematicTag": "Baptist Call 1/2"
+  },
+  "readings": [
+    {
+      "type": "first",
+      "citation": "Is 11:1–10",
+      "summary": "A shoot shall sprout from the stump of Jesse.\nPeace and justice will triumph."
+    },
+    {
+      "type": "psalm",
+      "citation": "Ps 72:1-2, 7-8, 12-13, 17, R. see v.7\nJustice shall flourish in his time,\nand fullness of peace for ever.",
+      "summary": "",
+      "antiphon": "Ps 72:1-2, 7-8, 12-13, 17, R. see v.7\nJustice shall flourish in his time,\nand fullness of peace for ever."
+    },
+    {
+      "type": "second",
+      "citation": "Rom 15:4-9",
+      "summary": "Live in harmony with one another."
+    },
+    {
+      "type": "gospel_verse",
+      "citation": "Lk 3:4, 6",
+      "summary": "Prepare the way of the Lord, make straight his paths:\nall flesh shall see the salvation of God."
+    },
+    {
+      "type": "gospel",
+      "citation": "Mt 3:1-12",
+      "summary": "John the Baptist begins to preach in the desert."
+    }
+  ],
+  "antiphons": [
+    {
+      "type": "entrance",
+      "option": 1,
+      "citation": "Cf. Is 30:19, 30",
+      "text": "O people of Sion, behold,\nthe Lord will come to save the nations,\nand the Lord will make the glory of his voice heard\nin the joy of your heart."
+    },
+    {
+      "type": "communion",
+      "option": 1,
+      "citation": "Bar 5:5; 4:36",
+      "text": "Jerusalem, arise and stand upon the heights,\nand behold the joy which comes to you from God."
+    }
+  ],
+  "planningNotes": [],
+  "musicPlans": [
+    {
+      "community": "Reflections",
+      "communityId": "reflections",
+      "date": "Year A — Dec 06, 2025 (Sat)",
+      "presider": "Msgr. Lloyd Torgerson",
+      "gathering": {
+        "title": "Ready The Way",
+        "composer": "Bob Hurd · Craig Kingsbury",
+        "description": "Advent"
+      },
+      "penitentialAct": {
+        "title": "Warm the Time of WInter",
+        "composer": "Lori True"
+      },
+      "responsorialPsalm": {
+        "psalm": "Ps 72 Justice shall flourish in his time, and fullness...",
+        "setting": "The Lyric Psalter • Tony Alonso & Marty Haugen"
+      },
+      "gospelAcclamation": {
+        "title": "Advent/Christmas 2 — Missa Pacem",
+        "composer": "L. Randolph Babin"
+      },
+      "offertory": {
+        "title": "Say to the Frightened Heart",
+        "composer": "Bob Hurd",
+        "description": "Advent"
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "Mass of the Incarnate Word",
+        "composer": "Bob Hurd • Traditional Arrangement"
+      },
+      "lordsPrayer": {
+        "title": "Chanted Our Father (Snow)",
+        "composer": "Jennings • Paregorius"
+      },
+      "fractionRite": {
+        "title": "Missa Veni Emmanuel",
+        "composer": "Ed Archer"
+      },
+      "communionSongs": [
+        {
+          "title": "Bread of Life (Advent/Christmas)",
+          "composer": "Bernadette Farrell",
+          "description": "Advent"
+        },
+        {
+          "title": "Comfort My People",
+          "composer": "Ian Callanan",
+          "description": "Advent"
+        },
+        {
+          "title": "There Is A Longing",
+          "composer": "Anne Quigley",
+          "description": "Advent"
+        }
+      ],
+      "sending": {
+        "title": "In the Day of the Lord",
+        "composer": "M.D. Ridge",
+        "description": "Advent"
+      }
+    },
+    {
+      "community": "Foundations",
+      "communityId": "foundations",
+      "date": "Year A — Dec 07, 2025 (Sun)",
+      "presider": "Fr. Thomas Park",
+      "gathering": {
+        "title": "Prepare Ye the Way of the Lord",
+        "composer": "James Moore",
+        "description": "Gospel"
+      },
+      "penitentialAct": {
+        "title": "Warm the Time of WInter",
+        "composer": "Lori True"
+      },
+      "responsorialPsalm": {
+        "psalm": "Ps 72 Justice shall flourish in his time, and fullness...",
+        "setting": "The Lyric Psalter • Tony Alonso & Marty Haugen"
+      },
+      "gospelAcclamation": {
+        "title": "Hallelujah, Hallelu!",
+        "composer": "Michael Mahler",
+        "verse": "Prepare the way of the Lord, make straight his paths:\nall flesh shall see the salvation of God."
+      },
+      "offertory": {
+        "title": "To You, O God, I Lift Up My Soul",
+        "composer": "Bob Hurd"
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "Mass of the Incarnate Word"
+      },
+      "lordsPrayer": {
+        "title": "Chanted Our Father (Snow)",
+        "composer": "Jennings • Paregorius"
+      },
+      "fractionRite": {
+        "title": "Missa Veni Emmanuel"
+      },
+      "communionSongs": [
+        {
+          "title": "Bread of Life (Advent/Christmas)",
+          "composer": "Bernadette Farrell",
+          "description": "Advent"
+        },
+        {
+          "title": "Find Us Ready",
+          "composer": "Tom Booth"
+        }
+      ],
+      "sending": {
+        "title": "Soon and Very Soon",
+        "composer": "Andrae Crouch and the Disciples"
+      }
+    },
+    {
+      "community": "Generations",
+      "communityId": "generations",
+      "date": "Year A — Dec 07, 2025 (Sun)",
+      "presider": "Msgr. Lloyd Torgerson",
+      "gathering": {
+        "title": "Prepare Ye the Way",
+        "composer": "John Angotti",
+        "description": "Advent"
+      },
+      "penitentialAct": {
+        "title": "Warm the Time of WInter",
+        "composer": "Lori True"
+      },
+      "responsorialPsalm": {
+        "psalm": "Ps 72 Justice shall flourish in his time, and fullness...",
+        "setting": "Spirit & Psalm • PJ Cooper"
+      },
+      "gospelAcclamation": {
+        "title": "Hallelujah (adapted for Liturgy)",
+        "composer": "Leonard Cohen",
+        "verse": "Prepare the way of the Lord, make straight his paths:\nall flesh shall see the salvation of God."
+      },
+      "offertory": {
+        "title": "The King Shall Come",
+        "composer": "Trevor Thomson",
+        "description": "Advent"
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "Mass of the Incarnate Word",
+        "composer": "Bob Hurd • Arr. by Lockwood"
+      },
+      "lordsPrayer": {
+        "title": "Chanted Our Father (Snow)",
+        "composer": "Jennings • Paregorius"
+      },
+      "fractionRite": {
+        "title": "Advent Lamb of God"
+      },
+      "communionSongs": [
+        {
+          "title": "There Is A Longing",
+          "composer": "Anne Quigley"
+        },
+        {
+          "title": "In Days to Come",
+          "composer": "Sarah Hart",
+          "description": "Advent"
+        },
+        {
+          "title": "Creator of the Stars of Night",
+          "composer": "Ed Bolduc · Karen Bolduc · John Carrozza",
+          "description": "Advent"
+        },
+        {
+          "title": "Make Your Home In Me",
+          "composer": "Ben Walther",
+          "description": "Advent"
+        },
+        {
+          "title": "Emmanuel",
+          "composer": "Steve Angrisano",
+          "description": "Traditionally after Dec. 17th for 'O' Antiphons"
+        }
+      ]
+    },
+    {
+      "community": "Heritage",
+      "communityId": "heritage",
+      "date": "Year A — Dec 07, 2025 (Sun)",
+      "presider": "Fr. Vince Kuna",
+      "gathering": {
+        "title": "Christ Be Our Light (Welcome)",
+        "composer": "B. Farrell · Adapted by J. Bonilla & D. Lockwood",
+        "description": "Advent"
+      },
+      "penitentialAct": {
+        "title": "Warm the Time of WInter",
+        "composer": "Lori True"
+      },
+      "responsorialPsalm": {
+        "psalm": "Ps 72 Justice shall flourish in his time, and fullness...",
+        "setting": "The Lyric Psalter • Tony Alonso & Marty Haugen"
+      },
+      "gospelAcclamation": {
+        "title": "Advent/Christmas 2 — Missa Pacem",
+        "composer": "L. Randolph Babin"
+      },
+      "offertory": {
+        "title": "Say to the Frightened Heart",
+        "composer": "Bob Hurd",
+        "description": "Advent"
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "Mass of the Incarnate Word",
+        "composer": "Bob Hurd • Traditional Arrangement"
+      },
+      "lordsPrayer": {
+        "title": "Chanted Our Father (Snow)",
+        "composer": "Jennings • Paregorius"
+      },
+      "fractionRite": {
+        "title": "Missa Veni Emmanuel"
+      },
+      "communionSongs": [
+        {
+          "title": "Bread of Life (Advent/Christmas)",
+          "composer": "Bernadette Farrell",
+          "description": "Advent"
+        },
+        {
+          "title": "Comfort My People",
+          "composer": "Ian Callanan",
+          "description": "Advent"
+        },
+        {
+          "title": "There Is A Longing",
+          "composer": "Anne Quigley"
+        }
+      ],
+      "sending": {
+        "title": "On Jordan's Bank",
+        "composer": "WINCHESTER NEW"
+      }
+    },
+    {
+      "community": "Elevations",
+      "communityId": "elevations",
+      "date": "Year A — Dec 07, 2025 (Sun)",
+      "presider": "Fr. Eusebio Llonoso",
+      "gathering": {
+        "title": "Prepare Ye the Way",
+        "composer": "John Angotti",
+        "description": "Advent"
+      },
+      "penitentialAct": {
+        "title": "Warm the Time of WInter",
+        "composer": "Lori True"
+      },
+      "responsorialPsalm": {
+        "psalm": "Ps 72 Justice shall flourish in his time, and fullness...",
+        "setting": "Spirit & Psalm • PJ Cooper"
+      },
+      "gospelAcclamation": {
+        "title": "Hallelujah, Hallelu!",
+        "composer": "Michael Mahler",
+        "verse": "Prepare the way of the Lord, make straight his paths:\nall flesh shall see the salvation of God."
+      },
+      "offertory": {
+        "title": "The King Shall Come",
+        "composer": "Trevor Thomson",
+        "description": "Advent"
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "Incarnate Word • Bob Hurd , Arr. by Lockwood",
+        "composer": "Bob Hurd , Arr. by Lockwood"
+      },
+      "lordsPrayer": {
+        "title": "Chanted Our Father (Snow)",
+        "composer": "Jennings • Paregorius"
+      },
+      "fractionRite": {
+        "title": "Advent Lamb of God"
+      },
+      "communionSongs": [
+        {
+          "title": "There Is A Longing",
+          "composer": "Anne Quigley",
+          "description": "Advent"
+        },
+        {
+          "title": "Creator of the Stars of Night",
+          "composer": "Ed Bolduc · Karen Bolduc · John Carrozza"
+        },
+        {
+          "title": "Make Your Home In Me",
+          "composer": "Ben Walther",
+          "description": "Gospel"
+        }
+      ],
+      "sending": {
+        "title": "Even So Come",
+        "composer": "Chris Tomlin",
+        "description": "Advent"
+      }
+    }
+  ]
+}

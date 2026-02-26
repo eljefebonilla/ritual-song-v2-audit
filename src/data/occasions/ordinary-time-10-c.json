@@ -1,0 +1,186 @@
+{
+  "id": "ordinary-time-10-c",
+  "name": "ORDINARY TIME 10 [C]",
+  "year": "C",
+  "season": "ordinary",
+  "seasonLabel": "Ordinary Time",
+  "seasonOrder": 10,
+  "dates": [],
+  "lectionary": {
+    "number": "090•C",
+    "gospelTitle": "Widow’s Son Raised",
+    "thematicTag": "Compassion Signs 2/2"
+  },
+  "readings": [
+    {
+      "type": "first",
+      "citation": "1 Kgs 17:17–24",
+      "summary": "See! Your son is alive."
+    },
+    {
+      "type": "psalm",
+      "citation": "Ps 30:2, 4, 5–6, 11, 12, 13\nI will praise you, Lord, for you have rescued me.",
+      "summary": "",
+      "antiphon": "Ps 30:2, 4, 5–6, 11, 12, 13\nI will praise you, Lord, for you have rescued me."
+    },
+    {
+      "type": "second",
+      "citation": "Gal 1:11–19",
+      "summary": "God revealed his Son to me, so that I might proclaim him to the Gentiles."
+    },
+    {
+      "type": "gospel_verse",
+      "citation": "Lk 7:16",
+      "summary": "A great prophet has risen in our midst\nGod has visited his people."
+    },
+    {
+      "type": "gospel",
+      "citation": "Lk 7:11–17",
+      "summary": "Young man, I tell you, arise!"
+    }
+  ],
+  "antiphons": [
+    {
+      "type": "entrance",
+      "option": 1,
+      "citation": "Cf. Ps 27 (26):1–2",
+      "text": "The Lord is my light and my salvation; whom shall I fear?\nThe Lord is the stronghold of my life; whom should I dread?\nWhen those who do evil draw near, they stumble and fall."
+    },
+    {
+      "type": "communion",
+      "option": 1,
+      "citation": "Ps 18 (17):3",
+      "text": "The Lord is my rock, my fortress, and my deliverer;\nmy God is my saving strength."
+    },
+    {
+      "type": "communion",
+      "option": 2,
+      "citation": "Communion Antiphon • Option II | 1 Jn 4:16",
+      "text": "God is love, and whoever abides in love\nabides in God, and God in him."
+    }
+  ],
+  "planningNotes": [],
+  "musicPlans": [
+    {
+      "community": "Reflections",
+      "communityId": "reflections",
+      "date": "Year C — Sep 16, 2028 (Sat)",
+      "presider": "NOT THIS YEAR",
+      "penitentialAct": {
+        "title": "Kyrie • Misa Del Mundo",
+        "composer": "Only if needed. Talk to presider!"
+      },
+      "gloria": {
+        "title": "Glory to God (Through-composed Setting)",
+        "composer": "Mass of Renewal • Curtis Stephan"
+      },
+      "responsorialPsalm": {
+        "psalm": "Ps 30 I will praise you, Lord, for you have rescued me.",
+        "setting": "The Lyric Psalter • Tony Alonso & Marty Haugen"
+      },
+      "gospelAcclamation": {
+        "title": "Alleluia (Mass of Joy & Peace)",
+        "composer": "Song Title",
+        "verse": "A great prophet has risen in our midst\nGod has visited his people."
+      },
+      "lordsPrayer": {
+        "title": "Chanted Our Father (Snow)",
+        "composer": "Jennings/Paregorius"
+      },
+      "fractionRite": {
+        "title": "Lamb of God Setting"
+      }
+    },
+    {
+      "community": "Foundations",
+      "communityId": "foundations",
+      "date": "Year C — Sep 17, 2028 (Sun)",
+      "presider": "NOT THIS YEAR",
+      "penitentialAct": {
+        "title": "Kyrie (Gift of God) • Adapted Version",
+        "composer": "Marty Haugen • Arranged by David Locwood"
+      },
+      "gloria": {
+        "title": "Glory to God (Mass of Joy & Peace)",
+        "composer": "Alonso • Arr. by Houze OR Arr. by Lockwood"
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "Mass of Glory • Bob Hurd • Arr. by Dan Houze"
+      },
+      "lordsPrayer": {
+        "title": "Chanted Our Father (Snow)",
+        "composer": "Jennings • Paregorius"
+      },
+      "fractionRite": {
+        "title": "Lamb of God (Mass of Glory)"
+      }
+    },
+    {
+      "community": "Generations",
+      "communityId": "generations",
+      "date": "Year C — Sep 17, 2028 (Sun)",
+      "presider": "NOT THIS YEAR",
+      "penitentialAct": {
+        "title": "Kyrie • Misa Del Mundo",
+        "composer": "If needed. Talk to presider!"
+      },
+      "gloria": {
+        "title": "Glory, Glory, Gloria!",
+        "composer": "Tony Alonso • Arr. by Dan Houze"
+      },
+      "gospelAcclamation": {
+        "title": "Setting from Mass of ???",
+        "composer": "Song Title"
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "Mass of Restoration",
+        "composer": "Joshua Blakesley"
+      },
+      "lordsPrayer": {
+        "title": "(Echo) Our Father",
+        "composer": "Jerome Andrews • Arranged by Dan Houze"
+      },
+      "fractionRite": {
+        "title": "Lamb of God (Resoration)"
+      }
+    },
+    {
+      "community": "Heritage",
+      "communityId": "heritage",
+      "date": "Year C — Sep 17, 2028 (Sun)",
+      "presider": "NOT THIS YEAR",
+      "gloria": {
+        "title": "Glory to God (Mass of Joy & Peace)",
+        "composer": "Tony Alonso, Thru Composed"
+      },
+      "lordsPrayer": {
+        "title": "Echo Our Father",
+        "composer": "Andrews, Arr. Bonilla • Lockwood • Fajardo"
+      }
+    },
+    {
+      "community": "Elevations",
+      "communityId": "elevations",
+      "date": "Year C — Sep 17, 2028 (Sun)",
+      "presider": "NOT THIS YEAR",
+      "penitentialAct": {
+        "title": "Kyrie • Misa Del Mundo",
+        "composer": "Only if needed. Talk to presider!"
+      },
+      "gloria": {
+        "title": "Glory, Glory, Gloria!"
+      },
+      "gospelAcclamation": {
+        "title": "Setting from Mass of ???",
+        "verse": "Song Title"
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "Mass of ? • Composer"
+      },
+      "lordsPrayer": {
+        "title": "Echo Our Father",
+        "composer": "Andrews, Arr. Bonilla • Lockwood • Fajardo"
+      }
+    }
+  ]
+}

@@ -1,0 +1,215 @@
+{
+  "id": "ordinary-time-20-b",
+  "name": "ORDINARY TIME 20 [B]",
+  "year": "B",
+  "season": "ordinary",
+  "seasonLabel": "Ordinary Time",
+  "seasonOrder": 20,
+  "dates": [
+    {
+      "date": "2024-08-18",
+      "label": "Year B — Aug 18, 2024 (Sun)",
+      "dayOfWeek": "Sun"
+    },
+    {
+      "date": "2036-08-17",
+      "label": "Year B — Aug 17, 2036 (Sun)",
+      "dayOfWeek": "Sun"
+    },
+    {
+      "date": "2033-08-14",
+      "label": "Year B — Aug 14, 2033 (Sun)",
+      "dayOfWeek": "Sun"
+    },
+    {
+      "date": "2030-08-18",
+      "label": "Year B — Aug 18, 2030 (Sun)",
+      "dayOfWeek": "Sun"
+    }
+  ],
+  "lectionary": {
+    "number": "119•B",
+    "gospelTitle": "My Flesh for the World",
+    "thematicTag": "Bread Life 4/5: Flesh & Blood"
+  },
+  "readings": [
+    {
+      "type": "first",
+      "citation": "Prv 9:1-6",
+      "summary": "Wisdom teaches understanding."
+    },
+    {
+      "type": "psalm",
+      "citation": "Ps 34:2-3, 10-11, 12-13, 14-15, R. v.9a\nTaste and see the goodness of the Lord.",
+      "summary": "",
+      "antiphon": "Ps 34:2-3, 10-11, 12-13, 14-15, R. v.9a\nTaste and see the goodness of the Lord."
+    },
+    {
+      "type": "second",
+      "citation": "Eph 5:15-20",
+      "summary": "Sing praise to God, avoid that which is evil."
+    },
+    {
+      "type": "gospel_verse",
+      "citation": "Jn 6:56",
+      "summary": "Whoever eats my flesh and drinks my blood\nremains in me and I in him, says the Lord."
+    },
+    {
+      "type": "gospel",
+      "citation": "Jn 6:51-58",
+      "summary": "Whoever eats and drinks of the body... of Christ has eternal life."
+    }
+  ],
+  "antiphons": [
+    {
+      "type": "entrance",
+      "option": 1,
+      "citation": "Ps 84 (83):10–11",
+      "text": "Turn your eyes, O God, our shield;\nand look on the face of your anointed one;\none day within your courts is better than a thousand elsewhere."
+    },
+    {
+      "type": "communion",
+      "option": 1,
+      "citation": "Ps 130 (129):7",
+      "text": "With the Lord there is mercy;\nin him is plentiful redemption."
+    },
+    {
+      "type": "communion",
+      "option": 2,
+      "citation": "Roman Missal — Jn 6:51–52",
+      "text": "I am the living bread that came down from heaven,\nsays the Lord.\nWhoever eats of this bread will live for ever."
+    }
+  ],
+  "planningNotes": [],
+  "musicPlans": [
+    {
+      "community": "Reflections",
+      "communityId": "reflections",
+      "date": "N/A in 2027",
+      "presider": "NOT THIS YEAR",
+      "penitentialAct": {
+        "title": "Kyrie • Misa Del Mundo",
+        "composer": "Only if needed. Talk to presider!"
+      },
+      "gloria": {
+        "title": "Glory to God (Through-composed Setting)",
+        "composer": "Mass of Renewal • Curtis Stephan"
+      },
+      "gospelAcclamation": {
+        "title": "Alleluia (Mass of Joy & Peace)",
+        "composer": "Song Title"
+      },
+      "lordsPrayer": {
+        "title": "Chanted Our Father (Snow)",
+        "composer": "Jennings/Paregorius"
+      },
+      "fractionRite": {
+        "title": "Lamb of God Setting"
+      }
+    },
+    {
+      "community": "Foundations",
+      "communityId": "foundations",
+      "date": "N/A in 2027",
+      "presider": "NOT THIS YEAR",
+      "penitentialAct": {
+        "title": "Kyrie (Gift of God) • Adapted Version",
+        "composer": "Marty Haugen • Arranged by David Locwood"
+      },
+      "gloria": {
+        "title": "Glory to God (Mass of Joy & Peace)",
+        "composer": "Alonso • Arr. by Houze OR Arr. by Lockwood"
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "Mass of Glory • Bob Hurd • Arr. by Dan Houze"
+      },
+      "lordsPrayer": {
+        "title": "Chanted Our Father (Snow)",
+        "composer": "Jennings • Paregorius"
+      },
+      "fractionRite": {
+        "title": "Lamb of God (Mass of Glory)"
+      }
+    },
+    {
+      "community": "Generations",
+      "communityId": "generations",
+      "date": "N/A in 2027",
+      "presider": "NOT THIS YEAR",
+      "penitentialAct": {
+        "title": "Kyrie • Misa Del Mundo",
+        "composer": "If needed. Talk to presider!"
+      },
+      "gloria": {
+        "title": "Glory, Glory, Gloria!",
+        "composer": "Tony Alonso • Arr. by Dan Houze"
+      },
+      "gospelAcclamation": {
+        "title": "Setting from Mass of ???",
+        "composer": "Song Title"
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "Mass of Restoration",
+        "composer": "Joshua Blakesley"
+      },
+      "lordsPrayer": {
+        "title": "(Echo) Our Father",
+        "composer": "Jerome Andrews • Arranged by Dan Houze"
+      },
+      "fractionRite": {
+        "title": "Lamb of God (Resoration)"
+      }
+    },
+    {
+      "community": "Heritage",
+      "communityId": "heritage",
+      "date": "N/A in 2027",
+      "presider": "NOT THIS YEAR",
+      "penitentialAct": {
+        "title": "Kyrie • Misa Del Mundo",
+        "composer": "Only if needed. Talk to presider!"
+      },
+      "gloria": {
+        "title": "Glory to God (Mass of Christ the Savior)",
+        "composer": "Dan Schutte"
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "Mass of Christ the Savior - Dan Schutte"
+      },
+      "lordsPrayer": {
+        "title": "Echo Our Father",
+        "composer": "Andrews, Arr. Bonilla • Lockwood • Fajardo"
+      },
+      "fractionRite": {
+        "title": "Lamb of God (Mass of Christ the Savior)"
+      }
+    },
+    {
+      "community": "Elevations",
+      "communityId": "elevations",
+      "date": "N/A in 2027",
+      "presider": "NOT THIS YEAR",
+      "penitentialAct": {
+        "title": "Kyrie • Misa Del Mundo",
+        "composer": "Only if needed. Talk to presider!"
+      },
+      "gloria": {
+        "title": "Glory, Glory, Gloria!"
+      },
+      "gospelAcclamation": {
+        "title": "Setting from Mass of ???",
+        "verse": "Song Title"
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "Mass of Restoration • Joshua Blakesley"
+      },
+      "lordsPrayer": {
+        "title": "Echo Our Father",
+        "composer": "Andrews, Arr. Bonilla • Lockwood • Fajardo"
+      },
+      "fractionRite": {
+        "title": "Lamb of God (Resoration)"
+      }
+    }
+  ]
+}

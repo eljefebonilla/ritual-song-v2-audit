@@ -1,0 +1,394 @@
+{
+  "id": "ordinary-time-08-c",
+  "name": "ORDINARY TIME 08 [C]",
+  "year": "C",
+  "season": "ordinary",
+  "seasonLabel": "Ordinary Time",
+  "seasonOrder": 8,
+  "dates": [
+    {
+      "date": "2025-03-02",
+      "label": "Year C — Mar 02, 2025 (Sun)",
+      "dayOfWeek": "Sun"
+    }
+  ],
+  "lectionary": {
+    "number": "084•C",
+    "gospelTitle": "Good Fruit Needed",
+    "thematicTag": "Sermon Plain 3/3"
+  },
+  "readings": [
+    {
+      "type": "first",
+      "citation": "Cf. Ps 18 (17):19–25",
+      "summary": "Entrance Antiphon | Cf. Ps 18 (17):19–26"
+    },
+    {
+      "type": "psalm",
+      "citation": "Entrance Antiphon | Cf. Ps 18 (17):19–27",
+      "summary": "",
+      "antiphon": "Entrance Antiphon | Cf. Ps 18 (17):19–27"
+    },
+    {
+      "type": "second",
+      "citation": "Cf. Ps 18 (17):19–28",
+      "summary": "Entrance Antiphon | Cf. Ps 18 (17):19–29"
+    },
+    {
+      "type": "gospel_verse",
+      "citation": "Cf. Ps 18 (17):19–31",
+      "summary": "Shine like lights in the world\nas you hold on to the word of life."
+    },
+    {
+      "type": "gospel",
+      "citation": "Lk 6:39-45",
+      "summary": "Take the plank from your eye."
+    }
+  ],
+  "antiphons": [
+    {
+      "type": "entrance",
+      "option": 1,
+      "citation": "Cf. Ps 18 (17):19–20",
+      "text": "Entrance Antiphon | Cf. Ps 18 (17):19–21"
+    },
+    {
+      "type": "entrance",
+      "option": 2,
+      "citation": "Entrance Antiphon | Cf. Ps 18 (17):19–22",
+      "text": "Entrance Antiphon | Cf. Ps 18 (17):19–23"
+    },
+    {
+      "type": "communion",
+      "option": 1,
+      "citation": "Cf. Ps 13 (12):6",
+      "text": "I will sing to the Lord who has been bountiful with me,\nsing psalms to the name of the Lord Most High."
+    },
+    {
+      "type": "communion",
+      "option": 2,
+      "citation": "Communion Antiphon • Option II | Cf. Mt 28:20",
+      "text": "Behold, I am with you always,\neven to the end of the age, says the Lord."
+    }
+  ],
+  "planningNotes": [
+    "FEB - BLACKHISTORYMONTH",
+    "Together in Mission (Part II)"
+  ],
+  "musicPlans": [
+    {
+      "community": "Reflections",
+      "communityId": "reflections",
+      "date": "Year C — Feb 26, 2028 (Sat)",
+      "presider": "NOT THIS YEAR",
+      "gathering": {
+        "title": "The House That Love Is Building",
+        "composer": "Sarah Hart • Arranged by Arielle Phan"
+      },
+      "penitentialAct": {
+        "title": "Kyrie • Misa Del Mundo",
+        "composer": "Jesse Manibusan"
+      },
+      "gloria": {
+        "title": "Glory to God (Through-composed Setting)",
+        "composer": "Mass of Renewal • Curtis Stephan"
+      },
+      "responsorialPsalm": {
+        "psalm": "Ps 92 Lord, it is good to give thanks to you.",
+        "setting": "The Lyric Psalter • Tony Alonso & Marty Haugen"
+      },
+      "gospelAcclamation": {
+        "title": "Alleluia (Mass of Joy & Peace)",
+        "composer": "ORDINARY TIME • 08C"
+      },
+      "offertory": {
+        "title": "Act Justly",
+        "composer": "Bernadette Farrell",
+        "description": "\"show us the way to live\""
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "Mass for the Healing of the World",
+        "composer": "Trevor Thomson"
+      },
+      "lordsPrayer": {
+        "title": "Chanted Our Father (Snow)",
+        "composer": "Jennings/Paregorius"
+      },
+      "fractionRite": {
+        "title": "Lamb of God (Mass for the Healing of the World)",
+        "composer": "Trevor Thomson"
+      },
+      "communionSongs": [
+        {
+          "title": "The Supper of the Lord",
+          "composer": "Laurence Rosania",
+          "description": "\"Bread of Love is broken now...\""
+        },
+        {
+          "title": "Christ Before Us",
+          "composer": "Janèt Sullivan Whitaker • Mark J. Sullivan",
+          "description": "May we live... kindness, love, compassion, charity.\""
+        },
+        {
+          "title": "The Servant Song",
+          "composer": "Richard Gillard • Arranged by Ed Archer",
+          "description": "\"I will hold the Christ-light for you\""
+        }
+      ],
+      "sending": {
+        "title": "God of Day and God of Darkness",
+        "composer": "BEACH SPRING • Marty Haugen",
+        "description": "Verse 3: \"Show us Christ in one another\""
+      }
+    },
+    {
+      "community": "Foundations",
+      "communityId": "foundations",
+      "date": "Year C — Feb 27, 2028 (Sun)",
+      "presider": "NOT THIS YEAR",
+      "gathering": {
+        "title": "Come and Gather Beneath the Tree of Life",
+        "composer": "Marty Haugen",
+        "description": "\"...Fruit of Wisdom, branch of peace..\""
+      },
+      "penitentialAct": {
+        "title": "Kyrie (Gift of God) • Adapted Version",
+        "composer": "Marty Haugen • Arranged by David Locwood"
+      },
+      "gloria": {
+        "title": "Mass of Joy & Peace (Gospel Version)",
+        "composer": "Tony Alonso • Arrangement by David Lockwood"
+      },
+      "responsorialPsalm": {
+        "psalm": "Ps 92 Lord, it is good to give thanks to you.",
+        "setting": "The Lyric Psalter • Tony Alonso & Marty Haugen"
+      },
+      "gospelAcclamation": {
+        "title": "Alleluia! Give the Glory (Mass of Glory)"
+      },
+      "offertory": {
+        "title": "Act Justly",
+        "composer": "Bernadette Farrell",
+        "description": "\"show us the way to live\""
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "Mass of Glory"
+      },
+      "lordsPrayer": {
+        "title": "Chanted Our Father (Snow)",
+        "composer": "Jennings • Paregorius"
+      },
+      "fractionRite": {
+        "title": "Lamb of God (Mass of Glory)"
+      },
+      "communionSongs": [
+        {
+          "title": "Feed Us, Lord",
+          "composer": "W. Clifford Petty",
+          "description": "\"...with the bread that makes us one\""
+        },
+        {
+          "title": "Go Into the World",
+          "composer": "Tom Booth",
+          "description": "\"... loving the people that you meet\""
+        }
+      ],
+      "sending": {
+        "title": "Lead Me, Guide Me",
+        "composer": "Doris Akers • Richard Smallwood",
+        "description": "\"...I am blind without thy Light to see\""
+      }
+    },
+    {
+      "community": "Generations",
+      "communityId": "generations",
+      "date": "Year C — Feb 27, 2028 (Sun)",
+      "presider": "NOT THIS YEAR",
+      "prelude": {
+        "title": "This Little Light of Mine"
+      },
+      "gathering": {
+        "title": "All Who Enter Here",
+        "composer": "Dan Houze & John Angotti",
+        "description": "\"...always open is Love's door\""
+      },
+      "penitentialAct": {
+        "title": "Kyrie • Misa Del Mundo",
+        "composer": "Jesse Manibusan"
+      },
+      "gloria": {
+        "title": "Glory, Glory, Gloria! (Mass of the Setting Sun)",
+        "composer": "Bonilla & Wilson • Vocal Arr. by Lockwood & Phan"
+      },
+      "responsorialPsalm": {
+        "psalm": "Ps 92 Lord, it is good to give thanks to you.",
+        "setting": "Spirit & Psalm • Steve Angrisano"
+      },
+      "gospelAcclamation": {
+        "title": "Mass of Endless Mercy",
+        "composer": "ORDINARY TIME • 08C"
+      },
+      "offertory": {
+        "title": "The Servant Song",
+        "composer": "Gillard • Arr. by  Micah Jones & Sean Mahon",
+        "description": "Worship Folk Ballad, Acoustic \"Train\" Feel"
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "Mass of St. Anne",
+        "composer": "Ed Bolduc"
+      },
+      "lordsPrayer": {
+        "title": "Echo Our Father",
+        "composer": "Jerome Andrews • Arranged by Dan Houze"
+      },
+      "fractionRite": {
+        "title": "Lamb of God (Mass of Holy Cross)"
+      },
+      "communionSongs": [
+        {
+          "title": "The Feast Meant for Everyone",
+          "composer": "Tom Booth • Sarah Hart",
+          "description": "\"Bread for the immigrant,...poor,...outcast...\""
+        },
+        {
+          "title": "A Place At Your Table",
+          "composer": "Ben Walther",
+          "description": "\"the saint and the sinner, your friends\""
+        },
+        {
+          "title": "As Christ Is for Us",
+          "composer": "Janèt Sullivan Whitaker",
+          "description": "\"in the kindness we show to the stranger...\""
+        }
+      ],
+      "sending": {
+        "title": "Make the Love of God Known",
+        "composer": "Rick Modlin • Arranged by David Lockwood",
+        "description": "Verse 6 - \"Love your neighbor in need\""
+      }
+    },
+    {
+      "community": "Heritage",
+      "communityId": "heritage",
+      "date": "Year C — Feb 27, 2028 (Sun)",
+      "presider": "NOT THIS YEAR",
+      "gathering": {
+        "title": "All Are Welcome",
+        "composer": "Marty Haugen",
+        "description": "\"Here the love of Christ shall end divisions...\""
+      },
+      "penitentialAct": {
+        "title": "Kyrie • Misa Del Mundo",
+        "composer": "Jesse Manibusan"
+      },
+      "gloria": {
+        "title": "Glory to God (Mass of Christ the Savior)",
+        "composer": "Dan Schutte"
+      },
+      "responsorialPsalm": {
+        "psalm": "Ps 92 Lord, it is good to give thanks to you.",
+        "setting": "The Lyric Psalter • Tony Alonso & Marty Haugen"
+      },
+      "offertory": {
+        "title": "Act Justly",
+        "composer": "Bernadette Farrell",
+        "description": "\"show us the way to live\""
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "Mass of Creation - Rev. 2010"
+      },
+      "lordsPrayer": {
+        "title": "Chanted Our Father (Snow)",
+        "composer": "Jennings/Paregorius"
+      },
+      "fractionRite": {
+        "title": "Lamb of God (Mass of Creation)"
+      },
+      "communionSongs": [
+        {
+          "title": "The Supper of the Lord",
+          "composer": "Laurence Rosania",
+          "description": "\"Bread of Love is broken now...\""
+        },
+        {
+          "title": "Christ Before Us",
+          "composer": "Janèt Sullivan Whitaker • Mark J. Sullivan",
+          "description": "May we live... kindness, love, compassion, charity.\""
+        },
+        {
+          "title": "The Servant Song",
+          "composer": "Richard Gillard • Arranged by Ed Archer",
+          "description": "\"I will hold the Christ-light for you\""
+        }
+      ],
+      "sending": {
+        "title": "For the Fruits of This Creation",
+        "composer": "Green • DeBruyn",
+        "description": "\"For every tree is known by its own fruit\" - Gospel"
+      }
+    },
+    {
+      "community": "Elevations",
+      "communityId": "elevations",
+      "date": "Year C — Feb 27, 2028 (Sun)",
+      "presider": "NOT THIS YEAR",
+      "gathering": {
+        "title": "All Who Enter Here",
+        "composer": "Dan Houze & John Angotti",
+        "description": "\"...always open is Love's door\""
+      },
+      "penitentialAct": {
+        "title": "Kyrie (Misa Del Mundo)",
+        "composer": "Jesse Manibusan — If needed."
+      },
+      "gloria": {
+        "title": "Glory, Glory, Gloria! (Mass of the Setting Sun)"
+      },
+      "responsorialPsalm": {
+        "psalm": "Ps 92 Lord, it is good to give thanks to you.",
+        "setting": "Spirit & Psalm • Steve Angrisano"
+      },
+      "gospelAcclamation": {
+        "title": "Mass of Endless Mercy",
+        "verse": "ORDINARY TIME • 08C"
+      },
+      "offertory": {
+        "title": "The Servant Song",
+        "composer": "Gillard • Arr. by  Micah Jones & Sean Mahon",
+        "description": "Worship Folk Ballad, Acoustic \"Train\" Feel"
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "Mass of Communion (Lower Key) • Matt Maher"
+      },
+      "lordsPrayer": {
+        "title": "Echo Our Father",
+        "composer": "Andrews, Arr. Bonilla • Lockwood • Fajardo"
+      },
+      "fractionRite": {
+        "title": "Lamb of God (Mass of Holy Cross)"
+      },
+      "communionSongs": [
+        {
+          "title": "The Feast Meant for Everyone",
+          "composer": "Tom Booth • Sarah Hart",
+          "description": "\"Bread for the immigrant,...poor,...outcast...\""
+        },
+        {
+          "title": "A Place At Your Table",
+          "composer": "Ben Walther",
+          "description": "\"the saint and the sinner, your friends\""
+        },
+        {
+          "title": "As Christ Is for Us",
+          "composer": "Janèt Sullivan Whitaker",
+          "description": "\"in the kindness we show to the stranger...\""
+        }
+      ],
+      "sending": {
+        "title": "Make the Love of God Known",
+        "composer": "Rick Modlin • Arranged by David Lockwood",
+        "description": "Verse 6 - \"Love your neighbor in need\""
+      }
+    }
+  ]
+}

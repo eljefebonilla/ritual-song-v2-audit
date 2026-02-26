@@ -1,0 +1,336 @@
+{
+  "id": "easter-02-divine-mercy-a",
+  "name": "EASTER 02 DIVINE MERCY [A]",
+  "year": "A",
+  "season": "easter",
+  "seasonLabel": "Easter",
+  "seasonOrder": 2,
+  "dates": [
+    {
+      "date": "2023-04-16",
+      "label": "Year A — Apr 16, 2023 (Sun)",
+      "dayOfWeek": "Sun"
+    },
+    {
+      "date": "2035-04-01",
+      "label": "Year A — Apr 01, 2035 (Sun)",
+      "dayOfWeek": "Sun"
+    },
+    {
+      "date": "2032-04-04",
+      "label": "Year A — Apr 04, 2032 (Sun)",
+      "dayOfWeek": "Sun"
+    },
+    {
+      "date": "2029-04-08",
+      "label": "Year A — Apr 08, 2029 (Sun)",
+      "dayOfWeek": "Sun"
+    },
+    {
+      "date": "2026-04-12",
+      "label": "Year A — Apr 12, 2026 (Sun)",
+      "dayOfWeek": "Sun"
+    }
+  ],
+  "lectionary": {
+    "number": "043•A",
+    "gospelTitle": "Thomas Comes to Faith",
+    "thematicTag": "Res Appearance 1/3"
+  },
+  "readings": [
+    {
+      "type": "first",
+      "citation": "Acts 2:42-47",
+      "summary": "Life of the early disciples."
+    },
+    {
+      "type": "psalm",
+      "citation": "Ps 118:2-4, 13-15, 22-24. R. v.1\nGive thanks to the Lord, for he is good,\nhis love is everlasting.",
+      "summary": "",
+      "antiphon": "Ps 118:2-4, 13-15, 22-24. R. v.1\nGive thanks to the Lord, for he is good,\nhis love is everlasting."
+    },
+    {
+      "type": "second",
+      "citation": "1 Pt 1:3-9",
+      "summary": "Current trials lead to rejoicing when Christ again appears."
+    },
+    {
+      "type": "gospel_verse",
+      "citation": "Jn 20:29",
+      "summary": "You believe in me, Thomas,\nbecause you have seen me, says the Lord;\nblessed are those who have not seen me, but still believe!"
+    },
+    {
+      "type": "gospel",
+      "citation": "Jn 20:19-31 (ABC)",
+      "summary": "Blessed are those who have not seen and have believed."
+    }
+  ],
+  "antiphons": [
+    {
+      "type": "entrance",
+      "option": 1,
+      "citation": "Cf. 1 Pt 2:2",
+      "text": "Like newborn infants, you must long for the pure,\nspiritual milk, that in him you may grow to salvation, alleluia."
+    },
+    {
+      "type": "entrance",
+      "option": 2,
+      "citation": "Entrance Antiphon • Option II | 4 Esdr 2:36–37",
+      "text": "Receive the joy of your glory, giving thanks to God,\nwho has called you into the heavenly kingdom, alleluia."
+    },
+    {
+      "type": "communion",
+      "option": 1,
+      "citation": "Jn 20:27",
+      "text": "Bring your hand and feel the place of the nails,\nand do not be unbelieving but believing, alleluia."
+    }
+  ],
+  "planningNotes": [
+    "🌲 APR - Earth Month🌲",
+    "DIVINE MERCY SUNDAY"
+  ],
+  "musicPlans": [
+    {
+      "community": "Reflections",
+      "communityId": "reflections",
+      "date": "Year A — Apr 11, 2026 (Sat)",
+      "presider": "TBD",
+      "prelude": {
+        "title": "Regina Caeli / O Queen of Heaven",
+        "composer": "Mode VI Latin • 12th C",
+        "description": "Pope Leo XIV singing Regina Caeli"
+      },
+      "gloria": {
+        "title": "Glory to God (Through-composed Setting)",
+        "composer": "Mass of Renewal • Curtis Stephan"
+      },
+      "responsorialPsalm": {
+        "psalm": "Ps 118 Give thanks to the Lord, for he is good...",
+        "setting": "The Lyric Psalter • Tony Alonso & Marty Haugen"
+      },
+      "gospelAcclamation": {
+        "title": "Easter Alleluia (Refrain)",
+        "composer": "The Lyric Gospel Acclamations • Tony Alonso",
+        "verse": "You believe in me, Thomas,\nbecause you have seen me, says the Lord;\nblessed are those who have not seen me, but still believe!"
+      },
+      "offertory": {
+        "title": "We Walk By Faith",
+        "composer": "Marty Haugen  • Arranged by David Lockwood",
+        "description": "Gospel: \"We may not touch his hands and side...\""
+      },
+      "lordsPrayer": {
+        "title": "Chanted Our Father (Snow)",
+        "composer": "Jennings/Paregorius"
+      },
+      "fractionRite": {
+        "title": "Lamb of God Setting"
+      },
+      "communionSongs": [
+        {
+          "title": "God of Mercy",
+          "composer": "Rick Manalo, CSP &  Bob Hurd",
+          "description": "Mercy Sunday"
+        }
+      ]
+    },
+    {
+      "community": "Foundations",
+      "communityId": "foundations",
+      "date": "Year A — Apr 12, 2026 (Sun)",
+      "presider": "TBD",
+      "prelude": {
+        "title": "Regina Caeli / O Queen of Heaven",
+        "composer": "Mode VI Latin • 12th C",
+        "description": "Pope Leo XIV singing Regina Caeli"
+      },
+      "penitentialAct": {
+        "title": "Kyrie (Gift of God) • Adapted Version",
+        "composer": "Marty Haugen • Arranged by David Locwood"
+      },
+      "gloria": {
+        "title": "Glory to God (Mass of Joy & Peace)",
+        "composer": "Alonso • Arr. by Houze OR Arr. by Lockwood"
+      },
+      "responsorialPsalm": {
+        "psalm": "Ps 118 Give thanks to the Lord...",
+        "setting": "Spirit & Psalm • Tom Kendzia"
+      },
+      "gospelAcclamation": {
+        "title": "Easter Alleluia (Refrain)",
+        "composer": "The Lyric Gospel Acclamations • Tony Alonso",
+        "verse": "You believe in me, Thomas,\nbecause you have seen me, says the Lord;\nblessed are those who have not seen me, but still believe!"
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "Mass of Glory",
+        "composer": "Bob Hurd & Ken Canedo"
+      },
+      "lordsPrayer": {
+        "title": "Chanted Our Father (Snow)",
+        "composer": "Jennings • Paregorius"
+      },
+      "fractionRite": {
+        "title": "Lamb of God (Mass of Glory)",
+        "composer": "Bob Hurd & Ken Canedo"
+      },
+      "communionSongs": [
+        {
+          "title": "Jesus, Living Bread",
+          "composer": "Tom Booth",
+          "description": "“Have mercy on me, Lord…Help my unbelief…”"
+        },
+        {
+          "title": "Prayer of St Francis",
+          "composer": "Sebastian Temple • Arranged by Ed Archer",
+          "description": "For Pope • Gospel: \"where there is doubt...\""
+        }
+      ]
+    },
+    {
+      "community": "Generations",
+      "communityId": "generations",
+      "date": "Year A — Apr 12, 2026 (Sun)",
+      "presider": "TBD",
+      "penitentialAct": {
+        "title": "Kyrie • Misa Del Mundo",
+        "composer": "If needed. Talk to presider!"
+      },
+      "gloria": {
+        "title": "Glory to God (Mass of Joy & Peace)",
+        "composer": "Tony Alonso • Arr. by Dan Houze"
+      },
+      "responsorialPsalm": {
+        "psalm": "Ps 118 Give thanks to the Lord...",
+        "setting": "Spirit & Psalm • Tom Kendzia"
+      },
+      "gospelAcclamation": {
+        "title": "Easter Alleluia (Refrain)",
+        "composer": "The Lyric Gospel Acclamations • Tony Alonso",
+        "verse": "You believe in me, Thomas,\nbecause you have seen me, says the Lord;\nblessed are those who have not seen me, but still believe!"
+      },
+      "offertory": {
+        "title": "We Walk By Faith",
+        "composer": "Marty Haugen  • Arranged by David Lockwood",
+        "description": "Gospel: \"We may not touch his hands and side...\""
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "Mass of Glory",
+        "composer": "Bob Hurd • Arr. by Dan Houze"
+      },
+      "lordsPrayer": {
+        "title": "(Echo) Our Father",
+        "composer": "Jerome Andrews • Arranged by Dan Houze"
+      },
+      "fractionRite": {
+        "title": "Lamb of God (Mass of Glory)"
+      },
+      "communionSongs": [
+        {
+          "title": "Jesus, Living Bread",
+          "composer": "Tom Booth",
+          "description": "“Have mercy on me, Lord…Help my unbelief…”"
+        },
+        {
+          "title": "Jesus I Trust In You",
+          "composer": "Josh Blakesley • Sarah Kroger • Sarah Hart",
+          "description": "Inspired by the Chaplet of Divine Mercy"
+        },
+        {
+          "title": "His Mercy Is More",
+          "composer": "Keith & Kristyn Getty",
+          "description": "Mercy Sunday"
+        }
+      ]
+    },
+    {
+      "community": "Heritage",
+      "communityId": "heritage",
+      "date": "Year A — Apr 12, 2026 (Sun)",
+      "presider": "TBD",
+      "prelude": {
+        "title": "Regina Caeli / O Queen of Heaven",
+        "composer": "Mode VI Latin • 12th C",
+        "description": "Pope Leo XIV singing Regina Caeli"
+      },
+      "gloria": {
+        "title": "Glory to God (Mass of Joy & Peace)",
+        "composer": "Tony Alonso, Thru Composed"
+      },
+      "responsorialPsalm": {
+        "psalm": "Ps 118 Give thanks to the Lord...",
+        "setting": "The Lyric Psalter • Tony Alonso & Marty Haugen"
+      },
+      "gospelAcclamation": {
+        "title": "Easter Alleluia (Refrain)",
+        "composer": "The Lyric Gospel Acclamations • Tony Alonso",
+        "verse": "You believe in me, Thomas,\nbecause you have seen me, says the Lord;\nblessed are those who have not seen me, but still believe!"
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "Mass of Joy & Peace",
+        "composer": "Tony Alonso"
+      },
+      "lordsPrayer": {
+        "title": "Chanted Our Father (Snow)",
+        "composer": "Jennings/Paregorius"
+      },
+      "fractionRite": {
+        "title": "Lamb of God (Mass of Joy & Peace)",
+        "composer": "Tony Alonso"
+      },
+      "communionSongs": [
+        {
+          "title": "God of Mercy",
+          "composer": "Rick Manalo, CSP &  Bob Hurd",
+          "description": "Mercy Sunday"
+        },
+        {
+          "title": "We Walk By Faith",
+          "composer": "Marty Haugen • Original Arrangement",
+          "description": "Gospel: \"We may not touch his hands and side...\""
+        }
+      ]
+    },
+    {
+      "community": "Elevations",
+      "communityId": "elevations",
+      "date": "Year A — Apr 12, 2026 (Sun)",
+      "presider": "TBD",
+      "prelude": {
+        "title": "Regina Caeli / O Queen of Heaven",
+        "composer": "Mode VI Latin • 12th C",
+        "description": "Pope Leo XIV singing Regina Caeli"
+      },
+      "penitentialAct": {
+        "title": "Kyrie (Misa Del Mundo)",
+        "composer": "Jesse Manibusan — If needed."
+      },
+      "gloria": {
+        "title": "Glory to God (Joy & Peace)"
+      },
+      "responsorialPsalm": {
+        "psalm": "Ps 118 Give thanks to the Lord...",
+        "setting": "Spirit & Psalm • Tom Kendzia"
+      },
+      "gospelAcclamation": {
+        "title": "Easter Alleluia (Refrain)",
+        "verse": "You believe in me, Thomas,\nbecause you have seen me, says the Lord;\nblessed are those who have not seen me, but still believe!"
+      },
+      "offertory": {
+        "title": "We Walk By Faith",
+        "composer": "Marty Haugen  • Arranged by David Lockwood",
+        "description": "Gospel: \"We may not touch his hands and side...\""
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "Mass of Restoration",
+        "composer": "Joshua Blakesley"
+      },
+      "lordsPrayer": {
+        "title": "Echo Our Father",
+        "composer": "Andrews, Arr. Bonilla • Lockwood • Fajardo"
+      },
+      "fractionRite": {
+        "title": "Lamb of God (Mass of Restoration)",
+        "composer": "Joshua Blakesley"
+      }
+    }
+  ]
+}

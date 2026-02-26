@@ -1,0 +1,418 @@
+{
+  "id": "the-dedication-of-nov-9-the-lateran-basilica-abc",
+  "name": "THE DEDICATION OF (NOV 9)\nTHE LATERAN BASILICA [ABC]",
+  "year": "ABC",
+  "season": "ordinary",
+  "seasonLabel": "Ordinary Time",
+  "seasonOrder": 9,
+  "dates": [
+    {
+      "date": "2025-11-09",
+      "label": "Year C — Nov 09, 2025 (Sun)",
+      "dayOfWeek": "Sun"
+    },
+    {
+      "date": "2029-11-09",
+      "label": "Year A — Nov 09, 2029 (Fri)",
+      "dayOfWeek": "Fri"
+    },
+    {
+      "date": "2028-11-09",
+      "label": "Year C — Nov 09, 2028 (Thu)",
+      "dayOfWeek": "Thu"
+    },
+    {
+      "date": "2027-11-09",
+      "label": "Year B — Nov 09, 2027 (Tue)",
+      "dayOfWeek": "Tue"
+    },
+    {
+      "date": "2026-11-09",
+      "label": "Year A — Nov 09, 2026 (Mon)",
+      "dayOfWeek": "Mon"
+    }
+  ],
+  "lectionary": {
+    "number": "671•ABC",
+    "gospelTitle": "Temple of His Body",
+    "thematicTag": "Christ the True Temple"
+  },
+  "readings": [
+    {
+      "type": "first",
+      "citation": "Ez 47:1-2, 8-9, 12",
+      "summary": "The water from the temple brings life."
+    },
+    {
+      "type": "psalm",
+      "citation": "Ps 46:2-3, 5-6, 8-9\nThe waters of the river gladden the city of God,\nthe holy dwelling of the Most High!",
+      "summary": "",
+      "antiphon": "Ps 46:2-3, 5-6, 8-9\nThe waters of the river gladden the city of God,\nthe holy dwelling of the Most High!"
+    },
+    {
+      "type": "second",
+      "citation": "1 Cor 3:9c-11, 16-17",
+      "summary": "You are God’s temple."
+    },
+    {
+      "type": "gospel_verse",
+      "citation": "2 Chr 7:16",
+      "summary": "I have chosen and consecrated this house, says the Lord, that my name may be there forever."
+    },
+    {
+      "type": "gospel",
+      "citation": "Jn 2:13-22",
+      "summary": "Jesus drives the money-changers from the temple."
+    }
+  ],
+  "antiphons": [
+    {
+      "type": "entrance",
+      "option": 1,
+      "citation": "Cf. Rev 21:2",
+      "text": "I saw the holy city, a new Jerusalem,\ncoming down out of heaven from God,\nprepared like a bride adorned for her husband."
+    },
+    {
+      "type": "entrance",
+      "option": 2,
+      "citation": "Roman Missal — Cf. Rev 21:3",
+      "text": "Behold God’s dwelling with the human race.\nHe will dwell with them and they will be his people,\nand God himself with them will be their God."
+    },
+    {
+      "type": "communion",
+      "option": 1,
+      "citation": "Cf. 1 Pt 2:5Sir 45:25",
+      "text": "Be built up like living stones,\ninto a spiritual house, a holy priesthood."
+    }
+  ],
+  "planningNotes": [
+    "Black Catholic History Month",
+    "Month of Remembrance",
+    "🇺🇸  Weekend before Veteran's Day 🇺🇸"
+  ],
+  "musicPlans": [
+    {
+      "community": "Reflections",
+      "communityId": "reflections",
+      "date": "Year C — Nov 08, 2025 (Sat)",
+      "presider": "Msgr. Lloyd Torgerson",
+      "prelude": {
+        "title": "Litany of Saints",
+        "composer": "Litany of Saints - John D. Becker",
+        "description": "Include Saint Carlo Acutis"
+      },
+      "gathering": {
+        "title": "Your Peace Will Make Us One",
+        "composer": "Audrey Assad",
+        "description": "Veteran's Day Weekend"
+      },
+      "penitentialAct": {
+        "title": "Kyrie • Misa Del Mundo",
+        "composer": "Only if needed. Talk to presider!"
+      },
+      "gloria": {
+        "title": "Glory to God (Through-composed Setting)",
+        "composer": "Mass of Renewal • Curtis Stephan"
+      },
+      "responsorialPsalm": {
+        "psalm": "Ps 46 The waters of the river gladden...",
+        "setting": "The Lyric Psalter • Tony Alonso & Marty Haugen"
+      },
+      "gospelAcclamation": {
+        "title": "Alleluia (Mass of Joy & Peace)",
+        "composer": "L.B. | ABC — \"I have chosen...\""
+      },
+      "offertory": {
+        "title": "Reunited in Everlasting Life",
+        "composer": "Janèt Sullivan Whitaker",
+        "description": "Month of Remembrance"
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "Mass for the Healing of the World",
+        "composer": "Trevor Thomson"
+      },
+      "lordsPrayer": {
+        "title": "Chanted Our Father (Snow)",
+        "composer": "Jennings/Paregorius"
+      },
+      "fractionRite": {
+        "title": "Lamb of God (Mass for the Healing of the World)",
+        "composer": "Trevor Thomson"
+      },
+      "communionSongs": [
+        {
+          "title": "Bread of Angels",
+          "composer": "Curtis Stephan",
+          "description": "“Word incarnate, dwell within is; pierce our hardened hearts.”"
+        },
+        {
+          "title": "Take and Eat",
+          "composer": "Michael Joncas",
+          "description": "Communion Antiphon"
+        },
+        {
+          "title": "May the Angels Lead You Home",
+          "composer": "Sarah Hart and Francesca LaRosa",
+          "description": "Month of Remembrance"
+        }
+      ],
+      "sending": {
+        "title": "The Church of Christ in Every Age",
+        "composer": "DUNEDIN • Fred Pratt Green • Vernon Griffiths",
+        "description": "Lateran Basilica"
+      }
+    },
+    {
+      "community": "Foundations",
+      "communityId": "foundations",
+      "date": "Year C — Nov 09, 2025 (Sun)",
+      "presider": "Fr. Thomas Park",
+      "gathering": {
+        "title": "Your Peace Will Make Us One",
+        "composer": "Audrey Assad",
+        "description": "Veteran's Day Weekend"
+      },
+      "penitentialAct": {
+        "title": "Kyrie (Gift of God) • Adapted Version",
+        "composer": "Marty Haugen • Arranged by David Locwood"
+      },
+      "gloria": {
+        "title": "Glory to God (Mass of Joy & Peace)",
+        "composer": "Alonso • Arr. by Houze OR Arr. by Lockwood"
+      },
+      "responsorialPsalm": {
+        "psalm": "Ps 46 The waters of the river gladden...",
+        "setting": "The Lyric Psalter • Tony Alonso & Marty Haugen"
+      },
+      "offertory": {
+        "title": "Build A Family",
+        "composer": "Ed Bolduc • Arranged by Dan Houze",
+        "description": "\"and may we build a family of love...\""
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "Mass of Glory • Bob Hurd • Arr. by Dan Houze"
+      },
+      "lordsPrayer": {
+        "title": "Chanted Our Father (Snow)",
+        "composer": "Jennings • Paregorius"
+      },
+      "fractionRite": {
+        "title": "Lamb of God (Mass of Glory)"
+      },
+      "communionSongs": [
+        {
+          "title": "We Are Many Parts",
+          "composer": "Marty Haugen • Arr. by Dan Houze",
+          "description": "\"Let us be your love to all the world\""
+        },
+        {
+          "title": "May the Angels Lead You Home",
+          "composer": "Sarah Hart and Francesca LaRosa",
+          "description": "Month of Remembrance"
+        }
+      ],
+      "sending": {
+        "title": "Go In Peace",
+        "composer": "Sarah Hart • Arr. by Dan Houze",
+        "description": "Month of Remembrance"
+      }
+    },
+    {
+      "community": "Generations",
+      "communityId": "generations",
+      "date": "Year C — Nov 09, 2025 (Sun)",
+      "presider": "Msgr. Lloyd Torgerson",
+      "gathering": {
+        "title": "Your Peace Will Make Us One",
+        "composer": "Audrey Assad",
+        "description": "Veteran's Day Weekend"
+      },
+      "penitentialAct": {
+        "title": "Kyrie • Misa Del Mundo",
+        "composer": "Only if needed. Talk to presider!"
+      },
+      "gloria": {
+        "title": "Glory, Glory, Gloria!",
+        "composer": "Jeffrey Bonilla & Drew Wilson"
+      },
+      "responsorialPsalm": {
+        "psalm": "Ps 46 The waters of the river gladden...",
+        "setting": "Spirit & Psalm • Craig Colson & Kristen Colson"
+      },
+      "gospelAcclamation": {
+        "title": "Setting from Mass of St. Kilian",
+        "composer": "L.B. | ABC — \"I have chosen...\""
+      },
+      "offertory": {
+        "title": "In the Fields of the Lord [NEW]",
+        "composer": "Audrey Assad •  Isaac Wardell",
+        "description": "\"...at the harvest of the Lord, the fields are white.\""
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "Mass of Restoration",
+        "composer": "Joshua Blakesley"
+      },
+      "lordsPrayer": {
+        "title": "(Echo) Our Father",
+        "composer": "Jerome Andrews • Arranged by Dan Houze"
+      },
+      "fractionRite": {
+        "title": "Lamb of God (Resoration)"
+      },
+      "communionSongs": [
+        {
+          "title": "Reunited in Everlasting Life",
+          "composer": "Janèt Sullivan Whitaker",
+          "description": "Month of Remembrance"
+        },
+        {
+          "title": "We Are Many Parts",
+          "composer": "Marty Haugen • Arr. by Dan Houze",
+          "description": "\"Let us be your love to all the world\""
+        },
+        {
+          "title": "A Place At Your Table",
+          "composer": "Ben Walther",
+          "description": "\"the saint and the sinner, your friends\""
+        },
+        {
+          "title": "Well Done",
+          "composer": "The Afters",
+          "description": "Month of Remembrance"
+        }
+      ],
+      "sending": {
+        "title": "Go In Peace",
+        "composer": "Sarah Hart • Arr. by Dan Houze",
+        "description": "Month of Remembrance"
+      }
+    },
+    {
+      "community": "Heritage",
+      "communityId": "heritage",
+      "date": "Year C — Nov 09, 2025 (Sun)",
+      "presider": "Fr. Thomas Park",
+      "gathering": {
+        "title": "Your Peace Will Make Us One",
+        "composer": "Audrey Assad",
+        "description": "Veteran's Day Weekend"
+      },
+      "penitentialAct": {
+        "title": "Kyrie • Misa Del Mundo",
+        "composer": "Only if needed. Talk to presider!"
+      },
+      "gloria": {
+        "title": "Glory to God (Mass of Christ the Savior)",
+        "composer": "Dan Schutte"
+      },
+      "responsorialPsalm": {
+        "psalm": "Ps 46 The waters of the river gladden...",
+        "setting": "The Lyric Psalter • Tony Alonso & Marty Haugen"
+      },
+      "gospelAcclamation": {
+        "title": "Alleluia (Mass of Joy & Peace)",
+        "composer": "L.B. | ABC — \"I have chosen...\""
+      },
+      "offertory": {
+        "title": "Reunited in Everlasting Life",
+        "composer": "Janèt Sullivan Whitaker",
+        "description": "Month of Remembrance"
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "Mass of Christ the Savior - Dan Schutte"
+      },
+      "lordsPrayer": {
+        "title": "Echo Our Father",
+        "composer": "Andrews, Arr. Bonilla • Lockwood • Fajardo"
+      },
+      "fractionRite": {
+        "title": "Lamb of God (Mass of Christ the Savior)"
+      },
+      "communionSongs": [
+        {
+          "title": "Bread of Angels",
+          "composer": "Curtis Stephan",
+          "description": "“Word incarnate, dwell within is; pierce our hardened hearts.”"
+        },
+        {
+          "title": "Take and Eat",
+          "composer": "Michael Joncas",
+          "description": "Communion Antiphon"
+        },
+        {
+          "title": "May the Angels Lead You Home",
+          "composer": "Sarah Hart and Francesca LaRosa",
+          "description": "Month of Remembrance"
+        }
+      ],
+      "sending": {
+        "title": "The Church of Christ in Every Age",
+        "composer": "DUNEDIN • Fred Pratt Green • Vernon Griffiths",
+        "description": "Lateran Basilica"
+      }
+    },
+    {
+      "community": "Elevations",
+      "communityId": "elevations",
+      "date": "Year C — Nov 09, 2025 (Sun)",
+      "presider": "Fr. Steve Katsouros, SJ",
+      "gathering": {
+        "title": "Your Peace Will Make Us One",
+        "composer": "Audrey Assad",
+        "description": "Veteran's Day Weekend"
+      },
+      "penitentialAct": {
+        "title": "Kyrie • Misa Del Mundo",
+        "composer": "Only if needed. Talk to presider!"
+      },
+      "gloria": {
+        "title": "Glory, Glory, Gloria!"
+      },
+      "responsorialPsalm": {
+        "psalm": "Ps 46 The waters of the river gladden...",
+        "setting": "Spirit & Psalm • Craig Colson & Kristen Colson"
+      },
+      "gospelAcclamation": {
+        "title": "Setting from Mass of St. Kilian",
+        "verse": "L.B. | ABC — \"I have chosen...\""
+      },
+      "offertory": {
+        "title": "In the Fields of the Lord",
+        "composer": "Audrey Assad •  Isaac Wardell",
+        "description": "\"...at the harvest of the Lord, the fields are white.\""
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "Mass of Restoration • Joshua Blakesley"
+      },
+      "lordsPrayer": {
+        "title": "Echo Our Father",
+        "composer": "Andrews, Arr. Bonilla • Lockwood • Fajardo"
+      },
+      "fractionRite": {
+        "title": "Lamb of God (Resoration)"
+      },
+      "communionSongs": [
+        {
+          "title": "Reunited in Everlasting Life",
+          "composer": "Janèt Sullivan Whitaker",
+          "description": "Month of Remembrance"
+        },
+        {
+          "title": "We Are Many Parts",
+          "composer": "Marty Haugen • Arr. by Dan Houze",
+          "description": "\"Let us be your love to all the world\""
+        },
+        {
+          "title": "Well Done",
+          "composer": "The Afters",
+          "description": "Month of Remembrance"
+        }
+      ],
+      "sending": {
+        "title": "Go In Peace",
+        "composer": "Sarah Hart • Arr. by Dan Houze",
+        "description": "Month of Remembrance"
+      }
+    }
+  ]
+}

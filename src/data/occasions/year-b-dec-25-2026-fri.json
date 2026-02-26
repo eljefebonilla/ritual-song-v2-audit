@@ -1,0 +1,19 @@
+{
+  "id": "year-b-dec-25-2026-fri",
+  "name": "Year B — Dec 25, 2026 (Fri)",
+  "year": "ABC",
+  "season": "ordinary",
+  "seasonLabel": "Ordinary Time",
+  "seasonOrder": 25,
+  "dates": [],
+  "lectionary": {
+    "number": "Year A — Dec 25, 2031 (Thu)",
+    "gospelTitle": "Year C — Dec 25, 2030 (Wed)",
+    "thematicTag": "Year B — Dec 25, 2029 (Tue)",
+    "thematicDetail": "Year A — Dec 25, 2028 (Mon)"
+  },
+  "readings": [],
+  "antiphons": [],
+  "planningNotes": [],
+  "musicPlans": []
+}

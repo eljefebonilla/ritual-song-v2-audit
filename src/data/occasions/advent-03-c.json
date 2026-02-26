@@ -1,0 +1,372 @@
+{
+  "id": "advent-03-c",
+  "name": "ADVENT 03 [C]",
+  "year": "C",
+  "season": "advent",
+  "seasonLabel": "Advent",
+  "seasonOrder": 3,
+  "dates": [
+    {
+      "date": "2024-12-15",
+      "label": "Year C — Dec 15, 2024 (Sun)",
+      "dayOfWeek": "Sun"
+    },
+    {
+      "date": "2036-12-14",
+      "label": "Year C — Dec 14, 2036 (Sun)",
+      "dayOfWeek": "Sun"
+    },
+    {
+      "date": "2033-12-11",
+      "label": "Year C — Dec 11, 2033 (Sun)",
+      "dayOfWeek": "Sun"
+    },
+    {
+      "date": "2030-12-15",
+      "label": "Year C — Dec 15, 2030 (Sun)",
+      "dayOfWeek": "Sun"
+    },
+    {
+      "date": "2027-12-12",
+      "label": "Year C — Dec 12, 2027 (Sun)",
+      "dayOfWeek": "Sun"
+    }
+  ],
+  "lectionary": {
+    "number": "009•C",
+    "gospelTitle": "What Should We Do?",
+    "thematicTag": "Baptist Advent 2/2 – Ethical Fruit"
+  },
+  "readings": [
+    {
+      "type": "first",
+      "citation": "Zep 3:14-18a",
+      "summary": "Shout for joy, sing joyfully."
+    },
+    {
+      "type": "psalm",
+      "citation": "Is 12:2-3, 4, 5-6, R. v.6\nCry out with joy and gladness:\nfor among you is the great and Holy One of Israel.",
+      "summary": "",
+      "antiphon": "Is 12:2-3, 4, 5-6, R. v.6\nCry out with joy and gladness:\nfor among you is the great and Holy One of Israel."
+    },
+    {
+      "type": "second",
+      "citation": "Phil 4:4-7",
+      "summary": "Rejoice, the Lord is near."
+    },
+    {
+      "type": "gospel_verse",
+      "citation": "Is 61:1 (cited in Lk 4:18)",
+      "summary": "The Spirit of the Lord is upon me,\nbecause he has anointed me\nto bring glad tidings to the poor."
+    },
+    {
+      "type": "gospel",
+      "citation": "Luke 3:10-18",
+      "summary": "John announces the coming of the Messiah."
+    }
+  ],
+  "antiphons": [
+    {
+      "type": "entrance",
+      "option": 1,
+      "citation": "Phil 4:4–5",
+      "text": "Rejoice in the Lord always;\nagain I say, rejoice.\nIndeed, the Lord is near."
+    },
+    {
+      "type": "communion",
+      "option": 1,
+      "citation": "Cf. Is 35:4",
+      "text": "Say to the faint of heart: Be strong and do not fear.\nBehold, our God will come, and he will save us."
+    }
+  ],
+  "planningNotes": [],
+  "musicPlans": [
+    {
+      "community": "Reflections",
+      "communityId": "reflections",
+      "date": "Year C — Dec 11, 2027 (Sat)",
+      "presider": "NOT THIS YEAR",
+      "prelude": {
+        "title": "10 – Third Sunday of Advent",
+        "composer": "Let Us All REJOICE! Angrisano, Hart, & Stephan"
+      },
+      "gathering": {
+        "title": "Creator of the Stars of Night",
+        "composer": "CONDITOR ALME SIDERUM, LM; Mode IV",
+        "description": "Conditor alme siderum, Latin 9th C.;tr. The Hymnal"
+      },
+      "penitentialAct": {
+        "title": "Warm the Time of WInter",
+        "composer": "Lori True"
+      },
+      "responsorialPsalm": {
+        "psalm": "Isaiah 12 Cry out with joy and gladness...",
+        "setting": "The Lyric Psalter • Tony Alonso & Marty Haugen"
+      },
+      "gospelAcclamation": {
+        "title": "Advent/Christmas 2 — Missa Pacem",
+        "composer": "L. Randolph Babin"
+      },
+      "offertory": {
+        "title": "Dwell in the Midst of Us",
+        "composer": "Jeffrey Bonilla · David Lockwood"
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "Mass of the Incarnate Word",
+        "composer": "Bob Hurd • Traditional Arrangement"
+      },
+      "lordsPrayer": {
+        "title": "Chanted Our Father (Snow)",
+        "composer": "Jennings • Paregorius"
+      },
+      "fractionRite": {
+        "title": "Missa Veni Emmanuel",
+        "composer": "Ed Archer"
+      },
+      "communionSongs": [
+        {
+          "title": "My Soul in Stillness Waits",
+          "composer": "Marty Haugen",
+          "description": "Psalm 95 and \"O\" Antiphons"
+        },
+        {
+          "title": "In Days to Come",
+          "composer": "Sarah Hart"
+        },
+        {
+          "title": "Bethlehem (House of Bread)",
+          "composer": "Alan J. Hommerding • Ed Bolduc"
+        }
+      ],
+      "sending": {
+        "title": "Rejoice, the Lord Is King",
+        "composer": "DARWALL'S 148TH · Charles Wesley"
+      }
+    },
+    {
+      "community": "Foundations",
+      "communityId": "foundations",
+      "date": "Year C — Dec 12, 2027 (Sun)",
+      "presider": "NOT THIS YEAR",
+      "gathering": {
+        "title": "O Come, O Come Emmanuel",
+        "composer": "Grayson Warren Brown"
+      },
+      "penitentialAct": {
+        "title": "Warm the Time of WInter",
+        "composer": "Lori True"
+      },
+      "responsorialPsalm": {
+        "psalm": "Isaiah 12 Cry out with joy and gladness...",
+        "setting": "Spirit & Psalm • Scott Soper"
+      },
+      "gospelAcclamation": {
+        "title": "Hallelujah, Hallelu!",
+        "composer": "Michael Mahler",
+        "verse": "The Spirit of the Lord is upon me, because he has\nanointed me to bring glad tidings to the poor."
+      },
+      "offertory": {
+        "title": "Christ Circle Round Us",
+        "composer": "Dan Schutte",
+        "description": "Salve Regina — Chant Mode V,  O Antiphons"
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "Mass of the Incarnate Word"
+      },
+      "lordsPrayer": {
+        "title": "Chanted Our Father (Snow)",
+        "composer": "Jennings • Paregorius"
+      },
+      "fractionRite": {
+        "title": "Missa Veni Emmanuel"
+      },
+      "communionSongs": [
+        {
+          "title": "Bethlehem (House of Bread)",
+          "composer": "Alan J. Hommerding · Ed Bolduc"
+        },
+        {
+          "title": "In Days to Come",
+          "composer": "Sarah Hart"
+        }
+      ],
+      "sending": {
+        "title": "God of Day and God of Darkness",
+        "composer": "BEACH SPRING · Marty Haugen"
+      }
+    },
+    {
+      "community": "Generations",
+      "communityId": "generations",
+      "date": "Year C — Dec 12, 2027 (Sun)",
+      "presider": "NOT THIS YEAR",
+      "gathering": {
+        "title": "Emmanuel",
+        "composer": "Steve Angrisano",
+        "description": "Traditionally after Dec. 17th for 'O' Antiphons"
+      },
+      "penitentialAct": {
+        "title": "Warm the Time of WInter",
+        "composer": "Lori True"
+      },
+      "responsorialPsalm": {
+        "psalm": "Isaiah 12 Cry out with joy and gladness...",
+        "setting": "Spirit & Psalm • Scott Soper"
+      },
+      "gospelAcclamation": {
+        "title": "Hallelujah (adapted for Liturgy)",
+        "composer": "Leonard Cohen",
+        "verse": "The Spirit of the Lord is upon me, because he has\nanointed me to bring glad tidings to the poor."
+      },
+      "offertory": {
+        "title": "Dwell in the Midst of Us",
+        "composer": "Jeffrey Bonilla & David Lockwood"
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "Mass of the Incarnate Word"
+      },
+      "lordsPrayer": {
+        "title": "Chanted Our Father (Snow)",
+        "composer": "Jennings • Paregorius"
+      },
+      "fractionRite": {
+        "title": "Advent Lamb of God"
+      },
+      "communionSongs": [
+        {
+          "title": "Bethlehem (House of Bread)",
+          "composer": "Alan J. Hommerding · Ed Bolduc"
+        },
+        {
+          "title": "Glory (Let There Be Peace)",
+          "composer": "Matt Maher"
+        },
+        {
+          "title": "Come Jesus Come",
+          "composer": "CeCe Winans"
+        }
+      ],
+      "sending": {
+        "title": "Awake To The Day",
+        "composer": "Ed Bolduc"
+      }
+    },
+    {
+      "community": "Heritage",
+      "communityId": "heritage",
+      "date": "Year C — Dec 12, 2027 (Sun)",
+      "presider": "NOT THIS YEAR",
+      "prelude": {
+        "title": "10 – Third Sunday of Advent"
+      },
+      "gathering": {
+        "title": "Creator of the Stars of Night",
+        "composer": "CONDITOR ALME SIDERUM",
+        "description": "Chant, Mode IV"
+      },
+      "penitentialAct": {
+        "title": "Warm the Time of WInter",
+        "composer": "Lori True"
+      },
+      "responsorialPsalm": {
+        "psalm": "Isaiah 12 Cry out with joy and gladness...",
+        "setting": "The Lyric Psalter • Tony Alonso & Marty Haugen"
+      },
+      "gospelAcclamation": {
+        "title": "Advent/Christmas 2 — Missa Pacem",
+        "composer": "L. Randolph Babin"
+      },
+      "offertory": {
+        "title": "Dwell in the Midst of Us",
+        "composer": "Jeffrey Bonilla & David Lockwood"
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "Mass of the Incarnate Word",
+        "composer": "Bob Hurd • Traditional Arrangement"
+      },
+      "lordsPrayer": {
+        "title": "Chanted Our Father (Snow)",
+        "composer": "Jennings • Paregorius"
+      },
+      "fractionRite": {
+        "title": "Missa Veni Emmanuel"
+      },
+      "communionSongs": [
+        {
+          "title": "My Soul in Stillness Waits",
+          "composer": "Marty Haugen",
+          "description": "Psalm 95 and \"O\" Antiphons"
+        },
+        {
+          "title": "In Days to Come",
+          "composer": "Sarah Hart"
+        },
+        {
+          "title": "Bethlehem (House of Bread)",
+          "composer": "Alan J. Hommerding • Ed Bolduc"
+        }
+      ],
+      "sending": {
+        "title": "Rejoice, the Lord Is King",
+        "composer": "DARWALL'S 148TH • Charles Wesley"
+      }
+    },
+    {
+      "community": "Elevations",
+      "communityId": "elevations",
+      "date": "Year C — Dec 12, 2027 (Sun)",
+      "presider": "NOT THIS YEAR",
+      "gathering": {
+        "title": "Emmanuel",
+        "composer": "Steve Angrisano",
+        "description": "Traditionally after Dec. 17th for 'O' Antiphons"
+      },
+      "penitentialAct": {
+        "title": "Warm the Time of WInter",
+        "composer": "Lori True"
+      },
+      "responsorialPsalm": {
+        "psalm": "Isaiah 12 Cry out with joy and gladness...",
+        "setting": "Spirit & Psalm • Scott Soper"
+      },
+      "gospelAcclamation": {
+        "title": "Hallelujah, Hallelu!",
+        "composer": "Michael Mahler",
+        "verse": "The Spirit of the Lord is upon me, because he has\nanointed me to bring glad tidings to the poor."
+      },
+      "offertory": {
+        "title": "Dwell in the Midst of Us",
+        "composer": "Jeffrey Bonilla & David Lockwood"
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "Incarnate Word • Bob Hurd , Arr. by Lockwood",
+        "composer": "Bob Hurd , Arr. by Lockwood"
+      },
+      "lordsPrayer": {
+        "title": "Chanted Our Father (Snow)",
+        "composer": "Jennings • Paregorius"
+      },
+      "fractionRite": {
+        "title": "Advent Lamb of God"
+      },
+      "communionSongs": [
+        {
+          "title": "Bethlehem (House of Bread)",
+          "composer": "Alan J. Hommerding · Ed Bolduc"
+        },
+        {
+          "title": "Glory (Let There Be Peace)",
+          "composer": "Matt Maher"
+        },
+        {
+          "title": "The King Shall Come",
+          "composer": "Trevor Thomson"
+        }
+      ],
+      "sending": {
+        "title": "Awake To The Day",
+        "composer": "Ed Bolduc"
+      }
+    }
+  ]
+}

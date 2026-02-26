@@ -1,0 +1,429 @@
+{
+  "id": "ordinary-time-14-c",
+  "name": "ORDINARY TIME 14 [C]",
+  "year": "C",
+  "season": "ordinary",
+  "seasonLabel": "Ordinary Time",
+  "seasonOrder": 14,
+  "dates": [
+    {
+      "date": "2025-07-06",
+      "label": "Year C — Jul 06, 2025 (Sun)",
+      "dayOfWeek": "Sun"
+    },
+    {
+      "date": "2037-07-05",
+      "label": "Year C — Jul 05, 2037 (Sun)",
+      "dayOfWeek": "Sun"
+    },
+    {
+      "date": "2034-07-09",
+      "label": "Year C — Jul 09, 2034 (Sun)",
+      "dayOfWeek": "Sun"
+    },
+    {
+      "date": "2031-07-06",
+      "label": "Year C — Jul 06, 2031 (Sun)",
+      "dayOfWeek": "Sun"
+    },
+    {
+      "date": "2028-07-09",
+      "label": "Year C — Jul 09, 2028 (Sun)",
+      "dayOfWeek": "Sun"
+    }
+  ],
+  "lectionary": {
+    "number": "102•C",
+    "gospelTitle": "Mission of Seventy",
+    "thematicTag": "Travel Disc. (Journey to Jerusalem) 1/4"
+  },
+  "readings": [
+    {
+      "type": "first",
+      "citation": "Is 66:10-14c",
+      "summary": "The Lord will prosper Jerusalem."
+    },
+    {
+      "type": "psalm",
+      "citation": "Ps 66:1–3, 4–5, 6–7, 16, 20\nLet all the earth cry out to God with joy.",
+      "summary": "",
+      "antiphon": "Ps 66:1–3, 4–5, 6–7, 16, 20\nLet all the earth cry out to God with joy."
+    },
+    {
+      "type": "second",
+      "citation": "Gal 6:14-18",
+      "summary": "Paul boasts of the cross of Christ."
+    },
+    {
+      "type": "gospel_verse",
+      "citation": "Col 3:15a, 16a",
+      "summary": "Let the peace of Christ control your hearts;\nlet the word of Christ dwell in you richly."
+    },
+    {
+      "type": "gospel",
+      "citation": "Lk 10:1-12. 17-20 (Shorter - 10:1-9)",
+      "summary": "Jesus sends forth the seventy-two."
+    }
+  ],
+  "antiphons": [
+    {
+      "type": "entrance",
+      "option": 1,
+      "citation": "Cf. Ps 48 (47):10–11",
+      "text": "Your merciful love, O God, we have received\nin the midst of your temple. Your praise, O God,\nlike your name, reaches the ends of the earth;\nyour right hand is filled with saving justice."
+    },
+    {
+      "type": "communion",
+      "option": 1,
+      "citation": "Ps 34 (33):9",
+      "text": "Taste and see that the Lord is good;\nblessed the man who seeks refuge in him."
+    },
+    {
+      "type": "communion",
+      "option": 2,
+      "citation": "Communion Antiphon • Option II | Mt 11:28",
+      "text": "Come to me, all who labor and are burdened,\nand I will refresh you, says the Lord."
+    }
+  ],
+  "planningNotes": [],
+  "musicPlans": [
+    {
+      "community": "Reflections",
+      "communityId": "reflections",
+      "date": "Year C — Jul 05, 2025 (Sat)",
+      "presider": "NOT THIS YEAR",
+      "prelude": {
+        "title": "Peace on Earth (Larghetto)",
+        "composer": "Dvořák • adapted by Bob Hurd",
+        "description": "Prayer for Peace"
+      },
+      "gathering": {
+        "title": "Your Peace Will Make Us One",
+        "composer": "Audrey Assad",
+        "description": "\"Peace I leave with you; my peace I give to you.\""
+      },
+      "penitentialAct": {
+        "title": "Kyrie • Misa Del Mundo",
+        "composer": "Only if needed. Talk to presider!"
+      },
+      "gloria": {
+        "title": "Glory to God (Through-composed Setting)",
+        "composer": "Mass of Renewal • Curtis Stephan"
+      },
+      "responsorialPsalm": {
+        "psalm": "Ps 66 Let all the earth cry out to God with joy.",
+        "setting": "The Lyric Psalter • Tony Alonso & Marty Haugen"
+      },
+      "gospelAcclamation": {
+        "title": "Alleluia (Mass of Joy & Peace)",
+        "composer": "O.T. • 14 | C — \"Let the peace of Christ...\""
+      },
+      "offertory": {
+        "title": "Christ Before Us",
+        "composer": "Janèt Sullivan Whitaker • Mark J. Sullivan",
+        "description": "Christ to guide us all our days."
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "Mass of the Holy Family",
+        "composer": "Chris de Silva"
+      },
+      "lordsPrayer": {
+        "title": "Chanted Our Father (Snow)",
+        "composer": "Jennings/Paregorius"
+      },
+      "fractionRite": {
+        "title": "Lamb of God (Mass of the Holy Family)",
+        "composer": "Chris de Silva"
+      },
+      "communionSongs": [
+        {
+          "title": "Do Not Be Afraid",
+          "composer": "Jeanne Cotter",
+          "description": "Jesus sends out disciples."
+        },
+        {
+          "title": "Ubi Caritas",
+          "composer": "Bob Hurd",
+          "description": "\"Love one another as I have loved you\""
+        },
+        {
+          "title": "Act Justly",
+          "composer": "Bernadette Farrell",
+          "description": "\"...walk, walk, humbly with our God\""
+        }
+      ],
+      "sending": {
+        "title": "Let There Be Peace on Earth",
+        "composer": "Jill Jackson • Sy Miller",
+        "description": "Prayer for Peace"
+      }
+    },
+    {
+      "community": "Foundations",
+      "communityId": "foundations",
+      "date": "Year C — Jul 06, 2025 (Sun)",
+      "presider": "NOT THIS YEAR",
+      "gathering": {
+        "title": "Your Peace Will Make Us One",
+        "composer": "Audrey Assad",
+        "description": "\"Peace I leave with you; my peace I give to you.\""
+      },
+      "penitentialAct": {
+        "title": "Kyrie (Gift of God) • Adapted Version",
+        "composer": "Marty Haugen • Arranged by David Locwood"
+      },
+      "gloria": {
+        "title": "Glory to God (Mass of Joy & Peace)",
+        "composer": "Alonso • Arr. by Houze OR Arr. by Lockwood"
+      },
+      "responsorialPsalm": {
+        "psalm": "Ps 66 Let all the earth cry out to God...",
+        "setting": "Spirit & Psalm • Sarah Hart"
+      },
+      "offertory": {
+        "title": "Go Into the World",
+        "composer": "Tom Booth",
+        "description": "“Go into the world loving the people that you meet.\""
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "Mass of Glory • Bob Hurd • Arr. by Dan Houze"
+      },
+      "lordsPrayer": {
+        "title": "Chanted Our Father (Snow)",
+        "composer": "Jennings • Paregorius"
+      },
+      "fractionRite": {
+        "title": "Lamb of God (Mass of Glory)"
+      },
+      "communionSongs": [
+        {
+          "title": "Taste and See (Gospel Version)",
+          "composer": "James E. Moore • ValLimar Jansen",
+          "description": "Communion Antiphon"
+        },
+        {
+          "title": "Be Not Afraid",
+          "composer": "Bob Dufford, SJ",
+          "description": "\"I go before you always\""
+        }
+      ],
+      "sending": {
+        "title": "Lead Me, Guide Me",
+        "composer": "Doris Akers & Richard Smallwood",
+        "description": "Mission of Seventy-two"
+      }
+    },
+    {
+      "community": "Generations",
+      "communityId": "generations",
+      "date": "Year C — Jul 06, 2025 (Sun)",
+      "presider": "NOT THIS YEAR",
+      "prelude": {
+        "title": "Peace on Earth (Larghetto)",
+        "composer": "Dvořák • adapted by Bob Hurd",
+        "description": "Prayer for Peace"
+      },
+      "gathering": {
+        "title": "Your Peace Will Make Us One",
+        "composer": "Audrey Assad",
+        "description": "\"Peace I leave with you; my peace I give to you.\""
+      },
+      "penitentialAct": {
+        "title": "Kyrie • Misa Del Mundo",
+        "composer": "Only if needed. Talk to presider!"
+      },
+      "gloria": {
+        "title": "Glory, Glory, Gloria!",
+        "composer": "Jeffrey Bonilla & Drew Wilson"
+      },
+      "responsorialPsalm": {
+        "psalm": "Ps 66 Let all the earth cry out to God...",
+        "setting": "Spirit & Psalm • Sarah Hart"
+      },
+      "gospelAcclamation": {
+        "title": "Setting from Mass of Restoration",
+        "composer": "O.T. • 14 | C — \"Let the peace of Christ...\""
+      },
+      "offertory": {
+        "title": "We Walk By Faith",
+        "composer": "Marty Haugen • Arranged by David Lockwood",
+        "description": "Jesus sends out disciples."
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "Mass of Restoration",
+        "composer": "Joshua Blakesley"
+      },
+      "lordsPrayer": {
+        "title": "(Echo) Our Father",
+        "composer": "Jerome Andrews • Arranged by Dan Houze"
+      },
+      "fractionRite": {
+        "title": "Lamb of God (Resoration)"
+      },
+      "communionSongs": [
+        {
+          "title": "Come to the Water",
+          "composer": "John Foley SJ • Matt Maher • Adapt by Arielle Phan",
+          "description": "Communion Antiphon"
+        },
+        {
+          "title": "Pan del Cielo / Bread from Heaven",
+          "composer": "Iván Díaz",
+          "description": "\"Bread of Life, hope for all the lowly\""
+        },
+        {
+          "title": "Taste and See",
+          "composer": "Bob Hurd",
+          "description": "Fun Groove Version - Communion Antiphon"
+        },
+        {
+          "title": "Strength for the Journey",
+          "composer": "Michael John Poirier",
+          "description": "\"There is a road meant for you to travel\""
+        }
+      ],
+      "sending": {
+        "title": "Act Justly, Love Mercy, Walk Humbly",
+        "composer": "Pat Barrett",
+        "description": "Good News to all the world!"
+      }
+    },
+    {
+      "community": "Heritage",
+      "communityId": "heritage",
+      "date": "Year C — Jul 06, 2025 (Sun)",
+      "presider": "NOT THIS YEAR",
+      "prelude": {
+        "title": "Peace on Earth (Larghetto)",
+        "composer": "Dvořák • adapted by Bob Hurd",
+        "description": "Prayer for Peace"
+      },
+      "gathering": {
+        "title": "Your Peace Will Make Us One",
+        "composer": "Audrey Assad",
+        "description": "\"Peace I leave with you; my peace I give to you.\""
+      },
+      "penitentialAct": {
+        "title": "Kyrie • Misa Del Mundo",
+        "composer": "Only if needed. Talk to presider!"
+      },
+      "gloria": {
+        "title": "Glory to God (Mass of Christ the Savior)",
+        "composer": "Dan Schutte"
+      },
+      "responsorialPsalm": {
+        "psalm": "Ps 66 Let all the earth cry out to God with joy.",
+        "setting": "The Lyric Psalter • Tony Alonso & Marty Haugen"
+      },
+      "gospelAcclamation": {
+        "title": "Alleluia (Mass of Joy & Peace)",
+        "composer": "O.T. • 14 | C — \"Let the peace of Christ...\""
+      },
+      "offertory": {
+        "title": "Act Justly",
+        "composer": "Bernadette Farrell",
+        "description": "\"...walk, walk, humbly with our God\""
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "Mass of Christ the Savior - Dan Schutte"
+      },
+      "lordsPrayer": {
+        "title": "Echo Our Father",
+        "composer": "Andrews, Arr. Bonilla • Lockwood • Fajardo"
+      },
+      "fractionRite": {
+        "title": "Lamb of God (Mass of Christ the Savior)"
+      },
+      "communionSongs": [
+        {
+          "title": "Be Not Afraid",
+          "composer": "Bob Dufford, SJ",
+          "description": "\"I go before you always\""
+        },
+        {
+          "title": "Taste and See",
+          "composer": "Bob Hurd • Craig Kingsbury • Dominic MacAller",
+          "description": "Communion Antiphon"
+        },
+        {
+          "title": "Ubi Caritas",
+          "composer": "Bob Hurd",
+          "description": "\"Love one another as I have loved you\""
+        }
+      ],
+      "sending": {
+        "title": "Let There Be Peace on Earth",
+        "composer": "Jill Jackson • Sy Miller",
+        "description": "Prayer for Peace"
+      }
+    },
+    {
+      "community": "Elevations",
+      "communityId": "elevations",
+      "date": "Year C — Jul 06, 2025 (Sun)",
+      "presider": "NOT THIS YEAR",
+      "prelude": {
+        "title": "Peace on Earth (Larghetto)",
+        "composer": "Dvořák • adapted by Bob Hurd",
+        "description": "Prayer for Peace"
+      },
+      "gathering": {
+        "title": "Your Peace Will Make Us One",
+        "composer": "Audrey Assad",
+        "description": "\"Peace I leave with you; my peace I give to you.\""
+      },
+      "penitentialAct": {
+        "title": "Kyrie • Misa Del Mundo",
+        "composer": "Only if needed. Talk to presider!"
+      },
+      "gloria": {
+        "title": "Glory, Glory, Gloria!"
+      },
+      "responsorialPsalm": {
+        "psalm": "Ps 66 Let all the earth cry out to God...",
+        "setting": "Spirit & Psalm • Sarah Hart"
+      },
+      "gospelAcclamation": {
+        "title": "Setting from Mass of Restoration",
+        "verse": "O.T. • 14 | C — \"Let the peace of Christ...\""
+      },
+      "offertory": {
+        "title": "We Walk By Faith",
+        "composer": "Marty Haugen • Arranged by David Lockwood",
+        "description": "Jesus sends out disciples."
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "Mass of Restoration • Joshua Blakesley"
+      },
+      "lordsPrayer": {
+        "title": "Echo Our Father",
+        "composer": "Andrews, Arr. Bonilla • Lockwood • Fajardo"
+      },
+      "fractionRite": {
+        "title": "Lamb of God (Resoration)"
+      },
+      "communionSongs": [
+        {
+          "title": "Come to the Water",
+          "composer": "John Foley SJ • Matt Maher • Adapt by Arielle Phan",
+          "description": "Communion Antiphon"
+        },
+        {
+          "title": "Pan del Cielo / Bread from Heaven",
+          "composer": "Iván Díaz",
+          "description": "\"Bread of Life, hope for all the lowly\""
+        },
+        {
+          "title": "Strength for the Journey",
+          "composer": "Michael John Poirier",
+          "description": "\"There is a road meant for you to travel\""
+        }
+      ],
+      "sending": {
+        "title": "Act Justly, Love Mercy, Walk Humbly",
+        "composer": "Pat Barrett",
+        "description": "Good News to all the world!"
+      }
+    }
+  ]
+}

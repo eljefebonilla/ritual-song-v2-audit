@@ -1,0 +1,351 @@
+{
+  "id": "year-c-jun-08-2025-sun",
+  "name": "Year C — Jun 08, 2025 (Sun)",
+  "year": "ABC",
+  "season": "ordinary",
+  "seasonLabel": "Ordinary Time",
+  "seasonOrder": 8,
+  "dates": [],
+  "lectionary": {
+    "number": "Year C — May 20, 2040 (Sun)",
+    "gospelTitle": "Year C — May 24, 2037 (Sun)",
+    "thematicTag": "Year C — May 28, 2034 (Sun)",
+    "thematicDetail": "Year C — Jun 01, 2031 (Sun)"
+  },
+  "readings": [
+    {
+      "type": "psalm",
+      "citation": "Receive Spirit | Alt. Spirit Promise",
+      "summary": "",
+      "antiphon": "Planning Reminders"
+    },
+    {
+      "type": "second",
+      "citation": "SEQUENCE!!!",
+      "summary": ""
+    },
+    {
+      "type": "gospel_verse",
+      "citation": "The Spirit of the Lord has filled the whole world\nand that which contains all things\nunderstands what is said, alleluia.",
+      "summary": "Entrance Antiphon • Option II | Rom 5:5; cf. 8:11"
+    },
+    {
+      "type": "gospel",
+      "citation": "Reading I | Acts 2:1-11",
+      "summary": "The Spirit comes to the Apostles as tongues of fire."
+    }
+  ],
+  "antiphons": [
+    {
+      "type": "entrance",
+      "option": 1,
+      "citation": "Verse before the Gospel | Lectionary",
+      "text": "Come, Holy Spirit, fill the hearts of your faithful\nand kindle in them the fire of your love."
+    },
+    {
+      "type": "communion",
+      "option": 2,
+      "citation": "Communion Antiphon | Acts 2:4, 11",
+      "text": "They were all filled with the Holy Spirit\nand spoke of the marvels of God, alleluia."
+    }
+  ],
+  "planningNotes": [
+    "Communion Antiphon • Option II",
+    "N/A"
+  ],
+  "musicPlans": [
+    {
+      "community": "Foundations",
+      "communityId": "foundations",
+      "date": "Year C — Jun 04, 2028 (Sun)",
+      "presider": "NOT THIS YEAR",
+      "prelude": {
+        "title": "Regina Caeli / O Queen of Heaven",
+        "composer": "Mode VI Latin • 12th C",
+        "description": "Pope Leo XIV singing Regina Caeli"
+      },
+      "penitentialAct": {
+        "title": "Louis Lambillotte SJ",
+        "composer": "Pentecost",
+        "description": "Penitential Act"
+      },
+      "gloria": {
+        "title": "Kyrie (Gift of God) • Adapted Version",
+        "composer": "Marty Haugen • Arranged by David Locwood",
+        "description": "Gloria"
+      },
+      "gospelAcclamation": {
+        "title": "Spirit & Psalm • Steve Angrisano",
+        "composer": "Gospel Acclamation",
+        "verse": "Pentecost Sequence (Archer)"
+      },
+      "offertory": {
+        "title": "Verse Audio Example",
+        "description": "Offertory Song"
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "Spirit of God",
+        "composer": "James E. Moore"
+      },
+      "lordsPrayer": {
+        "title": "Eucharistic Acclamations",
+        "composer": "Mass of Glory • Bob Hurd • Arr. by Dan Houze",
+        "description": "Bob Hurd & Ken Canedo"
+      },
+      "fractionRite": {
+        "title": "Holy, Holy",
+        "composer": "We Proclaim Your Death",
+        "description": "Amen"
+      },
+      "communionSongs": [
+        {
+          "title": "The Lord's Prayer",
+          "composer": "Chanted Our Father (Snow)",
+          "description": "Jennings • Paregorius"
+        },
+        {
+          "title": "Fraction Rite",
+          "composer": "Lamb of God (Mass of Glory)"
+        },
+        {
+          "title": "Communion Songs",
+          "composer": "One Bread, One Body",
+          "description": "John Foley, SJ"
+        },
+        {
+          "title": "Second Reading",
+          "composer": "Holy Spirit, Flow Through Me",
+          "description": "Walt Mills • Lead Me Guide Me 2"
+        }
+      ],
+      "sending": {
+        "title": "ST COLUMBA (Traditional Irish) • Edwin Hatch",
+        "composer": "\"Fill me with life anew,\r\""
+      }
+    },
+    {
+      "community": "Generations",
+      "communityId": "generations",
+      "date": "Year C — Jun 04, 2028 (Sun)",
+      "presider": "NOT THIS YEAR",
+      "prelude": {
+        "title": "Regina Caeli / O Queen of Heaven",
+        "composer": "Mode VI Latin • 12th C",
+        "description": "Pope Leo XIV singing Regina Caeli"
+      },
+      "penitentialAct": {
+        "title": "John Angotti",
+        "composer": "Translation: Come, Holy Spirit, Creator blest...",
+        "description": "Penitential Act"
+      },
+      "gloria": {
+        "title": "Kyrie • Misa Del Mundo",
+        "composer": "Only if needed. Talk to presider!",
+        "description": "Gloria"
+      },
+      "gospelAcclamation": {
+        "title": "Spirit & Psalm • Steve Angrisano",
+        "composer": "Gospel Acclamation",
+        "verse": "Pentecost Sequence (Archer)"
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "Christ Be Our Light",
+        "composer": "Bernadette Farrell"
+      },
+      "lordsPrayer": {
+        "title": "Eucharistic Acclamations",
+        "composer": "Mass of Glory",
+        "description": "Bob Hurd • Arr. by Dan Houze"
+      },
+      "fractionRite": {
+        "title": "Holy",
+        "composer": "Mystery of Faith",
+        "description": "Amen"
+      },
+      "communionSongs": [
+        {
+          "title": "The Lord's Prayer",
+          "composer": "(Echo) Our Father",
+          "description": "Jerome Andrews • Arranged by Dan Houze"
+        },
+        {
+          "title": "Fraction Rite",
+          "composer": "Lamb of God (Mass of Glory)"
+        },
+        {
+          "title": "Communion Songs",
+          "composer": "Holy Spirit",
+          "description": "Bryan & Katie Torwalt"
+        },
+        {
+          "title": "\"The Advocate... will teach you everything...\"",
+          "composer": "One Bread, One Body",
+          "description": "John Foley, SJ"
+        },
+        {
+          "title": "Second Reading",
+          "composer": "Jesus Christ, You Are My Life",
+          "description": "Marco Frisina"
+        },
+        {
+          "title": "\"Holy fire, come dwell in each heart.\"",
+          "composer": "Breathe",
+          "description": "Hillsong Worship"
+        }
+      ],
+      "sending": {
+        "title": "Creator Spirit, by Whose Aid",
+        "composer": "Arr. by David Lockwood",
+        "description": "All Creatures of Our God and King different Lyrics"
+      }
+    },
+    {
+      "community": "Heritage",
+      "communityId": "heritage",
+      "date": "Year C — Jun 04, 2028 (Sun)",
+      "presider": "NOT THIS YEAR",
+      "prelude": {
+        "title": "Regina Caeli / O Queen of Heaven",
+        "composer": "Mode VI Latin • 12th C",
+        "description": "Pope Leo XIV singing Regina Caeli"
+      },
+      "penitentialAct": {
+        "title": "LASST UNS ERFREUEN",
+        "composer": "Same tune as 'All Creatures of Our God and King'",
+        "description": "Penitential Act"
+      },
+      "gloria": {
+        "title": "Kyrie • Misa Del Mundo",
+        "composer": "Only if needed. Talk to presider!",
+        "description": "Gospel Acclamation"
+      },
+      "gospelAcclamation": {
+        "title": "Lyric Psalter • Tony Alonso & Marty Haugen",
+        "composer": "Gospel Acclamation",
+        "verse": "Pentecost Sequence (Archer)"
+      },
+      "offertory": {
+        "title": "Lyric Gospel Acclamations • Tony Alonso",
+        "description": "Offertory Song"
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "Christ Be Our Light",
+        "composer": "Bernadette Farrell"
+      },
+      "lordsPrayer": {
+        "title": "Eucharistic Acclamations",
+        "composer": "Mass of Joy & Peace",
+        "description": "Tony Alonso"
+      },
+      "fractionRite": {
+        "title": "Holy, Holy, Holy",
+        "composer": "When We Eat This Bread",
+        "description": "Amen"
+      },
+      "communionSongs": [
+        {
+          "title": "The Lord's Prayer",
+          "composer": "Chanted Our Father (Snow)",
+          "description": "Jennings/Paregorius"
+        },
+        {
+          "title": "Fraction Rite",
+          "composer": "Lamb of God (Mass of Joy & Peace)"
+        },
+        {
+          "title": "Communion Songs",
+          "composer": "One Bread, One Body",
+          "description": "John Foley, SJ"
+        },
+        {
+          "title": "Second Reading",
+          "composer": "I, The Lord",
+          "description": "Tom Kendzia"
+        },
+        {
+          "title": "\"I will lead you home... follow me\"",
+          "composer": "Send out Your Spirit",
+          "description": "Bernadette Farrell • Jo Routh • Kevin Walsh"
+        }
+      ],
+      "sending": {
+        "title": "ST COLUMBA (Traditional Irish) • Edwin Hatch",
+        "composer": "\"Fill me with life anew,\r\""
+      }
+    },
+    {
+      "community": "Elevations",
+      "communityId": "elevations",
+      "date": "Year C — Jun 04, 2028 (Sun)",
+      "presider": "NOT THIS YEAR",
+      "prelude": {
+        "title": "Song Title",
+        "composer": "Composer/s"
+      },
+      "penitentialAct": {
+        "title": "John Angotti",
+        "composer": "Translation: Come, Holy Spirit, Creator blest...",
+        "description": "Penitential Act"
+      },
+      "gloria": {
+        "title": "Kyrie • Misa Del Mundo",
+        "composer": "Only if needed. Talk to presider!",
+        "description": "Gloria"
+      },
+      "gospelAcclamation": {
+        "title": "Spirit & Psalm • Steve Angrisano",
+        "composer": "Gospel Acclamation",
+        "verse": "Pentecost Sequence (Archer)"
+      },
+      "offertory": {
+        "title": "The Lyric Gospel Acclamations • Tony Alonso",
+        "description": "Offertory Song"
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "Christ Be Our Light",
+        "composer": "Bernadette Farrell"
+      },
+      "lordsPrayer": {
+        "title": "Eucharistic Acclamations",
+        "composer": "Mass of Restoration",
+        "description": "Joshua Blakesley"
+      },
+      "fractionRite": {
+        "title": "Holy, Holy, Holy",
+        "composer": "Save Us Savior of the World",
+        "description": "Amen"
+      },
+      "communionSongs": [
+        {
+          "title": "The Lord's Prayer",
+          "composer": "Echo Our Father",
+          "description": "Andrews, Arr. Bonilla • Lockwood • Fajardo"
+        },
+        {
+          "title": "Fraction Rite",
+          "composer": "Lamb of God (Resoration)"
+        },
+        {
+          "title": "Communion Songs",
+          "composer": "One Bread, One Body",
+          "description": "John Foley, SJ"
+        },
+        {
+          "title": "Second Reading",
+          "composer": "Jesus Christ, You Are My Life",
+          "description": "Marco Frisina"
+        },
+        {
+          "title": "\"Holy fire, come dwell in each heart.\"",
+          "composer": "Come, Holy Spirit",
+          "description": "Tom Booth • Robert Feduccia"
+        }
+      ],
+      "sending": {
+        "title": "Sending Song",
+        "composer": "Creator Spirit, by Whose Aid",
+        "description": "Arr. by David Lockwood"
+      }
+    }
+  ]
+}

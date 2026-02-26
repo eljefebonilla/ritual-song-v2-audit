@@ -1,0 +1,438 @@
+{
+  "id": "ordinary-time-30-c",
+  "name": "ORDINARY TIME 30 [C]",
+  "year": "C",
+  "season": "ordinary",
+  "seasonLabel": "Ordinary Time",
+  "seasonOrder": 30,
+  "dates": [
+    {
+      "date": "2025-10-26",
+      "label": "Year C — Oct 26, 2025 (Sun)",
+      "dayOfWeek": "Sun"
+    },
+    {
+      "date": "2037-10-25",
+      "label": "Year C — Oct 25, 2037 (Sun)",
+      "dayOfWeek": "Sun"
+    },
+    {
+      "date": "2034-10-29",
+      "label": "Year C — Oct 29, 2034 (Sun)",
+      "dayOfWeek": "Sun"
+    },
+    {
+      "date": "2031-10-26",
+      "label": "Year C — Oct 26, 2031 (Sun)",
+      "dayOfWeek": "Sun"
+    },
+    {
+      "date": "2028-10-29",
+      "label": "Year C — Oct 29, 2028 (Sun)",
+      "dayOfWeek": "Sun"
+    }
+  ],
+  "lectionary": {
+    "number": "150•C",
+    "gospelTitle": "Justified by Humility",
+    "thematicTag": "Prayer Parables 2/2"
+  },
+  "readings": [
+    {
+      "type": "first",
+      "citation": "Sir 35:12-14, 16-18",
+      "summary": "The Lord judges justly with no favorites."
+    },
+    {
+      "type": "psalm",
+      "citation": "Ps 34:2-3, 17-18, 19, 23, R. v.7a\nThe Lord hears the cry of the poor.",
+      "summary": "",
+      "antiphon": "Ps 34:2-3, 17-18, 19, 23, R. v.7a\nThe Lord hears the cry of the poor."
+    },
+    {
+      "type": "second",
+      "citation": "2 Tm 4:6-8, 16-18",
+      "summary": "Paul concludes his writing, is ready for the Day of the Lord."
+    },
+    {
+      "type": "gospel_verse",
+      "citation": "2 Cor 5:19",
+      "summary": "God was reconciling the world to himself in Christ,\nand entrusting to us the message of salvation."
+    },
+    {
+      "type": "gospel",
+      "citation": "Lk 18:9-14",
+      "summary": "Those who humble themselves will be exalted."
+    }
+  ],
+  "antiphons": [
+    {
+      "type": "entrance",
+      "option": 1,
+      "citation": "Cf. Ps 105 (104):3–4",
+      "text": "Let the hearts that seek the Lord rejoice;\nturn to the Lord and his strength; constantly seek his face."
+    },
+    {
+      "type": "communion",
+      "option": 1,
+      "citation": "Cf. Ps 20 (19):6",
+      "text": "We will ring out our joy at your saving help\nand exult in the name of our God."
+    },
+    {
+      "type": "communion",
+      "option": 2,
+      "citation": "Roman Missal — Eph 5:2",
+      "text": "Christ loved us and gave himself up for us,\nas a fragrant offering to God."
+    }
+  ],
+  "planningNotes": [
+    "Month of Holy Rosary",
+    "Respect Life Month",
+    "Catholic Social Teaching Month"
+  ],
+  "musicPlans": [
+    {
+      "community": "Reflections",
+      "communityId": "reflections",
+      "date": "Year C — Oct 25, 2025 (Sat)",
+      "presider": "Fr. Thomas Park",
+      "prelude": {
+        "title": "Hail Mary: Gentle Woman",
+        "composer": "Carey Landry",
+        "description": "Month of the Holy Rosary"
+      },
+      "gathering": {
+        "title": "Gather Us In",
+        "composer": "Marty Haugen",
+        "description": "Humility: V2 - \"Give us a heart so meek and so lowly...\""
+      },
+      "penitentialAct": {
+        "title": "Kyrie • Misa Del Mundo",
+        "composer": "Only if needed. Talk to presider!"
+      },
+      "gloria": {
+        "title": "Glory to God (Through-composed Setting)",
+        "composer": "Mass of Renewal • Curtis Stephan"
+      },
+      "responsorialPsalm": {
+        "psalm": "Ps 34 The Lord hears the cry of the poor.",
+        "setting": "The Lyric Psalter • Tony Alonso & Marty Haugen"
+      },
+      "gospelAcclamation": {
+        "title": "Alleluia (Mass of Joy & Peace)",
+        "composer": "O.T. • 30 | C — \"God was reconciling...\""
+      },
+      "offertory": {
+        "title": "Humbly, Lord, We Worship You",
+        "composer": "Sr. Jeanne Frolick SFCC",
+        "description": "\"Lord, forgive us all our faults\""
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "Mass for the Healing of the World",
+        "composer": "Trevor Thomson"
+      },
+      "lordsPrayer": {
+        "title": "Chanted Our Father (Snow)",
+        "composer": "Jennings/Paregorius"
+      },
+      "fractionRite": {
+        "title": "Lamb of God (Mass for the Healing of the World)",
+        "composer": "Trevor Thomson"
+      },
+      "communionSongs": [
+        {
+          "title": "Christ in Me Arise",
+          "composer": "Trevor Thomson",
+          "description": "Respect Life Month: \"You who formed me in my mother's womb\""
+        },
+        {
+          "title": "Holy Is His Name",
+          "composer": "John Michael Talbot",
+          "description": "Mary's humble gratitute."
+        },
+        {
+          "title": "Litany of Humility",
+          "composer": "Thomas Muglia",
+          "description": "Based on 'Litany of Humility' by Rafael Merry del Val y Zulueta"
+        }
+      ],
+      "sending": {
+        "title": "O Breathe on Me, O Breath of God",
+        "composer": "ST COLUMBA (Traditional Irish) • Edwin Hatch",
+        "description": "\"until my will is one with yours\""
+      }
+    },
+    {
+      "community": "Foundations",
+      "communityId": "foundations",
+      "date": "Year C — Oct 26, 2025 (Sun)",
+      "presider": "Fr. Eusebio Llonoso",
+      "prelude": {
+        "title": "Hail Mary: Gentle Woman",
+        "composer": "Carey Landry",
+        "description": "Month of the Holy Rosary"
+      },
+      "gathering": {
+        "title": "As We Gather at Your Table",
+        "composer": "NETTLETON • Carl P. Daw • Arr. by J. Bonilla",
+        "description": "\"help us know, O God, your presence...\""
+      },
+      "penitentialAct": {
+        "title": "Kyrie (Gift of God) • Adapted Version",
+        "composer": "Marty Haugen • Arranged by David Locwood"
+      },
+      "gloria": {
+        "title": "Glory to God (Mass of Joy & Peace)",
+        "composer": "Alonso • Arr. by Houze OR Arr. by Lockwood"
+      },
+      "responsorialPsalm": {
+        "psalm": "Ps 34 The Lord hears the cry of the poor.",
+        "setting": "The Lyric Psalter • Tony Alonso & Marty Haugen"
+      },
+      "offertory": {
+        "title": "Humbly, Lord, We Worship You",
+        "composer": "Sr. Jeanne Frolick SFCC",
+        "description": "\"Lord, forgive us all our faults\""
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "Mass of Glory • Bob Hurd • Arr. by Dan Houze"
+      },
+      "lordsPrayer": {
+        "title": "Chanted Our Father (Snow)",
+        "composer": "Jennings • Paregorius"
+      },
+      "fractionRite": {
+        "title": "Lamb of God (Mass of Glory)"
+      },
+      "communionSongs": [
+        {
+          "title": "Bread for the World",
+          "composer": "Bernadette Farrell",
+          "description": "\"...broken to reacxh and heal the wounds of human pain\""
+        },
+        {
+          "title": "Precious Lord, Take My Hand",
+          "composer": "Thomas A. Dorsey",
+          "description": "\"...take my hand, lead me on, let me stand...\""
+        }
+      ],
+      "sending": {
+        "title": "Lord, Whose Love in Humble Service",
+        "composer": "BEACH SPRING • Albert F. Bayly",
+        "description": "Gospel Theme | Humility"
+      }
+    },
+    {
+      "community": "Generations",
+      "communityId": "generations",
+      "date": "Year C — Oct 26, 2025 (Sun)",
+      "presider": "Msgr. Lloyd Torgerson",
+      "prelude": {
+        "title": "Hail Mary: Gentle Woman",
+        "composer": "Carey Landry",
+        "description": "Month of the Holy Rosary"
+      },
+      "gathering": {
+        "title": "You Are Welcome Here",
+        "composer": "Chris Muglia",
+        "description": "\"...find your forgiveness and strength\""
+      },
+      "penitentialAct": {
+        "title": "Kyrie • Misa Del Mundo",
+        "composer": "Only if needed. Talk to presider!"
+      },
+      "gloria": {
+        "title": "Glory, Glory, Gloria!",
+        "composer": "Jeffrey Bonilla & Drew Wilson"
+      },
+      "responsorialPsalm": {
+        "psalm": "Ps 34 The Lord hears the cry of the poor.",
+        "setting": "The Lyric Psalter • Tony Alonso & Marty Haugen"
+      },
+      "gospelAcclamation": {
+        "title": "Setting from Mass of the Desert",
+        "composer": "O.T. • 30 | C — \"God was reconciling...\""
+      },
+      "offertory": {
+        "title": "Simple Kingdom [NEW]",
+        "composer": "Bryan & Katie Torwaltwith with Cody Carnes",
+        "description": "\"Your kingdom is humble as humble as death\""
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "Mass of Restoration",
+        "composer": "Joshua Blakesley"
+      },
+      "lordsPrayer": {
+        "title": "(Echo) Our Father",
+        "composer": "Jerome Andrews • Arranged by Dan Houze"
+      },
+      "fractionRite": {
+        "title": "Lamb of God (Resoration)"
+      },
+      "communionSongs": [
+        {
+          "title": "Daily Bread",
+          "composer": "Pat Barrett • Kari Jobe",
+          "description": "\"...we will seek your face before we seek your hand\""
+        },
+        {
+          "title": "Miracle of Grace",
+          "composer": "Curtis Stephan",
+          "description": "“Unworthy though we are you feed the hungry heart…\""
+        },
+        {
+          "title": "Remembrance",
+          "composer": "Hillsong",
+          "description": "\"If ever I should lose my way... remind me of the price You paid\""
+        },
+        {
+          "title": "This Is the Kingdom",
+          "composer": "Elevation Worship • Pat Barrett • Arr. by E. Fajardo",
+          "description": "✪ OT - 30 C (Beatitudes)"
+        }
+      ],
+      "sending": {
+        "title": "Act Justly, Love Mercy, Walk Humbly",
+        "composer": "Pat Barrett",
+        "description": "Walk humbly!"
+      }
+    },
+    {
+      "community": "Heritage",
+      "communityId": "heritage",
+      "date": "Year C — Oct 26, 2025 (Sun)",
+      "presider": "Fr. Vince Kuna",
+      "prelude": {
+        "title": "Hail Mary: Gentle Woman",
+        "composer": "Carey Landry",
+        "description": "Month of the Holy Rosary"
+      },
+      "gathering": {
+        "title": "Gather Us In",
+        "composer": "Marty Haugen",
+        "description": "Prayer for Humility: V2 - \"Give us a heart so meek and so lowly...\""
+      },
+      "penitentialAct": {
+        "title": "Kyrie • Misa Del Mundo",
+        "composer": "Only if needed. Talk to presider!"
+      },
+      "gloria": {
+        "title": "Glory to God (Mass of Christ the Savior)",
+        "composer": "Dan Schutte"
+      },
+      "responsorialPsalm": {
+        "psalm": "Ps 34 The Lord hears the cry of the poor.",
+        "setting": "The Lyric Psalter • Tony Alonso & Marty Haugen"
+      },
+      "gospelAcclamation": {
+        "title": "Alleluia (Mass of Joy & Peace)",
+        "composer": "O.T. • 30 | C — \"God was reconciling...\""
+      },
+      "offertory": {
+        "title": "Humbly, Lord, We Worship You",
+        "composer": "Sr. Jeanne Frolick SFCC",
+        "description": "\"Lord, forgive us all our faults\""
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "Mass of Christ the Savior - Dan Schutte"
+      },
+      "lordsPrayer": {
+        "title": "Echo Our Father",
+        "composer": "Andrews, Arr. Bonilla • Lockwood • Fajardo"
+      },
+      "fractionRite": {
+        "title": "Lamb of God (Mass of Christ the Savior)"
+      },
+      "communionSongs": [
+        {
+          "title": "Center of My Life",
+          "composer": "Paul Inwood",
+          "description": "\"...I will always serve you...\""
+        },
+        {
+          "title": "Bread for the World",
+          "composer": "Bernadette Farrell",
+          "description": "\"...broken to reacxh and heal the wounds of human pain\""
+        },
+        {
+          "title": "Holy Is His Name",
+          "composer": "John Michael Talbot",
+          "description": "Mary's humble gratitute."
+        }
+      ],
+      "sending": {
+        "title": "Lord, Whose Love in Humble Service",
+        "composer": "BEACH SPRING • Albert F. Bayly",
+        "description": "Gospel Theme | Humility"
+      }
+    },
+    {
+      "community": "Elevations",
+      "communityId": "elevations",
+      "date": "Year C — Oct 26, 2025 (Sun)",
+      "presider": "Msgr. Lloyd Torgerson",
+      "prelude": {
+        "title": "Hail Mary: Gentle Woman",
+        "composer": "Carey Landry",
+        "description": "Month of the Holy Rosary"
+      },
+      "gathering": {
+        "title": "You Are Welcome Here",
+        "composer": "Chris Muglia",
+        "description": "\"...find your forgiveness and strength\""
+      },
+      "penitentialAct": {
+        "title": "Kyrie • Misa Del Mundo",
+        "composer": "Only if needed. Talk to presider!"
+      },
+      "gloria": {
+        "title": "Glory, Glory, Gloria!"
+      },
+      "responsorialPsalm": {
+        "psalm": "Ps 34 The Lord hears the cry of the poor.",
+        "setting": "The Lyric Psalter • Tony Alonso & Marty Haugen"
+      },
+      "gospelAcclamation": {
+        "title": "Setting from Mass of the Desert",
+        "verse": "O.T. • 30 | C — \"God was reconciling...\""
+      },
+      "offertory": {
+        "title": "Simple Kingdom [NEW]",
+        "composer": "Bryan & Katie Torwaltwith with Cody Carnes",
+        "description": "\"Your kingdom is humble as humble as death\""
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "Mass of Restoration • Joshua Blakesley"
+      },
+      "lordsPrayer": {
+        "title": "Echo Our Father",
+        "composer": "Andrews, Arr. Bonilla • Lockwood • Fajardo"
+      },
+      "fractionRite": {
+        "title": "Lamb of God (Resoration)"
+      },
+      "communionSongs": [
+        {
+          "title": "Daily Bread",
+          "composer": "Pat Barrett • Kari Jobe",
+          "description": "\"...we will seek your face before we seek your hand\""
+        },
+        {
+          "title": "Miracle of Grace",
+          "composer": "Curtis Stephan",
+          "description": "“Unworthy though we are you feed the hungry heart…\""
+        },
+        {
+          "title": "This Is the Kingdom",
+          "composer": "Elevation Worship • Pat Barrett • Arr. by E. Fajardo",
+          "description": "✪ OT - 30 C (Beatitudes)"
+        }
+      ],
+      "sending": {
+        "title": "Your Grace Is Enough",
+        "composer": "Matt Maher",
+        "description": "Humility - \"You choose the weak to lead the strong\""
+      }
+    }
+  ]
+}

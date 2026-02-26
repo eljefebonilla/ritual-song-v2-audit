@@ -1,0 +1,399 @@
+{
+  "id": "ordinary-time-06-c",
+  "name": "ORDINARY TIME 06 [C]",
+  "year": "C",
+  "season": "ordinary",
+  "seasonLabel": "Ordinary Time",
+  "seasonOrder": 6,
+  "dates": [
+    {
+      "date": "2025-02-16",
+      "label": "Year C — Feb 16, 2025 (Sun)",
+      "dayOfWeek": "Sun"
+    }
+  ],
+  "lectionary": {
+    "number": "078•C",
+    "gospelTitle": "Blessings and Woes",
+    "thematicTag": "Sermon Plain 1/3"
+  },
+  "readings": [
+    {
+      "type": "first",
+      "citation": "Cf. Ps 31 (30):3–9",
+      "summary": "Entrance Antiphon | Cf. Ps 31 (30):3–10"
+    },
+    {
+      "type": "psalm",
+      "citation": "Entrance Antiphon | Cf. Ps 31 (30):3–11",
+      "summary": "",
+      "antiphon": "Entrance Antiphon | Cf. Ps 31 (30):3–11"
+    },
+    {
+      "type": "second",
+      "citation": "Cf. Ps 31 (30):3–12",
+      "summary": "Entrance Antiphon | Cf. Ps 31 (30):3–13"
+    },
+    {
+      "type": "gospel_verse",
+      "citation": "Cf. Ps 31 (30):3–15",
+      "summary": "Rejoice and be glad;\nyour reward will be great in heaven."
+    },
+    {
+      "type": "gospel",
+      "citation": "Lk 6:17, 20-26",
+      "summary": "The beginning of the Sermon on the Plain (Mount)."
+    }
+  ],
+  "antiphons": [
+    {
+      "type": "entrance",
+      "option": 1,
+      "citation": "Cf. Ps 31 (30):3–4",
+      "text": "Entrance Antiphon | Cf. Ps 31 (30):3–5"
+    },
+    {
+      "type": "entrance",
+      "option": 2,
+      "citation": "Entrance Antiphon | Cf. Ps 31 (30):3–6",
+      "text": "Entrance Antiphon | Cf. Ps 31 (30):3–7"
+    },
+    {
+      "type": "communion",
+      "option": 1,
+      "citation": "Cf. Ps 78 (77):29–30",
+      "text": "They ate and had their fill,\nand what they craved the Lord gave them;\nthey were not disappointed in what they craved."
+    },
+    {
+      "type": "communion",
+      "option": 2,
+      "citation": "Communion Antiphon • Option II | Cf. Jn 3:16",
+      "text": "God so loved the world\nthat he gave his Only Begotten Son,\nso that all who believe in him may not perish,\nbut may have eternal life."
+    }
+  ],
+  "planningNotes": [
+    "FEB - BLACKHISTORYMONTH",
+    "Together in Mission (Part I)",
+    "♡ VALENTINE'S DAY ♡"
+  ],
+  "musicPlans": [
+    {
+      "community": "Reflections",
+      "communityId": "reflections",
+      "date": "Year C — Feb 12, 2028 (Sat)",
+      "presider": "NOT THIS YEAR",
+      "gathering": {
+        "title": "Make Us True Servants",
+        "composer": "SLANE • Susan G Wente",
+        "description": "\"Loving our neighbor whatever the cost\""
+      },
+      "penitentialAct": {
+        "title": "Kyrie • Misa Del Mundo",
+        "composer": "Jesse Manibusan"
+      },
+      "gloria": {
+        "title": "Glory to God (Through-composed Setting)",
+        "composer": "Mass of Renewal • Curtis Stephan"
+      },
+      "responsorialPsalm": {
+        "psalm": "Ps 1 Blessed are they who hope in the Lord.",
+        "setting": "The Lyric Psalter • Tony Alonso & Marty Haugen"
+      },
+      "gospelAcclamation": {
+        "title": "Alleluia (Mass of Joy & Peace)",
+        "composer": "ORDINARY TIME • 06C"
+      },
+      "offertory": {
+        "title": "We Are the Light of the World",
+        "composer": "Jean Anthony Greif",
+        "description": "Beattitudes - Breaking Bread Arrangement"
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "Mass for the Healing of the World",
+        "composer": "Trevor Thomson"
+      },
+      "lordsPrayer": {
+        "title": "Chanted Our Father (Snow)",
+        "composer": "Jennings/Paregorius"
+      },
+      "fractionRite": {
+        "title": "Lamb of God (Mass for the Healing of the World)",
+        "composer": "Trevor Thomson"
+      },
+      "communionSongs": [
+        {
+          "title": "Come to the Water",
+          "composer": "Arr. by Arielle Phan",
+          "description": "\"We cultivate healing through kindness\""
+        },
+        {
+          "title": "Precious Lord, Take My Hand",
+          "composer": "Thomas A. Dorsey",
+          "description": "Black History Month • Wildfires • Fr Prosper"
+        },
+        {
+          "title": "Partners in the Mission",
+          "composer": "BEAMS OF LOVE • Peter Fisher Hesed",
+          "description": "Together in Mission"
+        }
+      ],
+      "sending": {
+        "title": "Bring Forth the Kingdom",
+        "composer": "Marty Haugen"
+      }
+    },
+    {
+      "community": "Foundations",
+      "communityId": "foundations",
+      "date": "5",
+      "presider": "NOT THIS YEAR",
+      "gathering": {
+        "title": "Make Us True Servants",
+        "composer": "SLANE • Susan G Wente",
+        "description": "\"Loving our neighbor whatever the cost\""
+      },
+      "penitentialAct": {
+        "title": "Kyrie (Gift of God) • Adapted Version",
+        "composer": "Marty Haugen • Arranged by David Locwood"
+      },
+      "gloria": {
+        "title": "Mass of Joy & Peace (Gospel Version)",
+        "composer": "Tony Alonso • Arrangement by David Lockwood"
+      },
+      "responsorialPsalm": {
+        "psalm": "Ps 1 Blessed are they who hope in the Lord.",
+        "setting": "The Lyric Psalter • Tony Alonso & Marty Haugen"
+      },
+      "gospelAcclamation": {
+        "title": "Alleluia! Give the Glory (Mass of Glory)",
+        "verse": "Rejoice and be glad;\nyour reward will be great in heaven."
+      },
+      "offertory": {
+        "title": "Go into the World",
+        "composer": "Tom Booth",
+        "description": "\"I give my command: love one another...\""
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "Mass of Glory"
+      },
+      "lordsPrayer": {
+        "title": "Chanted Our Father (Snow)",
+        "composer": "Jennings • Paregorius"
+      },
+      "fractionRite": {
+        "title": "Lamb of God (Mass of Glory)"
+      },
+      "communionSongs": [
+        {
+          "title": "Bread of Life",
+          "composer": "Bobby Fisher",
+          "description": "Open our eyes... see, your presence in one another\""
+        },
+        {
+          "title": "Precious Lord, Take My Hand",
+          "composer": "Thomas A. Dorsey",
+          "description": "Black History Month • Wildfires • Fr Prosper"
+        }
+      ],
+      "sending": {
+        "title": "Give Us Peace",
+        "composer": "Leon C. Roberts",
+        "description": "Black History Month"
+      }
+    },
+    {
+      "community": "Generations",
+      "communityId": "generations",
+      "date": "Year C — Feb 13, 2028 (Sun)",
+      "presider": "NOT THIS YEAR",
+      "gathering": {
+        "title": "Make Us True Servants (Text)",
+        "composer": "SLANE • Susan G Wente",
+        "description": "Music reference for band at the 1 minute mark"
+      },
+      "penitentialAct": {
+        "title": "Kyrie • Misa Del Mundo",
+        "composer": "Jesse Manibusan"
+      },
+      "gloria": {
+        "title": "Glory, Glory, Gloria! (Mass of the Setting Sun)",
+        "composer": "Bonilla & Wilson • Vocal Arr. by Lockwood & Phan"
+      },
+      "responsorialPsalm": {
+        "psalm": "Ps 1 Blessed are they who hope in the Lord.",
+        "setting": "Spirit & Psalm • Santiago Fernández"
+      },
+      "gospelAcclamation": {
+        "title": "Hallelujah (adapted for Liturgy)",
+        "composer": "Leonard Cohen",
+        "verse": "Rejoice and be glad;\nyour reward will be great in heaven."
+      },
+      "offertory": {
+        "title": "Precious Lord, Take My Hand",
+        "composer": "Thomas A. Dorsey",
+        "description": "Black History Month • Wildfires • Fr Prosper"
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "Mass of St. Anne",
+        "composer": "Ed Bolduc"
+      },
+      "lordsPrayer": {
+        "title": "Echo Our Father",
+        "composer": "Jerome Andrews • Arranged by Dan Houze"
+      },
+      "fractionRite": {
+        "title": "Lamb of God (Mass of Holy Cross)"
+      },
+      "communionSongs": [
+        {
+          "title": "The Road of Mercy",
+          "composer": "Maureen Briare",
+          "description": "\"how can we serve as hope...\""
+        },
+        {
+          "title": "A Place At Your Table",
+          "composer": "Ben Walther",
+          "description": "\"the saint and the sinner, your friends\""
+        },
+        {
+          "title": "Come to the Water",
+          "composer": "Arr. by Arielle Phan",
+          "description": "\"We cultivate healing through kindness\""
+        }
+      ],
+      "sending": {
+        "title": "in Christ There Is No East or West",
+        "composer": "William A. Dunkerley • Arranged by David Lockwood",
+        "description": "Black History Month"
+      }
+    },
+    {
+      "community": "Heritage",
+      "communityId": "heritage",
+      "date": "Year C — Feb 13, 2028 (Sun)",
+      "presider": "NOT THIS YEAR",
+      "gathering": {
+        "title": "Make Us True Servants",
+        "composer": "SLANE • Susan G Wente",
+        "description": "\"Loving our neighbor whatever the cost\""
+      },
+      "penitentialAct": {
+        "title": "Kyrie • Misa Del Mundo",
+        "composer": "Jesse Manibusan"
+      },
+      "gloria": {
+        "title": "Glory to God (Mass of Christ the Savior)",
+        "composer": "Dan Schutte"
+      },
+      "responsorialPsalm": {
+        "psalm": "Ps 1 Blessed are they who hope in the Lord.",
+        "setting": "The Lyric Psalter • Tony Alonso & Marty Haugen"
+      },
+      "gospelAcclamation": {
+        "title": "ORDINARY TIME • 06C",
+        "composer": "The Lyric Gospel Acclamations • Tony Alonso"
+      },
+      "offertory": {
+        "title": "We Are the Light of the World",
+        "composer": "Jean Anthony Greif",
+        "description": "Beattitudes - Breaking Bread Arrangement"
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "Mass of Creation - Rev. 2010"
+      },
+      "lordsPrayer": {
+        "title": "Chanted Our Father (Snow)",
+        "composer": "Jennings/Paregorius"
+      },
+      "fractionRite": {
+        "title": "Lamb of God (Mass of Creation)"
+      },
+      "communionSongs": [
+        {
+          "title": "Precious Lord, Take My Hand",
+          "composer": "Thomas A. Dorsey",
+          "description": "Black History Month • Wildfires"
+        },
+        {
+          "title": "The Road of Mercy",
+          "composer": "Maureen Briare",
+          "description": "\"how can we serve as hope...\""
+        },
+        {
+          "title": "Partners in the Mission",
+          "composer": "BEAMS OF LOVE • Peter Fisher Hesed",
+          "description": "Together in Mission"
+        }
+      ],
+      "sending": {
+        "title": "in Christ There Is No East or West",
+        "composer": "William A. Dunkerley",
+        "description": "Black History Month"
+      }
+    },
+    {
+      "community": "Elevations",
+      "communityId": "elevations",
+      "date": "Year C — Feb 13, 2028 (Sun)",
+      "presider": "NOT THIS YEAR",
+      "gathering": {
+        "title": "Make Us True Servants (Text)",
+        "composer": "SLANE • Susan G Wente",
+        "description": "Music reference for band at the 1 minute mark"
+      },
+      "penitentialAct": {
+        "title": "Kyrie (Misa Del Mundo)",
+        "composer": "Jesse Manibusan — If needed."
+      },
+      "gloria": {
+        "title": "Glory, Glory, Gloria! (Mass of the Setting Sun)"
+      },
+      "responsorialPsalm": {
+        "psalm": "Ps 1 Blessed are they who hope in the Lord.",
+        "setting": "Spirit & Psalm • Santiago Fernández"
+      },
+      "gospelAcclamation": {
+        "title": "Hallelujah (adapted for Liturgy)",
+        "composer": "Leonard Cohen",
+        "verse": "Rejoice and be glad;\nyour reward will be great in heaven."
+      },
+      "offertory": {
+        "title": "Give Us Your Peace",
+        "composer": "Jesse Manibusan • Sarah Hart",
+        "description": "\"... when we are tired,  weary, and worn\""
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "Mass of Communion (Lower Key) • Matt Maher"
+      },
+      "lordsPrayer": {
+        "title": "Echo Our Father",
+        "composer": "Andrews • Arr. by Bonilla • Lockwood • Fajardo"
+      },
+      "fractionRite": {
+        "title": "Lamb of God (Mass of Holy Cross)"
+      },
+      "communionSongs": [
+        {
+          "title": "Precious Lord, Take My Hand",
+          "composer": "Thomas A. Dorsey",
+          "description": "Black History Month • Wildfires • Fr Prosper"
+        },
+        {
+          "title": "A Place At Your Table",
+          "composer": "Ben Walther",
+          "description": "\"the saint and the sinner, your friends\""
+        },
+        {
+          "title": "This Is the Kingdom",
+          "composer": "Elevation Worship • Pat Barrett",
+          "description": "✪ OT - 06 C (Beatitudes)"
+        }
+      ],
+      "sending": {
+        "title": "in Christ There Is No East or West",
+        "composer": "William A. Dunkerley • Arranged by David Lockwood",
+        "description": "Black History Month"
+      }
+    }
+  ]
+}

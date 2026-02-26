@@ -1,0 +1,400 @@
+{
+  "id": "holy-family-b",
+  "name": "HOLY FAMILY [B]",
+  "year": "B",
+  "season": "christmas",
+  "seasonLabel": "Christmas",
+  "seasonOrder": 0,
+  "dates": [
+    {
+      "date": "2023-12-31",
+      "label": "Year B — Dec 31, 2023 (Sun)",
+      "dayOfWeek": "Sun"
+    },
+    {
+      "date": "2035-12-30",
+      "label": "Year B — Dec 30, 2035 (Sun)",
+      "dayOfWeek": "Sun"
+    },
+    {
+      "date": "2032-12-26",
+      "label": "Year B — Dec 26, 2032 (Sun)",
+      "dayOfWeek": "Sun"
+    },
+    {
+      "date": "2029-12-30",
+      "label": "Year B — Dec 30, 2029 (Sun)",
+      "dayOfWeek": "Sun"
+    },
+    {
+      "date": "2026-12-27",
+      "label": "Year B — Dec 27, 2026 (Sun)",
+      "dayOfWeek": "Sun"
+    }
+  ],
+  "lectionary": {
+    "number": "017•B",
+    "gospelTitle": "Child Grows in Wisdom",
+    "thematicTag": "Infancy Flight & Return"
+  },
+  "readings": [
+    {
+      "type": "first",
+      "citation": "Gen 15:1-6; 21:1-3",
+      "summary": "The Lord promises Abram many descendants.\n\nNote: Reading from Year A may be used as well."
+    },
+    {
+      "type": "psalm",
+      "citation": "Ps 105:1-2, 3-4, 5-6, 8-9, R. v.7a, 8a (Year A Option as well)\nThe Lord remembers his covenant for ever.",
+      "summary": "",
+      "antiphon": "Ps 105:1-2, 3-4, 5-6, 8-9, R. v.7a, 8a (Year A Option as well)\nThe Lord remembers his covenant for ever."
+    },
+    {
+      "type": "second",
+      "citation": "Heb 11:8, 11-12, 17-19 (Year A option also)",
+      "summary": "The faith of Abraham and Sarah."
+    },
+    {
+      "type": "gospel_verse",
+      "citation": "Heb 1:1–2",
+      "summary": "In the past God spoke to our ancestors through the prophets;\nin these last days, he has spoken to us through the Son."
+    },
+    {
+      "type": "gospel",
+      "citation": "Lk 2:22-40 (Shorter - 2:22, 39-40)",
+      "summary": "Jesus is presented at the Temple by Mary and Joseph."
+    }
+  ],
+  "antiphons": [
+    {
+      "type": "entrance",
+      "option": 1,
+      "citation": "Lk 2:16",
+      "text": "The shepherds went in haste, and found Mary and Joseph and the Infant lying in a manger."
+    },
+    {
+      "type": "communion",
+      "option": 1,
+      "citation": "Bar 3:38",
+      "text": "Our God has appeared on the earth, and lived among us."
+    }
+  ],
+  "planningNotes": [],
+  "musicPlans": [
+    {
+      "community": "Reflections",
+      "communityId": "reflections",
+      "date": "Year B — Dec 26, 2026 (Sat)",
+      "presider": "NOT THIS YEAR",
+      "prelude": {
+        "title": "Of the Father's Love Begotten",
+        "composer": "DIVINUM MYSTERIUM, 12th C.; Mode V",
+        "description": "Can be chanted by David - in Breaking Bread"
+      },
+      "gathering": {
+        "title": "Hark! The Herald Angel Sings",
+        "composer": "MENDELSSOHN • Arranged by Tony Alonso",
+        "description": "\"Guitar Edition\" from GIA"
+      },
+      "penitentialAct": {
+        "title": "Kyrie • Misa Del Mundo",
+        "composer": "Jesse Manibusan"
+      },
+      "gloria": {
+        "title": "Glory to God (Through-composed Setting)",
+        "composer": "Mass of Renewal • Curtis Stephan"
+      },
+      "gospelAcclamation": {
+        "title": "Advent and Christmastide Gospel Acclamation",
+        "composer": "CHRISTMAS — Holy Family • B Option"
+      },
+      "offertory": {
+        "title": "O Little Town of Bethlehem",
+        "composer": "Praise Charts & OCP Arrangements",
+        "description": "Two traditional arrangement options."
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "Mass of the Incarnate Word",
+        "composer": "Bob Hurd • Traditional Arrangement"
+      },
+      "lordsPrayer": {
+        "title": "Chanted Our Father (Snow)",
+        "composer": "Jennings/Paregorius"
+      },
+      "fractionRite": {
+        "title": "Lamb of God",
+        "composer": "Jeffrey Bonilla"
+      },
+      "communionSongs": [
+        {
+          "title": "Bread of Life (Advent/Christmas)",
+          "composer": "Bernadette Farrell",
+          "description": "Christmas Verses"
+        },
+        {
+          "title": "It Came Upon A Midnight Clear",
+          "composer": "Praise Charts & OCP Arrangements",
+          "description": "Two traditional arrangement options."
+        },
+        {
+          "title": "Away in a Manger",
+          "composer": "Praise Charts & OCP Arrangements",
+          "description": "Two traditional arrangement options."
+        }
+      ],
+      "sending": {
+        "title": "Angels We Have Heard On High",
+        "composer": "Praise Charts & OCP Arrangements",
+        "description": "Two traditional arrangement options."
+      }
+    },
+    {
+      "community": "Foundations",
+      "communityId": "foundations",
+      "date": "Year B — Dec 27, 2026 (Sun)",
+      "presider": "NOT THIS YEAR",
+      "prelude": {
+        "title": "Of the Father's Love Begotten",
+        "composer": "DIVINUM MYSTERIUM, 12th C.; Mode V",
+        "description": "Can be chanted by David - in Breaking Bread"
+      },
+      "gathering": {
+        "title": "Hark! The Herald Angel Sings",
+        "composer": "MENDELSSOHN • Arranged by Tony Alonso",
+        "description": "\"Guitar Edition\" from GIA"
+      },
+      "penitentialAct": {
+        "title": "Kyrie (Gift of God) • Adapted Version",
+        "composer": "Marty Haugen • Arranged by David Locwood"
+      },
+      "gloria": {
+        "title": "Mass of Joy & Peace (Gospel Version)",
+        "composer": "Tony Alonso • Arrangement by David Lockwood"
+      },
+      "responsorialPsalm": {
+        "psalm": "Ps",
+        "setting": "Spirit & Psalm •"
+      },
+      "gospelAcclamation": {
+        "title": "Hallelujah (adapted for Liturgy)",
+        "composer": "Leonard Cohen",
+        "verse": "Verse"
+      },
+      "offertory": {
+        "title": "O Little Town of Bethlehem",
+        "composer": "Praise Charts & OCP Arrangements",
+        "description": "Two traditional arrangement options."
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "Mass of Glory (Christmas Intro)"
+      },
+      "lordsPrayer": {
+        "title": "Chanted Our Father (Snow)",
+        "composer": "Jennings • Paregorius"
+      },
+      "fractionRite": {
+        "title": "Lamb of God (Mass of Glory)"
+      },
+      "communionSongs": [
+        {
+          "title": "Bread of Life (Advent/Christmas)",
+          "composer": "Bernadette Farrell",
+          "description": "Christmas Verses"
+        },
+        {
+          "title": "It Came Upon A Midnight Clear",
+          "composer": "Praise Charts & OCP Arrangements",
+          "description": "Two traditional arrangement options."
+        }
+      ],
+      "sending": {
+        "title": "Angels We Have Heard On High",
+        "composer": "Praise Charts & OCP Arrangements",
+        "description": "Two traditional arrangement options."
+      }
+    },
+    {
+      "community": "Generations",
+      "communityId": "generations",
+      "date": "Year B — Dec 27, 2026 (Sun)",
+      "presider": "NOT THIS YEAR",
+      "penitentialAct": {
+        "title": "Kyrie • Misa Del Mundo",
+        "composer": "If needed. Talk to presider!"
+      },
+      "gloria": {
+        "title": "Glory, Glory, Gloria! (Mass of the Setting Sun)",
+        "composer": "Bonilla & Wilson • Vocal Arr. by Lockwood & Phan"
+      },
+      "offertory": {
+        "title": "O Little Town of Bethlehem",
+        "composer": "Praise Charts & OCP Arrangements",
+        "description": "Two traditional arrangement options."
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "Mass of Glory (Lockwood Christmas Intro)"
+      },
+      "lordsPrayer": {
+        "title": "Echo Our Father",
+        "composer": "Jerome Andrews, Arranged by Dan Houze"
+      },
+      "fractionRite": {
+        "title": "Lamb of God (Mass of Glory)"
+      },
+      "communionSongs": [
+        {
+          "title": "Bread of Life (Advent/Christmas)",
+          "composer": "Bernadette Farrell",
+          "description": "Christmas Verses"
+        },
+        {
+          "title": "It Came Upon A Midnight Clear",
+          "composer": "Praise Charts & OCP Arrangements",
+          "description": "Two traditional arrangement options."
+        },
+        {
+          "title": "Away in a Manger",
+          "composer": "Praise Charts & OCP Arrangements",
+          "description": "Two traditional arrangement options."
+        },
+        {
+          "title": "Silent Night",
+          "composer": "Arrangement by Chris Tomlin"
+        }
+      ],
+      "sending": {
+        "title": "Angels We Have Heard On High",
+        "composer": "Praise Charts & OCP Arrangements",
+        "description": "Two traditional arrangement options."
+      }
+    },
+    {
+      "community": "Heritage",
+      "communityId": "heritage",
+      "date": "Year B — Dec 27, 2026 (Sun)",
+      "presider": "NOT THIS YEAR",
+      "prelude": {
+        "title": "Of the Father's Love Begotten"
+      },
+      "gathering": {
+        "title": "Hark! The Herald Angel Sings",
+        "composer": "MENDELSSOHN • Arranged by Tony Alonso",
+        "description": "\"Guitar Edition\" from GIA"
+      },
+      "penitentialAct": {
+        "title": "Warm the Time of WInter",
+        "composer": "Lori True"
+      },
+      "responsorialPsalm": {
+        "psalm": "Ps 84 Blessed are they who dwell...",
+        "setting": "The Lyric Psaltes • Tony Alonso & Marty Haugen"
+      },
+      "gospelAcclamation": {
+        "title": "Advent and Christmastide Gospel Acclamation",
+        "composer": "CHRISTMAS — Holy Family • B Option"
+      },
+      "offertory": {
+        "title": "O Little Town of Bethlehem",
+        "composer": "Praise Charts & OCP Arrangements",
+        "description": "Two traditional arrangement options."
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "Mass of the Incarnate Word",
+        "composer": "Bob Hurd • Traditional Arrangement"
+      },
+      "lordsPrayer": {
+        "title": "Chanted Our Father (Snow)",
+        "composer": "Jennings/Paregorius"
+      },
+      "fractionRite": {
+        "title": "Lamb of God (Mass of Holy Cross)"
+      },
+      "communionSongs": [
+        {
+          "title": "Bread of Life (Advent/Christmas)",
+          "composer": "Bernadette Farrell",
+          "description": "Christmas Verses"
+        },
+        {
+          "title": "It Came Upon A Midnight Clear",
+          "composer": "Praise Charts & OCP Arrangements",
+          "description": "Two traditional arrangement options."
+        },
+        {
+          "title": "Away in a Manger",
+          "composer": "Praise Charts & OCP Arrangements",
+          "description": "Two traditional arrangement options."
+        }
+      ],
+      "sending": {
+        "title": "Angels We Have Heard On High",
+        "composer": "Praise Charts & OCP Arrangements",
+        "description": "Two traditional arrangement options."
+      }
+    },
+    {
+      "community": "Elevations",
+      "communityId": "elevations",
+      "date": "Year B — Dec 27, 2026 (Sun)",
+      "presider": "NOT THIS YEAR",
+      "gathering": {
+        "title": "Hark! The Herald Angel Sings",
+        "composer": "MENDELSSOHN • Arranged by Tony Alonso",
+        "description": "\"Guitar Edition\" from GIA"
+      },
+      "penitentialAct": {
+        "title": "Kyrie (Misa Del Mundo)",
+        "composer": "Jesse Manibusan — If needed."
+      },
+      "gloria": {
+        "title": "Glory, Glory, Gloria! Christmas Edition"
+      },
+      "responsorialPsalm": {
+        "psalm": "Ps 84 Blessed are they who dwell...",
+        "setting": "Spirit & Psalm • Iván Díaz"
+      },
+      "gospelAcclamation": {
+        "title": "Hallelujah (adapted for Liturgy)",
+        "composer": "Leonard Cohen",
+        "verse": "Gospel Verse"
+      },
+      "offertory": {
+        "title": "O Little Town of Bethlehem",
+        "composer": "Praise Charts & OCP Arrangements",
+        "description": "Two traditional arrangement options."
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "Mass of Glory (Christmas Intro)"
+      },
+      "lordsPrayer": {
+        "title": "Echo Our Father",
+        "composer": "Jerome Andrews, Arranged by Dan Houze"
+      },
+      "fractionRite": {
+        "title": "Lamb of God (Mass of Glory)"
+      },
+      "communionSongs": [
+        {
+          "title": "Bread of Life (Advent/Christmas)",
+          "composer": "Bernadette Farrell",
+          "description": "Christmas Verses"
+        },
+        {
+          "title": "It Came Upon A Midnight Clear",
+          "composer": "Praise Charts & OCP Arrangements",
+          "description": "Two traditional arrangement options."
+        },
+        {
+          "title": "Away in a Manger",
+          "composer": "Praise Charts & OCP Arrangements",
+          "description": "Two traditional arrangement options."
+        }
+      ],
+      "sending": {
+        "title": "Angels We Have Heard On High",
+        "composer": "Praise Charts & OCP Arrangements",
+        "description": "Two traditional arrangement options."
+      }
+    }
+  ]
+}

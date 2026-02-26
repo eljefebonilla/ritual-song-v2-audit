@@ -1,0 +1,186 @@
+{
+  "id": "ordinary-time-09-c",
+  "name": "ORDINARY TIME 09 [C]",
+  "year": "C",
+  "season": "ordinary",
+  "seasonLabel": "Ordinary Time",
+  "seasonOrder": 9,
+  "dates": [],
+  "lectionary": {
+    "number": "087•C",
+    "gospelTitle": "Faith of Centurion",
+    "thematicTag": "Compassion Signs 1/2"
+  },
+  "readings": [
+    {
+      "type": "first",
+      "citation": "1 Kgs 8:41–43",
+      "summary": "When foreigners come, listen to them."
+    },
+    {
+      "type": "psalm",
+      "citation": "Ps 117:1, 2\nGo out to all the world and tell the good news.",
+      "summary": "",
+      "antiphon": "Ps 117:1, 2\nGo out to all the world and tell the good news."
+    },
+    {
+      "type": "second",
+      "citation": "Gal 1:1–2, 6–10",
+      "summary": "If I were trying to please people, I would not be a slave of Christ."
+    },
+    {
+      "type": "gospel_verse",
+      "citation": "Jn 3:16",
+      "summary": "God so loved the world that he gave his only Son,\nso that everyone who believes in him might have eternal life."
+    },
+    {
+      "type": "gospel",
+      "citation": "Lk 7:1–10",
+      "summary": "Not even in Israel have I found such faith."
+    }
+  ],
+  "antiphons": [
+    {
+      "type": "entrance",
+      "option": 1,
+      "citation": "Cf. Ps 25 (24):16, 18",
+      "text": "Turn to me and have mercy on me, O Lord,\nfor I am alone and poor.\nSee my lowliness and suffering\nand take away all my sins, my God"
+    },
+    {
+      "type": "communion",
+      "option": 1,
+      "citation": "Cf. Ps 17 (16):6]",
+      "text": "To you I call, for you will surely heed me, O God;\nturn your ear to me; hear my words."
+    },
+    {
+      "type": "communion",
+      "option": 2,
+      "citation": "Communion Antiphon • Option II | Mk 11:23, 24",
+      "text": "Amen, I say to you: Whatever you ask for in prayer,\nbelieve you will receive it,\nand it will be yours, says the Lord."
+    }
+  ],
+  "planningNotes": [],
+  "musicPlans": [
+    {
+      "community": "Reflections",
+      "communityId": "reflections",
+      "date": "Year C — Sep 16, 2028 (Sat)",
+      "presider": "NOT THIS YEAR",
+      "penitentialAct": {
+        "title": "Kyrie • Misa Del Mundo",
+        "composer": "Only if needed. Talk to presider!"
+      },
+      "gloria": {
+        "title": "Glory to God (Through-composed Setting)",
+        "composer": "Mass of Renewal • Curtis Stephan"
+      },
+      "responsorialPsalm": {
+        "psalm": "Ps 117 Go out to all the world and tell the good news.",
+        "setting": "The Lyric Psalter • Tony Alonso & Marty Haugen"
+      },
+      "gospelAcclamation": {
+        "title": "Alleluia (Mass of Joy & Peace)",
+        "composer": "Song Title",
+        "verse": "God so loved the world that he gave his only Son,\nso that everyone who believes in him might have eternal life."
+      },
+      "lordsPrayer": {
+        "title": "Chanted Our Father (Snow)",
+        "composer": "Jennings/Paregorius"
+      },
+      "fractionRite": {
+        "title": "Lamb of God Setting"
+      }
+    },
+    {
+      "community": "Foundations",
+      "communityId": "foundations",
+      "date": "Year C — Sep 17, 2028 (Sun)",
+      "presider": "NOT THIS YEAR",
+      "penitentialAct": {
+        "title": "Kyrie (Gift of God) • Adapted Version",
+        "composer": "Marty Haugen • Arranged by David Locwood"
+      },
+      "gloria": {
+        "title": "Glory to God (Mass of Joy & Peace)",
+        "composer": "Alonso • Arr. by Houze OR Arr. by Lockwood"
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "Mass of Glory • Bob Hurd • Arr. by Dan Houze"
+      },
+      "lordsPrayer": {
+        "title": "Chanted Our Father (Snow)",
+        "composer": "Jennings • Paregorius"
+      },
+      "fractionRite": {
+        "title": "Lamb of God (Mass of Glory)"
+      }
+    },
+    {
+      "community": "Generations",
+      "communityId": "generations",
+      "date": "Year C — Sep 17, 2028 (Sun)",
+      "presider": "NOT THIS YEAR",
+      "penitentialAct": {
+        "title": "Kyrie • Misa Del Mundo",
+        "composer": "If needed. Talk to presider!"
+      },
+      "gloria": {
+        "title": "Glory, Glory, Gloria!",
+        "composer": "Tony Alonso • Arr. by Dan Houze"
+      },
+      "gospelAcclamation": {
+        "title": "Setting from Mass of ???",
+        "composer": "Song Title"
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "Mass of Restoration",
+        "composer": "Joshua Blakesley"
+      },
+      "lordsPrayer": {
+        "title": "(Echo) Our Father",
+        "composer": "Jerome Andrews • Arranged by Dan Houze"
+      },
+      "fractionRite": {
+        "title": "Lamb of God (Resoration)"
+      }
+    },
+    {
+      "community": "Heritage",
+      "communityId": "heritage",
+      "date": "Year C — Sep 17, 2028 (Sun)",
+      "presider": "NOT THIS YEAR",
+      "gloria": {
+        "title": "Glory to God (Mass of Joy & Peace)",
+        "composer": "Tony Alonso, Thru Composed"
+      },
+      "lordsPrayer": {
+        "title": "Echo Our Father",
+        "composer": "Andrews, Arr. Bonilla • Lockwood • Fajardo"
+      }
+    },
+    {
+      "community": "Elevations",
+      "communityId": "elevations",
+      "date": "Year C — Sep 17, 2028 (Sun)",
+      "presider": "NOT THIS YEAR",
+      "penitentialAct": {
+        "title": "Kyrie • Misa Del Mundo",
+        "composer": "Only if needed. Talk to presider!"
+      },
+      "gloria": {
+        "title": "Glory, Glory, Gloria!"
+      },
+      "gospelAcclamation": {
+        "title": "Setting from Mass of ???",
+        "verse": "Song Title"
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "Mass of ? • Composer"
+      },
+      "lordsPrayer": {
+        "title": "Echo Our Father",
+        "composer": "Andrews, Arr. Bonilla • Lockwood • Fajardo"
+      }
+    }
+  ]
+}

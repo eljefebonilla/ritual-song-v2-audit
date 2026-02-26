@@ -1,0 +1,415 @@
+{
+  "id": "solemnity-body-blood-of-christ-b",
+  "name": "SOLEMNITY\nBODY & BLOOD OF CHRIST [B]",
+  "year": "B",
+  "season": "solemnity",
+  "seasonLabel": "Solemnity",
+  "seasonOrder": 0,
+  "dates": [
+    {
+      "date": "2024-06-02",
+      "label": "Year B — Jun 02, 2024 (Sun)",
+      "dayOfWeek": "Sun"
+    },
+    {
+      "date": "2036-06-15",
+      "label": "Year B — Jun 15, 2036 (Sun)",
+      "dayOfWeek": "Sun"
+    },
+    {
+      "date": "2033-06-19",
+      "label": "Year B — Jun 19, 2033 (Sun)",
+      "dayOfWeek": "Sun"
+    },
+    {
+      "date": "2030-06-23",
+      "label": "Year B — Jun 23, 2030 (Sun)",
+      "dayOfWeek": "Sun"
+    },
+    {
+      "date": "2027-05-30",
+      "label": "Year B — May 30, 2027 (Sun)",
+      "dayOfWeek": "Sun"
+    }
+  ],
+  "lectionary": {
+    "number": "167•A",
+    "gospelTitle": "Living Bread for the World",
+    "thematicTag": "Eucharist Institution"
+  },
+  "readings": [
+    {
+      "type": "first",
+      "citation": "Ex 24:3-8",
+      "summary": "Our covenant with God is ratified in blood."
+    },
+    {
+      "type": "psalm",
+      "citation": "Ps 116\nI will take the cup of salvation\nand call on the name of the Lord.",
+      "summary": "",
+      "antiphon": "Ps 116\nI will take the cup of salvation\nand call on the name of the Lord."
+    },
+    {
+      "type": "second",
+      "citation": "Heb 9:11-15",
+      "summary": "Christ’s new covenant in his own blood."
+    },
+    {
+      "type": "gospel_verse",
+      "citation": "Jn 6:51",
+      "summary": "I am the living bread that came down from heaven,\nsays the Lord; whoever eats this bread will live forever."
+    },
+    {
+      "type": "gospel",
+      "citation": "Mk 14:12-16, 22-26",
+      "summary": "Jesus offers his body and blood at the Last Supper."
+    }
+  ],
+  "antiphons": [
+    {
+      "type": "entrance",
+      "option": 1,
+      "citation": "Cf. Ps 81 (80):17",
+      "text": "He fed them with the finest wheat\nand satisfied them with honey from the rock."
+    },
+    {
+      "type": "communion",
+      "option": 1,
+      "citation": "Jn 6:57",
+      "text": "Whoever eats my flesh and drinks my blood\nremains in me and I in him, says the Lord."
+    }
+  ],
+  "planningNotes": [],
+  "musicPlans": [
+    {
+      "community": "Reflections",
+      "communityId": "reflections",
+      "date": "Year B — May 29, 2027 (Sat)",
+      "presider": "NOT THIS YEAR",
+      "gathering": {
+        "title": "I Am the Bread of Life",
+        "composer": "John Michael Talbot",
+        "description": "\"No one who comes to me shall hunger again\""
+      },
+      "penitentialAct": {
+        "title": "Kyrie • Misa Del Mundo",
+        "composer": "Only if needed. Talk to presider!"
+      },
+      "gloria": {
+        "title": "Glory to God (Through-composed Setting)",
+        "composer": "Mass of Renewal • Curtis Stephan"
+      },
+      "responsorialPsalm": {
+        "psalm": "Ps 110 You are a priest for ever, in the line...",
+        "setting": "The Lyric Psalter • Tony Alonso & Marty Haugen"
+      },
+      "gospelAcclamation": {
+        "title": "Corpus Christi Sequence",
+        "composer": "James Poppleton",
+        "verse": "I am the living bread that came down from heaven,\nsays the Lord; whoever eats this bread will live forever."
+      },
+      "offertory": {
+        "title": "Jesus, Living Bread",
+        "composer": "Tom Booth",
+        "description": "\"Source of endless love, Mercy’s hope unfurled\""
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "Mass of the Holy Family",
+        "composer": "Chris de Silva"
+      },
+      "lordsPrayer": {
+        "title": "Chanted Our Father (Snow)",
+        "composer": "Jennings/Paregorius"
+      },
+      "fractionRite": {
+        "title": "Lamb of God (Mass of the Holy Family)",
+        "composer": "Chris de Silva"
+      },
+      "communionSongs": [
+        {
+          "title": "Make Us One",
+          "composer": "Jeffrey Bonilla & David Lockwood",
+          "description": "\"Body of Christ...Blood of Christ...\""
+        },
+        {
+          "title": "Eat This Bread",
+          "composer": "Taizé • Jacques Berthier",
+          "description": "Communion Antiphon"
+        },
+        {
+          "title": "I Am Yours - Consume Me Completely",
+          "composer": "Trevor Thomson",
+          "description": "“O Bread of Life, you will answer all our needs…”"
+        }
+      ],
+      "sending": {
+        "title": "As the Bread of Life Is Broken",
+        "composer": "THAXTED • Jeffrey Bonilla",
+        "description": "Vss 3 & 4 | Lowered Key (Ab) Finale File - \"We Place...\""
+      }
+    },
+    {
+      "community": "Foundations",
+      "communityId": "foundations",
+      "date": "Year B — May 30, 2027 (Sun)",
+      "presider": "NOT THIS YEAR",
+      "gathering": {
+        "title": "As We Gather at Your Table",
+        "composer": "NETTLETON • Carl P. Daw • Arr. by J. Bonilla",
+        "description": "\"help us summon other guests to share that feast\""
+      },
+      "penitentialAct": {
+        "title": "Kyrie (Gift of God) • Adapted Version",
+        "composer": "Marty Haugen • Arranged by David Locwood"
+      },
+      "gloria": {
+        "title": "Glory to God (Mass of Joy & Peace)",
+        "composer": "Tony Alonso • Arr. by David Lockwood"
+      },
+      "responsorialPsalm": {
+        "psalm": "Ps 110 You are a priest for ever, in the line...",
+        "setting": "Francesca LaRosa"
+      },
+      "gospelAcclamation": {
+        "title": "Corpus Christi Sequence",
+        "composer": "James Poppleton",
+        "verse": "Gospel Verse"
+      },
+      "offertory": {
+        "title": "Jesus, Living Bread",
+        "composer": "Tom Booth",
+        "description": "\"Source of endless love, Mercy’s hope unfurled\""
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "Mass of Glory • Bob Hurd • Arr. by Dan Houze"
+      },
+      "lordsPrayer": {
+        "title": "Chanted Our Father (Snow)",
+        "composer": "Jennings • Paregorius"
+      },
+      "fractionRite": {
+        "title": "Lamb of God (Mass of Glory)"
+      },
+      "communionSongs": [
+        {
+          "title": "One Bread, One Body",
+          "composer": "John Foley, SJ",
+          "description": "✪ Body & Blood B"
+        },
+        {
+          "title": "I Am the Bread of Life",
+          "composer": "Sr. Suzanne Toolan RSM",
+          "description": "\"...you who come to me shall not hunger.\""
+        }
+      ],
+      "sending": {
+        "title": "As the Bread of Life Is Broken",
+        "composer": "THAXTED • Jeffrey Bonilla",
+        "description": "Vss 3 & 4 | Lowered Key (Ab) Finale File - \"We Place...\""
+      }
+    },
+    {
+      "community": "Generations",
+      "communityId": "generations",
+      "date": "Year B — May 30, 2027 (Sun)",
+      "presider": "NOT THIS YEAR",
+      "gathering": {
+        "title": "I Am the Bread of Life",
+        "composer": "Sr. Suzanne Toolan RSM, Arr. by Dan Houze",
+        "description": "\"...you who come to me shall not hunger.\""
+      },
+      "penitentialAct": {
+        "title": "Kyrie • Misa Del Mundo",
+        "composer": "Only if needed. Talk to presider!"
+      },
+      "gloria": {
+        "title": "Glory, Glory, Gloria!",
+        "composer": "Tony Alonso • Arr. by Dan Houze"
+      },
+      "responsorialPsalm": {
+        "psalm": "Ps 110 You are a priest for ever, in the line...",
+        "setting": "Francesca LaRosa"
+      },
+      "gospelAcclamation": {
+        "title": "Corpus Christi Sequence",
+        "composer": "James Poppleton"
+      },
+      "offertory": {
+        "title": "Jesus, Living Bread",
+        "composer": "Tom Booth",
+        "description": "\"Source of endless love, Mercy’s hope unfurled\""
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "Mass of Glory",
+        "composer": "Bob Hurd • Arr. by Dan Houze"
+      },
+      "lordsPrayer": {
+        "title": "(Echo) Our Father",
+        "composer": "Jerome Andrews • Arranged by Dan Houze"
+      },
+      "fractionRite": {
+        "title": "Lamb of God (Mass of Glory)"
+      },
+      "communionSongs": [
+        {
+          "title": "Here At This Table",
+          "composer": "Janet Sullivan Whitaker",
+          "description": "\"... drink for all who thirst\""
+        },
+        {
+          "title": "I Am Yours - Consume Me Completely",
+          "composer": "Trevor Thomson",
+          "description": "“O Bread of Life, you will answer all our needs…”"
+        },
+        {
+          "title": "A Place At Your Table",
+          "composer": "Ben Walther",
+          "description": "\"the saint and the sinner, your friends\""
+        },
+        {
+          "title": "Remembrance",
+          "composer": "Hillsong",
+          "description": "\"Your promisde I won't forget\""
+        }
+      ],
+      "sending": {
+        "title": "Bread for the World",
+        "composer": "Bernadette Farrell",
+        "description": "\"broken to reach and heal the wounds of human pain\""
+      }
+    },
+    {
+      "community": "Heritage",
+      "communityId": "heritage",
+      "date": "Year B — May 30, 2027 (Sun)",
+      "presider": "NOT THIS YEAR",
+      "prelude": {
+        "title": "Ave Verum Corpus (Hail, True Body)",
+        "composer": "Wolfgang Amadeus Mozart",
+        "description": "The motet was composed for Corpus Christi!"
+      },
+      "gathering": {
+        "title": "I Am the Bread of Life",
+        "composer": "Sr. Suzanne Toolan RSM",
+        "description": "\"...you who come to me shall not hunger.\""
+      },
+      "penitentialAct": {
+        "title": "Kyrie • Misa Del Mundo",
+        "composer": "Only if needed. Talk to presider!"
+      },
+      "gloria": {
+        "title": "Glory to God (Mass of Joy & Peace)",
+        "composer": "Tony Alonso, Thru Composed"
+      },
+      "responsorialPsalm": {
+        "psalm": "Ps 110 You are a priest for ever, in the line...",
+        "setting": "Lyric Psalter • Tony Alonso & Marty Haugen"
+      },
+      "gospelAcclamation": {
+        "title": "Corpus Christi Sequence",
+        "composer": "James Poppleton"
+      },
+      "offertory": {
+        "title": "Jesus, Living Bread",
+        "composer": "Tom Booth",
+        "description": "\"Source of endless love, Mercy’s hope unfurled\""
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "Mass of Joy & Peace • Tony Alonso"
+      },
+      "lordsPrayer": {
+        "title": "Chanted Our Father (Snow)",
+        "composer": "Jennings/Paregorius"
+      },
+      "fractionRite": {
+        "title": "Lamb of God (Mass of Joy & Peace)"
+      },
+      "communionSongs": [
+        {
+          "title": "Eat This Bread",
+          "composer": "Taizé • Jacques Berthier",
+          "description": "Communion Antiphon"
+        },
+        {
+          "title": "Bread of Angels",
+          "composer": "Curtis Stephan",
+          "description": "Body and Blood"
+        },
+        {
+          "title": "I Received the Living God",
+          "composer": "Traditional",
+          "description": "Body and Blood"
+        }
+      ],
+      "sending": {
+        "title": "As the Bread of Life Is Broken",
+        "composer": "THAXTED • Jeffrey Bonilla",
+        "description": "Vss 3 & 4 | Lowered Key (Ab) Finale File - \"We Place...\""
+      }
+    },
+    {
+      "community": "Elevations",
+      "communityId": "elevations",
+      "date": "Year B — May 30, 2027 (Sun)",
+      "presider": "NOT THIS YEAR",
+      "gathering": {
+        "title": "I Am the Bread of Life",
+        "composer": "Sr. Suzanne Toolan RSM",
+        "description": "\"...you who come to me shall not hunger.\""
+      },
+      "penitentialAct": {
+        "title": "Kyrie • Misa Del Mundo",
+        "composer": "Only if needed. Talk to presider!"
+      },
+      "gloria": {
+        "title": "Glory to God (Mass of Joy & Peace)"
+      },
+      "responsorialPsalm": {
+        "psalm": "Ps 110 You are a priest for ever, in the line...",
+        "setting": "Francesca LaRosa"
+      },
+      "gospelAcclamation": {
+        "title": "Corpus Christi Sequence",
+        "verse": "James Poppleton"
+      },
+      "offertory": {
+        "title": "Jesus, Living Bread",
+        "composer": "Tom Booth",
+        "description": "\"Source of endless love, Mercy’s hope unfurled\""
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "Mass of Restoration",
+        "composer": "Joshua Blakesley"
+      },
+      "lordsPrayer": {
+        "title": "Echo Our Father",
+        "composer": "Andrews, Arr. Bonilla • Lockwood • Fajardo"
+      },
+      "fractionRite": {
+        "title": "Lamb of God (Resoration)"
+      },
+      "communionSongs": [
+        {
+          "title": "Make Us One",
+          "composer": "Jeffrey Bonilla & David Lockwood",
+          "description": "\"Body of Christ...Blood of Christ...\""
+        },
+        {
+          "title": "I Am Yours - Consume Me Completely",
+          "composer": "Trevor Thomson",
+          "description": "“O Bread of Life, you will answer all our needs…”"
+        },
+        {
+          "title": "Here At This Table",
+          "composer": "Janet Sullivan Whitaker",
+          "description": "\"... drink for all who thirst\""
+        }
+      ],
+      "sending": {
+        "title": "Bread for the World",
+        "composer": "Bernadette Farrell",
+        "description": "\"broken to reach and heal the wounds of human pain\""
+      }
+    }
+  ]
+}

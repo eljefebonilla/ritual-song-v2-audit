@@ -1,0 +1,315 @@
+{
+  "id": "easter-04-a",
+  "name": "EASTER 04 [A]",
+  "year": "A",
+  "season": "easter",
+  "seasonLabel": "Easter",
+  "seasonOrder": 4,
+  "dates": [
+    {
+      "date": "2023-04-30",
+      "label": "Year A — Apr 30, 2023 (Sun)",
+      "dayOfWeek": "Sun"
+    },
+    {
+      "date": "2035-04-15",
+      "label": "Year A — Apr 15, 2035 (Sun)",
+      "dayOfWeek": "Sun"
+    },
+    {
+      "date": "2032-04-18",
+      "label": "Year A — Apr 18, 2032 (Sun)",
+      "dayOfWeek": "Sun"
+    },
+    {
+      "date": "2029-04-22",
+      "label": "Year A — Apr 22, 2029 (Sun)",
+      "dayOfWeek": "Sun"
+    },
+    {
+      "date": "2026-04-26",
+      "label": "Year A — Apr 26, 2026 (Sun)",
+      "dayOfWeek": "Sun"
+    }
+  ],
+  "lectionary": {
+    "number": "049•A",
+    "gospelTitle": "Gate for the Sheep",
+    "thematicTag": "Good Shepherd Sunday"
+  },
+  "readings": [
+    {
+      "type": "first",
+      "citation": "Acts 2:14a, 36-41",
+      "summary": "Three thousand are baptized at Peter's urging."
+    },
+    {
+      "type": "psalm",
+      "citation": "Ps 23:1-3a, 3b-4, 5, 6, R. v.1\nThe Lord is my shepherd; there is nothing I shall want.",
+      "summary": "",
+      "antiphon": "Ps 23:1-3a, 3b-4, 5, 6, R. v.1\nThe Lord is my shepherd; there is nothing I shall want."
+    },
+    {
+      "type": "second",
+      "citation": "1 Pt 2:20b-25",
+      "summary": "Christ delivered himself up to free us from sin."
+    },
+    {
+      "type": "gospel_verse",
+      "citation": "Jn 10:14",
+      "summary": "I am the good shepherd, says the Lord;\nI know my sheep, and mine know me."
+    },
+    {
+      "type": "gospel",
+      "citation": "Jn 10:1-10",
+      "summary": "Jesus the sheepgate."
+    }
+  ],
+  "antiphons": [
+    {
+      "type": "entrance",
+      "option": 1,
+      "citation": "Cf. Ps 33 (32):5–6",
+      "text": "The merciful love of the Lord fills the earth;\nby the word of the Lord the heavens were made, alleluia."
+    },
+    {
+      "type": "communion",
+      "option": 1,
+      "citation": "Roman Missal",
+      "text": "The Good Shepherd has risen,\nwho laid down his life for his sheep\nand willingly died for his flock, alleluia."
+    }
+  ],
+  "planningNotes": [
+    "🌲 APR - Earth Month🌲",
+    "🐏  Good Shepherd Sunday  🐏",
+    "Confirmation @ 11:30am"
+  ],
+  "musicPlans": [
+    {
+      "community": "Reflections",
+      "communityId": "reflections",
+      "date": "Year A — Apr 25, 2026 (Sat)",
+      "presider": "TBD",
+      "prelude": {
+        "title": "Regina Caeli / O Queen of Heaven",
+        "composer": "Mode VI Latin • 12th C",
+        "description": "Pope Leo XIV singing Regina Caeli"
+      },
+      "gathering": {
+        "title": "Come, Worship the Lord",
+        "composer": "John Michael Talbot",
+        "description": "\"we are his people, the flock that he shepherds...\""
+      },
+      "gloria": {
+        "title": "Glory to God (Through-composed Setting)",
+        "composer": "Mass of Renewal • Curtis Stephan"
+      },
+      "gospelAcclamation": {
+        "title": "Easter Alleluia (Refrain)",
+        "composer": "The Lyric Gospel Acclamations • Tony Alonso",
+        "verse": "I am the good shepherd, says the Lord;\nI know my sheep, and mine know me."
+      },
+      "offertory": {
+        "title": "Christ the Good Shepherd",
+        "composer": "Bob Hurd",
+        "description": "Play less campy than recording!"
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "Mass of the Holy Family",
+        "composer": "Chris de Silva"
+      },
+      "lordsPrayer": {
+        "title": "Chanted Our Father (Snow)",
+        "composer": "Jennings/Paregorius"
+      },
+      "fractionRite": {
+        "title": "Lamb of God (Mass of the Holy Family)",
+        "composer": "Chris de Silva"
+      },
+      "communionSongs": [
+        {
+          "title": "Remembrance of You",
+          "composer": "Sarah Hart & Sarah Kroger",
+          "description": "From Last Supper to the joy of Easter."
+        },
+        {
+          "title": "Psalm 23: Shepherd Me, O God",
+          "composer": "Marty Haugen",
+          "description": "\"You have set me a banquet of love...\""
+        }
+      ]
+    },
+    {
+      "community": "Foundations",
+      "communityId": "foundations",
+      "date": "Year A — Apr 26, 2026 (Sun)",
+      "presider": "TBD",
+      "prelude": {
+        "title": "Regina Caeli / O Queen of Heaven",
+        "composer": "Mode VI Latin • 12th C",
+        "description": "Pope Leo XIV singing Regina Caeli"
+      },
+      "penitentialAct": {
+        "title": "Kyrie (Gift of God) • Adapted Version",
+        "composer": "Marty Haugen • Arranged by David Locwood"
+      },
+      "gloria": {
+        "title": "Glory to God (Mass of Joy & Peace)",
+        "composer": "Alonso • Arr. by Houze OR Arr. by Lockwood"
+      },
+      "gospelAcclamation": {
+        "title": "Easter Alleluia (Refrain)",
+        "composer": "The Lyric Gospel Acclamations • Tony Alonso",
+        "verse": "I am the good shepherd, says the Lord;\nI know my sheep, and mine know me."
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "Mass of Glory",
+        "composer": "Bob Hurd & Ken Canedo"
+      },
+      "lordsPrayer": {
+        "title": "Chanted Our Father (Snow)",
+        "composer": "Jennings • Paregorius"
+      },
+      "fractionRite": {
+        "title": "Lamb of God (Mass of Glory)",
+        "composer": "Bob Hurd & Ken Canedo"
+      },
+      "communionSongs": [
+        {
+          "title": "Every Mother, Every Father",
+          "composer": "Andy Bast & Bruce Benedict",
+          "description": "Mother's Day"
+        }
+      ]
+    },
+    {
+      "community": "Generations",
+      "communityId": "generations",
+      "date": "Year A — Apr 26, 2026 (Sun)",
+      "presider": "TBD",
+      "penitentialAct": {
+        "title": "Kyrie • Misa Del Mundo",
+        "composer": "If needed. Talk to presider!"
+      },
+      "gloria": {
+        "title": "Glory to God (Mass of Joy & Peace)",
+        "composer": "Tony Alonso • Arr. by Dan Houze"
+      },
+      "responsorialPsalm": {
+        "psalm": "Ps 23 The Lord Is My Shepherd",
+        "setting": "Joshua Blakesley"
+      },
+      "gospelAcclamation": {
+        "title": "Easter Alleluia (Refrain)",
+        "composer": "The Lyric Gospel Acclamations • Tony Alonso",
+        "verse": "I am the good shepherd, says the Lord;\nI know my sheep, and mine know me."
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "Mass of Glory",
+        "composer": "Bob Hurd • Arr. by Dan Houze"
+      },
+      "lordsPrayer": {
+        "title": "(Echo) Our Father",
+        "composer": "Jerome Andrews • Arranged by Dan Houze"
+      },
+      "fractionRite": {
+        "title": "Lamb of God (Mass of Glory)"
+      },
+      "communionSongs": [
+        {
+          "title": "Remembrance of You",
+          "composer": "Sarah Hart & Sarah Kroger",
+          "description": "From Last Supper to the joy of Easter."
+        },
+        {
+          "title": "Jesus I Trust In You",
+          "composer": "Josh Blakesley • Sarah Kroger • Sarah Hart",
+          "description": "We are his people!"
+        },
+        {
+          "title": "Every Mother, Every Father",
+          "composer": "Andy Bast & Bruce Benedict",
+          "description": "Mother's Day"
+        }
+      ]
+    },
+    {
+      "community": "Heritage",
+      "communityId": "heritage",
+      "date": "Year A — Apr 26, 2026 (Sun)",
+      "presider": "TBD",
+      "prelude": {
+        "title": "Regina Caeli / O Queen of Heaven",
+        "composer": "Mode VI Latin • 12th C",
+        "description": "Pope Leo XIV singing Regina Caeli"
+      },
+      "gloria": {
+        "title": "Glory to God (Mass of Joy & Peace)",
+        "composer": "Tony Alonso, Thru Composed"
+      },
+      "gospelAcclamation": {
+        "title": "Easter Alleluia (Refrain)",
+        "composer": "The Lyric Gospel Acclamations • Tony Alonso",
+        "verse": "I am the good shepherd, says the Lord;\nI know my sheep, and mine know me."
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "Mass of Joy & Peace",
+        "composer": "Tony Alonso"
+      },
+      "lordsPrayer": {
+        "title": "Chanted Our Father (Snow)",
+        "composer": "Jennings/Paregorius"
+      },
+      "fractionRite": {
+        "title": "Lamb of God (Mass of Joy & Peace)",
+        "composer": "Tony Alonso"
+      },
+      "communionSongs": [
+        {
+          "title": "A Home of Grace",
+          "composer": "Joseph M. Martin",
+          "description": "Mother's Day"
+        }
+      ]
+    },
+    {
+      "community": "Elevations",
+      "communityId": "elevations",
+      "date": "Year A — Apr 26, 2026 (Sun)",
+      "presider": "TBD",
+      "prelude": {
+        "title": "Regina Caeli / O Queen of Heaven",
+        "composer": "Mode VI Latin • 12th C",
+        "description": "Pope Leo XIV singing Regina Caeli"
+      },
+      "penitentialAct": {
+        "title": "Kyrie (Misa Del Mundo)",
+        "composer": "Jesse Manibusan — If needed."
+      },
+      "gloria": {
+        "title": "Glory to God (Joy & Peace)"
+      },
+      "responsorialPsalm": {
+        "psalm": "Ps 100 We are his people, the sheep...",
+        "setting": "Spirit & Psalm • Sarah Hart"
+      },
+      "gospelAcclamation": {
+        "title": "Easter Alleluia (Refrain)",
+        "composer": "The Lyric Gospel Acclamations • Tony Alonso",
+        "verse": "I am the good shepherd, says the Lord;\nI know my sheep, and mine know me."
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "Mass of Restoration",
+        "composer": "Joshua Blakesley"
+      },
+      "lordsPrayer": {
+        "title": "Echo Our Father",
+        "composer": "Andrews, Arr. Bonilla • Lockwood • Fajardo"
+      },
+      "fractionRite": {
+        "title": "Lamb of God (Mass of Restoration)",
+        "composer": "Joshua Blakesley"
+      }
+    }
+  ]
+}

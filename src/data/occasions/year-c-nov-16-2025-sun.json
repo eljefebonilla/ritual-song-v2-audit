@@ -1,0 +1,403 @@
+{
+  "id": "year-c-nov-16-2025-sun",
+  "name": "Year C — Nov 16, 2025 (Sun)",
+  "year": "ABC",
+  "season": "ordinary",
+  "seasonLabel": "Ordinary Time",
+  "seasonOrder": 16,
+  "dates": [],
+  "lectionary": {
+    "number": "Year C — Nov 18, 2040 (Sun)",
+    "gospelTitle": "Year C — Nov 15, 2037 (Sun)",
+    "thematicTag": "Year C — Nov 19, 2034 (Sun)",
+    "thematicDetail": "Year C — Nov 16, 2031 (Sun)"
+  },
+  "readings": [
+    {
+      "type": "psalm",
+      "citation": "End-Time Discourse 2/2",
+      "summary": "",
+      "antiphon": "Planning Reminders"
+    },
+    {
+      "type": "gospel_verse",
+      "citation": "The Lord said: I think thoughts of peace and not of affliction.\nYou will call upon me, and I will answer you,\nand I will lead back your captives from every place.",
+      "summary": ""
+    },
+    {
+      "type": "gospel",
+      "citation": "Reading I | Mal 3:19-20a",
+      "summary": "Evildoers will be destroyed; those who fear God will be saved."
+    }
+  ],
+  "antiphons": [
+    {
+      "type": "entrance",
+      "option": 1,
+      "citation": "Verse before the Gospel | Lk 21:28",
+      "text": "Stand erect and raise your heads\nbecause your redemption is at hand."
+    },
+    {
+      "type": "communion",
+      "option": 2,
+      "citation": "Communion Antiphon • Option I | Ps 73 (72):28",
+      "text": "To be near God is my happiness,\nto place my hope in God the Lord."
+    }
+  ],
+  "planningNotes": [
+    "Communion Antiphon • Option II | Mk 11:23–24",
+    "Amen, I say to you: Whatever you ask in prayer,\nbelieve that you will receive,\nand it shall be given to you, says the Lord."
+  ],
+  "musicPlans": [
+    {
+      "community": "Reflections",
+      "communityId": "reflections",
+      "date": "Year C — Nov 15, 2025 (Sat)",
+      "presider": "Fr. Thomas Park",
+      "prelude": {
+        "title": "Reunited in Everlasting Life",
+        "composer": "Janèt Sullivan Whitaker",
+        "description": "Month of Remembrance"
+      },
+      "penitentialAct": {
+        "title": "Bernadette Farrell • Arr, by Jeffrey Bonilla",
+        "composer": "“Longing for peace... longing for hope, many despair.\"",
+        "description": "Penitential Act"
+      },
+      "gloria": {
+        "title": "Kyrie • Misa Del Mundo",
+        "composer": "Only if needed. Talk to presider!",
+        "description": "Gloria"
+      },
+      "gospelAcclamation": {
+        "title": "The Lyric Psalter • Tony Alonso & Marty Haugen",
+        "composer": "Gospel Acclamation",
+        "verse": "Alleluia (Mass of Joy & Peace)"
+      },
+      "offertory": {
+        "title": "The Lyric Gospel Acclamations • Tony Alonso",
+        "description": "Offertory Song"
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "The Clouds’ Veil",
+        "composer": "Liam Lawton"
+      },
+      "lordsPrayer": {
+        "title": "Eucharistic Acclamations",
+        "composer": "Mass for the Healing of the World",
+        "description": "Trevor Thomson"
+      },
+      "fractionRite": {
+        "title": "Holy",
+        "composer": "When We Eat This Bread",
+        "description": "Amen"
+      },
+      "communionSongs": [
+        {
+          "title": "The Lord's Prayer",
+          "composer": "Chanted Our Father (Snow)",
+          "description": "Jennings/Paregorius"
+        },
+        {
+          "title": "Fraction Rite",
+          "composer": "Lamb of God (Mass for the Healing of the World)",
+          "description": "Trevor Thomson"
+        },
+        {
+          "title": "Communion Songs",
+          "composer": "It Is Well With My Soul",
+          "description": "VILLE DU HAVRE • Chris Rice"
+        },
+        {
+          "title": "Verses 1 and 4",
+          "composer": "Gift of Finest Wheat",
+          "description": "BICENTENNIAL • Robert Kreutz • Omer Westendorf"
+        }
+      ]
+    },
+    {
+      "community": "Foundations",
+      "communityId": "foundations",
+      "date": "Year C — Nov 16, 2025 (Sun)",
+      "presider": "Fr. Vince Kuna",
+      "prelude": {
+        "title": "Song Title",
+        "composer": "Composer/s"
+      },
+      "penitentialAct": {
+        "title": "Bob Hurd",
+        "composer": "\"...one spirit of love\"",
+        "description": "Penitential Act"
+      },
+      "gloria": {
+        "title": "Kyrie (Gift of God) • Adapted Version",
+        "composer": "Marty Haugen • Arranged by David Locwood",
+        "description": "Gloria"
+      },
+      "gospelAcclamation": {
+        "title": "Spirit & Psalm • Timothy R. Smith",
+        "composer": "Gospel Acclamation",
+        "verse": "Song Title"
+      },
+      "offertory": {
+        "title": "Verse Audio Example",
+        "description": "Offertory Song"
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "It Is Well With My Soul",
+        "composer": "VILLE DU HAVRE • Chris Rice"
+      },
+      "lordsPrayer": {
+        "title": "Eucharistic Acclamations",
+        "composer": "Mass of Glory • Bob Hurd • Arr. by Dan Houze"
+      },
+      "fractionRite": {
+        "title": "Holy, Holy",
+        "composer": "We Proclaim Your Death",
+        "description": "Amen"
+      },
+      "communionSongs": [
+        {
+          "title": "The Lord's Prayer",
+          "composer": "Chanted Our Father (Snow)",
+          "description": "Jennings • Paregorius"
+        },
+        {
+          "title": "Fraction Rite",
+          "composer": "Lamb of God (Mass of Glory)"
+        },
+        {
+          "title": "Communion Songs",
+          "composer": "Give Me Jesus",
+          "description": "Spiritual • Sara Watkins"
+        },
+        {
+          "title": "\"...and when I've come to die, give me Jesus\"",
+          "composer": "Pastures of the Lord",
+          "description": "Curtis Stephan"
+        }
+      ],
+      "sending": {
+        "title": "TRADITIONAL Arr. Bonilla (Rubato Intro)",
+        "composer": "Vss 1, 2, 7 — 10 (as needed)"
+      }
+    },
+    {
+      "community": "Generations",
+      "communityId": "generations",
+      "date": "Year C — Nov 16, 2025 (Sun)",
+      "presider": "Msgr. Lloyd Torgerson",
+      "prelude": {
+        "title": "All My Tears (Be Washed Away)",
+        "composer": "Emmylou Harris and Julie Miller",
+        "description": "Solo prelude - Teresa W."
+      },
+      "penitentialAct": {
+        "title": "Bob Hurd",
+        "composer": "\"...one spirit of love\"",
+        "description": "Penitential Act"
+      },
+      "gloria": {
+        "title": "Kyrie • Misa Del Mundo",
+        "composer": "Only if needed. Talk to presider!",
+        "description": "Gloria"
+      },
+      "gospelAcclamation": {
+        "title": "Spirit & Psalm • Timothy R. Smith",
+        "composer": "Gospel Acclamation",
+        "verse": "Setting from Mass of Renewal"
+      },
+      "offertory": {
+        "title": "Spirit & Psalm • Curtis Stephan",
+        "description": "Offertory Song"
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "It Is Well With My Soul",
+        "composer": "VILLE DU HAVRE • Chris Rice"
+      },
+      "lordsPrayer": {
+        "title": "Eucharistic Acclamations",
+        "composer": "Mass of Restoration",
+        "description": "Joshua Blakesley"
+      },
+      "fractionRite": {
+        "title": "Holy, Holy, Holy",
+        "composer": "Save Us Savior of the World",
+        "description": "Amen"
+      },
+      "communionSongs": [
+        {
+          "title": "The Lord's Prayer",
+          "composer": "(Echo) Our Father",
+          "description": "Jerome Andrews • Arranged by Dan Houze"
+        },
+        {
+          "title": "Fraction Rite",
+          "composer": "Lamb of God (Resoration)"
+        },
+        {
+          "title": "Communion Songs",
+          "composer": "In the Fields of the Lord",
+          "description": "Audrey Assad •  Isaac Wardell"
+        },
+        {
+          "title": "\"...at the harvest of the Lord, the fields are white.\"",
+          "composer": "Give Me Jesus",
+          "description": "Spiritual • Sara Watkins"
+        },
+        {
+          "title": "\"...and when I've come to die, give me Jesus\"",
+          "composer": "Gift of Finest Wheat",
+          "description": "BICENTENNIAL • Robert Kreutz • Omer Westendorf"
+        },
+        {
+          "title": "General",
+          "composer": "Scars in Heaven",
+          "description": "Casting Crowns"
+        }
+      ],
+      "sending": {
+        "title": "When the Saints Go Marching In",
+        "composer": "TRADITIONAL Arr. Bonilla",
+        "description": "Vss 1, 2, 7 — 10 (as needed)"
+      }
+    },
+    {
+      "community": "Heritage",
+      "communityId": "heritage",
+      "date": "Year C — Nov 16, 2025 (Sun)",
+      "presider": "\"Fr. David Guffey, CSC\"",
+      "penitentialAct": {
+        "title": "Bernadette Farrell • Arr, by Jeffrey Bonilla",
+        "composer": "“Longing for peace... longing for hope, many despair.\"",
+        "description": "Penitential Act"
+      },
+      "gloria": {
+        "title": "Kyrie • Misa Del Mundo",
+        "composer": "Only if needed. Talk to presider!",
+        "description": "Gloria"
+      },
+      "gospelAcclamation": {
+        "title": "The Lyric Psalter • Tony Alonso & Marty Haugen",
+        "composer": "Gospel Acclamation",
+        "verse": "Alleluia (Mass of Joy & Peace)"
+      },
+      "offertory": {
+        "title": "The Lyric Gospel Acclamations • Tony Alonso",
+        "description": "Offertory Song"
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "The Clouds’ Veil",
+        "composer": "Liam Lawton"
+      },
+      "lordsPrayer": {
+        "title": "Eucharistic Acclamations",
+        "composer": "Mass of Christ the Savior - Dan Schutte"
+      },
+      "fractionRite": {
+        "title": "Holy",
+        "composer": "When We Eat This Bread",
+        "description": "Amen"
+      },
+      "communionSongs": [
+        {
+          "title": "The Lord's Prayer",
+          "composer": "Echo Our Father",
+          "description": "Andrews, Arr. Bonilla • Lockwood • Fajardo"
+        },
+        {
+          "title": "Fraction Rite",
+          "composer": "Lamb of God (Mass of Christ the Savior)"
+        },
+        {
+          "title": "Communion Songs",
+          "composer": "It Is Well With My Soul",
+          "description": "VILLE DU HAVRE • Chris Rice"
+        },
+        {
+          "title": "Verses 1 and 4",
+          "composer": "Gift of Finest Wheat",
+          "description": "BICENTENNIAL • Robert Kreutz • Omer Westendorf"
+        },
+        {
+          "title": "General",
+          "composer": "Pastures of the Lord",
+          "description": "Curtis Stephan"
+        }
+      ],
+      "sending": {
+        "title": "Liam Lawton",
+        "composer": "Signs of the End"
+      }
+    },
+    {
+      "community": "Elevations",
+      "communityId": "elevations",
+      "date": "Year C — Nov 16, 2025 (Sun)",
+      "presider": "Msgr. Lloyd Torgerson",
+      "penitentialAct": {
+        "title": "Bernadette Farrell • Arr, by Jeffrey Bonilla",
+        "composer": "“Longing for peace... longing for hope, many despair.\"",
+        "description": "Penitential Act"
+      },
+      "gloria": {
+        "title": "Kyrie • Misa Del Mundo",
+        "composer": "Only if needed. Talk to presider!",
+        "description": "Gloria"
+      },
+      "gospelAcclamation": {
+        "title": "Spirit & Psalm • Timothy R. Smith",
+        "composer": "Gospel Acclamation",
+        "verse": "Setting from Mass of Renewal"
+      },
+      "offertory": {
+        "title": "Spirit & Psalm • Curtis Stephan",
+        "description": "Offertory Song"
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "It Is Well With My Soul",
+        "composer": "VILLE DU HAVRE • Chris Rice"
+      },
+      "lordsPrayer": {
+        "title": "Eucharistic Acclamations",
+        "composer": "Mass of Restoration • Joshua Blakesley"
+      },
+      "fractionRite": {
+        "title": "Holy, Holy, Holy",
+        "composer": "Save Us Savior of the World",
+        "description": "Amen"
+      },
+      "communionSongs": [
+        {
+          "title": "The Lord's Prayer",
+          "composer": "Echo Our Father",
+          "description": "Andrews, Arr. Bonilla • Lockwood • Fajardo"
+        },
+        {
+          "title": "Fraction Rite",
+          "composer": "Lamb of God (Resoration)"
+        },
+        {
+          "title": "Communion Songs",
+          "composer": "In the Fields of the Lord",
+          "description": "Audrey Assad •  Isaac Wardell"
+        },
+        {
+          "title": "\"...at the harvest of the Lord, the fields are white.\"",
+          "composer": "Give Me Jesus",
+          "description": "Spiritual • Sara Watkins"
+        },
+        {
+          "title": "\"...and when I've come to die, give me Jesus\"",
+          "composer": "Scars in Heaven",
+          "description": "Casting Crowns"
+        }
+      ],
+      "sending": {
+        "title": "Sending Song",
+        "composer": "When the Saints Go Marching In",
+        "description": "TRADITIONAL Arr. Bonilla"
+      }
+    }
+  ]
+}

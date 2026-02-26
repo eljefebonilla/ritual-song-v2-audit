@@ -1,0 +1,408 @@
+{
+  "id": "year-c-jul-13-2025-sun",
+  "name": "Year C — Jul 13, 2025 (Sun)",
+  "year": "ABC",
+  "season": "ordinary",
+  "seasonLabel": "Ordinary Time",
+  "seasonOrder": 13,
+  "dates": [],
+  "lectionary": {
+    "number": "Year C — Jul 15, 2040 (Sun)",
+    "gospelTitle": "Year C — Jul 12, 2037 (Sun)",
+    "thematicTag": "Year C — Jul 16, 2034 (Sun)",
+    "thematicDetail": "Year C — Jul 13, 2031 (Sun)"
+  },
+  "readings": [
+    {
+      "type": "psalm",
+      "citation": "Travel Disc. (Journey to Jerusalem) 2/4",
+      "summary": "",
+      "antiphon": "Planning Reminders"
+    },
+    {
+      "type": "gospel_verse",
+      "citation": "As for me, in justice I shall behold your face;\nI shall be filled with the vision of your glory.",
+      "summary": ""
+    },
+    {
+      "type": "gospel",
+      "citation": "Reading I | Dt 30:10-14",
+      "summary": "The law of the Lord is near to you."
+    }
+  ],
+  "antiphons": [
+    {
+      "type": "entrance",
+      "option": 1,
+      "citation": "Verse before the Gospel | cf. John 6:63c, 68c",
+      "text": "Your words, Lord, are Spirit and life;\nyou have the words of everlasting life."
+    },
+    {
+      "type": "communion",
+      "option": 2,
+      "citation": "Communion Antiphon • Option I | Cf. Ps 84 (83):4–5",
+      "text": "The sparrow finds a home, and the swallow a nest for her young: by your altars, O Lord of hosts, my King and my God. Blessed are they who dwell in your house, for ever singing your praise."
+    }
+  ],
+  "planningNotes": [
+    "Roman Missal — Jn 6:57",
+    "Whoever eats my flesh and drinks my blood\nremains in me and I in him, says the Lord."
+  ],
+  "musicPlans": [
+    {
+      "community": "Reflections",
+      "communityId": "reflections",
+      "date": "Year C — Jul 12, 2025 (Sat)",
+      "presider": "NOT THIS YEAR",
+      "prelude": {
+        "title": "Song Title",
+        "composer": "Composer/s"
+      },
+      "penitentialAct": {
+        "title": "SLANE • Susan G Wente",
+        "composer": "\"Loving our neighbor whatever the cost\"",
+        "description": "Penitential Act"
+      },
+      "gloria": {
+        "title": "Kyrie • Misa Del Mundo",
+        "composer": "Only if needed. Talk to presider!",
+        "description": "Gloria"
+      },
+      "gospelAcclamation": {
+        "title": "The Lyric Psalter • Tony Alonso & Marty Haugen",
+        "composer": "Gospel Acclamation",
+        "verse": "Alleluia (Mass of Joy & Peace)"
+      },
+      "offertory": {
+        "title": "The Lyric Gospel Acclamations • Tony Alonso",
+        "description": "Offertory Song"
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "A Generous Heart",
+        "composer": "Chris de Silva"
+      },
+      "lordsPrayer": {
+        "title": "Eucharistic Acclamations",
+        "composer": "Mass of the Holy Family",
+        "description": "Chris de Silva"
+      },
+      "fractionRite": {
+        "title": "Holy, Holy, Holy",
+        "composer": "When We Eat This Bread",
+        "description": "Amen"
+      },
+      "communionSongs": [
+        {
+          "title": "The Lord's Prayer",
+          "composer": "Chanted Our Father (Snow)",
+          "description": "Jennings/Paregorius"
+        },
+        {
+          "title": "Fraction Rite",
+          "composer": "Lamb of God (Mass of the Holy Family)",
+          "description": "Chris de Silva"
+        },
+        {
+          "title": "Communion Songs",
+          "composer": "The Feast Meant for Everyone",
+          "description": "Tom Booth & Sarah Hart"
+        },
+        {
+          "title": "\"Bread for the immigrant, bread for the poor\"",
+          "composer": "Prayer of St Francis",
+          "description": "Sebastian Temple • Arranged by Ed Archer"
+        }
+      ]
+    },
+    {
+      "community": "Foundations",
+      "communityId": "foundations",
+      "date": "Year C — Jul 13, 2025 (Sun)",
+      "presider": "NOT THIS YEAR",
+      "prelude": {
+        "title": "N/A"
+      },
+      "penitentialAct": {
+        "title": "SLANE • Susan G Wente",
+        "composer": "\"Loving our neighbor whatever the cost\"",
+        "description": "Penitential Act"
+      },
+      "gloria": {
+        "title": "Kyrie (Gift of God) • Adapted Version",
+        "composer": "Marty Haugen • Arranged by David Locwood",
+        "description": "Gloria"
+      },
+      "gospelAcclamation": {
+        "title": "Spirit & Psalm • Casey McKinley",
+        "composer": "Gospel Acclamation",
+        "verse": "Song Title"
+      },
+      "offertory": {
+        "title": "Verse Audio Example",
+        "description": "Offertory Song"
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "Act Justly",
+        "composer": "Bernadette Farrell"
+      },
+      "lordsPrayer": {
+        "title": "Eucharistic Acclamations",
+        "composer": "Mass of Glory • Bob Hurd • Arr. by Dan Houze"
+      },
+      "fractionRite": {
+        "title": "Holy, Holy",
+        "composer": "We Proclaim Your Death",
+        "description": "Amen"
+      },
+      "communionSongs": [
+        {
+          "title": "The Lord's Prayer",
+          "composer": "Chanted Our Father (Snow)",
+          "description": "Jennings • Paregorius"
+        },
+        {
+          "title": "Fraction Rite",
+          "composer": "Lamb of God (Mass of Glory)"
+        },
+        {
+          "title": "Communion Songs",
+          "composer": "The Feast Meant for Everyone",
+          "description": "Tom Booth & Sarah Hart"
+        },
+        {
+          "title": "Table Song",
+          "composer": "By Our Love",
+          "description": "Tom Kendzia"
+        }
+      ],
+      "sending": {
+        "title": "Tom Kendzia",
+        "composer": "\"Called to love one another, as Christ to the World\""
+      }
+    },
+    {
+      "community": "Generations",
+      "communityId": "generations",
+      "date": "Year C — Jul 13, 2025 (Sun)",
+      "presider": "NOT THIS YEAR",
+      "prelude": {
+        "title": "Song Title",
+        "composer": "Composer/s"
+      },
+      "penitentialAct": {
+        "title": "Trevor Thomson",
+        "composer": "\"We are one in our hurting, we are one in our pain\"",
+        "description": "Penitential Act"
+      },
+      "gloria": {
+        "title": "Kyrie • Misa Del Mundo",
+        "composer": "Only if needed. Talk to presider!",
+        "description": "Gloria"
+      },
+      "gospelAcclamation": {
+        "title": "Spirit & Psalm • Casey McKinley",
+        "composer": "Gospel Acclamation",
+        "verse": "Setting from Mass of Endless Mercy"
+      },
+      "offertory": {
+        "title": "Spirit & Psalm • Steve Angrisano",
+        "description": "Offertory Song"
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "Prayer of St Francis",
+        "composer": "Sebastian Temple • Arranged by Ed Archer"
+      },
+      "lordsPrayer": {
+        "title": "Eucharistic Acclamations",
+        "composer": "Mass of Restoration",
+        "description": "Joshua Blakesley"
+      },
+      "fractionRite": {
+        "title": "Holy, Holy, Holy",
+        "composer": "Save Us Savior of the World",
+        "description": "Amen"
+      },
+      "communionSongs": [
+        {
+          "title": "The Lord's Prayer",
+          "composer": "(Echo) Our Father",
+          "description": "Jerome Andrews • Arranged by Dan Houze"
+        },
+        {
+          "title": "Fraction Rite",
+          "composer": "Lamb of God (Resoration)"
+        },
+        {
+          "title": "Communion Songs",
+          "composer": "The Feast Meant for Everyone",
+          "description": "Tom Booth & Sarah Hart"
+        },
+        {
+          "title": "Table Song",
+          "composer": "Caminemos con Jesús",
+          "description": "Tony Alonso"
+        },
+        {
+          "title": "\"with the ones the world has turned away\" (Good Samaritan)",
+          "composer": "A Place At Your Table",
+          "description": "Ben Walther"
+        },
+        {
+          "title": "\"the saint and the sinner, your friends\"",
+          "composer": "Hold on to Love",
+          "description": "Jesse Manibusan"
+        }
+      ],
+      "sending": {
+        "title": "Make the Love of God Known",
+        "composer": "Rick Modlin • Arranged by David Lockwood",
+        "description": "Verse 6 - \"Love your neighbor in need\""
+      }
+    },
+    {
+      "community": "Heritage",
+      "communityId": "heritage",
+      "date": "Year C — Jul 13, 2025 (Sun)",
+      "presider": "NOT THIS YEAR",
+      "prelude": {
+        "title": "Song Title",
+        "composer": "Composer/s"
+      },
+      "penitentialAct": {
+        "title": "SLANE • Susan G Wente",
+        "composer": "\"Loving our neighbor whatever the cost\"",
+        "description": "Penitential Act"
+      },
+      "gloria": {
+        "title": "Kyrie • Misa Del Mundo",
+        "composer": "Only if needed. Talk to presider!",
+        "description": "Gloria"
+      },
+      "gospelAcclamation": {
+        "title": "The Lyric Psalter • Tony Alonso & Marty Haugen",
+        "composer": "Gospel Acclamation",
+        "verse": "Alleluia (Mass of Joy & Peace)"
+      },
+      "offertory": {
+        "title": "The Lyric Gospel Acclamations • Tony Alonso",
+        "description": "Offertory Song"
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "Heart of Jesus",
+        "composer": "Bob Hurd"
+      },
+      "lordsPrayer": {
+        "title": "Eucharistic Acclamations",
+        "composer": "Mass of Christ the Savior - Dan Schutte"
+      },
+      "fractionRite": {
+        "title": "Holy",
+        "composer": "When We Eat This Bread",
+        "description": "Amen"
+      },
+      "communionSongs": [
+        {
+          "title": "The Lord's Prayer",
+          "composer": "Echo Our Father",
+          "description": "Andrews, Arr. Bonilla • Lockwood • Fajardo"
+        },
+        {
+          "title": "Fraction Rite",
+          "composer": "Lamb of God (Mass of Christ the Savior)"
+        },
+        {
+          "title": "Communion Songs",
+          "composer": "The Feast Meant for Everyone",
+          "description": "Tom Booth & Sarah Hart"
+        },
+        {
+          "title": "\"Bread for the immigrant, bread for the poor\"",
+          "composer": "Prayer of St Francis",
+          "description": "Sebastian Temple • Arranged by Ed Archer"
+        },
+        {
+          "title": "\"Where there's despair in life let me bring hope\"",
+          "composer": "Partners in the Mission",
+          "description": "BEAMS OF LOVE • Peter Fisher Hesed"
+        }
+      ],
+      "sending": {
+        "title": "Peter Scholtes • Arr. Mark Hayes",
+        "composer": "OCP Arrangement"
+      }
+    },
+    {
+      "community": "Elevations",
+      "communityId": "elevations",
+      "date": "Year C — Jul 13, 2025 (Sun)",
+      "presider": "NOT THIS YEAR",
+      "prelude": {
+        "title": "Song Title",
+        "composer": "Composer/s"
+      },
+      "penitentialAct": {
+        "title": "Trevor Thomson",
+        "composer": "\"We are one in our hurting, we are one in our pain\"",
+        "description": "Penitential Act"
+      },
+      "gloria": {
+        "title": "Kyrie • Misa Del Mundo",
+        "composer": "Only if needed. Talk to presider!",
+        "description": "Gloria"
+      },
+      "gospelAcclamation": {
+        "title": "Spirit & Psalm • Casey McKinley",
+        "composer": "Gospel Acclamation",
+        "verse": "Setting from Mass of Endless Mercy"
+      },
+      "offertory": {
+        "title": "Spirit & Psalm • Steve Angrisano",
+        "description": "Offertory Song"
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "Prayer of St Francis",
+        "composer": "Sebastian Temple • Arranged by Ed Archer"
+      },
+      "lordsPrayer": {
+        "title": "Eucharistic Acclamations",
+        "composer": "Mass of Restoration • Joshua Blakesley"
+      },
+      "fractionRite": {
+        "title": "Holy, Holy, Holy",
+        "composer": "Save Us Savior of the World",
+        "description": "Amen"
+      },
+      "communionSongs": [
+        {
+          "title": "The Lord's Prayer",
+          "composer": "Echo Our Father",
+          "description": "Andrews, Arr. Bonilla • Lockwood • Fajardo"
+        },
+        {
+          "title": "Fraction Rite",
+          "composer": "Lamb of God (Resoration)"
+        },
+        {
+          "title": "Communion Songs",
+          "composer": "The Feast Meant for Everyone",
+          "description": "Tom Booth & Sarah Hart"
+        },
+        {
+          "title": "Table Song",
+          "composer": "Caminemos con Jesús",
+          "description": "Tony Alonso"
+        },
+        {
+          "title": "\"with the ones the world has turned away\" (Good Samaritan)",
+          "composer": "Hold on to Love",
+          "description": "Jesse Manibusan"
+        }
+      ],
+      "sending": {
+        "title": "Sending Song",
+        "composer": "Make the Love of God Known",
+        "description": "Rick Modlin • Arranged by David Lockwood"
+      }
+    }
+  ]
+}

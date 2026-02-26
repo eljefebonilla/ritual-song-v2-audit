@@ -1,0 +1,46 @@
+{
+  "id": "memorial-abc-feast-of-st-francis-oct-4",
+  "name": "MEMORIAL [ABC] \nFEAST OF ST FRANCIS (OCT 4)",
+  "year": "ABC",
+  "season": "feast",
+  "seasonLabel": "Feast",
+  "seasonOrder": 4,
+  "dates": [
+    {
+      "date": "2025-10-04",
+      "label": "Year C — Oct 04, 2025 (Sat)",
+      "dayOfWeek": "Sat"
+    },
+    {
+      "date": "2030-10-04",
+      "label": "Year B — Oct 04, 2030 (Fri)",
+      "dayOfWeek": "Fri"
+    },
+    {
+      "date": "2029-10-04",
+      "label": "Year A — Oct 04, 2029 (Thu)",
+      "dayOfWeek": "Thu"
+    },
+    {
+      "date": "2028-10-04",
+      "label": "Year C — Oct 04, 2028 (Wed)",
+      "dayOfWeek": "Wed"
+    },
+    {
+      "date": "2027-10-04",
+      "label": "Year B — Oct 04, 2027 (Mon)",
+      "dayOfWeek": "Mon"
+    }
+  ],
+  "lectionary": {
+    "number": "651•ABC",
+    "gospelTitle": "Learn From Me; I Am Gentle",
+    "thematicTag": "Humble Joy; Poverty and Peace."
+  },
+  "readings": [],
+  "antiphons": [],
+  "planningNotes": [
+    "Year A — Oct 04, 2026 (Sun)"
+  ],
+  "musicPlans": []
+}

@@ -1,0 +1,401 @@
+{
+  "id": "year-c-jan-19-2025-sun",
+  "name": "Year C — Jan 19, 2025 (Sun)",
+  "year": "ABC",
+  "season": "ordinary",
+  "seasonLabel": "Ordinary Time",
+  "seasonOrder": 19,
+  "dates": [],
+  "lectionary": {
+    "number": "Year C — Jan 15, 2040 (Sun)",
+    "gospelTitle": "Year C — Jan 18, 2037 (Sun)",
+    "thematicTag": "Year C — Jan 15, 2034 (Sun)",
+    "thematicDetail": "Year C — Jan 19, 2031 (Sun)"
+  },
+  "readings": [
+    {
+      "type": "psalm",
+      "citation": "First Sign (John)",
+      "summary": "",
+      "antiphon": "Planning Reminders"
+    },
+    {
+      "type": "gospel_verse",
+      "citation": "All the earth shall bow down before you, O God,\nand shall sing to you, shall sing to your name, O Most High!",
+      "summary": "Entrance Antiphon • Option II"
+    }
+  ],
+  "antiphons": [
+    {
+      "type": "entrance",
+      "option": 1,
+      "citation": "Verse before the Gospel | See 2 Thes 2:14",
+      "text": "God has called us through the Gospel\nto possess the glory of our Lord Jesus Christ."
+    },
+    {
+      "type": "communion",
+      "option": 2,
+      "citation": "Communion Antiphon • Option I | Cf. Ps 23 (22):5",
+      "text": "You have prepared a table before me,\nand how precious is the chalice that quenches my thirst."
+    }
+  ],
+  "planningNotes": [
+    "Communion Antiphon • Option II | 1 Jn 4:16",
+    "We have come to know and to believe\nin the love that God has for us."
+  ],
+  "musicPlans": [
+    {
+      "community": "Reflections",
+      "communityId": "reflections",
+      "date": "Year C — Jan 15, 2028 (Sat)",
+      "presider": "NOT THIS YEAR",
+      "prelude": {
+        "title": "Hail Mary: Gentle Woman",
+        "composer": "Carey Landry · Jeffrey Honoré, Tom Kendzia",
+        "description": "Gospel: “Do whatever he tells you.” — Mary"
+      },
+      "penitentialAct": {
+        "title": "vs 1 - Byrne • vs 2 - Wente • vs 3 - Belle (adapt.)",
+        "composer": "Arranged by Assad • Adapt. by Bonilla & Phan",
+        "description": "Penitential Act (Only if presider wants led by cantor)"
+      },
+      "gloria": {
+        "title": "Kyrie • Misa Del Mundo",
+        "composer": "Jesse Manibusan",
+        "description": "Gloria"
+      },
+      "gospelAcclamation": {
+        "title": "The Lyric Psalter • Tony Alonso & Marty Haugen",
+        "composer": "Gospel Acclamation",
+        "verse": "Alleluia (Mass of Joy & Peace)"
+      },
+      "offertory": {
+        "title": "The Lyric Gospel Acclamations • Tony Alonso",
+        "description": "Offertory Song"
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "Come to Me and Drink",
+        "composer": "Bob Hurd"
+      },
+      "lordsPrayer": {
+        "title": "Eucharistic Acclamations",
+        "composer": "Mass for the Healing of the World",
+        "description": "Trevor Thomson"
+      },
+      "fractionRite": {
+        "title": "Holy",
+        "composer": "When We Eat This Bread",
+        "description": "Amen"
+      },
+      "communionSongs": [
+        {
+          "title": "The Lord's Prayer",
+          "composer": "Chanted Our Father (Snow)",
+          "description": "Jennings/Paregorius"
+        },
+        {
+          "title": "Fraction Rite",
+          "composer": "Lamb of God (Mass for the Healing of the World)",
+          "description": "Trevor Thomson"
+        },
+        {
+          "title": "Communion Songs",
+          "composer": "Broken Vessels (Amazing Grace)",
+          "description": "Hillsong Worship"
+        },
+        {
+          "title": "\"...in mercy gathered, mended and whole\"",
+          "composer": "On Eagle's Wings",
+          "description": "Michael Joncas • Craig Kingsbury"
+        }
+      ]
+    },
+    {
+      "community": "Foundations",
+      "communityId": "foundations",
+      "date": "Year C — Jan 16, 2028 (Sun)",
+      "presider": "NOT THIS YEAR",
+      "prelude": {
+        "title": "Hail Mary: Gentle Woman",
+        "composer": "Carey Landry • Jeffrey Honoré • Tom Kendzia",
+        "description": "Gospel: “Do whatever he tells you.” — Mary"
+      },
+      "penitentialAct": {
+        "title": "vs 1 - Byrne • vs 2 - Wente • vs 3 - Belle (adapt.)",
+        "composer": "Arranged by Assad • Adapt. by Bonilla & Phan",
+        "description": "Penitential Act (If presider wants led by cantor)"
+      },
+      "gloria": {
+        "title": "Kyrie (Gift of God) • Adapted Version",
+        "composer": "Marty Haugen • Arranged by David Locwood",
+        "description": "Gloria"
+      },
+      "gospelAcclamation": {
+        "title": "Spirit & Psalm • Cooper Ray",
+        "composer": "Gospel Acclamation",
+        "verse": "Alleluia! Give the Glory (Mass of Glory)"
+      },
+      "offertory": {
+        "title": "Bob Hurd •  Ken Canedo • Craig Kingsbury",
+        "description": "Offertory Song"
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "On Eagle's Wings",
+        "composer": "Michael Joncas · Craig Kingsbury"
+      },
+      "lordsPrayer": {
+        "title": "Eucharistic Acclamations",
+        "composer": "Mass of Glory"
+      },
+      "fractionRite": {
+        "title": "Holy",
+        "composer": "Mystery of Faith",
+        "description": "Amen"
+      },
+      "communionSongs": [
+        {
+          "title": "The Lord's Prayer",
+          "composer": "Chanted Our Father (Snow)",
+          "description": "Jennings • Paregorius"
+        },
+        {
+          "title": "Fraction Rite",
+          "composer": "Lamb of God (Mass of Glory)"
+        },
+        {
+          "title": "Communion Songs",
+          "composer": "We Are Many Parts",
+          "description": "Marty Haugen"
+        },
+        {
+          "title": "2nd Reading • Week of Prayer for Christian Unity",
+          "composer": "Give Me Jesus",
+          "description": "Spiritual • Sara Watkins"
+        }
+      ],
+      "sending": {
+        "title": "Adapt. by Burleigh • Oxenham • Arr. by Lockwood",
+        "composer": "MLK • Week of Prayer for Christian Unity"
+      }
+    },
+    {
+      "community": "Generations",
+      "communityId": "generations",
+      "date": "Year C — Jan 16, 2028 (Sun)",
+      "presider": "NOT THIS YEAR",
+      "prelude": {
+        "title": "Hail Mary: Gentle Woman",
+        "composer": "Carey Landrey"
+      },
+      "penitentialAct": {
+        "title": "vs 1 - Byrne • vs 2 - Wente • vs 3 - Belle (adapt.)",
+        "composer": "Arranged by Assad • Adapt. by Bonilla & Phan",
+        "description": "Penitential Act (Only if presider wants led by cantor)"
+      },
+      "gloria": {
+        "title": "Kyrie • Misa Del Mundo",
+        "composer": "Jesse Manibusan",
+        "description": "Gloria"
+      },
+      "gospelAcclamation": {
+        "title": "Spirit & Psalm • Cooper Ray",
+        "composer": "Gospel Acclamation",
+        "verse": "Setting from Mass of Endless Mercy"
+      },
+      "offertory": {
+        "title": "Spirit & Psalm • Steve Angrisano",
+        "description": "Offertory Song"
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "The Lord Is My Shepherd",
+        "composer": "Josh Blakesley (Subtle Reharm. Version)"
+      },
+      "lordsPrayer": {
+        "title": "Eucharistic Acclamations",
+        "composer": "Mass of St. Anne",
+        "description": "Ed Bolduc"
+      },
+      "fractionRite": {
+        "title": "Holy",
+        "composer": "Mystery of Faith",
+        "description": "Amen"
+      },
+      "communionSongs": [
+        {
+          "title": "The Lord's Prayer",
+          "composer": "Echo Our Father",
+          "description": "Jerome Andrews • Arranged by Dan Houze"
+        },
+        {
+          "title": "Fraction Rite",
+          "composer": "Lamb of God (Mass of Holy Cross)"
+        },
+        {
+          "title": "Communion Songs",
+          "composer": "Here At This Table",
+          "description": "Janèt Sullivan Whitaker"
+        },
+        {
+          "title": "\"... drink for all who thirst\"",
+          "composer": "Song Title",
+          "description": "Composer/s"
+        },
+        {
+          "title": "Description",
+          "composer": "We Are Many Parts",
+          "description": "Marty Haugen"
+        },
+        {
+          "title": "2nd Reading • Week of Prayer for Christian Unity",
+          "composer": "Day of Peace",
+          "description": "Janèt Sullivan Whitaker"
+        }
+      ],
+      "sending": {
+        "title": "In Christ There Is No East Or West",
+        "composer": "Adapt. by Burleigh • Oxenham • Arr. by Lockwood",
+        "description": "MLK • Week of Prayer for Christian Unity"
+      }
+    },
+    {
+      "community": "Heritage",
+      "communityId": "heritage",
+      "date": "Year C — Jan 16, 2028 (Sun)",
+      "presider": "NOT THIS YEAR",
+      "prelude": {
+        "title": "Hail Mary: Gentle Woman"
+      },
+      "penitentialAct": {
+        "title": "vs 1 - Byrne • vs 2 - Wente • vs 3 - Belle (adapt.)",
+        "composer": "OCP CHART • Adapt. by Bonilla & Phan",
+        "description": "Penitential Act (If presider wants led by cantor)"
+      },
+      "gloria": {
+        "title": "Kyrie • Misa Del Mundo",
+        "composer": "Jesse Manibusan",
+        "description": "Gloria"
+      },
+      "gospelAcclamation": {
+        "title": "The Lyric Psalter • Tony Alonso & Marty Haugen",
+        "composer": "Gospel Acclamation",
+        "verse": "ORDINARY TIME • 02C"
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "Peace on Earth (Larghetto)",
+        "composer": "Dvořák adapted by Bob Hurd"
+      },
+      "lordsPrayer": {
+        "title": "Eucharistic Acclamations",
+        "composer": "Mass of Creation - Rev. 2010"
+      },
+      "fractionRite": {
+        "title": "Holy",
+        "composer": "Mystery of Faith",
+        "description": "Amen"
+      },
+      "communionSongs": [
+        {
+          "title": "The Lord's Prayer",
+          "composer": "Chanted Our Father (Snow)",
+          "description": "Jennings • Paregorius"
+        },
+        {
+          "title": "Fraction Rite",
+          "composer": "Lamb of God (Mass of Creation)"
+        },
+        {
+          "title": "Communion Songs",
+          "composer": "Ubi Caritas",
+          "description": "Bob Hurd"
+        },
+        {
+          "title": "Christian Love and Unity • Disaster Response",
+          "composer": "On Eagle's Wings",
+          "description": "Michael Joncas • Craig Kingsbury"
+        },
+        {
+          "title": "\" ...and he will raise you up...\"",
+          "composer": "Immaculate Mary (Lowered)",
+          "description": "LOURDES HYMN • Arr. by Randall DeBruyn"
+        }
+      ],
+      "sending": {
+        "title": "Jill Jackson • Sy Miller",
+        "composer": "MLK • Christian Unity • Prayer for Peace"
+      }
+    },
+    {
+      "community": "Elevations",
+      "communityId": "elevations",
+      "date": "Year C — Jan 16, 2028 (Sun)",
+      "presider": "NOT THIS YEAR",
+      "prelude": {
+        "title": "Song Title",
+        "composer": "Composer/s"
+      },
+      "penitentialAct": {
+        "title": "vs 1 - Byrne • vs 2 - Wente • vs 3 - Belle (adapt.)",
+        "composer": "Arranged by Assad • Adapt. by Bonilla & Phan",
+        "description": "Penitential Act (If presider wants led by cantor)"
+      },
+      "gloria": {
+        "title": "Kyrie (Misa Del Mundo)",
+        "composer": "Jesse Manibusan — If needed.",
+        "description": "Gloria"
+      },
+      "gospelAcclamation": {
+        "title": "Spirit & Psalm • Cooper Ray",
+        "composer": "Gospel Acclamation",
+        "verse": "Setting from Mass of Endless Mercy"
+      },
+      "offertory": {
+        "title": "Spirit & Psalm • Steve Angrisano",
+        "description": "Offertory Song"
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "By Our Love",
+        "composer": "Tom Kenzia"
+      },
+      "lordsPrayer": {
+        "title": "Eucharistic Acclamations",
+        "composer": "Mass of Communion (Lower Key) • Matt Maher"
+      },
+      "fractionRite": {
+        "title": "Holy",
+        "composer": "Mystery of Faith",
+        "description": "Amen"
+      },
+      "communionSongs": [
+        {
+          "title": "The Lord's Prayer",
+          "composer": "Echo Our Father",
+          "description": "Andrews • Arr. by Bonilla • Lockwood • Fajardo"
+        },
+        {
+          "title": "Fraction Rite",
+          "composer": "Lamb of God (Mass of Holy Cross)"
+        },
+        {
+          "title": "Communion Songs",
+          "composer": "Here At This Table",
+          "description": "Janet Sullivan Whitaker"
+        },
+        {
+          "title": "\"... drink for all who thirst\"",
+          "composer": "We Are Many Parts",
+          "description": "Marty Haugen"
+        },
+        {
+          "title": "2nd Reading • Week of Prayer for Christian Unity",
+          "composer": "New Wine",
+          "description": "Hillsong Worship"
+        }
+      ],
+      "sending": {
+        "title": "Sending Song",
+        "composer": "In Christ There Is No East Or West",
+        "description": "Adapt. by Burleigh • Oxenham • Arr. by Lockwood"
+      }
+    }
+  ]
+}

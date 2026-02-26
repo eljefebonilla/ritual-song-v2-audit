@@ -1,0 +1,269 @@
+{
+  "id": "easter-07-b",
+  "name": "EASTER 07 [B]",
+  "year": "B",
+  "season": "easter",
+  "seasonLabel": "Easter",
+  "seasonOrder": 7,
+  "dates": [
+    {
+      "date": "2024-05-05",
+      "label": "Year B — May 05, 2024 (Sun)",
+      "dayOfWeek": "Sun"
+    },
+    {
+      "date": "2036-05-18",
+      "label": "Year B — May 18, 2036 (Sun)",
+      "dayOfWeek": "Sun"
+    },
+    {
+      "date": "2033-05-22",
+      "label": "Year B — May 22, 2033 (Sun)",
+      "dayOfWeek": "Sun"
+    },
+    {
+      "date": "2030-05-26",
+      "label": "Year B — May 26, 2030 (Sun)",
+      "dayOfWeek": "Sun"
+    },
+    {
+      "date": "2027-05-02",
+      "label": "Year B — May 02, 2027 (Sun)",
+      "dayOfWeek": "Sun"
+    }
+  ],
+  "lectionary": {
+    "number": "060•B",
+    "gospelTitle": "“Keep Them in Your Name”",
+    "thematicTag": "High-Priest Prayer 1/2"
+  },
+  "readings": [
+    {
+      "type": "first",
+      "citation": "Acts 1:15-17, 20a, 20c-26",
+      "summary": "Matthias replaces Judas as the twelfth apostle."
+    },
+    {
+      "type": "psalm",
+      "citation": "Ps 103:1-2, 11-12, 19-20, R. v.19a\nThe Lord has revealed to the nations his saving power.",
+      "summary": "",
+      "antiphon": "Ps 103:1-2, 11-12, 19-20, R. v.19a\nThe Lord has revealed to the nations his saving power."
+    },
+    {
+      "type": "second",
+      "citation": "1 Jn 4:11-16",
+      "summary": "God is love."
+    },
+    {
+      "type": "gospel_verse",
+      "citation": "Jn 14:18 (7th Sun of Easter option)",
+      "summary": "I will not leave you orphans, says the Lord.\nI will come back to you, and your heart will rejoice."
+    },
+    {
+      "type": "gospel",
+      "citation": "Jn 17:11b-19",
+      "summary": "Jesus prays to the Father for his disciples."
+    }
+  ],
+  "antiphons": [
+    {
+      "type": "entrance",
+      "option": 1,
+      "citation": "Cf. Ps 27 (26):7–9",
+      "text": "O Lord, hear my voice, for I have called to you;\nof you my heart has spoken: Seek his face;\nhide not your face from me, alleluia."
+    },
+    {
+      "type": "communion",
+      "option": 1,
+      "citation": "Jn 14:15–16",
+      "text": "If you love me, keep my commandments,\nsays the Lord, and I will ask the Father\nand he will send you another Paraclete,\nto abide with you for ever, alleluia."
+    }
+  ],
+  "planningNotes": [
+    "N/A in ADLA"
+  ],
+  "musicPlans": [
+    {
+      "community": "Reflections",
+      "communityId": "reflections",
+      "date": "Year B — May 01, 2027 (Sat)",
+      "presider": "NOT THIS YEAR",
+      "prelude": {
+        "title": "Regina Caeli / O Queen of Heaven",
+        "composer": "Mode VI Latin • 12th C",
+        "description": "Pope Leo XIV singing Regina Caeli"
+      },
+      "gloria": {
+        "title": "Glory to God (Through-composed Setting)",
+        "composer": "Mass of Renewal • Curtis Stephan"
+      },
+      "gospelAcclamation": {
+        "title": "Easter Alleluia (Refrain)",
+        "composer": "The Lyric Gospel Acclamations • Tony Alonso",
+        "verse": "I will not leave you orphans, says the Lord.\nI will come back to you, and your heart will rejoice."
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "Mass of the Holy Family",
+        "composer": "Chris de Silva"
+      },
+      "lordsPrayer": {
+        "title": "Chanted Our Father (Snow)",
+        "composer": "Jennings/Paregorius"
+      },
+      "fractionRite": {
+        "title": "Lamb of God (Mass of the Holy Family)",
+        "composer": "Chris de Silva"
+      }
+    },
+    {
+      "community": "Foundations",
+      "communityId": "foundations",
+      "date": "Year B — May 02, 2027 (Sun)",
+      "presider": "NOT THIS YEAR",
+      "prelude": {
+        "title": "Regina Caeli / O Queen of Heaven",
+        "composer": "Mode VI Latin • 12th C",
+        "description": "Pope Leo XIV singing Regina Caeli"
+      },
+      "penitentialAct": {
+        "title": "Kyrie (Gift of God) • Adapted Version",
+        "composer": "Marty Haugen • Arranged by David Locwood"
+      },
+      "gloria": {
+        "title": "Glory to God (Mass of Joy & Peace)",
+        "composer": "Alonso • Arr. by Houze OR Arr. by Lockwood"
+      },
+      "gospelAcclamation": {
+        "title": "Easter Alleluia (Refrain)",
+        "composer": "The Lyric Gospel Acclamations • Tony Alonso",
+        "verse": "I will not leave you orphans, says the Lord.\nI will come back to you, and your heart will rejoice."
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "Mass of Glory",
+        "composer": "Bob Hurd & Ken Canedo"
+      },
+      "lordsPrayer": {
+        "title": "Chanted Our Father (Snow)",
+        "composer": "Jennings • Paregorius"
+      },
+      "fractionRite": {
+        "title": "Lamb of God (Mass of Glory)",
+        "composer": "Bob Hurd & Ken Canedo"
+      },
+      "communionSongs": [
+        {
+          "title": "One Bread, One Body",
+          "composer": "John Foley SJ — Upbeat!",
+          "description": "✪ E - 07 B"
+        }
+      ]
+    },
+    {
+      "community": "Generations",
+      "communityId": "generations",
+      "date": "Year B — May 02, 2027 (Sun)",
+      "presider": "NOT THIS YEAR",
+      "penitentialAct": {
+        "title": "Kyrie • Misa Del Mundo",
+        "composer": "If needed. Talk to presider!"
+      },
+      "gloria": {
+        "title": "Glory to God (Mass of Joy & Peace)",
+        "composer": "Tony Alonso • Arr. by Dan Houze"
+      },
+      "responsorialPsalm": {
+        "psalm": "Ps 67 O God, let all the nations praise you!",
+        "setting": "Spirit & Psalm • Thomas Muglia"
+      },
+      "gospelAcclamation": {
+        "title": "Easter Alleluia (Refrain)",
+        "composer": "The Lyric Gospel Acclamations • Tony Alonso",
+        "verse": "I will not leave you orphans, says the Lord.\nI will come back to you, and your heart will rejoice."
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "Mass of Glory",
+        "composer": "Bob Hurd • Arr. by Dan Houze"
+      },
+      "lordsPrayer": {
+        "title": "(Echo) Our Father",
+        "composer": "Jerome Andrews • Arranged by Dan Houze"
+      },
+      "fractionRite": {
+        "title": "Lamb of God (Mass of Glory)"
+      },
+      "communionSongs": [
+        {
+          "title": "Holy Spirit",
+          "composer": "Bryan & Katie Torwalt",
+          "description": "\"The Advocate... will teach you everything...\""
+        }
+      ]
+    },
+    {
+      "community": "Heritage",
+      "communityId": "heritage",
+      "date": "Year B — May 02, 2027 (Sun)",
+      "presider": "NOT THIS YEAR",
+      "prelude": {
+        "title": "Regina Caeli / O Queen of Heaven",
+        "composer": "Mode VI Latin • 12th C",
+        "description": "Pope Leo XIV singing Regina Caeli"
+      },
+      "gloria": {
+        "title": "Glory to God (Mass of Joy & Peace)",
+        "composer": "Tony Alonso, Thru Composed"
+      },
+      "gospelAcclamation": {
+        "title": "Easter Alleluia (Refrain)",
+        "composer": "The Lyric Gospel Acclamations • Tony Alonso",
+        "verse": "I will not leave you orphans, says the Lord.\nI will come back to you, and your heart will rejoice."
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "Mass of Joy & Peace",
+        "composer": "Tony Alonso"
+      },
+      "lordsPrayer": {
+        "title": "Chanted Our Father (Snow)",
+        "composer": "Jennings/Paregorius"
+      },
+      "fractionRite": {
+        "title": "Lamb of God (Mass of Joy & Peace)",
+        "composer": "Tony Alonso"
+      }
+    },
+    {
+      "community": "Elevations",
+      "communityId": "elevations",
+      "date": "Year B — May 02, 2027 (Sun)",
+      "presider": "NOT THIS YEAR",
+      "penitentialAct": {
+        "title": "Kyrie (Misa Del Mundo)",
+        "composer": "Jesse Manibusan — If needed."
+      },
+      "gloria": {
+        "title": "Glory to God (Joy & Peace)"
+      },
+      "responsorialPsalm": {
+        "psalm": "Ps 67 O God, let all the nations praise you!",
+        "setting": "Spirit & Psalm • Thomas Muglia"
+      },
+      "gospelAcclamation": {
+        "title": "Easter Alleluia (Refrain)",
+        "composer": "The Lyric Gospel Acclamations • Tony Alonso",
+        "verse": "I will not leave you orphans, says the Lord.\nI will come back to you, and your heart will rejoice."
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "Mass of Restoration",
+        "composer": "Joshua Blakesley"
+      },
+      "lordsPrayer": {
+        "title": "Echo Our Father",
+        "composer": "Andrews, Arr. Bonilla • Lockwood • Fajardo"
+      },
+      "fractionRite": {
+        "title": "Lamb of God (Mass of Restoration)",
+        "composer": "Joshua Blakesley"
+      }
+    }
+  ]
+}

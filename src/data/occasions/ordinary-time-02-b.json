@@ -1,0 +1,319 @@
+{
+  "id": "ordinary-time-02-b",
+  "name": "ORDINARY TIME 02 [B]",
+  "year": "B",
+  "season": "ordinary",
+  "seasonLabel": "Ordinary Time",
+  "seasonOrder": 2,
+  "dates": [
+    {
+      "date": "2024-01-14",
+      "label": "Year B — Jan 14, 2024 (Sun)",
+      "dayOfWeek": "Sun"
+    },
+    {
+      "date": "2036-01-20",
+      "label": "Year B — Jan 20, 2036 (Sun)",
+      "dayOfWeek": "Sun"
+    },
+    {
+      "date": "2033-01-16",
+      "label": "Year B — Jan 16, 2033 (Sun)",
+      "dayOfWeek": "Sun"
+    },
+    {
+      "date": "2030-01-20",
+      "label": "Year B — Jan 20, 2030 (Sun)",
+      "dayOfWeek": "Sun"
+    },
+    {
+      "date": "2027-01-17",
+      "label": "Year B — Jan 17, 2027 (Sun)",
+      "dayOfWeek": "Sun"
+    }
+  ],
+  "lectionary": {
+    "number": "065•B",
+    "gospelTitle": "Come and See",
+    "thematicTag": "Discipleship Dawn"
+  },
+  "readings": [
+    {
+      "type": "gospel_verse",
+      "citation": "Jn 1:41, 17b",
+      "summary": "We have found the Messiah:\nJesus Christ, who brings us truth and grace."
+    },
+    {
+      "type": "gospel",
+      "citation": "Jn 1:35-42",
+      "summary": "John identifies the Messiah, Peter responds."
+    }
+  ],
+  "antiphons": [
+    {
+      "type": "entrance",
+      "option": 1,
+      "citation": "Ps 66 (65):4",
+      "text": "All the earth shall bow down before you, O God,\nand shall sing to you, shall sing to your name, O Most High!"
+    },
+    {
+      "type": "communion",
+      "option": 1,
+      "citation": "Cf. Ps 23 (22):5",
+      "text": "You have prepared a table before me,\nand how precious is the chalice that quenches my thirst."
+    },
+    {
+      "type": "communion",
+      "option": 2,
+      "citation": "Communion Antiphon • Option II | 1 Jn 4:16",
+      "text": "We have come to know and to believe\nin the love that God has for us."
+    }
+  ],
+  "planningNotes": [],
+  "musicPlans": [
+    {
+      "community": "Reflections",
+      "communityId": "reflections",
+      "date": "Year B — Jan 16, 2027 (Sat)",
+      "presider": "NOT THIS YEAR",
+      "penitentialAct": {
+        "title": "Kyrie • Misa Del Mundo",
+        "composer": "Jesse Manibusan"
+      },
+      "gloria": {
+        "title": "Glory to God (Through-composed Setting)",
+        "composer": "Mass of Renewal • Curtis Stephan"
+      },
+      "responsorialPsalm": {
+        "psalm": "Ps 40 Here am I, Lord; I come to do your will.",
+        "setting": "The Lyric Psalter • Tony Alonso & Marty Haugen"
+      },
+      "gospelAcclamation": {
+        "title": "Alleluia (Mass of Joy & Peace)",
+        "composer": "ORDINARY TIME • 02B"
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "Mass for the Healing of the World",
+        "composer": "Trevor Thomson"
+      },
+      "lordsPrayer": {
+        "title": "Chanted Our Father (Snow)",
+        "composer": "Jennings/Paregorius"
+      },
+      "fractionRite": {
+        "title": "Lamb of God (Mass for the Healing of the World)",
+        "composer": "Trevor Thomson"
+      },
+      "communionSongs": [
+        {
+          "title": "Psalm 23: Shepherd Me, O God",
+          "composer": "Marty Haugen",
+          "description": "OT2B"
+        }
+      ],
+      "sending": {
+        "title": "Let There Be Peace on Earth",
+        "composer": "Jill Jackson, Sy Miller",
+        "description": "MLK • Christian Unity • Prayer for Peace"
+      }
+    },
+    {
+      "community": "Foundations",
+      "communityId": "foundations",
+      "date": "Year B — Jan 17, 2027 (Sun)",
+      "presider": "NOT THIS YEAR",
+      "prelude": {
+        "title": "Hail Mary: Gentle Woman",
+        "composer": "Carey Landry • Jeffrey Honoré • Tom Kendzia",
+        "description": "Gospel: “Do whatever he tells you.” — Mary"
+      },
+      "gathering": {
+        "title": "Be Though My Vision SLANE",
+        "composer": "vs 1 - Byrne • vs 2 - Wente • vs 3 - Belle (adapt.)",
+        "description": "Arranged by Assad • Adapt. by Bonilla & Phan"
+      },
+      "penitentialAct": {
+        "title": "Kyrie (Gift of God) • Adapted Version",
+        "composer": "Marty Haugen • Arranged by David Locwood"
+      },
+      "gloria": {
+        "title": "Mass of Joy & Peace (Gospel Version)",
+        "composer": "Tony Alonso • Arrangement by David Lockwood"
+      },
+      "responsorialPsalm": {
+        "psalm": "Ps 40 Here am I, Lord; I come to do your will.",
+        "setting": "Spirit & Psalm • Cooper Ray"
+      },
+      "gospelAcclamation": {
+        "title": "Alleluia! Give the Glory (Mass of Glory)",
+        "verse": "We have found the Messiah:\nJesus Christ, who brings us truth and grace."
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "Mass of Glory"
+      },
+      "lordsPrayer": {
+        "title": "Chanted Our Father (Snow)",
+        "composer": "Jennings • Paregorius"
+      },
+      "fractionRite": {
+        "title": "Lamb of God (Mass of Glory)"
+      },
+      "communionSongs": [
+        {
+          "title": "One Bread, One Body",
+          "composer": "John Foley SJ — Upbeat!",
+          "description": "✪ OT - 02 B"
+        },
+        {
+          "title": "Give Me Jesus",
+          "composer": "Spiritual • Sara Watkins",
+          "description": "MLK Weekend"
+        }
+      ],
+      "sending": {
+        "title": "In Christ There Is No East Or West",
+        "composer": "Adapt. by Burleigh • Oxenham • Arr. by Lockwood",
+        "description": "MLK • Week of Prayer for Christian Unity"
+      }
+    },
+    {
+      "community": "Generations",
+      "communityId": "generations",
+      "date": "Year B — Jan 17, 2027 (Sun)",
+      "presider": "NOT THIS YEAR",
+      "penitentialAct": {
+        "title": "Kyrie • Misa Del Mundo",
+        "composer": "Jesse Manibusan"
+      },
+      "gloria": {
+        "title": "Glory, Glory, Gloria! (Mass of the Setting Sun)",
+        "composer": "Bonilla & Wilson • Vocal Arr. by Lockwood & Phan"
+      },
+      "responsorialPsalm": {
+        "psalm": "Ps 40 Here am I, Lord; I come to do your will.",
+        "setting": "Spirit & Psalm • ?"
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "Mass of St. Anne",
+        "composer": "Ed Bolduc"
+      },
+      "lordsPrayer": {
+        "title": "Echo Our Father",
+        "composer": "Jerome Andrews • Arranged by Dan Houze"
+      },
+      "fractionRite": {
+        "title": "Lamb of God (Mass of Holy Cross)"
+      },
+      "communionSongs": [
+        {
+          "title": "Day of Peace",
+          "composer": "Janèt Sullivan Whitaker",
+          "description": "\"I dream...\" - MLK • Prayer for Peace in Holy Land"
+        }
+      ],
+      "sending": {
+        "title": "In Christ There Is No East Or West",
+        "composer": "Adapt. by Burleigh • Oxenham • Arr. by Lockwood",
+        "description": "MLK • Week of Prayer for Christian Unity"
+      }
+    },
+    {
+      "community": "Heritage",
+      "communityId": "heritage",
+      "date": "Year B — Jan 17, 2027 (Sun)",
+      "presider": "NOT THIS YEAR",
+      "prelude": {
+        "title": "Hail Mary: Gentle Woman"
+      },
+      "penitentialAct": {
+        "title": "Kyrie • Misa Del Mundo",
+        "composer": "Jesse Manibusan"
+      },
+      "gloria": {
+        "title": "Glory to God (Mass of Christ the Savior)",
+        "composer": "Dan Schutte"
+      },
+      "responsorialPsalm": {
+        "psalm": "Ps 40 Here am I, Lord; I come to do your will.",
+        "setting": "The Lyric Psalter • Tony Alonso & Marty Haugen"
+      },
+      "gospelAcclamation": {
+        "title": "ORDINARY TIME • 02C",
+        "composer": "The Lyric Gospel Acclamations • Tony Alonso"
+      },
+      "offertory": {
+        "title": "Peace on Earth (Larghetto)",
+        "composer": "Dvořák adapted by Bob Hurd",
+        "description": "Prayer for Peace"
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "Mass of Creation - Rev. 2010"
+      },
+      "lordsPrayer": {
+        "title": "Chanted Our Father (Snow)",
+        "composer": "Jennings • Paregorius"
+      },
+      "fractionRite": {
+        "title": "Lamb of God (Mass of Creation)"
+      },
+      "communionSongs": [
+        {
+          "title": "Ubi Caritas",
+          "composer": "Bob Hurd",
+          "description": "Christian Love and Unity • Disaster Response"
+        },
+        {
+          "title": "On Eagle's Wings",
+          "composer": "Michael Joncas • Craig Kingsbury",
+          "description": "\" ...and he will raise you up...\""
+        },
+        {
+          "title": "Immaculate Mary (Lowered)",
+          "composer": "LOURDES HYMN • Arr. by Randall DeBruyn",
+          "description": "Additional Arr. by Jeffrey Bonilla"
+        }
+      ],
+      "sending": {
+        "title": "Let There Be Peace on Earth",
+        "composer": "Jill Jackson • Sy Miller",
+        "description": "MLK • Christian Unity • Prayer for Peace"
+      }
+    },
+    {
+      "community": "Elevations",
+      "communityId": "elevations",
+      "date": "Year B — Jan 17, 2027 (Sun)",
+      "presider": "NOT THIS YEAR",
+      "penitentialAct": {
+        "title": "Kyrie (Misa Del Mundo)",
+        "composer": "Jesse Manibusan — If needed."
+      },
+      "gloria": {
+        "title": "Glory, Glory, Gloria! (Mass of the Setting Sun)"
+      },
+      "responsorialPsalm": {
+        "psalm": "Ps 40 Here am I, Lord; I come to do your will.",
+        "setting": "Spirit & Psalm • ?"
+      },
+      "gospelAcclamation": {
+        "title": "Setting from Mass of Endless Mercy",
+        "verse": "We have found the Messiah:\nJesus Christ, who brings us truth and grace."
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "Mass of Communion (Lower Key) • Matt Maher"
+      },
+      "lordsPrayer": {
+        "title": "Echo Our Father",
+        "composer": "Andrews • Arr. by Bonilla • Lockwood • Fajardo"
+      },
+      "fractionRite": {
+        "title": "Lamb of God (Mass of Holy Cross)"
+      },
+      "sending": {
+        "title": "In Christ There Is No East Or West",
+        "composer": "Adapt. by Burleigh • Oxenham • Arr. by Lockwood",
+        "description": "MLK • Week of Prayer for Christian Unity"
+      }
+    }
+  ]
+}

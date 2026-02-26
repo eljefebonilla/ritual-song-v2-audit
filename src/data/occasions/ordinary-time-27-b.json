@@ -1,0 +1,218 @@
+{
+  "id": "ordinary-time-27-b",
+  "name": "ORDINARY TIME 27 [B]",
+  "year": "B",
+  "season": "ordinary",
+  "seasonLabel": "Ordinary Time",
+  "seasonOrder": 27,
+  "dates": [
+    {
+      "date": "2024-10-06",
+      "label": "Year B — Oct 06, 2024 (Sun)",
+      "dayOfWeek": "Sun"
+    },
+    {
+      "date": "2036-10-05",
+      "label": "Year B — Oct 05, 2036 (Sun)",
+      "dayOfWeek": "Sun"
+    },
+    {
+      "date": "2033-10-02",
+      "label": "Year B — Oct 02, 2033 (Sun)",
+      "dayOfWeek": "Sun"
+    },
+    {
+      "date": "2030-10-06",
+      "label": "Year B — Oct 06, 2030 (Sun)",
+      "dayOfWeek": "Sun"
+    },
+    {
+      "date": "2027-10-03",
+      "label": "Year B — Oct 03, 2027 (Sun)",
+      "dayOfWeek": "Sun"
+    }
+  ],
+  "lectionary": {
+    "number": "140•B",
+    "gospelTitle": "Marriage and Little Children",
+    "thematicTag": "Teaching on Marriage"
+  },
+  "readings": [
+    {
+      "type": "first",
+      "citation": "Gen 2:18-24",
+      "summary": "The Lord God creates woman."
+    },
+    {
+      "type": "psalm",
+      "citation": "Ps 128:1-2, 3, 4-5, 6, R. v.5\nMay the Lord bless us all the days of our lives.",
+      "summary": "",
+      "antiphon": "Ps 128:1-2, 3, 4-5, 6, R. v.5\nMay the Lord bless us all the days of our lives."
+    },
+    {
+      "type": "second",
+      "citation": "Heb 2:9-11",
+      "summary": "Jesus was made low to taste death for all people."
+    },
+    {
+      "type": "gospel_verse",
+      "citation": "1 Jn 4:12",
+      "summary": "If we love one another, God remains in us\nand his love is brought to perfection in us."
+    },
+    {
+      "type": "gospel",
+      "citation": "Mk 10:2-16 (Shorter - Mk 10:2-12)",
+      "summary": "Let the children come to me. (They are no longer two.)"
+    }
+  ],
+  "antiphons": [
+    {
+      "type": "entrance",
+      "option": 1,
+      "citation": "Cf. Est 4:17",
+      "text": "Within your will, O Lord, all things are established,\nand there is none that can resist your will.\nFor you have made all things, the heaven and the earth,\nand all that is held within the circle of heaven;\nyou are the Lord of all."
+    },
+    {
+      "type": "communion",
+      "option": 1,
+      "citation": "Lam 3:25",
+      "text": "The Lord is good to those who hope in him,\nto the soul that seeks him."
+    },
+    {
+      "type": "communion",
+      "option": 2,
+      "citation": "Roman Missal — Cf. 1 Cor 10:17",
+      "text": "Though many, we are one bread, one body,\nfor we all partake of the one Bread and one Chalice."
+    }
+  ],
+  "planningNotes": [
+    "OCT - Holy Rosary",
+    "OCT - Respect Life",
+    "OCT - Catholic Social Teaching",
+    "Dr Michael — Image of Art"
+  ],
+  "musicPlans": [
+    {
+      "community": "Reflections",
+      "communityId": "reflections",
+      "date": "Year B — Oct 02, 2027 (Sat)",
+      "presider": "NOT THIS YEAR",
+      "penitentialAct": {
+        "title": "Kyrie • Misa Del Mundo",
+        "composer": "Only if needed. Talk to presider!"
+      },
+      "gloria": {
+        "title": "Glory to God (Through-composed Setting)",
+        "composer": "Mass of Renewal • Curtis Stephan"
+      },
+      "gospelAcclamation": {
+        "title": "Alleluia (Mass of Joy & Peace)",
+        "composer": "Song Title"
+      },
+      "lordsPrayer": {
+        "title": "Chanted Our Father (Snow)",
+        "composer": "Jennings/Paregorius"
+      },
+      "fractionRite": {
+        "title": "Lamb of God Setting"
+      }
+    },
+    {
+      "community": "Foundations",
+      "communityId": "foundations",
+      "date": "Year B — Oct 03, 2027 (Sun)",
+      "presider": "NOT THIS YEAR",
+      "penitentialAct": {
+        "title": "Kyrie (Gift of God) • Adapted Version",
+        "composer": "Marty Haugen • Arranged by David Locwood"
+      },
+      "gloria": {
+        "title": "Glory to God (Mass of Joy & Peace)",
+        "composer": "Alonso • Arr. by Houze OR Arr. by Lockwood"
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "Mass of ?"
+      },
+      "lordsPrayer": {
+        "title": "Chanted Our Father (Snow)",
+        "composer": "Jennings • Paregorius"
+      },
+      "fractionRite": {
+        "title": "Lamb of God (Mass of ???)"
+      }
+    },
+    {
+      "community": "Generations",
+      "communityId": "generations",
+      "date": "Year B — Oct 03, 2027 (Sun)",
+      "presider": "NOT THIS YEAR",
+      "penitentialAct": {
+        "title": "Kyrie • Misa Del Mundo",
+        "composer": "If needed. Talk to presider!"
+      },
+      "gloria": {
+        "title": "Glory, Glory, Gloria!",
+        "composer": "Tony Alonso • Arr. by Dan Houze"
+      },
+      "gospelAcclamation": {
+        "title": "Setting from Mass of ???",
+        "composer": "Song Title"
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "Mass of Restoration",
+        "composer": "Joshua Blakesley"
+      },
+      "lordsPrayer": {
+        "title": "(Echo) Our Father",
+        "composer": "Jerome Andrews • Arranged by Dan Houze"
+      },
+      "fractionRite": {
+        "title": "Lamb of God (Resoration)"
+      }
+    },
+    {
+      "community": "Heritage",
+      "communityId": "heritage",
+      "date": "Year B — Oct 03, 2027 (Sun)",
+      "presider": "NOT THIS YEAR",
+      "penitentialAct": {
+        "title": "Kyrie • Misa Del Mundo",
+        "composer": "Only if needed. Talk to presider!"
+      },
+      "gloria": {
+        "title": "Glory to God (Mass of Christ the Savior)",
+        "composer": "Dan Schutte"
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "Mass of Christ the Savior - Dan Schutte"
+      },
+      "lordsPrayer": {
+        "title": "Echo Our Father",
+        "composer": "Andrews, Arr. Bonilla • Lockwood • Fajardo"
+      },
+      "fractionRite": {
+        "title": "Lamb of God (Mass of Christ the Savior)"
+      }
+    },
+    {
+      "community": "Elevations",
+      "communityId": "elevations",
+      "date": "Year B — Oct 03, 2027 (Sun)",
+      "presider": "NOT THIS YEAR",
+      "gospelAcclamation": {
+        "title": "Setting from Mass of ???",
+        "verse": "Song Title"
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "Mass of Restoration • Joshua Blakesley"
+      },
+      "lordsPrayer": {
+        "title": "Echo Our Father",
+        "composer": "Andrews, Arr. Bonilla • Lockwood • Fajardo"
+      },
+      "fractionRite": {
+        "title": "Lamb of God (Resoration)"
+      }
+    }
+  ]
+}

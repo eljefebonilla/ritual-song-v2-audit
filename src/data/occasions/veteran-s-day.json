@@ -1,0 +1,44 @@
+{
+  "id": "veteran-s-day",
+  "name": "VETERAN'S DAY",
+  "year": "ABC",
+  "season": "ordinary",
+  "seasonLabel": "Ordinary Time",
+  "seasonOrder": 0,
+  "dates": [
+    {
+      "date": "2025-11-11",
+      "label": "Year C — Nov 11, 2025 (Tue)",
+      "dayOfWeek": "Tue"
+    },
+    {
+      "date": "2029-11-11",
+      "label": "Year A — Nov 11, 2029 (Sun)",
+      "dayOfWeek": "Sun"
+    },
+    {
+      "date": "2028-11-11",
+      "label": "Year C — Nov 11, 2028 (Sat)",
+      "dayOfWeek": "Sat"
+    },
+    {
+      "date": "2027-11-11",
+      "label": "Year B — Nov 11, 2027 (Thu)",
+      "dayOfWeek": "Thu"
+    },
+    {
+      "date": "2026-11-11",
+      "label": "Year A — Nov 11, 2026 (Wed)",
+      "dayOfWeek": "Wed"
+    }
+  ],
+  "lectionary": {
+    "number": "SEE SHEET",
+    "gospelTitle": "",
+    "thematicTag": "🇺🇸 TUESDAY 🇺🇸"
+  },
+  "readings": [],
+  "antiphons": [],
+  "planningNotes": [],
+  "musicPlans": []
+}

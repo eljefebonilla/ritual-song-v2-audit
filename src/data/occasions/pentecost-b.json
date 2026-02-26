@@ -1,0 +1,239 @@
+{
+  "id": "pentecost-b",
+  "name": "PENTECOST [B]",
+  "year": "B",
+  "season": "easter",
+  "seasonLabel": "Easter",
+  "seasonOrder": 0,
+  "dates": [
+    {
+      "date": "2024-05-19",
+      "label": "Year B — May 19, 2024 (Sun)",
+      "dayOfWeek": "Sun"
+    },
+    {
+      "date": "2036-06-01",
+      "label": "Year B — Jun 01, 2036 (Sun)",
+      "dayOfWeek": "Sun"
+    },
+    {
+      "date": "2033-06-05",
+      "label": "Year B — Jun 05, 2033 (Sun)",
+      "dayOfWeek": "Sun"
+    },
+    {
+      "date": "2030-06-09",
+      "label": "Year B — Jun 09, 2030 (Sun)",
+      "dayOfWeek": "Sun"
+    },
+    {
+      "date": "2027-05-16",
+      "label": "Year B — May 16, 2027 (Sun)",
+      "dayOfWeek": "Sun"
+    }
+  ],
+  "lectionary": {
+    "number": "063•B",
+    "gospelTitle": "Spirit of Truth Guides",
+    "thematicTag": "Receive Spirit | Spirit Promise (alt.)"
+  },
+  "readings": [
+    {
+      "type": "first",
+      "citation": "Acts 2:1-11",
+      "summary": "The Spirit comes to the Apostles as tongues of fire."
+    },
+    {
+      "type": "psalm",
+      "citation": "Ps 104:1, 24, 29-30, 31, 34, R. see v.30\nLord, send out your Spirit, and renew the face of the earth.",
+      "summary": "",
+      "antiphon": "Ps 104:1, 24, 29-30, 31, 34, R. see v.30\nLord, send out your Spirit, and renew the face of the earth."
+    },
+    {
+      "type": "second",
+      "citation": "Gal 5:16-25 (Year A also may be used)",
+      "summary": "If you are guided by the Spirit."
+    },
+    {
+      "type": "gospel_verse",
+      "citation": "Lectionary",
+      "summary": "Come, Holy Spirit, fill the hearts of your faithful\nand kindle in them the fire of your love."
+    },
+    {
+      "type": "gospel",
+      "citation": "Jn 15:26-27; 16:12-15",
+      "summary": "When the Advocate comes, he will be my witness.\n\nYear A reading option as well —Jn 20:19-23"
+    }
+  ],
+  "antiphons": [
+    {
+      "type": "entrance",
+      "option": 1,
+      "citation": "Cf. Wis 1:7",
+      "text": "The Spirit of the Lord has filled the whole world\nand that which contains all things\nunderstands what is said, alleluia."
+    },
+    {
+      "type": "entrance",
+      "option": 2,
+      "citation": "Entrance Antiphon • Option II | Rom 5:5; cf. 8:11",
+      "text": "The love of God has been poured into our hearts\nthrough the Spirit of God dwelling within us, alleluia."
+    },
+    {
+      "type": "communion",
+      "option": 1,
+      "citation": "Acts 2:4, 11",
+      "text": "They were all filled with the Holy Spirit\nand spoke of the marvels of God, alleluia."
+    }
+  ],
+  "planningNotes": [
+    "MAY - MONTH OF MARY",
+    "SEQUENCE!!!"
+  ],
+  "musicPlans": [
+    {
+      "community": "Foundations",
+      "communityId": "foundations",
+      "date": "Year B — May 16, 2027 (Sun)",
+      "presider": "NOT THIS YEAR",
+      "prelude": {
+        "title": "Regina Caeli / O Queen of Heaven",
+        "composer": "Mode VI Latin • 12th C",
+        "description": "Pope Leo XIV singing Regina Caeli"
+      },
+      "penitentialAct": {
+        "title": "Kyrie (Gift of God) • Adapted Version",
+        "composer": "Marty Haugen • Arranged by David Locwood"
+      },
+      "gloria": {
+        "title": "Glory to God (Mass of Joy & Peace)"
+      },
+      "gospelAcclamation": {
+        "title": "Pentecost Sequence",
+        "composer": "Refrain by Leonard Cohen • Adapted for Liturgy",
+        "verse": "Sequence music by Ed Archer"
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "Mass of Glory",
+        "composer": "Bob Hurd & Ken Canedo"
+      },
+      "lordsPrayer": {
+        "title": "Chanted Our Father (Snow)",
+        "composer": "Jennings • Paregorius"
+      },
+      "fractionRite": {
+        "title": "Lamb of God (Mass of Glory)"
+      }
+    },
+    {
+      "community": "Generations",
+      "communityId": "generations",
+      "date": "Year B — May 16, 2027 (Sun)",
+      "presider": "NOT THIS YEAR",
+      "gathering": {
+        "title": "Veni, Creator Spiritus",
+        "composer": "John Angotti",
+        "description": "Translation: Come, Holy Spirit, Creator blest..."
+      },
+      "penitentialAct": {
+        "title": "Kyrie • Misa Del Mundo",
+        "composer": "If needed. Talk to presider!"
+      },
+      "gloria": {
+        "title": "Glory to God (Mass of Joy & Peace)",
+        "composer": "Tony Alonso • Arr. by Dan Houze"
+      },
+      "responsorialPsalm": {
+        "psalm": "Ps 104 Lord, send out your Spirit...",
+        "setting": "Spirit & Psalm • Steve Angrisano"
+      },
+      "gospelAcclamation": {
+        "title": "Pentecost Sequence",
+        "composer": "Sequence music by Ed Archer",
+        "verse": "Refrain by Leonard Cohen • Adapted for Liturgy"
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "Mass of Glory",
+        "composer": "Bob Hurd • Arr. by Dan Houze"
+      },
+      "lordsPrayer": {
+        "title": "(Echo) Our Father",
+        "composer": "Jerome Andrews • Arranged by Dan Houze"
+      },
+      "fractionRite": {
+        "title": "Lamb of God (Mass of Glory)"
+      }
+    },
+    {
+      "community": "Heritage",
+      "communityId": "heritage",
+      "date": "Year B — May 16, 2027 (Sun)",
+      "presider": "NOT THIS YEAR",
+      "prelude": {
+        "title": "Regina Caeli / O Queen of Heaven",
+        "composer": "Mode VI Latin • 12th C",
+        "description": "Pope Leo XIV singing Regina Caeli"
+      },
+      "gloria": {
+        "title": "Glory to God (Mass of Joy & Peace)",
+        "composer": "Tony Alonso, Thru Composed"
+      },
+      "gospelAcclamation": {
+        "title": "Pentecost Sequence",
+        "composer": "Sequence music by Ed Archer"
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "Mass of Joy & Peace",
+        "composer": "Tony Alonso"
+      },
+      "lordsPrayer": {
+        "title": "Chanted Our Father (Snow)",
+        "composer": "Jennings/Paregorius"
+      },
+      "fractionRite": {
+        "title": "Lamb of God (Mass of...?)"
+      }
+    },
+    {
+      "community": "Elevations",
+      "communityId": "elevations",
+      "date": "Year B — May 16, 2027 (Sun)",
+      "presider": "NOT THIS YEAR",
+      "gathering": {
+        "title": "Veni, Creator Spiritus",
+        "composer": "John Angotti",
+        "description": "Translation: Come, Holy Spirit, Creator blest..."
+      },
+      "penitentialAct": {
+        "title": "Kyrie • Misa Del Mundo",
+        "composer": "Only if needed. Talk to presider!"
+      },
+      "gloria": {
+        "title": "Glory to God (Mass of Joy & Peace)"
+      },
+      "responsorialPsalm": {
+        "psalm": "Ps 104 Lord, send out your Spirit...",
+        "setting": "Spirit & Psalm • Steve Angrisano"
+      },
+      "gospelAcclamation": {
+        "title": "Pentecost Sequence",
+        "verse": "Sequence music by Ed Archer"
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "Mass of Restoration",
+        "composer": "Joshua Blakesley"
+      },
+      "lordsPrayer": {
+        "title": "Echo Our Father",
+        "composer": "Andrews, Arr. Bonilla • Lockwood • Fajardo"
+      },
+      "fractionRite": {
+        "title": "Lamb of God (Resoration)"
+      },
+      "sending": {
+        "title": "Creator Spirit, by Whose Aid",
+        "composer": "Arr. by David Lockwood",
+        "description": "\"All Creatures of Our God and King\" with different lyrics."
+      }
+    }
+  ]
+}

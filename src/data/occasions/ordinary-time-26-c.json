@@ -1,0 +1,436 @@
+{
+  "id": "ordinary-time-26-c",
+  "name": "ORDINARY TIME 26 [C]",
+  "year": "C",
+  "season": "ordinary",
+  "seasonLabel": "Ordinary Time",
+  "seasonOrder": 26,
+  "dates": [
+    {
+      "date": "2025-09-28",
+      "label": "Year C — Sep 28, 2025 (Sun)",
+      "dayOfWeek": "Sun"
+    },
+    {
+      "date": "2037-09-27",
+      "label": "Year C — Sep 27, 2037 (Sun)",
+      "dayOfWeek": "Sun"
+    },
+    {
+      "date": "2034-10-01",
+      "label": "Year C — Oct 01, 2034 (Sun)",
+      "dayOfWeek": "Sun"
+    },
+    {
+      "date": "2031-09-28",
+      "label": "Year C — Sep 28, 2031 (Sun)",
+      "dayOfWeek": "Sun"
+    },
+    {
+      "date": "2028-10-01",
+      "label": "Year C — Oct 01, 2028 (Sun)",
+      "dayOfWeek": "Sun"
+    }
+  ],
+  "lectionary": {
+    "number": "138•C",
+    "gospelTitle": "Better to Give",
+    "thematicTag": "Riches Teaching 2/2"
+  },
+  "readings": [
+    {
+      "type": "first",
+      "citation": "Am 6:1a, 4-7",
+      "summary": "Woe to the complacent."
+    },
+    {
+      "type": "psalm",
+      "citation": "Ps 146:7, 8-9, 9-10, R. v.1b\nPraise the Lord, my soul!",
+      "summary": "",
+      "antiphon": "Ps 146:7, 8-9, 9-10, R. v.1b\nPraise the Lord, my soul!"
+    },
+    {
+      "type": "second",
+      "citation": "1 Tm 6:11-16",
+      "summary": "Fight the good fight."
+    },
+    {
+      "type": "gospel_verse",
+      "citation": "See 2 Cor 8:9",
+      "summary": "Though our Lord Jesus Christ was rich, he became poor, so that by his poverty you might become rich."
+    },
+    {
+      "type": "gospel",
+      "citation": "Lk 16:19-31",
+      "summary": "Parable of the rich man and Lazarus."
+    }
+  ],
+  "antiphons": [
+    {
+      "type": "entrance",
+      "option": 1,
+      "citation": "Dn 3:31, 29, 30, 43, 42",
+      "text": "All that you have done to us, O Lord,\nyou have done with true judgment,\nfor we have sinned against you\nand not obeyed your commandments.\nBut give glory to your name\nand deal with us according to the bounty of your mercy."
+    },
+    {
+      "type": "communion",
+      "option": 1,
+      "citation": "Cf. Ps 119 (118):49–50",
+      "text": "Remember your word to your servant, O Lord,\nby which you have given me hope.\nThis is my comfort when I am brought low."
+    },
+    {
+      "type": "communion",
+      "option": 2,
+      "citation": "Communion Antiphon • Option II |  1 Jn 3:16",
+      "text": "By this we came to know the love of God:\nthat Christ laid down his life for us;\nso we ought to lay down our lives for one another."
+    }
+  ],
+  "planningNotes": [
+    "SEASON OF CREATION (9/1 - 10/4)",
+    "Stewardship Renewal"
+  ],
+  "musicPlans": [
+    {
+      "community": "Reflections",
+      "communityId": "reflections",
+      "date": "Year C — Sep 27, 2025 (Sat)",
+      "presider": "Fr. Thomas Park",
+      "prelude": {
+        "title": "Tend the Ground",
+        "composer": "Curtis Stephan • Based on Laudato Si",
+        "description": "Season of Creation • Pope Francis"
+      },
+      "gathering": {
+        "title": "For the Beauty of the Earth",
+        "composer": "DIX • Folliott Sandford Pierpoint • Arr. by Dan Houze",
+        "description": "Season of Creation"
+      },
+      "penitentialAct": {
+        "title": "Kyrie • Misa Del Mundo",
+        "composer": "Only if needed. Talk to presider!"
+      },
+      "gloria": {
+        "title": "Glory to God (Through-composed Setting)",
+        "composer": "Mass of Renewal • Curtis Stephan"
+      },
+      "responsorialPsalm": {
+        "psalm": "Ps 146 Praise the Lord, my soul!",
+        "setting": "The Lyric Psalter • Tony Alonso & Marty Haugen"
+      },
+      "gospelAcclamation": {
+        "title": "Alleluia (Mass of Joy & Peace)",
+        "composer": "O.T. • 26 | C — \"Though our Lord Jesus...\""
+      },
+      "offertory": {
+        "title": "Prayer of St Francis",
+        "composer": "Sebastian Temple • Arranged by Ed Archer",
+        "description": "St Francis and as contrast to the rich man (Gospel)"
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "Mass for the Healing of the World",
+        "composer": "Trevor Thomson"
+      },
+      "lordsPrayer": {
+        "title": "Chanted Our Father (Snow)",
+        "composer": "Jennings/Paregorius"
+      },
+      "fractionRite": {
+        "title": "Lamb of God (Mass for the Healing of the World)",
+        "composer": "Trevor Thomson"
+      },
+      "communionSongs": [
+        {
+          "title": "Be Though My Vision",
+          "composer": "SLANE • Arranged by Assad",
+          "description": "Gospel Theme \"Riches I head not...\""
+        },
+        {
+          "title": "We Remember",
+          "composer": "Marty Haugen",
+          "description": "Jn 3:16 Communion Antiphon"
+        },
+        {
+          "title": "Christ Be Our Light",
+          "composer": "Bernadette Farrell • Arr, by Jeffrey Bonilla",
+          "description": "Poor Lazarus | “Longing for food, many are hungry…”"
+        }
+      ],
+      "sending": {
+        "title": "The Church of Christ in Every Age",
+        "composer": "DUNEDIN • Fred Pratt Green • Vernon Griffiths",
+        "description": "Calls us to be of service in contrast to rich man in Gospel"
+      }
+    },
+    {
+      "community": "Foundations",
+      "communityId": "foundations",
+      "date": "Year C — Sep 28, 2025 (Sun)",
+      "presider": "Fr. Vince Kuna",
+      "prelude": {
+        "title": "Tend the Ground",
+        "composer": "Curtis Stephan • Based on Laudato Si",
+        "description": "Season of Creation • Pope Francis"
+      },
+      "gathering": {
+        "title": "For the Beauty of the Earth",
+        "composer": "DIX • Folliott Sandford Pierpoint • Arr. by Dan Houze",
+        "description": "Season of Creation"
+      },
+      "penitentialAct": {
+        "title": "Kyrie (Gift of God) • Adapted Version",
+        "composer": "Marty Haugen • Arranged by David Locwood"
+      },
+      "gloria": {
+        "title": "Glory to God (Mass of Joy & Peace)",
+        "composer": "Alonso • Arr. by Houze OR Arr. by Lockwood"
+      },
+      "responsorialPsalm": {
+        "psalm": "Ps 146 Praise the Lord, my soul!",
+        "setting": "The Lyric Psalter • Tony Alonso & Marty Haugen"
+      },
+      "offertory": {
+        "title": "Prayer of St Francis",
+        "composer": "Sebastian Temple • Arranged by Ed Archer",
+        "description": "St Francis and as contrast to the rich man (Gospel)"
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "Mass of Glory • Bob Hurd • Arr. by Dan Houze"
+      },
+      "lordsPrayer": {
+        "title": "Chanted Our Father (Snow)",
+        "composer": "Jennings • Paregorius"
+      },
+      "fractionRite": {
+        "title": "Lamb of God (Mass of Glory)"
+      },
+      "communionSongs": [
+        {
+          "title": "Be Though My Vision",
+          "composer": "SLANE • Arranged by Assad",
+          "description": "Gospel Theme \"Riches I head not...\""
+        },
+        {
+          "title": "We Remember",
+          "composer": "Marty Haugen",
+          "description": "Jn 3:16 Communion Antiphon"
+        }
+      ],
+      "sending": {
+        "title": "Lord, Whose Love in Humble Service",
+        "composer": "BEACH SPRING • Albert F. Bayly",
+        "description": "Answers Amos’ and Luke’s warnings by calling us to service."
+      }
+    },
+    {
+      "community": "Generations",
+      "communityId": "generations",
+      "date": "Year C — Sep 28, 2025 (Sun)",
+      "presider": "Msgr. Lloyd Torgerson",
+      "prelude": {
+        "title": "No prelude because of the special Rite for those",
+        "composer": "going through the process of Initiation."
+      },
+      "gathering": {
+        "title": "Christ Be Our Light (Welcome)",
+        "composer": "Farrell • Arr. by Bonilla • Adapt. for Rite with Lockwood",
+        "description": "Poor Lazarus | “Longing for food, many are hungry…”"
+      },
+      "penitentialAct": {
+        "title": "Kyrie • Misa Del Mundo",
+        "composer": "Only if needed. Talk to presider!"
+      },
+      "gloria": {
+        "title": "Glory, Glory, Gloria!",
+        "composer": "Jeffrey Bonilla & Drew Wilson"
+      },
+      "responsorialPsalm": {
+        "psalm": "Ps 146 Praise the Lord, my soul!",
+        "setting": "Spirit & Psalm • Sarah Hart"
+      },
+      "gospelAcclamation": {
+        "title": "Setting from Mass of the Desert",
+        "composer": "O.T. • 26 | C — \"Though our Lord Jesus...\""
+      },
+      "offertory": {
+        "title": "The Servant Song",
+        "composer": "Richard Gillard • Arranged by Ed Archer",
+        "description": "Stewardship Renewal"
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "Mass of Restoration",
+        "composer": "Joshua Blakesley"
+      },
+      "lordsPrayer": {
+        "title": "(Echo) Our Father",
+        "composer": "Jerome Andrews • Arranged by Dan Houze"
+      },
+      "fractionRite": {
+        "title": "Lamb of God (Resoration)"
+      },
+      "communionSongs": [
+        {
+          "title": "Be Though My Vision",
+          "composer": "SLANE • Arranged by Assad",
+          "description": "Gospel Theme \"Riches I head not...\""
+        },
+        {
+          "title": "Caminemos con Jesús",
+          "composer": "Tony Alonso",
+          "description": "\"with the ones the world has turned away\""
+        },
+        {
+          "title": "Taste and See",
+          "composer": "Bob Hurd",
+          "description": "Fun Groove Version"
+        },
+        {
+          "title": "Daily Bread",
+          "composer": "Pat Barrett • Kari Jobe",
+          "description": "\"...we will seek your face before we seek your hand\""
+        }
+      ],
+      "sending": {
+        "title": "Act Justly, Love Mercy, Walk Humbly",
+        "composer": "Pat Barrett",
+        "description": "Calls us to do what the rich man in Gospel did not do."
+      }
+    },
+    {
+      "community": "Heritage",
+      "communityId": "heritage",
+      "date": "Year C — Sep 28, 2025 (Sun)",
+      "presider": "\"Fr. David Guffey, CSC\"",
+      "prelude": {
+        "title": "Tend the Ground",
+        "composer": "Curtis Stephan • Based on Laudato Si",
+        "description": "Season of Creation • Pope Francis"
+      },
+      "gathering": {
+        "title": "For the Beauty of the Earth",
+        "composer": "DIX • Folliott Sandford Pierpoint",
+        "description": "Season of Creation"
+      },
+      "penitentialAct": {
+        "title": "Kyrie • Misa Del Mundo",
+        "composer": "Only if needed. Talk to presider!"
+      },
+      "gloria": {
+        "title": "Glory to God (Mass of Christ the Savior)",
+        "composer": "Dan Schutte"
+      },
+      "responsorialPsalm": {
+        "psalm": "Ps 146 Praise the Lord, my soul!",
+        "setting": "The Lyric Psalter • Tony Alonso & Marty Haugen"
+      },
+      "gospelAcclamation": {
+        "title": "Alleluia (Mass of Joy & Peace)",
+        "composer": "O.T. • 26 | C — \"Though our Lord Jesus...\""
+      },
+      "offertory": {
+        "title": "Prayer of St Francis",
+        "composer": "Sebastian Temple • Arranged by Ed Archer",
+        "description": "St Francis and as contrast to the rich man (Gospel)"
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "Mass of Christ the Savior - Dan Schutte"
+      },
+      "lordsPrayer": {
+        "title": "Echo Our Father",
+        "composer": "Andrews, Arr. Bonilla • Lockwood • Fajardo"
+      },
+      "fractionRite": {
+        "title": "Lamb of God (Mass of Christ the Savior)"
+      },
+      "communionSongs": [
+        {
+          "title": "We Remember",
+          "composer": "Marty Haugen",
+          "description": "Jn 3:16 Communion Antiphon"
+        },
+        {
+          "title": "Be Though My Vision",
+          "composer": "SLANE • Arranged by Assad",
+          "description": "Gospel Theme \"Riches I head not...\""
+        },
+        {
+          "title": "Take, Lord, Receive",
+          "composer": "John Foley SJ",
+          "description": "\"Your love and your grace\rare enough for me.\""
+        }
+      ],
+      "sending": {
+        "title": "The Church of Christ in Every Age",
+        "composer": "DUNEDIN • Fred Pratt Green • Vernon Griffiths",
+        "description": "Calls us to be of service in contrast to rich man in Gospel"
+      }
+    },
+    {
+      "community": "Elevations",
+      "communityId": "elevations",
+      "date": "Year C — Sep 28, 2025 (Sun)",
+      "presider": "Fr. Eusebio Llonoso",
+      "prelude": {
+        "title": "Tend the Ground",
+        "composer": "Curtis Stephan • Based on Laudato Si",
+        "description": "Season of Creation • Pope Francis"
+      },
+      "gathering": {
+        "title": "For the Beauty of the Earth",
+        "composer": "DIX • Folliott Sandford Pierpoint • Arr. by Dan Houze",
+        "description": "Season of Creation"
+      },
+      "penitentialAct": {
+        "title": "Kyrie • Misa Del Mundo",
+        "composer": "Only if needed. Talk to presider!"
+      },
+      "gloria": {
+        "title": "Glory, Glory, Gloria!"
+      },
+      "responsorialPsalm": {
+        "psalm": "Ps 146 Praise the Lord, my soul!",
+        "setting": "Spirit & Psalm • Sarah Hart"
+      },
+      "gospelAcclamation": {
+        "title": "Setting from Mass of the Desert",
+        "verse": "O.T. • 26 | C — \"Though our Lord Jesus...\""
+      },
+      "offertory": {
+        "title": "Be Though My Vision",
+        "composer": "SLANE • Arranged by Assad",
+        "description": "Gospel Theme \"Riches I head not...\""
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "Mass of Restoration • Joshua Blakesley"
+      },
+      "lordsPrayer": {
+        "title": "Echo Our Father",
+        "composer": "Andrews, Arr. Bonilla • Lockwood • Fajardo"
+      },
+      "fractionRite": {
+        "title": "Lamb of God (Resoration)"
+      },
+      "communionSongs": [
+        {
+          "title": "Daily Bread",
+          "composer": "Pat Barrett • Kari Jobe",
+          "description": "\"...we will seek your face before we seek your hand\""
+        },
+        {
+          "title": "Caminemos con Jesús",
+          "composer": "Tony Alonso",
+          "description": "\"with the ones the world has turned away\""
+        },
+        {
+          "title": "Make Me a Channel of Your Peace",
+          "composer": "John Angotti",
+          "description": "St Francis and as contrast to rich man in Gospel."
+        }
+      ],
+      "sending": {
+        "title": "Act Justly, Love Mercy, Walk Humbly",
+        "composer": "Pat Barrett",
+        "description": "Calls us to do what the rich man in Gospel did not do."
+      }
+    }
+  ]
+}

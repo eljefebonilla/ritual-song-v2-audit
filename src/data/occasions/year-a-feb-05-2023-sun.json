@@ -1,0 +1,424 @@
+{
+  "id": "year-a-feb-05-2023-sun",
+  "name": "Year A — Feb 05, 2023 (Sun)",
+  "year": "ABC",
+  "season": "ordinary",
+  "seasonLabel": "Ordinary Time",
+  "seasonOrder": 5,
+  "dates": [],
+  "lectionary": {
+    "number": "Year A — Feb 07, 2038 (Sun)",
+    "gospelTitle": "Year A — Feb 04, 2035 (Sun)",
+    "thematicTag": "Year A — Feb 08, 2032 (Sun)",
+    "thematicDetail": "Year A — Feb 04, 2029 (Sun)"
+  },
+  "readings": [
+    {
+      "type": "first",
+      "citation": "THIS WEEK",
+      "summary": ""
+    },
+    {
+      "type": "psalm",
+      "citation": "Sermon Mount 2/6",
+      "summary": "",
+      "antiphon": "Planning Reminders"
+    },
+    {
+      "type": "gospel_verse",
+      "citation": "O come, let us worship God\nand bow low before the God who made us,\nfor he is the Lord our God.",
+      "summary": "Entrance Antiphon • Option II"
+    },
+    {
+      "type": "gospel",
+      "citation": "Reading I | Is 58:7-10",
+      "summary": "Share with those in need and you will be rewarded."
+    }
+  ],
+  "antiphons": [
+    {
+      "type": "entrance",
+      "option": 1,
+      "citation": "Verse before the Gospel | Jn 8:12",
+      "text": "I am the light of the world, says the Lord;\nwhoever follows me will have the light of life."
+    },
+    {
+      "type": "communion",
+      "option": 2,
+      "citation": "Communion Antiphon • Option I | Cf. Ps 107 (106):8–9",
+      "text": "Let them thank the Lord for his mercy,\nhis wonders for the children of men,\nfor he satisfies the thirsty soul,\nand the hungry he fills with good things."
+    }
+  ],
+  "planningNotes": [
+    "Communion Antiphon • Option II | Cf. Mt 5:5–6",
+    "Blessed are those who mourn, for they shall be consoled.\nBlessed are those who hunger and thirst for righteousness,\nfor they shall have their fill."
+  ],
+  "musicPlans": [
+    {
+      "community": "Reflections",
+      "communityId": "reflections",
+      "date": "Year A — Feb 07, 2026 (Sat)",
+      "presider": "Fr. Thomas Park",
+      "prelude": {
+        "title": "Love Never Fails",
+        "composer": "Brandon Heath",
+        "description": "World Marriage Day"
+      },
+      "penitentialAct": {
+        "title": "Marty Haugen",
+        "composer": "V3 - \"call us anew to be salt for the earth.\"",
+        "description": "Penitential Act (Only if presider wants led by cantor)"
+      },
+      "gloria": {
+        "title": "Kyrie • Misa Del Mundo",
+        "composer": "Jesse Manibusan",
+        "description": "Gloria"
+      },
+      "gospelAcclamation": {
+        "title": "The Lyric Psalter • Tony Alonso & Marty Haugen",
+        "composer": "Gospel Acclamation",
+        "verse": "Alleluia (Mass of Joy & Peace)"
+      },
+      "offertory": {
+        "title": "Vere - ORDINARY TIME • 05A",
+        "description": "Offertory Song"
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "What You Have Done for Me",
+        "composer": "Tony Alonso"
+      },
+      "lordsPrayer": {
+        "title": "Eucharistic Acclamations",
+        "composer": "Mass for the Healing of the World",
+        "description": "Trevor Thomson"
+      },
+      "fractionRite": {
+        "title": "Holy",
+        "composer": "When We Eat This Bread",
+        "description": "Amen"
+      },
+      "communionSongs": [
+        {
+          "title": "The Lord's Prayer",
+          "composer": "Chanted Our Father (Snow)",
+          "description": "Jennings/Paregorius"
+        },
+        {
+          "title": "Fraction Rite",
+          "composer": "Lamb of God (Mass for the Healing of the World)",
+          "description": "Trevor Thomson"
+        },
+        {
+          "title": "Communion Songs",
+          "composer": "Lux Mundi",
+          "description": "Trevor Thomson"
+        },
+        {
+          "title": "Light of the World",
+          "composer": "I Am Yours",
+          "description": "Trevor Thomson"
+        }
+      ]
+    },
+    {
+      "community": "Foundations",
+      "communityId": "foundations",
+      "date": "Year A — Feb 08, 2026 (Sun)",
+      "presider": "Fr. Vince Kuna",
+      "prelude": {
+        "title": "Lift Every Voice",
+        "composer": "James Weldon Johnson & John Rosamond Johnson",
+        "description": "Black History Month"
+      },
+      "penitentialAct": {
+        "title": "Bob Hurd",
+        "composer": "General",
+        "description": "Penitential Act (If presider wants led by cantor)"
+      },
+      "gloria": {
+        "title": "Kyrie (Gift of God) • Adapted Version",
+        "composer": "Marty Haugen • Arranged by David Locwood",
+        "description": "Gloria"
+      },
+      "gospelAcclamation": {
+        "title": "Spirit & Psalm • Steve Angrisano",
+        "composer": "Gospel Acclamation",
+        "verse": "Alleluia! Give the Glory (Mass of Glory)"
+      },
+      "offertory": {
+        "title": "Verse Audio Example",
+        "description": "Offertory Song"
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "Give Thanks With A Grateful Heart",
+        "composer": "Cece Winans"
+      },
+      "lordsPrayer": {
+        "title": "Eucharistic Acclamations",
+        "composer": "Mass of Glory",
+        "description": "Bob Hurd & Ken Canedo"
+      },
+      "fractionRite": {
+        "title": "Holy",
+        "composer": "Mystery of Faith",
+        "description": "Amen"
+      },
+      "communionSongs": [
+        {
+          "title": "The Lord's Prayer",
+          "composer": "Chanted Our Father (Snow)",
+          "description": "Jennings • Paregorius"
+        },
+        {
+          "title": "Fraction Rite",
+          "composer": "Lamb of God (Mass of Glory)",
+          "description": "Bob Hurd & Ken Canedo"
+        },
+        {
+          "title": "Communion Songs",
+          "composer": "Taste and See (Gospel Version)",
+          "description": "James E. Moore • ValLimar Jansen"
+        },
+        {
+          "title": "African American Sacred Songs",
+          "composer": "Gift of Finest Wheat",
+          "description": "BICENTENNIAL • Robert Kreutz • Omer Westendorf"
+        }
+      ],
+      "sending": {
+        "title": "Ernest W. Blandy",
+        "composer": "First Reading | , Gospel"
+      }
+    },
+    {
+      "community": "Generations",
+      "communityId": "generations",
+      "date": "Year A — Feb 08, 2026 (Sun)",
+      "presider": "Msgr. Lloyd Torgerson",
+      "prelude": {
+        "title": "Love Never Fails",
+        "composer": "Brandon Heath",
+        "description": "World Marriage Day"
+      },
+      "penitentialAct": {
+        "title": "South African Hymn",
+        "composer": "Light",
+        "description": "Penitential Act (Only if presider wants led by cantor)"
+      },
+      "gloria": {
+        "title": "Kyrie • Misa Del Mundo",
+        "composer": "Jesse Manibusan",
+        "description": "Gloria"
+      },
+      "gospelAcclamation": {
+        "title": "Spirit & Psalm • Steve Angrisano",
+        "composer": "Gospel Acclamation",
+        "verse": "Hallelujah (adapted for Liturgy)"
+      },
+      "offertory": {
+        "title": "Choir Practice Tracks",
+        "description": "Offertory Song"
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "Give Thanks With A Grateful Heart",
+        "composer": "Henry Smith • Arr. Joel Mott"
+      },
+      "lordsPrayer": {
+        "title": "Eucharistic Acclamations",
+        "composer": "Mass of St. Anne",
+        "description": "Ed Bolduc"
+      },
+      "fractionRite": {
+        "title": "Holy",
+        "composer": "Mystery of Faith",
+        "description": "Amen"
+      },
+      "communionSongs": [
+        {
+          "title": "The Lord's Prayer",
+          "composer": "Echo Our Father",
+          "description": "Jerome Andrews • Arranged by Dan Houze"
+        },
+        {
+          "title": "Fraction Rite",
+          "composer": "Lamb of God (Mass of Holy Cross)",
+          "description": "David Clark Isele"
+        },
+        {
+          "title": "Communion Songs",
+          "composer": "I Am Yours",
+          "description": "Trevor Thomson"
+        },
+        {
+          "title": "“Let your light shine,…let me be your light in this world.”",
+          "composer": "Taste and See",
+          "description": "Bob Hurd"
+        },
+        {
+          "title": "Fun Groove Version",
+          "composer": "I Am the Bread of Life (Come and Follow Me)",
+          "description": "Steve Angrisano • Tom Booth"
+        },
+        {
+          "title": "\"...I am the Truth and Light...\"",
+          "composer": "Lord, I Need You",
+          "description": "Matt Maher"
+        }
+      ],
+      "sending": {
+        "title": "This Little Light of Mine",
+        "composer": "Spiritual",
+        "description": "Gospel | “lamps lit”"
+      }
+    },
+    {
+      "community": "Heritage",
+      "communityId": "heritage",
+      "date": "Year A — Feb 08, 2026 (Sun)",
+      "presider": "\"Fr. David Guffey, CSC\"",
+      "prelude": {
+        "title": "N/A"
+      },
+      "penitentialAct": {
+        "title": "Marty Haugen",
+        "composer": "V3 - \"call us anew to be salt for the earth.\"",
+        "description": "Penitential Act (If presider wants led by cantor)"
+      },
+      "gloria": {
+        "title": "Kyrie • Misa Del Mundo",
+        "composer": "Jesse Manibusan",
+        "description": "Gloria"
+      },
+      "gospelAcclamation": {
+        "title": "The Lyric Psalter • Tony Alonso & Marty Haugen",
+        "composer": "Gospel Acclamation",
+        "verse": "Alleluia (Mass of Joy & Peace)"
+      },
+      "offertory": {
+        "title": "Verse = ORDINARY TIME • 05A",
+        "description": "Offertory Song"
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "What You Have Done for Me",
+        "composer": "Tony Alonso"
+      },
+      "lordsPrayer": {
+        "title": "Eucharistic Acclamations",
+        "composer": "Mass of Joy & Peace",
+        "description": "Tony Alonso"
+      },
+      "fractionRite": {
+        "title": "Holy, Holy, Holy",
+        "composer": "When We Eat This Bread",
+        "description": "Amen"
+      },
+      "communionSongs": [
+        {
+          "title": "The Lord's Prayer",
+          "composer": "Chanted Our Father (Snow)",
+          "description": "Jennings/Paregorius"
+        },
+        {
+          "title": "Fraction Rite",
+          "composer": "Lamb of God (Mass of Joy & Peace)",
+          "description": "Tony Alonso"
+        },
+        {
+          "title": "Communion Songs",
+          "composer": "Here I Am Lord",
+          "description": "Dan Schutte • Arranged by Jack Schrader"
+        },
+        {
+          "title": "Basic arrangement if choir is small.",
+          "composer": "Take, O Take Me As I Am",
+          "description": "John Bell"
+        },
+        {
+          "title": "First Reading | , Gospel",
+          "composer": "Only This I Want",
+          "description": "Dan Schutte"
+        }
+      ],
+      "sending": {
+        "title": "Dan Schutte",
+        "composer": "\"...send us forth as salt for the earth\""
+      }
+    },
+    {
+      "community": "Elevations",
+      "communityId": "elevations",
+      "date": "Year A — Feb 08, 2026 (Sun)",
+      "presider": "Fr. Eusebio Llonoso",
+      "prelude": {
+        "title": "Love Never Fails",
+        "composer": "Brandon Heath",
+        "description": "World Marriage Day"
+      },
+      "penitentialAct": {
+        "title": "Bernadette Farrell • Arr. Bonilla",
+        "composer": "Gospel - \"...light for the world to see.\"",
+        "description": "Penitential Act (If presider wants led by cantor)"
+      },
+      "gloria": {
+        "title": "Kyrie (Misa Del Mundo)",
+        "composer": "Jesse Manibusan — If needed.",
+        "description": "Gloria"
+      },
+      "gospelAcclamation": {
+        "title": "Spirit & Psalm • Steve Angrisano",
+        "composer": "Gospel Acclamation",
+        "verse": "Hallelujah (adapted for Liturgy)"
+      },
+      "offertory": {
+        "title": "Choir Practice Tracks",
+        "description": "Offertory Song"
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "Give Thanks With A Grateful Heart",
+        "composer": "Henry Smith • Arr. Joel Mott"
+      },
+      "lordsPrayer": {
+        "title": "Eucharistic Acclamations",
+        "composer": "Mass of Communion (Lower Key)",
+        "description": "Matt Maher"
+      },
+      "fractionRite": {
+        "title": "Holy",
+        "composer": "Mystery of Faith",
+        "description": "Amen"
+      },
+      "communionSongs": [
+        {
+          "title": "The Lord's Prayer",
+          "composer": "Echo Our Father",
+          "description": "Andrews • Arr. by Bonilla • Lockwood • Fajardo"
+        },
+        {
+          "title": "Fraction Rite",
+          "composer": "Lamb of God (Mass of Holy Cross)",
+          "description": "David Clark Isele"
+        },
+        {
+          "title": "Communion Songs",
+          "composer": "Simple Kingdom",
+          "description": "Bryan & Katie Torwaltwith with Cody Carnes"
+        },
+        {
+          "title": "Sermon on the Mount",
+          "composer": "I Am Yours",
+          "description": "Trevor Thomson"
+        },
+        {
+          "title": "“Let your light shine,…let me be your light in this world.”",
+          "composer": "Lord, I Need You",
+          "description": "Matt Maher"
+        }
+      ],
+      "sending": {
+        "title": "Sending Song",
+        "composer": "This Little Light of Mine",
+        "description": "Spiritual"
+      }
+    }
+  ]
+}

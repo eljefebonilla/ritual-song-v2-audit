@@ -1,0 +1,396 @@
+{
+  "id": "advent-04-a",
+  "name": "ADVENT 04 [A]",
+  "year": "A",
+  "season": "advent",
+  "seasonLabel": "Advent",
+  "seasonOrder": 4,
+  "dates": [
+    {
+      "date": "2025-12-21",
+      "label": "Year A — Dec 21, 2025 (Sun)",
+      "dayOfWeek": "Sun"
+    },
+    {
+      "date": "2037-12-20",
+      "label": "Year A — Dec 20, 2037 (Sun)",
+      "dayOfWeek": "Sun"
+    },
+    {
+      "date": "2034-12-24",
+      "label": "Year A — Dec 24, 2034 (Sun)",
+      "dayOfWeek": "Sun"
+    },
+    {
+      "date": "2031-12-21",
+      "label": "Year A — Dec 21, 2031 (Sun)",
+      "dayOfWeek": "Sun"
+    },
+    {
+      "date": "2028-12-24",
+      "label": "Year A — Dec 24, 2028 (Sun)",
+      "dayOfWeek": "Sun"
+    }
+  ],
+  "lectionary": {
+    "number": "010•A",
+    "gospelTitle": "Emmanuel: God with Us",
+    "thematicTag": "Infancy: Joseph’s Dream"
+  },
+  "readings": [
+    {
+      "type": "first",
+      "citation": "Is 7:10-14",
+      "summary": "Prediction of Emmanuel, born of a virgin."
+    },
+    {
+      "type": "psalm",
+      "citation": "Ps 24:1-2, 3-4, 5-6, R. v.7c and 10b\nLet the Lord enter; he is king of glory.",
+      "summary": "",
+      "antiphon": "Ps 24:1-2, 3-4, 5-6, R. v.7c and 10b\nLet the Lord enter; he is king of glory."
+    },
+    {
+      "type": "second",
+      "citation": "Rom 1:1-7",
+      "summary": "Paul spreads the news of the Son of God"
+    },
+    {
+      "type": "gospel_verse",
+      "citation": "Mt 1:23",
+      "summary": "The virgin shall conceive, and bear a son,\nand they shall name him Emmanuel."
+    },
+    {
+      "type": "gospel",
+      "citation": "Mt 1:18-24",
+      "summary": "An angel visits Joseph, who takes Mary as his wife."
+    }
+  ],
+  "antiphons": [
+    {
+      "type": "entrance",
+      "option": 1,
+      "citation": "Cf. Is 45:8",
+      "text": "Drop down dew from above, you heavens,\nand let the clouds rain down the Just One;\nlet the earth be opened and bring forth a Savior."
+    },
+    {
+      "type": "communion",
+      "option": 1,
+      "citation": "Is 7:14",
+      "text": "Behold, a Virgin shall conceive and bear a son;\nand his name will be called Emmanuel."
+    }
+  ],
+  "planningNotes": [],
+  "musicPlans": [
+    {
+      "community": "Reflections",
+      "communityId": "reflections",
+      "date": "Year A — Dec 20, 2025 (Sat)",
+      "presider": "Fr. Thomas Park",
+      "gathering": {
+        "title": "The Angel Gabriel from Heaven Came",
+        "composer": "GABRIEL'S MESSAGE • Basque Carol",
+        "description": "Gospel"
+      },
+      "penitentialAct": {
+        "title": "Warm the Time of WInter",
+        "composer": "Lori True"
+      },
+      "responsorialPsalm": {
+        "psalm": "Ps 24 Let the Lord enter; he is king of glory.",
+        "setting": "The Lyric Psalter • Tony Alonso & Marty Haugen"
+      },
+      "gospelAcclamation": {
+        "title": "Advent/Christmas 2 — Missa Pacem",
+        "composer": "L. Randolph Babin"
+      },
+      "offertory": {
+        "title": "Holy Is His Name",
+        "composer": "John Michael Talbot",
+        "description": "Gospel"
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "Mass of the Incarnate Word",
+        "composer": "Bob Hurd • Traditional Arrangement"
+      },
+      "lordsPrayer": {
+        "title": "Chanted Our Father (Snow)",
+        "composer": "Jennings • Paregorius"
+      },
+      "fractionRite": {
+        "title": "Missa Veni Emmanuel",
+        "composer": "Ed Archer"
+      },
+      "communionSongs": [
+        {
+          "title": "O Come, O Come Emmanuel",
+          "composer": "\"Veni, veni Emmanuel\"; Latin 9th C;",
+          "description": "Communion Antiphon - Desire of Nations Verse!"
+        },
+        {
+          "title": "Waiting in Silence",
+          "composer": "Carey Landry",
+          "description": "Only if needed!"
+        },
+        {
+          "title": "Hail Mary: Gentle Woman",
+          "composer": "Carey Landrey"
+        }
+      ],
+      "sending": {
+        "title": "Your Light Will Come, Jerusalem",
+        "composer": "Bob Hurd",
+        "description": "Advent"
+      }
+    },
+    {
+      "community": "Foundations",
+      "communityId": "foundations",
+      "date": "Year A — Dec 21, 2025 (Sun)",
+      "presider": "Fr. Vince Kuna",
+      "gathering": {
+        "title": "Find Us Ready",
+        "composer": "Tom Booth",
+        "description": "Advent"
+      },
+      "penitentialAct": {
+        "title": "Warm the Time of WInter",
+        "composer": "Lori True"
+      },
+      "responsorialPsalm": {
+        "psalm": "Ps 24 Let the Lord enter; he is king of glory.",
+        "setting": "The Lyric Psalter • Tony Alonso & Marty Haugen"
+      },
+      "gospelAcclamation": {
+        "title": "Hallelujah, Hallelu!",
+        "composer": "Michael Mahler",
+        "verse": "The virgin shall conceive, and bear a son,\nand they shall name him Emmanuel."
+      },
+      "offertory": {
+        "title": "Hail Mary: Gentle Woman",
+        "composer": "Carey Landrey",
+        "description": "Gospel"
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "Mass of the Incarnate Word"
+      },
+      "lordsPrayer": {
+        "title": "Chanted Our Father (Snow)",
+        "composer": "Jennings • Paregorius"
+      },
+      "fractionRite": {
+        "title": "Missa Veni Emmanuel"
+      },
+      "communionSongs": [
+        {
+          "title": "O Come, O Come Emmanuel",
+          "composer": "\"Veni, veni Emmanuel\"; Latin 9th C;",
+          "description": "Communion Antiphon"
+        },
+        {
+          "title": "Bread of Life (Advent/Christmas)",
+          "composer": "Bernadette Farrell",
+          "description": "Only if needed!"
+        }
+      ],
+      "sending": {
+        "title": "Soon and Very Soon",
+        "composer": "Andrae Crouch and the Disciples"
+      }
+    },
+    {
+      "community": "Generations",
+      "communityId": "generations",
+      "date": "Year A — Dec 21, 2025 (Sun)",
+      "presider": "Msgr. Lloyd Torgerson",
+      "gathering": {
+        "title": "Prepare Ye the Way",
+        "composer": "John Angotti",
+        "description": "Gospel"
+      },
+      "penitentialAct": {
+        "title": "Warm the Time of WInter",
+        "composer": "Lori True"
+      },
+      "responsorialPsalm": {
+        "psalm": "Ps 24 Let the Lord enter; he is king of glory.",
+        "setting": "Spirit & Psalm • Ben Walther"
+      },
+      "gospelAcclamation": {
+        "title": "Hallelujah (adapted for Liturgy)",
+        "composer": "Leonard Cohen",
+        "verse": "The virgin shall conceive, and bear a son,\nand they shall name him Emmanuel."
+      },
+      "offertory": {
+        "title": "Hail Mary: Gentle Woman",
+        "composer": "Carey Landrey",
+        "description": "Gospel"
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "Mass of the Incarnate Word",
+        "composer": "Bob Hurd • Arr. by Lockwood"
+      },
+      "lordsPrayer": {
+        "title": "Chanted Our Father (Snow)",
+        "composer": "Jennings • Paregorius"
+      },
+      "fractionRite": {
+        "title": "Advent Lamb of God (Bonilla)"
+      },
+      "communionSongs": [
+        {
+          "title": "O Come, O Come Emmanuel",
+          "composer": "For King + Country (Cm)",
+          "description": "O Antiphons - Desire of Nations Verse!"
+        },
+        {
+          "title": "The King Shall Come",
+          "composer": "Trevor Thomson",
+          "description": "Advent"
+        },
+        {
+          "title": "Make Your Home In Me",
+          "composer": "Ben Walther",
+          "description": "Gospel"
+        },
+        {
+          "title": "Always Carry You",
+          "composer": "Matt Maher",
+          "description": "Gospel"
+        }
+      ],
+      "sending": {
+        "title": "Come Lord Jesus",
+        "composer": "John Angotti",
+        "description": "Advent"
+      }
+    },
+    {
+      "community": "Heritage",
+      "communityId": "heritage",
+      "date": "Year A — Dec 21, 2025 (Sun)",
+      "presider": "\"Fr. David Guffey, CSC\"",
+      "prelude": {
+        "title": "Hail Mary: Gentle Woman",
+        "composer": "Carey Landrey",
+        "description": "Post Communion Med. if Ave Maria is too much"
+      },
+      "gathering": {
+        "title": "The Angel Gabriel from Heaven Came",
+        "composer": "trad. Basque Carol • tr. by Sabine Baring-Gould",
+        "description": "GABRIEL’S MESSAGE"
+      },
+      "penitentialAct": {
+        "title": "Warm the Time of WInter",
+        "composer": "Lori True"
+      },
+      "responsorialPsalm": {
+        "psalm": "Ps 24 Let the Lord enter; he is king of glory.",
+        "setting": "The Lyric Psalter • Tony Alonso & Marty Haugen"
+      },
+      "gospelAcclamation": {
+        "title": "Advent/Christmas 2 — Missa Pacem",
+        "composer": "L. Randolph Babin"
+      },
+      "offertory": {
+        "title": "Holy Is His Name",
+        "composer": "John Michael Talbot",
+        "description": "Gospel"
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "Mass of the Incarnate Word",
+        "composer": "Bob Hurd • Traditional Arrangement"
+      },
+      "lordsPrayer": {
+        "title": "Chanted Our Father (Snow)",
+        "composer": "Jennings • Paregorius"
+      },
+      "fractionRite": {
+        "title": "Missa Veni Emmanuel"
+      },
+      "communionSongs": [
+        {
+          "title": "O Come, O Come Emmanuel",
+          "composer": "VENI, VENI, EMMANUEL",
+          "description": "Communion Antiphon"
+        },
+        {
+          "title": "Waiting in Silence",
+          "composer": "Carey Landry",
+          "description": "Only if needed!"
+        },
+        {
+          "title": "Ave Maria",
+          "composer": "Franz Schubert",
+          "description": "Grace"
+        }
+      ],
+      "sending": {
+        "title": "People Look East",
+        "composer": "Eleanor Farjeon • Arr. by Marty Haugen",
+        "description": "BESANCON"
+      }
+    },
+    {
+      "community": "Elevations",
+      "communityId": "elevations",
+      "date": "Year A — Dec 21, 2025 (Sun)",
+      "presider": "Fr. Eusebio Llonoso",
+      "gathering": {
+        "title": "Prepare Ye the Way",
+        "composer": "John Angotti",
+        "description": "Advent"
+      },
+      "penitentialAct": {
+        "title": "Warm the Time of WInter",
+        "composer": "Lori True"
+      },
+      "responsorialPsalm": {
+        "psalm": "Ps 24 Let the Lord enter; he is king of glory.",
+        "setting": "Spirit & Psalm • Ben Walther"
+      },
+      "gospelAcclamation": {
+        "title": "Hallelujah, Hallelu!",
+        "composer": "Michael Mahler",
+        "verse": "The virgin shall conceive, and bear a son,\nand they shall name him Emmanuel."
+      },
+      "offertory": {
+        "title": "Hail Mary: Gentle Woman",
+        "composer": "Carey Landrey",
+        "description": "Gospel"
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "Incarnate Word • Bob Hurd , Arr. by Lockwood",
+        "composer": "Bob Hurd , Arr. by Lockwood"
+      },
+      "lordsPrayer": {
+        "title": "Chanted Our Father (Snow)",
+        "composer": "Jennings • Paregorius"
+      },
+      "fractionRite": {
+        "title": "Advent Lamb of God"
+      },
+      "communionSongs": [
+        {
+          "title": "O Come, O Come Emmanuael",
+          "composer": "For King + Country (Cm)",
+          "description": "O Antiphons - Desire of Nations Verse!"
+        },
+        {
+          "title": "Make Your Home In Me",
+          "composer": "Ben Walther",
+          "description": "Gospel"
+        },
+        {
+          "title": "Always Carry You",
+          "composer": "Matt Maher",
+          "description": "Gospel"
+        }
+      ],
+      "sending": {
+        "title": "Come Lord Jesus",
+        "composer": "John Angotti",
+        "description": "Advent"
+      }
+    }
+  ]
+}

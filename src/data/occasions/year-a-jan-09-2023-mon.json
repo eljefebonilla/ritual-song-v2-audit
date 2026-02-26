@@ -1,0 +1,404 @@
+{
+  "id": "year-a-jan-09-2023-mon",
+  "name": "Year A — Jan 09, 2023 (Mon)",
+  "year": "ABC",
+  "season": "ordinary",
+  "seasonLabel": "Ordinary Time",
+  "seasonOrder": 9,
+  "dates": [],
+  "lectionary": {
+    "number": "Year A — Jan 10, 2038 (Sun)",
+    "gospelTitle": "Year A — Jan 08, 2035 (Mon)",
+    "thematicTag": "Year A — Jan 11, 2032 (Sun)",
+    "thematicDetail": "Year A — Jan 08, 2029 (Mon)"
+  },
+  "readings": [
+    {
+      "type": "psalm",
+      "citation": "Epiphany Theophany",
+      "summary": "",
+      "antiphon": "Planning Reminders"
+    },
+    {
+      "type": "gospel_verse",
+      "citation": "After the Lord was baptized, the heavens were opened,\nand the Spirit descended upon him like a dove,\nand the voice of the Father thundered:\nThis is my beloved Son, with whom I am well pleased.",
+      "summary": "Entrance Antiphon • Option II"
+    },
+    {
+      "type": "gospel",
+      "citation": "Reading I | Is 42:1-4, 6-7 (Year A)",
+      "summary": "The Lord upholds his Servant."
+    }
+  ],
+  "antiphons": [
+    {
+      "type": "entrance",
+      "option": 1,
+      "citation": "Verse before the Gospel | Mk 9:7",
+      "text": "The heavens were opened\nand the voice of the Father thundered:\nThis is my beloved Son, listen to him."
+    },
+    {
+      "type": "communion",
+      "option": 2,
+      "citation": "Communion Antiphon | Jn 1:32, 34",
+      "text": "Behold the One of whom John said:\nI have seen and testified that this is the Son of God."
+    }
+  ],
+  "planningNotes": [
+    "Communion Antiphon • Option II",
+    "N/A"
+  ],
+  "musicPlans": [
+    {
+      "community": "Reflections",
+      "communityId": "reflections",
+      "date": "Year A — Jan 10, 2026 (Sat)",
+      "presider": "TBD",
+      "prelude": {
+        "title": "N/A"
+      },
+      "penitentialAct": {
+        "title": "John B. Foley, SJ • Arranged by Arielle Phan",
+        "composer": "Baptism of the Lord",
+        "description": "Penitential Act (SPRINKLING RITE!!!)"
+      },
+      "gloria": {
+        "title": "Kyrie • Misa Del Mundo",
+        "composer": "Jesse Manibusan",
+        "description": "Gloria"
+      },
+      "gospelAcclamation": {
+        "title": "The Lyric Psalter • Tony Alonso & Marty Haugen",
+        "composer": "Gospel Acclamation",
+        "verse": "Alleluia (Mass of Joy & Peace)"
+      },
+      "offertory": {
+        "title": "The Lyric Gospel Acclamations • Tony Alonso",
+        "description": "Offertory Song"
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "When Jesus Comes to Jordan's Stream [NEW]",
+        "composer": "Text by Michael Joncas • Music by Casey McKinley"
+      },
+      "lordsPrayer": {
+        "title": "Eucharistic Acclamations",
+        "composer": "Mass of the Incarnate Word",
+        "description": "Bob Hurd • Traditional Arrangement"
+      },
+      "fractionRite": {
+        "title": "Holy",
+        "composer": "Mystery of Faith",
+        "description": "Amen"
+      },
+      "communionSongs": [
+        {
+          "title": "The Lord's Prayer",
+          "composer": "Chanted Our Father (Snow)",
+          "description": "Jennings/Paregorius"
+        },
+        {
+          "title": "Fraction Rite",
+          "composer": "Lamb of God (Mass of Holy Cross)",
+          "description": "David Clark Isele"
+        },
+        {
+          "title": "Communion Songs",
+          "composer": "Christ the Lord",
+          "description": "Sarah Hart • Robert Feduccia"
+        },
+        {
+          "title": "VERSE 2 - 4",
+          "composer": "Spirit and Grace",
+          "description": "Ricky Manalo, CSP"
+        }
+      ]
+    },
+    {
+      "community": "Foundations",
+      "communityId": "foundations",
+      "date": "Year A — Jan 11, 2026 (Sun)",
+      "presider": "TBD",
+      "prelude": {
+        "title": "N/A"
+      },
+      "penitentialAct": {
+        "title": "John B. Foley, SJ • Arranged by Arielle Phan",
+        "composer": "Baptism of the Lord",
+        "description": "Penitential Act (SPRINKLING RITE!!!)"
+      },
+      "gloria": {
+        "title": "Kyrie (Gift of God) • Adapted Version",
+        "composer": "Marty Haugen • Arranged by David Locwood",
+        "description": "Gloria"
+      },
+      "gospelAcclamation": {
+        "title": "Francesca LaRosa",
+        "composer": "Gospel Acclamation",
+        "verse": "Hallelujah (adapted for Liturgy)"
+      },
+      "offertory": {
+        "title": "Choir Practice Tracks",
+        "description": "Offertory Song"
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "When Jesus Comes to Jordan's Stream [NEW]",
+        "composer": "Text by Michael Joncas • Music by Casey McKinley"
+      },
+      "lordsPrayer": {
+        "title": "Eucharistic Acclamations",
+        "composer": "Mass of Glory (Lockwood Christmas Intro)"
+      },
+      "fractionRite": {
+        "title": "Holy",
+        "composer": "Mystery of Faith",
+        "description": "Amen"
+      },
+      "communionSongs": [
+        {
+          "title": "The Lord's Prayer",
+          "composer": "Chanted Our Father (Snow)",
+          "description": "Jennings • Paregorius"
+        },
+        {
+          "title": "Fraction Rite",
+          "composer": "Lamb of God (Mass of Glory)"
+        },
+        {
+          "title": "Communion Songs",
+          "composer": "The Feast Meant for Everyone",
+          "description": "Tom Booth & Sarah Hart"
+        },
+        {
+          "title": "Poverty Awareness Month • \"...bread for the poor...\"",
+          "composer": "Spirit of God",
+          "description": "James E. Moore"
+        }
+      ],
+      "sending": {
+        "title": "ST COLUMBA (Traditional Irish) • Edwin Hatch",
+        "composer": "Spirit Descends at Baptism"
+      }
+    },
+    {
+      "community": "Generations",
+      "communityId": "generations",
+      "date": "Year A — Jan 11, 2026 (Sun)",
+      "presider": "TBD",
+      "prelude": {
+        "title": "Song Title",
+        "composer": "Composer/s"
+      },
+      "penitentialAct": {
+        "title": "John B. Foley, SJ • Arranged by Arielle Phan",
+        "composer": "Baptism of the Lord",
+        "description": "Penitential Act (SPRINKLING RITE!!!)"
+      },
+      "gloria": {
+        "title": "Kyrie • Misa Del Mundo",
+        "composer": "Jesse Manibusan",
+        "description": "Gloria"
+      },
+      "gospelAcclamation": {
+        "title": "Francesca LaRosa",
+        "composer": "Gospel Acclamation",
+        "verse": "Hallelujah (adapted for Liturgy)"
+      },
+      "offertory": {
+        "title": "Choir Practice Tracks",
+        "description": "Offertory Song"
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "When Jesus Comes to Jordan's Stream [NEW]",
+        "composer": "Text by Michael Joncas • Music by Casey McKinley"
+      },
+      "lordsPrayer": {
+        "title": "Eucharistic Acclamations",
+        "composer": "Mass of Glory (Lockwood Christmas Intro)",
+        "description": "Bob Hurd • Arr. by Dan Houze"
+      },
+      "fractionRite": {
+        "title": "Holy",
+        "composer": "Mystery of Faith",
+        "description": "Amen"
+      },
+      "communionSongs": [
+        {
+          "title": "The Lord's Prayer",
+          "composer": "Echo Our Father",
+          "description": "Jerome Andrews, Arranged by Dan Houze"
+        },
+        {
+          "title": "Fraction Rite",
+          "composer": "Lamb of God (Mass of Glory)",
+          "description": "Bob Hurd  • Ken Canedo"
+        },
+        {
+          "title": "Communion Songs",
+          "composer": "This Is My Beloved Son",
+          "description": "John Angotti"
+        },
+        {
+          "title": "Baptism of the Lord Text",
+          "composer": "The Feast Meant for Everyone",
+          "description": "Tom Booth & Sarah Hart"
+        },
+        {
+          "title": "Poverty Awareness Month • \"...bread for the poor...\"",
+          "composer": "Bread of Life",
+          "description": "Michael John Poirier"
+        },
+        {
+          "title": "Forshadowing — Word of God Sunday + Presentation",
+          "composer": "Rest On Us [NEW SONG]",
+          "description": "Maverick City Music • Brandon Lake • Eniola Abioye"
+        }
+      ],
+      "sending": {
+        "title": "I Send You Out",
+        "composer": "John Angotti",
+        "description": "Baptism of the Lord"
+      }
+    },
+    {
+      "community": "Heritage",
+      "communityId": "heritage",
+      "date": "Year A — Jan 11, 2026 (Sun)",
+      "presider": "TBD",
+      "prelude": {
+        "title": "N/A"
+      },
+      "penitentialAct": {
+        "title": "John B. Foley, SJ • Arranged by Arielle Phan",
+        "composer": "Baptism of the Lord",
+        "description": "Penitential Act (SPRINKLING RITE!!!)"
+      },
+      "gloria": {
+        "title": "Kyrie • Misa Del Mundo",
+        "composer": "Jesse Manibusan",
+        "description": "Gloria"
+      },
+      "gospelAcclamation": {
+        "title": "The Lyric Psalter • Tony Alonso & Marty Haugen",
+        "composer": "Gospel Acclamation",
+        "verse": "CHRISTMAS — Baptism • ABC"
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "When Jesus Comes to Jordan's Stream [NEW]",
+        "composer": "Text by Michael Joncas • Music by Casey McKinley"
+      },
+      "lordsPrayer": {
+        "title": "Eucharistic Acclamations",
+        "composer": "Mass of the Incarnate Word",
+        "description": "Bob Hurd • Traditional Arrangement"
+      },
+      "fractionRite": {
+        "title": "Holy",
+        "composer": "Mystery of Faith",
+        "description": "Amen"
+      },
+      "communionSongs": [
+        {
+          "title": "The Lord's Prayer",
+          "composer": "Chanted Our Father (Snow)",
+          "description": "Jennings/Paregorius"
+        },
+        {
+          "title": "Fraction Rite",
+          "composer": "Lamb of God (Mass of Holy Cross)"
+        },
+        {
+          "title": "Communion Songs",
+          "composer": "Christ the Lord",
+          "description": "Sarah Hart • Robert Feduccia"
+        },
+        {
+          "title": "VERSE 2 - 4",
+          "composer": "Heart of Jesus",
+          "description": "Bob Hurd"
+        },
+        {
+          "title": "Poverty Awareness Month",
+          "composer": "Send out Your Spirit",
+          "description": "Bernadette Farrell • Jo Routh • Kevin Walsh"
+        }
+      ],
+      "sending": {
+        "title": "ST COLUMBA (Traditional Irish) • Edwin Hatch",
+        "composer": "Spirit Descends at Baptism"
+      }
+    },
+    {
+      "community": "Elevations",
+      "communityId": "elevations",
+      "date": "Year A — Jan 11, 2026 (Sun)",
+      "presider": "TBD",
+      "prelude": {
+        "title": "N/A"
+      },
+      "penitentialAct": {
+        "title": "John B. Foley, SJ • Arranged by Arielle Phan",
+        "composer": "Baptism of the Lord",
+        "description": "Penitential Act (SPRINKLING RITE!!!)"
+      },
+      "gloria": {
+        "title": "Kyrie (Misa Del Mundo)",
+        "composer": "Jesse Manibusan — If needed.",
+        "description": "Gloria"
+      },
+      "gospelAcclamation": {
+        "title": "Francesca LaRosa",
+        "composer": "Gospel Acclamation",
+        "verse": "Hallelujah (adapted for Liturgy)"
+      },
+      "offertory": {
+        "title": "Choir Practice Tracks",
+        "description": "Offertory Song"
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "When Jesus Comes to Jordan's Stream [NEW]",
+        "composer": "Text by Michael Joncas • Music by Casey McKinley"
+      },
+      "lordsPrayer": {
+        "title": "Eucharistic Acclamations",
+        "composer": "Mass of Glory (Christmas Intro)",
+        "description": "Bob Hurd • Ken Canedo"
+      },
+      "fractionRite": {
+        "title": "Holy",
+        "composer": "Mystery of Faith",
+        "description": "Amen"
+      },
+      "communionSongs": [
+        {
+          "title": "The Lord's Prayer",
+          "composer": "Echo Our Father",
+          "description": "Andrews • Arr. by Bonilla • Lockwood • Fajardo"
+        },
+        {
+          "title": "Fraction Rite",
+          "composer": "Lamb of God (Mass of Glory)"
+        },
+        {
+          "title": "Communion Songs",
+          "composer": "This Is My Beloved Son",
+          "description": "John Angotti"
+        },
+        {
+          "title": "Baptism of the Lord Text",
+          "composer": "The Feast Meant for Everyone",
+          "description": "Tom Booth & Sarah Hart"
+        },
+        {
+          "title": "Poverty Awareness Month • \"...bread for the poor...\"",
+          "composer": "Rest On Us [NEW SONG]",
+          "description": "Maverick City Music • Brandon Lake • Eniola Abioye"
+        }
+      ],
+      "sending": {
+        "title": "Sending Song",
+        "composer": "I Send You Out",
+        "description": "John Angotti"
+      }
+    }
+  ]
+}

@@ -1,0 +1,124 @@
+{
+  "id": "year-c-jun-07-2025-sat",
+  "name": "Year C — Jun 07, 2025 (Sat)",
+  "year": "ABC",
+  "season": "ordinary",
+  "seasonLabel": "Ordinary Time",
+  "seasonOrder": 7,
+  "dates": [],
+  "lectionary": {
+    "number": "Year B — Jun 08, 2030 (Sat)",
+    "gospelTitle": "Year A — May 19, 2029 (Sat)",
+    "thematicTag": "Year C — Jun 03, 2028 (Sat)",
+    "thematicDetail": "Year B — May 15, 2027 (Sat)"
+  },
+  "readings": [
+    {
+      "type": "psalm",
+      "citation": "Spirit Promised as Water",
+      "summary": "",
+      "antiphon": "Planning Reminders"
+    },
+    {
+      "type": "second",
+      "citation": "SEQUENCE!!!",
+      "summary": ""
+    },
+    {
+      "type": "gospel_verse",
+      "citation": "The love of God has been poured into our hearts\nthrough the Spirit of God dwelling within us, alleluia.",
+      "summary": ""
+    },
+    {
+      "type": "gospel",
+      "citation": "Reading I",
+      "summary": "MULTIPLE OPTIONS - See Lectionary"
+    }
+  ],
+  "antiphons": [
+    {
+      "type": "entrance",
+      "option": 1,
+      "citation": "Verse before the Gospel | Lectionary",
+      "text": "Come, Holy Spirit, fill the hearts of your faithful\nand kindle in them the fire of your love."
+    },
+    {
+      "type": "communion",
+      "option": 2,
+      "citation": "Communion Antiphon | Jn 7:37",
+      "text": "On the last day of the festival, Jesus stood and cried out:\nIf anyone is thirsty, let him come to me and drink, alleluia."
+    }
+  ],
+  "planningNotes": [
+    "Communion Antiphon • Option II",
+    "N/A"
+  ],
+  "musicPlans": [
+    {
+      "community": "Reflections",
+      "communityId": "reflections",
+      "date": "Year A — May 23, 2026 (Sat)",
+      "presider": "TBD",
+      "prelude": {
+        "title": "Regina Caeli / O Queen of Heaven",
+        "composer": "Mode VI Latin • 12th C",
+        "description": "Pope Leo XIV singing Regina Caeli"
+      },
+      "penitentialAct": {
+        "title": "John Angotti",
+        "composer": "Translation: Come, Holy Spirit, Creator blest...",
+        "description": "Penitential Act"
+      },
+      "gloria": {
+        "title": "Kyrie • Misa Del Mundo",
+        "composer": "Only if needed. Talk to presider!",
+        "description": "Gloria"
+      },
+      "gospelAcclamation": {
+        "title": "The Lyric Psalter • Tony Alonso & Marty Haugen",
+        "composer": "Gospel Acclamation",
+        "verse": "Pentecost Sequence (Archer)"
+      },
+      "offertory": {
+        "title": "PENT | ABC — \"Come, Holy Spirit, fill....\"",
+        "description": "Offertory Song"
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "Send out Your Spirit",
+        "composer": "Bernadette Farrell • Jo Routh • Kevin Walsh"
+      },
+      "lordsPrayer": {
+        "title": "Eucharistic Acclamations",
+        "composer": "Mass of the Holy Family",
+        "description": "Chris de Silva"
+      },
+      "fractionRite": {
+        "title": "Holy, Holy, Holy",
+        "composer": "When We Eat This Bread",
+        "description": "Amen"
+      },
+      "communionSongs": [
+        {
+          "title": "The Lord's Prayer",
+          "composer": "Chanted Our Father (Snow)",
+          "description": "Jennings/Paregorius"
+        },
+        {
+          "title": "Fraction Rite",
+          "composer": "Lamb of God (Mass of the Holy Family)",
+          "description": "Chris de Silva"
+        },
+        {
+          "title": "Communion Songs",
+          "composer": "Spirit and Grace",
+          "description": "Ricky Manalo, CSP"
+        },
+        {
+          "title": "You are wind that breathes through the field",
+          "composer": "I, The Lord",
+          "description": "Tom Kendzia"
+        }
+      ]
+    }
+  ]
+}

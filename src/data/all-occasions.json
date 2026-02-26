@@ -1,0 +1,1703 @@
+[
+  {
+    "id": "advent-01-a",
+    "name": "ADVENT 01 [A]",
+    "year": "A",
+    "season": "advent",
+    "seasonLabel": "Advent",
+    "seasonOrder": 1,
+    "nextDate": "2025-11-30"
+  },
+  {
+    "id": "advent-01-b",
+    "name": "ADVENT 01 [B]",
+    "year": "B",
+    "season": "advent",
+    "seasonLabel": "Advent",
+    "seasonOrder": 1,
+    "nextDate": "2023-12-03"
+  },
+  {
+    "id": "advent-01-c",
+    "name": "ADVENT 01 [C]",
+    "year": "C",
+    "season": "advent",
+    "seasonLabel": "Advent",
+    "seasonOrder": 1,
+    "nextDate": "2024-12-01"
+  },
+  {
+    "id": "advent-02-a",
+    "name": "ADVENT 02 [A]",
+    "year": "A",
+    "season": "advent",
+    "seasonLabel": "Advent",
+    "seasonOrder": 2,
+    "nextDate": "2025-12-07"
+  },
+  {
+    "id": "advent-02-b",
+    "name": "ADVENT 02 [B]",
+    "year": "B",
+    "season": "advent",
+    "seasonLabel": "Advent",
+    "seasonOrder": 2,
+    "nextDate": "2023-12-10"
+  },
+  {
+    "id": "advent-02-c",
+    "name": "ADVENT 02 [C]",
+    "year": "C",
+    "season": "advent",
+    "seasonLabel": "Advent",
+    "seasonOrder": 2,
+    "nextDate": "2024-12-08"
+  },
+  {
+    "id": "solemnity-immaculate-conception",
+    "name": "Solemnity\nIMMACULATE CONCEPTION",
+    "year": "ABC",
+    "season": "solemnity",
+    "seasonLabel": "Solemnity",
+    "seasonOrder": 0,
+    "nextDate": "2025-12-08"
+  },
+  {
+    "id": "feast-our-lady-of-guadalupe-abc",
+    "name": "FeAST\nOUR LADY OF GUADALUPE  [ABC]",
+    "year": "ABC",
+    "season": "feast",
+    "seasonLabel": "Feast",
+    "seasonOrder": 0,
+    "nextDate": "2025-12-12"
+  },
+  {
+    "id": "advent-03-a",
+    "name": "ADVENT 03 [A]",
+    "year": "A",
+    "season": "advent",
+    "seasonLabel": "Advent",
+    "seasonOrder": 3,
+    "nextDate": "2025-12-14"
+  },
+  {
+    "id": "advent-03-b",
+    "name": "ADVENT 03 [B]",
+    "year": "B",
+    "season": "advent",
+    "seasonLabel": "Advent",
+    "seasonOrder": 3,
+    "nextDate": "2023-12-17"
+  },
+  {
+    "id": "advent-03-c",
+    "name": "ADVENT 03 [C]",
+    "year": "C",
+    "season": "advent",
+    "seasonLabel": "Advent",
+    "seasonOrder": 3,
+    "nextDate": "2024-12-15"
+  },
+  {
+    "id": "advent-04-a",
+    "name": "ADVENT 04 [A]",
+    "year": "A",
+    "season": "advent",
+    "seasonLabel": "Advent",
+    "seasonOrder": 4,
+    "nextDate": "2025-12-21"
+  },
+  {
+    "id": "advent-04-b",
+    "name": "ADVENT 04 [B]",
+    "year": "B",
+    "season": "advent",
+    "seasonLabel": "Advent",
+    "seasonOrder": 4,
+    "nextDate": "2023-12-24"
+  },
+  {
+    "id": "advent-04-c",
+    "name": "ADVENT 04 [C]",
+    "year": "C",
+    "season": "advent",
+    "seasonLabel": "Advent",
+    "seasonOrder": 4,
+    "nextDate": "2024-12-22"
+  },
+  {
+    "id": "nativity",
+    "name": "Nativity",
+    "year": "ABC",
+    "season": "ordinary",
+    "seasonLabel": "Ordinary Time",
+    "seasonOrder": 0,
+    "nextDate": "2026-12-25"
+  },
+  {
+    "id": "holy-family-a",
+    "name": "HOLY FAMILY [A]",
+    "year": "A",
+    "season": "christmas",
+    "seasonLabel": "Christmas",
+    "seasonOrder": 0,
+    "nextDate": "2025-12-28"
+  },
+  {
+    "id": "holy-family-b",
+    "name": "HOLY FAMILY [B]",
+    "year": "B",
+    "season": "christmas",
+    "seasonLabel": "Christmas",
+    "seasonOrder": 0,
+    "nextDate": "2023-12-31"
+  },
+  {
+    "id": "holy-family-c",
+    "name": "HOLY FAMILY [C]",
+    "year": "C",
+    "season": "christmas",
+    "seasonLabel": "Christmas",
+    "seasonOrder": 0,
+    "nextDate": "2024-12-29"
+  },
+  {
+    "id": "jan-1-mary-mother-of-god-abc",
+    "name": "Jan 1 • MARY, MOTHER OF GOD [ABC]",
+    "year": "ABC",
+    "season": "ordinary",
+    "seasonLabel": "Ordinary Time",
+    "seasonOrder": 1,
+    "nextDate": "2026-01-01"
+  },
+  {
+    "id": "2nd-sun-after-christmas-abc-epiphany-replaces-in-adla",
+    "name": "2ND SUN AFTER CHRISTMAS [ABC]\nEpiphany replaces in ADLA",
+    "year": "ABC",
+    "season": "christmas",
+    "seasonLabel": "Christmas",
+    "seasonOrder": 2,
+    "nextDate": "2026-01-04"
+  },
+  {
+    "id": "the-epiphany-of-the-lord-abc",
+    "name": "THE EPIPHANY OF THE LORD [ABC]",
+    "year": "ABC",
+    "season": "christmas",
+    "seasonLabel": "Christmas",
+    "seasonOrder": 0,
+    "nextDate": "2026-01-04"
+  },
+  {
+    "id": "baptism-of-the-lord-a",
+    "name": "BAPTISM OF THE LORD [A]",
+    "year": "A",
+    "season": "ordinary",
+    "seasonLabel": "Ordinary Time",
+    "seasonOrder": 0,
+    "nextDate": "2023-01-09"
+  },
+  {
+    "id": "baptism-of-the-lord-b",
+    "name": "BAPTISM OF THE LORD [B]",
+    "year": "B",
+    "season": "ordinary",
+    "seasonLabel": "Ordinary Time",
+    "seasonOrder": 0,
+    "nextDate": "2024-01-08"
+  },
+  {
+    "id": "baptism-of-the-lord-c",
+    "name": "BAPTISM OF THE LORD [C]",
+    "year": "C",
+    "season": "ordinary",
+    "seasonLabel": "Ordinary Time",
+    "seasonOrder": 0,
+    "nextDate": "2025-01-12"
+  },
+  {
+    "id": "ordinary-time-02-a",
+    "name": "ORDINARY TIME 02 [A]",
+    "year": "A",
+    "season": "ordinary",
+    "seasonLabel": "Ordinary Time",
+    "seasonOrder": 2,
+    "nextDate": "2023-01-15"
+  },
+  {
+    "id": "ordinary-time-02-b",
+    "name": "ORDINARY TIME 02 [B]",
+    "year": "B",
+    "season": "ordinary",
+    "seasonLabel": "Ordinary Time",
+    "seasonOrder": 2,
+    "nextDate": "2024-01-14"
+  },
+  {
+    "id": "ordinary-time-02-c",
+    "name": "ORDINARY TIME 02 [C]",
+    "year": "C",
+    "season": "ordinary",
+    "seasonLabel": "Ordinary Time",
+    "seasonOrder": 2,
+    "nextDate": "2025-01-19"
+  },
+  {
+    "id": "mlk-day",
+    "name": "MLK DAY",
+    "year": "ABC",
+    "season": "ordinary",
+    "seasonLabel": "Ordinary Time",
+    "seasonOrder": 0,
+    "nextDate": "2026-01-19"
+  },
+  {
+    "id": "ordinary-time-03-a-word-of-god-sunday",
+    "name": "ORDINARY TIME 03 [A]\nWORD OF GOD Sunday",
+    "year": "A",
+    "season": "ordinary",
+    "seasonLabel": "Ordinary Time",
+    "seasonOrder": 3,
+    "nextDate": "2023-01-22"
+  },
+  {
+    "id": "ordinary-time-03-b-word-of-god-sunday",
+    "name": "ORDINARY TIME 03 [B]\nWORD OF GOD Sunday",
+    "year": "B",
+    "season": "ordinary",
+    "seasonLabel": "Ordinary Time",
+    "seasonOrder": 3,
+    "nextDate": "2024-01-21"
+  },
+  {
+    "id": "ordinary-time-03-c-word-of-god-sunday",
+    "name": "ORDINARY TIME 03 [C]\nWORD OF GOD Sunday",
+    "year": "C",
+    "season": "ordinary",
+    "seasonLabel": "Ordinary Time",
+    "seasonOrder": 3,
+    "nextDate": "2025-01-26"
+  },
+  {
+    "id": "ordinary-time-04-a",
+    "name": "ORDINARY TIME 04 [A]",
+    "year": "A",
+    "season": "ordinary",
+    "seasonLabel": "Ordinary Time",
+    "seasonOrder": 4,
+    "nextDate": "2023-01-29"
+  },
+  {
+    "id": "ordinary-time-04-b",
+    "name": "ORDINARY TIME 04 [B]",
+    "year": "B",
+    "season": "ordinary",
+    "seasonLabel": "Ordinary Time",
+    "seasonOrder": 4,
+    "nextDate": "2024-01-28"
+  },
+  {
+    "id": "ordinary-time-04-c",
+    "name": "ORDINARY TIME 04 [C]",
+    "year": "C",
+    "season": "ordinary",
+    "seasonLabel": "Ordinary Time",
+    "seasonOrder": 4,
+    "nextDate": "2037-02-01"
+  },
+  {
+    "id": "feast-abc-feb-2-presentation-of-the-lord",
+    "name": "Feast [ABC]\nFeb 2 • PRESENTATION OF THE LORD",
+    "year": "ABC",
+    "season": "feast",
+    "seasonLabel": "Feast",
+    "seasonOrder": 2,
+    "nextDate": "2026-02-02"
+  },
+  {
+    "id": "ordinary-time-05-a",
+    "name": "ORDINARY TIME 05 [A]",
+    "year": "A",
+    "season": "ordinary",
+    "seasonLabel": "Ordinary Time",
+    "seasonOrder": 5,
+    "nextDate": "2023-02-05"
+  },
+  {
+    "id": "ordinary-time-05-b",
+    "name": "ORDINARY TIME 05 [B]",
+    "year": "B",
+    "season": "ordinary",
+    "seasonLabel": "Ordinary Time",
+    "seasonOrder": 5,
+    "nextDate": "2024-02-04"
+  },
+  {
+    "id": "ordinary-time-05-c",
+    "name": "ORDINARY TIME 05 [C]",
+    "year": "C",
+    "season": "ordinary",
+    "seasonLabel": "Ordinary Time",
+    "seasonOrder": 5,
+    "nextDate": "2025-02-09"
+  },
+  {
+    "id": "ordinary-time-06-a",
+    "name": "ORDINARY TIME 06 [A]",
+    "year": "A",
+    "season": "ordinary",
+    "seasonLabel": "Ordinary Time",
+    "seasonOrder": 6,
+    "nextDate": "2023-02-12"
+  },
+  {
+    "id": "ordinary-time-06-b",
+    "name": "ORDINARY TIME 06 [B]",
+    "year": "B",
+    "season": "ordinary",
+    "seasonLabel": "Ordinary Time",
+    "seasonOrder": 6,
+    "nextDate": "2024-02-11"
+  },
+  {
+    "id": "ordinary-time-06-c",
+    "name": "ORDINARY TIME 06 [C]",
+    "year": "C",
+    "season": "ordinary",
+    "seasonLabel": "Ordinary Time",
+    "seasonOrder": 6,
+    "nextDate": "2025-02-16"
+  },
+  {
+    "id": "ordinary-time-07-a",
+    "name": "ORDINARY TIME 07 [A]",
+    "year": "A",
+    "season": "ordinary",
+    "seasonLabel": "Ordinary Time",
+    "seasonOrder": 7,
+    "nextDate": "2023-02-19"
+  },
+  {
+    "id": "ordinary-time-07-b",
+    "name": "ORDINARY TIME 07 [B]",
+    "year": "B",
+    "season": "ordinary",
+    "seasonLabel": "Ordinary Time",
+    "seasonOrder": 7,
+    "nextDate": "2024-02-04"
+  },
+  {
+    "id": "ordinary-time-07-c",
+    "name": "ORDINARY TIME 07 [C]",
+    "year": "C",
+    "season": "ordinary",
+    "seasonLabel": "Ordinary Time",
+    "seasonOrder": 7,
+    "nextDate": "2025-02-09"
+  },
+  {
+    "id": "ordinary-time-08-a",
+    "name": "ORDINARY TIME 08 [A]",
+    "year": "A",
+    "season": "ordinary",
+    "seasonLabel": "Ordinary Time",
+    "seasonOrder": 8,
+    "nextDate": null
+  },
+  {
+    "id": "ordinary-time-08-b",
+    "name": "ORDINARY TIME 08 [B]",
+    "year": "B",
+    "season": "ordinary",
+    "seasonLabel": "Ordinary Time",
+    "seasonOrder": 8,
+    "nextDate": null
+  },
+  {
+    "id": "ordinary-time-08-c",
+    "name": "ORDINARY TIME 08 [C]",
+    "year": "C",
+    "season": "ordinary",
+    "seasonLabel": "Ordinary Time",
+    "seasonOrder": 8,
+    "nextDate": "2025-03-02"
+  },
+  {
+    "id": "ash-wednesday",
+    "name": "ASH WEDNESDAY",
+    "year": "ABC",
+    "season": "lent",
+    "seasonLabel": "Lent",
+    "seasonOrder": 0,
+    "nextDate": "2026-02-18"
+  },
+  {
+    "id": "lent-01-a",
+    "name": "LENT 01 [A]",
+    "year": "A",
+    "season": "lent",
+    "seasonLabel": "Lent",
+    "seasonOrder": 1,
+    "nextDate": "2023-02-26"
+  },
+  {
+    "id": "lent-01-b",
+    "name": "LENT 01 [B]",
+    "year": "B",
+    "season": "lent",
+    "seasonLabel": "Lent",
+    "seasonOrder": 1,
+    "nextDate": "2024-02-18"
+  },
+  {
+    "id": "lent-01-c",
+    "name": "LENT 01 [C]",
+    "year": "C",
+    "season": "lent",
+    "seasonLabel": "Lent",
+    "seasonOrder": 1,
+    "nextDate": "2025-03-09"
+  },
+  {
+    "id": "lent-02-a",
+    "name": "LENT 02 [A]",
+    "year": "A",
+    "season": "lent",
+    "seasonLabel": "Lent",
+    "seasonOrder": 2,
+    "nextDate": "2023-03-05"
+  },
+  {
+    "id": "lent-02-b",
+    "name": "LENT 02 [B]",
+    "year": "B",
+    "season": "lent",
+    "seasonLabel": "Lent",
+    "seasonOrder": 2,
+    "nextDate": "2024-02-25"
+  },
+  {
+    "id": "lent-02-c",
+    "name": "LENT 02 [C]",
+    "year": "C",
+    "season": "lent",
+    "seasonLabel": "Lent",
+    "seasonOrder": 2,
+    "nextDate": "2025-03-16"
+  },
+  {
+    "id": "lent-03-a-first-scrutiny",
+    "name": "LENT 03 [A]\nFirst Scrutiny",
+    "year": "A",
+    "season": "lent",
+    "seasonLabel": "Lent",
+    "seasonOrder": 3,
+    "nextDate": "2023-03-12"
+  },
+  {
+    "id": "lent-03-b",
+    "name": "LENT 03 [B]",
+    "year": "B",
+    "season": "lent",
+    "seasonLabel": "Lent",
+    "seasonOrder": 3,
+    "nextDate": "2024-03-03"
+  },
+  {
+    "id": "lent-03-c",
+    "name": "LENT 03 [C]",
+    "year": "C",
+    "season": "lent",
+    "seasonLabel": "Lent",
+    "seasonOrder": 3,
+    "nextDate": "2025-03-23"
+  },
+  {
+    "id": "lent-04-a-second-scrutiny",
+    "name": "LENT 04 [A]\nSecond Scrutiny",
+    "year": "A",
+    "season": "lent",
+    "seasonLabel": "Lent",
+    "seasonOrder": 4,
+    "nextDate": "2023-03-19"
+  },
+  {
+    "id": "lent-04-b",
+    "name": "LENT 04 [B]",
+    "year": "B",
+    "season": "lent",
+    "seasonLabel": "Lent",
+    "seasonOrder": 4,
+    "nextDate": "2024-03-10"
+  },
+  {
+    "id": "lent-04-c",
+    "name": "LENT 04 [C]",
+    "year": "C",
+    "season": "lent",
+    "seasonLabel": "Lent",
+    "seasonOrder": 4,
+    "nextDate": "2025-03-30"
+  },
+  {
+    "id": "lent-05-a-third-scrutiny",
+    "name": "LENT 05 [A]\nThird Scrutiny",
+    "year": "A",
+    "season": "lent",
+    "seasonLabel": "Lent",
+    "seasonOrder": 5,
+    "nextDate": "2023-03-26"
+  },
+  {
+    "id": "lent-05-b",
+    "name": "LENT 05 [B]",
+    "year": "B",
+    "season": "lent",
+    "seasonLabel": "Lent",
+    "seasonOrder": 5,
+    "nextDate": "2024-03-17"
+  },
+  {
+    "id": "lent-05-c",
+    "name": "LENT 05 [C]",
+    "year": "C",
+    "season": "lent",
+    "seasonLabel": "Lent",
+    "seasonOrder": 5,
+    "nextDate": "2025-04-06"
+  },
+  {
+    "id": "palm-sunday-a",
+    "name": "Palm Sunday [A]",
+    "year": "A",
+    "season": "lent",
+    "seasonLabel": "Lent",
+    "seasonOrder": 0,
+    "nextDate": "2023-04-02"
+  },
+  {
+    "id": "palm-sunday-b",
+    "name": "Palm Sunday [B]",
+    "year": "B",
+    "season": "lent",
+    "seasonLabel": "Lent",
+    "seasonOrder": 0,
+    "nextDate": "2024-03-24"
+  },
+  {
+    "id": "palm-sunday-c",
+    "name": "Palm Sunday [C]",
+    "year": "C",
+    "season": "lent",
+    "seasonLabel": "Lent",
+    "seasonOrder": 0,
+    "nextDate": "2025-04-13"
+  },
+  {
+    "id": "easter-sunday-abc",
+    "name": "EASTER SUNDAY [ABC]",
+    "year": "ABC",
+    "season": "easter",
+    "seasonLabel": "Easter",
+    "seasonOrder": 0,
+    "nextDate": "2026-04-05"
+  },
+  {
+    "id": "easter-02-divine-mercy-a",
+    "name": "EASTER 02 DIVINE MERCY [A]",
+    "year": "A",
+    "season": "easter",
+    "seasonLabel": "Easter",
+    "seasonOrder": 2,
+    "nextDate": "2023-04-16"
+  },
+  {
+    "id": "easter-02-divine-mercy-b",
+    "name": "EASTER 02 DIVINE MERCY [B]",
+    "year": "B",
+    "season": "easter",
+    "seasonLabel": "Easter",
+    "seasonOrder": 2,
+    "nextDate": "2024-04-07"
+  },
+  {
+    "id": "easter-02-divine-mercy-c",
+    "name": "EASTER 02 DIVINE MERCY [C]",
+    "year": "C",
+    "season": "easter",
+    "seasonLabel": "Easter",
+    "seasonOrder": 2,
+    "nextDate": "2025-04-27"
+  },
+  {
+    "id": "easter-03-a",
+    "name": "EASTER 03 [A]",
+    "year": "A",
+    "season": "easter",
+    "seasonLabel": "Easter",
+    "seasonOrder": 3,
+    "nextDate": "2023-04-23"
+  },
+  {
+    "id": "easter-03-b",
+    "name": "EASTER 03 [B]",
+    "year": "B",
+    "season": "easter",
+    "seasonLabel": "Easter",
+    "seasonOrder": 3,
+    "nextDate": "2024-04-14"
+  },
+  {
+    "id": "easter-03-c",
+    "name": "EASTER 03 [C]",
+    "year": "C",
+    "season": "easter",
+    "seasonLabel": "Easter",
+    "seasonOrder": 3,
+    "nextDate": "2025-05-04"
+  },
+  {
+    "id": "easter-04-a",
+    "name": "EASTER 04 [A]",
+    "year": "A",
+    "season": "easter",
+    "seasonLabel": "Easter",
+    "seasonOrder": 4,
+    "nextDate": "2023-04-30"
+  },
+  {
+    "id": "easter-04-b",
+    "name": "EASTER 04 [B]",
+    "year": "B",
+    "season": "easter",
+    "seasonLabel": "Easter",
+    "seasonOrder": 4,
+    "nextDate": "2024-04-21"
+  },
+  {
+    "id": "easter-04-c",
+    "name": "EASTER 04 [C]",
+    "year": "C",
+    "season": "easter",
+    "seasonLabel": "Easter",
+    "seasonOrder": 4,
+    "nextDate": "2025-05-11"
+  },
+  {
+    "id": "easter-05-a",
+    "name": "EASTER 05 [A]",
+    "year": "A",
+    "season": "easter",
+    "seasonLabel": "Easter",
+    "seasonOrder": 5,
+    "nextDate": "2023-05-07"
+  },
+  {
+    "id": "easter-05-b",
+    "name": "EASTER 05 [B]",
+    "year": "B",
+    "season": "easter",
+    "seasonLabel": "Easter",
+    "seasonOrder": 5,
+    "nextDate": "2024-04-28"
+  },
+  {
+    "id": "easter-05-c",
+    "name": "EASTER 05 [C]",
+    "year": "C",
+    "season": "easter",
+    "seasonLabel": "Easter",
+    "seasonOrder": 5,
+    "nextDate": "2025-05-18"
+  },
+  {
+    "id": "easter-06-a",
+    "name": "EASTER 06 [A]",
+    "year": "A",
+    "season": "easter",
+    "seasonLabel": "Easter",
+    "seasonOrder": 6,
+    "nextDate": "2023-05-14"
+  },
+  {
+    "id": "easter-06-b",
+    "name": "EASTER 06 [B]",
+    "year": "B",
+    "season": "easter",
+    "seasonLabel": "Easter",
+    "seasonOrder": 6,
+    "nextDate": "2024-05-05"
+  },
+  {
+    "id": "easter-06-c",
+    "name": "EASTER 06 [C]",
+    "year": "C",
+    "season": "easter",
+    "seasonLabel": "Easter",
+    "seasonOrder": 6,
+    "nextDate": "2025-05-25"
+  },
+  {
+    "id": "easter-07-a",
+    "name": "EASTER 07 [A]",
+    "year": "A",
+    "season": "easter",
+    "seasonLabel": "Easter",
+    "seasonOrder": 7,
+    "nextDate": "2023-05-14"
+  },
+  {
+    "id": "easter-07-b",
+    "name": "EASTER 07 [B]",
+    "year": "B",
+    "season": "easter",
+    "seasonLabel": "Easter",
+    "seasonOrder": 7,
+    "nextDate": "2024-05-05"
+  },
+  {
+    "id": "easter-07-c",
+    "name": "EASTER 07 [C]",
+    "year": "C",
+    "season": "easter",
+    "seasonLabel": "Easter",
+    "seasonOrder": 7,
+    "nextDate": "2025-05-25"
+  },
+  {
+    "id": "ascension-a",
+    "name": "ASCENSION [A]",
+    "year": "A",
+    "season": "easter",
+    "seasonLabel": "Easter",
+    "seasonOrder": 0,
+    "nextDate": "2023-05-21"
+  },
+  {
+    "id": "ascension-b",
+    "name": "ASCENSION [B]",
+    "year": "B",
+    "season": "easter",
+    "seasonLabel": "Easter",
+    "seasonOrder": 0,
+    "nextDate": "2024-05-12"
+  },
+  {
+    "id": "ascension-c",
+    "name": "ASCENSION [C]",
+    "year": "C",
+    "season": "easter",
+    "seasonLabel": "Easter",
+    "seasonOrder": 0,
+    "nextDate": "2025-06-01"
+  },
+  {
+    "id": "pentecost-ext-vigil-abc",
+    "name": "PENTECOST - Ext. VIGIL [ABC]",
+    "year": "ABC",
+    "season": "easter",
+    "seasonLabel": "Easter",
+    "seasonOrder": 0,
+    "nextDate": "2025-06-07"
+  },
+  {
+    "id": "pentecost-vigil-abc",
+    "name": "PENTECOST VIGIL [ABC]",
+    "year": "ABC",
+    "season": "easter",
+    "seasonLabel": "Easter",
+    "seasonOrder": 0,
+    "nextDate": "2025-06-07"
+  },
+  {
+    "id": "pentecost-a",
+    "name": "PENTECOST [A]",
+    "year": "A",
+    "season": "easter",
+    "seasonLabel": "Easter",
+    "seasonOrder": 0,
+    "nextDate": "2023-05-28"
+  },
+  {
+    "id": "pentecost-b",
+    "name": "PENTECOST [B]",
+    "year": "B",
+    "season": "easter",
+    "seasonLabel": "Easter",
+    "seasonOrder": 0,
+    "nextDate": "2024-05-19"
+  },
+  {
+    "id": "pentecost-c",
+    "name": "PENTECOST [C]",
+    "year": "C",
+    "season": "easter",
+    "seasonLabel": "Easter",
+    "seasonOrder": 0,
+    "nextDate": "2025-06-08"
+  },
+  {
+    "id": "memorial-day",
+    "name": "Memorial Day",
+    "year": "ABC",
+    "season": "ordinary",
+    "seasonLabel": "Ordinary Time",
+    "seasonOrder": 0,
+    "nextDate": null
+  },
+  {
+    "id": "solemnity-most-holy-trinity-a",
+    "name": "SOLEMNITY\nMOST HOLY TRINITY [A]",
+    "year": "A",
+    "season": "solemnity",
+    "seasonLabel": "Solemnity",
+    "seasonOrder": 0,
+    "nextDate": "2023-06-04"
+  },
+  {
+    "id": "solemnity-most-holy-trinity-b",
+    "name": "SOLEMNITY\nMOST HOLY TRINITY [B]",
+    "year": "B",
+    "season": "solemnity",
+    "seasonLabel": "Solemnity",
+    "seasonOrder": 0,
+    "nextDate": "2024-05-26"
+  },
+  {
+    "id": "solemnity-most-holy-trinity-c",
+    "name": "SOLEMNITY\nMOST HOLY TRINITY [C]",
+    "year": "C",
+    "season": "solemnity",
+    "seasonLabel": "Solemnity",
+    "seasonOrder": 0,
+    "nextDate": "2025-06-15"
+  },
+  {
+    "id": "solemnity-body-blood-of-christ-a",
+    "name": "SOLEMNITY\nBODY & BLOOD OF CHRIST [A]",
+    "year": "A",
+    "season": "solemnity",
+    "seasonLabel": "Solemnity",
+    "seasonOrder": 0,
+    "nextDate": "2023-06-11"
+  },
+  {
+    "id": "solemnity-body-blood-of-christ-b",
+    "name": "SOLEMNITY\nBODY & BLOOD OF CHRIST [B]",
+    "year": "B",
+    "season": "solemnity",
+    "seasonLabel": "Solemnity",
+    "seasonOrder": 0,
+    "nextDate": "2024-06-02"
+  },
+  {
+    "id": "solemnity-body-blood-of-christ-c",
+    "name": "SOLEMNITY\nBODY & BLOOD OF CHRIST [C]",
+    "year": "C",
+    "season": "solemnity",
+    "seasonLabel": "Solemnity",
+    "seasonOrder": 0,
+    "nextDate": "2025-06-22"
+  },
+  {
+    "id": "ordinary-time-09-a",
+    "name": "ORDINARY TIME 09 [A]",
+    "year": "A",
+    "season": "ordinary",
+    "seasonLabel": "Ordinary Time",
+    "seasonOrder": 9,
+    "nextDate": "2035-06-03"
+  },
+  {
+    "id": "ordinary-time-09-b",
+    "name": "ORDINARY TIME 09 [B]",
+    "year": "B",
+    "season": "ordinary",
+    "seasonLabel": "Ordinary Time",
+    "seasonOrder": 9,
+    "nextDate": null
+  },
+  {
+    "id": "ordinary-time-09-c",
+    "name": "ORDINARY TIME 09 [C]",
+    "year": "C",
+    "season": "ordinary",
+    "seasonLabel": "Ordinary Time",
+    "seasonOrder": 9,
+    "nextDate": null
+  },
+  {
+    "id": "ordinary-time-10-a",
+    "name": "ORDINARY TIME 10 [A]",
+    "year": "A",
+    "season": "ordinary",
+    "seasonLabel": "Ordinary Time",
+    "seasonOrder": 10,
+    "nextDate": "2035-06-10"
+  },
+  {
+    "id": "ordinary-time-10-b",
+    "name": "ORDINARY TIME 10 [B]",
+    "year": "B",
+    "season": "ordinary",
+    "seasonLabel": "Ordinary Time",
+    "seasonOrder": 10,
+    "nextDate": "2024-06-09"
+  },
+  {
+    "id": "ordinary-time-10-c",
+    "name": "ORDINARY TIME 10 [C]",
+    "year": "C",
+    "season": "ordinary",
+    "seasonLabel": "Ordinary Time",
+    "seasonOrder": 10,
+    "nextDate": null
+  },
+  {
+    "id": "ordinary-time-11-a",
+    "name": "ORDINARY TIME 11 [A]",
+    "year": "A",
+    "season": "ordinary",
+    "seasonLabel": "Ordinary Time",
+    "seasonOrder": 11,
+    "nextDate": "2023-06-18"
+  },
+  {
+    "id": "ordinary-time-11-b",
+    "name": "ORDINARY TIME 11 [B]",
+    "year": "B",
+    "season": "ordinary",
+    "seasonLabel": "Ordinary Time",
+    "seasonOrder": 11,
+    "nextDate": "2024-06-16"
+  },
+  {
+    "id": "ordinary-time-11-c",
+    "name": "ORDINARY TIME 11 [C]",
+    "year": "C",
+    "season": "ordinary",
+    "seasonLabel": "Ordinary Time",
+    "seasonOrder": 11,
+    "nextDate": "2037-06-14"
+  },
+  {
+    "id": "ordinary-time-12-a",
+    "name": "ORDINARY TIME 12 [A]",
+    "year": "A",
+    "season": "ordinary",
+    "seasonLabel": "Ordinary Time",
+    "seasonOrder": 12,
+    "nextDate": "2023-06-25"
+  },
+  {
+    "id": "ordinary-time-12-b",
+    "name": "ORDINARY TIME 12 [B]",
+    "year": "B",
+    "season": "ordinary",
+    "seasonLabel": "Ordinary Time",
+    "seasonOrder": 12,
+    "nextDate": "2024-06-23"
+  },
+  {
+    "id": "ordinary-time-12-c",
+    "name": "ORDINARY TIME 12 [C]",
+    "year": "C",
+    "season": "ordinary",
+    "seasonLabel": "Ordinary Time",
+    "seasonOrder": 12,
+    "nextDate": "2037-06-21"
+  },
+  {
+    "id": "ordinary-time-13-a",
+    "name": "ORDINARY TIME 13 [A]",
+    "year": "A",
+    "season": "ordinary",
+    "seasonLabel": "Ordinary Time",
+    "seasonOrder": 13,
+    "nextDate": "2023-07-02"
+  },
+  {
+    "id": "ordinary-time-13-b",
+    "name": "ORDINARY TIME 13 [B]",
+    "year": "B",
+    "season": "ordinary",
+    "seasonLabel": "Ordinary Time",
+    "seasonOrder": 13,
+    "nextDate": "2024-06-30"
+  },
+  {
+    "id": "ordinary-time-13-c",
+    "name": "ORDINARY TIME 13 [C]",
+    "year": "C",
+    "season": "ordinary",
+    "seasonLabel": "Ordinary Time",
+    "seasonOrder": 13,
+    "nextDate": "2037-06-28"
+  },
+  {
+    "id": "ss-peter-paul-apostles-jun-29-at-the-vigil-mass-abc",
+    "name": "Ss PETER & PAUL, APOSTLES (JUN 29) \nAT THE VIGIL MASS [ABC]",
+    "year": "ABC",
+    "season": "ordinary",
+    "seasonLabel": "Ordinary Time",
+    "seasonOrder": 29,
+    "nextDate": "2025-06-28"
+  },
+  {
+    "id": "ss-peter-paul-apostles-jun-29-mass-during-the-day-abc",
+    "name": "Ss PETER & PAUL, APOSTLES (JUN 29) \nMASS DURING THE DAY [ABC]",
+    "year": "ABC",
+    "season": "ordinary",
+    "seasonLabel": "Ordinary Time",
+    "seasonOrder": 29,
+    "nextDate": "2025-06-29"
+  },
+  {
+    "id": "independence-day",
+    "name": "INDEPENDENCE DAY",
+    "year": "ABC",
+    "season": "ordinary",
+    "seasonLabel": "Ordinary Time",
+    "seasonOrder": 0,
+    "nextDate": "2025-07-04"
+  },
+  {
+    "id": "ordinary-time-14-a",
+    "name": "ORDINARY TIME 14 [A]",
+    "year": "A",
+    "season": "ordinary",
+    "seasonLabel": "Ordinary Time",
+    "seasonOrder": 14,
+    "nextDate": "2023-07-09"
+  },
+  {
+    "id": "ordinary-time-14-b",
+    "name": "ORDINARY TIME 14 [B]",
+    "year": "B",
+    "season": "ordinary",
+    "seasonLabel": "Ordinary Time",
+    "seasonOrder": 14,
+    "nextDate": "2024-07-07"
+  },
+  {
+    "id": "ordinary-time-14-c",
+    "name": "ORDINARY TIME 14 [C]",
+    "year": "C",
+    "season": "ordinary",
+    "seasonLabel": "Ordinary Time",
+    "seasonOrder": 14,
+    "nextDate": "2025-07-06"
+  },
+  {
+    "id": "ordinary-time-15-a",
+    "name": "ORDINARY TIME 15 [A]",
+    "year": "A",
+    "season": "ordinary",
+    "seasonLabel": "Ordinary Time",
+    "seasonOrder": 15,
+    "nextDate": "2023-07-16"
+  },
+  {
+    "id": "ordinary-time-15-b",
+    "name": "ORDINARY TIME 15 [B]",
+    "year": "B",
+    "season": "ordinary",
+    "seasonLabel": "Ordinary Time",
+    "seasonOrder": 15,
+    "nextDate": "2024-07-14"
+  },
+  {
+    "id": "ordinary-time-15-c",
+    "name": "ORDINARY TIME 15 [C]",
+    "year": "C",
+    "season": "ordinary",
+    "seasonLabel": "Ordinary Time",
+    "seasonOrder": 15,
+    "nextDate": "2025-07-13"
+  },
+  {
+    "id": "ordinary-time-16-a",
+    "name": "ORDINARY TIME 16 [A]",
+    "year": "A",
+    "season": "ordinary",
+    "seasonLabel": "Ordinary Time",
+    "seasonOrder": 16,
+    "nextDate": "2023-07-23"
+  },
+  {
+    "id": "ordinary-time-16-b",
+    "name": "ORDINARY TIME 16 [B]",
+    "year": "B",
+    "season": "ordinary",
+    "seasonLabel": "Ordinary Time",
+    "seasonOrder": 16,
+    "nextDate": "2024-07-21"
+  },
+  {
+    "id": "ordinary-time-16-c",
+    "name": "ORDINARY TIME 16 [C]",
+    "year": "C",
+    "season": "ordinary",
+    "seasonLabel": "Ordinary Time",
+    "seasonOrder": 16,
+    "nextDate": "2025-07-20"
+  },
+  {
+    "id": "ordinary-time-17-a",
+    "name": "ORDINARY TIME 17 [A]",
+    "year": "A",
+    "season": "ordinary",
+    "seasonLabel": "Ordinary Time",
+    "seasonOrder": 17,
+    "nextDate": "2023-07-30"
+  },
+  {
+    "id": "ordinary-time-17-b",
+    "name": "ORDINARY TIME 17 [B]",
+    "year": "B",
+    "season": "ordinary",
+    "seasonLabel": "Ordinary Time",
+    "seasonOrder": 17,
+    "nextDate": "2024-07-28"
+  },
+  {
+    "id": "ordinary-time-17-c",
+    "name": "ORDINARY TIME 17 [C]",
+    "year": "C",
+    "season": "ordinary",
+    "seasonLabel": "Ordinary Time",
+    "seasonOrder": 17,
+    "nextDate": "2025-07-27"
+  },
+  {
+    "id": "ordinary-time-18-a",
+    "name": "ORDINARY TIME 18 [A]",
+    "year": "A",
+    "season": "ordinary",
+    "seasonLabel": "Ordinary Time",
+    "seasonOrder": 18,
+    "nextDate": "2035-08-05"
+  },
+  {
+    "id": "ordinary-time-18-b",
+    "name": "ORDINARY TIME 18 [B]",
+    "year": "B",
+    "season": "ordinary",
+    "seasonLabel": "Ordinary Time",
+    "seasonOrder": 18,
+    "nextDate": "2024-08-04"
+  },
+  {
+    "id": "ordinary-time-18-c",
+    "name": "ORDINARY TIME 18 [C]",
+    "year": "C",
+    "season": "ordinary",
+    "seasonLabel": "Ordinary Time",
+    "seasonOrder": 18,
+    "nextDate": "2025-08-03"
+  },
+  {
+    "id": "ordinary-time-19-a",
+    "name": "ORDINARY TIME 19 [A]",
+    "year": "A",
+    "season": "ordinary",
+    "seasonLabel": "Ordinary Time",
+    "seasonOrder": 19,
+    "nextDate": "2023-08-13"
+  },
+  {
+    "id": "ordinary-time-19-b",
+    "name": "ORDINARY TIME 19 [B]",
+    "year": "B",
+    "season": "ordinary",
+    "seasonLabel": "Ordinary Time",
+    "seasonOrder": 19,
+    "nextDate": "2024-08-11"
+  },
+  {
+    "id": "ordinary-time-19-c",
+    "name": "ORDINARY TIME 19 [C]",
+    "year": "C",
+    "season": "ordinary",
+    "seasonLabel": "Ordinary Time",
+    "seasonOrder": 19,
+    "nextDate": "2025-08-10"
+  },
+  {
+    "id": "ordinary-time-20-a",
+    "name": "ORDINARY TIME 20 [A]",
+    "year": "A",
+    "season": "ordinary",
+    "seasonLabel": "Ordinary Time",
+    "seasonOrder": 20,
+    "nextDate": "2023-08-20"
+  },
+  {
+    "id": "ordinary-time-20-b",
+    "name": "ORDINARY TIME 20 [B]",
+    "year": "B",
+    "season": "ordinary",
+    "seasonLabel": "Ordinary Time",
+    "seasonOrder": 20,
+    "nextDate": "2024-08-18"
+  },
+  {
+    "id": "ordinary-time-20-c",
+    "name": "ORDINARY TIME 20 [C]",
+    "year": "C",
+    "season": "ordinary",
+    "seasonLabel": "Ordinary Time",
+    "seasonOrder": 20,
+    "nextDate": "2025-08-17"
+  },
+  {
+    "id": "ordinary-time-21-a",
+    "name": "ORDINARY TIME 21 [A]",
+    "year": "A",
+    "season": "ordinary",
+    "seasonLabel": "Ordinary Time",
+    "seasonOrder": 21,
+    "nextDate": "2023-08-27"
+  },
+  {
+    "id": "ordinary-time-21-b",
+    "name": "ORDINARY TIME 21 [B]",
+    "year": "B",
+    "season": "ordinary",
+    "seasonLabel": "Ordinary Time",
+    "seasonOrder": 21,
+    "nextDate": "2024-08-25"
+  },
+  {
+    "id": "ordinary-time-21-c",
+    "name": "ORDINARY TIME 21 [C]",
+    "year": "C",
+    "season": "ordinary",
+    "seasonLabel": "Ordinary Time",
+    "seasonOrder": 21,
+    "nextDate": "2025-08-24"
+  },
+  {
+    "id": "feast-of-st-monica",
+    "name": "FEAST of ST MONICA",
+    "year": "ABC",
+    "season": "feast",
+    "seasonLabel": "Feast",
+    "seasonOrder": 0,
+    "nextDate": "2025-08-27"
+  },
+  {
+    "id": "ordinary-time-22-a",
+    "name": "ORDINARY TIME 22 [A]",
+    "year": "A",
+    "season": "ordinary",
+    "seasonLabel": "Ordinary Time",
+    "seasonOrder": 22,
+    "nextDate": "2023-09-03"
+  },
+  {
+    "id": "ordinary-time-22-b",
+    "name": "ORDINARY TIME 22 [B]",
+    "year": "B",
+    "season": "ordinary",
+    "seasonLabel": "Ordinary Time",
+    "seasonOrder": 22,
+    "nextDate": "2024-09-01"
+  },
+  {
+    "id": "ordinary-time-22-c",
+    "name": "ORDINARY TIME 22 [C]",
+    "year": "C",
+    "season": "ordinary",
+    "seasonLabel": "Ordinary Time",
+    "seasonOrder": 22,
+    "nextDate": "2025-08-31"
+  },
+  {
+    "id": "ordinary-time-23-a",
+    "name": "ORDINARY TIME 23 [A]",
+    "year": "A",
+    "season": "ordinary",
+    "seasonLabel": "Ordinary Time",
+    "seasonOrder": 23,
+    "nextDate": "2023-09-10"
+  },
+  {
+    "id": "ordinary-time-23-b",
+    "name": "ORDINARY TIME 23 [B]",
+    "year": "B",
+    "season": "ordinary",
+    "seasonLabel": "Ordinary Time",
+    "seasonOrder": 23,
+    "nextDate": "2024-09-08"
+  },
+  {
+    "id": "ordinary-time-23-c",
+    "name": "ORDINARY TIME 23 [C]",
+    "year": "C",
+    "season": "ordinary",
+    "seasonLabel": "Ordinary Time",
+    "seasonOrder": 23,
+    "nextDate": "2025-09-07"
+  },
+  {
+    "id": "feast-the-exaltation-sep-14-of-the-holy-cross-abc",
+    "name": "FEAST: The EXALTATION (SEP 14)\n OF THE HOLY CROSS [ABC]",
+    "year": "ABC",
+    "season": "feast",
+    "seasonLabel": "Feast",
+    "seasonOrder": 14,
+    "nextDate": "2025-09-14"
+  },
+  {
+    "id": "ordinary-time-24-a",
+    "name": "ORDINARY TIME 24 [A]",
+    "year": "A",
+    "season": "ordinary",
+    "seasonLabel": "Ordinary Time",
+    "seasonOrder": 24,
+    "nextDate": "2023-09-17"
+  },
+  {
+    "id": "ordinary-time-24-b",
+    "name": "ORDINARY TIME 24 [B]",
+    "year": "B",
+    "season": "ordinary",
+    "seasonLabel": "Ordinary Time",
+    "seasonOrder": 24,
+    "nextDate": "2024-09-15"
+  },
+  {
+    "id": "ordinary-time-24-c",
+    "name": "ORDINARY TIME 24 [C]",
+    "year": "C",
+    "season": "ordinary",
+    "seasonLabel": "Ordinary Time",
+    "seasonOrder": 24,
+    "nextDate": "2037-09-13"
+  },
+  {
+    "id": "ordinary-time-25-a",
+    "name": "ORDINARY TIME 25 [A]",
+    "year": "A",
+    "season": "ordinary",
+    "seasonLabel": "Ordinary Time",
+    "seasonOrder": 25,
+    "nextDate": "2023-09-24"
+  },
+  {
+    "id": "ordinary-time-25-b",
+    "name": "ORDINARY TIME 25 [B]",
+    "year": "B",
+    "season": "ordinary",
+    "seasonLabel": "Ordinary Time",
+    "seasonOrder": 25,
+    "nextDate": "2024-09-22"
+  },
+  {
+    "id": "ordinary-time-25-c",
+    "name": "ORDINARY TIME 25 [C]",
+    "year": "C",
+    "season": "ordinary",
+    "seasonLabel": "Ordinary Time",
+    "seasonOrder": 25,
+    "nextDate": "2025-09-21"
+  },
+  {
+    "id": "ordinary-time-26-a",
+    "name": "ORDINARY TIME 26 [A]",
+    "year": "A",
+    "season": "ordinary",
+    "seasonLabel": "Ordinary Time",
+    "seasonOrder": 26,
+    "nextDate": "2023-10-01"
+  },
+  {
+    "id": "ordinary-time-26-b",
+    "name": "ORDINARY TIME 26 [B]",
+    "year": "B",
+    "season": "ordinary",
+    "seasonLabel": "Ordinary Time",
+    "seasonOrder": 26,
+    "nextDate": "2024-09-29"
+  },
+  {
+    "id": "ordinary-time-26-c",
+    "name": "ORDINARY TIME 26 [C]",
+    "year": "C",
+    "season": "ordinary",
+    "seasonLabel": "Ordinary Time",
+    "seasonOrder": 26,
+    "nextDate": "2025-09-28"
+  },
+  {
+    "id": "memorial-abc-feast-of-st-francis-oct-4",
+    "name": "MEMORIAL [ABC] \nFEAST OF ST FRANCIS (OCT 4)",
+    "year": "ABC",
+    "season": "feast",
+    "seasonLabel": "Feast",
+    "seasonOrder": 4,
+    "nextDate": "2025-10-04"
+  },
+  {
+    "id": "ordinary-time-27-a",
+    "name": "ORDINARY TIME 27 [A]",
+    "year": "A",
+    "season": "ordinary",
+    "seasonLabel": "Ordinary Time",
+    "seasonOrder": 27,
+    "nextDate": "2023-10-08"
+  },
+  {
+    "id": "ordinary-time-27-b",
+    "name": "ORDINARY TIME 27 [B]",
+    "year": "B",
+    "season": "ordinary",
+    "seasonLabel": "Ordinary Time",
+    "seasonOrder": 27,
+    "nextDate": "2024-10-06"
+  },
+  {
+    "id": "ordinary-time-27-c",
+    "name": "ORDINARY TIME 27 [C]",
+    "year": "C",
+    "season": "ordinary",
+    "seasonLabel": "Ordinary Time",
+    "seasonOrder": 27,
+    "nextDate": "2025-10-05"
+  },
+  {
+    "id": "ordinary-time-28-a",
+    "name": "ORDINARY TIME 28 [A]",
+    "year": "A",
+    "season": "ordinary",
+    "seasonLabel": "Ordinary Time",
+    "seasonOrder": 28,
+    "nextDate": "2023-10-15"
+  },
+  {
+    "id": "ordinary-time-28-b",
+    "name": "ORDINARY TIME 28 [B]",
+    "year": "B",
+    "season": "ordinary",
+    "seasonLabel": "Ordinary Time",
+    "seasonOrder": 28,
+    "nextDate": "2024-10-13"
+  },
+  {
+    "id": "ordinary-time-28-c",
+    "name": "ORDINARY TIME 28 [C]",
+    "year": "C",
+    "season": "ordinary",
+    "seasonLabel": "Ordinary Time",
+    "seasonOrder": 28,
+    "nextDate": "2025-10-12"
+  },
+  {
+    "id": "ordinary-time-29-a",
+    "name": "ORDINARY TIME 29 [A]",
+    "year": "A",
+    "season": "ordinary",
+    "seasonLabel": "Ordinary Time",
+    "seasonOrder": 29,
+    "nextDate": "2023-10-22"
+  },
+  {
+    "id": "ordinary-time-29-b",
+    "name": "ORDINARY TIME 29 [B]",
+    "year": "B",
+    "season": "ordinary",
+    "seasonLabel": "Ordinary Time",
+    "seasonOrder": 29,
+    "nextDate": "2024-10-20"
+  },
+  {
+    "id": "ordinary-time-29-c",
+    "name": "ORDINARY TIME 29 [C]",
+    "year": "C",
+    "season": "ordinary",
+    "seasonLabel": "Ordinary Time",
+    "seasonOrder": 29,
+    "nextDate": "2025-10-19"
+  },
+  {
+    "id": "ordinary-time-30-a",
+    "name": "ORDINARY TIME 30 [A]",
+    "year": "A",
+    "season": "ordinary",
+    "seasonLabel": "Ordinary Time",
+    "seasonOrder": 30,
+    "nextDate": "2023-10-29"
+  },
+  {
+    "id": "ordinary-time-30-b",
+    "name": "ORDINARY TIME 30 [B]",
+    "year": "B",
+    "season": "ordinary",
+    "seasonLabel": "Ordinary Time",
+    "seasonOrder": 30,
+    "nextDate": "2024-10-27"
+  },
+  {
+    "id": "ordinary-time-30-c",
+    "name": "ORDINARY TIME 30 [C]",
+    "year": "C",
+    "season": "ordinary",
+    "seasonLabel": "Ordinary Time",
+    "seasonOrder": 30,
+    "nextDate": "2025-10-26"
+  },
+  {
+    "id": "ordinary-time-31-a",
+    "name": "ORDINARY TIME 31 [A]",
+    "year": "A",
+    "season": "ordinary",
+    "seasonLabel": "Ordinary Time",
+    "seasonOrder": 31,
+    "nextDate": "2023-11-05"
+  },
+  {
+    "id": "ordinary-time-31-b",
+    "name": "ORDINARY TIME 31 [B]",
+    "year": "B",
+    "season": "ordinary",
+    "seasonLabel": "Ordinary Time",
+    "seasonOrder": 31,
+    "nextDate": "2024-11-03"
+  },
+  {
+    "id": "ordinary-time-31-c",
+    "name": "ORDINARY TIME 31 [C]",
+    "year": "C",
+    "season": "ordinary",
+    "seasonLabel": "Ordinary Time",
+    "seasonOrder": 31,
+    "nextDate": "2034-11-05"
+  },
+  {
+    "id": "ordinary-time-32-a",
+    "name": "ORDINARY TIME 32 [A]",
+    "year": "A",
+    "season": "ordinary",
+    "seasonLabel": "Ordinary Time",
+    "seasonOrder": 32,
+    "nextDate": "2023-11-12"
+  },
+  {
+    "id": "ordinary-time-32-b",
+    "name": "ORDINARY TIME 32 [B]",
+    "year": "B",
+    "season": "ordinary",
+    "seasonLabel": "Ordinary Time",
+    "seasonOrder": 32,
+    "nextDate": "2024-11-10"
+  },
+  {
+    "id": "ordinary-time-32-c",
+    "name": "ORDINARY TIME 32 [C]",
+    "year": "C",
+    "season": "ordinary",
+    "seasonLabel": "Ordinary Time",
+    "seasonOrder": 32,
+    "nextDate": "2037-11-08"
+  },
+  {
+    "id": "solemnity-nov-1-all-saints-abc",
+    "name": "SOLEMNITY (NOV 1) \nALL SAINTS [ABC]",
+    "year": "ABC",
+    "season": "solemnity",
+    "seasonLabel": "Solemnity",
+    "seasonOrder": 1,
+    "nextDate": "2025-11-01"
+  },
+  {
+    "id": "solemnity-nov-1-all-souls-abc",
+    "name": "SOLEMNITY (NOV 1)\nALL SOULS [ABC]",
+    "year": "ABC",
+    "season": "solemnity",
+    "seasonLabel": "Solemnity",
+    "seasonOrder": 1,
+    "nextDate": "2025-11-02"
+  },
+  {
+    "id": "the-dedication-of-nov-9-the-lateran-basilica-abc",
+    "name": "THE DEDICATION OF (NOV 9)\nTHE LATERAN BASILICA [ABC]",
+    "year": "ABC",
+    "season": "ordinary",
+    "seasonLabel": "Ordinary Time",
+    "seasonOrder": 9,
+    "nextDate": "2025-11-09"
+  },
+  {
+    "id": "veteran-s-day",
+    "name": "VETERAN'S DAY",
+    "year": "ABC",
+    "season": "ordinary",
+    "seasonLabel": "Ordinary Time",
+    "seasonOrder": 0,
+    "nextDate": "2025-11-11"
+  },
+  {
+    "id": "ordinary-time-33-a",
+    "name": "ORDINARY TIME 33 [A]",
+    "year": "A",
+    "season": "ordinary",
+    "seasonLabel": "Ordinary Time",
+    "seasonOrder": 33,
+    "nextDate": "2023-11-19"
+  },
+  {
+    "id": "ordinary-time-33-b",
+    "name": "ORDINARY TIME 33 [B]",
+    "year": "B",
+    "season": "ordinary",
+    "seasonLabel": "Ordinary Time",
+    "seasonOrder": 33,
+    "nextDate": "2024-11-17"
+  },
+  {
+    "id": "ordinary-time-33-c",
+    "name": "ORDINARY TIME 33 [C]",
+    "year": "C",
+    "season": "ordinary",
+    "seasonLabel": "Ordinary Time",
+    "seasonOrder": 33,
+    "nextDate": "2025-11-16"
+  },
+  {
+    "id": "solemnity-christ-the-king-a",
+    "name": "SOLEMNITY\nCHRIST THE KING [A]",
+    "year": "A",
+    "season": "solemnity",
+    "seasonLabel": "Solemnity",
+    "seasonOrder": 0,
+    "nextDate": "2023-11-26"
+  },
+  {
+    "id": "solemnity-christ-the-king-b",
+    "name": "SOLEMNITY\nCHRIST THE KING [B]",
+    "year": "B",
+    "season": "solemnity",
+    "seasonLabel": "Solemnity",
+    "seasonOrder": 0,
+    "nextDate": "2024-11-24"
+  },
+  {
+    "id": "solemnity-christ-the-king-c",
+    "name": "SOLEMNITY\nCHRIST THE KING [C]",
+    "year": "C",
+    "season": "solemnity",
+    "seasonLabel": "Solemnity",
+    "seasonOrder": 0,
+    "nextDate": "2025-11-23"
+  },
+  {
+    "id": "thanksgiving",
+    "name": "THANKSGIVING",
+    "year": "ABC",
+    "season": "ordinary",
+    "seasonLabel": "Ordinary Time",
+    "seasonOrder": 0,
+    "nextDate": "2025-11-27"
+  }
+]

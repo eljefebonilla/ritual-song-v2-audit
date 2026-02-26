@@ -1,0 +1,437 @@
+{
+  "id": "ordinary-time-23-c",
+  "name": "ORDINARY TIME 23 [C]",
+  "year": "C",
+  "season": "ordinary",
+  "seasonLabel": "Ordinary Time",
+  "seasonOrder": 23,
+  "dates": [
+    {
+      "date": "2025-09-07",
+      "label": "Year C — Sep 07, 2025 (Sun)",
+      "dayOfWeek": "Sun"
+    },
+    {
+      "date": "2037-09-06",
+      "label": "Year C — Sep 06, 2037 (Sun)",
+      "dayOfWeek": "Sun"
+    },
+    {
+      "date": "2034-09-10",
+      "label": "Year C — Sep 10, 2034 (Sun)",
+      "dayOfWeek": "Sun"
+    },
+    {
+      "date": "2031-09-07",
+      "label": "Year C — Sep 07, 2031 (Sun)",
+      "dayOfWeek": "Sun"
+    },
+    {
+      "date": "2028-09-10",
+      "label": "Year C — Sep 10, 2028 (Sun)",
+      "dayOfWeek": "Sun"
+    }
+  ],
+  "lectionary": {
+    "number": "129•C",
+    "gospelTitle": "Cost of Discipleship",
+    "thematicTag": "Table Ethics 2/2"
+  },
+  "readings": [
+    {
+      "type": "first",
+      "citation": "Wis 9:13-18b",
+      "summary": "Who can know the will of God?"
+    },
+    {
+      "type": "psalm",
+      "citation": "Ps 90:3-4, 5-6, 12-13, 14-17, R. v.1\nIn every age, O Lord, you have been our refuge.",
+      "summary": "",
+      "antiphon": "Ps 90:3-4, 5-6, 12-13, 14-17, R. v.1\nIn every age, O Lord, you have been our refuge."
+    },
+    {
+      "type": "second",
+      "citation": "Phlm 9-10, 12-17",
+      "summary": "Paul sends Onesimus,erly a slave, back to Philemon as a brother."
+    },
+    {
+      "type": "gospel_verse",
+      "citation": "Ps 119:135",
+      "summary": "Let your face shine upon your servant;\nand teach me your laws."
+    },
+    {
+      "type": "gospel",
+      "citation": "Lk 14:25-33",
+      "summary": "Disciples must carry their own cross."
+    }
+  ],
+  "antiphons": [
+    {
+      "type": "entrance",
+      "option": 1,
+      "citation": "Ps 119 (118):137, 124",
+      "text": "You are just, O Lord, and your judgment is right;\ntreat your servant in accord with your merciful love."
+    },
+    {
+      "type": "communion",
+      "option": 1,
+      "citation": "Cf. Ps 42 (41):2–3",
+      "text": "Like the deer that yearns for running streams,\nso my soul is yearning for you, my God;\nmy soul is thirsting for God, the living God."
+    },
+    {
+      "type": "communion",
+      "option": 2,
+      "citation": "Communion Antiphon • Option II |   Jn 8:12",
+      "text": "I am the light of the world, says the Lord;\nwhoever follows me will not walk in darkness,\nbut will have the light of life."
+    }
+  ],
+  "planningNotes": [
+    "SEASON OF CREATION (9/1 - 10/4)",
+    "St, Phoebe Weekend"
+  ],
+  "musicPlans": [
+    {
+      "community": "Reflections",
+      "communityId": "reflections",
+      "date": "Year C — Sep 06, 2025 (Sat)",
+      "presider": "Fr. Eusebio Llonoso",
+      "prelude": {
+        "title": "Peace on Earth (Larghetto)",
+        "composer": "Dvořák • adapted by Bob Hurd",
+        "description": "Prayer for Peace"
+      },
+      "gathering": {
+        "title": "For the Beauty of the Earth",
+        "composer": "DIX • Folliott Sandford Pierpoint • Arr. by Dan Houze",
+        "description": "Season of Creation"
+      },
+      "penitentialAct": {
+        "title": "Kyrie • Misa Del Mundo",
+        "composer": "Only if needed. Talk to presider!"
+      },
+      "gloria": {
+        "title": "Glory to God (Through-composed Setting)",
+        "composer": "Mass of Renewal • Curtis Stephan"
+      },
+      "responsorialPsalm": {
+        "psalm": "Ps 90 In every age, O Lord, you have been...",
+        "setting": "The Lyric Psalter • Tony Alonso & Marty Haugen"
+      },
+      "gospelAcclamation": {
+        "title": "Alleluia (Mass of Joy & Peace)",
+        "composer": "O.T. • 23 | C — \"Let your face shine upon...\""
+      },
+      "offertory": {
+        "title": "The Summons",
+        "composer": "John L Bell",
+        "description": "Gospel: To be a disciple we must carry our own cross."
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "Mass for the Healing of the World",
+        "composer": "Trevor Thomson"
+      },
+      "lordsPrayer": {
+        "title": "Chanted Our Father (Snow)",
+        "composer": "Jennings/Paregorius"
+      },
+      "fractionRite": {
+        "title": "Lamb of God (Mass for the Healing of the World)",
+        "composer": "Trevor Thomson"
+      },
+      "communionSongs": [
+        {
+          "title": "So Longs My Soul",
+          "composer": "Liam Lawton",
+          "description": "Communion Antiphon"
+        },
+        {
+          "title": "Be Though My Vision",
+          "composer": "SLANE • Arranged by Assad",
+          "description": "Gospel Theme \"Riches I head not...\""
+        },
+        {
+          "title": "Take, Lord, Receive",
+          "composer": "John Foley SJ",
+          "description": "\"Your love and your grace\rare enough for me.\""
+        }
+      ],
+      "sending": {
+        "title": "They'll Know We Are Christians",
+        "composer": "Peter Scholtes • Arr. Mark Hayes",
+        "description": "OCP Arrangement"
+      }
+    },
+    {
+      "community": "Foundations",
+      "communityId": "foundations",
+      "date": "Year C — Sep 07, 2025 (Sun)",
+      "presider": "Fr. Thomas Park",
+      "prelude": {
+        "title": "Peace on Earth (Larghetto)",
+        "composer": "Dvořák • adapted by Bob Hurd",
+        "description": "Prayer for Peace"
+      },
+      "gathering": {
+        "title": "For the Beauty of the Earth",
+        "composer": "DIX • Folliott Sandford Pierpoint • Arr. by Dan Houze",
+        "description": "Season of Creation"
+      },
+      "penitentialAct": {
+        "title": "Kyrie (Gift of God) • Adapted Version",
+        "composer": "Marty Haugen • Arranged by David Locwood"
+      },
+      "gloria": {
+        "title": "Glory to God (Mass of Joy & Peace)",
+        "composer": "Alonso • Arr. by Houze OR Arr. by Lockwood"
+      },
+      "responsorialPsalm": {
+        "psalm": "Ps 90 In every age, O Lord, you have been...",
+        "setting": "Spirit & Psalm • Iván Díaz"
+      },
+      "offertory": {
+        "title": "Where Your Treasure Is",
+        "composer": "Mary Haugen",
+        "description": "Gospel Reading"
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "Mass of Glory • Bob Hurd • Arr. by Dan Houze"
+      },
+      "lordsPrayer": {
+        "title": "Chanted Our Father (Snow)",
+        "composer": "Jennings • Paregorius"
+      },
+      "fractionRite": {
+        "title": "Lamb of God (Mass of Glory)"
+      },
+      "communionSongs": [
+        {
+          "title": "Be Though My Vision",
+          "composer": "SLANE • Arranged by Assad",
+          "description": "Gospel Theme \"Riches I head not...\""
+        },
+        {
+          "title": "I Will Choose Christ",
+          "composer": "Tom Booth",
+          "description": "\"As I look upon your cross so too must I die with you…”"
+        }
+      ],
+      "sending": {
+        "title": "Where He Leads Me",
+        "composer": "Ernest W. Blandy",
+        "description": "Gospel"
+      }
+    },
+    {
+      "community": "Generations",
+      "communityId": "generations",
+      "date": "Year C — Sep 07, 2025 (Sun)",
+      "presider": "Msgr. Lloyd Torgerson",
+      "prelude": {
+        "title": "Peace on Earth (Larghetto)",
+        "composer": "Dvořák • adapted by Bob Hurd",
+        "description": "Prayer for Peace"
+      },
+      "gathering": {
+        "title": "For the Beauty of the Earth",
+        "composer": "DIX • Folliott Sandford Pierpoint • Arr. by Dan Houze",
+        "description": "Season of Creation"
+      },
+      "penitentialAct": {
+        "title": "Kyrie • Misa Del Mundo",
+        "composer": "Only if needed. Talk to presider!"
+      },
+      "gloria": {
+        "title": "Glory, Glory, Gloria!",
+        "composer": "Jeffrey Bonilla & Drew Wilson"
+      },
+      "responsorialPsalm": {
+        "psalm": "Ps 90 In every age, O Lord, you have been...",
+        "setting": "Spirit & Psalm • Iván Díaz"
+      },
+      "gospelAcclamation": {
+        "title": "Setting from Mass of Endless Mercy",
+        "composer": "O.T. • 23 | C — \"Let your face shine upon...\""
+      },
+      "offertory": {
+        "title": "Take, Lord, Receive",
+        "composer": "John Foley SJ",
+        "description": "\"Your love and your grace\rare enough for me.\""
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "Mass of Restoration",
+        "composer": "Joshua Blakesley"
+      },
+      "lordsPrayer": {
+        "title": "(Echo) Our Father",
+        "composer": "Jerome Andrews • Arranged by Dan Houze"
+      },
+      "fractionRite": {
+        "title": "Lamb of God (Resoration)"
+      },
+      "communionSongs": [
+        {
+          "title": "So Longs My Soul",
+          "composer": "Liam Lawton",
+          "description": "Communion Antiphon"
+        },
+        {
+          "title": "Be Though My Vision",
+          "composer": "SLANE • Arranged by Assad",
+          "description": "Gospel Theme \"Riches I head not...\""
+        },
+        {
+          "title": "The Summons",
+          "composer": "John L Bell • Arranged by David Lockwood",
+          "description": "Gospel: To be a disciple we must carry our own cross."
+        },
+        {
+          "title": "Daily Bread",
+          "composer": "Pat Barrett • Kari Jobe",
+          "description": "\"...we will seek your face before we seek your hand\""
+        }
+      ],
+      "sending": {
+        "title": "Make the Love of God Known",
+        "composer": "Rick Modlin • Arranged by David Lockwood",
+        "description": "Gospel | Discipleship"
+      }
+    },
+    {
+      "community": "Heritage",
+      "communityId": "heritage",
+      "date": "Year C — Sep 07, 2025 (Sun)",
+      "presider": "\"Fr. David Guffey, CSC\"",
+      "prelude": {
+        "title": "Peace on Earth (Larghetto)",
+        "composer": "Dvořák • adapted by Bob Hurd",
+        "description": "Prayer for Peace"
+      },
+      "gathering": {
+        "title": "For the Beauty of the Earth",
+        "composer": "DIX • Folliott Sandford Pierpoint",
+        "description": "Season of Creation"
+      },
+      "penitentialAct": {
+        "title": "Kyrie • Misa Del Mundo",
+        "composer": "Only if needed. Talk to presider!"
+      },
+      "gloria": {
+        "title": "Glory to God (Mass of Christ the Savior)",
+        "composer": "Dan Schutte"
+      },
+      "responsorialPsalm": {
+        "psalm": "Ps 90 In every age, O Lord, you have been...",
+        "setting": "The Lyric Psalter • Tony Alonso & Marty Haugen"
+      },
+      "gospelAcclamation": {
+        "title": "Alleluia (Mass of Joy & Peace)",
+        "composer": "O.T. • 23 | C — \"Let your face shine upon...\""
+      },
+      "offertory": {
+        "title": "Where Your Treasure Is",
+        "composer": "Mary Haugen",
+        "description": "Gospel Reading"
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "Mass of Christ the Savior - Dan Schutte"
+      },
+      "lordsPrayer": {
+        "title": "Echo Our Father",
+        "composer": "Andrews, Arr. Bonilla • Lockwood • Fajardo"
+      },
+      "fractionRite": {
+        "title": "Lamb of God (Mass of Christ the Savior)"
+      },
+      "communionSongs": [
+        {
+          "title": "As the Deer Longs",
+          "composer": "Bob Hurd",
+          "description": "Communion Antiphon"
+        },
+        {
+          "title": "Be Though My Vision",
+          "composer": "SLANE • Arranged by Assad",
+          "description": "Gospel Theme \"Riches I head not...\""
+        },
+        {
+          "title": "Take, Lord, Receive",
+          "composer": "John Foley SJ",
+          "description": "\"Your love and your grace\rare enough for me.\""
+        }
+      ],
+      "sending": {
+        "title": "They'll Know We Are Christians",
+        "composer": "Peter Scholtes • Arr. Mark Hayes",
+        "description": "OCP Arrangement"
+      }
+    },
+    {
+      "community": "Elevations",
+      "communityId": "elevations",
+      "date": "Year C — Sep 07, 2025 (Sun)",
+      "presider": "Fr. Vince Kuna",
+      "prelude": {
+        "title": "Peace on Earth (Larghetto)",
+        "composer": "Dvořák • adapted by Bob Hurd",
+        "description": "Prayer for Peace"
+      },
+      "gathering": {
+        "title": "For the Beauty of the Earth",
+        "composer": "DIX • Folliott Sandford Pierpoint • Arr. by Dan Houze",
+        "description": "Season of Creation"
+      },
+      "penitentialAct": {
+        "title": "Kyrie • Misa Del Mundo",
+        "composer": "Only if needed. Talk to presider!"
+      },
+      "gloria": {
+        "title": "Glory, Glory, Gloria!"
+      },
+      "responsorialPsalm": {
+        "psalm": "Ps 90 In every age, O Lord, you have been...",
+        "setting": "Spirit & Psalm • Iván Díaz"
+      },
+      "gospelAcclamation": {
+        "title": "Setting from Mass of Endless Mercy",
+        "verse": "O.T. • 23 | C — \"Let your face shine upon...\""
+      },
+      "offertory": {
+        "title": "The Summons",
+        "composer": "John L Bell • Arranged by David Lockwood",
+        "description": "Gospel: To be a disciple we must carry our own cross."
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "Mass of Restoration • Joshua Blakesley"
+      },
+      "lordsPrayer": {
+        "title": "Echo Our Father",
+        "composer": "Andrews, Arr. Bonilla • Lockwood • Fajardo"
+      },
+      "fractionRite": {
+        "title": "Lamb of God (Resoration)"
+      },
+      "communionSongs": [
+        {
+          "title": "So Longs My Soul",
+          "composer": "Liam Lawton",
+          "description": "Communion Antiphon"
+        },
+        {
+          "title": "Be Though My Vision",
+          "composer": "SLANE • Arranged by Assad",
+          "description": "Gospel Theme \"Riches I head not...\""
+        },
+        {
+          "title": "Daily Bread",
+          "composer": "Pat Barrett • Kari Jobe",
+          "description": "\"...we will seek your face before we seek your hand\""
+        }
+      ],
+      "sending": {
+        "title": "Make the Love of God Known",
+        "composer": "Rick Modlin • Arranged by David Lockwood",
+        "description": "Verse 6 - \"Love your neighbor in need\""
+      }
+    }
+  ]
+}

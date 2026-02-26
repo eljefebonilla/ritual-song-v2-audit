@@ -1,0 +1,417 @@
+{
+  "id": "2nd-sun-after-christmas-abc-epiphany-replaces-in-adla",
+  "name": "2ND SUN AFTER CHRISTMAS [ABC]\nEpiphany replaces in ADLA",
+  "year": "ABC",
+  "season": "christmas",
+  "seasonLabel": "Christmas",
+  "seasonOrder": 2,
+  "dates": [
+    {
+      "date": "2026-01-04",
+      "label": "ABC — Jan 04, 2026 (Sun)",
+      "dayOfWeek": "Sun"
+    },
+    {
+      "date": "2032-01-04",
+      "label": "ABC — Jan 04, 2032 (Sun)",
+      "dayOfWeek": "Sun"
+    },
+    {
+      "date": "2031-01-05",
+      "label": "ABC — Jan 05, 2031 (Sun)",
+      "dayOfWeek": "Sun"
+    },
+    {
+      "date": "2028-01-02",
+      "label": "ABC — Jan 02, 2028 (Sun)",
+      "dayOfWeek": "Sun"
+    },
+    {
+      "date": "2027-01-03",
+      "label": "ABC — Jan 03, 2027 (Sun)",
+      "dayOfWeek": "Sun"
+    }
+  ],
+  "lectionary": {
+    "number": "019•ABC",
+    "gospelTitle": "The Word Became Flesh",
+    "thematicTag": "Incarnation"
+  },
+  "readings": [
+    {
+      "type": "first",
+      "citation": "Sir 24:1–2, 8–12",
+      "summary": "Summary"
+    },
+    {
+      "type": "psalm",
+      "citation": "Ps 72:1-2, 7-8, 10-11, 12-13, R see Jn 1:14\nThe Word of God became man and lived among us.",
+      "summary": "",
+      "antiphon": "Ps 72:1-2, 7-8, 10-11, 12-13, R see Jn 1:14\nThe Word of God became man and lived among us."
+    },
+    {
+      "type": "second",
+      "citation": "Eph 1:3–6, 15–18",
+      "summary": "God destined us for adoption to himself through Jesus Christ."
+    },
+    {
+      "type": "gospel_verse",
+      "citation": "cf. 1 Tm 3:16",
+      "summary": "Glory to you, O Christ, proclaimed to the Gentiles;\nGlory to you, O Christ, believed in throughout the world!"
+    },
+    {
+      "type": "gospel",
+      "citation": "Jn 1:1–18 (Shorter - Jn 1:1–5, 9–14)",
+      "summary": "The Word became flesh and made his dwelling among us."
+    }
+  ],
+  "antiphons": [
+    {
+      "type": "entrance",
+      "option": 1,
+      "citation": "Wis 18:14–15",
+      "text": "When a profound silence covered all things and night was in\nthe middle of its course, your all-powerful Word, O Lord,\nbounded from heaven’s royal throne."
+    },
+    {
+      "type": "communion",
+      "option": 1,
+      "citation": "Cf. Jn 1:12",
+      "text": "To all who would accept him,\nhe gave the power to become children of God."
+    }
+  ],
+  "planningNotes": [],
+  "musicPlans": [
+    {
+      "community": "Reflections",
+      "communityId": "reflections",
+      "date": "ABC — Jan 03, 2026 (Sat)",
+      "presider": "NOT IN ADLA",
+      "prelude": {
+        "title": "All Glory Be To Christ",
+        "composer": "AULD LANG SYNE • Kings Kaleidoscope",
+        "description": "Optional Prelude or Meditation Song"
+      },
+      "gathering": {
+        "title": "Angels from the Realms of Glory",
+        "composer": "REGENT SQUARE, Smart • Montgomery",
+        "description": "Verses 1, 3, and 4"
+      },
+      "penitentialAct": {
+        "title": "Will not be led by Cantor"
+      },
+      "gloria": {
+        "title": "Glory to God (Through-composed Setting)",
+        "composer": "Mass of Renewal • Curtis Stephan"
+      },
+      "gospelAcclamation": {
+        "title": "Alleluia (Mass of Joy & Peace)",
+        "composer": "2nd SUN AFTER CHRISTMAS • ABC"
+      },
+      "offertory": {
+        "title": "What Child Is This?",
+        "composer": "GREENSLEEVES • William Dix • Arr. by Haugen",
+        "description": "Verse 3: \"So bring him incense, gold, and myrrh\""
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "Mass of the Incarnate Word",
+        "composer": "Bob Hurd • Traditional Arrangement"
+      },
+      "lordsPrayer": {
+        "title": "Chanted Our Father (Snow)",
+        "composer": "Jennings/Paregorius"
+      },
+      "fractionRite": {
+        "title": "Lamb of God (Mass of Holy Cross)",
+        "composer": "Isele"
+      },
+      "communionSongs": [
+        {
+          "title": "33 – The Epiphany of the Lord - Day",
+          "composer": "Let Us All REJOICE! Angrisano, Hart, & Stephan",
+          "description": "Communion Antiphon"
+        },
+        {
+          "title": "The First Nowell",
+          "composer": "English Melody and Carol, 17th C.",
+          "description": "Wisemen Verses"
+        },
+        {
+          "title": "We Three Kings",
+          "composer": "John H. Hopkins, Jr. • Arranged by Tom Booth",
+          "description": "Verses 1 & 5"
+        }
+      ],
+      "sending": {
+        "title": "Epiphany Carol",
+        "composer": "BEACH SPRING • Patrick O’Brien",
+        "description": "Same tune as Healing 'River of the Spirit'"
+      }
+    },
+    {
+      "community": "Foundations",
+      "communityId": "foundations",
+      "date": "ABC — Jan 04, 2026 (Sun)",
+      "presider": "NOT IN ADLA",
+      "prelude": {
+        "title": "All Glory Be To Christ",
+        "composer": "AULD LANG SYNE • Kings Kaleidoscope",
+        "description": "Optional Prelude or Meditation Song"
+      },
+      "gathering": {
+        "title": "Angels from the Realms of Glory",
+        "composer": "REGENT SQUARE, Smart • Montgomery",
+        "description": "Verses 1, 3, and 4"
+      },
+      "penitentialAct": {
+        "title": "Kyrie (Gift of God) • Adapted Version",
+        "composer": "Marty Haugen • Arranged by David Locwood"
+      },
+      "gloria": {
+        "title": "Mass of Joy & Peace (Gospel Version)",
+        "composer": "Tony Alonso • Arrangement by David Lockwood"
+      },
+      "responsorialPsalm": {
+        "psalm": "Ps 72 Lord, every nation on earth...",
+        "setting": "Spirit & Psalm • Scott Soper"
+      },
+      "gospelAcclamation": {
+        "title": "Alleluia! Give the Glory (Mass of Glory)"
+      },
+      "offertory": {
+        "title": "What Child Is This?",
+        "composer": "GREENSLEEVES • William Dix • Arr. by Haugen",
+        "description": "Verse 3: \"So bring him incense, gold, and myrrh\""
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "Mass of Glory (Lockwood Christmas Intro)"
+      },
+      "lordsPrayer": {
+        "title": "Chanted Our Father (Snow)",
+        "composer": "Jennings • Paregorius"
+      },
+      "fractionRite": {
+        "title": "Lamb of God (Mass of Glory)"
+      },
+      "communionSongs": [
+        {
+          "title": "The First Noel (Nowell)",
+          "composer": "Arranged by Matt Maher • Adapt. by Arielle Phan",
+          "description": "Wisemen Verses - Coda optional"
+        },
+        {
+          "title": "We Three Kings",
+          "composer": "John H. Hopkins, Jr. • Arranged by Tom Booth",
+          "description": "Verses 1 & 5"
+        }
+      ],
+      "sending": {
+        "title": "Epiphany Carol",
+        "composer": "BEACH SPRING • Patrick O’Brien",
+        "description": "Same tune as Healing 'River of the Spirit'"
+      }
+    },
+    {
+      "community": "Generations",
+      "communityId": "generations",
+      "date": "ABC — Jan 04, 2026 (Sun)",
+      "presider": "NOT IN ADLA",
+      "prelude": {
+        "title": "All Glory Be To Christ",
+        "composer": "AULD LANG SYNE • Kings Kaleidoscope",
+        "description": "Optional Prelude or Meditation Song"
+      },
+      "gathering": {
+        "title": "We Three Kings",
+        "composer": "John H. Hopkins, Jr. • Arranged by Tom Booth",
+        "description": "Verses 1 & 5"
+      },
+      "penitentialAct": {
+        "title": "Kyrie • Misa Del Mundo",
+        "composer": "If needed. Talk to presider!"
+      },
+      "gloria": {
+        "title": "Glory, Glory, Gloria! Christmas Edition",
+        "composer": "Bonilla & Wilson • Vocal Arr. by Lockwood & Phan"
+      },
+      "responsorialPsalm": {
+        "psalm": "Ps 72 Lord, every nation on earth...",
+        "setting": "Spirit & Psalm • Scott Soper"
+      },
+      "gospelAcclamation": {
+        "title": "Setting from Mass of Renewal"
+      },
+      "offertory": {
+        "title": "What Child Is This?",
+        "composer": "GREENSLEEVES • William Dix • Arr. by Haugen",
+        "description": "Verse 3: \"So bring him incense, gold, and myrrh\""
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "Mass of Glory (Lockwood Christmas Intro)"
+      },
+      "lordsPrayer": {
+        "title": "Echo Our Father",
+        "composer": "Jerome Andrews, Arranged by Dan Houze"
+      },
+      "fractionRite": {
+        "title": "Lamb of God (Mass of Glory)"
+      },
+      "communionSongs": [
+        {
+          "title": "The First Noel (Nowell)",
+          "composer": "Arranged by Matt Maher • Adapt. by Arielle Phan",
+          "description": "Wisemen Verses - Coda optional"
+        },
+        {
+          "title": "Jesus, Living Bread",
+          "composer": "Tom Booth",
+          "description": "\"Light for all the world\""
+        },
+        {
+          "title": "Glory (Let There Be Peace)",
+          "composer": "Matt Maher"
+        }
+      ],
+      "sending": {
+        "title": "Go Tell It On the Mountain",
+        "composer": "Arrangement by David Lockwood",
+        "description": "Simplified Version as backup!"
+      }
+    },
+    {
+      "community": "Heritage",
+      "communityId": "heritage",
+      "date": "ABC — Jan 04, 2026 (Sun)",
+      "presider": "NOT IN ADLA",
+      "prelude": {
+        "title": "All Glory Be To Christ",
+        "composer": "AULD LANG SYNE • Kings Kaleidoscope",
+        "description": "Optional Prelude or Meditation Song"
+      },
+      "gathering": {
+        "title": "Angels from the Realms of Glory",
+        "composer": "REGENT SQUARE, Smart • Montgomery",
+        "description": "Verses 1, 3, and 4"
+      },
+      "penitentialAct": {
+        "title": "Will not be led by Cantor"
+      },
+      "gloria": {
+        "title": "A Joyful Christmas Gloria",
+        "composer": "Arr. Jeanne Cotter & Tony Alonso"
+      },
+      "responsorialPsalm": {
+        "psalm": "Ps 72 Lord, every nation on earth...",
+        "setting": "The Lyric Psalter • Tony Alonso & Marty Haugen"
+      },
+      "gospelAcclamation": {
+        "title": "CHRISTMAS — Epiphany • ABC",
+        "composer": "The Lyric Gospel Acclamations • Tony Alonso"
+      },
+      "offertory": {
+        "title": "What Child Is This?",
+        "composer": "GREENSLEEVES • William Dix • Arr. by Haugen",
+        "description": "Verse 3: \"So bring him incense, gold, and myrrh\""
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "Mass of the Incarnate Word",
+        "composer": "Bob Hurd • Traditional Arrangement"
+      },
+      "lordsPrayer": {
+        "title": "Chanted Our Father (Snow)",
+        "composer": "Jennings/Paregorius"
+      },
+      "fractionRite": {
+        "title": "Lamb of God (Mass of Holy Cross)"
+      },
+      "communionSongs": [
+        {
+          "title": "33 – The Epiphany of the Lord - Day",
+          "composer": "Let Us All REJOICE! Angrisano, Hart, & Stephan",
+          "description": "Communion Antiphon"
+        },
+        {
+          "title": "The First Nowell",
+          "composer": "English Melody and Carol, 17th C.",
+          "description": "Wisemen Verses"
+        },
+        {
+          "title": "We Three Kings",
+          "composer": "John H. Hopkins, Jr. • Arranged by Tom Booth",
+          "description": "Verses 1 & 5"
+        }
+      ],
+      "sending": {
+        "title": "Epiphany Carol",
+        "composer": "BEACH SPRING • Patrick O’Brien",
+        "description": "Same tune as Healing 'River of the Spirit'"
+      }
+    },
+    {
+      "community": "Elevations",
+      "communityId": "elevations",
+      "date": "ABC — Jan 04, 2026 (Sun)",
+      "presider": "NOT IN ADLA",
+      "prelude": {
+        "title": "All Glory Be To Christ",
+        "composer": "AULD LANG SYNE • Kings Kaleidoscope",
+        "description": "Optional Prelude or Meditation Song"
+      },
+      "gathering": {
+        "title": "We Three Kings",
+        "composer": "John H. Hopkins, Jr. • Arranged by Tom Booth",
+        "description": "Verses 1 & 5"
+      },
+      "penitentialAct": {
+        "title": "Kyrie (Misa Del Mundo)",
+        "composer": "Jesse Manibusan — If needed."
+      },
+      "gloria": {
+        "title": "Glory, Glory, Gloria! Christmas Edition"
+      },
+      "responsorialPsalm": {
+        "psalm": "Ps 72 Lord, every nation on earth...",
+        "setting": "Spirit & Psalm • Scott Soper"
+      },
+      "gospelAcclamation": {
+        "title": "Hallelujah (adapted for Liturgy)",
+        "composer": "Leonard Cohen"
+      },
+      "offertory": {
+        "title": "What Child Is This?",
+        "composer": "GREENSLEEVES • William Dix • Arr. by Haugen",
+        "description": "Verse 3: \"So bring him incense, gold, and myrrh\""
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "Mass of Glory (Christmas Intro)"
+      },
+      "lordsPrayer": {
+        "title": "Echo Our Father",
+        "composer": "Jerome Andrews, Arranged by Dan Houze"
+      },
+      "fractionRite": {
+        "title": "Lamb of God (Mass of Glory)"
+      },
+      "communionSongs": [
+        {
+          "title": "The First Noel (Nowell)",
+          "composer": "Arr. by Matt Maher • Adapt. by Arielle Phan",
+          "description": "Wisemen Verses - Coda optional"
+        },
+        {
+          "title": "Jesus, Living Bread",
+          "composer": "Tom Booth",
+          "description": "\"Light for all the world\""
+        },
+        {
+          "title": "Glory (Let There Be Peace)",
+          "composer": "Matt Maher"
+        }
+      ],
+      "sending": {
+        "title": "Go Tell It On the Mountain",
+        "composer": "Arrangement by David Lockwood",
+        "description": "Simplified Version as backup!"
+      }
+    }
+  ]
+}

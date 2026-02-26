@@ -1,0 +1,374 @@
+{
+  "id": "lent-02-b",
+  "name": "LENT 02 [B]",
+  "year": "B",
+  "season": "lent",
+  "seasonLabel": "Lent",
+  "seasonOrder": 2,
+  "dates": [
+    {
+      "date": "2024-02-25",
+      "label": "Year B — Feb 25, 2024 (Sun)",
+      "dayOfWeek": "Sun"
+    },
+    {
+      "date": "2036-03-09",
+      "label": "Year B — Mar 09, 2036 (Sun)",
+      "dayOfWeek": "Sun"
+    },
+    {
+      "date": "2033-03-13",
+      "label": "Year B — Mar 13, 2033 (Sun)",
+      "dayOfWeek": "Sun"
+    },
+    {
+      "date": "2030-03-17",
+      "label": "Year B — Mar 17, 2030 (Sun)",
+      "dayOfWeek": "Sun"
+    },
+    {
+      "date": "2027-02-21",
+      "label": "Year B — Feb 21, 2027 (Sun)",
+      "dayOfWeek": "Sun"
+    }
+  ],
+  "lectionary": {
+    "number": "026•B",
+    "gospelTitle": "Jesus Is Transfigured",
+    "thematicTag": "Glory Preview of Cross"
+  },
+  "readings": [
+    {
+      "type": "first",
+      "citation": "Gen 22:1-2, 9a-18",
+      "summary": "God put Abraham to the test."
+    },
+    {
+      "type": "psalm",
+      "citation": "Ps 116:10, 15, 16-17, 18-19, R. 116:9\nI will walk before the Lord, in the land of the living",
+      "summary": "",
+      "antiphon": "Ps 116:10, 15, 16-17, 18-19, R. 116:9\nI will walk before the Lord, in the land of the living"
+    },
+    {
+      "type": "second",
+      "citation": "Rom 8:31b-34",
+      "summary": "God, sacrificing even his Son for us, will grant us victory."
+    },
+    {
+      "type": "gospel_verse",
+      "citation": "Mt 17:5",
+      "summary": "From the shining cloud the Father’s voice is heard:\nThis is my beloved Son, hear him."
+    },
+    {
+      "type": "gospel",
+      "citation": "Mk 9:2-10",
+      "summary": "Jesus is transfigured before Peter, James, and John."
+    }
+  ],
+  "antiphons": [
+    {
+      "type": "entrance",
+      "option": 1,
+      "citation": "Cf. Ps 27 (26):8–9]",
+      "text": "Of you my heart has spoken: Seek his face.\nIt is your face, O Lord, that I seek;\nhide not your face from me."
+    },
+    {
+      "type": "entrance",
+      "option": 2,
+      "citation": "Entrance Antiphon • Option II | Ps 25 (24):6, 2, 22",
+      "text": "Remember your compassion, O Lord,\nand your merciful love, for they are from of old.\nLet not our enemies exult over us.\nRedeem us, O God of Israel, from all our distress."
+    },
+    {
+      "type": "communion",
+      "option": 1,
+      "citation": "Cf. Mt 17:5",
+      "text": "This is my beloved Son, with whom I am well pleased;\nlisten to him."
+    }
+  ],
+  "planningNotes": [
+    "FEB - Black History Month"
+  ],
+  "musicPlans": [
+    {
+      "community": "Reflections",
+      "communityId": "reflections",
+      "date": "Year B — Feb 20, 2027 (Sat)",
+      "presider": "NOT THIS YEAR",
+      "prelude": {
+        "title": "See Taizé Setlist"
+      },
+      "penitentialAct": {
+        "title": "Kyrie (Mass of Colour) — optional tropes",
+        "composer": "Jeffrey Bonilla & David Lockwood"
+      },
+      "responsorialPsalm": {
+        "psalm": "Ps 116 I will walk before the Lord...",
+        "setting": "The Lyric Psalter • Tony Alonso & Marty Haugen"
+      },
+      "gospelAcclamation": {
+        "title": "Mass of Joy & Peace Lenten G.A. (Refrain)",
+        "composer": "The Lyric Gospel Acclamations • Tony Alonso",
+        "verse": "From the shining cloud the Father’s voice is heard:\nThis is my beloved Son, hear him."
+      },
+      "offertory": {
+        "title": "Transfigure Us, O Lord",
+        "composer": "Bob Hurd",
+        "description": "Gospel Reading - Transfiguration"
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "Mass of Creation",
+        "composer": "Marty Haugen • Arr. by Lockwood & Phan"
+      },
+      "lordsPrayer": {
+        "title": "Chanted Our Father (Snow)",
+        "composer": "Jennings/Paregorius"
+      },
+      "fractionRite": {
+        "title": "Lamb of God (Mass of Creation)",
+        "composer": "Marty Haugen • Arr. by Lockwood & Phan"
+      },
+      "communionSongs": [
+        {
+          "title": "Hosea (Choral)",
+          "composer": "Gregory Norbet • Arranged by Ed Archer",
+          "description": "Lenten Song"
+        },
+        {
+          "title": "God of Mercy",
+          "composer": "Ricky Manalo, CSP • Bob Hurd",
+          "description": "Lenten Communion"
+        }
+      ],
+      "sending": {
+        "title": "God of Day and God of Darkness",
+        "composer": "BEACH SPRING • Marty Haugen",
+        "description": "\"creation... groaning for the dawning of your might\""
+      }
+    },
+    {
+      "community": "Foundations",
+      "communityId": "foundations",
+      "date": "Year B — Feb 21, 2027 (Sun)",
+      "presider": "NOT THIS YEAR",
+      "penitentialAct": {
+        "title": "Kyrie (Mass of Colour) — optional tropes",
+        "composer": "Jeffrey Bonilla & David Lockwood"
+      },
+      "responsorialPsalm": {
+        "psalm": "Ps 116 I will walk before the Lord...",
+        "setting": "Spirit & Psalm • Composer"
+      },
+      "gospelAcclamation": {
+        "title": "Praise to You, Lord Jesus Christ",
+        "composer": "Ed Archer",
+        "verse": "From the shining cloud the Father’s voice is heard:\nThis is my beloved Son, hear him."
+      },
+      "offertory": {
+        "title": "—"
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "Mass of a Firm Foundation"
+      },
+      "lordsPrayer": {
+        "title": "Chanted Our Father (Snow)",
+        "composer": "Jennings • Paregorius"
+      },
+      "fractionRite": {
+        "title": "Lamb of God (Mass of a Firm Foundation)"
+      },
+      "communionSongs": [
+        {
+          "title": "Hosea",
+          "composer": "Weston Priory • Gregory Norbet",
+          "description": "Lenten Song"
+        },
+        {
+          "title": "You Are the Light",
+          "composer": "Sarah Hart",
+          "description": "\"Sweet mystery, how true you guide.\""
+        }
+      ],
+      "sending": {
+        "title": "How Great Thou Art",
+        "composer": "Stuart  K. Hine",
+        "description": "Transfiguration — \"...when I in awsome wonder...\""
+      }
+    },
+    {
+      "community": "Generations",
+      "communityId": "generations",
+      "date": "Year B — Feb 21, 2027 (Sun)",
+      "presider": "NOT THIS YEAR",
+      "gathering": {
+        "title": "Be Though My Vision",
+        "composer": "SLANE • Arranged by Assad",
+        "description": "☘️ St. Patricks Day"
+      },
+      "penitentialAct": {
+        "title": "Kyrie (Mass of Colour) — optional tropes",
+        "composer": "Jeffrey Bonilla & David Lockwood"
+      },
+      "responsorialPsalm": {
+        "psalm": "Ps 116 I will walk before the Lord...",
+        "setting": "Spirit & Psalm • Dana Catherine"
+      },
+      "gospelAcclamation": {
+        "title": "Praise to You, Lord Jesus Christ",
+        "composer": "Ed Archer",
+        "verse": "From the shining cloud the Father’s voice is heard:\nThis is my beloved Son, hear him."
+      },
+      "offertory": {
+        "title": "Transfigure Us, O Lord",
+        "composer": "Bob Hurd",
+        "description": "Gospel Reading - Transfiguration"
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "Mass of Colour",
+        "composer": "Jeffrey Bonilla & David Lockwood"
+      },
+      "lordsPrayer": {
+        "title": "Spoken during Season of Lent"
+      },
+      "fractionRite": {
+        "title": "Lamb of God (Mass of Colour)"
+      },
+      "communionSongs": [
+        {
+          "title": "Hosea (Choral)",
+          "composer": "Gregory Norbet • Arranged by Ed Archer",
+          "description": "Lenten Song"
+        },
+        {
+          "title": "You Are the Light",
+          "composer": "Sarah Hart",
+          "description": "\"Sweet mystery, how true you guide.\""
+        },
+        {
+          "title": "This Is My Beloved Son",
+          "composer": "John Angotti",
+          "description": "Sing alternate text — Transfiguration"
+        }
+      ],
+      "sending": {
+        "title": "How Great Thou Art",
+        "composer": "Paul Baloche",
+        "description": "Transfiguration!"
+      }
+    },
+    {
+      "community": "Heritage",
+      "communityId": "heritage",
+      "date": "Year B — Feb 21, 2027 (Sun)",
+      "presider": "NOT THIS YEAR",
+      "gathering": {
+        "title": "'Tis Good, Lord, to Be Here",
+        "composer": "SWABIA • Joseph A. Robinson",
+        "description": "Transfigured Christ, behold your God"
+      },
+      "penitentialAct": {
+        "title": "Kyrie (Mass of Colour) — optional tropes",
+        "composer": "Jeffrey Bonilla & David Lockwood"
+      },
+      "responsorialPsalm": {
+        "psalm": "Ps 116 I will walk before the Lord...",
+        "setting": "The Lyric Psalter • Tony Alonso & Marty Haugen"
+      },
+      "gospelAcclamation": {
+        "title": "Mass of Joy & Peace Lenten G.A. (Refrain)",
+        "composer": "The Lyric Gospel Acclamations • Tony Alonso",
+        "verse": "From the shining cloud the Father’s voice is heard:\nThis is my beloved Son, hear him."
+      },
+      "offertory": {
+        "title": "Transfigure Us, O Lord",
+        "composer": "Bob Hurd",
+        "description": "Gospel Reading - Transfiguration"
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "Mass of Creation - Rev. 2010",
+        "composer": "Marty Haugen"
+      },
+      "lordsPrayer": {
+        "title": "Chanted Our Father (Snow)",
+        "composer": "Jennings/Paregorius"
+      },
+      "fractionRite": {
+        "title": "Lamb of God (Mass of Creation)"
+      },
+      "communionSongs": [
+        {
+          "title": "Hosea (Choral)",
+          "composer": "Gregory Norbet • Arranged by Ed Archer",
+          "description": "No audio reference available yet."
+        },
+        {
+          "title": "You Are the Light",
+          "composer": "Sarah Hart",
+          "description": "\"Sweet mystery, how true you guide.\""
+        },
+        {
+          "title": "Jesus, the Lord",
+          "composer": "Roc O’Connor, SJ",
+          "description": "Transfiguration"
+        }
+      ]
+    },
+    {
+      "community": "Elevations",
+      "communityId": "elevations",
+      "date": "Year B — Feb 21, 2027 (Sun)",
+      "presider": "NOT THIS YEAR",
+      "penitentialAct": {
+        "title": "Kyrie (Mass of Colour) — optional tropes",
+        "composer": "Jeffrey Bonilla & David Lockwood"
+      },
+      "responsorialPsalm": {
+        "psalm": "Ps 116 I will walk before the Lord...",
+        "setting": "Spirit & Psalm • Dana Catherine"
+      },
+      "gospelAcclamation": {
+        "title": "Praise to You, Lord Jesus Christ",
+        "composer": "Ed Archer",
+        "verse": "From the shining cloud the Father’s voice is heard:\nThis is my beloved Son, hear him."
+      },
+      "offertory": {
+        "title": "Transfigure Us, O Lord",
+        "composer": "Bob Hurd",
+        "description": "Gospel Reading - Transfiguration"
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "Mass of Colour",
+        "composer": "Bonilla & Lockwood"
+      },
+      "lordsPrayer": {
+        "title": "Chanted Our Father (Snow)",
+        "composer": "Jennings/Paregorius — if requested by Presider"
+      },
+      "fractionRite": {
+        "title": "Lamb of God (Mass of Colour)",
+        "composer": "Jeffrey Bonilla & David Lockwood"
+      },
+      "communionSongs": [
+        {
+          "title": "Hosea (Choral)",
+          "composer": "Gregory Norbet • Arranged by Ed Archer",
+          "description": "No audio reference available yet."
+        },
+        {
+          "title": "You Are the Light",
+          "composer": "Sarah Hart",
+          "description": "\"Sweet mystery, how true you guide.\""
+        },
+        {
+          "title": "This Is My Beloved Son",
+          "composer": "John Angotti",
+          "description": "Sing alternate text — Transfiguration"
+        }
+      ],
+      "sending": {
+        "title": "How Great Thou Art",
+        "composer": "Paul Baloche",
+        "description": "Transfiguration!"
+      }
+    }
+  ]
+}

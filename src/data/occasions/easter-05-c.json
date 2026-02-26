@@ -1,0 +1,430 @@
+{
+  "id": "easter-05-c",
+  "name": "EASTER 05 [C]",
+  "year": "C",
+  "season": "easter",
+  "seasonLabel": "Easter",
+  "seasonOrder": 5,
+  "dates": [
+    {
+      "date": "2025-05-18",
+      "label": "Year C — May 18, 2025 (Sun)",
+      "dayOfWeek": "Sun"
+    },
+    {
+      "date": "2037-05-03",
+      "label": "Year C — May 03, 2037 (Sun)",
+      "dayOfWeek": "Sun"
+    },
+    {
+      "date": "2034-05-07",
+      "label": "Year C — May 07, 2034 (Sun)",
+      "dayOfWeek": "Sun"
+    },
+    {
+      "date": "2031-05-11",
+      "label": "Year C — May 11, 2031 (Sun)",
+      "dayOfWeek": "Sun"
+    },
+    {
+      "date": "2028-05-14",
+      "label": "Year C — May 14, 2028 (Sun)",
+      "dayOfWeek": "Sun"
+    }
+  ],
+  "lectionary": {
+    "number": "054•C",
+    "gospelTitle": "Love One Another",
+    "thematicTag": "Farewell Disc. 1/2"
+  },
+  "readings": [
+    {
+      "type": "first",
+      "citation": "Acts 14:21-27",
+      "summary": "Paul and Barnabas journey extensively, returning to Antioch."
+    },
+    {
+      "type": "psalm",
+      "citation": "Ps 145:8-9, 10-11, 12-13, R. see v.1\nI will praise your name for ever, my king and my God.",
+      "summary": "",
+      "antiphon": "Ps 145:8-9, 10-11, 12-13, R. see v.1\nI will praise your name for ever, my king and my God."
+    },
+    {
+      "type": "second",
+      "citation": "Rv 21:1-5a",
+      "summary": "John sees a new Jerusalem."
+    },
+    {
+      "type": "gospel_verse",
+      "citation": "Jn 13:34",
+      "summary": "I give you a new commandment, says the Lord:\nlove one another as I have loved you."
+    },
+    {
+      "type": "gospel",
+      "citation": "Jn 13:31-33a, 34-35",
+      "summary": "Jesus issues a new commandment, love one another."
+    }
+  ],
+  "antiphons": [
+    {
+      "type": "entrance",
+      "option": 1,
+      "citation": "Cf. Ps 98 (97):1–2",
+      "text": "O sing a new song to the Lord,\nfor he has worked wonders;\nin the sight of the nations\nhe has shown his deliverance, alleluia."
+    },
+    {
+      "type": "communion",
+      "option": 1,
+      "citation": "Cf. Jn 15:1, 5",
+      "text": "I am the true vine and you are the branches, \nSays the Lord. Whoever remains in me,\nand I in him, bears fruit in plenty, alleluia."
+    }
+  ],
+  "planningNotes": [
+    "🌲 APR - Earth Month🌲"
+  ],
+  "musicPlans": [
+    {
+      "community": "Reflections",
+      "communityId": "reflections",
+      "date": "Year C — May 13, 2028 (Sat)",
+      "presider": "NOT THIS YEAR",
+      "prelude": {
+        "title": "Regina Caeli / O Queen of Heaven",
+        "composer": "Mode VI Latin • 12th C",
+        "description": "Pope Leo XIV singing Regina Caeli"
+      },
+      "gathering": {
+        "title": "Now the Green Blade Rises",
+        "composer": "NOEL NOUVELET • French Carol • John M. C. Crum",
+        "description": "\"Love is come again like wheat that springeth green.\""
+      },
+      "penitentialAct": {
+        "title": "Kyrie • Misa Del Mundo",
+        "composer": "Only if needed. Talk to presider!"
+      },
+      "gloria": {
+        "title": "Glory to God (Through-composed Setting)",
+        "composer": "Mass of Renewal • Curtis Stephan"
+      },
+      "responsorialPsalm": {
+        "psalm": "Ps 145 I will praise your name for ever...",
+        "setting": "The Lyric Psalter • Tony Alonso & Marty Haugen"
+      },
+      "gospelAcclamation": {
+        "title": "Easter Alleluia (Refrain)",
+        "composer": "The Lyric Gospel Acclamations • Tony Alonso",
+        "verse": "I give you a new commandment, says the Lord:\nlove one another as I have loved you."
+      },
+      "offertory": {
+        "title": "Ubi Caritas",
+        "composer": "Taizé •  Jacques Berthier",
+        "description": "Trans. — Where charity and love are, God is there."
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "Mass of the Holy Family",
+        "composer": "Chris de Silva"
+      },
+      "lordsPrayer": {
+        "title": "Chanted Our Father (Snow)",
+        "composer": "Jennings/Paregorius"
+      },
+      "fractionRite": {
+        "title": "Lamb of God (Mass of the Holy Family)",
+        "composer": "Chris de Silva"
+      },
+      "communionSongs": [
+        {
+          "title": "Christians, Let Us Love One Another",
+          "composer": "PICARDY • Claudia Foltz, SNJM • Armand Nigro SJ",
+          "description": "\"...as we share the true Living Bread...\""
+        },
+        {
+          "title": "This Is How",
+          "composer": "Chris de Silva",
+          "description": "\"As I have loved you,... love one another.\""
+        },
+        {
+          "title": "Our Life Is Hidden with Christ",
+          "composer": "Bob Hurd • Arranged by Rick Modlin",
+          "description": "\"...once crucified, in glory now...\""
+        }
+      ],
+      "sending": {
+        "title": "They'll Know We Are Christians",
+        "composer": "Peter Scholtes • Arr. Mark Hayes",
+        "description": "OCP Arrangement"
+      }
+    },
+    {
+      "community": "Foundations",
+      "communityId": "foundations",
+      "date": "Year C — May 14, 2028 (Sun)",
+      "presider": "NOT THIS YEAR",
+      "prelude": {
+        "title": "Regina Caeli / O Queen of Heaven",
+        "composer": "Mode VI Latin • 12th C",
+        "description": "Pope Leo XIV singing Regina Caeli"
+      },
+      "gathering": {
+        "title": "All Who Enter Here",
+        "composer": "John Angotti • Dan Houze",
+        "description": "\"Always open is Love's door\""
+      },
+      "penitentialAct": {
+        "title": "Kyrie (Gift of God) • Adapted Version",
+        "composer": "Marty Haugen • Arranged by David Locwood"
+      },
+      "gloria": {
+        "title": "Glory to God (Mass of Joy & Peace)",
+        "composer": "Alonso • Arr. by Houze OR Arr. by Lockwood"
+      },
+      "responsorialPsalm": {
+        "psalm": "Ps 145 I will praise your name for ever...",
+        "setting": "Spirit & Psalm • Ben Walther"
+      },
+      "gospelAcclamation": {
+        "title": "Easter Alleluia (Refrain)",
+        "composer": "The Lyric Gospel Acclamations • Tony Alonso",
+        "verse": "I give you a new commandment, says the Lord:\nlove one another as I have loved you."
+      },
+      "offertory": {
+        "title": "Go Into the World",
+        "composer": "Tom Booth",
+        "description": "“Go into the world loving the people that you meet.\""
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "Mass of Glory",
+        "composer": "Bob Hurd & Ken Canedo"
+      },
+      "lordsPrayer": {
+        "title": "Chanted Our Father (Snow)",
+        "composer": "Jennings • Paregorius"
+      },
+      "fractionRite": {
+        "title": "Lamb of God (Mass of Glory)",
+        "composer": "Bob Hurd & Ken Canedo"
+      },
+      "communionSongs": [
+        {
+          "title": "We Are Many Parts",
+          "composer": "Marty Haugen • Arr. by Dan Houze",
+          "description": "\"Let us be your love to all the world\""
+        },
+        {
+          "title": "By Our Love",
+          "composer": "Tom Kendzia",
+          "description": "Gospel"
+        }
+      ],
+      "sending": {
+        "title": "Lord, You Give the Great Commission",
+        "composer": "ABBOT’S LEIGH • Jeffery Rowthorn",
+        "description": "Gospel"
+      }
+    },
+    {
+      "community": "Generations",
+      "communityId": "generations",
+      "date": "Year C — May 14, 2028 (Sun)",
+      "presider": "NOT THIS YEAR",
+      "prelude": {
+        "title": "Regina Caeli / O Queen of Heaven",
+        "composer": "Mode VI Latin • 12th C",
+        "description": "Pope Leo XIV singing Regina Caeli"
+      },
+      "gathering": {
+        "title": "All Who Enter Here",
+        "composer": "John Angotti • Dan Houze",
+        "description": "\"Always open is Love's door\""
+      },
+      "penitentialAct": {
+        "title": "Kyrie • Misa Del Mundo",
+        "composer": "Only if needed. Talk to presider!"
+      },
+      "gloria": {
+        "title": "Glory to God (Mass of Joy & Peace)",
+        "composer": "Tony Alonso • Arr. by Dan Houze"
+      },
+      "responsorialPsalm": {
+        "psalm": "Ps 145 I will praise your name for ever...",
+        "setting": "Spirit & Psalm • Ben Walther"
+      },
+      "gospelAcclamation": {
+        "title": "Easter Alleluia (Refrain)",
+        "composer": "The Lyric Gospel Acclamations • Tony Alonso",
+        "verse": "I give you a new commandment, says the Lord:\nlove one another as I have loved you."
+      },
+      "offertory": {
+        "title": "Day by Day (The Porters Gate)",
+        "composer": "Lowana Wallace & Isaac Wardell",
+        "description": "\"As I have loved you,... love one another.\""
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "Mass of Glory",
+        "composer": "Bob Hurd • Arr. by Dan Houze"
+      },
+      "lordsPrayer": {
+        "title": "(Echo) Our Father",
+        "composer": "Jerome Andrews • Arranged by Dan Houze"
+      },
+      "fractionRite": {
+        "title": "Lamb of God (Mass of Glory)"
+      },
+      "communionSongs": [
+        {
+          "title": "This Is How",
+          "composer": "Chris de Silva",
+          "description": "\"As I have loved you,... love one another.\""
+        },
+        {
+          "title": "We Are Many Parts",
+          "composer": "Marty Haugen • Arr. by Dan Houze",
+          "description": "\"Let us be your love to all the world\""
+        },
+        {
+          "title": "New Creation",
+          "composer": "Jackie François",
+          "description": "Second Reading: “Behold, I make all things new.”"
+        },
+        {
+          "title": "Love Never Fails",
+          "composer": "Brandon Heath",
+          "description": "“’...Love is the Way the Truth the Life.”"
+        }
+      ],
+      "sending": {
+        "title": "Make the Love of God Known",
+        "composer": "Rick Modlin • Arranged by David Lockwood",
+        "description": "\"May our lives reflect God's love...\""
+      }
+    },
+    {
+      "community": "Heritage",
+      "communityId": "heritage",
+      "date": "Year C — May 14, 2028 (Sun)",
+      "presider": "NOT THIS YEAR",
+      "prelude": {
+        "title": "Regina Caeli / O Queen of Heaven",
+        "composer": "Mode VI Latin • 12th C",
+        "description": "Pope Leo XIV singing Regina Caeli"
+      },
+      "gathering": {
+        "title": "Now the Green Blade Rises",
+        "composer": "NOEL NOUVELET • French Carol • John M. C. Crum",
+        "description": "\"Love is come again like wheat that springeth green.\""
+      },
+      "penitentialAct": {
+        "title": "Kyrie • Misa Del Mundo",
+        "composer": "Only if needed. Talk to presider!"
+      },
+      "gloria": {
+        "title": "Glory to God (Mass of Joy & Peace)",
+        "composer": "Tony Alonso, Thru Composed"
+      },
+      "responsorialPsalm": {
+        "psalm": "Ps 145 I will praise your name for ever...",
+        "setting": "The Lyric Psalter • Tony Alonso & Marty Haugen"
+      },
+      "gospelAcclamation": {
+        "title": "Easter Alleluia (Refrain)",
+        "composer": "The Lyric Gospel Acclamations • Tony Alonso",
+        "verse": "I give you a new commandment, says the Lord:\nlove one another as I have loved you."
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "Mass of Joy & Peace",
+        "composer": "Tony Alonso"
+      },
+      "lordsPrayer": {
+        "title": "Chanted Our Father (Snow)",
+        "composer": "Jennings/Paregorius"
+      },
+      "fractionRite": {
+        "title": "Lamb of God (Mass of Joy & Peace)",
+        "composer": "Tony Alonso"
+      },
+      "communionSongs": [
+        {
+          "title": "This Is How",
+          "composer": "Chris de Silva",
+          "description": "\"As I have loved you,... love one another.\""
+        }
+      ],
+      "sending": {
+        "title": "God Is Love",
+        "composer": "Cyril Vincent Taylor • Timothy Rees",
+        "description": "\"As I have loved you,... love one another.\""
+      }
+    },
+    {
+      "community": "Elevations",
+      "communityId": "elevations",
+      "date": "Year C — May 14, 2028 (Sun)",
+      "presider": "NOT THIS YEAR",
+      "prelude": {
+        "title": "Regina Caeli / O Queen of Heaven",
+        "composer": "Mode VI Latin • 12th C",
+        "description": "Pope Leo XIV singing Regina Caeli"
+      },
+      "gathering": {
+        "title": "All Who Enter Here",
+        "composer": "John Angotti • Dan Houze",
+        "description": "\"Always open is Love's door\""
+      },
+      "penitentialAct": {
+        "title": "Kyrie (Misa Del Mundo)",
+        "composer": "Jesse Manibusan — If needed."
+      },
+      "gloria": {
+        "title": "Glory to God (Joy & Peace)"
+      },
+      "responsorialPsalm": {
+        "psalm": "Ps 145 I will praise your name for ever...",
+        "setting": "Spirit & Psalm • Ben Walther"
+      },
+      "gospelAcclamation": {
+        "title": "Easter Alleluia (Refrain)",
+        "composer": "The Lyric Gospel Acclamations • Tony Alonso",
+        "verse": "I give you a new commandment, says the Lord:\nlove one another as I have loved you."
+      },
+      "offertory": {
+        "title": "Day by Day (The Porters Gate)",
+        "composer": "Lowana Wallace & Isaac Wardell",
+        "description": "\"As I have loved you,... love one another.\""
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "Mass of Restoration",
+        "composer": "Joshua Blakesley"
+      },
+      "lordsPrayer": {
+        "title": "Echo Our Father",
+        "composer": "Andrews, Arr. Bonilla • Lockwood • Fajardo"
+      },
+      "fractionRite": {
+        "title": "Lamb of God (Mass of Restoration)",
+        "composer": "Joshua Blakesley"
+      },
+      "communionSongs": [
+        {
+          "title": "This Is How",
+          "composer": "Chris de Silva",
+          "description": "\"As I have loved you,... love one another.\""
+        },
+        {
+          "title": "New Creation",
+          "composer": "Jackie François",
+          "description": "Second Reading: “Behold, I make all things new.”"
+        },
+        {
+          "title": "Love Never Fails",
+          "composer": "Brandon Heath",
+          "description": "“’...Love is the Way the Truth the Life.”"
+        }
+      ],
+      "sending": {
+        "title": "Make the Love of God Known",
+        "composer": "Rick Modlin • Arranged by David Lockwood",
+        "description": "\"May our lives reflect God's love...\""
+      }
+    }
+  ]
+}

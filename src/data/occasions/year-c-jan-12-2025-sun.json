@@ -1,0 +1,400 @@
+{
+  "id": "year-c-jan-12-2025-sun",
+  "name": "Year C — Jan 12, 2025 (Sun)",
+  "year": "ABC",
+  "season": "ordinary",
+  "seasonLabel": "Ordinary Time",
+  "seasonOrder": 12,
+  "dates": [],
+  "lectionary": {
+    "number": "Year C — Jan 09, 2040 (Mon)",
+    "gospelTitle": "Year C — Jan 11, 2037 (Sun)",
+    "thematicTag": "Year C — Jan 08, 2034 (Sun)",
+    "thematicDetail": "Year C — Jan 12, 2031 (Sun)"
+  },
+  "readings": [
+    {
+      "type": "psalm",
+      "citation": "Epiphany Theophany",
+      "summary": "",
+      "antiphon": "Planning Reminders"
+    },
+    {
+      "type": "gospel_verse",
+      "citation": "After the Lord was baptized, the heavens were opened,\nand the Spirit descended upon him like a dove,\nand the voice of the Father thundered:\nThis is my beloved Son, with whom I am well pleased.",
+      "summary": "Entrance Antiphon • Option II"
+    },
+    {
+      "type": "gospel",
+      "citation": "Reading I | Is 40:1-5, 9-11",
+      "summary": "In the desert make ready the way of the Lord.\n\nNote: Reading from Year A may be used as well."
+    }
+  ],
+  "antiphons": [
+    {
+      "type": "entrance",
+      "option": 1,
+      "citation": "Verse before the Gospel | Lk 3:16",
+      "text": "John said: One mightier than I is coming;\nhe will baptize you with the Holy Spirit and with fire.\n\nMk 9:7 (Year A Option)"
+    },
+    {
+      "type": "communion",
+      "option": 2,
+      "citation": "Communion Antiphon | Jn 1:32, 34",
+      "text": "Behold the One of whom John said:\nI have seen and testified that this is the Son of God."
+    }
+  ],
+  "planningNotes": [
+    "Communion Antiphon • Option II",
+    "N/A"
+  ],
+  "musicPlans": [
+    {
+      "community": "Reflections",
+      "communityId": "reflections",
+      "date": "Year C — Jan 08, 2028 (Sat)",
+      "presider": "NOT THIS YEAR",
+      "prelude": {
+        "title": "Video being played.",
+        "composer": "No Prelude Song."
+      },
+      "penitentialAct": {
+        "title": "John B. Foley, SJ • Arranged by Arielle Phan",
+        "composer": "Baptism of the Lord",
+        "description": "Penitential Act (Only if presider wants led by cantor)"
+      },
+      "gloria": {
+        "title": "Kyrie • Misa Del Mundo",
+        "composer": "Jesse Manibusan",
+        "description": "Gloria"
+      },
+      "gospelAcclamation": {
+        "title": "TBD",
+        "composer": "Gospel Acclamation",
+        "verse": "Alleluia (Mass of Joy & Peace)"
+      },
+      "offertory": {
+        "title": "The Lyric Gospel Acclamations • Tony Alonso",
+        "description": "Offertory Song"
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "Be Not Afraid",
+        "composer": "Robert J. Dufford, SJ"
+      },
+      "lordsPrayer": {
+        "title": "Eucharistic Acclamations",
+        "composer": "Mass of the Incarnate Word",
+        "description": "Bob Hurd • Traditional Arrangement"
+      },
+      "fractionRite": {
+        "title": "Holy",
+        "composer": "Mystery of Faith",
+        "description": "Amen"
+      },
+      "communionSongs": [
+        {
+          "title": "The Lord's Prayer",
+          "composer": "Chanted Our Father (Snow)",
+          "description": "Jennings/Paregorius"
+        },
+        {
+          "title": "Fraction Rite",
+          "composer": "Lamb of God (Mass of Holy Cross)",
+          "description": "Isele"
+        },
+        {
+          "title": "Communion Songs",
+          "composer": "Christ the Lord",
+          "description": "Sarah Hart • Robert Feduccia"
+        },
+        {
+          "title": "VERSE 2 - 4",
+          "composer": "Psalm 23: Shepherd Me, O God",
+          "description": "Marty Haugen"
+        }
+      ]
+    },
+    {
+      "community": "Foundations",
+      "communityId": "foundations",
+      "date": "Year C — Jan 09, 2028 (Sun)",
+      "presider": "NOT THIS YEAR",
+      "prelude": {
+        "title": "Song Title",
+        "composer": "Composer/s"
+      },
+      "penitentialAct": {
+        "title": "John B. Foley, SJ • Arranged by Arielle Phan",
+        "composer": "Baptism of the Lord",
+        "description": "Penitential Act (If presider wants led by cantor)"
+      },
+      "gloria": {
+        "title": "Kyrie (Gift of God) • Adapted Version",
+        "composer": "Marty Haugen • Arranged by David Locwood",
+        "description": "Gloria"
+      },
+      "gospelAcclamation": {
+        "title": "TBD",
+        "composer": "Gospel Acclamation",
+        "verse": "Hallelujah (adapted for Liturgy)"
+      },
+      "offertory": {
+        "title": "Choir Practice Tracks",
+        "description": "Offertory Song"
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "Be Not Afraid",
+        "composer": "Robert J. Dufford, SJ"
+      },
+      "lordsPrayer": {
+        "title": "Eucharistic Acclamations",
+        "composer": "Mass of Glory (Lockwood Christmas Intro)"
+      },
+      "fractionRite": {
+        "title": "Holy",
+        "composer": "Mystery of Faith",
+        "description": "Amen"
+      },
+      "communionSongs": [
+        {
+          "title": "The Lord's Prayer",
+          "composer": "Chanted Our Father (Snow)",
+          "description": "Jennings • Paregorius"
+        },
+        {
+          "title": "Fraction Rite",
+          "composer": "Lamb of God (Mass of Glory)"
+        },
+        {
+          "title": "Communion Songs",
+          "composer": "The Body of Christ",
+          "description": "Sarah Hart"
+        },
+        {
+          "title": "\"We are healed by the Body of Christ\" Palisades Fire",
+          "composer": "Shelter Me, O God",
+          "description": "Bob Hurd • Arranged by David Lockwood"
+        }
+      ],
+      "sending": {
+        "title": "THAXTED • Jeffrey Bonilla",
+        "composer": "Wildfires"
+      }
+    },
+    {
+      "community": "Generations",
+      "communityId": "generations",
+      "date": "Year C — Jan 09, 2028 (Sun)",
+      "presider": "NOT THIS YEAR",
+      "prelude": {
+        "title": "Song Title",
+        "composer": "Composer/s"
+      },
+      "penitentialAct": {
+        "title": "John B. Foley, SJ • Arranged by Arielle Phan",
+        "composer": "Baptism of the Lord",
+        "description": "Penitential Act"
+      },
+      "gloria": {
+        "title": "Kyrie • Misa Del Mundo",
+        "composer": "If needed. Talk to presider!",
+        "description": "Gloria"
+      },
+      "gospelAcclamation": {
+        "title": "TBD",
+        "composer": "Gospel Acclamation",
+        "verse": "Hallelujah (adapted for Liturgy)"
+      },
+      "offertory": {
+        "title": "Choir Practice Tracks",
+        "description": "Offertory Song"
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "Be Not Afraid",
+        "composer": "Robert J. Dufford, SJ"
+      },
+      "lordsPrayer": {
+        "title": "Eucharistic Acclamations",
+        "composer": "Mass of Glory (Lockwood Christmas Intro)"
+      },
+      "fractionRite": {
+        "title": "Holy",
+        "composer": "Mystery of Faith",
+        "description": "Amen"
+      },
+      "communionSongs": [
+        {
+          "title": "The Lord's Prayer",
+          "composer": "Echo Our Father",
+          "description": "Jerome Andrews, Arranged by Dan Houze"
+        },
+        {
+          "title": "Fraction Rite",
+          "composer": "Lamb of God (Mass of Glory)"
+        },
+        {
+          "title": "Communion Songs",
+          "composer": "The Body of Christ",
+          "description": "Sarah Hart"
+        },
+        {
+          "title": "\"We are healed by the Body of Christ\"",
+          "composer": "Song Title",
+          "description": "Composer/s"
+        },
+        {
+          "title": "Description",
+          "composer": "Shelter Me, O God",
+          "description": "Bob Hurd • Arranged by David Lockwood"
+        },
+        {
+          "title": "\"You alone are my hope\"",
+          "composer": "Build A Family",
+          "description": "Ed Bolduc • Arr. by Dan Houze"
+        }
+      ],
+      "sending": {
+        "title": "We Place Our Trust In You",
+        "composer": "THAXTED • Jeffrey Bonilla",
+        "description": "Wildfires"
+      }
+    },
+    {
+      "community": "Heritage",
+      "communityId": "heritage",
+      "date": "Year C — Jan 09, 2028 (Sun)",
+      "presider": "NOT THIS YEAR",
+      "penitentialAct": {
+        "title": "John B. Foley, SJ • Arranged by Arielle Phan",
+        "composer": "Baptism of the Lord",
+        "description": "Penitential Act"
+      },
+      "gloria": {
+        "title": "Will not be led by Cantor",
+        "description": "Gloria"
+      },
+      "gospelAcclamation": {
+        "title": "TBD",
+        "composer": "Gospel Acclamation",
+        "verse": "CHRISTMAS — Baptism • ABC"
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "Be Not Afraid",
+        "composer": "Robert J. Dufford, SJ"
+      },
+      "lordsPrayer": {
+        "title": "Eucharistic Acclamations",
+        "composer": "Mass of the Incarnate Word",
+        "description": "Bob Hurd • Traditional Arrangement"
+      },
+      "fractionRite": {
+        "title": "Holy",
+        "composer": "Mystery of Faith",
+        "description": "Amen"
+      },
+      "communionSongs": [
+        {
+          "title": "The Lord's Prayer",
+          "composer": "Chanted Our Father (Snow)",
+          "description": "Jennings/Paregorius"
+        },
+        {
+          "title": "Fraction Rite",
+          "composer": "Lamb of God (Mass of Holy Cross)"
+        },
+        {
+          "title": "Communion Songs",
+          "composer": "Shelter Me, O God",
+          "description": "Bob Hurd"
+        },
+        {
+          "title": "\"You alone are my hope\"",
+          "composer": "In Every Age",
+          "description": "Janèt Sullivan Whitaker"
+        },
+        {
+          "title": "\"You have been our refuge\"",
+          "composer": "Only in God",
+          "description": "John Michael Talbot"
+        }
+      ],
+      "sending": {
+        "title": "THAXTED • Jeffrey Bonilla",
+        "composer": "Wildfires"
+      }
+    },
+    {
+      "community": "Elevations",
+      "communityId": "elevations",
+      "date": "Year C — Jan 09, 2028 (Sun)",
+      "presider": "NOT THIS YEAR",
+      "prelude": {
+        "title": "Song Title",
+        "composer": "Composer/s"
+      },
+      "penitentialAct": {
+        "title": "John B. Foley, SJ • Arranged by Arielle Phan",
+        "composer": "Baptism of the Lord",
+        "description": "Penitential Act"
+      },
+      "gloria": {
+        "title": "Kyrie (Misa Del Mundo)",
+        "composer": "Jesse Manibusan — If needed.",
+        "description": "Gloria"
+      },
+      "gospelAcclamation": {
+        "title": "TBD",
+        "composer": "Gospel Acclamation",
+        "verse": "Hallelujah (adapted for Liturgy)"
+      },
+      "offertory": {
+        "title": "Choir Practice Tracks",
+        "description": "Offertory Song"
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "Song Title",
+        "composer": "Composer"
+      },
+      "lordsPrayer": {
+        "title": "Eucharistic Acclamations",
+        "composer": "Mass of Glory (Christmas Intro)"
+      },
+      "fractionRite": {
+        "title": "Holy",
+        "composer": "Mystery of Faith",
+        "description": "Amen"
+      },
+      "communionSongs": [
+        {
+          "title": "The Lord's Prayer",
+          "composer": "Echo Our Father",
+          "description": "Jerome Andrews, Arranged by Dan Houze"
+        },
+        {
+          "title": "Fraction Rite",
+          "composer": "Lamb of God (Mass of Glory)"
+        },
+        {
+          "title": "Communion Songs",
+          "composer": "Christ the Lord",
+          "description": "Sarah Hart • Robert Feduccia"
+        },
+        {
+          "title": "VERSE 2 - 4",
+          "composer": "Song Title",
+          "description": "Composer"
+        },
+        {
+          "title": "Description",
+          "composer": "Song Title",
+          "description": "Composer"
+        }
+      ],
+      "sending": {
+        "title": "Sending Song",
+        "composer": "Song Title",
+        "description": "Composer"
+      }
+    }
+  ]
+}

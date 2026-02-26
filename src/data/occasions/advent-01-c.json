@@ -1,0 +1,364 @@
+{
+  "id": "advent-01-c",
+  "name": "ADVENT 01 [C]",
+  "year": "C",
+  "season": "advent",
+  "seasonLabel": "Advent",
+  "seasonOrder": 1,
+  "dates": [
+    {
+      "date": "2024-12-01",
+      "label": "Year C — Dec 01, 2024 (Sun)",
+      "dayOfWeek": "Sun"
+    },
+    {
+      "date": "2036-11-30",
+      "label": "Year C — Nov 30, 2036 (Sun)",
+      "dayOfWeek": "Sun"
+    },
+    {
+      "date": "2033-11-27",
+      "label": "Year C — Nov 27, 2033 (Sun)",
+      "dayOfWeek": "Sun"
+    },
+    {
+      "date": "2030-12-01",
+      "label": "Year C — Dec 01, 2030 (Sun)",
+      "dayOfWeek": "Sun"
+    },
+    {
+      "date": "2027-11-28",
+      "label": "Year C — Nov 28, 2027 (Sun)",
+      "dayOfWeek": "Sun"
+    }
+  ],
+  "lectionary": {
+    "number": "003•C",
+    "gospelTitle": "Redemption Is Near",
+    "thematicTag": "Eschatological Watch (Lk 21)"
+  },
+  "readings": [
+    {
+      "type": "first",
+      "citation": "Jer 33:14-16",
+      "summary": "The day is coming when the Lord will fulfill his promises."
+    },
+    {
+      "type": "psalm",
+      "citation": "Ps 25:4-5, 8-9, 10, 14, R. v.1b\nTo you, O Lord, I lift my soul.",
+      "summary": "",
+      "antiphon": "Ps 25:4-5, 8-9, 10, 14, R. v.1b\nTo you, O Lord, I lift my soul."
+    },
+    {
+      "type": "second",
+      "citation": "1 Thes 3:12 – 4:2",
+      "summary": "Conduct yourself in a way pleasing to God."
+    },
+    {
+      "type": "gospel_verse",
+      "citation": "cf. Ps 85:8",
+      "summary": "Lord, show us your love; and grant us your salvation."
+    },
+    {
+      "type": "gospel",
+      "citation": "| Lk 21:25-28, 34-36",
+      "summary": "Be ready for the second coming."
+    }
+  ],
+  "antiphons": [
+    {
+      "type": "entrance",
+      "option": 1,
+      "citation": "Cf. Ps 25 (24):1–3",
+      "text": "To you, I lift up my soul, O my God.\nIn you, I have trusted; let me not be put to shame.\nNor let my enemies exult over me; and let none who hope in you be put to shame."
+    },
+    {
+      "type": "communion",
+      "option": 1,
+      "citation": "Ps 85 (84):13]",
+      "text": "The Lord will bestow his bounty,\nand our earth shall yield its increase."
+    }
+  ],
+  "planningNotes": [],
+  "musicPlans": [
+    {
+      "community": "Reflections",
+      "communityId": "reflections",
+      "date": "Year C — Nov 27, 2027 (Sat)",
+      "presider": "NOT THIS YEAR",
+      "prelude": {
+        "title": "Dwell in the Midst of Us",
+        "composer": "Jeffrey Bonilla · David Lockwood",
+        "description": "Advent 1 ABC"
+      },
+      "gathering": {
+        "title": "Christ Be Our Light",
+        "composer": "Bernadette Farrell",
+        "description": "Advent 1 ABC"
+      },
+      "penitentialAct": {
+        "title": "Warm the Time of WInter",
+        "composer": "Lori True"
+      },
+      "responsorialPsalm": {
+        "psalm": "Ps 25 To you, O Lord, I lift my soul.",
+        "setting": "The Lyric Psalter • Tony Alonso & Marty Haugen"
+      },
+      "gospelAcclamation": {
+        "title": "Advent/Christmas 2 — Missa Pacem",
+        "composer": "L. Randolph Babin"
+      },
+      "offertory": {
+        "title": "Wait for the Lord",
+        "composer": "Jacques Berthier · Taizé Community"
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "Mass of the Incarnate Word",
+        "composer": "Bob Hurd • Arr. Lockwood"
+      },
+      "lordsPrayer": {
+        "title": "Chanted Our Father (Snow)",
+        "composer": "Jennings • Paregorius"
+      },
+      "fractionRite": {
+        "title": "Missa Veni Emmanuel",
+        "composer": "Ed Archer"
+      },
+      "communionSongs": [
+        {
+          "title": "In Days to Come",
+          "composer": "Sarah Hart"
+        },
+        {
+          "title": "Bethlehem (House of Bread)",
+          "composer": "Alan J. Hommerding • Ed Bolduc"
+        },
+        {
+          "title": "Waiting in Silence",
+          "composer": "Carey Landry"
+        }
+      ],
+      "sending": {
+        "title": "God of Day and God of Darkness",
+        "composer": "BEACH SPRING · Marty Haugen"
+      }
+    },
+    {
+      "community": "Foundations",
+      "communityId": "foundations",
+      "date": "Year C — Nov 28, 2027 (Sun)",
+      "presider": "NOT THIS YEAR",
+      "gathering": {
+        "title": "Find Us Ready",
+        "composer": "Tom Booth"
+      },
+      "penitentialAct": {
+        "title": "Warm the Time of WInter",
+        "composer": "Lori True"
+      },
+      "responsorialPsalm": {
+        "psalm": "Ps 25 To you, O Lord, I lift my soul.",
+        "setting": "The Lyric Psalter • Tony Alonso & Marty Haugen"
+      },
+      "gospelAcclamation": {
+        "title": "Hallelujah, Hallelu!",
+        "composer": "Michael Mahler",
+        "verse": "Show us Lord, your love; and grant us your salvation."
+      },
+      "offertory": {
+        "title": "Your Light Will Come, Jerusalem",
+        "composer": "Bob Hurd"
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "Mass of the Incarnate Word"
+      },
+      "lordsPrayer": {
+        "title": "Chanted Our Father (Snow)",
+        "composer": "Jennings • Paregorius"
+      },
+      "fractionRite": {
+        "title": "Missa Veni Emmanuel"
+      },
+      "communionSongs": [
+        {
+          "title": "In Days to Come",
+          "composer": "Sarah Hart"
+        },
+        {
+          "title": "Bethlehem (House of Bread)",
+          "composer": "Alan J. Hommerding · Ed Bolduc"
+        }
+      ],
+      "sending": {
+        "title": "God of Day and God of Darkness",
+        "composer": "BEACH SPRING · Marty Haugen"
+      }
+    },
+    {
+      "community": "Generations",
+      "communityId": "generations",
+      "date": "Year C — Nov 28, 2027 (Sun)",
+      "presider": "NOT THIS YEAR",
+      "gathering": {
+        "title": "Come Lord Jesus",
+        "composer": "John Angotti"
+      },
+      "penitentialAct": {
+        "title": "Warm the Time of WInter",
+        "composer": "Lori True"
+      },
+      "responsorialPsalm": {
+        "psalm": "To You, O Lord (Psalm 25)",
+        "setting": "Timothy Smith"
+      },
+      "gospelAcclamation": {
+        "title": "Hallelujah (adapted for Liturgy)",
+        "composer": "Leonard Cohen",
+        "verse": "Show us Lord, your love; and grant us your salvation."
+      },
+      "offertory": {
+        "title": "Dwell in the Midst of Us",
+        "composer": "Jeffrey Bonilla & David Lockwood"
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "Mass of the Incarnate Word"
+      },
+      "lordsPrayer": {
+        "title": "Chanted Our Father (Snow)",
+        "composer": "Jennings • Paregorius"
+      },
+      "fractionRite": {
+        "title": "Advent Lamb of God"
+      },
+      "communionSongs": [
+        {
+          "title": "O Come, O Come Emmanuel",
+          "composer": "Grayson Warren Brown"
+        },
+        {
+          "title": "Bethlehem (House of Bread)",
+          "composer": "Alan J. Hommerding · Ed Bolduc"
+        },
+        {
+          "title": "Glory (Let There Be Peace)",
+          "composer": "Matt Maher"
+        }
+      ],
+      "sending": {
+        "title": "Awake To The Day",
+        "composer": "Ed Bolduc"
+      }
+    },
+    {
+      "community": "Heritage",
+      "communityId": "heritage",
+      "date": "Year C — Nov 28, 2027 (Sun)",
+      "presider": "NOT THIS YEAR",
+      "gathering": {
+        "title": "Dwell in the Midst of Us",
+        "composer": "Jeffrey Bonilla & David Lockwood"
+      },
+      "penitentialAct": {
+        "title": "Warm the Time of WInter",
+        "composer": "Lori True"
+      },
+      "responsorialPsalm": {
+        "psalm": "Ps 25 To you, O Lord, I lift my soul.",
+        "setting": "The Lyric Psalter • Tony Alonso & Marty Haugen"
+      },
+      "gospelAcclamation": {
+        "title": "Advent/Christmas 2 — Missa Pacem",
+        "composer": "L. Randolph Babin"
+      },
+      "offertory": {
+        "title": "Your Light Will Come, Jerusalem",
+        "composer": "Bob Hurd"
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "Mass of the Incarnate Word"
+      },
+      "lordsPrayer": {
+        "title": "Chanted Our Father (Snow)",
+        "composer": "Jennings • Paregorius"
+      },
+      "fractionRite": {
+        "title": "Missa Veni Emmanuel"
+      },
+      "communionSongs": [
+        {
+          "title": "In Days to Come",
+          "composer": "Sarah Hart"
+        },
+        {
+          "title": "Bethlehem (House of Bread)",
+          "composer": "Alan J. Hommerding • Ed Bolduc"
+        },
+        {
+          "title": "Waiting in Silence",
+          "composer": "Carey Landry"
+        }
+      ],
+      "sending": {
+        "title": "God of Day and God of Darkness",
+        "composer": "BEACH SPRING • Marty Haugen"
+      }
+    },
+    {
+      "community": "Elevations",
+      "communityId": "elevations",
+      "date": "Year C — Nov 28, 2027 (Sun)",
+      "presider": "NOT THIS YEAR",
+      "gathering": {
+        "title": "Come Lord Jesus",
+        "composer": "John Angotti"
+      },
+      "penitentialAct": {
+        "title": "Warm the Time of WInter",
+        "composer": "Lori True"
+      },
+      "responsorialPsalm": {
+        "psalm": "Ps 122 Let us go rejoicing to the house of the Lord.",
+        "setting": "Spirit & Psalm • Sarah Hart"
+      },
+      "gospelAcclamation": {
+        "title": "Hallelujah, Hallelu!",
+        "composer": "Michael Mahler",
+        "verse": "Show us Lord, your love; and grant us your salvation."
+      },
+      "offertory": {
+        "title": "Dwell in the Midst of Us",
+        "composer": "Jeffrey Bonilla & David Lockwood"
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "Incarnate Word • Bob Hurd , Arr. by Lockwood",
+        "composer": "Bob Hurd , Arr. by Lockwood"
+      },
+      "lordsPrayer": {
+        "title": "Chanted Our Father (Snow)",
+        "composer": "Jennings • Paregorius"
+      },
+      "fractionRite": {
+        "title": "Advent Lamb of God"
+      },
+      "communionSongs": [
+        {
+          "title": "Jesus, Hope Of The World",
+          "composer": "Paul Tate"
+        },
+        {
+          "title": "Glory (Let There Be Peace)",
+          "composer": "Matt Maher"
+        },
+        {
+          "title": "Bethlehem (House of Bread)",
+          "composer": "Alan J. Hommerding · Ed Bolduc"
+        }
+      ],
+      "sending": {
+        "title": "Awake To The Day",
+        "composer": "Ed Bolduc",
+        "description": "Gospel"
+      }
+    }
+  ]
+}

@@ -1,0 +1,439 @@
+{
+  "id": "ordinary-time-29-c",
+  "name": "ORDINARY TIME 29 [C]",
+  "year": "C",
+  "season": "ordinary",
+  "seasonLabel": "Ordinary Time",
+  "seasonOrder": 29,
+  "dates": [
+    {
+      "date": "2025-10-19",
+      "label": "Year C — Oct 19, 2025 (Sun)",
+      "dayOfWeek": "Sun"
+    },
+    {
+      "date": "2037-10-18",
+      "label": "Year C — Oct 18, 2037 (Sun)",
+      "dayOfWeek": "Sun"
+    },
+    {
+      "date": "2034-10-22",
+      "label": "Year C — Oct 22, 2034 (Sun)",
+      "dayOfWeek": "Sun"
+    },
+    {
+      "date": "2031-10-19",
+      "label": "Year C — Oct 19, 2031 (Sun)",
+      "dayOfWeek": "Sun"
+    },
+    {
+      "date": "2028-10-22",
+      "label": "Year C — Oct 22, 2028 (Sun)",
+      "dayOfWeek": "Sun"
+    }
+  ],
+  "lectionary": {
+    "number": "147•C",
+    "gospelTitle": "Pray Always (Persistant Widow)",
+    "thematicTag": "Prayer Parables 1/2"
+  },
+  "readings": [
+    {
+      "type": "first",
+      "citation": "Ex 17:8-13",
+      "summary": "With the staff of God, Moses helps Israel defeat Amalek."
+    },
+    {
+      "type": "psalm",
+      "citation": "Ps 121:1-2, 3-4, 5-6, 7-8, R. see v.2\nOur help is from the Lord, who made heaven and earth.",
+      "summary": "",
+      "antiphon": "Ps 121:1-2, 3-4, 5-6, 7-8, R. see v.2\nOur help is from the Lord, who made heaven and earth."
+    },
+    {
+      "type": "second",
+      "citation": "2 Tm 3:14 – 4:2",
+      "summary": "All scripture is inspired by God."
+    },
+    {
+      "type": "gospel_verse",
+      "citation": "Heb 4:12",
+      "summary": "The word of God is living and effective,\ndiscerning reflections and thoughts of the heart."
+    },
+    {
+      "type": "gospel",
+      "citation": "Lk 18:1-8",
+      "summary": "The widow and the irreligious judge."
+    }
+  ],
+  "antiphons": [
+    {
+      "type": "entrance",
+      "option": 1,
+      "citation": "Cf. Ps 17 (16):6, 8",
+      "text": "To you I call; for you will surely heed me, O God;\nturn your ear to me; hear my words.\nGuard me as the apple of your eye;\nin the shadow of your wings protect me."
+    },
+    {
+      "type": "communion",
+      "option": 1,
+      "citation": "Cf. Ps 33 (32):18–19",
+      "text": "Behold, the eyes of the Lord are on those who fear him,\nwho hope in his merciful love, to rescue their souls from death,\nto keep them alive in famine."
+    },
+    {
+      "type": "communion",
+      "option": 2,
+      "citation": "Communion Antiphon • Option II |  Mk 10:45",
+      "text": "The Son of Man has come\nto give his life as a ransom for many."
+    }
+  ],
+  "planningNotes": [
+    "Month of Holy Rosary",
+    "Respect Life Month",
+    "Catholic Social Teaching Month",
+    "Carlos Acutis Relic — Oct 17-19"
+  ],
+  "musicPlans": [
+    {
+      "community": "Reflections",
+      "communityId": "reflections",
+      "date": "Year C — Oct 18, 2025 (Sat)",
+      "presider": "Fr. Eusebio Llonoso",
+      "prelude": {
+        "title": "Salve, Regina",
+        "composer": "CHANT MODE V",
+        "description": "Month of the Holy Rosary"
+      },
+      "gathering": {
+        "title": "Shelter Me, O God",
+        "composer": "Bob Hurd • Arranged by David Lockwood",
+        "description": "Entrance Antiphon | \"in the shadow of your wings protect me.\""
+      },
+      "penitentialAct": {
+        "title": "Kyrie • Misa Del Mundo",
+        "composer": "Only if needed. Talk to presider!"
+      },
+      "gloria": {
+        "title": "Glory to God (Through-composed Setting)",
+        "composer": "Mass of Renewal • Curtis Stephan"
+      },
+      "responsorialPsalm": {
+        "psalm": "Ps 121 Our help is from the Lord, who made...",
+        "setting": "The Lyric Psalter • Tony Alonso & Marty Haugen"
+      },
+      "gospelAcclamation": {
+        "title": "Alleluia (Mass of Joy & Peace)",
+        "composer": "O.T. • 29 | C — \"The word of God is living...\""
+      },
+      "offertory": {
+        "title": "Litany of Saints",
+        "composer": "Litany of Saints - John D. Becker",
+        "description": "Praying always for us (Persistantly) — include Saint Carlo Acutis"
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "Mass for the Healing of the World",
+        "composer": "Trevor Thomson"
+      },
+      "lordsPrayer": {
+        "title": "Chanted Our Father (Snow)",
+        "composer": "Jennings/Paregorius"
+      },
+      "fractionRite": {
+        "title": "Lamb of God (Mass for the Healing of the World)",
+        "composer": "Trevor Thomson"
+      },
+      "communionSongs": [
+        {
+          "title": "O God, You Search Me",
+          "composer": "Bernadette Farrell",
+          "description": "Respect Life Month"
+        },
+        {
+          "title": "There Is A Longing",
+          "composer": "Anne Quigley",
+          "description": "Litany of persistant prayers."
+        },
+        {
+          "title": "In Every Age",
+          "composer": "Janèt Sullivan Whitaker",
+          "description": "\"...you have been our refuge\" / Antiphon / God's faithfulness"
+        }
+      ],
+      "sending": {
+        "title": "God, We Praise You",
+        "composer": "NETTLETON • Christopher Idle",
+        "description": "General Sending"
+      }
+    },
+    {
+      "community": "Foundations",
+      "communityId": "foundations",
+      "date": "Year C — Oct 19, 2025 (Sun)",
+      "presider": "Fr. Thomas Park",
+      "prelude": {
+        "title": "Salve, Regina",
+        "composer": "CHANT MODE V",
+        "description": "Month of the Holy Rosary"
+      },
+      "gathering": {
+        "title": "Shelter Me, O God",
+        "composer": "Bob Hurd • Arranged by David Lockwood",
+        "description": "Entrance Antiphon | \"in the shadow of your wings protect me.\""
+      },
+      "penitentialAct": {
+        "title": "Kyrie (Gift of God) • Adapted Version",
+        "composer": "Marty Haugen • Arranged by David Locwood"
+      },
+      "gloria": {
+        "title": "Glory to God (Mass of Joy & Peace)",
+        "composer": "Alonso • Arr. by Houze OR Arr. by Lockwood"
+      },
+      "responsorialPsalm": {
+        "psalm": "Ps 121 Our help is from the Lord...",
+        "setting": "Spirit & Psalm • Paul Hillebrand"
+      },
+      "offertory": {
+        "title": "Litany of Saints",
+        "composer": "Litany of Saints - John D. Becker",
+        "description": "Praying always for us (Persistantly) — include Saint Carlo Acutis"
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "Mass of Glory • Bob Hurd • Arr. by Dan Houze"
+      },
+      "lordsPrayer": {
+        "title": "Chanted Our Father (Snow)",
+        "composer": "Jennings • Paregorius"
+      },
+      "fractionRite": {
+        "title": "Lamb of God (Mass of Glory)"
+      },
+      "communionSongs": [
+        {
+          "title": "Rain Down",
+          "composer": "Jaime Cortez",
+          "description": "Communion Antiphon | Psalm 33"
+        },
+        {
+          "title": "O God, You Search Me",
+          "composer": "Bernadette Farrell",
+          "description": "Respect Life Month"
+        }
+      ],
+      "sending": {
+        "title": "I Want to Walk as a Child of the Light",
+        "composer": "HOUSTON • Kathleen Thomerson",
+        "description": "Desire to walk humbly with God."
+      }
+    },
+    {
+      "community": "Generations",
+      "communityId": "generations",
+      "date": "Year C — Oct 19, 2025 (Sun)",
+      "presider": "Msgr. Lloyd Torgerson",
+      "prelude": {
+        "title": "Salve, Regina",
+        "composer": "CHANT MODE V",
+        "description": "Month of the Holy Rosary"
+      },
+      "gathering": {
+        "title": "Shelter Me, O God",
+        "composer": "Bob Hurd • Arranged by David Lockwood",
+        "description": "Entrance Antiphon | \"in the shadow of your wings protect me.\""
+      },
+      "penitentialAct": {
+        "title": "Kyrie • Misa Del Mundo",
+        "composer": "Only if needed. Talk to presider!"
+      },
+      "gloria": {
+        "title": "Glory, Glory, Gloria!",
+        "composer": "Jeffrey Bonilla & Drew Wilson"
+      },
+      "responsorialPsalm": {
+        "psalm": "Ps 121 Our help is from the Lord...",
+        "setting": "Spirit & Psalm • Paul Hillebrand"
+      },
+      "gospelAcclamation": {
+        "title": "Setting from Mass of Restoration",
+        "composer": "O.T. • 29 | C — \"The word of God is living...\""
+      },
+      "offertory": {
+        "title": "Litany of Saints",
+        "composer": "Litany of Saints - John D. Becker",
+        "description": "Praying always for us (Persistantly) — include Saint Carlo Acutis"
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "Mass of Restoration",
+        "composer": "Joshua Blakesley"
+      },
+      "lordsPrayer": {
+        "title": "(Echo) Our Father",
+        "composer": "Jerome Andrews • Arranged by Dan Houze"
+      },
+      "fractionRite": {
+        "title": "Lamb of God (Resoration)"
+      },
+      "communionSongs": [
+        {
+          "title": "Rain Down",
+          "composer": "Jaime Cortez",
+          "description": "Communion Antiphon | Psalm 33"
+        },
+        {
+          "title": "O God, You Search Me",
+          "composer": "Bernadette Farrell",
+          "description": "Respect Life Month"
+        },
+        {
+          "title": "Jesus I Trust In You",
+          "composer": "Sarah Hart • Josh Blakesley • Sarah Kroger",
+          "description": "Pray always"
+        },
+        {
+          "title": "Loved",
+          "composer": "Ben Smith, Pat Barrett",
+          "description": "Respect Life Month | \"Before my life began you knew my name\""
+        }
+      ],
+      "sending": {
+        "title": "Go Make a Difference",
+        "composer": "Steve Angrisano • Tom Tomaszek",
+        "description": "Serving God over mammon."
+      }
+    },
+    {
+      "community": "Heritage",
+      "communityId": "heritage",
+      "date": "Year C — Oct 19, 2025 (Sun)",
+      "presider": "Fr. Vince Kuna",
+      "prelude": {
+        "title": "Salve, Regina",
+        "composer": "CHANT MODE V",
+        "description": "Month of the Holy Rosary"
+      },
+      "gathering": {
+        "title": "Shelter Me, O God",
+        "composer": "Bob Hurd",
+        "description": "Entrance Antiphon | \"in the shadow of your wings protect me.\""
+      },
+      "penitentialAct": {
+        "title": "Kyrie • Misa Del Mundo",
+        "composer": "Only if needed. Talk to presider!"
+      },
+      "gloria": {
+        "title": "Glory to God (Mass of Christ the Savior)",
+        "composer": "Dan Schutte"
+      },
+      "responsorialPsalm": {
+        "psalm": "Ps 121 Our help is from the Lord, who made...",
+        "setting": "The Lyric Psalter • Tony Alonso & Marty Haugen"
+      },
+      "gospelAcclamation": {
+        "title": "Alleluia (Mass of Joy & Peace)",
+        "composer": "O.T. • 29 | C — \"The word of God is living...\""
+      },
+      "offertory": {
+        "title": "Litany of Saints",
+        "composer": "Litany of Saints - John D. Becker",
+        "description": "Praying always for us (Persistantly) — include Saint Carlo Acutis"
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "Mass of Christ the Savior - Dan Schutte"
+      },
+      "lordsPrayer": {
+        "title": "Echo Our Father",
+        "composer": "Andrews, Arr. Bonilla • Lockwood • Fajardo"
+      },
+      "fractionRite": {
+        "title": "Lamb of God (Mass of Christ the Savior)"
+      },
+      "communionSongs": [
+        {
+          "title": "O God, You Search Me",
+          "composer": "Bernadette Farrell",
+          "description": "Respect Life Month"
+        },
+        {
+          "title": "There Is A Longing",
+          "composer": "Anne Quigley",
+          "description": "Litany of persistant prayers."
+        },
+        {
+          "title": "In Every Age",
+          "composer": "Janèt Sullivan Whitaker",
+          "description": "\"...you have been our refuge\" / Antiphon / God's faithfulness"
+        }
+      ],
+      "sending": {
+        "title": "How Firm a Foundation",
+        "composer": "FOUNDATION • Russell Woollen",
+        "description": "God's faithfulness in our need."
+      }
+    },
+    {
+      "community": "Elevations",
+      "communityId": "elevations",
+      "date": "Year C — Oct 19, 2025 (Sun)",
+      "presider": "\"Fr. David Guffey, CSC\"",
+      "prelude": {
+        "title": "Salve, Regina",
+        "composer": "CHANT MODE V",
+        "description": "Month of the Holy Rosary"
+      },
+      "gathering": {
+        "title": "Shelter Me, O God",
+        "composer": "Bob Hurd • Arranged by David Lockwood",
+        "description": "Entrance Antiphon | \"in the shadow of your wings protect me.\""
+      },
+      "penitentialAct": {
+        "title": "Kyrie • Misa Del Mundo",
+        "composer": "Only if needed. Talk to presider!"
+      },
+      "gloria": {
+        "title": "Glory, Glory, Gloria!"
+      },
+      "responsorialPsalm": {
+        "psalm": "Ps 121 Our help is from the Lord...",
+        "setting": "Spirit & Psalm • Paul Hillebrand"
+      },
+      "gospelAcclamation": {
+        "title": "Setting from Mass of Restoration",
+        "verse": "O.T. • 29 | C — \"The word of God is living...\""
+      },
+      "offertory": {
+        "title": "Jesus I Trust In You",
+        "composer": "Sarah Hart • Josh Blakesley • Sarah Kroger",
+        "description": "Pray always"
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "Mass of Restoration • Joshua Blakesley"
+      },
+      "lordsPrayer": {
+        "title": "Echo Our Father",
+        "composer": "Andrews, Arr. Bonilla • Lockwood • Fajardo"
+      },
+      "fractionRite": {
+        "title": "Lamb of God (Resoration)"
+      },
+      "communionSongs": [
+        {
+          "title": "O God, You Search Me",
+          "composer": "Bernadette Farrell",
+          "description": "Respect Life Month"
+        },
+        {
+          "title": "I Am Yours - Consume Me Completely",
+          "composer": "Trevor Thomson",
+          "description": "“O Bread of Life, you will answer all our needs…”"
+        },
+        {
+          "title": "Loved",
+          "composer": "Ben Smith, Pat Barrett",
+          "description": "Respect Life Month | \"Before my life began you knew my name\""
+        }
+      ],
+      "sending": {
+        "title": "Lift High the Cross [NEW]",
+        "composer": "CRUCIFER • Nicholson • Arr. by David Lockwood",
+        "description": "General Sending"
+      }
+    }
+  ]
+}

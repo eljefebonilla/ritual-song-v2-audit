@@ -1,0 +1,66 @@
+{
+  "id": "ash-wednesday",
+  "name": "ASH WEDNESDAY",
+  "year": "ABC",
+  "season": "lent",
+  "seasonLabel": "Lent",
+  "seasonOrder": 0,
+  "dates": [
+    {
+      "date": "2026-02-18",
+      "label": "Year A — Feb 18, 2026 (Wed)",
+      "dayOfWeek": "Wed"
+    }
+  ],
+  "lectionary": {
+    "number": "SEE SHEET",
+    "gospelTitle": "",
+    "thematicTag": ""
+  },
+  "readings": [
+    {
+      "type": "first",
+      "citation": "",
+      "summary": "Text"
+    },
+    {
+      "type": "psalm",
+      "citation": "Responsorial Psalm Verse and Text",
+      "summary": "",
+      "antiphon": "Responsorial Psalm Verse and Text"
+    },
+    {
+      "type": "second",
+      "citation": "1 Cor 15:54-58",
+      "summary": "Text"
+    },
+    {
+      "type": "gospel_verse",
+      "citation": "",
+      "summary": "Text"
+    },
+    {
+      "type": "gospel",
+      "citation": "Lk 6:39-45",
+      "summary": "Text"
+    }
+  ],
+  "antiphons": [
+    {
+      "type": "communion",
+      "option": 1,
+      "citation": "Cf. Ps 13 (12):6",
+      "text": "I will sing to the Lord who has been bountiful with me,\nsing psalms to the name of the Lord Most High."
+    },
+    {
+      "type": "communion",
+      "option": 2,
+      "citation": "Communion Antiphon • Option II | Cf. Mt 28:20",
+      "text": "Behold, I am with you always,\neven to the end of the age, says the Lord."
+    }
+  ],
+  "planningNotes": [
+    "FEB - Black History Month"
+  ],
+  "musicPlans": []
+}

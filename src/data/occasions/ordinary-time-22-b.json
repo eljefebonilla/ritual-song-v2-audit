@@ -1,0 +1,220 @@
+{
+  "id": "ordinary-time-22-b",
+  "name": "ORDINARY TIME 22 [B]",
+  "year": "B",
+  "season": "ordinary",
+  "seasonLabel": "Ordinary Time",
+  "seasonOrder": 22,
+  "dates": [
+    {
+      "date": "2024-09-01",
+      "label": "Year B — Sep 01, 2024 (Sun)",
+      "dayOfWeek": "Sun"
+    },
+    {
+      "date": "2036-08-31",
+      "label": "Year B — Aug 31, 2036 (Sun)",
+      "dayOfWeek": "Sun"
+    },
+    {
+      "date": "2033-08-28",
+      "label": "Year B — Aug 28, 2033 (Sun)",
+      "dayOfWeek": "Sun"
+    },
+    {
+      "date": "2030-09-01",
+      "label": "Year B — Sep 01, 2030 (Sun)",
+      "dayOfWeek": "Sun"
+    },
+    {
+      "date": "2027-08-29",
+      "label": "Year B — Aug 29, 2027 (Sun)",
+      "dayOfWeek": "Sun"
+    }
+  ],
+  "lectionary": {
+    "number": "125•B",
+    "gospelTitle": "Humility Invited",
+    "thematicTag": "Table Ethics 1/2"
+  },
+  "readings": [
+    {
+      "type": "first",
+      "citation": "Dt 4:1-2, 6-8",
+      "summary": "By obeying God, Israel shows wisdom."
+    },
+    {
+      "type": "psalm",
+      "citation": "Ps 15:2-3, 3-4, 4-5, R. v.1a\nOne who does justice will live in the presence of the Lord.",
+      "summary": "",
+      "antiphon": "Ps 15:2-3, 3-4, 4-5, R. v.1a\nOne who does justice will live in the presence of the Lord."
+    },
+    {
+      "type": "second",
+      "citation": "Jas 1:17-18, 21b-22, 27",
+      "summary": "All truly valuable gifts come from above."
+    },
+    {
+      "type": "gospel_verse",
+      "citation": "Jas 1:18",
+      "summary": "The Father willed to give us birth by the word of truth\nthat we may be a kind of firstfruits of his creatures."
+    },
+    {
+      "type": "gospel",
+      "citation": "Mk 7:1-8, 14-15, 21-23",
+      "summary": "Jesus confronts the Pharisees, who pay only lip service to God."
+    }
+  ],
+  "antiphons": [
+    {
+      "type": "entrance",
+      "option": 1,
+      "citation": "Roman Missal — Cf. Ps 86 (85):3, 5",
+      "text": "Have mercy on me, O Lord, for I cry to you all the day long.\nO Lord, you are good and forgiving,\nfull of mercy to all who call to you."
+    },
+    {
+      "type": "communion",
+      "option": 1,
+      "citation": "Ps 31 (30):20",
+      "text": "How great is the goodness, Lord,\nthat you keep for those who fear you."
+    },
+    {
+      "type": "communion",
+      "option": 2,
+      "citation": "Roman Missal — Mt 5:9–10",
+      "text": "Blessed are the peacemakers,\nfor they shall be called children of God.\nBlessed are they who are persecuted\nfor the sake of righteousness,\nfor theirs is the Kingdom of Heaven."
+    }
+  ],
+  "planningNotes": [],
+  "musicPlans": [
+    {
+      "community": "Reflections",
+      "communityId": "reflections",
+      "date": "Year B — Aug 28, 2027 (Sat)",
+      "presider": "NOT THIS YEAR",
+      "penitentialAct": {
+        "title": "Kyrie • Misa Del Mundo",
+        "composer": "Only if needed. Talk to presider!"
+      },
+      "gloria": {
+        "title": "Glory to God (Through-composed Setting)",
+        "composer": "Mass of Renewal • Curtis Stephan"
+      },
+      "gospelAcclamation": {
+        "title": "Alleluia (Mass of Joy & Peace)",
+        "composer": "Song Title"
+      },
+      "lordsPrayer": {
+        "title": "Chanted Our Father (Snow)",
+        "composer": "Jennings/Paregorius"
+      },
+      "fractionRite": {
+        "title": "Lamb of God Setting"
+      }
+    },
+    {
+      "community": "Foundations",
+      "communityId": "foundations",
+      "date": "Year B — Aug 29, 2027 (Sun)",
+      "presider": "NOT THIS YEAR",
+      "penitentialAct": {
+        "title": "Kyrie (Gift of God) • Adapted Version",
+        "composer": "Marty Haugen • Arranged by David Locwood"
+      },
+      "gloria": {
+        "title": "Glory to God (Mass of Joy & Peace)",
+        "composer": "Alonso • Arr. by Houze OR Arr. by Lockwood"
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "Mass of Glory • Bob Hurd • Arr. by Dan Houze"
+      },
+      "lordsPrayer": {
+        "title": "Chanted Our Father (Snow)",
+        "composer": "Jennings • Paregorius"
+      },
+      "fractionRite": {
+        "title": "Lamb of God (Mass of Glory)"
+      }
+    },
+    {
+      "community": "Generations",
+      "communityId": "generations",
+      "date": "Year B — Aug 29, 2027 (Sun)",
+      "presider": "NOT THIS YEAR",
+      "penitentialAct": {
+        "title": "Kyrie • Misa Del Mundo",
+        "composer": "If needed. Talk to presider!"
+      },
+      "gloria": {
+        "title": "Glory, Glory, Gloria!",
+        "composer": "Tony Alonso • Arr. by Dan Houze"
+      },
+      "gospelAcclamation": {
+        "title": "Setting from Mass of ???",
+        "composer": "Song Title"
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "Mass of Restoration",
+        "composer": "Joshua Blakesley"
+      },
+      "lordsPrayer": {
+        "title": "(Echo) Our Father",
+        "composer": "Jerome Andrews • Arranged by Dan Houze"
+      },
+      "fractionRite": {
+        "title": "Lamb of God (Resoration)"
+      }
+    },
+    {
+      "community": "Heritage",
+      "communityId": "heritage",
+      "date": "Year B — Aug 29, 2027 (Sun)",
+      "presider": "NOT THIS YEAR",
+      "penitentialAct": {
+        "title": "Kyrie • Misa Del Mundo",
+        "composer": "Only if needed. Talk to presider!"
+      },
+      "gloria": {
+        "title": "Glory to God (Mass of Christ the Savior)",
+        "composer": "Dan Schutte"
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "Mass of Christ the Savior - Dan Schutte"
+      },
+      "lordsPrayer": {
+        "title": "Echo Our Father",
+        "composer": "Andrews, Arr. Bonilla • Lockwood • Fajardo"
+      },
+      "fractionRite": {
+        "title": "Lamb of God (Mass of Christ the Savior)"
+      }
+    },
+    {
+      "community": "Elevations",
+      "communityId": "elevations",
+      "date": "Year B — Aug 29, 2027 (Sun)",
+      "presider": "NOT THIS YEAR",
+      "penitentialAct": {
+        "title": "Kyrie • Misa Del Mundo",
+        "composer": "Only if needed. Talk to presider!"
+      },
+      "gloria": {
+        "title": "Glory, Glory, Gloria!"
+      },
+      "gospelAcclamation": {
+        "title": "Setting from Mass of ???",
+        "verse": "Song Title"
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "Mass of Restoration • Joshua Blakesley"
+      },
+      "lordsPrayer": {
+        "title": "Echo Our Father",
+        "composer": "Andrews, Arr. Bonilla • Lockwood • Fajardo"
+      },
+      "fractionRite": {
+        "title": "Lamb of God (Resoration)"
+      }
+    }
+  ]
+}

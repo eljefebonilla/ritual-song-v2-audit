@@ -1,0 +1,425 @@
+{
+  "id": "year-c-jun-01-2025-sun",
+  "name": "Year C — Jun 01, 2025 (Sun)",
+  "year": "ABC",
+  "season": "ordinary",
+  "seasonLabel": "Ordinary Time",
+  "seasonOrder": 1,
+  "dates": [],
+  "lectionary": {
+    "number": "Year C — May 13, 2040 (Sun)",
+    "gospelTitle": "Year C — May 17, 2037 (Sun)",
+    "thematicTag": "Year C — May 21, 2034 (Sun)",
+    "thematicDetail": "Year C — May 25, 2031 (Sun)"
+  },
+  "readings": [
+    {
+      "type": "psalm",
+      "citation": "Mission Mandate",
+      "summary": "",
+      "antiphon": "Planning Reminders"
+    },
+    {
+      "type": "second",
+      "citation": "BACCALAUREATE | SUN - 2 PM",
+      "summary": ""
+    },
+    {
+      "type": "gospel_verse",
+      "citation": "You kingdoms of the earth, sing to God;\npraise the Lord, who ascends above the highest heavens;\nhis majesty and might are in the skies, alleluia.",
+      "summary": "Acts 1:11 — At the Mass during the Day"
+    },
+    {
+      "type": "gospel",
+      "citation": "Reading I | Acts 1:1-11 (Years ABC)",
+      "summary": "Jesus is taken up into heaven."
+    }
+  ],
+  "antiphons": [
+    {
+      "type": "entrance",
+      "option": 1,
+      "citation": "Verse before the Gospel | Mt 28:19a, 20b",
+      "text": "Go and teach all nations, says the Lord;\nI am with you always, until the end of the world."
+    },
+    {
+      "type": "communion",
+      "option": 2,
+      "citation": "Communion Antiphon | Cf. Heb 10:12 (At the Vigil)",
+      "text": "Christ, offering a single sacrifice for sins,\nis seated for ever at God’s right hand, alleluia."
+    }
+  ],
+  "planningNotes": [
+    "Communion Antiphon | Mt 28:20 (At Mass during the Day)",
+    "Behold, I am with you always,\neven to the end of the age, alleluia."
+  ],
+  "musicPlans": [
+    {
+      "community": "Reflections",
+      "communityId": "reflections",
+      "date": "Year C — May 27, 2028 (Sat)",
+      "presider": "NOT THIS YEAR",
+      "prelude": {
+        "title": "Regina Caeli / O Queen of Heaven",
+        "composer": "Mode VI Latin • 12th C",
+        "description": "Pope Leo XIV singing Regina Caeli"
+      },
+      "penitentialAct": {
+        "title": "LLANFAIR • Trevor Thomson",
+        "composer": "Ascension of the Lord",
+        "description": "Penitential Act"
+      },
+      "gloria": {
+        "title": "Kyrie • Misa Del Mundo",
+        "composer": "Only if needed. Talk to presider!",
+        "description": "Gloria"
+      },
+      "gospelAcclamation": {
+        "title": "The Lyric Psalter • Tony Alonso & Marty Haugen",
+        "composer": "Gospel Acclamation",
+        "verse": "Easter Alleluia (Refrain)"
+      },
+      "offertory": {
+        "title": "ASC | ABC — \"Go and teach all nations....\"",
+        "description": "Offertory Song"
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "Where My Father Lives",
+        "composer": "M.D. Ridge"
+      },
+      "lordsPrayer": {
+        "title": "Eucharistic Acclamations",
+        "composer": "Mass of the Holy Family",
+        "description": "Chris de Silva"
+      },
+      "fractionRite": {
+        "title": "Holy, Holy, Holy",
+        "composer": "When We Eat This Bread",
+        "description": "Amen"
+      },
+      "communionSongs": [
+        {
+          "title": "The Lord's Prayer",
+          "composer": "Chanted Our Father (Snow)",
+          "description": "Jennings/Paregorius"
+        },
+        {
+          "title": "Fraction Rite",
+          "composer": "Lamb of God (Mass of the Holy Family)",
+          "description": "Chris de Silva"
+        },
+        {
+          "title": "Communion Songs",
+          "composer": "Be Not Afraid",
+          "description": "Bob Dufford, SJ"
+        },
+        {
+          "title": "\"I go before you always\"",
+          "composer": "Our Life Is Hidden with Christ",
+          "description": "Bob Hurd • Arranged by Rick Modlin"
+        }
+      ]
+    },
+    {
+      "community": "Foundations",
+      "communityId": "foundations",
+      "date": "Year C — May 28, 2028 (Sun)",
+      "presider": "NOT THIS YEAR",
+      "prelude": {
+        "title": "Regina Caeli / O Queen of Heaven",
+        "composer": "Mode VI Latin • 12th C",
+        "description": "Pope Leo XIV singing Regina Caeli"
+      },
+      "penitentialAct": {
+        "title": "LLANFAIR • Trevor Thomson",
+        "composer": "Ascension of the Lord",
+        "description": "Penitential Act"
+      },
+      "gloria": {
+        "title": "Kyrie (Gift of God) • Adapted Version",
+        "composer": "Marty Haugen • Arranged by David Locwood",
+        "description": "Gloria"
+      },
+      "gospelAcclamation": {
+        "title": "Spirit & Psalm • Josh Blakesley",
+        "composer": "Gospel Acclamation",
+        "verse": "Easter Alleluia (Refrain)"
+      },
+      "offertory": {
+        "title": "ASC | ABC — \"Go and teach all nations....\"",
+        "description": "Offertory Song"
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "Where My Father Lives",
+        "composer": "M.D. Ridge"
+      },
+      "lordsPrayer": {
+        "title": "Eucharistic Acclamations",
+        "composer": "Mass of Glory",
+        "description": "Bob Hurd & Ken Canedo"
+      },
+      "fractionRite": {
+        "title": "Holy, Holy",
+        "composer": "We Proclaim Your Death",
+        "description": "Amen"
+      },
+      "communionSongs": [
+        {
+          "title": "The Lord's Prayer",
+          "composer": "Chanted Our Father (Snow)",
+          "description": "Jennings • Paregorius"
+        },
+        {
+          "title": "Fraction Rite",
+          "composer": "Lamb of God (Resoration)",
+          "description": "Bob Hurd & Ken Canedo"
+        },
+        {
+          "title": "Communion Songs",
+          "composer": "Be Not Afraid",
+          "description": "Bob Dufford, SJ"
+        },
+        {
+          "title": "\"I go before you always\"",
+          "composer": "Go into the World",
+          "description": "Tom Booth"
+        }
+      ],
+      "sending": {
+        "title": "Christopher Walker",
+        "composer": "\"Jesus is Lord, King of glory now\"!"
+      }
+    },
+    {
+      "community": "Generations",
+      "communityId": "generations",
+      "date": "Year C — May 28, 2028 (Sun)",
+      "presider": "NOT THIS YEAR",
+      "prelude": {
+        "title": "Regina Caeli / O Queen of Heaven",
+        "composer": "Mode VI Latin • 12th C",
+        "description": "Pope Leo XIV singing Regina Caeli"
+      },
+      "penitentialAct": {
+        "title": "LLANFAIR • Trevor Thomson",
+        "composer": "Ascension of the Lord",
+        "description": "Penitential Act"
+      },
+      "gloria": {
+        "title": "Kyrie (Misa Del Mundo)",
+        "composer": "Jesse Manibusan",
+        "description": "Gloria"
+      },
+      "gospelAcclamation": {
+        "title": "Spirit & Psalm • Josh Blakesley",
+        "composer": "Gospel Acclamation",
+        "verse": "Easter Alleluia (Refrain)"
+      },
+      "offertory": {
+        "title": "ASC | ABC — \"Go and teach all nations....\"",
+        "description": "Offertory Song"
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "Where My Father Lives",
+        "composer": "M.D. Ridge"
+      },
+      "lordsPrayer": {
+        "title": "Eucharistic Acclamations",
+        "composer": "Mass of Glory",
+        "description": "Bob Hurd • Arr. by Dan Houze"
+      },
+      "fractionRite": {
+        "title": "Holy",
+        "composer": "Mystery of Faith",
+        "description": "Amen"
+      },
+      "communionSongs": [
+        {
+          "title": "The Lord's Prayer",
+          "composer": "(Echo) Our Father",
+          "description": "Jerome Andrews • Arranged by Dan Houze"
+        },
+        {
+          "title": "Fraction Rite",
+          "composer": "Lamb of God (Mass of Glory)"
+        },
+        {
+          "title": "Communion Songs",
+          "composer": "Be Not Afraid",
+          "description": "Bob Dufford, SJ"
+        },
+        {
+          "title": "\"I go before you always\"",
+          "composer": "In Christ Alone",
+          "description": "Keith Getty and Stuart Townend"
+        },
+        {
+          "title": "\"Here in the love of Christ I stand\"",
+          "composer": "One Sacrifice of Christ",
+          "description": "Rick Modlin • Robert Feduccia"
+        },
+        {
+          "title": "\"Jesus... died and rose, and ascended to the throne.\"",
+          "composer": "Remembrance",
+          "description": "Hillsong"
+        }
+      ],
+      "sending": {
+        "title": "Make the Love of God Known",
+        "composer": "Rick Modlin • Arranged by David Lockwood",
+        "description": "\"repentance...preached in his name...to all the nations\""
+      }
+    },
+    {
+      "community": "Heritage",
+      "communityId": "heritage",
+      "date": "Year C — May 28, 2028 (Sun)",
+      "presider": "NOT THIS YEAR",
+      "prelude": {
+        "title": "Regina Caeli / O Queen of Heaven",
+        "composer": "Mode VI Latin • 12th C",
+        "description": "Pope Leo XIV singing Regina Caeli"
+      },
+      "penitentialAct": {
+        "title": "LLANFAIR • Charles Wesley • Robert Williams",
+        "composer": "Ascension of the Lord",
+        "description": "Penitential Act"
+      },
+      "gloria": {
+        "title": "Kyrie • Misa Del Mundo",
+        "composer": "Only if needed. Talk to presider!",
+        "description": "Gloria"
+      },
+      "gospelAcclamation": {
+        "title": "Lyric Psalter • Tony Alonso & Marty Haugen",
+        "composer": "Gospel Acclamation",
+        "verse": "Easter Alleluia (Refrain)"
+      },
+      "offertory": {
+        "title": "ASC | ABC — \"Go and teach all nations....\"",
+        "description": "Offertory Song"
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "Where My Father Lives",
+        "composer": "M.D. Ridge"
+      },
+      "lordsPrayer": {
+        "title": "Eucharistic Acclamations",
+        "composer": "Mass of Joy & Peace",
+        "description": "Tony Alonso"
+      },
+      "fractionRite": {
+        "title": "Holy, Holy, Holy",
+        "composer": "When We Eat This Bread",
+        "description": "Amen"
+      },
+      "communionSongs": [
+        {
+          "title": "The Lord's Prayer",
+          "composer": "Chanted Our Father (Snow)",
+          "description": "Jennings/Paregorius"
+        },
+        {
+          "title": "Fraction Rite",
+          "composer": "Lamb of God (Mass of Joy & Peace)",
+          "description": "Tony Alonso"
+        },
+        {
+          "title": "Communion Songs",
+          "composer": "Be Not Afraid",
+          "description": "Bob Dufford, SJ"
+        },
+        {
+          "title": "\"I go before you always\"",
+          "composer": "Eye Has Not Seen",
+          "description": "Marty Haugen"
+        },
+        {
+          "title": "\"...so we return in love what love has made\"",
+          "composer": "One Sacrifice of Christ",
+          "description": "Rick Modlin • Robert Feduccia"
+        }
+      ],
+      "sending": {
+        "title": "ELLACOMBE • Leon M. Adkins",
+        "composer": "Gospel"
+      }
+    },
+    {
+      "community": "Elevations",
+      "communityId": "elevations",
+      "date": "Year C — May 28, 2028 (Sun)",
+      "presider": "NOT THIS YEAR",
+      "prelude": {
+        "title": "Regina Caeli / O Queen of Heaven",
+        "composer": "Mode VI Latin • 12th C",
+        "description": "Pope Leo XIV singing Regina Caeli"
+      },
+      "penitentialAct": {
+        "title": "LLANFAIR • Trevor Thomson",
+        "composer": "Ascension of the Lord",
+        "description": "Penitential Act"
+      },
+      "gloria": {
+        "title": "Kyrie (Misa Del Mundo)",
+        "composer": "Jesse Manibusan — If needed.",
+        "description": "Gloria"
+      },
+      "gospelAcclamation": {
+        "title": "Spirit & Psalm • Josh Blakesley",
+        "composer": "Gospel Acclamation",
+        "verse": "Easter Alleluia (Refrain)"
+      },
+      "offertory": {
+        "title": "ASC | ABC — \"Go and teach all nations....\"",
+        "description": "Offertory Song"
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "Where My Father Lives",
+        "composer": "M.D. Ridge"
+      },
+      "lordsPrayer": {
+        "title": "Eucharistic Acclamations",
+        "composer": "Mass of Restoration",
+        "description": "Joshua Blakesley"
+      },
+      "fractionRite": {
+        "title": "Holy, Holy, Holy",
+        "composer": "Save Us Savior of the World",
+        "description": "Amen"
+      },
+      "communionSongs": [
+        {
+          "title": "The Lord's Prayer",
+          "composer": "Echo Our Father",
+          "description": "Andrews, Arr. Bonilla • Lockwood • Fajardo"
+        },
+        {
+          "title": "Fraction Rite",
+          "composer": "Lamb of God (Resoration)",
+          "description": "Joshua Blakesley"
+        },
+        {
+          "title": "Communion Songs",
+          "composer": "Be Not Afraid",
+          "description": "Bob Dufford, SJ"
+        },
+        {
+          "title": "\"I go before you always\"",
+          "composer": "One Sacrifice of Christ",
+          "description": "Rick Modlin • Robert Feduccia"
+        },
+        {
+          "title": "\"Jesus... died and rose, and ascended to the throne.\"",
+          "composer": "Remembrance",
+          "description": "Hillsong"
+        }
+      ],
+      "sending": {
+        "title": "Sending Song",
+        "composer": "Go Out, Go Out",
+        "description": "Curtis Stephan"
+      }
+    }
+  ]
+}

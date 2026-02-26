@@ -1,0 +1,47 @@
+{
+  "id": "pentecost-ext-vigil-abc",
+  "name": "PENTECOST - Ext. VIGIL [ABC]",
+  "year": "ABC",
+  "season": "easter",
+  "seasonLabel": "Easter",
+  "seasonOrder": 0,
+  "dates": [
+    {
+      "date": "2025-06-07",
+      "label": "Year C — Jun 07, 2025 (Sat)",
+      "dayOfWeek": "Sat"
+    },
+    {
+      "date": "2029-05-19",
+      "label": "Year A — May 19, 2029 (Sat)",
+      "dayOfWeek": "Sat"
+    },
+    {
+      "date": "2028-06-03",
+      "label": "Year C — Jun 03, 2028 (Sat)",
+      "dayOfWeek": "Sat"
+    },
+    {
+      "date": "2027-05-15",
+      "label": "Year B — May 15, 2027 (Sat)",
+      "dayOfWeek": "Sat"
+    },
+    {
+      "date": "2026-05-23",
+      "label": "Year A — May 23, 2026 (Sat)",
+      "dayOfWeek": "Sat"
+    }
+  ],
+  "lectionary": {
+    "number": "062•ABC",
+    "gospelTitle": "Living Water, Spirit Flow",
+    "thematicTag": "Spirit Promised as Water"
+  },
+  "readings": [],
+  "antiphons": [],
+  "planningNotes": [
+    "Year A — May 23, 2026 (Sat)",
+    "SEE SHEET"
+  ],
+  "musicPlans": []
+}

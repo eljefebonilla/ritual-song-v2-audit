@@ -1,0 +1,413 @@
+{
+  "id": "baptism-of-the-lord-a",
+  "name": "BAPTISM OF THE LORD [A]",
+  "year": "A",
+  "season": "ordinary",
+  "seasonLabel": "Ordinary Time",
+  "seasonOrder": 0,
+  "dates": [
+    {
+      "date": "2023-01-09",
+      "label": "Year A — Jan 09, 2023 (Mon)",
+      "dayOfWeek": "Mon"
+    },
+    {
+      "date": "2035-01-08",
+      "label": "Year A — Jan 08, 2035 (Mon)",
+      "dayOfWeek": "Mon"
+    },
+    {
+      "date": "2032-01-11",
+      "label": "Year A — Jan 11, 2032 (Sun)",
+      "dayOfWeek": "Sun"
+    },
+    {
+      "date": "2029-01-08",
+      "label": "Year A — Jan 08, 2029 (Mon)",
+      "dayOfWeek": "Mon"
+    },
+    {
+      "date": "2026-01-11",
+      "label": "Year A — Jan 11, 2026 (Sun)",
+      "dayOfWeek": "Sun"
+    }
+  ],
+  "lectionary": {
+    "number": "021•A-Gospel A",
+    "gospelTitle": "Spirit Descends at Baptism",
+    "thematicTag": "Epiphany Theophany"
+  },
+  "readings": [
+    {
+      "type": "first",
+      "citation": "Is 42:1-4, 6-7 (Year A)",
+      "summary": "The Lord upholds his Servant."
+    },
+    {
+      "type": "psalm",
+      "citation": "Ps 29:1-2, 3-4, 9-10. R. v.11b\nThe Lord will bless his people with peace.",
+      "summary": "",
+      "antiphon": "Ps 29:1-2, 3-4, 9-10. R. v.11b\nThe Lord will bless his people with peace."
+    },
+    {
+      "type": "second",
+      "citation": "Acts 10:34-38",
+      "summary": "Peter brings the good news to the Gentiles."
+    },
+    {
+      "type": "gospel_verse",
+      "citation": "Mk 9:7",
+      "summary": "The heavens were opened\nand the voice of the Father thundered:\nThis is my beloved Son, listen to him."
+    },
+    {
+      "type": "gospel",
+      "citation": "Mt 3:13-17",
+      "summary": "Jesus is baptized by John."
+    }
+  ],
+  "antiphons": [
+    {
+      "type": "entrance",
+      "option": 1,
+      "citation": "Cf. Mt 3:16–17",
+      "text": "After the Lord was baptized, the heavens were opened,\nand the Spirit descended upon him like a dove,\nand the voice of the Father thundered:\nThis is my beloved Son, with whom I am well pleased."
+    },
+    {
+      "type": "communion",
+      "option": 1,
+      "citation": "Jn 1:32, 34",
+      "text": "Behold the One of whom John said:\nI have seen and testified that this is the Son of God."
+    }
+  ],
+  "planningNotes": [],
+  "musicPlans": [
+    {
+      "community": "Reflections",
+      "communityId": "reflections",
+      "date": "Year A — Jan 10, 2026 (Sat)",
+      "presider": "TBD",
+      "gathering": {
+        "title": "Come to the Water",
+        "composer": "John B. Foley, SJ • Arranged by Arielle Phan",
+        "description": "Baptism of the Lord"
+      },
+      "penitentialAct": {
+        "title": "Kyrie • Misa Del Mundo",
+        "composer": "Jesse Manibusan"
+      },
+      "gloria": {
+        "title": "Glory to God (Through-composed Setting)",
+        "composer": "Mass of Renewal • Curtis Stephan"
+      },
+      "responsorialPsalm": {
+        "psalm": "Ps 29 The Lord will bless his people with peace.",
+        "setting": "The Lyric Psalter • Tony Alonso & Marty Haugen"
+      },
+      "gospelAcclamation": {
+        "title": "Alleluia (Mass of Joy & Peace)",
+        "composer": "CHRISTMAS — Baptism • ABC"
+      },
+      "offertory": {
+        "title": "When Jesus Comes to Jordan's Stream [NEW]",
+        "composer": "Text by Michael Joncas • Music by Casey McKinley",
+        "description": "Baptism of the Lord"
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "Mass of the Incarnate Word",
+        "composer": "Bob Hurd • Traditional Arrangement"
+      },
+      "lordsPrayer": {
+        "title": "Chanted Our Father (Snow)",
+        "composer": "Jennings/Paregorius"
+      },
+      "fractionRite": {
+        "title": "Lamb of God (Mass of Holy Cross)",
+        "composer": "David Clark Isele"
+      },
+      "communionSongs": [
+        {
+          "title": "Christ the Lord",
+          "composer": "Sarah Hart • Robert Feduccia",
+          "description": "VERSE 2 - 4"
+        },
+        {
+          "title": "Spirit and Grace",
+          "composer": "Ricky Manalo, CSP",
+          "description": "Spirit Descends at Baptism"
+        },
+        {
+          "title": "Heart of Jesus",
+          "composer": "Bob Hurd",
+          "description": "Poverty Awareness Month"
+        }
+      ],
+      "sending": {
+        "title": "O Breathe on Me, O Breath of God",
+        "composer": "ST COLUMBA (Traditional Irish) • Edwin Hatch",
+        "description": "Spirit Descends at Baptism"
+      }
+    },
+    {
+      "community": "Foundations",
+      "communityId": "foundations",
+      "date": "Year A — Jan 11, 2026 (Sun)",
+      "presider": "TBD",
+      "gathering": {
+        "title": "Come to the Water",
+        "composer": "John B. Foley, SJ • Arranged by Arielle Phan",
+        "description": "Baptism of the Lord"
+      },
+      "penitentialAct": {
+        "title": "Kyrie (Gift of God) • Adapted Version",
+        "composer": "Marty Haugen • Arranged by David Locwood"
+      },
+      "gloria": {
+        "title": "Mass of Joy & Peace (Gospel Version)",
+        "composer": "Tony Alonso • Arrangement by David Lockwood"
+      },
+      "responsorialPsalm": {
+        "psalm": "Ps 29 The Lord will bless his people with peace.",
+        "setting": "Francesca LaRosa"
+      },
+      "gospelAcclamation": {
+        "title": "Hallelujah (adapted for Liturgy)",
+        "composer": "Leonard Cohen",
+        "verse": "The heavens were opened\nand the voice of the Father thundered:\nThis is my beloved Son, listen to him."
+      },
+      "offertory": {
+        "title": "When Jesus Comes to Jordan's Stream [NEW]",
+        "composer": "Text by Michael Joncas • Music by Casey McKinley",
+        "description": "Baptism of the Lord"
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "Mass of Glory (Lockwood Christmas Intro)"
+      },
+      "lordsPrayer": {
+        "title": "Chanted Our Father (Snow)",
+        "composer": "Jennings • Paregorius"
+      },
+      "fractionRite": {
+        "title": "Lamb of God (Mass of Glory)"
+      },
+      "communionSongs": [
+        {
+          "title": "The Feast Meant for Everyone",
+          "composer": "Tom Booth & Sarah Hart",
+          "description": "Poverty Awareness Month • \"...bread for the poor...\""
+        },
+        {
+          "title": "Spirit of God",
+          "composer": "James E. Moore",
+          "description": "Spirit Descends at Baptism"
+        }
+      ],
+      "sending": {
+        "title": "O Breathe on Me, O Breath of God",
+        "composer": "ST COLUMBA (Traditional Irish) • Edwin Hatch",
+        "description": "Spirit Descends at Baptism"
+      }
+    },
+    {
+      "community": "Generations",
+      "communityId": "generations",
+      "date": "Year A — Jan 11, 2026 (Sun)",
+      "presider": "TBD",
+      "gathering": {
+        "title": "Come to the Water",
+        "composer": "John B. Foley, SJ • Arranged by Arielle Phan",
+        "description": "Baptism of the Lord"
+      },
+      "penitentialAct": {
+        "title": "Kyrie • Misa Del Mundo",
+        "composer": "Jesse Manibusan"
+      },
+      "gloria": {
+        "title": "Glory, Glory, Gloria! (Mass of the Setting Sun)",
+        "composer": "Bonilla & Wilson • Vocal Arr. by Lockwood & Phan"
+      },
+      "responsorialPsalm": {
+        "psalm": "Ps 29 The Lord will bless his people with peace.",
+        "setting": "Francesca LaRosa"
+      },
+      "gospelAcclamation": {
+        "title": "Hallelujah (adapted for Liturgy)",
+        "composer": "Leonard Cohen",
+        "verse": "The heavens were opened\nand the voice of the Father thundered:\nThis is my beloved Son, listen to him."
+      },
+      "offertory": {
+        "title": "When Jesus Comes to Jordan's Stream [NEW]",
+        "composer": "Text by Michael Joncas • Music by Casey McKinley",
+        "description": "Baptism of the Lord"
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "Mass of Glory (Lockwood Christmas Intro)",
+        "composer": "Bob Hurd • Arr. by Dan Houze"
+      },
+      "lordsPrayer": {
+        "title": "Echo Our Father",
+        "composer": "Jerome Andrews, Arranged by Dan Houze"
+      },
+      "fractionRite": {
+        "title": "Lamb of God (Mass of Glory)",
+        "composer": "Bob Hurd  • Ken Canedo"
+      },
+      "communionSongs": [
+        {
+          "title": "This Is My Beloved Son",
+          "composer": "John Angotti",
+          "description": "Baptism of the Lord Text"
+        },
+        {
+          "title": "The Feast Meant for Everyone",
+          "composer": "Tom Booth & Sarah Hart",
+          "description": "Poverty Awareness Month • \"...bread for the poor...\""
+        },
+        {
+          "title": "Bread of Life",
+          "composer": "Michael John Poirier",
+          "description": "Forshadowing — Word of God Sunday + Presentation"
+        },
+        {
+          "title": "Rest On Us [NEW SONG]",
+          "composer": "Maverick City Music • Brandon Lake • Eniola Abioye",
+          "description": "“As the Spirit was moving over the water…\""
+        }
+      ],
+      "sending": {
+        "title": "I Send You Out",
+        "composer": "John Angotti",
+        "description": "Baptism of the Lord"
+      }
+    },
+    {
+      "community": "Heritage",
+      "communityId": "heritage",
+      "date": "Year A — Jan 11, 2026 (Sun)",
+      "presider": "TBD",
+      "gathering": {
+        "title": "Come to the Water",
+        "composer": "John B. Foley, SJ • Arranged by Arielle Phan",
+        "description": "Baptism of the Lord"
+      },
+      "penitentialAct": {
+        "title": "Kyrie • Misa Del Mundo",
+        "composer": "Jesse Manibusan"
+      },
+      "gloria": {
+        "title": "Glory to God (Mass of Christ the Savior)",
+        "composer": "Dan Schutte"
+      },
+      "responsorialPsalm": {
+        "psalm": "Ps 29 The Lord will bless his people with peace.",
+        "setting": "The Lyric Psalter • Tony Alonso & Marty Haugen"
+      },
+      "gospelAcclamation": {
+        "title": "CHRISTMAS — Baptism • ABC",
+        "composer": "The Lyric Gospel Acclamations • Tony Alonso"
+      },
+      "offertory": {
+        "title": "When Jesus Comes to Jordan's Stream [NEW]",
+        "composer": "Text by Michael Joncas • Music by Casey McKinley",
+        "description": "Baptism of the Lord"
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "Mass of the Incarnate Word",
+        "composer": "Bob Hurd • Traditional Arrangement"
+      },
+      "lordsPrayer": {
+        "title": "Chanted Our Father (Snow)",
+        "composer": "Jennings/Paregorius"
+      },
+      "fractionRite": {
+        "title": "Lamb of God (Mass of Holy Cross)"
+      },
+      "communionSongs": [
+        {
+          "title": "Christ the Lord",
+          "composer": "Sarah Hart • Robert Feduccia",
+          "description": "VERSE 2 - 4"
+        },
+        {
+          "title": "Heart of Jesus",
+          "composer": "Bob Hurd",
+          "description": "Poverty Awareness Month"
+        },
+        {
+          "title": "Send out Your Spirit",
+          "composer": "Bernadette Farrell • Jo Routh • Kevin Walsh",
+          "description": "Spirit Descends at Baptism"
+        }
+      ],
+      "sending": {
+        "title": "O Breathe on Me, O Breath of God",
+        "composer": "ST COLUMBA (Traditional Irish) • Edwin Hatch",
+        "description": "Spirit Descends at Baptism"
+      }
+    },
+    {
+      "community": "Elevations",
+      "communityId": "elevations",
+      "date": "Year A — Jan 11, 2026 (Sun)",
+      "presider": "TBD",
+      "gathering": {
+        "title": "Come to the Water",
+        "composer": "John B. Foley, SJ • Arranged by Arielle Phan",
+        "description": "Baptism of the Lord"
+      },
+      "penitentialAct": {
+        "title": "Kyrie (Misa Del Mundo)",
+        "composer": "Jesse Manibusan — If needed."
+      },
+      "gloria": {
+        "title": "Glory, Glory, Gloria! (Mass of the Setting Sun)"
+      },
+      "responsorialPsalm": {
+        "psalm": "Ps 29 The Lord will bless his people with peace.",
+        "setting": "Francesca LaRosa"
+      },
+      "gospelAcclamation": {
+        "title": "Hallelujah (adapted for Liturgy)",
+        "composer": "Leonard Cohen",
+        "verse": "The heavens were opened\nand the voice of the Father thundered:\nThis is my beloved Son, listen to him."
+      },
+      "offertory": {
+        "title": "When Jesus Comes to Jordan's Stream [NEW]",
+        "composer": "Text by Michael Joncas • Music by Casey McKinley",
+        "description": "Baptism of the Lord"
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "Mass of Glory (Christmas Intro)",
+        "composer": "Bob Hurd • Ken Canedo"
+      },
+      "lordsPrayer": {
+        "title": "Echo Our Father",
+        "composer": "Andrews • Arr. by Bonilla • Lockwood • Fajardo"
+      },
+      "fractionRite": {
+        "title": "Lamb of God (Mass of Glory)"
+      },
+      "communionSongs": [
+        {
+          "title": "This Is My Beloved Son",
+          "composer": "John Angotti",
+          "description": "Baptism of the Lord Text"
+        },
+        {
+          "title": "The Feast Meant for Everyone",
+          "composer": "Tom Booth & Sarah Hart",
+          "description": "Poverty Awareness Month • \"...bread for the poor...\""
+        },
+        {
+          "title": "Rest On Us [NEW SONG]",
+          "composer": "Maverick City Music • Brandon Lake • Eniola Abioye",
+          "description": "“As the Spirit was moving over the water…\""
+        }
+      ],
+      "sending": {
+        "title": "I Send You Out",
+        "composer": "John Angotti",
+        "description": "Baptism of the Lord"
+      }
+    }
+  ]
+}

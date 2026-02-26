@@ -1,0 +1,26 @@
+{
+  "id": "year-c-nov-11-2025-tue",
+  "name": "Year C — Nov 11, 2025 (Tue)",
+  "year": "ABC",
+  "season": "ordinary",
+  "seasonLabel": "Ordinary Time",
+  "seasonOrder": 11,
+  "dates": [],
+  "lectionary": {
+    "number": "Year B — Nov 11, 2030 (Mon)",
+    "gospelTitle": "Year A — Nov 11, 2029 (Sun)",
+    "thematicTag": "Year C — Nov 11, 2028 (Sat)",
+    "thematicDetail": "Year B — Nov 11, 2027 (Thu)"
+  },
+  "readings": [
+    {
+      "type": "psalm",
+      "citation": "🇺🇸 TUESDAY 🇺🇸",
+      "summary": "",
+      "antiphon": "Planning Reminders"
+    }
+  ],
+  "antiphons": [],
+  "planningNotes": [],
+  "musicPlans": []
+}

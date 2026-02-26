@@ -1,0 +1,328 @@
+{
+  "id": "lent-05-b",
+  "name": "LENT 05 [B]",
+  "year": "B",
+  "season": "lent",
+  "seasonLabel": "Lent",
+  "seasonOrder": 5,
+  "dates": [
+    {
+      "date": "2024-03-17",
+      "label": "Year B — Mar 17, 2024 (Sun)",
+      "dayOfWeek": "Sun"
+    },
+    {
+      "date": "2036-03-30",
+      "label": "Year B — Mar 30, 2036 (Sun)",
+      "dayOfWeek": "Sun"
+    },
+    {
+      "date": "2033-04-03",
+      "label": "Year B — Apr 03, 2033 (Sun)",
+      "dayOfWeek": "Sun"
+    },
+    {
+      "date": "2030-04-07",
+      "label": "Year B — Apr 07, 2030 (Sun)",
+      "dayOfWeek": "Sun"
+    },
+    {
+      "date": "2027-03-14",
+      "label": "Year B — Mar 14, 2027 (Sun)",
+      "dayOfWeek": "Sun"
+    }
+  ],
+  "lectionary": {
+    "number": "035•B",
+    "gospelTitle": "A Grain of Wheat Dies",
+    "thematicTag": "Hour Has Come"
+  },
+  "readings": [
+    {
+      "type": "first",
+      "citation": "Jer 31:31-34",
+      "summary": "The Lord promises a new covenant."
+    },
+    {
+      "type": "psalm",
+      "citation": "Ps 51:3-4, 12-13, 14-15, R. v.12a\nCreate a clean heart in me, O God.",
+      "summary": "",
+      "antiphon": "Ps 51:3-4, 12-13, 14-15, R. v.12a\nCreate a clean heart in me, O God."
+    },
+    {
+      "type": "second",
+      "citation": "Heb 5:7-9",
+      "summary": "Christ is the source of salvation for all who obey."
+    },
+    {
+      "type": "gospel_verse",
+      "citation": "Jn 12:26",
+      "summary": "Whoever serves me must follow me, says the Lord;\nand where I am, there also will my servant be."
+    },
+    {
+      "type": "gospel",
+      "citation": "Jn 12:20-33",
+      "summary": "Jesus foretells of his death and resurrection."
+    }
+  ],
+  "antiphons": [
+    {
+      "type": "entrance",
+      "option": 1,
+      "citation": "Cf. Ps 43 (42):1–2",
+      "text": "Give me justice, O God,\nand plead my cause against a nation that is faithless.\nFrom the deceitful and cunning rescue me,\nfor you, O God, are my strength."
+    },
+    {
+      "type": "communion",
+      "option": 1,
+      "citation": "For Jn 12:24 (Grain of Wheat)",
+      "text": "Amen, Amen I say to you: Unless a grain of wheat\nfalls to the ground and dies, it remains a single grain.\nBut if it dies, it bears much fruit."
+    }
+  ],
+  "planningNotes": [
+    "🍀  ST. PATRICK'S DAY | MAR 17  🍀",
+    "⏰ DST - 2027 - MAR 14 - LOSE HOUR"
+  ],
+  "musicPlans": [
+    {
+      "community": "Reflections",
+      "communityId": "reflections",
+      "date": "Year B — Mar 13, 2027 (Sat)",
+      "presider": "NOT THIS YEAR",
+      "prelude": {
+        "title": "See Taizé Setlist"
+      },
+      "gathering": {
+        "title": "Gather Us in Mercy, Lord",
+        "composer": "Gabe Huck • Adapted and Arr. by Tony Alonso"
+      },
+      "penitentialAct": {
+        "title": "Kyrie (Mass of Colour) — optional tropes",
+        "composer": "Jeffrey Bonilla & David Lockwood"
+      },
+      "responsorialPsalm": {
+        "psalm": "Ps 51 Create a clean heart in me, O God.",
+        "setting": "The Lyric Psalter • Tony Alonso & Marty Haugen"
+      },
+      "gospelAcclamation": {
+        "title": "Mass of Joy & Peace Lenten G.A. (Refrain)",
+        "composer": "The Lyric Gospel Acclamations • Tony Alonso",
+        "verse": "Whoever serves me must follow me, says the Lord;\nand where I am, there also will my servant be."
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "Mass of Creation",
+        "composer": "Marty Haugen • Arr. by Lockwood & Phan"
+      },
+      "lordsPrayer": {
+        "title": "Chanted Our Father (Snow)",
+        "composer": "Jennings/Paregorius"
+      },
+      "fractionRite": {
+        "title": "Lamb of God (Mass of Creation)",
+        "composer": "Marty Haugen • Arr. by Lockwood & Phan"
+      },
+      "communionSongs": [
+        {
+          "title": "Psalm 23: Shepherd Me, O God",
+          "composer": "Marty Haugen",
+          "description": "Lent 5B"
+        }
+      ]
+    },
+    {
+      "community": "Foundations",
+      "communityId": "foundations",
+      "date": "Year B — Mar 14, 2027 (Sun)",
+      "presider": "NOT THIS YEAR",
+      "penitentialAct": {
+        "title": "Kyrie (Mass of Colour) — optional tropes",
+        "composer": "Jeffrey Bonilla & David Lockwood"
+      },
+      "responsorialPsalm": {
+        "psalm": "Ps 51 Create a clean heart in me, O God.",
+        "setting": "Spirit & Psalm • Sarah Hart"
+      },
+      "gospelAcclamation": {
+        "title": "Praise to You, Lord Jesus Christ",
+        "composer": "Ed Archer",
+        "verse": "Whoever serves me must follow me, says the Lord;\nand where I am, there also will my servant be."
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "Mass of a Firm Foundation",
+        "composer": "David Lockwood"
+      },
+      "lordsPrayer": {
+        "title": "Chanted Our Father (Snow)",
+        "composer": "Jennings • Paregorius"
+      },
+      "fractionRite": {
+        "title": "Lamb of God (Mass of a Firm Foundation)",
+        "composer": "David Lockwood"
+      },
+      "communionSongs": [
+        {
+          "title": "Beyond the Days",
+          "composer": "Ricky Manalo, CSP"
+        },
+        {
+          "title": "Change Our Hearts",
+          "composer": "Rory Cooney",
+          "description": "Lenten Song"
+        }
+      ],
+      "sending": {
+        "title": "40 Days",
+        "composer": "Matt Maher",
+        "description": "Lenten Sending"
+      }
+    },
+    {
+      "community": "Generations",
+      "communityId": "generations",
+      "date": "Year B — Mar 14, 2027 (Sun)",
+      "presider": "NOT THIS YEAR",
+      "penitentialAct": {
+        "title": "Kyrie (Mass of Colour) — optional tropes",
+        "composer": "Jeffrey Bonilla & David Lockwood"
+      },
+      "responsorialPsalm": {
+        "psalm": "Ps 51 Create a clean heart in me, O God.",
+        "setting": "Spirit & Psalm • Sarah Hart"
+      },
+      "gospelAcclamation": {
+        "title": "Praise to You, Lord Jesus Christ",
+        "composer": "Ed Archer",
+        "verse": "Whoever serves me must follow me, says the Lord;\nand where I am, there also will my servant be."
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "Mass of Colour",
+        "composer": "Jeffrey Bonilla & David Lockwood"
+      },
+      "lordsPrayer": {
+        "title": "Spoken during Season of Lent"
+      },
+      "fractionRite": {
+        "title": "Lamb of God (Mass of Colour)"
+      },
+      "communionSongs": [
+        {
+          "title": "Beyond the Days",
+          "composer": "Ricky Manalo, CSP",
+          "description": "\"we see the dawn of a new day\""
+        },
+        {
+          "title": "Beyond the Days",
+          "composer": "Ricky Manalo, CSP",
+          "description": "\"we see the dawn of a new day\""
+        }
+      ],
+      "sending": {
+        "title": "—"
+      }
+    },
+    {
+      "community": "Heritage",
+      "communityId": "heritage",
+      "date": "Year B — Mar 14, 2027 (Sun)",
+      "presider": "NOT THIS YEAR",
+      "gathering": {
+        "title": "Gather Us in Mercy, Lord",
+        "composer": "Gabe Huck • Adapted and Arr. by Tony Alonso",
+        "description": "Lentan Gathering Song"
+      },
+      "penitentialAct": {
+        "title": "Kyrie (Mass of Colour) — optional tropes",
+        "composer": "Jeffrey Bonilla & David Lockwood"
+      },
+      "responsorialPsalm": {
+        "psalm": "Ps 51 Create a clean heart in me, O God.",
+        "setting": "The Lyric Psalter • Tony Alonso & Marty Haugen"
+      },
+      "gospelAcclamation": {
+        "title": "Mass of Joy & Peace Lenten G.A. (Refrain)",
+        "composer": "The Lyric Gospel Acclamations • Tony Alonso",
+        "verse": "Whoever serves me must follow me, says the Lord;\nand where I am, there also will my servant be."
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "Mass of Creation - Rev. 2010",
+        "composer": "Marty Haugen"
+      },
+      "lordsPrayer": {
+        "title": "Chanted Our Father (Snow)",
+        "composer": "Jennings/Paregorius"
+      },
+      "fractionRite": {
+        "title": "Lamb of God (Mass of Creation)"
+      },
+      "communionSongs": [
+        {
+          "title": "Beyond the Days",
+          "composer": "Ricky Manalo, CSP"
+        },
+        {
+          "title": "Eat This Bread",
+          "composer": "Taizé • Jacques Berthier",
+          "description": "Lenten Communion"
+        },
+        {
+          "title": "Unless a Grain Wheat",
+          "composer": "Bob Hurd",
+          "description": "\"...but if it die, it will yield a rich harvest\""
+        }
+      ],
+      "sending": {
+        "title": "God of Day and God of Darkness",
+        "composer": "BEACH SPRING • Marty Haugen",
+        "description": "Lenten Sending"
+      }
+    },
+    {
+      "community": "Elevations",
+      "communityId": "elevations",
+      "date": "Year B — Mar 14, 2027 (Sun)",
+      "presider": "NOT THIS YEAR",
+      "penitentialAct": {
+        "title": "Kyrie (Mass of Colour) — optional tropes",
+        "composer": "Jeffrey Bonilla & David Lockwood"
+      },
+      "responsorialPsalm": {
+        "psalm": "Ps 51 Create a clean heart in me, O God.",
+        "setting": "Spirit & Psalm • Sarah Hart"
+      },
+      "gospelAcclamation": {
+        "title": "Praise to You, Lord Jesus Christ",
+        "composer": "Ed Archer",
+        "verse": "Whoever serves me must follow me, says the Lord;\nand where I am, there also will my servant be."
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "Mass of Colour",
+        "composer": "Bonilla & Lockwood"
+      },
+      "lordsPrayer": {
+        "title": "Echo Our Father",
+        "composer": "Andrews, Arr. Bonilla • Lockwood • Fajardo"
+      },
+      "fractionRite": {
+        "title": "Lamb of God (Mass of Colour)",
+        "composer": "Jeffrey Bonilla & David Lockwood"
+      },
+      "communionSongs": [
+        {
+          "title": "Beyond the Days",
+          "composer": "Ricky Manalo, CSP",
+          "description": "Lenten Communion"
+        },
+        {
+          "title": "Unless A Grain Of Wheat",
+          "composer": "John Angotti",
+          "description": "\"But if it dies, it shall bear fruit in the world\""
+        }
+      ],
+      "sending": {
+        "title": "Create In Me",
+        "composer": "Rend Collective",
+        "description": "Psalm 51"
+      }
+    }
+  ]
+}

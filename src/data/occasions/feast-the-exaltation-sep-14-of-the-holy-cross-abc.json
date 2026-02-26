@@ -1,0 +1,426 @@
+{
+  "id": "feast-the-exaltation-sep-14-of-the-holy-cross-abc",
+  "name": "FEAST: The EXALTATION (SEP 14)\n OF THE HOLY CROSS [ABC]",
+  "year": "ABC",
+  "season": "feast",
+  "seasonLabel": "Feast",
+  "seasonOrder": 14,
+  "dates": [
+    {
+      "date": "2025-09-14",
+      "label": "Year C — Sep 14, 2025 (Sun)",
+      "dayOfWeek": "Sun"
+    },
+    {
+      "date": "2029-09-14",
+      "label": "Year A — Sep 14, 2029 (Fri)",
+      "dayOfWeek": "Fri"
+    },
+    {
+      "date": "2028-09-14",
+      "label": "Year C — Sep 14, 2028 (Thu)",
+      "dayOfWeek": "Thu"
+    },
+    {
+      "date": "2027-09-14",
+      "label": "Year B — Sep 14, 2027 (Tue)",
+      "dayOfWeek": "Tue"
+    },
+    {
+      "date": "2026-09-14",
+      "label": "Year A — Sep 14, 2026 (Mon)",
+      "dayOfWeek": "Mon"
+    }
+  ],
+  "lectionary": {
+    "number": "638•ABC",
+    "gospelTitle": "Son of Man Lifted Up",
+    "thematicTag": "Lifted Up for Life"
+  },
+  "readings": [
+    {
+      "type": "first",
+      "citation": "Nm 21:4b-9",
+      "summary": "The Israelites are delivered from the fiery serpents."
+    },
+    {
+      "type": "psalm",
+      "citation": "Ps 78:1bc-2, 34-35, 36-37, 38\nDo not forget the works of the Lord!",
+      "summary": "",
+      "antiphon": "Ps 78:1bc-2, 34-35, 36-37, 38\nDo not forget the works of the Lord!"
+    },
+    {
+      "type": "second",
+      "citation": "Phil 2:6-11",
+      "summary": "Paul acknowledges Jesus as Lord."
+    },
+    {
+      "type": "gospel_verse",
+      "citation": "",
+      "summary": "We adore you, O Christ, and we bless you,\nbecause by your Cross you have redeemed the world."
+    },
+    {
+      "type": "gospel",
+      "citation": "Jn 3:13-17",
+      "summary": "The Son of Man must be lifted up to gain eternal life."
+    }
+  ],
+  "antiphons": [
+    {
+      "type": "entrance",
+      "option": 1,
+      "citation": "Cf. Gal 6:14",
+      "text": "We should glory in the Cross of our Lord Jesus Christ,\nin whom is our salvation, life and resurrection,\nthrough whom we are saved and delivered."
+    },
+    {
+      "type": "communion",
+      "option": 1,
+      "citation": "Jn 12:32",
+      "text": "When I am lifted up from the earth,\nI will draw everyone to myself, says the Lord."
+    }
+  ],
+  "planningNotes": [
+    "SEASON OF CREATION (9/1 - 10/4)",
+    "Catechetical Sunday",
+    "Theme -\"Always be ready to give an explanation..",
+    "for a reason for your hope,\" (1 Peter 3:15)."
+  ],
+  "musicPlans": [
+    {
+      "community": "Reflections",
+      "communityId": "reflections",
+      "date": "Year C — Sep 13, 2025 (Sat)",
+      "presider": "Fr. Thomas Park",
+      "prelude": {
+        "title": "You Are Welcome Here",
+        "composer": "Chris Muglia",
+        "description": "Optional"
+      },
+      "gathering": {
+        "title": "Canticle of the Sun",
+        "composer": "Marty Haugen • Arr. by David Lockwood",
+        "description": "Season of Creation"
+      },
+      "penitentialAct": {
+        "title": "Kyrie • Misa Del Mundo",
+        "composer": "Only if needed. Talk to presider!"
+      },
+      "gloria": {
+        "title": "Glory to God (Through-composed Setting)",
+        "composer": "Mass of Renewal • Curtis Stephan"
+      },
+      "responsorialPsalm": {
+        "psalm": "Ps 78 Do not forget the works of the Lord!",
+        "setting": "The Lyric Psalter • Tony Alonso & Marty Haugen"
+      },
+      "gospelAcclamation": {
+        "title": "Alleluia (Mass of Joy & Peace)",
+        "composer": "Exxaltation of the H.C. — \"We adore you...\""
+      },
+      "offertory": {
+        "title": "Only This I Want",
+        "composer": "Dan Schutte",
+        "description": "\"...and to bear his cross, so to wear the crown he wore.\""
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "Mass for the Healing of the World",
+        "composer": "Trevor Thomson"
+      },
+      "lordsPrayer": {
+        "title": "Chanted Our Father (Snow)",
+        "composer": "Jennings/Paregorius"
+      },
+      "fractionRite": {
+        "title": "Lamb of God (Mass for the Healing of the World)",
+        "composer": "Trevor Thomson"
+      },
+      "communionSongs": [
+        {
+          "title": "Crux Fidelis",
+          "composer": "Steven C. Warner",
+          "description": "Holy Cross Song"
+        },
+        {
+          "title": "Glory in the Cross",
+          "composer": "Dan Schutte",
+          "description": "Feast of the Exaltation of the Holy Cross"
+        },
+        {
+          "title": "Jesus the Lord",
+          "composer": "Roc O’Connor SJ  • John Foley SJ",
+          "description": "Song of praise."
+        }
+      ],
+      "sending": {
+        "title": "Lift High the Cross",
+        "composer": "CRUCIFER • Sydney H. Nicholson",
+        "description": "Feast of the Exaltation of the Holy Cross"
+      }
+    },
+    {
+      "community": "Foundations",
+      "communityId": "foundations",
+      "date": "Year C — Sep 14, 2025 (Sun)",
+      "presider": "Fr. Vince Kuna",
+      "gathering": {
+        "title": "Be Though My Vision",
+        "composer": "SLANE • Arranged by Assad",
+        "description": "Jesus teachus us the way of the law through a new lens."
+      },
+      "penitentialAct": {
+        "title": "Kyrie (Gift of God) • Adapted Version",
+        "composer": "Marty Haugen • Arranged by David Locwood"
+      },
+      "gloria": {
+        "title": "Mass of Joy & Peace (Gospel Version)",
+        "composer": "Tony Alonso • Arrangement by David Lockwood"
+      },
+      "responsorialPsalm": {
+        "psalm": "Ps 1 Blessed are they who hope in the Lord.",
+        "setting": "The Lyric Psalter • Tony Alonso & Marty Haugen"
+      },
+      "gospelAcclamation": {
+        "title": "Alleluia! Give the Glory (Mass of Glory)",
+        "composer": "Bob Hurd •  Ken Canedo • Craig Kingsbury",
+        "verse": "Blessed are you, Father, Lord of heaven and earth;\nyou have revealed to little ones\nthe mysteries of the kingdom."
+      },
+      "offertory": {
+        "title": "I Will Choose Christ",
+        "composer": "Tom Booth",
+        "description": "\"...and as I walk this road with you teach me to love.\""
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "Mass of Glory"
+      },
+      "lordsPrayer": {
+        "title": "Chanted Our Father (Snow)",
+        "composer": "Jennings • Paregorius"
+      },
+      "fractionRite": {
+        "title": "Lamb of God (Mass of Glory)"
+      },
+      "communionSongs": [
+        {
+          "title": "I Lift My Soul to You",
+          "composer": "Lori True",
+          "description": "Verses are all about following the law."
+        },
+        {
+          "title": "Precious Lord, Take My Hand",
+          "composer": "Thomas A. Dorsey",
+          "description": "Black History Month • Wildfires • Fr Prosper"
+        }
+      ],
+      "sending": {
+        "title": "Give Us Peace",
+        "composer": "Leon C. Roberts",
+        "description": "Black History Month"
+      }
+    },
+    {
+      "community": "Generations",
+      "communityId": "generations",
+      "date": "Year C — Sep 14, 2025 (Sun)",
+      "presider": "Msgr. Lloyd Torgerson",
+      "prelude": {
+        "title": "You Are Welcome Here",
+        "composer": "Chris Muglia",
+        "description": "Optional"
+      },
+      "gathering": {
+        "title": "Canticle of the Sun",
+        "composer": "Marty Haugen • Arr. by David Lockwood",
+        "description": "Season of Creation"
+      },
+      "penitentialAct": {
+        "title": "Kyrie • Misa Del Mundo",
+        "composer": "Only if needed. Talk to presider!"
+      },
+      "gloria": {
+        "title": "Glory, Glory, Gloria!",
+        "composer": "Jeffrey Bonilla & Drew Wilson"
+      },
+      "responsorialPsalm": {
+        "psalm": "Ps 78 Do not forget the works of the Lord!",
+        "setting": "Spirit & Psalm • Paul Hillebrand & Tom Booth"
+      },
+      "gospelAcclamation": {
+        "title": "Setting from Mass of St. Kilian",
+        "composer": "Exaltation of the Holy Cross — \"We adore...\""
+      },
+      "offertory": {
+        "title": "Build a Family",
+        "composer": "Ed Bolduc • Arranged by Daniel Houze",
+        "description": "Installation of Dr. Erin Luby"
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "Mass of Restoration",
+        "composer": "Joshua Blakesley"
+      },
+      "lordsPrayer": {
+        "title": "(Echo) Our Father",
+        "composer": "Jerome Andrews • Arranged by Dan Houze"
+      },
+      "fractionRite": {
+        "title": "Lamb of God (Resoration)"
+      },
+      "communionSongs": [
+        {
+          "title": "One Bread, One Cup",
+          "composer": "Fisher • Canedo • Lee • Aven",
+          "description": "Table Song"
+        },
+        {
+          "title": "Pan del Cielo / Bread from Heaven",
+          "composer": "Iván Díaz • Tom Booth • Estela García",
+          "description": "\"...strength for all who journey\""
+        },
+        {
+          "title": "Strength for the Journey",
+          "composer": "Michael John Poirier",
+          "description": "\"...there is a cross meant for you alone...\""
+        },
+        {
+          "title": "At The Cross (Love Ran Red)",
+          "composer": "Chris Tomlin",
+          "description": "\"...mercy reigns and never dies\""
+        }
+      ],
+      "sending": {
+        "title": "Lift High the Cross [NEW]",
+        "composer": "CRUCIFER • Nicholson • Arr. by David Lockwood"
+      }
+    },
+    {
+      "community": "Heritage",
+      "communityId": "heritage",
+      "date": "Year C — Sep 14, 2025 (Sun)",
+      "presider": "\"Fr. David Guffey, CSC\"",
+      "gathering": {
+        "title": "Praise To the Lord, the Almighty",
+        "composer": "LOBE DEN HERREN • Gesangbuch • Ed Archer",
+        "description": "\"Surely his goodness and mercy shall daily atteend us\""
+      },
+      "penitentialAct": {
+        "title": "Kyrie • Misa Del Mundo",
+        "composer": "Only if needed. Talk to presider!"
+      },
+      "gloria": {
+        "title": "Glory to God (Mass of Christ the Savior)",
+        "composer": "Dan Schutte"
+      },
+      "responsorialPsalm": {
+        "psalm": "Ps 78 Do not forget the works of the Lord!",
+        "setting": "The Lyric Psalter • Tony Alonso & Marty Haugen"
+      },
+      "gospelAcclamation": {
+        "title": "Alleluia (Mass of Joy & Peace)",
+        "composer": "Exxaltation of the H.C. — \"We adore you...\""
+      },
+      "offertory": {
+        "title": "Only This I Want",
+        "composer": "Dan Schutte",
+        "description": "\"...and to bear his cross, so to wear the crown he wore.\""
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "Mass of Christ the Savior - Dan Schutte"
+      },
+      "lordsPrayer": {
+        "title": "Echo Our Father",
+        "composer": "Andrews, Arr. Bonilla • Lockwood • Fajardo"
+      },
+      "fractionRite": {
+        "title": "Lamb of God (Mass of Christ the Savior)"
+      },
+      "communionSongs": [
+        {
+          "title": "Crux Fidelis",
+          "composer": "Steven C. Warner",
+          "description": "Holy Cross Song"
+        },
+        {
+          "title": "We Remember",
+          "composer": "Marty Haugen",
+          "description": "\"We remember how you loved us to your death\""
+        },
+        {
+          "title": "Jesus the Lord",
+          "composer": "Roc O’Connor SJ  • John Foley SJ",
+          "description": "Song of praise."
+        }
+      ],
+      "sending": {
+        "title": "Lift High the Cross",
+        "composer": "CRUCIFER • Sydney H. Nicholson",
+        "description": "Feast of the Exaltation of the Holy Cross"
+      }
+    },
+    {
+      "community": "Elevations",
+      "communityId": "elevations",
+      "date": "Year C — Sep 14, 2025 (Sun)",
+      "presider": "Fr. Eusebio Llonoso",
+      "prelude": {
+        "title": "You Are Welcome Here",
+        "composer": "Chris Muglia",
+        "description": "Optional"
+      },
+      "gathering": {
+        "title": "Canticle of the Sun",
+        "composer": "Marty Haugen • Arr. by David Lockwood",
+        "description": "Season of Creation"
+      },
+      "penitentialAct": {
+        "title": "Kyrie • Misa Del Mundo",
+        "composer": "Only if needed. Talk to presider!"
+      },
+      "gloria": {
+        "title": "Glory, Glory, Gloria!"
+      },
+      "responsorialPsalm": {
+        "psalm": "Ps 78 Do not forget the works of the Lord!",
+        "setting": "Spirit & Psalm • Paul Hillebrand & Tom Booth"
+      },
+      "gospelAcclamation": {
+        "title": "Setting from Mass of St. Kilian",
+        "verse": "Exaltation of the Holy Cross — \"We adore...\""
+      },
+      "offertory": {
+        "title": "In Christ Alone",
+        "composer": "Keith & Kristyn Getty • Arr. by Micah Jones",
+        "description": "\"The love of God was magnified\""
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "Mass of Restoration • Joshua Blakesley"
+      },
+      "lordsPrayer": {
+        "title": "Echo Our Father",
+        "composer": "Andrews, Arr. Bonilla • Lockwood • Fajardo"
+      },
+      "fractionRite": {
+        "title": "Lamb of God (Resoration)"
+      },
+      "communionSongs": [
+        {
+          "title": "Pan del Cielo / Bread from Heaven",
+          "composer": "Iván Díaz • Tom Booth • Estela García",
+          "description": "\"...strength for all who journey\""
+        },
+        {
+          "title": "At The Cross (Love Ran Red)",
+          "composer": "Chris Tomlin",
+          "description": "\"...mercy reigns and never dies\""
+        },
+        {
+          "title": "What A Beautiful Name (Gospel Version)",
+          "composer": "Hillsong Worship",
+          "description": "Second Reading: the name that is above every name."
+        }
+      ],
+      "sending": {
+        "title": "Lift High the Cross [NEW]",
+        "composer": "CRUCIFER • Nicholson • Arr. by David Lockwood"
+      }
+    }
+  ]
+}

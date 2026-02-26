@@ -1,0 +1,352 @@
+{
+  "id": "lent-03-c",
+  "name": "LENT 03 [C]",
+  "year": "C",
+  "season": "lent",
+  "seasonLabel": "Lent",
+  "seasonOrder": 3,
+  "dates": [
+    {
+      "date": "2025-03-23",
+      "label": "Year C — Mar 23, 2025 (Sun)",
+      "dayOfWeek": "Sun"
+    },
+    {
+      "date": "2037-03-08",
+      "label": "Year C — Mar 08, 2037 (Sun)",
+      "dayOfWeek": "Sun"
+    },
+    {
+      "date": "2034-03-12",
+      "label": "Year C — Mar 12, 2034 (Sun)",
+      "dayOfWeek": "Sun"
+    },
+    {
+      "date": "2031-03-16",
+      "label": "Year C — Mar 16, 2031 (Sun)",
+      "dayOfWeek": "Sun"
+    },
+    {
+      "date": "2028-03-19",
+      "label": "Year C — Mar 19, 2028 (Sun)",
+      "dayOfWeek": "Sun"
+    }
+  ],
+  "lectionary": {
+    "number": "030•C",
+    "gospelTitle": "The Parable of the Fig Tree",
+    "thematicTag": "Call to Repent – Jerusalem"
+  },
+  "readings": [
+    {
+      "type": "first",
+      "citation": "Ex 3:1-8a, 13-15",
+      "summary": "The Lord calls Moses from a burning bush."
+    },
+    {
+      "type": "psalm",
+      "citation": "Ps 103: 1-2, 3-4, 6-7, 8, 11, R. v.8a\nThe Lord is kind and merciful.",
+      "summary": "",
+      "antiphon": "Ps 103: 1-2, 3-4, 6-7, 8, 11, R. v.8a\nThe Lord is kind and merciful."
+    },
+    {
+      "type": "second",
+      "citation": "1 Cor 10:1-6, 10-12",
+      "summary": "We must learn from the example of our ancestors."
+    },
+    {
+      "type": "gospel_verse",
+      "citation": "Mt 4:17",
+      "summary": "Repent, says the Lord;\nthe kingdom of heaven is at hand."
+    },
+    {
+      "type": "gospel",
+      "citation": "Lk 13:1-9",
+      "summary": "The parable of the fig tree."
+    }
+  ],
+  "antiphons": [
+    {
+      "type": "entrance",
+      "option": 1,
+      "citation": "Cf. Ps 25 (24):15–16]",
+      "text": "My eyes are always on the Lord,\nfor he rescues my feet from the snare.\nTurn to me and have mercy on me,\nfor I am alone and poor."
+    },
+    {
+      "type": "entrance",
+      "option": 2,
+      "citation": "Entrance Antiphon • Option II | Cf. Ez 36:23–26",
+      "text": "When I prove my holiness among you,\nI will gather you from all the foreign lands;\nand I will pour clean water upon you\nand cleanse you from all your impurities,\nand I will give you a new spirit, says the Lord."
+    },
+    {
+      "type": "communion",
+      "option": 1,
+      "citation": "Years B & C - Ps 84 (83):4–5",
+      "text": "The sparrow finds a home, and the swallow a nest for her young: by your altars, O Lord of hosts, my King and my God. Blessed are they who dwell in your house, for ever singing your praise."
+    }
+  ],
+  "planningNotes": [
+    "🍀  ST. PATRICK'S DAY | MAR 17  🍀"
+  ],
+  "musicPlans": [
+    {
+      "community": "Reflections",
+      "communityId": "reflections",
+      "date": "Year C — Mar 18, 2028 (Sat)",
+      "presider": "NOT THIS YEAR",
+      "prelude": {
+        "title": "See Taizé Setlist"
+      },
+      "gathering": {
+        "title": "Gather Us in Mercy, Lord",
+        "composer": "Gabe Huck • Adapted and Arr. by Tony Alonso"
+      },
+      "penitentialAct": {
+        "title": "Kyrie (Mass of Colour) — optional tropes",
+        "composer": "Jeffrey Bonilla & David Lockwood"
+      },
+      "responsorialPsalm": {
+        "psalm": "Ps 103 The Lord is kind and merciful.",
+        "setting": "The Lyric Psalter • Tony Alonso & Marty Haugen"
+      },
+      "gospelAcclamation": {
+        "title": "Mass of Joy & Peace Lenten G.A. (Refrain)",
+        "composer": "The Lyric Gospel Acclamations • Tony Alonso",
+        "verse": "Repent, says the Lord;\nthe kingdom of heaven is at hand."
+      },
+      "offertory": {
+        "title": "Turn Our Hearts Around",
+        "composer": "Trevor Thomson",
+        "description": "\"Hold us in your mercy\""
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "Mass of Creation",
+        "composer": "Marty Haugen • Arr. by Lockwood & Phan"
+      },
+      "lordsPrayer": {
+        "title": "Chanted Our Father (Snow)",
+        "composer": "Jennings/Paregorius"
+      },
+      "fractionRite": {
+        "title": "Lamb of God (Mass of Creation)",
+        "composer": "Marty Haugen • Arr. by Lockwood & Phan"
+      },
+      "communionSongs": [
+        {
+          "title": "Beyond the Days",
+          "composer": "Ricky Manalo, CSP",
+          "description": "Lenten Song"
+        },
+        {
+          "title": "Turn To Me",
+          "composer": "John Foley SJ",
+          "description": "Lenten Song"
+        },
+        {
+          "title": "Center of My Life",
+          "composer": "Paul Inwood • Arranged by David Lockwood",
+          "description": "\"You will show me the path of life\""
+        }
+      ],
+      "sending": {
+        "title": "Led by the Spirit",
+        "composer": "KINGSFOLD • Bob Hurd",
+        "description": "Lenten Sending"
+      }
+    },
+    {
+      "community": "Foundations",
+      "communityId": "foundations",
+      "date": "Year C — Mar 19, 2028 (Sun)",
+      "presider": "NOT THIS YEAR",
+      "gathering": {
+        "title": "Lead Me, Guide Me",
+        "composer": "Doris Akers • Richard Smallwood",
+        "description": "\"help me trod the paths of righteousness\""
+      },
+      "penitentialAct": {
+        "title": "Kyrie (Mass of Colour) — optional tropes",
+        "composer": "Jeffrey Bonilla & David Lockwood"
+      },
+      "responsorialPsalm": {
+        "psalm": "Ps 103 The Lord is kind and merciful.",
+        "setting": "The Lyric Psalter • Tony Alonso & Marty Haugen"
+      },
+      "gospelAcclamation": {
+        "title": "Praise to You, Lord Jesus Christ",
+        "composer": "Ed Archer",
+        "verse": "Repent, says the Lord;\nthe kingdom of heaven is at hand."
+      },
+      "offertory": {
+        "title": "Turn Our Hearts Around",
+        "composer": "Trevor Thomson",
+        "description": "\"Hold us in your mercy\""
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "Mass of a Firm Foundation"
+      },
+      "lordsPrayer": {
+        "title": "Chanted Our Father (Snow)",
+        "composer": "Jennings • Paregorius"
+      },
+      "fractionRite": {
+        "title": "Lamb of God (Mass of a Firm Foundation)"
+      },
+      "communionSongs": [
+        {
+          "title": "Beyond the Days",
+          "composer": "Ricky Manalo, CSP"
+        },
+        {
+          "title": "Change Our Hearts",
+          "composer": "Rory Cooney",
+          "description": "Lenten Song"
+        }
+      ],
+      "sending": {
+        "title": "40 Days",
+        "composer": "Matt Maher",
+        "description": "Lenten Sending"
+      }
+    },
+    {
+      "community": "Generations",
+      "communityId": "generations",
+      "date": "Year C — Mar 19, 2028 (Sun)",
+      "presider": "NOT THIS YEAR",
+      "penitentialAct": {
+        "title": "Kyrie (Mass of Colour) — optional tropes",
+        "composer": "Jeffrey Bonilla & David Lockwood"
+      },
+      "responsorialPsalm": {
+        "psalm": "Ps 103 The Lord is kind and merciful",
+        "setting": "Ed Archer • No Audio Available (Check back to Youtube)"
+      },
+      "gospelAcclamation": {
+        "title": "Praise to You, Lord Jesus Christ",
+        "composer": "Ed Archer",
+        "verse": "Repent, says the Lord;\nthe kingdom of heaven is at hand."
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "Mass of Colour",
+        "composer": "Jeffrey Bonilla & David Lockwood"
+      },
+      "lordsPrayer": {
+        "title": "Spoken during Season of Lent"
+      },
+      "fractionRite": {
+        "title": "Lamb of God (Mass of Colour)"
+      },
+      "communionSongs": [
+        {
+          "title": "Beyond the Days",
+          "composer": "Ricky Manalo, CSP",
+          "description": "\"we see the dawn of a new day\""
+        }
+      ],
+      "sending": {
+        "title": "Create In Me",
+        "composer": "Rend Collective",
+        "description": "Psalm 51"
+      }
+    },
+    {
+      "community": "Heritage",
+      "communityId": "heritage",
+      "date": "Year C — Mar 19, 2028 (Sun)",
+      "presider": "NOT THIS YEAR",
+      "penitentialAct": {
+        "title": "Kyrie (Mass of Colour) — optional tropes",
+        "composer": "Jeffrey Bonilla & David Lockwood"
+      },
+      "responsorialPsalm": {
+        "psalm": "Ps 103 The Lord is kind and merciful.",
+        "setting": "The Lyric Psalter • Tony Alonso & Marty Haugen"
+      },
+      "gospelAcclamation": {
+        "title": "Mass of Joy & Peace Lenten G.A. (Refrain)",
+        "composer": "The Lyric Gospel Acclamations • Tony Alonso",
+        "verse": "Repent, says the Lord;\nthe kingdom of heaven is at hand."
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "Mass of Creation - Rev. 2010",
+        "composer": "Marty Haugen"
+      },
+      "lordsPrayer": {
+        "title": "Chanted Our Father (Snow)",
+        "composer": "Jennings/Paregorius"
+      },
+      "fractionRite": {
+        "title": "Lamb of God (Mass of Creation)"
+      },
+      "sending": {
+        "title": "In These Days of Lenten Journey",
+        "composer": "Ricky Manalo CSP • Gerard Chiusano",
+        "description": "Lenten Sending Song"
+      }
+    },
+    {
+      "community": "Elevations",
+      "communityId": "elevations",
+      "date": "Year C — Mar 19, 2028 (Sun)",
+      "presider": "NOT THIS YEAR",
+      "gathering": {
+        "title": "Gather Us in Mercy, Lord",
+        "composer": "Gabe Huck • Adapted and Arr. by Tony Alonso",
+        "description": "Lenten Gathering Song"
+      },
+      "penitentialAct": {
+        "title": "Kyrie (Mass of Colour) — optional tropes",
+        "composer": "Jeffrey Bonilla & David Lockwood"
+      },
+      "responsorialPsalm": {
+        "psalm": "Ps 103 The Lord is kind and merciful.",
+        "setting": "Ed Archer • No Audio Available (Check back to Youtube)"
+      },
+      "gospelAcclamation": {
+        "title": "Praise to You, Lord Jesus Christ",
+        "composer": "Ed Archer",
+        "verse": "Repent, says the Lord;\nthe kingdom of heaven is at hand."
+      },
+      "offertory": {
+        "title": "Turn Our Hearts Around",
+        "composer": "Trevor Thomson",
+        "description": "\"Hold us in your mercy\""
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "Mass of Colour",
+        "composer": "Bonilla & Lockwood"
+      },
+      "lordsPrayer": {
+        "title": "Echo Our Father",
+        "composer": "Andrews, Arr. Bonilla • Lockwood • Fajardo"
+      },
+      "fractionRite": {
+        "title": "Lamb of God (Mass of Colour)",
+        "composer": "Jeffrey Bonilla & David Lockwood"
+      },
+      "communionSongs": [
+        {
+          "title": "Beyond the Days",
+          "composer": "Ricky Manalo, CSP",
+          "description": "Lenten Communion"
+        },
+        {
+          "title": "Turn To Me",
+          "composer": "John Foley SJ",
+          "description": "Lenten Song"
+        },
+        {
+          "title": "Lord I Need You",
+          "composer": "Matt Maher",
+          "description": "“... when temptation comes my way\""
+        }
+      ],
+      "sending": {
+        "title": "Create In Me",
+        "composer": "Rend Collective",
+        "description": "Psalm 51"
+      }
+    }
+  ]
+}

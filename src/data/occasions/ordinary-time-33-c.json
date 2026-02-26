@@ -1,0 +1,422 @@
+{
+  "id": "ordinary-time-33-c",
+  "name": "ORDINARY TIME 33 [C]",
+  "year": "C",
+  "season": "ordinary",
+  "seasonLabel": "Ordinary Time",
+  "seasonOrder": 33,
+  "dates": [
+    {
+      "date": "2025-11-16",
+      "label": "Year C — Nov 16, 2025 (Sun)",
+      "dayOfWeek": "Sun"
+    },
+    {
+      "date": "2037-11-15",
+      "label": "Year C — Nov 15, 2037 (Sun)",
+      "dayOfWeek": "Sun"
+    },
+    {
+      "date": "2034-11-19",
+      "label": "Year C — Nov 19, 2034 (Sun)",
+      "dayOfWeek": "Sun"
+    },
+    {
+      "date": "2031-11-16",
+      "label": "Year C — Nov 16, 2031 (Sun)",
+      "dayOfWeek": "Sun"
+    },
+    {
+      "date": "2028-11-19",
+      "label": "Year C — Nov 19, 2028 (Sun)",
+      "dayOfWeek": "Sun"
+    }
+  ],
+  "lectionary": {
+    "number": "159•C",
+    "gospelTitle": "Signs of the End",
+    "thematicTag": "End-Time Discourse 2/2"
+  },
+  "readings": [
+    {
+      "type": "first",
+      "citation": "Mal 3:19-20a",
+      "summary": "Evildoers will be destroyed; those who fear God will be saved."
+    },
+    {
+      "type": "psalm",
+      "citation": "Ps 98:5-6, 7-8, 9, R. see v.9\nThe Lord comes to rule the earth with justice.",
+      "summary": "",
+      "antiphon": "Ps 98:5-6, 7-8, 9, R. see v.9\nThe Lord comes to rule the earth with justice."
+    },
+    {
+      "type": "second",
+      "citation": "2 Thes 3:7-12",
+      "summary": "Work hard and earn your keep."
+    },
+    {
+      "type": "gospel_verse",
+      "citation": "Lk 21:28",
+      "summary": "Stand erect and raise your heads\nbecause your redemption is at hand."
+    },
+    {
+      "type": "gospel",
+      "citation": "Lk 21:5-19",
+      "summary": "Patiently endure the trials you are sure to face for Jesus."
+    }
+  ],
+  "antiphons": [
+    {
+      "type": "entrance",
+      "option": 1,
+      "citation": "Jer 29:11, 12, 14",
+      "text": "The Lord said: I think thoughts of peace and not of affliction.\nYou will call upon me, and I will answer you,\nand I will lead back your captives from every place."
+    },
+    {
+      "type": "communion",
+      "option": 1,
+      "citation": "Ps 73 (72):28",
+      "text": "To be near God is my happiness,\nto place my hope in God the Lord."
+    },
+    {
+      "type": "communion",
+      "option": 2,
+      "citation": "Communion Antiphon • Option II | Mk 11:23–24",
+      "text": "Amen, I say to you: Whatever you ask in prayer,\nbelieve that you will receive,\nand it shall be given to you, says the Lord."
+    }
+  ],
+  "planningNotes": [
+    "Black Catholic History Month",
+    "Month of Remembrance"
+  ],
+  "musicPlans": [
+    {
+      "community": "Reflections",
+      "communityId": "reflections",
+      "date": "Year C — Nov 15, 2025 (Sat)",
+      "presider": "Fr. Thomas Park",
+      "prelude": {
+        "title": "Reunited in Everlasting Life",
+        "composer": "Janèt Sullivan Whitaker",
+        "description": "Month of Remembrance"
+      },
+      "gathering": {
+        "title": "Christ Be Our Light",
+        "composer": "Bernadette Farrell • Arr, by Jeffrey Bonilla",
+        "description": "“Longing for peace... longing for hope, many despair.\""
+      },
+      "penitentialAct": {
+        "title": "Kyrie • Misa Del Mundo",
+        "composer": "Only if needed. Talk to presider!"
+      },
+      "gloria": {
+        "title": "Glory to God (Through-composed Setting)",
+        "composer": "Mass of Renewal • Curtis Stephan"
+      },
+      "responsorialPsalm": {
+        "psalm": "Ps 98 The Lord comes to rule the earth...",
+        "setting": "The Lyric Psalter • Tony Alonso & Marty Haugen"
+      },
+      "gospelAcclamation": {
+        "title": "Alleluia (Mass of Joy & Peace)",
+        "composer": "O.T. • 33 | C — \"Stand...\""
+      },
+      "offertory": {
+        "title": "The Clouds’ Veil",
+        "composer": "Liam Lawton",
+        "description": "\"You are by my side\""
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "Mass for the Healing of the World",
+        "composer": "Trevor Thomson"
+      },
+      "lordsPrayer": {
+        "title": "Chanted Our Father (Snow)",
+        "composer": "Jennings/Paregorius"
+      },
+      "fractionRite": {
+        "title": "Lamb of God (Mass for the Healing of the World)",
+        "composer": "Trevor Thomson"
+      },
+      "communionSongs": [
+        {
+          "title": "It Is Well With My Soul",
+          "composer": "VILLE DU HAVRE • Chris Rice",
+          "description": "Verses 1 and 4"
+        },
+        {
+          "title": "Gift of Finest Wheat",
+          "composer": "BICENTENNIAL • Robert Kreutz • Omer Westendorf",
+          "description": "General"
+        },
+        {
+          "title": "Pastures of the Lord",
+          "composer": "Curtis Stephan",
+          "description": "Month of Remembrance"
+        }
+      ],
+      "sending": {
+        "title": "Canticle of the Turning",
+        "composer": "Liam Lawton",
+        "description": "Signs of the End"
+      }
+    },
+    {
+      "community": "Foundations",
+      "communityId": "foundations",
+      "date": "Year C — Nov 16, 2025 (Sun)",
+      "presider": "Fr. Vince Kuna",
+      "gathering": {
+        "title": "Gather Your People",
+        "composer": "Bob Hurd",
+        "description": "\"...one spirit of love\""
+      },
+      "penitentialAct": {
+        "title": "Kyrie (Gift of God) • Adapted Version",
+        "composer": "Marty Haugen • Arranged by David Locwood"
+      },
+      "gloria": {
+        "title": "Glory to God (Mass of Joy & Peace)",
+        "composer": "Alonso • Arr. by Houze OR Arr. by Lockwood"
+      },
+      "responsorialPsalm": {
+        "psalm": "Ps 98 The Lord comes to rule the earth...",
+        "setting": "Spirit & Psalm • Timothy R. Smith"
+      },
+      "offertory": {
+        "title": "It Is Well With My Soul",
+        "composer": "VILLE DU HAVRE • Chris Rice",
+        "description": "Verses 1 and 4"
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "Mass of Glory • Bob Hurd • Arr. by Dan Houze"
+      },
+      "lordsPrayer": {
+        "title": "Chanted Our Father (Snow)",
+        "composer": "Jennings • Paregorius"
+      },
+      "fractionRite": {
+        "title": "Lamb of God (Mass of Glory)"
+      },
+      "communionSongs": [
+        {
+          "title": "Give Me Jesus",
+          "composer": "Spiritual • Sara Watkins",
+          "description": "\"...and when I've come to die, give me Jesus\""
+        },
+        {
+          "title": "Pastures of the Lord",
+          "composer": "Curtis Stephan",
+          "description": "Month of Remembrance"
+        }
+      ],
+      "sending": {
+        "title": "When the Saints Go Marching In",
+        "composer": "TRADITIONAL Arr. Bonilla (Rubato Intro)",
+        "description": "Vss 1, 2, 7 — 10 (as needed)"
+      }
+    },
+    {
+      "community": "Generations",
+      "communityId": "generations",
+      "date": "Year C — Nov 16, 2025 (Sun)",
+      "presider": "Msgr. Lloyd Torgerson",
+      "prelude": {
+        "title": "All My Tears (Be Washed Away)",
+        "composer": "Emmylou Harris and Julie Miller",
+        "description": "Solo prelude - Teresa W."
+      },
+      "gathering": {
+        "title": "Gather Your People",
+        "composer": "Bob Hurd",
+        "description": "\"...one spirit of love\""
+      },
+      "penitentialAct": {
+        "title": "Kyrie • Misa Del Mundo",
+        "composer": "Only if needed. Talk to presider!"
+      },
+      "gloria": {
+        "title": "Glory, Glory, Gloria!",
+        "composer": "Jeffrey Bonilla & Drew Wilson"
+      },
+      "responsorialPsalm": {
+        "psalm": "Ps 98 The Lord comes to rule the earth...",
+        "setting": "Spirit & Psalm • Timothy R. Smith"
+      },
+      "gospelAcclamation": {
+        "title": "Setting from Mass of Renewal",
+        "composer": "O.T. • 33 | C — \"Stand...raise your heads...\""
+      },
+      "offertory": {
+        "title": "It Is Well With My Soul",
+        "composer": "VILLE DU HAVRE • Chris Rice",
+        "description": "Verses 1 and 4"
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "Mass of Restoration",
+        "composer": "Joshua Blakesley"
+      },
+      "lordsPrayer": {
+        "title": "(Echo) Our Father",
+        "composer": "Jerome Andrews • Arranged by Dan Houze"
+      },
+      "fractionRite": {
+        "title": "Lamb of God (Resoration)"
+      },
+      "communionSongs": [
+        {
+          "title": "In the Fields of the Lord",
+          "composer": "Audrey Assad •  Isaac Wardell",
+          "description": "\"...at the harvest of the Lord, the fields are white.\""
+        },
+        {
+          "title": "Give Me Jesus",
+          "composer": "Spiritual • Sara Watkins",
+          "description": "\"...and when I've come to die, give me Jesus\""
+        },
+        {
+          "title": "Gift of Finest Wheat",
+          "composer": "BICENTENNIAL • Robert Kreutz • Omer Westendorf",
+          "description": "General"
+        },
+        {
+          "title": "Scars in Heaven",
+          "composer": "Casting Crowns",
+          "description": "Month of Remembrance"
+        }
+      ],
+      "sending": {
+        "title": "When the Saints Go Marching In",
+        "composer": "TRADITIONAL Arr. Bonilla",
+        "description": "Vss 1, 2, 7 — 10 (as needed)"
+      }
+    },
+    {
+      "community": "Heritage",
+      "communityId": "heritage",
+      "date": "Year C — Nov 16, 2025 (Sun)",
+      "presider": "\"Fr. David Guffey, CSC\"",
+      "gathering": {
+        "title": "Christ Be Our Light",
+        "composer": "Bernadette Farrell • Arr, by Jeffrey Bonilla",
+        "description": "“Longing for peace... longing for hope, many despair.\""
+      },
+      "penitentialAct": {
+        "title": "Kyrie • Misa Del Mundo",
+        "composer": "Only if needed. Talk to presider!"
+      },
+      "gloria": {
+        "title": "Glory to God (Mass of Christ the Savior)",
+        "composer": "Dan Schutte"
+      },
+      "responsorialPsalm": {
+        "psalm": "Ps 98 The Lord comes to rule the earth...",
+        "setting": "The Lyric Psalter • Tony Alonso & Marty Haugen"
+      },
+      "gospelAcclamation": {
+        "title": "Alleluia (Mass of Joy & Peace)",
+        "composer": "O.T. • 33 | C — \"Stand...\""
+      },
+      "offertory": {
+        "title": "The Clouds’ Veil",
+        "composer": "Liam Lawton",
+        "description": "\"You are by my side\""
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "Mass of Christ the Savior - Dan Schutte"
+      },
+      "lordsPrayer": {
+        "title": "Echo Our Father",
+        "composer": "Andrews, Arr. Bonilla • Lockwood • Fajardo"
+      },
+      "fractionRite": {
+        "title": "Lamb of God (Mass of Christ the Savior)"
+      },
+      "communionSongs": [
+        {
+          "title": "It Is Well With My Soul",
+          "composer": "VILLE DU HAVRE • Chris Rice",
+          "description": "Verses 1 and 4"
+        },
+        {
+          "title": "Gift of Finest Wheat",
+          "composer": "BICENTENNIAL • Robert Kreutz • Omer Westendorf",
+          "description": "General"
+        },
+        {
+          "title": "Pastures of the Lord",
+          "composer": "Curtis Stephan",
+          "description": "Month of Remembrance"
+        }
+      ],
+      "sending": {
+        "title": "Canticle of the Turning",
+        "composer": "Liam Lawton",
+        "description": "Signs of the End"
+      }
+    },
+    {
+      "community": "Elevations",
+      "communityId": "elevations",
+      "date": "Year C — Nov 16, 2025 (Sun)",
+      "presider": "Msgr. Lloyd Torgerson",
+      "gathering": {
+        "title": "Christ Be Our Light",
+        "composer": "Bernadette Farrell • Arr, by Jeffrey Bonilla",
+        "description": "“Longing for peace... longing for hope, many despair.\""
+      },
+      "penitentialAct": {
+        "title": "Kyrie • Misa Del Mundo",
+        "composer": "Only if needed. Talk to presider!"
+      },
+      "gloria": {
+        "title": "Glory, Glory, Gloria!"
+      },
+      "responsorialPsalm": {
+        "psalm": "Ps 98 The Lord comes to rule the earth...",
+        "setting": "Spirit & Psalm • Timothy R. Smith"
+      },
+      "gospelAcclamation": {
+        "title": "Setting from Mass of Renewal",
+        "verse": "O.T. • 33 | C — \"Stand...raise your heads...\""
+      },
+      "offertory": {
+        "title": "It Is Well With My Soul",
+        "composer": "VILLE DU HAVRE • Chris Rice",
+        "description": "Verses 1 and 4"
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "Mass of Restoration • Joshua Blakesley"
+      },
+      "lordsPrayer": {
+        "title": "Echo Our Father",
+        "composer": "Andrews, Arr. Bonilla • Lockwood • Fajardo"
+      },
+      "fractionRite": {
+        "title": "Lamb of God (Resoration)"
+      },
+      "communionSongs": [
+        {
+          "title": "In the Fields of the Lord",
+          "composer": "Audrey Assad •  Isaac Wardell",
+          "description": "\"...at the harvest of the Lord, the fields are white.\""
+        },
+        {
+          "title": "Give Me Jesus",
+          "composer": "Spiritual • Sara Watkins",
+          "description": "\"...and when I've come to die, give me Jesus\""
+        },
+        {
+          "title": "Scars in Heaven",
+          "composer": "Casting Crowns",
+          "description": "Month of Remembrance"
+        }
+      ],
+      "sending": {
+        "title": "When the Saints Go Marching In",
+        "composer": "TRADITIONAL Arr. Bonilla",
+        "description": "Vss 1, 2, 7 — 10 (as needed)"
+      }
+    }
+  ]
+}

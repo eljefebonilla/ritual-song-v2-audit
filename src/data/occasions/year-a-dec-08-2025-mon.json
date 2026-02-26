@@ -1,0 +1,52 @@
+{
+  "id": "year-a-dec-08-2025-mon",
+  "name": "Year A — Dec 08, 2025 (Mon)",
+  "year": "ABC",
+  "season": "ordinary",
+  "seasonLabel": "Ordinary Time",
+  "seasonOrder": 8,
+  "dates": [],
+  "lectionary": {
+    "number": "Year C — Dec 09, 2030 (Mon)",
+    "gospelTitle": "Year B — Dec 08, 2029 (Sat)",
+    "thematicTag": "Year A — Dec 08, 2028 (Fri)",
+    "thematicDetail": "Year C — Dec 08, 2027 (Wed)"
+  },
+  "readings": [
+    {
+      "type": "psalm",
+      "citation": "Full of Grace",
+      "summary": "",
+      "antiphon": "Planning Reminders"
+    },
+    {
+      "type": "gospel_verse",
+      "citation": "Text",
+      "summary": "Entrance Antiphon • Option II"
+    },
+    {
+      "type": "gospel",
+      "citation": "Reading I | Verse",
+      "summary": "Text"
+    }
+  ],
+  "antiphons": [
+    {
+      "type": "entrance",
+      "option": 1,
+      "citation": "Verse before the Gospel | Verse",
+      "text": "Text"
+    },
+    {
+      "type": "communion",
+      "option": 2,
+      "citation": "Communion Antiphon | Verse",
+      "text": "Text"
+    }
+  ],
+  "planningNotes": [
+    "Communion Antiphon • Option II",
+    "N/A"
+  ],
+  "musicPlans": []
+}

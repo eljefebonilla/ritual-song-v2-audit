@@ -1,0 +1,409 @@
+{
+  "id": "year-c-nov-02-2025-sun",
+  "name": "Year C — Nov 02, 2025 (Sun)",
+  "year": "ABC",
+  "season": "ordinary",
+  "seasonLabel": "Ordinary Time",
+  "seasonOrder": 2,
+  "dates": [],
+  "lectionary": {
+    "number": "Year B — Nov 02, 2030 (Sat)",
+    "gospelTitle": "Year A — Nov 02, 2029 (Fri)",
+    "thematicTag": "Year C — Nov 02, 2028 (Thu)",
+    "thematicDetail": "Year B — Nov 02, 2027 (Tue)"
+  },
+  "readings": [
+    {
+      "type": "psalm",
+      "citation": "Raise Them on Last Day",
+      "summary": "",
+      "antiphon": "Planning Reminders"
+    },
+    {
+      "type": "gospel_verse",
+      "citation": "Just as Jesus died and has risen again,\nso through Jesus God will bring with him\nthose who have fallen asleep;\nand as in Adam all die,\nso also in Christ will all be brought to life.",
+      "summary": "2. Roman Missal —  Cf. 4 Esdr 2:34–35"
+    },
+    {
+      "type": "gospel",
+      "citation": "Reading I | MULTIPLE OPTIONS - See Lectionary",
+      "summary": "668. The Commemoration of All the Faithful Departed\n(or those given in the Masses for the Dead, nos. 1011–1015)"
+    }
+  ],
+  "antiphons": [
+    {
+      "type": "entrance",
+      "option": 1,
+      "citation": "Verse before the Gospel | Mt 25:34",
+      "text": "Come, you who are blessed by my Father;\ninherit the Kingdom prepared for you from the foundation of the world."
+    },
+    {
+      "type": "communion",
+      "option": 2,
+      "citation": "Communion Antiphon • Option I | Cf. Jn 11:25–26",
+      "text": "I am the Resurrection and the Life, says the Lord.\nWhoever believes in me, even though he dies, will live, and\neveryone who lives and believes in me will not die for ever."
+    }
+  ],
+  "planningNotes": [
+    "Communion Antiphon • Option II | Cf. 4 Esdr 2:35, 34",
+    "Let perpetual light shine upon them, O Lord,\nwith your Saints for ever, for you are merciful.\n\nCommunion Antiphon • Option III |  Cf. Phil 3:20–21\nWe await a savior, the Lord Jesus Christ,\nwho will change our mortal bodies,\nto conform with his glorified body."
+  ],
+  "musicPlans": [
+    {
+      "community": "Reflections",
+      "communityId": "reflections",
+      "date": "Year C — Nov 01, 2025 (Sat)",
+      "presider": "Fr. Eusebio Llonoso",
+      "prelude": {
+        "title": "The Clouds’ Veil",
+        "composer": "Liam Lawton",
+        "description": "\"You are by my side\" / DID NOT GET TO IT!"
+      },
+      "penitentialAct": {
+        "title": "VILLE DU HAVRE • Chris Rice",
+        "composer": "Verses 1 and 4",
+        "description": "Penitential Act"
+      },
+      "gloria": {
+        "title": "Kyrie • Misa Del Mundo",
+        "composer": "Only if needed. Talk to presider!"
+      },
+      "gospelAcclamation": {
+        "title": "The Lyric Psalter • Tony Alonso & Marty Haugen",
+        "composer": "Gospel Acclamation",
+        "verse": "Alleluia (Mass of Joy & Peace)"
+      },
+      "offertory": {
+        "title": "The Lyric Gospel Acclamations • Tony Alonso",
+        "description": "Offertory Song"
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "On Eagle's Wings",
+        "composer": "Michael Joncas • Craig Kingsbury"
+      },
+      "lordsPrayer": {
+        "title": "Eucharistic Acclamations",
+        "composer": "Mass for the Healing of the World",
+        "description": "Trevor Thomson"
+      },
+      "fractionRite": {
+        "title": "Holy",
+        "composer": "When We Eat This Bread",
+        "description": "Amen"
+      },
+      "communionSongs": [
+        {
+          "title": "The Lord's Prayer",
+          "composer": "Chanted Our Father (Snow)",
+          "description": "Jennings/Paregorius"
+        },
+        {
+          "title": "Fraction Rite",
+          "composer": "Lamb of God (Mass for the Healing of the World)",
+          "description": "Trevor Thomson"
+        },
+        {
+          "title": "Communion Songs",
+          "composer": "I Am the Bread of Life",
+          "description": "Sr. Suzanne Toolan RSM • Arr. by Dan Houze"
+        },
+        {
+          "title": "Communion Antiphon",
+          "composer": "Reunited in Everlasting Life",
+          "description": "Janèt Sullivan Whitaker"
+        }
+      ]
+    },
+    {
+      "community": "Foundations",
+      "communityId": "foundations",
+      "date": "Year C — Nov 02, 2025 (Sun)",
+      "presider": "Fr. Thomas Park",
+      "prelude": {
+        "title": "Amazing Grace",
+        "composer": "Amazing Grace • John Newton",
+        "description": "\"When we've been there 10,000 years...\""
+      },
+      "penitentialAct": {
+        "title": "TRADITIONAL Arr. Bonilla (Rubato Intro)",
+        "composer": "Vss 1, 2, 7 — 10 (as needed)",
+        "description": "Penitential Act"
+      },
+      "gloria": {
+        "title": "Kyrie • Misa Del Mundo",
+        "composer": "Only if needed. Talk to presider!"
+      },
+      "gospelAcclamation": {
+        "title": "Spirit & Psalm • Sarah Hart",
+        "composer": "Gospel Acclamation",
+        "verse": "Song Title"
+      },
+      "offertory": {
+        "title": "Verse Audio Example",
+        "description": "Offertory Song"
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "It Is Well With My Soul [NEW]",
+        "composer": "VILLE DU HAVRE • Chris Rice"
+      },
+      "lordsPrayer": {
+        "title": "Eucharistic Acclamations",
+        "composer": "Mass of Glory • Bob Hurd • Arr. by Dan Houze"
+      },
+      "fractionRite": {
+        "title": "Holy, Holy",
+        "composer": "We Proclaim Your Death",
+        "description": "Amen"
+      },
+      "communionSongs": [
+        {
+          "title": "The Lord's Prayer",
+          "composer": "Chanted Our Father (Snow)",
+          "description": "Jennings • Paregorius"
+        },
+        {
+          "title": "Fraction Rite",
+          "composer": "Lamb of God (Mass of Glory)"
+        },
+        {
+          "title": "Communion Songs",
+          "composer": "I Am the Bread of Life",
+          "description": "Sr. Suzanne Toolan RSM • Arr. by Dan Houze"
+        },
+        {
+          "title": "Communion Antiphon",
+          "composer": "On Eagle's Wings",
+          "description": "Michael Joncas • Craig Kingsbury"
+        }
+      ],
+      "sending": {
+        "title": "NETTLETON • Christopher Idle",
+        "composer": "Verses 2 and 4"
+      }
+    },
+    {
+      "community": "Generations",
+      "communityId": "generations",
+      "date": "Year C — Nov 02, 2025 (Sun)",
+      "presider": "Msgr. Lloyd Torgerson",
+      "prelude": {
+        "title": "Now and at the Hour [NEW]",
+        "composer": "THE BRILLIANCE",
+        "description": "\"...for all things we have done and left undone.\""
+      },
+      "penitentialAct": {
+        "title": "Sr. Suzanne Toolan RSM, Arr. by Dan Houze",
+        "composer": "Communion Antiphon",
+        "description": "Penitential Act"
+      },
+      "gloria": {
+        "title": "Kyrie • Misa Del Mundo",
+        "composer": "Only if needed. Talk to presider!"
+      },
+      "gospelAcclamation": {
+        "title": "Spirit & Psalm • Sarah Hart",
+        "composer": "Gospel Acclamation",
+        "verse": "Setting from Mass of St. Kilian"
+      },
+      "offertory": {
+        "title": "Spirit & Psalm • Curtis Stephan",
+        "description": "Offertory Song"
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "Go In Peace",
+        "composer": "Sarah Hart • Arr. by Dan Houze"
+      },
+      "lordsPrayer": {
+        "title": "Eucharistic Acclamations",
+        "composer": "Mass of Restoration",
+        "description": "Joshua Blakesley"
+      },
+      "fractionRite": {
+        "title": "Holy, Holy, Holy",
+        "composer": "Save Us Savior of the World",
+        "description": "Amen"
+      },
+      "communionSongs": [
+        {
+          "title": "The Lord's Prayer",
+          "composer": "(Echo) Our Father",
+          "description": "Jerome Andrews • Arranged by Dan Houze"
+        },
+        {
+          "title": "Fraction Rite",
+          "composer": "Lamb of God (Resoration)"
+        },
+        {
+          "title": "Communion Songs",
+          "composer": "It Is Well With My Soul [NEW]",
+          "description": "VILLE DU HAVRE • Chris Rice"
+        },
+        {
+          "title": "Verses 1 and 4",
+          "composer": "On Eagle's Wings",
+          "description": "Michael Joncas • Craig Kingsbury"
+        },
+        {
+          "title": "\" ...and he will raise you up...\"",
+          "composer": "So Longs My Soul",
+          "description": "Liam Lawton"
+        },
+        {
+          "title": "Month of Remembrance",
+          "composer": "I Can Only Imagine",
+          "description": "MercyMe"
+        }
+      ],
+      "sending": {
+        "title": "When the Saints Go Marching In",
+        "composer": "TRADITIONAL Arr. Bonilla",
+        "description": "Vss 1, 2, 7 — 10 (as needed)"
+      }
+    },
+    {
+      "community": "Heritage",
+      "communityId": "heritage",
+      "date": "Year C — Nov 02, 2025 (Sun)",
+      "presider": "Fr. Vince Kuna",
+      "prelude": {
+        "title": "The Clouds’ Veil",
+        "composer": "Liam Lawton",
+        "description": "\"You are by my side\""
+      },
+      "penitentialAct": {
+        "title": "Taizé • Jacques Berthier",
+        "composer": "All Souls",
+        "description": "Penitential Act"
+      },
+      "gloria": {
+        "title": "Kyrie • Misa Del Mundo",
+        "composer": "Only if needed. Talk to presider!"
+      },
+      "gospelAcclamation": {
+        "title": "The Lyric Psalter • Tony Alonso & Marty Haugen",
+        "composer": "Gospel Acclamation",
+        "verse": "Alleluia (Mass of Joy & Peace)"
+      },
+      "offertory": {
+        "title": "The Lyric Gospel Acclamations • Tony Alonso",
+        "description": "Offertory Song"
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "Go In Peace",
+        "composer": "Sarah Hart • Arr. by Dan Houze"
+      },
+      "lordsPrayer": {
+        "title": "Eucharistic Acclamations",
+        "composer": "Mass of Christ the Savior - Dan Schutte"
+      },
+      "fractionRite": {
+        "title": "Holy",
+        "composer": "When We Eat This Bread",
+        "description": "Amen"
+      },
+      "communionSongs": [
+        {
+          "title": "The Lord's Prayer",
+          "composer": "Echo Our Father",
+          "description": "Andrews, Arr. Bonilla • Lockwood • Fajardo"
+        },
+        {
+          "title": "Fraction Rite",
+          "composer": "Lamb of God (Mass of Christ the Savior)"
+        },
+        {
+          "title": "Communion Songs",
+          "composer": "I Am the Bread of Life",
+          "description": "Sr. Suzanne Toolan RSM, Arr. by Dan Houze"
+        },
+        {
+          "title": "Communion Antiphon",
+          "composer": "On Eagle's Wings",
+          "description": "Michael Joncas • Craig Kingsbury"
+        },
+        {
+          "title": "\" ...and he will raise you up...\"",
+          "composer": "It Is Well With My Soul",
+          "description": "VILLE DU HAVRE • Chris Rice"
+        }
+      ],
+      "sending": {
+        "title": "NETTLETON • Christopher Idle",
+        "composer": "Verses 2 and 4"
+      }
+    },
+    {
+      "community": "Elevations",
+      "communityId": "elevations",
+      "date": "Year C — Nov 02, 2025 (Sun)",
+      "presider": "Msgr. Lloyd Torgerson",
+      "prelude": {
+        "title": "Now and at the Hour [NEW]",
+        "composer": "THE BRILLIANCE",
+        "description": "\"...for all things we have done and left undone.\""
+      },
+      "penitentialAct": {
+        "title": "Sr. Suzanne Toolan RSM • Arr. by Dan Houze",
+        "composer": "Communion Antiphon",
+        "description": "Penitential Act"
+      },
+      "gloria": {
+        "title": "Kyrie • Misa Del Mundo",
+        "composer": "Only if needed. Talk to presider!"
+      },
+      "gospelAcclamation": {
+        "title": "Spirit & Psalm • Sarah Hart",
+        "composer": "Gospel Acclamation",
+        "verse": "Setting from Mass of St. Kilian"
+      },
+      "offertory": {
+        "title": "Spirit & Psalm • Curtis Stephan",
+        "description": "Offertory Song"
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "Go In Peace",
+        "composer": "Sarah Hart • Arr. by Dan Houze"
+      },
+      "lordsPrayer": {
+        "title": "Eucharistic Acclamations",
+        "composer": "Mass of Restoration • Joshua Blakesley"
+      },
+      "fractionRite": {
+        "title": "Holy, Holy, Holy",
+        "composer": "Save Us Savior of the World",
+        "description": "Amen"
+      },
+      "communionSongs": [
+        {
+          "title": "The Lord's Prayer",
+          "composer": "Echo Our Father",
+          "description": "Andrews, Arr. Bonilla • Lockwood • Fajardo"
+        },
+        {
+          "title": "Fraction Rite",
+          "composer": "Lamb of God (Resoration)"
+        },
+        {
+          "title": "Communion Songs",
+          "composer": "It Is Well With My Soul",
+          "description": "VILLE DU HAVRE • Chris Rice"
+        },
+        {
+          "title": "Verses 1 and 4",
+          "composer": "On Eagle's Wings",
+          "description": "Michael Joncas • Craig Kingsbury"
+        },
+        {
+          "title": "\" ...and he will raise you up...\"",
+          "composer": "I Can Only Imagine",
+          "description": "MercyMe"
+        }
+      ],
+      "sending": {
+        "title": "Sending Song",
+        "composer": "When the Saints Go Marching In",
+        "description": "TRADITIONAL Arr. Bonilla"
+      }
+    }
+  ]
+}

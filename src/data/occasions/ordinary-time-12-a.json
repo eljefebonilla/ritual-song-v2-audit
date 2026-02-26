@@ -1,0 +1,206 @@
+{
+  "id": "ordinary-time-12-a",
+  "name": "ORDINARY TIME 12 [A]",
+  "year": "A",
+  "season": "ordinary",
+  "seasonLabel": "Ordinary Time",
+  "seasonOrder": 12,
+  "dates": [
+    {
+      "date": "2023-06-25",
+      "label": "Year A — Jun 25, 2023 (Sun)",
+      "dayOfWeek": "Sun"
+    },
+    {
+      "date": "2032-06-20",
+      "label": "Year A — Jun 20, 2032 (Sun)",
+      "dayOfWeek": "Sun"
+    },
+    {
+      "date": "2026-06-21",
+      "label": "Year A — Jun 21, 2026 (Sun)",
+      "dayOfWeek": "Sun"
+    }
+  ],
+  "lectionary": {
+    "number": "094•A",
+    "gospelTitle": "Do Not Be Afraid",
+    "thematicTag": "Mission Disc. 2/3"
+  },
+  "readings": [
+    {
+      "type": "first",
+      "citation": "Jer 20:10-13",
+      "summary": "The Lord is with Jeremiah."
+    },
+    {
+      "type": "psalm",
+      "citation": "Ps 69:8-10, 14, 17, 33-35, R. v.14c\nLord, in your great love, answer me.",
+      "summary": "",
+      "antiphon": "Ps 69:8-10, 14, 17, 33-35, R. v.14c\nLord, in your great love, answer me."
+    },
+    {
+      "type": "second",
+      "citation": "Rom 5:12-15",
+      "summary": "As sin entered the world through one man, so through one man are we saved."
+    },
+    {
+      "type": "gospel_verse",
+      "citation": "Jn 15:26b, 27a",
+      "summary": "The Spirit of truth will testify to me, says the Lord;\nand you also will testify."
+    },
+    {
+      "type": "gospel",
+      "citation": "Mt 10:26-33",
+      "summary": "Those who acknowledge Christ will be known to the Father."
+    }
+  ],
+  "antiphons": [
+    {
+      "type": "entrance",
+      "option": 1,
+      "citation": "Cf. Ps 28 (27):8–9",
+      "text": "The Lord is the strength of his people,\na saving refuge for the one he has anointed.\nSave your people, Lord, and bless your heritage,\nand govern them for ever."
+    },
+    {
+      "type": "communion",
+      "option": 1,
+      "citation": "Ps 145 (144):15]",
+      "text": "The eyes of all look to you, Lord,\nand you give them their food in due season."
+    },
+    {
+      "type": "communion",
+      "option": 2,
+      "citation": "Communion Antiphon • Option II | Jn 10:11, 15",
+      "text": "I am the Good Shepherd,\nand I lay down my life for my sheep, says the Lord."
+    }
+  ],
+  "planningNotes": [],
+  "musicPlans": [
+    {
+      "community": "Reflections",
+      "communityId": "reflections",
+      "date": "Year A — Sep 12, 2026 (Sat)",
+      "presider": "TBD",
+      "penitentialAct": {
+        "title": "Kyrie • Misa Del Mundo",
+        "composer": "Only if needed. Talk to presider!"
+      },
+      "gloria": {
+        "title": "Glory to God (Through-composed Setting)",
+        "composer": "Mass of Renewal • Curtis Stephan"
+      },
+      "responsorialPsalm": {
+        "psalm": "Ps 69 Lord, in your great love, answer me.",
+        "setting": "The Lyric Psalter • Tony Alonso & Marty Haugen"
+      },
+      "gospelAcclamation": {
+        "title": "Alleluia (Mass of Joy & Peace)",
+        "composer": "Song Title",
+        "verse": "The Spirit of truth will testify to me, says the Lord;\nand you also will testify."
+      },
+      "lordsPrayer": {
+        "title": "Chanted Our Father (Snow)",
+        "composer": "Jennings/Paregorius"
+      },
+      "fractionRite": {
+        "title": "Lamb of God Setting"
+      }
+    },
+    {
+      "community": "Foundations",
+      "communityId": "foundations",
+      "date": "Year A — Sep 13, 2026 (Sun)",
+      "presider": "TBD",
+      "penitentialAct": {
+        "title": "Kyrie (Gift of God) • Adapted Version",
+        "composer": "Marty Haugen • Arranged by David Locwood"
+      },
+      "gloria": {
+        "title": "Glory to God (Mass of Joy & Peace)",
+        "composer": "Alonso • Arr. by Houze OR Arr. by Lockwood"
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "Mass of Glory • Bob Hurd • Arr. by Dan Houze"
+      },
+      "lordsPrayer": {
+        "title": "Chanted Our Father (Snow)",
+        "composer": "Jennings • Paregorius"
+      },
+      "fractionRite": {
+        "title": "Lamb of God (Mass of Glory)"
+      }
+    },
+    {
+      "community": "Generations",
+      "communityId": "generations",
+      "date": "Year A — Sep 13, 2026 (Sun)",
+      "presider": "TBD",
+      "penitentialAct": {
+        "title": "Kyrie • Misa Del Mundo",
+        "composer": "If needed. Talk to presider!"
+      },
+      "gloria": {
+        "title": "Glory, Glory, Gloria!",
+        "composer": "Tony Alonso • Arr. by Dan Houze"
+      },
+      "gospelAcclamation": {
+        "title": "Setting from Mass of ???",
+        "composer": "Song Title"
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "Mass of Restoration",
+        "composer": "Joshua Blakesley"
+      },
+      "lordsPrayer": {
+        "title": "(Echo) Our Father",
+        "composer": "Jerome Andrews • Arranged by Dan Houze"
+      },
+      "fractionRite": {
+        "title": "Lamb of God (Resoration)"
+      }
+    },
+    {
+      "community": "Heritage",
+      "communityId": "heritage",
+      "date": "Year A — Sep 13, 2026 (Sun)",
+      "presider": "TBD",
+      "penitentialAct": {
+        "title": "Kyrie • Misa Del Mundo",
+        "composer": "Only if needed. Talk to presider!"
+      },
+      "gloria": {
+        "title": "Glory to God (Mass of Christ the Savior)",
+        "composer": "Dan Schutte"
+      },
+      "lordsPrayer": {
+        "title": "Echo Our Father",
+        "composer": "Andrews, Arr. Bonilla • Lockwood • Fajardo"
+      }
+    },
+    {
+      "community": "Elevations",
+      "communityId": "elevations",
+      "date": "Year A — Sep 13, 2026 (Sun)",
+      "presider": "TBD",
+      "penitentialAct": {
+        "title": "Kyrie • Misa Del Mundo",
+        "composer": "Only if needed. Talk to presider!"
+      },
+      "gloria": {
+        "title": "Glory, Glory, Gloria!"
+      },
+      "gospelAcclamation": {
+        "title": "Setting from Mass of ???",
+        "verse": "Song Title"
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "Mass of ? • Composer"
+      },
+      "lordsPrayer": {
+        "title": "Echo Our Father",
+        "composer": "Andrews, Arr. Bonilla • Lockwood • Fajardo"
+      }
+    }
+  ]
+}

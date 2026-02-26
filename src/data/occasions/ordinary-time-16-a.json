@@ -1,0 +1,220 @@
+{
+  "id": "ordinary-time-16-a",
+  "name": "ORDINARY TIME 16 [A]",
+  "year": "A",
+  "season": "ordinary",
+  "seasonLabel": "Ordinary Time",
+  "seasonOrder": 16,
+  "dates": [
+    {
+      "date": "2023-07-23",
+      "label": "Year A — Jul 23, 2023 (Sun)",
+      "dayOfWeek": "Sun"
+    },
+    {
+      "date": "2035-07-22",
+      "label": "Year A — Jul 22, 2035 (Sun)",
+      "dayOfWeek": "Sun"
+    },
+    {
+      "date": "2032-07-18",
+      "label": "Year A — Jul 18, 2032 (Sun)",
+      "dayOfWeek": "Sun"
+    },
+    {
+      "date": "2029-07-22",
+      "label": "Year A — Jul 22, 2029 (Sun)",
+      "dayOfWeek": "Sun"
+    },
+    {
+      "date": "2026-07-19",
+      "label": "Year A — Jul 19, 2026 (Sun)",
+      "dayOfWeek": "Sun"
+    }
+  ],
+  "lectionary": {
+    "number": "106•A",
+    "gospelTitle": "Wheat and Weeds",
+    "thematicTag": "Parables 2/3"
+  },
+  "readings": [
+    {
+      "type": "first",
+      "citation": "Wis 12:13, 16-19",
+      "summary": "God is mighty and gentle."
+    },
+    {
+      "type": "psalm",
+      "citation": "Ps 86:5-6, 9-10, 15-16. R. v.5a\nLord, you are good and forgiving.",
+      "summary": "",
+      "antiphon": "Ps 86:5-6, 9-10, 15-16. R. v.5a\nLord, you are good and forgiving."
+    },
+    {
+      "type": "second",
+      "citation": "Rom 8:26-27",
+      "summary": "The Spirit overcomes our weaknesses."
+    },
+    {
+      "type": "gospel_verse",
+      "citation": "See Mt 11:25",
+      "summary": "Blessed are you, Father, Lord of heaven and earth;\nyou have revealed to little ones the mysteries of the kingdom."
+    },
+    {
+      "type": "gospel",
+      "citation": "Mt 13:24-43 (Shorter - Mt 13:24-30)",
+      "summary": "Parables of the weeds in the field and the mustard seed."
+    }
+  ],
+  "antiphons": [
+    {
+      "type": "entrance",
+      "option": 1,
+      "citation": "Ps 54 (53):6, 8",
+      "text": "See, I have God for my help.\nThe Lord sustains my soul.\nI will sacrifice to you with willing heart,\nand praise your name, O Lord, for it is good."
+    },
+    {
+      "type": "communion",
+      "option": 1,
+      "citation": "Ps 111 (110):4–5",
+      "text": "The Lord, the gracious, the merciful,\nhas made a memorial of his wonders;\nhe gives food to those who fear him."
+    },
+    {
+      "type": "communion",
+      "option": 2,
+      "citation": "Roman Missal — Rev 3:20",
+      "text": "Behold, I stand at the door and knock, says the Lord.\nIf anyone hears my voice and opens the door to me,\nI will enter his house and dine with him, and he with me."
+    }
+  ],
+  "planningNotes": [],
+  "musicPlans": [
+    {
+      "community": "Reflections",
+      "communityId": "reflections",
+      "date": "Year A — Jul 18, 2026 (Sat)",
+      "presider": "TBD",
+      "penitentialAct": {
+        "title": "Kyrie • Misa Del Mundo",
+        "composer": "Only if needed. Talk to presider!"
+      },
+      "gloria": {
+        "title": "Glory to God (Through-composed Setting)",
+        "composer": "Mass of Renewal • Curtis Stephan"
+      },
+      "gospelAcclamation": {
+        "title": "Alleluia (Mass of Joy & Peace)",
+        "composer": "Song Title"
+      },
+      "lordsPrayer": {
+        "title": "Chanted Our Father (Snow)",
+        "composer": "Jennings/Paregorius"
+      },
+      "fractionRite": {
+        "title": "Lamb of God Setting"
+      }
+    },
+    {
+      "community": "Foundations",
+      "communityId": "foundations",
+      "date": "Year A — Jul 19, 2026 (Sun)",
+      "presider": "TBD",
+      "penitentialAct": {
+        "title": "Kyrie (Gift of God) • Adapted Version",
+        "composer": "Marty Haugen • Arranged by David Locwood"
+      },
+      "gloria": {
+        "title": "Glory to God (Mass of Joy & Peace)",
+        "composer": "Alonso • Arr. by Houze OR Arr. by Lockwood"
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "Mass of Glory • Bob Hurd • Arr. by Dan Houze"
+      },
+      "lordsPrayer": {
+        "title": "Chanted Our Father (Snow)",
+        "composer": "Jennings • Paregorius"
+      },
+      "fractionRite": {
+        "title": "Lamb of God (Mass of Glory)"
+      }
+    },
+    {
+      "community": "Generations",
+      "communityId": "generations",
+      "date": "Year A — Jul 19, 2026 (Sun)",
+      "presider": "TBD",
+      "penitentialAct": {
+        "title": "Kyrie • Misa Del Mundo",
+        "composer": "If needed. Talk to presider!"
+      },
+      "gloria": {
+        "title": "Glory, Glory, Gloria!",
+        "composer": "Tony Alonso • Arr. by Dan Houze"
+      },
+      "gospelAcclamation": {
+        "title": "Setting from Mass of ???",
+        "composer": "Song Title"
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "Mass of Restoration",
+        "composer": "Joshua Blakesley"
+      },
+      "lordsPrayer": {
+        "title": "(Echo) Our Father",
+        "composer": "Jerome Andrews • Arranged by Dan Houze"
+      },
+      "fractionRite": {
+        "title": "Lamb of God (Resoration)"
+      }
+    },
+    {
+      "community": "Heritage",
+      "communityId": "heritage",
+      "date": "Year A — Jul 19, 2026 (Sun)",
+      "presider": "TBD",
+      "penitentialAct": {
+        "title": "Kyrie • Misa Del Mundo",
+        "composer": "Only if needed. Talk to presider!"
+      },
+      "gloria": {
+        "title": "Glory to God (Mass of Christ the Savior)",
+        "composer": "Dan Schutte"
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "Mass of Christ the Savior - Dan Schutte"
+      },
+      "lordsPrayer": {
+        "title": "Echo Our Father",
+        "composer": "Andrews, Arr. Bonilla • Lockwood • Fajardo"
+      },
+      "fractionRite": {
+        "title": "Lamb of God (Mass of Christ the Savior)"
+      }
+    },
+    {
+      "community": "Elevations",
+      "communityId": "elevations",
+      "date": "Year A — Jul 19, 2026 (Sun)",
+      "presider": "TBD",
+      "penitentialAct": {
+        "title": "Kyrie • Misa Del Mundo",
+        "composer": "Only if needed. Talk to presider!"
+      },
+      "gloria": {
+        "title": "Glory, Glory, Gloria!"
+      },
+      "gospelAcclamation": {
+        "title": "Setting from Mass of ???",
+        "verse": "Song Title"
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "Mass of Restoration • Joshua Blakesley"
+      },
+      "lordsPrayer": {
+        "title": "Echo Our Father",
+        "composer": "Andrews, Arr. Bonilla • Lockwood • Fajardo"
+      },
+      "fractionRite": {
+        "title": "Lamb of God (Resoration)"
+      }
+    }
+  ]
+}

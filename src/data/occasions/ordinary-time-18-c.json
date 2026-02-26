@@ -1,0 +1,398 @@
+{
+  "id": "ordinary-time-18-c",
+  "name": "ORDINARY TIME 18 [C]",
+  "year": "C",
+  "season": "ordinary",
+  "seasonLabel": "Ordinary Time",
+  "seasonOrder": 18,
+  "dates": [
+    {
+      "date": "2025-08-03",
+      "label": "Year C — Aug 03, 2025 (Sun)",
+      "dayOfWeek": "Sun"
+    },
+    {
+      "date": "2037-08-02",
+      "label": "Year C — Aug 02, 2037 (Sun)",
+      "dayOfWeek": "Sun"
+    },
+    {
+      "date": "2031-08-03",
+      "label": "Year C — Aug 03, 2031 (Sun)",
+      "dayOfWeek": "Sun"
+    }
+  ],
+  "lectionary": {
+    "number": "114•C",
+    "gospelTitle": "Rich Fool",
+    "thematicTag": "Wealth Warnings 1/2"
+  },
+  "readings": [
+    {
+      "type": "first",
+      "citation": "Sir 1:2; 2:21-23",
+      "summary": "All earthly things pass away."
+    },
+    {
+      "type": "psalm",
+      "citation": "Ps 90:3-4, 5-6, 12-13, 14, 17, R. v.8\nIf today you hear his voice, harden not your hearts.",
+      "summary": "",
+      "antiphon": "Ps 90:3-4, 5-6, 12-13, 14, 17, R. v.8\nIf today you hear his voice, harden not your hearts."
+    },
+    {
+      "type": "second",
+      "citation": "Col 3:1-5, 9-11",
+      "summary": "Set your heart on heavenly realities."
+    },
+    {
+      "type": "gospel_verse",
+      "citation": "Mt 5:3",
+      "summary": "Blessed are the poor in spirit,\nfor theirs is the kingdom of heaven."
+    },
+    {
+      "type": "gospel",
+      "citation": "Lk 12:13-21",
+      "summary": "Parable of the rich fool."
+    }
+  ],
+  "antiphons": [
+    {
+      "type": "entrance",
+      "option": 1,
+      "citation": "Ps 70 (69):2, 6",
+      "text": "O God, come to my assistance;\nO Lord, make haste to help me!\nYou are my rescuer, my help;\nO Lord, do not delay."
+    },
+    {
+      "type": "communion",
+      "option": 1,
+      "citation": "Wis 16:20",
+      "text": "You have given us, O Lord, bread from heaven,\nendowed with all delights and sweetness in every taste."
+    },
+    {
+      "type": "communion",
+      "option": 2,
+      "citation": "Roman Missal — Jn 6:35",
+      "text": "I am the bread of life, says the Lord;\nwhoever comes to me will not hunger\nand whoever believes in me will not thirst."
+    }
+  ],
+  "planningNotes": [],
+  "musicPlans": [
+    {
+      "community": "Reflections",
+      "communityId": "reflections",
+      "date": "Year C — Aug 02, 2025 (Sat)",
+      "presider": "NOT THIS YEAR",
+      "gathering": {
+        "title": "Be Though My Vision",
+        "composer": "SLANE • Arr. by Audrey Assad • Adapt. by Bonilla & Phan",
+        "description": "\"Riches I head not, nor man's empty praise\""
+      },
+      "penitentialAct": {
+        "title": "Kyrie • Misa Del Mundo",
+        "composer": "Only if needed. Talk to presider!"
+      },
+      "gloria": {
+        "title": "Glory to God (Through-composed Setting)",
+        "composer": "Mass of Renewal • Curtis Stephan"
+      },
+      "responsorialPsalm": {
+        "psalm": "Ps 90 If today you hear his voice...",
+        "setting": "The Lyric Psalter • Tony Alonso & Marty Haugen"
+      },
+      "gospelAcclamation": {
+        "title": "Alleluia (Mass of Joy & Peace)",
+        "composer": "O.T. • 18 | C — \"Blessed are the poor...\""
+      },
+      "offertory": {
+        "title": "A Generous Heart",
+        "composer": "Chris de Silva",
+        "description": "Based on Prayer for Generosity, St. Ignatius of Loyola."
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "Mass of the Holy Family",
+        "composer": "Chris de Silva"
+      },
+      "lordsPrayer": {
+        "title": "Chanted Our Father (Snow)",
+        "composer": "Jennings/Paregorius"
+      },
+      "fractionRite": {
+        "title": "Lamb of God (Mass of the Holy Family)",
+        "composer": "Chris de Silva"
+      },
+      "communionSongs": [
+        {
+          "title": "Only This I Want",
+          "composer": "Dan Schutte",
+          "description": "\"...and to bear his cross, so to wear the crown he wore.\""
+        },
+        {
+          "title": "In Every Age",
+          "composer": "Janèt Sullivan Whitaker",
+          "description": "Echoes Psalm 90: God as refuge, earthly things pass away."
+        },
+        {
+          "title": "Take, Lord, Receive",
+          "composer": "John Foley SJ",
+          "description": "\"Your love and your grace\rare enough for me.\""
+        }
+      ],
+      "sending": {
+        "title": "God, We Praise You",
+        "composer": "NETTLETON • Christopher Idle",
+        "description": "General Sending"
+      }
+    },
+    {
+      "community": "Foundations",
+      "communityId": "foundations",
+      "date": "Year C — Aug 03, 2025 (Sun)",
+      "presider": "NOT THIS YEAR",
+      "gathering": {
+        "title": "Be Though My Vision",
+        "composer": "SLANE • Arr. by Audrey Assad • Adapt. by Bonilla & Phan",
+        "description": "\"Riches I head not, nor man's empty praise\""
+      },
+      "penitentialAct": {
+        "title": "Kyrie (Gift of God) • Adapted Version",
+        "composer": "Marty Haugen • Arranged by David Locwood"
+      },
+      "gloria": {
+        "title": "Glory to God (Mass of Joy & Peace)",
+        "composer": "Alonso • Arr. by Houze OR Arr. by Lockwood"
+      },
+      "responsorialPsalm": {
+        "psalm": "Ps 90 If today you hear his voice...",
+        "setting": "Spirit & Psalm • Ben Walther"
+      },
+      "offertory": {
+        "title": "Where Your Treasure Is",
+        "composer": "Mary Haugen",
+        "description": "Gospel (Where your treasure is, there is your heart.)"
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "Mass of Glory • Bob Hurd • Arr. by Dan Houze"
+      },
+      "lordsPrayer": {
+        "title": "Chanted Our Father (Snow)",
+        "composer": "Jennings • Paregorius"
+      },
+      "fractionRite": {
+        "title": "Lamb of God (Mass of Glory)"
+      },
+      "communionSongs": [
+        {
+          "title": "One Bread, One Body",
+          "composer": "John Foley SJ",
+          "description": "Table song."
+        },
+        {
+          "title": "Only This I Want",
+          "composer": "Dan Schutte",
+          "description": "\"...and to bear his cross,\rso to wear the crown he wore.\""
+        }
+      ],
+      "sending": {
+        "title": "God, We Praise You",
+        "composer": "NETTLETON • Christopher Idle",
+        "description": "General Sending"
+      }
+    },
+    {
+      "community": "Generations",
+      "communityId": "generations",
+      "date": "Year C — Aug 03, 2025 (Sun)",
+      "presider": "NOT THIS YEAR",
+      "gathering": {
+        "title": "Be Though My Vision",
+        "composer": "SLANE • Arr. by Audrey Assad • Adapt. by Bonilla & Phan",
+        "description": "\"Riches I head not, nor man's empty praise\""
+      },
+      "penitentialAct": {
+        "title": "Kyrie • Misa Del Mundo",
+        "composer": "Only if needed. Talk to presider!"
+      },
+      "gloria": {
+        "title": "Glory, Glory, Gloria!",
+        "composer": "Jeffrey Bonilla & Drew Wilson"
+      },
+      "responsorialPsalm": {
+        "psalm": "Ps 90 If today you hear his voice...",
+        "setting": "Spirit & Psalm • Ben Walther"
+      },
+      "gospelAcclamation": {
+        "title": "Setting from Mass of St. Mary Magdalene",
+        "composer": "O.T. • 18 | C — \"Blessed are the poor...\""
+      },
+      "offertory": {
+        "title": "Take, Lord, Receive",
+        "composer": "John Foley SJ",
+        "description": "\"Your love and your grace\rare enough for me.\""
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "Mass of Restoration",
+        "composer": "Joshua Blakesley"
+      },
+      "lordsPrayer": {
+        "title": "(Echo) Our Father",
+        "composer": "Jerome Andrews • Arranged by Dan Houze"
+      },
+      "fractionRite": {
+        "title": "Lamb of God (Resoration)"
+      },
+      "communionSongs": [
+        {
+          "title": "In Every Age",
+          "composer": "Janèt Sullivan Whitaker",
+          "description": "Echoes Psalm 90: God as refuge, earthly things pass away."
+        },
+        {
+          "title": "Caminemos con Jesús",
+          "composer": "Tony Alonso"
+        },
+        {
+          "title": "One Bread, One Body",
+          "composer": "John Foley SJ",
+          "description": "Table song."
+        },
+        {
+          "title": "Loved (NEW SONG)",
+          "composer": "Ben Smith, Pat Barrett",
+          "description": "\"No greater treasure than knowing I am yours and you are mine\""
+        }
+      ],
+      "sending": {
+        "title": "Act Justly, Love Mercy, Walk Humbly",
+        "composer": "Pat Barrett",
+        "description": "Good News to all the world!"
+      }
+    },
+    {
+      "community": "Heritage",
+      "communityId": "heritage",
+      "date": "Year C — Aug 03, 2025 (Sun)",
+      "presider": "NOT THIS YEAR",
+      "gathering": {
+        "title": "Be Though My Vision",
+        "composer": "SLANE • Arr. by Audrey Assad • Adapt. by Bonilla & Phan",
+        "description": "\"Riches I head not, nor man's empty praise\""
+      },
+      "penitentialAct": {
+        "title": "Kyrie • Misa Del Mundo",
+        "composer": "Only if needed. Talk to presider!"
+      },
+      "gloria": {
+        "title": "Glory to God (Mass of Christ the Savior)",
+        "composer": "Dan Schutte"
+      },
+      "responsorialPsalm": {
+        "psalm": "Ps 90 If today you hear his voice...",
+        "setting": "The Lyric Psalter • Tony Alonso & Marty Haugen"
+      },
+      "gospelAcclamation": {
+        "title": "Alleluia (Mass of Joy & Peace)",
+        "composer": "O.T. • 18 | C — \"Blessed are the poor...\""
+      },
+      "offertory": {
+        "title": "Where Your Treasure Is",
+        "composer": "Mary Haugen",
+        "description": "Gospel (Where your treasure is, there is your heart.)"
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "Mass of Christ the Savior - Dan Schutte"
+      },
+      "lordsPrayer": {
+        "title": "Echo Our Father",
+        "composer": "Andrews, Arr. Bonilla • Lockwood • Fajardo"
+      },
+      "fractionRite": {
+        "title": "Lamb of God (Mass of Christ the Savior)"
+      },
+      "communionSongs": [
+        {
+          "title": "In Every Age",
+          "composer": "Janèt Sullivan Whitaker",
+          "description": "Echoes Psalm 90: God as refuge, earthly things pass away."
+        },
+        {
+          "title": "One Bread, One Body",
+          "composer": "John Foley SJ",
+          "description": "Table song."
+        },
+        {
+          "title": "Take, Lord, Receive",
+          "composer": "John Foley SJ",
+          "description": "\"Your love and your grace\rare enough for me.\""
+        }
+      ],
+      "sending": {
+        "title": "God, We Praise You",
+        "composer": "NETTLETON • Christopher Idle",
+        "description": "General Sending"
+      }
+    },
+    {
+      "community": "Elevations",
+      "communityId": "elevations",
+      "date": "Year C — Aug 03, 2025 (Sun)",
+      "presider": "NOT THIS YEAR",
+      "gathering": {
+        "title": "Be Though My Vision",
+        "composer": "SLANE • Arr. by Audrey Assad • Adapt. by Bonilla & Phan",
+        "description": "\"Riches I head not, nor man's empty praise\""
+      },
+      "penitentialAct": {
+        "title": "Kyrie • Misa Del Mundo",
+        "composer": "Only if needed. Talk to presider!"
+      },
+      "gloria": {
+        "title": "Glory, Glory, Gloria!"
+      },
+      "responsorialPsalm": {
+        "psalm": "Ps 90 If today you hear his voice...",
+        "setting": "Spirit & Psalm • Ben Walther"
+      },
+      "gospelAcclamation": {
+        "title": "Setting from Mass of St. Mary Magdalene",
+        "verse": "O.T. • 18 | C — \"Blessed are the poor...\""
+      },
+      "offertory": {
+        "title": "Take, Lord, Receive",
+        "composer": "John Foley SJ",
+        "description": "\"Your love and your grace\rare enough for me.\""
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "Mass of Restoration • Joshua Blakesley"
+      },
+      "lordsPrayer": {
+        "title": "Echo Our Father",
+        "composer": "Andrews, Arr. Bonilla • Lockwood • Fajardo"
+      },
+      "fractionRite": {
+        "title": "Lamb of God (Resoration)"
+      },
+      "communionSongs": [
+        {
+          "title": "Caminemos con Jesús",
+          "composer": "Tony Alonso",
+          "description": "\"With the ones the world has turned away...\""
+        },
+        {
+          "title": "In Every Age",
+          "composer": "Janèt Sullivan Whitaker",
+          "description": "Echoes Psalm 90: God as refuge, earthly things pass away."
+        },
+        {
+          "title": "This Is the Kingdom",
+          "composer": "Elevation Worship • Pat Barrett • Arr. by E. Fajardo",
+          "description": "✪ OT - 18 C (Beatitudes - Gospel Verse)"
+        }
+      ],
+      "sending": {
+        "title": "Your Grace Is Enough",
+        "composer": "Matt Maher",
+        "description": "Highlights God's grace as sufficient beyond earthly needs ."
+      }
+    }
+  ]
+}

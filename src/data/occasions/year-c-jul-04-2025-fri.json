@@ -1,0 +1,25 @@
+{
+  "id": "year-c-jul-04-2025-fri",
+  "name": "Year C — Jul 04, 2025 (Fri)",
+  "year": "ABC",
+  "season": "ordinary",
+  "seasonLabel": "Ordinary Time",
+  "seasonOrder": 4,
+  "dates": [],
+  "lectionary": {
+    "number": "Year B — Jul 04, 2030 (Thu)",
+    "gospelTitle": "Year A — Jul 04, 2029 (Wed)",
+    "thematicTag": "Year C — Jul 04, 2028 (Tue)",
+    "thematicDetail": "Year B — Jul 04, 2027 (Sun)"
+  },
+  "readings": [
+    {
+      "type": "psalm",
+      "citation": "FRIDAY",
+      "summary": ""
+    }
+  ],
+  "antiphons": [],
+  "planningNotes": [],
+  "musicPlans": []
+}

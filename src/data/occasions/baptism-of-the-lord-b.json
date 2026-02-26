@@ -1,0 +1,300 @@
+{
+  "id": "baptism-of-the-lord-b",
+  "name": "BAPTISM OF THE LORD [B]",
+  "year": "B",
+  "season": "ordinary",
+  "seasonLabel": "Ordinary Time",
+  "seasonOrder": 0,
+  "dates": [
+    {
+      "date": "2024-01-08",
+      "label": "Year B — Jan 08, 2024 (Mon)",
+      "dayOfWeek": "Mon"
+    },
+    {
+      "date": "2036-01-13",
+      "label": "Year B — Jan 13, 2036 (Sun)",
+      "dayOfWeek": "Sun"
+    },
+    {
+      "date": "2033-01-09",
+      "label": "Year B — Jan 09, 2033 (Sun)",
+      "dayOfWeek": "Sun"
+    },
+    {
+      "date": "2030-01-13",
+      "label": "Year B — Jan 13, 2030 (Sun)",
+      "dayOfWeek": "Sun"
+    },
+    {
+      "date": "2027-01-10",
+      "label": "Year B — Jan 10, 2027 (Sun)",
+      "dayOfWeek": "Sun"
+    }
+  ],
+  "lectionary": {
+    "number": "021•B",
+    "gospelTitle": "Beloved Son, Well-Pleased",
+    "thematicTag": "Epiphany Theophany"
+  },
+  "readings": [
+    {
+      "type": "first",
+      "citation": "Is 55:1-11",
+      "summary": "Comer to the Water. Seek the Lord.\n\nNote: Reading from Year A may be used as well."
+    },
+    {
+      "type": "psalm",
+      "citation": "Is 12:2–3, 4bcd, 5–6 (Year A option as well)\nYou will draw water joyfully from the springs of salvation.",
+      "summary": "",
+      "antiphon": "Is 12:2–3, 4bcd, 5–6 (Year A option as well)\nYou will draw water joyfully from the springs of salvation."
+    },
+    {
+      "type": "second",
+      "citation": "1 Jn 5:1-9 (Year A option as well)",
+      "summary": "The blood of Christ cleanses us."
+    },
+    {
+      "type": "gospel_verse",
+      "citation": "cf. V Jn 1:29",
+      "summary": "John saw Jesus approaching him, and said:\nBehold the Lamb of God who takes away the sin of the world.\n\nMk 9:7 (Year A Option)"
+    },
+    {
+      "type": "gospel",
+      "citation": "Mk 1:7-11",
+      "summary": "Jesus is baptized by John."
+    }
+  ],
+  "antiphons": [
+    {
+      "type": "entrance",
+      "option": 1,
+      "citation": "Cf. Mt 3:16–17",
+      "text": "After the Lord was baptized, the heavens were opened,\nand the Spirit descended upon him like a dove,\nand the voice of the Father thundered:\nThis is my beloved Son, with whom I am well pleased."
+    },
+    {
+      "type": "communion",
+      "option": 1,
+      "citation": "Jn 1:32, 34",
+      "text": "Behold the One of whom John said:\nI have seen and testified that this is the Son of God."
+    }
+  ],
+  "planningNotes": [],
+  "musicPlans": [
+    {
+      "community": "Reflections",
+      "communityId": "reflections",
+      "date": "Year B — Jan 09, 2027 (Sat)",
+      "presider": "NOT THIS YEAR",
+      "gathering": {
+        "title": "Come to the Water",
+        "composer": "John B. Foley, SJ • Arranged by Arielle Phan",
+        "description": "Baptism of the Lord"
+      },
+      "penitentialAct": {
+        "title": "Kyrie • Misa Del Mundo",
+        "composer": "Jesse Manibusan"
+      },
+      "gloria": {
+        "title": "Glory to God (Through-composed Setting)",
+        "composer": "Mass of Renewal • Curtis Stephan"
+      },
+      "responsorialPsalm": {
+        "psalm": "Is 12 You will draw water joyfully from the springs of salvation.",
+        "setting": "TBD"
+      },
+      "gospelAcclamation": {
+        "title": "Alleluia (Mass of Joy & Peace)",
+        "composer": "CHRISTMAS — Baptism • ABC"
+      },
+      "offertory": {
+        "title": "Be Not Afraid",
+        "composer": "Robert J. Dufford, SJ",
+        "description": "\"If you walk amid the burning flames...\""
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "Mass of the Incarnate Word",
+        "composer": "Bob Hurd • Traditional Arrangement"
+      },
+      "lordsPrayer": {
+        "title": "Chanted Our Father (Snow)",
+        "composer": "Jennings/Paregorius"
+      },
+      "fractionRite": {
+        "title": "Lamb of God (Mass of Holy Cross)",
+        "composer": "Isele"
+      },
+      "communionSongs": [
+        {
+          "title": "Christ the Lord",
+          "composer": "Sarah Hart • Robert Feduccia",
+          "description": "VERSE 2 - 4"
+        }
+      ]
+    },
+    {
+      "community": "Foundations",
+      "communityId": "foundations",
+      "date": "Year B — Jan 10, 2027 (Sun)",
+      "presider": "NOT THIS YEAR",
+      "gathering": {
+        "title": "Come to the Water",
+        "composer": "John B. Foley, SJ • Arranged by Arielle Phan",
+        "description": "Baptism of the Lord"
+      },
+      "penitentialAct": {
+        "title": "Kyrie (Gift of God) • Adapted Version",
+        "composer": "Marty Haugen • Arranged by David Locwood"
+      },
+      "gloria": {
+        "title": "Mass of Joy & Peace (Gospel Version)",
+        "composer": "Tony Alonso • Arrangement by David Lockwood"
+      },
+      "responsorialPsalm": {
+        "psalm": "Is 12 You will draw water joyfully from the springs of salvation.",
+        "setting": "TBD"
+      },
+      "gospelAcclamation": {
+        "title": "Hallelujah (adapted for Liturgy)",
+        "composer": "Leonard Cohen",
+        "verse": "John saw Jesus approaching him, \nand said: Behold the Lamb of God\nwho takes away the sin of the world."
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "Mass of Glory (Lockwood Christmas Intro)"
+      },
+      "lordsPrayer": {
+        "title": "Chanted Our Father (Snow)",
+        "composer": "Jennings • Paregorius"
+      },
+      "fractionRite": {
+        "title": "Lamb of God (Mass of Glory)"
+      }
+    },
+    {
+      "community": "Generations",
+      "communityId": "generations",
+      "date": "Year B — Jan 10, 2027 (Sun)",
+      "presider": "NOT THIS YEAR",
+      "gathering": {
+        "title": "Come to the Water",
+        "composer": "John B. Foley, SJ • Arranged by Arielle Phan",
+        "description": "Baptism of the Lord"
+      },
+      "penitentialAct": {
+        "title": "Kyrie • Misa Del Mundo",
+        "composer": "If needed. Talk to presider!"
+      },
+      "gloria": {
+        "title": "Glory, Glory, Gloria! (Mass of the Setting Sun)",
+        "composer": "Bonilla & Wilson • Vocal Arr. by Lockwood & Phan"
+      },
+      "responsorialPsalm": {
+        "psalm": "Is 12 You will draw water joyfully from the springs of salvation.",
+        "setting": "TBD"
+      },
+      "gospelAcclamation": {
+        "title": "Hallelujah (adapted for Liturgy)",
+        "composer": "Leonard Cohen",
+        "verse": "John saw Jesus approaching him, \nand said: Behold the Lamb of God\nwho takes away the sin of the world."
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "Mass of Glory (Lockwood Christmas Intro)"
+      },
+      "lordsPrayer": {
+        "title": "Echo Our Father",
+        "composer": "Jerome Andrews, Arranged by Dan Houze"
+      },
+      "fractionRite": {
+        "title": "Lamb of God (Mass of Glory)"
+      }
+    },
+    {
+      "community": "Heritage",
+      "communityId": "heritage",
+      "date": "Year B — Jan 10, 2027 (Sun)",
+      "presider": "NOT THIS YEAR",
+      "gathering": {
+        "title": "Come to the Water",
+        "composer": "John B. Foley, SJ • Arranged by Arielle Phan",
+        "description": "Baptism of the Lord"
+      },
+      "penitentialAct": {
+        "title": "Will not be led by Cantor"
+      },
+      "gloria": {
+        "title": "A Joyful Christmas Gloria",
+        "composer": "Arr. Jeanne Cotter & Tony Alonso"
+      },
+      "responsorialPsalm": {
+        "psalm": "Is 12 You will draw water joyfully from the springs of salvation.",
+        "setting": "TBD"
+      },
+      "gospelAcclamation": {
+        "title": "CHRISTMAS — Baptism • ABC",
+        "composer": "The Lyric Gospel Acclamations • Tony Alonso"
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "Mass of the Incarnate Word",
+        "composer": "Bob Hurd • Traditional Arrangement"
+      },
+      "lordsPrayer": {
+        "title": "Chanted Our Father (Snow)",
+        "composer": "Jennings/Paregorius"
+      },
+      "fractionRite": {
+        "title": "Lamb of God (Mass of Holy Cross)"
+      },
+      "communionSongs": [
+        {
+          "title": "Christ the Lord",
+          "composer": "Sarah Hart • Robert Feduccia",
+          "description": "VERSE 2 - 4"
+        }
+      ]
+    },
+    {
+      "community": "Elevations",
+      "communityId": "elevations",
+      "date": "Year B — Jan 10, 2027 (Sun)",
+      "presider": "NOT THIS YEAR",
+      "gathering": {
+        "title": "Come to the Water",
+        "composer": "John B. Foley, SJ • Arranged by Arielle Phan",
+        "description": "Baptism of the Lord"
+      },
+      "penitentialAct": {
+        "title": "Kyrie (Misa Del Mundo)",
+        "composer": "Jesse Manibusan — If needed."
+      },
+      "gloria": {
+        "title": "Glory, Glory, Gloria! (Mass of the Setting Sun)"
+      },
+      "responsorialPsalm": {
+        "psalm": "Is 12 You will draw water joyfully from the springs of salvation.",
+        "setting": "TBD"
+      },
+      "gospelAcclamation": {
+        "title": "Hallelujah (adapted for Liturgy)",
+        "composer": "Leonard Cohen",
+        "verse": "John saw Jesus approaching him, \nand said: Behold the Lamb of God\nwho takes away the sin of the world."
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "Mass of Glory (Christmas Intro)"
+      },
+      "lordsPrayer": {
+        "title": "Echo Our Father",
+        "composer": "Jerome Andrews, Arranged by Dan Houze"
+      },
+      "fractionRite": {
+        "title": "Lamb of God (Mass of Glory)"
+      },
+      "communionSongs": [
+        {
+          "title": "Christ the Lord",
+          "composer": "Sarah Hart • Robert Feduccia",
+          "description": "VERSE 2 - 4"
+        }
+      ]
+    }
+  ]
+}

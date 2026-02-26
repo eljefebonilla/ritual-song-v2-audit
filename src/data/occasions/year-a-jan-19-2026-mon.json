@@ -1,0 +1,19 @@
+{
+  "id": "year-a-jan-19-2026-mon",
+  "name": "Year A — Jan 19, 2026 (Mon)",
+  "year": "ABC",
+  "season": "ordinary",
+  "seasonLabel": "Ordinary Time",
+  "seasonOrder": 19,
+  "dates": [],
+  "lectionary": {
+    "number": "Year C — Jan 20, 2031 (Mon)",
+    "gospelTitle": "Year B — Jan 21, 2030 (Mon)",
+    "thematicTag": "Year A — Jan 15, 2029 (Mon)",
+    "thematicDetail": "Year C — Jan 17, 2028 (Mon)"
+  },
+  "readings": [],
+  "antiphons": [],
+  "planningNotes": [],
+  "musicPlans": []
+}

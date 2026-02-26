@@ -1,0 +1,197 @@
+{
+  "id": "easter-sunday-abc",
+  "name": "EASTER SUNDAY [ABC]",
+  "year": "ABC",
+  "season": "easter",
+  "seasonLabel": "Easter",
+  "seasonOrder": 0,
+  "dates": [
+    {
+      "date": "2026-04-05",
+      "label": "Year A — Apr 05, 2026 (Sun)",
+      "dayOfWeek": "Sun"
+    },
+    {
+      "date": "2030-04-21",
+      "label": "Year B — Apr 21, 2030 (Sun)",
+      "dayOfWeek": "Sun"
+    },
+    {
+      "date": "2029-04-01",
+      "label": "Year A — Apr 01, 2029 (Sun)",
+      "dayOfWeek": "Sun"
+    },
+    {
+      "date": "2028-04-16",
+      "label": "Year C — Apr 16, 2028 (Sun)",
+      "dayOfWeek": "Sun"
+    },
+    {
+      "date": "2027-03-28",
+      "label": "Year B — Mar 28, 2027 (Sun)",
+      "dayOfWeek": "Sun"
+    }
+  ],
+  "lectionary": {
+    "number": "042•ABC",
+    "gospelTitle": "Tomb Empty; Christ Risen (Jn)",
+    "thematicTag": "First Day of New Creation"
+  },
+  "readings": [],
+  "antiphons": [],
+  "planningNotes": [
+    "SEE SHEET"
+  ],
+  "musicPlans": [
+    {
+      "community": "Foundations",
+      "communityId": "foundations",
+      "date": "Year C — Apr 23, 2028 (Sun)",
+      "presider": "NOT THIS YEAR",
+      "prelude": {
+        "title": "Regina Caeli / O Queen of Heaven",
+        "composer": "Mode VI Latin • 12th C",
+        "description": "Pope Leo XIV singing Regina Caeli"
+      },
+      "gloria": {
+        "title": "Glory to God (Mass of Joy & Peace)",
+        "composer": "Alonso • Arr. by Houze OR Arr. by Lockwood"
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "Mass of Glory",
+        "composer": "Bob Hurd & Ken Canedo"
+      },
+      "lordsPrayer": {
+        "title": "Chanted Our Father (Snow)",
+        "composer": "Jennings • Paregorius"
+      },
+      "fractionRite": {
+        "title": "Lamb of God (Mass of Glory)",
+        "composer": "Bob Hurd & Ken Canedo"
+      },
+      "communionSongs": [
+        {
+          "title": "Composer(s) • Arranger(s)"
+        },
+        {
+          "title": "Composer(s) • Arranger(s)"
+        }
+      ]
+    },
+    {
+      "community": "Generations",
+      "communityId": "generations",
+      "date": "Year C — Apr 23, 2028 (Sun)",
+      "presider": "NOT THIS YEAR",
+      "prelude": {
+        "title": "Regina Caeli / O Queen of Heaven",
+        "composer": "Mode VI Latin • 12th C",
+        "description": "Pope Leo XIV singing Regina Caeli"
+      },
+      "gloria": {
+        "title": "Glory to God (Mass of Joy & Peace)",
+        "composer": "Tony Alonso • Arr. by Dan Houze"
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "Mass of Glory",
+        "composer": "Jeffrey Bonilla & David Lockwood"
+      },
+      "lordsPrayer": {
+        "title": "(Echo) Our Father",
+        "composer": "Jerome Andrews • Arranged by Dan Houze"
+      },
+      "fractionRite": {
+        "title": "Lamb of God (Mass of Glory)"
+      },
+      "communionSongs": [
+        {
+          "title": "Composer(s) • Arranger(s)"
+        },
+        {
+          "title": "Composer(s) • Arranger(s)"
+        },
+        {
+          "title": "Composer(s) • Arranger(s)"
+        },
+        {
+          "title": "Composer(s) • Arranger(s)"
+        }
+      ]
+    },
+    {
+      "community": "Heritage",
+      "communityId": "heritage",
+      "date": "Year C — Apr 23, 2028 (Sun)",
+      "presider": "NOT THIS YEAR",
+      "prelude": {
+        "title": "Regina Caeli / O Queen of Heaven",
+        "composer": "Mode VI Latin • 12th C",
+        "description": "Pope Leo XIV singing Regina Caeli"
+      },
+      "gloria": {
+        "title": "Glory to God (Mass of Joy & Peace)",
+        "composer": "Tony Alonso, Thru Composed"
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "Mass of Joy & Peace",
+        "composer": "Tony Alonso"
+      },
+      "lordsPrayer": {
+        "title": "Chanted Our Father (Snow)",
+        "composer": "Jennings/Paregorius"
+      },
+      "fractionRite": {
+        "title": "Lamb of God (Mass of Joy & Peace)",
+        "composer": "Tony Alonso"
+      },
+      "communionSongs": [
+        {
+          "title": "Composer(s) • Arranger(s)"
+        },
+        {
+          "title": "Composer(s) • Arranger(s)"
+        },
+        {
+          "title": "Composer(s) • Arranger(s)"
+        }
+      ]
+    },
+    {
+      "community": "Elevations",
+      "communityId": "elevations",
+      "date": "Year C — Apr 23, 2028 (Sun)",
+      "presider": "NOT THIS YEAR",
+      "prelude": {
+        "title": "Regina Caeli / O Queen of Heaven",
+        "composer": "Mode VI Latin • 12th C",
+        "description": "Pope Leo XIV singing Regina Caeli"
+      },
+      "gloria": {
+        "title": "Glory to God (Joy & Peace)"
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "Mass of Restoration",
+        "composer": "Joshua Blakesley"
+      },
+      "lordsPrayer": {
+        "title": "Echo Our Father",
+        "composer": "Andrews, Arr. Bonilla • Lockwood • Fajardo"
+      },
+      "fractionRite": {
+        "title": "Lamb of God (Mass of Restoration)",
+        "composer": "Joshua Blakesley"
+      },
+      "communionSongs": [
+        {
+          "title": "Composer(s) • Arranger(s)"
+        },
+        {
+          "title": "Composer(s) • Arranger(s)"
+        },
+        {
+          "title": "Composer(s) • Arranger(s)"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,399 @@
+{
+  "id": "year-c-nov-23-2025-sun",
+  "name": "Year C — Nov 23, 2025 (Sun)",
+  "year": "ABC",
+  "season": "ordinary",
+  "seasonLabel": "Ordinary Time",
+  "seasonOrder": 23,
+  "dates": [],
+  "lectionary": {
+    "number": "Year C — Nov 25, 2040 (Sun)",
+    "gospelTitle": "Year C — Nov 22, 2037 (Sun)",
+    "thematicTag": "Year C — Nov 26, 2034 (Sun)",
+    "thematicDetail": "Year C — Nov 23, 2031 (Sun)"
+  },
+  "readings": [
+    {
+      "type": "psalm",
+      "citation": "Paradoxical Kingship",
+      "summary": "",
+      "antiphon": "Planning Reminders"
+    },
+    {
+      "type": "gospel_verse",
+      "citation": "How worthy is the Lamb who was slain,\nto receive power and divinity,\nand wisdom and strength and honor.\nTo him belong glory and power for ever and ever.",
+      "summary": ""
+    },
+    {
+      "type": "gospel",
+      "citation": "Reading I | 2 Sm 5:1-3",
+      "summary": "David is anointed King of Israel."
+    }
+  ],
+  "antiphons": [
+    {
+      "type": "entrance",
+      "option": 1,
+      "citation": "Verse before the Gospel | Mk 11:9, 10",
+      "text": "Blessed is he who comes in the name of the Lord!\nBlessed is the kingdom of our father David that is to come!"
+    },
+    {
+      "type": "communion",
+      "option": 2,
+      "citation": "Communion Antiphon | Ps 29 (28):10–11",
+      "text": "The Lord sits as King for ever.\nThe Lord will bless his people with peace."
+    }
+  ],
+  "planningNotes": [
+    "Communion Antiphon • Option II",
+    "N/A"
+  ],
+  "musicPlans": [
+    {
+      "community": "Reflections",
+      "communityId": "reflections",
+      "date": "Year C — Nov 22, 2025 (Sat)",
+      "presider": "Fr. Eusebio Llonoso",
+      "prelude": {
+        "title": "N/A"
+      },
+      "penitentialAct": {
+        "title": "LASST UNS ERFREUEN",
+        "composer": "Christ the King",
+        "description": "Penitential Act"
+      },
+      "gloria": {
+        "title": "Kyrie • Misa Del Mundo",
+        "composer": "Only if needed. Talk to presider!",
+        "description": "Gloria"
+      },
+      "gospelAcclamation": {
+        "title": "The Lyric Psalter • Tony Alonso & Marty Haugen",
+        "composer": "Gospel Acclamation",
+        "verse": "Alleluia (Mass of Joy & Peace)"
+      },
+      "offertory": {
+        "title": "The Lyric Gospel Acclamations • Tony Alonso",
+        "description": "Offertory Song"
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "Jesus, Remember Me",
+        "composer": "Taizé — Jacques Berthier"
+      },
+      "lordsPrayer": {
+        "title": "Eucharistic Acclamations",
+        "composer": "Mass for the Healing of the World",
+        "description": "Trevor Thomson"
+      },
+      "fractionRite": {
+        "title": "Holy",
+        "composer": "When We Eat This Bread",
+        "description": "Amen"
+      },
+      "communionSongs": [
+        {
+          "title": "The Lord's Prayer",
+          "composer": "Chanted Our Father (Snow)",
+          "description": "Jennings/Paregorius"
+        },
+        {
+          "title": "Fraction Rite",
+          "composer": "Lamb of God (Mass for the Healing of the World)",
+          "description": "Trevor Thomson"
+        },
+        {
+          "title": "Communion Songs",
+          "composer": "Worthy Is the Lamb",
+          "description": "Ricky Manalo CSP"
+        },
+        {
+          "title": "Ent Ant \"How worthy is the Lamb who was slain...\"",
+          "composer": "Unless a Grain of Wheat",
+          "description": "Bernadette Farrell • Barbara Bridge • Kevin Walsh"
+        }
+      ]
+    },
+    {
+      "community": "Foundations",
+      "communityId": "foundations",
+      "date": "Year C — Nov 23, 2025 (Sun)",
+      "presider": "Fr. Thomas Park",
+      "prelude": {
+        "title": "Song Title",
+        "composer": "Composer/s"
+      },
+      "penitentialAct": {
+        "title": "LASST UNS ERFREUEN",
+        "composer": "Christ the King!",
+        "description": "Penitential Act"
+      },
+      "gloria": {
+        "title": "Kyrie (Gift of God) • Adapted Version",
+        "composer": "Marty Haugen • Arranged by David Locwood",
+        "description": "Gloria"
+      },
+      "gospelAcclamation": {
+        "title": "The Lyric Psalter • Tony Alonso & Marty Haugen",
+        "composer": "Gospel Acclamation",
+        "verse": "Song Title"
+      },
+      "offertory": {
+        "title": "Verse Audio Example",
+        "description": "Offertory Song"
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "At the Name of Jesus",
+        "composer": "Christopher Walker"
+      },
+      "lordsPrayer": {
+        "title": "Eucharistic Acclamations",
+        "composer": "Mass of Glory • Bob Hurd • Arr. by Dan Houze"
+      },
+      "fractionRite": {
+        "title": "Holy, Holy",
+        "composer": "We Proclaim Your Death",
+        "description": "Amen"
+      },
+      "communionSongs": [
+        {
+          "title": "The Lord's Prayer",
+          "composer": "Chanted Our Father (Snow)",
+          "description": "Jennings • Paregorius"
+        },
+        {
+          "title": "Fraction Rite",
+          "composer": "Lamb of God (Mass of Glory)"
+        },
+        {
+          "title": "Communion Songs",
+          "composer": "Above All",
+          "description": "Lenny LeBlanc"
+        },
+        {
+          "title": "Christ the King!",
+          "composer": "Jesus, Living Bread",
+          "description": "Tom Booth"
+        }
+      ],
+      "sending": {
+        "title": "CRUCIFER • Nicholson • Arr. by David Lockwood",
+        "composer": "Christ the King!"
+      }
+    },
+    {
+      "community": "Generations",
+      "communityId": "generations",
+      "date": "Year C — Nov 23, 2025 (Sun)",
+      "presider": "Msgr. Lloyd Torgerson",
+      "prelude": {
+        "title": "N/A"
+      },
+      "penitentialAct": {
+        "title": "LASST UNS ERFREUEN • Arr. by David Lockwood",
+        "composer": "Christ the King",
+        "description": "Penitential Act"
+      },
+      "gloria": {
+        "title": "Kyrie • Misa Del Mundo",
+        "composer": "Only if needed. Talk to presider!",
+        "description": "Gloria"
+      },
+      "gospelAcclamation": {
+        "title": "Spirit & Psalm • Steve Angrisano",
+        "composer": "Gospel Acclamation",
+        "verse": "Setting from Mass of Misa del Mundo"
+      },
+      "offertory": {
+        "title": "Spirit & Psalm • Jesse Manibusan & Tony Gómez",
+        "description": "Offertory Song"
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "Above All",
+        "composer": "Lenny LeBlanc"
+      },
+      "lordsPrayer": {
+        "title": "Eucharistic Acclamations",
+        "composer": "Mass of Restoration",
+        "description": "Joshua Blakesley"
+      },
+      "fractionRite": {
+        "title": "Holy, Holy, Holy",
+        "composer": "Save Us Savior of the World",
+        "description": "Amen"
+      },
+      "communionSongs": [
+        {
+          "title": "The Lord's Prayer",
+          "composer": "(Echo) Our Father",
+          "description": "Jerome Andrews • Arranged by Dan Houze"
+        },
+        {
+          "title": "Fraction Rite",
+          "composer": "Lamb of God (Resoration)"
+        },
+        {
+          "title": "Communion Songs",
+          "composer": "Hymn to Christ the King",
+          "description": "Hart • Kroger • Ndolo • Blakesley"
+        },
+        {
+          "title": "Chirst the King",
+          "composer": "Jesus, Living Bread",
+          "description": "Tom Booth"
+        },
+        {
+          "title": "‘Lord, just say the word and my soul shall be healed…”",
+          "composer": "In Christ Alone",
+          "description": "Keith & Kristyn Getty"
+        },
+        {
+          "title": "\"The love of God was magnified\"",
+          "composer": "What A Beautiful Name",
+          "description": "Hillsong Worship •  (Original Version) Key of D"
+        }
+      ],
+      "sending": {
+        "title": "Lift High the Cross",
+        "composer": "CRUCIFER • Nicholson • Arr. by David Lockwood",
+        "description": "Christ the King!"
+      }
+    },
+    {
+      "community": "Heritage",
+      "communityId": "heritage",
+      "date": "Year C — Nov 23, 2025 (Sun)",
+      "presider": "Fr. Vince Kuna",
+      "penitentialAct": {
+        "title": "LASST UNS ERFREUEN",
+        "composer": "Christ the King",
+        "description": "Penitential Act"
+      },
+      "gloria": {
+        "title": "Kyrie • Misa Del Mundo",
+        "composer": "Only if needed. Talk to presider!",
+        "description": "Gloria"
+      },
+      "gospelAcclamation": {
+        "title": "The Lyric Psalter • Tony Alonso & Marty Haugen",
+        "composer": "Gospel Acclamation",
+        "verse": "Alleluia (Mass of Joy & Peace)"
+      },
+      "offertory": {
+        "title": "The Lyric Gospel Acclamations • Tony Alonso",
+        "description": "Offertory Song"
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "Jesus, Remember Me",
+        "composer": "Taizé — Jacques Berthier"
+      },
+      "lordsPrayer": {
+        "title": "Eucharistic Acclamations",
+        "composer": "Mass of Christ the Savior - Dan Schutte"
+      },
+      "fractionRite": {
+        "title": "Holy",
+        "composer": "When We Eat This Bread",
+        "description": "Amen"
+      },
+      "communionSongs": [
+        {
+          "title": "The Lord's Prayer",
+          "composer": "Echo Our Father",
+          "description": "Andrews, Arr. Bonilla • Lockwood • Fajardo"
+        },
+        {
+          "title": "Fraction Rite",
+          "composer": "Lamb of God (Mass of Christ the Savior)"
+        },
+        {
+          "title": "Communion Songs",
+          "composer": "Worthy Is the Lamb",
+          "description": "Ricky Manalo CSP"
+        },
+        {
+          "title": "Entrance Antiphon \"How worthy is the Lamb who was slain...\"",
+          "composer": "We Remember",
+          "description": "Marty Haugen"
+        },
+        {
+          "title": "\"We remember how you loved us to your death\"",
+          "composer": "Jesus the Lord",
+          "description": "Roc O’Connor SJ  • John Foley SJ"
+        }
+      ],
+      "sending": {
+        "title": "CRUCIFER • Sydney H. Nicholson",
+        "composer": "Christ the King!"
+      }
+    },
+    {
+      "community": "Elevations",
+      "communityId": "elevations",
+      "date": "Year C — Nov 23, 2025 (Sun)",
+      "presider": "\"Fr. David Guffey, CSC\"",
+      "penitentialAct": {
+        "title": "LASST UNS ERFREUEN • Arr. by David Lockwood",
+        "composer": "Christ the King",
+        "description": "Penitential Act"
+      },
+      "gloria": {
+        "title": "Kyrie • Misa Del Mundo",
+        "composer": "Only if needed. Talk to presider!",
+        "description": "Gloria"
+      },
+      "gospelAcclamation": {
+        "title": "The Lyric Psalter • Tony Alonso & Marty Haugen",
+        "composer": "Gospel Acclamation",
+        "verse": "Setting from Mass of Misa del Mundo"
+      },
+      "offertory": {
+        "title": "Spirit & Psalm • Jesse Manibusan & Tony Gómez",
+        "description": "Offertory Song"
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "In Christ Alone",
+        "composer": "Keith & Kristyn Getty • Arr. by Micah Jones"
+      },
+      "lordsPrayer": {
+        "title": "Eucharistic Acclamations",
+        "composer": "Mass of Restoration • Joshua Blakesley"
+      },
+      "fractionRite": {
+        "title": "Holy, Holy, Holy",
+        "composer": "Save Us Savior of the World",
+        "description": "Amen"
+      },
+      "communionSongs": [
+        {
+          "title": "The Lord's Prayer",
+          "composer": "Echo Our Father",
+          "description": "Andrews, Arr. Bonilla • Lockwood • Fajardo"
+        },
+        {
+          "title": "Fraction Rite",
+          "composer": "Lamb of God (Resoration)"
+        },
+        {
+          "title": "Communion Songs",
+          "composer": "Hymn to Christ the King",
+          "description": "Hart • Kroger • Ndolo • Blakesley"
+        },
+        {
+          "title": "Chirst the King",
+          "composer": "Endless Praise",
+          "description": "Charity Gayle"
+        },
+        {
+          "title": "\"Jesus, King of Kings, Jesus majesty\"",
+          "composer": "What A Beautiful Name (Gospel Version)",
+          "description": "Hillsong Worship"
+        }
+      ],
+      "sending": {
+        "title": "Sending Song",
+        "composer": "Lift High the Cross",
+        "description": "CRUCIFER • Nicholson • Arr. by David Lockwood"
+      }
+    }
+  ]
+}

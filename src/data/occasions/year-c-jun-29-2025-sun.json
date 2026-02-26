@@ -1,0 +1,356 @@
+{
+  "id": "year-c-jun-29-2025-sun",
+  "name": "Year C — Jun 29, 2025 (Sun)",
+  "year": "ABC",
+  "season": "ordinary",
+  "seasonLabel": "Ordinary Time",
+  "seasonOrder": 29,
+  "dates": [],
+  "lectionary": {
+    "number": "Year B — Jun 29, 2030 (Sat)",
+    "gospelTitle": "Year A — Jun 29, 2029 (Fri)",
+    "thematicTag": "Year C — Jun 29, 2028 (Thu)",
+    "thematicDetail": "Year B — Jun 29, 2027 (Tue)"
+  },
+  "readings": [
+    {
+      "type": "psalm",
+      "citation": "Keys of the Kingdom",
+      "summary": "",
+      "antiphon": "Planning Reminders"
+    },
+    {
+      "type": "gospel_verse",
+      "citation": "Peter the Apostle, and Paul the teacher of the Gentiles,\nthese have taught us your law, O Lord.",
+      "summary": ""
+    },
+    {
+      "type": "gospel",
+      "citation": "Reading I | Mass During the Day — Acts 12:1-11",
+      "summary": "The Lord rescues Peter from Herod."
+    }
+  ],
+  "antiphons": [
+    {
+      "type": "entrance",
+      "option": 1,
+      "citation": "Mass During the Day — Verse before the Gospel | Mt 16:18",
+      "text": "You are Peter and upon this rock I will build my Church,\nand the gates of the netherworld shall not prevail against it."
+    },
+    {
+      "type": "communion",
+      "option": 2,
+      "citation": "Communion Antiphon | Cf. Mt 16:16, 18",
+      "text": "Peter said to Jesus:\nYou are the Christ, the Son of the living God.\nAnd Jesus replied: You are Peter,\nand upon this rock I will build my Church."
+    }
+  ],
+  "planningNotes": [
+    "Communion Antiphon • Option II",
+    "N/A"
+  ],
+  "musicPlans": [
+    {
+      "community": "Reflections",
+      "communityId": "reflections",
+      "date": "",
+      "gospelAcclamation": {
+        "title": "The Lyric Psalter • Tony Alonso & Marty Haugen",
+        "composer": "Gospel Acclamation",
+        "verse": "Alleluia (Mass of Joy & Peace)"
+      }
+    },
+    {
+      "community": "Foundations",
+      "communityId": "foundations",
+      "date": "Year C — Jun 29, 2025 (Sun)",
+      "presider": "NOT THIS YEAR",
+      "prelude": {
+        "title": "N/A"
+      },
+      "penitentialAct": {
+        "title": "John Foley SJ • Matt Maher • Adapt by Arielle Phan",
+        "composer": "\"...and let all who have nothing, let them come to the Lord\"",
+        "description": "Penitential Act"
+      },
+      "gloria": {
+        "title": "Kyrie (Gift of God) • Adapted Version",
+        "composer": "Marty Haugen • Arranged by David Locwood",
+        "description": "Gloria"
+      },
+      "gospelAcclamation": {
+        "title": "Francesca LaRosa",
+        "composer": "Gospel Acclamation",
+        "verse": "Song Title"
+      },
+      "offertory": {
+        "title": "Verse Audio Example",
+        "description": "Offertory Song"
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "I Will Choose Christ",
+        "composer": "Tom Booth"
+      },
+      "lordsPrayer": {
+        "title": "Eucharistic Acclamations",
+        "composer": "Mass of Glory • Bob Hurd • Arr. by Dan Houze"
+      },
+      "fractionRite": {
+        "title": "Holy, Holy",
+        "composer": "We Proclaim Your Death",
+        "description": "Amen"
+      },
+      "communionSongs": [
+        {
+          "title": "The Lord's Prayer",
+          "composer": "Chanted Our Father (Snow)",
+          "description": "Jennings • Paregorius"
+        },
+        {
+          "title": "Fraction Rite",
+          "composer": "Lamb of God (Mass of Glory)"
+        },
+        {
+          "title": "Communion Songs",
+          "composer": "One Bread, One Body",
+          "description": "John Foley SJ — Upbeat!"
+        },
+        {
+          "title": "✪ Peter & Paul S",
+          "composer": "For All the Saints Who’ve Shown Your Love",
+          "description": "O WALY WALY • John L. Bell (GIA)"
+        }
+      ],
+      "sending": {
+        "title": "TRADITIONAL Arr. Bonilla (Rubato Intro)",
+        "composer": "Vss 1, 2, 7 — 10 (as needed)"
+      }
+    },
+    {
+      "community": "Generations",
+      "communityId": "generations",
+      "date": "Year C — Jun 29, 2025 (Sun)",
+      "presider": "NOT THIS YEAR",
+      "prelude": {
+        "title": "God of Peace",
+        "composer": "Jeffrey Bonilla & David Lockwood",
+        "description": "Prayer for Peace"
+      },
+      "penitentialAct": {
+        "title": "John Foley SJ • Matt Maher • Adapt by Arielle Phan",
+        "composer": "\"...and let all who have nothing, let them come to the Lord\"",
+        "description": "Penitential Act"
+      },
+      "gloria": {
+        "title": "Kyrie • Misa Del Mundo",
+        "composer": "Only if needed. Talk to presider!",
+        "description": "Gloria"
+      },
+      "gospelAcclamation": {
+        "title": "Francesca LaRosa",
+        "composer": "Gospel Acclamation",
+        "verse": "Setting from Mass of Renewal"
+      },
+      "offertory": {
+        "title": "Spirit & Psalm • Curtis Stephan",
+        "description": "Offertory Song"
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "Hold on to Love",
+        "composer": "Jesse Manibusan"
+      },
+      "lordsPrayer": {
+        "title": "Eucharistic Acclamations",
+        "composer": "Mass of Restoration",
+        "description": "Joshua Blakesley"
+      },
+      "fractionRite": {
+        "title": "Holy, Holy, Holy",
+        "composer": "Save Us Savior of the World",
+        "description": "Amen"
+      },
+      "communionSongs": [
+        {
+          "title": "The Lord's Prayer",
+          "composer": "(Echo) Our Father",
+          "description": "Jerome Andrews • Arranged by Dan Houze"
+        },
+        {
+          "title": "Fraction Rite",
+          "composer": "Lamb of God (Resoration)"
+        },
+        {
+          "title": "Communion Songs",
+          "composer": "Pan de Vida (4/4)",
+          "description": "Bob Hurd • Arranged by Ed Archer"
+        },
+        {
+          "title": "\"...at this table the last shall be first",
+          "composer": "Here I Am, Lord",
+          "description": "Dan Schutte • Arranged by Lockwood & Bonilla"
+        },
+        {
+          "title": "Willingness to answer the call like the Peter and Paul.",
+          "composer": "We Are Many Parts",
+          "description": "Marty Haugen"
+        },
+        {
+          "title": "\"...may the Spirit of Love make us one...\"",
+          "composer": "Breathe",
+          "description": "Hillsong Worship"
+        }
+      ],
+      "sending": {
+        "title": "When the Saints Go Marching In",
+        "composer": "TRADITIONAL Arr. Bonilla (Rubato Intro)",
+        "description": "Vss 1, 2, 7 — 10 (as needed)"
+      }
+    },
+    {
+      "community": "Heritage",
+      "communityId": "heritage",
+      "date": "Year C — Jun 29, 2025 (Sun)",
+      "presider": "NOT THIS YEAR",
+      "prelude": {
+        "title": "God of Peace",
+        "composer": "Jeffrey Bonilla & David Lockwood",
+        "description": "Prayer for Peace"
+      },
+      "penitentialAct": {
+        "title": "NETTLETON • Delores Dufner, OSB",
+        "composer": "Verses 1, 4, and 5",
+        "description": "Penitential Act"
+      },
+      "gloria": {
+        "title": "Kyrie • Misa Del Mundo",
+        "composer": "Only if needed. Talk to presider!",
+        "description": "Gloria"
+      },
+      "gospelAcclamation": {
+        "title": "The Lyric Psalter • Tony Alonso & Marty Haugen",
+        "composer": "Gospel Acclamation",
+        "verse": "Alleluia (Mass of Joy & Peace)"
+      },
+      "offertory": {
+        "title": "The Lyric Gospel Acclamations • Tony Alonso",
+        "description": "Offertory Song"
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "The Road of Mercy",
+        "composer": "Maureen Briare"
+      },
+      "lordsPrayer": {
+        "title": "Eucharistic Acclamations",
+        "composer": "Mass of Christ the Savior - Dan Schutte"
+      },
+      "fractionRite": {
+        "title": "Holy",
+        "composer": "When We Eat This Bread",
+        "description": "Amen"
+      },
+      "communionSongs": [
+        {
+          "title": "The Lord's Prayer",
+          "composer": "Echo Our Father",
+          "description": "Andrews, Arr. Bonilla • Lockwood • Fajardo"
+        },
+        {
+          "title": "Fraction Rite",
+          "composer": "Lamb of God (Mass of Christ the Savior)"
+        },
+        {
+          "title": "Communion Songs",
+          "composer": "The Supper of the Lord",
+          "description": "Laurence Rosania"
+        },
+        {
+          "title": "\"Bread of Love is broken now...\"",
+          "composer": "Eye Has Not Seen",
+          "description": "Marty Haugen"
+        },
+        {
+          "title": "\"...so we return in love what love has made\"",
+          "composer": "For All the Saints Who’ve Shown Your Love",
+          "description": "O WALY WALY • John L. Bell (GIA)"
+        }
+      ],
+      "sending": {
+        "title": "CRUCIFER • Sydney H. Nicholson",
+        "composer": "Ss Peter and Paul"
+      }
+    },
+    {
+      "community": "Elevations",
+      "communityId": "elevations",
+      "date": "Year C — Jun 29, 2025 (Sun)",
+      "presider": "NOT THIS YEAR",
+      "prelude": {
+        "title": "God of Peace",
+        "composer": "Jeffrey Bonilla & David Lockwood",
+        "description": "Prayer for Peace"
+      },
+      "penitentialAct": {
+        "title": "John Foley SJ • Matt Maher • Adapt by Arielle Phan",
+        "composer": "\"...and let all who have nothing, let them come to the Lord\"",
+        "description": "Penitential Act"
+      },
+      "gloria": {
+        "title": "Kyrie • Misa Del Mundo",
+        "composer": "Only if needed. Talk to presider!",
+        "description": "Gloria"
+      },
+      "gospelAcclamation": {
+        "title": "Francesca LaRosa",
+        "composer": "Gospel Acclamation",
+        "verse": "Setting from Mass of Renewal"
+      },
+      "offertory": {
+        "title": "Spirit & Psalm • Curtis Stephan",
+        "description": "Offertory Song"
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "Hold on to Love",
+        "composer": "Jesse Manibusan"
+      },
+      "lordsPrayer": {
+        "title": "Eucharistic Acclamations",
+        "composer": "Mass of Restoration • Joshua Blakesley"
+      },
+      "fractionRite": {
+        "title": "Holy, Holy, Holy",
+        "composer": "Save Us Savior of the World",
+        "description": "Amen"
+      },
+      "communionSongs": [
+        {
+          "title": "The Lord's Prayer",
+          "composer": "Echo Our Father",
+          "description": "Andrews, Arr. Bonilla • Lockwood • Fajardo"
+        },
+        {
+          "title": "Fraction Rite",
+          "composer": "Lamb of God (Resoration)"
+        },
+        {
+          "title": "Communion Songs",
+          "composer": "Pan de Vida (4/4)",
+          "description": "Bob Hurd • Arranged by Ed Archer"
+        },
+        {
+          "title": "\"...at this table the last shall be first",
+          "composer": "Here I Am, Lord",
+          "description": "Dan Schutte • Arranged by Lockwood & Bonilla"
+        },
+        {
+          "title": "Willingness to answer the call like the Peter and Paul.",
+          "composer": "Breathe",
+          "description": "Hillsong Worship"
+        }
+      ],
+      "sending": {
+        "title": "Sending Song",
+        "composer": "When the Saints Go Marching In",
+        "description": "TRADITIONAL Arr. Bonilla (Rubato Intro)"
+      }
+    }
+  ]
+}

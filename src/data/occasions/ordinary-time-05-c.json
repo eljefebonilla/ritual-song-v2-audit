@@ -1,0 +1,413 @@
+{
+  "id": "ordinary-time-05-c",
+  "name": "ORDINARY TIME 05 [C]",
+  "year": "C",
+  "season": "ordinary",
+  "seasonLabel": "Ordinary Time",
+  "seasonOrder": 5,
+  "dates": [
+    {
+      "date": "2025-02-09",
+      "label": "Year C — Feb 09, 2025 (Sun)",
+      "dayOfWeek": "Sun"
+    }
+  ],
+  "lectionary": {
+    "number": "075•C",
+    "gospelTitle": "Catching People",
+    "thematicTag": "Call of Peter (Lk 5)"
+  },
+  "readings": [
+    {
+      "type": "first",
+      "citation": "Cf. Ps 95 (94):6–12",
+      "summary": "Entrance Antiphon | Cf. Ps 95 (94):6–13"
+    },
+    {
+      "type": "psalm",
+      "citation": "Entrance Antiphon | Cf. Ps 95 (94):6–14",
+      "summary": "",
+      "antiphon": "Entrance Antiphon | Cf. Ps 95 (94):6–14"
+    },
+    {
+      "type": "second",
+      "citation": "Cf. Ps 95 (94):6–15",
+      "summary": "Entrance Antiphon | Cf. Ps 95 (94):6–16"
+    },
+    {
+      "type": "gospel_verse",
+      "citation": "Mt 4:19",
+      "summary": "Come after me\nand I will make you fishers of men."
+    },
+    {
+      "type": "gospel",
+      "citation": "Lk 5:1-11",
+      "summary": "An abundance of fish are caught by Simon."
+    }
+  ],
+  "antiphons": [
+    {
+      "type": "entrance",
+      "option": 1,
+      "citation": "Cf. Ps 95 (94):6–7",
+      "text": "Entrance Antiphon | Cf. Ps 95 (94):6–8"
+    },
+    {
+      "type": "entrance",
+      "option": 2,
+      "citation": "Entrance Antiphon | Cf. Ps 95 (94):6–9",
+      "text": "Entrance Antiphon | Cf. Ps 95 (94):6–10"
+    },
+    {
+      "type": "communion",
+      "option": 1,
+      "citation": "Cf. Ps 107 (106):8–9",
+      "text": "Let them thank the Lord for his mercy,\nhis wonders for the children of men,\nfor he satisfies the thirsty soul,\nand the hungry he fills with good things."
+    },
+    {
+      "type": "communion",
+      "option": 2,
+      "citation": "Communion Antiphon • Option II | Cf. Mt 5:5–6",
+      "text": "Blessed are those who mourn, for they shall be consoled.\nBlessed are those who hunger and thirst for righteousness,\nfor they shall have their fill."
+    }
+  ],
+  "planningNotes": [
+    "FEB - BLACKHISTORYMONTH",
+    "🏈  Superbowl Sunday  🏈",
+    "? MEN’S CORNERSTONE ?",
+    "♡ World Marriage Day ♡"
+  ],
+  "musicPlans": [
+    {
+      "community": "Reflections",
+      "communityId": "reflections",
+      "date": "Year C — Feb 05, 2028 (Sat)",
+      "presider": "NOT THIS YEAR",
+      "gathering": {
+        "title": "Come Worship The Lord",
+        "composer": "John Michael Talbot",
+        "description": "Entrance Antiphon"
+      },
+      "penitentialAct": {
+        "title": "Kyrie • Misa Del Mundo",
+        "composer": "Jesse Manibusan"
+      },
+      "gloria": {
+        "title": "Glory to God (Through-composed Setting)",
+        "composer": "Mass of Renewal • Curtis Stephan"
+      },
+      "responsorialPsalm": {
+        "psalm": "Ps 138 In the sight of the angels I will sing...",
+        "setting": "The Lyric Psalter • Tony Alonso & Marty Haugen"
+      },
+      "gospelAcclamation": {
+        "title": "Alleluia (Mass of Joy & Peace)",
+        "composer": "ORDINARY TIME • 05C"
+      },
+      "offertory": {
+        "title": "We Walk By Faith",
+        "composer": "Marty Haugen • Arranged by David Lockwood",
+        "description": "\"...help then, O Lord, our unbelief\""
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "Mass for the Healing of the World",
+        "composer": "Trevor Thomson"
+      },
+      "lordsPrayer": {
+        "title": "Chanted Our Father (Snow)",
+        "composer": "Jennings/Paregorius"
+      },
+      "fractionRite": {
+        "title": "Lamb of God (Mass for the Healing of the World)",
+        "composer": "Trevor Thomson"
+      },
+      "communionSongs": [
+        {
+          "title": "Jesus, Living Bread",
+          "composer": "Tom Booth",
+          "description": "“I’m open to your ways…”"
+        },
+        {
+          "title": "Take, O Take Me As I Am",
+          "composer": "John Bell",
+          "description": "First Reading | , Gospel"
+        },
+        {
+          "title": "Only This I Want",
+          "composer": "Dan Schutte",
+          "description": "\"Only this I want: but to know the Lord\""
+        }
+      ],
+      "sending": {
+        "title": "We Belong to You",
+        "composer": "Trevor Thomson",
+        "description": "\"all who seek to find their purpose\""
+      }
+    },
+    {
+      "community": "Foundations",
+      "communityId": "foundations",
+      "date": "Year C — Feb 06, 2028 (Sun)",
+      "presider": "NOT THIS YEAR",
+      "prelude": {
+        "title": "Love Never Fails",
+        "composer": "Brandon Heath",
+        "description": "World Marriage Day"
+      },
+      "gathering": {
+        "title": "As We Gather at Your Table",
+        "composer": "NETTLETON • Carl P. Daw • Arr. by J. Bonilla",
+        "description": "\"help us summon other guests to share that feast\""
+      },
+      "penitentialAct": {
+        "title": "Kyrie (Gift of God) • Adapted Version",
+        "composer": "Marty Haugen • Arranged by David Locwood"
+      },
+      "gloria": {
+        "title": "Mass of Joy & Peace (Gospel Version)",
+        "composer": "Tony Alonso • Arrangement by David Lockwood"
+      },
+      "responsorialPsalm": {
+        "psalm": "Ps 138 In the sight of the angels I will sing...",
+        "setting": "The Lyric Psalter • Tony Alonso & Marty Haugen"
+      },
+      "gospelAcclamation": {
+        "title": "Alleluia! Give the Glory (Mass of Glory)",
+        "verse": "Come after me\nand I will make you fishers of men."
+      },
+      "offertory": {
+        "title": "I Will Choose Christ",
+        "composer": "Tom Booth",
+        "description": "\"How many times must he call my name\""
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "Mass of Glory"
+      },
+      "lordsPrayer": {
+        "title": "Chanted Our Father (Snow)",
+        "composer": "Jennings • Paregorius"
+      },
+      "fractionRite": {
+        "title": "Lamb of God (Mass of Glory)"
+      },
+      "communionSongs": [
+        {
+          "title": "Taste and See (Gospel Version)",
+          "composer": "James E. Moore • ValLimar Jansen",
+          "description": "African American Sacred Songs"
+        },
+        {
+          "title": "Take, O Take Me As I Am",
+          "composer": "John Bell",
+          "description": "First Reading | , Gospel"
+        }
+      ],
+      "sending": {
+        "title": "Where He Leads Me",
+        "composer": "Ernest W. Blandy",
+        "description": "First Reading | , Gospel"
+      }
+    },
+    {
+      "community": "Generations",
+      "communityId": "generations",
+      "date": "Year C — Feb 06, 2028 (Sun)",
+      "presider": "NOT THIS YEAR",
+      "prelude": {
+        "title": "Love Never Fails"
+      },
+      "gathering": {
+        "title": "All Who Enter Here",
+        "composer": "Dan Houze & John Angotti",
+        "description": "\"...always open is Love's door\""
+      },
+      "penitentialAct": {
+        "title": "Kyrie • Misa Del Mundo",
+        "composer": "Jesse Manibusan"
+      },
+      "gloria": {
+        "title": "Glory, Glory, Gloria! (Mass of the Setting Sun)",
+        "composer": "Bonilla & Wilson • Vocal Arr. by Lockwood & Phan"
+      },
+      "responsorialPsalm": {
+        "psalm": "Ps 138 In the sight of the angels I will sing...",
+        "setting": "Spirit & Psalm • Thomas N. Tomaszek"
+      },
+      "gospelAcclamation": {
+        "title": "Hallelujah (adapted for Liturgy)",
+        "composer": "Leonard Cohen",
+        "verse": "Come after me\nand I will make you fishers of men."
+      },
+      "offertory": {
+        "title": "Goodness of God",
+        "composer": "CeCe Winans"
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "Mass of St. Anne",
+        "composer": "Ed Bolduc"
+      },
+      "lordsPrayer": {
+        "title": "Echo Our Father",
+        "composer": "Jerome Andrews • Arranged by Dan Houze"
+      },
+      "fractionRite": {
+        "title": "Lamb of God (Mass of Holy Cross)"
+      },
+      "communionSongs": [
+        {
+          "title": "Here I Am, Lord",
+          "composer": "Dan Schutte • Arranged by Lockwood & Bonilla",
+          "description": "First Reading |  —\"Here I am,\" I said; \"send me!\""
+        },
+        {
+          "title": "The Summons",
+          "composer": "John L Bell • Arranged by David Lockwood",
+          "description": "Gospel —\"...they left everything and followed him\""
+        },
+        {
+          "title": "Jesus, Living Bread",
+          "composer": "Tom Booth",
+          "description": "“I’m open to your ways…”"
+        }
+      ],
+      "sending": {
+        "title": "I Send You Out",
+        "composer": "John Angotti",
+        "description": "\"...it's time for us to become people of Spirit\""
+      }
+    },
+    {
+      "community": "Heritage",
+      "communityId": "heritage",
+      "date": "Year C — Feb 06, 2028 (Sun)",
+      "presider": "NOT THIS YEAR",
+      "gathering": {
+        "title": "As We Gather at Your Table",
+        "composer": "NETTLETON • Carl P. Daw • OCP",
+        "description": "\"help us summon other guests to share that feast\""
+      },
+      "penitentialAct": {
+        "title": "Kyrie • Misa Del Mundo",
+        "composer": "Jesse Manibusan"
+      },
+      "gloria": {
+        "title": "Glory to God (Mass of Christ the Savior)",
+        "composer": "Dan Schutte"
+      },
+      "responsorialPsalm": {
+        "psalm": "Ps 138 In the sight of the angels I will sing...",
+        "setting": "The Lyric Psalter • Tony Alonso & Marty Haugen"
+      },
+      "gospelAcclamation": {
+        "title": "ORDINARY TIME • 05C",
+        "composer": "The Lyric Gospel Acclamations • Tony Alonso"
+      },
+      "offertory": {
+        "title": "We Walk By Faith - Haugen (Traditional)",
+        "composer": "Marty Haugen • Arranged by Carol Browning",
+        "description": "\"...help then, O Lord, our unbelief\""
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "Mass of Creation - Rev. 2010"
+      },
+      "lordsPrayer": {
+        "title": "Chanted Our Father (Snow)",
+        "composer": "Jennings/Paregorius"
+      },
+      "fractionRite": {
+        "title": "Lamb of God (Mass of Creation)"
+      },
+      "communionSongs": [
+        {
+          "title": "Here I Am Lord",
+          "composer": "Dan Schutte • Arranged by Jack Schrader",
+          "description": "Basic arrangement if choir is small."
+        },
+        {
+          "title": "Take, O Take Me As I Am",
+          "composer": "John Bell",
+          "description": "First Reading, Gospel"
+        },
+        {
+          "title": "Only This I Want",
+          "composer": "Dan Schutte",
+          "description": "\"Only this I want: but to know the Lord\""
+        }
+      ],
+      "sending": {
+        "title": "Lord, You Give The Great Commission",
+        "composer": "ABBOT'S LEIGH • Jeffrey Rowthorn",
+        "description": "\"you call us to your service\""
+      }
+    },
+    {
+      "community": "Elevations",
+      "communityId": "elevations",
+      "date": "Year C — Feb 06, 2028 (Sun)",
+      "presider": "NOT THIS YEAR",
+      "prelude": {
+        "title": "Love Never Fails",
+        "composer": "Brandon Heath",
+        "description": "National Marriage Week"
+      },
+      "gathering": {
+        "title": "All Who Enter Here",
+        "composer": "Dan Houze & John Angotti",
+        "description": "\"...always open is Love's door\""
+      },
+      "penitentialAct": {
+        "title": "6666",
+        "composer": "Jesse Manibusan — If needed."
+      },
+      "gloria": {
+        "title": "Glory, Glory, Gloria! (Mass of the Setting Sun)"
+      },
+      "responsorialPsalm": {
+        "psalm": "Ps 138 In the sight of the angels I will sing...",
+        "setting": "Spirit & Psalm • Thomas N. Tomaszek"
+      },
+      "gospelAcclamation": {
+        "title": "Hallelujah (adapted for Liturgy)",
+        "composer": "Leonard Cohen",
+        "verse": "Come after me\nand I will make you fishers of men."
+      },
+      "offertory": {
+        "title": "Strength for the Journey",
+        "composer": "Michael John Poirier",
+        "description": "\"There is a road meant for you to travel\""
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "Mass of Communion (Lower Key) • Matt Maher"
+      },
+      "lordsPrayer": {
+        "title": "Echo Our Father",
+        "composer": "Andrews • Arr. by Bonilla • Lockwood • Fajardo"
+      },
+      "fractionRite": {
+        "title": "Lamb of God (Mass of Holy Cross)"
+      },
+      "communionSongs": [
+        {
+          "title": "Here I Am, Lord",
+          "composer": "Dan Schutte • Arranged by Lockwood & Bonilla",
+          "description": "First Reading |  —\"Here I am,\" I said; \"send me!\""
+        },
+        {
+          "title": "The Summons",
+          "composer": "John L Bell • Arranged by David Lockwood",
+          "description": "Gospel —\"...they left everything and followed him\""
+        },
+        {
+          "title": "Jesus, Living Bread",
+          "composer": "Tom Booth",
+          "description": "“I’m open to your ways…”"
+        }
+      ],
+      "sending": {
+        "title": "Your Grace Is Enough",
+        "composer": "Matt Maher",
+        "description": "Gospel —\"...they left everything and followed him\""
+      }
+    }
+  ]
+}
