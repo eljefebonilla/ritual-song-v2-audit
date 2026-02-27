@@ -24,6 +24,8 @@ interface FilterToolbarProps {
   setHidePastWeeks: (v: boolean) => void;
   hideMassParts: boolean;
   setHideMassParts: (v: boolean) => void;
+  hideReadings: boolean;
+  setHideReadings: (v: boolean) => void;
   viewMode: PlannerViewMode;
   setViewMode: (v: PlannerViewMode) => void;
 }
@@ -58,6 +60,8 @@ export default function FilterToolbar({
   setHidePastWeeks,
   hideMassParts,
   setHideMassParts,
+  hideReadings,
+  setHideReadings,
   viewMode,
   setViewMode,
 }: FilterToolbarProps) {
@@ -314,6 +318,17 @@ export default function FilterToolbar({
               className="rounded border-stone-300 text-parish-burgundy focus:ring-parish-burgundy"
             />
             <span className="text-xs text-stone-600">Hide mass parts</span>
+          </label>
+
+          {/* Hide readings toggle */}
+          <label className="flex items-center gap-1.5 cursor-pointer select-none">
+            <input
+              type="checkbox"
+              checked={hideReadings}
+              onChange={(e) => setHideReadings(e.target.checked)}
+              className="rounded border-stone-300 text-parish-burgundy focus:ring-parish-burgundy"
+            />
+            <span className="text-xs text-stone-600">Hide readings</span>
           </label>
         </div>
       </div>

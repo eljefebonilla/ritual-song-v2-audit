@@ -13,6 +13,7 @@ import PlannerGrid from "./PlannerGrid";
 
 const HIDE_PAST_KEY = "rs_hide_past_weeks";
 const HIDE_MASS_PARTS_KEY = "rs_hide_mass_parts";
+const HIDE_READINGS_KEY = "rs_hide_readings";
 
 export type PlannerViewMode = "grid" | "cards";
 
@@ -55,15 +56,27 @@ export default function PlannerShell({ occasions }: PlannerShellProps) {
     }
   });
 
+  // Hide readings toggle (persisted to localStorage — lazy init)
+  const [hideReadings, setHideReadings] = useState(() => {
+    if (typeof window === "undefined") return false;
+    try {
+      const stored = localStorage.getItem(HIDE_READINGS_KEY);
+      return stored === "true";
+    } catch {
+      return false;
+    }
+  });
+
   // Persist to localStorage when changed
   useEffect(() => {
     try {
       localStorage.setItem(HIDE_PAST_KEY, String(hidePastWeeks));
       localStorage.setItem(HIDE_MASS_PARTS_KEY, String(hideMassParts));
+      localStorage.setItem(HIDE_READINGS_KEY, String(hideReadings));
     } catch {
       // ignore
     }
-  }, [hidePastWeeks, hideMassParts]);
+  }, [hidePastWeeks, hideMassParts, hideReadings]);
 
   const filteredOccasions = useMemo(
     () => getFilteredOccasions(occasions, yearCycle, season),
@@ -126,11 +139,13 @@ export default function PlannerShell({ occasions }: PlannerShellProps) {
         setHidePastWeeks={handleHidePastToggle}
         hideMassParts={hideMassParts}
         setHideMassParts={setHideMassParts}
+        hideReadings={hideReadings}
+        setHideReadings={setHideReadings}
         viewMode={viewMode}
         setViewMode={setViewMode}
       />
       <div className="flex-1 overflow-hidden">
-        <PlannerGrid columns={columns} viewMode={viewMode} hideMassParts={hideMassParts} communityId={communityId} />
+        <PlannerGrid columns={columns} viewMode={viewMode} hideMassParts={hideMassParts} hideReadings={hideReadings} communityId={communityId} />
       </div>
     </div>
   );

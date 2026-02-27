@@ -25,6 +25,7 @@ interface PlannerGridProps {
   columns: GridColumn[];
   viewMode: PlannerViewMode;
   hideMassParts?: boolean;
+  hideReadings?: boolean;
   communityId?: string;
 }
 
@@ -35,7 +36,7 @@ interface EditingCell {
   anchorRect: DOMRect;
 }
 
-function OccasionCard({ column, hideMassParts = false }: { column: GridColumn; hideMassParts?: boolean }) {
+function OccasionCard({ column, hideMassParts = false, hideReadings = false }: { column: GridColumn; hideMassParts?: boolean; hideReadings?: boolean }) {
   const { occasion, plan } = column;
   const colors = SEASON_COLORS[occasion.season] || SEASON_COLORS.ordinary;
   const displayDate = getOccasionDisplayDate(occasion);
@@ -74,6 +75,7 @@ function OccasionCard({ column, hideMassParts = false }: { column: GridColumn; h
         {GRID_SECTIONS.map((section) => {
           const sectionRows = section.rows
             .filter((rowKey) => !(hideMassParts && MASS_PART_ROWS.has(rowKey)))
+            .filter((rowKey) => !(hideReadings && READING_ROWS.has(rowKey)))
             .map((rowKey) => {
               const data = extractCellData(plan, rowKey, occasion);
               return { rowKey, data };
@@ -112,7 +114,7 @@ function OccasionCard({ column, hideMassParts = false }: { column: GridColumn; h
   );
 }
 
-export default function PlannerGrid({ columns, viewMode, hideMassParts = false, communityId }: PlannerGridProps) {
+export default function PlannerGrid({ columns, viewMode, hideMassParts = false, hideReadings = false, communityId }: PlannerGridProps) {
   const { isAdmin } = useUser();
   const [massSettingExpanded, setMassSettingExpanded] = useState(false);
   const [editingCell, setEditingCell] = useState<EditingCell | null>(null);
@@ -191,7 +193,7 @@ export default function PlannerGrid({ columns, viewMode, hideMassParts = false, 
     return (
       <div className="h-full overflow-y-auto p-4 space-y-3">
         {columns.map((col) => (
-          <OccasionCard key={col.occasion.id} column={col} hideMassParts={hideMassParts} />
+          <OccasionCard key={col.occasion.id} column={col} hideMassParts={hideMassParts} hideReadings={hideReadings} />
         ))}
       </div>
     );
@@ -203,6 +205,7 @@ export default function PlannerGrid({ columns, viewMode, hideMassParts = false, 
     // Check if any rows in this section are visible
     const visibleRows = section.rows.filter((rowKey) => {
       if (hideMassParts && MASS_PART_ROWS.has(rowKey)) return false;
+      if (hideReadings && READING_ROWS.has(rowKey)) return false;
       // Hide mass setting sub-rows when collapsed
       if (MASS_SETTING_SUB_SET.has(rowKey) && !massSettingExpanded) return false;
       return true;
@@ -222,7 +225,7 @@ export default function PlannerGrid({ columns, viewMode, hideMassParts = false, 
     }
   }
 
-  const COL_WIDTH = 140;
+  const COL_WIDTH = 280;
   const LABEL_WIDTH = 130;
   const HEADER_HEIGHT = 72;
 
