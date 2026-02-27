@@ -5,6 +5,7 @@ import {
   useContext,
   useState,
   useEffect,
+  useRef,
   type ReactNode,
 } from "react";
 import { createClient } from "@/lib/supabase/client";
@@ -51,9 +52,19 @@ export function UserProvider({ children }: { children: ReactNode }) {
   const [roleOverride, setRoleOverride] = useState<UserRole | null>(null);
   const [loading, setLoading] = useState(true);
 
-  const supabase = createClient();
+  // Defer Supabase client creation to avoid SSR prerender failures
+  // when NEXT_PUBLIC_ env vars aren't available at build time.
+  const supabaseRef = useRef<ReturnType<typeof createClient> | null>(null);
+  function getSupabase() {
+    if (!supabaseRef.current) {
+      supabaseRef.current = createClient();
+    }
+    return supabaseRef.current;
+  }
 
   useEffect(() => {
+    const supabase = getSupabase();
+
     // Get initial session
     supabase.auth.getUser().then(({ data: { user } }) => {
       setUser(user);
@@ -81,6 +92,7 @@ export function UserProvider({ children }: { children: ReactNode }) {
   }, []); // eslint-disable-line react-hooks/exhaustive-deps
 
   async function fetchProfile(userId: string) {
+    const supabase = getSupabase();
     const { data } = await supabase
       .from("profiles")
       .select("*")
@@ -92,7 +104,7 @@ export function UserProvider({ children }: { children: ReactNode }) {
   }
 
   async function signOut() {
-    await supabase.auth.signOut();
+    await getSupabase().auth.signOut();
     setUser(null);
     setProfile(null);
     setRoleOverride(null);
