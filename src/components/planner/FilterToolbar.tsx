@@ -1,9 +1,11 @@
 "use client";
 
+import { useState } from "react";
 import type { LiturgicalOccasion, LiturgicalSeason } from "@/lib/types";
 import type { YearCycleFilter, CommunityId } from "@/lib/grid-types";
 import { COMMUNITY_OPTIONS, SEASON_OPTIONS } from "@/lib/grid-types";
 import { useUser } from "@/lib/user-context";
+import type { PlannerViewMode } from "./PlannerShell";
 
 interface FilterToolbarProps {
   yearCycle: YearCycleFilter;
@@ -20,6 +22,10 @@ interface FilterToolbarProps {
   occasions: LiturgicalOccasion[];
   hidePastWeeks: boolean;
   setHidePastWeeks: (v: boolean) => void;
+  hideMassParts: boolean;
+  setHideMassParts: (v: boolean) => void;
+  viewMode: PlannerViewMode;
+  setViewMode: (v: PlannerViewMode) => void;
 }
 
 const YEAR_CYCLES: { id: YearCycleFilter; label: string }[] = [
@@ -50,8 +56,13 @@ export default function FilterToolbar({
   totalOccasions,
   hidePastWeeks,
   setHidePastWeeks,
+  hideMassParts,
+  setHideMassParts,
+  viewMode,
+  setViewMode,
 }: FilterToolbarProps) {
   const { role, setRole } = useUser();
+  const [filtersExpanded, setFiltersExpanded] = useState(false);
 
   const handleRangePreset = (count: number) => {
     setRangeStart(0);
@@ -88,154 +99,223 @@ export default function FilterToolbar({
           </span>
         </h1>
         <div className="flex items-center gap-2">
-          <span className="text-xs text-stone-400">View as:</span>
+          {/* View mode toggle */}
           <div className="flex bg-stone-100 rounded-lg p-0.5">
             <button
-              onClick={() => setRole("admin")}
-              className={`px-3 py-1 text-xs font-medium rounded-md transition-colors ${
-                role === "admin"
+              onClick={() => setViewMode("grid")}
+              className={`p-1.5 rounded-md transition-colors ${
+                viewMode === "grid"
                   ? "bg-white text-stone-900 shadow-sm"
-                  : "text-stone-500 hover:text-stone-700"
+                  : "text-stone-400 hover:text-stone-700"
               }`}
+              title="Grid view"
             >
-              Music Director
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                <rect x="3" y="3" width="7" height="7" /><rect x="14" y="3" width="7" height="7" />
+                <rect x="3" y="14" width="7" height="7" /><rect x="14" y="14" width="7" height="7" />
+              </svg>
             </button>
             <button
-              onClick={() => setRole("member")}
-              className={`px-3 py-1 text-xs font-medium rounded-md transition-colors ${
-                role === "member"
+              onClick={() => setViewMode("cards")}
+              className={`p-1.5 rounded-md transition-colors ${
+                viewMode === "cards"
                   ? "bg-white text-stone-900 shadow-sm"
-                  : "text-stone-500 hover:text-stone-700"
+                  : "text-stone-400 hover:text-stone-700"
               }`}
+              title="Card view"
             >
-              Choir Member
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                <line x1="8" y1="6" x2="21" y2="6" /><line x1="8" y1="12" x2="21" y2="12" /><line x1="8" y1="18" x2="21" y2="18" />
+                <line x1="3" y1="6" x2="3.01" y2="6" /><line x1="3" y1="12" x2="3.01" y2="12" /><line x1="3" y1="18" x2="3.01" y2="18" />
+              </svg>
             </button>
           </div>
-        </div>
-      </div>
 
-      {/* Filter row */}
-      <div className="flex items-center gap-3 flex-wrap">
-        {/* Year Cycle */}
-        <div className="flex items-center gap-1.5">
-          <label className="text-xs font-medium text-stone-500 uppercase tracking-wide">Cycle</label>
-          <div className="flex bg-stone-100 rounded-lg p-0.5">
-            {YEAR_CYCLES.map((yc) => (
+          {/* Role toggle — hidden on small screens to save space */}
+          <div className="hidden sm:flex items-center gap-2">
+            <span className="text-xs text-stone-400">View as:</span>
+            <div className="flex bg-stone-100 rounded-lg p-0.5">
               <button
-                key={yc.id}
-                onClick={() => setYearCycle(yc.id)}
-                className={`px-2.5 py-1 text-xs font-medium rounded-md transition-colors ${
-                  yearCycle === yc.id
+                onClick={() => setRole("admin")}
+                className={`px-3 py-1 text-xs font-medium rounded-md transition-colors ${
+                  role === "admin"
                     ? "bg-white text-stone-900 shadow-sm"
                     : "text-stone-500 hover:text-stone-700"
                 }`}
               >
-                {yc.label}
+                Music Director
               </button>
-            ))}
+              <button
+                onClick={() => setRole("member")}
+                className={`px-3 py-1 text-xs font-medium rounded-md transition-colors ${
+                  role === "member"
+                    ? "bg-white text-stone-900 shadow-sm"
+                    : "text-stone-500 hover:text-stone-700"
+                }`}
+              >
+                Choir Member
+              </button>
+            </div>
           </div>
         </div>
+      </div>
 
-        <div className="w-px h-6 bg-stone-200" />
+      {/* Mobile: expandable filter section */}
+      <button
+        onClick={() => setFiltersExpanded(!filtersExpanded)}
+        className="flex items-center gap-1.5 text-xs font-medium text-stone-500 mb-2 md:hidden"
+      >
+        <svg
+          width="12"
+          height="12"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          strokeWidth="2"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          className={`transition-transform ${filtersExpanded ? "rotate-90" : ""}`}
+        >
+          <polyline points="9 18 15 12 9 6" />
+        </svg>
+        Filters
+      </button>
 
-        {/* Season */}
-        <div className="flex items-center gap-1.5">
-          <label className="text-xs font-medium text-stone-500 uppercase tracking-wide">Season</label>
-          <select
-            value={season}
-            onChange={(e) => {
-              setSeason(e.target.value as LiturgicalSeason | "all");
-              setRangeStart(0);
-            }}
-            className="text-xs border border-stone-200 rounded-md px-2 py-1.5 bg-white text-stone-700 focus:outline-none focus:ring-1 focus:ring-stone-400"
-          >
-            {SEASON_OPTIONS.map((s) => (
-              <option key={s.id} value={s.id}>{s.label}</option>
-            ))}
-          </select>
-        </div>
-
-        <div className="w-px h-6 bg-stone-200" />
-
-        {/* Community */}
-        <div className="flex items-center gap-1.5">
-          <label className="text-xs font-medium text-stone-500 uppercase tracking-wide">Community</label>
-          <select
-            value={communityId}
-            onChange={(e) => setCommunityId(e.target.value as CommunityId)}
-            className="text-xs border border-stone-200 rounded-md px-2 py-1.5 bg-white text-stone-700 focus:outline-none focus:ring-1 focus:ring-stone-400"
-          >
-            {COMMUNITY_OPTIONS.map((c) => (
-              <option key={c.id} value={c.id}>{c.label}</option>
-            ))}
-          </select>
-        </div>
-
-        <div className="w-px h-6 bg-stone-200" />
-
-        {/* Range presets */}
-        <div className="flex items-center gap-1.5">
-          <label className="text-xs font-medium text-stone-500 uppercase tracking-wide">Show</label>
-          <div className="flex bg-stone-100 rounded-lg p-0.5">
-            {RANGE_PRESETS.map((rp) => {
-              const isActive =
-                rp.count === -1
-                  ? rangeEnd === totalOccasions && rangeStart === 0
-                  : rangeEnd - rangeStart === rp.count && rangeStart === 0;
-              return (
+      {/* Filter row — always visible on md+, collapsible on mobile */}
+      <div className={`${filtersExpanded ? "block" : "hidden"} md:block`}>
+        <div className="flex flex-col gap-3 md:flex-row md:items-center md:flex-wrap">
+          {/* Year Cycle */}
+          <div className="flex items-center gap-1.5">
+            <label className="text-xs font-medium text-stone-500 uppercase tracking-wide">Cycle</label>
+            <div className="flex bg-stone-100 rounded-lg p-0.5">
+              {YEAR_CYCLES.map((yc) => (
                 <button
-                  key={rp.label}
-                  onClick={() => handleRangePreset(rp.count)}
+                  key={yc.id}
+                  onClick={() => setYearCycle(yc.id)}
                   className={`px-2.5 py-1 text-xs font-medium rounded-md transition-colors ${
-                    isActive
+                    yearCycle === yc.id
                       ? "bg-white text-stone-900 shadow-sm"
                       : "text-stone-500 hover:text-stone-700"
                   }`}
                 >
-                  {rp.label}
+                  {yc.label}
                 </button>
-              );
-            })}
+              ))}
+            </div>
           </div>
+
+          <div className="hidden md:block w-px h-6 bg-stone-200" />
+
+          {/* Season */}
+          <div className="flex items-center gap-1.5">
+            <label className="text-xs font-medium text-stone-500 uppercase tracking-wide">Season</label>
+            <select
+              value={season}
+              onChange={(e) => {
+                setSeason(e.target.value as LiturgicalSeason | "all");
+                setRangeStart(0);
+              }}
+              className="text-xs border border-stone-200 rounded-md px-2 py-1.5 bg-white text-stone-700 focus:outline-none focus:ring-1 focus:ring-stone-400"
+            >
+              {SEASON_OPTIONS.map((s) => (
+                <option key={s.id} value={s.id}>{s.label}</option>
+              ))}
+            </select>
+          </div>
+
+          <div className="hidden md:block w-px h-6 bg-stone-200" />
+
+          {/* Community */}
+          <div className="flex items-center gap-1.5">
+            <label className="text-xs font-medium text-stone-500 uppercase tracking-wide">Community</label>
+            <select
+              value={communityId}
+              onChange={(e) => setCommunityId(e.target.value as CommunityId)}
+              className="text-xs border border-stone-200 rounded-md px-2 py-1.5 bg-white text-stone-700 focus:outline-none focus:ring-1 focus:ring-stone-400"
+            >
+              {COMMUNITY_OPTIONS.map((c) => (
+                <option key={c.id} value={c.id}>{c.label}</option>
+              ))}
+            </select>
+          </div>
+
+          <div className="hidden md:block w-px h-6 bg-stone-200" />
+
+          {/* Range presets */}
+          <div className="flex items-center gap-1.5">
+            <label className="text-xs font-medium text-stone-500 uppercase tracking-wide">Show</label>
+            <div className="flex bg-stone-100 rounded-lg p-0.5">
+              {RANGE_PRESETS.map((rp) => {
+                const isActive =
+                  rp.count === -1
+                    ? rangeEnd === totalOccasions && rangeStart === 0
+                    : rangeEnd - rangeStart === rp.count && rangeStart === 0;
+                return (
+                  <button
+                    key={rp.label}
+                    onClick={() => handleRangePreset(rp.count)}
+                    className={`px-2.5 py-1 text-xs font-medium rounded-md transition-colors ${
+                      isActive
+                        ? "bg-white text-stone-900 shadow-sm"
+                        : "text-stone-500 hover:text-stone-700"
+                    }`}
+                  >
+                    {rp.label}
+                  </button>
+                );
+              })}
+            </div>
+          </div>
+
+          {/* Page navigation */}
+          <div className="flex items-center gap-1">
+            <button
+              onClick={handlePageBack}
+              disabled={!canPageBack}
+              className={`p-1 rounded transition-colors ${
+                canPageBack ? "text-stone-500 hover:text-stone-900 hover:bg-stone-100" : "text-stone-200 cursor-not-allowed"
+              }`}
+            >
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><polyline points="15 18 9 12 15 6" /></svg>
+            </button>
+            <span className="text-xs text-stone-400 tabular-nums min-w-[4rem] text-center">
+              {rangeStart + 1}–{rangeEnd} of {totalOccasions}
+            </span>
+            <button
+              onClick={handlePageForward}
+              disabled={!canPageForward}
+              className={`p-1 rounded transition-colors ${
+                canPageForward ? "text-stone-500 hover:text-stone-900 hover:bg-stone-100" : "text-stone-200 cursor-not-allowed"
+              }`}
+            >
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><polyline points="9 18 15 12 9 6" /></svg>
+            </button>
+          </div>
+
+          <div className="hidden md:block w-px h-6 bg-stone-200" />
+
+          {/* Hide past weeks toggle */}
+          <label className="flex items-center gap-1.5 cursor-pointer select-none">
+            <input
+              type="checkbox"
+              checked={hidePastWeeks}
+              onChange={(e) => setHidePastWeeks(e.target.checked)}
+              className="rounded border-stone-300 text-parish-burgundy focus:ring-parish-burgundy"
+            />
+            <span className="text-xs text-stone-600">Hide past weeks</span>
+          </label>
+
+          {/* Hide mass parts toggle */}
+          <label className="flex items-center gap-1.5 cursor-pointer select-none">
+            <input
+              type="checkbox"
+              checked={hideMassParts}
+              onChange={(e) => setHideMassParts(e.target.checked)}
+              className="rounded border-stone-300 text-parish-burgundy focus:ring-parish-burgundy"
+            />
+            <span className="text-xs text-stone-600">Hide mass parts</span>
+          </label>
         </div>
-
-        {/* Page navigation */}
-        <div className="flex items-center gap-1">
-          <button
-            onClick={handlePageBack}
-            disabled={!canPageBack}
-            className={`p-1 rounded transition-colors ${
-              canPageBack ? "text-stone-500 hover:text-stone-900 hover:bg-stone-100" : "text-stone-200 cursor-not-allowed"
-            }`}
-          >
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><polyline points="15 18 9 12 15 6" /></svg>
-          </button>
-          <span className="text-xs text-stone-400 tabular-nums min-w-[4rem] text-center">
-            {rangeStart + 1}–{rangeEnd} of {totalOccasions}
-          </span>
-          <button
-            onClick={handlePageForward}
-            disabled={!canPageForward}
-            className={`p-1 rounded transition-colors ${
-              canPageForward ? "text-stone-500 hover:text-stone-900 hover:bg-stone-100" : "text-stone-200 cursor-not-allowed"
-            }`}
-          >
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><polyline points="9 18 15 12 9 6" /></svg>
-          </button>
-        </div>
-
-        <div className="w-px h-6 bg-stone-200" />
-
-        {/* Hide past weeks toggle */}
-        <label className="flex items-center gap-1.5 cursor-pointer select-none">
-          <input
-            type="checkbox"
-            checked={hidePastWeeks}
-            onChange={(e) => setHidePastWeeks(e.target.checked)}
-            className="rounded border-stone-300 text-parish-burgundy focus:ring-parish-burgundy"
-          />
-          <span className="text-xs text-stone-600">Hide past weeks</span>
-        </label>
       </div>
     </div>
   );

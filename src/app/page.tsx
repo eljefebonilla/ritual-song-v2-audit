@@ -1,14 +1,51 @@
 import Link from "next/link";
 import { getAllOccasions, getSeasons, getCurrentWeekOccasions } from "@/lib/data";
 import { SEASON_COLORS } from "@/lib/liturgical-colors";
+import type { SeasonGroup } from "@/lib/types";
+
+/**
+ * Liturgical year display order, splitting Ordinary Time into two halves:
+ * Advent → Christmas → OT I (seasonOrder ≤ 8) → Lent → Easter → OT II (seasonOrder > 8)
+ * Solemnities and Feasts go at the end.
+ */
+const LITURGICAL_DISPLAY_ORDER: {
+  key: string;
+  seasonId: string;
+  label: string;
+  filter?: (occ: { seasonOrder: number }) => boolean;
+}[] = [
+  { key: "advent", seasonId: "advent", label: "Advent" },
+  { key: "christmas", seasonId: "christmas", label: "Christmas" },
+  {
+    key: "ordinary-i",
+    seasonId: "ordinary",
+    label: "Ordinary Time I",
+    filter: (occ) => occ.seasonOrder > 0 && occ.seasonOrder <= 8,
+  },
+  { key: "lent", seasonId: "lent", label: "Lent" },
+  { key: "easter", seasonId: "easter", label: "Easter" },
+  {
+    key: "ordinary-ii",
+    seasonId: "ordinary",
+    label: "Ordinary Time II",
+    filter: (occ) => occ.seasonOrder > 8,
+  },
+  { key: "solemnity", seasonId: "solemnity", label: "Solemnities" },
+  { key: "feast", seasonId: "feast", label: "Feasts" },
+];
 
 export default function DashboardPage() {
   const occasions = getAllOccasions();
   const seasons = getSeasons();
   const { thisWeek, nextWeek } = getCurrentWeekOccasions();
 
+  const seasonMap = new Map<string, SeasonGroup>();
+  for (const s of seasons) {
+    seasonMap.set(s.id, s);
+  }
+
   return (
-    <div className="p-8 max-w-6xl">
+    <div className="p-4 pt-14 md:p-8 md:pt-8 max-w-3xl">
       <h1 className="text-2xl font-bold text-stone-900 mb-1">Dashboard</h1>
       <p className="text-sm text-stone-500 mb-8">
         {occasions.length} liturgical occasions across the 3-year lectionary cycle
@@ -62,16 +99,24 @@ export default function DashboardPage() {
         </Link>
       </div>
 
-      {/* Seasons overview */}
+      {/* Seasons overview — single column, liturgical order */}
       <h2 className="text-lg font-bold text-stone-900 mb-4">
-        Liturgical Seasons
+        Liturgical Year
       </h2>
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-        {seasons.map((season) => {
+      <div className="flex flex-col gap-3">
+        {LITURGICAL_DISPLAY_ORDER.map((entry) => {
+          const season = seasonMap.get(entry.seasonId);
+          if (!season) return null;
+
+          const filteredOccasions = entry.filter
+            ? season.occasions.filter(entry.filter)
+            : season.occasions;
+
           const colors = SEASON_COLORS[season.id];
+
           return (
             <Link
-              key={season.id}
+              key={entry.key}
               href={`/season/${season.id}`}
               className="border border-stone-200 rounded-lg overflow-hidden bg-white hover:shadow-md transition-shadow"
             >
@@ -79,10 +124,10 @@ export default function DashboardPage() {
                 className="h-2"
                 style={{ backgroundColor: colors.primary }}
               />
-              <div className="p-4">
-                <h3 className="font-bold text-stone-900">{season.label}</h3>
-                <p className="text-xs text-stone-400 mt-1">
-                  {season.occasions.length} occasions
+              <div className="p-4 flex items-center justify-between">
+                <h3 className="font-bold text-stone-900">{entry.label}</h3>
+                <p className="text-xs text-stone-400">
+                  {filteredOccasions.length} occasions
                 </p>
               </div>
             </Link>

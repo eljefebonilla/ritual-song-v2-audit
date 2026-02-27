@@ -1,6 +1,8 @@
 "use client";
 
-import type { LibrarySong } from "@/lib/types";
+import type { LibrarySong, ResourceDisplayCategory } from "@/lib/types";
+import { RESOURCE_DISPLAY_LABELS } from "@/lib/types";
+import { getSongDisplayCategories } from "@/lib/song-library";
 
 interface SongCardProps {
   song: LibrarySong;
@@ -8,16 +10,16 @@ interface SongCardProps {
   onClick: () => void;
 }
 
-export default function SongCard({ song, isSelected, onClick }: SongCardProps) {
-  const hasResources = song.resources.length > 0;
+const BADGE_STYLES: Record<ResourceDisplayCategory, string> = {
+  aim: "bg-amber-200 text-amber-800",
+  lead_sheet: "bg-emerald-100 text-emerald-700",
+  choral: "bg-violet-100 text-violet-700",
+  color: "bg-sky-100 text-sky-700",
+  audio: "bg-red-100 text-red-700",
+};
 
-  // Count resources by source
-  const localCount = song.resources.filter((r) => r.source === "local").length;
-  const ocpCount = song.resources.filter(
-    (r) => r.source === "ocp_bb" || r.source === "ocp_ss"
-  ).length;
-  const ytCount = song.resources.filter((r) => r.source === "youtube").length;
-  const hasAIM = song.resources.some((r) => r.isHighlighted);
+export default function SongCard({ song, isSelected, onClick }: SongCardProps) {
+  const categories = getSongDisplayCategories(song);
 
   return (
     <button
@@ -39,51 +41,24 @@ export default function SongCard({ song, isSelected, onClick }: SongCardProps) {
             </p>
           )}
         </div>
-        {hasAIM && (
-          <span className="px-1 py-0.5 text-[9px] font-bold bg-amber-200 text-amber-800 rounded shrink-0">
-            AIM
-          </span>
-        )}
       </div>
 
       <div className="flex items-center justify-between mt-2">
         <span className="text-[10px] text-stone-400">
           Used {song.usageCount}x
         </span>
-        {hasResources ? (
-          <div className="flex gap-1">
-            {localCount > 0 && (
-              <span
-                className="inline-flex items-center gap-0.5 px-1.5 py-0.5 text-[9px] font-medium bg-emerald-100 text-emerald-700 rounded"
-                title={`${localCount} local files`}
-              >
-                <svg
-                  className="w-2.5 h-2.5"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="2.5"
-                >
-                  <path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z" />
-                </svg>
-                {localCount}
-              </span>
-            )}
-            {ocpCount > 0 && (
-              <span
-                className="inline-flex items-center px-1.5 py-0.5 text-[9px] font-medium bg-blue-100 text-blue-700 rounded"
-                title="OCP link"
-              >
-                OCP
-              </span>
-            )}
-            {ytCount > 0 && (
-              <span
-                className="inline-flex items-center px-1.5 py-0.5 text-[9px] font-medium bg-red-100 text-red-700 rounded"
-                title="YouTube link"
-              >
-                YT
-              </span>
+        {categories.size > 0 ? (
+          <div className="flex gap-1 flex-wrap justify-end">
+            {(["aim", "lead_sheet", "choral", "color", "audio"] as ResourceDisplayCategory[]).map(
+              (cat) =>
+                categories.has(cat) && (
+                  <span
+                    key={cat}
+                    className={`inline-flex items-center px-1.5 py-0.5 text-[9px] font-medium rounded ${BADGE_STYLES[cat]}`}
+                  >
+                    {RESOURCE_DISPLAY_LABELS[cat]}
+                  </span>
+                )
             )}
           </div>
         ) : (

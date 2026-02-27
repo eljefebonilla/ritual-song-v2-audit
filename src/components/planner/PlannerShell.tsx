@@ -12,6 +12,9 @@ import FilterToolbar from "./FilterToolbar";
 import PlannerGrid from "./PlannerGrid";
 
 const HIDE_PAST_KEY = "rs_hide_past_weeks";
+const HIDE_MASS_PARTS_KEY = "rs_hide_mass_parts";
+
+export type PlannerViewMode = "grid" | "cards";
 
 interface PlannerShellProps {
   occasions: LiturgicalOccasion[];
@@ -24,19 +27,32 @@ export default function PlannerShell({ occasions }: PlannerShellProps) {
   const [rangeStart, setRangeStart] = useState(0);
   const [rangeEnd, setRangeEnd] = useState(12);
 
+  // View mode: auto-detect mobile on mount
+  const [viewMode, setViewMode] = useState<PlannerViewMode>("grid");
+
   // Hide past weeks state (persisted to localStorage)
   const [hidePastWeeks, setHidePastWeeks] = useState(true);
+  // Hide mass parts toggle (persisted to localStorage)
+  const [hideMassParts, setHideMassParts] = useState(false);
   const [hydrated, setHydrated] = useState(false);
 
-  // Hydrate from localStorage on mount
+  // Hydrate from localStorage on mount + detect mobile
   useEffect(() => {
     try {
       const stored = localStorage.getItem(HIDE_PAST_KEY);
       if (stored !== null) {
         setHidePastWeeks(stored !== "false");
       }
+      const storedMP = localStorage.getItem(HIDE_MASS_PARTS_KEY);
+      if (storedMP !== null) {
+        setHideMassParts(storedMP === "true");
+      }
     } catch {
       // ignore
+    }
+    // Auto-set to cards on mobile
+    if (window.innerWidth < 768) {
+      setViewMode("cards");
     }
     setHydrated(true);
   }, []);
@@ -46,10 +62,11 @@ export default function PlannerShell({ occasions }: PlannerShellProps) {
     if (!hydrated) return;
     try {
       localStorage.setItem(HIDE_PAST_KEY, String(hidePastWeeks));
+      localStorage.setItem(HIDE_MASS_PARTS_KEY, String(hideMassParts));
     } catch {
       // ignore
     }
-  }, [hidePastWeeks, hydrated]);
+  }, [hidePastWeeks, hideMassParts, hydrated]);
 
   const filteredOccasions = useMemo(
     () => getFilteredOccasions(occasions, yearCycle, season),
@@ -110,9 +127,13 @@ export default function PlannerShell({ occasions }: PlannerShellProps) {
         occasions={filteredOccasions}
         hidePastWeeks={hidePastWeeks}
         setHidePastWeeks={handleHidePastToggle}
+        hideMassParts={hideMassParts}
+        setHideMassParts={setHideMassParts}
+        viewMode={viewMode}
+        setViewMode={setViewMode}
       />
       <div className="flex-1 overflow-hidden">
-        <PlannerGrid columns={columns} />
+        <PlannerGrid columns={columns} viewMode={viewMode} hideMassParts={hideMassParts} communityId={communityId} />
       </div>
     </div>
   );

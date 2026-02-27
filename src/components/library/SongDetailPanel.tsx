@@ -8,6 +8,7 @@ import type {
   SongResourceSource,
 } from "@/lib/types";
 import { useUser } from "@/lib/user-context";
+import { useMedia } from "@/lib/media-context";
 import Link from "next/link";
 
 interface SongDetailPanelProps {
@@ -43,12 +44,14 @@ function resourceUrl(resource: SongResource): string | null {
   return null;
 }
 
-function ResourceLink({ resource }: { resource: SongResource }) {
+function ResourceLink({ resource, songTitle }: { resource: SongResource; songTitle?: string }) {
   const audioRef = useRef<HTMLAudioElement>(null);
   const [playing, setPlaying] = useState(false);
+  const { play } = useMedia();
   const url = resourceUrl(resource);
   const isAudio = resource.type === "audio";
   const isLocalAudio = isAudio && resource.filePath;
+  const isYouTube = resource.type === "youtube" && resource.url;
 
   const togglePlay = () => {
     if (!audioRef.current) return;
@@ -59,6 +62,16 @@ function ResourceLink({ resource }: { resource: SongResource }) {
       audioRef.current.play();
       setPlaying(true);
     }
+  };
+
+  // Open in media player panel (audio or YouTube)
+  const openInPlayer = (type: "audio" | "youtube", mediaUrl: string) => {
+    play({
+      type,
+      url: mediaUrl,
+      title: songTitle || resource.label,
+      subtitle: resource.label,
+    });
   };
 
   // Inline audio player for local audio files
@@ -72,19 +85,12 @@ function ResourceLink({ resource }: { resource: SongResource }) {
         }`}
       >
         <button
-          onClick={togglePlay}
+          onClick={() => openInPlayer("audio", url)}
           className="w-6 h-6 flex items-center justify-center rounded-full bg-stone-800 text-white hover:bg-stone-700 shrink-0"
         >
-          {playing ? (
-            <svg width="10" height="10" viewBox="0 0 24 24" fill="currentColor">
-              <rect x="6" y="4" width="4" height="16" />
-              <rect x="14" y="4" width="4" height="16" />
-            </svg>
-          ) : (
-            <svg width="10" height="10" viewBox="0 0 24 24" fill="currentColor">
-              <polygon points="5,3 19,12 5,21" />
-            </svg>
-          )}
+          <svg width="10" height="10" viewBox="0 0 24 24" fill="currentColor">
+            <polygon points="5,3 19,12 5,21" />
+          </svg>
         </button>
         <div className="min-w-0 flex-1">
           <p className="text-xs font-medium text-stone-700 truncate">
@@ -96,13 +102,40 @@ function ResourceLink({ resource }: { resource: SongResource }) {
             )}
           </p>
         </div>
-        <audio
-          ref={audioRef}
-          src={url}
-          preload="none"
-          onEnded={() => setPlaying(false)}
-        />
       </div>
+    );
+  }
+
+  // YouTube links open in player instead of navigating away
+  if (isYouTube && resource.url) {
+    return (
+      <button
+        type="button"
+        onClick={() => openInPlayer("youtube", resource.url!)}
+        className={`w-full text-left flex items-center gap-2 px-3 py-2 rounded-md border hover:border-stone-300 transition-colors group ${
+          resource.isHighlighted
+            ? "border-amber-300 bg-amber-50 hover:bg-amber-100"
+            : "border-stone-200 bg-white hover:bg-stone-50"
+        }`}
+      >
+        <TypeIcon type={resource.type} />
+        <div className="min-w-0 flex-1">
+          <p className="text-xs font-medium text-stone-700 truncate">
+            {resource.label}
+            {resource.isHighlighted && (
+              <span className="ml-1 px-1 py-0.5 text-[9px] font-bold bg-amber-200 text-amber-800 rounded">
+                AIM
+              </span>
+            )}
+          </p>
+          <p className="text-[10px] text-stone-400 truncate">
+            Open in player
+          </p>
+        </div>
+        <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor" className="text-stone-300 group-hover:text-stone-500 shrink-0">
+          <polygon points="5,3 19,12 5,21" />
+        </svg>
+      </button>
     );
   }
 
@@ -264,37 +297,47 @@ export default function SongDetailPanel({
   ];
 
   return (
-    <div className="w-80 border-l border-stone-200 bg-white flex flex-col shrink-0">
-      {/* Header */}
-      <div className="p-4 border-b border-stone-200">
-        <div className="flex items-start justify-between">
-          <div className="min-w-0 flex-1">
-            <h2 className="text-sm font-bold text-stone-900 leading-tight">
-              {song.title}
-            </h2>
-            {song.composer && (
-              <p className="text-xs text-stone-500 mt-0.5">{song.composer}</p>
-            )}
-          </div>
-          <button
-            onClick={onClose}
-            className="p-1 text-stone-400 hover:text-stone-600 transition-colors shrink-0"
-          >
-            <svg
-              width="16"
-              height="16"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="2"
-              strokeLinecap="round"
-              strokeLinejoin="round"
+    <>
+      {/* Mobile backdrop */}
+      <div
+        className="fixed inset-0 bg-black/50 z-40 md:hidden"
+        onClick={onClose}
+      />
+
+      <div className="
+        fixed inset-0 z-50 bg-white flex flex-col
+        md:relative md:inset-auto md:z-auto md:w-80 md:border-l md:border-stone-200 md:shrink-0
+      ">
+        {/* Header */}
+        <div className="p-4 border-b border-stone-200">
+          <div className="flex items-start justify-between">
+            <div className="min-w-0 flex-1">
+              <h2 className="text-sm font-bold text-stone-900 leading-tight">
+                {song.title}
+              </h2>
+              {song.composer && (
+                <p className="text-xs text-stone-500 mt-0.5">{song.composer}</p>
+              )}
+            </div>
+            <button
+              onClick={onClose}
+              className="p-1 text-stone-400 hover:text-stone-600 transition-colors shrink-0"
             >
-              <line x1="18" y1="6" x2="6" y2="18" />
-              <line x1="6" y1="6" x2="18" y2="18" />
-            </svg>
-          </button>
-        </div>
+              <svg
+                width="16"
+                height="16"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              >
+                <line x1="18" y1="6" x2="6" y2="18" />
+                <line x1="6" y1="6" x2="18" y2="18" />
+              </svg>
+            </button>
+          </div>
         <div className="flex items-center gap-2 mt-2">
           <p className="text-[10px] text-stone-400">
             Used {song.usageCount}x
@@ -331,7 +374,7 @@ export default function SongDetailPanel({
                   </h3>
                   <div className="space-y-1.5">
                     {resources.map((r) => (
-                      <ResourceLink key={r.id} resource={r} />
+                      <ResourceLink key={r.id} resource={r} songTitle={song.title} />
                     ))}
                   </div>
                 </div>
@@ -467,5 +510,6 @@ export default function SongDetailPanel({
         </div>
       )}
     </div>
+    </>
   );
 }

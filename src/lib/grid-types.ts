@@ -14,15 +14,25 @@ export type CommunityId =
 export type UserRole = "admin" | "member";
 
 // The row labels for the grid (left-hand column)
+// Includes both music rows and reading rows
 export const GRID_ROW_KEYS = [
   "prelude",
+  "entranceAntiphon",
   "gathering",
   "penitentialAct",
   "gloria",
+  "firstReading",
+  "psalmText",
   "psalm",
+  "secondReading",
+  "gospelVerse",
   "gospelAcclamation",
+  "gospel",
   "offertory",
   "massSetting",
+  "massSettingHoly",
+  "massSettingMemorial",
+  "massSettingAmen",
   "lordsPrayer",
   "fractionRite",
   "communion1",
@@ -31,18 +41,56 @@ export const GRID_ROW_KEYS = [
   "sending",
 ] as const;
 
+// Sub-rows that expand from massSetting
+export const MASS_SETTING_SUB_ROWS: GridRowKey[] = [
+  "massSettingHoly",
+  "massSettingMemorial",
+  "massSettingAmen",
+];
+
 export type GridRowKey = (typeof GRID_ROW_KEYS)[number];
+
+// Reading rows — non-editable, styled differently
+export const READING_ROWS: Set<GridRowKey> = new Set([
+  "entranceAntiphon",
+  "firstReading",
+  "psalmText",
+  "secondReading",
+  "gospelVerse",
+  "gospel",
+]);
+
+// Mass part rows — hideable via toggle
+export const MASS_PART_ROWS: Set<GridRowKey> = new Set([
+  "penitentialAct",
+  "gloria",
+  "massSetting",
+  "massSettingHoly",
+  "massSettingMemorial",
+  "massSettingAmen",
+  "lordsPrayer",
+  "fractionRite",
+]);
 
 // Maps row keys to display labels
 export const GRID_ROW_LABELS: Record<GridRowKey, string> = {
   prelude: "Prelude",
+  entranceAntiphon: "Entrance Ant.",
   gathering: "Gathering",
   penitentialAct: "Penitential Act",
   gloria: "Gloria",
+  firstReading: "1st Reading",
+  psalmText: "Psalm Text",
   psalm: "Psalm",
+  secondReading: "2nd Reading",
+  gospelVerse: "Gospel Verse",
   gospelAcclamation: "Gospel Accl.",
+  gospel: "Gospel",
   offertory: "Offertory",
   massSetting: "Mass Setting",
+  massSettingHoly: "Holy, Holy",
+  massSettingMemorial: "Memorial Accl.",
+  massSettingAmen: "Great Amen",
   lordsPrayer: "Lord's Prayer",
   fractionRite: "Fraction Rite",
   communion1: "Communion",
@@ -51,21 +99,32 @@ export const GRID_ROW_LABELS: Record<GridRowKey, string> = {
   sending: "Sending",
 };
 
-// Section groupings for visual dividers
+// Section groupings for visual dividers (interweaved with readings)
 export const GRID_SECTIONS = [
   {
     label: "Introductory Rites",
-    rows: ["prelude", "gathering", "penitentialAct", "gloria"] as GridRowKey[],
+    rows: ["prelude", "entranceAntiphon", "gathering", "penitentialAct", "gloria"] as GridRowKey[],
   },
   {
     label: "Liturgy of the Word",
-    rows: ["psalm", "gospelAcclamation"] as GridRowKey[],
+    rows: [
+      "firstReading",
+      "psalmText",
+      "psalm",
+      "secondReading",
+      "gospelVerse",
+      "gospelAcclamation",
+      "gospel",
+    ] as GridRowKey[],
   },
   {
     label: "Liturgy of the Eucharist",
     rows: [
       "offertory",
       "massSetting",
+      "massSettingHoly",
+      "massSettingMemorial",
+      "massSettingAmen",
       "lordsPrayer",
       "fractionRite",
       "communion1",
@@ -97,6 +156,7 @@ export interface GridCellData {
   composer?: string;
   description?: string;
   isEmpty: boolean;
+  isReading?: boolean; // true for reading/antiphon rows (non-editable)
 }
 
 export const COMMUNITY_OPTIONS: { id: CommunityId; label: string }[] = [

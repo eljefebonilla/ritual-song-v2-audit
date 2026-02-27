@@ -145,10 +145,23 @@ export interface SongResource {
   isHighlighted?: boolean; // true for "AIM" files (priority lead sheets)
 }
 
+export type SongCategory = "song" | "mass_part" | "psalm" | "gospel_acclamation";
+
+export type ResourceDisplayCategory = "lead_sheet" | "choral" | "aim" | "color" | "audio";
+
+export const RESOURCE_DISPLAY_LABELS: Record<ResourceDisplayCategory, string> = {
+  lead_sheet: "Lead Sheet",
+  choral: "Choral",
+  aim: "AIM",
+  color: "Color",
+  audio: "Audio",
+};
+
 export interface LibrarySong {
   id: string; // slug from title+composer
   title: string;
   composer?: string;
+  category?: SongCategory;
   resources: SongResource[];
   usageCount: number; // how many times this song appears in music plans
   occasions: string[]; // occasion IDs where this song is used

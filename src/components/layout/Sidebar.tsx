@@ -3,7 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useUser } from "@/lib/user-context";
 
 const SEASONS = [
@@ -22,18 +22,21 @@ function NavLink({
   collapsed,
   icon,
   label,
+  onClick,
 }: {
   href: string;
   pathname: string;
   collapsed: boolean;
   icon: React.ReactNode;
   label: string;
+  onClick?: () => void;
 }) {
   const isActive =
     href === "/" ? pathname === "/" : pathname.startsWith(href);
   return (
     <Link
       href={href}
+      onClick={onClick}
       className={`flex items-center gap-3 px-4 py-2.5 text-sm transition-colors ${
         isActive
           ? "bg-stone-700 text-white"
@@ -46,26 +49,32 @@ function NavLink({
   );
 }
 
-export default function Sidebar() {
+interface SidebarProps {
+  open: boolean;
+  onClose: () => void;
+}
+
+export default function Sidebar({ open, onClose }: SidebarProps) {
   const pathname = usePathname();
   const [collapsed, setCollapsed] = useState(false);
   const { isAuthenticated, isAdmin, displayName, signOut } = useUser();
+
+  // Close mobile sidebar on route change
+  useEffect(() => {
+    onClose();
+  }, [pathname]); // eslint-disable-line react-hooks/exhaustive-deps
 
   // Don't render sidebar on gate or auth pages
   if (pathname.startsWith("/gate") || pathname.startsWith("/auth")) {
     return null;
   }
 
-  return (
-    <aside
-      className={`fixed left-0 top-0 h-full bg-stone-900 text-stone-100 transition-all duration-300 z-50 flex flex-col ${
-        collapsed ? "w-16" : "w-64"
-      }`}
-    >
+  const sidebarContent = (
+    <>
       {/* Header */}
       <div className="p-4 border-b border-parish-gold/20 flex items-center justify-between">
         {!collapsed && (
-          <Link href="/" className="block">
+          <Link href="/" className="block" onClick={onClose}>
             <Image
               src="/logo-stmonica-white.png"
               alt="St. Monica Catholic Community"
@@ -79,8 +88,16 @@ export default function Sidebar() {
             </p>
           </Link>
         )}
+        {/* Close button on mobile, collapse toggle on desktop */}
         <button
-          onClick={() => setCollapsed(!collapsed)}
+          onClick={() => {
+            // On mobile, close the drawer
+            if (window.innerWidth < 768) {
+              onClose();
+            } else {
+              setCollapsed(!collapsed);
+            }
+          }}
           className="p-1.5 rounded hover:bg-stone-700 text-stone-400 hover:text-white transition-colors"
           aria-label={collapsed ? "Expand sidebar" : "Collapse sidebar"}
         >
@@ -98,7 +115,11 @@ export default function Sidebar() {
             {collapsed ? (
               <polyline points="9 18 15 12 9 6" />
             ) : (
-              <polyline points="15 18 9 12 15 6" />
+              <>
+                <line x1="18" y1="6" x2="6" y2="18" className="md:hidden" />
+                <line x1="6" y1="6" x2="18" y2="18" className="md:hidden" />
+                <polyline points="15 18 9 12 15 6" className="hidden md:block" />
+              </>
             )}
           </svg>
         </button>
@@ -112,6 +133,7 @@ export default function Sidebar() {
           pathname={pathname}
           collapsed={collapsed}
           label="Dashboard"
+          onClick={onClose}
           icon={
             <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
               <path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
@@ -125,6 +147,7 @@ export default function Sidebar() {
           pathname={pathname}
           collapsed={collapsed}
           label="Calendar"
+          onClick={onClose}
           icon={
             <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
               <rect width="18" height="18" x="3" y="4" rx="2" ry="2" />
@@ -140,6 +163,7 @@ export default function Sidebar() {
           pathname={pathname}
           collapsed={collapsed}
           label="Announcements"
+          onClick={onClose}
           icon={
             <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
               <path d="m3 11 18-5v12L3 13v-2z" />
@@ -162,6 +186,7 @@ export default function Sidebar() {
           pathname={pathname}
           collapsed={collapsed}
           label="Planner"
+          onClick={onClose}
           icon={
             <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
               <rect x="3" y="3" width="7" height="7" />
@@ -177,6 +202,7 @@ export default function Sidebar() {
           pathname={pathname}
           collapsed={collapsed}
           label="Song Library"
+          onClick={onClose}
           icon={
             <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
               <path d="M9 18V5l12-2v13" />
@@ -185,6 +211,30 @@ export default function Sidebar() {
             </svg>
           }
         />
+
+        {/* Library sub-navigation */}
+        {!collapsed && pathname.startsWith("/library") && (
+          <div className="ml-7 border-l border-stone-700 pl-3">
+            {[
+              { href: "/library/mass-parts", label: "Mass Parts" },
+              { href: "/library/psalms", label: "Psalms" },
+              { href: "/library/gospel-acclamations", label: "Gospel Accl." },
+            ].map((sub) => (
+              <Link
+                key={sub.href}
+                href={sub.href}
+                onClick={onClose}
+                className={`block py-1.5 text-xs transition-colors ${
+                  pathname === sub.href
+                    ? "text-white font-medium"
+                    : "text-stone-400 hover:text-stone-200"
+                }`}
+              >
+                {sub.label}
+              </Link>
+            ))}
+          </div>
+        )}
 
         {/* Liturgical Seasons */}
         {!collapsed && (
@@ -199,6 +249,7 @@ export default function Sidebar() {
           <Link
             key={season.id}
             href={`/season/${season.id}`}
+            onClick={onClose}
             className={`flex items-center gap-3 px-4 py-2 text-sm transition-colors ${
               pathname === `/season/${season.id}`
                 ? "bg-stone-700 text-white"
@@ -225,6 +276,7 @@ export default function Sidebar() {
               pathname={pathname}
               collapsed={collapsed}
               label="Members"
+              onClick={onClose}
               icon={
                 <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                   <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" />
@@ -239,6 +291,7 @@ export default function Sidebar() {
               pathname={pathname}
               collapsed={collapsed}
               label="Compliance"
+              onClick={onClose}
               icon={
                 <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                   <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10" />
@@ -257,6 +310,7 @@ export default function Sidebar() {
             <div className="flex items-center justify-between">
               <Link
                 href="/profile"
+                onClick={onClose}
                 className="flex items-center gap-2 text-xs text-stone-300 hover:text-white transition-colors"
               >
                 <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -280,6 +334,7 @@ export default function Sidebar() {
           ) : (
             <Link
               href="/auth/login"
+              onClick={onClose}
               className="flex items-center gap-2 text-xs text-parish-gold hover:text-parish-gold/80 transition-colors"
             >
               <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -295,6 +350,31 @@ export default function Sidebar() {
           </p>
         </div>
       )}
-    </aside>
+    </>
+  );
+
+  return (
+    <>
+      {/* Mobile backdrop */}
+      {open && (
+        <div
+          className="fixed inset-0 bg-black/50 z-40 md:hidden"
+          onClick={onClose}
+        />
+      )}
+
+      {/* Sidebar */}
+      <aside
+        className={`
+          fixed left-0 top-0 h-full bg-stone-900 text-stone-100 z-50 flex flex-col
+          transition-transform duration-300 ease-in-out
+          ${collapsed ? "w-16" : "w-64"}
+          ${open ? "translate-x-0" : "-translate-x-full"}
+          md:translate-x-0 md:transition-[width] md:duration-300
+        `}
+      >
+        {sidebarContent}
+      </aside>
+    </>
   );
 }

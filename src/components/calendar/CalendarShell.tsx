@@ -1,13 +1,14 @@
 "use client";
 
 import { useState, useMemo, useCallback, useEffect } from "react";
-import type { MinistryCalendar, CalendarView } from "@/lib/calendar-types";
+import type { MinistryCalendar, CalendarView, CalendarEvent } from "@/lib/calendar-types";
 import type { CommunityId } from "@/lib/grid-types";
 import { getVisibleWeeks } from "@/lib/calendar-utils";
 import { useUser } from "@/lib/user-context";
 import CalendarToolbar from "./CalendarToolbar";
 import AgendaView from "./AgendaView";
 import MonthView from "./MonthView";
+import EventEditor from "./EventEditor";
 
 interface CalendarShellProps {
   calendar: MinistryCalendar;
@@ -28,6 +29,10 @@ export default function CalendarShell({ calendar }: CalendarShellProps) {
 
   // Admin hidden weeks (localStorage)
   const [hiddenWeekIds, setHiddenWeekIds] = useState<string[]>([]);
+
+  // Event editor state
+  const [editorOpen, setEditorOpen] = useState(false);
+  const [editingEvent, setEditingEvent] = useState<(CalendarEvent & { id?: string }) | undefined>(undefined);
 
   // Load hidden weeks from localStorage on mount
   useEffect(() => {
@@ -73,6 +78,32 @@ export default function CalendarShell({ calendar }: CalendarShellProps) {
     [calendar.weeks, showPastDates, hiddenWeekIds, isAdmin]
   );
 
+  const handleAddEvent = () => {
+    setEditingEvent(undefined);
+    setEditorOpen(true);
+  };
+
+  const handleSaveEvent = async (data: Record<string, unknown>) => {
+    const url = editingEvent?.id
+      ? `/api/calendar/${editingEvent.id}`
+      : "/api/calendar";
+    const method = editingEvent?.id ? "PUT" : "POST";
+
+    await fetch(url, {
+      method,
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(data),
+    });
+    // In a full implementation, we'd refetch or update local state here.
+    // For now, the calendar still reads from JSON, so new events will show
+    // after the migration script is run.
+  };
+
+  const handleDeleteEvent = async () => {
+    if (!editingEvent?.id) return;
+    await fetch(`/api/calendar/${editingEvent.id}`, { method: "DELETE" });
+  };
+
   return (
     <div className="flex flex-col h-screen">
       <CalendarToolbar
@@ -86,6 +117,7 @@ export default function CalendarShell({ calendar }: CalendarShellProps) {
         setCurrentMonth={setCurrentMonth}
         totalWeeks={calendar.weeks.length}
         visibleWeeks={visibleWeeks.length}
+        onAddEvent={isAdmin ? handleAddEvent : undefined}
       />
 
       <div className="flex-1 overflow-y-auto">
@@ -100,6 +132,19 @@ export default function CalendarShell({ calendar }: CalendarShellProps) {
           <MonthView weeks={calendar.weeks} currentMonth={currentMonth} />
         )}
       </div>
+
+      {/* Event Editor */}
+      {editorOpen && (
+        <EventEditor
+          event={editingEvent}
+          onSave={handleSaveEvent}
+          onDelete={editingEvent?.id ? handleDeleteEvent : undefined}
+          onClose={() => {
+            setEditorOpen(false);
+            setEditingEvent(undefined);
+          }}
+        />
+      )}
     </div>
   );
 }

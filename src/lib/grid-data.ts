@@ -55,11 +55,48 @@ export function buildGridColumns(
 
 /**
  * Extracts the cell data for a given row key from a music plan.
+ * For reading rows, pulls from the occasion's readings/antiphons.
  */
 export function extractCellData(
   plan: MusicPlan | null,
-  rowKey: GridRowKey
+  rowKey: GridRowKey,
+  occasion?: LiturgicalOccasion
 ): GridCellData {
+  // Reading rows — pull from occasion, not plan
+  switch (rowKey) {
+    case "entranceAntiphon": {
+      const ant = occasion?.antiphons?.find((a) => a.type === "entrance");
+      if (ant) return { title: ant.text, description: ant.citation, isEmpty: false, isReading: true };
+      return { title: "", isEmpty: true, isReading: true };
+    }
+    case "firstReading": {
+      const r = occasion?.readings?.find((rd) => rd.type === "first");
+      if (r) return { title: r.citation, description: r.summary, isEmpty: false, isReading: true };
+      return { title: "", isEmpty: true, isReading: true };
+    }
+    case "psalmText": {
+      const r = occasion?.readings?.find((rd) => rd.type === "psalm");
+      if (r) return { title: r.antiphon || r.citation, description: r.summary, isEmpty: false, isReading: true };
+      return { title: "", isEmpty: true, isReading: true };
+    }
+    case "secondReading": {
+      const r = occasion?.readings?.find((rd) => rd.type === "second");
+      if (r) return { title: r.citation, description: r.summary, isEmpty: false, isReading: true };
+      return { title: "", isEmpty: true, isReading: true };
+    }
+    case "gospelVerse": {
+      const r = occasion?.readings?.find((rd) => rd.type === "gospel_verse");
+      if (r) return { title: r.citation, description: r.summary, isEmpty: false, isReading: true };
+      return { title: "", isEmpty: true, isReading: true };
+    }
+    case "gospel": {
+      const r = occasion?.readings?.find((rd) => rd.type === "gospel");
+      if (r) return { title: r.citation, description: r.summary, isEmpty: false, isReading: true };
+      return { title: "", isEmpty: true, isReading: true };
+    }
+  }
+
+  // Music rows — pull from plan
   if (!plan) {
     return { title: "", isEmpty: true };
   }
@@ -99,6 +136,17 @@ export function extractCellData(
         return {
           title: plan.eucharisticAcclamations.massSettingName,
           composer: plan.eucharisticAcclamations.composer,
+          isEmpty: false,
+        };
+      }
+      return { title: "", isEmpty: true };
+    case "massSettingHoly":
+    case "massSettingMemorial":
+    case "massSettingAmen":
+      // Sub-rows inherit from the mass setting
+      if (plan.eucharisticAcclamations) {
+        return {
+          title: plan.eucharisticAcclamations.massSettingName,
           isEmpty: false,
         };
       }
