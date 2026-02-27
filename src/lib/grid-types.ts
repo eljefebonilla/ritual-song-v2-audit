@@ -1,6 +1,6 @@
 // Types specific to the Planner grid view
 
-import type { LiturgicalYear, LiturgicalSeason, LiturgicalOccasion, MusicPlan, SongEntry } from "./types";
+import type { LiturgicalSeason, LiturgicalOccasion, MusicPlan } from "./types";
 
 export type YearCycleFilter = "A" | "B" | "C" | "all";
 

@@ -28,9 +28,6 @@ export default function MediaPlayer() {
     if (current?.type === "audio" && audioRef.current) {
       audioRef.current.src = current.url;
       audioRef.current.play().catch(() => {});
-      setPlaying(true);
-    } else {
-      setPlaying(false);
     }
   }, [current]);
 

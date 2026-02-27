@@ -269,7 +269,7 @@ export default function PlannerGrid({ columns, viewMode, hideMassParts = false, 
                     {row.label}
                   </span>
                 </div>
-                {columns.map((col, ci) => (
+                {columns.map((col) => (
                   <div
                     key={`${col.occasion.id}-section-${ri}`}
                     className="shrink-0 bg-stone-100 border-b border-r border-stone-100"

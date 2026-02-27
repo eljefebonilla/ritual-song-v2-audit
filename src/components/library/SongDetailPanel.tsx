@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useRef } from "react";
+import { useState } from "react";
 import type {
   LibrarySong,
   SongResource,
@@ -45,24 +45,11 @@ function resourceUrl(resource: SongResource): string | null {
 }
 
 function ResourceLink({ resource, songTitle }: { resource: SongResource; songTitle?: string }) {
-  const audioRef = useRef<HTMLAudioElement>(null);
-  const [playing, setPlaying] = useState(false);
   const { play } = useMedia();
   const url = resourceUrl(resource);
   const isAudio = resource.type === "audio";
   const isLocalAudio = isAudio && resource.filePath;
   const isYouTube = resource.type === "youtube" && resource.url;
-
-  const togglePlay = () => {
-    if (!audioRef.current) return;
-    if (playing) {
-      audioRef.current.pause();
-      setPlaying(false);
-    } else {
-      audioRef.current.play();
-      setPlaying(true);
-    }
-  };
 
   // Open in media player panel (audio or YouTube)
   const openInPlayer = (type: "audio" | "youtube", mediaUrl: string) => {

@@ -28,45 +28,42 @@ export default function PlannerShell({ occasions }: PlannerShellProps) {
   const [rangeEnd, setRangeEnd] = useState(12);
 
   // View mode: auto-detect mobile on mount
-  const [viewMode, setViewMode] = useState<PlannerViewMode>("grid");
+  const [viewMode, setViewMode] = useState<PlannerViewMode>(() => {
+    if (typeof window !== "undefined" && window.innerWidth < 768) return "cards";
+    return "grid";
+  });
 
-  // Hide past weeks state (persisted to localStorage)
-  const [hidePastWeeks, setHidePastWeeks] = useState(true);
-  // Hide mass parts toggle (persisted to localStorage)
-  const [hideMassParts, setHideMassParts] = useState(false);
-  const [hydrated, setHydrated] = useState(false);
-
-  // Hydrate from localStorage on mount + detect mobile
-  useEffect(() => {
+  // Hide past weeks state (persisted to localStorage — lazy init)
+  const [hidePastWeeks, setHidePastWeeks] = useState(() => {
+    if (typeof window === "undefined") return true;
     try {
       const stored = localStorage.getItem(HIDE_PAST_KEY);
-      if (stored !== null) {
-        setHidePastWeeks(stored !== "false");
-      }
-      const storedMP = localStorage.getItem(HIDE_MASS_PARTS_KEY);
-      if (storedMP !== null) {
-        setHideMassParts(storedMP === "true");
-      }
+      return stored !== null ? stored !== "false" : true;
     } catch {
-      // ignore
+      return true;
     }
-    // Auto-set to cards on mobile
-    if (window.innerWidth < 768) {
-      setViewMode("cards");
+  });
+
+  // Hide mass parts toggle (persisted to localStorage — lazy init)
+  const [hideMassParts, setHideMassParts] = useState(() => {
+    if (typeof window === "undefined") return false;
+    try {
+      const stored = localStorage.getItem(HIDE_MASS_PARTS_KEY);
+      return stored === "true";
+    } catch {
+      return false;
     }
-    setHydrated(true);
-  }, []);
+  });
 
   // Persist to localStorage when changed
   useEffect(() => {
-    if (!hydrated) return;
     try {
       localStorage.setItem(HIDE_PAST_KEY, String(hidePastWeeks));
       localStorage.setItem(HIDE_MASS_PARTS_KEY, String(hideMassParts));
     } catch {
       // ignore
     }
-  }, [hidePastWeeks, hideMassParts, hydrated]);
+  }, [hidePastWeeks, hideMassParts]);
 
   const filteredOccasions = useMemo(
     () => getFilteredOccasions(occasions, yearCycle, season),

@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useMemo, useCallback, useRef } from "react";
-import type { LibrarySong, SongResourceType } from "@/lib/types";
+import type { LibrarySong } from "@/lib/types";
 import { useUser } from "@/lib/user-context";
 import SongCard from "./SongCard";
 import SongDetailPanel from "./SongDetailPanel";

@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useMemo, useCallback, useEffect } from "react";
+import { useState, useMemo, useCallback } from "react";
 import type { MinistryCalendar, CalendarView, CalendarEvent } from "@/lib/calendar-types";
 import type { CommunityId } from "@/lib/grid-types";
 import { getVisibleWeeks } from "@/lib/calendar-utils";
@@ -27,24 +27,20 @@ export default function CalendarShell({ calendar }: CalendarShellProps) {
   );
   const [currentMonth, setCurrentMonth] = useState(() => new Date());
 
-  // Admin hidden weeks (localStorage)
-  const [hiddenWeekIds, setHiddenWeekIds] = useState<string[]>([]);
+  // Admin hidden weeks (localStorage — lazy init)
+  const [hiddenWeekIds, setHiddenWeekIds] = useState<string[]>(() => {
+    if (typeof window === "undefined") return [];
+    try {
+      const stored = localStorage.getItem(HIDDEN_WEEKS_KEY);
+      return stored ? JSON.parse(stored) : [];
+    } catch {
+      return [];
+    }
+  });
 
   // Event editor state
   const [editorOpen, setEditorOpen] = useState(false);
   const [editingEvent, setEditingEvent] = useState<(CalendarEvent & { id?: string }) | undefined>(undefined);
-
-  // Load hidden weeks from localStorage on mount
-  useEffect(() => {
-    try {
-      const stored = localStorage.getItem(HIDDEN_WEEKS_KEY);
-      if (stored) {
-        setHiddenWeekIds(JSON.parse(stored));
-      }
-    } catch {
-      // ignore parse errors
-    }
-  }, []);
 
   // Toggle week hidden state
   const toggleHiddenWeek = useCallback(

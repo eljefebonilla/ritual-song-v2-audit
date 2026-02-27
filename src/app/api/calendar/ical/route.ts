@@ -94,7 +94,7 @@ export async function GET(request: NextRequest) {
 function toIcalDateTime(date: string, time: string, addMinutes = 0): string {
   const [y, m, d] = date.split("-");
   const [h, min] = time.split(":");
-  let totalMin = parseInt(h) * 60 + parseInt(min) + addMinutes;
+  const totalMin = parseInt(h) * 60 + parseInt(min) + addMinutes;
   const hours = Math.floor(totalMin / 60) % 24;
   const mins = totalMin % 60;
   return `${y}${m}${d}T${pad(hours)}${pad(mins)}00`;

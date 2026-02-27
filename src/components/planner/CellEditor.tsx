@@ -24,8 +24,6 @@ interface CellEditorProps {
 }
 
 export default function CellEditor({
-  occasionId,
-  communityId,
   rowKey,
   currentData,
   anchorRect,

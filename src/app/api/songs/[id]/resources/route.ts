@@ -64,7 +64,7 @@ export async function POST(
     fs.writeFileSync(SONG_LIBRARY_PATH, JSON.stringify(library, null, 2));
 
     return NextResponse.json({ resource, song });
-  } catch (e) {
+  } catch {
     return NextResponse.json(
       { error: "Failed to add resource" },
       { status: 500 }
