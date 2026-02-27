@@ -129,6 +129,7 @@ export type SongResourceType =
 
 export type SongResourceSource =
   | "local"
+  | "supabase"
   | "ocp_bb"
   | "ocp_ss"
   | "youtube"
@@ -138,8 +139,9 @@ export interface SongResource {
   id: string;
   type: SongResourceType;
   label: string; // "Lead Sheet (AIM)", "Breaking Bread #639", "YouTube"
-  url?: string; // External link (OCP page, YouTube)
+  url?: string; // External link (OCP page, YouTube, Supabase public URL)
   filePath?: string; // Local file path (for Music folder resources)
+  storagePath?: string; // Supabase Storage path (for deletion)
   value?: string; // For non-URL resources like hymnal numbers
   source?: SongResourceSource;
   isHighlighted?: boolean; // true for "AIM" files (priority lead sheets)
@@ -162,6 +164,7 @@ export interface LibrarySong {
   title: string;
   composer?: string;
   category?: SongCategory;
+  functions?: string[]; // liturgical functions: gathering, offertory, communion, etc.
   resources: SongResource[];
   usageCount: number; // how many times this song appears in music plans
   occasions: string[]; // occasion IDs where this song is used

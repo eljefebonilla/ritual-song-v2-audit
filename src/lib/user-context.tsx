@@ -99,15 +99,15 @@ export function UserProvider({ children }: { children: ReactNode }) {
   }
 
   // Determine effective role
-  const dbRole = profile?.role ?? "member";
-  const isAdmin = dbRole === "admin";
-  const role: UserRole = roleOverride ?? (user ? dbRole : "member");
+  // In local dev, default to admin so gate-code users get full access
+  const isDev = process.env.NODE_ENV === "development";
+  const dbRole = profile?.role ?? (isDev ? "admin" : "member");
+  const role: UserRole = roleOverride ?? (user ? dbRole : (isDev ? "admin" : "member"));
+  const isAdmin = role === "admin";
 
-  // setRole only works for admins (to preview member view)
+  // Allow role toggle for anyone (gate-code users can switch to Music Director view)
   function setRole(newRole: UserRole) {
-    if (isAdmin) {
-      setRoleOverride(newRole);
-    }
+    setRoleOverride(newRole);
   }
 
   const displayName = profile?.full_name ?? (user ? "Member" : "Guest");

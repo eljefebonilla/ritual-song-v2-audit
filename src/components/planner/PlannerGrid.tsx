@@ -35,7 +35,7 @@ interface EditingCell {
   anchorRect: DOMRect;
 }
 
-function OccasionCard({ column }: { column: GridColumn }) {
+function OccasionCard({ column, hideMassParts = false }: { column: GridColumn; hideMassParts?: boolean }) {
   const { occasion, plan } = column;
   const colors = SEASON_COLORS[occasion.season] || SEASON_COLORS.ordinary;
   const displayDate = getOccasionDisplayDate(occasion);
@@ -73,6 +73,7 @@ function OccasionCard({ column }: { column: GridColumn }) {
       <div className="divide-y divide-stone-50">
         {GRID_SECTIONS.map((section) => {
           const sectionRows = section.rows
+            .filter((rowKey) => !(hideMassParts && MASS_PART_ROWS.has(rowKey)))
             .map((rowKey) => {
               const data = extractCellData(plan, rowKey, occasion);
               return { rowKey, data };
@@ -190,7 +191,7 @@ export default function PlannerGrid({ columns, viewMode, hideMassParts = false, 
     return (
       <div className="h-full overflow-y-auto p-4 space-y-3">
         {columns.map((col) => (
-          <OccasionCard key={col.occasion.id} column={col} />
+          <OccasionCard key={col.occasion.id} column={col} hideMassParts={hideMassParts} />
         ))}
       </div>
     );

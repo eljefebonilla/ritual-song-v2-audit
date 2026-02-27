@@ -76,6 +76,16 @@ export function classifySong(title: string): SongCategory {
 }
 
 /**
+ * Filter out local-only resources when running on Vercel (read-only filesystem).
+ */
+export function getVisibleResources(resources: SongResource[]): SongResource[] {
+  if (process.env.VERCEL) {
+    return resources.filter((r) => r.source !== "local");
+  }
+  return resources;
+}
+
+/**
  * Classify a resource into a display category for badge/filter purposes.
  */
 export function getResourceDisplayCategory(resource: SongResource): ResourceDisplayCategory | null {

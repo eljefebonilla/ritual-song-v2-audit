@@ -9,7 +9,7 @@ interface AlphabetJumpProps {
 
 export default function AlphabetJump({ availableLetters, onLetterClick }: AlphabetJumpProps) {
   return (
-    <div className="sticky top-0 flex flex-col items-center py-2 px-1 shrink-0 select-none z-10">
+    <div className="flex flex-wrap items-center gap-0.5 px-1 py-2 select-none">
       {LETTERS.map((letter) => {
         const available = availableLetters.has(letter);
         return (
@@ -17,9 +17,9 @@ export default function AlphabetJump({ availableLetters, onLetterClick }: Alphab
             key={letter}
             onClick={() => available && onLetterClick(letter)}
             disabled={!available}
-            className={`w-5 h-5 flex items-center justify-center text-[10px] font-bold rounded transition-colors ${
+            className={`w-7 h-7 flex items-center justify-center text-xs rounded transition-colors ${
               available
-                ? "text-stone-600 hover:bg-stone-200 hover:text-stone-900 cursor-pointer"
+                ? "font-bold text-stone-700 hover:bg-stone-200 hover:text-stone-900 cursor-pointer"
                 : "text-stone-300 cursor-default"
             }`}
           >

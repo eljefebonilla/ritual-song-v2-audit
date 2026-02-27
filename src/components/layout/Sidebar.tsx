@@ -172,6 +172,22 @@ export default function Sidebar({ open, onClose }: SidebarProps) {
           }
         />
 
+        <NavLink
+          href="/choir"
+          pathname={pathname}
+          collapsed={collapsed}
+          label="Choir Sign-Up"
+          onClick={onClose}
+          icon={
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+              <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" />
+              <circle cx="9" cy="7" r="4" />
+              <line x1="19" y1="8" x2="19" y2="14" />
+              <line x1="22" y1="11" x2="16" y2="11" />
+            </svg>
+          }
+        />
+
         {/* Music Section */}
         {!collapsed && (
           <div className="mt-6 px-4 mb-2">
@@ -212,30 +228,6 @@ export default function Sidebar({ open, onClose }: SidebarProps) {
           }
         />
 
-        {/* Library sub-navigation */}
-        {!collapsed && pathname.startsWith("/library") && (
-          <div className="ml-7 border-l border-stone-700 pl-3">
-            {[
-              { href: "/library/mass-parts", label: "Mass Parts" },
-              { href: "/library/psalms", label: "Psalms" },
-              { href: "/library/gospel-acclamations", label: "Gospel Accl." },
-            ].map((sub) => (
-              <Link
-                key={sub.href}
-                href={sub.href}
-                onClick={onClose}
-                className={`block py-1.5 text-xs transition-colors ${
-                  pathname === sub.href
-                    ? "text-white font-medium"
-                    : "text-stone-400 hover:text-stone-200"
-                }`}
-              >
-                {sub.label}
-              </Link>
-            ))}
-          </div>
-        )}
-
         {/* Liturgical Seasons */}
         {!collapsed && (
           <div className="mt-6 px-4 mb-2">
@@ -271,6 +263,22 @@ export default function Sidebar({ open, onClose }: SidebarProps) {
                 Admin
               </p>
             </div>
+            <NavLink
+              href="/admin/booking"
+              pathname={pathname}
+              collapsed={collapsed}
+              label="Booking Grid"
+              onClick={onClose}
+              icon={
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                  <rect x="3" y="3" width="18" height="18" rx="2" />
+                  <line x1="3" y1="9" x2="21" y2="9" />
+                  <line x1="3" y1="15" x2="21" y2="15" />
+                  <line x1="9" y1="3" x2="9" y2="21" />
+                  <line x1="15" y1="3" x2="15" y2="21" />
+                </svg>
+              }
+            />
             <NavLink
               href="/admin/members"
               pathname={pathname}

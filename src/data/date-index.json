@@ -1,0 +1,4820 @@
+[
+  {
+    "date": "2023-01-09",
+    "occasionId": "baptism-of-the-lord-a",
+    "season": "ordinary",
+    "name": "BAPTISM OF THE LORD [A]"
+  },
+  {
+    "date": "2023-01-15",
+    "occasionId": "ordinary-time-02-a",
+    "season": "ordinary",
+    "name": "ORDINARY TIME 02 [A]"
+  },
+  {
+    "date": "2023-01-22",
+    "occasionId": "ordinary-time-03-a-word-of-god-sunday",
+    "season": "ordinary",
+    "name": "ORDINARY TIME 03 [A]\nWORD OF GOD Sunday"
+  },
+  {
+    "date": "2023-01-29",
+    "occasionId": "ordinary-time-04-a",
+    "season": "ordinary",
+    "name": "ORDINARY TIME 04 [A]"
+  },
+  {
+    "date": "2023-02-05",
+    "occasionId": "ordinary-time-05-a",
+    "season": "ordinary",
+    "name": "ORDINARY TIME 05 [A]"
+  },
+  {
+    "date": "2023-02-12",
+    "occasionId": "ordinary-time-06-a",
+    "season": "ordinary",
+    "name": "ORDINARY TIME 06 [A]"
+  },
+  {
+    "date": "2023-02-19",
+    "occasionId": "ordinary-time-07-a",
+    "season": "ordinary",
+    "name": "ORDINARY TIME 07 [A]"
+  },
+  {
+    "date": "2023-02-26",
+    "occasionId": "lent-01-a",
+    "season": "lent",
+    "name": "LENT 01 [A]"
+  },
+  {
+    "date": "2023-03-05",
+    "occasionId": "lent-02-a",
+    "season": "lent",
+    "name": "LENT 02 [A]"
+  },
+  {
+    "date": "2023-03-12",
+    "occasionId": "lent-03-a-first-scrutiny",
+    "season": "lent",
+    "name": "LENT 03 [A]\nFirst Scrutiny"
+  },
+  {
+    "date": "2023-03-19",
+    "occasionId": "lent-04-a-second-scrutiny",
+    "season": "lent",
+    "name": "LENT 04 [A]\nSecond Scrutiny"
+  },
+  {
+    "date": "2023-03-26",
+    "occasionId": "lent-05-a-third-scrutiny",
+    "season": "lent",
+    "name": "LENT 05 [A]\nThird Scrutiny"
+  },
+  {
+    "date": "2023-04-02",
+    "occasionId": "palm-sunday-a",
+    "season": "lent",
+    "name": "Palm Sunday [A]"
+  },
+  {
+    "date": "2023-04-16",
+    "occasionId": "easter-02-divine-mercy-a",
+    "season": "easter",
+    "name": "EASTER 02 DIVINE MERCY [A]"
+  },
+  {
+    "date": "2023-04-23",
+    "occasionId": "easter-03-a",
+    "season": "easter",
+    "name": "EASTER 03 [A]"
+  },
+  {
+    "date": "2023-04-30",
+    "occasionId": "easter-04-a",
+    "season": "easter",
+    "name": "EASTER 04 [A]"
+  },
+  {
+    "date": "2023-05-07",
+    "occasionId": "easter-05-a",
+    "season": "easter",
+    "name": "EASTER 05 [A]"
+  },
+  {
+    "date": "2023-05-14",
+    "occasionId": "easter-06-a",
+    "season": "easter",
+    "name": "EASTER 06 [A]"
+  },
+  {
+    "date": "2023-05-21",
+    "occasionId": "ascension-a",
+    "season": "easter",
+    "name": "ASCENSION [A]"
+  },
+  {
+    "date": "2023-05-28",
+    "occasionId": "pentecost-a",
+    "season": "easter",
+    "name": "PENTECOST [A]"
+  },
+  {
+    "date": "2023-06-04",
+    "occasionId": "solemnity-most-holy-trinity-a",
+    "season": "solemnity",
+    "name": "SOLEMNITY\nMOST HOLY TRINITY [A]"
+  },
+  {
+    "date": "2023-06-11",
+    "occasionId": "solemnity-body-blood-of-christ-a",
+    "season": "solemnity",
+    "name": "SOLEMNITY\nBODY & BLOOD OF CHRIST [A]"
+  },
+  {
+    "date": "2023-06-18",
+    "occasionId": "ordinary-time-11-a",
+    "season": "ordinary",
+    "name": "ORDINARY TIME 11 [A]"
+  },
+  {
+    "date": "2023-06-25",
+    "occasionId": "ordinary-time-12-a",
+    "season": "ordinary",
+    "name": "ORDINARY TIME 12 [A]"
+  },
+  {
+    "date": "2023-07-02",
+    "occasionId": "ordinary-time-13-a",
+    "season": "ordinary",
+    "name": "ORDINARY TIME 13 [A]"
+  },
+  {
+    "date": "2023-07-09",
+    "occasionId": "ordinary-time-14-a",
+    "season": "ordinary",
+    "name": "ORDINARY TIME 14 [A]"
+  },
+  {
+    "date": "2023-07-16",
+    "occasionId": "ordinary-time-15-a",
+    "season": "ordinary",
+    "name": "ORDINARY TIME 15 [A]"
+  },
+  {
+    "date": "2023-07-23",
+    "occasionId": "ordinary-time-16-a",
+    "season": "ordinary",
+    "name": "ORDINARY TIME 16 [A]"
+  },
+  {
+    "date": "2023-07-30",
+    "occasionId": "ordinary-time-17-a",
+    "season": "ordinary",
+    "name": "ORDINARY TIME 17 [A]"
+  },
+  {
+    "date": "2023-08-13",
+    "occasionId": "ordinary-time-19-a",
+    "season": "ordinary",
+    "name": "ORDINARY TIME 19 [A]"
+  },
+  {
+    "date": "2023-08-20",
+    "occasionId": "ordinary-time-20-a",
+    "season": "ordinary",
+    "name": "ORDINARY TIME 20 [A]"
+  },
+  {
+    "date": "2023-08-27",
+    "occasionId": "ordinary-time-21-a",
+    "season": "ordinary",
+    "name": "ORDINARY TIME 21 [A]"
+  },
+  {
+    "date": "2023-09-03",
+    "occasionId": "ordinary-time-22-a",
+    "season": "ordinary",
+    "name": "ORDINARY TIME 22 [A]"
+  },
+  {
+    "date": "2023-09-10",
+    "occasionId": "ordinary-time-23-a",
+    "season": "ordinary",
+    "name": "ORDINARY TIME 23 [A]"
+  },
+  {
+    "date": "2023-09-17",
+    "occasionId": "ordinary-time-24-a",
+    "season": "ordinary",
+    "name": "ORDINARY TIME 24 [A]"
+  },
+  {
+    "date": "2023-09-24",
+    "occasionId": "ordinary-time-25-a",
+    "season": "ordinary",
+    "name": "ORDINARY TIME 25 [A]"
+  },
+  {
+    "date": "2023-10-01",
+    "occasionId": "ordinary-time-26-a",
+    "season": "ordinary",
+    "name": "ORDINARY TIME 26 [A]"
+  },
+  {
+    "date": "2023-10-08",
+    "occasionId": "ordinary-time-27-a",
+    "season": "ordinary",
+    "name": "ORDINARY TIME 27 [A]"
+  },
+  {
+    "date": "2023-10-15",
+    "occasionId": "ordinary-time-28-a",
+    "season": "ordinary",
+    "name": "ORDINARY TIME 28 [A]"
+  },
+  {
+    "date": "2023-10-22",
+    "occasionId": "ordinary-time-29-a",
+    "season": "ordinary",
+    "name": "ORDINARY TIME 29 [A]"
+  },
+  {
+    "date": "2023-10-29",
+    "occasionId": "ordinary-time-30-a",
+    "season": "ordinary",
+    "name": "ORDINARY TIME 30 [A]"
+  },
+  {
+    "date": "2023-11-05",
+    "occasionId": "ordinary-time-31-a",
+    "season": "ordinary",
+    "name": "ORDINARY TIME 31 [A]"
+  },
+  {
+    "date": "2023-11-12",
+    "occasionId": "ordinary-time-32-a",
+    "season": "ordinary",
+    "name": "ORDINARY TIME 32 [A]"
+  },
+  {
+    "date": "2023-11-19",
+    "occasionId": "ordinary-time-33-a",
+    "season": "ordinary",
+    "name": "ORDINARY TIME 33 [A]"
+  },
+  {
+    "date": "2023-11-26",
+    "occasionId": "solemnity-christ-the-king-a",
+    "season": "solemnity",
+    "name": "SOLEMNITY\nCHRIST THE KING [A]"
+  },
+  {
+    "date": "2023-12-03",
+    "occasionId": "advent-01-b",
+    "season": "advent",
+    "name": "ADVENT 01 [B]"
+  },
+  {
+    "date": "2023-12-10",
+    "occasionId": "advent-02-b",
+    "season": "advent",
+    "name": "ADVENT 02 [B]"
+  },
+  {
+    "date": "2023-12-17",
+    "occasionId": "advent-03-b",
+    "season": "advent",
+    "name": "ADVENT 03 [B]"
+  },
+  {
+    "date": "2023-12-24",
+    "occasionId": "advent-04-b",
+    "season": "advent",
+    "name": "ADVENT 04 [B]"
+  },
+  {
+    "date": "2023-12-31",
+    "occasionId": "holy-family-b",
+    "season": "christmas",
+    "name": "HOLY FAMILY [B]"
+  },
+  {
+    "date": "2024-01-08",
+    "occasionId": "baptism-of-the-lord-b",
+    "season": "ordinary",
+    "name": "BAPTISM OF THE LORD [B]"
+  },
+  {
+    "date": "2024-01-14",
+    "occasionId": "ordinary-time-02-b",
+    "season": "ordinary",
+    "name": "ORDINARY TIME 02 [B]"
+  },
+  {
+    "date": "2024-01-21",
+    "occasionId": "ordinary-time-03-b-word-of-god-sunday",
+    "season": "ordinary",
+    "name": "ORDINARY TIME 03 [B]\nWORD OF GOD Sunday"
+  },
+  {
+    "date": "2024-01-28",
+    "occasionId": "ordinary-time-04-b",
+    "season": "ordinary",
+    "name": "ORDINARY TIME 04 [B]"
+  },
+  {
+    "date": "2024-02-04",
+    "occasionId": "ordinary-time-05-b",
+    "season": "ordinary",
+    "name": "ORDINARY TIME 05 [B]"
+  },
+  {
+    "date": "2024-02-11",
+    "occasionId": "ordinary-time-06-b",
+    "season": "ordinary",
+    "name": "ORDINARY TIME 06 [B]"
+  },
+  {
+    "date": "2024-02-18",
+    "occasionId": "lent-01-b",
+    "season": "lent",
+    "name": "LENT 01 [B]"
+  },
+  {
+    "date": "2024-02-25",
+    "occasionId": "lent-02-b",
+    "season": "lent",
+    "name": "LENT 02 [B]"
+  },
+  {
+    "date": "2024-03-03",
+    "occasionId": "lent-03-b",
+    "season": "lent",
+    "name": "LENT 03 [B]"
+  },
+  {
+    "date": "2024-03-10",
+    "occasionId": "lent-04-b",
+    "season": "lent",
+    "name": "LENT 04 [B]"
+  },
+  {
+    "date": "2024-03-17",
+    "occasionId": "lent-05-b",
+    "season": "lent",
+    "name": "LENT 05 [B]"
+  },
+  {
+    "date": "2024-03-24",
+    "occasionId": "palm-sunday-b",
+    "season": "lent",
+    "name": "Palm Sunday [B]"
+  },
+  {
+    "date": "2024-04-07",
+    "occasionId": "easter-02-divine-mercy-b",
+    "season": "easter",
+    "name": "EASTER 02 DIVINE MERCY [B]"
+  },
+  {
+    "date": "2024-04-14",
+    "occasionId": "easter-03-b",
+    "season": "easter",
+    "name": "EASTER 03 [B]"
+  },
+  {
+    "date": "2024-04-21",
+    "occasionId": "easter-04-b",
+    "season": "easter",
+    "name": "EASTER 04 [B]"
+  },
+  {
+    "date": "2024-04-28",
+    "occasionId": "easter-05-b",
+    "season": "easter",
+    "name": "EASTER 05 [B]"
+  },
+  {
+    "date": "2024-05-05",
+    "occasionId": "easter-06-b",
+    "season": "easter",
+    "name": "EASTER 06 [B]"
+  },
+  {
+    "date": "2024-05-12",
+    "occasionId": "ascension-b",
+    "season": "easter",
+    "name": "ASCENSION [B]"
+  },
+  {
+    "date": "2024-05-19",
+    "occasionId": "pentecost-b",
+    "season": "easter",
+    "name": "PENTECOST [B]"
+  },
+  {
+    "date": "2024-05-26",
+    "occasionId": "solemnity-most-holy-trinity-b",
+    "season": "solemnity",
+    "name": "SOLEMNITY\nMOST HOLY TRINITY [B]"
+  },
+  {
+    "date": "2024-06-02",
+    "occasionId": "solemnity-body-blood-of-christ-b",
+    "season": "solemnity",
+    "name": "SOLEMNITY\nBODY & BLOOD OF CHRIST [B]"
+  },
+  {
+    "date": "2024-06-09",
+    "occasionId": "ordinary-time-10-b",
+    "season": "ordinary",
+    "name": "ORDINARY TIME 10 [B]"
+  },
+  {
+    "date": "2024-06-16",
+    "occasionId": "ordinary-time-11-b",
+    "season": "ordinary",
+    "name": "ORDINARY TIME 11 [B]"
+  },
+  {
+    "date": "2024-06-23",
+    "occasionId": "ordinary-time-12-b",
+    "season": "ordinary",
+    "name": "ORDINARY TIME 12 [B]"
+  },
+  {
+    "date": "2024-06-30",
+    "occasionId": "ordinary-time-13-b",
+    "season": "ordinary",
+    "name": "ORDINARY TIME 13 [B]"
+  },
+  {
+    "date": "2024-07-07",
+    "occasionId": "ordinary-time-14-b",
+    "season": "ordinary",
+    "name": "ORDINARY TIME 14 [B]"
+  },
+  {
+    "date": "2024-07-14",
+    "occasionId": "ordinary-time-15-b",
+    "season": "ordinary",
+    "name": "ORDINARY TIME 15 [B]"
+  },
+  {
+    "date": "2024-07-21",
+    "occasionId": "ordinary-time-16-b",
+    "season": "ordinary",
+    "name": "ORDINARY TIME 16 [B]"
+  },
+  {
+    "date": "2024-07-28",
+    "occasionId": "ordinary-time-17-b",
+    "season": "ordinary",
+    "name": "ORDINARY TIME 17 [B]"
+  },
+  {
+    "date": "2024-08-04",
+    "occasionId": "ordinary-time-18-b",
+    "season": "ordinary",
+    "name": "ORDINARY TIME 18 [B]"
+  },
+  {
+    "date": "2024-08-11",
+    "occasionId": "ordinary-time-19-b",
+    "season": "ordinary",
+    "name": "ORDINARY TIME 19 [B]"
+  },
+  {
+    "date": "2024-08-18",
+    "occasionId": "ordinary-time-20-b",
+    "season": "ordinary",
+    "name": "ORDINARY TIME 20 [B]"
+  },
+  {
+    "date": "2024-08-25",
+    "occasionId": "ordinary-time-21-b",
+    "season": "ordinary",
+    "name": "ORDINARY TIME 21 [B]"
+  },
+  {
+    "date": "2024-09-01",
+    "occasionId": "ordinary-time-22-b",
+    "season": "ordinary",
+    "name": "ORDINARY TIME 22 [B]"
+  },
+  {
+    "date": "2024-09-08",
+    "occasionId": "ordinary-time-23-b",
+    "season": "ordinary",
+    "name": "ORDINARY TIME 23 [B]"
+  },
+  {
+    "date": "2024-09-15",
+    "occasionId": "ordinary-time-24-b",
+    "season": "ordinary",
+    "name": "ORDINARY TIME 24 [B]"
+  },
+  {
+    "date": "2024-09-22",
+    "occasionId": "ordinary-time-25-b",
+    "season": "ordinary",
+    "name": "ORDINARY TIME 25 [B]"
+  },
+  {
+    "date": "2024-09-29",
+    "occasionId": "ordinary-time-26-b",
+    "season": "ordinary",
+    "name": "ORDINARY TIME 26 [B]"
+  },
+  {
+    "date": "2024-10-06",
+    "occasionId": "ordinary-time-27-b",
+    "season": "ordinary",
+    "name": "ORDINARY TIME 27 [B]"
+  },
+  {
+    "date": "2024-10-13",
+    "occasionId": "ordinary-time-28-b",
+    "season": "ordinary",
+    "name": "ORDINARY TIME 28 [B]"
+  },
+  {
+    "date": "2024-10-20",
+    "occasionId": "ordinary-time-29-b",
+    "season": "ordinary",
+    "name": "ORDINARY TIME 29 [B]"
+  },
+  {
+    "date": "2024-10-27",
+    "occasionId": "ordinary-time-30-b",
+    "season": "ordinary",
+    "name": "ORDINARY TIME 30 [B]"
+  },
+  {
+    "date": "2024-11-03",
+    "occasionId": "ordinary-time-31-b",
+    "season": "ordinary",
+    "name": "ORDINARY TIME 31 [B]"
+  },
+  {
+    "date": "2024-11-10",
+    "occasionId": "ordinary-time-32-b",
+    "season": "ordinary",
+    "name": "ORDINARY TIME 32 [B]"
+  },
+  {
+    "date": "2024-11-17",
+    "occasionId": "ordinary-time-33-b",
+    "season": "ordinary",
+    "name": "ORDINARY TIME 33 [B]"
+  },
+  {
+    "date": "2024-11-24",
+    "occasionId": "solemnity-christ-the-king-b",
+    "season": "solemnity",
+    "name": "SOLEMNITY\nCHRIST THE KING [B]"
+  },
+  {
+    "date": "2024-12-01",
+    "occasionId": "advent-01-c",
+    "season": "advent",
+    "name": "ADVENT 01 [C]"
+  },
+  {
+    "date": "2024-12-08",
+    "occasionId": "advent-02-c",
+    "season": "advent",
+    "name": "ADVENT 02 [C]"
+  },
+  {
+    "date": "2024-12-15",
+    "occasionId": "advent-03-c",
+    "season": "advent",
+    "name": "ADVENT 03 [C]"
+  },
+  {
+    "date": "2024-12-22",
+    "occasionId": "advent-04-c",
+    "season": "advent",
+    "name": "ADVENT 04 [C]"
+  },
+  {
+    "date": "2024-12-29",
+    "occasionId": "holy-family-c",
+    "season": "christmas",
+    "name": "HOLY FAMILY [C]"
+  },
+  {
+    "date": "2025-01-12",
+    "occasionId": "baptism-of-the-lord-c",
+    "season": "ordinary",
+    "name": "BAPTISM OF THE LORD [C]"
+  },
+  {
+    "date": "2025-01-19",
+    "occasionId": "ordinary-time-02-c",
+    "season": "ordinary",
+    "name": "ORDINARY TIME 02 [C]"
+  },
+  {
+    "date": "2025-01-26",
+    "occasionId": "ordinary-time-03-c-word-of-god-sunday",
+    "season": "ordinary",
+    "name": "ORDINARY TIME 03 [C]\nWORD OF GOD Sunday"
+  },
+  {
+    "date": "2025-02-09",
+    "occasionId": "ordinary-time-05-c",
+    "season": "ordinary",
+    "name": "ORDINARY TIME 05 [C]"
+  },
+  {
+    "date": "2025-02-16",
+    "occasionId": "ordinary-time-06-c",
+    "season": "ordinary",
+    "name": "ORDINARY TIME 06 [C]"
+  },
+  {
+    "date": "2025-03-02",
+    "occasionId": "ordinary-time-08-c",
+    "season": "ordinary",
+    "name": "ORDINARY TIME 08 [C]"
+  },
+  {
+    "date": "2025-03-09",
+    "occasionId": "lent-01-c",
+    "season": "lent",
+    "name": "LENT 01 [C]"
+  },
+  {
+    "date": "2025-03-16",
+    "occasionId": "lent-02-c",
+    "season": "lent",
+    "name": "LENT 02 [C]"
+  },
+  {
+    "date": "2025-03-23",
+    "occasionId": "lent-03-c",
+    "season": "lent",
+    "name": "LENT 03 [C]"
+  },
+  {
+    "date": "2025-03-30",
+    "occasionId": "lent-04-c",
+    "season": "lent",
+    "name": "LENT 04 [C]"
+  },
+  {
+    "date": "2025-04-06",
+    "occasionId": "lent-05-c",
+    "season": "lent",
+    "name": "LENT 05 [C]"
+  },
+  {
+    "date": "2025-04-13",
+    "occasionId": "palm-sunday-c",
+    "season": "lent",
+    "name": "Palm Sunday [C]"
+  },
+  {
+    "date": "2025-04-27",
+    "occasionId": "easter-02-divine-mercy-c",
+    "season": "easter",
+    "name": "EASTER 02 DIVINE MERCY [C]"
+  },
+  {
+    "date": "2025-05-04",
+    "occasionId": "easter-03-c",
+    "season": "easter",
+    "name": "EASTER 03 [C]"
+  },
+  {
+    "date": "2025-05-11",
+    "occasionId": "easter-04-c",
+    "season": "easter",
+    "name": "EASTER 04 [C]"
+  },
+  {
+    "date": "2025-05-18",
+    "occasionId": "easter-05-c",
+    "season": "easter",
+    "name": "EASTER 05 [C]"
+  },
+  {
+    "date": "2025-05-25",
+    "occasionId": "easter-06-c",
+    "season": "easter",
+    "name": "EASTER 06 [C]"
+  },
+  {
+    "date": "2025-06-01",
+    "occasionId": "ascension-c",
+    "season": "easter",
+    "name": "ASCENSION [C]"
+  },
+  {
+    "date": "2025-06-07",
+    "occasionId": "pentecost-ext-vigil-abc",
+    "season": "easter",
+    "name": "PENTECOST - Ext. VIGIL [ABC]"
+  },
+  {
+    "date": "2025-06-08",
+    "occasionId": "pentecost-c",
+    "season": "easter",
+    "name": "PENTECOST [C]"
+  },
+  {
+    "date": "2025-06-15",
+    "occasionId": "solemnity-most-holy-trinity-c",
+    "season": "solemnity",
+    "name": "SOLEMNITY\nMOST HOLY TRINITY [C]"
+  },
+  {
+    "date": "2025-06-22",
+    "occasionId": "solemnity-body-blood-of-christ-c",
+    "season": "solemnity",
+    "name": "SOLEMNITY\nBODY & BLOOD OF CHRIST [C]"
+  },
+  {
+    "date": "2025-06-28",
+    "occasionId": "ss-peter-paul-apostles-jun-29-at-the-vigil-mass-abc",
+    "season": "ordinary",
+    "name": "Ss PETER & PAUL, APOSTLES (JUN 29) \nAT THE VIGIL MASS [ABC]"
+  },
+  {
+    "date": "2025-06-29",
+    "occasionId": "ss-peter-paul-apostles-jun-29-mass-during-the-day-abc",
+    "season": "ordinary",
+    "name": "Ss PETER & PAUL, APOSTLES (JUN 29) \nMASS DURING THE DAY [ABC]"
+  },
+  {
+    "date": "2025-07-04",
+    "occasionId": "independence-day",
+    "season": "ordinary",
+    "name": "INDEPENDENCE DAY"
+  },
+  {
+    "date": "2025-07-06",
+    "occasionId": "ordinary-time-14-c",
+    "season": "ordinary",
+    "name": "ORDINARY TIME 14 [C]"
+  },
+  {
+    "date": "2025-07-13",
+    "occasionId": "ordinary-time-15-c",
+    "season": "ordinary",
+    "name": "ORDINARY TIME 15 [C]"
+  },
+  {
+    "date": "2025-07-20",
+    "occasionId": "ordinary-time-16-c",
+    "season": "ordinary",
+    "name": "ORDINARY TIME 16 [C]"
+  },
+  {
+    "date": "2025-07-27",
+    "occasionId": "ordinary-time-17-c",
+    "season": "ordinary",
+    "name": "ORDINARY TIME 17 [C]"
+  },
+  {
+    "date": "2025-08-03",
+    "occasionId": "ordinary-time-18-c",
+    "season": "ordinary",
+    "name": "ORDINARY TIME 18 [C]"
+  },
+  {
+    "date": "2025-08-10",
+    "occasionId": "ordinary-time-19-c",
+    "season": "ordinary",
+    "name": "ORDINARY TIME 19 [C]"
+  },
+  {
+    "date": "2025-08-17",
+    "occasionId": "ordinary-time-20-c",
+    "season": "ordinary",
+    "name": "ORDINARY TIME 20 [C]"
+  },
+  {
+    "date": "2025-08-24",
+    "occasionId": "ordinary-time-21-c",
+    "season": "ordinary",
+    "name": "ORDINARY TIME 21 [C]"
+  },
+  {
+    "date": "2025-08-27",
+    "occasionId": "feast-of-st-monica",
+    "season": "feast",
+    "name": "FEAST of ST MONICA"
+  },
+  {
+    "date": "2025-08-31",
+    "occasionId": "ordinary-time-22-c",
+    "season": "ordinary",
+    "name": "ORDINARY TIME 22 [C]"
+  },
+  {
+    "date": "2025-09-07",
+    "occasionId": "ordinary-time-23-c",
+    "season": "ordinary",
+    "name": "ORDINARY TIME 23 [C]"
+  },
+  {
+    "date": "2025-09-14",
+    "occasionId": "feast-the-exaltation-sep-14-of-the-holy-cross-abc",
+    "season": "feast",
+    "name": "FEAST: The EXALTATION (SEP 14)\n OF THE HOLY CROSS [ABC]"
+  },
+  {
+    "date": "2025-09-21",
+    "occasionId": "ordinary-time-25-c",
+    "season": "ordinary",
+    "name": "ORDINARY TIME 25 [C]"
+  },
+  {
+    "date": "2025-09-28",
+    "occasionId": "ordinary-time-26-c",
+    "season": "ordinary",
+    "name": "ORDINARY TIME 26 [C]"
+  },
+  {
+    "date": "2025-10-04",
+    "occasionId": "memorial-abc-feast-of-st-francis-oct-4",
+    "season": "feast",
+    "name": "MEMORIAL [ABC] \nFEAST OF ST FRANCIS (OCT 4)"
+  },
+  {
+    "date": "2025-10-05",
+    "occasionId": "ordinary-time-27-c",
+    "season": "ordinary",
+    "name": "ORDINARY TIME 27 [C]"
+  },
+  {
+    "date": "2025-10-12",
+    "occasionId": "ordinary-time-28-c",
+    "season": "ordinary",
+    "name": "ORDINARY TIME 28 [C]"
+  },
+  {
+    "date": "2025-10-19",
+    "occasionId": "ordinary-time-29-c",
+    "season": "ordinary",
+    "name": "ORDINARY TIME 29 [C]"
+  },
+  {
+    "date": "2025-10-26",
+    "occasionId": "ordinary-time-30-c",
+    "season": "ordinary",
+    "name": "ORDINARY TIME 30 [C]"
+  },
+  {
+    "date": "2025-11-01",
+    "occasionId": "solemnity-nov-1-all-saints-abc",
+    "season": "solemnity",
+    "name": "SOLEMNITY (NOV 1) \nALL SAINTS [ABC]"
+  },
+  {
+    "date": "2025-11-02",
+    "occasionId": "solemnity-nov-1-all-souls-abc",
+    "season": "solemnity",
+    "name": "SOLEMNITY (NOV 1)\nALL SOULS [ABC]"
+  },
+  {
+    "date": "2025-11-09",
+    "occasionId": "the-dedication-of-nov-9-the-lateran-basilica-abc",
+    "season": "ordinary",
+    "name": "THE DEDICATION OF (NOV 9)\nTHE LATERAN BASILICA [ABC]"
+  },
+  {
+    "date": "2025-11-11",
+    "occasionId": "veteran-s-day",
+    "season": "ordinary",
+    "name": "VETERAN'S DAY"
+  },
+  {
+    "date": "2025-11-16",
+    "occasionId": "ordinary-time-33-c",
+    "season": "ordinary",
+    "name": "ORDINARY TIME 33 [C]"
+  },
+  {
+    "date": "2025-11-23",
+    "occasionId": "solemnity-christ-the-king-c",
+    "season": "solemnity",
+    "name": "SOLEMNITY\nCHRIST THE KING [C]"
+  },
+  {
+    "date": "2025-11-27",
+    "occasionId": "thanksgiving",
+    "season": "ordinary",
+    "name": "THANKSGIVING"
+  },
+  {
+    "date": "2025-11-30",
+    "occasionId": "advent-01-a",
+    "season": "advent",
+    "name": "ADVENT 01 [A]"
+  },
+  {
+    "date": "2025-12-07",
+    "occasionId": "advent-02-a",
+    "season": "advent",
+    "name": "ADVENT 02 [A]"
+  },
+  {
+    "date": "2025-12-08",
+    "occasionId": "solemnity-immaculate-conception",
+    "season": "solemnity",
+    "name": "Solemnity\nIMMACULATE CONCEPTION"
+  },
+  {
+    "date": "2025-12-12",
+    "occasionId": "feast-our-lady-of-guadalupe-abc",
+    "season": "feast",
+    "name": "FeAST\nOUR LADY OF GUADALUPE  [ABC]"
+  },
+  {
+    "date": "2025-12-14",
+    "occasionId": "advent-03-a",
+    "season": "advent",
+    "name": "ADVENT 03 [A]"
+  },
+  {
+    "date": "2025-12-21",
+    "occasionId": "advent-04-a",
+    "season": "advent",
+    "name": "ADVENT 04 [A]"
+  },
+  {
+    "date": "2025-12-28",
+    "occasionId": "holy-family-a",
+    "season": "christmas",
+    "name": "HOLY FAMILY [A]"
+  },
+  {
+    "date": "2026-01-01",
+    "occasionId": "jan-1-mary-mother-of-god-abc",
+    "season": "ordinary",
+    "name": "Jan 1 • MARY, MOTHER OF GOD [ABC]"
+  },
+  {
+    "date": "2026-01-04",
+    "occasionId": "2nd-sun-after-christmas-abc-epiphany-replaces-in-adla",
+    "season": "christmas",
+    "name": "2ND SUN AFTER CHRISTMAS [ABC]\nEpiphany replaces in ADLA"
+  },
+  {
+    "date": "2026-01-11",
+    "occasionId": "baptism-of-the-lord-a",
+    "season": "ordinary",
+    "name": "BAPTISM OF THE LORD [A]"
+  },
+  {
+    "date": "2026-01-18",
+    "occasionId": "ordinary-time-02-a",
+    "season": "ordinary",
+    "name": "ORDINARY TIME 02 [A]"
+  },
+  {
+    "date": "2026-01-19",
+    "occasionId": "mlk-day",
+    "season": "ordinary",
+    "name": "MLK DAY"
+  },
+  {
+    "date": "2026-01-25",
+    "occasionId": "ordinary-time-03-a-word-of-god-sunday",
+    "season": "ordinary",
+    "name": "ORDINARY TIME 03 [A]\nWORD OF GOD Sunday"
+  },
+  {
+    "date": "2026-02-01",
+    "occasionId": "ordinary-time-04-a",
+    "season": "ordinary",
+    "name": "ORDINARY TIME 04 [A]"
+  },
+  {
+    "date": "2026-02-02",
+    "occasionId": "feast-abc-feb-2-presentation-of-the-lord",
+    "season": "feast",
+    "name": "Feast [ABC]\nFeb 2 • PRESENTATION OF THE LORD"
+  },
+  {
+    "date": "2026-02-08",
+    "occasionId": "ordinary-time-05-a",
+    "season": "ordinary",
+    "name": "ORDINARY TIME 05 [A]"
+  },
+  {
+    "date": "2026-02-15",
+    "occasionId": "ordinary-time-06-a",
+    "season": "ordinary",
+    "name": "ORDINARY TIME 06 [A]"
+  },
+  {
+    "date": "2026-02-18",
+    "occasionId": "ash-wednesday",
+    "season": "lent",
+    "name": "ASH WEDNESDAY"
+  },
+  {
+    "date": "2026-02-22",
+    "occasionId": "lent-01-a",
+    "season": "lent",
+    "name": "LENT 01 [A]"
+  },
+  {
+    "date": "2026-03-01",
+    "occasionId": "lent-02-a",
+    "season": "lent",
+    "name": "LENT 02 [A]"
+  },
+  {
+    "date": "2026-03-08",
+    "occasionId": "lent-03-a-first-scrutiny",
+    "season": "lent",
+    "name": "LENT 03 [A]\nFirst Scrutiny"
+  },
+  {
+    "date": "2026-03-15",
+    "occasionId": "lent-04-a-second-scrutiny",
+    "season": "lent",
+    "name": "LENT 04 [A]\nSecond Scrutiny"
+  },
+  {
+    "date": "2026-03-22",
+    "occasionId": "lent-05-a-third-scrutiny",
+    "season": "lent",
+    "name": "LENT 05 [A]\nThird Scrutiny"
+  },
+  {
+    "date": "2026-03-29",
+    "occasionId": "palm-sunday-a",
+    "season": "lent",
+    "name": "Palm Sunday [A]"
+  },
+  {
+    "date": "2026-04-05",
+    "occasionId": "easter-sunday-abc",
+    "season": "easter",
+    "name": "EASTER SUNDAY [ABC]"
+  },
+  {
+    "date": "2026-04-12",
+    "occasionId": "easter-02-divine-mercy-a",
+    "season": "easter",
+    "name": "EASTER 02 DIVINE MERCY [A]"
+  },
+  {
+    "date": "2026-04-19",
+    "occasionId": "easter-03-a",
+    "season": "easter",
+    "name": "EASTER 03 [A]"
+  },
+  {
+    "date": "2026-04-26",
+    "occasionId": "easter-04-a",
+    "season": "easter",
+    "name": "EASTER 04 [A]"
+  },
+  {
+    "date": "2026-05-03",
+    "occasionId": "easter-05-a",
+    "season": "easter",
+    "name": "EASTER 05 [A]"
+  },
+  {
+    "date": "2026-05-10",
+    "occasionId": "easter-06-a",
+    "season": "easter",
+    "name": "EASTER 06 [A]"
+  },
+  {
+    "date": "2026-05-17",
+    "occasionId": "ascension-a",
+    "season": "easter",
+    "name": "ASCENSION [A]"
+  },
+  {
+    "date": "2026-05-23",
+    "occasionId": "pentecost-ext-vigil-abc",
+    "season": "easter",
+    "name": "PENTECOST - Ext. VIGIL [ABC]"
+  },
+  {
+    "date": "2026-05-24",
+    "occasionId": "pentecost-a",
+    "season": "easter",
+    "name": "PENTECOST [A]"
+  },
+  {
+    "date": "2026-05-31",
+    "occasionId": "solemnity-most-holy-trinity-a",
+    "season": "solemnity",
+    "name": "SOLEMNITY\nMOST HOLY TRINITY [A]"
+  },
+  {
+    "date": "2026-06-07",
+    "occasionId": "solemnity-body-blood-of-christ-a",
+    "season": "solemnity",
+    "name": "SOLEMNITY\nBODY & BLOOD OF CHRIST [A]"
+  },
+  {
+    "date": "2026-06-14",
+    "occasionId": "ordinary-time-11-a",
+    "season": "ordinary",
+    "name": "ORDINARY TIME 11 [A]"
+  },
+  {
+    "date": "2026-06-21",
+    "occasionId": "ordinary-time-12-a",
+    "season": "ordinary",
+    "name": "ORDINARY TIME 12 [A]"
+  },
+  {
+    "date": "2026-06-28",
+    "occasionId": "ordinary-time-13-a",
+    "season": "ordinary",
+    "name": "ORDINARY TIME 13 [A]"
+  },
+  {
+    "date": "2026-06-29",
+    "occasionId": "ss-peter-paul-apostles-jun-29-mass-during-the-day-abc",
+    "season": "ordinary",
+    "name": "Ss PETER & PAUL, APOSTLES (JUN 29) \nMASS DURING THE DAY [ABC]"
+  },
+  {
+    "date": "2026-07-04",
+    "occasionId": "independence-day",
+    "season": "ordinary",
+    "name": "INDEPENDENCE DAY"
+  },
+  {
+    "date": "2026-07-05",
+    "occasionId": "ordinary-time-14-a",
+    "season": "ordinary",
+    "name": "ORDINARY TIME 14 [A]"
+  },
+  {
+    "date": "2026-07-12",
+    "occasionId": "ordinary-time-15-a",
+    "season": "ordinary",
+    "name": "ORDINARY TIME 15 [A]"
+  },
+  {
+    "date": "2026-07-19",
+    "occasionId": "ordinary-time-16-a",
+    "season": "ordinary",
+    "name": "ORDINARY TIME 16 [A]"
+  },
+  {
+    "date": "2026-07-26",
+    "occasionId": "ordinary-time-17-a",
+    "season": "ordinary",
+    "name": "ORDINARY TIME 17 [A]"
+  },
+  {
+    "date": "2026-08-02",
+    "occasionId": "ordinary-time-18-a",
+    "season": "ordinary",
+    "name": "ORDINARY TIME 18 [A]"
+  },
+  {
+    "date": "2026-08-09",
+    "occasionId": "ordinary-time-19-a",
+    "season": "ordinary",
+    "name": "ORDINARY TIME 19 [A]"
+  },
+  {
+    "date": "2026-08-16",
+    "occasionId": "ordinary-time-20-a",
+    "season": "ordinary",
+    "name": "ORDINARY TIME 20 [A]"
+  },
+  {
+    "date": "2026-08-23",
+    "occasionId": "ordinary-time-21-a",
+    "season": "ordinary",
+    "name": "ORDINARY TIME 21 [A]"
+  },
+  {
+    "date": "2026-08-30",
+    "occasionId": "ordinary-time-22-a",
+    "season": "ordinary",
+    "name": "ORDINARY TIME 22 [A]"
+  },
+  {
+    "date": "2026-09-06",
+    "occasionId": "ordinary-time-23-a",
+    "season": "ordinary",
+    "name": "ORDINARY TIME 23 [A]"
+  },
+  {
+    "date": "2026-09-13",
+    "occasionId": "ordinary-time-24-a",
+    "season": "ordinary",
+    "name": "ORDINARY TIME 24 [A]"
+  },
+  {
+    "date": "2026-09-14",
+    "occasionId": "feast-the-exaltation-sep-14-of-the-holy-cross-abc",
+    "season": "feast",
+    "name": "FEAST: The EXALTATION (SEP 14)\n OF THE HOLY CROSS [ABC]"
+  },
+  {
+    "date": "2026-09-20",
+    "occasionId": "ordinary-time-25-a",
+    "season": "ordinary",
+    "name": "ORDINARY TIME 25 [A]"
+  },
+  {
+    "date": "2026-09-27",
+    "occasionId": "ordinary-time-26-a",
+    "season": "ordinary",
+    "name": "ORDINARY TIME 26 [A]"
+  },
+  {
+    "date": "2026-10-04",
+    "occasionId": "ordinary-time-27-a",
+    "season": "ordinary",
+    "name": "ORDINARY TIME 27 [A]"
+  },
+  {
+    "date": "2026-10-11",
+    "occasionId": "ordinary-time-28-a",
+    "season": "ordinary",
+    "name": "ORDINARY TIME 28 [A]"
+  },
+  {
+    "date": "2026-10-18",
+    "occasionId": "ordinary-time-29-a",
+    "season": "ordinary",
+    "name": "ORDINARY TIME 29 [A]"
+  },
+  {
+    "date": "2026-10-25",
+    "occasionId": "ordinary-time-30-a",
+    "season": "ordinary",
+    "name": "ORDINARY TIME 30 [A]"
+  },
+  {
+    "date": "2026-11-01",
+    "occasionId": "solemnity-nov-1-all-saints-abc",
+    "season": "solemnity",
+    "name": "SOLEMNITY (NOV 1) \nALL SAINTS [ABC]"
+  },
+  {
+    "date": "2026-11-02",
+    "occasionId": "solemnity-nov-1-all-souls-abc",
+    "season": "solemnity",
+    "name": "SOLEMNITY (NOV 1)\nALL SOULS [ABC]"
+  },
+  {
+    "date": "2026-11-08",
+    "occasionId": "ordinary-time-32-a",
+    "season": "ordinary",
+    "name": "ORDINARY TIME 32 [A]"
+  },
+  {
+    "date": "2026-11-09",
+    "occasionId": "the-dedication-of-nov-9-the-lateran-basilica-abc",
+    "season": "ordinary",
+    "name": "THE DEDICATION OF (NOV 9)\nTHE LATERAN BASILICA [ABC]"
+  },
+  {
+    "date": "2026-11-11",
+    "occasionId": "veteran-s-day",
+    "season": "ordinary",
+    "name": "VETERAN'S DAY"
+  },
+  {
+    "date": "2026-11-15",
+    "occasionId": "ordinary-time-33-a",
+    "season": "ordinary",
+    "name": "ORDINARY TIME 33 [A]"
+  },
+  {
+    "date": "2026-11-22",
+    "occasionId": "solemnity-christ-the-king-a",
+    "season": "solemnity",
+    "name": "SOLEMNITY\nCHRIST THE KING [A]"
+  },
+  {
+    "date": "2026-11-26",
+    "occasionId": "thanksgiving",
+    "season": "ordinary",
+    "name": "THANKSGIVING"
+  },
+  {
+    "date": "2026-11-29",
+    "occasionId": "advent-01-b",
+    "season": "advent",
+    "name": "ADVENT 01 [B]"
+  },
+  {
+    "date": "2026-12-06",
+    "occasionId": "advent-02-b",
+    "season": "advent",
+    "name": "ADVENT 02 [B]"
+  },
+  {
+    "date": "2026-12-08",
+    "occasionId": "solemnity-immaculate-conception",
+    "season": "solemnity",
+    "name": "Solemnity\nIMMACULATE CONCEPTION"
+  },
+  {
+    "date": "2026-12-12",
+    "occasionId": "feast-our-lady-of-guadalupe-abc",
+    "season": "feast",
+    "name": "FeAST\nOUR LADY OF GUADALUPE  [ABC]"
+  },
+  {
+    "date": "2026-12-13",
+    "occasionId": "advent-03-b",
+    "season": "advent",
+    "name": "ADVENT 03 [B]"
+  },
+  {
+    "date": "2026-12-20",
+    "occasionId": "advent-04-b",
+    "season": "advent",
+    "name": "ADVENT 04 [B]"
+  },
+  {
+    "date": "2026-12-25",
+    "occasionId": "nativity",
+    "season": "ordinary",
+    "name": "Nativity"
+  },
+  {
+    "date": "2026-12-27",
+    "occasionId": "holy-family-b",
+    "season": "christmas",
+    "name": "HOLY FAMILY [B]"
+  },
+  {
+    "date": "2027-01-01",
+    "occasionId": "jan-1-mary-mother-of-god-abc",
+    "season": "ordinary",
+    "name": "Jan 1 • MARY, MOTHER OF GOD [ABC]"
+  },
+  {
+    "date": "2027-01-03",
+    "occasionId": "2nd-sun-after-christmas-abc-epiphany-replaces-in-adla",
+    "season": "christmas",
+    "name": "2ND SUN AFTER CHRISTMAS [ABC]\nEpiphany replaces in ADLA"
+  },
+  {
+    "date": "2027-01-10",
+    "occasionId": "baptism-of-the-lord-b",
+    "season": "ordinary",
+    "name": "BAPTISM OF THE LORD [B]"
+  },
+  {
+    "date": "2027-01-17",
+    "occasionId": "ordinary-time-02-b",
+    "season": "ordinary",
+    "name": "ORDINARY TIME 02 [B]"
+  },
+  {
+    "date": "2027-01-18",
+    "occasionId": "mlk-day",
+    "season": "ordinary",
+    "name": "MLK DAY"
+  },
+  {
+    "date": "2027-01-24",
+    "occasionId": "ordinary-time-03-b-word-of-god-sunday",
+    "season": "ordinary",
+    "name": "ORDINARY TIME 03 [B]\nWORD OF GOD Sunday"
+  },
+  {
+    "date": "2027-01-31",
+    "occasionId": "ordinary-time-04-b",
+    "season": "ordinary",
+    "name": "ORDINARY TIME 04 [B]"
+  },
+  {
+    "date": "2027-02-02",
+    "occasionId": "feast-abc-feb-2-presentation-of-the-lord",
+    "season": "feast",
+    "name": "Feast [ABC]\nFeb 2 • PRESENTATION OF THE LORD"
+  },
+  {
+    "date": "2027-02-14",
+    "occasionId": "lent-01-b",
+    "season": "lent",
+    "name": "LENT 01 [B]"
+  },
+  {
+    "date": "2027-02-21",
+    "occasionId": "lent-02-b",
+    "season": "lent",
+    "name": "LENT 02 [B]"
+  },
+  {
+    "date": "2027-02-28",
+    "occasionId": "lent-03-b",
+    "season": "lent",
+    "name": "LENT 03 [B]"
+  },
+  {
+    "date": "2027-03-07",
+    "occasionId": "lent-04-b",
+    "season": "lent",
+    "name": "LENT 04 [B]"
+  },
+  {
+    "date": "2027-03-14",
+    "occasionId": "lent-05-b",
+    "season": "lent",
+    "name": "LENT 05 [B]"
+  },
+  {
+    "date": "2027-03-21",
+    "occasionId": "palm-sunday-b",
+    "season": "lent",
+    "name": "Palm Sunday [B]"
+  },
+  {
+    "date": "2027-03-28",
+    "occasionId": "easter-sunday-abc",
+    "season": "easter",
+    "name": "EASTER SUNDAY [ABC]"
+  },
+  {
+    "date": "2027-04-04",
+    "occasionId": "easter-02-divine-mercy-b",
+    "season": "easter",
+    "name": "EASTER 02 DIVINE MERCY [B]"
+  },
+  {
+    "date": "2027-04-11",
+    "occasionId": "easter-03-b",
+    "season": "easter",
+    "name": "EASTER 03 [B]"
+  },
+  {
+    "date": "2027-04-18",
+    "occasionId": "easter-04-b",
+    "season": "easter",
+    "name": "EASTER 04 [B]"
+  },
+  {
+    "date": "2027-04-25",
+    "occasionId": "easter-05-b",
+    "season": "easter",
+    "name": "EASTER 05 [B]"
+  },
+  {
+    "date": "2027-05-02",
+    "occasionId": "easter-06-b",
+    "season": "easter",
+    "name": "EASTER 06 [B]"
+  },
+  {
+    "date": "2027-05-09",
+    "occasionId": "ascension-b",
+    "season": "easter",
+    "name": "ASCENSION [B]"
+  },
+  {
+    "date": "2027-05-15",
+    "occasionId": "pentecost-ext-vigil-abc",
+    "season": "easter",
+    "name": "PENTECOST - Ext. VIGIL [ABC]"
+  },
+  {
+    "date": "2027-05-16",
+    "occasionId": "pentecost-b",
+    "season": "easter",
+    "name": "PENTECOST [B]"
+  },
+  {
+    "date": "2027-05-23",
+    "occasionId": "solemnity-most-holy-trinity-b",
+    "season": "solemnity",
+    "name": "SOLEMNITY\nMOST HOLY TRINITY [B]"
+  },
+  {
+    "date": "2027-05-30",
+    "occasionId": "solemnity-body-blood-of-christ-b",
+    "season": "solemnity",
+    "name": "SOLEMNITY\nBODY & BLOOD OF CHRIST [B]"
+  },
+  {
+    "date": "2027-06-06",
+    "occasionId": "ordinary-time-10-b",
+    "season": "ordinary",
+    "name": "ORDINARY TIME 10 [B]"
+  },
+  {
+    "date": "2027-06-13",
+    "occasionId": "ordinary-time-11-b",
+    "season": "ordinary",
+    "name": "ORDINARY TIME 11 [B]"
+  },
+  {
+    "date": "2027-06-20",
+    "occasionId": "ordinary-time-12-b",
+    "season": "ordinary",
+    "name": "ORDINARY TIME 12 [B]"
+  },
+  {
+    "date": "2027-06-27",
+    "occasionId": "ordinary-time-13-b",
+    "season": "ordinary",
+    "name": "ORDINARY TIME 13 [B]"
+  },
+  {
+    "date": "2027-06-28",
+    "occasionId": "ss-peter-paul-apostles-jun-29-at-the-vigil-mass-abc",
+    "season": "ordinary",
+    "name": "Ss PETER & PAUL, APOSTLES (JUN 29) \nAT THE VIGIL MASS [ABC]"
+  },
+  {
+    "date": "2027-06-29",
+    "occasionId": "ss-peter-paul-apostles-jun-29-mass-during-the-day-abc",
+    "season": "ordinary",
+    "name": "Ss PETER & PAUL, APOSTLES (JUN 29) \nMASS DURING THE DAY [ABC]"
+  },
+  {
+    "date": "2027-07-04",
+    "occasionId": "independence-day",
+    "season": "ordinary",
+    "name": "INDEPENDENCE DAY"
+  },
+  {
+    "date": "2027-07-11",
+    "occasionId": "ordinary-time-15-b",
+    "season": "ordinary",
+    "name": "ORDINARY TIME 15 [B]"
+  },
+  {
+    "date": "2027-07-18",
+    "occasionId": "ordinary-time-16-b",
+    "season": "ordinary",
+    "name": "ORDINARY TIME 16 [B]"
+  },
+  {
+    "date": "2027-07-25",
+    "occasionId": "ordinary-time-17-b",
+    "season": "ordinary",
+    "name": "ORDINARY TIME 17 [B]"
+  },
+  {
+    "date": "2027-08-01",
+    "occasionId": "ordinary-time-18-b",
+    "season": "ordinary",
+    "name": "ORDINARY TIME 18 [B]"
+  },
+  {
+    "date": "2027-08-08",
+    "occasionId": "ordinary-time-19-b",
+    "season": "ordinary",
+    "name": "ORDINARY TIME 19 [B]"
+  },
+  {
+    "date": "2027-08-22",
+    "occasionId": "ordinary-time-21-b",
+    "season": "ordinary",
+    "name": "ORDINARY TIME 21 [B]"
+  },
+  {
+    "date": "2027-08-29",
+    "occasionId": "ordinary-time-22-b",
+    "season": "ordinary",
+    "name": "ORDINARY TIME 22 [B]"
+  },
+  {
+    "date": "2027-09-05",
+    "occasionId": "ordinary-time-23-b",
+    "season": "ordinary",
+    "name": "ORDINARY TIME 23 [B]"
+  },
+  {
+    "date": "2027-09-12",
+    "occasionId": "ordinary-time-24-b",
+    "season": "ordinary",
+    "name": "ORDINARY TIME 24 [B]"
+  },
+  {
+    "date": "2027-09-14",
+    "occasionId": "feast-the-exaltation-sep-14-of-the-holy-cross-abc",
+    "season": "feast",
+    "name": "FEAST: The EXALTATION (SEP 14)\n OF THE HOLY CROSS [ABC]"
+  },
+  {
+    "date": "2027-09-19",
+    "occasionId": "ordinary-time-25-b",
+    "season": "ordinary",
+    "name": "ORDINARY TIME 25 [B]"
+  },
+  {
+    "date": "2027-09-26",
+    "occasionId": "ordinary-time-26-b",
+    "season": "ordinary",
+    "name": "ORDINARY TIME 26 [B]"
+  },
+  {
+    "date": "2027-10-03",
+    "occasionId": "ordinary-time-27-b",
+    "season": "ordinary",
+    "name": "ORDINARY TIME 27 [B]"
+  },
+  {
+    "date": "2027-10-04",
+    "occasionId": "memorial-abc-feast-of-st-francis-oct-4",
+    "season": "feast",
+    "name": "MEMORIAL [ABC] \nFEAST OF ST FRANCIS (OCT 4)"
+  },
+  {
+    "date": "2027-10-10",
+    "occasionId": "ordinary-time-28-b",
+    "season": "ordinary",
+    "name": "ORDINARY TIME 28 [B]"
+  },
+  {
+    "date": "2027-10-17",
+    "occasionId": "ordinary-time-29-b",
+    "season": "ordinary",
+    "name": "ORDINARY TIME 29 [B]"
+  },
+  {
+    "date": "2027-10-24",
+    "occasionId": "ordinary-time-30-b",
+    "season": "ordinary",
+    "name": "ORDINARY TIME 30 [B]"
+  },
+  {
+    "date": "2027-10-31",
+    "occasionId": "ordinary-time-31-b",
+    "season": "ordinary",
+    "name": "ORDINARY TIME 31 [B]"
+  },
+  {
+    "date": "2027-11-01",
+    "occasionId": "solemnity-nov-1-all-saints-abc",
+    "season": "solemnity",
+    "name": "SOLEMNITY (NOV 1) \nALL SAINTS [ABC]"
+  },
+  {
+    "date": "2027-11-02",
+    "occasionId": "solemnity-nov-1-all-souls-abc",
+    "season": "solemnity",
+    "name": "SOLEMNITY (NOV 1)\nALL SOULS [ABC]"
+  },
+  {
+    "date": "2027-11-07",
+    "occasionId": "ordinary-time-32-b",
+    "season": "ordinary",
+    "name": "ORDINARY TIME 32 [B]"
+  },
+  {
+    "date": "2027-11-09",
+    "occasionId": "the-dedication-of-nov-9-the-lateran-basilica-abc",
+    "season": "ordinary",
+    "name": "THE DEDICATION OF (NOV 9)\nTHE LATERAN BASILICA [ABC]"
+  },
+  {
+    "date": "2027-11-11",
+    "occasionId": "veteran-s-day",
+    "season": "ordinary",
+    "name": "VETERAN'S DAY"
+  },
+  {
+    "date": "2027-11-14",
+    "occasionId": "ordinary-time-33-b",
+    "season": "ordinary",
+    "name": "ORDINARY TIME 33 [B]"
+  },
+  {
+    "date": "2027-11-21",
+    "occasionId": "solemnity-christ-the-king-b",
+    "season": "solemnity",
+    "name": "SOLEMNITY\nCHRIST THE KING [B]"
+  },
+  {
+    "date": "2027-11-25",
+    "occasionId": "thanksgiving",
+    "season": "ordinary",
+    "name": "THANKSGIVING"
+  },
+  {
+    "date": "2027-11-28",
+    "occasionId": "advent-01-c",
+    "season": "advent",
+    "name": "ADVENT 01 [C]"
+  },
+  {
+    "date": "2027-12-05",
+    "occasionId": "advent-02-c",
+    "season": "advent",
+    "name": "ADVENT 02 [C]"
+  },
+  {
+    "date": "2027-12-08",
+    "occasionId": "solemnity-immaculate-conception",
+    "season": "solemnity",
+    "name": "Solemnity\nIMMACULATE CONCEPTION"
+  },
+  {
+    "date": "2027-12-12",
+    "occasionId": "advent-03-c",
+    "season": "advent",
+    "name": "ADVENT 03 [C]"
+  },
+  {
+    "date": "2027-12-19",
+    "occasionId": "advent-04-c",
+    "season": "advent",
+    "name": "ADVENT 04 [C]"
+  },
+  {
+    "date": "2027-12-25",
+    "occasionId": "nativity",
+    "season": "ordinary",
+    "name": "Nativity"
+  },
+  {
+    "date": "2027-12-26",
+    "occasionId": "holy-family-c",
+    "season": "christmas",
+    "name": "HOLY FAMILY [C]"
+  },
+  {
+    "date": "2028-01-01",
+    "occasionId": "jan-1-mary-mother-of-god-abc",
+    "season": "ordinary",
+    "name": "Jan 1 • MARY, MOTHER OF GOD [ABC]"
+  },
+  {
+    "date": "2028-01-02",
+    "occasionId": "2nd-sun-after-christmas-abc-epiphany-replaces-in-adla",
+    "season": "christmas",
+    "name": "2ND SUN AFTER CHRISTMAS [ABC]\nEpiphany replaces in ADLA"
+  },
+  {
+    "date": "2028-01-09",
+    "occasionId": "baptism-of-the-lord-c",
+    "season": "ordinary",
+    "name": "BAPTISM OF THE LORD [C]"
+  },
+  {
+    "date": "2028-01-16",
+    "occasionId": "ordinary-time-02-c",
+    "season": "ordinary",
+    "name": "ORDINARY TIME 02 [C]"
+  },
+  {
+    "date": "2028-01-17",
+    "occasionId": "mlk-day",
+    "season": "ordinary",
+    "name": "MLK DAY"
+  },
+  {
+    "date": "2028-01-23",
+    "occasionId": "ordinary-time-03-c-word-of-god-sunday",
+    "season": "ordinary",
+    "name": "ORDINARY TIME 03 [C]\nWORD OF GOD Sunday"
+  },
+  {
+    "date": "2028-01-30",
+    "occasionId": "ordinary-time-04-c",
+    "season": "ordinary",
+    "name": "ORDINARY TIME 04 [C]"
+  },
+  {
+    "date": "2028-02-02",
+    "occasionId": "feast-abc-feb-2-presentation-of-the-lord",
+    "season": "feast",
+    "name": "Feast [ABC]\nFeb 2 • PRESENTATION OF THE LORD"
+  },
+  {
+    "date": "2028-03-05",
+    "occasionId": "lent-01-c",
+    "season": "lent",
+    "name": "LENT 01 [C]"
+  },
+  {
+    "date": "2028-03-12",
+    "occasionId": "lent-02-c",
+    "season": "lent",
+    "name": "LENT 02 [C]"
+  },
+  {
+    "date": "2028-03-19",
+    "occasionId": "lent-03-c",
+    "season": "lent",
+    "name": "LENT 03 [C]"
+  },
+  {
+    "date": "2028-03-26",
+    "occasionId": "lent-04-c",
+    "season": "lent",
+    "name": "LENT 04 [C]"
+  },
+  {
+    "date": "2028-04-02",
+    "occasionId": "lent-05-c",
+    "season": "lent",
+    "name": "LENT 05 [C]"
+  },
+  {
+    "date": "2028-04-09",
+    "occasionId": "palm-sunday-c",
+    "season": "lent",
+    "name": "Palm Sunday [C]"
+  },
+  {
+    "date": "2028-04-16",
+    "occasionId": "easter-sunday-abc",
+    "season": "easter",
+    "name": "EASTER SUNDAY [ABC]"
+  },
+  {
+    "date": "2028-04-23",
+    "occasionId": "easter-02-divine-mercy-c",
+    "season": "easter",
+    "name": "EASTER 02 DIVINE MERCY [C]"
+  },
+  {
+    "date": "2028-04-30",
+    "occasionId": "easter-03-c",
+    "season": "easter",
+    "name": "EASTER 03 [C]"
+  },
+  {
+    "date": "2028-05-07",
+    "occasionId": "easter-04-c",
+    "season": "easter",
+    "name": "EASTER 04 [C]"
+  },
+  {
+    "date": "2028-05-14",
+    "occasionId": "easter-05-c",
+    "season": "easter",
+    "name": "EASTER 05 [C]"
+  },
+  {
+    "date": "2028-05-21",
+    "occasionId": "easter-06-c",
+    "season": "easter",
+    "name": "EASTER 06 [C]"
+  },
+  {
+    "date": "2028-05-28",
+    "occasionId": "ascension-c",
+    "season": "easter",
+    "name": "ASCENSION [C]"
+  },
+  {
+    "date": "2028-06-03",
+    "occasionId": "pentecost-ext-vigil-abc",
+    "season": "easter",
+    "name": "PENTECOST - Ext. VIGIL [ABC]"
+  },
+  {
+    "date": "2028-06-04",
+    "occasionId": "pentecost-c",
+    "season": "easter",
+    "name": "PENTECOST [C]"
+  },
+  {
+    "date": "2028-06-11",
+    "occasionId": "solemnity-most-holy-trinity-c",
+    "season": "solemnity",
+    "name": "SOLEMNITY\nMOST HOLY TRINITY [C]"
+  },
+  {
+    "date": "2028-06-18",
+    "occasionId": "solemnity-body-blood-of-christ-c",
+    "season": "solemnity",
+    "name": "SOLEMNITY\nBODY & BLOOD OF CHRIST [C]"
+  },
+  {
+    "date": "2028-06-25",
+    "occasionId": "ordinary-time-12-c",
+    "season": "ordinary",
+    "name": "ORDINARY TIME 12 [C]"
+  },
+  {
+    "date": "2028-06-28",
+    "occasionId": "ss-peter-paul-apostles-jun-29-at-the-vigil-mass-abc",
+    "season": "ordinary",
+    "name": "Ss PETER & PAUL, APOSTLES (JUN 29) \nAT THE VIGIL MASS [ABC]"
+  },
+  {
+    "date": "2028-06-29",
+    "occasionId": "ss-peter-paul-apostles-jun-29-mass-during-the-day-abc",
+    "season": "ordinary",
+    "name": "Ss PETER & PAUL, APOSTLES (JUN 29) \nMASS DURING THE DAY [ABC]"
+  },
+  {
+    "date": "2028-07-02",
+    "occasionId": "ordinary-time-13-c",
+    "season": "ordinary",
+    "name": "ORDINARY TIME 13 [C]"
+  },
+  {
+    "date": "2028-07-04",
+    "occasionId": "independence-day",
+    "season": "ordinary",
+    "name": "INDEPENDENCE DAY"
+  },
+  {
+    "date": "2028-07-09",
+    "occasionId": "ordinary-time-14-c",
+    "season": "ordinary",
+    "name": "ORDINARY TIME 14 [C]"
+  },
+  {
+    "date": "2028-07-16",
+    "occasionId": "ordinary-time-15-c",
+    "season": "ordinary",
+    "name": "ORDINARY TIME 15 [C]"
+  },
+  {
+    "date": "2028-07-23",
+    "occasionId": "ordinary-time-16-c",
+    "season": "ordinary",
+    "name": "ORDINARY TIME 16 [C]"
+  },
+  {
+    "date": "2028-07-30",
+    "occasionId": "ordinary-time-17-c",
+    "season": "ordinary",
+    "name": "ORDINARY TIME 17 [C]"
+  },
+  {
+    "date": "2028-08-13",
+    "occasionId": "ordinary-time-19-c",
+    "season": "ordinary",
+    "name": "ORDINARY TIME 19 [C]"
+  },
+  {
+    "date": "2028-08-20",
+    "occasionId": "ordinary-time-20-c",
+    "season": "ordinary",
+    "name": "ORDINARY TIME 20 [C]"
+  },
+  {
+    "date": "2028-08-27",
+    "occasionId": "ordinary-time-21-c",
+    "season": "ordinary",
+    "name": "ORDINARY TIME 21 [C]"
+  },
+  {
+    "date": "2028-09-03",
+    "occasionId": "ordinary-time-22-c",
+    "season": "ordinary",
+    "name": "ORDINARY TIME 22 [C]"
+  },
+  {
+    "date": "2028-09-10",
+    "occasionId": "ordinary-time-23-c",
+    "season": "ordinary",
+    "name": "ORDINARY TIME 23 [C]"
+  },
+  {
+    "date": "2028-09-14",
+    "occasionId": "feast-the-exaltation-sep-14-of-the-holy-cross-abc",
+    "season": "feast",
+    "name": "FEAST: The EXALTATION (SEP 14)\n OF THE HOLY CROSS [ABC]"
+  },
+  {
+    "date": "2028-09-17",
+    "occasionId": "ordinary-time-24-c",
+    "season": "ordinary",
+    "name": "ORDINARY TIME 24 [C]"
+  },
+  {
+    "date": "2028-09-24",
+    "occasionId": "ordinary-time-25-c",
+    "season": "ordinary",
+    "name": "ORDINARY TIME 25 [C]"
+  },
+  {
+    "date": "2028-10-01",
+    "occasionId": "ordinary-time-26-c",
+    "season": "ordinary",
+    "name": "ORDINARY TIME 26 [C]"
+  },
+  {
+    "date": "2028-10-04",
+    "occasionId": "memorial-abc-feast-of-st-francis-oct-4",
+    "season": "feast",
+    "name": "MEMORIAL [ABC] \nFEAST OF ST FRANCIS (OCT 4)"
+  },
+  {
+    "date": "2028-10-08",
+    "occasionId": "ordinary-time-27-c",
+    "season": "ordinary",
+    "name": "ORDINARY TIME 27 [C]"
+  },
+  {
+    "date": "2028-10-15",
+    "occasionId": "ordinary-time-28-c",
+    "season": "ordinary",
+    "name": "ORDINARY TIME 28 [C]"
+  },
+  {
+    "date": "2028-10-22",
+    "occasionId": "ordinary-time-29-c",
+    "season": "ordinary",
+    "name": "ORDINARY TIME 29 [C]"
+  },
+  {
+    "date": "2028-10-29",
+    "occasionId": "ordinary-time-30-c",
+    "season": "ordinary",
+    "name": "ORDINARY TIME 30 [C]"
+  },
+  {
+    "date": "2028-11-01",
+    "occasionId": "solemnity-nov-1-all-saints-abc",
+    "season": "solemnity",
+    "name": "SOLEMNITY (NOV 1) \nALL SAINTS [ABC]"
+  },
+  {
+    "date": "2028-11-02",
+    "occasionId": "solemnity-nov-1-all-souls-abc",
+    "season": "solemnity",
+    "name": "SOLEMNITY (NOV 1)\nALL SOULS [ABC]"
+  },
+  {
+    "date": "2028-11-05",
+    "occasionId": "ordinary-time-31-c",
+    "season": "ordinary",
+    "name": "ORDINARY TIME 31 [C]"
+  },
+  {
+    "date": "2028-11-09",
+    "occasionId": "the-dedication-of-nov-9-the-lateran-basilica-abc",
+    "season": "ordinary",
+    "name": "THE DEDICATION OF (NOV 9)\nTHE LATERAN BASILICA [ABC]"
+  },
+  {
+    "date": "2028-11-11",
+    "occasionId": "veteran-s-day",
+    "season": "ordinary",
+    "name": "VETERAN'S DAY"
+  },
+  {
+    "date": "2028-11-12",
+    "occasionId": "ordinary-time-32-c",
+    "season": "ordinary",
+    "name": "ORDINARY TIME 32 [C]"
+  },
+  {
+    "date": "2028-11-19",
+    "occasionId": "ordinary-time-33-c",
+    "season": "ordinary",
+    "name": "ORDINARY TIME 33 [C]"
+  },
+  {
+    "date": "2028-11-23",
+    "occasionId": "thanksgiving",
+    "season": "ordinary",
+    "name": "THANKSGIVING"
+  },
+  {
+    "date": "2028-11-26",
+    "occasionId": "solemnity-christ-the-king-c",
+    "season": "solemnity",
+    "name": "SOLEMNITY\nCHRIST THE KING [C]"
+  },
+  {
+    "date": "2028-12-08",
+    "occasionId": "solemnity-immaculate-conception",
+    "season": "solemnity",
+    "name": "Solemnity\nIMMACULATE CONCEPTION"
+  },
+  {
+    "date": "2028-12-10",
+    "occasionId": "advent-02-a",
+    "season": "advent",
+    "name": "ADVENT 02 [A]"
+  },
+  {
+    "date": "2028-12-12",
+    "occasionId": "feast-our-lady-of-guadalupe-abc",
+    "season": "feast",
+    "name": "FeAST\nOUR LADY OF GUADALUPE  [ABC]"
+  },
+  {
+    "date": "2028-12-17",
+    "occasionId": "advent-03-a",
+    "season": "advent",
+    "name": "ADVENT 03 [A]"
+  },
+  {
+    "date": "2028-12-24",
+    "occasionId": "advent-04-a",
+    "season": "advent",
+    "name": "ADVENT 04 [A]"
+  },
+  {
+    "date": "2028-12-25",
+    "occasionId": "nativity",
+    "season": "ordinary",
+    "name": "Nativity"
+  },
+  {
+    "date": "2028-12-31",
+    "occasionId": "holy-family-a",
+    "season": "christmas",
+    "name": "HOLY FAMILY [A]"
+  },
+  {
+    "date": "2029-01-01",
+    "occasionId": "jan-1-mary-mother-of-god-abc",
+    "season": "ordinary",
+    "name": "Jan 1 • MARY, MOTHER OF GOD [ABC]"
+  },
+  {
+    "date": "2029-01-07",
+    "occasionId": "the-epiphany-of-the-lord-abc",
+    "season": "christmas",
+    "name": "THE EPIPHANY OF THE LORD [ABC]"
+  },
+  {
+    "date": "2029-01-08",
+    "occasionId": "baptism-of-the-lord-a",
+    "season": "ordinary",
+    "name": "BAPTISM OF THE LORD [A]"
+  },
+  {
+    "date": "2029-01-14",
+    "occasionId": "ordinary-time-02-a",
+    "season": "ordinary",
+    "name": "ORDINARY TIME 02 [A]"
+  },
+  {
+    "date": "2029-01-15",
+    "occasionId": "mlk-day",
+    "season": "ordinary",
+    "name": "MLK DAY"
+  },
+  {
+    "date": "2029-01-21",
+    "occasionId": "ordinary-time-03-a-word-of-god-sunday",
+    "season": "ordinary",
+    "name": "ORDINARY TIME 03 [A]\nWORD OF GOD Sunday"
+  },
+  {
+    "date": "2029-01-28",
+    "occasionId": "ordinary-time-04-a",
+    "season": "ordinary",
+    "name": "ORDINARY TIME 04 [A]"
+  },
+  {
+    "date": "2029-02-02",
+    "occasionId": "feast-abc-feb-2-presentation-of-the-lord",
+    "season": "feast",
+    "name": "Feast [ABC]\nFeb 2 • PRESENTATION OF THE LORD"
+  },
+  {
+    "date": "2029-02-04",
+    "occasionId": "ordinary-time-05-a",
+    "season": "ordinary",
+    "name": "ORDINARY TIME 05 [A]"
+  },
+  {
+    "date": "2029-02-11",
+    "occasionId": "ordinary-time-06-a",
+    "season": "ordinary",
+    "name": "ORDINARY TIME 06 [A]"
+  },
+  {
+    "date": "2029-02-18",
+    "occasionId": "lent-01-a",
+    "season": "lent",
+    "name": "LENT 01 [A]"
+  },
+  {
+    "date": "2029-02-25",
+    "occasionId": "lent-02-a",
+    "season": "lent",
+    "name": "LENT 02 [A]"
+  },
+  {
+    "date": "2029-03-04",
+    "occasionId": "lent-03-a-first-scrutiny",
+    "season": "lent",
+    "name": "LENT 03 [A]\nFirst Scrutiny"
+  },
+  {
+    "date": "2029-03-11",
+    "occasionId": "lent-04-a-second-scrutiny",
+    "season": "lent",
+    "name": "LENT 04 [A]\nSecond Scrutiny"
+  },
+  {
+    "date": "2029-03-18",
+    "occasionId": "lent-05-a-third-scrutiny",
+    "season": "lent",
+    "name": "LENT 05 [A]\nThird Scrutiny"
+  },
+  {
+    "date": "2029-03-25",
+    "occasionId": "palm-sunday-a",
+    "season": "lent",
+    "name": "Palm Sunday [A]"
+  },
+  {
+    "date": "2029-04-01",
+    "occasionId": "easter-sunday-abc",
+    "season": "easter",
+    "name": "EASTER SUNDAY [ABC]"
+  },
+  {
+    "date": "2029-04-08",
+    "occasionId": "easter-02-divine-mercy-a",
+    "season": "easter",
+    "name": "EASTER 02 DIVINE MERCY [A]"
+  },
+  {
+    "date": "2029-04-15",
+    "occasionId": "easter-03-a",
+    "season": "easter",
+    "name": "EASTER 03 [A]"
+  },
+  {
+    "date": "2029-04-22",
+    "occasionId": "easter-04-a",
+    "season": "easter",
+    "name": "EASTER 04 [A]"
+  },
+  {
+    "date": "2029-04-29",
+    "occasionId": "easter-05-a",
+    "season": "easter",
+    "name": "EASTER 05 [A]"
+  },
+  {
+    "date": "2029-05-06",
+    "occasionId": "easter-06-a",
+    "season": "easter",
+    "name": "EASTER 06 [A]"
+  },
+  {
+    "date": "2029-05-13",
+    "occasionId": "ascension-a",
+    "season": "easter",
+    "name": "ASCENSION [A]"
+  },
+  {
+    "date": "2029-05-19",
+    "occasionId": "pentecost-ext-vigil-abc",
+    "season": "easter",
+    "name": "PENTECOST - Ext. VIGIL [ABC]"
+  },
+  {
+    "date": "2029-05-20",
+    "occasionId": "pentecost-a",
+    "season": "easter",
+    "name": "PENTECOST [A]"
+  },
+  {
+    "date": "2029-05-27",
+    "occasionId": "solemnity-most-holy-trinity-a",
+    "season": "solemnity",
+    "name": "SOLEMNITY\nMOST HOLY TRINITY [A]"
+  },
+  {
+    "date": "2029-06-03",
+    "occasionId": "solemnity-body-blood-of-christ-a",
+    "season": "solemnity",
+    "name": "SOLEMNITY\nBODY & BLOOD OF CHRIST [A]"
+  },
+  {
+    "date": "2029-06-10",
+    "occasionId": "ordinary-time-10-a",
+    "season": "ordinary",
+    "name": "ORDINARY TIME 10 [A]"
+  },
+  {
+    "date": "2029-06-17",
+    "occasionId": "ordinary-time-11-a",
+    "season": "ordinary",
+    "name": "ORDINARY TIME 11 [A]"
+  },
+  {
+    "date": "2029-06-28",
+    "occasionId": "ss-peter-paul-apostles-jun-29-at-the-vigil-mass-abc",
+    "season": "ordinary",
+    "name": "Ss PETER & PAUL, APOSTLES (JUN 29) \nAT THE VIGIL MASS [ABC]"
+  },
+  {
+    "date": "2029-06-29",
+    "occasionId": "ss-peter-paul-apostles-jun-29-mass-during-the-day-abc",
+    "season": "ordinary",
+    "name": "Ss PETER & PAUL, APOSTLES (JUN 29) \nMASS DURING THE DAY [ABC]"
+  },
+  {
+    "date": "2029-07-01",
+    "occasionId": "ordinary-time-13-a",
+    "season": "ordinary",
+    "name": "ORDINARY TIME 13 [A]"
+  },
+  {
+    "date": "2029-07-04",
+    "occasionId": "independence-day",
+    "season": "ordinary",
+    "name": "INDEPENDENCE DAY"
+  },
+  {
+    "date": "2029-07-08",
+    "occasionId": "ordinary-time-14-a",
+    "season": "ordinary",
+    "name": "ORDINARY TIME 14 [A]"
+  },
+  {
+    "date": "2029-07-15",
+    "occasionId": "ordinary-time-15-a",
+    "season": "ordinary",
+    "name": "ORDINARY TIME 15 [A]"
+  },
+  {
+    "date": "2029-07-22",
+    "occasionId": "ordinary-time-16-a",
+    "season": "ordinary",
+    "name": "ORDINARY TIME 16 [A]"
+  },
+  {
+    "date": "2029-07-29",
+    "occasionId": "ordinary-time-17-a",
+    "season": "ordinary",
+    "name": "ORDINARY TIME 17 [A]"
+  },
+  {
+    "date": "2029-08-05",
+    "occasionId": "ordinary-time-18-a",
+    "season": "ordinary",
+    "name": "ORDINARY TIME 18 [A]"
+  },
+  {
+    "date": "2029-08-12",
+    "occasionId": "ordinary-time-19-a",
+    "season": "ordinary",
+    "name": "ORDINARY TIME 19 [A]"
+  },
+  {
+    "date": "2029-08-19",
+    "occasionId": "ordinary-time-20-a",
+    "season": "ordinary",
+    "name": "ORDINARY TIME 20 [A]"
+  },
+  {
+    "date": "2029-08-26",
+    "occasionId": "ordinary-time-21-a",
+    "season": "ordinary",
+    "name": "ORDINARY TIME 21 [A]"
+  },
+  {
+    "date": "2029-09-02",
+    "occasionId": "ordinary-time-22-a",
+    "season": "ordinary",
+    "name": "ORDINARY TIME 22 [A]"
+  },
+  {
+    "date": "2029-09-09",
+    "occasionId": "ordinary-time-23-a",
+    "season": "ordinary",
+    "name": "ORDINARY TIME 23 [A]"
+  },
+  {
+    "date": "2029-09-14",
+    "occasionId": "feast-the-exaltation-sep-14-of-the-holy-cross-abc",
+    "season": "feast",
+    "name": "FEAST: The EXALTATION (SEP 14)\n OF THE HOLY CROSS [ABC]"
+  },
+  {
+    "date": "2029-09-16",
+    "occasionId": "ordinary-time-24-a",
+    "season": "ordinary",
+    "name": "ORDINARY TIME 24 [A]"
+  },
+  {
+    "date": "2029-09-23",
+    "occasionId": "ordinary-time-25-a",
+    "season": "ordinary",
+    "name": "ORDINARY TIME 25 [A]"
+  },
+  {
+    "date": "2029-09-30",
+    "occasionId": "ordinary-time-26-a",
+    "season": "ordinary",
+    "name": "ORDINARY TIME 26 [A]"
+  },
+  {
+    "date": "2029-10-04",
+    "occasionId": "memorial-abc-feast-of-st-francis-oct-4",
+    "season": "feast",
+    "name": "MEMORIAL [ABC] \nFEAST OF ST FRANCIS (OCT 4)"
+  },
+  {
+    "date": "2029-10-07",
+    "occasionId": "ordinary-time-27-a",
+    "season": "ordinary",
+    "name": "ORDINARY TIME 27 [A]"
+  },
+  {
+    "date": "2029-10-14",
+    "occasionId": "ordinary-time-28-a",
+    "season": "ordinary",
+    "name": "ORDINARY TIME 28 [A]"
+  },
+  {
+    "date": "2029-10-21",
+    "occasionId": "ordinary-time-29-a",
+    "season": "ordinary",
+    "name": "ORDINARY TIME 29 [A]"
+  },
+  {
+    "date": "2029-10-28",
+    "occasionId": "ordinary-time-30-a",
+    "season": "ordinary",
+    "name": "ORDINARY TIME 30 [A]"
+  },
+  {
+    "date": "2029-11-01",
+    "occasionId": "solemnity-nov-1-all-saints-abc",
+    "season": "solemnity",
+    "name": "SOLEMNITY (NOV 1) \nALL SAINTS [ABC]"
+  },
+  {
+    "date": "2029-11-02",
+    "occasionId": "solemnity-nov-1-all-souls-abc",
+    "season": "solemnity",
+    "name": "SOLEMNITY (NOV 1)\nALL SOULS [ABC]"
+  },
+  {
+    "date": "2029-11-04",
+    "occasionId": "ordinary-time-31-a",
+    "season": "ordinary",
+    "name": "ORDINARY TIME 31 [A]"
+  },
+  {
+    "date": "2029-11-09",
+    "occasionId": "the-dedication-of-nov-9-the-lateran-basilica-abc",
+    "season": "ordinary",
+    "name": "THE DEDICATION OF (NOV 9)\nTHE LATERAN BASILICA [ABC]"
+  },
+  {
+    "date": "2029-11-11",
+    "occasionId": "ordinary-time-32-a",
+    "season": "ordinary",
+    "name": "ORDINARY TIME 32 [A]"
+  },
+  {
+    "date": "2029-11-18",
+    "occasionId": "ordinary-time-33-a",
+    "season": "ordinary",
+    "name": "ORDINARY TIME 33 [A]"
+  },
+  {
+    "date": "2029-11-22",
+    "occasionId": "thanksgiving",
+    "season": "ordinary",
+    "name": "THANKSGIVING"
+  },
+  {
+    "date": "2029-11-25",
+    "occasionId": "solemnity-christ-the-king-a",
+    "season": "solemnity",
+    "name": "SOLEMNITY\nCHRIST THE KING [A]"
+  },
+  {
+    "date": "2029-12-02",
+    "occasionId": "advent-01-b",
+    "season": "advent",
+    "name": "ADVENT 01 [B]"
+  },
+  {
+    "date": "2029-12-08",
+    "occasionId": "solemnity-immaculate-conception",
+    "season": "solemnity",
+    "name": "Solemnity\nIMMACULATE CONCEPTION"
+  },
+  {
+    "date": "2029-12-09",
+    "occasionId": "advent-02-b",
+    "season": "advent",
+    "name": "ADVENT 02 [B]"
+  },
+  {
+    "date": "2029-12-12",
+    "occasionId": "feast-our-lady-of-guadalupe-abc",
+    "season": "feast",
+    "name": "FeAST\nOUR LADY OF GUADALUPE  [ABC]"
+  },
+  {
+    "date": "2029-12-16",
+    "occasionId": "advent-03-b",
+    "season": "advent",
+    "name": "ADVENT 03 [B]"
+  },
+  {
+    "date": "2029-12-23",
+    "occasionId": "advent-04-b",
+    "season": "advent",
+    "name": "ADVENT 04 [B]"
+  },
+  {
+    "date": "2029-12-25",
+    "occasionId": "nativity",
+    "season": "ordinary",
+    "name": "Nativity"
+  },
+  {
+    "date": "2029-12-30",
+    "occasionId": "holy-family-b",
+    "season": "christmas",
+    "name": "HOLY FAMILY [B]"
+  },
+  {
+    "date": "2030-01-01",
+    "occasionId": "jan-1-mary-mother-of-god-abc",
+    "season": "ordinary",
+    "name": "Jan 1 • MARY, MOTHER OF GOD [ABC]"
+  },
+  {
+    "date": "2030-01-06",
+    "occasionId": "the-epiphany-of-the-lord-abc",
+    "season": "christmas",
+    "name": "THE EPIPHANY OF THE LORD [ABC]"
+  },
+  {
+    "date": "2030-01-13",
+    "occasionId": "baptism-of-the-lord-b",
+    "season": "ordinary",
+    "name": "BAPTISM OF THE LORD [B]"
+  },
+  {
+    "date": "2030-01-20",
+    "occasionId": "ordinary-time-02-b",
+    "season": "ordinary",
+    "name": "ORDINARY TIME 02 [B]"
+  },
+  {
+    "date": "2030-01-21",
+    "occasionId": "mlk-day",
+    "season": "ordinary",
+    "name": "MLK DAY"
+  },
+  {
+    "date": "2030-01-27",
+    "occasionId": "ordinary-time-03-b-word-of-god-sunday",
+    "season": "ordinary",
+    "name": "ORDINARY TIME 03 [B]\nWORD OF GOD Sunday"
+  },
+  {
+    "date": "2030-02-02",
+    "occasionId": "feast-abc-feb-2-presentation-of-the-lord",
+    "season": "feast",
+    "name": "Feast [ABC]\nFeb 2 • PRESENTATION OF THE LORD"
+  },
+  {
+    "date": "2030-02-03",
+    "occasionId": "ordinary-time-04-b",
+    "season": "ordinary",
+    "name": "ORDINARY TIME 04 [B]"
+  },
+  {
+    "date": "2030-03-10",
+    "occasionId": "lent-01-b",
+    "season": "lent",
+    "name": "LENT 01 [B]"
+  },
+  {
+    "date": "2030-03-17",
+    "occasionId": "lent-02-b",
+    "season": "lent",
+    "name": "LENT 02 [B]"
+  },
+  {
+    "date": "2030-03-24",
+    "occasionId": "lent-03-b",
+    "season": "lent",
+    "name": "LENT 03 [B]"
+  },
+  {
+    "date": "2030-03-31",
+    "occasionId": "lent-04-b",
+    "season": "lent",
+    "name": "LENT 04 [B]"
+  },
+  {
+    "date": "2030-04-07",
+    "occasionId": "lent-05-b",
+    "season": "lent",
+    "name": "LENT 05 [B]"
+  },
+  {
+    "date": "2030-04-14",
+    "occasionId": "palm-sunday-b",
+    "season": "lent",
+    "name": "Palm Sunday [B]"
+  },
+  {
+    "date": "2030-04-21",
+    "occasionId": "easter-sunday-abc",
+    "season": "easter",
+    "name": "EASTER SUNDAY [ABC]"
+  },
+  {
+    "date": "2030-04-28",
+    "occasionId": "easter-02-divine-mercy-b",
+    "season": "easter",
+    "name": "EASTER 02 DIVINE MERCY [B]"
+  },
+  {
+    "date": "2030-05-05",
+    "occasionId": "easter-03-b",
+    "season": "easter",
+    "name": "EASTER 03 [B]"
+  },
+  {
+    "date": "2030-05-12",
+    "occasionId": "easter-04-b",
+    "season": "easter",
+    "name": "EASTER 04 [B]"
+  },
+  {
+    "date": "2030-05-19",
+    "occasionId": "easter-05-b",
+    "season": "easter",
+    "name": "EASTER 05 [B]"
+  },
+  {
+    "date": "2030-05-26",
+    "occasionId": "easter-06-b",
+    "season": "easter",
+    "name": "EASTER 06 [B]"
+  },
+  {
+    "date": "2030-06-02",
+    "occasionId": "ascension-b",
+    "season": "easter",
+    "name": "ASCENSION [B]"
+  },
+  {
+    "date": "2030-06-09",
+    "occasionId": "pentecost-b",
+    "season": "easter",
+    "name": "PENTECOST [B]"
+  },
+  {
+    "date": "2030-06-16",
+    "occasionId": "solemnity-most-holy-trinity-b",
+    "season": "solemnity",
+    "name": "SOLEMNITY\nMOST HOLY TRINITY [B]"
+  },
+  {
+    "date": "2030-06-23",
+    "occasionId": "solemnity-body-blood-of-christ-b",
+    "season": "solemnity",
+    "name": "SOLEMNITY\nBODY & BLOOD OF CHRIST [B]"
+  },
+  {
+    "date": "2030-06-30",
+    "occasionId": "ordinary-time-13-b",
+    "season": "ordinary",
+    "name": "ORDINARY TIME 13 [B]"
+  },
+  {
+    "date": "2030-07-07",
+    "occasionId": "ordinary-time-14-b",
+    "season": "ordinary",
+    "name": "ORDINARY TIME 14 [B]"
+  },
+  {
+    "date": "2030-07-14",
+    "occasionId": "ordinary-time-15-b",
+    "season": "ordinary",
+    "name": "ORDINARY TIME 15 [B]"
+  },
+  {
+    "date": "2030-07-21",
+    "occasionId": "ordinary-time-16-b",
+    "season": "ordinary",
+    "name": "ORDINARY TIME 16 [B]"
+  },
+  {
+    "date": "2030-07-28",
+    "occasionId": "ordinary-time-17-b",
+    "season": "ordinary",
+    "name": "ORDINARY TIME 17 [B]"
+  },
+  {
+    "date": "2030-08-04",
+    "occasionId": "ordinary-time-18-b",
+    "season": "ordinary",
+    "name": "ORDINARY TIME 18 [B]"
+  },
+  {
+    "date": "2030-08-11",
+    "occasionId": "ordinary-time-19-b",
+    "season": "ordinary",
+    "name": "ORDINARY TIME 19 [B]"
+  },
+  {
+    "date": "2030-08-18",
+    "occasionId": "ordinary-time-20-b",
+    "season": "ordinary",
+    "name": "ORDINARY TIME 20 [B]"
+  },
+  {
+    "date": "2030-08-25",
+    "occasionId": "ordinary-time-21-b",
+    "season": "ordinary",
+    "name": "ORDINARY TIME 21 [B]"
+  },
+  {
+    "date": "2030-09-01",
+    "occasionId": "ordinary-time-22-b",
+    "season": "ordinary",
+    "name": "ORDINARY TIME 22 [B]"
+  },
+  {
+    "date": "2030-09-08",
+    "occasionId": "ordinary-time-23-b",
+    "season": "ordinary",
+    "name": "ORDINARY TIME 23 [B]"
+  },
+  {
+    "date": "2030-09-15",
+    "occasionId": "ordinary-time-24-b",
+    "season": "ordinary",
+    "name": "ORDINARY TIME 24 [B]"
+  },
+  {
+    "date": "2030-09-22",
+    "occasionId": "ordinary-time-25-b",
+    "season": "ordinary",
+    "name": "ORDINARY TIME 25 [B]"
+  },
+  {
+    "date": "2030-09-29",
+    "occasionId": "ordinary-time-26-b",
+    "season": "ordinary",
+    "name": "ORDINARY TIME 26 [B]"
+  },
+  {
+    "date": "2030-10-04",
+    "occasionId": "memorial-abc-feast-of-st-francis-oct-4",
+    "season": "feast",
+    "name": "MEMORIAL [ABC] \nFEAST OF ST FRANCIS (OCT 4)"
+  },
+  {
+    "date": "2030-10-06",
+    "occasionId": "ordinary-time-27-b",
+    "season": "ordinary",
+    "name": "ORDINARY TIME 27 [B]"
+  },
+  {
+    "date": "2030-10-13",
+    "occasionId": "ordinary-time-28-b",
+    "season": "ordinary",
+    "name": "ORDINARY TIME 28 [B]"
+  },
+  {
+    "date": "2030-10-20",
+    "occasionId": "ordinary-time-29-b",
+    "season": "ordinary",
+    "name": "ORDINARY TIME 29 [B]"
+  },
+  {
+    "date": "2030-10-27",
+    "occasionId": "ordinary-time-30-b",
+    "season": "ordinary",
+    "name": "ORDINARY TIME 30 [B]"
+  },
+  {
+    "date": "2030-11-03",
+    "occasionId": "ordinary-time-31-b",
+    "season": "ordinary",
+    "name": "ORDINARY TIME 31 [B]"
+  },
+  {
+    "date": "2030-11-10",
+    "occasionId": "ordinary-time-32-b",
+    "season": "ordinary",
+    "name": "ORDINARY TIME 32 [B]"
+  },
+  {
+    "date": "2030-11-17",
+    "occasionId": "ordinary-time-33-b",
+    "season": "ordinary",
+    "name": "ORDINARY TIME 33 [B]"
+  },
+  {
+    "date": "2030-11-24",
+    "occasionId": "solemnity-christ-the-king-b",
+    "season": "solemnity",
+    "name": "SOLEMNITY\nCHRIST THE KING [B]"
+  },
+  {
+    "date": "2030-12-01",
+    "occasionId": "advent-01-c",
+    "season": "advent",
+    "name": "ADVENT 01 [C]"
+  },
+  {
+    "date": "2030-12-08",
+    "occasionId": "advent-02-c",
+    "season": "advent",
+    "name": "ADVENT 02 [C]"
+  },
+  {
+    "date": "2030-12-12",
+    "occasionId": "feast-our-lady-of-guadalupe-abc",
+    "season": "feast",
+    "name": "FeAST\nOUR LADY OF GUADALUPE  [ABC]"
+  },
+  {
+    "date": "2030-12-15",
+    "occasionId": "advent-03-c",
+    "season": "advent",
+    "name": "ADVENT 03 [C]"
+  },
+  {
+    "date": "2030-12-22",
+    "occasionId": "advent-04-c",
+    "season": "advent",
+    "name": "ADVENT 04 [C]"
+  },
+  {
+    "date": "2030-12-25",
+    "occasionId": "nativity",
+    "season": "ordinary",
+    "name": "Nativity"
+  },
+  {
+    "date": "2030-12-29",
+    "occasionId": "holy-family-c",
+    "season": "christmas",
+    "name": "HOLY FAMILY [C]"
+  },
+  {
+    "date": "2031-01-05",
+    "occasionId": "2nd-sun-after-christmas-abc-epiphany-replaces-in-adla",
+    "season": "christmas",
+    "name": "2ND SUN AFTER CHRISTMAS [ABC]\nEpiphany replaces in ADLA"
+  },
+  {
+    "date": "2031-01-12",
+    "occasionId": "baptism-of-the-lord-c",
+    "season": "ordinary",
+    "name": "BAPTISM OF THE LORD [C]"
+  },
+  {
+    "date": "2031-01-19",
+    "occasionId": "ordinary-time-02-c",
+    "season": "ordinary",
+    "name": "ORDINARY TIME 02 [C]"
+  },
+  {
+    "date": "2031-01-26",
+    "occasionId": "ordinary-time-03-c-word-of-god-sunday",
+    "season": "ordinary",
+    "name": "ORDINARY TIME 03 [C]\nWORD OF GOD Sunday"
+  },
+  {
+    "date": "2031-03-02",
+    "occasionId": "lent-01-c",
+    "season": "lent",
+    "name": "LENT 01 [C]"
+  },
+  {
+    "date": "2031-03-09",
+    "occasionId": "lent-02-c",
+    "season": "lent",
+    "name": "LENT 02 [C]"
+  },
+  {
+    "date": "2031-03-16",
+    "occasionId": "lent-03-c",
+    "season": "lent",
+    "name": "LENT 03 [C]"
+  },
+  {
+    "date": "2031-03-23",
+    "occasionId": "lent-04-c",
+    "season": "lent",
+    "name": "LENT 04 [C]"
+  },
+  {
+    "date": "2031-03-30",
+    "occasionId": "lent-05-c",
+    "season": "lent",
+    "name": "LENT 05 [C]"
+  },
+  {
+    "date": "2031-04-06",
+    "occasionId": "palm-sunday-c",
+    "season": "lent",
+    "name": "Palm Sunday [C]"
+  },
+  {
+    "date": "2031-04-20",
+    "occasionId": "easter-02-divine-mercy-c",
+    "season": "easter",
+    "name": "EASTER 02 DIVINE MERCY [C]"
+  },
+  {
+    "date": "2031-04-27",
+    "occasionId": "easter-03-c",
+    "season": "easter",
+    "name": "EASTER 03 [C]"
+  },
+  {
+    "date": "2031-05-11",
+    "occasionId": "easter-05-c",
+    "season": "easter",
+    "name": "EASTER 05 [C]"
+  },
+  {
+    "date": "2031-05-18",
+    "occasionId": "easter-06-c",
+    "season": "easter",
+    "name": "EASTER 06 [C]"
+  },
+  {
+    "date": "2031-05-25",
+    "occasionId": "ascension-c",
+    "season": "easter",
+    "name": "ASCENSION [C]"
+  },
+  {
+    "date": "2031-06-01",
+    "occasionId": "pentecost-c",
+    "season": "easter",
+    "name": "PENTECOST [C]"
+  },
+  {
+    "date": "2031-06-08",
+    "occasionId": "solemnity-most-holy-trinity-c",
+    "season": "solemnity",
+    "name": "SOLEMNITY\nMOST HOLY TRINITY [C]"
+  },
+  {
+    "date": "2031-06-15",
+    "occasionId": "solemnity-body-blood-of-christ-c",
+    "season": "solemnity",
+    "name": "SOLEMNITY\nBODY & BLOOD OF CHRIST [C]"
+  },
+  {
+    "date": "2031-06-22",
+    "occasionId": "ordinary-time-12-c",
+    "season": "ordinary",
+    "name": "ORDINARY TIME 12 [C]"
+  },
+  {
+    "date": "2031-07-06",
+    "occasionId": "ordinary-time-14-c",
+    "season": "ordinary",
+    "name": "ORDINARY TIME 14 [C]"
+  },
+  {
+    "date": "2031-07-13",
+    "occasionId": "ordinary-time-15-c",
+    "season": "ordinary",
+    "name": "ORDINARY TIME 15 [C]"
+  },
+  {
+    "date": "2031-07-20",
+    "occasionId": "ordinary-time-16-c",
+    "season": "ordinary",
+    "name": "ORDINARY TIME 16 [C]"
+  },
+  {
+    "date": "2031-07-27",
+    "occasionId": "ordinary-time-17-c",
+    "season": "ordinary",
+    "name": "ORDINARY TIME 17 [C]"
+  },
+  {
+    "date": "2031-08-03",
+    "occasionId": "ordinary-time-18-c",
+    "season": "ordinary",
+    "name": "ORDINARY TIME 18 [C]"
+  },
+  {
+    "date": "2031-08-10",
+    "occasionId": "ordinary-time-19-c",
+    "season": "ordinary",
+    "name": "ORDINARY TIME 19 [C]"
+  },
+  {
+    "date": "2031-08-17",
+    "occasionId": "ordinary-time-20-c",
+    "season": "ordinary",
+    "name": "ORDINARY TIME 20 [C]"
+  },
+  {
+    "date": "2031-08-24",
+    "occasionId": "ordinary-time-21-c",
+    "season": "ordinary",
+    "name": "ORDINARY TIME 21 [C]"
+  },
+  {
+    "date": "2031-08-31",
+    "occasionId": "ordinary-time-22-c",
+    "season": "ordinary",
+    "name": "ORDINARY TIME 22 [C]"
+  },
+  {
+    "date": "2031-09-07",
+    "occasionId": "ordinary-time-23-c",
+    "season": "ordinary",
+    "name": "ORDINARY TIME 23 [C]"
+  },
+  {
+    "date": "2031-09-21",
+    "occasionId": "ordinary-time-25-c",
+    "season": "ordinary",
+    "name": "ORDINARY TIME 25 [C]"
+  },
+  {
+    "date": "2031-09-28",
+    "occasionId": "ordinary-time-26-c",
+    "season": "ordinary",
+    "name": "ORDINARY TIME 26 [C]"
+  },
+  {
+    "date": "2031-10-05",
+    "occasionId": "ordinary-time-27-c",
+    "season": "ordinary",
+    "name": "ORDINARY TIME 27 [C]"
+  },
+  {
+    "date": "2031-10-12",
+    "occasionId": "ordinary-time-28-c",
+    "season": "ordinary",
+    "name": "ORDINARY TIME 28 [C]"
+  },
+  {
+    "date": "2031-10-19",
+    "occasionId": "ordinary-time-29-c",
+    "season": "ordinary",
+    "name": "ORDINARY TIME 29 [C]"
+  },
+  {
+    "date": "2031-10-26",
+    "occasionId": "ordinary-time-30-c",
+    "season": "ordinary",
+    "name": "ORDINARY TIME 30 [C]"
+  },
+  {
+    "date": "2031-11-16",
+    "occasionId": "ordinary-time-33-c",
+    "season": "ordinary",
+    "name": "ORDINARY TIME 33 [C]"
+  },
+  {
+    "date": "2031-11-23",
+    "occasionId": "solemnity-christ-the-king-c",
+    "season": "solemnity",
+    "name": "SOLEMNITY\nCHRIST THE KING [C]"
+  },
+  {
+    "date": "2031-11-30",
+    "occasionId": "advent-01-a",
+    "season": "advent",
+    "name": "ADVENT 01 [A]"
+  },
+  {
+    "date": "2031-12-07",
+    "occasionId": "advent-02-a",
+    "season": "advent",
+    "name": "ADVENT 02 [A]"
+  },
+  {
+    "date": "2031-12-14",
+    "occasionId": "advent-03-a",
+    "season": "advent",
+    "name": "ADVENT 03 [A]"
+  },
+  {
+    "date": "2031-12-21",
+    "occasionId": "advent-04-a",
+    "season": "advent",
+    "name": "ADVENT 04 [A]"
+  },
+  {
+    "date": "2031-12-28",
+    "occasionId": "holy-family-a",
+    "season": "christmas",
+    "name": "HOLY FAMILY [A]"
+  },
+  {
+    "date": "2032-01-04",
+    "occasionId": "2nd-sun-after-christmas-abc-epiphany-replaces-in-adla",
+    "season": "christmas",
+    "name": "2ND SUN AFTER CHRISTMAS [ABC]\nEpiphany replaces in ADLA"
+  },
+  {
+    "date": "2032-01-11",
+    "occasionId": "baptism-of-the-lord-a",
+    "season": "ordinary",
+    "name": "BAPTISM OF THE LORD [A]"
+  },
+  {
+    "date": "2032-01-18",
+    "occasionId": "ordinary-time-02-a",
+    "season": "ordinary",
+    "name": "ORDINARY TIME 02 [A]"
+  },
+  {
+    "date": "2032-01-25",
+    "occasionId": "ordinary-time-03-a-word-of-god-sunday",
+    "season": "ordinary",
+    "name": "ORDINARY TIME 03 [A]\nWORD OF GOD Sunday"
+  },
+  {
+    "date": "2032-02-01",
+    "occasionId": "ordinary-time-04-a",
+    "season": "ordinary",
+    "name": "ORDINARY TIME 04 [A]"
+  },
+  {
+    "date": "2032-02-08",
+    "occasionId": "ordinary-time-05-a",
+    "season": "ordinary",
+    "name": "ORDINARY TIME 05 [A]"
+  },
+  {
+    "date": "2032-02-15",
+    "occasionId": "lent-01-a",
+    "season": "lent",
+    "name": "LENT 01 [A]"
+  },
+  {
+    "date": "2032-02-22",
+    "occasionId": "lent-02-a",
+    "season": "lent",
+    "name": "LENT 02 [A]"
+  },
+  {
+    "date": "2032-02-29",
+    "occasionId": "lent-03-a-first-scrutiny",
+    "season": "lent",
+    "name": "LENT 03 [A]\nFirst Scrutiny"
+  },
+  {
+    "date": "2032-03-07",
+    "occasionId": "lent-04-a-second-scrutiny",
+    "season": "lent",
+    "name": "LENT 04 [A]\nSecond Scrutiny"
+  },
+  {
+    "date": "2032-03-14",
+    "occasionId": "lent-05-a-third-scrutiny",
+    "season": "lent",
+    "name": "LENT 05 [A]\nThird Scrutiny"
+  },
+  {
+    "date": "2032-03-21",
+    "occasionId": "palm-sunday-a",
+    "season": "lent",
+    "name": "Palm Sunday [A]"
+  },
+  {
+    "date": "2032-04-04",
+    "occasionId": "easter-02-divine-mercy-a",
+    "season": "easter",
+    "name": "EASTER 02 DIVINE MERCY [A]"
+  },
+  {
+    "date": "2032-04-11",
+    "occasionId": "easter-03-a",
+    "season": "easter",
+    "name": "EASTER 03 [A]"
+  },
+  {
+    "date": "2032-04-18",
+    "occasionId": "easter-04-a",
+    "season": "easter",
+    "name": "EASTER 04 [A]"
+  },
+  {
+    "date": "2032-04-25",
+    "occasionId": "easter-05-a",
+    "season": "easter",
+    "name": "EASTER 05 [A]"
+  },
+  {
+    "date": "2032-05-02",
+    "occasionId": "easter-06-a",
+    "season": "easter",
+    "name": "EASTER 06 [A]"
+  },
+  {
+    "date": "2032-05-09",
+    "occasionId": "ascension-a",
+    "season": "easter",
+    "name": "ASCENSION [A]"
+  },
+  {
+    "date": "2032-05-16",
+    "occasionId": "pentecost-a",
+    "season": "easter",
+    "name": "PENTECOST [A]"
+  },
+  {
+    "date": "2032-05-23",
+    "occasionId": "solemnity-most-holy-trinity-a",
+    "season": "solemnity",
+    "name": "SOLEMNITY\nMOST HOLY TRINITY [A]"
+  },
+  {
+    "date": "2032-05-30",
+    "occasionId": "solemnity-body-blood-of-christ-a",
+    "season": "solemnity",
+    "name": "SOLEMNITY\nBODY & BLOOD OF CHRIST [A]"
+  },
+  {
+    "date": "2032-06-06",
+    "occasionId": "ordinary-time-10-a",
+    "season": "ordinary",
+    "name": "ORDINARY TIME 10 [A]"
+  },
+  {
+    "date": "2032-06-13",
+    "occasionId": "ordinary-time-11-a",
+    "season": "ordinary",
+    "name": "ORDINARY TIME 11 [A]"
+  },
+  {
+    "date": "2032-06-20",
+    "occasionId": "ordinary-time-12-a",
+    "season": "ordinary",
+    "name": "ORDINARY TIME 12 [A]"
+  },
+  {
+    "date": "2032-06-27",
+    "occasionId": "ordinary-time-13-a",
+    "season": "ordinary",
+    "name": "ORDINARY TIME 13 [A]"
+  },
+  {
+    "date": "2032-07-04",
+    "occasionId": "ordinary-time-14-a",
+    "season": "ordinary",
+    "name": "ORDINARY TIME 14 [A]"
+  },
+  {
+    "date": "2032-07-11",
+    "occasionId": "ordinary-time-15-a",
+    "season": "ordinary",
+    "name": "ORDINARY TIME 15 [A]"
+  },
+  {
+    "date": "2032-07-18",
+    "occasionId": "ordinary-time-16-a",
+    "season": "ordinary",
+    "name": "ORDINARY TIME 16 [A]"
+  },
+  {
+    "date": "2032-07-25",
+    "occasionId": "ordinary-time-17-a",
+    "season": "ordinary",
+    "name": "ORDINARY TIME 17 [A]"
+  },
+  {
+    "date": "2032-08-01",
+    "occasionId": "ordinary-time-18-a",
+    "season": "ordinary",
+    "name": "ORDINARY TIME 18 [A]"
+  },
+  {
+    "date": "2032-08-08",
+    "occasionId": "ordinary-time-19-a",
+    "season": "ordinary",
+    "name": "ORDINARY TIME 19 [A]"
+  },
+  {
+    "date": "2032-08-22",
+    "occasionId": "ordinary-time-21-a",
+    "season": "ordinary",
+    "name": "ORDINARY TIME 21 [A]"
+  },
+  {
+    "date": "2032-08-29",
+    "occasionId": "ordinary-time-22-a",
+    "season": "ordinary",
+    "name": "ORDINARY TIME 22 [A]"
+  },
+  {
+    "date": "2032-09-05",
+    "occasionId": "ordinary-time-23-a",
+    "season": "ordinary",
+    "name": "ORDINARY TIME 23 [A]"
+  },
+  {
+    "date": "2032-09-12",
+    "occasionId": "ordinary-time-24-a",
+    "season": "ordinary",
+    "name": "ORDINARY TIME 24 [A]"
+  },
+  {
+    "date": "2032-09-19",
+    "occasionId": "ordinary-time-25-a",
+    "season": "ordinary",
+    "name": "ORDINARY TIME 25 [A]"
+  },
+  {
+    "date": "2032-09-26",
+    "occasionId": "ordinary-time-26-a",
+    "season": "ordinary",
+    "name": "ORDINARY TIME 26 [A]"
+  },
+  {
+    "date": "2032-10-03",
+    "occasionId": "ordinary-time-27-a",
+    "season": "ordinary",
+    "name": "ORDINARY TIME 27 [A]"
+  },
+  {
+    "date": "2032-10-10",
+    "occasionId": "ordinary-time-28-a",
+    "season": "ordinary",
+    "name": "ORDINARY TIME 28 [A]"
+  },
+  {
+    "date": "2032-10-17",
+    "occasionId": "ordinary-time-29-a",
+    "season": "ordinary",
+    "name": "ORDINARY TIME 29 [A]"
+  },
+  {
+    "date": "2032-10-24",
+    "occasionId": "ordinary-time-30-a",
+    "season": "ordinary",
+    "name": "ORDINARY TIME 30 [A]"
+  },
+  {
+    "date": "2032-10-31",
+    "occasionId": "ordinary-time-31-a",
+    "season": "ordinary",
+    "name": "ORDINARY TIME 31 [A]"
+  },
+  {
+    "date": "2032-11-07",
+    "occasionId": "ordinary-time-32-a",
+    "season": "ordinary",
+    "name": "ORDINARY TIME 32 [A]"
+  },
+  {
+    "date": "2032-11-14",
+    "occasionId": "ordinary-time-33-a",
+    "season": "ordinary",
+    "name": "ORDINARY TIME 33 [A]"
+  },
+  {
+    "date": "2032-11-21",
+    "occasionId": "solemnity-christ-the-king-a",
+    "season": "solemnity",
+    "name": "SOLEMNITY\nCHRIST THE KING [A]"
+  },
+  {
+    "date": "2032-11-28",
+    "occasionId": "advent-01-b",
+    "season": "advent",
+    "name": "ADVENT 01 [B]"
+  },
+  {
+    "date": "2032-12-05",
+    "occasionId": "advent-02-b",
+    "season": "advent",
+    "name": "ADVENT 02 [B]"
+  },
+  {
+    "date": "2032-12-12",
+    "occasionId": "advent-03-b",
+    "season": "advent",
+    "name": "ADVENT 03 [B]"
+  },
+  {
+    "date": "2032-12-19",
+    "occasionId": "advent-04-b",
+    "season": "advent",
+    "name": "ADVENT 04 [B]"
+  },
+  {
+    "date": "2032-12-26",
+    "occasionId": "holy-family-b",
+    "season": "christmas",
+    "name": "HOLY FAMILY [B]"
+  },
+  {
+    "date": "2033-01-09",
+    "occasionId": "baptism-of-the-lord-b",
+    "season": "ordinary",
+    "name": "BAPTISM OF THE LORD [B]"
+  },
+  {
+    "date": "2033-01-16",
+    "occasionId": "ordinary-time-02-b",
+    "season": "ordinary",
+    "name": "ORDINARY TIME 02 [B]"
+  },
+  {
+    "date": "2033-01-23",
+    "occasionId": "ordinary-time-03-b-word-of-god-sunday",
+    "season": "ordinary",
+    "name": "ORDINARY TIME 03 [B]\nWORD OF GOD Sunday"
+  },
+  {
+    "date": "2033-01-30",
+    "occasionId": "ordinary-time-04-b",
+    "season": "ordinary",
+    "name": "ORDINARY TIME 04 [B]"
+  },
+  {
+    "date": "2033-03-06",
+    "occasionId": "lent-01-b",
+    "season": "lent",
+    "name": "LENT 01 [B]"
+  },
+  {
+    "date": "2033-03-13",
+    "occasionId": "lent-02-b",
+    "season": "lent",
+    "name": "LENT 02 [B]"
+  },
+  {
+    "date": "2033-03-20",
+    "occasionId": "lent-03-b",
+    "season": "lent",
+    "name": "LENT 03 [B]"
+  },
+  {
+    "date": "2033-03-27",
+    "occasionId": "lent-04-b",
+    "season": "lent",
+    "name": "LENT 04 [B]"
+  },
+  {
+    "date": "2033-04-03",
+    "occasionId": "lent-05-b",
+    "season": "lent",
+    "name": "LENT 05 [B]"
+  },
+  {
+    "date": "2033-04-10",
+    "occasionId": "palm-sunday-b",
+    "season": "lent",
+    "name": "Palm Sunday [B]"
+  },
+  {
+    "date": "2033-04-24",
+    "occasionId": "easter-02-divine-mercy-b",
+    "season": "easter",
+    "name": "EASTER 02 DIVINE MERCY [B]"
+  },
+  {
+    "date": "2033-05-01",
+    "occasionId": "easter-03-b",
+    "season": "easter",
+    "name": "EASTER 03 [B]"
+  },
+  {
+    "date": "2033-05-08",
+    "occasionId": "easter-04-b",
+    "season": "easter",
+    "name": "EASTER 04 [B]"
+  },
+  {
+    "date": "2033-05-15",
+    "occasionId": "easter-05-b",
+    "season": "easter",
+    "name": "EASTER 05 [B]"
+  },
+  {
+    "date": "2033-05-22",
+    "occasionId": "easter-06-b",
+    "season": "easter",
+    "name": "EASTER 06 [B]"
+  },
+  {
+    "date": "2033-05-29",
+    "occasionId": "ascension-b",
+    "season": "easter",
+    "name": "ASCENSION [B]"
+  },
+  {
+    "date": "2033-06-05",
+    "occasionId": "pentecost-b",
+    "season": "easter",
+    "name": "PENTECOST [B]"
+  },
+  {
+    "date": "2033-06-12",
+    "occasionId": "solemnity-most-holy-trinity-b",
+    "season": "solemnity",
+    "name": "SOLEMNITY\nMOST HOLY TRINITY [B]"
+  },
+  {
+    "date": "2033-06-19",
+    "occasionId": "solemnity-body-blood-of-christ-b",
+    "season": "solemnity",
+    "name": "SOLEMNITY\nBODY & BLOOD OF CHRIST [B]"
+  },
+  {
+    "date": "2033-06-26",
+    "occasionId": "ordinary-time-13-b",
+    "season": "ordinary",
+    "name": "ORDINARY TIME 13 [B]"
+  },
+  {
+    "date": "2033-07-03",
+    "occasionId": "ordinary-time-14-b",
+    "season": "ordinary",
+    "name": "ORDINARY TIME 14 [B]"
+  },
+  {
+    "date": "2033-07-10",
+    "occasionId": "ordinary-time-15-b",
+    "season": "ordinary",
+    "name": "ORDINARY TIME 15 [B]"
+  },
+  {
+    "date": "2033-07-17",
+    "occasionId": "ordinary-time-16-b",
+    "season": "ordinary",
+    "name": "ORDINARY TIME 16 [B]"
+  },
+  {
+    "date": "2033-07-24",
+    "occasionId": "ordinary-time-17-b",
+    "season": "ordinary",
+    "name": "ORDINARY TIME 17 [B]"
+  },
+  {
+    "date": "2033-07-31",
+    "occasionId": "ordinary-time-18-b",
+    "season": "ordinary",
+    "name": "ORDINARY TIME 18 [B]"
+  },
+  {
+    "date": "2033-08-07",
+    "occasionId": "ordinary-time-19-b",
+    "season": "ordinary",
+    "name": "ORDINARY TIME 19 [B]"
+  },
+  {
+    "date": "2033-08-14",
+    "occasionId": "ordinary-time-20-b",
+    "season": "ordinary",
+    "name": "ORDINARY TIME 20 [B]"
+  },
+  {
+    "date": "2033-08-21",
+    "occasionId": "ordinary-time-21-b",
+    "season": "ordinary",
+    "name": "ORDINARY TIME 21 [B]"
+  },
+  {
+    "date": "2033-08-28",
+    "occasionId": "ordinary-time-22-b",
+    "season": "ordinary",
+    "name": "ORDINARY TIME 22 [B]"
+  },
+  {
+    "date": "2033-09-04",
+    "occasionId": "ordinary-time-23-b",
+    "season": "ordinary",
+    "name": "ORDINARY TIME 23 [B]"
+  },
+  {
+    "date": "2033-09-11",
+    "occasionId": "ordinary-time-24-b",
+    "season": "ordinary",
+    "name": "ORDINARY TIME 24 [B]"
+  },
+  {
+    "date": "2033-09-18",
+    "occasionId": "ordinary-time-25-b",
+    "season": "ordinary",
+    "name": "ORDINARY TIME 25 [B]"
+  },
+  {
+    "date": "2033-09-25",
+    "occasionId": "ordinary-time-26-b",
+    "season": "ordinary",
+    "name": "ORDINARY TIME 26 [B]"
+  },
+  {
+    "date": "2033-10-02",
+    "occasionId": "ordinary-time-27-b",
+    "season": "ordinary",
+    "name": "ORDINARY TIME 27 [B]"
+  },
+  {
+    "date": "2033-10-09",
+    "occasionId": "ordinary-time-28-b",
+    "season": "ordinary",
+    "name": "ORDINARY TIME 28 [B]"
+  },
+  {
+    "date": "2033-10-16",
+    "occasionId": "ordinary-time-29-b",
+    "season": "ordinary",
+    "name": "ORDINARY TIME 29 [B]"
+  },
+  {
+    "date": "2033-10-23",
+    "occasionId": "ordinary-time-30-b",
+    "season": "ordinary",
+    "name": "ORDINARY TIME 30 [B]"
+  },
+  {
+    "date": "2033-10-30",
+    "occasionId": "ordinary-time-31-b",
+    "season": "ordinary",
+    "name": "ORDINARY TIME 31 [B]"
+  },
+  {
+    "date": "2033-11-06",
+    "occasionId": "ordinary-time-32-b",
+    "season": "ordinary",
+    "name": "ORDINARY TIME 32 [B]"
+  },
+  {
+    "date": "2033-11-13",
+    "occasionId": "ordinary-time-33-b",
+    "season": "ordinary",
+    "name": "ORDINARY TIME 33 [B]"
+  },
+  {
+    "date": "2033-11-20",
+    "occasionId": "solemnity-christ-the-king-b",
+    "season": "solemnity",
+    "name": "SOLEMNITY\nCHRIST THE KING [B]"
+  },
+  {
+    "date": "2033-11-27",
+    "occasionId": "advent-01-c",
+    "season": "advent",
+    "name": "ADVENT 01 [C]"
+  },
+  {
+    "date": "2033-12-04",
+    "occasionId": "advent-02-c",
+    "season": "advent",
+    "name": "ADVENT 02 [C]"
+  },
+  {
+    "date": "2033-12-11",
+    "occasionId": "advent-03-c",
+    "season": "advent",
+    "name": "ADVENT 03 [C]"
+  },
+  {
+    "date": "2033-12-18",
+    "occasionId": "advent-04-c",
+    "season": "advent",
+    "name": "ADVENT 04 [C]"
+  },
+  {
+    "date": "2033-12-30",
+    "occasionId": "holy-family-c",
+    "season": "christmas",
+    "name": "HOLY FAMILY [C]"
+  },
+  {
+    "date": "2034-01-08",
+    "occasionId": "baptism-of-the-lord-c",
+    "season": "ordinary",
+    "name": "BAPTISM OF THE LORD [C]"
+  },
+  {
+    "date": "2034-01-15",
+    "occasionId": "ordinary-time-02-c",
+    "season": "ordinary",
+    "name": "ORDINARY TIME 02 [C]"
+  },
+  {
+    "date": "2034-01-22",
+    "occasionId": "ordinary-time-03-c-word-of-god-sunday",
+    "season": "ordinary",
+    "name": "ORDINARY TIME 03 [C]\nWORD OF GOD Sunday"
+  },
+  {
+    "date": "2034-01-29",
+    "occasionId": "ordinary-time-04-c",
+    "season": "ordinary",
+    "name": "ORDINARY TIME 04 [C]"
+  },
+  {
+    "date": "2034-02-26",
+    "occasionId": "lent-01-c",
+    "season": "lent",
+    "name": "LENT 01 [C]"
+  },
+  {
+    "date": "2034-03-05",
+    "occasionId": "lent-02-c",
+    "season": "lent",
+    "name": "LENT 02 [C]"
+  },
+  {
+    "date": "2034-03-12",
+    "occasionId": "lent-03-c",
+    "season": "lent",
+    "name": "LENT 03 [C]"
+  },
+  {
+    "date": "2034-03-19",
+    "occasionId": "lent-04-c",
+    "season": "lent",
+    "name": "LENT 04 [C]"
+  },
+  {
+    "date": "2034-03-26",
+    "occasionId": "lent-05-c",
+    "season": "lent",
+    "name": "LENT 05 [C]"
+  },
+  {
+    "date": "2034-04-02",
+    "occasionId": "palm-sunday-c",
+    "season": "lent",
+    "name": "Palm Sunday [C]"
+  },
+  {
+    "date": "2034-04-16",
+    "occasionId": "easter-02-divine-mercy-c",
+    "season": "easter",
+    "name": "EASTER 02 DIVINE MERCY [C]"
+  },
+  {
+    "date": "2034-04-23",
+    "occasionId": "easter-03-c",
+    "season": "easter",
+    "name": "EASTER 03 [C]"
+  },
+  {
+    "date": "2034-04-30",
+    "occasionId": "easter-04-c",
+    "season": "easter",
+    "name": "EASTER 04 [C]"
+  },
+  {
+    "date": "2034-05-07",
+    "occasionId": "easter-05-c",
+    "season": "easter",
+    "name": "EASTER 05 [C]"
+  },
+  {
+    "date": "2034-05-14",
+    "occasionId": "easter-06-c",
+    "season": "easter",
+    "name": "EASTER 06 [C]"
+  },
+  {
+    "date": "2034-05-21",
+    "occasionId": "ascension-c",
+    "season": "easter",
+    "name": "ASCENSION [C]"
+  },
+  {
+    "date": "2034-05-28",
+    "occasionId": "pentecost-c",
+    "season": "easter",
+    "name": "PENTECOST [C]"
+  },
+  {
+    "date": "2034-06-04",
+    "occasionId": "solemnity-most-holy-trinity-c",
+    "season": "solemnity",
+    "name": "SOLEMNITY\nMOST HOLY TRINITY [C]"
+  },
+  {
+    "date": "2034-06-11",
+    "occasionId": "solemnity-body-blood-of-christ-c",
+    "season": "solemnity",
+    "name": "SOLEMNITY\nBODY & BLOOD OF CHRIST [C]"
+  },
+  {
+    "date": "2034-06-18",
+    "occasionId": "ordinary-time-11-c",
+    "season": "ordinary",
+    "name": "ORDINARY TIME 11 [C]"
+  },
+  {
+    "date": "2034-06-25",
+    "occasionId": "ordinary-time-12-c",
+    "season": "ordinary",
+    "name": "ORDINARY TIME 12 [C]"
+  },
+  {
+    "date": "2034-07-02",
+    "occasionId": "ordinary-time-13-c",
+    "season": "ordinary",
+    "name": "ORDINARY TIME 13 [C]"
+  },
+  {
+    "date": "2034-07-09",
+    "occasionId": "ordinary-time-14-c",
+    "season": "ordinary",
+    "name": "ORDINARY TIME 14 [C]"
+  },
+  {
+    "date": "2034-07-16",
+    "occasionId": "ordinary-time-15-c",
+    "season": "ordinary",
+    "name": "ORDINARY TIME 15 [C]"
+  },
+  {
+    "date": "2034-07-23",
+    "occasionId": "ordinary-time-16-c",
+    "season": "ordinary",
+    "name": "ORDINARY TIME 16 [C]"
+  },
+  {
+    "date": "2034-07-30",
+    "occasionId": "ordinary-time-17-c",
+    "season": "ordinary",
+    "name": "ORDINARY TIME 17 [C]"
+  },
+  {
+    "date": "2034-08-13",
+    "occasionId": "ordinary-time-19-c",
+    "season": "ordinary",
+    "name": "ORDINARY TIME 19 [C]"
+  },
+  {
+    "date": "2034-08-20",
+    "occasionId": "ordinary-time-20-c",
+    "season": "ordinary",
+    "name": "ORDINARY TIME 20 [C]"
+  },
+  {
+    "date": "2034-08-27",
+    "occasionId": "ordinary-time-21-c",
+    "season": "ordinary",
+    "name": "ORDINARY TIME 21 [C]"
+  },
+  {
+    "date": "2034-09-03",
+    "occasionId": "ordinary-time-22-c",
+    "season": "ordinary",
+    "name": "ORDINARY TIME 22 [C]"
+  },
+  {
+    "date": "2034-09-10",
+    "occasionId": "ordinary-time-23-c",
+    "season": "ordinary",
+    "name": "ORDINARY TIME 23 [C]"
+  },
+  {
+    "date": "2034-09-17",
+    "occasionId": "ordinary-time-24-c",
+    "season": "ordinary",
+    "name": "ORDINARY TIME 24 [C]"
+  },
+  {
+    "date": "2034-09-24",
+    "occasionId": "ordinary-time-25-c",
+    "season": "ordinary",
+    "name": "ORDINARY TIME 25 [C]"
+  },
+  {
+    "date": "2034-10-01",
+    "occasionId": "ordinary-time-26-c",
+    "season": "ordinary",
+    "name": "ORDINARY TIME 26 [C]"
+  },
+  {
+    "date": "2034-10-08",
+    "occasionId": "ordinary-time-27-c",
+    "season": "ordinary",
+    "name": "ORDINARY TIME 27 [C]"
+  },
+  {
+    "date": "2034-10-15",
+    "occasionId": "ordinary-time-28-c",
+    "season": "ordinary",
+    "name": "ORDINARY TIME 28 [C]"
+  },
+  {
+    "date": "2034-10-22",
+    "occasionId": "ordinary-time-29-c",
+    "season": "ordinary",
+    "name": "ORDINARY TIME 29 [C]"
+  },
+  {
+    "date": "2034-10-29",
+    "occasionId": "ordinary-time-30-c",
+    "season": "ordinary",
+    "name": "ORDINARY TIME 30 [C]"
+  },
+  {
+    "date": "2034-11-05",
+    "occasionId": "ordinary-time-31-c",
+    "season": "ordinary",
+    "name": "ORDINARY TIME 31 [C]"
+  },
+  {
+    "date": "2034-11-12",
+    "occasionId": "ordinary-time-32-c",
+    "season": "ordinary",
+    "name": "ORDINARY TIME 32 [C]"
+  },
+  {
+    "date": "2034-11-19",
+    "occasionId": "ordinary-time-33-c",
+    "season": "ordinary",
+    "name": "ORDINARY TIME 33 [C]"
+  },
+  {
+    "date": "2034-11-26",
+    "occasionId": "solemnity-christ-the-king-c",
+    "season": "solemnity",
+    "name": "SOLEMNITY\nCHRIST THE KING [C]"
+  },
+  {
+    "date": "2034-12-03",
+    "occasionId": "advent-01-a",
+    "season": "advent",
+    "name": "ADVENT 01 [A]"
+  },
+  {
+    "date": "2034-12-10",
+    "occasionId": "advent-02-a",
+    "season": "advent",
+    "name": "ADVENT 02 [A]"
+  },
+  {
+    "date": "2034-12-17",
+    "occasionId": "advent-03-a",
+    "season": "advent",
+    "name": "ADVENT 03 [A]"
+  },
+  {
+    "date": "2034-12-24",
+    "occasionId": "advent-04-a",
+    "season": "advent",
+    "name": "ADVENT 04 [A]"
+  },
+  {
+    "date": "2034-12-31",
+    "occasionId": "holy-family-a",
+    "season": "christmas",
+    "name": "HOLY FAMILY [A]"
+  },
+  {
+    "date": "2035-01-08",
+    "occasionId": "baptism-of-the-lord-a",
+    "season": "ordinary",
+    "name": "BAPTISM OF THE LORD [A]"
+  },
+  {
+    "date": "2035-01-14",
+    "occasionId": "ordinary-time-02-a",
+    "season": "ordinary",
+    "name": "ORDINARY TIME 02 [A]"
+  },
+  {
+    "date": "2035-01-21",
+    "occasionId": "ordinary-time-03-a-word-of-god-sunday",
+    "season": "ordinary",
+    "name": "ORDINARY TIME 03 [A]\nWORD OF GOD Sunday"
+  },
+  {
+    "date": "2035-01-28",
+    "occasionId": "ordinary-time-04-a",
+    "season": "ordinary",
+    "name": "ORDINARY TIME 04 [A]"
+  },
+  {
+    "date": "2035-02-04",
+    "occasionId": "ordinary-time-05-a",
+    "season": "ordinary",
+    "name": "ORDINARY TIME 05 [A]"
+  },
+  {
+    "date": "2035-02-11",
+    "occasionId": "lent-01-a",
+    "season": "lent",
+    "name": "LENT 01 [A]"
+  },
+  {
+    "date": "2035-02-18",
+    "occasionId": "lent-02-a",
+    "season": "lent",
+    "name": "LENT 02 [A]"
+  },
+  {
+    "date": "2035-02-25",
+    "occasionId": "lent-03-a-first-scrutiny",
+    "season": "lent",
+    "name": "LENT 03 [A]\nFirst Scrutiny"
+  },
+  {
+    "date": "2035-03-04",
+    "occasionId": "lent-04-a-second-scrutiny",
+    "season": "lent",
+    "name": "LENT 04 [A]\nSecond Scrutiny"
+  },
+  {
+    "date": "2035-03-11",
+    "occasionId": "lent-05-a-third-scrutiny",
+    "season": "lent",
+    "name": "LENT 05 [A]\nThird Scrutiny"
+  },
+  {
+    "date": "2035-03-18",
+    "occasionId": "palm-sunday-a",
+    "season": "lent",
+    "name": "Palm Sunday [A]"
+  },
+  {
+    "date": "2035-04-01",
+    "occasionId": "easter-02-divine-mercy-a",
+    "season": "easter",
+    "name": "EASTER 02 DIVINE MERCY [A]"
+  },
+  {
+    "date": "2035-04-08",
+    "occasionId": "easter-03-a",
+    "season": "easter",
+    "name": "EASTER 03 [A]"
+  },
+  {
+    "date": "2035-04-15",
+    "occasionId": "easter-04-a",
+    "season": "easter",
+    "name": "EASTER 04 [A]"
+  },
+  {
+    "date": "2035-04-22",
+    "occasionId": "easter-05-a",
+    "season": "easter",
+    "name": "EASTER 05 [A]"
+  },
+  {
+    "date": "2035-04-29",
+    "occasionId": "easter-06-a",
+    "season": "easter",
+    "name": "EASTER 06 [A]"
+  },
+  {
+    "date": "2035-05-06",
+    "occasionId": "ascension-a",
+    "season": "easter",
+    "name": "ASCENSION [A]"
+  },
+  {
+    "date": "2035-05-13",
+    "occasionId": "pentecost-a",
+    "season": "easter",
+    "name": "PENTECOST [A]"
+  },
+  {
+    "date": "2035-05-20",
+    "occasionId": "solemnity-most-holy-trinity-a",
+    "season": "solemnity",
+    "name": "SOLEMNITY\nMOST HOLY TRINITY [A]"
+  },
+  {
+    "date": "2035-05-27",
+    "occasionId": "solemnity-body-blood-of-christ-a",
+    "season": "solemnity",
+    "name": "SOLEMNITY\nBODY & BLOOD OF CHRIST [A]"
+  },
+  {
+    "date": "2035-06-03",
+    "occasionId": "ordinary-time-09-a",
+    "season": "ordinary",
+    "name": "ORDINARY TIME 09 [A]"
+  },
+  {
+    "date": "2035-06-10",
+    "occasionId": "ordinary-time-10-a",
+    "season": "ordinary",
+    "name": "ORDINARY TIME 10 [A]"
+  },
+  {
+    "date": "2035-06-17",
+    "occasionId": "ordinary-time-11-a",
+    "season": "ordinary",
+    "name": "ORDINARY TIME 11 [A]"
+  },
+  {
+    "date": "2035-07-01",
+    "occasionId": "ordinary-time-13-a",
+    "season": "ordinary",
+    "name": "ORDINARY TIME 13 [A]"
+  },
+  {
+    "date": "2035-07-08",
+    "occasionId": "ordinary-time-14-a",
+    "season": "ordinary",
+    "name": "ORDINARY TIME 14 [A]"
+  },
+  {
+    "date": "2035-07-15",
+    "occasionId": "ordinary-time-15-a",
+    "season": "ordinary",
+    "name": "ORDINARY TIME 15 [A]"
+  },
+  {
+    "date": "2035-07-22",
+    "occasionId": "ordinary-time-16-a",
+    "season": "ordinary",
+    "name": "ORDINARY TIME 16 [A]"
+  },
+  {
+    "date": "2035-07-29",
+    "occasionId": "ordinary-time-17-a",
+    "season": "ordinary",
+    "name": "ORDINARY TIME 17 [A]"
+  },
+  {
+    "date": "2035-08-05",
+    "occasionId": "ordinary-time-18-a",
+    "season": "ordinary",
+    "name": "ORDINARY TIME 18 [A]"
+  },
+  {
+    "date": "2035-08-12",
+    "occasionId": "ordinary-time-19-a",
+    "season": "ordinary",
+    "name": "ORDINARY TIME 19 [A]"
+  },
+  {
+    "date": "2035-08-19",
+    "occasionId": "ordinary-time-20-a",
+    "season": "ordinary",
+    "name": "ORDINARY TIME 20 [A]"
+  },
+  {
+    "date": "2035-08-26",
+    "occasionId": "ordinary-time-21-a",
+    "season": "ordinary",
+    "name": "ORDINARY TIME 21 [A]"
+  },
+  {
+    "date": "2035-09-02",
+    "occasionId": "ordinary-time-22-a",
+    "season": "ordinary",
+    "name": "ORDINARY TIME 22 [A]"
+  },
+  {
+    "date": "2035-09-09",
+    "occasionId": "ordinary-time-23-a",
+    "season": "ordinary",
+    "name": "ORDINARY TIME 23 [A]"
+  },
+  {
+    "date": "2035-09-16",
+    "occasionId": "ordinary-time-24-a",
+    "season": "ordinary",
+    "name": "ORDINARY TIME 24 [A]"
+  },
+  {
+    "date": "2035-09-23",
+    "occasionId": "ordinary-time-25-a",
+    "season": "ordinary",
+    "name": "ORDINARY TIME 25 [A]"
+  },
+  {
+    "date": "2035-09-30",
+    "occasionId": "ordinary-time-26-a",
+    "season": "ordinary",
+    "name": "ORDINARY TIME 26 [A]"
+  },
+  {
+    "date": "2035-10-07",
+    "occasionId": "ordinary-time-27-a",
+    "season": "ordinary",
+    "name": "ORDINARY TIME 27 [A]"
+  },
+  {
+    "date": "2035-10-14",
+    "occasionId": "ordinary-time-28-a",
+    "season": "ordinary",
+    "name": "ORDINARY TIME 28 [A]"
+  },
+  {
+    "date": "2035-10-21",
+    "occasionId": "ordinary-time-29-a",
+    "season": "ordinary",
+    "name": "ORDINARY TIME 29 [A]"
+  },
+  {
+    "date": "2035-10-28",
+    "occasionId": "ordinary-time-30-a",
+    "season": "ordinary",
+    "name": "ORDINARY TIME 30 [A]"
+  },
+  {
+    "date": "2035-11-04",
+    "occasionId": "ordinary-time-31-a",
+    "season": "ordinary",
+    "name": "ORDINARY TIME 31 [A]"
+  },
+  {
+    "date": "2035-11-11",
+    "occasionId": "ordinary-time-32-a",
+    "season": "ordinary",
+    "name": "ORDINARY TIME 32 [A]"
+  },
+  {
+    "date": "2035-11-18",
+    "occasionId": "ordinary-time-33-a",
+    "season": "ordinary",
+    "name": "ORDINARY TIME 33 [A]"
+  },
+  {
+    "date": "2035-11-25",
+    "occasionId": "solemnity-christ-the-king-a",
+    "season": "solemnity",
+    "name": "SOLEMNITY\nCHRIST THE KING [A]"
+  },
+  {
+    "date": "2035-12-02",
+    "occasionId": "advent-01-b",
+    "season": "advent",
+    "name": "ADVENT 01 [B]"
+  },
+  {
+    "date": "2035-12-09",
+    "occasionId": "advent-02-b",
+    "season": "advent",
+    "name": "ADVENT 02 [B]"
+  },
+  {
+    "date": "2035-12-16",
+    "occasionId": "advent-03-b",
+    "season": "advent",
+    "name": "ADVENT 03 [B]"
+  },
+  {
+    "date": "2035-12-23",
+    "occasionId": "advent-04-b",
+    "season": "advent",
+    "name": "ADVENT 04 [B]"
+  },
+  {
+    "date": "2035-12-30",
+    "occasionId": "holy-family-b",
+    "season": "christmas",
+    "name": "HOLY FAMILY [B]"
+  },
+  {
+    "date": "2036-01-13",
+    "occasionId": "baptism-of-the-lord-b",
+    "season": "ordinary",
+    "name": "BAPTISM OF THE LORD [B]"
+  },
+  {
+    "date": "2036-01-20",
+    "occasionId": "ordinary-time-02-b",
+    "season": "ordinary",
+    "name": "ORDINARY TIME 02 [B]"
+  },
+  {
+    "date": "2036-01-27",
+    "occasionId": "ordinary-time-03-b-word-of-god-sunday",
+    "season": "ordinary",
+    "name": "ORDINARY TIME 03 [B]\nWORD OF GOD Sunday"
+  },
+  {
+    "date": "2036-02-03",
+    "occasionId": "ordinary-time-04-b",
+    "season": "ordinary",
+    "name": "ORDINARY TIME 04 [B]"
+  },
+  {
+    "date": "2036-03-02",
+    "occasionId": "lent-01-b",
+    "season": "lent",
+    "name": "LENT 01 [B]"
+  },
+  {
+    "date": "2036-03-09",
+    "occasionId": "lent-02-b",
+    "season": "lent",
+    "name": "LENT 02 [B]"
+  },
+  {
+    "date": "2036-03-16",
+    "occasionId": "lent-03-b",
+    "season": "lent",
+    "name": "LENT 03 [B]"
+  },
+  {
+    "date": "2036-03-23",
+    "occasionId": "lent-04-b",
+    "season": "lent",
+    "name": "LENT 04 [B]"
+  },
+  {
+    "date": "2036-03-30",
+    "occasionId": "lent-05-b",
+    "season": "lent",
+    "name": "LENT 05 [B]"
+  },
+  {
+    "date": "2036-04-06",
+    "occasionId": "palm-sunday-b",
+    "season": "lent",
+    "name": "Palm Sunday [B]"
+  },
+  {
+    "date": "2036-04-20",
+    "occasionId": "easter-02-divine-mercy-b",
+    "season": "easter",
+    "name": "EASTER 02 DIVINE MERCY [B]"
+  },
+  {
+    "date": "2036-04-27",
+    "occasionId": "easter-03-b",
+    "season": "easter",
+    "name": "EASTER 03 [B]"
+  },
+  {
+    "date": "2036-05-04",
+    "occasionId": "easter-04-b",
+    "season": "easter",
+    "name": "EASTER 04 [B]"
+  },
+  {
+    "date": "2036-05-11",
+    "occasionId": "easter-05-b",
+    "season": "easter",
+    "name": "EASTER 05 [B]"
+  },
+  {
+    "date": "2036-05-18",
+    "occasionId": "easter-06-b",
+    "season": "easter",
+    "name": "EASTER 06 [B]"
+  },
+  {
+    "date": "2036-05-25",
+    "occasionId": "ascension-b",
+    "season": "easter",
+    "name": "ASCENSION [B]"
+  },
+  {
+    "date": "2036-06-01",
+    "occasionId": "pentecost-b",
+    "season": "easter",
+    "name": "PENTECOST [B]"
+  },
+  {
+    "date": "2036-06-08",
+    "occasionId": "solemnity-most-holy-trinity-b",
+    "season": "solemnity",
+    "name": "SOLEMNITY\nMOST HOLY TRINITY [B]"
+  },
+  {
+    "date": "2036-06-15",
+    "occasionId": "solemnity-body-blood-of-christ-b",
+    "season": "solemnity",
+    "name": "SOLEMNITY\nBODY & BLOOD OF CHRIST [B]"
+  },
+  {
+    "date": "2036-06-22",
+    "occasionId": "ordinary-time-12-b",
+    "season": "ordinary",
+    "name": "ORDINARY TIME 12 [B]"
+  },
+  {
+    "date": "2036-07-06",
+    "occasionId": "ordinary-time-14-b",
+    "season": "ordinary",
+    "name": "ORDINARY TIME 14 [B]"
+  },
+  {
+    "date": "2036-07-13",
+    "occasionId": "ordinary-time-15-b",
+    "season": "ordinary",
+    "name": "ORDINARY TIME 15 [B]"
+  },
+  {
+    "date": "2036-07-20",
+    "occasionId": "ordinary-time-16-b",
+    "season": "ordinary",
+    "name": "ORDINARY TIME 16 [B]"
+  },
+  {
+    "date": "2036-07-27",
+    "occasionId": "ordinary-time-17-b",
+    "season": "ordinary",
+    "name": "ORDINARY TIME 17 [B]"
+  },
+  {
+    "date": "2036-08-03",
+    "occasionId": "ordinary-time-18-b",
+    "season": "ordinary",
+    "name": "ORDINARY TIME 18 [B]"
+  },
+  {
+    "date": "2036-08-10",
+    "occasionId": "ordinary-time-19-b",
+    "season": "ordinary",
+    "name": "ORDINARY TIME 19 [B]"
+  },
+  {
+    "date": "2036-08-17",
+    "occasionId": "ordinary-time-20-b",
+    "season": "ordinary",
+    "name": "ORDINARY TIME 20 [B]"
+  },
+  {
+    "date": "2036-08-24",
+    "occasionId": "ordinary-time-21-b",
+    "season": "ordinary",
+    "name": "ORDINARY TIME 21 [B]"
+  },
+  {
+    "date": "2036-08-31",
+    "occasionId": "ordinary-time-22-b",
+    "season": "ordinary",
+    "name": "ORDINARY TIME 22 [B]"
+  },
+  {
+    "date": "2036-09-07",
+    "occasionId": "ordinary-time-23-b",
+    "season": "ordinary",
+    "name": "ORDINARY TIME 23 [B]"
+  },
+  {
+    "date": "2036-09-21",
+    "occasionId": "ordinary-time-25-b",
+    "season": "ordinary",
+    "name": "ORDINARY TIME 25 [B]"
+  },
+  {
+    "date": "2036-09-28",
+    "occasionId": "ordinary-time-26-b",
+    "season": "ordinary",
+    "name": "ORDINARY TIME 26 [B]"
+  },
+  {
+    "date": "2036-10-05",
+    "occasionId": "ordinary-time-27-b",
+    "season": "ordinary",
+    "name": "ORDINARY TIME 27 [B]"
+  },
+  {
+    "date": "2036-10-12",
+    "occasionId": "ordinary-time-28-b",
+    "season": "ordinary",
+    "name": "ORDINARY TIME 28 [B]"
+  },
+  {
+    "date": "2036-10-19",
+    "occasionId": "ordinary-time-29-b",
+    "season": "ordinary",
+    "name": "ORDINARY TIME 29 [B]"
+  },
+  {
+    "date": "2036-10-26",
+    "occasionId": "ordinary-time-30-b",
+    "season": "ordinary",
+    "name": "ORDINARY TIME 30 [B]"
+  },
+  {
+    "date": "2036-11-16",
+    "occasionId": "ordinary-time-33-b",
+    "season": "ordinary",
+    "name": "ORDINARY TIME 33 [B]"
+  },
+  {
+    "date": "2036-11-23",
+    "occasionId": "solemnity-christ-the-king-b",
+    "season": "solemnity",
+    "name": "SOLEMNITY\nCHRIST THE KING [B]"
+  },
+  {
+    "date": "2036-11-30",
+    "occasionId": "advent-01-c",
+    "season": "advent",
+    "name": "ADVENT 01 [C]"
+  },
+  {
+    "date": "2036-12-07",
+    "occasionId": "advent-02-c",
+    "season": "advent",
+    "name": "ADVENT 02 [C]"
+  },
+  {
+    "date": "2036-12-14",
+    "occasionId": "advent-03-c",
+    "season": "advent",
+    "name": "ADVENT 03 [C]"
+  },
+  {
+    "date": "2036-12-21",
+    "occasionId": "advent-04-c",
+    "season": "advent",
+    "name": "ADVENT 04 [C]"
+  },
+  {
+    "date": "2036-12-28",
+    "occasionId": "holy-family-c",
+    "season": "christmas",
+    "name": "HOLY FAMILY [C]"
+  },
+  {
+    "date": "2037-01-11",
+    "occasionId": "baptism-of-the-lord-c",
+    "season": "ordinary",
+    "name": "BAPTISM OF THE LORD [C]"
+  },
+  {
+    "date": "2037-01-18",
+    "occasionId": "ordinary-time-02-c",
+    "season": "ordinary",
+    "name": "ORDINARY TIME 02 [C]"
+  },
+  {
+    "date": "2037-01-25",
+    "occasionId": "ordinary-time-03-c-word-of-god-sunday",
+    "season": "ordinary",
+    "name": "ORDINARY TIME 03 [C]\nWORD OF GOD Sunday"
+  },
+  {
+    "date": "2037-02-01",
+    "occasionId": "ordinary-time-04-c",
+    "season": "ordinary",
+    "name": "ORDINARY TIME 04 [C]"
+  },
+  {
+    "date": "2037-02-22",
+    "occasionId": "lent-01-c",
+    "season": "lent",
+    "name": "LENT 01 [C]"
+  },
+  {
+    "date": "2037-03-01",
+    "occasionId": "lent-02-c",
+    "season": "lent",
+    "name": "LENT 02 [C]"
+  },
+  {
+    "date": "2037-03-08",
+    "occasionId": "lent-03-c",
+    "season": "lent",
+    "name": "LENT 03 [C]"
+  },
+  {
+    "date": "2037-03-15",
+    "occasionId": "lent-04-c",
+    "season": "lent",
+    "name": "LENT 04 [C]"
+  },
+  {
+    "date": "2037-03-22",
+    "occasionId": "lent-05-c",
+    "season": "lent",
+    "name": "LENT 05 [C]"
+  },
+  {
+    "date": "2037-03-29",
+    "occasionId": "palm-sunday-c",
+    "season": "lent",
+    "name": "Palm Sunday [C]"
+  },
+  {
+    "date": "2037-04-12",
+    "occasionId": "easter-02-divine-mercy-c",
+    "season": "easter",
+    "name": "EASTER 02 DIVINE MERCY [C]"
+  },
+  {
+    "date": "2037-04-19",
+    "occasionId": "easter-03-c",
+    "season": "easter",
+    "name": "EASTER 03 [C]"
+  },
+  {
+    "date": "2037-04-26",
+    "occasionId": "easter-04-c",
+    "season": "easter",
+    "name": "EASTER 04 [C]"
+  },
+  {
+    "date": "2037-05-03",
+    "occasionId": "easter-05-c",
+    "season": "easter",
+    "name": "EASTER 05 [C]"
+  },
+  {
+    "date": "2037-05-10",
+    "occasionId": "easter-06-c",
+    "season": "easter",
+    "name": "EASTER 06 [C]"
+  },
+  {
+    "date": "2037-05-17",
+    "occasionId": "ascension-c",
+    "season": "easter",
+    "name": "ASCENSION [C]"
+  },
+  {
+    "date": "2037-05-24",
+    "occasionId": "pentecost-c",
+    "season": "easter",
+    "name": "PENTECOST [C]"
+  },
+  {
+    "date": "2037-05-31",
+    "occasionId": "solemnity-most-holy-trinity-c",
+    "season": "solemnity",
+    "name": "SOLEMNITY\nMOST HOLY TRINITY [C]"
+  },
+  {
+    "date": "2037-06-07",
+    "occasionId": "solemnity-body-blood-of-christ-c",
+    "season": "solemnity",
+    "name": "SOLEMNITY\nBODY & BLOOD OF CHRIST [C]"
+  },
+  {
+    "date": "2037-06-14",
+    "occasionId": "ordinary-time-11-c",
+    "season": "ordinary",
+    "name": "ORDINARY TIME 11 [C]"
+  },
+  {
+    "date": "2037-06-21",
+    "occasionId": "ordinary-time-12-c",
+    "season": "ordinary",
+    "name": "ORDINARY TIME 12 [C]"
+  },
+  {
+    "date": "2037-06-28",
+    "occasionId": "ordinary-time-13-c",
+    "season": "ordinary",
+    "name": "ORDINARY TIME 13 [C]"
+  },
+  {
+    "date": "2037-07-05",
+    "occasionId": "ordinary-time-14-c",
+    "season": "ordinary",
+    "name": "ORDINARY TIME 14 [C]"
+  },
+  {
+    "date": "2037-07-12",
+    "occasionId": "ordinary-time-15-c",
+    "season": "ordinary",
+    "name": "ORDINARY TIME 15 [C]"
+  },
+  {
+    "date": "2037-07-19",
+    "occasionId": "ordinary-time-16-c",
+    "season": "ordinary",
+    "name": "ORDINARY TIME 16 [C]"
+  },
+  {
+    "date": "2037-07-26",
+    "occasionId": "ordinary-time-17-c",
+    "season": "ordinary",
+    "name": "ORDINARY TIME 17 [C]"
+  },
+  {
+    "date": "2037-08-02",
+    "occasionId": "ordinary-time-18-c",
+    "season": "ordinary",
+    "name": "ORDINARY TIME 18 [C]"
+  },
+  {
+    "date": "2037-08-09",
+    "occasionId": "ordinary-time-19-c",
+    "season": "ordinary",
+    "name": "ORDINARY TIME 19 [C]"
+  },
+  {
+    "date": "2037-08-16",
+    "occasionId": "ordinary-time-20-c",
+    "season": "ordinary",
+    "name": "ORDINARY TIME 20 [C]"
+  },
+  {
+    "date": "2037-08-23",
+    "occasionId": "ordinary-time-21-c",
+    "season": "ordinary",
+    "name": "ORDINARY TIME 21 [C]"
+  },
+  {
+    "date": "2037-08-30",
+    "occasionId": "ordinary-time-22-c",
+    "season": "ordinary",
+    "name": "ORDINARY TIME 22 [C]"
+  },
+  {
+    "date": "2037-09-06",
+    "occasionId": "ordinary-time-23-c",
+    "season": "ordinary",
+    "name": "ORDINARY TIME 23 [C]"
+  },
+  {
+    "date": "2037-09-13",
+    "occasionId": "ordinary-time-24-c",
+    "season": "ordinary",
+    "name": "ORDINARY TIME 24 [C]"
+  },
+  {
+    "date": "2037-09-20",
+    "occasionId": "ordinary-time-25-c",
+    "season": "ordinary",
+    "name": "ORDINARY TIME 25 [C]"
+  },
+  {
+    "date": "2037-09-27",
+    "occasionId": "ordinary-time-26-c",
+    "season": "ordinary",
+    "name": "ORDINARY TIME 26 [C]"
+  },
+  {
+    "date": "2037-10-04",
+    "occasionId": "ordinary-time-27-c",
+    "season": "ordinary",
+    "name": "ORDINARY TIME 27 [C]"
+  },
+  {
+    "date": "2037-10-11",
+    "occasionId": "ordinary-time-28-c",
+    "season": "ordinary",
+    "name": "ORDINARY TIME 28 [C]"
+  },
+  {
+    "date": "2037-10-18",
+    "occasionId": "ordinary-time-29-c",
+    "season": "ordinary",
+    "name": "ORDINARY TIME 29 [C]"
+  },
+  {
+    "date": "2037-10-25",
+    "occasionId": "ordinary-time-30-c",
+    "season": "ordinary",
+    "name": "ORDINARY TIME 30 [C]"
+  },
+  {
+    "date": "2037-11-08",
+    "occasionId": "ordinary-time-32-c",
+    "season": "ordinary",
+    "name": "ORDINARY TIME 32 [C]"
+  },
+  {
+    "date": "2037-11-15",
+    "occasionId": "ordinary-time-33-c",
+    "season": "ordinary",
+    "name": "ORDINARY TIME 33 [C]"
+  },
+  {
+    "date": "2037-11-22",
+    "occasionId": "solemnity-christ-the-king-c",
+    "season": "solemnity",
+    "name": "SOLEMNITY\nCHRIST THE KING [C]"
+  },
+  {
+    "date": "2037-11-29",
+    "occasionId": "advent-01-a",
+    "season": "advent",
+    "name": "ADVENT 01 [A]"
+  },
+  {
+    "date": "2037-12-06",
+    "occasionId": "advent-02-a",
+    "season": "advent",
+    "name": "ADVENT 02 [A]"
+  },
+  {
+    "date": "2037-12-13",
+    "occasionId": "advent-03-a",
+    "season": "advent",
+    "name": "ADVENT 03 [A]"
+  },
+  {
+    "date": "2037-12-20",
+    "occasionId": "advent-04-a",
+    "season": "advent",
+    "name": "ADVENT 04 [A]"
+  },
+  {
+    "date": "2037-12-27",
+    "occasionId": "holy-family-a",
+    "season": "christmas",
+    "name": "HOLY FAMILY [A]"
+  },
+  {
+    "date": "2040-04-15",
+    "occasionId": "easter-04-c",
+    "season": "easter",
+    "name": "EASTER 04 [C]"
+  }
+]

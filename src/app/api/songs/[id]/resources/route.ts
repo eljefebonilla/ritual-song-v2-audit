@@ -1,20 +1,7 @@
 import { NextRequest, NextResponse } from "next/server";
-import fs from "fs";
-import path from "path";
-import { createClient } from "@/lib/supabase/server";
-import type { LibrarySong, SongResource } from "@/lib/types";
-
-const SONG_LIBRARY_PATH = path.join(
-  process.cwd(),
-  "src/data/song-library.json"
-);
-
-function slugify(text: string): string {
-  return text
-    .toLowerCase()
-    .replace(/[^a-z0-9]+/g, "-")
-    .replace(/^-+|-+$/g, "");
-}
+import { verifyAdmin } from "@/lib/admin";
+import { createAdminClient } from "@/lib/supabase/admin";
+import { getSongById } from "@/lib/song-library";
 
 export async function POST(
   request: NextRequest,
@@ -22,18 +9,7 @@ export async function POST(
 ) {
   const { id } = await params;
 
-  // Verify admin
-  const supabase = await createClient();
-  const { data: { user } } = await supabase.auth.getUser();
-  if (!user) {
-    return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
-  }
-  const { data: profile } = await supabase
-    .from("profiles")
-    .select("role")
-    .eq("id", user.id)
-    .single();
-  if (!profile || profile.role !== "admin") {
+  if (!(await verifyAdmin())) {
     return NextResponse.json({ error: "Admin access required" }, { status: 403 });
   }
 
@@ -48,38 +24,46 @@ export async function POST(
       );
     }
 
-    // Read current library
-    const library: LibrarySong[] = JSON.parse(
-      fs.readFileSync(SONG_LIBRARY_PATH, "utf-8")
-    );
-
-    // Find the song
-    const song = library.find((s) => s.id === id);
+    // Validate song exists
+    const song = getSongById(id);
     if (!song) {
       return NextResponse.json({ error: "Song not found" }, { status: 404 });
     }
 
     // Determine source from URL or explicit source
     let resolvedSource = source || "manual";
-    if (url && url.includes("youtube.com") || url && url.includes("youtu.be")) {
+    if (url && (url.includes("youtube.com") || url.includes("youtu.be"))) {
       resolvedSource = "youtube";
     }
 
-    // Create new resource
-    const resource: SongResource = {
-      id: `${resolvedSource}-${slugify(label)}-${Date.now()}`,
-      type,
-      label,
-      url: url || undefined,
-      source: resolvedSource,
-    };
+    const supabase = createAdminClient();
 
-    song.resources.push(resource);
+    const { data: resource, error: insertError } = await supabase
+      .from("song_resources")
+      .insert({
+        song_id: id,
+        type,
+        label,
+        url: url || null,
+        source: resolvedSource,
+      })
+      .select()
+      .single();
 
-    // Write back
-    fs.writeFileSync(SONG_LIBRARY_PATH, JSON.stringify(library, null, 2));
+    if (insertError) {
+      return NextResponse.json({ error: insertError.message }, { status: 500 });
+    }
 
-    return NextResponse.json({ resource, song });
+    return NextResponse.json({
+      resource: {
+        id: resource.id,
+        type: resource.type,
+        label: resource.label,
+        url: resource.url,
+        source: resource.source,
+        isHighlighted: resource.is_highlighted,
+      },
+    });
   } catch {
     return NextResponse.json(
       { error: "Failed to add resource" },

@@ -1,5 +1,5 @@
 import { NextRequest, NextResponse } from "next/server";
-import { createClient } from "@/lib/supabase/server";
+import { verifyAdmin } from "@/lib/admin";
 import { getSongLibrary } from "@/lib/song-library";
 import fs from "fs";
 import path from "path";
@@ -47,21 +47,7 @@ export async function GET(request: NextRequest) {
  * Body: { title, composer?, category? }
  */
 export async function POST(request: NextRequest) {
-  const supabase = await createClient();
-
-  // Verify admin
-  const { data: { user } } = await supabase.auth.getUser();
-  if (!user) {
-    return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
-  }
-
-  const { data: profile } = await supabase
-    .from("profiles")
-    .select("role")
-    .eq("id", user.id)
-    .single();
-
-  if (!profile || profile.role !== "admin") {
+  if (!(await verifyAdmin())) {
     return NextResponse.json({ error: "Admin access required" }, { status: 403 });
   }
 

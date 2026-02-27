@@ -1,23 +1,9 @@
 import { NextRequest, NextResponse } from "next/server";
-import { createClient } from "@/lib/supabase/server";
+import { verifyAdmin } from "@/lib/admin";
 import fs from "fs";
 import path from "path";
 
 const SONG_LIBRARY_PATH = path.join(process.cwd(), "src/data/song-library.json");
-
-async function verifyAdmin() {
-  const supabase = await createClient();
-  const { data: { user } } = await supabase.auth.getUser();
-  if (!user) return false;
-
-  const { data: profile } = await supabase
-    .from("profiles")
-    .select("role")
-    .eq("id", user.id)
-    .single();
-
-  return profile?.role === "admin";
-}
 
 /**
  * PUT /api/songs/[id] — Update a song (admin only)

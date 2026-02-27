@@ -13,10 +13,23 @@
 import fs from "fs";
 import path from "path";
 import { createClient } from "@supabase/supabase-js";
-import * as dotenv from "dotenv";
 
-// Load env
-dotenv.config({ path: path.join(__dirname, "../.env.local") });
+// Load .env.local manually (no dotenv dependency needed)
+const envPath = path.join(__dirname, "../.env.local");
+if (fs.existsSync(envPath)) {
+  const envContent = fs.readFileSync(envPath, "utf-8");
+  for (const line of envContent.split("\n")) {
+    const trimmed = line.trim();
+    if (!trimmed || trimmed.startsWith("#")) continue;
+    const eqIdx = trimmed.indexOf("=");
+    if (eqIdx === -1) continue;
+    const key = trimmed.slice(0, eqIdx);
+    const value = trimmed.slice(eqIdx + 1);
+    if (!process.env[key]) {
+      process.env[key] = value;
+    }
+  }
+}
 
 const CALENDAR_PATH = path.join(__dirname, "../src/data/ministry-calendar.json");
 

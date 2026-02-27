@@ -1,4 +1,5 @@
 import { NextRequest, NextResponse } from "next/server";
+import { verifyAdmin } from "@/lib/admin";
 import { createClient } from "@/lib/supabase/server";
 
 /**
@@ -52,25 +53,15 @@ export async function GET(request: NextRequest) {
  * POST /api/calendar — Create a new calendar event (admin only)
  */
 export async function POST(request: NextRequest) {
-  const supabase = await createClient();
-
-  // Verify admin
-  const { data: { user } } = await supabase.auth.getUser();
-  if (!user) {
-    return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
-  }
-
-  const { data: profile } = await supabase
-    .from("profiles")
-    .select("role")
-    .eq("id", user.id)
-    .single();
-
-  if (!profile || profile.role !== "admin") {
+  if (!(await verifyAdmin())) {
     return NextResponse.json({ error: "Admin access required" }, { status: 403 });
   }
 
+  const supabase = await createClient();
   const body = await request.json();
+
+  // Get user ID for created_by if authenticated
+  const { data: { user } } = await supabase.auth.getUser();
 
   const { data, error } = await supabase
     .from("mass_events")
@@ -94,7 +85,7 @@ export async function POST(request: NextRequest) {
       liturgical_week: body.liturgical_week || null,
       liturgical_name: body.liturgical_name || null,
       season: body.season || null,
-      created_by: user.id,
+      created_by: user?.id || null,
     })
     .select()
     .single();
