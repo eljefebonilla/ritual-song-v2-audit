@@ -50,7 +50,7 @@ export default function MassSignupCard({
   const [expanded, setExpanded] = useState(false);
   const [showComments, setShowComments] = useState(false);
   const [showPartPicker, setShowPartPicker] = useState(false);
-  const communityColor = getCommunityColor(mass.community);
+  const communityStyle = getCommunityColor(mass.community);
   const isSignedUp = mySignup !== null;
 
   const handleSignUp = () => {
@@ -86,7 +86,8 @@ export default function MassSignupCard({
             </span>
             {mass.community && (
               <span
-                className={`text-[10px] px-1.5 py-0.5 rounded font-medium ${communityColor}`}
+                className="text-[10px] px-1.5 py-0.5 rounded font-medium"
+                style={communityStyle}
               >
                 {mass.community}
               </span>

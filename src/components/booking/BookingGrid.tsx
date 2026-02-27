@@ -103,7 +103,7 @@ export default function BookingGrid({
         </thead>
         <tbody>
           {masses.map((mass) => {
-            const communityColor = getCommunityColor(mass.community);
+            const communityStyle = getCommunityColor(mass.community);
             // Index slots by role id
             const slotsByRole = new Map<string, BookingSlot[]>();
             for (const slot of mass.booking_slots || []) {
@@ -135,7 +135,8 @@ export default function BookingGrid({
                       </span>
                       {mass.community && (
                         <span
-                          className={`text-[9px] px-1 py-0.5 rounded font-medium ${communityColor}`}
+                          className="text-[9px] px-1 py-0.5 rounded font-medium"
+                          style={communityStyle}
                         >
                           {mass.community}
                         </span>

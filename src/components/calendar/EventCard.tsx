@@ -10,7 +10,7 @@ interface EventCardProps {
 }
 
 export default function EventCard({ event, isPast }: EventCardProps) {
-  const communityColorClass = getCommunityColor(event.community);
+  const communityStyle = getCommunityColor(event.community);
   const hasOccasionLink = event.occasionId && event.eventType === "mass";
 
   const card = (
@@ -64,7 +64,8 @@ export default function EventCard({ event, isPast }: EventCardProps) {
           {/* Community badge */}
           {event.community && (
             <span
-              className={`text-[10px] px-1.5 py-0.5 rounded font-medium ${communityColorClass}`}
+              className="text-[10px] px-1.5 py-0.5 rounded font-medium"
+              style={communityStyle}
             >
               {event.community}
             </span>

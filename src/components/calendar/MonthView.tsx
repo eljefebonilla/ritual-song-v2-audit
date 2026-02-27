@@ -114,16 +114,16 @@ export default function MonthView({ weeks, currentMonth }: MonthViewProps) {
                     let dotColor = "bg-stone-300";
                     if (evt.eventType === "mass") {
                       if (evt.community) {
-                        const communityColors: Record<string, string> = {
-                          reflections: "bg-purple-400",
-                          foundations: "bg-blue-400",
-                          generations: "bg-green-400",
-                          heritage: "bg-amber-400",
-                          elevations: "bg-rose-400",
+                        const communityDotColors: Record<string, string> = {
+                          reflections: "#5a6a78",
+                          foundations: "#8b6b5a",
+                          generations: "#8a7a3a",
+                          heritage: "#5a6b54",
+                          elevations: "#6b5a8a",
                         };
                         dotColor =
-                          communityColors[evt.community.toLowerCase()] ||
-                          "bg-parish-burgundy";
+                          communityDotColors[evt.community.toLowerCase()] ||
+                          "";
                       } else {
                         dotColor = "bg-parish-burgundy";
                       }
@@ -133,10 +133,12 @@ export default function MonthView({ weeks, currentMonth }: MonthViewProps) {
                       dotColor = "bg-indigo-400";
                     }
 
+                    const isHex = dotColor.startsWith("#");
                     return (
                       <div
                         key={i}
-                        className={`h-1 rounded-full ${dotColor}`}
+                        className={`h-1 rounded-full ${isHex ? "" : dotColor}`}
+                        style={isHex ? { backgroundColor: dotColor } : undefined}
                         title={`${evt.startTime12h || ""} ${evt.title}`}
                       />
                     );
