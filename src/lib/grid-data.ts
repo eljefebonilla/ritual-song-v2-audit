@@ -203,19 +203,34 @@ function getSeasonSortOrder(season: string): number {
 export function findNextUpcomingSundayIndex(
   occasions: LiturgicalOccasion[]
 ): number {
-  const today = new Date();
-  const dayOfWeek = today.getDay(); // 0=Sun
-  const daysUntilSunday = dayOfWeek === 0 ? 0 : 7 - dayOfWeek;
-  const nextSunday = new Date(today);
-  nextSunday.setDate(today.getDate() + daysUntilSunday);
-  const nextSundayISO = nextSunday.toISOString().split("T")[0];
+  const todayISO = new Date().toISOString().split("T")[0];
+
+  // Find the occasion with the soonest upcoming date (>= today).
+  // This represents "this week" in the liturgical calendar.
+  let bestIdx = -1;
+  let bestDate = "";
 
   for (let i = 0; i < occasions.length; i++) {
     const occ = occasions[i];
-    const futureDate = occ.dates.find((d) => d.date >= nextSundayISO);
-    if (futureDate) return i;
+    if (!occ.dates || occ.dates.length === 0) continue;
+
+    // Find this occasion's nearest future date
+    let nearestFuture = "";
+    for (const d of occ.dates) {
+      if (d.date >= todayISO && (nearestFuture === "" || d.date < nearestFuture)) {
+        nearestFuture = d.date;
+      }
+    }
+    if (!nearestFuture) continue;
+
+    // Track the occasion with the smallest (soonest) future date
+    if (bestDate === "" || nearestFuture < bestDate) {
+      bestDate = nearestFuture;
+      bestIdx = i;
+    }
   }
-  return 0; // fallback: show from beginning
+
+  return bestIdx >= 0 ? bestIdx : 0;
 }
 
 /**
