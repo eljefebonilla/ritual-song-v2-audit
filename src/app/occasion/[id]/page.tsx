@@ -21,7 +21,7 @@ export default async function OccasionPage({
   const colors = SEASON_COLORS[occasion.season] || SEASON_COLORS.ordinary;
 
   return (
-    <div className="p-8 max-w-4xl">
+    <div className="p-4 pt-14 md:p-8 md:pt-8 max-w-4xl">
       {/* Breadcrumb */}
       <div className="flex items-center gap-2 text-xs text-stone-400 mb-4">
         <Link href="/" className="hover:text-stone-600">

@@ -23,7 +23,7 @@ export default async function SeasonPage({
   const occasions = getOccasionsByseason(id);
 
   return (
-    <div className="p-8 max-w-4xl">
+    <div className="p-4 pt-14 md:p-8 md:pt-8 max-w-4xl">
       <div className="flex items-center gap-2 text-xs text-stone-400 mb-4">
         <Link href="/" className="hover:text-stone-600">Dashboard</Link>
         <span>/</span>

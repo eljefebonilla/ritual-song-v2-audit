@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useMemo, useCallback } from "react";
+import { useRouter } from "next/navigation";
 import type { MinistryCalendar, CalendarView, CalendarEvent } from "@/lib/calendar-types";
 import type { CommunityId } from "@/lib/grid-types";
 import { getVisibleWeeks } from "@/lib/calendar-utils";
@@ -18,6 +19,7 @@ const HIDDEN_WEEKS_KEY = "rs_hidden_weeks";
 
 export default function CalendarShell({ calendar }: CalendarShellProps) {
   const { isAdmin } = useUser();
+  const router = useRouter();
 
   // View state
   const [view, setView] = useState<CalendarView>("agenda");
@@ -85,19 +87,23 @@ export default function CalendarShell({ calendar }: CalendarShellProps) {
       : "/api/calendar";
     const method = editingEvent?.id ? "PUT" : "POST";
 
-    await fetch(url, {
+    const res = await fetch(url, {
       method,
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(data),
     });
-    // In a full implementation, we'd refetch or update local state here.
-    // For now, the calendar still reads from JSON, so new events will show
-    // after the migration script is run.
+
+    if (res.ok) {
+      router.refresh();
+    }
   };
 
   const handleDeleteEvent = async () => {
     if (!editingEvent?.id) return;
-    await fetch(`/api/calendar/${editingEvent.id}`, { method: "DELETE" });
+    const res = await fetch(`/api/calendar/${editingEvent.id}`, { method: "DELETE" });
+    if (res.ok) {
+      router.refresh();
+    }
   };
 
   return (

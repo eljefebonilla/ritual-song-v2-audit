@@ -1,6 +1,7 @@
 import { NextRequest, NextResponse } from "next/server";
 import fs from "fs";
 import path from "path";
+import { createClient } from "@/lib/supabase/server";
 import type { LibrarySong, SongResource } from "@/lib/types";
 
 const SONG_LIBRARY_PATH = path.join(
@@ -20,6 +21,21 @@ export async function POST(
   { params }: { params: Promise<{ id: string }> }
 ) {
   const { id } = await params;
+
+  // Verify admin
+  const supabase = await createClient();
+  const { data: { user } } = await supabase.auth.getUser();
+  if (!user) {
+    return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
+  }
+  const { data: profile } = await supabase
+    .from("profiles")
+    .select("role")
+    .eq("id", user.id)
+    .single();
+  if (!profile || profile.role !== "admin") {
+    return NextResponse.json({ error: "Admin access required" }, { status: 403 });
+  }
 
   try {
     const body = await request.json();

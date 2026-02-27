@@ -34,6 +34,25 @@ const LITURGICAL_DISPLAY_ORDER: {
   { key: "feast", seasonId: "feast", label: "Feasts" },
 ];
 
+function getNearestDate(dates: { date: string; label: string }[]): string | null {
+  if (!dates.length) return null;
+  const now = Date.now();
+  let best = dates[0];
+  let bestDiff = Infinity;
+  for (const d of dates) {
+    const diff = Math.abs(new Date(d.date).getTime() - now);
+    if (diff < bestDiff) {
+      bestDiff = diff;
+      best = d;
+    }
+  }
+  return new Date(best.date).toLocaleDateString("en-US", {
+    month: "short",
+    day: "numeric",
+    year: "numeric",
+  });
+}
+
 export default function DashboardPage() {
   const occasions = getAllOccasions();
   const seasons = getSeasons();
@@ -58,9 +77,16 @@ export default function DashboardPage() {
             href={`/occasion/${thisWeek.id}`}
             className="border border-stone-200 rounded-lg p-5 bg-white hover:shadow-md transition-shadow"
           >
-            <p className="text-[10px] uppercase tracking-widest text-stone-400 font-semibold mb-1">
-              This Week
-            </p>
+            <div className="flex items-center justify-between mb-1">
+              <p className="text-[10px] uppercase tracking-widest text-stone-400 font-semibold">
+                This Week
+              </p>
+              {thisWeek.dates.length > 0 && (
+                <p className="text-[10px] text-stone-400">
+                  {getNearestDate(thisWeek.dates)}
+                </p>
+              )}
+            </div>
             <p className="text-lg font-bold text-stone-900">{thisWeek.name}</p>
             <p className="text-sm text-stone-500 mt-1">
               {thisWeek.lectionary.thematicTag}
@@ -72,9 +98,16 @@ export default function DashboardPage() {
             href={`/occasion/${nextWeek.id}`}
             className="border border-stone-200 rounded-lg p-5 bg-white hover:shadow-md transition-shadow"
           >
-            <p className="text-[10px] uppercase tracking-widest text-stone-400 font-semibold mb-1">
-              Next Week
-            </p>
+            <div className="flex items-center justify-between mb-1">
+              <p className="text-[10px] uppercase tracking-widest text-stone-400 font-semibold">
+                Next Week
+              </p>
+              {nextWeek.dates.length > 0 && (
+                <p className="text-[10px] text-stone-400">
+                  {getNearestDate(nextWeek.dates)}
+                </p>
+              )}
+            </div>
             <p className="text-lg font-bold text-stone-900">{nextWeek.name}</p>
             <p className="text-sm text-stone-500 mt-1">
               {nextWeek.lectionary.thematicTag}
