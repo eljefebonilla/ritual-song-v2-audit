@@ -104,7 +104,7 @@ export default function PlannerShell({ occasions }: PlannerShellProps) {
   };
 
   return (
-    <div className="flex flex-col h-screen">
+    <div className="flex flex-col h-screen bg-white">
       <FilterToolbar
         yearCycle={yearCycle}
         setYearCycle={setYearCycle}
