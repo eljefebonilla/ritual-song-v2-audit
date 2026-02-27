@@ -1,4 +1,4 @@
-import { createClient } from "@/lib/supabase/server";
+import { createAdminClient } from "@/lib/supabase/admin";
 import { notFound } from "next/navigation";
 import type { Setlist, SetlistSongRow, SetlistPersonnel, SetlistSafetySong } from "@/lib/booking-types";
 import PrintButton from "@/components/setlist/PrintButton";
@@ -68,7 +68,7 @@ function PersonnelColumn({ personnel, label }: { personnel: SetlistPersonnel[]; 
 
 export default async function SetlistPrintPage({ params }: Props) {
   const { massEventId } = await params;
-  const supabase = await createClient();
+  const supabase = createAdminClient();
 
   const { data: mass } = await supabase
     .from("mass_events")

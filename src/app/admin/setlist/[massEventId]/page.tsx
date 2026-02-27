@@ -1,4 +1,4 @@
-import { createClient } from "@/lib/supabase/server";
+import { createAdminClient } from "@/lib/supabase/admin";
 import { notFound } from "next/navigation";
 import SetlistShell from "@/components/setlist/SetlistShell";
 
@@ -8,7 +8,7 @@ interface Props {
 
 export default async function SetlistPage({ params }: Props) {
   const { massEventId } = await params;
-  const supabase = await createClient();
+  const supabase = createAdminClient();
 
   // Fetch mass event
   const { data: mass } = await supabase

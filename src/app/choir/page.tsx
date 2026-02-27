@@ -1,8 +1,8 @@
-import { createClient } from "@/lib/supabase/server";
+import { createAdminClient } from "@/lib/supabase/admin";
 import ChoirShell from "@/components/choir/ChoirShell";
 
 export default async function ChoirPage() {
-  const supabase = await createClient();
+  const supabase = createAdminClient();
   const today = new Date().toISOString().split("T")[0];
 
   // Fetch upcoming masses that accept choir volunteers

@@ -1,4 +1,4 @@
-import { createClient } from "@/lib/supabase/server";
+import { createAdminClient } from "@/lib/supabase/admin";
 import BookingShell from "@/components/booking/BookingShell";
 
 function getWeekRange(): { from: string; to: string } {
@@ -17,7 +17,7 @@ function getWeekRange(): { from: string; to: string } {
 }
 
 export default async function BookingPage() {
-  const supabase = await createClient();
+  const supabase = createAdminClient();
   const { from, to } = getWeekRange();
 
   const { data: masses } = await supabase
