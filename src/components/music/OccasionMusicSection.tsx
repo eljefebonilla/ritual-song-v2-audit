@@ -83,6 +83,32 @@ export default function OccasionMusicSection({
     setAudioOverrides((prev) => ({ ...prev, [songId]: url }));
   }, []);
 
+  // Fetch Supabase audio for all songs so play buttons work everywhere
+  const allSongIds = useMemo(() => {
+    const ids = new Set<string>();
+    for (const plan of sorted) {
+      const s = planToSlots(plan, readings, antiphons, occasionResources, resolvedSongs);
+      for (const slot of s) {
+        if (slot.resolvedSong?.id) ids.add(slot.resolvedSong.id);
+      }
+    }
+    return [...ids];
+  }, [sorted, readings, antiphons, occasionResources, resolvedSongs]);
+
+  useEffect(() => {
+    if (allSongIds.length === 0) return;
+    let cancelled = false;
+    fetch(`/api/songs/batch-audio?ids=${allSongIds.join(",")}`)
+      .then((res) => (res.ok ? res.json() : null))
+      .then((data) => {
+        if (!cancelled && data?.audioUrls) {
+          setAudioOverrides((prev) => ({ ...prev, ...data.audioUrls }));
+        }
+      })
+      .catch(() => {});
+    return () => { cancelled = true; };
+  }, [allSongIds]);
+
   // Measure and position the right panel centered on the selected row
   const updatePanelPosition = useCallback(() => {
     const container = containerRef.current;
