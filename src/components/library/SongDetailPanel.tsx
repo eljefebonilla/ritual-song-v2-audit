@@ -138,9 +138,10 @@ function ResourceLink({
             : "border-stone-200 bg-white hover:bg-stone-50"
         }`}
       >
-        <button
-          type="button"
-          onClick={() => openInPlayer("youtube", resource.url!)}
+        <a
+          href={resource.url}
+          target="_blank"
+          rel="noopener noreferrer"
           className="flex items-center gap-2 min-w-0 flex-1"
         >
           <TypeIcon type={resource.type} />
@@ -154,13 +155,23 @@ function ResourceLink({
               )}
             </p>
             <p className="text-[10px] text-stone-400 truncate">
-              Open in player
+              Opens on YouTube
             </p>
           </div>
-          <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor" className="text-stone-300 group-hover:text-stone-500 shrink-0">
-            <polygon points="5,3 19,12 5,21" />
+          <svg
+            className="w-3 h-3 text-stone-300 group-hover:text-stone-500 shrink-0"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth="2"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          >
+            <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
+            <polyline points="15 3 21 3 21 9" />
+            <line x1="10" y1="14" x2="21" y2="3" />
           </svg>
-        </button>
+        </a>
         {deleteButton}
       </div>
     );
