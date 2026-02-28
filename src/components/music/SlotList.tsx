@@ -123,7 +123,14 @@ function AntiphonRow({ slot }: { slot: WorshipSlot }) {
         <SlotPlayButton resources={slot.resources} />
       </span>
       <div className="min-w-0 flex-1">
-        <p className="text-sm font-medium text-stone-700">{a.citation}</p>
+        <p className="text-sm font-medium text-stone-700">
+          {a.citation}
+          {slot.optionNumber != null && (
+            <span className="text-stone-400 font-normal ml-1">
+              (Option {slot.optionNumber})
+            </span>
+          )}
+        </p>
         <p className="text-xs text-stone-500 italic mt-0.5">
           &ldquo;{a.text}&rdquo;
         </p>

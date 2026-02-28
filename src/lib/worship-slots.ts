@@ -8,6 +8,43 @@ import type {
 } from "./types";
 import { normalizeTitle } from "./occasion-helpers";
 
+/**
+ * Strip messy prefixes from antiphon citations.
+ * e.g. "Communion Antiphon • Option II | Cf. Ps 91 (90):4" → "Cf. Ps 91 (90):4"
+ *      "Communion Antiphon | Acts 2:4, 11" → "Acts 2:4, 11"
+ *      "Cf. Mt 4:4" → "Cf. Mt 4:4" (no change)
+ */
+function cleanCitation(citation: string): string {
+  // Strip patterns like "Communion Antiphon • Option II | " or "Communion Antiphon | "
+  const pipeIdx = citation.indexOf("|");
+  if (pipeIdx !== -1 && /antiphon/i.test(citation.slice(0, pipeIdx))) {
+    return citation.slice(pipeIdx + 1).trim();
+  }
+  // Strip "Roman Missal — " prefix
+  const dashIdx = citation.indexOf("—");
+  if (dashIdx !== -1 && /roman missal/i.test(citation.slice(0, dashIdx))) {
+    return citation.slice(dashIdx + 1).trim();
+  }
+  return citation;
+}
+
+/**
+ * Match an audio resource to a specific antiphon by comparing the label text
+ * (after stripping the "Entrance:" or "Communion:" prefix) to the antiphon text.
+ */
+function matchResourceToAntiphon(
+  resource: OccasionResource,
+  antiphon: Antiphon,
+): boolean {
+  if (resource.type !== "audio") return false;
+  // Strip "Entrance: " or "Communion: " prefix
+  const labelText = resource.label.replace(/^(entrance|communion):\s*/i, "").toLowerCase().trim();
+  if (!labelText) return false;
+  // Compare to the beginning of the antiphon text (normalized)
+  const antiphonStart = antiphon.text.toLowerCase().replace(/\n/g, " ").trim();
+  return antiphonStart.startsWith(labelText);
+}
+
 export const SECTION_LABELS: Record<WorshipSlot["section"], string> = {
   pre_mass: "Pre-Mass",
   introductory: "Introductory Rites",
@@ -69,18 +106,23 @@ export function planToSlots(
   );
 
   if (entranceAntiphons.length > 0) {
+    const hasMultipleEntrance = entranceAntiphons.length > 1;
     for (let i = 0; i < entranceAntiphons.length; i++) {
+      const ant = entranceAntiphons[i];
+      // Match audio resource to this specific antiphon; sheet music goes to all
+      const matchedResources = entranceAntiphonResources.filter(
+        (r) => r.type === "sheet_music" || matchResourceToAntiphon(r, ant),
+      );
       slots.push({
         id: nextId(),
         section: "introductory",
         role: "entrance_antiphon",
-        label: entranceAntiphons.length === 1
-          ? "Entrance Antiphon"
-          : `Entrance Antiphon ${entranceAntiphons[i].option}`,
+        label: "Entrance Antiphon",
         kind: "antiphon",
         order: i,
-        antiphon: entranceAntiphons[i],
-        resources: i === 0 ? entranceAntiphonResources : undefined,
+        antiphon: { ...ant, citation: cleanCitation(ant.citation) },
+        optionNumber: hasMultipleEntrance ? ant.option : undefined,
+        resources: matchedResources.length > 0 ? matchedResources : undefined,
       });
     }
   }
@@ -292,20 +334,23 @@ export function planToSlots(
   // Communion antiphons (at top of communion, before communion songs)
   const communionAntiphons = antiphons?.filter((a) => a.type === "communion") ?? [];
   if (communionAntiphons.length > 0) {
+    const hasMultipleCommunion = communionAntiphons.length > 1;
     for (let i = 0; i < communionAntiphons.length; i++) {
+      const ant = communionAntiphons[i];
+      // Match audio resource to this specific antiphon; sheet music goes to all
+      const matchedResources = communionAntiphonResources.filter(
+        (r) => r.type === "sheet_music" || matchResourceToAntiphon(r, ant),
+      );
       slots.push({
         id: nextId(),
         section: "eucharist",
         role: "communion_antiphon",
-        label: communionAntiphons.length === 1
-          ? "Communion Antiphon"
-          : `Communion Antiphon ${communionAntiphons[i].option}`,
+        label: "Comm. Antiphon",
         kind: "antiphon",
         order: euchOrder++,
-        antiphon: communionAntiphons[i],
-        resources: i === 0 && communionAntiphonResources.length > 0
-          ? communionAntiphonResources
-          : undefined,
+        antiphon: { ...ant, citation: cleanCitation(ant.citation) },
+        optionNumber: hasMultipleCommunion ? ant.option : undefined,
+        resources: matchedResources.length > 0 ? matchedResources : undefined,
       });
     }
   }

@@ -216,6 +216,7 @@ export interface WorshipSlot {
 
   // Antiphon slots
   antiphon?: Antiphon;
+  optionNumber?: number; // Only set when there are multiple antiphons of same type
 
   // Occasion resources (GA audio, antiphon PDFs)
   resources?: OccasionResource[];
