@@ -37,6 +37,18 @@ async function checkAdmin(request: NextRequest): Promise<boolean> {
  */
 export async function GET() {
   try {
+    // Diagnostic: check env vars
+    const envUrl = process.env.NEXT_PUBLIC_SUPABASE_URL;
+    const envKey = process.env.SUPABASE_SERVICE_ROLE_KEY;
+    if (!envUrl || !envKey) {
+      return NextResponse.json({
+        error: "Missing env vars",
+        hasUrl: !!envUrl,
+        hasKey: !!envKey,
+        nodeEnv: process.env.NODE_ENV,
+      }, { status: 500 });
+    }
+
     const songs = getSongLibrary();
     const groups = detectDuplicateGroups(songs);
     const junk = detectJunkEntries(songs);
