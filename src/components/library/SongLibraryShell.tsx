@@ -2,7 +2,7 @@
 
 import { useState, useMemo, useCallback, useRef, useEffect } from "react";
 import { useSearchParams } from "next/navigation";
-import type { LibrarySong, LiturgicalOccasion } from "@/lib/types";
+import type { LibrarySong, LiturgicalOccasion, SongCategory } from "@/lib/types";
 import { useUser } from "@/lib/user-context";
 import { getSongDisplayCategories } from "@/lib/song-library";
 import {
@@ -30,6 +30,13 @@ const SORT_OPTIONS = [
 ] as const;
 
 type SortOption = (typeof SORT_OPTIONS)[number]["id"];
+
+const CATEGORY_TABS: { id: SongCategory; label: string }[] = [
+  { id: "song", label: "Songs" },
+  { id: "mass_part", label: "Mass Parts" },
+  { id: "psalm", label: "Psalms" },
+  { id: "gospel_acclamation", label: "Gospel Acclamations" },
+];
 
 // Map from Order of Mass filter values to how songs match them
 const ORDER_FILTER_TO_FUNCTIONS: Record<string, string[]> = {
@@ -81,6 +88,7 @@ function findNearestOccasionDate(
 export default function SongLibraryShell({ songs, title = "Song Library", subtitle }: SongLibraryShellProps) {
   const { role, setRole, isAdmin } = useUser();
   const searchParams = useSearchParams();
+  const [categoryTab, setCategoryTab] = useState<SongCategory>("song");
   const [search, setSearch] = useState("");
   const [sort, setSort] = useState<SortOption>("usage");
   const [selectedSongId, setSelectedSongId] = useState<string | null>(
@@ -124,6 +132,16 @@ export default function SongLibraryShell({ songs, title = "Song Library", subtit
       }
     }
     return map;
+  }, [songs]);
+
+  const categoryCounts = useMemo(() => {
+    const counts: Record<string, number> = {};
+    for (const tab of CATEGORY_TABS) counts[tab.id] = 0;
+    for (const s of songs) {
+      const cat = s.category || "song";
+      if (counts[cat] !== undefined) counts[cat]++;
+    }
+    return counts;
   }, [songs]);
 
   const activeFilterCount =
@@ -212,7 +230,7 @@ export default function SongLibraryShell({ songs, title = "Song Library", subtit
   }, [selectedDate, selectedEnsemble, dateOccasionMap, normalizedTitleIndex]);
 
   const filtered = useMemo(() => {
-    let list = [...songs];
+    let list = songs.filter(s => (s.category || "song") === categoryTab);
 
     // Search filter
     if (search.trim()) {
@@ -294,7 +312,7 @@ export default function SongLibraryShell({ songs, title = "Song Library", subtit
     }
 
     return list;
-  }, [songs, search, sort, orderOfMassFilters, seasonFilters, resourceFilters, calendarSongIds, calendarSongMeta, occasionSeasonMap]);
+  }, [songs, categoryTab, search, sort, orderOfMassFilters, seasonFilters, resourceFilters, calendarSongIds, calendarSongMeta, occasionSeasonMap]);
 
   // Build letter groups for alphabet jump
   const { availableLetters, letterIndices } = useMemo(() => {
@@ -329,7 +347,8 @@ export default function SongLibraryShell({ songs, title = "Song Library", subtit
     ? songs.find((s) => s.id === selectedSongId) || null
     : null;
 
-  const songsWithResources = songs.filter((s) => s.resources.length > 0).length;
+  const categorySongs = useMemo(() => songs.filter(s => (s.category || "song") === categoryTab), [songs, categoryTab]);
+  const songsWithResources = categorySongs.filter((s) => s.resources.length > 0).length;
 
   // Track which letters have had their anchor placed
   const placedLetters = new Set<string>();
@@ -344,7 +363,7 @@ export default function SongLibraryShell({ songs, title = "Song Library", subtit
             <div>
               <h1 className="text-lg font-bold text-stone-900">{title}</h1>
               <p className="text-xs text-stone-400">
-                {subtitle || `${songs.length} songs \u00b7 ${songsWithResources} with resources`}
+                {subtitle || `${categoryCounts[categoryTab]} ${CATEGORY_TABS.find(t => t.id === categoryTab)!.label.toLowerCase()} \u00b7 ${songsWithResources} with resources`}
               </p>
             </div>
             <div className="flex items-center gap-2">
@@ -385,6 +404,26 @@ export default function SongLibraryShell({ songs, title = "Song Library", subtit
                 </div>
               </div>
             </div>
+          </div>
+
+          {/* Category tabs */}
+          <div className="flex gap-1 mb-1 bg-stone-100 rounded-lg p-0.5 overflow-x-auto">
+            {CATEGORY_TABS.map((tab) => (
+              <button
+                key={tab.id}
+                onClick={() => {
+                  setCategoryTab(tab.id);
+                  setSearch("");
+                }}
+                className={`px-3 py-1.5 text-xs font-medium rounded-md whitespace-nowrap transition-colors ${
+                  categoryTab === tab.id
+                    ? "bg-white text-stone-900 shadow-sm"
+                    : "text-stone-500 hover:text-stone-700"
+                }`}
+              >
+                {tab.label} ({categoryCounts[tab.id]})
+              </button>
+            ))}
           </div>
 
           <div className="flex flex-col gap-2 sm:flex-row sm:items-center sm:gap-3">

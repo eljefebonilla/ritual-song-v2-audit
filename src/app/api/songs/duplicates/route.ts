@@ -2,6 +2,8 @@ import { NextRequest, NextResponse } from "next/server";
 import { getSongLibrary } from "@/lib/song-library";
 import { createAdminClient } from "@/lib/supabase/admin";
 import { detectDuplicateGroups, detectJunkEntries } from "@/lib/duplicate-detection";
+import { getAllFullOccasions } from "@/lib/data";
+import { extractSongEntries, normalizeTitle } from "@/lib/occasion-helpers";
 import fs from "fs";
 import path from "path";
 
@@ -37,9 +39,75 @@ async function checkAdmin(request: NextRequest): Promise<boolean> {
  */
 export async function GET() {
   try {
-    const songs = getSongLibrary();
+    const allSongs = getSongLibrary();
+    const songs = allSongs.filter(s => s.category === "song" || s.category === "mass_part");
     const groups = detectDuplicateGroups(songs);
     const junk = detectJunkEntries(songs);
+
+    // --- Enrich duplicate groups with per-community usage ---
+    // Build reverse index: songKey → songId for all songs in duplicate groups
+    const songKeyToId = new Map<string, string>();
+    for (const group of groups) {
+      for (const song of group.songs) {
+        const base = normalizeTitle(song.title);
+        const key = song.composer ? `${base}|||${song.composer.toLowerCase()}` : base;
+        songKeyToId.set(key, song.id);
+      }
+    }
+
+    // Count per-community usage from all occasion music plans
+    const communityUsageMap = new Map<string, Record<string, number>>();
+    const allOccasions = getAllFullOccasions();
+
+    for (const occasion of allOccasions) {
+      for (const plan of occasion.musicPlans) {
+        const communityId = plan.communityId;
+
+        // Standard song entries (gathering, offertory, communion, etc.)
+        for (const entry of extractSongEntries(plan)) {
+          const base = normalizeTitle(entry.title);
+          const key = entry.composer ? `${base}|||${entry.composer.toLowerCase()}` : base;
+          const songId = songKeyToId.get(key);
+          if (songId) {
+            if (!communityUsageMap.has(songId)) communityUsageMap.set(songId, {});
+            const usage = communityUsageMap.get(songId)!;
+            usage[communityId] = (usage[communityId] || 0) + 1;
+          }
+        }
+
+        // Responsorial psalm setting
+        if (plan.responsorialPsalm?.setting) {
+          const key = normalizeTitle(plan.responsorialPsalm.setting);
+          const songId = songKeyToId.get(key);
+          if (songId) {
+            if (!communityUsageMap.has(songId)) communityUsageMap.set(songId, {});
+            const usage = communityUsageMap.get(songId)!;
+            usage[communityId] = (usage[communityId] || 0) + 1;
+          }
+        }
+
+        // Eucharistic acclamations (mass settings)
+        if (plan.eucharisticAcclamations) {
+          const base = normalizeTitle(plan.eucharisticAcclamations.massSettingName);
+          const key = plan.eucharisticAcclamations.composer
+            ? `${base}|||${plan.eucharisticAcclamations.composer.toLowerCase()}`
+            : base;
+          const songId = songKeyToId.get(key);
+          if (songId) {
+            if (!communityUsageMap.has(songId)) communityUsageMap.set(songId, {});
+            const usage = communityUsageMap.get(songId)!;
+            usage[communityId] = (usage[communityId] || 0) + 1;
+          }
+        }
+      }
+    }
+
+    // Attach computed community usage to each song
+    for (const group of groups) {
+      for (const song of group.songs) {
+        song.communityUsage = communityUsageMap.get(song.id) || {};
+      }
+    }
 
     const supabase = createAdminClient();
     const { data: decisions } = await supabase
