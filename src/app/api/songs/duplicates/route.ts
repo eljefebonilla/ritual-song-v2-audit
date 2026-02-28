@@ -6,54 +6,61 @@ import { detectDuplicateGroups, detectJunkEntries } from "@/lib/duplicate-detect
 import fs from "fs";
 import path from "path";
 
+export const runtime = "nodejs";
+
 const SONG_LIBRARY_PATH = path.join(process.cwd(), "src/data/song-library.json");
 
 /**
  * GET /api/songs/duplicates — Returns duplicate groups and junk entries
  */
 export async function GET() {
-  if (!(await verifyAdmin())) {
-    return NextResponse.json({ error: "Admin access required" }, { status: 403 });
-  }
+  try {
+    if (!(await verifyAdmin())) {
+      return NextResponse.json({ error: "Admin access required" }, { status: 403 });
+    }
 
-  const songs = getSongLibrary();
-  const groups = detectDuplicateGroups(songs);
-  const junk = detectJunkEntries(songs);
+    const songs = getSongLibrary();
+    const groups = detectDuplicateGroups(songs);
+    const junk = detectJunkEntries(songs);
 
-  // Fetch dismissed pairs to filter them out
-  const supabase = createAdminClient();
-  const { data: decisions } = await supabase
-    .from("song_merge_decisions")
-    .select("song_id_a, song_id_b, decision");
+    // Fetch dismissed pairs to filter them out
+    const supabase = createAdminClient();
+    const { data: decisions } = await supabase
+      .from("song_merge_decisions")
+      .select("song_id_a, song_id_b, decision");
 
-  const dismissedPairs = new Set<string>();
-  if (decisions) {
-    for (const d of decisions) {
-      if (d.decision === "dismissed") {
-        // Store both orderings
-        dismissedPairs.add(`${d.song_id_a}::${d.song_id_b}`);
-        dismissedPairs.add(`${d.song_id_b}::${d.song_id_a}`);
+    const dismissedPairs = new Set<string>();
+    if (decisions) {
+      for (const d of decisions) {
+        if (d.decision === "dismissed") {
+          // Store both orderings
+          dismissedPairs.add(`${d.song_id_a}::${d.song_id_b}`);
+          dismissedPairs.add(`${d.song_id_b}::${d.song_id_a}`);
+        }
       }
     }
+
+    // Filter out groups where all pairs have been dismissed
+    const filteredGroups = groups.filter((g) => {
+      if (g.songs.length !== 2) return true; // keep multi-member groups
+      const key = `${g.songs[0].id}::${g.songs[1].id}`;
+      return !dismissedPairs.has(key);
+    });
+
+    return NextResponse.json({
+      groups: filteredGroups,
+      junk,
+      stats: {
+        totalGroups: groups.length,
+        filteredGroups: filteredGroups.length,
+        dismissedCount: groups.length - filteredGroups.length,
+        junkCount: junk.length,
+      },
+    });
+  } catch (err) {
+    const message = err instanceof Error ? err.message : "Unknown error";
+    return NextResponse.json({ error: message }, { status: 500 });
   }
-
-  // Filter out groups where all pairs have been dismissed
-  const filteredGroups = groups.filter((g) => {
-    if (g.songs.length !== 2) return true; // keep multi-member groups
-    const key = `${g.songs[0].id}::${g.songs[1].id}`;
-    return !dismissedPairs.has(key);
-  });
-
-  return NextResponse.json({
-    groups: filteredGroups,
-    junk,
-    stats: {
-      totalGroups: groups.length,
-      filteredGroups: filteredGroups.length,
-      dismissedCount: groups.length - filteredGroups.length,
-      junkCount: junk.length,
-    },
-  });
 }
 
 /**
