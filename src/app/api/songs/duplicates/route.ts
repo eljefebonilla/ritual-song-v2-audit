@@ -15,7 +15,8 @@ const SONG_LIBRARY_PATH = path.join(process.cwd(), "src/data/song-library.json")
  */
 export async function GET() {
   try {
-    if (!(await verifyAdmin())) {
+    const isAdmin = await verifyAdmin();
+    if (!isAdmin) {
       return NextResponse.json({ error: "Admin access required" }, { status: 403 });
     }
 
@@ -24,6 +25,21 @@ export async function GET() {
     const junk = detectJunkEntries(songs);
 
     // Fetch dismissed pairs to filter them out
+    const url = process.env.NEXT_PUBLIC_SUPABASE_URL;
+    const key = process.env.SUPABASE_SERVICE_ROLE_KEY;
+    if (!url || !key) {
+      // Return results without Supabase filtering if env vars missing
+      return NextResponse.json({
+        groups,
+        junk,
+        stats: {
+          totalGroups: groups.length,
+          filteredGroups: groups.length,
+          dismissedCount: 0,
+          junkCount: junk.length,
+        },
+      });
+    }
     const supabase = createAdminClient();
     const { data: decisions } = await supabase
       .from("song_merge_decisions")
