@@ -104,12 +104,12 @@ function ResourceLink({
           onClick={() => openInPlayer("audio", url)}
           className="w-6 h-6 flex items-center justify-center rounded-full shrink-0 transition-all active:scale-95"
           style={{
-            background: "linear-gradient(145deg, #6B8FAD18, #6B8FAD08)",
-            border: "2px solid #6B8FAD",
-            boxShadow: "0 1px 4px #6B8FAD25",
+            background: "linear-gradient(145deg, #4CAF500a, transparent)",
+            border: "2px solid #4CAF50",
+            boxShadow: "0 1px 4px #4CAF5015",
           }}
         >
-          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#6B8FAD" strokeWidth="2.5" strokeLinejoin="round">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#4CAF50" strokeWidth="2.5" strokeLinejoin="round">
             <polygon points="5,3 19,12 5,21" />
           </svg>
         </button>

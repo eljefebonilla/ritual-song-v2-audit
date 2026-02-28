@@ -69,7 +69,7 @@ export default function MediaPlayer() {
   const isYouTube = current.type === "youtube";
   const youtubeId = isYouTube ? extractYouTubeId(current.url) : null;
   const progress = duration > 0 ? currentTime / duration : 0;
-  const accentColor = isYouTube ? "#E07A5F" : "#6B8FAD";
+  const accentColor = "#4CAF50";
 
   const audioControls = !isYouTube && (
     <div className="w-full space-y-2">
@@ -101,9 +101,13 @@ export default function MediaPlayer() {
       onClick={togglePlay}
       className="w-10 h-10 flex items-center justify-center rounded-full shrink-0 transition-all active:scale-95"
       style={{
-        background: `linear-gradient(145deg, ${accentColor}18, ${accentColor}08)`,
+        background: playing
+          ? `linear-gradient(145deg, ${accentColor}20, ${accentColor}10)`
+          : `linear-gradient(145deg, ${accentColor}0a, transparent)`,
         border: `2px solid ${accentColor}`,
-        boxShadow: `0 1px 4px ${accentColor}25`,
+        boxShadow: playing
+          ? `0 0 8px ${accentColor}30, 0 1px 4px ${accentColor}20`
+          : `0 1px 4px ${accentColor}15`,
       }}
     >
       {playing ? (
