@@ -69,7 +69,7 @@ export default function MediaPlayer() {
   const isYouTube = current.type === "youtube";
   const youtubeId = isYouTube ? extractYouTubeId(current.url) : null;
   const progress = duration > 0 ? currentTime / duration : 0;
-  const accentColor = isYouTube ? "#ef4444" : "#22c55e";
+  const accentColor = isYouTube ? "#E07A5F" : "#6B8FAD";
 
   const audioControls = !isYouTube && (
     <div className="w-full space-y-2">
@@ -99,15 +99,19 @@ export default function MediaPlayer() {
   const playPauseBtn = (
     <button
       onClick={togglePlay}
-      className="w-10 h-10 flex items-center justify-center rounded-full shrink-0 transition-colors"
-      style={{ backgroundColor: accentColor }}
+      className="w-10 h-10 flex items-center justify-center rounded-full shrink-0 transition-all active:scale-95"
+      style={{
+        background: `linear-gradient(145deg, ${accentColor}18, ${accentColor}08)`,
+        border: `2px solid ${accentColor}`,
+        boxShadow: `0 1px 4px ${accentColor}25`,
+      }}
     >
       {playing ? (
-        <svg width="14" height="14" viewBox="0 0 24 24" fill="white">
-          <rect x="6" y="4" width="4" height="16" /><rect x="14" y="4" width="4" height="16" />
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke={accentColor} strokeWidth="2.5">
+          <rect x="6" y="4" width="4" height="16" rx="1" /><rect x="14" y="4" width="4" height="16" rx="1" />
         </svg>
       ) : (
-        <svg width="14" height="14" viewBox="0 0 24 24" fill="white">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke={accentColor} strokeWidth="2.5" strokeLinejoin="round">
           <polygon points="6,3 20,12 6,21" />
         </svg>
       )}

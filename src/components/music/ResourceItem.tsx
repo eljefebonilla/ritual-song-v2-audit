@@ -31,11 +31,15 @@ export default function ResourceItem({
                 : "Antiphon",
             })
           }
-          className="w-6 h-6 flex items-center justify-center rounded-full shrink-0 hover:opacity-80 transition-opacity"
-          style={{ backgroundColor: "#22c55e" }}
+          className="w-6 h-6 flex items-center justify-center rounded-full shrink-0 transition-all active:scale-95"
+          style={{
+            background: "linear-gradient(145deg, #6B8FAD18, #6B8FAD08)",
+            border: "2px solid #6B8FAD",
+            boxShadow: "0 1px 4px #6B8FAD25",
+          }}
         >
-          <svg width="10" height="10" viewBox="0 0 24 24" fill="white">
-            <polygon points="5,3 19,12 5,21" />
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#6B8FAD" strokeWidth="2.5" strokeLinejoin="round">
+            <polygon points="6,3 20,12 6,21" />
           </svg>
         </button>
         <p className="text-xs font-medium text-stone-700 truncate">

@@ -56,16 +56,25 @@ export default function InteractiveSongSlot({
             {resolved.audioUrl && resolved.audioType && (
               <button
                 onClick={handleToggle}
-                className="flex items-center justify-center transition-colors"
+                className="w-6 h-6 flex items-center justify-center rounded-full transition-all active:scale-95"
                 title={isPlaying ? "Stop" : "Play"}
+                style={isPlaying ? {
+                  background: "linear-gradient(145deg, #E07A5F18, #E07A5F08)",
+                  border: "2px solid #E07A5F",
+                  boxShadow: "0 1px 4px #E07A5F25",
+                } : {
+                  background: "linear-gradient(145deg, #6B8FAD18, #6B8FAD08)",
+                  border: "2px solid #6B8FAD",
+                  boxShadow: "0 1px 4px #6B8FAD25",
+                }}
               >
                 {isPlaying ? (
-                  <svg width="14" height="14" viewBox="0 0 24 24" fill="#ef4444">
+                  <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="#E07A5F" strokeWidth="3">
                     <rect x="4" y="4" width="16" height="16" rx="2" />
                   </svg>
                 ) : (
-                  <svg width="14" height="14" viewBox="0 0 24 24" fill="#22c55e">
-                    <polygon points="5,3 19,12 5,21" />
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#6B8FAD" strokeWidth="2.5" strokeLinejoin="round">
+                    <polygon points="6,3 20,12 6,21" />
                   </svg>
                 )}
               </button>
