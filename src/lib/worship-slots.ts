@@ -56,9 +56,17 @@ export function planToSlots(
   // --- INTRODUCTORY RITES ---
   // Entrance antiphons
   const entranceAntiphons = antiphons?.filter((a) => a.type === "entrance") ?? [];
-  const entranceAntiphonResources = occasionResources?.filter(
+  const allAntiphonResources = occasionResources?.filter(
     (r) => r.category === "antiphon"
   ) ?? [];
+
+  // Split antiphon resources: "Entrance:" audio → entrance, "Communion:" audio → communion, PDFs → both
+  const entranceAntiphonResources = allAntiphonResources.filter(
+    (r) => r.type === "sheet_music" || /^entrance:/i.test(r.label)
+  );
+  const communionAntiphonResources = allAntiphonResources.filter(
+    (r) => r.type === "sheet_music" || /^communion:/i.test(r.label)
+  );
 
   if (entranceAntiphons.length > 0) {
     for (let i = 0; i < entranceAntiphons.length; i++) {
@@ -281,7 +289,7 @@ export function planToSlots(
     });
   }
 
-  // Communion antiphons
+  // Communion antiphons (at top of communion, before communion songs)
   const communionAntiphons = antiphons?.filter((a) => a.type === "communion") ?? [];
   if (communionAntiphons.length > 0) {
     for (let i = 0; i < communionAntiphons.length; i++) {
@@ -295,6 +303,9 @@ export function planToSlots(
         kind: "antiphon",
         order: euchOrder++,
         antiphon: communionAntiphons[i],
+        resources: i === 0 && communionAntiphonResources.length > 0
+          ? communionAntiphonResources
+          : undefined,
       });
     }
   }
