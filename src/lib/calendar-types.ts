@@ -21,6 +21,7 @@ export interface CalendarWeek {
 }
 
 export interface CalendarEvent {
+  id?: string;                // Supabase mass_event UUID (absent in static JSON)
   date: string;               // "2025-11-29" ISO date
   dayOfWeek: string;          // "Saturday"
   startTime: string | null;   // "17:30" 24h format or null for all-day

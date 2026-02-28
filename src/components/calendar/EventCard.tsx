@@ -1,8 +1,10 @@
 "use client";
 
+import { useState } from "react";
 import Link from "next/link";
 import type { CalendarEvent } from "@/lib/calendar-types";
 import { getCommunityColor } from "@/lib/calendar-utils";
+import MassComments from "@/components/comments/MassComments";
 
 interface EventCardProps {
   event: CalendarEvent;
@@ -12,8 +14,16 @@ interface EventCardProps {
 export default function EventCard({ event, isPast }: EventCardProps) {
   const communityStyle = getCommunityColor(event.community);
   const hasOccasionLink = event.occasionId && event.eventType === "mass";
+  const hasComments = !!event.id;
+  const [showComments, setShowComments] = useState(false);
 
-  const card = (
+  const handleCommentsClick = (e: React.MouseEvent) => {
+    e.preventDefault();
+    e.stopPropagation();
+    setShowComments(!showComments);
+  };
+
+  const cardContent = (
     <div
       className={`flex items-start gap-3 px-3 py-2 rounded-lg transition-colors group ${
         isPast
@@ -97,30 +107,70 @@ export default function EventCard({ event, isPast }: EventCardProps) {
         )}
       </div>
 
-      {/* Link indicator */}
-      {hasOccasionLink && (
-        <div className="shrink-0 opacity-0 group-hover:opacity-100 transition-opacity">
-          <svg
-            width="14"
-            height="14"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            strokeWidth="2"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            className="text-stone-400"
+      {/* Right side icons */}
+      <div className="flex items-center gap-1.5 shrink-0">
+        {/* Comments toggle */}
+        {hasComments && (
+          <button
+            onClick={handleCommentsClick}
+            className={`p-1 rounded transition-colors ${
+              showComments
+                ? "text-stone-700 bg-stone-100"
+                : "text-stone-300 hover:text-stone-500 opacity-0 group-hover:opacity-100"
+            }`}
+            title="Comments"
           >
-            <polyline points="9 18 15 12 9 6" />
-          </svg>
+            <svg
+              width="14"
+              height="14"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            >
+              <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" />
+            </svg>
+          </button>
+        )}
+
+        {/* Link indicator */}
+        {hasOccasionLink && (
+          <div className="opacity-0 group-hover:opacity-100 transition-opacity">
+            <svg
+              width="14"
+              height="14"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              className="text-stone-400"
+            >
+              <polyline points="9 18 15 12 9 6" />
+            </svg>
+          </div>
+        )}
+      </div>
+    </div>
+  );
+
+  return (
+    <div>
+      {hasOccasionLink ? (
+        <Link href={`/occasion/${event.occasionId}`}>{cardContent}</Link>
+      ) : (
+        cardContent
+      )}
+
+      {/* Inline comments */}
+      {showComments && event.id && (
+        <div className="ml-[6.5rem] mr-3 mb-2 pl-3 border-l-2 border-stone-200">
+          <MassComments massEventId={event.id} />
         </div>
       )}
     </div>
   );
-
-  if (hasOccasionLink) {
-    return <Link href={`/occasion/${event.occasionId}`}>{card}</Link>;
-  }
-
-  return card;
 }

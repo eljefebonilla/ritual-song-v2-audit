@@ -47,6 +47,7 @@ function buildCalendarFromRows(
     const week = weekMap.get(weekId)!;
 
     const event: CalendarEvent = {
+      id: (row.id as string) || undefined,
       date: (row.event_date as string) || "",
       dayOfWeek: (row.day_of_week as string) || "",
       startTime: (row.start_time as string) || null,
