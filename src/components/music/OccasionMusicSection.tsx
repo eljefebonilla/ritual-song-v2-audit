@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useMemo } from "react";
+import { useState, useMemo, useRef, useEffect, useCallback } from "react";
 import type {
   MusicPlan,
   Reading,
@@ -9,11 +9,10 @@ import type {
   ResolvedSong,
   LibrarySong,
 } from "@/lib/types";
-import { normalizeTitle, COMMUNITY_BADGES } from "@/lib/occasion-helpers";
+import { COMMUNITY_BADGES } from "@/lib/occasion-helpers";
 import { planToSlots } from "@/lib/worship-slots";
 import SlotList from "./SlotList";
 import SongDetailPanel from "@/components/library/SongDetailPanel";
-import OccasionResourcePanel from "./OccasionResourcePanel";
 
 interface OccasionMusicSectionProps {
   plans: MusicPlan[];
@@ -54,6 +53,11 @@ export default function OccasionMusicSection({
 
   const [activeIdx, setActiveIdx] = useState(0);
   const [selectedSongId, setSelectedSongId] = useState<string | null>(null);
+  const [panelOffset, setPanelOffset] = useState(0);
+
+  const containerRef = useRef<HTMLDivElement>(null);
+  const selectedRowRef = useRef<HTMLDivElement>(null);
+  const panelRef = useRef<HTMLDivElement>(null);
 
   const activePlan = sorted[activeIdx];
   if (!activePlan) return null;
@@ -66,7 +70,6 @@ export default function OccasionMusicSection({
     resolvedSongs,
   );
 
-  // Find the selected LibrarySong by ID
   const selectedSong = selectedSongId
     ? Object.values(librarySongs).find((s) => s.id === selectedSongId) ?? null
     : null;
@@ -74,6 +77,38 @@ export default function OccasionMusicSection({
   const handleSongSelect = (songId: string) => {
     setSelectedSongId((prev) => (prev === songId ? null : songId));
   };
+
+  // Measure and position the right panel centered on the selected row
+  const updatePanelPosition = useCallback(() => {
+    const container = containerRef.current;
+    const row = selectedRowRef.current;
+    const panel = panelRef.current;
+    if (!container || !row || !panel) {
+      setPanelOffset(0);
+      return;
+    }
+
+    const containerRect = container.getBoundingClientRect();
+    const rowRect = row.getBoundingClientRect();
+    const panelHeight = panel.offsetHeight;
+
+    // Row center relative to container top
+    const rowCenter = rowRect.top - containerRect.top + rowRect.height / 2;
+    // Desired offset: center panel on row
+    let offset = rowCenter - panelHeight / 2;
+    // Clamp: top = 0, bottom = container can't overflow
+    const maxOffset = container.offsetHeight - panelHeight;
+    offset = Math.max(0, Math.min(offset, maxOffset));
+
+    setPanelOffset(offset);
+  }, []);
+
+  useEffect(() => {
+    if (selectedSong) {
+      // Small delay to let panel render and get its height
+      requestAnimationFrame(updatePanelPosition);
+    }
+  }, [selectedSongId, selectedSong, updatePanelPosition]);
 
   return (
     <div className="mt-10">
@@ -83,7 +118,10 @@ export default function OccasionMusicSection({
 
       <div className="flex gap-0 items-start">
         {/* Left: Tabs + Slot List */}
-        <div className="border border-stone-200 rounded-lg overflow-hidden bg-white flex-1 min-w-0">
+        <div
+          ref={containerRef}
+          className="border border-stone-200 rounded-lg overflow-hidden bg-white flex-1 min-w-0"
+        >
           {/* Community Tabs */}
           <div className="flex border-b border-stone-200 bg-stone-50">
             {sorted.map((plan, i) => {
@@ -133,25 +171,33 @@ export default function OccasionMusicSection({
             seasonColor={seasonColor}
             selectedSongId={selectedSongId}
             onSongSelect={handleSongSelect}
+            selectedRowRef={selectedRowRef}
             presider={activePlan.presider}
             massNotes={activePlan.massNotes}
           />
         </div>
 
-        {/* Right panel: Song detail or Occasion resources */}
-        <div className="hidden md:block w-80 shrink-0">
-          {selectedSong ? (
-            <SongDetailPanel
-              song={selectedSong}
-              onClose={() => setSelectedSongId(null)}
-            />
-          ) : occasionResources && occasionResources.length > 0 ? (
-            <OccasionResourcePanel
-              resources={occasionResources}
-              seasonColor={seasonColor}
-            />
-          ) : null}
-        </div>
+        {/* Right panel: Song detail centered on selected row */}
+        {selectedSong && (
+          <div
+            className="hidden md:block w-80 shrink-0 transition-[margin] duration-200 ease-out"
+            style={{ marginTop: panelOffset }}
+          >
+            <div
+              ref={panelRef}
+              className="rounded-lg overflow-hidden"
+              style={{
+                border: "2px solid #4CAF50",
+                boxShadow: "0 0 12px #4CAF5020, 0 2px 8px #4CAF5015",
+              }}
+            >
+              <SongDetailPanel
+                song={selectedSong}
+                onClose={() => setSelectedSongId(null)}
+              />
+            </div>
+          </div>
+        )}
       </div>
 
       {/* Mobile: Song Detail as modal */}

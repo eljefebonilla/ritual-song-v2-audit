@@ -1,16 +1,18 @@
 "use client";
 
-import type { WorshipSlot } from "@/lib/types";
+import type { RefObject } from "react";
+import type { WorshipSlot, OccasionResource } from "@/lib/types";
 import { SECTION_LABELS } from "@/lib/worship-slots";
+import { useMedia } from "@/lib/media-context";
 import InteractiveSongSlot from "./InteractiveSongSlot";
 import SongSlot from "./SongSlot";
-import ResourceItem from "./ResourceItem";
 
 interface SlotListProps {
   slots: WorshipSlot[];
   seasonColor: string;
   selectedSongId?: string | null;
   onSongSelect?: (songId: string) => void;
+  selectedRowRef?: RefObject<HTMLDivElement | null>;
   presider?: string;
   massNotes?: string[];
 }
@@ -29,6 +31,59 @@ function SectionHeader({ title, color }: { title: string; color: string }) {
   );
 }
 
+/** Play button for the fixed-width column — used by antiphon/resource rows with audio */
+function SlotPlayButton({ resources }: { resources?: OccasionResource[] }) {
+  const { play, stop, current } = useMedia();
+  const audioResource = resources?.find((r) => r.type === "audio");
+  if (!audioResource) return null;
+
+  const url = `/api/music/${encodeURIComponent(audioResource.filePath)}`;
+  const isPlaying = current?.url === url;
+
+  const handleToggle = (e: React.MouseEvent) => {
+    e.stopPropagation();
+    if (isPlaying) {
+      stop();
+    } else {
+      play({
+        type: "audio",
+        url,
+        title: audioResource.label,
+        subtitle: audioResource.category === "gospel_acclamation"
+          ? "Gospel Acclamation"
+          : "Antiphon",
+      });
+    }
+  };
+
+  return (
+    <button
+      onClick={handleToggle}
+      className="w-6 h-6 flex items-center justify-center rounded-full transition-all active:scale-95"
+      title={isPlaying ? "Stop" : "Play"}
+      style={isPlaying ? {
+        background: "linear-gradient(145deg, #4CAF5020, #4CAF5010)",
+        border: "2px solid #4CAF50",
+        boxShadow: "0 0 8px #4CAF5030, 0 1px 4px #4CAF5020",
+      } : {
+        background: "linear-gradient(145deg, #4CAF500a, transparent)",
+        border: "2px solid #4CAF50",
+        boxShadow: "0 1px 4px #4CAF5015",
+      }}
+    >
+      {isPlaying ? (
+        <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="#4CAF50" strokeWidth="3">
+          <rect x="4" y="4" width="16" height="16" rx="2" />
+        </svg>
+      ) : (
+        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#4CAF50" strokeWidth="2.5" strokeLinejoin="round">
+          <polygon points="6,3 20,12 6,21" />
+        </svg>
+      )}
+    </button>
+  );
+}
+
 function ReadingRow({ slot }: { slot: WorshipSlot }) {
   if (!slot.reading) return null;
   const r = slot.reading;
@@ -37,7 +92,9 @@ function ReadingRow({ slot }: { slot: WorshipSlot }) {
       <span className="text-[10px] uppercase tracking-wider font-semibold text-stone-400 w-28 shrink-0 pt-0.5">
         {slot.label}
       </span>
-      <span className="w-7 shrink-0" />
+      <span className="w-7 shrink-0 flex items-start justify-center pt-0.5">
+        <SlotPlayButton resources={slot.resources} />
+      </span>
       <div className="min-w-0 flex-1">
         <p className="text-sm font-medium text-stone-700">{r.citation}</p>
         {r.summary && (
@@ -61,7 +118,9 @@ function AntiphonRow({ slot }: { slot: WorshipSlot }) {
       <span className="text-[10px] uppercase tracking-wider font-semibold text-stone-400 w-28 shrink-0 pt-0.5">
         {slot.label}
       </span>
-      <span className="w-7 shrink-0" />
+      <span className="w-7 shrink-0 flex items-start justify-center pt-0.5">
+        <SlotPlayButton resources={slot.resources} />
+      </span>
       <div className="min-w-0 flex-1">
         <p className="text-sm font-medium text-stone-700">{a.citation}</p>
         <p className="text-xs text-stone-500 italic mt-0.5">
@@ -79,7 +138,7 @@ function MassSettingRow({ slot }: { slot: WorshipSlot }) {
       <span className="text-[10px] uppercase tracking-wider font-semibold text-stone-400 w-28 shrink-0 pt-0.5">
         {slot.label}
       </span>
-      <span className="w-7 shrink-0" />
+      <span className="w-7 shrink-0 flex items-start justify-center pt-0.5" />
       <div>
         <p className="text-sm font-medium text-stone-800">
           {slot.massSetting.name}
@@ -94,20 +153,21 @@ function MassSettingRow({ slot }: { slot: WorshipSlot }) {
   );
 }
 
-function InlineResources({
-  slot,
-  seasonColor,
-}: {
-  slot: WorshipSlot;
-  seasonColor: string;
-}) {
-  if (!slot.resources || slot.resources.length === 0) return null;
+function ResourceRow({ slot }: { slot: WorshipSlot }) {
   return (
-    <div className="px-3 pb-2 pl-[9.75rem]">
-      <div className="flex flex-wrap gap-1.5">
-        {slot.resources.map((r) => (
-          <ResourceItem key={r.id} resource={r} seasonColor={seasonColor} />
-        ))}
+    <div className="flex items-start gap-3 py-2 px-3">
+      <span className="text-[10px] uppercase tracking-wider font-semibold text-stone-400 w-28 shrink-0 pt-0.5">
+        {slot.label}
+      </span>
+      <span className="w-7 shrink-0 flex items-start justify-center pt-0.5">
+        <SlotPlayButton resources={slot.resources} />
+      </span>
+      <div className="min-w-0 flex-1">
+        {slot.reading && (
+          <p className="text-sm font-medium text-stone-700">
+            {slot.reading.citation}
+          </p>
+        )}
       </div>
     </div>
   );
@@ -115,14 +175,14 @@ function InlineResources({
 
 function SongSlotRow({
   slot,
-  seasonColor,
   selectedSongId,
   onSongSelect,
+  selectedRowRef,
 }: {
   slot: WorshipSlot;
-  seasonColor: string;
   selectedSongId?: string | null;
   onSongSelect?: (songId: string) => void;
+  selectedRowRef?: RefObject<HTMLDivElement | null>;
 }) {
   if (!slot.song) return null;
 
@@ -135,6 +195,7 @@ function SongSlotRow({
         resolved={slot.resolvedSong}
         isSelected={isSelected}
         onSelect={onSongSelect ? () => onSongSelect(slot.resolvedSong!.id) : undefined}
+        rowRef={isSelected ? selectedRowRef : undefined}
       />
     );
   }
@@ -147,6 +208,7 @@ export default function SlotList({
   seasonColor,
   selectedSongId,
   onSongSelect,
+  selectedRowRef,
   presider,
   massNotes,
 }: SlotListProps) {
@@ -202,49 +264,19 @@ export default function SlotList({
                     <SongSlotRow
                       key={slot.id}
                       slot={slot}
-                      seasonColor={seasonColor}
                       selectedSongId={selectedSongId}
                       onSongSelect={onSongSelect}
+                      selectedRowRef={selectedRowRef}
                     />
                   );
                 case "reading":
                   return <ReadingRow key={slot.id} slot={slot} />;
                 case "antiphon":
-                  return (
-                    <div key={slot.id}>
-                      <AntiphonRow slot={slot} />
-                      <InlineResources slot={slot} seasonColor={seasonColor} />
-                    </div>
-                  );
+                  return <AntiphonRow key={slot.id} slot={slot} />;
                 case "mass_setting":
                   return <MassSettingRow key={slot.id} slot={slot} />;
                 case "resource":
-                  return (
-                    <div key={slot.id} className="px-3 py-2">
-                      {slot.reading && (
-                        <div className="flex items-start gap-3 mb-2">
-                          <span className="text-[10px] uppercase tracking-wider font-semibold text-stone-400 w-28 shrink-0 pt-0.5">
-                            {slot.label}
-                          </span>
-                          <span className="w-7 shrink-0" />
-                          <p className="text-sm font-medium text-stone-700">
-                            {slot.reading.citation}
-                          </p>
-                        </div>
-                      )}
-                      {slot.resources && (
-                        <div className="flex flex-wrap gap-1.5 pl-[9.75rem]">
-                          {slot.resources.map((r) => (
-                            <ResourceItem
-                              key={r.id}
-                              resource={r}
-                              seasonColor={seasonColor}
-                            />
-                          ))}
-                        </div>
-                      )}
-                    </div>
-                  );
+                  return <ResourceRow key={slot.id} slot={slot} />;
                 default:
                   return null;
               }

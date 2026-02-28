@@ -13,7 +13,7 @@ export default function SongSlot({ label, song }: SongSlotProps) {
         {label}
       </span>
       {/* Empty play button column to align titles */}
-      <span className="w-7 shrink-0" />
+      <span className="w-7 shrink-0 flex items-start justify-center pt-0.5" />
       {song ? (
         <div className="min-w-0">
           <p className="text-sm font-medium text-stone-800 leading-snug">
