@@ -15,6 +15,7 @@ import Link from "next/link";
 interface SongDetailPanelProps {
   song: LibrarySong;
   onClose: () => void;
+  onAudioUploaded?: (songId: string, url: string) => void;
 }
 
 const RESOURCE_TYPE_LABELS: Record<SongResourceType, string> = {
@@ -285,9 +286,17 @@ function TypeIcon({ type }: { type: SongResourceType }) {
   }
 }
 
+function getLastName(composer: string | undefined): string {
+  if (!composer) return "";
+  const first = composer.split(/[\/&,]/).map((s) => s.trim())[0];
+  const parts = first.split(/\s+/);
+  return parts[parts.length - 1];
+}
+
 export default function SongDetailPanel({
   song,
   onClose,
+  onAudioUploaded,
 }: SongDetailPanelProps) {
   const router = useRouter();
   const { role } = useUser();
@@ -453,15 +462,27 @@ export default function SongDetailPanel({
   const handleFileSelected = (file: File) => {
     setUploadFile(file);
     const ext = file.name.split(".").pop()?.toLowerCase();
+    let detectedType: SongResourceType = "other";
+    let suffix = "";
+
     if (ext === "pdf" || ext === "png" || ext === "jpg" || ext === "jpeg") {
-      setNewType("sheet_music");
+      detectedType = "sheet_music";
     } else if (["mp3", "wav", "m4a", "aif", "aiff"].includes(ext || "")) {
-      setNewType("audio");
+      detectedType = "audio";
     } else if (["musx", "mxl", "musicxml"].includes(ext || "")) {
-      setNewType("notation");
+      detectedType = "notation";
+      suffix = " - Notation";
     } else if (ext === "txt") {
-      setNewType("lyrics");
+      detectedType = "lyrics";
+      suffix = " - Lyrics";
     }
+
+    setNewType(detectedType);
+
+    // Auto-fill label: "Title (LastName)" + optional suffix
+    const lastName = getLastName(song.composer);
+    const base = `${song.title}${lastName ? ` (${lastName})` : ""}`;
+    setNewLabel(`${base}${suffix}`);
   };
 
   const handleUploadFile = async () => {
@@ -486,6 +507,14 @@ export default function SongDetailPanel({
           if (prev.some((r) => r.id === data.resource.id)) return prev;
           return [...prev, data.resource];
         });
+        // Signal audio upload so play button appears in Order of Worship
+        if (
+          (newType === "audio" || newType === "practice_track") &&
+          data.resource.url &&
+          onAudioUploaded
+        ) {
+          onAudioUploaded(song.id, data.resource.url);
+        }
         setAddingResource(false);
         setNewLabel("");
         setUploadFile(null);
@@ -834,6 +863,18 @@ export default function SongDetailPanel({
                           <p className="text-xs text-stone-500">Drop file here or click to browse</p>
                           <p className="text-[10px] text-stone-400">PDF, audio, images, notation</p>
                         </div>
+                      )}
+                      {/* Type selector */}
+                      {uploadFile && (
+                        <select
+                          value={newType}
+                          onChange={(e) => setNewType(e.target.value as SongResourceType)}
+                          className="w-full text-xs border border-stone-200 rounded-md px-2 py-1.5"
+                        >
+                          {Object.entries(RESOURCE_TYPE_LABELS).map(([k, v]) => (
+                            <option key={k} value={k}>{v}</option>
+                          ))}
+                        </select>
                       )}
                       <input
                         type="text"

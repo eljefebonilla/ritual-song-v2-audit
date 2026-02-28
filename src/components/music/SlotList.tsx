@@ -13,6 +13,7 @@ interface SlotListProps {
   selectedSongId?: string | null;
   onSongSelect?: (songId: string) => void;
   selectedRowRef?: RefObject<HTMLDivElement | null>;
+  audioOverrides?: Record<string, string>;
   presider?: string;
   massNotes?: string[];
 }
@@ -178,21 +179,27 @@ function SongSlotRow({
   selectedSongId,
   onSongSelect,
   selectedRowRef,
+  audioOverrides,
 }: {
   slot: WorshipSlot;
   selectedSongId?: string | null;
   onSongSelect?: (songId: string) => void;
   selectedRowRef?: RefObject<HTMLDivElement | null>;
+  audioOverrides?: Record<string, string>;
 }) {
   if (!slot.song) return null;
 
   if (slot.resolvedSong) {
     const isSelected = selectedSongId === slot.resolvedSong.id;
+    const overrideUrl = audioOverrides?.[slot.resolvedSong.id];
+    const resolved = overrideUrl
+      ? { ...slot.resolvedSong, audioUrl: overrideUrl, audioType: "audio" as const }
+      : slot.resolvedSong;
     return (
       <InteractiveSongSlot
         label={slot.label}
         song={slot.song}
-        resolved={slot.resolvedSong}
+        resolved={resolved}
         isSelected={isSelected}
         onSelect={onSongSelect ? () => onSongSelect(slot.resolvedSong!.id) : undefined}
         rowRef={isSelected ? selectedRowRef : undefined}
@@ -209,6 +216,7 @@ export default function SlotList({
   selectedSongId,
   onSongSelect,
   selectedRowRef,
+  audioOverrides,
   presider,
   massNotes,
 }: SlotListProps) {
@@ -267,6 +275,7 @@ export default function SlotList({
                       selectedSongId={selectedSongId}
                       onSongSelect={onSongSelect}
                       selectedRowRef={selectedRowRef}
+                      audioOverrides={audioOverrides}
                     />
                   );
                 case "reading":

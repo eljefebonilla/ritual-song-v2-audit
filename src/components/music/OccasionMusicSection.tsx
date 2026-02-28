@@ -54,6 +54,7 @@ export default function OccasionMusicSection({
   const [activeIdx, setActiveIdx] = useState(0);
   const [selectedSongId, setSelectedSongId] = useState<string | null>(null);
   const [panelOffset, setPanelOffset] = useState(0);
+  const [audioOverrides, setAudioOverrides] = useState<Record<string, string>>({});
 
   const containerRef = useRef<HTMLDivElement>(null);
   const selectedRowRef = useRef<HTMLDivElement>(null);
@@ -77,6 +78,10 @@ export default function OccasionMusicSection({
   const handleSongSelect = (songId: string) => {
     setSelectedSongId((prev) => (prev === songId ? null : songId));
   };
+
+  const handleAudioUploaded = useCallback((songId: string, url: string) => {
+    setAudioOverrides((prev) => ({ ...prev, [songId]: url }));
+  }, []);
 
   // Measure and position the right panel centered on the selected row
   const updatePanelPosition = useCallback(() => {
@@ -172,6 +177,7 @@ export default function OccasionMusicSection({
             selectedSongId={selectedSongId}
             onSongSelect={handleSongSelect}
             selectedRowRef={selectedRowRef}
+            audioOverrides={audioOverrides}
             presider={activePlan.presider}
             massNotes={activePlan.massNotes}
           />
@@ -194,6 +200,7 @@ export default function OccasionMusicSection({
               <SongDetailPanel
                 song={selectedSong}
                 onClose={() => setSelectedSongId(null)}
+                onAudioUploaded={handleAudioUploaded}
               />
             </div>
           </div>
