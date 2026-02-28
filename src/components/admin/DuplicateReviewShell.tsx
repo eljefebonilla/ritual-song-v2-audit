@@ -2,6 +2,7 @@
 
 import { useState, useMemo } from "react";
 import type { DuplicateGroup, DuplicateConfidence, JunkEntry } from "@/lib/duplicate-detection";
+import { COMMUNITY_BADGES } from "@/lib/occasion-helpers";
 
 type TabId = "high" | "medium" | "low" | "junk";
 
@@ -22,6 +23,7 @@ export default function DuplicateReviewShell({ groups: initialGroups, junk: init
   const [junk, setJunk] = useState(initialJunk);
   const [activeTab, setActiveTab] = useState<TabId>("high");
   const [expandedGroup, setExpandedGroup] = useState<string | null>(null);
+  const [selectedIds, setSelectedIds] = useState<string[]>([]);
   const [merging, setMerging] = useState<string | null>(null);
   const [dismissing, setDismissing] = useState<string | null>(null);
   const [deleting, setDeleting] = useState<string | null>(null);
@@ -38,21 +40,79 @@ export default function DuplicateReviewShell({ groups: initialGroups, junk: init
     [groups, activeTab]
   );
 
-  async function handleMerge(group: DuplicateGroup, primaryId: string) {
-    const secondary = group.songs.find((s) => s.id !== primaryId);
-    if (!secondary) return;
+  function toggleSelected(songId: string) {
+    setSelectedIds((prev) =>
+      prev.includes(songId) ? prev.filter((id) => id !== songId) : [...prev, songId]
+    );
+  }
 
+  async function handleMerge(group: DuplicateGroup, primaryId: string, secondaryId: string) {
     setMerging(group.normalizedTitle);
     try {
       const res = await fetch("/api/songs/duplicates", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ primaryId, secondaryId: secondary.id }),
+        body: JSON.stringify({ primaryId, secondaryId }),
       });
-      if (res.ok) {
+      if (!res.ok) return;
+      setGroups((prev) => prev.filter((g) => g.normalizedTitle !== group.normalizedTitle));
+      setExpandedGroup(null);
+    } finally {
+      setMerging(null);
+    }
+  }
+
+  async function handleClusterMerge(group: DuplicateGroup, keeperKey: string) {
+    const keeper = group.songs.find((s) => s._key === keeperKey)!;
+    const keeperId = keeper.id;
+    // Resolve selected _keys to unique song IDs, excluding the keeper
+    const secondarySongIds = [
+      ...new Set(
+        selectedIds
+          .filter((key) => key !== keeperKey)
+          .map((key) => group.songs.find((s) => s._key === key)!.id)
+          .filter((id) => id !== keeperId)
+      ),
+    ];
+    if (secondarySongIds.length === 0) return;
+
+    setMerging(group.normalizedTitle);
+    try {
+      let latestMerged: { resources: { id: string }[]; usageCount: number } | null = null;
+      for (const secondaryId of secondarySongIds) {
+        const res = await fetch("/api/songs/duplicates", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ primaryId: keeperId, secondaryId }),
+        });
+        if (!res.ok) return;
+        const data = await res.json();
+        latestMerged = data.merged;
+      }
+
+      // Remove all entries whose song ID was merged (including split siblings)
+      const mergedIdSet = new Set(secondarySongIds);
+      const remaining = group.songs.filter((s) => !mergedIdSet.has(s.id));
+
+      if (remaining.length <= 1) {
         setGroups((prev) => prev.filter((g) => g.normalizedTitle !== group.normalizedTitle));
         setExpandedGroup(null);
+      } else {
+        setGroups((prev) =>
+          prev.map((g) => {
+            if (g.normalizedTitle !== group.normalizedTitle) return g;
+            return {
+              ...g,
+              songs: remaining.map((s) =>
+                s.id === keeperId && latestMerged
+                  ? { ...s, resourceCount: latestMerged.resources.length, usageCount: latestMerged.usageCount }
+                  : s
+              ),
+            };
+          })
+        );
       }
+      setSelectedIds([]);
     } finally {
       setMerging(null);
     }
@@ -131,7 +191,10 @@ export default function DuplicateReviewShell({ groups: initialGroups, junk: init
               >
                 {/* Group header */}
                 <button
-                  onClick={() => setExpandedGroup(isExpanded ? null : group.normalizedTitle)}
+                  onClick={() => {
+                    setExpandedGroup(isExpanded ? null : group.normalizedTitle);
+                    setSelectedIds([]);
+                  }}
                   className="w-full flex items-center justify-between px-4 py-3 hover:bg-stone-50 transition-colors text-left"
                 >
                   <div className="flex items-center gap-3 min-w-0">
@@ -158,32 +221,110 @@ export default function DuplicateReviewShell({ groups: initialGroups, junk: init
                 {/* Expanded detail */}
                 {isExpanded && (
                   <div className="border-t border-stone-100 px-4 py-3">
+                    {/* Instruction for 3+ groups */}
+                    {group.songs.length > 2 && (
+                      <p className="text-xs text-stone-400 mb-2">
+                        {selectedIds.length < 2
+                          ? "Check the entries that are the same arrangement, then pick which to keep."
+                          : `${selectedIds.length} selected \u2014 now click "Keep This One" on the entry you want to keep.`}
+                      </p>
+                    )}
+
                     <div className="grid gap-2 sm:grid-cols-2">
-                      {group.songs.map((song) => (
-                        <div
-                          key={song.id}
-                          className="border border-stone-200 rounded-md p-3 bg-stone-50"
-                        >
-                          <p className="text-sm font-medium text-stone-900">{song.title}</p>
-                          <p className="text-xs text-stone-500 mt-0.5">
-                            {song.composer || "No composer"}
-                          </p>
-                          <div className="flex gap-3 mt-2 text-xs text-stone-400">
-                            <span>{song.resourceCount} resources</span>
-                            <span>Used {song.usageCount}x</span>
+                      {group.songs.map((song) => {
+                        const isSelected = selectedIds.includes(song._key);
+
+                        return (
+                          <div
+                            key={song._key}
+                            className={`border rounded-md p-3 ${
+                              isSelected
+                                ? "border-blue-400 bg-blue-50"
+                                : "border-stone-200 bg-stone-50"
+                            }`}
+                          >
+                            <p className="text-sm font-medium text-stone-900">{song.title}</p>
+                            <p className="text-xs text-stone-500 mt-0.5">
+                              {song.composer || "No composer"}
+                            </p>
+                            <div className="flex items-center gap-3 mt-2 text-xs text-stone-400">
+                              <span>{song.resourceCount} resources</span>
+                              {Object.keys(song.communityUsage).length > 0 ? (
+                                <div className="flex gap-1 flex-wrap">
+                                  {Object.entries(song.communityUsage)
+                                    .sort(([, a], [, b]) => b - a)
+                                    .map(([communityId, count]) => {
+                                      const badge = COMMUNITY_BADGES[communityId];
+                                      if (!badge) return null;
+                                      return (
+                                        <span
+                                          key={communityId}
+                                          className="inline-flex items-center gap-0.5 px-1.5 py-0.5 rounded text-[10px] font-semibold"
+                                          style={{ backgroundColor: badge.bg, color: badge.text }}
+                                        >
+                                          {badge.letter} {count}x
+                                        </span>
+                                      );
+                                    })}
+                                </div>
+                              ) : (
+                                <span>Used {song.usageCount}x</span>
+                              )}
+                            </div>
+
+                            {/* 2-entry groups: direct merge */}
+                            {group.songs.length === 2 && (
+                              <button
+                                disabled={isMerging}
+                                onClick={() => {
+                                  const other = group.songs.find((s) => s._key !== song._key)!;
+                                  handleMerge(group, song.id, other.id);
+                                }}
+                                className="mt-2 px-3 py-1 text-xs font-medium text-white bg-stone-900 rounded hover:bg-stone-800 disabled:opacity-50"
+                              >
+                                {isMerging ? "Merging..." : "Keep This One"}
+                              </button>
+                            )}
+
+                            {/* 3+ entry groups: checkbox + conditional Keep button */}
+                            {group.songs.length > 2 && (
+                              <div className="flex items-center gap-2 mt-2">
+                                <label className="flex items-center gap-1.5 cursor-pointer">
+                                  <input
+                                    type="checkbox"
+                                    checked={isSelected}
+                                    onChange={() => toggleSelected(song._key)}
+                                    className="rounded border-stone-300 text-blue-600 focus:ring-blue-500"
+                                  />
+                                  <span className="text-xs text-stone-500">Same arrangement</span>
+                                </label>
+                                {isSelected && selectedIds.length >= 2 && (
+                                  <button
+                                    disabled={isMerging}
+                                    onClick={() => handleClusterMerge(group, song._key)}
+                                    className="ml-auto px-3 py-1 text-xs font-medium text-white bg-stone-900 rounded hover:bg-stone-800 disabled:opacity-50"
+                                  >
+                                    {isMerging ? "Merging..." : "Keep This One"}
+                                  </button>
+                                )}
+                              </div>
+                            )}
                           </div>
-                          {group.songs.length === 2 && (
-                            <button
-                              disabled={isMerging}
-                              onClick={() => handleMerge(group, song.id)}
-                              className="mt-2 px-3 py-1 text-xs font-medium text-white bg-stone-900 rounded hover:bg-stone-800 disabled:opacity-50"
-                            >
-                              {isMerging ? "Merging..." : "Keep This One"}
-                            </button>
-                          )}
-                        </div>
-                      ))}
+                        );
+                      })}
                     </div>
+
+                    {/* Clear selection link for 3+ groups */}
+                    {group.songs.length > 2 && selectedIds.length > 0 && (
+                      <div className="mt-2">
+                        <button
+                          onClick={() => setSelectedIds([])}
+                          className="text-xs text-stone-400 hover:text-stone-600"
+                        >
+                          Clear selection
+                        </button>
+                      </div>
+                    )}
 
                     <div className="flex justify-end mt-3 pt-3 border-t border-stone-100">
                       <button

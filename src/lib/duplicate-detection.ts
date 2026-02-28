@@ -10,10 +10,12 @@ export interface DuplicateGroup {
   confidence: DuplicateConfidence;
   songs: {
     id: string;
+    _key: string;
     title: string;
     composer: string | null;
     resourceCount: number;
     usageCount: number;
+    communityUsage: Record<string, number>;
   }[];
 }
 
@@ -55,10 +57,12 @@ export function detectDuplicateGroups(songs: LibrarySong[]): DuplicateGroup[] {
       confidence,
       songs: members.map((s) => ({
         id: s.id,
+        _key: s.id,
         title: s.title,
         composer: s.composer || null,
         resourceCount: s.resources.length,
         usageCount: s.usageCount,
+        communityUsage: {},
       })),
     });
   }
