@@ -13,6 +13,7 @@ import { normalizeTitle, COMMUNITY_BADGES } from "@/lib/occasion-helpers";
 import { planToSlots } from "@/lib/worship-slots";
 import SlotList from "./SlotList";
 import SongDetailPanel from "@/components/library/SongDetailPanel";
+import OccasionResourcePanel from "./OccasionResourcePanel";
 
 interface OccasionMusicSectionProps {
   plans: MusicPlan[];
@@ -82,9 +83,7 @@ export default function OccasionMusicSection({
 
       <div className="flex gap-0 items-start">
         {/* Left: Tabs + Slot List */}
-        <div className={`border border-stone-200 rounded-lg overflow-hidden bg-white ${
-          selectedSong ? "flex-1 min-w-0" : "w-full"
-        }`}>
+        <div className="border border-stone-200 rounded-lg overflow-hidden bg-white flex-1 min-w-0">
           {/* Community Tabs */}
           <div className="flex border-b border-stone-200 bg-stone-50">
             {sorted.map((plan, i) => {
@@ -139,15 +138,20 @@ export default function OccasionMusicSection({
           />
         </div>
 
-        {/* Right: Song Detail Panel */}
-        {selectedSong && (
-          <div className="hidden md:block w-80 shrink-0">
+        {/* Right panel: Song detail or Occasion resources */}
+        <div className="hidden md:block w-80 shrink-0">
+          {selectedSong ? (
             <SongDetailPanel
               song={selectedSong}
               onClose={() => setSelectedSongId(null)}
             />
-          </div>
-        )}
+          ) : occasionResources && occasionResources.length > 0 ? (
+            <OccasionResourcePanel
+              resources={occasionResources}
+              seasonColor={seasonColor}
+            />
+          ) : null}
+        </div>
       </div>
 
       {/* Mobile: Song Detail as modal */}

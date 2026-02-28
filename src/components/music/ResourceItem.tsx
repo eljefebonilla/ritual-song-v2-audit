@@ -31,9 +31,10 @@ export default function ResourceItem({
                 : "Antiphon",
             })
           }
-          className="w-6 h-6 flex items-center justify-center rounded-full bg-stone-800 text-white hover:bg-stone-700 shrink-0"
+          className="w-6 h-6 flex items-center justify-center rounded-full shrink-0 hover:opacity-80 transition-opacity"
+          style={{ backgroundColor: "#22c55e" }}
         >
-          <svg width="10" height="10" viewBox="0 0 24 24" fill="currentColor">
+          <svg width="10" height="10" viewBox="0 0 24 24" fill="white">
             <polygon points="5,3 19,12 5,21" />
           </svg>
         </button>

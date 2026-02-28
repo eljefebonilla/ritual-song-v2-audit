@@ -69,6 +69,7 @@ export default function MediaPlayer() {
   const isYouTube = current.type === "youtube";
   const youtubeId = isYouTube ? extractYouTubeId(current.url) : null;
   const progress = duration > 0 ? currentTime / duration : 0;
+  const accentColor = isYouTube ? "#ef4444" : "#22c55e";
 
   const audioControls = !isYouTube && (
     <div className="w-full space-y-2">
@@ -78,10 +79,13 @@ export default function MediaPlayer() {
         onClick={handleScrub}
       >
         <div
-          className="h-full bg-stone-600 rounded-full relative transition-[width] duration-100"
-          style={{ width: `${progress * 100}%` }}
+          className="h-full rounded-full relative transition-[width] duration-100"
+          style={{ width: `${progress * 100}%`, backgroundColor: accentColor }}
         >
-          <div className="absolute right-0 top-1/2 -translate-y-1/2 w-3 h-3 bg-stone-700 rounded-full opacity-0 group-hover:opacity-100 transition-opacity" />
+          <div
+            className="absolute right-0 top-1/2 -translate-y-1/2 w-3 h-3 rounded-full opacity-0 group-hover:opacity-100 transition-opacity"
+            style={{ backgroundColor: accentColor }}
+          />
         </div>
       </div>
       {/* Time */}
@@ -95,14 +99,15 @@ export default function MediaPlayer() {
   const playPauseBtn = (
     <button
       onClick={togglePlay}
-      className="w-10 h-10 flex items-center justify-center rounded-full bg-stone-900 text-white hover:bg-stone-800 shrink-0 transition-colors"
+      className="w-10 h-10 flex items-center justify-center rounded-full shrink-0 transition-colors"
+      style={{ backgroundColor: accentColor }}
     >
       {playing ? (
-        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="white">
           <rect x="6" y="4" width="4" height="16" /><rect x="14" y="4" width="4" height="16" />
         </svg>
       ) : (
-        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="white">
           <polygon points="6,3 20,12 6,21" />
         </svg>
       )}
