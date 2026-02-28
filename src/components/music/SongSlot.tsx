@@ -12,8 +12,8 @@ export default function SongSlot({ label, song }: SongSlotProps) {
       <span className="text-[10px] uppercase tracking-wider font-semibold text-stone-400 w-28 shrink-0 pt-0.5">
         {label}
       </span>
-      {/* Empty bullet column to align with InteractiveSongSlot */}
-      <span className="w-3 shrink-0" />
+      {/* Empty play button column to align titles */}
+      <span className="w-7 shrink-0" />
       {song ? (
         <div className="min-w-0">
           <p className="text-sm font-medium text-stone-800 leading-snug">

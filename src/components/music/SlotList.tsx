@@ -37,6 +37,7 @@ function ReadingRow({ slot }: { slot: WorshipSlot }) {
       <span className="text-[10px] uppercase tracking-wider font-semibold text-stone-400 w-28 shrink-0 pt-0.5">
         {slot.label}
       </span>
+      <span className="w-7 shrink-0" />
       <div className="min-w-0 flex-1">
         <p className="text-sm font-medium text-stone-700">{r.citation}</p>
         {r.summary && (
@@ -60,6 +61,7 @@ function AntiphonRow({ slot }: { slot: WorshipSlot }) {
       <span className="text-[10px] uppercase tracking-wider font-semibold text-stone-400 w-28 shrink-0 pt-0.5">
         {slot.label}
       </span>
+      <span className="w-7 shrink-0" />
       <div className="min-w-0 flex-1">
         <p className="text-sm font-medium text-stone-700">{a.citation}</p>
         <p className="text-xs text-stone-500 italic mt-0.5">
@@ -77,6 +79,7 @@ function MassSettingRow({ slot }: { slot: WorshipSlot }) {
       <span className="text-[10px] uppercase tracking-wider font-semibold text-stone-400 w-28 shrink-0 pt-0.5">
         {slot.label}
       </span>
+      <span className="w-7 shrink-0" />
       <div>
         <p className="text-sm font-medium text-stone-800">
           {slot.massSetting.name}
@@ -100,7 +103,7 @@ function InlineResources({
 }) {
   if (!slot.resources || slot.resources.length === 0) return null;
   return (
-    <div className="px-3 pb-2 pl-[7.75rem]">
+    <div className="px-3 pb-2 pl-[9.75rem]">
       <div className="flex flex-wrap gap-1.5">
         {slot.resources.map((r) => (
           <ResourceItem key={r.id} resource={r} seasonColor={seasonColor} />
@@ -223,13 +226,14 @@ export default function SlotList({
                           <span className="text-[10px] uppercase tracking-wider font-semibold text-stone-400 w-28 shrink-0 pt-0.5">
                             {slot.label}
                           </span>
+                          <span className="w-7 shrink-0" />
                           <p className="text-sm font-medium text-stone-700">
                             {slot.reading.citation}
                           </p>
                         </div>
                       )}
                       {slot.resources && (
-                        <div className="flex flex-wrap gap-1.5 pl-[7.75rem]">
+                        <div className="flex flex-wrap gap-1.5 pl-[9.75rem]">
                           {slot.resources.map((r) => (
                             <ResourceItem
                               key={r.id}
