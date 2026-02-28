@@ -419,5 +419,39 @@
         "description": "Somber Recessional"
       }
     }
+  ],
+  "occasionResources": [
+    {
+      "id": "psalms--psalms-lent-len-palm-sundayc-gospel-acclamations-len-palm-sunday-c-gospelacc-al",
+      "type": "sheet_music",
+      "label": "Gospel Acclamation (Alonso)",
+      "filePath": "_psalms/Lent/Len-Palm-SundayC/Gospel Acclamations/Len-Palm-Sunday-C_GospelAcc_Alonso.pdf",
+      "source": "local",
+      "category": "gospel_acclamation"
+    },
+    {
+      "id": "psalms--psalms-lent-len-palm-sundayc-gospel-acclamations-len-palm-sunday-c-thursday-of-",
+      "type": "sheet_music",
+      "label": "Gospel Acclamation (Alonso)",
+      "filePath": "_psalms/Lent/Len-Palm-SundayC/Gospel Acclamations/Len-Palm-Sunday-C_Thursday-Of-The-Lord’S-Supper_GospelAcc_Alonso.pdf",
+      "source": "local",
+      "category": "gospel_acclamation"
+    },
+    {
+      "id": "psalms--psalms-lent-len-palm-sundayc-gospel-acclamations-len-palm-sundayc-gospel-acclam",
+      "type": "sheet_music",
+      "label": "Gospel Acclamation - Spirit & Psalm (Hart)",
+      "filePath": "_psalms/Lent/Len-Palm-SundayC/Gospel Acclamations/Len-Palm-SundayC_Gospel-Acclamation_Spirit&Psalm2025_Hart.pdf",
+      "source": "local",
+      "category": "gospel_acclamation"
+    },
+    {
+      "id": "psalms--psalms-lent-len-palm-sundayc-antiphons-len-palm-sundayc-antiphons-rejoice-pdf",
+      "type": "sheet_music",
+      "label": "REJOICE Antiphons",
+      "filePath": "_psalms/Lent/Len-Palm-SundayC/Antiphons/Len-Palm-SundayC_Antiphons_REJOICE.pdf",
+      "source": "local",
+      "category": "antiphon"
+    }
   ]
 }

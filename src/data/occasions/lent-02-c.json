@@ -397,5 +397,63 @@
         "description": "Transfiguration!"
       }
     }
+  ],
+  "occasionResources": [
+    {
+      "id": "psalms--psalms-lent-len-02c-gospel-acclamations-lent-2abc-mp3",
+      "type": "audio",
+      "label": "Gospel Acclamation",
+      "filePath": "_psalms/Lent/Len-02C/Gospel Acclamations/LENT_2ABC.mp3",
+      "source": "local",
+      "category": "gospel_acclamation"
+    },
+    {
+      "id": "psalms--psalms-lent-len-02c-gospel-acclamations-len-02c-gospel-acclamation-spirit-psalm",
+      "type": "sheet_music",
+      "label": "Gospel Acclamation - Spirit & Psalm (Blakesley)",
+      "filePath": "_psalms/Lent/Len-02C/Gospel Acclamations/Len-02C_Gospel-Acclamation_Spirit&Psalm2025_Blakesley.pdf",
+      "source": "local",
+      "category": "gospel_acclamation"
+    },
+    {
+      "id": "psalms--psalms-lent-len-02c-gospel-acclamations-len-02c-gospelacc-alonso-pdf",
+      "type": "sheet_music",
+      "label": "Gospel Acclamation (Alonso)",
+      "filePath": "_psalms/Lent/Len-02C/Gospel Acclamations/Len-02C_GospelAcc_Alonso.pdf",
+      "source": "local",
+      "category": "gospel_acclamation"
+    },
+    {
+      "id": "psalms--psalms-lent-len-02c-antiphons-len-02c-antiphons-rejoice-pdf",
+      "type": "sheet_music",
+      "label": "REJOICE Antiphons",
+      "filePath": "_psalms/Lent/Len-02C/Antiphons/Len-02C_Antiphons_REJOICE.pdf",
+      "source": "local",
+      "category": "antiphon"
+    },
+    {
+      "id": "psalms--psalms-lent-len-02c-antiphons-rejoice-l02-of-you-my-heart-has-spoken-2nd-sunday",
+      "type": "audio",
+      "label": "Entrance: Of You My Heart",
+      "filePath": "_psalms/Lent/Len-02C/Antiphons/REJOICE_L02 Of_You_My_Heart_Has_Spoken_2nd_Sunday_Of_Lent_Entrance_Antiphon_I_68.mp3",
+      "source": "local",
+      "category": "antiphon"
+    },
+    {
+      "id": "psalms--psalms-lent-len-02c-antiphons-rejoice-l02-remember-your-compassion-o-lord-2nd-s",
+      "type": "audio",
+      "label": "Entrance: Remember Your Compassion O Lord",
+      "filePath": "_psalms/Lent/Len-02C/Antiphons/REJOICE_L02 Remember_Your_Compassion_O_Lord_2nd_Sunday_Of_Lent_Entrance_Antiphon_Ii_69.mp3",
+      "source": "local",
+      "category": "antiphon"
+    },
+    {
+      "id": "psalms--psalms-lent-len-02c-antiphons-rejoice-l02-this-is-my-beloved-son-2nd-sunday-of-",
+      "type": "audio",
+      "label": "Communion: This Is My",
+      "filePath": "_psalms/Lent/Len-02C/Antiphons/REJOICE_L02 This_Is_My_Beloved_Son_2nd_Sunday_Of_Lent_Communion_Antiphon_70.mp3",
+      "source": "local",
+      "category": "antiphon"
+    }
   ]
 }

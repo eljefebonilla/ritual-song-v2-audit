@@ -80,5 +80,79 @@
     }
   ],
   "planningNotes": [],
-  "musicPlans": []
+  "musicPlans": [],
+  "occasionResources": [
+    {
+      "id": "psalms--psalms-christmas-chr-immaculate-conceptiona-gospel-acclamations-advent-immacula",
+      "type": "audio",
+      "label": "Gospel Acclamation",
+      "filePath": "_psalms/Christmas/Chr-Immaculate-ConceptionA/Gospel Acclamations/ADVENT_ImmaculateConception.mp3",
+      "source": "local",
+      "category": "gospel_acclamation"
+    },
+    {
+      "id": "psalms--psalms-christmas-chr-immaculate-conceptiona-gospel-acclamations-chr-immaculate-",
+      "type": "sheet_music",
+      "label": "Gospel Acclamation (Alonso)",
+      "filePath": "_psalms/Christmas/Chr-Immaculate-ConceptionA/Gospel Acclamations/Chr-Immaculate-Conception-A_GospelAcc_Alonso.pdf",
+      "source": "local",
+      "category": "gospel_acclamation"
+    },
+    {
+      "id": "psalms--psalms-christmas-chr-immaculate-conceptiona-gospel-acclamations-chr-immaculate-",
+      "type": "sheet_music",
+      "label": "Gospel Acclamation - Spirit & Psalm (Angrisano)",
+      "filePath": "_psalms/Christmas/Chr-Immaculate-ConceptionA/Gospel Acclamations/Chr-Immaculate-ConceptionA_Gospel-Acclamation_Spirit&Psalm2026_Angrisano.pdf",
+      "source": "local",
+      "category": "gospel_acclamation"
+    },
+    {
+      "id": "psalms--psalms-christmas-chr-immaculate-conceptiona-gospel-acclamations-ot-immaculate-c",
+      "type": "audio",
+      "label": "Gospel Acclamation",
+      "filePath": "_psalms/Christmas/Chr-Immaculate-ConceptionA/Gospel Acclamations/OT Immaculate Conception.mp3",
+      "source": "local",
+      "category": "gospel_acclamation"
+    },
+    {
+      "id": "psalms--psalms-christmas-chr-immaculate-conceptiona-antiphons-chr-immaculate-conception",
+      "type": "sheet_music",
+      "label": "REJOICE Antiphons",
+      "filePath": "_psalms/Christmas/Chr-Immaculate-ConceptionA/Antiphons/Chr-Immaculate-ConceptionA_Antiphons_REJOICE.pdf",
+      "source": "local",
+      "category": "antiphon"
+    },
+    {
+      "id": "psalms--psalms-christmas-chr-immaculate-conceptiona-antiphons-rejoice-mary-glorious-thi",
+      "type": "audio",
+      "label": "Communion: Glorious Things Are Spoken Of You O Mary For From You",
+      "filePath": "_psalms/Christmas/Chr-Immaculate-ConceptionA/Antiphons/REJOICE_MARY Glorious_Things_Are_Spoken_Of_You_O_Mary_For_From_You_Immaculate_Conception_Communion_Antiphon_2.mp3",
+      "source": "local",
+      "category": "antiphon"
+    },
+    {
+      "id": "psalms--psalms-christmas-chr-immaculate-conceptiona-antiphons-rejoice-mary-i-rejoice-he",
+      "type": "audio",
+      "label": "Entrance: I Rejoice Heartily In The Lord",
+      "filePath": "_psalms/Christmas/Chr-Immaculate-ConceptionA/Antiphons/REJOICE_MARY I_Rejoice_Heartily_In_The_Lord_Immaculate_Conception_Entrance_Antiphon_1.mp3",
+      "source": "local",
+      "category": "antiphon"
+    },
+    {
+      "id": "psalms--psalms-christmas-chr-immaculate-conceptionb-gospel-acclamations-chr-immaculate-",
+      "type": "sheet_music",
+      "label": "Gospel Acclamation - Spirit & Psalm (Angrisano)",
+      "filePath": "_psalms/Christmas/Chr-Immaculate-ConceptionB/Gospel Acclamations/Chr-Immaculate-ConceptionB_Gospel-Acclamation_Spirit&Psalm2024_Angrisano.pdf",
+      "source": "local",
+      "category": "gospel_acclamation"
+    },
+    {
+      "id": "psalms--psalms-christmas-chr-immaculate-conceptionc-gospel-acclamations-chr-immaculate-",
+      "type": "sheet_music",
+      "label": "Gospel Acclamation - Spirit & Psalm (Booth)",
+      "filePath": "_psalms/Christmas/Chr-Immaculate-ConceptionC/Gospel Acclamations/Chr-Immaculate-ConceptionC_Gospel-Acclamation_Spirit&Psalm2025_Booth.pdf",
+      "source": "local",
+      "category": "gospel_acclamation"
+    }
+  ]
 }

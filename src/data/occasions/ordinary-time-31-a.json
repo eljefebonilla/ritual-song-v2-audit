@@ -207,5 +207,55 @@
         "title": "Lamb of God (Resoration)"
       }
     }
+  ],
+  "occasionResources": [
+    {
+      "id": "psalms--psalms-ordinary-time-ot-31a-gospel-acclamations-ot-31a-mp3",
+      "type": "audio",
+      "label": "Gospel Acclamation",
+      "filePath": "_psalms/Ordinary Time/OT-31A/Gospel Acclamations/OT 31A.mp3",
+      "source": "local",
+      "category": "gospel_acclamation"
+    },
+    {
+      "id": "psalms--psalms-ordinary-time-ot-31a-gospel-acclamations-ot-31a-gospelacc-ot-alonso-pdf",
+      "type": "sheet_music",
+      "label": "Gospel Acclamation (Alonso)",
+      "filePath": "_psalms/Ordinary Time/OT-31A/Gospel Acclamations/OT-31A_GospelAcc-OT_Alonso.pdf",
+      "source": "local",
+      "category": "gospel_acclamation"
+    },
+    {
+      "id": "psalms--psalms-ordinary-time-ot-31a-antiphons-ot-31a-antiphons-rejoice-pdf",
+      "type": "sheet_music",
+      "label": "REJOICE Antiphons",
+      "filePath": "_psalms/Ordinary Time/OT-31A/Antiphons/OT-31A_Antiphons_REJOICE.pdf",
+      "source": "local",
+      "category": "antiphon"
+    },
+    {
+      "id": "psalms--psalms-ordinary-time-ot-31a-antiphons-rejoice-ot31-forsake-me-not-o-lord-my-god",
+      "type": "audio",
+      "label": "Entrance: Forsake Me Not O Lord",
+      "filePath": "_psalms/Ordinary Time/OT-31A/Antiphons/REJOICE_OT31 Forsake_Me_Not_O_Lord_My_God_31st_Sunday_In_Ordinary_Time_Entrance_Antiphon_190.mp3",
+      "source": "local",
+      "category": "antiphon"
+    },
+    {
+      "id": "psalms--psalms-ordinary-time-ot-31a-antiphons-rejoice-ot31-just-as-the-living-father-se",
+      "type": "audio",
+      "label": "Communion: Just As The Living Father",
+      "filePath": "_psalms/Ordinary Time/OT-31A/Antiphons/REJOICE_OT31 Just_As_The_Living_Father_Sent_Me_31st_Sunday_In_Ordinary_Time_Communion_Antiphon_Ii_192.mp3",
+      "source": "local",
+      "category": "antiphon"
+    },
+    {
+      "id": "psalms--psalms-ordinary-time-ot-31a-antiphons-rejoice-ot31-you-will-show-me-the-path-of",
+      "type": "audio",
+      "label": "Communion: You Will Show Me The Path",
+      "filePath": "_psalms/Ordinary Time/OT-31A/Antiphons/REJOICE_OT31 You_Will_Show_Me_The_Path_Of_Life_31st_Sunday_In_Ordinary_Time_Communion_Antiphon_I_191.mp3",
+      "source": "local",
+      "category": "antiphon"
+    }
   ]
 }

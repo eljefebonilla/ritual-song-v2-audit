@@ -433,5 +433,55 @@
         "description": "Verse 6 - \"Love your neighbor in need\""
       }
     }
+  ],
+  "occasionResources": [
+    {
+      "id": "psalms--psalms-ordinary-time-ot-23c-gospel-acclamations-ot-23c-mp3",
+      "type": "audio",
+      "label": "Gospel Acclamation",
+      "filePath": "_psalms/Ordinary Time/OT-23C/Gospel Acclamations/OT 23C.mp3",
+      "source": "local",
+      "category": "gospel_acclamation"
+    },
+    {
+      "id": "psalms--psalms-ordinary-time-ot-23c-gospel-acclamations-ot-23c-gospel-acclamation-spiri",
+      "type": "sheet_music",
+      "label": "Gospel Acclamation - Spirit & Psalm (Angrisano)",
+      "filePath": "_psalms/Ordinary Time/OT-23C/Gospel Acclamations/OT-23C_Gospel-Acclamation_Spirit&Psalm2025_Angrisano.pdf",
+      "source": "local",
+      "category": "gospel_acclamation"
+    },
+    {
+      "id": "psalms--psalms-ordinary-time-ot-23c-gospel-acclamations-ot-23c-gospelacc-ot-alonso-pdf",
+      "type": "sheet_music",
+      "label": "Gospel Acclamation (Alonso)",
+      "filePath": "_psalms/Ordinary Time/OT-23C/Gospel Acclamations/OT-23C_GospelAcc-OT_Alonso.pdf",
+      "source": "local",
+      "category": "gospel_acclamation"
+    },
+    {
+      "id": "psalms--psalms-ordinary-time-ot-23c-antiphons-ot-23c-antiphons-rejoice-pdf",
+      "type": "sheet_music",
+      "label": "REJOICE Antiphons",
+      "filePath": "_psalms/Ordinary Time/OT-23C/Antiphons/OT-23C_Antiphons_REJOICE.pdf",
+      "source": "local",
+      "category": "antiphon"
+    },
+    {
+      "id": "psalms--psalms-ordinary-time-ot-23c-antiphons-rejoice-ot23-like-the-deer-that-yearns-23",
+      "type": "audio",
+      "label": "Communion: Like The Deer",
+      "filePath": "_psalms/Ordinary Time/OT-23C/Antiphons/REJOICE_OT23 Like_The_Deer_That_Yearns_23rd_Sunday_In_Ordinary_Time_Communion_Antiphon_I_167.mp3",
+      "source": "local",
+      "category": "antiphon"
+    },
+    {
+      "id": "psalms--psalms-ordinary-time-ot-23c-antiphons-rejoice-ot23-you-are-just-o-lord-23rd-sun",
+      "type": "audio",
+      "label": "Entrance: You Are Just O Lord",
+      "filePath": "_psalms/Ordinary Time/OT-23C/Antiphons/REJOICE_OT23 You_Are_Just_O_Lord_23rd_Sunday_In_Ordinary_Time_Entrance_Antiphon_166.mp3",
+      "source": "local",
+      "category": "antiphon"
+    }
   ]
 }

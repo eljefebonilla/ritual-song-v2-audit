@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useMemo, useCallback, useRef, useEffect } from "react";
+import { useSearchParams } from "next/navigation";
 import type { LibrarySong, LiturgicalOccasion } from "@/lib/types";
 import { useUser } from "@/lib/user-context";
 import { getSongDisplayCategories } from "@/lib/song-library";
@@ -79,9 +80,12 @@ function findNearestOccasionDate(
 
 export default function SongLibraryShell({ songs, title = "Song Library", subtitle }: SongLibraryShellProps) {
   const { role, setRole, isAdmin } = useUser();
+  const searchParams = useSearchParams();
   const [search, setSearch] = useState("");
   const [sort, setSort] = useState<SortOption>("usage");
-  const [selectedSongId, setSelectedSongId] = useState<string | null>(null);
+  const [selectedSongId, setSelectedSongId] = useState<string | null>(
+    searchParams.get("song") || null
+  );
   const [addingSong, setAddingSong] = useState(false);
   const [newTitle, setNewTitle] = useState("");
   const [newComposer, setNewComposer] = useState("");

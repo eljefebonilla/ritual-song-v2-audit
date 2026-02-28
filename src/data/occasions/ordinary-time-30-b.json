@@ -213,5 +213,63 @@
         "title": "Lamb of God (Resoration)"
       }
     }
+  ],
+  "occasionResources": [
+    {
+      "id": "psalms--psalms-ordinary-time-ot-30b-gospel-acclamations-ot-13b-30b-mp3",
+      "type": "audio",
+      "label": "Gospel Acclamation",
+      "filePath": "_psalms/Ordinary Time/OT-30B/Gospel Acclamations/OT 13B 30B.mp3",
+      "source": "local",
+      "category": "gospel_acclamation"
+    },
+    {
+      "id": "psalms--psalms-ordinary-time-ot-30b-gospel-acclamations-ot-30b-gospel-acclamation-spiri",
+      "type": "sheet_music",
+      "label": "Gospel Acclamation - Spirit & Psalm (Manibusan)",
+      "filePath": "_psalms/Ordinary Time/OT-30B/Gospel Acclamations/OT-30B_Gospel-Acclamation_Spirit&Psalm2024_Manibusan.pdf",
+      "source": "local",
+      "category": "gospel_acclamation"
+    },
+    {
+      "id": "psalms--psalms-ordinary-time-ot-30b-gospel-acclamations-ot-30b-gospelacc-alonso-pdf",
+      "type": "sheet_music",
+      "label": "Gospel Acclamation (Alonso)",
+      "filePath": "_psalms/Ordinary Time/OT-30B/Gospel Acclamations/OT-30B_GospelAcc_Alonso.pdf",
+      "source": "local",
+      "category": "gospel_acclamation"
+    },
+    {
+      "id": "psalms--psalms-ordinary-time-ot-30b-antiphons-ot-30b-antiphons-rejoice-pdf",
+      "type": "sheet_music",
+      "label": "REJOICE Antiphons",
+      "filePath": "_psalms/Ordinary Time/OT-30B/Antiphons/OT-30B_Antiphons_REJOICE.pdf",
+      "source": "local",
+      "category": "antiphon"
+    },
+    {
+      "id": "psalms--psalms-ordinary-time-ot-30b-antiphons-rejoice-ot30-christ-loved-us-and-gave-him",
+      "type": "audio",
+      "label": "Communion: Christ Loved Us And Gave",
+      "filePath": "_psalms/Ordinary Time/OT-30B/Antiphons/REJOICE_OT30 Christ_Loved_Us_And_Gave_Himself_Up_30th_Sunday_In_Ordinary_Time_Communion_Antiphon_Ii_189.mp3",
+      "source": "local",
+      "category": "antiphon"
+    },
+    {
+      "id": "psalms--psalms-ordinary-time-ot-30b-antiphons-rejoice-ot30-let-the-hearts-that-seek-the",
+      "type": "audio",
+      "label": "Entrance: Let The Hearts That Seek The",
+      "filePath": "_psalms/Ordinary Time/OT-30B/Antiphons/REJOICE_OT30 Let_The_Hearts_That_Seek_The_Lord_Rejoice_30th_Sunday_In_Ordinary_Time_Entrance_Antiphon_187.mp3",
+      "source": "local",
+      "category": "antiphon"
+    },
+    {
+      "id": "psalms--psalms-ordinary-time-ot-30b-antiphons-rejoice-ot30-we-will-ring-out-our-joy-30t",
+      "type": "audio",
+      "label": "Communion: We Will Ring Out",
+      "filePath": "_psalms/Ordinary Time/OT-30B/Antiphons/REJOICE_OT30 We_Will_Ring_Out_Our_Joy_30th_Sunday_In_Ordinary_Time_Communion_Antiphon_I_188.mp3",
+      "source": "local",
+      "category": "antiphon"
+    }
   ]
 }

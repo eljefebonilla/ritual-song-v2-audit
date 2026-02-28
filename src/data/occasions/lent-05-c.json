@@ -366,5 +366,55 @@
         "description": "\"when I in awesome wonder\""
       }
     }
+  ],
+  "occasionResources": [
+    {
+      "id": "psalms--psalms-lent-len-05c-gospel-acclamations-len-05c-gospel-acclamation-spirit-psalm",
+      "type": "sheet_music",
+      "label": "Gospel Acclamation - Spirit & Psalm (Blakesley)",
+      "filePath": "_psalms/Lent/Len-05C/Gospel Acclamations/Len-05C_Gospel-Acclamation_Spirit&Psalm2025_Blakesley.pdf",
+      "source": "local",
+      "category": "gospel_acclamation"
+    },
+    {
+      "id": "psalms--psalms-lent-len-05c-antiphons-len-05c-antiphons-rejoice-pdf",
+      "type": "sheet_music",
+      "label": "REJOICE Antiphons",
+      "filePath": "_psalms/Lent/Len-05C/Antiphons/Len-05C_Antiphons_REJOICE.pdf",
+      "source": "local",
+      "category": "antiphon"
+    },
+    {
+      "id": "psalms--psalms-lent-len-05c-antiphons-rejoice-l05-amen-amen-i-say-to-you-5th-sunday-of-",
+      "type": "audio",
+      "label": "Communion: Amen Amen I Say",
+      "filePath": "_psalms/Lent/Len-05C/Antiphons/REJOICE_L05 Amen_Amen_I_Say_To_You_5th_Sunday_Of_Lent_Communion_Antiphon_Iii_82.mp3",
+      "source": "local",
+      "category": "antiphon"
+    },
+    {
+      "id": "psalms--psalms-lent-len-05c-antiphons-rejoice-l05-everyone-who-lives-and-believes-5th-s",
+      "type": "audio",
+      "label": "Communion: Everyone Who Lives",
+      "filePath": "_psalms/Lent/Len-05C/Antiphons/REJOICE_L05 Everyone_Who_Lives_And_Believes_5th_Sunday_Of_Lent_Communion_Antiphon_I_80.mp3",
+      "source": "local",
+      "category": "antiphon"
+    },
+    {
+      "id": "psalms--psalms-lent-len-05c-antiphons-rejoice-l05-give-me-justice-o-god-5th-sunday-of-l",
+      "type": "audio",
+      "label": "Entrance: Give Me Justice O God",
+      "filePath": "_psalms/Lent/Len-05C/Antiphons/REJOICE_L05 Give_Me_Justice_O_God_5th_Sunday_Of_Lent_Entrance_Antiphon_79.mp3",
+      "source": "local",
+      "category": "antiphon"
+    },
+    {
+      "id": "psalms--psalms-lent-len-05c-antiphons-rejoice-l05-has-no-one-condemned-you-woman-5th-su",
+      "type": "audio",
+      "label": "Communion: Has No One Condemned",
+      "filePath": "_psalms/Lent/Len-05C/Antiphons/REJOICE_L05 Has_No_One_Condemned_You_Woman_5th_Sunday_Of_Lent_Communion_Antiphon_Ii_81.mp3",
+      "source": "local",
+      "category": "antiphon"
+    }
   ]
 }

@@ -207,5 +207,63 @@
         "composer": "Andrews, Arr. Bonilla • Lockwood • Fajardo"
       }
     }
+  ],
+  "occasionResources": [
+    {
+      "id": "psalms--psalms-ordinary-time-ot-13b-gospel-acclamations-ot-13b-30b-mp3",
+      "type": "audio",
+      "label": "Gospel Acclamation",
+      "filePath": "_psalms/Ordinary Time/OT-13B/Gospel Acclamations/OT 13B 30B.mp3",
+      "source": "local",
+      "category": "gospel_acclamation"
+    },
+    {
+      "id": "psalms--psalms-ordinary-time-ot-13b-gospel-acclamations-ot-13b-gospel-acclamation-spiri",
+      "type": "sheet_music",
+      "label": "Gospel Acclamation - Spirit & Psalm (Manibusan)",
+      "filePath": "_psalms/Ordinary Time/OT-13B/Gospel Acclamations/OT-13B_Gospel-Acclamation_Spirit&Psalm2024_Manibusan.pdf",
+      "source": "local",
+      "category": "gospel_acclamation"
+    },
+    {
+      "id": "psalms--psalms-ordinary-time-ot-13b-gospel-acclamations-ot-13b-gospelacc-alonso-pdf",
+      "type": "sheet_music",
+      "label": "Gospel Acclamation (Alonso)",
+      "filePath": "_psalms/Ordinary Time/OT-13B/Gospel Acclamations/OT-13B_GospelAcc_Alonso.pdf",
+      "source": "local",
+      "category": "gospel_acclamation"
+    },
+    {
+      "id": "psalms--psalms-ordinary-time-ot-13b-antiphons-ot-13b-antiphons-rejoice-pdf",
+      "type": "sheet_music",
+      "label": "REJOICE Antiphons",
+      "filePath": "_psalms/Ordinary Time/OT-13B/Antiphons/OT-13B_Antiphons_REJOICE.pdf",
+      "source": "local",
+      "category": "antiphon"
+    },
+    {
+      "id": "psalms--psalms-ordinary-time-ot-13b-antiphons-rejoice-ot13-all-peoples-clap-your-hands-",
+      "type": "audio",
+      "label": "Entrance: All Peoples Clap",
+      "filePath": "_psalms/Ordinary Time/OT-13B/Antiphons/REJOICE_OT13 All_Peoples_Clap_Your_Hands_13th_Sunday_In_Ordinary_Time_Entrance_Antiphon_136.mp3",
+      "source": "local",
+      "category": "antiphon"
+    },
+    {
+      "id": "psalms--psalms-ordinary-time-ot-13b-antiphons-rejoice-ot13-bless-the-lord-o-my-soul-and",
+      "type": "audio",
+      "label": "Communion: Bless The Lord O My Soul And All",
+      "filePath": "_psalms/Ordinary Time/OT-13B/Antiphons/REJOICE_OT13 Bless_The_Lord_O_My_Soul_And_All_Within_Me_13th_Sunday_In_Ordinary_Time_Communion_Antiphon_I_137.mp3",
+      "source": "local",
+      "category": "antiphon"
+    },
+    {
+      "id": "psalms--psalms-ordinary-time-ot-13b-antiphons-rejoice-ot13-o-father-i-pray-for-them-13t",
+      "type": "audio",
+      "label": "Communion: O Father I Pray",
+      "filePath": "_psalms/Ordinary Time/OT-13B/Antiphons/REJOICE_OT13 O_Father_I_Pray_For_Them_13th_Sunday_In_Ordinary_Time_Communion_Antiphon_Ii_138.mp3",
+      "source": "local",
+      "category": "antiphon"
+    }
   ]
 }

@@ -6416,13 +6416,6 @@
         "source": "local"
       },
       {
-        "id": "local-transfigure-us-o-lord-hurd-transfigure-us-o-lord-140533-txt",
-        "type": "lyrics",
-        "label": "Lyrics",
-        "filePath": "Transfigure Us, O Lord - Hurd/Transfigure_Us_O_Lord_140533.txt",
-        "source": "local"
-      },
-      {
         "id": "local-transfigure-us-o-lord-hurd-transfigure-us-o-lord-8783-gif",
         "type": "sheet_music",
         "label": "Sheet Music",
@@ -6575,7 +6568,43 @@
     "id": "ps-67-o-god-let-all-the-nations-praise-you--spirit-psalm-thomas-muglia",
     "title": "Ps 67 O God, let all the nations praise you!",
     "composer": "Spirit & Psalm • Thomas Muglia",
-    "resources": [],
+    "resources": [
+      {
+        "id": "psalms--psalms-christmas-chr-mary-mother-of-goda-psalms-chr-mary-mother-of-goda-ps-67-g",
+        "type": "sheet_music",
+        "label": "Spirit & Psalm",
+        "filePath": "_psalms/Christmas/Chr-Mary-Mother-Of-GodA/Psalms/Chr-Mary-Mother-Of-GodA_Ps-67_God-Bless-Us-In-His-Mercy._Spirit&Psalm2026_Stephan.pdf",
+        "source": "local"
+      },
+      {
+        "id": "psalms--psalms-christmas-chr-mary-mother-of-godb-psalms-chr-mary-mother-of-godb-ps-67-g",
+        "type": "sheet_music",
+        "label": "Spirit & Psalm",
+        "filePath": "_psalms/Christmas/Chr-Mary-Mother-Of-GodB/Psalms/Chr-Mary-Mother-Of-GodB_Ps-67_God-Bless-Us-In-His-Mercy._Spirit&Psalm2024_Stephan.pdf",
+        "source": "local"
+      },
+      {
+        "id": "psalms--psalms-christmas-chr-mary-mother-of-godc-psalms-chr-mary-mother-of-godc-ps-67-g",
+        "type": "sheet_music",
+        "label": "Spirit & Psalm",
+        "filePath": "_psalms/Christmas/Chr-Mary-Mother-Of-GodC/Psalms/Chr-Mary-Mother-Of-GodC_Ps-67_God-Bless-Us-In-His-Mercy._Spirit&Psalm2025_Stephan.pdf",
+        "source": "local"
+      },
+      {
+        "id": "psalms--psalms-easter-eas-06c-psalms-eas-06c-ps-67-o-god-let-all-the-nations-spirit-psa",
+        "type": "sheet_music",
+        "label": "Spirit & Psalm",
+        "filePath": "_psalms/Easter/Eas-06C/Psalms/Eas-06C_Ps-67_O-God,-Let-All-The-Nations_Spirit&Psalm2025_Muglia.pdf",
+        "source": "local"
+      },
+      {
+        "id": "psalms--psalms-ordinary-time-ot-20a-psalms-ot-20a-ps-67-o-god-let-all-the-nations-spiri",
+        "type": "sheet_music",
+        "label": "Spirit & Psalm",
+        "filePath": "_psalms/Ordinary Time/OT-20A/Psalms/OT-20A_Ps-67_O-God,-Let-All-The-Nations_Spirit&Psalm2026_Muglia.pdf",
+        "source": "local"
+      }
+    ],
     "usageCount": 14,
     "occasions": [
       "easter-06-a",
@@ -8734,7 +8763,92 @@
     "id": "ps-103-the-lord-is-kind-and-merciful--the-lyric-psalter-tony-alonso-marty-haugen",
     "title": "Ps 103 The Lord is kind and merciful.",
     "composer": "The Lyric Psalter • Tony Alonso & Marty Haugen",
-    "resources": [],
+    "resources": [
+      {
+        "id": "psalms--psalms-easter-eas-07b-psalms-eas-07b-ps-103-the-lord-has-set-his-throne-spirit-",
+        "type": "sheet_music",
+        "label": "Spirit & Psalm",
+        "filePath": "_psalms/Easter/Eas-07B/Psalms/Eas-07B_Ps-103_The-Lord-Has-Set-His-Throne_Spirit&Psalm2024_Ray.pdf",
+        "source": "local"
+      },
+      {
+        "id": "psalms--psalms-easter-eas-07b-psalms-eas-07b-ps-103-the-lord-has-set-lyricpsalterchoral",
+        "type": "sheet_music",
+        "label": "Lyric Psalter - Choral",
+        "filePath": "_psalms/Easter/Eas-07B/Psalms/Eas-07B_Ps-103_The-Lord-Has-Set_LyricPsalterChoral_Haugen.pdf",
+        "source": "local"
+      },
+      {
+        "id": "psalms--psalms-easter-eas-07b-psalms-easter-07b-ps-103-the-lord-has-set-his-throne-lyri",
+        "type": "sheet_music",
+        "label": "Lyric Psalter",
+        "filePath": "_psalms/Easter/Eas-07B/Psalms/Easter-07B_Ps-103_The-Lord-Has-Set-His-Throne_LyricPsalter_Haugen.pdf",
+        "source": "local"
+      },
+      {
+        "id": "psalms--psalms-lent-len-03c-psalms-len-03c-ps-103-the-lord-is-kind-and-merciful-spirit-",
+        "type": "sheet_music",
+        "label": "Spirit & Psalm",
+        "filePath": "_psalms/Lent/Len-03C/Psalms/Len-03C_Ps-103_The-Lord-Is-Kind-And-Merciful_Spirit&Psalm2025_Manibusan.pdf",
+        "source": "local"
+      },
+      {
+        "id": "psalms--psalms-ordinary-time-ot-04a-psalms-ot-04a-ps-103-the-lord-is-kind-lyricpsalterc",
+        "type": "sheet_music",
+        "label": "Lyric Psalter - Choral",
+        "filePath": "_psalms/Ordinary Time/OT-04A/Psalms/OT-04A_Ps-103_The-Lord-Is-Kind_LyricPsalterChoral_Haugen.pdf",
+        "source": "local"
+      },
+      {
+        "id": "psalms--psalms-ordinary-time-ot-07a-psalms-ot-07a-ps-103-the-lord-is-kind-and-merciful-",
+        "type": "sheet_music",
+        "label": "Lyric Psalter - Choral",
+        "filePath": "_psalms/Ordinary Time/OT-07A/Psalms/OT-07A_Ps-103_The-Lord-Is-Kind-And-Merciful_LyricPsalterChoral_Haugen.pdf",
+        "source": "local"
+      },
+      {
+        "id": "psalms--psalms-ordinary-time-ot-07a-psalms-ot-07a-ps-103-the-lord-is-kind-and-merciful-",
+        "type": "sheet_music",
+        "label": "Lyric Psalter",
+        "filePath": "_psalms/Ordinary Time/OT-07A/Psalms/OT-07A_Ps-103_The-Lord-Is-Kind-And-Merciful_LyricPsalter_Haugen.pdf",
+        "source": "local"
+      },
+      {
+        "id": "psalms--psalms-ordinary-time-ot-07a-psalms-ot-07a-ps-103-the-lord-is-kind-and-merciful-",
+        "type": "sheet_music",
+        "label": "Spirit & Psalm",
+        "filePath": "_psalms/Ordinary Time/OT-07A/Psalms/OT-07A_Ps-103_The-Lord-Is-Kind-And-Merciful_Spirit&Psalm2023_Manibusan.pdf",
+        "source": "local"
+      },
+      {
+        "id": "psalms--psalms-ordinary-time-ot-07c-psalms-ot-07c-ps-103-the-lord-is-kind-and-merciful-",
+        "type": "sheet_music",
+        "label": "Spirit & Psalm",
+        "filePath": "_psalms/Ordinary Time/OT-07C/Psalms/OT-07C_Ps-103_The-Lord-Is-Kind-And-Merciful_Spirit&Psalm2025_Manibusan.pdf",
+        "source": "local"
+      },
+      {
+        "id": "psalms--psalms-ordinary-time-ot-24a-psalms-ot-24a-ps-103-the-lord-is-kind-and-merciful-",
+        "type": "sheet_music",
+        "label": "Spirit & Psalm",
+        "filePath": "_psalms/Ordinary Time/OT-24A/Psalms/OT-24A_Ps-103_The-Lord-Is-Kind-And-Merciful,_Spirit&Psalm2026_Ray.pdf",
+        "source": "local"
+      },
+      {
+        "id": "psalms--psalms-ordinary-time-ot-24a-psalms-ot-24a-ps-103-the-lord-is-kind-and-merciful-",
+        "type": "sheet_music",
+        "label": "Lyric Psalter - Choral",
+        "filePath": "_psalms/Ordinary Time/OT-24A/Psalms/OT-24A_Ps-103_The-Lord-Is-Kind-And-Merciful_LyricPsalterChoral_Haugen.pdf",
+        "source": "local"
+      },
+      {
+        "id": "psalms--psalms-ordinary-time-ot-24a-psalms-ot-24a-ps-103-the-lord-is-kind-and-merciful-",
+        "type": "sheet_music",
+        "label": "Lyric Psalter",
+        "filePath": "_psalms/Ordinary Time/OT-24A/Psalms/OT-24A_Ps-103_The-Lord-Is-Kind-And-Merciful_LyricPsalter_Haugen.pdf",
+        "source": "local"
+      }
+    ],
     "usageCount": 10,
     "occasions": [
       "ordinary-time-07-a",
@@ -9499,7 +9613,15 @@
     "id": "ps-1-blessed-are-they-who-hope-in-the-lord--the-lyric-psalter-tony-alonso-marty-haugen",
     "title": "Ps 1 Blessed are they who hope in the Lord.",
     "composer": "The Lyric Psalter • Tony Alonso & Marty Haugen",
-    "resources": [],
+    "resources": [
+      {
+        "id": "psalms--psalms-ordinary-time-ot-06c-psalms-ot-06c-ps-1-blessed-are-they-who-hope-lyricp",
+        "type": "sheet_music",
+        "label": "Lyric Psalter",
+        "filePath": "_psalms/Ordinary Time/OT-06C/Psalms/OT-06C_Ps-1_Blessed-Are-They-Who-Hope_LyricPsalter_Alonso.pdf",
+        "source": "local"
+      }
+    ],
     "usageCount": 9,
     "occasions": [
       "ordinary-time-06-a",
@@ -9948,7 +10070,43 @@
     "id": "ps-22-my-god-why-have-you-abandoned-me--the-lyric-psalter-tony-alonso-marty-haugen",
     "title": "Ps 22 My God... why have you abandoned me?",
     "composer": "The Lyric Psalter • Tony Alonso & Marty Haugen",
-    "resources": [],
+    "resources": [
+      {
+        "id": "psalms--psalms-lent-len-palm-sundaya-psalms-len-palm-sunday-a-ps-22-my-god-my-god-lyric",
+        "type": "sheet_music",
+        "label": "Lyric Psalter",
+        "filePath": "_psalms/Lent/Len-Palm-SundayA/Psalms/Len-Palm-Sunday-A_Ps-22_My-God-My-God_LyricPsalter_Haugen.pdf",
+        "source": "local"
+      },
+      {
+        "id": "psalms--psalms-lent-len-palm-sundaya-psalms-len-palm-sundaya-ps-22-my-god-my-god-why-ha",
+        "type": "sheet_music",
+        "label": "Spirit & Psalm",
+        "filePath": "_psalms/Lent/Len-Palm-SundayA/Psalms/Len-Palm-SundayA_Ps-22_My-God,-My-God,-Why-Have_Spirit&Psalm2026_Hart.pdf",
+        "source": "local"
+      },
+      {
+        "id": "psalms--psalms-lent-len-palm-sundaya-psalms-len-palm-sundaya-ps-22-my-god-my-god-lyricp",
+        "type": "sheet_music",
+        "label": "Lyric Psalter - Choral",
+        "filePath": "_psalms/Lent/Len-Palm-SundayA/Psalms/Len-Palm-SundayA_Ps-22_My-God,-My-God_LyricPsalterChoral_Haugen.pdf",
+        "source": "local"
+      },
+      {
+        "id": "psalms--psalms-lent-len-palm-sundayb-psalms-len-palm-sundayb-ps-22-my-god-my-god-why-ha",
+        "type": "sheet_music",
+        "label": "Spirit & Psalm",
+        "filePath": "_psalms/Lent/Len-Palm-SundayB/Psalms/Len-Palm-SundayB_Ps-22_My-God,-My-God,-Why-Have_Spirit&Psalm2024_Hart.pdf",
+        "source": "local"
+      },
+      {
+        "id": "psalms--psalms-lent-len-palm-sundayc-psalms-len-palm-sundayc-ps-22-my-god-my-god-why-ha",
+        "type": "sheet_music",
+        "label": "Spirit & Psalm",
+        "filePath": "_psalms/Lent/Len-Palm-SundayC/Psalms/Len-Palm-SundayC_Ps-22_My-God,-My-God,-Why-Have_Spirit&Psalm2025_Hart.pdf",
+        "source": "local"
+      }
+    ],
     "usageCount": 9,
     "occasions": [
       "palm-sunday-a",
@@ -9986,7 +10144,57 @@
     "id": "ps-118-give-thanks-to-the-lord--spirit-psalm-tom-kendzia",
     "title": "Ps 118 Give thanks to the Lord...",
     "composer": "Spirit & Psalm • Tom Kendzia",
-    "resources": [],
+    "resources": [
+      {
+        "id": "psalms--psalms-easter-eas-02a-psalms-eas-02a-ps-118-give-thanks-to-thelord-for-he-spiri",
+        "type": "sheet_music",
+        "label": "Spirit & Psalm",
+        "filePath": "_psalms/Easter/Eas-02A/Psalms/Eas-02A_Ps-118_Give-Thanks-To-Thelord-For-He_Spirit&Psalm2026_Kendzia.pdf",
+        "source": "local"
+      },
+      {
+        "id": "psalms--psalms-easter-eas-02b-psalms-eas-02b-ps-118-give-thanks-to-thelord-for-he-spiri",
+        "type": "sheet_music",
+        "label": "Spirit & Psalm",
+        "filePath": "_psalms/Easter/Eas-02B/Psalms/Eas-02B_Ps-118_Give-Thanks-To-Thelord-For-He_Spirit&Psalm2024_Kendzia.pdf",
+        "source": "local"
+      },
+      {
+        "id": "psalms--psalms-easter-eas-02c-psalms-eas-02c-ps-118-give-thanks-to-thelord-for-he-spiri",
+        "type": "sheet_music",
+        "label": "Spirit & Psalm",
+        "filePath": "_psalms/Easter/Eas-02C/Psalms/Eas-02C_Ps-118_Give-Thanks-To-Thelord-For-He_Spirit&Psalm2025_Kendzia.pdf",
+        "source": "local"
+      },
+      {
+        "id": "psalms--psalms-easter-eas-04b-psalms-eas-04b-ps-118-the-stone-rejected-by-the-builders-",
+        "type": "sheet_music",
+        "label": "Spirit & Psalm",
+        "filePath": "_psalms/Easter/Eas-04B/Psalms/Eas-04B_Ps-118_The-Stone-Rejected-By-The-Builders_Spirit&Psalm2024_Anderson.pdf",
+        "source": "local"
+      },
+      {
+        "id": "psalms--psalms-easter-eas-easter-sundaya-psalms-eas-easter-sundaya-ps-118-at-the-mass-d",
+        "type": "sheet_music",
+        "label": "Spirit & Psalm",
+        "filePath": "_psalms/Easter/Eas-Easter-SundayA/Psalms/Eas-Easter-SundayA_Ps-118_At-The-Mass-During-The-Day_Spirit&Psalm2026_Walther.pdf",
+        "source": "local"
+      },
+      {
+        "id": "psalms--psalms-easter-eas-easter-sundayb-psalms-eas-easter-sundayb-ps-118-at-the-mass-d",
+        "type": "sheet_music",
+        "label": "Spirit & Psalm",
+        "filePath": "_psalms/Easter/Eas-Easter-SundayB/Psalms/Eas-Easter-SundayB_Ps-118_At-The-Mass-During-The-Day_Spirit&Psalm2024_Walther.pdf",
+        "source": "local"
+      },
+      {
+        "id": "psalms--psalms-easter-eas-easter-sundayc-psalms-eas-easter-sundayc-ps-118-at-the-mass-d",
+        "type": "sheet_music",
+        "label": "Spirit & Psalm",
+        "filePath": "_psalms/Easter/Eas-Easter-SundayC/Psalms/Eas-Easter-SundayC_Ps-118_At-The-Mass-During-The-Day_Spirit&Psalm2025_Walther.pdf",
+        "source": "local"
+      }
+    ],
     "usageCount": 9,
     "occasions": [
       "easter-02-divine-mercy-a",
@@ -10204,7 +10412,15 @@
     "id": "ps-8-o-lord-our-god-how-wonderful--spirit-psalm-trevor-thomson",
     "title": "Ps 8 O Lord, our God, how wonderful...",
     "composer": "Spirit & Psalm • Trevor Thomson",
-    "resources": [],
+    "resources": [
+      {
+        "id": "psalms--psalms-solemnities-sol-holy-trinityc-psalms-sol-holy-trinityc-ps-8-the-most-hol",
+        "type": "sheet_music",
+        "label": "Spirit & Psalm",
+        "filePath": "_psalms/Solemnities/Sol-Holy-TrinityC/Psalms/Sol-Holy-TrinityC_Ps-8_The-Most-Holy-Trinity_Spirit&Psalm2025_Thomson.pdf",
+        "source": "local"
+      }
+    ],
     "usageCount": 9,
     "occasions": [
       "solemnity-most-holy-trinity-a",
@@ -10444,7 +10660,43 @@
     "id": "ps-126-the-lord-has-done-great-things--the-lyric-psalter-tony-alonso-marty-haugen",
     "title": "Ps 126 The Lord has done great things...",
     "composer": "The Lyric Psalter • Tony Alonso & Marty Haugen",
-    "resources": [],
+    "resources": [
+      {
+        "id": "psalms--psalms-easter-eas-easter-sundayc-psalms-eas-easter-sundayc-ps-126-the-lord-has-",
+        "type": "sheet_music",
+        "label": "Lyric Psalter - Choral",
+        "filePath": "_psalms/Easter/Eas-Easter-SundayC/Psalms/Eas-Easter-SundayC_Ps-126_The-Lord-Has-Done-Great-Things_LyricPsalterChoral_Alonso.pdf",
+        "source": "local"
+      },
+      {
+        "id": "psalms--psalms-lent-len-05c-psalms-len-05c-ps-126-the-lord-has-done-great-things-lyricp",
+        "type": "sheet_music",
+        "label": "Lyric Psalter - Choral",
+        "filePath": "_psalms/Lent/Len-05C/Psalms/Len-05C_Ps-126_The-Lord-Has-Done-Great-Things_LyricPsalterChoral_Haugen.pdf",
+        "source": "local"
+      },
+      {
+        "id": "psalms--psalms-lent-len-05c-psalms-len-05c-ps-126-the-lord-has-done-great-things-lyricp",
+        "type": "sheet_music",
+        "label": "Lyric Psalter",
+        "filePath": "_psalms/Lent/Len-05C/Psalms/Len-05C_Ps-126_The-Lord-Has-Done-Great-Things_LyricPsalter_Alonso.pdf",
+        "source": "local"
+      },
+      {
+        "id": "psalms--psalms-ordinary-time-ot-30b-psalms-ot-30b-ps-126-the-lord-has-done-great-things",
+        "type": "sheet_music",
+        "label": "Lyric Psalter - Choral",
+        "filePath": "_psalms/Ordinary Time/OT-30B/Psalms/OT-30B_Ps-126_The-Lord-Has-Done-Great-Things_LyricPsalterChoral_Alonso.pdf",
+        "source": "local"
+      },
+      {
+        "id": "psalms--psalms-ordinary-time-ot-30b-psalms-ot-30b-ps-126-the-lord-has-done-great-things",
+        "type": "sheet_music",
+        "label": "Lyric Psalter",
+        "filePath": "_psalms/Ordinary Time/OT-30B/Psalms/OT-30B_Ps-126_The-Lord-Has-Done-Great-Things_LyricPsalter_Alonso.pdf",
+        "source": "local"
+      }
+    ],
     "usageCount": 8,
     "occasions": [
       "advent-02-b",
@@ -11002,7 +11254,15 @@
     "id": "ps-92-lord-it-is-good-to-give-thanks-to-you--the-lyric-psalter-tony-alonso-marty-haugen",
     "title": "Ps 92 Lord, it is good to give thanks to you.",
     "composer": "The Lyric Psalter • Tony Alonso & Marty Haugen",
-    "resources": [],
+    "resources": [
+      {
+        "id": "psalms--psalms-ordinary-time-ot-10c-psalms-ot-10c-ps-92-lord-it-is-good-lyricpsaltercho",
+        "type": "sheet_music",
+        "label": "Lyric Psalter - Choral",
+        "filePath": "_psalms/Ordinary Time/OT-10C/Psalms/OT-10C_Ps-92_Lord,-It-Is-Good_LyricPsalterChoral_Alonso.pdf",
+        "source": "local"
+      }
+    ],
     "usageCount": 8,
     "occasions": [
       "ordinary-time-08-a",
@@ -12177,7 +12437,29 @@
     "id": "ps-145-i-will-praise-your-name-for-ever--spirit-psalm-ben-walther",
     "title": "Ps 145 I will praise your name for ever...",
     "composer": "Spirit & Psalm • Ben Walther",
-    "resources": [],
+    "resources": [
+      {
+        "id": "psalms--psalms-easter-eas-05c-psalms-eas-05c-ps-145-i-will-praise-your-name-spirit-psal",
+        "type": "sheet_music",
+        "label": "Spirit & Psalm",
+        "filePath": "_psalms/Easter/Eas-05C/Psalms/Eas-05C_Ps-145_I-Will-Praise-Your-Name_Spirit&Psalm2025_Walther.pdf",
+        "source": "local"
+      },
+      {
+        "id": "psalms--psalms-ordinary-time-ot-14a-psalms-ot-14a-ps-145-i-will-praise-your-name-spirit",
+        "type": "sheet_music",
+        "label": "Spirit & Psalm",
+        "filePath": "_psalms/Ordinary Time/OT-14A/Psalms/OT-14A_Ps-145_I-Will-Praise-Your-Name_Spirit&Psalm2026_Walther.pdf",
+        "source": "local"
+      },
+      {
+        "id": "psalms--psalms-ordinary-time-ot-31c-psalms-ot-31c-ps-145-i-will-praise-your-name-spirit",
+        "type": "sheet_music",
+        "label": "Spirit & Psalm",
+        "filePath": "_psalms/Ordinary Time/OT-31C/Psalms/OT-31C_Ps-145_I-Will-Praise-Your-Name_Spirit&Psalm2022_Walther.pdf",
+        "source": "local"
+      }
+    ],
     "usageCount": 7,
     "occasions": [
       "easter-05-a",
@@ -12190,7 +12472,29 @@
     "id": "ps-47-god-mounts-his-throne-to-shouts--spirit-psalm-josh-blakesley",
     "title": "Ps 47 God mounts his throne to shouts...",
     "composer": "Spirit & Psalm • Josh Blakesley",
-    "resources": [],
+    "resources": [
+      {
+        "id": "psalms--psalms-easter-eas-ascensiona-psalms-eas-ascensiona-ps-47-is-observed-as-an-east",
+        "type": "sheet_music",
+        "label": "Spirit & Psalm",
+        "filePath": "_psalms/Easter/Eas-AscensionA/Psalms/Eas-AscensionA_Ps-47_Is-Observed-As-An-Easter-Weekday_Spirit&Psalm2026_Blakesley.pdf",
+        "source": "local"
+      },
+      {
+        "id": "psalms--psalms-easter-eas-ascensionb-psalms-eas-ascensionb-ps-47-is-observed-as-an-east",
+        "type": "sheet_music",
+        "label": "Spirit & Psalm",
+        "filePath": "_psalms/Easter/Eas-AscensionB/Psalms/Eas-AscensionB_Ps-47_Is-Observed-As-An-Easter-Weekday_Spirit&Psalm2024_Blakesley.pdf",
+        "source": "local"
+      },
+      {
+        "id": "psalms--psalms-easter-eas-ascensionc-psalms-eas-ascensionc-ps-47-is-observed-as-an-east",
+        "type": "sheet_music",
+        "label": "Spirit & Psalm",
+        "filePath": "_psalms/Easter/Eas-AscensionC/Psalms/Eas-AscensionC_Ps-47_Is-Observed-As-An-Easter-Weekday_Spirit&Psalm2025_Blakesley.pdf",
+        "source": "local"
+      }
+    ],
     "usageCount": 7,
     "occasions": [
       "ascension-a",
@@ -12236,7 +12540,36 @@
     "id": "ps-104-lord-send-out-your-spirit--spirit-psalm-steve-angrisano",
     "title": "Ps 104 Lord, send out your Spirit...",
     "composer": "Spirit & Psalm • Steve Angrisano",
-    "resources": [],
+    "resources": [
+      {
+        "id": "psalms--psalms-christmas-chr-baptismc-psalms-chr-baptismc-ps-104-the-baptism-of-the-lor",
+        "type": "sheet_music",
+        "label": "Spirit & Psalm",
+        "filePath": "_psalms/Christmas/Chr-BaptismC/Psalms/Chr-BaptismC_Ps-104_The-Baptism-Of-The-Lord_Spirit&Psalm2025_Modlin.pdf",
+        "source": "local"
+      },
+      {
+        "id": "psalms--psalms-easter-eas-pentecosta-psalms-eas-pentecosta-ps-104-lord-send-out-your-sp",
+        "type": "sheet_music",
+        "label": "Spirit & Psalm",
+        "filePath": "_psalms/Easter/Eas-PentecostA/Psalms/Eas-PentecostA_Ps-104_Lord,-Send-Out-Your-Spirit,_Spirit&Psalm2026_Angrisano.pdf",
+        "source": "local"
+      },
+      {
+        "id": "psalms--psalms-easter-eas-pentecostb-psalms-eas-pentecostb-ps-104-lord-send-out-your-sp",
+        "type": "sheet_music",
+        "label": "Spirit & Psalm",
+        "filePath": "_psalms/Easter/Eas-PentecostB/Psalms/Eas-PentecostB_Ps-104_Lord,-Send-Out-Your-Spirit,_Spirit&Psalm2024_Angrisano.pdf",
+        "source": "local"
+      },
+      {
+        "id": "psalms--psalms-easter-eas-pentecostc-psalms-eas-pentecostc-ps-104-lord-send-out-your-sp",
+        "type": "sheet_music",
+        "label": "Spirit & Psalm",
+        "filePath": "_psalms/Easter/Eas-PentecostC/Psalms/Eas-PentecostC_Ps-104_Lord,-Send-Out-Your-Spirit,_Spirit&Psalm2025_Angrisano.pdf",
+        "source": "local"
+      }
+    ],
     "usageCount": 7,
     "occasions": [
       "pentecost-a",
@@ -13393,7 +13726,29 @@
     "id": "ps-27-the-lord-is-my-light-and-my-salvation--spirit-psalm-cooper-ray",
     "title": "Ps 27 The Lord is my light and my salvation.",
     "composer": "Spirit & Psalm • Cooper Ray",
-    "resources": [],
+    "resources": [
+      {
+        "id": "psalms--psalms-easter-eas-07a-psalms-eas-07a-ps-27-i-believe-that-i-shall-see-spirit-ps",
+        "type": "sheet_music",
+        "label": "Spirit & Psalm",
+        "filePath": "_psalms/Easter/Eas-07A/Psalms/Eas-07A_Ps-27_I-Believe-That-I-Shall-See_Spirit&Psalm2026_Kroger.pdf",
+        "source": "local"
+      },
+      {
+        "id": "psalms--psalms-lent-len-02c-psalms-len-02c-ps-27-the-lord-is-my-light-spirit-psalm2025-",
+        "type": "sheet_music",
+        "label": "Spirit & Psalm",
+        "filePath": "_psalms/Lent/Len-02C/Psalms/Len-02C_Ps-27_The-Lord-Is-My-Light,_Spirit&Psalm2025_Ray.pdf",
+        "source": "local"
+      },
+      {
+        "id": "psalms--psalms-ordinary-time-ot-03a-psalms-ot-03a-ps-27-the-lord-is-my-light-spirit-psa",
+        "type": "sheet_music",
+        "label": "Spirit & Psalm",
+        "filePath": "_psalms/Ordinary Time/OT-03A/Psalms/OT-03A_Ps-27_The-Lord-Is-My-Light,_Spirit&Psalm2026_Ray.pdf",
+        "source": "local"
+      }
+    ],
     "usageCount": 6,
     "occasions": [
       "ordinary-time-03-a-word-of-god-sunday",
@@ -14275,7 +14630,15 @@
     "id": "ps-122-let-us-go-rejoicing-to-the-house-of-the-lord--spirit-psalm-sarah-hart",
     "title": "Ps 122 Let us go rejoicing to the house of the Lord.",
     "composer": "Spirit & Psalm • Sarah Hart",
-    "resources": [],
+    "resources": [
+      {
+        "id": "psalms--psalms-advent-adv-01a-psalms-adv-01a-ps-122-let-us-go-rejoicing-spirit-psalm202",
+        "type": "sheet_music",
+        "label": "Spirit & Psalm",
+        "filePath": "_psalms/Advent/Adv-01A/Psalms/Adv-01A_Ps-122_Let-Us-Go-Rejoicing_Spirit&Psalm2026_Hart.pdf",
+        "source": "local"
+      }
+    ],
     "usageCount": 5,
     "occasions": [
       "advent-01-a",
@@ -14457,7 +14820,29 @@
     "id": "ps-80-lord-make-us-turn-to-you--the-lyric-psalter-tony-alonso-marty-haugen",
     "title": "Ps 80 Lord, make us turn to you...",
     "composer": "The Lyric Psalter • Tony Alonso & Marty Haugen",
-    "resources": [],
+    "resources": [
+      {
+        "id": "psalms--psalms-advent-adv-01b-psalms-adv-01b-ps-80-lord-make-us-turn-to-you-lyricpsalte",
+        "type": "sheet_music",
+        "label": "Lyric Psalter - Choral",
+        "filePath": "_psalms/Advent/Adv-01B/Psalms/Adv-01B_Ps-80_Lord,-Make-Us-Turn-To-You_LyricPsalterChoral_Haugen.pdf",
+        "source": "local"
+      },
+      {
+        "id": "psalms--psalms-advent-adv-02b-psalms-adv-02b-ps-80-lord-make-us-turn-to-you-lyricpsalte",
+        "type": "sheet_music",
+        "label": "Lyric Psalter - Choral",
+        "filePath": "_psalms/Advent/Adv-02B/Psalms/Adv-02B_Ps-80_Lord,-Make-Us-Turn-To-You_LyricPsalterChoral_Haugen.pdf",
+        "source": "local"
+      },
+      {
+        "id": "psalms--psalms-ordinary-time-ot-27a-psalms-ot-27a-ps-80-the-vineyard-of-the-lord-lyricp",
+        "type": "sheet_music",
+        "label": "Lyric Psalter",
+        "filePath": "_psalms/Ordinary Time/OT-27A/Psalms/OT-27A_Ps-80_The-Vineyard-Of-The-Lord_LyricPsalter_Alonso.pdf",
+        "source": "local"
+      }
+    ],
     "usageCount": 5,
     "occasions": [
       "advent-04-b",
@@ -14486,7 +14871,15 @@
     "id": "ps-84-blessed-are-they-who-dwell--spirit-psalm-iv-n-d-az",
     "title": "Ps 84 Blessed are they who dwell...",
     "composer": "Spirit & Psalm • Iván Díaz",
-    "resources": [],
+    "resources": [
+      {
+        "id": "psalms--psalms-christmas-chr-holy-familyc-psalms-chr-holy-familyc-ps-84-the-holy-family",
+        "type": "sheet_music",
+        "label": "Spirit & Psalm",
+        "filePath": "_psalms/Christmas/Chr-Holy-FamilyC/Psalms/Chr-Holy-FamilyC_Ps-84_The-Holy-Family-Of-Jesus,-Mary_Spirit&Psalm2025_Díaz.pdf",
+        "source": "local"
+      }
+    ],
     "usageCount": 5,
     "occasions": [
       "holy-family-a",
@@ -15310,7 +15703,64 @@
     "id": "ps-23-the-lord-is-my-shepherd-there-is-nothing--spirit-psalm-sarah-hart",
     "title": "Ps 23 The Lord is my shepherd there is nothing...",
     "composer": "Spirit & Psalm • Sarah Hart 🍀",
-    "resources": [],
+    "resources": [
+      {
+        "id": "psalms--psalms-easter-eas-04a-psalms-eas-04a-ps-23-the-lord-is-my-shepherd-there-spirit",
+        "type": "sheet_music",
+        "label": "Spirit & Psalm",
+        "filePath": "_psalms/Easter/Eas-04A/Psalms/Eas-04A_Ps-23_The-Lord-Is-My-Shepherd-There_Spirit&Psalm2026_Hart.pdf",
+        "source": "local"
+      },
+      {
+        "id": "psalms--psalms-lent-len-04a-psalms-len-04a-ps-23-the-lord-is-my-shepherd-there-spirit-p",
+        "type": "sheet_music",
+        "label": "Spirit & Psalm",
+        "filePath": "_psalms/Lent/Len-04A/Psalms/Len-04A_Ps-23_The-Lord-Is-My-Shepherd-There_Spirit&Psalm2026_Hart.pdf",
+        "source": "local"
+      },
+      {
+        "id": "psalms--psalms-lent-len-04b-psalms-len-04b-ps-23-the-lord-is-my-shepherd-there-spirit-p",
+        "type": "sheet_music",
+        "label": "Spirit & Psalm",
+        "filePath": "_psalms/Lent/Len-04B/Psalms/Len-04B_Ps-23_The-Lord-Is-My-Shepherd-There_Spirit&Psalm2024_Hart.pdf",
+        "source": "local"
+      },
+      {
+        "id": "psalms--psalms-lent-len-04c-psalms-len-04c-ps-23-the-lord-is-my-shepherd-there-spirit-p",
+        "type": "sheet_music",
+        "label": "Spirit & Psalm",
+        "filePath": "_psalms/Lent/Len-04C/Psalms/Len-04C_Ps-23_The-Lord-Is-My-Shepherd-There_Spirit&Psalm2025_Hart.pdf",
+        "source": "local"
+      },
+      {
+        "id": "psalms--psalms-ordinary-time-ot-16b-psalms-ot-16b-ps-23-the-lord-is-my-shepherd-there-s",
+        "type": "sheet_music",
+        "label": "Spirit & Psalm",
+        "filePath": "_psalms/Ordinary Time/OT-16B/Psalms/OT-16B_Ps-23_The-Lord-Is-My-Shepherd-There_Spirit&Psalm2024_Hart.pdf",
+        "source": "local"
+      },
+      {
+        "id": "psalms--psalms-ordinary-time-ot-28a-psalms-ot-28a-ps-23-i-shall-live-in-the-house-spiri",
+        "type": "sheet_music",
+        "label": "Spirit & Psalm",
+        "filePath": "_psalms/Ordinary Time/OT-28A/Psalms/OT-28A_Ps-23_I-Shall-Live-In-The-House_Spirit&Psalm2026_Anderson.pdf",
+        "source": "local"
+      },
+      {
+        "id": "psalms--psalms-solemnities-sol-all-soulsc-psalms-sol-all-soulsc-ps-23-all-souls-day-spi",
+        "type": "sheet_music",
+        "label": "Spirit & Psalm",
+        "filePath": "_psalms/Solemnities/Sol-All-SoulsC/Psalms/Sol-All-SoulsC_Ps-23_All-Souls’-Day_Spirit&Psalm2025_Unknown.pdf",
+        "source": "local"
+      },
+      {
+        "id": "psalms--psalms-solemnities-sol-christ-the-kinga-psalms-sol-christ-the-kinga-ps-23-our-l",
+        "type": "sheet_music",
+        "label": "Spirit & Psalm",
+        "filePath": "_psalms/Solemnities/Sol-Christ-The-KingA/Psalms/Sol-Christ-The-KingA_Ps-23_Our-Lord-Jesus-Christ,-King_Spirit&Psalm2026_Hart.pdf",
+        "source": "local"
+      }
+    ],
     "usageCount": 5,
     "occasions": [
       "lent-04-a-second-scrutiny"
@@ -15558,7 +16008,22 @@
     "id": "ps-30-i-will-praise-you-lord-for-you-have--spirit-psalm-rick-modlin",
     "title": "Ps 30 I will praise you, Lord, for you have...",
     "composer": "Spirit & Psalm • Rick Modlin",
-    "resources": [],
+    "resources": [
+      {
+        "id": "psalms--psalms-easter-eas-03c-psalms-eas-03c-ps-30-i-will-praise-you-lord-spirit-psalm2",
+        "type": "sheet_music",
+        "label": "Spirit & Psalm",
+        "filePath": "_psalms/Easter/Eas-03C/Psalms/Eas-03C_Ps-30_I-Will-Praise-You,-Lord,_Spirit&Psalm2025_Modlin.pdf",
+        "source": "local"
+      },
+      {
+        "id": "psalms--psalms-ordinary-time-ot-13b-psalms-ot-13b-ps-30-i-will-praise-you-lord-spirit-p",
+        "type": "sheet_music",
+        "label": "Spirit & Psalm",
+        "filePath": "_psalms/Ordinary Time/OT-13B/Psalms/OT-13B_Ps-30_I-Will-Praise-You,-Lord,_Spirit&Psalm2024_Modlin.pdf",
+        "source": "local"
+      }
+    ],
     "usageCount": 5,
     "occasions": [
       "easter-03-a",
@@ -15665,7 +16130,22 @@
     "id": "ps-100-we-are-his-people-the-sheep--spirit-psalm-sarah-hart",
     "title": "Ps 100 We are his people, the sheep...",
     "composer": "Spirit & Psalm • Sarah Hart",
-    "resources": [],
+    "resources": [
+      {
+        "id": "psalms--psalms-easter-eas-04c-psalms-eas-04c-ps-100-we-are-his-people-we-are-spirit-psa",
+        "type": "sheet_music",
+        "label": "Spirit & Psalm",
+        "filePath": "_psalms/Easter/Eas-04C/Psalms/Eas-04C_Ps-100_We-Are-His-People,-We-Are_Spirit&Psalm2025_Hart.pdf",
+        "source": "local"
+      },
+      {
+        "id": "psalms--psalms-ordinary-time-ot-11a-psalms-ot-11a-ps-100-we-are-his-people-we-are-spiri",
+        "type": "sheet_music",
+        "label": "Spirit & Psalm",
+        "filePath": "_psalms/Ordinary Time/OT-11A/Psalms/OT-11A_Ps-100_We-Are-His-People,-We-Are_Spirit&Psalm2026_Hart.pdf",
+        "source": "local"
+      }
+    ],
     "usageCount": 5,
     "occasions": [
       "easter-04-a",
@@ -15773,7 +16253,50 @@
     "id": "ps-47-god-mounts-his-throne-to-shouts--the-lyric-psalter-tony-alonso-marty-haugen",
     "title": "Ps 47 God mounts his throne to shouts...",
     "composer": "The Lyric Psalter • Tony Alonso & Marty Haugen",
-    "resources": [],
+    "resources": [
+      {
+        "id": "psalms--psalms-easter-eas-07a-psalms-eas-07a-ps-47-god-mounts-his-throne-lyricpsalterch",
+        "type": "sheet_music",
+        "label": "Lyric Psalter - Choral",
+        "filePath": "_psalms/Easter/Eas-07A/Psalms/Eas-07A_Ps-47_God-Mounts-His-Throne_LyricPsalterChoral_Haugen.pdf",
+        "source": "local"
+      },
+      {
+        "id": "psalms--psalms-easter-eas-ascensiona-psalms-eas-ascension-a-ps-47-god-mounts-his-throne",
+        "type": "sheet_music",
+        "label": "Lyric Psalter",
+        "filePath": "_psalms/Easter/Eas-AscensionA/Psalms/Eas-Ascension-A_Ps-47_God-Mounts-His-Throne_LyricPsalter_Haugen.pdf",
+        "source": "local"
+      },
+      {
+        "id": "psalms--psalms-easter-eas-ascensiona-psalms-eas-ascensiona-ps-47-god-mounts-his-throne-",
+        "type": "sheet_music",
+        "label": "Lyric Psalter - Choral",
+        "filePath": "_psalms/Easter/Eas-AscensionA/Psalms/Eas-AscensionA_Ps-47_God-Mounts-His-Throne_LyricPsalterChoral_Haugen.pdf",
+        "source": "local"
+      },
+      {
+        "id": "psalms--psalms-easter-eas-ascensionb-psalms-eas-ascensionb-ps-47-god-mounts-his-throne-",
+        "type": "sheet_music",
+        "label": "Lyric Psalter - Choral",
+        "filePath": "_psalms/Easter/Eas-AscensionB/Psalms/Eas-AscensionB_Ps-47_God-Mounts-His-Throne_LyricPsalterChoral_Haugen.pdf",
+        "source": "local"
+      },
+      {
+        "id": "psalms--psalms-easter-eas-pentecostc-psalms-eas-pentecostc-ps-47-god-mounts-his-throne-",
+        "type": "sheet_music",
+        "label": "Lyric Psalter - Choral",
+        "filePath": "_psalms/Easter/Eas-PentecostC/Psalms/Eas-PentecostC_Ps-47_God-Mounts-His-Throne_LyricPsalterChoral_Haugen.pdf",
+        "source": "local"
+      },
+      {
+        "id": "psalms--psalms-solemnities-sol-holy-trinityc-psalms-sol-holy-trinityc-ps-47-god-mounts-",
+        "type": "sheet_music",
+        "label": "Lyric Psalter - Choral",
+        "filePath": "_psalms/Solemnities/Sol-Holy-TrinityC/Psalms/Sol-Holy-TrinityC_Ps-47_God-Mounts-His-Throne_LyricPsalterChoral_Haugen.pdf",
+        "source": "local"
+      }
+    ],
     "usageCount": 5,
     "occasions": [
       "ascension-a",
@@ -16131,7 +16654,29 @@
     "id": "ps-34-o-taste-and-see--marty-haugen",
     "title": "Ps 34 O Taste and See",
     "composer": "Marty Haugen",
-    "resources": [],
+    "resources": [
+      {
+        "id": "psalms--psalms-ordinary-time-ot-19b-psalms-ot-19b-ps-34-taste-and-see-the-goodness-spir",
+        "type": "sheet_music",
+        "label": "Spirit & Psalm",
+        "filePath": "_psalms/Ordinary Time/OT-19B/Psalms/OT-19B_Ps-34_Taste-And-See-The-Goodness_Spirit&Psalm2024_Booth.pdf",
+        "source": "local"
+      },
+      {
+        "id": "psalms--psalms-ordinary-time-ot-20b-psalms-ot-20b-ps-34-taste-and-see-the-goodness-spir",
+        "type": "sheet_music",
+        "label": "Spirit & Psalm",
+        "filePath": "_psalms/Ordinary Time/OT-20B/Psalms/OT-20B_Ps-34_Taste-And-See-The-Goodness_Spirit&Psalm2024_Booth.pdf",
+        "source": "local"
+      },
+      {
+        "id": "psalms--psalms-ordinary-time-ot-21b-psalms-ot-21b-ps-34-taste-and-see-the-goodness-spir",
+        "type": "sheet_music",
+        "label": "Spirit & Psalm",
+        "filePath": "_psalms/Ordinary Time/OT-21B/Psalms/OT-21B_Ps-34_Taste-And-See-The-Goodness_Spirit&Psalm2024_Booth.pdf",
+        "source": "local"
+      }
+    ],
     "usageCount": 5,
     "occasions": [
       "feast-of-st-monica"
@@ -16409,7 +16954,43 @@
     "id": "ps-34-the-lord-hears-the-cry-of-the-poor--the-lyric-psalter-tony-alonso-marty-haugen",
     "title": "Ps 34 The Lord hears the cry of the poor.",
     "composer": "The Lyric Psalter • Tony Alonso & Marty Haugen",
-    "resources": [],
+    "resources": [
+      {
+        "id": "psalms--psalms-christmas-chr-christmas-dayc-psalms-chr-christmas-dayc-ps-34-at-the-mass",
+        "type": "sheet_music",
+        "label": "Spirit & Psalm",
+        "filePath": "_psalms/Christmas/Chr-Christmas-DayC/Psalms/Chr-Christmas-DayC_Ps-34_At-The-Mass-During-The-Day_Spirit&Psalm2025_Consiglio.pdf",
+        "source": "local"
+      },
+      {
+        "id": "psalms--psalms-ordinary-time-ot-02c-psalms-ot-02c-ps-34-the-lord-hears-the-cry-lyricpsa",
+        "type": "sheet_music",
+        "label": "Lyric Psalter - Choral",
+        "filePath": "_psalms/Ordinary Time/OT-02C/Psalms/OT-02C_Ps-34_The-Lord-Hears-The-Cry_LyricPsalterChoral_Haugen.pdf",
+        "source": "local"
+      },
+      {
+        "id": "psalms--psalms-ordinary-time-ot-30c-psalms-ot-30c-ps-34-the-lord-hears-the-cry-spirit-p",
+        "type": "sheet_music",
+        "label": "Spirit & Psalm",
+        "filePath": "_psalms/Ordinary Time/OT-30C/Psalms/OT-30C_Ps-34_The-Lord-Hears-The-Cry,_Spirit&Psalm2025_Fernández.pdf",
+        "source": "local"
+      },
+      {
+        "id": "psalms--psalms-ordinary-time-ot-30c-psalms-ot-30c-ps-34-the-lord-hears-the-cry-lyricpsa",
+        "type": "sheet_music",
+        "label": "Lyric Psalter - Choral",
+        "filePath": "_psalms/Ordinary Time/OT-30C/Psalms/OT-30C_Ps-34_The-Lord-Hears-The-Cry_LyricPsalterChoral_Haugen.pdf",
+        "source": "local"
+      },
+      {
+        "id": "psalms--psalms-ordinary-time-ot-30c-psalms-ot-30c-ps-34-the-lord-hears-the-cry-lyricpsa",
+        "type": "sheet_music",
+        "label": "Lyric Psalter",
+        "filePath": "_psalms/Ordinary Time/OT-30C/Psalms/OT-30C_Ps-34_The-Lord-Hears-The-Cry_LyricPsalter_Haugen.pdf",
+        "source": "local"
+      }
+    ],
     "usageCount": 5,
     "occasions": [
       "ordinary-time-30-c"
@@ -16750,7 +17331,85 @@
     "id": "ps-27-the-lord-is-my-light-and-my-salvation--the-lyric-psalter-tony-alonso-marty-haugen",
     "title": "Ps 27 The Lord is my light and my salvation.",
     "composer": "The Lyric Psalter • Tony Alonso & Marty Haugen",
-    "resources": [],
+    "resources": [
+      {
+        "id": "psalms--psalms-easter-eas-07a-psalms-eas-07a-ps-27-i-believe-that-i-shall-see-lyricpsal",
+        "type": "sheet_music",
+        "label": "Lyric Psalter",
+        "filePath": "_psalms/Easter/Eas-07A/Psalms/Eas-07A_Ps-27_I-Believe-That-I-Shall-See_LyricPsalter_Alonso.pdf",
+        "source": "local"
+      },
+      {
+        "id": "psalms--psalms-ordinary-time-ot-03a-psalms-ot-03a-ps-27-the-lord-is-my-light-and-my-sal",
+        "type": "sheet_music",
+        "label": "Lyric Psalter",
+        "filePath": "_psalms/Ordinary Time/OT-03A/Psalms/OT-03A_Ps-27_The-Lord-Is-My-Light-And-My-Salvation_LyricPsalter_Alonso.pdf",
+        "source": "local"
+      },
+      {
+        "id": "psalms--psalms-solemnities-sol-all-soulsa-psalms-sol-all-soulsa-ps-27-the-lord-is-my-li",
+        "type": "sheet_music",
+        "label": "Lyric Psalter - Choral",
+        "filePath": "_psalms/Solemnities/Sol-All-SoulsA/Psalms/Sol-All-SoulsA_Ps-27_The-Lord-Is-My-Light_LyricPsalterChoral_Alonso.pdf",
+        "source": "local"
+      },
+      {
+        "id": "psalms--psalms-solemnities-sol-all-soulsa-psalms-sol-all-soulsa-ps-27-the-lord-is-my-li",
+        "type": "sheet_music",
+        "label": "Lyric Psalter",
+        "filePath": "_psalms/Solemnities/Sol-All-SoulsA/Psalms/Sol-All-SoulsA_Ps-27_The-Lord-Is-My-Light_LyricPsalter_Alonso.pdf",
+        "source": "local"
+      },
+      {
+        "id": "psalms--psalms-solemnities-sol-all-soulsb-psalms-sol-all-soulsb-ps-27-the-lord-is-my-li",
+        "type": "sheet_music",
+        "label": "Lyric Psalter - Choral",
+        "filePath": "_psalms/Solemnities/Sol-All-SoulsB/Psalms/Sol-All-SoulsB_Ps-27_The-Lord-Is-My-Light_LyricPsalterChoral_Alonso.pdf",
+        "source": "local"
+      },
+      {
+        "id": "psalms--psalms-solemnities-sol-all-soulsb-psalms-sol-all-soulsb-ps-27-the-lord-is-my-li",
+        "type": "sheet_music",
+        "label": "Lyric Psalter",
+        "filePath": "_psalms/Solemnities/Sol-All-SoulsB/Psalms/Sol-All-SoulsB_Ps-27_The-Lord-Is-My-Light_LyricPsalter_Alonso.pdf",
+        "source": "local"
+      },
+      {
+        "id": "psalms--psalms-solemnities-sol-all-soulsc-psalms-sol-all-soulsc-ps-27-the-lord-is-my-li",
+        "type": "sheet_music",
+        "label": "Lyric Psalter - Choral",
+        "filePath": "_psalms/Solemnities/Sol-All-SoulsC/Psalms/Sol-All-SoulsC_Ps-27_The-Lord-Is-My-Light_LyricPsalterChoral_Alonso.pdf",
+        "source": "local"
+      },
+      {
+        "id": "psalms--psalms-solemnities-sol-all-soulsc-psalms-sol-all-soulsc-ps-27-the-lord-is-my-li",
+        "type": "sheet_music",
+        "label": "Lyric Psalter",
+        "filePath": "_psalms/Solemnities/Sol-All-SoulsC/Psalms/Sol-All-SoulsC_Ps-27_The-Lord-Is-My-Light_LyricPsalter_Alonso.pdf",
+        "source": "local"
+      },
+      {
+        "id": "psalms--psalms-solemnities-sol-lateran-basilicaa-psalms-sol-lateran-basilicaa-ps-27-the",
+        "type": "sheet_music",
+        "label": "Lyric Psalter - Choral",
+        "filePath": "_psalms/Solemnities/Sol-Lateran-BasilicaA/Psalms/Sol-Lateran-BasilicaA_Ps-27_The-Lord-Is-My-Light_LyricPsalterChoral_Alonso.pdf",
+        "source": "local"
+      },
+      {
+        "id": "psalms--psalms-solemnities-sol-lateran-basilicab-psalms-sol-lateran-basilicab-ps-27-the",
+        "type": "sheet_music",
+        "label": "Lyric Psalter - Choral",
+        "filePath": "_psalms/Solemnities/Sol-Lateran-BasilicaB/Psalms/Sol-Lateran-BasilicaB_Ps-27_The-Lord-Is-My-Light_LyricPsalterChoral_Alonso.pdf",
+        "source": "local"
+      },
+      {
+        "id": "psalms--psalms-solemnities-sol-lateran-basilicac-psalms-sol-lateran-basilicac-ps-27-the",
+        "type": "sheet_music",
+        "label": "Lyric Psalter - Choral",
+        "filePath": "_psalms/Solemnities/Sol-Lateran-BasilicaC/Psalms/Sol-Lateran-BasilicaC_Ps-27_The-Lord-Is-My-Light_LyricPsalterChoral_Alonso.pdf",
+        "source": "local"
+      }
+    ],
     "usageCount": 4,
     "occasions": [
       "ordinary-time-03-a-word-of-god-sunday",
@@ -17175,7 +17834,15 @@
     "id": "ps-138-in-the-sight-of-the-angels-i-will-sing--the-lyric-psalter-tony-alonso-marty-haugen",
     "title": "Ps 138 In the sight of the angels I will sing...",
     "composer": "The Lyric Psalter • Tony Alonso & Marty Haugen",
-    "resources": [],
+    "resources": [
+      {
+        "id": "psalms--psalms-ordinary-time-ot-07c-psalms-ot-07c-ps-138-in-the-sight-of-the-angels-lyr",
+        "type": "sheet_music",
+        "label": "Lyric Psalter - Choral",
+        "filePath": "_psalms/Ordinary Time/OT-07C/Psalms/OT-07C_Ps-138_In-The-Sight-Of-The-Angels_LyricPsalterChoral_Alonso.pdf",
+        "source": "local"
+      }
+    ],
     "usageCount": 4,
     "occasions": [
       "ordinary-time-05-b",
@@ -17756,7 +18423,29 @@
     "id": "ps-118-give-thanks-to-the-lord--the-lyric-psalter-tony-alonso-marty-haugen",
     "title": "Ps 118 Give thanks to the Lord...",
     "composer": "The Lyric Psalter • Tony Alonso & Marty Haugen",
-    "resources": [],
+    "resources": [
+      {
+        "id": "psalms--psalms-easter-eas-02a-psalms-eas-02a-ps-118-give-thanks-to-the-lord-lyricpsalte",
+        "type": "sheet_music",
+        "label": "Lyric Psalter",
+        "filePath": "_psalms/Easter/Eas-02A/Psalms/Eas-02A_Ps-118_Give-Thanks-To-The-Lord_LyricPsalter_Haugen.pdf",
+        "source": "local"
+      },
+      {
+        "id": "psalms--psalms-easter-eas-03c-psalms-eas-03c-ps-118-give-thanks-to-the-lord-lyricpsalte",
+        "type": "sheet_music",
+        "label": "Lyric Psalter - Choral",
+        "filePath": "_psalms/Easter/Eas-03C/Psalms/Eas-03C_Ps-118_Give-Thanks-To-The-Lord_LyricPsalterChoral_Haugen.pdf",
+        "source": "local"
+      },
+      {
+        "id": "psalms--psalms-easter-eas-05b-psalms-eas-05b-ps-118-the-stone-rejected-by-the-builders-",
+        "type": "sheet_music",
+        "label": "Lyric Psalter - Choral",
+        "filePath": "_psalms/Easter/Eas-05B/Psalms/Eas-05B_Ps-118_The-Stone-Rejected-By-The-Builders_LyricPsalterChoral_Haugen.pdf",
+        "source": "local"
+      }
+    ],
     "usageCount": 4,
     "occasions": [
       "easter-02-divine-mercy-a",
@@ -18075,7 +18764,85 @@
     "id": "ps-67-o-god-let-all-the-nations-praise-you--the-lyric-psalter-tony-alonso-marty-haugen",
     "title": "Ps 67 O God, let all the nations praise you!",
     "composer": "The Lyric Psalter • Tony Alonso & Marty Haugen",
-    "resources": [],
+    "resources": [
+      {
+        "id": "psalms--psalms-christmas-chr-mary-mother-of-goda-psalms-chr-mary-mother-of-goda-ps-67-m",
+        "type": "sheet_music",
+        "label": "Lyric Psalter - Choral",
+        "filePath": "_psalms/Christmas/Chr-Mary-Mother-Of-GodA/Psalms/Chr-Mary-Mother-Of-GodA_Ps-67_May-God-Bless-Us_LyricPsalterChoral_Alonso.pdf",
+        "source": "local"
+      },
+      {
+        "id": "psalms--psalms-christmas-chr-mary-mother-of-goda-psalms-chr-mary-mother-of-goda-ps-67-m",
+        "type": "sheet_music",
+        "label": "Lyric Psalter",
+        "filePath": "_psalms/Christmas/Chr-Mary-Mother-Of-GodA/Psalms/Chr-Mary-Mother-Of-GodA_Ps-67_May-God-Bless-Us_LyricPsalter_Alonso.pdf",
+        "source": "local"
+      },
+      {
+        "id": "psalms--psalms-christmas-chr-mary-mother-of-godb-psalms-chr-mary-mother-of-godb-ps-67-m",
+        "type": "sheet_music",
+        "label": "Lyric Psalter - Choral",
+        "filePath": "_psalms/Christmas/Chr-Mary-Mother-Of-GodB/Psalms/Chr-Mary-Mother-Of-GodB_Ps-67_May-God-Bless-Us_LyricPsalterChoral_Alonso.pdf",
+        "source": "local"
+      },
+      {
+        "id": "psalms--psalms-christmas-chr-mary-mother-of-godb-psalms-chr-mary-mother-of-godb-ps-67-m",
+        "type": "sheet_music",
+        "label": "Lyric Psalter",
+        "filePath": "_psalms/Christmas/Chr-Mary-Mother-Of-GodB/Psalms/Chr-Mary-Mother-Of-GodB_Ps-67_May-God-Bless-Us_LyricPsalter_Alonso.pdf",
+        "source": "local"
+      },
+      {
+        "id": "psalms--psalms-christmas-chr-mary-mother-of-godc-psalms-chr-mary-mother-of-godc-ps-67-m",
+        "type": "sheet_music",
+        "label": "Lyric Psalter - Choral",
+        "filePath": "_psalms/Christmas/Chr-Mary-Mother-Of-GodC/Psalms/Chr-Mary-Mother-Of-GodC_Ps-67_May-God-Bless-Us_LyricPsalterChoral_Alonso.pdf",
+        "source": "local"
+      },
+      {
+        "id": "psalms--psalms-christmas-chr-mary-mother-of-godc-psalms-chr-mary-mother-of-godc-ps-67-m",
+        "type": "sheet_music",
+        "label": "Lyric Psalter",
+        "filePath": "_psalms/Christmas/Chr-Mary-Mother-Of-GodC/Psalms/Chr-Mary-Mother-Of-GodC_Ps-67_May-God-Bless-Us_LyricPsalter_Alonso.pdf",
+        "source": "local"
+      },
+      {
+        "id": "psalms--psalms-easter-eas-06c-psalms-eas-06c-ps-67-o-god-let-all-the-nations-lyricpsalt",
+        "type": "sheet_music",
+        "label": "Lyric Psalter",
+        "filePath": "_psalms/Easter/Eas-06C/Psalms/Eas-06C_Ps-67_O-God-Let-All-The-Nations_LyricPsalter_Alonso.pdf",
+        "source": "local"
+      },
+      {
+        "id": "psalms--psalms-lent-len-ash-weda-psalms-len-ash-weda-ps-67-may-god-bless-us-lyricpsalte",
+        "type": "sheet_music",
+        "label": "Lyric Psalter - Choral",
+        "filePath": "_psalms/Lent/Len-Ash-WedA/Psalms/Len-Ash-WedA_Ps-67_May-God-Bless-Us_LyricPsalterChoral_Alonso.pdf",
+        "source": "local"
+      },
+      {
+        "id": "psalms--psalms-lent-len-ash-wedb-psalms-len-ash-wedb-ps-67-may-god-bless-us-lyricpsalte",
+        "type": "sheet_music",
+        "label": "Lyric Psalter - Choral",
+        "filePath": "_psalms/Lent/Len-Ash-WedB/Psalms/Len-Ash-WedB_Ps-67_May-God-Bless-Us_LyricPsalterChoral_Alonso.pdf",
+        "source": "local"
+      },
+      {
+        "id": "psalms--psalms-lent-len-ash-wedc-psalms-len-ash-wedc-ps-67-may-god-bless-us-lyricpsalte",
+        "type": "sheet_music",
+        "label": "Lyric Psalter - Choral",
+        "filePath": "_psalms/Lent/Len-Ash-WedC/Psalms/Len-Ash-WedC_Ps-67_May-God-Bless-Us_LyricPsalterChoral_Alonso.pdf",
+        "source": "local"
+      },
+      {
+        "id": "psalms--psalms-ordinary-time-ot-20a-psalms-ot-20a-ps-67-o-god-let-all-the-nations-prais",
+        "type": "sheet_music",
+        "label": "Lyric Psalter",
+        "filePath": "_psalms/Ordinary Time/OT-20A/Psalms/OT-20A_Ps-67_O-God-Let-All-The-Nations-Praise-You_LyricPsalter_Alonso.pdf",
+        "source": "local"
+      }
+    ],
     "usageCount": 4,
     "occasions": [
       "easter-06-c",
@@ -18491,7 +19258,22 @@
     "id": "ps-122-let-us-go-rejoicing-to-the-house--the-lyric-psalter-tony-alonso-marty-haugen",
     "title": "Ps 122 Let us go rejoicing to the house...",
     "composer": "The Lyric Psalter • Tony Alonso & Marty Haugen",
-    "resources": [],
+    "resources": [
+      {
+        "id": "psalms--psalms-advent-adv-01a-psalms-adv-01a-ps-122-let-us-go-rejoicing-lyricpsaltercho",
+        "type": "sheet_music",
+        "label": "Lyric Psalter - Choral",
+        "filePath": "_psalms/Advent/Adv-01A/Psalms/Adv-01A_Ps-122_Let-Us-Go-Rejoicing_LyricPsalterChoral_Haugen.pdf",
+        "source": "local"
+      },
+      {
+        "id": "psalms--psalms-advent-adv-01a-psalms-adv-01a-ps-122-let-us-go-rejoicing-lyricpsalter-ha",
+        "type": "sheet_music",
+        "label": "Lyric Psalter",
+        "filePath": "_psalms/Advent/Adv-01A/Psalms/Adv-01A_Ps-122_Let-Us-Go-Rejoicing_LyricPsalter_Haugen.pdf",
+        "source": "local"
+      }
+    ],
     "usageCount": 4,
     "occasions": [
       "solemnity-christ-the-king-c"
@@ -18557,7 +19339,29 @@
     "id": "ps-25-to-you-o-lord-i-lift-my-soul--the-lyric-psalter-tony-alonso-marty-haugen",
     "title": "Ps 25 To you, O Lord, I lift my soul.",
     "composer": "The Lyric Psalter • Tony Alonso & Marty Haugen",
-    "resources": [],
+    "resources": [
+      {
+        "id": "psalms--psalms-advent-adv-01c-psalms-adv-01c-ps-25-to-you-o-lord-i-lift-lyricpsaltercho",
+        "type": "sheet_music",
+        "label": "Lyric Psalter - Choral",
+        "filePath": "_psalms/Advent/Adv-01C/Psalms/Adv-01C_Ps-25_To-You-O-Lord-I-Lift_LyricPsalterChoral_Haugen.pdf",
+        "source": "local"
+      },
+      {
+        "id": "psalms--psalms-advent-adv-03c-psalms-adv-03c-ps-25-to-you-o-lord-i-lift-lyricpsaltercho",
+        "type": "sheet_music",
+        "label": "Lyric Psalter - Choral",
+        "filePath": "_psalms/Advent/Adv-03C/Psalms/Adv-03C_Ps-25_To-You,-O-Lord,-I-Lift_LyricPsalterChoral_Haugen.pdf",
+        "source": "local"
+      },
+      {
+        "id": "psalms--psalms-advent-adv-04c-psalms-adv-04c-ps-25-to-you-o-lord-i-lift-lyricpsaltercho",
+        "type": "sheet_music",
+        "label": "Lyric Psalter - Choral",
+        "filePath": "_psalms/Advent/Adv-04C/Psalms/Adv-04C_Ps-25_To-You,-O-Lord,-I-Lift_LyricPsalterChoral_Haugen.pdf",
+        "source": "local"
+      }
+    ],
     "usageCount": 3,
     "occasions": [
       "advent-01-c"
@@ -18628,7 +19432,22 @@
     "id": "ps-72-justice-shall-flourish-in-his-time-and-fullness--the-lyric-psalter-tony-alonso-marty-haugen",
     "title": "Ps 72 Justice shall flourish in his time, and fullness...",
     "composer": "The Lyric Psalter • Tony Alonso & Marty Haugen",
-    "resources": [],
+    "resources": [
+      {
+        "id": "psalms--psalms-advent-adv-02a-psalms-adv-02a-ps-72-justice-shall-flourish-in-his-time-l",
+        "type": "sheet_music",
+        "label": "Lyric Psalter - Choral",
+        "filePath": "_psalms/Advent/Adv-02A/Psalms/Adv-02A_Ps-72_Justice-Shall-Flourish-In-His-Time_LyricPsalterChoral_Haugen.pdf",
+        "source": "local"
+      },
+      {
+        "id": "psalms--psalms-advent-adv-02a-psalms-adv-02a-ps-72-justice-shall-flourish-in-his-time-l",
+        "type": "sheet_music",
+        "label": "Lyric Psalter",
+        "filePath": "_psalms/Advent/Adv-02A/Psalms/Adv-02A_Ps-72_Justice-Shall-Flourish-In-His-Time_LyricPsalter_Haugen.pdf",
+        "source": "local"
+      }
+    ],
     "usageCount": 3,
     "occasions": [
       "advent-02-a"
@@ -18753,7 +19572,29 @@
     "id": "ps-126-the-lord-has-done-great-things--spirit-psalm-chris-muglia",
     "title": "Ps 126 The Lord has done great things...",
     "composer": "Spirit & Psalm • Chris Muglia",
-    "resources": [],
+    "resources": [
+      {
+        "id": "psalms--psalms-advent-adv-02c-psalms-adv-02c-ps-126-the-lord-has-done-great-things-spir",
+        "type": "sheet_music",
+        "label": "Spirit & Psalm",
+        "filePath": "_psalms/Advent/Adv-02C/Psalms/Adv-02C_Ps-126_The-Lord-Has-Done-Great-Things_Spirit&Psalm2025_Muglia.pdf",
+        "source": "local"
+      },
+      {
+        "id": "psalms--psalms-lent-len-05c-psalms-len-05c-ps-126-the-lord-has-done-great-things-spirit",
+        "type": "sheet_music",
+        "label": "Spirit & Psalm",
+        "filePath": "_psalms/Lent/Len-05C/Psalms/Len-05C_Ps-126_The-Lord-Has-Done-Great-Things_Spirit&Psalm2025_Muglia.pdf",
+        "source": "local"
+      },
+      {
+        "id": "psalms--psalms-ordinary-time-ot-30b-psalms-ot-30b-ps-126-the-lord-has-done-great-things",
+        "type": "sheet_music",
+        "label": "Spirit & Psalm",
+        "filePath": "_psalms/Ordinary Time/OT-30B/Psalms/OT-30B_Ps-126_The-Lord-Has-Done-Great-Things_Spirit&Psalm2024_Muglia.pdf",
+        "source": "local"
+      }
+    ],
     "usageCount": 3,
     "occasions": [
       "advent-02-b",
@@ -18851,7 +19692,29 @@
     "id": "ps-146-lord-come-and-save-us--the-lyric-psalter-tony-alonso-marty-haugen",
     "title": "Ps 146 Lord, come and save us.",
     "composer": "The Lyric Psalter • Tony Alonso & Marty Haugen",
-    "resources": [],
+    "resources": [
+      {
+        "id": "psalms--psalms-advent-adv-03a-psalms-adv-03a-ps-146-lord-come-and-save-us-lyricpsalterc",
+        "type": "sheet_music",
+        "label": "Lyric Psalter - Choral",
+        "filePath": "_psalms/Advent/Adv-03A/Psalms/Adv-03A_Ps-146_Lord,-Come-And-Save-Us_LyricPsalterChoral_Haugen.pdf",
+        "source": "local"
+      },
+      {
+        "id": "psalms--psalms-advent-adv-03a-psalms-adv-03a-ps-146-lord-come-and-save-us-lyricpsalter-",
+        "type": "sheet_music",
+        "label": "Lyric Psalter",
+        "filePath": "_psalms/Advent/Adv-03A/Psalms/Adv-03A_Ps-146_Lord-Come-And-Save-Us_LyricPsalter_Haugen.pdf",
+        "source": "local"
+      },
+      {
+        "id": "psalms--psalms-advent-adv-04a-psalms-adv-04a-ps-146-lord-come-and-save-us-lyricpsalterc",
+        "type": "sheet_music",
+        "label": "Lyric Psalter - Choral",
+        "filePath": "_psalms/Advent/Adv-04A/Psalms/Adv-04A_Ps-146_Lord,-Come-And-Save-Us_LyricPsalterChoral_Haugen.pdf",
+        "source": "local"
+      }
+    ],
     "usageCount": 3,
     "occasions": [
       "advent-03-a"
@@ -19103,7 +19966,15 @@
     "id": "ps-24-let-the-lord-enter-he-is-king-of-glory--the-lyric-psalter-tony-alonso-marty-haugen",
     "title": "Ps 24 Let the Lord enter; he is king of glory.",
     "composer": "The Lyric Psalter • Tony Alonso & Marty Haugen",
-    "resources": [],
+    "resources": [
+      {
+        "id": "psalms--psalms-advent-adv-04a-psalms-adv-04a-ps-24-let-the-lord-enter-lyricpsalter-alon",
+        "type": "sheet_music",
+        "label": "Lyric Psalter",
+        "filePath": "_psalms/Advent/Adv-04A/Psalms/Adv-04A_Ps-24_Let-The-Lord-Enter_LyricPsalter_Alonso.pdf",
+        "source": "local"
+      }
+    ],
     "usageCount": 3,
     "occasions": [
       "advent-04-a"
@@ -19545,7 +20416,15 @@
     "id": "ps-29-the-lord-will-bless-his-people-with-peace--francesca-larosa",
     "title": "Ps 29 The Lord will bless his people with peace.",
     "composer": "Francesca LaRosa",
-    "resources": [],
+    "resources": [
+      {
+        "id": "psalms--psalms-christmas-chr-baptisma-psalms-chr-baptisma-ps-29-the-baptism-of-the-lord",
+        "type": "sheet_music",
+        "label": "Spirit & Psalm",
+        "filePath": "_psalms/Christmas/Chr-BaptismA/Psalms/Chr-BaptismA_Ps-29_The-Baptism-Of-The-Lord_Spirit&Psalm2026_Hillebrand.pdf",
+        "source": "local"
+      }
+    ],
     "usageCount": 3,
     "occasions": [
       "baptism-of-the-lord-a"
@@ -19740,7 +20619,22 @@
     "id": "ps-40-here-am-i-lord-i-come-to-do-your-will--spirit-psalm-paul-hillebrand",
     "title": "Ps 40 Here am I, Lord; I come to do your will.",
     "composer": "Spirit & Psalm • Paul Hillebrand",
-    "resources": [],
+    "resources": [
+      {
+        "id": "psalms--psalms-ordinary-time-ot-02a-psalms-ot-02a-ps-40-here-am-i-lord-here-am-spirit-p",
+        "type": "sheet_music",
+        "label": "Spirit & Psalm",
+        "filePath": "_psalms/Ordinary Time/OT-02A/Psalms/OT-02A_Ps-40_Here-Am-I,-Lord-Here-Am_Spirit&Psalm2026_Hillebrand.pdf",
+        "source": "local"
+      },
+      {
+        "id": "psalms--psalms-ordinary-time-ot-02b-psalms-ot-02b-ps-40-here-am-i-lord-here-am-spirit-p",
+        "type": "sheet_music",
+        "label": "Spirit & Psalm",
+        "filePath": "_psalms/Ordinary Time/OT-02B/Psalms/OT-02B_Ps-40_Here-Am-I,-Lord-Here-Am_Spirit&Psalm2024_Hillebrand.pdf",
+        "source": "local"
+      }
+    ],
     "usageCount": 3,
     "occasions": [
       "ordinary-time-02-a"
@@ -19768,7 +20662,43 @@
     "id": "ps-96-proclaim-his-marvelous-deeds--spirit-psalm-cooper-ray",
     "title": "Ps 96 Proclaim his marvelous deeds...",
     "composer": "Spirit & Psalm • Cooper Ray",
-    "resources": [],
+    "resources": [
+      {
+        "id": "psalms--psalms-christmas-chr-christmas-nighta-psalms-chr-christmas-nighta-ps-96-today-t",
+        "type": "sheet_music",
+        "label": "Spirit & Psalm",
+        "filePath": "_psalms/Christmas/Chr-Christmas-NightA/Psalms/Chr-Christmas-NightA_Ps-96_Today,-Today-Is-Born-Our-Savior,_Spirit&Psalm2026_Stephan.pdf",
+        "source": "local"
+      },
+      {
+        "id": "psalms--psalms-christmas-chr-christmas-nightb-psalms-chr-christmas-nightb-ps-96-today-t",
+        "type": "sheet_music",
+        "label": "Spirit & Psalm",
+        "filePath": "_psalms/Christmas/Chr-Christmas-NightB/Psalms/Chr-Christmas-NightB_Ps-96_Today,-Today-Is-Born-Our-Savior,_Spirit&Psalm2024_Stephan.pdf",
+        "source": "local"
+      },
+      {
+        "id": "psalms--psalms-christmas-chr-christmas-nightc-psalms-chr-christmas-nightc-ps-96-today-t",
+        "type": "sheet_music",
+        "label": "Spirit & Psalm",
+        "filePath": "_psalms/Christmas/Chr-Christmas-NightC/Psalms/Chr-Christmas-NightC_Ps-96_Today,-Today-Is-Born-Our-Savior,_Spirit&Psalm2025_Stephan.pdf",
+        "source": "local"
+      },
+      {
+        "id": "psalms--psalms-ordinary-time-ot-02c-psalms-ot-02c-ps-96-proclaim-his-marvelous-deeds-to",
+        "type": "sheet_music",
+        "label": "Spirit & Psalm",
+        "filePath": "_psalms/Ordinary Time/OT-02C/Psalms/OT-02C_Ps-96_Proclaim-His-Marvelous-Deeds-To-All_Spirit&Psalm2025_Ray.pdf",
+        "source": "local"
+      },
+      {
+        "id": "psalms--psalms-ordinary-time-ot-29a-psalms-ot-29a-ps-96-give-the-lord-glory-and-honor-s",
+        "type": "sheet_music",
+        "label": "Spirit & Psalm",
+        "filePath": "_psalms/Ordinary Time/OT-29A/Psalms/OT-29A_Ps-96_Give-The-Lord-Glory-And-Honor._Spirit&Psalm2026_Smith.pdf",
+        "source": "local"
+      }
+    ],
     "usageCount": 3,
     "occasions": [
       "ordinary-time-02-c"
@@ -19779,7 +20709,15 @@
     "id": "ps-19-your-words-lord-are-spirit-and-life--spirit-psalm-scot-crandal",
     "title": "Ps 19 Your words, Lord, are Spirit and life.",
     "composer": "Spirit & Psalm • Scot Crandal",
-    "resources": [],
+    "resources": [
+      {
+        "id": "psalms--psalms-ordinary-time-ot-03c-psalms-ot-03c-ps-19-your-words-lord-are-spirit-spir",
+        "type": "sheet_music",
+        "label": "Spirit & Psalm",
+        "filePath": "_psalms/Ordinary Time/OT-03C/Psalms/OT-03C_Ps-19_Your-Words,-Lord,-Are-Spirit_Spirit&Psalm2025_Crandal.pdf",
+        "source": "local"
+      }
+    ],
     "usageCount": 3,
     "occasions": [
       "ordinary-time-03-c-word-of-god-sunday"
@@ -19790,7 +20728,15 @@
     "id": "ps-146-blessed-the-poor-in-spirit--spirit-psalm-mary-kate-westrich",
     "title": "Ps 146 Blessed the poor in spirit...",
     "composer": "Spirit & Psalm • Mary Kate Westrich",
-    "resources": [],
+    "resources": [
+      {
+        "id": "psalms--psalms-ordinary-time-ot-04a-psalms-ot-04a-ps-146-blessed-are-the-poor-in-spirit",
+        "type": "sheet_music",
+        "label": "Spirit & Psalm",
+        "filePath": "_psalms/Ordinary Time/OT-04A/Psalms/OT-04A_Ps-146_Blessed-Are-The-Poor-In-Spirit_Spirit&Psalm2026_Westrich.pdf",
+        "source": "local"
+      }
+    ],
     "usageCount": 3,
     "occasions": [
       "ordinary-time-04-a"
@@ -19801,7 +20747,43 @@
     "id": "ps-95-if-today-you-hear-his-voice--the-lyric-psalter-tony-alonso-marty-haugen",
     "title": "Ps 95 If today you hear his voice...",
     "composer": "The Lyric Psalter • Tony Alonso & Marty Haugen",
-    "resources": [],
+    "resources": [
+      {
+        "id": "psalms--psalms-lent-len-03a-psalms-len-03a-ps-95-if-today-you-hear-his-voice-lyricpsalt",
+        "type": "sheet_music",
+        "label": "Lyric Psalter - Choral",
+        "filePath": "_psalms/Lent/Len-03A/Psalms/Len-03A_Ps-95_If-Today-You-Hear-His-Voice_LyricPsalterChoral_Haugen.pdf",
+        "source": "local"
+      },
+      {
+        "id": "psalms--psalms-lent-len-03a-psalms-len-03a-ps-95-if-today-you-hear-his-voice-lyricpsalt",
+        "type": "sheet_music",
+        "label": "Lyric Psalter",
+        "filePath": "_psalms/Lent/Len-03A/Psalms/Len-03A_Ps-95_If-Today-You-Hear-His-Voice_LyricPsalter_Haugen.pdf",
+        "source": "local"
+      },
+      {
+        "id": "psalms--psalms-lent-len-04a-psalms-len-04a-ps-95-if-today-you-hear-his-voice-lyricpsalt",
+        "type": "sheet_music",
+        "label": "Lyric Psalter - Choral",
+        "filePath": "_psalms/Lent/Len-04A/Psalms/Len-04A_Ps-95_If-Today-You-Hear-His-Voice_LyricPsalterChoral_Haugen.pdf",
+        "source": "local"
+      },
+      {
+        "id": "psalms--psalms-ordinary-time-ot-03a-psalms-ot-03a-ps-95-if-today-you-hear-his-voice-lyr",
+        "type": "sheet_music",
+        "label": "Lyric Psalter - Choral",
+        "filePath": "_psalms/Ordinary Time/OT-03A/Psalms/OT-03A_Ps-95_If-Today-You-Hear-His-Voice_LyricPsalterChoral_Haugen.pdf",
+        "source": "local"
+      },
+      {
+        "id": "psalms--psalms-ordinary-time-ot-05b-psalms-ot-05b-ps-95-if-today-you-hear-his-voice-lyr",
+        "type": "sheet_music",
+        "label": "Lyric Psalter - Choral",
+        "filePath": "_psalms/Ordinary Time/OT-05B/Psalms/OT-05B_Ps-95_If-Today-You-Hear-His-Voice_LyricPsalterChoral_Haugen.pdf",
+        "source": "local"
+      }
+    ],
     "usageCount": 3,
     "occasions": [
       "ordinary-time-04-b",
@@ -19887,7 +20869,36 @@
     "id": "ps-24-who-is-this-king-of-glory-it-is-the-lord--spirit-psalm-josh-blakesley",
     "title": "Ps 24 Who is this king of glory? It is the Lord!",
     "composer": "Spirit & Psalm • Josh Blakesley",
-    "resources": [],
+    "resources": [
+      {
+        "id": "psalms--psalms-solemnities-sol-all-saintsa-psalms-sol-all-saintsa-ps-24-lord-this-is-th",
+        "type": "sheet_music",
+        "label": "Spirit & Psalm",
+        "filePath": "_psalms/Solemnities/Sol-All-SaintsA/Psalms/Sol-All-SaintsA_Ps-24_Lord,-This-Is-The-People-That_Spirit&Psalm2026_McKinley.pdf",
+        "source": "local"
+      },
+      {
+        "id": "psalms--psalms-solemnities-sol-all-saintsb-psalms-sol-all-saintsb-ps-24-lord-this-is-th",
+        "type": "sheet_music",
+        "label": "Spirit & Psalm",
+        "filePath": "_psalms/Solemnities/Sol-All-SaintsB/Psalms/Sol-All-SaintsB_Ps-24_Lord,-This-Is-The-People-That_Spirit&Psalm2024_McKinley.pdf",
+        "source": "local"
+      },
+      {
+        "id": "psalms--psalms-solemnities-sol-all-saintsc-psalms-sol-all-saintsc-ps-24-lord-this-is-th",
+        "type": "sheet_music",
+        "label": "Spirit & Psalm",
+        "filePath": "_psalms/Solemnities/Sol-All-SaintsC/Psalms/Sol-All-SaintsC_Ps-24_Lord,-This-Is-The-People-That_Spirit&Psalm2025_McKinley.pdf",
+        "source": "local"
+      },
+      {
+        "id": "psalms--psalms-solemnities-sol-presentationc-psalms-sol-presentationc-ps-24-the-present",
+        "type": "sheet_music",
+        "label": "Spirit & Psalm",
+        "filePath": "_psalms/Solemnities/Sol-PresentationC/Psalms/Sol-PresentationC_Ps-24_The-Presentation-Of-The-Lord_Spirit&Psalm2025_Blakesley.pdf",
+        "source": "local"
+      }
+    ],
     "usageCount": 3,
     "occasions": [
       "feast-abc-feb-2-presentation-of-the-lord"
@@ -19948,7 +20959,15 @@
     "id": "ps-112-the-just-man-is-a-light-in-darkness--spirit-psalm-steve-angrisano",
     "title": "Ps 112 The just man is a light in darkness...",
     "composer": "Spirit & Psalm • Steve Angrisano",
-    "resources": [],
+    "resources": [
+      {
+        "id": "psalms--psalms-ordinary-time-ot-05a-psalms-ot-05a-ps-112-the-just-man-is-a-light-spirit",
+        "type": "sheet_music",
+        "label": "Spirit & Psalm",
+        "filePath": "_psalms/Ordinary Time/OT-05A/Psalms/OT-05A_Ps-112_The-Just-Man-Is-A-Light_Spirit&Psalm2026_Angrisano.pdf",
+        "source": "local"
+      }
+    ],
     "usageCount": 3,
     "occasions": [
       "ordinary-time-05-a"
@@ -20426,7 +21445,15 @@
     "id": "ps-51-be-merciful-o-lord-for-we-have-sinned--spirit-psalm-cyrtus-stephan",
     "title": "Ps 51 Be merciful, O Lord, for we have sinned.",
     "composer": "Spirit & Psalm • Cyrtus Stephan",
-    "resources": [],
+    "resources": [
+      {
+        "id": "psalms--psalms-lent-len-01a-psalms-len-01a-ps-51-be-merciful-be-merciful-o-lord-spirit-",
+        "type": "sheet_music",
+        "label": "Spirit & Psalm",
+        "filePath": "_psalms/Lent/Len-01A/Psalms/Len-01A_Ps-51_Be-Merciful,-Be-Merciful,-O-Lord,_Spirit&Psalm2026_Stephan.pdf",
+        "source": "local"
+      }
+    ],
     "usageCount": 3,
     "occasions": [
       "lent-01-a"
@@ -20504,7 +21531,29 @@
     "id": "ps-25-your-ways-o-lord-are-love-and-truth-to-those--the-lyric-psalter-tony-alonso-marty-haugen",
     "title": "Ps 25 Your ways, O Lord, are love and truth to those...",
     "composer": "The Lyric Psalter • Tony Alonso & Marty Haugen",
-    "resources": [],
+    "resources": [
+      {
+        "id": "psalms--psalms-ordinary-time-ot-06a-psalms-ot-06a-ps-25-remember-your-mercies-o-lord-ly",
+        "type": "sheet_music",
+        "label": "Lyric Psalter - Choral",
+        "filePath": "_psalms/Ordinary Time/OT-06A/Psalms/OT-06A_Ps-25_Remember-Your-Mercies,-O-Lord_LyricPsalterChoral_Haugen.pdf",
+        "source": "local"
+      },
+      {
+        "id": "psalms--psalms-ordinary-time-ot-07a-psalms-ot-07a-ps-25-remember-your-mercies-o-lord-ly",
+        "type": "sheet_music",
+        "label": "Lyric Psalter - Choral",
+        "filePath": "_psalms/Ordinary Time/OT-07A/Psalms/OT-07A_Ps-25_Remember-Your-Mercies,-O-Lord_LyricPsalterChoral_Haugen.pdf",
+        "source": "local"
+      },
+      {
+        "id": "psalms--psalms-ordinary-time-ot-26a-psalms-ot-26a-ps-25-remember-your-mercies-o-lord-ly",
+        "type": "sheet_music",
+        "label": "Lyric Psalter",
+        "filePath": "_psalms/Ordinary Time/OT-26A/Psalms/OT-26A_Ps-25_Remember-Your-Mercies-O-Lord_LyricPsalter_Haugen.pdf",
+        "source": "local"
+      }
+    ],
     "usageCount": 3,
     "occasions": [
       "lent-01-b"
@@ -20515,7 +21564,50 @@
     "id": "ps-33-lord-let-your-mercy-be-on-us-as-we-place--the-lyric-psalter-tony-alonso-marty-haugen",
     "title": "Ps 33 Lord, let your mercy be on us, as we place...",
     "composer": "The Lyric Psalter • Tony Alonso & Marty Haugen",
-    "resources": [],
+    "resources": [
+      {
+        "id": "psalms--psalms-easter-eas-05a-psalms-eas-05a-ps-33-lord-let-your-mercy-be-lyricpsalterc",
+        "type": "sheet_music",
+        "label": "Lyric Psalter - Choral",
+        "filePath": "_psalms/Easter/Eas-05A/Psalms/Eas-05A_Ps-33_Lord,-Let-Your-Mercy-Be_LyricPsalterChoral_Haugen.pdf",
+        "source": "local"
+      },
+      {
+        "id": "psalms--psalms-easter-eas-05a-psalms-eas-05a-ps-33-lord-let-your-mercy-be-on-us-lyricps",
+        "type": "sheet_music",
+        "label": "Lyric Psalter",
+        "filePath": "_psalms/Easter/Eas-05A/Psalms/Eas-05A_Ps-33_Lord-Let-Your-Mercy-Be-On-Us_LyricPsalter_Haugen.pdf",
+        "source": "local"
+      },
+      {
+        "id": "psalms--psalms-easter-eas-06a-psalms-eas-06a-ps-33-lord-let-your-mercy-be-lyricpsalterc",
+        "type": "sheet_music",
+        "label": "Lyric Psalter - Choral",
+        "filePath": "_psalms/Easter/Eas-06A/Psalms/Eas-06A_Ps-33_Lord,-Let-Your-Mercy-Be_LyricPsalterChoral_Haugen.pdf",
+        "source": "local"
+      },
+      {
+        "id": "psalms--psalms-lent-len-02a-psalms-len-02a-ps-33-lord-let-your-mercy-be-lyricpsaltercho",
+        "type": "sheet_music",
+        "label": "Lyric Psalter - Choral",
+        "filePath": "_psalms/Lent/Len-02A/Psalms/Len-02A_Ps-33_Lord,-Let-Your-Mercy-Be_LyricPsalterChoral_Haugen.pdf",
+        "source": "local"
+      },
+      {
+        "id": "psalms--psalms-lent-len-02a-psalms-len-02a-ps-33-lord-let-your-mercy-be-on-us-lyricpsal",
+        "type": "sheet_music",
+        "label": "Lyric Psalter",
+        "filePath": "_psalms/Lent/Len-02A/Psalms/Len-02A_Ps-33_Lord-Let-Your-Mercy-Be-On-Us_LyricPsalter_Haugen.pdf",
+        "source": "local"
+      },
+      {
+        "id": "psalms--psalms-ordinary-time-ot-29b-psalms-ot-29b-ps-33-lord-let-your-mercy-be-lyricpsa",
+        "type": "sheet_music",
+        "label": "Lyric Psalter",
+        "filePath": "_psalms/Ordinary Time/OT-29B/Psalms/OT-29B_Ps-33_Lord-Let-Your-Mercy-Be_LyricPsalter_Haugen.pdf",
+        "source": "local"
+      }
+    ],
     "usageCount": 3,
     "occasions": [
       "lent-02-a"
@@ -20549,13 +21641,6 @@
         "source": "local"
       },
       {
-        "id": "local-hosea-priory-norbet-hosea-satb-ed-archer-2025-musx",
-        "type": "notation",
-        "label": "Notation File",
-        "filePath": "Hosea - Priory_Norbet/Hosea SATB  - Ed Archer 2025.musx",
-        "source": "local"
-      },
-      {
         "id": "local-hosea-priory-norbet-hosea-cch240-90668-txt",
         "type": "lyrics",
         "label": "Lyrics",
@@ -20574,13 +21659,6 @@
         "type": "sheet_music",
         "label": "SAT Arrangement",
         "filePath": "Hosea - Priory_Norbet/Hosea-SATB Score- Arr. Archer.pdf",
-        "source": "local"
-      },
-      {
-        "id": "local-hosea-priory-norbet-hosea-satb-score-final-musx",
-        "type": "notation",
-        "label": "Notation File",
-        "filePath": "Hosea - Priory_Norbet/Hosea-SATB Score-FINAL.musx",
         "source": "local"
       },
       {
@@ -20832,7 +21910,22 @@
     "id": "ps-19-lord-you-have-the-words-of-everlasting-life--spirit-psalm-jeff-thomas",
     "title": "Ps 19 Lord, you have the words of everlasting life.",
     "composer": "Spirit & Psalm • Jeff Thomas",
-    "resources": [],
+    "resources": [
+      {
+        "id": "psalms--psalms-lent-len-03b-psalms-len-03b-ps-19-lord-you-have-the-words-spirit-psalm20",
+        "type": "sheet_music",
+        "label": "Spirit & Psalm",
+        "filePath": "_psalms/Lent/Len-03B/Psalms/Len-03B_Ps-19_Lord,-You-Have-The-Words_Spirit&Psalm2024_Thomas.pdf",
+        "source": "local"
+      },
+      {
+        "id": "psalms--psalms-ordinary-time-ot-26b-psalms-ot-26b-ps-19-the-precepts-of-the-lord-give-s",
+        "type": "sheet_music",
+        "label": "Spirit & Psalm",
+        "filePath": "_psalms/Ordinary Time/OT-26B/Psalms/OT-26B_Ps-19_The-Precepts-Of-The-Lord-Give_Spirit&Psalm2024_Muglia.pdf",
+        "source": "local"
+      }
+    ],
     "usageCount": 3,
     "occasions": [
       "lent-03-b"
@@ -20925,7 +22018,15 @@
     "id": "ps-137-let-my-tongue-be-silenced-if-i-ever-forget-you--spirit-psalm-rick-modlin",
     "title": "Ps 137 Let my tongue be silenced, if I ever forget you!",
     "composer": "Spirit & Psalm • Rick Modlin",
-    "resources": [],
+    "resources": [
+      {
+        "id": "psalms--psalms-lent-len-04b-psalms-len-04b-ps-137-let-my-tongue-be-silenced-if-spirit-p",
+        "type": "sheet_music",
+        "label": "Spirit & Psalm",
+        "filePath": "_psalms/Lent/Len-04B/Psalms/Len-04B_Ps-137_Let-My-Tongue-Be-Silenced,-If_Spirit&Psalm2024_Modlin.pdf",
+        "source": "local"
+      }
+    ],
     "usageCount": 3,
     "occasions": [
       "lent-04-b"
@@ -21033,7 +22134,36 @@
     "id": "ps-130-with-the-lord-there-is-mercy--spirit-psalm-jesse-manibusan",
     "title": "Ps 130 With the Lord there is mercy...",
     "composer": "Spirit & Psalm • Jesse Manibusan",
-    "resources": [],
+    "resources": [
+      {
+        "id": "psalms--psalms-lent-len-05a-psalms-len-05a-ps-130-with-the-lord-there-is-mercy-spirit-p",
+        "type": "sheet_music",
+        "label": "Spirit & Psalm",
+        "filePath": "_psalms/Lent/Len-05A/Psalms/Len-05A_Ps-130_With-The-Lord-There-Is-Mercy_Spirit&Psalm2026_Manibusan.pdf",
+        "source": "local"
+      },
+      {
+        "id": "psalms--psalms-lent-len-05b-psalms-len-05b-ps-130-with-the-lord-there-is-mercy-spirit-p",
+        "type": "sheet_music",
+        "label": "Spirit & Psalm",
+        "filePath": "_psalms/Lent/Len-05B/Psalms/Len-05B_Ps-130_With-The-Lord-There-Is-Mercy_Spirit&Psalm2024_Manibusan.pdf",
+        "source": "local"
+      },
+      {
+        "id": "psalms--psalms-lent-len-05c-psalms-len-05c-ps-130-with-the-lord-there-is-mercy-spirit-p",
+        "type": "sheet_music",
+        "label": "Spirit & Psalm",
+        "filePath": "_psalms/Lent/Len-05C/Psalms/Len-05C_Ps-130_With-The-Lord-There-Is-Mercy_Spirit&Psalm2025_Manibusan.pdf",
+        "source": "local"
+      },
+      {
+        "id": "psalms--psalms-ordinary-time-ot-10b-psalms-ot-10b-ps-130-with-the-lord-there-is-mercy-s",
+        "type": "sheet_music",
+        "label": "Spirit & Psalm",
+        "filePath": "_psalms/Ordinary Time/OT-10B/Psalms/OT-10B_Ps-130_With-The-Lord-There-Is-Mercy,_Spirit&Psalm2024_Manibusan.pdf",
+        "source": "local"
+      }
+    ],
     "usageCount": 3,
     "occasions": [
       "lent-05-a-third-scrutiny"
@@ -21044,7 +22174,15 @@
     "id": "ps-51-create-a-clean-heart-in-me-o-god--spirit-psalm-sarah-hart",
     "title": "Ps 51 Create a clean heart in me, O God.",
     "composer": "Spirit & Psalm • Sarah Hart",
-    "resources": [],
+    "resources": [
+      {
+        "id": "psalms--psalms-lent-len-05b-psalms-len-05b-ps-51-create-a-clean-heart-in-me-spirit-psal",
+        "type": "sheet_music",
+        "label": "Spirit & Psalm",
+        "filePath": "_psalms/Lent/Len-05B/Psalms/Len-05B_Ps-51_Create-A-Clean-Heart-In-Me,_Spirit&Psalm2024_Hart.pdf",
+        "source": "local"
+      }
+    ],
     "usageCount": 3,
     "occasions": [
       "lent-05-b"
@@ -21603,7 +22741,29 @@
     "id": "ps-110-you-are-a-priest-for-ever-in-the-line--the-lyric-psalter-tony-alonso-marty-haugen",
     "title": "Ps 110 You are a priest for ever, in the line...",
     "composer": "The Lyric Psalter • Tony Alonso & Marty Haugen",
-    "resources": [],
+    "resources": [
+      {
+        "id": "psalms--psalms-ordinary-time-ot-03c-psalms-ot-03c-ps-110-you-are-a-priest-for-ever-lyri",
+        "type": "sheet_music",
+        "label": "Lyric Psalter - Choral",
+        "filePath": "_psalms/Ordinary Time/OT-03C/Psalms/OT-03C_Ps-110_You-Are-A-Priest-For-Ever_LyricPsalterChoral_Alonso.pdf",
+        "source": "local"
+      },
+      {
+        "id": "psalms--psalms-ordinary-time-ot-04c-psalms-ot-04c-ps-110-you-are-a-priest-for-ever-lyri",
+        "type": "sheet_music",
+        "label": "Lyric Psalter - Choral",
+        "filePath": "_psalms/Ordinary Time/OT-04C/Psalms/OT-04C_Ps-110_You-Are-A-Priest-For-Ever_LyricPsalterChoral_Alonso.pdf",
+        "source": "local"
+      },
+      {
+        "id": "psalms--psalms-ordinary-time-ot-05c-psalms-ot-05c-ps-110-you-are-a-priest-for-ever-lyri",
+        "type": "sheet_music",
+        "label": "Lyric Psalter - Choral",
+        "filePath": "_psalms/Ordinary Time/OT-05C/Psalms/OT-05C_Ps-110_You-Are-A-Priest-For-Ever_LyricPsalterChoral_Alonso.pdf",
+        "source": "local"
+      }
+    ],
     "usageCount": 3,
     "occasions": [
       "solemnity-body-blood-of-christ-a",
@@ -21738,7 +22898,22 @@
     "id": "ps-66-let-all-the-earth-cry-out-to-god--spirit-psalm-sarah-hart",
     "title": "Ps 66 Let all the earth cry out to God...",
     "composer": "Spirit & Psalm • Sarah Hart",
-    "resources": [],
+    "resources": [
+      {
+        "id": "psalms--psalms-easter-eas-06a-psalms-eas-06a-ps-66-let-all-the-earth-cry-out-spirit-psa",
+        "type": "sheet_music",
+        "label": "Spirit & Psalm",
+        "filePath": "_psalms/Easter/Eas-06A/Psalms/Eas-06A_Ps-66_Let-All-The-Earth-Cry-Out_Spirit&Psalm2026_Hart.pdf",
+        "source": "local"
+      },
+      {
+        "id": "psalms--psalms-ordinary-time-ot-14c-psalms-ot-14c-ps-66-let-all-the-earth-cry-out-spiri",
+        "type": "sheet_music",
+        "label": "Spirit & Psalm",
+        "filePath": "_psalms/Ordinary Time/OT-14C/Psalms/OT-14C_Ps-66_Let-All-The-Earth-Cry-Out_Spirit&Psalm2025_Hart.pdf",
+        "source": "local"
+      }
+    ],
     "usageCount": 3,
     "occasions": [
       "ordinary-time-14-c"
@@ -21749,7 +22924,22 @@
     "id": "ps-69-turn-to-the-lord-in-your-need--spirit-psalm-casey-mckinley",
     "title": "Ps 69 Turn to the Lord in your need...",
     "composer": "Spirit & Psalm • Casey McKinley",
-    "resources": [],
+    "resources": [
+      {
+        "id": "psalms--psalms-ordinary-time-ot-12a-psalms-ot-12a-ps-69-lord-in-your-great-love-inyourg",
+        "type": "sheet_music",
+        "label": "Spirit & Psalm",
+        "filePath": "_psalms/Ordinary Time/OT-12A/Psalms/OT-12A_Ps-69_Lord,-In-Your-Great-Love,-Inyourgreat_Spirit&Psalm2026_Walther.pdf",
+        "source": "local"
+      },
+      {
+        "id": "psalms--psalms-ordinary-time-ot-15c-psalms-ot-15c-ps-69-turn-to-the-lord-in-your-spirit",
+        "type": "sheet_music",
+        "label": "Spirit & Psalm",
+        "filePath": "_psalms/Ordinary Time/OT-15C/Psalms/OT-15C_Ps-69_Turn-To-The-Lord-In-Your_Spirit&Psalm2025_McKinley.pdf",
+        "source": "local"
+      }
+    ],
     "usageCount": 3,
     "occasions": [
       "ordinary-time-15-c"
@@ -21760,7 +22950,22 @@
     "id": "ps-15-he-who-does-justice-will-live-in-the--spirit-psalm-ken-canedo",
     "title": "Ps 15 He who does justice will live in the...",
     "composer": "Spirit & Psalm • Ken Canedo",
-    "resources": [],
+    "resources": [
+      {
+        "id": "psalms--psalms-ordinary-time-ot-16c-psalms-ot-16c-ps-15-he-who-does-justice-will-live-s",
+        "type": "sheet_music",
+        "label": "Spirit & Psalm",
+        "filePath": "_psalms/Ordinary Time/OT-16C/Psalms/OT-16C_Ps-15_He-Who-Does-Justice-Will-Live_Spirit&Psalm2025_Canedo.pdf",
+        "source": "local"
+      },
+      {
+        "id": "psalms--psalms-ordinary-time-ot-22b-psalms-ot-22b-ps-15-the-one-who-does-justice-will-s",
+        "type": "sheet_music",
+        "label": "Spirit & Psalm",
+        "filePath": "_psalms/Ordinary Time/OT-22B/Psalms/OT-22B_Ps-15_The-One-Who-Does-Justice-Will_Spirit&Psalm2024_Canedo.pdf",
+        "source": "local"
+      }
+    ],
     "usageCount": 3,
     "occasions": [
       "ordinary-time-16-c"
@@ -21771,7 +22976,15 @@
     "id": "ps-138-lord-on-the-day-i-called-for-help--spirit-psalm-steve-angrisano",
     "title": "Ps 138 Lord, on the day I called for help...",
     "composer": "Spirit & Psalm • Steve Angrisano",
-    "resources": [],
+    "resources": [
+      {
+        "id": "psalms--psalms-ordinary-time-ot-17c-psalms-ot-17c-ps-138-lord-on-the-day-i-called-spiri",
+        "type": "sheet_music",
+        "label": "Spirit & Psalm",
+        "filePath": "_psalms/Ordinary Time/OT-17C/Psalms/OT-17C_Ps-138_Lord,-On-The-Day-I-Called_Spirit&Psalm2025_Angrisano.pdf",
+        "source": "local"
+      }
+    ],
     "usageCount": 3,
     "occasions": [
       "ordinary-time-17-c"
@@ -21855,7 +23068,15 @@
     "id": "ps-90-if-today-you-hear-his-voice--spirit-psalm-ben-walther",
     "title": "Ps 90 If today you hear his voice...",
     "composer": "Spirit & Psalm • Ben Walther",
-    "resources": [],
+    "resources": [
+      {
+        "id": "psalms--psalms-ordinary-time-ot-18c-psalms-ot-18c-ps-90-if-today-you-hear-his-voice-spi",
+        "type": "sheet_music",
+        "label": "Spirit & Psalm",
+        "filePath": "_psalms/Ordinary Time/OT-18C/Psalms/OT-18C_Ps-90_If-Today-You-Hear-His-Voice,_Spirit&Psalm2025_Walther.pdf",
+        "source": "local"
+      }
+    ],
     "usageCount": 3,
     "occasions": [
       "ordinary-time-18-c"
@@ -21866,7 +23087,15 @@
     "id": "ps-33-blessed-the-people-the-lord--spirit-psalm-jackie-fran-ois",
     "title": "Ps 33 Blessed the people the Lord...",
     "composer": "Spirit & Psalm • Jackie François",
-    "resources": [],
+    "resources": [
+      {
+        "id": "psalms--psalms-ordinary-time-ot-19c-psalms-ot-19c-ps-33-blessed-the-people-the-lord-has",
+        "type": "sheet_music",
+        "label": "Spirit & Psalm",
+        "filePath": "_psalms/Ordinary Time/OT-19C/Psalms/OT-19C_Ps-33_Blessed-The-People-The-Lord-Has_Spirit&Psalm2025_François.pdf",
+        "source": "local"
+      }
+    ],
     "usageCount": 3,
     "occasions": [
       "ordinary-time-19-c"
@@ -21967,7 +23196,15 @@
     "id": "ps-40-lord-come-to-my-aid--spirit-psalm-curtis-stephan",
     "title": "Ps 40 Lord, come to my aid!",
     "composer": "Spirit & Psalm • Curtis Stephan",
-    "resources": [],
+    "resources": [
+      {
+        "id": "psalms--psalms-ordinary-time-ot-20c-psalms-ot-20c-ps-40-lord-come-to-my-aid-come-spirit",
+        "type": "sheet_music",
+        "label": "Spirit & Psalm",
+        "filePath": "_psalms/Ordinary Time/OT-20C/Psalms/OT-20C_Ps-40_Lord,-Come-To-My-Aid,-Come_Spirit&Psalm2025_Stephan.pdf",
+        "source": "local"
+      }
+    ],
     "usageCount": 3,
     "occasions": [
       "ordinary-time-20-c"
@@ -21978,7 +23215,22 @@
     "id": "ps-117-go-out-to-all-the-world-and-tell--the-lyric-psalter-tony-alonso-marty-haugen",
     "title": "Ps 117 Go out to all the world and tell...",
     "composer": "The Lyric Psalter • Tony Alonso & Marty Haugen",
-    "resources": [],
+    "resources": [
+      {
+        "id": "psalms--psalms-ordinary-time-ot-03c-psalms-ot-03c-ps-117-go-out-to-all-the-world-lyricp",
+        "type": "sheet_music",
+        "label": "Lyric Psalter - Choral",
+        "filePath": "_psalms/Ordinary Time/OT-03C/Psalms/OT-03C_Ps-117_Go-Out-To-All-The-World_LyricPsalterChoral_Haugen.pdf",
+        "source": "local"
+      },
+      {
+        "id": "psalms--psalms-ordinary-time-ot-04c-psalms-ot-04c-ps-117-go-out-to-all-the-world-lyricp",
+        "type": "sheet_music",
+        "label": "Lyric Psalter - Choral",
+        "filePath": "_psalms/Ordinary Time/OT-04C/Psalms/OT-04C_Ps-117_Go-Out-To-All-The-World_LyricPsalterChoral_Haugen.pdf",
+        "source": "local"
+      }
+    ],
     "usageCount": 3,
     "occasions": [
       "ordinary-time-21-c"
@@ -22091,7 +23343,15 @@
     "id": "ps-68-god-in-your-goodness--spirit-psalm-chris-muglia",
     "title": "Ps 68 God, in your goodness...",
     "composer": "Spirit & Psalm • Chris Muglia",
-    "resources": [],
+    "resources": [
+      {
+        "id": "psalms--psalms-ordinary-time-ot-22c-psalms-ot-22c-ps-68-god-in-your-goodness-spirit-psa",
+        "type": "sheet_music",
+        "label": "Spirit & Psalm",
+        "filePath": "_psalms/Ordinary Time/OT-22C/Psalms/OT-22C_Ps-68_God,-In-Your-Goodness_Spirit&Psalm2025_Muglia.pdf",
+        "source": "local"
+      }
+    ],
     "usageCount": 3,
     "occasions": [
       "ordinary-time-22-c"
@@ -22102,7 +23362,15 @@
     "id": "ps-90-in-every-age-o-lord-you-have-been--spirit-psalm-iv-n-d-az",
     "title": "Ps 90 In every age, O Lord, you have been...",
     "composer": "Spirit & Psalm • Iván Díaz",
-    "resources": [],
+    "resources": [
+      {
+        "id": "psalms--psalms-ordinary-time-ot-23c-psalms-ot-23c-ps-90-in-every-age-o-lord-you-spirit-",
+        "type": "sheet_music",
+        "label": "Spirit & Psalm",
+        "filePath": "_psalms/Ordinary Time/OT-23C/Psalms/OT-23C_Ps-90_In-Every-Age,-O-Lord,-You_Spirit&Psalm2025_Díaz.pdf",
+        "source": "local"
+      }
+    ],
     "usageCount": 3,
     "occasions": [
       "ordinary-time-23-c"
@@ -22284,7 +23552,36 @@
     "id": "ps-113-praise-the-lord-who-lifts-up-the-poor--spirit-psalm-tom-booth",
     "title": "Ps 113 Praise the Lord who lifts up the poor.",
     "composer": "Spirit & Psalm • Tom Booth",
-    "resources": [],
+    "resources": [
+      {
+        "id": "psalms--psalms-ordinary-time-ot-25c-psalms-ot-25c-ps-113-praise-the-lord-who-lifts-up-s",
+        "type": "sheet_music",
+        "label": "Spirit & Psalm",
+        "filePath": "_psalms/Ordinary Time/OT-25C/Psalms/OT-25C_Ps-113_Praise-The-Lord,-Who-Lifts-Up_Spirit&Psalm2025_Booth.pdf",
+        "source": "local"
+      },
+      {
+        "id": "psalms--psalms-solemnities-sol-thanksgivinga-psalms-sol-thanksgivinga-ps-113-thanksgivi",
+        "type": "sheet_music",
+        "label": "Spirit & Psalm",
+        "filePath": "_psalms/Solemnities/Sol-ThanksgivingA/Psalms/Sol-ThanksgivingA_Ps-113_Thanksgiving-Day_Spirit&Psalm2026_Unknown.pdf",
+        "source": "local"
+      },
+      {
+        "id": "psalms--psalms-solemnities-sol-thanksgivingb-psalms-sol-thanksgivingb-ps-113-thanksgivi",
+        "type": "sheet_music",
+        "label": "Spirit & Psalm",
+        "filePath": "_psalms/Solemnities/Sol-ThanksgivingB/Psalms/Sol-ThanksgivingB_Ps-113_Thanksgiving-Day_Spirit&Psalm2024_Unknown.pdf",
+        "source": "local"
+      },
+      {
+        "id": "psalms--psalms-solemnities-sol-thanksgivingc-psalms-sol-thanksgivingc-ps-113-thanksgivi",
+        "type": "sheet_music",
+        "label": "Spirit & Psalm",
+        "filePath": "_psalms/Solemnities/Sol-ThanksgivingC/Psalms/Sol-ThanksgivingC_Ps-113_Thanksgiving-Day_Spirit&Psalm2025_Unknown.pdf",
+        "source": "local"
+      }
+    ],
     "usageCount": 3,
     "occasions": [
       "ordinary-time-25-c"
@@ -22295,7 +23592,43 @@
     "id": "ps-146-praise-the-lord-my-soul--the-lyric-psalter-tony-alonso-marty-haugen",
     "title": "Ps 146 Praise the Lord, my soul!",
     "composer": "The Lyric Psalter • Tony Alonso & Marty Haugen",
-    "resources": [],
+    "resources": [
+      {
+        "id": "psalms--psalms-ordinary-time-ot-02b-psalms-ot-02b-ps-146-praise-the-lord-my-soul-lyricp",
+        "type": "sheet_music",
+        "label": "Lyric Psalter - Choral",
+        "filePath": "_psalms/Ordinary Time/OT-02B/Psalms/OT-02B_Ps-146_Praise-The-Lord,-My-Soul!_LyricPsalterChoral_Haugen.pdf",
+        "source": "local"
+      },
+      {
+        "id": "psalms--psalms-ordinary-time-ot-03b-psalms-ot-03b-ps-146-praise-the-lord-my-soul-lyricp",
+        "type": "sheet_music",
+        "label": "Lyric Psalter - Choral",
+        "filePath": "_psalms/Ordinary Time/OT-03B/Psalms/OT-03B_Ps-146_Praise-The-Lord,-My-Soul!_LyricPsalterChoral_Haugen.pdf",
+        "source": "local"
+      },
+      {
+        "id": "psalms--psalms-ordinary-time-ot-05c-psalms-ot-05c-ps-146-praise-the-lord-my-soul-lyricp",
+        "type": "audio",
+        "label": "Lyric Psalter - Instrumental",
+        "filePath": "_psalms/Ordinary Time/OT-05C/Psalms/OT-05C_Ps-146_Praise-The-Lord-My-Soul_LyricPsalterINST_Alonso.pdf",
+        "source": "local"
+      },
+      {
+        "id": "psalms--psalms-ordinary-time-ot-08c-psalms-ot-08c-ps-146-praise-the-lord-my-soul-lyricp",
+        "type": "sheet_music",
+        "label": "Lyric Psalter - Choral",
+        "filePath": "_psalms/Ordinary Time/OT-08C/Psalms/OT-08C_Ps-146_Praise-The-Lord,-My-Soul!_LyricPsalterChoral_Haugen.pdf",
+        "source": "local"
+      },
+      {
+        "id": "psalms--psalms-ordinary-time-ot-25c-psalms-ot-25c-ps-146-praise-the-lord-my-soul-lyricp",
+        "type": "audio",
+        "label": "Lyric Psalter - Instrumental",
+        "filePath": "_psalms/Ordinary Time/OT-25C/Psalms/OT-25C_Ps-146_Praise-The-Lord-My-Soul_LyricPsalterINST_Alonso.pdf",
+        "source": "local"
+      }
+    ],
     "usageCount": 3,
     "occasions": [
       "ordinary-time-26-c"
@@ -22365,7 +23698,43 @@
     "id": "ps-95-if-today-you-hear-his-voice--spirit-psalm-ben-walther",
     "title": "Ps 95 If today you hear his voice...",
     "composer": "Spirit & Psalm • Ben Walther",
-    "resources": [],
+    "resources": [
+      {
+        "id": "psalms--psalms-lent-len-03a-psalms-len-03a-ps-95-if-today-you-hear-his-voice-spirit-psa",
+        "type": "sheet_music",
+        "label": "Spirit & Psalm",
+        "filePath": "_psalms/Lent/Len-03A/Psalms/Len-03A_Ps-95_If-Today-You-Hear-His-Voice,_Spirit&Psalm2026_Walther.pdf",
+        "source": "local"
+      },
+      {
+        "id": "psalms--psalms-lent-len-03b-psalms-len-03b-ps-95-if-today-you-hear-his-voice-spirit-psa",
+        "type": "sheet_music",
+        "label": "Spirit & Psalm",
+        "filePath": "_psalms/Lent/Len-03B/Psalms/Len-03B_Ps-95_If-Today-You-Hear-His-Voice,_Spirit&Psalm2024_Walther.pdf",
+        "source": "local"
+      },
+      {
+        "id": "psalms--psalms-lent-len-03c-psalms-len-03c-ps-95-if-today-you-hear-his-voice-spirit-psa",
+        "type": "sheet_music",
+        "label": "Spirit & Psalm",
+        "filePath": "_psalms/Lent/Len-03C/Psalms/Len-03C_Ps-95_If-Today-You-Hear-His-Voice,_Spirit&Psalm2025_Walther.pdf",
+        "source": "local"
+      },
+      {
+        "id": "psalms--psalms-ordinary-time-ot-04b-psalms-ot-04b-ps-95-if-today-you-hear-his-voice-spi",
+        "type": "sheet_music",
+        "label": "Spirit & Psalm",
+        "filePath": "_psalms/Ordinary Time/OT-04B/Psalms/OT-04B_Ps-95_If-Today-You-Hear-His-Voice,_Spirit&Psalm2024_Walther.pdf",
+        "source": "local"
+      },
+      {
+        "id": "psalms--psalms-ordinary-time-ot-27c-psalms-ot-27c-ps-95-if-today-you-hear-his-voice-spi",
+        "type": "sheet_music",
+        "label": "Spirit & Psalm",
+        "filePath": "_psalms/Ordinary Time/OT-27C/Psalms/OT-27C_Ps-95_If-Today-You-Hear-His-Voice,_Spirit&Psalm2025_Walther.pdf",
+        "source": "local"
+      }
+    ],
     "usageCount": 3,
     "occasions": [
       "ordinary-time-27-c"
@@ -22376,7 +23745,43 @@
     "id": "ps-98-the-lord-has-revealed-to-the-nations--spirit-psalm-joshua-blakesley",
     "title": "Ps 98 The Lord has revealed to the nations...",
     "composer": "Spirit & Psalm • Joshua Blakesley",
-    "resources": [],
+    "resources": [
+      {
+        "id": "psalms--psalms-christmas-chr-christmas-daya-psalms-chr-christmas-daya-ps-98-at-the-mass",
+        "type": "sheet_music",
+        "label": "Spirit & Psalm",
+        "filePath": "_psalms/Christmas/Chr-Christmas-DayA/Psalms/Chr-Christmas-DayA_Ps-98_At-The-Mass-During-The-Day_Spirit&Psalm2026_Angrisano.pdf",
+        "source": "local"
+      },
+      {
+        "id": "psalms--psalms-christmas-chr-christmas-dayb-psalms-chr-christmas-dayb-ps-98-at-the-mass",
+        "type": "sheet_music",
+        "label": "Spirit & Psalm",
+        "filePath": "_psalms/Christmas/Chr-Christmas-DayB/Psalms/Chr-Christmas-DayB_Ps-98_At-The-Mass-During-The-Day_Spirit&Psalm2024_Angrisano.pdf",
+        "source": "local"
+      },
+      {
+        "id": "psalms--psalms-christmas-chr-christmas-dayc-psalms-chr-christmas-dayc-ps-98-at-the-mass",
+        "type": "sheet_music",
+        "label": "Spirit & Psalm",
+        "filePath": "_psalms/Christmas/Chr-Christmas-DayC/Psalms/Chr-Christmas-DayC_Ps-98_At-The-Mass-During-The-Day_Spirit&Psalm2025_Angrisano.pdf",
+        "source": "local"
+      },
+      {
+        "id": "psalms--psalms-easter-eas-06b-psalms-eas-06b-ps-98-the-lord-has-revealed-spirit-psalm20",
+        "type": "sheet_music",
+        "label": "Spirit & Psalm",
+        "filePath": "_psalms/Easter/Eas-06B/Psalms/Eas-06B_Ps-98_The-Lord-Has-Revealed_Spirit&Psalm2024_Blakesley.pdf",
+        "source": "local"
+      },
+      {
+        "id": "psalms--psalms-ordinary-time-ot-28c-psalms-ot-28c-ps-98-the-lord-has-revealed-spirit-ps",
+        "type": "sheet_music",
+        "label": "Spirit & Psalm",
+        "filePath": "_psalms/Ordinary Time/OT-28C/Psalms/OT-28C_Ps-98_The-Lord-Has-Revealed_Spirit&Psalm2025_Blakesley.pdf",
+        "source": "local"
+      }
+    ],
     "usageCount": 3,
     "occasions": [
       "ordinary-time-28-c"
@@ -22387,7 +23792,15 @@
     "id": "ps-121-our-help-is-from-the-lord--spirit-psalm-paul-hillebrand",
     "title": "Ps 121 Our help is from the Lord...",
     "composer": "Spirit & Psalm • Paul Hillebrand",
-    "resources": [],
+    "resources": [
+      {
+        "id": "psalms--psalms-ordinary-time-ot-29c-psalms-ot-29c-ps-121-our-help-is-from-the-lord-spir",
+        "type": "sheet_music",
+        "label": "Spirit & Psalm",
+        "filePath": "_psalms/Ordinary Time/OT-29C/Psalms/OT-29C_Ps-121_Our-Help-Is-From-The-Lord,_Spirit&Psalm2025_Hillebrand.pdf",
+        "source": "local"
+      }
+    ],
     "usageCount": 3,
     "occasions": [
       "ordinary-time-29-c"
@@ -22625,7 +24038,15 @@
     "id": "ps-98-the-lord-comes-to-rule-the-earth--spirit-psalm-timothy-r-smith",
     "title": "Ps 98 The Lord comes to rule the earth...",
     "composer": "Spirit & Psalm • Timothy R. Smith",
-    "resources": [],
+    "resources": [
+      {
+        "id": "psalms--psalms-ordinary-time-ot-33c-psalms-ot-33c-ps-98-the-lord-comes-to-rule-spirit-p",
+        "type": "sheet_music",
+        "label": "Spirit & Psalm",
+        "filePath": "_psalms/Ordinary Time/OT-33C/Psalms/OT-33C_Ps-98_The-Lord-Comes-To-Rule,_Spirit&Psalm2025_Smith.pdf",
+        "source": "local"
+      }
+    ],
     "usageCount": 3,
     "occasions": [
       "ordinary-time-33-c"
@@ -22676,7 +24097,15 @@
     "id": "ps-72-justice-shall-flourish-in-his-time-and-fullness--spirit-psalm-pj-cooper",
     "title": "Ps 72 Justice shall flourish in his time, and fullness...",
     "composer": "Spirit & Psalm • PJ Cooper",
-    "resources": [],
+    "resources": [
+      {
+        "id": "psalms--psalms-advent-adv-02a-psalms-adv-02a-ps-72-justice-shall-flourish-in-his-time-s",
+        "type": "sheet_music",
+        "label": "Spirit & Psalm",
+        "filePath": "_psalms/Advent/Adv-02A/Psalms/Adv-02A_Ps-72_Justice-Shall-Flourish-In-His-Time_Spirit&Psalm2026_Anderson.pdf",
+        "source": "local"
+      }
+    ],
     "usageCount": 2,
     "occasions": [
       "advent-02-a"
@@ -22733,7 +24162,15 @@
     "id": "ps-146-lord-come-and-save-us--spirit-psalm-jeff-thomas",
     "title": "Ps 146 Lord, come and save us.",
     "composer": "Spirit & Psalm • Jeff Thomas",
-    "resources": [],
+    "resources": [
+      {
+        "id": "psalms--psalms-advent-adv-03a-psalms-adv-03a-ps-146-lord-come-and-save-us-come-spirit-p",
+        "type": "sheet_music",
+        "label": "Spirit & Psalm",
+        "filePath": "_psalms/Advent/Adv-03A/Psalms/Adv-03A_Ps-146_Lord,-Come-And-Save-Us,-Come_Spirit&Psalm2026_Thomas.pdf",
+        "source": "local"
+      }
+    ],
     "usageCount": 2,
     "occasions": [
       "advent-03-a"
@@ -22758,7 +24195,15 @@
     "id": "ps-24-let-the-lord-enter-he-is-king-of-glory--spirit-psalm-ben-walther",
     "title": "Ps 24 Let the Lord enter; he is king of glory.",
     "composer": "Spirit & Psalm • Ben Walther",
-    "resources": [],
+    "resources": [
+      {
+        "id": "psalms--psalms-advent-adv-04a-psalms-adv-04a-ps-24-let-the-lord-enter-he-spirit-psalm20",
+        "type": "sheet_music",
+        "label": "Spirit & Psalm",
+        "filePath": "_psalms/Advent/Adv-04A/Psalms/Adv-04A_Ps-24_Let-The-Lord-Enter-He_Spirit&Psalm2026_Walther.pdf",
+        "source": "local"
+      }
+    ],
     "usageCount": 2,
     "occasions": [
       "advent-04-a"
@@ -22783,7 +24228,29 @@
     "id": "ps-80-lord-make-us-turn-to-you--spirit-psalm-chris-muglia",
     "title": "Ps 80 Lord, make us turn to you...",
     "composer": "Spirit & Psalm • Chris Muglia",
-    "resources": [],
+    "resources": [
+      {
+        "id": "psalms--psalms-advent-adv-01b-psalms-adv-01b-ps-80-lord-make-us-turn-to-you-spirit-psal",
+        "type": "sheet_music",
+        "label": "Spirit & Psalm",
+        "filePath": "_psalms/Advent/Adv-01B/Psalms/Adv-01B_Ps-80_Lord,-Make-Us-Turn-To-You_Spirit&Psalm2024_Muglia.pdf",
+        "source": "local"
+      },
+      {
+        "id": "psalms--psalms-advent-adv-04c-psalms-adv-04c-ps-80-lord-make-us-turn-to-you-spirit-psal",
+        "type": "sheet_music",
+        "label": "Spirit & Psalm",
+        "filePath": "_psalms/Advent/Adv-04C/Psalms/Adv-04C_Ps-80_Lord,-Make-Us-Turn-To-You_Spirit&Psalm2025_Muglia.pdf",
+        "source": "local"
+      },
+      {
+        "id": "psalms--psalms-ordinary-time-ot-27a-psalms-ot-27a-ps-80-the-vineyard-of-the-lord-spirit",
+        "type": "sheet_music",
+        "label": "Spirit & Psalm",
+        "filePath": "_psalms/Ordinary Time/OT-27A/Psalms/OT-27A_Ps-80_The-Vineyard-Of-The-Lord_Spirit&Psalm2026_Angrisano.pdf",
+        "source": "local"
+      }
+    ],
     "usageCount": 2,
     "occasions": [
       "advent-04-c"
@@ -22808,7 +24275,29 @@
     "id": "ps-128-blessed-are-those-who-fear-the-lord-and-walk--spirit-psalm-steve-angrisano",
     "title": "Ps 128 Blessed are those who fear the Lord and walk...",
     "composer": "Spirit & Psalm • Steve Angrisano",
-    "resources": [],
+    "resources": [
+      {
+        "id": "psalms--psalms-christmas-chr-holy-familya-psalms-chr-holy-familya-ps-128-the-holy-famil",
+        "type": "sheet_music",
+        "label": "Spirit & Psalm",
+        "filePath": "_psalms/Christmas/Chr-Holy-FamilyA/Psalms/Chr-Holy-FamilyA_Ps-128_The-Holy-Family-Of-Jesus,-Mary_Spirit&Psalm2026_Angrisano.pdf",
+        "source": "local"
+      },
+      {
+        "id": "psalms--psalms-ordinary-time-ot-27b-psalms-ot-27b-ps-128-lord-bless-us-all-the-days-spi",
+        "type": "sheet_music",
+        "label": "Spirit & Psalm",
+        "filePath": "_psalms/Ordinary Time/OT-27B/Psalms/OT-27B_Ps-128_Lord-Bless-Us-All-The-Days_Spirit&Psalm2024_Ray.pdf",
+        "source": "local"
+      },
+      {
+        "id": "psalms--psalms-ordinary-time-ot-33a-psalms-ot-33a-ps-128-blessed-are-those-blessed-are-",
+        "type": "sheet_music",
+        "label": "Spirit & Psalm",
+        "filePath": "_psalms/Ordinary Time/OT-33A/Psalms/OT-33A_Ps-128_Blessed-Are-Those,-Blessed-Are-Those_Spirit&Psalm2026_Angrisano.pdf",
+        "source": "local"
+      }
+    ],
     "usageCount": 2,
     "occasions": [
       "holy-family-a"
@@ -22905,7 +24394,57 @@
     "id": "ps-72-lord-every-nation-on-earth-will-adore-you--the-lyric-psalter-tony-alonso-marty-haugen",
     "title": "Ps 72 Lord, every nation on earth will adore you.",
     "composer": "The Lyric Psalter • Tony Alonso & Marty Haugen",
-    "resources": [],
+    "resources": [
+      {
+        "id": "psalms--psalms-christmas-chr-baptismc-psalms-chr-baptismc-ps-72-lord-every-nation-on-ea",
+        "type": "sheet_music",
+        "label": "Lyric Psalter - Choral",
+        "filePath": "_psalms/Christmas/Chr-BaptismC/Psalms/Chr-BaptismC_Ps-72_Lord-Every-Nation-On-Earth_LyricPsalterChoral_Haugen.pdf",
+        "source": "local"
+      },
+      {
+        "id": "psalms--psalms-christmas-chr-epiphanya-psalms-chr-epiphany-a-ps-72-lord-every-nation-on",
+        "type": "sheet_music",
+        "label": "Lyric Psalter",
+        "filePath": "_psalms/Christmas/Chr-EpiphanyA/Psalms/Chr-Epiphany-A_Ps-72_Lord-Every-Nation-On-Earth-Will-Adore-You_LyricPsalter_Haugen.pdf",
+        "source": "local"
+      },
+      {
+        "id": "psalms--psalms-christmas-chr-epiphanya-psalms-chr-epiphanya-ps-72-lord-every-nation-on-",
+        "type": "sheet_music",
+        "label": "Lyric Psalter - Choral",
+        "filePath": "_psalms/Christmas/Chr-EpiphanyA/Psalms/Chr-EpiphanyA_Ps-72_Lord-Every-Nation-On-Earth_LyricPsalterChoral_Haugen.pdf",
+        "source": "local"
+      },
+      {
+        "id": "psalms--psalms-christmas-chr-epiphanyb-psalms-chr-epiphanyb-ps-72-lord-every-nation-on-",
+        "type": "sheet_music",
+        "label": "Lyric Psalter - Choral",
+        "filePath": "_psalms/Christmas/Chr-EpiphanyB/Psalms/Chr-EpiphanyB_Ps-72_Lord-Every-Nation-On-Earth_LyricPsalterChoral_Haugen.pdf",
+        "source": "local"
+      },
+      {
+        "id": "psalms--psalms-christmas-chr-epiphanyb-psalms-epiphany-b-ps-72-lord-every-nation-on-ear",
+        "type": "sheet_music",
+        "label": "Lyric Psalter",
+        "filePath": "_psalms/Christmas/Chr-EpiphanyB/Psalms/Epiphany-B_Ps-72_Lord-Every-Nation-On-Earth-Will_LyricPsalter_Haugen.pdf",
+        "source": "local"
+      },
+      {
+        "id": "psalms--psalms-christmas-chr-epiphanyc-psalms-chr-epiphanyc-ps-72-lord-every-nation-on-",
+        "type": "sheet_music",
+        "label": "Lyric Psalter",
+        "filePath": "_psalms/Christmas/Chr-EpiphanyC/Psalms/Chr-EpiphanyC_Ps-72_Lord-Every-Nation-On-Earth-Will_LyricPsalter_Haugen.pdf",
+        "source": "local"
+      },
+      {
+        "id": "psalms--psalms-christmas-chr-epiphanyc-psalms-chr-epiphanyc-ps-72-lord-every-nation-on-",
+        "type": "sheet_music",
+        "label": "Lyric Psalter - Choral",
+        "filePath": "_psalms/Christmas/Chr-EpiphanyC/Psalms/Chr-EpiphanyC_Ps-72_Lord-Every-Nation-On-Earth_LyricPsalterChoral_Haugen.pdf",
+        "source": "local"
+      }
+    ],
     "usageCount": 2,
     "occasions": [
       "the-epiphany-of-the-lord-abc"
@@ -22994,7 +24533,64 @@
     "id": "ps-29-the-lord-will-bless-his-people-with-peace--the-lyric-psalter-tony-alonso-marty-haugen",
     "title": "Ps 29 The Lord will bless his people with peace.",
     "composer": "The Lyric Psalter • Tony Alonso & Marty Haugen",
-    "resources": [],
+    "resources": [
+      {
+        "id": "psalms--psalms-christmas-chr-baptisma-psalms-chr-baptism-a-ps-29-the-lord-will-bless-hi",
+        "type": "sheet_music",
+        "label": "Lyric Psalter",
+        "filePath": "_psalms/Christmas/Chr-BaptismA/Psalms/Chr-Baptism-A_Ps-29_The-Lord-Will-Bless-His-People-With-Peace_LyricPsalter_Haugen.pdf",
+        "source": "local"
+      },
+      {
+        "id": "psalms--psalms-christmas-chr-baptisma-psalms-chr-baptisma-ps-29-lyricpsalterchoral-haug",
+        "type": "sheet_music",
+        "label": "Lyric Psalter - Choral",
+        "filePath": "_psalms/Christmas/Chr-BaptismA/Psalms/Chr-BaptismA_Ps-29_LyricPsalterChoral_Haugen.pdf",
+        "source": "local"
+      },
+      {
+        "id": "psalms--psalms-christmas-chr-baptismb-psalms-baptismlord-b-ps-29-the-lord-will-bless-hi",
+        "type": "sheet_music",
+        "label": "Lyric Psalter",
+        "filePath": "_psalms/Christmas/Chr-BaptismB/Psalms/BaptismLord-B_Ps-29_The-Lord-Will-Bless-His-People_LyricPsalter_Haugen.pdf",
+        "source": "local"
+      },
+      {
+        "id": "psalms--psalms-christmas-chr-baptismb-psalms-chr-baptismb-ps-29-lyricpsalterchoral-haug",
+        "type": "sheet_music",
+        "label": "Lyric Psalter - Choral",
+        "filePath": "_psalms/Christmas/Chr-BaptismB/Psalms/Chr-BaptismB_Ps-29_LyricPsalterChoral_Haugen.pdf",
+        "source": "local"
+      },
+      {
+        "id": "psalms--psalms-christmas-chr-baptismb-psalms-chr-baptismb-ps-29-the-lord-will-bless-his",
+        "type": "sheet_music",
+        "label": "Lyric Psalter - Choral",
+        "filePath": "_psalms/Christmas/Chr-BaptismB/Psalms/Chr-BaptismB_Ps-29_The-Lord-Will-Bless-His-People_LyricPsalterChoral_Haugen.pdf",
+        "source": "local"
+      },
+      {
+        "id": "psalms--psalms-christmas-chr-baptismc-psalms-chr-baptismc-ps-29-lyricpsalterchoral-haug",
+        "type": "sheet_music",
+        "label": "Lyric Psalter - Choral",
+        "filePath": "_psalms/Christmas/Chr-BaptismC/Psalms/Chr-BaptismC_Ps-29_LyricPsalterChoral_Haugen.pdf",
+        "source": "local"
+      },
+      {
+        "id": "psalms--psalms-christmas-chr-baptismc-psalms-chr-baptismc-ps-29-the-lord-will-bless-his",
+        "type": "sheet_music",
+        "label": "Lyric Psalter",
+        "filePath": "_psalms/Christmas/Chr-BaptismC/Psalms/Chr-BaptismC_Ps-29_The-Lord-Will-Bless-His-People_LyricPsalter_Haugen.pdf",
+        "source": "local"
+      },
+      {
+        "id": "psalms--psalms-lent-len-01c-psalms-len-01c-ps-29-lyricpsalterchoral-haugen-pdf",
+        "type": "sheet_music",
+        "label": "Lyric Psalter - Choral",
+        "filePath": "_psalms/Lent/Len-01C/Psalms/Len-01C_Ps-29_LyricPsalterChoral_Haugen.pdf",
+        "source": "local"
+      }
+    ],
     "usageCount": 2,
     "occasions": [
       "baptism-of-the-lord-a"
@@ -23288,7 +24884,15 @@
     "id": "ps-96-proclaim-his-marvelous-deeds--the-lyric-psalter-tony-alonso-marty-haugen",
     "title": "Ps 96 Proclaim his marvelous deeds...",
     "composer": "The Lyric Psalter • Tony Alonso & Marty Haugen",
-    "resources": [],
+    "resources": [
+      {
+        "id": "psalms--psalms-ordinary-time-ot-29a-psalms-ot-29a-ps-96-give-the-lord-glory-and-honor-l",
+        "type": "sheet_music",
+        "label": "Lyric Psalter",
+        "filePath": "_psalms/Ordinary Time/OT-29A/Psalms/OT-29A_Ps-96_Give-The-Lord-Glory-And-Honor_LyricPsalter_Haugen.pdf",
+        "source": "local"
+      }
+    ],
     "usageCount": 2,
     "occasions": [
       "ordinary-time-02-c"
@@ -23420,7 +25024,22 @@
     "id": "ps-25-teach-me-your-ways-o-lord--spirit-psalm",
     "title": "Ps 25 Teach me your ways, O Lord.",
     "composer": "Spirit & Psalm • ?",
-    "resources": [],
+    "resources": [
+      {
+        "id": "psalms--psalms-ordinary-time-ot-03b-psalms-ot-03b-ps-25-teach-me-your-ways-o-lord-spiri",
+        "type": "sheet_music",
+        "label": "Spirit & Psalm",
+        "filePath": "_psalms/Ordinary Time/OT-03B/Psalms/OT-03B_Ps-25_Teach-Me-Your-Ways,-O-Lord_Spirit&Psalm2024_François.pdf",
+        "source": "local"
+      },
+      {
+        "id": "psalms--psalms-ordinary-time-ot-26a-psalms-ot-26a-ps-25-remember-your-mercies-o-lord-re",
+        "type": "sheet_music",
+        "label": "Spirit & Psalm",
+        "filePath": "_psalms/Ordinary Time/OT-26A/Psalms/OT-26A_Ps-25_Remember-Your-Mercies,-O-Lord.-Remember_Spirit&Psalm2026_Canedo.pdf",
+        "source": "local"
+      }
+    ],
     "usageCount": 2,
     "occasions": [
       "ordinary-time-03-b-word-of-god-sunday"
@@ -23431,7 +25050,43 @@
     "id": "ps-19-your-words-lord-are-spirit-and-life--the-lyric-psalter-tony-alonso-marty-haugen",
     "title": "Ps 19 Your words, Lord, are Spirit and life.",
     "composer": "The Lyric Psalter • Tony Alonso & Marty Haugen",
-    "resources": [],
+    "resources": [
+      {
+        "id": "psalms--psalms-ordinary-time-ot-03c-psalms-ot-03c-ps-19-your-words-lord-are-spirit-lyri",
+        "type": "sheet_music",
+        "label": "Lyric Psalter - Choral",
+        "filePath": "_psalms/Ordinary Time/OT-03C/Psalms/OT-03C_Ps-19_Your-Words-Lord-Are-Spirit_LyricPsalterChoral_Alonso.pdf",
+        "source": "local"
+      },
+      {
+        "id": "psalms--psalms-ordinary-time-ot-03c-psalms-ot-03c-ps-19-your-words-lord-are-spirit-lyri",
+        "type": "sheet_music",
+        "label": "Lyric Psalter",
+        "filePath": "_psalms/Ordinary Time/OT-03C/Psalms/OT-03C_Ps-19_Your-Words-Lord-Are-Spirit_LyricPsalter_Alonso.pdf",
+        "source": "local"
+      },
+      {
+        "id": "psalms--psalms-ordinary-time-ot-06c-psalms-ot-06c-ps-19-your-words-lord-are-spirit-lyri",
+        "type": "sheet_music",
+        "label": "Lyric Psalter - Choral",
+        "filePath": "_psalms/Ordinary Time/OT-06C/Psalms/OT-06C_Ps-19_Your-Words,-Lord,-Are-Spirit_LyricPsalterChoral_Alonso.pdf",
+        "source": "local"
+      },
+      {
+        "id": "psalms--psalms-ordinary-time-ot-15c-psalms-ot-15c-ps-19-your-words-lord-are-spirit-lyri",
+        "type": "sheet_music",
+        "label": "Lyric Psalter - Choral",
+        "filePath": "_psalms/Ordinary Time/OT-15C/Psalms/OT-15C_Ps-19_Your-Words-Lord-Are-Spirit_LyricPsalterChoral_Alonso.pdf",
+        "source": "local"
+      },
+      {
+        "id": "psalms--psalms-ordinary-time-ot-18c-psalms-ot-18c-ps-19-your-words-lord-are-spirit-lyri",
+        "type": "sheet_music",
+        "label": "Lyric Psalter - Choral",
+        "filePath": "_psalms/Ordinary Time/OT-18C/Psalms/OT-18C_Ps-19_Your-Words,-Lord,-Are-Spirit_LyricPsalterChoral_Alonso.pdf",
+        "source": "local"
+      }
+    ],
     "usageCount": 2,
     "occasions": [
       "ordinary-time-03-c-word-of-god-sunday"
@@ -23546,7 +25201,22 @@
     "id": "ps-146-blessed-the-poor-in-spirit--the-lyric-psalter-tony-alonso-marty-haugen",
     "title": "Ps 146 Blessed the poor in spirit...",
     "composer": "The Lyric Psalter • Tony Alonso & Marty Haugen",
-    "resources": [],
+    "resources": [
+      {
+        "id": "psalms--psalms-ordinary-time-ot-04a-psalms-ot-04a-ps-146-blessed-are-the-poor-in-spirit",
+        "type": "sheet_music",
+        "label": "Lyric Psalter",
+        "filePath": "_psalms/Ordinary Time/OT-04A/Psalms/OT-04A_Ps-146_Blessed-Are-The-Poor-In-Spirit_LyricPsalter_Haugen.pdf",
+        "source": "local"
+      },
+      {
+        "id": "psalms--psalms-ordinary-time-ot-05a-psalms-ot-05a-ps-146-blessed-are-the-poor-in-spirit",
+        "type": "sheet_music",
+        "label": "Lyric Psalter - Choral",
+        "filePath": "_psalms/Ordinary Time/OT-05A/Psalms/OT-05A_Ps-146_Blessed-Are-The-Poor-In-Spirit_LyricPsalterChoral_Haugen.pdf",
+        "source": "local"
+      }
+    ],
     "usageCount": 2,
     "occasions": [
       "ordinary-time-04-a"
@@ -23568,7 +25238,15 @@
     "id": "ps-95-if-today-you-hear-his-voice-harden-not-your-hearts--spirit-psalm",
     "title": "Ps 95 If today you hear his voice, harden not your hearts.",
     "composer": "Spirit & Psalm • ?",
-    "resources": [],
+    "resources": [
+      {
+        "id": "psalms--psalms-ordinary-time-ot-23a-psalms-ot-23a-ps-95-if-todayyou-hear-his-voice-hard",
+        "type": "sheet_music",
+        "label": "Spirit & Psalm",
+        "filePath": "_psalms/Ordinary Time/OT-23A/Psalms/OT-23A_Ps-95_If-Todayyou-Hear-His-Voice,-Harden_Spirit&Psalm2026_Walther.pdf",
+        "source": "local"
+      }
+    ],
     "usageCount": 2,
     "occasions": [
       "ordinary-time-04-b"
@@ -23590,7 +25268,15 @@
     "id": "ps-71-i-will-sing-of-your-salvation--spirit-psalm",
     "title": "Ps 71 I will sing of your salvation.",
     "composer": "Spirit & Psalm • ?",
-    "resources": [],
+    "resources": [
+      {
+        "id": "psalms--psalms-ordinary-time-ot-04c-psalms-ot-04c-ps-71-i-will-sing-of-your-salvation-s",
+        "type": "sheet_music",
+        "label": "Spirit & Psalm",
+        "filePath": "_psalms/Ordinary Time/OT-04C/Psalms/OT-04C_Ps-71_I-Will-Sing-Of-Your-Salvation_Spirit&Psalm2022_Muglia.pdf",
+        "source": "local"
+      }
+    ],
     "usageCount": 2,
     "occasions": [
       "ordinary-time-04-c"
@@ -23716,7 +25402,29 @@
     "id": "ps-24-who-is-this-king-of-glory-it-is-the-lord--the-lyric-psalter-tony-alonso-marty-haugen",
     "title": "Ps 24 Who is this king of glory? It is the Lord!",
     "composer": "The Lyric Psalter • Tony Alonso & Marty Haugen",
-    "resources": [],
+    "resources": [
+      {
+        "id": "psalms--psalms-solemnities-sol-presentationa-psalms-sol-presentationa-ps-24-who-is-this",
+        "type": "sheet_music",
+        "label": "Lyric Psalter - Choral",
+        "filePath": "_psalms/Solemnities/Sol-PresentationA/Psalms/Sol-PresentationA_Ps-24_Who-Is-This-King-Of-Glory?_LyricPsalterChoral_Alonso.pdf",
+        "source": "local"
+      },
+      {
+        "id": "psalms--psalms-solemnities-sol-presentationb-psalms-sol-presentationb-ps-24-who-is-this",
+        "type": "sheet_music",
+        "label": "Lyric Psalter - Choral",
+        "filePath": "_psalms/Solemnities/Sol-PresentationB/Psalms/Sol-PresentationB_Ps-24_Who-Is-This-King-Of-Glory?_LyricPsalterChoral_Alonso.pdf",
+        "source": "local"
+      },
+      {
+        "id": "psalms--psalms-solemnities-sol-presentationc-psalms-sol-presentationc-ps-24-who-is-this",
+        "type": "sheet_music",
+        "label": "Lyric Psalter - Choral",
+        "filePath": "_psalms/Solemnities/Sol-PresentationC/Psalms/Sol-PresentationC_Ps-24_Who-Is-This-King-Of-Glory?_LyricPsalterChoral_Alonso.pdf",
+        "source": "local"
+      }
+    ],
     "usageCount": 2,
     "occasions": [
       "feast-abc-feb-2-presentation-of-the-lord"
@@ -23785,7 +25493,15 @@
     "id": "ps-112-the-just-man-is-a-light-in-darkness--the-lyric-psalter-tony-alonso-marty-haugen",
     "title": "Ps 112 The just man is a light in darkness...",
     "composer": "The Lyric Psalter • Tony Alonso & Marty Haugen",
-    "resources": [],
+    "resources": [
+      {
+        "id": "psalms--psalms-ordinary-time-ot-05a-psalms-ot-05a-ps-112-the-just-man-is-a-light-in-dar",
+        "type": "sheet_music",
+        "label": "Lyric Psalter",
+        "filePath": "_psalms/Ordinary Time/OT-05A/Psalms/OT-05A_Ps-112_The-Just-Man-Is-A-Light-In-Darkness_LyricPsalter_Alonso.pdf",
+        "source": "local"
+      }
+    ],
     "usageCount": 2,
     "occasions": [
       "ordinary-time-05-a"
@@ -23856,7 +25572,15 @@
     "id": "ps-138-in-the-sight-of-the-angels-i-will-sing--spirit-psalm-thomas-n-tomaszek",
     "title": "Ps 138 In the sight of the angels I will sing...",
     "composer": "Spirit & Psalm • Thomas N. Tomaszek",
-    "resources": [],
+    "resources": [
+      {
+        "id": "psalms--psalms-ordinary-time-ot-05c-psalms-ot-05c-ps-138-in-the-sight-of-the-angels-spi",
+        "type": "sheet_music",
+        "label": "Spirit & Psalm",
+        "filePath": "_psalms/Ordinary Time/OT-05C/Psalms/OT-05C_Ps-138_In-The-Sight-Of-The-Angels_Spirit&Psalm2025_Tomaszek.pdf",
+        "source": "local"
+      }
+    ],
     "usageCount": 2,
     "occasions": [
       "ordinary-time-05-c"
@@ -23867,7 +25591,36 @@
     "id": "ps-119-blessed-are-they-who-follow-the-law--the-lyric-psalter-tony-alonso-marty-haugen",
     "title": "Ps 119 Blessed are they who follow the law...",
     "composer": "The Lyric Psalter • Tony Alonso & Marty Haugen",
-    "resources": [],
+    "resources": [
+      {
+        "id": "psalms--psalms-ordinary-time-ot-06a-psalms-ot-06a-ps-119-blessed-are-they-lyricpsalter-",
+        "type": "sheet_music",
+        "label": "Lyric Psalter",
+        "filePath": "_psalms/Ordinary Time/OT-06A/Psalms/OT-06A_Ps-119_Blessed-Are-They_LyricPsalter_Alonso.pdf",
+        "source": "local"
+      },
+      {
+        "id": "psalms--psalms-ordinary-time-ot-17a-psalms-ot-17a-ps-119-lord-i-love-your-commands-lyri",
+        "type": "sheet_music",
+        "label": "Lyric Psalter - Choral",
+        "filePath": "_psalms/Ordinary Time/OT-17A/Psalms/OT-17A_Ps-119_Lord,-I-Love-Your-Commands_LyricPsalterChoral_Alonso.pdf",
+        "source": "local"
+      },
+      {
+        "id": "psalms--psalms-ordinary-time-ot-17a-psalms-ot-17a-ps-119-lord-i-love-your-commands-lyri",
+        "type": "sheet_music",
+        "label": "Lyric Psalter",
+        "filePath": "_psalms/Ordinary Time/OT-17A/Psalms/OT-17A_Ps-119_Lord-I-Love-Your-Commands_LyricPsalter_Alonso.pdf",
+        "source": "local"
+      },
+      {
+        "id": "psalms--psalms-ordinary-time-ot-18a-psalms-ot-18a-ps-119-lord-i-love-your-commands-lyri",
+        "type": "sheet_music",
+        "label": "Lyric Psalter - Choral",
+        "filePath": "_psalms/Ordinary Time/OT-18A/Psalms/OT-18A_Ps-119_Lord,-I-Love-Your-Commands_LyricPsalterChoral_Alonso.pdf",
+        "source": "local"
+      }
+    ],
     "usageCount": 2,
     "occasions": [
       "ordinary-time-06-a"
@@ -23878,7 +25631,22 @@
     "id": "ps-119-blessed-are-they-who-follow-the-law--spirit-psalm-josh-blakesley",
     "title": "Ps 119 Blessed are they who follow the law...",
     "composer": "Spirit & Psalm • Josh Blakesley",
-    "resources": [],
+    "resources": [
+      {
+        "id": "psalms--psalms-ordinary-time-ot-06a-psalms-ot-06a-ps-119-blessed-are-they-who-follow-sp",
+        "type": "sheet_music",
+        "label": "Spirit & Psalm",
+        "filePath": "_psalms/Ordinary Time/OT-06A/Psalms/OT-06A_Ps-119_Blessed-Are-They-Who-Follow_Spirit&Psalm2026_Blakesley.pdf",
+        "source": "local"
+      },
+      {
+        "id": "psalms--psalms-ordinary-time-ot-17a-psalms-ot-17a-ps-119-lord-i-love-your-commands-spir",
+        "type": "sheet_music",
+        "label": "Spirit & Psalm",
+        "filePath": "_psalms/Ordinary Time/OT-17A/Psalms/OT-17A_Ps-119_Lord,-I-Love-Your-Commands_Spirit&Psalm2026_Anderson.pdf",
+        "source": "local"
+      }
+    ],
     "usageCount": 2,
     "occasions": [
       "ordinary-time-06-a"
@@ -23932,7 +25700,15 @@
     "id": "ps-1-blessed-are-they-who-hope-in-the-lord--spirit-psalm-santiago-fern-ndez",
     "title": "Ps 1 Blessed are they who hope in the Lord.",
     "composer": "Spirit & Psalm • Santiago Fernández",
-    "resources": [],
+    "resources": [
+      {
+        "id": "psalms--psalms-ordinary-time-ot-06c-psalms-ot-06c-ps-1-blessed-are-they-who-hope-spirit",
+        "type": "sheet_music",
+        "label": "Spirit & Psalm",
+        "filePath": "_psalms/Ordinary Time/OT-06C/Psalms/OT-06C_Ps-1_Blessed-Are-They-Who-Hope_Spirit&Psalm2025_Fernández.pdf",
+        "source": "local"
+      }
+    ],
     "usageCount": 2,
     "occasions": [
       "ordinary-time-06-c"
@@ -24132,7 +25908,15 @@
     "id": "ps-92-lord-it-is-good-to-give-thanks-to-you--spirit-psalm-steve-angrisano",
     "title": "Ps 92 Lord, it is good to give thanks to you.",
     "composer": "Spirit & Psalm • Steve Angrisano",
-    "resources": [],
+    "resources": [
+      {
+        "id": "psalms--psalms-ordinary-time-ot-08c-psalms-ot-08c-ps-92-to-give-thanks-to-you-spirit-ps",
+        "type": "sheet_music",
+        "label": "Spirit & Psalm",
+        "filePath": "_psalms/Ordinary Time/OT-08C/Psalms/OT-08C_Ps-92_To-Give-Thanks-To-You_Spirit&Psalm2025_Angrisano.pdf",
+        "source": "local"
+      }
+    ],
     "usageCount": 2,
     "occasions": [
       "ordinary-time-08-c"
@@ -24143,7 +25927,22 @@
     "id": "ps-51-be-merciful-o-lord-for-we-have-sinned--the-lyric-psalter-tony-alonso-marty-haugen",
     "title": "Ps 51 Be merciful, O Lord, for we have sinned.",
     "composer": "The Lyric Psalter • Tony Alonso & Marty Haugen",
-    "resources": [],
+    "resources": [
+      {
+        "id": "psalms--psalms-lent-len-01a-psalms-len-01a-ps-51-be-merciful-o-lord-lyricpsalterchoral-",
+        "type": "sheet_music",
+        "label": "Lyric Psalter - Choral",
+        "filePath": "_psalms/Lent/Len-01A/Psalms/Len-01A_Ps-51_Be-Merciful-O-Lord_LyricPsalterChoral_Haugen.pdf",
+        "source": "local"
+      },
+      {
+        "id": "psalms--psalms-lent-len-01a-psalms-len-01a-ps-51-be-merciful-o-lord-lyricpsalter-haugen",
+        "type": "sheet_music",
+        "label": "Lyric Psalter",
+        "filePath": "_psalms/Lent/Len-01A/Psalms/Len-01A_Ps-51_Be-Merciful-O-Lord_LyricPsalter_Haugen.pdf",
+        "source": "local"
+      }
+    ],
     "usageCount": 2,
     "occasions": [
       "lent-01-a"
@@ -24169,7 +25968,15 @@
     "id": "ps-25-your-ways-o-lord-are-love-and-truth-to-those--spirit-psalm-santiago-fern-ndez",
     "title": "Ps 25 Your ways, O Lord, are love and truth to those...",
     "composer": "Spirit & Psalm • Santiago Fernández",
-    "resources": [],
+    "resources": [
+      {
+        "id": "psalms--psalms-lent-len-01b-psalms-len-01b-ps-25-your-ways-o-lord-are-love-spirit-psalm",
+        "type": "sheet_music",
+        "label": "Spirit & Psalm",
+        "filePath": "_psalms/Lent/Len-01B/Psalms/Len-01B_Ps-25_Your-Ways,-O-Lord,-Are-Love_Spirit&Psalm2024_Fernández.pdf",
+        "source": "local"
+      }
+    ],
     "usageCount": 2,
     "occasions": [
       "lent-01-b"
@@ -24180,7 +25987,15 @@
     "id": "ps-91-be-with-me-lord-when-i-am-in-trouble--the-lyric-psalter-tony-alonso-marty-haugen",
     "title": "Ps 91 Be with me, Lord, when I am in trouble.",
     "composer": "The Lyric Psalter • Tony Alonso & Marty Haugen",
-    "resources": [],
+    "resources": [
+      {
+        "id": "psalms--psalms-lent-len-03c-psalms-len-03c-ps-91-be-with-me-lord-lyricpsalterchoral-hau",
+        "type": "sheet_music",
+        "label": "Lyric Psalter - Choral",
+        "filePath": "_psalms/Lent/Len-03C/Psalms/Len-03C_Ps-91_Be-With-Me,-Lord_LyricPsalterChoral_Haugen.pdf",
+        "source": "local"
+      }
+    ],
     "usageCount": 2,
     "occasions": [
       "lent-01-c"
@@ -24191,7 +26006,15 @@
     "id": "ps-91-be-with-me-lord-when-i-am-in-trouble--spirit-psalm-ken-canedo",
     "title": "Ps 91 Be with me, Lord, when I am in trouble.",
     "composer": "Spirit & Psalm • Ken Canedo",
-    "resources": [],
+    "resources": [
+      {
+        "id": "psalms--psalms-lent-len-01c-psalms-len-01c-ps-91-be-withme-lord-when-i-am-spirit-psalm2",
+        "type": "sheet_music",
+        "label": "Spirit & Psalm",
+        "filePath": "_psalms/Lent/Len-01C/Psalms/Len-01C_Ps-91_Be-Withme,-Lord,-When-I-Am_Spirit&Psalm2025_Westrich.pdf",
+        "source": "local"
+      }
+    ],
     "usageCount": 2,
     "occasions": [
       "lent-01-c"
@@ -24202,7 +26025,29 @@
     "id": "ps-33-lord-let-your-mercy-be-on-us-as-we-place--spirit-psalm-scott-soper",
     "title": "Ps 33 Lord, let your mercy be on us, as we place...",
     "composer": "Spirit & Psalm • Scott Soper",
-    "resources": [],
+    "resources": [
+      {
+        "id": "psalms--psalms-easter-eas-05a-psalms-eas-05a-ps-33-lord-let-your-mercy-be-spirit-psalm2",
+        "type": "sheet_music",
+        "label": "Spirit & Psalm",
+        "filePath": "_psalms/Easter/Eas-05A/Psalms/Eas-05A_Ps-33_Lord,-Let-Your-Mercy-Be_Spirit&Psalm2026_Soper.pdf",
+        "source": "local"
+      },
+      {
+        "id": "psalms--psalms-lent-len-02a-psalms-len-02a-ps-33-lord-let-your-mercy-be-spirit-psalm202",
+        "type": "sheet_music",
+        "label": "Spirit & Psalm",
+        "filePath": "_psalms/Lent/Len-02A/Psalms/Len-02A_Ps-33_Lord,-Let-Your-Mercy-Be_Spirit&Psalm2026_Soper.pdf",
+        "source": "local"
+      },
+      {
+        "id": "psalms--psalms-ordinary-time-ot-29b-psalms-ot-29b-ps-33-lord-let-your-mercy-be-spirit-p",
+        "type": "sheet_music",
+        "label": "Spirit & Psalm",
+        "filePath": "_psalms/Ordinary Time/OT-29B/Psalms/OT-29B_Ps-33_Lord,-Let-Your-Mercy-Be_Spirit&Psalm2024_Soper.pdf",
+        "source": "local"
+      }
+    ],
     "usageCount": 2,
     "occasions": [
       "lent-02-a"
@@ -24228,7 +26073,29 @@
     "id": "ps-116-i-will-walk-before-the-lord--the-lyric-psalter-tony-alonso-marty-haugen",
     "title": "Ps 116 I will walk before the Lord...",
     "composer": "The Lyric Psalter • Tony Alonso & Marty Haugen",
-    "resources": [],
+    "resources": [
+      {
+        "id": "psalms--psalms-lent-len-03b-psalms-len-03b-ps-116-i-will-walk-before-the-lord-lyricpsal",
+        "type": "sheet_music",
+        "label": "Lyric Psalter - Choral",
+        "filePath": "_psalms/Lent/Len-03B/Psalms/Len-03B_Ps-116_I-Will-Walk-Before-The-Lord_LyricPsalterChoral_Alonso.pdf",
+        "source": "local"
+      },
+      {
+        "id": "psalms--psalms-ordinary-time-ot-05b-psalms-ot-05b-ps-116-i-will-walk-before-the-lord-ly",
+        "type": "sheet_music",
+        "label": "Lyric Psalter - Choral",
+        "filePath": "_psalms/Ordinary Time/OT-05B/Psalms/OT-05B_Ps-116_I-Will-Walk-Before-The-Lord_LyricPsalterChoral_Alonso.pdf",
+        "source": "local"
+      },
+      {
+        "id": "psalms--psalms-solemnities-sol-body-and-bloodb-psalms-corpuschristi-b-ps-116-i-will-tak",
+        "type": "sheet_music",
+        "label": "Lyric Psalter",
+        "filePath": "_psalms/Solemnities/Sol-Body-And-BloodB/Psalms/CorpusChristi-B_Ps-116_I-Will-Take-The-Cup_LyricPsalter_Alonso.pdf",
+        "source": "local"
+      }
+    ],
     "usageCount": 2,
     "occasions": [
       "lent-02-b"
@@ -24283,7 +26150,22 @@
     "id": "ps-116-i-will-walk-before-the-lord--spirit-psalm-dana-catherine",
     "title": "Ps 116 I will walk before the Lord...",
     "composer": "Spirit & Psalm • Dana Catherine",
-    "resources": [],
+    "resources": [
+      {
+        "id": "psalms--psalms-lent-len-02b-psalms-len-02b-ps-116-i-will-walk-before-the-lord-spirit-ps",
+        "type": "sheet_music",
+        "label": "Spirit & Psalm",
+        "filePath": "_psalms/Lent/Len-02B/Psalms/Len-02B_Ps-116_I-Will-Walk-Before-The-Lord,_Spirit&Psalm2024_Catherine.pdf",
+        "source": "local"
+      },
+      {
+        "id": "psalms--psalms-ordinary-time-ot-24b-psalms-ot-24b-ps-116-i-will-walk-before-the-lord-sp",
+        "type": "sheet_music",
+        "label": "Spirit & Psalm",
+        "filePath": "_psalms/Ordinary Time/OT-24B/Psalms/OT-24B_Ps-116_I-Will-Walk-Before-The-Lord,_Spirit&Psalm2024_Catherine.pdf",
+        "source": "local"
+      }
+    ],
     "usageCount": 2,
     "occasions": [
       "lent-02-b"
@@ -24367,7 +26249,36 @@
     "id": "ps-19-lord-you-have-the-words-of-everlasting-life--the-lyric-psalter-tony-alonso-marty-haugen",
     "title": "Ps 19 Lord, you have the words of everlasting life.",
     "composer": "The Lyric Psalter • Tony Alonso & Marty Haugen",
-    "resources": [],
+    "resources": [
+      {
+        "id": "psalms--psalms-lent-len-03b-psalms-lent-03b-ps-19-lord-you-have-the-words-lyricpsalter-",
+        "type": "sheet_music",
+        "label": "Lyric Psalter",
+        "filePath": "_psalms/Lent/Len-03B/Psalms/Lent-03B_Ps-19_Lord-You-Have-The-Words_LyricPsalter_Alonso.pdf",
+        "source": "local"
+      },
+      {
+        "id": "psalms--psalms-ordinary-time-ot-06b-psalms-ot-06b-ps-19-the-precepts-of-the-lord-lyricp",
+        "type": "sheet_music",
+        "label": "Lyric Psalter - Choral",
+        "filePath": "_psalms/Ordinary Time/OT-06B/Psalms/OT-06B_Ps-19_The-Precepts-Of-The-Lord_LyricPsalterChoral_Alonso.pdf",
+        "source": "local"
+      },
+      {
+        "id": "psalms--psalms-ordinary-time-ot-07b-psalms-ot-07b-ps-19-the-precepts-of-the-lord-lyricp",
+        "type": "sheet_music",
+        "label": "Lyric Psalter - Choral",
+        "filePath": "_psalms/Ordinary Time/OT-07B/Psalms/OT-07B_Ps-19_The-Precepts-Of-The-Lord_LyricPsalterChoral_Alonso.pdf",
+        "source": "local"
+      },
+      {
+        "id": "psalms--psalms-ordinary-time-ot-26b-psalms-ot-26b-ps-19-the-precepts-of-the-lord-lyricp",
+        "type": "sheet_music",
+        "label": "Lyric Psalter - Choral",
+        "filePath": "_psalms/Ordinary Time/OT-26B/Psalms/OT-26B_Ps-19_The-Precepts-Of-The-Lord_LyricPsalterChoral_Alonso.pdf",
+        "source": "local"
+      }
+    ],
     "usageCount": 2,
     "occasions": [
       "lent-03-b"
@@ -24572,7 +26483,29 @@
     "id": "ps-51-create-a-clean-heart-in-me-o-god--the-lyric-psalter-tony-alonso-marty-haugen",
     "title": "Ps 51 Create a clean heart in me, O God.",
     "composer": "The Lyric Psalter • Tony Alonso & Marty Haugen",
-    "resources": [],
+    "resources": [
+      {
+        "id": "psalms--psalms-lent-len-05b-psalms-len-05b-ps-51-create-a-clean-heart-in-me-lyricpsalte",
+        "type": "sheet_music",
+        "label": "Lyric Psalter - Choral",
+        "filePath": "_psalms/Lent/Len-05B/Psalms/Len-05B_Ps-51_Create-A-Clean-Heart-In-Me,_LyricPsalterChoral_Haugen.pdf",
+        "source": "local"
+      },
+      {
+        "id": "psalms--psalms-lent-len-05b-psalms-lent-05b-ps-51-create-a-clean-heart-in-me-lyricpsalt",
+        "type": "sheet_music",
+        "label": "Lyric Psalter",
+        "filePath": "_psalms/Lent/Len-05B/Psalms/Lent-05B_Ps-51_Create-A-Clean-Heart-In-Me_LyricPsalter_Haugen.pdf",
+        "source": "local"
+      },
+      {
+        "id": "psalms--psalms-lent-len-palm-sundayb-psalms-len-palm-sundayb-ps-51-create-a-clean-heart",
+        "type": "sheet_music",
+        "label": "Lyric Psalter - Choral",
+        "filePath": "_psalms/Lent/Len-Palm-SundayB/Psalms/Len-Palm-SundayB_Ps-51_Create-A-Clean-Heart-In-Me,_LyricPsalterChoral_Haugen.pdf",
+        "source": "local"
+      }
+    ],
     "usageCount": 2,
     "occasions": [
       "lent-05-b"
@@ -24666,7 +26599,22 @@
     "id": "ps-30-i-will-praise-you-lord-for-you-have--the-lyric-psalter-tony-alonso-marty-haugen",
     "title": "Ps 30 I will praise you, Lord, for you have...",
     "composer": "The Lyric Psalter • Tony Alonso & Marty Haugen",
-    "resources": [],
+    "resources": [
+      {
+        "id": "psalms--psalms-easter-eas-04c-psalms-eas-04c-ps-30-i-will-praise-you-lord-lyricpsalterc",
+        "type": "sheet_music",
+        "label": "Lyric Psalter - Choral",
+        "filePath": "_psalms/Easter/Eas-04C/Psalms/Eas-04C_Ps-30_I-Will-Praise-You,-Lord_LyricPsalterChoral_Haugen.pdf",
+        "source": "local"
+      },
+      {
+        "id": "psalms--psalms-ordinary-time-ot-12c-psalms-ot-12c-ps-30-i-will-praise-you-lord-lyricpsa",
+        "type": "sheet_music",
+        "label": "Lyric Psalter - Choral",
+        "filePath": "_psalms/Ordinary Time/OT-12C/Psalms/OT-12C_Ps-30_I-Will-Praise-You,-Lord_LyricPsalterChoral_Haugen.pdf",
+        "source": "local"
+      }
+    ],
     "usageCount": 2,
     "occasions": [
       "easter-03-c"
@@ -24737,7 +26685,43 @@
     "id": "ps-100-we-are-his-people-the-sheep--the-lyric-psalter-tony-alonso-marty-haugen",
     "title": "Ps 100 We are his people, the sheep...",
     "composer": "The Lyric Psalter • Tony Alonso & Marty Haugen",
-    "resources": [],
+    "resources": [
+      {
+        "id": "psalms--psalms-easter-eas-05c-psalms-eas-05c-ps-100-we-are-his-people-lyricpsalterchora",
+        "type": "sheet_music",
+        "label": "Lyric Psalter - Choral",
+        "filePath": "_psalms/Easter/Eas-05C/Psalms/Eas-05C_Ps-100_We-Are-His-People_LyricPsalterChoral_Alonso.pdf",
+        "source": "local"
+      },
+      {
+        "id": "psalms--psalms-easter-eas-06c-psalms-eas-06c-ps-100-we-are-his-people-lyricpsalterchora",
+        "type": "sheet_music",
+        "label": "Lyric Psalter - Choral",
+        "filePath": "_psalms/Easter/Eas-06C/Psalms/Eas-06C_Ps-100_We-Are-His-People_LyricPsalterChoral_Alonso.pdf",
+        "source": "local"
+      },
+      {
+        "id": "psalms--psalms-ordinary-time-ot-11a-psalms-ot-11a-ps-100-we-are-his-people-lyricpsalter",
+        "type": "sheet_music",
+        "label": "Lyric Psalter - Choral",
+        "filePath": "_psalms/Ordinary Time/OT-11A/Psalms/OT-11A_Ps-100_We-Are-His-People_LyricPsalterChoral_Alonso.pdf",
+        "source": "local"
+      },
+      {
+        "id": "psalms--psalms-ordinary-time-ot-11a-psalms-ot-11a-ps-100-we-are-his-people-lyricpsalter",
+        "type": "sheet_music",
+        "label": "Lyric Psalter",
+        "filePath": "_psalms/Ordinary Time/OT-11A/Psalms/OT-11A_Ps-100_We-Are-His-People_LyricPsalter_Alonso.pdf",
+        "source": "local"
+      },
+      {
+        "id": "psalms--psalms-ordinary-time-ot-12a-psalms-ot-12a-ps-100-we-are-his-people-lyricpsalter",
+        "type": "sheet_music",
+        "label": "Lyric Psalter - Choral",
+        "filePath": "_psalms/Ordinary Time/OT-12A/Psalms/OT-12A_Ps-100_We-Are-His-People_LyricPsalterChoral_Alonso.pdf",
+        "source": "local"
+      }
+    ],
     "usageCount": 2,
     "occasions": [
       "easter-04-c"
@@ -24842,7 +26826,50 @@
     "id": "ps-145-i-will-praise-your-name-for-ever--the-lyric-psalter-tony-alonso-marty-haugen",
     "title": "Ps 145 I will praise your name for ever...",
     "composer": "The Lyric Psalter • Tony Alonso & Marty Haugen",
-    "resources": [],
+    "resources": [
+      {
+        "id": "psalms--psalms-easter-eas-07c-psalms-eas-07c-ps-145-i-will-praise-your-name-lyricpsalte",
+        "type": "sheet_music",
+        "label": "Lyric Psalter - Choral",
+        "filePath": "_psalms/Easter/Eas-07C/Psalms/Eas-07C_Ps-145_I-Will-Praise-Your-Name_LyricPsalterChoral_Alonso.pdf",
+        "source": "local"
+      },
+      {
+        "id": "psalms--psalms-easter-eas-ascensionc-psalms-eas-ascensionc-ps-145-i-will-praise-your-na",
+        "type": "sheet_music",
+        "label": "Lyric Psalter - Choral",
+        "filePath": "_psalms/Easter/Eas-AscensionC/Psalms/Eas-AscensionC_Ps-145_I-Will-Praise-Your-Name_LyricPsalterChoral_Alonso.pdf",
+        "source": "local"
+      },
+      {
+        "id": "psalms--psalms-ordinary-time-ot-14a-psalms-ot-14a-ps-145-i-will-praise-your-name-lyricp",
+        "type": "sheet_music",
+        "label": "Lyric Psalter",
+        "filePath": "_psalms/Ordinary Time/OT-14A/Psalms/OT-14A_Ps-145_I-Will-Praise-Your-Name_LyricPsalter_Alonso.pdf",
+        "source": "local"
+      },
+      {
+        "id": "psalms--psalms-solemnities-sol-thanksgivinga-psalms-sol-thanksgivinga-ps-145-i-will-ble",
+        "type": "sheet_music",
+        "label": "Lyric Psalter - Choral",
+        "filePath": "_psalms/Solemnities/Sol-ThanksgivingA/Psalms/Sol-ThanksgivingA_Ps-145_I-Will-Bless-Your-Name_LyricPsalterChoral_Alonso.pdf",
+        "source": "local"
+      },
+      {
+        "id": "psalms--psalms-solemnities-sol-thanksgivingb-psalms-sol-thanksgivingb-ps-145-i-will-ble",
+        "type": "sheet_music",
+        "label": "Lyric Psalter - Choral",
+        "filePath": "_psalms/Solemnities/Sol-ThanksgivingB/Psalms/Sol-ThanksgivingB_Ps-145_I-Will-Bless-Your-Name_LyricPsalterChoral_Alonso.pdf",
+        "source": "local"
+      },
+      {
+        "id": "psalms--psalms-solemnities-sol-thanksgivingc-psalms-sol-thanksgivingc-ps-145-i-will-ble",
+        "type": "sheet_music",
+        "label": "Lyric Psalter - Choral",
+        "filePath": "_psalms/Solemnities/Sol-ThanksgivingC/Psalms/Sol-ThanksgivingC_Ps-145_I-Will-Bless-Your-Name_LyricPsalterChoral_Alonso.pdf",
+        "source": "local"
+      }
+    ],
     "usageCount": 2,
     "occasions": [
       "easter-05-c"
@@ -25057,7 +27084,29 @@
     "id": "ps-34-the-angel-of-the-lord-will-rescue-those--the-lyric-psalter-tony-alonso-marty-haugen",
     "title": "Ps 34 The angel of the Lord will rescue those...",
     "composer": "The Lyric Psalter • Tony Alonso & Marty Haugen",
-    "resources": [],
+    "resources": [
+      {
+        "id": "psalms--psalms-solemnities-sol-peter-paula-psalms-sol-peter-paula-ps-34-the-angel-of-th",
+        "type": "sheet_music",
+        "label": "Lyric Psalter - Choral",
+        "filePath": "_psalms/Solemnities/Sol-Peter-PaulA/Psalms/Sol-Peter-PaulA_Ps-34_The-Angel-Of-The-Lord_LyricPsalterChoral_Haugen.pdf",
+        "source": "local"
+      },
+      {
+        "id": "psalms--psalms-solemnities-sol-peter-paulb-psalms-sol-peter-paulb-ps-34-the-angel-of-th",
+        "type": "sheet_music",
+        "label": "Lyric Psalter - Choral",
+        "filePath": "_psalms/Solemnities/Sol-Peter-PaulB/Psalms/Sol-Peter-PaulB_Ps-34_The-Angel-Of-The-Lord_LyricPsalterChoral_Haugen.pdf",
+        "source": "local"
+      },
+      {
+        "id": "psalms--psalms-solemnities-sol-peter-paulc-psalms-sol-peter-paulc-ps-34-the-angel-of-th",
+        "type": "sheet_music",
+        "label": "Lyric Psalter - Choral",
+        "filePath": "_psalms/Solemnities/Sol-Peter-PaulC/Psalms/Sol-Peter-PaulC_Ps-34_The-Angel-Of-The-Lord_LyricPsalterChoral_Haugen.pdf",
+        "source": "local"
+      }
+    ],
     "usageCount": 2,
     "occasions": [
       "ss-peter-paul-apostles-jun-29-mass-during-the-day-abc"
@@ -25068,7 +27117,36 @@
     "id": "ps-66-let-all-the-earth-cry-out-to-god-with-joy--the-lyric-psalter-tony-alonso-marty-haugen",
     "title": "Ps 66 Let all the earth cry out to God with joy.",
     "composer": "The Lyric Psalter • Tony Alonso & Marty Haugen",
-    "resources": [],
+    "resources": [
+      {
+        "id": "psalms--psalms-easter-eas-06a-psalms-eas-06a-ps-66-let-all-the-earth-lyricpsalter-hauge",
+        "type": "sheet_music",
+        "label": "Lyric Psalter",
+        "filePath": "_psalms/Easter/Eas-06A/Psalms/Eas-06A_Ps-66_Let-All-The-Earth_LyricPsalter_Haugen.pdf",
+        "source": "local"
+      },
+      {
+        "id": "psalms--psalms-ordinary-time-ot-15c-psalms-ot-15c-ps-66-let-all-the-earth-lyricpsalterc",
+        "type": "sheet_music",
+        "label": "Lyric Psalter - Choral",
+        "filePath": "_psalms/Ordinary Time/OT-15C/Psalms/OT-15C_Ps-66_Let-All-The-Earth_LyricPsalterChoral_Haugen.pdf",
+        "source": "local"
+      },
+      {
+        "id": "psalms--psalms-ordinary-time-ot-16c-psalms-ot-16c-ps-66-let-all-the-earth-lyricpsalterc",
+        "type": "sheet_music",
+        "label": "Lyric Psalter - Choral",
+        "filePath": "_psalms/Ordinary Time/OT-16C/Psalms/OT-16C_Ps-66_Let-All-The-Earth_LyricPsalterChoral_Haugen.pdf",
+        "source": "local"
+      },
+      {
+        "id": "psalms--psalms-ordinary-time-ot-17c-psalms-ot-17c-ps-66-let-all-the-earth-lyricpsalterc",
+        "type": "sheet_music",
+        "label": "Lyric Psalter - Choral",
+        "filePath": "_psalms/Ordinary Time/OT-17C/Psalms/OT-17C_Ps-66_Let-All-The-Earth_LyricPsalterChoral_Haugen.pdf",
+        "source": "local"
+      }
+    ],
     "usageCount": 2,
     "occasions": [
       "ordinary-time-14-c"
@@ -25093,7 +27171,15 @@
     "id": "ps-69-turn-to-the-lord-in-your-need--the-lyric-psalter-tony-alonso-marty-haugen",
     "title": "Ps 69 Turn to the Lord in your need...",
     "composer": "The Lyric Psalter • Tony Alonso & Marty Haugen",
-    "resources": [],
+    "resources": [
+      {
+        "id": "psalms--psalms-ordinary-time-ot-15c-psalms-ot-15c-ps-69-turn-to-the-lord-lyricpsalter-a",
+        "type": "sheet_music",
+        "label": "Lyric Psalter",
+        "filePath": "_psalms/Ordinary Time/OT-15C/Psalms/OT-15C_Ps-69_Turn-To-The-Lord_LyricPsalter_Alonso.pdf",
+        "source": "local"
+      }
+    ],
     "usageCount": 2,
     "occasions": [
       "ordinary-time-15-c"
@@ -25371,7 +27457,29 @@
     "id": "ps-138-lord-on-the-day-i-called-for-help--the-lyric-psalter-tony-alonso-marty-haugen",
     "title": "Ps 138 Lord, on the day I called for help...",
     "composer": "The Lyric Psalter • Tony Alonso & Marty Haugen",
-    "resources": [],
+    "resources": [
+      {
+        "id": "psalms--psalms-ordinary-time-ot-17c-psalms-ot-17c-ps-138-lord-on-the-day-i-called-lyric",
+        "type": "sheet_music",
+        "label": "Lyric Psalter",
+        "filePath": "_psalms/Ordinary Time/OT-17C/Psalms/OT-17C_Ps-138_Lord-On-The-Day-I-Called_LyricPsalter_Alonso.pdf",
+        "source": "local"
+      },
+      {
+        "id": "psalms--psalms-ordinary-time-ot-19c-psalms-ot-19c-ps-138-lord-on-the-day-i-called-lyric",
+        "type": "sheet_music",
+        "label": "Lyric Psalter - Choral",
+        "filePath": "_psalms/Ordinary Time/OT-19C/Psalms/OT-19C_Ps-138_Lord,-On-The-Day-I-Called_LyricPsalterChoral_Alonso.pdf",
+        "source": "local"
+      },
+      {
+        "id": "psalms--psalms-ordinary-time-ot-20c-psalms-ot-20c-ps-138-lord-on-the-day-i-called-lyric",
+        "type": "sheet_music",
+        "label": "Lyric Psalter - Choral",
+        "filePath": "_psalms/Ordinary Time/OT-20C/Psalms/OT-20C_Ps-138_Lord,-On-The-Day-I-Called_LyricPsalterChoral_Alonso.pdf",
+        "source": "local"
+      }
+    ],
     "usageCount": 2,
     "occasions": [
       "ordinary-time-17-c"
@@ -25493,7 +27601,36 @@
     "id": "ps-33-blessed-the-people-the-lord--the-lyric-psalter-tony-alonso-marty-haugen",
     "title": "Ps 33 Blessed the people the Lord...",
     "composer": "The Lyric Psalter • Tony Alonso & Marty Haugen",
-    "resources": [],
+    "resources": [
+      {
+        "id": "psalms--psalms-ordinary-time-ot-02c-psalms-ot-02c-ps-33-blessed-the-people-the-lord-has",
+        "type": "sheet_music",
+        "label": "Lyric Psalter - Choral",
+        "filePath": "_psalms/Ordinary Time/OT-02C/Psalms/OT-02C_Ps-33_Blessed-The-People-The-Lord-Has_LyricPsalterChoral_Haugen.pdf",
+        "source": "local"
+      },
+      {
+        "id": "psalms--psalms-ordinary-time-ot-19c-psalms-ot-19c-ps-33-blessed-the-people-the-lord-has",
+        "type": "sheet_music",
+        "label": "Lyric Psalter",
+        "filePath": "_psalms/Ordinary Time/OT-19C/Psalms/OT-19C_Ps-33_Blessed-The-People-The-Lord-Has_LyricPsalter_Haugen.pdf",
+        "source": "local"
+      },
+      {
+        "id": "psalms--psalms-ordinary-time-ot-19c-psalms-ot-19c-ps-33-blessed-the-people-lyricpsalter",
+        "type": "sheet_music",
+        "label": "Lyric Psalter - Choral",
+        "filePath": "_psalms/Ordinary Time/OT-19C/Psalms/OT-19C_Ps-33_Blessed-The-People_LyricPsalterChoral_Haugen.pdf",
+        "source": "local"
+      },
+      {
+        "id": "psalms--psalms-solemnities-sol-body-and-bloodb-psalms-sol-body-and-bloodb-ps-33-blessed",
+        "type": "sheet_music",
+        "label": "Lyric Psalter - Choral",
+        "filePath": "_psalms/Solemnities/Sol-Body-And-BloodB/Psalms/Sol-Body-And-BloodB_Ps-33_Blessed-The-People_LyricPsalterChoral_Haugen.pdf",
+        "source": "local"
+      }
+    ],
     "usageCount": 2,
     "occasions": [
       "ordinary-time-19-c"
@@ -25694,7 +27831,71 @@
     "id": "ps-78-do-not-forget-the-works-of-the-lord--the-lyric-psalter-tony-alonso-marty-haugen",
     "title": "Ps 78 Do not forget the works of the Lord!",
     "composer": "The Lyric Psalter • Tony Alonso & Marty Haugen",
-    "resources": [],
+    "resources": [
+      {
+        "id": "psalms--psalms-solemnities-sol-all-saintsa-psalms-sol-all-saintsa-ps-78-do-not-forget-t",
+        "type": "sheet_music",
+        "label": "Lyric Psalter - Choral",
+        "filePath": "_psalms/Solemnities/Sol-All-SaintsA/Psalms/Sol-All-SaintsA_Ps-78_Do-Not-Forget-The-Works_LyricPsalterChoral_Haugen.pdf",
+        "source": "local"
+      },
+      {
+        "id": "psalms--psalms-solemnities-sol-all-saintsb-psalms-sol-all-saintsb-ps-78-do-not-forget-t",
+        "type": "sheet_music",
+        "label": "Lyric Psalter - Choral",
+        "filePath": "_psalms/Solemnities/Sol-All-SaintsB/Psalms/Sol-All-SaintsB_Ps-78_Do-Not-Forget-The-Works_LyricPsalterChoral_Haugen.pdf",
+        "source": "local"
+      },
+      {
+        "id": "psalms--psalms-solemnities-sol-all-saintsc-psalms-sol-all-saintsc-ps-78-do-not-forget-t",
+        "type": "sheet_music",
+        "label": "Lyric Psalter - Choral",
+        "filePath": "_psalms/Solemnities/Sol-All-SaintsC/Psalms/Sol-All-SaintsC_Ps-78_Do-Not-Forget-The-Works_LyricPsalterChoral_Haugen.pdf",
+        "source": "local"
+      },
+      {
+        "id": "psalms--psalms-solemnities-sol-exaltation-holy-crossa-psalms-sol-exaltation-holy-crossa",
+        "type": "sheet_music",
+        "label": "Lyric Psalter - Choral",
+        "filePath": "_psalms/Solemnities/Sol-Exaltation-Holy-CrossA/Psalms/Sol-Exaltation-Holy-CrossA_Ps-78_Do-Not-Forget-The-Works_LyricPsalterChoral_Haugen.pdf",
+        "source": "local"
+      },
+      {
+        "id": "psalms--psalms-solemnities-sol-exaltation-holy-crossa-psalms-sol-exaltation-holy-crossa",
+        "type": "sheet_music",
+        "label": "Lyric Psalter",
+        "filePath": "_psalms/Solemnities/Sol-Exaltation-Holy-CrossA/Psalms/Sol-Exaltation-Holy-CrossA_Ps-78_Do-Not-Forget-The-Works_LyricPsalter_Haugen.pdf",
+        "source": "local"
+      },
+      {
+        "id": "psalms--psalms-solemnities-sol-exaltation-holy-crossb-psalms-sol-exaltation-holy-crossb",
+        "type": "sheet_music",
+        "label": "Lyric Psalter - Choral",
+        "filePath": "_psalms/Solemnities/Sol-Exaltation-Holy-CrossB/Psalms/Sol-Exaltation-Holy-CrossB_Ps-78_Do-Not-Forget-The-Works_LyricPsalterChoral_Haugen.pdf",
+        "source": "local"
+      },
+      {
+        "id": "psalms--psalms-solemnities-sol-exaltation-holy-crossb-psalms-sol-exaltation-holy-crossb",
+        "type": "sheet_music",
+        "label": "Lyric Psalter",
+        "filePath": "_psalms/Solemnities/Sol-Exaltation-Holy-CrossB/Psalms/Sol-Exaltation-Holy-CrossB_Ps-78_Do-Not-Forget-The-Works_LyricPsalter_Haugen.pdf",
+        "source": "local"
+      },
+      {
+        "id": "psalms--psalms-solemnities-sol-exaltation-holy-crossc-psalms-sol-exaltation-holy-crossc",
+        "type": "sheet_music",
+        "label": "Lyric Psalter - Choral",
+        "filePath": "_psalms/Solemnities/Sol-Exaltation-Holy-CrossC/Psalms/Sol-Exaltation-Holy-CrossC_Ps-78_Do-Not-Forget-The-Works_LyricPsalterChoral_Haugen.pdf",
+        "source": "local"
+      },
+      {
+        "id": "psalms--psalms-solemnities-sol-exaltation-holy-crossc-psalms-sol-exaltation-holy-crossc",
+        "type": "sheet_music",
+        "label": "Lyric Psalter",
+        "filePath": "_psalms/Solemnities/Sol-Exaltation-Holy-CrossC/Psalms/Sol-Exaltation-Holy-CrossC_Ps-78_Do-Not-Forget-The-Works_LyricPsalter_Haugen.pdf",
+        "source": "local"
+      }
+    ],
     "usageCount": 2,
     "occasions": [
       "feast-the-exaltation-sep-14-of-the-holy-cross-abc"
@@ -25742,7 +27943,22 @@
     "id": "ps-78-do-not-forget-the-works-of-the-lord--spirit-psalm-paul-hillebrand-tom-booth",
     "title": "Ps 78 Do not forget the works of the Lord!",
     "composer": "Spirit & Psalm • Paul Hillebrand & Tom Booth",
-    "resources": [],
+    "resources": [
+      {
+        "id": "psalms--psalms-ordinary-time-ot-18b-psalms-ot-18b-ps-78-the-lord-gave-them-bread-spirit",
+        "type": "sheet_music",
+        "label": "Spirit & Psalm",
+        "filePath": "_psalms/Ordinary Time/OT-18B/Psalms/OT-18B_Ps-78_The-Lord-Gave-Them-Bread,_Spirit&Psalm2024_Angrisano.pdf",
+        "source": "local"
+      },
+      {
+        "id": "psalms--psalms-solemnities-sol-exaltation-holy-crossc-psalms-sol-exaltation-holy-crossc",
+        "type": "sheet_music",
+        "label": "Spirit & Psalm",
+        "filePath": "_psalms/Solemnities/Sol-Exaltation-Holy-CrossC/Psalms/Sol-Exaltation-Holy-CrossC_Ps-78_The-Exaltation-Of-The-Holy-Cross_Spirit&Psalm2025_Hillebrand.pdf",
+        "source": "local"
+      }
+    ],
     "usageCount": 2,
     "occasions": [
       "feast-the-exaltation-sep-14-of-the-holy-cross-abc"
@@ -25813,7 +28029,57 @@
     "id": "ps-113-praise-the-lord-who-lifts-up-the-poor--the-lyric-psalter-tony-alonso-marty-haugen",
     "title": "Ps 113 Praise the Lord who lifts up the poor.",
     "composer": "The Lyric Psalter • Tony Alonso & Marty Haugen",
-    "resources": [],
+    "resources": [
+      {
+        "id": "psalms--psalms-ordinary-time-ot-07c-psalms-ot-07c-ps-113-praise-the-lord-lyricpsalterch",
+        "type": "sheet_music",
+        "label": "Lyric Psalter - Choral",
+        "filePath": "_psalms/Ordinary Time/OT-07C/Psalms/OT-07C_Ps-113_Praise-The-Lord_LyricPsalterChoral_Alonso.pdf",
+        "source": "local"
+      },
+      {
+        "id": "psalms--psalms-solemnities-sol-thanksgivinga-psalms-sol-thanksgivinga-ps-113-blessed-be",
+        "type": "sheet_music",
+        "label": "Lyric Psalter - Choral",
+        "filePath": "_psalms/Solemnities/Sol-ThanksgivingA/Psalms/Sol-ThanksgivingA_Ps-113_Blessed-Be-The-Name_LyricPsalterChoral_Alonso.pdf",
+        "source": "local"
+      },
+      {
+        "id": "psalms--psalms-solemnities-sol-thanksgivinga-psalms-sol-thanksgivinga-ps-113-blessed-be",
+        "type": "sheet_music",
+        "label": "Lyric Psalter",
+        "filePath": "_psalms/Solemnities/Sol-ThanksgivingA/Psalms/Sol-ThanksgivingA_Ps-113_Blessed-Be-The-Name_LyricPsalter_Alonso.pdf",
+        "source": "local"
+      },
+      {
+        "id": "psalms--psalms-solemnities-sol-thanksgivingb-psalms-sol-thanksgivingb-ps-113-blessed-be",
+        "type": "sheet_music",
+        "label": "Lyric Psalter - Choral",
+        "filePath": "_psalms/Solemnities/Sol-ThanksgivingB/Psalms/Sol-ThanksgivingB_Ps-113_Blessed-Be-The-Name_LyricPsalterChoral_Alonso.pdf",
+        "source": "local"
+      },
+      {
+        "id": "psalms--psalms-solemnities-sol-thanksgivingb-psalms-sol-thanksgivingb-ps-113-blessed-be",
+        "type": "sheet_music",
+        "label": "Lyric Psalter",
+        "filePath": "_psalms/Solemnities/Sol-ThanksgivingB/Psalms/Sol-ThanksgivingB_Ps-113_Blessed-Be-The-Name_LyricPsalter_Alonso.pdf",
+        "source": "local"
+      },
+      {
+        "id": "psalms--psalms-solemnities-sol-thanksgivingc-psalms-sol-thanksgivingc-ps-113-blessed-be",
+        "type": "sheet_music",
+        "label": "Lyric Psalter - Choral",
+        "filePath": "_psalms/Solemnities/Sol-ThanksgivingC/Psalms/Sol-ThanksgivingC_Ps-113_Blessed-Be-The-Name_LyricPsalterChoral_Alonso.pdf",
+        "source": "local"
+      },
+      {
+        "id": "psalms--psalms-solemnities-sol-thanksgivingc-psalms-sol-thanksgivingc-ps-113-blessed-be",
+        "type": "sheet_music",
+        "label": "Lyric Psalter",
+        "filePath": "_psalms/Solemnities/Sol-ThanksgivingC/Psalms/Sol-ThanksgivingC_Ps-113_Blessed-Be-The-Name_LyricPsalter_Alonso.pdf",
+        "source": "local"
+      }
+    ],
     "usageCount": 2,
     "occasions": [
       "ordinary-time-25-c"
@@ -25948,7 +28214,29 @@
     "id": "ps-146-praise-the-lord-my-soul--spirit-psalm-sarah-hart",
     "title": "Ps 146 Praise the Lord, my soul!",
     "composer": "Spirit & Psalm • Sarah Hart",
-    "resources": [],
+    "resources": [
+      {
+        "id": "psalms--psalms-ordinary-time-ot-23b-psalms-ot-23b-ps-146-praise-the-lord-my-soul-praise",
+        "type": "sheet_music",
+        "label": "Spirit & Psalm",
+        "filePath": "_psalms/Ordinary Time/OT-23B/Psalms/OT-23B_Ps-146_Praise-The-Lord,-My-Soul-Praise_Spirit&Psalm2024_Hart.pdf",
+        "source": "local"
+      },
+      {
+        "id": "psalms--psalms-ordinary-time-ot-26c-psalms-ot-26c-ps-146-praise-the-lord-my-soul-praise",
+        "type": "sheet_music",
+        "label": "Spirit & Psalm",
+        "filePath": "_psalms/Ordinary Time/OT-26C/Psalms/OT-26C_Ps-146_Praise-The-Lord,-My-Soul-Praise_Spirit&Psalm2025_Hart.pdf",
+        "source": "local"
+      },
+      {
+        "id": "psalms--psalms-ordinary-time-ot-32b-psalms-ot-32b-ps-146-praise-the-lord-my-soul-praise",
+        "type": "sheet_music",
+        "label": "Spirit & Psalm",
+        "filePath": "_psalms/Ordinary Time/OT-32B/Psalms/OT-32B_Ps-146_Praise-The-Lord,-My-Soul-Praise_Spirit&Psalm2024_Hart.pdf",
+        "source": "local"
+      }
+    ],
     "usageCount": 2,
     "occasions": [
       "ordinary-time-26-c"
@@ -26067,7 +28355,99 @@
     "id": "ps-98-the-lord-has-revealed-to-the-nations--the-lyric-psalter-tony-alonso-marty-haugen",
     "title": "Ps 98 The Lord has revealed to the nations...",
     "composer": "The Lyric Psalter • Tony Alonso & Marty Haugen",
-    "resources": [],
+    "resources": [
+      {
+        "id": "psalms--psalms-christmas-chr-immaculate-conceptiona-psalms-chr-immaculate-conceptiona-p",
+        "type": "sheet_music",
+        "label": "Lyric Psalter - Choral",
+        "filePath": "_psalms/Christmas/Chr-Immaculate-ConceptionA/Psalms/Chr-Immaculate-ConceptionA_Ps-98_Sing-To-The-Lord-A-New_LyricPsalterChoral_Haas.pdf",
+        "source": "local"
+      },
+      {
+        "id": "psalms--psalms-christmas-chr-immaculate-conceptiona-psalms-chr-immaculate-conceptiona-p",
+        "type": "sheet_music",
+        "label": "Lyric Psalter",
+        "filePath": "_psalms/Christmas/Chr-Immaculate-ConceptionA/Psalms/Chr-Immaculate-ConceptionA_Ps-98_Sing-To-The-Lord-A-New_LyricPsalter_Haugen.pdf",
+        "source": "local"
+      },
+      {
+        "id": "psalms--psalms-christmas-chr-immaculate-conceptionb-psalms-chr-immaculate-conceptionb-p",
+        "type": "sheet_music",
+        "label": "Lyric Psalter - Choral",
+        "filePath": "_psalms/Christmas/Chr-Immaculate-ConceptionB/Psalms/Chr-Immaculate-ConceptionB_Ps-98_Sing-To-The-Lord-A-New_LyricPsalterChoral_Haas.pdf",
+        "source": "local"
+      },
+      {
+        "id": "psalms--psalms-christmas-chr-immaculate-conceptionb-psalms-chr-immaculate-conceptionb-p",
+        "type": "sheet_music",
+        "label": "Lyric Psalter",
+        "filePath": "_psalms/Christmas/Chr-Immaculate-ConceptionB/Psalms/Chr-Immaculate-ConceptionB_Ps-98_Sing-To-The-Lord-A-New_LyricPsalter_Haugen.pdf",
+        "source": "local"
+      },
+      {
+        "id": "psalms--psalms-christmas-chr-immaculate-conceptionc-psalms-chr-immaculate-conceptionc-p",
+        "type": "sheet_music",
+        "label": "Lyric Psalter - Choral",
+        "filePath": "_psalms/Christmas/Chr-Immaculate-ConceptionC/Psalms/Chr-Immaculate-ConceptionC_Ps-98_Sing-To-The-Lord-A-New_LyricPsalterChoral_Haas.pdf",
+        "source": "local"
+      },
+      {
+        "id": "psalms--psalms-christmas-chr-immaculate-conceptionc-psalms-chr-immaculate-conceptionc-p",
+        "type": "sheet_music",
+        "label": "Lyric Psalter",
+        "filePath": "_psalms/Christmas/Chr-Immaculate-ConceptionC/Psalms/Chr-Immaculate-ConceptionC_Ps-98_Sing-To-The-Lord-A-New_LyricPsalter_Haugen.pdf",
+        "source": "local"
+      },
+      {
+        "id": "psalms--psalms-easter-eas-06b-psalms-eas-06b-ps-98-the-lord-has-revealed-lyricpsalterch",
+        "type": "sheet_music",
+        "label": "Lyric Psalter - Choral",
+        "filePath": "_psalms/Easter/Eas-06B/Psalms/Eas-06B_Ps-98_The-Lord-Has-Revealed_LyricPsalterChoral_Haas.pdf",
+        "source": "local"
+      },
+      {
+        "id": "psalms--psalms-easter-eas-06b-psalms-easter-06b-ps-98-the-lord-has-revealed-lyricpsalte",
+        "type": "sheet_music",
+        "label": "Lyric Psalter",
+        "filePath": "_psalms/Easter/Eas-06B/Psalms/Easter-06B_Ps-98_The-Lord-Has-Revealed_LyricPsalter_Haugen.pdf",
+        "source": "local"
+      },
+      {
+        "id": "psalms--psalms-ordinary-time-ot-08c-psalms-ot-08c-ps-98-the-lord-has-revealed-lyricpsal",
+        "type": "sheet_music",
+        "label": "Lyric Psalter - Choral",
+        "filePath": "_psalms/Ordinary Time/OT-08C/Psalms/OT-08C_Ps-98_The-Lord-Has-Revealed_LyricPsalterChoral_Haugen.pdf",
+        "source": "local"
+      },
+      {
+        "id": "psalms--psalms-ordinary-time-ot-08c-psalms-ot-08c-ps-98-the-lord-has-revealed-lyricpsal",
+        "type": "sheet_music",
+        "label": "Lyric Psalter",
+        "filePath": "_psalms/Ordinary Time/OT-08C/Psalms/OT-08C_Ps-98_The-Lord-Has-Revealed_LyricPsalter_Haugen.pdf",
+        "source": "local"
+      },
+      {
+        "id": "psalms--psalms-ordinary-time-ot-09c-psalms-ot-09c-ps-98-the-lord-has-revealed-lyricpsal",
+        "type": "sheet_music",
+        "label": "Lyric Psalter - Choral",
+        "filePath": "_psalms/Ordinary Time/OT-09C/Psalms/OT-09C_Ps-98_The-Lord-Has-Revealed_LyricPsalterChoral_Haas.pdf",
+        "source": "local"
+      },
+      {
+        "id": "psalms--psalms-ordinary-time-ot-28c-psalms-ot-28c-ps-98-the-lord-has-revealed-lyricpsal",
+        "type": "sheet_music",
+        "label": "Lyric Psalter - Choral",
+        "filePath": "_psalms/Ordinary Time/OT-28C/Psalms/OT-28C_Ps-98_The-Lord-Has-Revealed_LyricPsalterChoral_Haugen.pdf",
+        "source": "local"
+      },
+      {
+        "id": "psalms--psalms-ordinary-time-ot-28c-psalms-ot-28c-ps-98-the-lord-has-revealed-lyricpsal",
+        "type": "sheet_music",
+        "label": "Lyric Psalter",
+        "filePath": "_psalms/Ordinary Time/OT-28C/Psalms/OT-28C_Ps-98_The-Lord-Has-Revealed_LyricPsalter_Haugen.pdf",
+        "source": "local"
+      }
+    ],
     "usageCount": 2,
     "occasions": [
       "ordinary-time-28-c"
@@ -26204,7 +28584,15 @@
     "id": "ps-121-our-help-is-from-the-lord-who-made--the-lyric-psalter-tony-alonso-marty-haugen",
     "title": "Ps 121 Our help is from the Lord, who made...",
     "composer": "The Lyric Psalter • Tony Alonso & Marty Haugen",
-    "resources": [],
+    "resources": [
+      {
+        "id": "psalms--psalms-ordinary-time-ot-30c-psalms-ot-30c-ps-121-lyricpsalterchoral-haugen-pdf",
+        "type": "sheet_music",
+        "label": "Lyric Psalter - Choral",
+        "filePath": "_psalms/Ordinary Time/OT-30C/Psalms/OT-30C_Ps-121_LyricPsalterChoral_Haugen.pdf",
+        "source": "local"
+      }
+    ],
     "usageCount": 2,
     "occasions": [
       "ordinary-time-29-c"
@@ -26336,7 +28724,29 @@
     "id": "ps-23-the-lord-is-my-shepherd--the-lyric-psalter-tony-alonso-marty-haugen",
     "title": "Ps 23 The Lord is my shepherd...",
     "composer": "The Lyric Psalter • Tony Alonso & Marty Haugen",
-    "resources": [],
+    "resources": [
+      {
+        "id": "psalms--psalms-lent-len-04a-psalms-len-04a-ps-23-the-lord-is-my-shepherd-lyricpsalter-h",
+        "type": "sheet_music",
+        "label": "Lyric Psalter",
+        "filePath": "_psalms/Lent/Len-04A/Psalms/Len-04A_Ps-23_The-Lord-Is-My-Shepherd_LyricPsalter_Haugen.pdf",
+        "source": "local"
+      },
+      {
+        "id": "psalms--psalms-ordinary-time-ot-28a-psalms-ot-28a-ps-23-i-shall-live-in-the-house-of-th",
+        "type": "sheet_music",
+        "label": "Lyric Psalter",
+        "filePath": "_psalms/Ordinary Time/OT-28A/Psalms/OT-28A_Ps-23_I-Shall-Live-In-The-House-Of-The-Lord_LyricPsalter_Haugen.pdf",
+        "source": "local"
+      },
+      {
+        "id": "psalms--psalms-solemnities-sol-christ-the-kinga-psalms-sol-christ-the-king-a-ps-23-the-",
+        "type": "sheet_music",
+        "label": "Lyric Psalter",
+        "filePath": "_psalms/Solemnities/Sol-Christ-The-KingA/Psalms/Sol-Christ-The-King-A_Ps-23_The-Lord-Is-My-Shepherd_LyricPsalter_Haugen.pdf",
+        "source": "local"
+      }
+    ],
     "usageCount": 2,
     "occasions": [
       "solemnity-nov-1-all-souls-abc"
@@ -26624,7 +29034,15 @@
     "id": "ps-46-the-waters-of-the-river-gladden--spirit-psalm-craig-colson-kristen-colson",
     "title": "Ps 46 The waters of the river gladden...",
     "composer": "Spirit & Psalm • Craig Colson & Kristen Colson",
-    "resources": [],
+    "resources": [
+      {
+        "id": "psalms--psalms-solemnities-sol-lateran-basilicac-psalms-sol-lateran-basilicac-ps-46-the",
+        "type": "sheet_music",
+        "label": "Spirit & Psalm",
+        "filePath": "_psalms/Solemnities/Sol-Lateran-BasilicaC/Psalms/Sol-Lateran-BasilicaC_Ps-46_The-Waters-Of-The-River-Gladden_Spirit&Psalm2025_Colson.pdf",
+        "source": "local"
+      }
+    ],
     "usageCount": 2,
     "occasions": [
       "the-dedication-of-nov-9-the-lateran-basilica-abc"
@@ -26721,7 +29139,43 @@
     "id": "ps-98-the-lord-comes-to-rule-the-earth--the-lyric-psalter-tony-alonso-marty-haugen",
     "title": "Ps 98 The Lord comes to rule the earth...",
     "composer": "The Lyric Psalter • Tony Alonso & Marty Haugen",
-    "resources": [],
+    "resources": [
+      {
+        "id": "psalms--psalms-christmas-chr-christmas-daya-psalms-chr-christmas-daya-ps-98-all-the-end",
+        "type": "sheet_music",
+        "label": "Lyric Psalter - Choral",
+        "filePath": "_psalms/Christmas/Chr-Christmas-DayA/Psalms/Chr-Christmas-DayA_Ps-98_All-The-Ends-Of-The-Earth_LyricPsalterChoral_Haugen.pdf",
+        "source": "local"
+      },
+      {
+        "id": "psalms--psalms-christmas-chr-christmas-dayb-psalms-chr-christmas-dayb-ps-98-all-the-end",
+        "type": "sheet_music",
+        "label": "Lyric Psalter - Choral",
+        "filePath": "_psalms/Christmas/Chr-Christmas-DayB/Psalms/Chr-Christmas-DayB_Ps-98_All-The-Ends-Of-The-Earth_LyricPsalterChoral_Haugen.pdf",
+        "source": "local"
+      },
+      {
+        "id": "psalms--psalms-christmas-chr-christmas-dayc-psalms-chr-christmas-dayc-ps-98-all-the-end",
+        "type": "sheet_music",
+        "label": "Lyric Psalter - Choral",
+        "filePath": "_psalms/Christmas/Chr-Christmas-DayC/Psalms/Chr-Christmas-DayC_Ps-98_All-The-Ends-Of-The-Earth_LyricPsalterChoral_Haugen.pdf",
+        "source": "local"
+      },
+      {
+        "id": "psalms--psalms-ordinary-time-ot-03c-psalms-ot-03c-ps-98-the-lord-comes-to-rule-lyricpsa",
+        "type": "sheet_music",
+        "label": "Lyric Psalter",
+        "filePath": "_psalms/Ordinary Time/OT-03C/Psalms/OT-03C_Ps-98_The-Lord-Comes-To-Rule_LyricPsalter_Haugen.pdf",
+        "source": "local"
+      },
+      {
+        "id": "psalms--psalms-ordinary-time-ot-33c-psalms-ot-33c-ps-98-the-lord-comes-to-rule-lyricpsa",
+        "type": "sheet_music",
+        "label": "Lyric Psalter",
+        "filePath": "_psalms/Ordinary Time/OT-33C/Psalms/OT-33C_Ps-98_The-Lord-Comes-To-Rule_LyricPsalter_Haugen.pdf",
+        "source": "local"
+      }
+    ],
     "usageCount": 2,
     "occasions": [
       "ordinary-time-33-c"
@@ -26951,7 +29405,92 @@
     "id": "ps-85-lord-let-us-see-your-kindness--the-lyric-psalter-tony-alonso-marty-haugen",
     "title": "Ps 85 Lord, let us see your kindness....",
     "composer": "The Lyric Psalter • Tony Alonso & Marty Haugen",
-    "resources": [],
+    "resources": [
+      {
+        "id": "psalms--psalms-advent-adv-02b-psalms-adv-02b-ps-85-lord-let-us-see-your-kindness-spirit",
+        "type": "sheet_music",
+        "label": "Spirit & Psalm",
+        "filePath": "_psalms/Advent/Adv-02B/Psalms/Adv-02B_Ps-85_Lord,-Let-Us-See-Your-Kindness,_Spirit&Psalm2024_Blakesley.pdf",
+        "source": "local"
+      },
+      {
+        "id": "psalms--psalms-ordinary-time-ot-15b-psalms-ot-15b-ps-85-lord-let-us-see-your-kindness-s",
+        "type": "sheet_music",
+        "label": "Spirit & Psalm",
+        "filePath": "_psalms/Ordinary Time/OT-15B/Psalms/OT-15B_Ps-85_Lord,-Let-Us-See-Your-Kindness,_Spirit&Psalm2024_Blakesley.pdf",
+        "source": "local"
+      },
+      {
+        "id": "psalms--psalms-ordinary-time-ot-19a-psalms-ot-19a-ps-85-lord-let-us-see-your-kindness-s",
+        "type": "sheet_music",
+        "label": "Spirit & Psalm",
+        "filePath": "_psalms/Ordinary Time/OT-19A/Psalms/OT-19A_Ps-85_Lord,-Let-Us-See-Your-Kindness,_Spirit&Psalm2026_Blakesley.pdf",
+        "source": "local"
+      },
+      {
+        "id": "psalms--psalms-ordinary-time-ot-19a-psalms-ot-19a-ps-85-lord-let-us-see-your-kindness-l",
+        "type": "sheet_music",
+        "label": "Lyric Psalter - Choral",
+        "filePath": "_psalms/Ordinary Time/OT-19A/Psalms/OT-19A_Ps-85_Lord,-Let-Us-See-Your-Kindness_LyricPsalterChoral_Haugen.pdf",
+        "source": "local"
+      },
+      {
+        "id": "psalms--psalms-ordinary-time-ot-19a-psalms-ot-19a-ps-85-lord-let-us-see-your-kindness-l",
+        "type": "sheet_music",
+        "label": "Lyric Psalter",
+        "filePath": "_psalms/Ordinary Time/OT-19A/Psalms/OT-19A_Ps-85_Lord-Let-Us-See-Your-Kindness_LyricPsalter_Haugen.pdf",
+        "source": "local"
+      },
+      {
+        "id": "psalms--psalms-ordinary-time-ot-20a-psalms-ot-20a-ps-85-lord-let-us-see-your-kindness-l",
+        "type": "sheet_music",
+        "label": "Lyric Psalter - Choral",
+        "filePath": "_psalms/Ordinary Time/OT-20A/Psalms/OT-20A_Ps-85_Lord,-Let-Us-See-Your-Kindness_LyricPsalterChoral_Haugen.pdf",
+        "source": "local"
+      },
+      {
+        "id": "psalms--psalms-solemnities-sol-independence-daya-psalms-sol-independence-daya-ps-85-the",
+        "type": "sheet_music",
+        "label": "Lyric Psalter - Choral",
+        "filePath": "_psalms/Solemnities/Sol-Independence-DayA/Psalms/Sol-Independence-DayA_Ps-85_The-Lord-Speaks-Of-Peace_LyricPsalterChoral_Alonso.pdf",
+        "source": "local"
+      },
+      {
+        "id": "psalms--psalms-solemnities-sol-independence-daya-psalms-sol-independence-daya-ps-85-the",
+        "type": "sheet_music",
+        "label": "Lyric Psalter",
+        "filePath": "_psalms/Solemnities/Sol-Independence-DayA/Psalms/Sol-Independence-DayA_Ps-85_The-Lord-Speaks-Of-Peace_LyricPsalter_Haugen.pdf",
+        "source": "local"
+      },
+      {
+        "id": "psalms--psalms-solemnities-sol-independence-dayb-psalms-sol-independence-dayb-ps-85-the",
+        "type": "sheet_music",
+        "label": "Lyric Psalter - Choral",
+        "filePath": "_psalms/Solemnities/Sol-Independence-DayB/Psalms/Sol-Independence-DayB_Ps-85_The-Lord-Speaks-Of-Peace_LyricPsalterChoral_Alonso.pdf",
+        "source": "local"
+      },
+      {
+        "id": "psalms--psalms-solemnities-sol-independence-dayb-psalms-sol-independence-dayb-ps-85-the",
+        "type": "sheet_music",
+        "label": "Lyric Psalter",
+        "filePath": "_psalms/Solemnities/Sol-Independence-DayB/Psalms/Sol-Independence-DayB_Ps-85_The-Lord-Speaks-Of-Peace_LyricPsalter_Haugen.pdf",
+        "source": "local"
+      },
+      {
+        "id": "psalms--psalms-solemnities-sol-independence-dayc-psalms-sol-independence-dayc-ps-85-the",
+        "type": "sheet_music",
+        "label": "Lyric Psalter - Choral",
+        "filePath": "_psalms/Solemnities/Sol-Independence-DayC/Psalms/Sol-Independence-DayC_Ps-85_The-Lord-Speaks-Of-Peace_LyricPsalterChoral_Alonso.pdf",
+        "source": "local"
+      },
+      {
+        "id": "psalms--psalms-solemnities-sol-independence-dayc-psalms-sol-independence-dayc-ps-85-the",
+        "type": "sheet_music",
+        "label": "Lyric Psalter",
+        "filePath": "_psalms/Solemnities/Sol-Independence-DayC/Psalms/Sol-Independence-DayC_Ps-85_The-Lord-Speaks-Of-Peace_LyricPsalter_Haugen.pdf",
+        "source": "local"
+      }
+    ],
     "usageCount": 1,
     "occasions": [
       "advent-02-b"
@@ -26973,7 +29512,71 @@
     "id": "ps-128-blessed-are-those-who-fear-the-lord-and-walk--the-lyric-psalter-tony-alonso-marty-haugen",
     "title": "Ps 128 Blessed are those who fear the Lord and walk...",
     "composer": "The Lyric Psalter • Tony Alonso & Marty Haugen",
-    "resources": [],
+    "resources": [
+      {
+        "id": "psalms--psalms-christmas-chr-epiphanyc-psalms-chr-epiphanyc-ps-128-blessed-are-those-wh",
+        "type": "sheet_music",
+        "label": "Lyric Psalter - Choral",
+        "filePath": "_psalms/Christmas/Chr-EpiphanyC/Psalms/Chr-EpiphanyC_Ps-128_Blessed-Are-Those-Who-Fear_LyricPsalterChoral_Alonso.pdf",
+        "source": "local"
+      },
+      {
+        "id": "psalms--psalms-christmas-chr-holy-familya-psalms-chr-holy-family-a-ps-128-blessed-are-t",
+        "type": "sheet_music",
+        "label": "Lyric Psalter",
+        "filePath": "_psalms/Christmas/Chr-Holy-FamilyA/Psalms/Chr-Holy-Family-A_Ps-128_Blessed-Are-Those-Who-Fear-The-Lord_LyricPsalter_Alonso.pdf",
+        "source": "local"
+      },
+      {
+        "id": "psalms--psalms-christmas-chr-holy-familya-psalms-chr-holy-familya-ps-128-blessed-are-th",
+        "type": "sheet_music",
+        "label": "Lyric Psalter - Choral",
+        "filePath": "_psalms/Christmas/Chr-Holy-FamilyA/Psalms/Chr-Holy-FamilyA_Ps-128_Blessed-Are-Those-Who-Fear_LyricPsalterChoral_Alonso.pdf",
+        "source": "local"
+      },
+      {
+        "id": "psalms--psalms-christmas-chr-holy-familyb-psalms-chr-holy-familyb-ps-128-blessed-are-th",
+        "type": "sheet_music",
+        "label": "Lyric Psalter - Choral",
+        "filePath": "_psalms/Christmas/Chr-Holy-FamilyB/Psalms/Chr-Holy-FamilyB_Ps-128_Blessed-Are-Those-Who-Fear_LyricPsalterChoral_Alonso.pdf",
+        "source": "local"
+      },
+      {
+        "id": "psalms--psalms-christmas-chr-holy-familyb-psalms-holyfamily-b-ps-128-blessed-are-those-",
+        "type": "sheet_music",
+        "label": "Lyric Psalter",
+        "filePath": "_psalms/Christmas/Chr-Holy-FamilyB/Psalms/HolyFamily-B_Ps-128_Blessed-Are-Those-Who-Fear_LyricPsalter_Alonso.pdf",
+        "source": "local"
+      },
+      {
+        "id": "psalms--psalms-christmas-chr-holy-familyc-psalms-chr-holy-familyc-ps-128-blessed-are-th",
+        "type": "sheet_music",
+        "label": "Lyric Psalter - Choral",
+        "filePath": "_psalms/Christmas/Chr-Holy-FamilyC/Psalms/Chr-Holy-FamilyC_Ps-128_Blessed-Are-Those-Who-Fear_LyricPsalterChoral_Alonso.pdf",
+        "source": "local"
+      },
+      {
+        "id": "psalms--psalms-christmas-chr-holy-familyc-psalms-chr-holy-familyc-ps-128-blessed-are-th",
+        "type": "sheet_music",
+        "label": "Lyric Psalter",
+        "filePath": "_psalms/Christmas/Chr-Holy-FamilyC/Psalms/Chr-Holy-FamilyC_Ps-128_Blessed-Are-Those-Who-Fear_LyricPsalter_Alonso.pdf",
+        "source": "local"
+      },
+      {
+        "id": "psalms--psalms-ordinary-time-ot-03a-psalms-ot-03a-ps-128-blessed-are-those-who-lyricpsa",
+        "type": "sheet_music",
+        "label": "Lyric Psalter - Choral",
+        "filePath": "_psalms/Ordinary Time/OT-03A/Psalms/OT-03A_Ps-128_Blessed-Are-Those-Who_LyricPsalterChoral_Alonso.pdf",
+        "source": "local"
+      },
+      {
+        "id": "psalms--psalms-ordinary-time-ot-33a-psalms-ot-33a-ps-128-blessed-are-those-who-fear-the",
+        "type": "sheet_music",
+        "label": "Lyric Psalter",
+        "filePath": "_psalms/Ordinary Time/OT-33A/Psalms/OT-33A_Ps-128_Blessed-Are-Those-Who-Fear-The-Lord_LyricPsalter_Alonso.pdf",
+        "source": "local"
+      }
+    ],
     "usageCount": 1,
     "occasions": [
       "holy-family-a"
@@ -27495,7 +30098,29 @@
     "id": "ps-71-i-will-sing-of-your-salvation--the-lyric-psalter-tony-alonso-marty-haugen",
     "title": "Ps 71 I will sing of your salvation.",
     "composer": "The Lyric Psalter • Tony Alonso & Marty Haugen",
-    "resources": [],
+    "resources": [
+      {
+        "id": "psalms--psalms-christmas-chr-christmas-vigila-psalms-chr-christmas-vigila-ps-71-unknown",
+        "type": "sheet_music",
+        "label": "Lyric Psalter",
+        "filePath": "_psalms/Christmas/Chr-Christmas-VigilA/Psalms/Chr-Christmas-VigilA_Ps-71_Unknown_LyricPsalter_Alonso.pdf",
+        "source": "local"
+      },
+      {
+        "id": "psalms--psalms-christmas-chr-christmas-vigilb-psalms-chr-christmas-vigilb-ps-71-unknown",
+        "type": "sheet_music",
+        "label": "Lyric Psalter",
+        "filePath": "_psalms/Christmas/Chr-Christmas-VigilB/Psalms/Chr-Christmas-VigilB_Ps-71_Unknown_LyricPsalter_Alonso.pdf",
+        "source": "local"
+      },
+      {
+        "id": "psalms--psalms-christmas-chr-christmas-vigilc-psalms-chr-christmas-vigilc-ps-71-unknown",
+        "type": "sheet_music",
+        "label": "Lyric Psalter",
+        "filePath": "_psalms/Christmas/Chr-Christmas-VigilC/Psalms/Chr-Christmas-VigilC_Ps-71_Unknown_LyricPsalter_Alonso.pdf",
+        "source": "local"
+      }
+    ],
     "usageCount": 1,
     "occasions": [
       "ordinary-time-04-c"
@@ -28500,7 +31125,22 @@
     "id": "ps-130-with-the-lord-there-is-mercy--the-lyric-psalter-tony-alonso-marty-haugen",
     "title": "Ps 130 With the Lord there is mercy...",
     "composer": "The Lyric Psalter • Tony Alonso & Marty Haugen",
-    "resources": [],
+    "resources": [
+      {
+        "id": "psalms--psalms-lent-len-05a-psalms-len-05a-ps-130-with-the-lord-there-is-mercy-lyricpsa",
+        "type": "sheet_music",
+        "label": "Lyric Psalter",
+        "filePath": "_psalms/Lent/Len-05A/Psalms/Len-05A_Ps-130_With-The-Lord-There-Is-Mercy_LyricPsalter_Haugen.pdf",
+        "source": "local"
+      },
+      {
+        "id": "psalms--psalms-ordinary-time-ot-11b-psalms-ot-11b-ps-130-with-the-lord-there-is-mercy-l",
+        "type": "sheet_music",
+        "label": "Lyric Psalter - Choral",
+        "filePath": "_psalms/Ordinary Time/OT-11B/Psalms/OT-11B_Ps-130_With-The-Lord-There-Is-Mercy_LyricPsalterChoral_Haugen.pdf",
+        "source": "local"
+      }
+    ],
     "usageCount": 1,
     "occasions": [
       "lent-05-a-third-scrutiny"
@@ -28791,7 +31431,36 @@
     "id": "ps-4-lord-let-your-face-shine-on-us--david-lockwood",
     "title": "Ps 4 Lord, let your face shine on us ...",
     "composer": "David Lockwood",
-    "resources": [],
+    "resources": [
+      {
+        "id": "psalms--psalms-easter-eas-03b-psalms-eas-03b-ps-4-lord-let-your-face-shine-lyricpsalter",
+        "type": "sheet_music",
+        "label": "Lyric Psalter - Choral",
+        "filePath": "_psalms/Easter/Eas-03B/Psalms/Eas-03B_Ps-4_Lord,-Let-Your-Face-Shine_LyricPsalterChoral_Haugen.pdf",
+        "source": "local"
+      },
+      {
+        "id": "psalms--psalms-easter-eas-03b-psalms-eas-03b-ps-4-lord-let-your-face-shine-spirit-psalm",
+        "type": "sheet_music",
+        "label": "Spirit & Psalm",
+        "filePath": "_psalms/Easter/Eas-03B/Psalms/Eas-03B_Ps-4_Lord,-Let-Your-Face-Shine_Spirit&Psalm2024_Thomas.pdf",
+        "source": "local"
+      },
+      {
+        "id": "psalms--psalms-easter-eas-03b-psalms-easter-03b-ps-4-lord-let-your-face-shine-lyricpsal",
+        "type": "sheet_music",
+        "label": "Lyric Psalter",
+        "filePath": "_psalms/Easter/Eas-03B/Psalms/Easter-03B_Ps-4_Lord-Let-Your-Face-Shine_LyricPsalter_Haugen.pdf",
+        "source": "local"
+      },
+      {
+        "id": "psalms--psalms-easter-eas-04b-psalms-eas-04b-ps-4-lord-let-your-face-shine-lyricpsalter",
+        "type": "sheet_music",
+        "label": "Lyric Psalter - Choral",
+        "filePath": "_psalms/Easter/Eas-04B/Psalms/Eas-04B_Ps-4_Lord,-Let-Your-Face-Shine_LyricPsalterChoral_Haugen.pdf",
+        "source": "local"
+      }
+    ],
     "usageCount": 1,
     "occasions": [
       "easter-03-b"
@@ -29385,7 +32054,50 @@
     "id": "ps-104-lord-send-out-your-spirit-and-renew--the-lyric-psalter-tony-alonso-marty-haugen",
     "title": "Ps 104 Lord, send out your Spirit, and renew...",
     "composer": "The Lyric Psalter • Tony Alonso & Marty Haugen",
-    "resources": [],
+    "resources": [
+      {
+        "id": "psalms--psalms-easter-eas-pentecosta-psalms-eas-pentecost-day-a-ps-104-lord-send-out-yo",
+        "type": "sheet_music",
+        "label": "Lyric Psalter",
+        "filePath": "_psalms/Easter/Eas-PentecostA/Psalms/Eas-Pentecost-Day-A_Ps-104_Lord-Send-Out-Your-Spirit_LyricPsalter_Alonso.pdf",
+        "source": "local"
+      },
+      {
+        "id": "psalms--psalms-easter-eas-pentecosta-psalms-eas-pentecosta-ps-104-lord-send-out-your-sp",
+        "type": "sheet_music",
+        "label": "Lyric Psalter - Choral",
+        "filePath": "_psalms/Easter/Eas-PentecostA/Psalms/Eas-PentecostA_Ps-104_Lord,-Send-Out-Your-Spirit_LyricPsalterChoral_Alonso.pdf",
+        "source": "local"
+      },
+      {
+        "id": "psalms--psalms-easter-eas-pentecostb-psalms-eas-pentecostb-ps-104-lord-send-out-your-sp",
+        "type": "sheet_music",
+        "label": "Lyric Psalter - Choral",
+        "filePath": "_psalms/Easter/Eas-PentecostB/Psalms/Eas-PentecostB_Ps-104_Lord,-Send-Out-Your-Spirit_LyricPsalterChoral_Alonso.pdf",
+        "source": "local"
+      },
+      {
+        "id": "psalms--psalms-easter-eas-pentecostvigila-psalms-eas-pentecost-vigil-a-ps-104-lord-send",
+        "type": "sheet_music",
+        "label": "Lyric Psalter",
+        "filePath": "_psalms/Easter/Eas-PentecostVigilA/Psalms/Eas-Pentecost-Vigil-A_Ps-104_Lord-Send-Out-Your-Spirit_LyricPsalter_Alonso.pdf",
+        "source": "local"
+      },
+      {
+        "id": "psalms--psalms-ordinary-time-ot-02c-psalms-ot-02c-ps-104-lord-send-out-your-spirit-lyri",
+        "type": "sheet_music",
+        "label": "Lyric Psalter - Choral",
+        "filePath": "_psalms/Ordinary Time/OT-02C/Psalms/OT-02C_Ps-104_Lord,-Send-Out-Your-Spirit_LyricPsalterChoral_Alonso.pdf",
+        "source": "local"
+      },
+      {
+        "id": "psalms--psalms-solemnities-sol-body-and-bloodc-psalms-sol-body-and-bloodc-ps-104-lord-s",
+        "type": "sheet_music",
+        "label": "Lyric Psalter - Choral",
+        "filePath": "_psalms/Solemnities/Sol-Body-And-BloodC/Psalms/Sol-Body-And-BloodC_Ps-104_Lord,-Send-Out-Your-Spirit_LyricPsalterChoral_Alonso.pdf",
+        "source": "local"
+      }
+    ],
     "usageCount": 1,
     "occasions": [
       "pentecost-vigil-abc"
@@ -29590,7 +32302,22 @@
     "id": "ps-31-lord-be-my-rock-of-safety--the-lyric-psalter-tony-alonso-marty-haugen",
     "title": "Ps 31 Lord, be my rock of safety.",
     "composer": "The Lyric Psalter • Tony Alonso & Marty Haugen",
-    "resources": [],
+    "resources": [
+      {
+        "id": "psalms--psalms-ordinary-time-ot-09a-psalms-ot-09a-ps-31-lord-be-my-rock-of-safety-lyric",
+        "type": "sheet_music",
+        "label": "Lyric Psalter",
+        "filePath": "_psalms/Ordinary Time/OT-09A/Psalms/OT-09A_Ps-31_Lord-Be-My-Rock-Of-Safety_LyricPsalter_Haugen.pdf",
+        "source": "local"
+      },
+      {
+        "id": "psalms--psalms-ordinary-time-ot-10a-psalms-ot-10a-ps-31-lord-be-my-rock-of-safety-lyric",
+        "type": "sheet_music",
+        "label": "Lyric Psalter - Choral",
+        "filePath": "_psalms/Ordinary Time/OT-10A/Psalms/OT-10A_Ps-31_Lord,-Be-My-Rock-Of-Safety_LyricPsalterChoral_Haugen.pdf",
+        "source": "local"
+      }
+    ],
     "usageCount": 1,
     "occasions": [
       "ordinary-time-09-a"
@@ -29601,7 +32328,29 @@
     "id": "ps-81-sing-with-joy-to-god-our-help--the-lyric-psalter-tony-alonso-marty-haugen",
     "title": "Ps 81 Sing with joy to God our help.",
     "composer": "The Lyric Psalter • Tony Alonso & Marty Haugen",
-    "resources": [],
+    "resources": [
+      {
+        "id": "psalms--psalms-ordinary-time-ot-09b-psalms-ot-09b-ps-81-sing-with-joy-to-god-our-lyricp",
+        "type": "sheet_music",
+        "label": "Lyric Psalter - Choral",
+        "filePath": "_psalms/Ordinary Time/OT-09B/Psalms/OT-09B_Ps-81_Sing-With-Joy-To-God-Our_LyricPsalterChoral_Haugen.pdf",
+        "source": "local"
+      },
+      {
+        "id": "psalms--psalms-ordinary-time-ot-09b-psalms-ot-09b-ps-81-sing-with-joy-to-god-lyricpsalt",
+        "type": "sheet_music",
+        "label": "Lyric Psalter",
+        "filePath": "_psalms/Ordinary Time/OT-09B/Psalms/OT-09B_Ps-81_Sing-With-Joy-To-God_LyricPsalter_Haugen.pdf",
+        "source": "local"
+      },
+      {
+        "id": "psalms--psalms-ordinary-time-ot-10b-psalms-ot-10b-ps-81-sing-with-joy-to-god-our-lyricp",
+        "type": "sheet_music",
+        "label": "Lyric Psalter - Choral",
+        "filePath": "_psalms/Ordinary Time/OT-10B/Psalms/OT-10B_Ps-81_Sing-With-Joy-To-God-Our_LyricPsalterChoral_Haugen.pdf",
+        "source": "local"
+      }
+    ],
     "usageCount": 1,
     "occasions": [
       "ordinary-time-09-b"
@@ -29612,7 +32361,15 @@
     "id": "ps-117-go-out-to-all-the-world-and-tell-the-good-news--the-lyric-psalter-tony-alonso-marty-haugen",
     "title": "Ps 117 Go out to all the world and tell the good news.",
     "composer": "The Lyric Psalter • Tony Alonso & Marty Haugen",
-    "resources": [],
+    "resources": [
+      {
+        "id": "psalms--psalms-ordinary-time-ot-21c-psalms-ot-21c-ps-117-tell-the-good-news-tell-spirit",
+        "type": "sheet_music",
+        "label": "Spirit & Psalm",
+        "filePath": "_psalms/Ordinary Time/OT-21C/Psalms/OT-21C_Ps-117_Tell-The-Good-News,-Tell_Spirit&Psalm2025_García-López.pdf",
+        "source": "local"
+      }
+    ],
     "usageCount": 1,
     "occasions": [
       "ordinary-time-09-c"
@@ -29623,7 +32380,15 @@
     "id": "ps-50-to-the-upright-i-will-show-the-saving-power-of-god--the-lyric-psalter-tony-alonso-marty-haugen",
     "title": "Ps 50 To the upright I will show the saving power of God.",
     "composer": "The Lyric Psalter • Tony Alonso & Marty Haugen",
-    "resources": [],
+    "resources": [
+      {
+        "id": "psalms--psalms-ordinary-time-ot-10a-psalms-ot-10a-ps-50-to-the-upright-i-will-show-lyri",
+        "type": "sheet_music",
+        "label": "Lyric Psalter",
+        "filePath": "_psalms/Ordinary Time/OT-10A/Psalms/OT-10A_Ps-50_To-The-Upright-I-Will-Show_LyricPsalter_Alonso.pdf",
+        "source": "local"
+      }
+    ],
     "usageCount": 1,
     "occasions": [
       "ordinary-time-10-a"
@@ -29656,7 +32421,36 @@
     "id": "ps-32-1-2-5-7-11-lord-forgive-the-wrong-i-have-done--the-lyric-psalter-tony-alonso-marty-haugen",
     "title": "Ps 32:1–2, 5, 7, 11 Lord, forgive the wrong I have done.",
     "composer": "The Lyric Psalter • Tony Alonso & Marty Haugen",
-    "resources": [],
+    "resources": [
+      {
+        "id": "psalms--psalms-ordinary-time-ot-06b-psalms-ot-06b-ps-32-i-turn-to-you-lord-lyricpsalter",
+        "type": "sheet_music",
+        "label": "Lyric Psalter - Choral",
+        "filePath": "_psalms/Ordinary Time/OT-06B/Psalms/OT-06B_Ps-32_I-Turn-To-You-Lord_LyricPsalterChoral_Alonso.pdf",
+        "source": "local"
+      },
+      {
+        "id": "psalms--psalms-ordinary-time-ot-06b-psalms-ot-06b-ps-32-ii-ttuurrnn-ttoo-yyoouu-lloorrd",
+        "type": "sheet_music",
+        "label": "Spirit & Psalm",
+        "filePath": "_psalms/Ordinary Time/OT-06B/Psalms/OT-06B_Ps-32_Ii-Ttuurrnn-Ttoo-Yyoouu,,-Lloorrdd,,-Iinn_Spirit&Psalm2024_Soper.pdf",
+        "source": "local"
+      },
+      {
+        "id": "psalms--psalms-ordinary-time-ot-07b-psalms-ot-07b-ps-32-i-turn-to-you-lord-lyricpsalter",
+        "type": "sheet_music",
+        "label": "Lyric Psalter - Choral",
+        "filePath": "_psalms/Ordinary Time/OT-07B/Psalms/OT-07B_Ps-32_I-Turn-To-You,-Lord_LyricPsalterChoral_Alonso.pdf",
+        "source": "local"
+      },
+      {
+        "id": "psalms--psalms-ordinary-time-ot-11c-psalms-ot-11c-ps-32-lord-forgive-the-wrong-i-have-l",
+        "type": "sheet_music",
+        "label": "Lyric Psalter",
+        "filePath": "_psalms/Ordinary Time/OT-11C/Psalms/OT-11C_Ps-32_Lord-Forgive-The-Wrong-I-Have_LyricPsalter_Alonso.pdf",
+        "source": "local"
+      }
+    ],
     "usageCount": 1,
     "occasions": [
       "ordinary-time-11-c"
@@ -29667,7 +32461,15 @@
     "id": "ps-69-lord-in-your-great-love-answer-me--the-lyric-psalter-tony-alonso-marty-haugen",
     "title": "Ps 69 Lord, in your great love, answer me.",
     "composer": "The Lyric Psalter • Tony Alonso & Marty Haugen",
-    "resources": [],
+    "resources": [
+      {
+        "id": "psalms--psalms-ordinary-time-ot-12a-psalms-ot-12a-ps-69-lord-in-your-great-love-answer-",
+        "type": "sheet_music",
+        "label": "Lyric Psalter",
+        "filePath": "_psalms/Ordinary Time/OT-12A/Psalms/OT-12A_Ps-69_Lord-In-Your-Great-Love-Answer-Me_LyricPsalter_Haugen.pdf",
+        "source": "local"
+      }
+    ],
     "usageCount": 1,
     "occasions": [
       "ordinary-time-12-a"
@@ -29678,7 +32480,29 @@
     "id": "ps-107-give-thanks-to-the-lord-his-love-is-everlasting--the-lyric-psalter-tony-alonso-marty-haugen",
     "title": "Ps 107 Give thanks to the Lord, his love is everlasting.",
     "composer": "The Lyric Psalter • Tony Alonso & Marty Haugen",
-    "resources": [],
+    "resources": [
+      {
+        "id": "psalms--psalms-ordinary-time-ot-12b-psalms-ot-12b-ps-107-give-thanks-give-thanks-give-t",
+        "type": "sheet_music",
+        "label": "Spirit & Psalm",
+        "filePath": "_psalms/Ordinary Time/OT-12B/Psalms/OT-12B_Ps-107_Give-Thanks,-Give-Thanks,-Give-Thanks_Spirit&Psalm2024_Hart.pdf",
+        "source": "local"
+      },
+      {
+        "id": "psalms--psalms-ordinary-time-ot-12b-psalms-ot-12b-ps-107-give-thanks-to-the-lord-lyricp",
+        "type": "sheet_music",
+        "label": "Lyric Psalter - Choral",
+        "filePath": "_psalms/Ordinary Time/OT-12B/Psalms/OT-12B_Ps-107_Give-Thanks-To-The-Lord_LyricPsalterChoral_Alonso.pdf",
+        "source": "local"
+      },
+      {
+        "id": "psalms--psalms-ordinary-time-ot-13b-psalms-ot-13b-ps-107-give-thanks-to-the-lord-lyricp",
+        "type": "sheet_music",
+        "label": "Lyric Psalter - Choral",
+        "filePath": "_psalms/Ordinary Time/OT-13B/Psalms/OT-13B_Ps-107_Give-Thanks-To-The-Lord_LyricPsalterChoral_Alonso.pdf",
+        "source": "local"
+      }
+    ],
     "usageCount": 1,
     "occasions": [
       "ordinary-time-12-b"
@@ -29689,7 +32513,71 @@
     "id": "ps-63-my-soul-is-thirsting-for-you-o-lord-my-god--the-lyric-psalter-tony-alonso-marty-haugen",
     "title": "Ps 63 My soul is thirsting for you, O Lord my God.",
     "composer": "The Lyric Psalter • Tony Alonso & Marty Haugen",
-    "resources": [],
+    "resources": [
+      {
+        "id": "psalms--psalms-ordinary-time-ot-02a-psalms-ot-02a-ps-63-my-soul-is-thirsting-for-you-ly",
+        "type": "sheet_music",
+        "label": "Lyric Psalter - Choral",
+        "filePath": "_psalms/Ordinary Time/OT-02A/Psalms/OT-02A_Ps-63_My-Soul-Is-Thirsting-For-You,_LyricPsalterChoral_Haugen.pdf",
+        "source": "local"
+      },
+      {
+        "id": "psalms--psalms-ordinary-time-ot-12a-psalms-ot-12a-ps-63-my-soul-is-thirsting-for-you-ly",
+        "type": "sheet_music",
+        "label": "Lyric Psalter - Choral",
+        "filePath": "_psalms/Ordinary Time/OT-12A/Psalms/OT-12A_Ps-63_My-Soul-Is-Thirsting-For-You_LyricPsalterChoral_Haugen.pdf",
+        "source": "local"
+      },
+      {
+        "id": "psalms--psalms-ordinary-time-ot-12c-psalms-ot-12c-ps-63-my-soul-is-thirsting-for-you-ly",
+        "type": "sheet_music",
+        "label": "Lyric Psalter",
+        "filePath": "_psalms/Ordinary Time/OT-12C/Psalms/OT-12C_Ps-63_My-Soul-Is-Thirsting-For-You_LyricPsalter_Haugen.pdf",
+        "source": "local"
+      },
+      {
+        "id": "psalms--psalms-ordinary-time-ot-13c-psalms-ot-13c-ps-63-my-soul-is-thirsting-for-you-ly",
+        "type": "sheet_music",
+        "label": "Lyric Psalter - Choral",
+        "filePath": "_psalms/Ordinary Time/OT-13C/Psalms/OT-13C_Ps-63_My-Soul-Is-Thirsting-For-You,_LyricPsalterChoral_Haugen.pdf",
+        "source": "local"
+      },
+      {
+        "id": "psalms--psalms-ordinary-time-ot-14c-psalms-ot-14c-ps-63-my-soul-is-thirsting-for-you-ly",
+        "type": "sheet_music",
+        "label": "Lyric Psalter - Choral",
+        "filePath": "_psalms/Ordinary Time/OT-14C/Psalms/OT-14C_Ps-63_My-Soul-Is-Thirsting-For-You,_LyricPsalterChoral_Haugen.pdf",
+        "source": "local"
+      },
+      {
+        "id": "psalms--psalms-ordinary-time-ot-22a-psalms-ot-22a-ps-63-my-soul-is-thirsting-thirsting-",
+        "type": "sheet_music",
+        "label": "Spirit & Psalm",
+        "filePath": "_psalms/Ordinary Time/OT-22A/Psalms/OT-22A_Ps-63_My-Soul-Is-Thirsting,-Thirsting_Spirit&Psalm2026_Stephan.pdf",
+        "source": "local"
+      },
+      {
+        "id": "psalms--psalms-ordinary-time-ot-22a-psalms-ot-22a-ps-63-my-soul-is-thirsting-for-you-ly",
+        "type": "sheet_music",
+        "label": "Lyric Psalter",
+        "filePath": "_psalms/Ordinary Time/OT-22A/Psalms/OT-22A_Ps-63_My-Soul-Is-Thirsting-For-You_LyricPsalter_Haugen.pdf",
+        "source": "local"
+      },
+      {
+        "id": "psalms--psalms-ordinary-time-ot-32a-psalms-ot-32a-ps-63-my-soul-is-thirsting-thirsting-",
+        "type": "sheet_music",
+        "label": "Spirit & Psalm",
+        "filePath": "_psalms/Ordinary Time/OT-32A/Psalms/OT-32A_Ps-63_My-Soul-Is-Thirsting,-Thirsting_Spirit&Psalm2026_Stephan.pdf",
+        "source": "local"
+      },
+      {
+        "id": "psalms--psalms-ordinary-time-ot-32a-psalms-ot-32a-ps-63-my-soul-is-thirsting-for-you-ly",
+        "type": "sheet_music",
+        "label": "Lyric Psalter",
+        "filePath": "_psalms/Ordinary Time/OT-32A/Psalms/OT-32A_Ps-63_My-Soul-Is-Thirsting-For-You_LyricPsalter_Haugen.pdf",
+        "source": "local"
+      }
+    ],
     "usageCount": 1,
     "occasions": [
       "ordinary-time-12-c"
@@ -29700,7 +32588,99 @@
     "id": "ps-89-for-ever-i-will-sing-the-goodness-of-the-lord--the-lyric-psalter-tony-alonso-marty-haugen",
     "title": "Ps 89 For ever I will sing the goodness of the Lord.",
     "composer": "The Lyric Psalter • Tony Alonso & Marty Haugen",
-    "resources": [],
+    "resources": [
+      {
+        "id": "psalms--psalms-advent-adv-04b-psalms-adv-04b-ps-89-for-ever-i-will-sing-spirit-psalm202",
+        "type": "sheet_music",
+        "label": "Spirit & Psalm",
+        "filePath": "_psalms/Advent/Adv-04B/Psalms/Adv-04B_Ps-89_For-Ever-I-Will-Sing_Spirit&Psalm2024_Booth.pdf",
+        "source": "local"
+      },
+      {
+        "id": "psalms--psalms-christmas-chr-christmas-nighta-psalms-chr-christmas-nighta-ps-89-for-eve",
+        "type": "sheet_music",
+        "label": "Lyric Psalter - Choral",
+        "filePath": "_psalms/Christmas/Chr-Christmas-NightA/Psalms/Chr-Christmas-NightA_Ps-89_For-Ever-I-Will-Sing_LyricPsalterChoral_Alonso.pdf",
+        "source": "local"
+      },
+      {
+        "id": "psalms--psalms-christmas-chr-christmas-nightb-psalms-chr-christmas-nightb-ps-89-for-eve",
+        "type": "sheet_music",
+        "label": "Lyric Psalter - Choral",
+        "filePath": "_psalms/Christmas/Chr-Christmas-NightB/Psalms/Chr-Christmas-NightB_Ps-89_For-Ever-I-Will-Sing_LyricPsalterChoral_Alonso.pdf",
+        "source": "local"
+      },
+      {
+        "id": "psalms--psalms-christmas-chr-christmas-nightc-psalms-chr-christmas-nightc-ps-89-for-eve",
+        "type": "sheet_music",
+        "label": "Lyric Psalter - Choral",
+        "filePath": "_psalms/Christmas/Chr-Christmas-NightC/Psalms/Chr-Christmas-NightC_Ps-89_For-Ever-I-Will-Sing_LyricPsalterChoral_Alonso.pdf",
+        "source": "local"
+      },
+      {
+        "id": "psalms--psalms-christmas-chr-christmas-vigila-psalms-chr-christmas-vigila-ps-89-for-eve",
+        "type": "sheet_music",
+        "label": "Lyric Psalter - Choral",
+        "filePath": "_psalms/Christmas/Chr-Christmas-VigilA/Psalms/Chr-Christmas-VigilA_Ps-89_For-Ever-I-Will-Sing_LyricPsalterChoral_Alonso.pdf",
+        "source": "local"
+      },
+      {
+        "id": "psalms--psalms-christmas-chr-christmas-vigila-psalms-chr-christmas-vigila-ps-89-for-eve",
+        "type": "sheet_music",
+        "label": "Spirit & Psalm",
+        "filePath": "_psalms/Christmas/Chr-Christmas-VigilA/Psalms/Chr-Christmas-VigilA_Ps-89_For-Ever-I-Will-Sing_Spirit&Psalm2026_Booth.pdf",
+        "source": "local"
+      },
+      {
+        "id": "psalms--psalms-christmas-chr-christmas-vigilb-psalms-chr-christmas-vigilb-ps-89-for-eve",
+        "type": "sheet_music",
+        "label": "Lyric Psalter - Choral",
+        "filePath": "_psalms/Christmas/Chr-Christmas-VigilB/Psalms/Chr-Christmas-VigilB_Ps-89_For-Ever-I-Will-Sing_LyricPsalterChoral_Alonso.pdf",
+        "source": "local"
+      },
+      {
+        "id": "psalms--psalms-christmas-chr-christmas-vigilb-psalms-chr-christmas-vigilb-ps-89-for-eve",
+        "type": "sheet_music",
+        "label": "Spirit & Psalm",
+        "filePath": "_psalms/Christmas/Chr-Christmas-VigilB/Psalms/Chr-Christmas-VigilB_Ps-89_For-Ever-I-Will-Sing_Spirit&Psalm2024_Booth.pdf",
+        "source": "local"
+      },
+      {
+        "id": "psalms--psalms-christmas-chr-christmas-vigilc-psalms-chr-christmas-vigilc-ps-89-for-eve",
+        "type": "sheet_music",
+        "label": "Lyric Psalter - Choral",
+        "filePath": "_psalms/Christmas/Chr-Christmas-VigilC/Psalms/Chr-Christmas-VigilC_Ps-89_For-Ever-I-Will-Sing_LyricPsalterChoral_Alonso.pdf",
+        "source": "local"
+      },
+      {
+        "id": "psalms--psalms-christmas-chr-christmas-vigilc-psalms-chr-christmas-vigilc-ps-89-for-eve",
+        "type": "sheet_music",
+        "label": "Spirit & Psalm",
+        "filePath": "_psalms/Christmas/Chr-Christmas-VigilC/Psalms/Chr-Christmas-VigilC_Ps-89_For-Ever-I-Will-Sing_Spirit&Psalm2025_Booth.pdf",
+        "source": "local"
+      },
+      {
+        "id": "psalms--psalms-ordinary-time-ot-13a-psalms-ot-13a-ps-89-for-ever-i-will-sing-lyricpsalt",
+        "type": "sheet_music",
+        "label": "Lyric Psalter",
+        "filePath": "_psalms/Ordinary Time/OT-13A/Psalms/OT-13A_Ps-89_For-Ever-I-Will-Sing_LyricPsalter_Alonso.pdf",
+        "source": "local"
+      },
+      {
+        "id": "psalms--psalms-ordinary-time-ot-13a-psalms-ot-13a-ps-89-for-ever-i-will-sing-spirit-psa",
+        "type": "sheet_music",
+        "label": "Spirit & Psalm",
+        "filePath": "_psalms/Ordinary Time/OT-13A/Psalms/OT-13A_Ps-89_For-Ever-I-Will-Sing_Spirit&Psalm2026_Booth.pdf",
+        "source": "local"
+      },
+      {
+        "id": "psalms--psalms-ordinary-time-ot-14a-psalms-ot-14a-ps-89-for-ever-i-will-sing-lyricpsalt",
+        "type": "sheet_music",
+        "label": "Lyric Psalter - Choral",
+        "filePath": "_psalms/Ordinary Time/OT-14A/Psalms/OT-14A_Ps-89_For-Ever-I-Will-Sing_LyricPsalterChoral_Alonso.pdf",
+        "source": "local"
+      }
+    ],
     "usageCount": 1,
     "occasions": [
       "ordinary-time-13-a"
@@ -29711,7 +32691,64 @@
     "id": "ps-16-you-are-my-inheritance-o-lord--the-lyric-psalter-tony-alonso-marty-haugen",
     "title": "Ps 16 You are my inheritance, O Lord.",
     "composer": "The Lyric Psalter • Tony Alonso & Marty Haugen",
-    "resources": [],
+    "resources": [
+      {
+        "id": "psalms--psalms-easter-eas-03a-psalms-eas-03a-ps-16-lord-you-will-show-us-lyricpsalterch",
+        "type": "sheet_music",
+        "label": "Lyric Psalter - Choral",
+        "filePath": "_psalms/Easter/Eas-03A/Psalms/Eas-03A_Ps-16_Lord,-You-Will-Show-Us_LyricPsalterChoral_Alonso.pdf",
+        "source": "local"
+      },
+      {
+        "id": "psalms--psalms-easter-eas-03a-psalms-eas-03a-ps-16-lord-you-will-show-us-spirit-psalm20",
+        "type": "sheet_music",
+        "label": "Spirit & Psalm",
+        "filePath": "_psalms/Easter/Eas-03A/Psalms/Eas-03A_Ps-16_Lord,-You-Will-Show-Us_Spirit&Psalm2026_Huval.pdf",
+        "source": "local"
+      },
+      {
+        "id": "psalms--psalms-easter-eas-03a-psalms-eas-03a-ps-16-lord-you-will-show-us-the-path-of-li",
+        "type": "sheet_music",
+        "label": "Lyric Psalter",
+        "filePath": "_psalms/Easter/Eas-03A/Psalms/Eas-03A_Ps-16_Lord-You-Will-Show-Us-The-Path-Of-Life_LyricPsalter_Alonso.pdf",
+        "source": "local"
+      },
+      {
+        "id": "psalms--psalms-easter-eas-04a-psalms-eas-04a-ps-16-lord-you-will-show-us-lyricpsalterch",
+        "type": "sheet_music",
+        "label": "Lyric Psalter - Choral",
+        "filePath": "_psalms/Easter/Eas-04A/Psalms/Eas-04A_Ps-16_Lord,-You-Will-Show-Us_LyricPsalterChoral_Alonso.pdf",
+        "source": "local"
+      },
+      {
+        "id": "psalms--psalms-ordinary-time-ot-13c-psalms-ot-13c-ps-16-you-are-my-inheri-tance-spirit-",
+        "type": "sheet_music",
+        "label": "Spirit & Psalm",
+        "filePath": "_psalms/Ordinary Time/OT-13C/Psalms/OT-13C_Ps-16_You-Are-My-Inheri---Tance,_Spirit&Psalm2022_Hillebrand.pdf",
+        "source": "local"
+      },
+      {
+        "id": "psalms--psalms-ordinary-time-ot-15c-psalms-ot-15c-ps-16-you-are-my-inheritance-lyricpsa",
+        "type": "sheet_music",
+        "label": "Lyric Psalter - Choral",
+        "filePath": "_psalms/Ordinary Time/OT-15C/Psalms/OT-15C_Ps-16_You-Are-My-Inheritance_LyricPsalterChoral_Alonso.pdf",
+        "source": "local"
+      },
+      {
+        "id": "psalms--psalms-ordinary-time-ot-33b-psalms-ot-33b-ps-16-you-are-my-inheri-tance-spirit-",
+        "type": "sheet_music",
+        "label": "Spirit & Psalm",
+        "filePath": "_psalms/Ordinary Time/OT-33B/Psalms/OT-33B_Ps-16_You-Are-My-Inheri---Tance,_Spirit&Psalm2024_Hillebrand.pdf",
+        "source": "local"
+      },
+      {
+        "id": "psalms--psalms-solemnities-sol-christ-the-kingb-psalms-sol-christ-the-kingb-ps-16-you-a",
+        "type": "sheet_music",
+        "label": "Lyric Psalter - Choral",
+        "filePath": "_psalms/Solemnities/Sol-Christ-The-KingB/Psalms/Sol-Christ-The-KingB_Ps-16_You-Are-My-Inheritance_LyricPsalterChoral_Alonso.pdf",
+        "source": "local"
+      }
+    ],
     "usageCount": 1,
     "occasions": [
       "ordinary-time-13-c"
@@ -29722,7 +32759,29 @@
     "id": "ps-19-their-message-goes-out-through-all--the-lyric-psalter-tony-alonso-marty-haugen",
     "title": "Ps 19 Their message goes out through all...",
     "composer": "The Lyric Psalter • Tony Alonso & Marty Haugen",
-    "resources": [],
+    "resources": [
+      {
+        "id": "psalms--psalms-solemnities-sol-peter-paul-vigila-psalms-sol-peter-paul-vigila-ps-19-the",
+        "type": "sheet_music",
+        "label": "Lyric Psalter - Choral",
+        "filePath": "_psalms/Solemnities/Sol-Peter-Paul-VigilA/Psalms/Sol-Peter-Paul-VigilA_Ps-19_Their-Message-Goes-Out_LyricPsalterChoral_Alonso.pdf",
+        "source": "local"
+      },
+      {
+        "id": "psalms--psalms-solemnities-sol-peter-paul-vigilb-psalms-sol-peter-paul-vigilb-ps-19-the",
+        "type": "sheet_music",
+        "label": "Lyric Psalter - Choral",
+        "filePath": "_psalms/Solemnities/Sol-Peter-Paul-VigilB/Psalms/Sol-Peter-Paul-VigilB_Ps-19_Their-Message-Goes-Out_LyricPsalterChoral_Alonso.pdf",
+        "source": "local"
+      },
+      {
+        "id": "psalms--psalms-solemnities-sol-peter-paul-vigilc-psalms-sol-peter-paul-vigilc-ps-19-the",
+        "type": "sheet_music",
+        "label": "Lyric Psalter - Choral",
+        "filePath": "_psalms/Solemnities/Sol-Peter-Paul-VigilC/Psalms/Sol-Peter-Paul-VigilC_Ps-19_Their-Message-Goes-Out_LyricPsalterChoral_Alonso.pdf",
+        "source": "local"
+      }
+    ],
     "usageCount": 1,
     "occasions": [
       "ss-peter-paul-apostles-jun-29-at-the-vigil-mass-abc"
@@ -29824,7 +32883,22 @@
     "id": "ps-123-1-2-2-3-4-our-eyes-are-fixed-on-the-lord-pleading-for-his-mercy--the-lyric-psalter-tony-alonso-marty-haugen",
     "title": "Ps 123:1–2, 2, 3–4 Our eyes are fixed on the Lord, pleading for his mercy.",
     "composer": "The Lyric Psalter • Tony Alonso & Marty Haugen",
-    "resources": [],
+    "resources": [
+      {
+        "id": "psalms--psalms-ordinary-time-ot-14b-psalms-ot-14b-ps-123-our-eyes-are-fixed-lyricpsalte",
+        "type": "sheet_music",
+        "label": "Lyric Psalter - Choral",
+        "filePath": "_psalms/Ordinary Time/OT-14B/Psalms/OT-14B_Ps-123_Our-Eyes-Are-Fixed_LyricPsalterChoral_Alonso.pdf",
+        "source": "local"
+      },
+      {
+        "id": "psalms--psalms-ordinary-time-ot-14b-psalms-ot-14b-ps-123-our-eyes-are-fixed-lyricpsalte",
+        "type": "sheet_music",
+        "label": "Lyric Psalter",
+        "filePath": "_psalms/Ordinary Time/OT-14B/Psalms/OT-14B_Ps-123_Our-Eyes-Are-Fixed_LyricPsalter_Alonso.pdf",
+        "source": "local"
+      }
+    ],
     "usageCount": 1,
     "occasions": [
       "ordinary-time-14-b"
@@ -29835,7 +32909,15 @@
     "id": "ps-123-our-eyes-are-fixed-on-the-lord--spirit-psalm-composer-s",
     "title": "Ps 123 Our eyes are fixed on the Lord...",
     "composer": "Spirit & Psalm • Composer/s",
-    "resources": [],
+    "resources": [
+      {
+        "id": "psalms--psalms-ordinary-time-ot-14b-psalms-ot-14b-ps-123-our-eyes-are-fixed-spirit-psal",
+        "type": "sheet_music",
+        "label": "Spirit & Psalm",
+        "filePath": "_psalms/Ordinary Time/OT-14B/Psalms/OT-14B_Ps-123_Our-Eyes-Are-Fixed_Spirit&Psalm2024_Huval.pdf",
+        "source": "local"
+      }
+    ],
     "usageCount": 1,
     "occasions": [
       "ordinary-time-14-b"

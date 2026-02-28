@@ -213,5 +213,63 @@
         "title": "Lamb of God (Resoration)"
       }
     }
+  ],
+  "occasionResources": [
+    {
+      "id": "psalms--psalms-ordinary-time-ot-28b-gospel-acclamations-ot-28b-32b-18c-mp3",
+      "type": "audio",
+      "label": "Gospel Acclamation",
+      "filePath": "_psalms/Ordinary Time/OT-28B/Gospel Acclamations/OT 28B 32B 18C.mp3",
+      "source": "local",
+      "category": "gospel_acclamation"
+    },
+    {
+      "id": "psalms--psalms-ordinary-time-ot-28b-gospel-acclamations-ot-28b-gospel-acclamation-spiri",
+      "type": "sheet_music",
+      "label": "Gospel Acclamation - Spirit & Psalm (Hart)",
+      "filePath": "_psalms/Ordinary Time/OT-28B/Gospel Acclamations/OT-28B_Gospel-Acclamation_Spirit&Psalm2024_Hart.pdf",
+      "source": "local",
+      "category": "gospel_acclamation"
+    },
+    {
+      "id": "psalms--psalms-ordinary-time-ot-28b-gospel-acclamations-ot-28b-gospelacc-alonso-pdf",
+      "type": "sheet_music",
+      "label": "Gospel Acclamation (Alonso)",
+      "filePath": "_psalms/Ordinary Time/OT-28B/Gospel Acclamations/OT-28B_GospelAcc_Alonso.pdf",
+      "source": "local",
+      "category": "gospel_acclamation"
+    },
+    {
+      "id": "psalms--psalms-ordinary-time-ot-28b-antiphons-ot-28b-antiphons-rejoice-pdf",
+      "type": "sheet_music",
+      "label": "REJOICE Antiphons",
+      "filePath": "_psalms/Ordinary Time/OT-28B/Antiphons/OT-28B_Antiphons_REJOICE.pdf",
+      "source": "local",
+      "category": "antiphon"
+    },
+    {
+      "id": "psalms--psalms-ordinary-time-ot-28b-antiphons-rejoice-ot28-if-you-o-lord-should-mark-in",
+      "type": "audio",
+      "label": "Entrance: If You O Lord Should",
+      "filePath": "_psalms/Ordinary Time/OT-28B/Antiphons/REJOICE_OT28 If_You_O_Lord_Should_Mark_Iniquities_28th_Sunday_In_Ordinary_Time_Entrance_Antiphon_181.mp3",
+      "source": "local",
+      "category": "antiphon"
+    },
+    {
+      "id": "psalms--psalms-ordinary-time-ot-28b-antiphons-rejoice-ot28-the-rich-suffer-want-and-go-",
+      "type": "audio",
+      "label": "Communion: The Rich Suffer Want And",
+      "filePath": "_psalms/Ordinary Time/OT-28B/Antiphons/REJOICE_OT28 The_Rich_Suffer_Want_And_Go_Hungry_28th_Sunday_In_Ordinary_Time_Communion_Antiphon_I_182.mp3",
+      "source": "local",
+      "category": "antiphon"
+    },
+    {
+      "id": "psalms--psalms-ordinary-time-ot-28b-antiphons-rejoice-ot28-when-the-lord-appears-28th-s",
+      "type": "audio",
+      "label": "Communion: When The",
+      "filePath": "_psalms/Ordinary Time/OT-28B/Antiphons/REJOICE_OT28 When_The_Lord_Appears_28th_Sunday_In_Ordinary_Time_Communion_Antiphon_Ii_183.mp3",
+      "source": "local",
+      "category": "antiphon"
+    }
   ]
 }

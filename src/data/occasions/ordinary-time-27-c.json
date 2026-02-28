@@ -435,5 +435,63 @@
         "description": "\"May the words of my mouth speak your peace...\""
       }
     }
+  ],
+  "occasionResources": [
+    {
+      "id": "psalms--psalms-ordinary-time-ot-27c-gospel-acclamations-ot-27c-mp3",
+      "type": "audio",
+      "label": "Gospel Acclamation",
+      "filePath": "_psalms/Ordinary Time/OT-27C/Gospel Acclamations/OT 27C.mp3",
+      "source": "local",
+      "category": "gospel_acclamation"
+    },
+    {
+      "id": "psalms--psalms-ordinary-time-ot-27c-gospel-acclamations-ot-27c-gospel-acclamation-spiri",
+      "type": "sheet_music",
+      "label": "Gospel Acclamation - Spirit & Psalm (Blakesley)",
+      "filePath": "_psalms/Ordinary Time/OT-27C/Gospel Acclamations/OT-27C_Gospel-Acclamation_Spirit&Psalm2025_Blakesley.pdf",
+      "source": "local",
+      "category": "gospel_acclamation"
+    },
+    {
+      "id": "psalms--psalms-ordinary-time-ot-27c-gospel-acclamations-ot-27c-gospelacc-ot-alonso-pdf",
+      "type": "sheet_music",
+      "label": "Gospel Acclamation (Alonso)",
+      "filePath": "_psalms/Ordinary Time/OT-27C/Gospel Acclamations/OT-27C_GospelAcc-OT_Alonso.pdf",
+      "source": "local",
+      "category": "gospel_acclamation"
+    },
+    {
+      "id": "psalms--psalms-ordinary-time-ot-27c-antiphons-ot-27c-antiphons-rejoice-pdf",
+      "type": "sheet_music",
+      "label": "REJOICE Antiphons",
+      "filePath": "_psalms/Ordinary Time/OT-27C/Antiphons/OT-27C_Antiphons_REJOICE.pdf",
+      "source": "local",
+      "category": "antiphon"
+    },
+    {
+      "id": "psalms--psalms-ordinary-time-ot-27c-antiphons-rejoice-ot27-the-lord-is-good-to-those-wh",
+      "type": "audio",
+      "label": "Communion: The Lord Is Good To Those",
+      "filePath": "_psalms/Ordinary Time/OT-27C/Antiphons/REJOICE_OT27 The_Lord_Is_Good_To_Those_Who_Hope_27th_Sunday_In_Ordinary_Time_Communion_Antiphon_I_179.mp3",
+      "source": "local",
+      "category": "antiphon"
+    },
+    {
+      "id": "psalms--psalms-ordinary-time-ot-27c-antiphons-rejoice-ot27-though-many-we-are-one-bread",
+      "type": "audio",
+      "label": "Communion: Though Many We Are",
+      "filePath": "_psalms/Ordinary Time/OT-27C/Antiphons/REJOICE_OT27 Though_Many_We_Are_One_Bread_27th_Sunday_In_Ordinary_Time_Communion_Antiphon_Ii_180.mp3",
+      "source": "local",
+      "category": "antiphon"
+    },
+    {
+      "id": "psalms--psalms-ordinary-time-ot-27c-antiphons-rejoice-ot27-within-your-will-o-lord-27th",
+      "type": "audio",
+      "label": "Entrance: Within Your Will O Lord",
+      "filePath": "_psalms/Ordinary Time/OT-27C/Antiphons/REJOICE_OT27 Within_Your_Will_O_Lord_27th_Sunday_In_Ordinary_Time_Entrance_Antiphon_178.mp3",
+      "source": "local",
+      "category": "antiphon"
+    }
   ]
 }

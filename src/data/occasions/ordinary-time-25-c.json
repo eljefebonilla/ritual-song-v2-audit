@@ -432,5 +432,63 @@
         "description": "Highlights God's grace as sufficient beyond earthly needs ."
       }
     }
+  ],
+  "occasionResources": [
+    {
+      "id": "psalms--psalms-ordinary-time-ot-25c-gospel-acclamations-ot-25c-26c-mp3",
+      "type": "audio",
+      "label": "Gospel Acclamation",
+      "filePath": "_psalms/Ordinary Time/OT-25C/Gospel Acclamations/OT 25C 26C.mp3",
+      "source": "local",
+      "category": "gospel_acclamation"
+    },
+    {
+      "id": "psalms--psalms-ordinary-time-ot-25c-gospel-acclamations-ot-25c-gospel-acclamation-spiri",
+      "type": "sheet_music",
+      "label": "Gospel Acclamation - Spirit & Psalm (Stephan)",
+      "filePath": "_psalms/Ordinary Time/OT-25C/Gospel Acclamations/OT-25C_Gospel-Acclamation_Spirit&Psalm2025_Stephan.pdf",
+      "source": "local",
+      "category": "gospel_acclamation"
+    },
+    {
+      "id": "psalms--psalms-ordinary-time-ot-25c-gospel-acclamations-ot-25c-gospelacc-ot-alonso-pdf",
+      "type": "sheet_music",
+      "label": "Gospel Acclamation (Alonso)",
+      "filePath": "_psalms/Ordinary Time/OT-25C/Gospel Acclamations/OT-25C_GospelAcc-OT_Alonso.pdf",
+      "source": "local",
+      "category": "gospel_acclamation"
+    },
+    {
+      "id": "psalms--psalms-ordinary-time-ot-25c-antiphons-ot-25c-antiphons-rejoice-pdf",
+      "type": "sheet_music",
+      "label": "REJOICE Antiphons",
+      "filePath": "_psalms/Ordinary Time/OT-25C/Antiphons/OT-25C_Antiphons_REJOICE.pdf",
+      "source": "local",
+      "category": "antiphon"
+    },
+    {
+      "id": "psalms--psalms-ordinary-time-ot-25c-antiphons-rejoice-ot25-i-am-the-good-shepherd-says-",
+      "type": "audio",
+      "label": "Communion: I Am The Good Shepherd Says",
+      "filePath": "_psalms/Ordinary Time/OT-25C/Antiphons/REJOICE_OT25 I_Am_The_Good_Shepherd_Says_The_Lord_25th_Sunday_In_Ordinary_Time_Communion_Antiphon_Ii_174.mp3",
+      "source": "local",
+      "category": "antiphon"
+    },
+    {
+      "id": "psalms--psalms-ordinary-time-ot-25c-antiphons-rejoice-ot25-i-am-the-salvation-of-the-pe",
+      "type": "audio",
+      "label": "Entrance: I Am The Salvation Of",
+      "filePath": "_psalms/Ordinary Time/OT-25C/Antiphons/REJOICE_OT25 I_Am_The_Salvation_Of_The_People_25th_Sunday_In_Ordinary_Time_Entrance_Antiphon_172.mp3",
+      "source": "local",
+      "category": "antiphon"
+    },
+    {
+      "id": "psalms--psalms-ordinary-time-ot-25c-antiphons-rejoice-ot25-you-have-laid-down-your-prec",
+      "type": "audio",
+      "label": "Communion: You Have Laid Down",
+      "filePath": "_psalms/Ordinary Time/OT-25C/Antiphons/REJOICE_OT25 You_Have_Laid_Down_Your_Precepts_25th_Sunday_In_Ordinary_Time_Communion_Antiphon_I_173.mp3",
+      "source": "local",
+      "category": "antiphon"
+    }
   ]
 }

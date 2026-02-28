@@ -198,5 +198,55 @@
         "composer": "Andrews, Arr. Bonilla • Lockwood • Fajardo"
       }
     }
+  ],
+  "occasionResources": [
+    {
+      "id": "psalms--psalms-ordinary-time-ot-10a-gospel-acclamations-ot-3c-7b-10a-mp3",
+      "type": "audio",
+      "label": "Gospel Acclamation",
+      "filePath": "_psalms/Ordinary Time/OT-10A/Gospel Acclamations/OT 3C 7B 10A.mp3",
+      "source": "local",
+      "category": "gospel_acclamation"
+    },
+    {
+      "id": "psalms--psalms-ordinary-time-ot-10a-gospel-acclamations-ot-10a-gospelacc-ot-alonso-pdf",
+      "type": "sheet_music",
+      "label": "Gospel Acclamation (Alonso)",
+      "filePath": "_psalms/Ordinary Time/OT-10A/Gospel Acclamations/OT-10A_GospelAcc-OT_Alonso.pdf",
+      "source": "local",
+      "category": "gospel_acclamation"
+    },
+    {
+      "id": "psalms--psalms-ordinary-time-ot-10a-antiphons-ot-10a-antiphons-rejoice-pdf",
+      "type": "sheet_music",
+      "label": "REJOICE Antiphons",
+      "filePath": "_psalms/Ordinary Time/OT-10A/Antiphons/OT-10A_Antiphons_REJOICE.pdf",
+      "source": "local",
+      "category": "antiphon"
+    },
+    {
+      "id": "psalms--psalms-ordinary-time-ot-10a-antiphons-rejoice-ot10-god-is-love-10th-sunday-in-o",
+      "type": "audio",
+      "label": "Communion: God",
+      "filePath": "_psalms/Ordinary Time/OT-10A/Antiphons/REJOICE_OT10 God_Is_Love_10th_Sunday_In_Ordinary_Time_Communion_Antiphon_Ii_129.mp3",
+      "source": "local",
+      "category": "antiphon"
+    },
+    {
+      "id": "psalms--psalms-ordinary-time-ot-10a-antiphons-rejoice-ot10-the-lord-is-my-light-and-my-",
+      "type": "audio",
+      "label": "Entrance: The Lord Is My Light And",
+      "filePath": "_psalms/Ordinary Time/OT-10A/Antiphons/REJOICE_OT10 The_Lord_Is_My_Light_And_My_Salvation_10th_Sunday_In_Ordinary_Time_Entrance_Antiphon_127.mp3",
+      "source": "local",
+      "category": "antiphon"
+    },
+    {
+      "id": "psalms--psalms-ordinary-time-ot-10a-antiphons-rejoice-ot10-the-lord-is-my-rock-10th-sun",
+      "type": "audio",
+      "label": "Communion: The Lord Is",
+      "filePath": "_psalms/Ordinary Time/OT-10A/Antiphons/REJOICE_OT10 The_Lord_Is_My_Rock_10th_Sunday_In_Ordinary_Time_Communion_Antiphon_I_128.mp3",
+      "source": "local",
+      "category": "antiphon"
+    }
   ]
 }

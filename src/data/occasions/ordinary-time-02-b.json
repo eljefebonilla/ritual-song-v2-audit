@@ -315,5 +315,71 @@
         "description": "MLK • Week of Prayer for Christian Unity"
       }
     }
+  ],
+  "occasionResources": [
+    {
+      "id": "psalms--psalms-ordinary-time-ot-02b-gospel-acclamations-ot-2b-mp3",
+      "type": "audio",
+      "label": "Gospel Acclamation",
+      "filePath": "_psalms/Ordinary Time/OT-02B/Gospel Acclamations/OT 2B.mp3",
+      "source": "local",
+      "category": "gospel_acclamation"
+    },
+    {
+      "id": "psalms--psalms-ordinary-time-ot-02b-gospel-acclamations-ot-02b-gospel-acclamation-spiri",
+      "type": "sheet_music",
+      "label": "Gospel Acclamation - Spirit & Psalm (Blakesley)",
+      "filePath": "_psalms/Ordinary Time/OT-02B/Gospel Acclamations/OT-02B_Gospel-Acclamation_Spirit&Psalm2024_Blakesley.pdf",
+      "source": "local",
+      "category": "gospel_acclamation"
+    },
+    {
+      "id": "psalms--psalms-ordinary-time-ot-02b-gospel-acclamations-ot-02b-gospelacc-alonso-pdf",
+      "type": "sheet_music",
+      "label": "Gospel Acclamation (Alonso)",
+      "filePath": "_psalms/Ordinary Time/OT-02B/Gospel Acclamations/OT-02B_GospelAcc_Alonso.pdf",
+      "source": "local",
+      "category": "gospel_acclamation"
+    },
+    {
+      "id": "psalms--psalms-ordinary-time-ot-02b-gospel-acclamations-ot-b-gospelacc-ot-pdf",
+      "type": "sheet_music",
+      "label": "Gospel Acclamation",
+      "filePath": "_psalms/Ordinary Time/OT-02B/Gospel Acclamations/OT-B_GospelAcc-OT.pdf",
+      "source": "local",
+      "category": "gospel_acclamation"
+    },
+    {
+      "id": "psalms--psalms-ordinary-time-ot-02b-antiphons-ot-02b-antiphons-rejoice-pdf",
+      "type": "sheet_music",
+      "label": "REJOICE Antiphons",
+      "filePath": "_psalms/Ordinary Time/OT-02B/Antiphons/OT-02B_Antiphons_REJOICE.pdf",
+      "source": "local",
+      "category": "antiphon"
+    },
+    {
+      "id": "psalms--psalms-ordinary-time-ot-02b-antiphons-rejoice-ot02-all-the-earth-shall-bow-down",
+      "type": "audio",
+      "label": "Entrance: All The Earth Shall Bow Down",
+      "filePath": "_psalms/Ordinary Time/OT-02B/Antiphons/REJOICE_OT02 All_The_Earth_Shall_Bow_Down_Before_You_2nd_Sunday_In_Ordinary_Time_Entrance_Antiphon_39.mp3",
+      "source": "local",
+      "category": "antiphon"
+    },
+    {
+      "id": "psalms--psalms-ordinary-time-ot-02b-antiphons-rejoice-ot02-we-have-come-to-know-and-to-",
+      "type": "audio",
+      "label": "Communion: We Have Come To Know And",
+      "filePath": "_psalms/Ordinary Time/OT-02B/Antiphons/REJOICE_OT02 We_Have_Come_To_Know_And_To_Believe_2nd_Sunday_In_Ordinary_Time_Communion_Antiphon_Ii_41.mp3",
+      "source": "local",
+      "category": "antiphon"
+    },
+    {
+      "id": "psalms--psalms-ordinary-time-ot-02b-antiphons-rejoice-ot02-you-have-prepared-a-table-be",
+      "type": "audio",
+      "label": "Communion: You Have Prepared A Table",
+      "filePath": "_psalms/Ordinary Time/OT-02B/Antiphons/REJOICE_OT02 You_Have_Prepared_A_Table_Before_Me_2nd_Sunday_In_Ordinary_Time_Communion_Antiphon_I_40.mp3",
+      "source": "local",
+      "category": "antiphon"
+    }
   ]
 }

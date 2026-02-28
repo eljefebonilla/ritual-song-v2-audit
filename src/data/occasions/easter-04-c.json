@@ -438,5 +438,55 @@
         "description": "Season of Easter"
       }
     }
+  ],
+  "occasionResources": [
+    {
+      "id": "psalms--psalms-easter-eas-04c-gospel-acclamations-easter-4abc-mp3",
+      "type": "audio",
+      "label": "Gospel Acclamation",
+      "filePath": "_psalms/Easter/Eas-04C/Gospel Acclamations/EASTER_4ABC.mp3",
+      "source": "local",
+      "category": "gospel_acclamation"
+    },
+    {
+      "id": "psalms--psalms-easter-eas-04c-gospel-acclamations-eas-04c-gospel-acclamation-spirit-psa",
+      "type": "sheet_music",
+      "label": "Gospel Acclamation - Spirit & Psalm (Manibusan)",
+      "filePath": "_psalms/Easter/Eas-04C/Gospel Acclamations/Eas-04C_Gospel-Acclamation_Spirit&Psalm2025_Manibusan.pdf",
+      "source": "local",
+      "category": "gospel_acclamation"
+    },
+    {
+      "id": "psalms--psalms-easter-eas-04c-gospel-acclamations-eas-04c-gospelacc-alonso-pdf",
+      "type": "sheet_music",
+      "label": "Gospel Acclamation (Alonso)",
+      "filePath": "_psalms/Easter/Eas-04C/Gospel Acclamations/Eas-04C_GospelAcc_Alonso.pdf",
+      "source": "local",
+      "category": "gospel_acclamation"
+    },
+    {
+      "id": "psalms--psalms-easter-eas-04c-antiphons-eas-04c-antiphons-rejoice-pdf",
+      "type": "sheet_music",
+      "label": "REJOICE Antiphons",
+      "filePath": "_psalms/Easter/Eas-04C/Antiphons/Eas-04C_Antiphons_REJOICE.pdf",
+      "source": "local",
+      "category": "antiphon"
+    },
+    {
+      "id": "psalms--psalms-easter-eas-04c-antiphons-rejoice-e04-the-good-shepherd-has-risen-4th-sun",
+      "type": "audio",
+      "label": "Communion: The Good Shepherd",
+      "filePath": "_psalms/Easter/Eas-04C/Antiphons/REJOICE_E04 The_Good_Shepherd_Has_Risen_4th_Sunday_Of_Easter_Communion_Antiphon_99.mp3",
+      "source": "local",
+      "category": "antiphon"
+    },
+    {
+      "id": "psalms--psalms-easter-eas-04c-antiphons-rejoice-e04-the-merciful-love-of-the-lord-fills",
+      "type": "audio",
+      "label": "Entrance: The Merciful Love Of The Lord Fills",
+      "filePath": "_psalms/Easter/Eas-04C/Antiphons/REJOICE_E04 The_Merciful_Love_Of_The_Lord_Fills_The_Earth_4th_Sunday_Of_Easter_Entrance_Antiphon_98.mp3",
+      "source": "local",
+      "category": "antiphon"
+    }
   ]
 }

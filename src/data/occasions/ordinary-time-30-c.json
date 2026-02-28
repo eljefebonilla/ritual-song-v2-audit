@@ -434,5 +434,63 @@
         "description": "Humility - \"You choose the weak to lead the strong\""
       }
     }
+  ],
+  "occasionResources": [
+    {
+      "id": "psalms--psalms-ordinary-time-ot-30c-gospel-acclamations-ot-30c-mp3",
+      "type": "audio",
+      "label": "Gospel Acclamation",
+      "filePath": "_psalms/Ordinary Time/OT-30C/Gospel Acclamations/OT 30C.mp3",
+      "source": "local",
+      "category": "gospel_acclamation"
+    },
+    {
+      "id": "psalms--psalms-ordinary-time-ot-30c-gospel-acclamations-ot-30c-gospel-acclamation-spiri",
+      "type": "sheet_music",
+      "label": "Gospel Acclamation - Spirit & Psalm (Booth)",
+      "filePath": "_psalms/Ordinary Time/OT-30C/Gospel Acclamations/OT-30C_Gospel-Acclamation_Spirit&Psalm2025_Booth.pdf",
+      "source": "local",
+      "category": "gospel_acclamation"
+    },
+    {
+      "id": "psalms--psalms-ordinary-time-ot-30c-gospel-acclamations-ot-30c-gospelacc-ot-alonso-pdf",
+      "type": "sheet_music",
+      "label": "Gospel Acclamation (Alonso)",
+      "filePath": "_psalms/Ordinary Time/OT-30C/Gospel Acclamations/OT-30C_GospelAcc-OT_Alonso.pdf",
+      "source": "local",
+      "category": "gospel_acclamation"
+    },
+    {
+      "id": "psalms--psalms-ordinary-time-ot-30c-antiphons-ot-30c-antiphons-rejoice-pdf",
+      "type": "sheet_music",
+      "label": "REJOICE Antiphons",
+      "filePath": "_psalms/Ordinary Time/OT-30C/Antiphons/OT-30C_Antiphons_REJOICE.pdf",
+      "source": "local",
+      "category": "antiphon"
+    },
+    {
+      "id": "psalms--psalms-ordinary-time-ot-30c-antiphons-rejoice-ot30-christ-loved-us-and-gave-him",
+      "type": "audio",
+      "label": "Communion: Christ Loved Us And Gave",
+      "filePath": "_psalms/Ordinary Time/OT-30C/Antiphons/REJOICE_OT30 Christ_Loved_Us_And_Gave_Himself_Up_30th_Sunday_In_Ordinary_Time_Communion_Antiphon_Ii_189.mp3",
+      "source": "local",
+      "category": "antiphon"
+    },
+    {
+      "id": "psalms--psalms-ordinary-time-ot-30c-antiphons-rejoice-ot30-let-the-hearts-that-seek-the",
+      "type": "audio",
+      "label": "Entrance: Let The Hearts That Seek The",
+      "filePath": "_psalms/Ordinary Time/OT-30C/Antiphons/REJOICE_OT30 Let_The_Hearts_That_Seek_The_Lord_Rejoice_30th_Sunday_In_Ordinary_Time_Entrance_Antiphon_187.mp3",
+      "source": "local",
+      "category": "antiphon"
+    },
+    {
+      "id": "psalms--psalms-ordinary-time-ot-30c-antiphons-rejoice-ot30-we-will-ring-out-our-joy-30t",
+      "type": "audio",
+      "label": "Communion: We Will Ring Out",
+      "filePath": "_psalms/Ordinary Time/OT-30C/Antiphons/REJOICE_OT30 We_Will_Ring_Out_Our_Joy_30th_Sunday_In_Ordinary_Time_Communion_Antiphon_I_188.mp3",
+      "source": "local",
+      "category": "antiphon"
+    }
   ]
 }

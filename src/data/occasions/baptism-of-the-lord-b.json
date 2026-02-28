@@ -296,5 +296,47 @@
         }
       ]
     }
+  ],
+  "occasionResources": [
+    {
+      "id": "psalms--psalms-christmas-chr-baptismb-gospel-acclamations-christmas-baptism-abc-mp3",
+      "type": "audio",
+      "label": "Gospel Acclamation",
+      "filePath": "_psalms/Christmas/Chr-BaptismB/Gospel Acclamations/CHRISTMAS_Baptism_ABC.mp3",
+      "source": "local",
+      "category": "gospel_acclamation"
+    },
+    {
+      "id": "psalms--psalms-christmas-chr-baptismb-gospel-acclamations-chr-baptism-b-gospelacc-pdf",
+      "type": "sheet_music",
+      "label": "Gospel Acclamation",
+      "filePath": "_psalms/Christmas/Chr-BaptismB/Gospel Acclamations/Chr-Baptism-B_GospelAcc.pdf",
+      "source": "local",
+      "category": "gospel_acclamation"
+    },
+    {
+      "id": "psalms--psalms-christmas-chr-baptismb-gospel-acclamations-chr-baptismb-gospel-acclamati",
+      "type": "sheet_music",
+      "label": "Gospel Acclamation - Spirit & Psalm (Blakesley)",
+      "filePath": "_psalms/Christmas/Chr-BaptismB/Gospel Acclamations/Chr-BaptismB_Gospel-Acclamation_Spirit&Psalm2021_Blakesley.pdf",
+      "source": "local",
+      "category": "gospel_acclamation"
+    },
+    {
+      "id": "psalms--psalms-christmas-chr-baptismb-antiphons-chr-baptismb-antiphons-rejoice-pdf",
+      "type": "sheet_music",
+      "label": "REJOICE Antiphons",
+      "filePath": "_psalms/Christmas/Chr-BaptismB/Antiphons/Chr-BaptismB_Antiphons_REJOICE.pdf",
+      "source": "local",
+      "category": "antiphon"
+    },
+    {
+      "id": "psalms--psalms-christmas-chr-baptismb-antiphons-rejoice-christmas-after-the-lord-was-ba",
+      "type": "audio",
+      "label": "Entrance: After The Lord Was Baptized Baptism Of",
+      "filePath": "_psalms/Christmas/Chr-BaptismB/Antiphons/REJOICE_CHRISTMAS After_The_Lord_Was_Baptized_Baptism_Of_The_Lord_Entrance_Antiphon_34.mp3",
+      "source": "local",
+      "category": "antiphon"
+    }
   ]
 }

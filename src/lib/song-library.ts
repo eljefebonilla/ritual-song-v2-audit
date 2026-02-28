@@ -1,4 +1,5 @@
-import type { LibrarySong, SongResource, SongCategory, ResourceDisplayCategory } from "./types";
+import type { LibrarySong, SongResource, SongCategory, ResourceDisplayCategory, MusicPlan, ResolvedSong } from "./types";
+import { normalizeTitle } from "./occasion-helpers";
 
 let songLibraryData: LibrarySong[] | null = null;
 
@@ -124,4 +125,112 @@ export function getSongDisplayCategories(song: LibrarySong): Set<ResourceDisplay
     if (cat) cats.add(cat);
   }
   return cats;
+}
+
+/**
+ * Build a Map<normalizedTitle, LibrarySong> for fast title matching.
+ */
+let _titleIndex: Map<string, LibrarySong> | null = null;
+
+export function getTitleIndex(): Map<string, LibrarySong> {
+  if (_titleIndex) return _titleIndex;
+  _titleIndex = new Map();
+  for (const song of getSongLibrary()) {
+    _titleIndex.set(normalizeTitle(song.title), song);
+  }
+  return _titleIndex;
+}
+
+/**
+ * Get a playable URL from a SongResource.
+ */
+export function resourceUrl(resource: SongResource): string | null {
+  if (resource.url) return resource.url;
+  if (resource.filePath) {
+    return `/api/music/${encodeURIComponent(resource.filePath)}`;
+  }
+  return null;
+}
+
+/**
+ * Find the best playable resource (audio or youtube) for a library song.
+ */
+function findPlayableResource(song: LibrarySong): { url: string; type: "audio" | "youtube" } | null {
+  // Prefer local audio first
+  for (const r of song.resources) {
+    if (r.type === "audio" && r.filePath) {
+      const url = resourceUrl(r);
+      if (url) return { url, type: "audio" };
+    }
+  }
+  // Then YouTube
+  for (const r of song.resources) {
+    if (r.type === "youtube" && r.url) {
+      return { url: r.url, type: "youtube" };
+    }
+  }
+  // Then any audio with a URL
+  for (const r of song.resources) {
+    if (r.type === "audio" && r.url) {
+      return { url: r.url, type: "audio" };
+    }
+  }
+  return null;
+}
+
+/**
+ * Resolve all song titles in an array of MusicPlans against the song library.
+ * Returns Record<normalizedTitle, ResolvedSong>.
+ */
+export function resolveAllSongs(plans: MusicPlan[]): Record<string, ResolvedSong> {
+  const index = getTitleIndex();
+  const result: Record<string, ResolvedSong> = {};
+
+  function tryResolve(title: string) {
+    const key = normalizeTitle(title);
+    if (result[key]) return; // already resolved
+    const song = index.get(key);
+    if (!song) return;
+
+    const playable = findPlayableResource(song);
+    result[key] = {
+      id: song.id,
+      title: song.title,
+      audioUrl: playable?.url ?? null,
+      audioType: playable?.type ?? null,
+    };
+  }
+
+  for (const plan of plans) {
+    // Single song fields
+    const songFields: (keyof MusicPlan)[] = [
+      "prelude", "gathering", "penitentialAct", "gloria",
+      "offertory", "lordsPrayer", "fractionRite", "sending",
+    ];
+    for (const field of songFields) {
+      const val = plan[field];
+      if (val && typeof val === "object" && "title" in val) {
+        tryResolve((val as { title: string }).title);
+      }
+    }
+
+    // Gospel acclamation
+    if (plan.gospelAcclamation?.title) {
+      tryResolve(plan.gospelAcclamation.title);
+    }
+
+    // Responsorial psalm
+    if (plan.responsorialPsalm?.psalm) {
+      tryResolve(plan.responsorialPsalm.psalm);
+    }
+
+    // Communion songs
+    if (plan.communionSongs) {
+      for (const s of plan.communionSongs) {
+        tryResolve(s.title);
+      }
+    }
+  }
+
+  return result;
 }

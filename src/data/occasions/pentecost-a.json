@@ -235,5 +235,47 @@
         "description": "\"All Creatures of Our God and King\" with different lyrics."
       }
     }
+  ],
+  "occasionResources": [
+    {
+      "id": "psalms--psalms-easter-eas-pentecosta-gospel-acclamations-eas-pentecost-a-gospelacc-alon",
+      "type": "sheet_music",
+      "label": "Gospel Acclamation (Alonso)",
+      "filePath": "_psalms/Easter/Eas-PentecostA/Gospel Acclamations/Eas-Pentecost-A_GospelAcc_Alonso.pdf",
+      "source": "local",
+      "category": "gospel_acclamation"
+    },
+    {
+      "id": "psalms--psalms-easter-eas-pentecosta-gospel-acclamations-eas-pentecosta-gospel-acclamat",
+      "type": "sheet_music",
+      "label": "Gospel Acclamation - Spirit & Psalm (Hart)",
+      "filePath": "_psalms/Easter/Eas-PentecostA/Gospel Acclamations/Eas-PentecostA_Gospel-Acclamation_Spirit&Psalm2026_Hart.pdf",
+      "source": "local",
+      "category": "gospel_acclamation"
+    },
+    {
+      "id": "psalms--psalms-easter-eas-pentecosta-antiphons-eas-pentecosta-antiphons-rejoice-pdf",
+      "type": "sheet_music",
+      "label": "REJOICE Antiphons",
+      "filePath": "_psalms/Easter/Eas-PentecostA/Antiphons/Eas-PentecostA_Antiphons_REJOICE.pdf",
+      "source": "local",
+      "category": "antiphon"
+    },
+    {
+      "id": "psalms--psalms-easter-eas-pentecosta-antiphons-rejoice-e08-they-were-all-filled-with-th",
+      "type": "audio",
+      "label": "Communion: They Were All Filled With The Holy",
+      "filePath": "_psalms/Easter/Eas-PentecostA/Antiphons/REJOICE_E08 They_Were_All_Filled_With_The_Holy_Spirit_Pentecost_Communion_Antiphon_114.mp3",
+      "source": "local",
+      "category": "antiphon"
+    },
+    {
+      "id": "psalms--psalms-easter-eas-pentecosta-antiphons-rejoice-e09-the-spirit-of-the-lord-has-f",
+      "type": "audio",
+      "label": "Entrance: The Spirit Of The Lord Has",
+      "filePath": "_psalms/Easter/Eas-PentecostA/Antiphons/REJOICE_E09 The_Spirit_Of_The_Lord_Has_Filled_Pentecost_Entrance_Antiphon_I_112.mp3",
+      "source": "local",
+      "category": "antiphon"
+    }
   ]
 }

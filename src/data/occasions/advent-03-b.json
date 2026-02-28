@@ -346,5 +346,71 @@
         "composer": "Ed Bolduc"
       }
     }
+  ],
+  "occasionResources": [
+    {
+      "id": "psalms--psalms-advent-adv-03b-gospel-acclamations-advent-3abc-mp3",
+      "type": "audio",
+      "label": "Gospel Acclamation",
+      "filePath": "_psalms/Advent/Adv-03B/Gospel Acclamations/ADVENT_3ABC.mp3",
+      "source": "local",
+      "category": "gospel_acclamation"
+    },
+    {
+      "id": "psalms--psalms-advent-adv-03b-gospel-acclamations-adv-03b-gospel-acclamation-spirit-psa",
+      "type": "sheet_music",
+      "label": "Gospel Acclamation - Spirit & Psalm (Stephan)",
+      "filePath": "_psalms/Advent/Adv-03B/Gospel Acclamations/Adv-03B_Gospel-Acclamation_Spirit&Psalm2024_Stephan.pdf",
+      "source": "local",
+      "category": "gospel_acclamation"
+    },
+    {
+      "id": "psalms--psalms-advent-adv-03b-gospel-acclamations-adv-03b-gospelacc-alonso-pdf",
+      "type": "sheet_music",
+      "label": "Gospel Acclamation (Alonso)",
+      "filePath": "_psalms/Advent/Adv-03B/Gospel Acclamations/Adv-03B_GospelAcc_Alonso.pdf",
+      "source": "local",
+      "category": "gospel_acclamation"
+    },
+    {
+      "id": "psalms--psalms-advent-adv-03b-antiphons-adv-03b-antiphons-rejoice-pdf",
+      "type": "sheet_music",
+      "label": "REJOICE Antiphons",
+      "filePath": "_psalms/Advent/Adv-03B/Antiphons/Adv-03B_Antiphons_REJOICE.pdf",
+      "source": "local",
+      "category": "antiphon"
+    },
+    {
+      "id": "psalms--psalms-advent-adv-03b-antiphons-adv-03b-lk-1-my-soul-rejoices-in-my-god-lyricps",
+      "type": "sheet_music",
+      "label": "Lyric Psalter Antiphon",
+      "filePath": "_psalms/Advent/Adv-03B/Antiphons/Adv-03B_Lk-1_MY-SOUL-REJOICES-IN-MY-GOD_LyricPsalterChoral_Haugen.pdf",
+      "source": "local",
+      "category": "antiphon"
+    },
+    {
+      "id": "psalms--psalms-advent-adv-03b-antiphons-adv-03b-lk-1-my-soul-rejoices-in-my-god-lyricps",
+      "type": "sheet_music",
+      "label": "Lyric Psalter Antiphon",
+      "filePath": "_psalms/Advent/Adv-03B/Antiphons/Adv-03B_Lk-1_MY-SOUL-REJOICES-IN-MY-GOD_LyricPsalter_Haugen.pdf",
+      "source": "local",
+      "category": "antiphon"
+    },
+    {
+      "id": "psalms--psalms-advent-adv-03b-antiphons-rejoice-a03-rejoice-in-the-lord-always-3rd-sund",
+      "type": "audio",
+      "label": "Entrance: Rejoice In The",
+      "filePath": "_psalms/Advent/Adv-03B/Antiphons/REJOICE_A03 Rejoice_In_The_Lord_Always_3rd_Sunday_Of_Advent_Entrance_Antiphon_10.mp3",
+      "source": "local",
+      "category": "antiphon"
+    },
+    {
+      "id": "psalms--psalms-advent-adv-03b-antiphons-rejoice-a03-say-to-the-faint-of-heart-3rd-sunda",
+      "type": "audio",
+      "label": "Communion: Say To The Faint",
+      "filePath": "_psalms/Advent/Adv-03B/Antiphons/REJOICE_A03 Say_To_The_Faint_Of_Heart_3rd_Sunday_Of_Advent_Communion_Antiphon_11.mp3",
+      "source": "local",
+      "category": "antiphon"
+    }
   ]
 }

@@ -210,5 +210,63 @@
         "title": "Lamb of God (Resoration)"
       }
     }
+  ],
+  "occasionResources": [
+    {
+      "id": "psalms--psalms-ordinary-time-ot-15a-gospel-acclamations-ot-15a-mp3",
+      "type": "audio",
+      "label": "Gospel Acclamation",
+      "filePath": "_psalms/Ordinary Time/OT-15A/Gospel Acclamations/OT 15A.mp3",
+      "source": "local",
+      "category": "gospel_acclamation"
+    },
+    {
+      "id": "psalms--psalms-ordinary-time-ot-15a-gospel-acclamations-ot-15a-gospel-acclamation-spiri",
+      "type": "sheet_music",
+      "label": "Gospel Acclamation - Spirit & Psalm (Booth)",
+      "filePath": "_psalms/Ordinary Time/OT-15A/Gospel Acclamations/OT-15A_Gospel-Acclamation_Spirit&Psalm2026_Booth.pdf",
+      "source": "local",
+      "category": "gospel_acclamation"
+    },
+    {
+      "id": "psalms--psalms-ordinary-time-ot-15a-gospel-acclamations-ot-15a-gospelacc-ot-alonso-pdf",
+      "type": "sheet_music",
+      "label": "Gospel Acclamation (Alonso)",
+      "filePath": "_psalms/Ordinary Time/OT-15A/Gospel Acclamations/OT-15A_GospelAcc-OT_Alonso.pdf",
+      "source": "local",
+      "category": "gospel_acclamation"
+    },
+    {
+      "id": "psalms--psalms-ordinary-time-ot-15a-antiphons-ot-15a-antiphons-rejoice-pdf",
+      "type": "sheet_music",
+      "label": "REJOICE Antiphons",
+      "filePath": "_psalms/Ordinary Time/OT-15A/Antiphons/OT-15A_Antiphons_REJOICE.pdf",
+      "source": "local",
+      "category": "antiphon"
+    },
+    {
+      "id": "psalms--psalms-ordinary-time-ot-15a-antiphons-rejoice-ot15-as-for-me-in-justice-i-shall",
+      "type": "audio",
+      "label": "Entrance: As For Me In Justice I",
+      "filePath": "_psalms/Ordinary Time/OT-15A/Antiphons/REJOICE_OT15 As_For_Me_In_Justice_I_Shall_Behold_15th_Sunday_In_Ordinary_Time_Entrance_Antiphon_142.mp3",
+      "source": "local",
+      "category": "antiphon"
+    },
+    {
+      "id": "psalms--psalms-ordinary-time-ot-15a-antiphons-rejoice-ot15-the-sparrow-finds-a-home-3rd",
+      "type": "audio",
+      "label": "Communion: The Sparrow Finds A Home 3rd Sunday Of Lent Communion",
+      "filePath": "_psalms/Ordinary Time/OT-15A/Antiphons/REJOICE_OT15 The_Sparrow_Finds_A_Home_3rd_Sunday_Of_Lent_Communion_Antiphon_Ii_15th_Sunday_In_Ot_Communion_Antiphon_I_74_143.mp3",
+      "source": "local",
+      "category": "antiphon"
+    },
+    {
+      "id": "psalms--psalms-ordinary-time-ot-15a-antiphons-rejoice-ot15-whoever-eats-my-flesh-body-a",
+      "type": "audio",
+      "label": "Communion: Whoever Eats My Flesh Body And Blood Corpus Christi Communion Antiphon 15th Sun",
+      "filePath": "_psalms/Ordinary Time/OT-15A/Antiphons/REJOICE_OT15 Whoever_Eats_My_Flesh_Body_And_Blood_Corpus_Christi_Communion_Antiphon_15th_Sun_In_Ot_Communion_Antiphon_Ii_118_144.mp3",
+      "source": "local",
+      "category": "antiphon"
+    }
   ]
 }

@@ -200,5 +200,63 @@
         "composer": "Andrews, Arr. Bonilla • Lockwood • Fajardo"
       }
     }
+  ],
+  "occasionResources": [
+    {
+      "id": "psalms--psalms-ordinary-time-ot-33a-gospel-acclamations-ot-33a-mp3",
+      "type": "audio",
+      "label": "Gospel Acclamation",
+      "filePath": "_psalms/Ordinary Time/OT-33A/Gospel Acclamations/OT 33A.mp3",
+      "source": "local",
+      "category": "gospel_acclamation"
+    },
+    {
+      "id": "psalms--psalms-ordinary-time-ot-33a-gospel-acclamations-ot-33a-gospel-acclamation-spiri",
+      "type": "sheet_music",
+      "label": "Gospel Acclamation - Spirit & Psalm (Angrisano)",
+      "filePath": "_psalms/Ordinary Time/OT-33A/Gospel Acclamations/OT-33A_Gospel-Acclamation_Spirit&Psalm2026_Angrisano.pdf",
+      "source": "local",
+      "category": "gospel_acclamation"
+    },
+    {
+      "id": "psalms--psalms-ordinary-time-ot-33a-gospel-acclamations-ot-33a-gospelacc-ot-alonso-pdf",
+      "type": "sheet_music",
+      "label": "Gospel Acclamation (Alonso)",
+      "filePath": "_psalms/Ordinary Time/OT-33A/Gospel Acclamations/OT-33A_GospelAcc-OT_Alonso.pdf",
+      "source": "local",
+      "category": "gospel_acclamation"
+    },
+    {
+      "id": "psalms--psalms-ordinary-time-ot-33a-antiphons-ot-33a-antiphons-rejoice-pdf",
+      "type": "sheet_music",
+      "label": "REJOICE Antiphons",
+      "filePath": "_psalms/Ordinary Time/OT-33A/Antiphons/OT-33A_Antiphons_REJOICE.pdf",
+      "source": "local",
+      "category": "antiphon"
+    },
+    {
+      "id": "psalms--psalms-ordinary-time-ot-33a-antiphons-rejoice-ot33-amen-i-say-to-you-whatever-y",
+      "type": "audio",
+      "label": "Communion: Amen I Say To You Whatever",
+      "filePath": "_psalms/Ordinary Time/OT-33A/Antiphons/REJOICE_OT33 Amen_I_Say_To_You_Whatever_You_Ask_33rd_Sunday_In_Ordinary_Time_Communion_Antiphon_Ii_198.mp3",
+      "source": "local",
+      "category": "antiphon"
+    },
+    {
+      "id": "psalms--psalms-ordinary-time-ot-33a-antiphons-rejoice-ot33-the-lord-said-i-think-though",
+      "type": "audio",
+      "label": "Entrance: The Lord Said I Think Thoughts",
+      "filePath": "_psalms/Ordinary Time/OT-33A/Antiphons/REJOICE_OT33 The_Lord_Said_I_Think_Thoughts_Of_Peace_33rd_Sunday_In_Ordinary_Time_Entrance_Antiphon_196.mp3",
+      "source": "local",
+      "category": "antiphon"
+    },
+    {
+      "id": "psalms--psalms-ordinary-time-ot-33a-antiphons-rejoice-ot33-to-be-near-god-is-my-happine",
+      "type": "audio",
+      "label": "Communion: To Be Near God Is",
+      "filePath": "_psalms/Ordinary Time/OT-33A/Antiphons/REJOICE_OT33 To_Be_Near_God_Is_My_Happiness_33rd_Sunday_In_Ordinary_Time_Communion_Antiphon_I_197.mp3",
+      "source": "local",
+      "category": "antiphon"
+    }
   ]
 }

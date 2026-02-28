@@ -386,5 +386,63 @@
         "description": "Wildfires"
       }
     }
+  ],
+  "occasionResources": [
+    {
+      "id": "psalms--psalms-ordinary-time-ot-03c-gospel-acclamations-ot-3c-7b-10a-mp3",
+      "type": "audio",
+      "label": "Gospel Acclamation",
+      "filePath": "_psalms/Ordinary Time/OT-03C/Gospel Acclamations/OT 3C 7B 10A.mp3",
+      "source": "local",
+      "category": "gospel_acclamation"
+    },
+    {
+      "id": "psalms--psalms-ordinary-time-ot-03c-gospel-acclamations-ot-03c-gospel-acclamation-spiri",
+      "type": "sheet_music",
+      "label": "Gospel Acclamation - Spirit & Psalm (Angrisano)",
+      "filePath": "_psalms/Ordinary Time/OT-03C/Gospel Acclamations/OT-03C_Gospel-Acclamation_Spirit&Psalm2025_Angrisano.pdf",
+      "source": "local",
+      "category": "gospel_acclamation"
+    },
+    {
+      "id": "psalms--psalms-ordinary-time-ot-03c-gospel-acclamations-ot-03c-gospelacc-ot-alonso-pdf",
+      "type": "sheet_music",
+      "label": "Gospel Acclamation (Alonso)",
+      "filePath": "_psalms/Ordinary Time/OT-03C/Gospel Acclamations/OT-03C_GospelAcc-OT_Alonso.pdf",
+      "source": "local",
+      "category": "gospel_acclamation"
+    },
+    {
+      "id": "psalms--psalms-ordinary-time-ot-03c-antiphons-ot-03c-antiphons-rejoice-pdf",
+      "type": "sheet_music",
+      "label": "REJOICE Antiphons",
+      "filePath": "_psalms/Ordinary Time/OT-03C/Antiphons/OT-03C_Antiphons_REJOICE.pdf",
+      "source": "local",
+      "category": "antiphon"
+    },
+    {
+      "id": "psalms--psalms-ordinary-time-ot-03c-antiphons-rejoice-ot03-i-am-the-light-of-the-world-",
+      "type": "audio",
+      "label": "Communion: I Am The Light Of The World 3rd Sunday In",
+      "filePath": "_psalms/Ordinary Time/OT-03C/Antiphons/REJOICE_OT03 I_Am_The_Light_Of_The_World_3rd_Sunday_In_Ordinary_Time_23rd_Sunday_In_Ordinary_Time_Communion_Antiphon_Ii_44_168.mp3",
+      "source": "local",
+      "category": "antiphon"
+    },
+    {
+      "id": "psalms--psalms-ordinary-time-ot-03c-antiphons-rejoice-ot03-look-toward-the-lord-and-be-",
+      "type": "audio",
+      "label": "Communion: Look Toward The Lord And",
+      "filePath": "_psalms/Ordinary Time/OT-03C/Antiphons/REJOICE_OT03 Look_Toward_The_Lord_And_Be_Radiant_3rd_Sunday_In_Ordinary_Time_Communion_Antiphon_I_43.mp3",
+      "source": "local",
+      "category": "antiphon"
+    },
+    {
+      "id": "psalms--psalms-ordinary-time-ot-03c-antiphons-rejoice-ot03-o-sing-a-new-song-to-the-lor",
+      "type": "audio",
+      "label": "Entrance: O Sing A New Song To The Lord Sing To",
+      "filePath": "_psalms/Ordinary Time/OT-03C/Antiphons/REJOICE_OT03 O_Sing_A_New_Song_To_The_Lord_Sing_To_The_Lord_3rd_Sunday_In_Ordinary_Time_Entrance_Antiphon_42.mp3",
+      "source": "local",
+      "category": "antiphon"
+    }
   ]
 }

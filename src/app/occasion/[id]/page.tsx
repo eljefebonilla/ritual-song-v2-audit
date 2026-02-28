@@ -2,6 +2,7 @@ import { notFound } from "next/navigation";
 import Link from "next/link";
 import { getOccasion, getAllOccasions } from "@/lib/data";
 import { SEASON_COLORS } from "@/lib/liturgical-colors";
+import { resolveAllSongs } from "@/lib/song-library";
 import MusicPlanTabs from "@/components/music/MusicPlanTabs";
 
 export function generateStaticParams() {
@@ -19,6 +20,7 @@ export default async function OccasionPage({
   if (!occasion) notFound();
 
   const colors = SEASON_COLORS[occasion.season] || SEASON_COLORS.ordinary;
+  const resolvedSongs = resolveAllSongs(occasion.musicPlans);
 
   return (
     <div className="p-4 pt-14 md:p-8 md:pt-8 max-w-4xl">
@@ -168,6 +170,7 @@ export default async function OccasionPage({
             <MusicPlanTabs
               plans={occasion.musicPlans}
               seasonColor={colors.primary}
+              resolvedSongs={resolvedSongs}
             />
           </div>
         </div>

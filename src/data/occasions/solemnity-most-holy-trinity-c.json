@@ -423,5 +423,55 @@
         "description": "...in the name of Father, ...Son, ...Holy Spirit"
       }
     }
+  ],
+  "occasionResources": [
+    {
+      "id": "psalms--psalms-solemnities-sol-holy-trinityc-gospel-acclamations-ot-trinity-sunday-mp3",
+      "type": "audio",
+      "label": "Gospel Acclamation",
+      "filePath": "_psalms/Solemnities/Sol-Holy-TrinityC/Gospel Acclamations/OT Trinity Sunday.mp3",
+      "source": "local",
+      "category": "gospel_acclamation"
+    },
+    {
+      "id": "psalms--psalms-solemnities-sol-holy-trinityc-gospel-acclamations-sol-holy-trinity-c-mos",
+      "type": "sheet_music",
+      "label": "Gospel Acclamation (Alonso)",
+      "filePath": "_psalms/Solemnities/Sol-Holy-TrinityC/Gospel Acclamations/Sol-Holy-Trinity-C_Most-Holy-Body-And-Blood-Of-Christ_GospelAcc-OT_Alonso.pdf",
+      "source": "local",
+      "category": "gospel_acclamation"
+    },
+    {
+      "id": "psalms--psalms-solemnities-sol-holy-trinityc-gospel-acclamations-sol-holy-trinityc-gosp",
+      "type": "sheet_music",
+      "label": "Gospel Acclamation - Spirit & Psalm (Booth)",
+      "filePath": "_psalms/Solemnities/Sol-Holy-TrinityC/Gospel Acclamations/Sol-Holy-TrinityC_Gospel-Acclamation_Spirit&Psalm2025_Booth.pdf",
+      "source": "local",
+      "category": "gospel_acclamation"
+    },
+    {
+      "id": "psalms--psalms-solemnities-sol-holy-trinityc-antiphons-rejoice-e08-blest-be-god-the-fat",
+      "type": "audio",
+      "label": "Entrance: Blest Be God The Father",
+      "filePath": "_psalms/Solemnities/Sol-Holy-TrinityC/Antiphons/REJOICE_E08 Blest_Be_God_The_Father_Holy_Trinity_Entrance_Antiphon_115.mp3",
+      "source": "local",
+      "category": "antiphon"
+    },
+    {
+      "id": "psalms--psalms-solemnities-sol-holy-trinityc-antiphons-rejoice-e08-since-you-are-childr",
+      "type": "audio",
+      "label": "Communion: Since You Are Children Of God",
+      "filePath": "_psalms/Solemnities/Sol-Holy-TrinityC/Antiphons/REJOICE_E08 Since_You_Are_Children_Of_God_Holy_Trinity_Communion_Antiphon_116.mp3",
+      "source": "local",
+      "category": "antiphon"
+    },
+    {
+      "id": "psalms--psalms-solemnities-sol-holy-trinityc-antiphons-sol-holy-trinityc-antiphons-rejo",
+      "type": "sheet_music",
+      "label": "REJOICE Antiphons",
+      "filePath": "_psalms/Solemnities/Sol-Holy-TrinityC/Antiphons/Sol-Holy-TrinityC_Antiphons_REJOICE.pdf",
+      "source": "local",
+      "category": "antiphon"
+    }
   ]
 }

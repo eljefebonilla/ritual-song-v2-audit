@@ -211,5 +211,55 @@
         "title": "Lamb of God (Resoration)"
       }
     }
+  ],
+  "occasionResources": [
+    {
+      "id": "psalms--psalms-ordinary-time-ot-23a-gospel-acclamations-ot-23a-24c-mp3",
+      "type": "audio",
+      "label": "Gospel Acclamation",
+      "filePath": "_psalms/Ordinary Time/OT-23A/Gospel Acclamations/OT 23A 24C.mp3",
+      "source": "local",
+      "category": "gospel_acclamation"
+    },
+    {
+      "id": "psalms--psalms-ordinary-time-ot-23a-gospel-acclamations-ot-23a-gospel-acclamation-spiri",
+      "type": "sheet_music",
+      "label": "Gospel Acclamation - Spirit & Psalm (Stephan)",
+      "filePath": "_psalms/Ordinary Time/OT-23A/Gospel Acclamations/OT-23A_Gospel-Acclamation_Spirit&Psalm2026_Stephan.pdf",
+      "source": "local",
+      "category": "gospel_acclamation"
+    },
+    {
+      "id": "psalms--psalms-ordinary-time-ot-23a-gospel-acclamations-ot-23a-gospelacc-ot-alonso-pdf",
+      "type": "sheet_music",
+      "label": "Gospel Acclamation (Alonso)",
+      "filePath": "_psalms/Ordinary Time/OT-23A/Gospel Acclamations/OT-23A_GospelAcc-OT_Alonso.pdf",
+      "source": "local",
+      "category": "gospel_acclamation"
+    },
+    {
+      "id": "psalms--psalms-ordinary-time-ot-23a-antiphons-ot-23a-antiphons-rejoice-pdf",
+      "type": "sheet_music",
+      "label": "REJOICE Antiphons",
+      "filePath": "_psalms/Ordinary Time/OT-23A/Antiphons/OT-23A_Antiphons_REJOICE.pdf",
+      "source": "local",
+      "category": "antiphon"
+    },
+    {
+      "id": "psalms--psalms-ordinary-time-ot-23a-antiphons-rejoice-ot23-like-the-deer-that-yearns-23",
+      "type": "audio",
+      "label": "Communion: Like The Deer",
+      "filePath": "_psalms/Ordinary Time/OT-23A/Antiphons/REJOICE_OT23 Like_The_Deer_That_Yearns_23rd_Sunday_In_Ordinary_Time_Communion_Antiphon_I_167.mp3",
+      "source": "local",
+      "category": "antiphon"
+    },
+    {
+      "id": "psalms--psalms-ordinary-time-ot-23a-antiphons-rejoice-ot23-you-are-just-o-lord-23rd-sun",
+      "type": "audio",
+      "label": "Entrance: You Are Just O Lord",
+      "filePath": "_psalms/Ordinary Time/OT-23A/Antiphons/REJOICE_OT23 You_Are_Just_O_Lord_23rd_Sunday_In_Ordinary_Time_Entrance_Antiphon_166.mp3",
+      "source": "local",
+      "category": "antiphon"
+    }
   ]
 }

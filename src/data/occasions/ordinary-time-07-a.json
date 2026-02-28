@@ -299,5 +299,63 @@
         "description": "...love my neighbor as myself...good news to all the world..."
       }
     }
+  ],
+  "occasionResources": [
+    {
+      "id": "psalms--psalms-ordinary-time-ot-07a-gospel-acclamations-ot-7a-mp3",
+      "type": "audio",
+      "label": "Gospel Acclamation",
+      "filePath": "_psalms/Ordinary Time/OT-07A/Gospel Acclamations/OT 7A.mp3",
+      "source": "local",
+      "category": "gospel_acclamation"
+    },
+    {
+      "id": "psalms--psalms-ordinary-time-ot-07a-gospel-acclamations-ot-07a-gospel-acclamation-spiri",
+      "type": "sheet_music",
+      "label": "Gospel Acclamation - Spirit & Psalm (Hart)",
+      "filePath": "_psalms/Ordinary Time/OT-07A/Gospel Acclamations/OT-07A_Gospel-Acclamation_Spirit&Psalm2023_Hart.pdf",
+      "source": "local",
+      "category": "gospel_acclamation"
+    },
+    {
+      "id": "psalms--psalms-ordinary-time-ot-07a-gospel-acclamations-ot-07a-gospelacc-ot-alonso-pdf",
+      "type": "sheet_music",
+      "label": "Gospel Acclamation (Alonso)",
+      "filePath": "_psalms/Ordinary Time/OT-07A/Gospel Acclamations/OT-07A_GospelAcc-OT_Alonso.pdf",
+      "source": "local",
+      "category": "gospel_acclamation"
+    },
+    {
+      "id": "psalms--psalms-ordinary-time-ot-07a-antiphons-ot-07a-antiphons-rejoice-pdf",
+      "type": "sheet_music",
+      "label": "REJOICE Antiphons",
+      "filePath": "_psalms/Ordinary Time/OT-07A/Antiphons/OT-07A_Antiphons_REJOICE.pdf",
+      "source": "local",
+      "category": "antiphon"
+    },
+    {
+      "id": "psalms--psalms-ordinary-time-ot-07a-antiphons-rejoice-ot07-i-will-recount-all-your-wond",
+      "type": "audio",
+      "label": "Communion: I Will Recount All",
+      "filePath": "_psalms/Ordinary Time/OT-07A/Antiphons/REJOICE_OT07 I_Will_Recount_All_Your_Wonders_7th_Sunday_In_Ordinary_Time_Communion_Antiphon_I_55.mp3",
+      "source": "local",
+      "category": "antiphon"
+    },
+    {
+      "id": "psalms--psalms-ordinary-time-ot-07a-antiphons-rejoice-ot07-lord-i-have-come-to-believe-",
+      "type": "audio",
+      "label": "Communion: Lord I Have Come",
+      "filePath": "_psalms/Ordinary Time/OT-07A/Antiphons/REJOICE_OT07 Lord_I_Have_Come_To_Believe_7th_Sunday_In_Ordinary_Time_Communion_Antiphon_Ii_56.mp3",
+      "source": "local",
+      "category": "antiphon"
+    },
+    {
+      "id": "psalms--psalms-ordinary-time-ot-07a-antiphons-rejoice-ot07-o-lord-i-trust-in-your-merci",
+      "type": "audio",
+      "label": "Entrance: O Lord I Trust In Your",
+      "filePath": "_psalms/Ordinary Time/OT-07A/Antiphons/REJOICE_OT07 O_Lord_I_Trust_In_Your_Merciful_Love_7th_Sunday_In_Ordinary_Time_Entrance_Antiphon_54.mp3",
+      "source": "local",
+      "category": "antiphon"
+    }
   ]
 }

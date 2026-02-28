@@ -273,5 +273,55 @@
         "title": "Lamb of God (Mass of Holy Cross)"
       }
     }
+  ],
+  "occasionResources": [
+    {
+      "id": "psalms--psalms-ordinary-time-ot-08a-gospel-acclamations-ot-8a-29c-mp3",
+      "type": "audio",
+      "label": "Gospel Acclamation",
+      "filePath": "_psalms/Ordinary Time/OT-08A/Gospel Acclamations/OT 8A 29C.mp3",
+      "source": "local",
+      "category": "gospel_acclamation"
+    },
+    {
+      "id": "psalms--psalms-ordinary-time-ot-08a-gospel-acclamations-ot-08a-gospelacc-ot-alonso-pdf",
+      "type": "sheet_music",
+      "label": "Gospel Acclamation (Alonso)",
+      "filePath": "_psalms/Ordinary Time/OT-08A/Gospel Acclamations/OT-08A_GospelAcc-OT_Alonso.pdf",
+      "source": "local",
+      "category": "gospel_acclamation"
+    },
+    {
+      "id": "psalms--psalms-ordinary-time-ot-08a-antiphons-ot-08a-antiphons-rejoice-pdf",
+      "type": "sheet_music",
+      "label": "REJOICE Antiphons",
+      "filePath": "_psalms/Ordinary Time/OT-08A/Antiphons/OT-08A_Antiphons_REJOICE.pdf",
+      "source": "local",
+      "category": "antiphon"
+    },
+    {
+      "id": "psalms--psalms-ordinary-time-ot-08a-antiphons-rejoice-ot08-behold-i-am-with-you-always-",
+      "type": "audio",
+      "label": "Communion: Behold I Am With You Always 8th Sunday In",
+      "filePath": "_psalms/Ordinary Time/OT-08A/Antiphons/REJOICE_OT08 Behold_I_Am_With_You_Always_8th_Sunday_In_Ordinary_Time_34th_Sunday_In_Ordinary_Time_Communion_Antiphon_Ii_59_205.mp3",
+      "source": "local",
+      "category": "antiphon"
+    },
+    {
+      "id": "psalms--psalms-ordinary-time-ot-08a-antiphons-rejoice-ot08-i-will-sing-to-the-lord-8th-",
+      "type": "audio",
+      "label": "Communion: I Will Sing To",
+      "filePath": "_psalms/Ordinary Time/OT-08A/Antiphons/REJOICE_OT08 I_Will_Sing_To_The_Lord_8th_Sunday_In_Ordinary_Time_Communion_Antiphon_I_58.mp3",
+      "source": "local",
+      "category": "antiphon"
+    },
+    {
+      "id": "psalms--psalms-ordinary-time-ot-08a-antiphons-rejoice-ot08-the-lord-became-my-protector",
+      "type": "audio",
+      "label": "Entrance: The Lord Became",
+      "filePath": "_psalms/Ordinary Time/OT-08A/Antiphons/REJOICE_OT08 The_Lord_Became_My_Protector_8th_Sunday_In_Ordinary_Time_Entrance_Antiphon_57.mp3",
+      "source": "local",
+      "category": "antiphon"
+    }
   ]
 }

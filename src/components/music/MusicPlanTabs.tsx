@@ -1,12 +1,13 @@
 "use client";
 
 import { useState } from "react";
-import type { MusicPlan } from "@/lib/types";
+import type { MusicPlan, ResolvedSong } from "@/lib/types";
 import OrderOfWorship from "./OrderOfWorship";
 
 interface MusicPlanTabsProps {
   plans: MusicPlan[];
   seasonColor: string;
+  resolvedSongs?: Record<string, ResolvedSong>;
 }
 
 const COMMUNITY_ORDER = [
@@ -20,6 +21,7 @@ const COMMUNITY_ORDER = [
 export default function MusicPlanTabs({
   plans,
   seasonColor,
+  resolvedSongs,
 }: MusicPlanTabsProps) {
   const sorted = [...plans].sort(
     (a, b) =>
@@ -72,7 +74,7 @@ export default function MusicPlanTabs({
       </div>
 
       {/* Content */}
-      <OrderOfWorship plan={activePlan} seasonColor={seasonColor} />
+      <OrderOfWorship plan={activePlan} seasonColor={seasonColor} resolvedSongs={resolvedSongs} />
     </div>
   );
 }

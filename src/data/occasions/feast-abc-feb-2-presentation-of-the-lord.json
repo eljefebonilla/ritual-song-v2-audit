@@ -420,5 +420,31 @@
         "description": "\"A light of revelation to the Gentiles...\""
       }
     }
+  ],
+  "occasionResources": [
+    {
+      "id": "psalms--psalms-solemnities-sol-presentationa-gospel-acclamations-ot-presentation-of-the",
+      "type": "audio",
+      "label": "Gospel Acclamation",
+      "filePath": "_psalms/Solemnities/Sol-PresentationA/Gospel Acclamations/OT Presentation of the Lord.mp3",
+      "source": "local",
+      "category": "gospel_acclamation"
+    },
+    {
+      "id": "psalms--psalms-solemnities-sol-presentationa-gospel-acclamations-sol-presentationa-gosp",
+      "type": "sheet_music",
+      "label": "Gospel Acclamation (Alonso)",
+      "filePath": "_psalms/Solemnities/Sol-PresentationA/Gospel Acclamations/Sol-PresentationA_GospelAcc_Alonso.pdf",
+      "source": "local",
+      "category": "gospel_acclamation"
+    },
+    {
+      "id": "psalms--psalms-solemnities-sol-presentationc-gospel-acclamations-sol-presentationc-gosp",
+      "type": "sheet_music",
+      "label": "Gospel Acclamation - Spirit & Psalm (Hart)",
+      "filePath": "_psalms/Solemnities/Sol-PresentationC/Gospel Acclamations/Sol-PresentationC_Gospel-Acclamation_Spirit&Psalm2025_Hart.pdf",
+      "source": "local",
+      "category": "gospel_acclamation"
+    }
   ]
 }

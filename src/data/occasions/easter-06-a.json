@@ -271,5 +271,55 @@
         "composer": "Joshua Blakesley"
       }
     }
+  ],
+  "occasionResources": [
+    {
+      "id": "psalms--psalms-easter-eas-06a-gospel-acclamations-easter-6abc-mp3",
+      "type": "audio",
+      "label": "Gospel Acclamation",
+      "filePath": "_psalms/Easter/Eas-06A/Gospel Acclamations/EASTER_6ABC.mp3",
+      "source": "local",
+      "category": "gospel_acclamation"
+    },
+    {
+      "id": "psalms--psalms-easter-eas-06a-gospel-acclamations-eas-06a-gospel-acclamation-spirit-psa",
+      "type": "sheet_music",
+      "label": "Gospel Acclamation - Spirit & Psalm (Hart)",
+      "filePath": "_psalms/Easter/Eas-06A/Gospel Acclamations/Eas-06A_Gospel-Acclamation_Spirit&Psalm2026_Hart.pdf",
+      "source": "local",
+      "category": "gospel_acclamation"
+    },
+    {
+      "id": "psalms--psalms-easter-eas-06a-gospel-acclamations-eas-06a-gospelacc-alonso-pdf",
+      "type": "sheet_music",
+      "label": "Gospel Acclamation (Alonso)",
+      "filePath": "_psalms/Easter/Eas-06A/Gospel Acclamations/Eas-06A_GospelAcc_Alonso.pdf",
+      "source": "local",
+      "category": "gospel_acclamation"
+    },
+    {
+      "id": "psalms--psalms-easter-eas-06a-antiphons-eas-06a-antiphons-rejoice-pdf",
+      "type": "sheet_music",
+      "label": "REJOICE Antiphons",
+      "filePath": "_psalms/Easter/Eas-06A/Antiphons/Eas-06A_Antiphons_REJOICE.pdf",
+      "source": "local",
+      "category": "antiphon"
+    },
+    {
+      "id": "psalms--psalms-easter-eas-06a-antiphons-rejoice-e06-if-you-love-me-keep-my-commandments",
+      "type": "audio",
+      "label": "Communion: If You Love Me Keep",
+      "filePath": "_psalms/Easter/Eas-06A/Antiphons/REJOICE_E06 If_You_Love_Me_Keep_My_Commandments_6th_Sunday_Of_Easter_Communion_Antiphon_103.mp3",
+      "source": "local",
+      "category": "antiphon"
+    },
+    {
+      "id": "psalms--psalms-easter-eas-06a-antiphons-rejoice-e06-proclaim-a-joyful-sound-and-let-it-",
+      "type": "audio",
+      "label": "Entrance: Proclaim A Joyful Sound And Let It",
+      "filePath": "_psalms/Easter/Eas-06A/Antiphons/REJOICE_E06 Proclaim_A_Joyful_Sound_And_Let_It_Be_Heard_6th_Sunday_Of_Easter_Entrance_Antiphon_102.mp3",
+      "source": "local",
+      "category": "antiphon"
+    }
   ]
 }

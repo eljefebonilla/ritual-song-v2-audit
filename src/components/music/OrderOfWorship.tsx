@@ -1,9 +1,12 @@
-import type { MusicPlan } from "@/lib/types";
+import type { MusicPlan, SongEntry, ResolvedSong } from "@/lib/types";
+import { normalizeTitle } from "@/lib/occasion-helpers";
 import SongSlot from "./SongSlot";
+import InteractiveSongSlot from "./InteractiveSongSlot";
 
 interface OrderOfWorshipProps {
   plan: MusicPlan;
   seasonColor: string;
+  resolvedSongs?: Record<string, ResolvedSong>;
 }
 
 function SectionHeader({
@@ -26,9 +29,29 @@ function SectionHeader({
   );
 }
 
+function SongRow({
+  label,
+  song,
+  resolvedSongs,
+  section,
+}: {
+  label: string;
+  song?: SongEntry;
+  resolvedSongs?: Record<string, ResolvedSong>;
+  section?: "introductory" | "word" | "eucharist" | "concluding";
+}) {
+  if (!song) return <SongSlot label={label} song={song} section={section} />;
+  const resolved = resolvedSongs?.[normalizeTitle(song.title)];
+  if (resolved) {
+    return <InteractiveSongSlot label={label} song={song} resolved={resolved} />;
+  }
+  return <SongSlot label={label} song={song} section={section} />;
+}
+
 export default function OrderOfWorship({
   plan,
   seasonColor,
+  resolvedSongs,
 }: OrderOfWorshipProps) {
   const hasAnyData =
     plan.prelude ||
@@ -45,6 +68,14 @@ export default function OrderOfWorship({
       </div>
     );
   }
+
+  // Check if psalm / GA have library matches
+  const psalmResolved = plan.responsorialPsalm
+    ? resolvedSongs?.[normalizeTitle(plan.responsorialPsalm.psalm)]
+    : undefined;
+  const gaResolved = plan.gospelAcclamation
+    ? resolvedSongs?.[normalizeTitle(plan.gospelAcclamation.title)]
+    : undefined;
 
   return (
     <div className="divide-y divide-stone-100">
@@ -66,56 +97,76 @@ export default function OrderOfWorship({
 
       {/* INTRODUCTORY RITES */}
       <SectionHeader title="Introductory Rites" color={seasonColor} />
-      <SongSlot label="Prelude" song={plan.prelude} section="introductory" />
-      <SongSlot label="Gathering" song={plan.gathering} section="introductory" />
-      <SongSlot label="Penitential Act" song={plan.penitentialAct} section="introductory" />
-      <SongSlot label="Gloria" song={plan.gloria} section="introductory" />
+      <SongRow label="Prelude" song={plan.prelude} resolvedSongs={resolvedSongs} section="introductory" />
+      <SongRow label="Gathering" song={plan.gathering} resolvedSongs={resolvedSongs} section="introductory" />
+      <SongRow label="Penitential Act" song={plan.penitentialAct} resolvedSongs={resolvedSongs} section="introductory" />
+      <SongRow label="Gloria" song={plan.gloria} resolvedSongs={resolvedSongs} section="introductory" />
 
       {/* LITURGY OF THE WORD */}
       <SectionHeader title="Liturgy of the Word" color={seasonColor} />
       {plan.responsorialPsalm && (
-        <div className="flex items-start gap-3 py-2 px-3">
-          <span className="text-[10px] uppercase tracking-wider font-semibold text-stone-400 w-28 shrink-0 pt-0.5">
-            Psalm
-          </span>
-          <div>
-            <p className="text-sm font-medium text-stone-800">
-              {plan.responsorialPsalm.psalm}
-            </p>
-            {plan.responsorialPsalm.setting && (
-              <p className="text-xs text-stone-500">
-                {plan.responsorialPsalm.setting}
+        psalmResolved ? (
+          <InteractiveSongSlot
+            label="Psalm"
+            song={{ title: plan.responsorialPsalm.psalm, description: plan.responsorialPsalm.setting }}
+            resolved={psalmResolved}
+          />
+        ) : (
+          <div className="flex items-start gap-3 py-2 px-3">
+            <span className="text-[10px] uppercase tracking-wider font-semibold text-stone-400 w-28 shrink-0 pt-0.5">
+              Psalm
+            </span>
+            <div>
+              <p className="text-sm font-medium text-stone-800">
+                {plan.responsorialPsalm.psalm}
               </p>
-            )}
+              {plan.responsorialPsalm.setting && (
+                <p className="text-xs text-stone-500">
+                  {plan.responsorialPsalm.setting}
+                </p>
+              )}
+            </div>
           </div>
-        </div>
+        )
       )}
       {plan.gospelAcclamation && (
-        <div className="flex items-start gap-3 py-2 px-3">
-          <span className="text-[10px] uppercase tracking-wider font-semibold text-stone-400 w-28 shrink-0 pt-0.5">
-            Gospel Accl.
-          </span>
-          <div>
-            <p className="text-sm font-medium text-stone-800">
-              {plan.gospelAcclamation.title}
-            </p>
-            {plan.gospelAcclamation.composer && (
-              <p className="text-xs text-stone-500">
-                {plan.gospelAcclamation.composer}
+        gaResolved ? (
+          <InteractiveSongSlot
+            label="Gospel Accl."
+            song={{
+              title: plan.gospelAcclamation.title,
+              composer: plan.gospelAcclamation.composer,
+              description: plan.gospelAcclamation.verse,
+            }}
+            resolved={gaResolved}
+          />
+        ) : (
+          <div className="flex items-start gap-3 py-2 px-3">
+            <span className="text-[10px] uppercase tracking-wider font-semibold text-stone-400 w-28 shrink-0 pt-0.5">
+              Gospel Accl.
+            </span>
+            <div>
+              <p className="text-sm font-medium text-stone-800">
+                {plan.gospelAcclamation.title}
               </p>
-            )}
-            {plan.gospelAcclamation.verse && (
-              <p className="text-xs text-stone-400 italic">
-                {plan.gospelAcclamation.verse}
-              </p>
-            )}
+              {plan.gospelAcclamation.composer && (
+                <p className="text-xs text-stone-500">
+                  {plan.gospelAcclamation.composer}
+                </p>
+              )}
+              {plan.gospelAcclamation.verse && (
+                <p className="text-xs text-stone-400 italic">
+                  {plan.gospelAcclamation.verse}
+                </p>
+              )}
+            </div>
           </div>
-        </div>
+        )
       )}
 
       {/* LITURGY OF THE EUCHARIST */}
       <SectionHeader title="Liturgy of the Eucharist" color={seasonColor} />
-      <SongSlot label="Offertory" song={plan.offertory} section="eucharist" />
+      <SongRow label="Offertory" song={plan.offertory} resolvedSongs={resolvedSongs} section="eucharist" />
       {plan.eucharisticAcclamations && (
         <div className="flex items-start gap-3 py-2 px-3">
           <span className="text-[10px] uppercase tracking-wider font-semibold text-stone-400 w-28 shrink-0 pt-0.5">
@@ -133,20 +184,21 @@ export default function OrderOfWorship({
           </div>
         </div>
       )}
-      <SongSlot label="Lord's Prayer" song={plan.lordsPrayer} section="eucharist" />
-      <SongSlot label="Fraction Rite" song={plan.fractionRite} section="eucharist" />
+      <SongRow label="Lord's Prayer" song={plan.lordsPrayer} resolvedSongs={resolvedSongs} section="eucharist" />
+      <SongRow label="Fraction Rite" song={plan.fractionRite} resolvedSongs={resolvedSongs} section="eucharist" />
       {plan.communionSongs?.map((song, i) => (
-        <SongSlot
+        <SongRow
           key={i}
           label={i === 0 ? "Communion" : `Comm. ${i + 1}`}
           song={song}
+          resolvedSongs={resolvedSongs}
           section="eucharist"
         />
       ))}
 
       {/* CONCLUDING RITES */}
       <SectionHeader title="The Concluding Rites" color={seasonColor} />
-      <SongSlot label="Sending" song={plan.sending} section="concluding" />
+      <SongRow label="Sending" song={plan.sending} resolvedSongs={resolvedSongs} section="concluding" />
     </div>
   );
 }

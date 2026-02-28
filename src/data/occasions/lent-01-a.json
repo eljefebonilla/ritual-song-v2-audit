@@ -405,5 +405,63 @@
         "description": "Lenten Sending"
       }
     }
+  ],
+  "occasionResources": [
+    {
+      "id": "psalms--psalms-lent-len-01a-gospel-acclamations-lent-1abc-mp3",
+      "type": "audio",
+      "label": "Gospel Acclamation",
+      "filePath": "_psalms/Lent/Len-01A/Gospel Acclamations/LENT_1ABC.mp3",
+      "source": "local",
+      "category": "gospel_acclamation"
+    },
+    {
+      "id": "psalms--psalms-lent-len-01a-gospel-acclamations-len-01a-gospel-acclamation-spirit-psalm",
+      "type": "sheet_music",
+      "label": "Gospel Acclamation - Spirit & Psalm (Booth)",
+      "filePath": "_psalms/Lent/Len-01A/Gospel Acclamations/Len-01A_Gospel-Acclamation_Spirit&Psalm2026_Booth.pdf",
+      "source": "local",
+      "category": "gospel_acclamation"
+    },
+    {
+      "id": "psalms--psalms-lent-len-01a-gospel-acclamations-len-01a-gospelacc-alonso-pdf",
+      "type": "sheet_music",
+      "label": "Gospel Acclamation (Alonso)",
+      "filePath": "_psalms/Lent/Len-01A/Gospel Acclamations/Len-01A_GospelAcc_Alonso.pdf",
+      "source": "local",
+      "category": "gospel_acclamation"
+    },
+    {
+      "id": "psalms--psalms-lent-len-01a-antiphons-len-01a-antiphons-rejoice-pdf",
+      "type": "sheet_music",
+      "label": "REJOICE Antiphons",
+      "filePath": "_psalms/Lent/Len-01A/Antiphons/Len-01A_Antiphons_REJOICE.pdf",
+      "source": "local",
+      "category": "antiphon"
+    },
+    {
+      "id": "psalms--psalms-lent-len-01a-antiphons-rejoice-l01-one-does-not-live-by-bread-alone-1st-",
+      "type": "audio",
+      "label": "Communion: One Does Not Live By",
+      "filePath": "_psalms/Lent/Len-01A/Antiphons/REJOICE_L01 One_Does_Not_Live_By_Bread_Alone_1st_Sunday_Of_Lent_Communion_Antiphon_I_66.mp3",
+      "source": "local",
+      "category": "antiphon"
+    },
+    {
+      "id": "psalms--psalms-lent-len-01a-antiphons-rejoice-l01-the-lord-will-conceal-you-1st-sunday-",
+      "type": "audio",
+      "label": "Communion: The Lord Will",
+      "filePath": "_psalms/Lent/Len-01A/Antiphons/REJOICE_L01 The_Lord_Will_Conceal_You_1st_Sunday_Of_Lent_Communion_Antiphon_Ii_67.mp3",
+      "source": "local",
+      "category": "antiphon"
+    },
+    {
+      "id": "psalms--psalms-lent-len-01a-antiphons-rejoice-l01-when-he-calls-on-me-1st-sunday-of-len",
+      "type": "audio",
+      "label": "Entrance: When He Calls",
+      "filePath": "_psalms/Lent/Len-01A/Antiphons/REJOICE_L01 When_He_Calls_On_Me_1st_Sunday_Of_Lent_Entrance_Antiphon_65.mp3",
+      "source": "local",
+      "category": "antiphon"
+    }
   ]
 }

@@ -216,5 +216,63 @@
         "title": "Lamb of God (Resoration)"
       }
     }
+  ],
+  "occasionResources": [
+    {
+      "id": "psalms--psalms-ordinary-time-ot-22b-gospel-acclamations-ot-8b-22b-mp3",
+      "type": "audio",
+      "label": "Gospel Acclamation",
+      "filePath": "_psalms/Ordinary Time/OT-22B/Gospel Acclamations/OT 8B 22B.mp3",
+      "source": "local",
+      "category": "gospel_acclamation"
+    },
+    {
+      "id": "psalms--psalms-ordinary-time-ot-22b-gospel-acclamations-ot-22b-gospel-acclamation-spiri",
+      "type": "sheet_music",
+      "label": "Gospel Acclamation - Spirit & Psalm (Blakesley)",
+      "filePath": "_psalms/Ordinary Time/OT-22B/Gospel Acclamations/OT-22B_Gospel-Acclamation_Spirit&Psalm2024_Blakesley.pdf",
+      "source": "local",
+      "category": "gospel_acclamation"
+    },
+    {
+      "id": "psalms--psalms-ordinary-time-ot-22b-gospel-acclamations-ot-22b-gospelacc-alonso-pdf",
+      "type": "sheet_music",
+      "label": "Gospel Acclamation (Alonso)",
+      "filePath": "_psalms/Ordinary Time/OT-22B/Gospel Acclamations/OT-22B_GospelAcc_Alonso.pdf",
+      "source": "local",
+      "category": "gospel_acclamation"
+    },
+    {
+      "id": "psalms--psalms-ordinary-time-ot-22b-antiphons-ot-22b-antiphons-rejoice-pdf",
+      "type": "sheet_music",
+      "label": "REJOICE Antiphons",
+      "filePath": "_psalms/Ordinary Time/OT-22B/Antiphons/OT-22B_Antiphons_REJOICE.pdf",
+      "source": "local",
+      "category": "antiphon"
+    },
+    {
+      "id": "psalms--psalms-ordinary-time-ot-22b-antiphons-rejoice-ot22-blessed-are-the-peacemakers-",
+      "type": "audio",
+      "label": "Communion: Blessed Are",
+      "filePath": "_psalms/Ordinary Time/OT-22B/Antiphons/REJOICE_OT22 Blessed_Are_The_Peacemakers_22nd_Sunday_In_Ordinary_Time_Communion_Antiphon_Ii_165.mp3",
+      "source": "local",
+      "category": "antiphon"
+    },
+    {
+      "id": "psalms--psalms-ordinary-time-ot-22b-antiphons-rejoice-ot22-have-mercy-on-me-o-lord-22nd",
+      "type": "audio",
+      "label": "Entrance: Have Mercy On Me O Lord",
+      "filePath": "_psalms/Ordinary Time/OT-22B/Antiphons/REJOICE_OT22 Have_Mercy_On_Me_O_Lord_22nd_Sunday_In_Ordinary_Time_Entrance_Antiphon_163.mp3",
+      "source": "local",
+      "category": "antiphon"
+    },
+    {
+      "id": "psalms--psalms-ordinary-time-ot-22b-antiphons-rejoice-ot22-how-great-is-the-goodness-22",
+      "type": "audio",
+      "label": "Communion: How Great Is",
+      "filePath": "_psalms/Ordinary Time/OT-22B/Antiphons/REJOICE_OT22 How_Great_Is_The_Goodness_22nd_Sunday_In_Ordinary_Time_Communion_Antiphon_I_164.mp3",
+      "source": "local",
+      "category": "antiphon"
+    }
   ]
 }

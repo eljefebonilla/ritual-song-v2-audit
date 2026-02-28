@@ -216,5 +216,63 @@
         "title": "Lamb of God (Resoration)"
       }
     }
+  ],
+  "occasionResources": [
+    {
+      "id": "psalms--psalms-ordinary-time-ot-21b-gospel-acclamations-ot-15c-21b-mp3",
+      "type": "audio",
+      "label": "Gospel Acclamation",
+      "filePath": "_psalms/Ordinary Time/OT-21B/Gospel Acclamations/OT 15C 21B.mp3",
+      "source": "local",
+      "category": "gospel_acclamation"
+    },
+    {
+      "id": "psalms--psalms-ordinary-time-ot-21b-gospel-acclamations-ot-21b-gospel-acclamation-spiri",
+      "type": "sheet_music",
+      "label": "Gospel Acclamation - Spirit & Psalm (Angrisano)",
+      "filePath": "_psalms/Ordinary Time/OT-21B/Gospel Acclamations/OT-21B_Gospel-Acclamation_Spirit&Psalm2024_Angrisano.pdf",
+      "source": "local",
+      "category": "gospel_acclamation"
+    },
+    {
+      "id": "psalms--psalms-ordinary-time-ot-21b-gospel-acclamations-ot-21b-gospelacc-alonso-pdf",
+      "type": "sheet_music",
+      "label": "Gospel Acclamation (Alonso)",
+      "filePath": "_psalms/Ordinary Time/OT-21B/Gospel Acclamations/OT-21B_GospelAcc_Alonso.pdf",
+      "source": "local",
+      "category": "gospel_acclamation"
+    },
+    {
+      "id": "psalms--psalms-ordinary-time-ot-21b-antiphons-ot-21b-antiphons-rejoice-pdf",
+      "type": "sheet_music",
+      "label": "REJOICE Antiphons",
+      "filePath": "_psalms/Ordinary Time/OT-21B/Antiphons/OT-21B_Antiphons_REJOICE.pdf",
+      "source": "local",
+      "category": "antiphon"
+    },
+    {
+      "id": "psalms--psalms-ordinary-time-ot-21b-antiphons-rejoice-ot21-the-earth-is-replete-with-th",
+      "type": "audio",
+      "label": "Communion: The Earth Is Replete With",
+      "filePath": "_psalms/Ordinary Time/OT-21B/Antiphons/REJOICE_OT21 The_Earth_Is_Replete_With_The_Fruits_21st_Sunday_In_Ordinary_Time_Communion_Antiphon_I_161.mp3",
+      "source": "local",
+      "category": "antiphon"
+    },
+    {
+      "id": "psalms--psalms-ordinary-time-ot-21b-antiphons-rejoice-ot21-turn-your-ear-o-lord-21st-su",
+      "type": "audio",
+      "label": "Entrance: Turn Your Ear O Lord",
+      "filePath": "_psalms/Ordinary Time/OT-21B/Antiphons/REJOICE_OT21 Turn_Your_Ear_O_Lord_21st_Sunday_In_Ordinary_Time_Entrance_Antiphon_160.mp3",
+      "source": "local",
+      "category": "antiphon"
+    },
+    {
+      "id": "psalms--psalms-ordinary-time-ot-21b-antiphons-rejoice-ot21-whoever-eats-my-flesh-and-dr",
+      "type": "audio",
+      "label": "Communion: Whoever Eats My Flesh And Drinks My Blood Has",
+      "filePath": "_psalms/Ordinary Time/OT-21B/Antiphons/REJOICE_OT21 Whoever_Eats_My_Flesh_And_Drinks_My_Blood_Has_Eternal_Life_21st_Sunday_In_Ordinary_Time_Communion_Antiphon_Ii_162.mp3",
+      "source": "local",
+      "category": "antiphon"
+    }
   ]
 }

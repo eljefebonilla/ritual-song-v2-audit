@@ -216,5 +216,63 @@
         "title": "Lamb of God (Resoration)"
       }
     }
+  ],
+  "occasionResources": [
+    {
+      "id": "psalms--psalms-ordinary-time-ot-16a-gospel-acclamations-ot-6a-14a-16a-mp3",
+      "type": "audio",
+      "label": "Gospel Acclamation",
+      "filePath": "_psalms/Ordinary Time/OT-16A/Gospel Acclamations/OT 6A 14A 16A.mp3",
+      "source": "local",
+      "category": "gospel_acclamation"
+    },
+    {
+      "id": "psalms--psalms-ordinary-time-ot-16a-gospel-acclamations-ot-16a-gospel-acclamation-spiri",
+      "type": "sheet_music",
+      "label": "Gospel Acclamation - Spirit & Psalm (Stephan)",
+      "filePath": "_psalms/Ordinary Time/OT-16A/Gospel Acclamations/OT-16A_Gospel-Acclamation_Spirit&Psalm2026_Stephan.pdf",
+      "source": "local",
+      "category": "gospel_acclamation"
+    },
+    {
+      "id": "psalms--psalms-ordinary-time-ot-16a-gospel-acclamations-ot-16a-gospelacc-ot-alonso-pdf",
+      "type": "sheet_music",
+      "label": "Gospel Acclamation (Alonso)",
+      "filePath": "_psalms/Ordinary Time/OT-16A/Gospel Acclamations/OT-16A_GospelAcc-OT_Alonso.pdf",
+      "source": "local",
+      "category": "gospel_acclamation"
+    },
+    {
+      "id": "psalms--psalms-ordinary-time-ot-16a-antiphons-ot-16a-antiphons-rejoice-pdf",
+      "type": "sheet_music",
+      "label": "REJOICE Antiphons",
+      "filePath": "_psalms/Ordinary Time/OT-16A/Antiphons/OT-16A_Antiphons_REJOICE.pdf",
+      "source": "local",
+      "category": "antiphon"
+    },
+    {
+      "id": "psalms--psalms-ordinary-time-ot-16a-antiphons-rejoice-ot16-behold-i-stand-at-the-door-1",
+      "type": "audio",
+      "label": "Communion: Behold I Stand At",
+      "filePath": "_psalms/Ordinary Time/OT-16A/Antiphons/REJOICE_OT16 Behold_I_Stand_At_The_Door_16th_Sunday_In_Ordinary_Time_Communion_Antiphon_Ii_147.mp3",
+      "source": "local",
+      "category": "antiphon"
+    },
+    {
+      "id": "psalms--psalms-ordinary-time-ot-16a-antiphons-rejoice-ot16-see-i-have-god-for-my-help-1",
+      "type": "audio",
+      "label": "Entrance: See I Have God For",
+      "filePath": "_psalms/Ordinary Time/OT-16A/Antiphons/REJOICE_OT16 See_I_Have_God_For_My_Help_16th_Sunday_In_Ordinary_Time_Entrance_Antiphon_145.mp3",
+      "source": "local",
+      "category": "antiphon"
+    },
+    {
+      "id": "psalms--psalms-ordinary-time-ot-16a-antiphons-rejoice-ot16-the-lord-the-gracious-the-me",
+      "type": "audio",
+      "label": "Communion: The Lord The Gracious",
+      "filePath": "_psalms/Ordinary Time/OT-16A/Antiphons/REJOICE_OT16 The_Lord_The_Gracious_The_Merciful_16th_Sunday_In_Ordinary_Time_Communion_Antiphon_I_146.mp3",
+      "source": "local",
+      "category": "antiphon"
+    }
   ]
 }

@@ -202,5 +202,63 @@
         "composer": "Andrews, Arr. Bonilla • Lockwood • Fajardo"
       }
     }
+  ],
+  "occasionResources": [
+    {
+      "id": "psalms--psalms-ordinary-time-ot-12b-gospel-acclamations-ot-12b-17b-mp3",
+      "type": "audio",
+      "label": "Gospel Acclamation",
+      "filePath": "_psalms/Ordinary Time/OT-12B/Gospel Acclamations/OT 12B 17B.mp3",
+      "source": "local",
+      "category": "gospel_acclamation"
+    },
+    {
+      "id": "psalms--psalms-ordinary-time-ot-12b-gospel-acclamations-ot-12b-gospel-acclamation-spiri",
+      "type": "sheet_music",
+      "label": "Gospel Acclamation - Spirit & Psalm (Stephan)",
+      "filePath": "_psalms/Ordinary Time/OT-12B/Gospel Acclamations/OT-12B_Gospel-Acclamation_Spirit&Psalm2024_Stephan.pdf",
+      "source": "local",
+      "category": "gospel_acclamation"
+    },
+    {
+      "id": "psalms--psalms-ordinary-time-ot-12b-gospel-acclamations-ot-12b-gospelacc-alonso-pdf",
+      "type": "sheet_music",
+      "label": "Gospel Acclamation (Alonso)",
+      "filePath": "_psalms/Ordinary Time/OT-12B/Gospel Acclamations/OT-12B_GospelAcc_Alonso.pdf",
+      "source": "local",
+      "category": "gospel_acclamation"
+    },
+    {
+      "id": "psalms--psalms-ordinary-time-ot-12b-antiphons-ot-12b-antiphons-rejoice-pdf",
+      "type": "sheet_music",
+      "label": "REJOICE Antiphons",
+      "filePath": "_psalms/Ordinary Time/OT-12B/Antiphons/OT-12B_Antiphons_REJOICE.pdf",
+      "source": "local",
+      "category": "antiphon"
+    },
+    {
+      "id": "psalms--psalms-ordinary-time-ot-12b-antiphons-rejoice-ot12-i-am-the-good-shepherd-and-i",
+      "type": "audio",
+      "label": "Communion: I Am The Good Shepherd And I Lay Down",
+      "filePath": "_psalms/Ordinary Time/OT-12B/Antiphons/REJOICE_OT12 I_Am_The_Good_Shepherd_And_I_Lay_Down_My_Life_12th_Sunday_In_Ordinary_Time_Communion_Antiphon_Ii_135.mp3",
+      "source": "local",
+      "category": "antiphon"
+    },
+    {
+      "id": "psalms--psalms-ordinary-time-ot-12b-antiphons-rejoice-ot12-the-eyes-of-all-look-to-you-",
+      "type": "audio",
+      "label": "Communion: The Eyes Of All Look",
+      "filePath": "_psalms/Ordinary Time/OT-12B/Antiphons/REJOICE_OT12 The_Eyes_Of_All_Look_To_You_12th_Sunday_In_Ordinary_Time_Communion_Antiphon_I_134.mp3",
+      "source": "local",
+      "category": "antiphon"
+    },
+    {
+      "id": "psalms--psalms-ordinary-time-ot-12b-antiphons-rejoice-ot12-the-lord-is-the-strength-of-",
+      "type": "audio",
+      "label": "Entrance: The Lord Is The Strength Of",
+      "filePath": "_psalms/Ordinary Time/OT-12B/Antiphons/REJOICE_OT12 The_Lord_Is_The_Strength_Of_His_People_12th_Sunday_In_Ordinary_Time_Entrance_Antiphon_133.mp3",
+      "source": "local",
+      "category": "antiphon"
+    }
   ]
 }

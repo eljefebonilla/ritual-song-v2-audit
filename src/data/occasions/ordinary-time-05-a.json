@@ -445,5 +445,63 @@
         "description": "Gospel | “lamps lit”"
       }
     }
+  ],
+  "occasionResources": [
+    {
+      "id": "psalms--psalms-ordinary-time-ot-05a-gospel-acclamations-ot-5a-mp3",
+      "type": "audio",
+      "label": "Gospel Acclamation",
+      "filePath": "_psalms/Ordinary Time/OT-05A/Gospel Acclamations/OT 5A.mp3",
+      "source": "local",
+      "category": "gospel_acclamation"
+    },
+    {
+      "id": "psalms--psalms-ordinary-time-ot-05a-gospel-acclamations-ot-05a-gospel-acclamation-spiri",
+      "type": "sheet_music",
+      "label": "Gospel Acclamation - Spirit & Psalm (Blakesley)",
+      "filePath": "_psalms/Ordinary Time/OT-05A/Gospel Acclamations/OT-05A_Gospel-Acclamation_Spirit&Psalm2026_Blakesley.pdf",
+      "source": "local",
+      "category": "gospel_acclamation"
+    },
+    {
+      "id": "psalms--psalms-ordinary-time-ot-05a-gospel-acclamations-ot-05a-gospelacc-ot-alonso-pdf",
+      "type": "sheet_music",
+      "label": "Gospel Acclamation (Alonso)",
+      "filePath": "_psalms/Ordinary Time/OT-05A/Gospel Acclamations/OT-05A_GospelAcc-OT_Alonso.pdf",
+      "source": "local",
+      "category": "gospel_acclamation"
+    },
+    {
+      "id": "psalms--psalms-ordinary-time-ot-05a-antiphons-ot-05a-antiphons-rejoice-pdf",
+      "type": "sheet_music",
+      "label": "REJOICE Antiphons",
+      "filePath": "_psalms/Ordinary Time/OT-05A/Antiphons/OT-05A_Antiphons_REJOICE.pdf",
+      "source": "local",
+      "category": "antiphon"
+    },
+    {
+      "id": "psalms--psalms-ordinary-time-ot-05a-antiphons-rejoice-ot05-blessed-are-those-who-mourn-",
+      "type": "audio",
+      "label": "Communion: Blessed Are Those",
+      "filePath": "_psalms/Ordinary Time/OT-05A/Antiphons/REJOICE_OT05 Blessed_Are_Those_Who_Mourn_5th_Sunday_In_Ordinary_Time_Communion_Antiphon_Ii_50.mp3",
+      "source": "local",
+      "category": "antiphon"
+    },
+    {
+      "id": "psalms--psalms-ordinary-time-ot-05a-antiphons-rejoice-ot05-let-them-thank-the-lord-for-",
+      "type": "audio",
+      "label": "Communion: Let Them Thank The Lord For",
+      "filePath": "_psalms/Ordinary Time/OT-05A/Antiphons/REJOICE_OT05 Let_Them_Thank_The_Lord_For_His_Mercy_5th_Sunday_In_Ordinary_Time_Communion_Antiphon_I_49.mp3",
+      "source": "local",
+      "category": "antiphon"
+    },
+    {
+      "id": "psalms--psalms-ordinary-time-ot-05a-antiphons-rejoice-ot05-o-come-let-us-worship-god-5t",
+      "type": "audio",
+      "label": "Entrance: O Come Let Us",
+      "filePath": "_psalms/Ordinary Time/OT-05A/Antiphons/REJOICE_OT05 O_Come_Let_Us_Worship_God_5th_Sunday_In_Ordinary_Time_Entrance_Antiphon_48.mp3",
+      "source": "local",
+      "category": "antiphon"
+    }
   ]
 }

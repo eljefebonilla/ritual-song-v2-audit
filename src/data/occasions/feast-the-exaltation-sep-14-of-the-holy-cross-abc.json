@@ -422,5 +422,31 @@
         "composer": "CRUCIFER • Nicholson • Arr. by David Lockwood"
       }
     }
+  ],
+  "occasionResources": [
+    {
+      "id": "psalms--psalms-solemnities-sol-exaltation-holy-crossa-gospel-acclamations-ot-exaltation",
+      "type": "audio",
+      "label": "Gospel Acclamation",
+      "filePath": "_psalms/Solemnities/Sol-Exaltation-Holy-CrossA/Gospel Acclamations/OT Exaltation of HC.mp3",
+      "source": "local",
+      "category": "gospel_acclamation"
+    },
+    {
+      "id": "psalms--psalms-solemnities-sol-exaltation-holy-crossa-gospel-acclamations-sol-exaltatio",
+      "type": "sheet_music",
+      "label": "Gospel Acclamation (Alonso)",
+      "filePath": "_psalms/Solemnities/Sol-Exaltation-Holy-CrossA/Gospel Acclamations/Sol-Exaltation-Holy-CrossA_GospelAcc_Alonso.pdf",
+      "source": "local",
+      "category": "gospel_acclamation"
+    },
+    {
+      "id": "psalms--psalms-solemnities-sol-exaltation-holy-crossc-gospel-acclamations-sol-exaltatio",
+      "type": "sheet_music",
+      "label": "Gospel Acclamation - Spirit & Psalm (Stephan)",
+      "filePath": "_psalms/Solemnities/Sol-Exaltation-Holy-CrossC/Gospel Acclamations/Sol-Exaltation-Holy-CrossC_Gospel-Acclamation_Spirit&Psalm2025_Stephan.pdf",
+      "source": "local",
+      "category": "gospel_acclamation"
+    }
   ]
 }

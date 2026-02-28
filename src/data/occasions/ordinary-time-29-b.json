@@ -220,5 +220,63 @@
         "title": "Lamb of God (Resoration)"
       }
     }
+  ],
+  "occasionResources": [
+    {
+      "id": "psalms--psalms-ordinary-time-ot-29b-gospel-acclamations-ot-29b-mp3",
+      "type": "audio",
+      "label": "Gospel Acclamation",
+      "filePath": "_psalms/Ordinary Time/OT-29B/Gospel Acclamations/OT 29B.mp3",
+      "source": "local",
+      "category": "gospel_acclamation"
+    },
+    {
+      "id": "psalms--psalms-ordinary-time-ot-29b-gospel-acclamations-ot-29b-gospel-acclamation-spiri",
+      "type": "sheet_music",
+      "label": "Gospel Acclamation - Spirit & Psalm (Booth)",
+      "filePath": "_psalms/Ordinary Time/OT-29B/Gospel Acclamations/OT-29B_Gospel-Acclamation_Spirit&Psalm2024_Booth.pdf",
+      "source": "local",
+      "category": "gospel_acclamation"
+    },
+    {
+      "id": "psalms--psalms-ordinary-time-ot-29b-gospel-acclamations-ot-29b-gospelacc-alonso-pdf",
+      "type": "sheet_music",
+      "label": "Gospel Acclamation (Alonso)",
+      "filePath": "_psalms/Ordinary Time/OT-29B/Gospel Acclamations/OT-29B_GospelAcc_Alonso.pdf",
+      "source": "local",
+      "category": "gospel_acclamation"
+    },
+    {
+      "id": "psalms--psalms-ordinary-time-ot-29b-antiphons-ot-29b-antiphons-rejoice-pdf",
+      "type": "sheet_music",
+      "label": "REJOICE Antiphons",
+      "filePath": "_psalms/Ordinary Time/OT-29B/Antiphons/OT-29B_Antiphons_REJOICE.pdf",
+      "source": "local",
+      "category": "antiphon"
+    },
+    {
+      "id": "psalms--psalms-ordinary-time-ot-29b-antiphons-rejoice-ot29-behold-the-eyes-of-the-lord-",
+      "type": "audio",
+      "label": "Communion: Behold The Eyes Of",
+      "filePath": "_psalms/Ordinary Time/OT-29B/Antiphons/REJOICE_OT29 Behold_The_Eyes_Of_The_Lord_29th_Sunday_In_Ordinary_Time_Communion_Antiphon_I_185.mp3",
+      "source": "local",
+      "category": "antiphon"
+    },
+    {
+      "id": "psalms--psalms-ordinary-time-ot-29b-antiphons-rejoice-ot29-the-son-of-man-has-come-29th",
+      "type": "audio",
+      "label": "Communion: The Son Of Man",
+      "filePath": "_psalms/Ordinary Time/OT-29B/Antiphons/REJOICE_OT29 The_Son_Of_Man_Has_Come_29th_Sunday_In_Ordinary_Time_Communion_Antiphon_Ii_186.mp3",
+      "source": "local",
+      "category": "antiphon"
+    },
+    {
+      "id": "psalms--psalms-ordinary-time-ot-29b-antiphons-rejoice-ot29-to-you-i-call-for-you-will-s",
+      "type": "audio",
+      "label": "Entrance: To You I Call For You Will Surely Heed",
+      "filePath": "_psalms/Ordinary Time/OT-29B/Antiphons/REJOICE_OT29 To_You_I_Call_For_You_Will_Surely_Heed_Meguard_Me_29th_Sunday_In_Ordinary_Time_Entrance_Antiphon_184.mp3",
+      "source": "local",
+      "category": "antiphon"
+    }
   ]
 }

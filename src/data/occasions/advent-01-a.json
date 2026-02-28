@@ -387,5 +387,55 @@
         "description": "Gospel"
       }
     }
+  ],
+  "occasionResources": [
+    {
+      "id": "psalms--psalms-advent-adv-01a-gospel-acclamations-advent-1abc-mp3",
+      "type": "audio",
+      "label": "Gospel Acclamation",
+      "filePath": "_psalms/Advent/Adv-01A/Gospel Acclamations/ADVENT_1ABC.mp3",
+      "source": "local",
+      "category": "gospel_acclamation"
+    },
+    {
+      "id": "psalms--psalms-advent-adv-01a-gospel-acclamations-adv-01a-gospel-acclamation-spirit-psa",
+      "type": "sheet_music",
+      "label": "Gospel Acclamation - Spirit & Psalm (Hart)",
+      "filePath": "_psalms/Advent/Adv-01A/Gospel Acclamations/Adv-01A_Gospel-Acclamation_Spirit&Psalm2026_Hart.pdf",
+      "source": "local",
+      "category": "gospel_acclamation"
+    },
+    {
+      "id": "psalms--psalms-advent-adv-01a-gospel-acclamations-adv-01a-gospelacc-alonso-pdf",
+      "type": "sheet_music",
+      "label": "Gospel Acclamation (Alonso)",
+      "filePath": "_psalms/Advent/Adv-01A/Gospel Acclamations/Adv-01A_GospelAcc_Alonso.pdf",
+      "source": "local",
+      "category": "gospel_acclamation"
+    },
+    {
+      "id": "psalms--psalms-advent-adv-01a-antiphons-adv-01a-antiphons-rejoice-pdf",
+      "type": "sheet_music",
+      "label": "REJOICE Antiphons",
+      "filePath": "_psalms/Advent/Adv-01A/Antiphons/Adv-01A_Antiphons_REJOICE.pdf",
+      "source": "local",
+      "category": "antiphon"
+    },
+    {
+      "id": "psalms--psalms-advent-adv-01a-antiphons-rejoice-a01-the-lord-will-bestow-his-bounty-1st",
+      "type": "audio",
+      "label": "Communion: The Lord Will Bestow",
+      "filePath": "_psalms/Advent/Adv-01A/Antiphons/REJOICE_A01 The_Lord_Will_Bestow_His_Bounty_1st_Sunday_Of_Advent_Communion_Antiphon_7.mp3",
+      "source": "local",
+      "category": "antiphon"
+    },
+    {
+      "id": "psalms--psalms-advent-adv-01a-antiphons-rejoice-a01-to-you-i-lift-up-my-soul-1st-sunday",
+      "type": "audio",
+      "label": "Entrance: To You I Lift Up",
+      "filePath": "_psalms/Advent/Adv-01A/Antiphons/REJOICE_A01 To_You_I_Lift_Up_My_Soul_1st_Sunday_Of_Advent_Entrance_Antiphon_6.mp3",
+      "source": "local",
+      "category": "antiphon"
+    }
   ]
 }

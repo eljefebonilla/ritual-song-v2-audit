@@ -211,5 +211,55 @@
         "title": "Lamb of God (Resoration)"
       }
     }
+  ],
+  "occasionResources": [
+    {
+      "id": "psalms--psalms-ordinary-time-ot-26a-gospel-acclamations-ot-12c-16b-20c-26a-mp3",
+      "type": "audio",
+      "label": "Gospel Acclamation",
+      "filePath": "_psalms/Ordinary Time/OT-26A/Gospel Acclamations/OT 12C 16B 20C 26A.mp3",
+      "source": "local",
+      "category": "gospel_acclamation"
+    },
+    {
+      "id": "psalms--psalms-ordinary-time-ot-26a-gospel-acclamations-ot-26a-gospelacc-ot-alonso-pdf",
+      "type": "sheet_music",
+      "label": "Gospel Acclamation (Alonso)",
+      "filePath": "_psalms/Ordinary Time/OT-26A/Gospel Acclamations/OT-26A_GospelAcc-OT_Alonso.pdf",
+      "source": "local",
+      "category": "gospel_acclamation"
+    },
+    {
+      "id": "psalms--psalms-ordinary-time-ot-26a-antiphons-ot-26a-antiphons-rejoice-pdf",
+      "type": "sheet_music",
+      "label": "REJOICE Antiphons",
+      "filePath": "_psalms/Ordinary Time/OT-26A/Antiphons/OT-26A_Antiphons_REJOICE.pdf",
+      "source": "local",
+      "category": "antiphon"
+    },
+    {
+      "id": "psalms--psalms-ordinary-time-ot-26a-antiphons-rejoice-ot26-all-that-you-have-done-to-us",
+      "type": "audio",
+      "label": "Entrance: All That You Have Done",
+      "filePath": "_psalms/Ordinary Time/OT-26A/Antiphons/REJOICE_OT26 All_That_You_Have_Done_To_Us_26th_Sunday_In_Ordinary_Time_Entrance_Antiphon_175.mp3",
+      "source": "local",
+      "category": "antiphon"
+    },
+    {
+      "id": "psalms--psalms-ordinary-time-ot-26a-antiphons-rejoice-ot26-by-this-we-came-to-know-26th",
+      "type": "audio",
+      "label": "Communion: By This We Came",
+      "filePath": "_psalms/Ordinary Time/OT-26A/Antiphons/REJOICE_OT26 By_This_We_Came_To_Know_26th_Sunday_In_Ordinary_Time_Communion_Antiphon_Ii_177.mp3",
+      "source": "local",
+      "category": "antiphon"
+    },
+    {
+      "id": "psalms--psalms-ordinary-time-ot-26a-antiphons-rejoice-ot26-remember-your-word-to-your-s",
+      "type": "audio",
+      "label": "Communion: Remember Your Word To",
+      "filePath": "_psalms/Ordinary Time/OT-26A/Antiphons/REJOICE_OT26 Remember_Your_Word_To_Your_Servant_26th_Sunday_In_Ordinary_Time_Communion_Antiphon_I_176.mp3",
+      "source": "local",
+      "category": "antiphon"
+    }
   ]
 }

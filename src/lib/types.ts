@@ -91,8 +91,20 @@ export interface LiturgicalOccasion {
   // Planning notes
   planningNotes: string[];
 
+  // Occasion-specific resources (gospel acclamations, antiphon recordings, etc.)
+  occasionResources?: OccasionResource[];
+
   // Music plans (one per community)
   musicPlans: MusicPlan[];
+}
+
+export interface OccasionResource {
+  id: string;
+  type: "sheet_music" | "audio";
+  label: string;
+  filePath: string;
+  source: "local";
+  category: "antiphon" | "gospel_acclamation";
 }
 
 export interface SeasonGroup {
@@ -168,4 +180,11 @@ export interface LibrarySong {
   resources: SongResource[];
   usageCount: number; // how many times this song appears in music plans
   occasions: string[]; // occasion IDs where this song is used
+}
+
+export interface ResolvedSong {
+  id: string;
+  audioUrl: string | null;
+  audioType: "audio" | "youtube" | null;
+  title: string;
 }

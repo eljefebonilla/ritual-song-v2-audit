@@ -216,5 +216,63 @@
         "title": "Lamb of God (Resoration)"
       }
     }
+  ],
+  "occasionResources": [
+    {
+      "id": "psalms--psalms-ordinary-time-ot-17b-gospel-acclamations-ot-12b-17b-mp3",
+      "type": "audio",
+      "label": "Gospel Acclamation",
+      "filePath": "_psalms/Ordinary Time/OT-17B/Gospel Acclamations/OT 12B 17B.mp3",
+      "source": "local",
+      "category": "gospel_acclamation"
+    },
+    {
+      "id": "psalms--psalms-ordinary-time-ot-17b-gospel-acclamations-ot-17b-gospel-acclamation-spiri",
+      "type": "sheet_music",
+      "label": "Gospel Acclamation - Spirit & Psalm (Stephan)",
+      "filePath": "_psalms/Ordinary Time/OT-17B/Gospel Acclamations/OT-17B_Gospel-Acclamation_Spirit&Psalm2024_Stephan.pdf",
+      "source": "local",
+      "category": "gospel_acclamation"
+    },
+    {
+      "id": "psalms--psalms-ordinary-time-ot-17b-gospel-acclamations-ot-17b-gospelacc-alonso-pdf",
+      "type": "sheet_music",
+      "label": "Gospel Acclamation (Alonso)",
+      "filePath": "_psalms/Ordinary Time/OT-17B/Gospel Acclamations/OT-17B_GospelAcc_Alonso.pdf",
+      "source": "local",
+      "category": "gospel_acclamation"
+    },
+    {
+      "id": "psalms--psalms-ordinary-time-ot-17b-antiphons-ot-17b-antiphons-rejoice-pdf",
+      "type": "sheet_music",
+      "label": "REJOICE Antiphons",
+      "filePath": "_psalms/Ordinary Time/OT-17B/Antiphons/OT-17B_Antiphons_REJOICE.pdf",
+      "source": "local",
+      "category": "antiphon"
+    },
+    {
+      "id": "psalms--psalms-ordinary-time-ot-17b-antiphons-rejoice-ot17-bless-the-lord-o-my-soul-and",
+      "type": "audio",
+      "label": "Communion: Bless The Lord O My Soul And",
+      "filePath": "_psalms/Ordinary Time/OT-17B/Antiphons/REJOICE_OT17 Bless_The_Lord_O_My_Soul_And_Never_Forget_17th_Sunday_In_Ordinary_Time_Communion_Antiphon_I_149.mp3",
+      "source": "local",
+      "category": "antiphon"
+    },
+    {
+      "id": "psalms--psalms-ordinary-time-ot-17b-antiphons-rejoice-ot17-blessed-are-the-merciful-17t",
+      "type": "audio",
+      "label": "Communion: Blessed Are",
+      "filePath": "_psalms/Ordinary Time/OT-17B/Antiphons/REJOICE_OT17 Blessed_Are_The_Merciful_17th_Sunday_In_Ordinary_Time_Communion_Antiphon_Ii_150.mp3",
+      "source": "local",
+      "category": "antiphon"
+    },
+    {
+      "id": "psalms--psalms-ordinary-time-ot-17b-antiphons-rejoice-ot17-god-is-in-his-holy-place-17t",
+      "type": "audio",
+      "label": "Entrance: God Is In His",
+      "filePath": "_psalms/Ordinary Time/OT-17B/Antiphons/REJOICE_OT17 God_Is_In_His_Holy_Place_17th_Sunday_In_Ordinary_Time_Entrance_Antiphon_148.mp3",
+      "source": "local",
+      "category": "antiphon"
+    }
   ]
 }

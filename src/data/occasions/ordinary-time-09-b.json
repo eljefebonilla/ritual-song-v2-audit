@@ -182,5 +182,55 @@
         "composer": "Andrews, Arr. Bonilla • Lockwood • Fajardo"
       }
     }
+  ],
+  "occasionResources": [
+    {
+      "id": "psalms--psalms-ordinary-time-ot-09b-gospel-acclamations-ot-9b-26b-mp3",
+      "type": "audio",
+      "label": "Gospel Acclamation",
+      "filePath": "_psalms/Ordinary Time/OT-09B/Gospel Acclamations/OT 9B 26B.mp3",
+      "source": "local",
+      "category": "gospel_acclamation"
+    },
+    {
+      "id": "psalms--psalms-ordinary-time-ot-09b-gospel-acclamations-ot-09b-gospelacc-alonso-pdf",
+      "type": "sheet_music",
+      "label": "Gospel Acclamation (Alonso)",
+      "filePath": "_psalms/Ordinary Time/OT-09B/Gospel Acclamations/OT-09B_GospelAcc_Alonso.pdf",
+      "source": "local",
+      "category": "gospel_acclamation"
+    },
+    {
+      "id": "psalms--psalms-ordinary-time-ot-09b-antiphons-ot-09b-antiphons-rejoice-pdf",
+      "type": "sheet_music",
+      "label": "REJOICE Antiphons",
+      "filePath": "_psalms/Ordinary Time/OT-09B/Antiphons/OT-09B_Antiphons_REJOICE.pdf",
+      "source": "local",
+      "category": "antiphon"
+    },
+    {
+      "id": "psalms--psalms-ordinary-time-ot-09b-antiphons-rejoice-ot09-amen-i-say-to-you-whatever-y",
+      "type": "audio",
+      "label": "Communion: Amen I Say To You Whatever You",
+      "filePath": "_psalms/Ordinary Time/OT-09B/Antiphons/REJOICE_OT09 Amen_I_Say_To_You_Whatever_You_Ask_For_9th_Sunday_In_Ordinary_Time_Communion_Antiphon_Ii_62.mp3",
+      "source": "local",
+      "category": "antiphon"
+    },
+    {
+      "id": "psalms--psalms-ordinary-time-ot-09b-antiphons-rejoice-ot09-to-you-i-call-for-you-will-s",
+      "type": "audio",
+      "label": "Communion: To You I Call For You Will Surely",
+      "filePath": "_psalms/Ordinary Time/OT-09B/Antiphons/REJOICE_OT09 To_You_I_Call_For_You_Will_Surely_Heed_Me_9th_Sunday_In_Ordinary_Time_Communion_Antiphon_I_61.mp3",
+      "source": "local",
+      "category": "antiphon"
+    },
+    {
+      "id": "psalms--psalms-ordinary-time-ot-09b-antiphons-rejoice-ot09-turn-to-me-and-have-mercy-9t",
+      "type": "audio",
+      "label": "Entrance: Turn To Me And",
+      "filePath": "_psalms/Ordinary Time/OT-09B/Antiphons/REJOICE_OT09 Turn_To_Me_And_Have_Mercy_9th_Sunday_In_Ordinary_Time_Entrance_Antiphon_60.mp3",
+      "source": "local",
+      "category": "antiphon"
+    }
   ]
 }

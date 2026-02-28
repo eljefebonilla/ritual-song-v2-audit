@@ -82,5 +82,63 @@
   "planningNotes": [
     "Not in 2027 and 2032 because it lands on a Sunday."
   ],
-  "musicPlans": []
+  "musicPlans": [],
+  "occasionResources": [
+    {
+      "id": "psalms--psalms-solemnities-sol-guadalupea-gospel-acclamations-sol-guadalupea-gospel-acc",
+      "type": "sheet_music",
+      "label": "Gospel Acclamation - Spirit & Psalm (Hart)",
+      "filePath": "_psalms/Solemnities/Sol-GuadalupeA/Gospel Acclamations/Sol-GuadalupeA_Gospel-Acclamation_Spirit&Psalm2026_Hart.pdf",
+      "source": "local",
+      "category": "gospel_acclamation"
+    },
+    {
+      "id": "psalms--psalms-solemnities-sol-guadalupea-antiphons-rejoice-mary-a-great-sign-appeared-",
+      "type": "audio",
+      "label": "Entrance: A Great Sign Appeared In The Sky Our Lady",
+      "filePath": "_psalms/Solemnities/Sol-GuadalupeA/Antiphons/REJOICE_MARY A_Great_Sign_Appeared_In_The_Sky_Our_Lady_Of_Guadalupe_Entrance_Antiphon_3.mp3",
+      "source": "local",
+      "category": "antiphon"
+    },
+    {
+      "id": "psalms--psalms-solemnities-sol-guadalupea-antiphons-rejoice-mary-god-has-not-acted-thus",
+      "type": "audio",
+      "label": "Communion: God Has Not Acted Thus For Any Other Nation Our Lady",
+      "filePath": "_psalms/Solemnities/Sol-GuadalupeA/Antiphons/REJOICE_MARY God_Has_Not_Acted_Thus_For_Any_Other_Nation_Our_Lady_Of_Guadalupe_Communion_Antiphon_Ii_5.mp3",
+      "source": "local",
+      "category": "antiphon"
+    },
+    {
+      "id": "psalms--psalms-solemnities-sol-guadalupea-antiphons-rejoice-mary-the-lord-has-cast-down",
+      "type": "audio",
+      "label": "Communion: The Lord Has Cast Down The Mighty Our Lady",
+      "filePath": "_psalms/Solemnities/Sol-GuadalupeA/Antiphons/REJOICE_MARY The_Lord_Has_Cast_Down_The_Mighty_Our_Lady_Of_Guadalupe_Communion_Antiphon_I_4.mp3",
+      "source": "local",
+      "category": "antiphon"
+    },
+    {
+      "id": "psalms--psalms-solemnities-sol-guadalupea-antiphons-sol-guadalupea-antiphons-rejoice-pd",
+      "type": "sheet_music",
+      "label": "REJOICE Antiphons",
+      "filePath": "_psalms/Solemnities/Sol-GuadalupeA/Antiphons/Sol-GuadalupeA_Antiphons_REJOICE.pdf",
+      "source": "local",
+      "category": "antiphon"
+    },
+    {
+      "id": "psalms--psalms-solemnities-sol-guadalupeb-gospel-acclamations-sol-guadalupeb-gospel-acc",
+      "type": "sheet_music",
+      "label": "Gospel Acclamation - Spirit & Psalm (Hart)",
+      "filePath": "_psalms/Solemnities/Sol-GuadalupeB/Gospel Acclamations/Sol-GuadalupeB_Gospel-Acclamation_Spirit&Psalm2024_Hart.pdf",
+      "source": "local",
+      "category": "gospel_acclamation"
+    },
+    {
+      "id": "psalms--psalms-solemnities-sol-guadalupec-gospel-acclamations-sol-guadalupec-gospel-acc",
+      "type": "sheet_music",
+      "label": "Gospel Acclamation - Spirit & Psalm (Hart)",
+      "filePath": "_psalms/Solemnities/Sol-GuadalupeC/Gospel Acclamations/Sol-GuadalupeC_Gospel-Acclamation_Spirit&Psalm2025_Hart.pdf",
+      "source": "local",
+      "category": "gospel_acclamation"
+    }
+  ]
 }

@@ -430,5 +430,63 @@
         "description": "Good News to all the world!"
       }
     }
+  ],
+  "occasionResources": [
+    {
+      "id": "psalms--psalms-ordinary-time-ot-20c-gospel-acclamations-ot-12c-16b-20c-26a-mp3",
+      "type": "audio",
+      "label": "Gospel Acclamation",
+      "filePath": "_psalms/Ordinary Time/OT-20C/Gospel Acclamations/OT 12C 16B 20C 26A.mp3",
+      "source": "local",
+      "category": "gospel_acclamation"
+    },
+    {
+      "id": "psalms--psalms-ordinary-time-ot-20c-gospel-acclamations-ot-20c-gospel-acclamation-spiri",
+      "type": "sheet_music",
+      "label": "Gospel Acclamation - Spirit & Psalm (Blakesley)",
+      "filePath": "_psalms/Ordinary Time/OT-20C/Gospel Acclamations/OT-20C_Gospel-Acclamation_Spirit&Psalm2025_Blakesley.pdf",
+      "source": "local",
+      "category": "gospel_acclamation"
+    },
+    {
+      "id": "psalms--psalms-ordinary-time-ot-20c-gospel-acclamations-ot-20c-gospelacc-ot-alonso-pdf",
+      "type": "sheet_music",
+      "label": "Gospel Acclamation (Alonso)",
+      "filePath": "_psalms/Ordinary Time/OT-20C/Gospel Acclamations/OT-20C_GospelAcc-OT_Alonso.pdf",
+      "source": "local",
+      "category": "gospel_acclamation"
+    },
+    {
+      "id": "psalms--psalms-ordinary-time-ot-20c-antiphons-ot-20c-antiphons-rejoice-pdf",
+      "type": "sheet_music",
+      "label": "REJOICE Antiphons",
+      "filePath": "_psalms/Ordinary Time/OT-20C/Antiphons/OT-20C_Antiphons_REJOICE.pdf",
+      "source": "local",
+      "category": "antiphon"
+    },
+    {
+      "id": "psalms--psalms-ordinary-time-ot-20c-antiphons-rejoice-ot20-i-am-the-living-bread-20th-s",
+      "type": "audio",
+      "label": "Communion: I Am The",
+      "filePath": "_psalms/Ordinary Time/OT-20C/Antiphons/REJOICE_OT20 I_Am_The_Living_Bread_20th_Sunday_In_Ordinary_Time_Communion_Antiphon_Ii_159.mp3",
+      "source": "local",
+      "category": "antiphon"
+    },
+    {
+      "id": "psalms--psalms-ordinary-time-ot-20c-antiphons-rejoice-ot20-turn-your-eyes-o-god-our-shi",
+      "type": "audio",
+      "label": "Entrance: Turn Your Eyes O God",
+      "filePath": "_psalms/Ordinary Time/OT-20C/Antiphons/REJOICE_OT20 Turn_Your_Eyes_O_God_Our_Shield_20th_Sunday_In_Ordinary_Time_Entrance_Antiphon_157.mp3",
+      "source": "local",
+      "category": "antiphon"
+    },
+    {
+      "id": "psalms--psalms-ordinary-time-ot-20c-antiphons-rejoice-ot20-with-the-lord-there-is-mercy",
+      "type": "audio",
+      "label": "Communion: With The Lord There",
+      "filePath": "_psalms/Ordinary Time/OT-20C/Antiphons/REJOICE_OT20 With_The_Lord_There_Is_Mercy_20th_Sunday_In_Ordinary_Time_Communion_Antiphon_I_158.mp3",
+      "source": "local",
+      "category": "antiphon"
+    }
   ]
 }

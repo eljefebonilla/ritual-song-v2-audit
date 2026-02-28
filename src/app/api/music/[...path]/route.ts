@@ -9,6 +9,8 @@ const MUSIC_DIR = join(
   "Music"
 );
 
+const PSALMS_DIR = join(process.cwd(), "..", "Organized Psalms");
+
 const MIME_TYPES: Record<string, string> = {
   ".pdf": "application/pdf",
   ".mp3": "audio/mpeg",
@@ -39,10 +41,18 @@ export async function GET(
     return NextResponse.json({ error: "Invalid path" }, { status: 400 });
   }
 
-  const filePath = join(MUSIC_DIR, decodeURIComponent(relativePath));
+  // Route _psalms/ paths to Organized Psalms directory
+  let resolvedDir = MUSIC_DIR;
+  let resolvedRelative = relativePath;
+  if (relativePath.startsWith("_psalms/")) {
+    resolvedDir = PSALMS_DIR;
+    resolvedRelative = relativePath.slice("_psalms/".length);
+  }
 
-  // Verify file is within MUSIC_DIR
-  if (!filePath.startsWith(MUSIC_DIR)) {
+  const filePath = join(resolvedDir, decodeURIComponent(resolvedRelative));
+
+  // Verify file is within the resolved directory
+  if (!filePath.startsWith(resolvedDir)) {
     return NextResponse.json({ error: "Invalid path" }, { status: 400 });
   }
 
