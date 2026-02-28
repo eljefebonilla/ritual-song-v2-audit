@@ -126,25 +126,17 @@ function SongSlotRow({
   if (slot.resolvedSong) {
     const isSelected = selectedSongId === slot.resolvedSong.id;
     return (
-      <>
-        <InteractiveSongSlot
-          label={slot.label}
-          song={slot.song}
-          resolved={slot.resolvedSong}
-          isSelected={isSelected}
-          onSelect={onSongSelect ? () => onSongSelect(slot.resolvedSong!.id) : undefined}
-        />
-        <InlineResources slot={slot} seasonColor={seasonColor} />
-      </>
+      <InteractiveSongSlot
+        label={slot.label}
+        song={slot.song}
+        resolved={slot.resolvedSong}
+        isSelected={isSelected}
+        onSelect={onSongSelect ? () => onSongSelect(slot.resolvedSong!.id) : undefined}
+      />
     );
   }
 
-  return (
-    <>
-      <SongSlot label={slot.label} song={slot.song} />
-      <InlineResources slot={slot} seasonColor={seasonColor} />
-    </>
-  );
+  return <SongSlot label={slot.label} song={slot.song} />;
 }
 
 export default function SlotList({

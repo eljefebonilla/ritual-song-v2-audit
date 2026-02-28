@@ -47,40 +47,30 @@ export default function InteractiveSongSlot({
       <span className="text-[10px] uppercase tracking-wider font-semibold text-stone-400 w-28 shrink-0 pt-0.5">
         {label}
       </span>
-      <div className="min-w-0 flex-1">
-        <div className="flex items-center gap-1.5">
-          <p className="text-sm font-medium text-stone-800 leading-snug">
-            {song.title}
-          </p>
-          <span className="flex items-center gap-1 shrink-0">
-            {resolved.audioUrl && resolved.audioType && (
-              <button
-                onClick={handleToggle}
-                className="w-6 h-6 flex items-center justify-center rounded-full transition-all active:scale-95"
-                title={isPlaying ? "Stop" : "Play"}
-                style={isPlaying ? {
-                  background: "linear-gradient(145deg, #4CAF5020, #4CAF5010)",
-                  border: "2px solid #4CAF50",
-                  boxShadow: "0 0 8px #4CAF5030, 0 1px 4px #4CAF5020",
-                } : {
-                  background: "linear-gradient(145deg, #4CAF500a, transparent)",
-                  border: "2px solid #4CAF50",
-                  boxShadow: "0 1px 4px #4CAF5015",
-                }}
-              >
-                {isPlaying ? (
-                  <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="#4CAF50" strokeWidth="3">
-                    <rect x="4" y="4" width="16" height="16" rx="2" />
-                  </svg>
-                ) : (
-                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#4CAF50" strokeWidth="2.5" strokeLinejoin="round">
-                    <polygon points="6,3 20,12 6,21" />
-                  </svg>
-                )}
-              </button>
+      {/* Play bullet column */}
+      <span className="w-3 shrink-0 flex items-center justify-center pt-0.5">
+        {resolved.audioUrl && resolved.audioType && (
+          <button
+            onClick={handleToggle}
+            className="transition-opacity hover:opacity-70 active:scale-90"
+            title={isPlaying ? "Stop" : "Play"}
+          >
+            {isPlaying ? (
+              <svg width="9" height="9" viewBox="0 0 24 24" fill="#4CAF50" stroke="none">
+                <rect x="4" y="4" width="16" height="16" rx="2" />
+              </svg>
+            ) : (
+              <svg width="9" height="9" viewBox="0 0 24 24" fill="#4CAF50" stroke="none">
+                <polygon points="5,2 21,12 5,22" />
+              </svg>
             )}
-          </span>
-        </div>
+          </button>
+        )}
+      </span>
+      <div className="min-w-0 flex-1">
+        <p className="text-sm font-medium text-stone-800 leading-snug">
+          {song.title}
+        </p>
         {song.composer && (
           <p className="text-xs text-stone-500">{song.composer}</p>
         )}
