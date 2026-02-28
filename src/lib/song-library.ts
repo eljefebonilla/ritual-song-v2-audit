@@ -1,4 +1,4 @@
-import type { LibrarySong, SongResource, SongCategory, ResourceDisplayCategory, MusicPlan, ResolvedSong } from "./types";
+import type { LibrarySong, SongResource, SongCategory, ResourceDisplayCategory, MusicPlan, ResolvedSong, OccasionResource } from "./types";
 import { normalizeTitle } from "./occasion-helpers";
 
 let songLibraryData: LibrarySong[] | null = null;
@@ -179,25 +179,79 @@ function findPlayableResource(song: LibrarySong): { url: string; type: "audio" |
 }
 
 /**
+ * Build a Record<normalizedTitle, LibrarySong> for all songs referenced in music plans.
+ * Used by the occasion page detail panel.
+ */
+export function resolveFullSongs(plans: MusicPlan[]): Record<string, LibrarySong> {
+  const index = getTitleIndex();
+  const result: Record<string, LibrarySong> = {};
+
+  function tryAdd(title: string) {
+    const key = normalizeTitle(title);
+    if (result[key]) return;
+    const song = index.get(key);
+    if (song) result[key] = song;
+  }
+
+  for (const plan of plans) {
+    const songFields: (keyof MusicPlan)[] = [
+      "prelude", "gathering", "penitentialAct", "gloria",
+      "offertory", "lordsPrayer", "fractionRite", "sending",
+    ];
+    for (const field of songFields) {
+      const val = plan[field];
+      if (val && typeof val === "object" && "title" in val) {
+        tryAdd((val as { title: string }).title);
+      }
+    }
+    if (plan.gospelAcclamation?.title) tryAdd(plan.gospelAcclamation.title);
+    if (plan.responsorialPsalm?.psalm) tryAdd(plan.responsorialPsalm.psalm);
+    if (plan.communionSongs) {
+      for (const s of plan.communionSongs) tryAdd(s.title);
+    }
+  }
+
+  return result;
+}
+
+/**
  * Resolve all song titles in an array of MusicPlans against the song library.
+ * Optionally injects audio from occasionResources for GA rows that lack it.
  * Returns Record<normalizedTitle, ResolvedSong>.
  */
-export function resolveAllSongs(plans: MusicPlan[]): Record<string, ResolvedSong> {
+export function resolveAllSongs(
+  plans: MusicPlan[],
+  occasionResources?: OccasionResource[],
+): Record<string, ResolvedSong> {
   const index = getTitleIndex();
   const result: Record<string, ResolvedSong> = {};
 
-  function tryResolve(title: string) {
+  // Find GA audio from occasion resources (if available)
+  const gaAudioUrl = occasionResources
+    ?.find((r) => r.category === "gospel_acclamation" && r.type === "audio")
+    ?.filePath;
+
+  function tryResolve(title: string, category?: "gospel_acclamation") {
     const key = normalizeTitle(title);
     if (result[key]) return; // already resolved
     const song = index.get(key);
     if (!song) return;
 
     const playable = findPlayableResource(song);
+
+    // If no audio from song library and this is a GA, use occasion resource audio
+    let audioUrl = playable?.url ?? null;
+    let audioType = playable?.type ?? null;
+    if (!audioUrl && category === "gospel_acclamation" && gaAudioUrl) {
+      audioUrl = `/api/music/${encodeURIComponent(gaAudioUrl)}`;
+      audioType = "audio";
+    }
+
     result[key] = {
       id: song.id,
       title: song.title,
-      audioUrl: playable?.url ?? null,
-      audioType: playable?.type ?? null,
+      audioUrl,
+      audioType,
     };
   }
 
@@ -214,9 +268,9 @@ export function resolveAllSongs(plans: MusicPlan[]): Record<string, ResolvedSong
       }
     }
 
-    // Gospel acclamation
+    // Gospel acclamation — pass category so occasion audio can be injected
     if (plan.gospelAcclamation?.title) {
-      tryResolve(plan.gospelAcclamation.title);
+      tryResolve(plan.gospelAcclamation.title, "gospel_acclamation");
     }
 
     // Responsorial psalm

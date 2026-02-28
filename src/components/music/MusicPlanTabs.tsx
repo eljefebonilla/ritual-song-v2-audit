@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import type { MusicPlan, ResolvedSong } from "@/lib/types";
+import { COMMUNITY_BADGES } from "@/lib/occasion-helpers";
 import OrderOfWorship from "./OrderOfWorship";
 
 interface MusicPlanTabsProps {
@@ -46,15 +47,21 @@ export default function MusicPlanTabs({
             plan.offertory ||
             plan.sending;
 
+          const badge = COMMUNITY_BADGES[plan.communityId];
+
           return (
             <button
               key={plan.communityId}
               onClick={() => setActiveIdx(i)}
               className={`relative px-4 py-2.5 text-xs font-semibold uppercase tracking-wider transition-colors ${
                 isActive
-                  ? "text-stone-900 bg-white"
-                  : "text-stone-400 hover:text-stone-600"
+                  ? ""
+                  : "hover:opacity-80"
               }`}
+              style={{
+                color: isActive ? badge?.text ?? "#1c1917" : "#a8a29e",
+                backgroundColor: isActive ? badge?.bg : undefined,
+              }}
             >
               <span className="flex items-center gap-1.5">
                 {plan.community}
@@ -65,7 +72,7 @@ export default function MusicPlanTabs({
               {isActive && (
                 <span
                   className="absolute bottom-0 left-0 right-0 h-0.5"
-                  style={{ backgroundColor: seasonColor }}
+                  style={{ backgroundColor: badge?.text ?? seasonColor }}
                 />
               )}
             </button>

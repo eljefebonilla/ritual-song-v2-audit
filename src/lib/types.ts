@@ -188,3 +188,38 @@ export interface ResolvedSong {
   audioType: "audio" | "youtube" | null;
   title: string;
 }
+
+// ===== WORSHIP SLOT TYPES =====
+
+export type SlotKind = "song" | "reading" | "antiphon" | "mass_setting" | "resource" | "note";
+
+export interface WorshipSlot {
+  id: string;
+  section: "pre_mass" | "introductory" | "word" | "eucharist" | "concluding";
+  role: string;
+  label: string;
+  kind: SlotKind;
+  order: number;
+
+  // Song slots
+  song?: SongEntry;
+  resolvedSong?: ResolvedSong;
+
+  // Psalm slots
+  psalm?: { psalm: string; setting?: string };
+
+  // Mass setting slots
+  massSetting?: { name: string; composer?: string };
+
+  // Reading slots
+  reading?: Reading;
+
+  // Antiphon slots
+  antiphon?: Antiphon;
+
+  // Occasion resources (GA audio, antiphon PDFs)
+  resources?: OccasionResource[];
+
+  // Annotations
+  annotations?: string[];
+}

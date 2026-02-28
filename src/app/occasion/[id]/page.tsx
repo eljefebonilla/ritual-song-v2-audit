@@ -2,8 +2,8 @@ import { notFound } from "next/navigation";
 import Link from "next/link";
 import { getOccasion, getAllOccasions } from "@/lib/data";
 import { SEASON_COLORS } from "@/lib/liturgical-colors";
-import { resolveAllSongs } from "@/lib/song-library";
-import MusicPlanTabs from "@/components/music/MusicPlanTabs";
+import { resolveAllSongs, resolveFullSongs } from "@/lib/song-library";
+import OccasionMusicSection from "@/components/music/OccasionMusicSection";
 
 export function generateStaticParams() {
   return getAllOccasions().map((o) => ({ id: o.id }));
@@ -20,10 +20,11 @@ export default async function OccasionPage({
   if (!occasion) notFound();
 
   const colors = SEASON_COLORS[occasion.season] || SEASON_COLORS.ordinary;
-  const resolvedSongs = resolveAllSongs(occasion.musicPlans);
+  const resolvedSongs = resolveAllSongs(occasion.musicPlans, occasion.occasionResources);
+  const librarySongs = resolveFullSongs(occasion.musicPlans);
 
   return (
-    <div className="p-4 pt-14 md:p-8 md:pt-8 max-w-4xl">
+    <div className="p-4 pt-14 md:p-8 md:pt-8 max-w-5xl">
       {/* Breadcrumb */}
       <div className="flex items-center gap-2 text-xs text-stone-400 mb-4">
         <Link href="/" className="hover:text-stone-600">
@@ -77,73 +78,6 @@ export default async function OccasionPage({
         </div>
       )}
 
-      {/* Readings */}
-      {occasion.readings.length > 0 && (
-        <div className="mb-6">
-          <h2 className="text-xs uppercase tracking-widest font-bold text-stone-400 mb-2">
-            Readings
-          </h2>
-          <div className="space-y-3">
-            {occasion.readings.map((r, i) => (
-              <div
-                key={i}
-                className="border border-stone-200 rounded-lg p-3 bg-white"
-              >
-                <div className="flex items-center gap-2">
-                  <span
-                    className="text-[10px] uppercase tracking-wider font-bold px-2 py-0.5 rounded"
-                    style={{
-                      backgroundColor: colors.primary + "15",
-                      color: colors.primary,
-                    }}
-                  >
-                    {r.type.replace("_", " ")}
-                  </span>
-                  <span className="text-sm font-semibold text-stone-800">
-                    {r.citation}
-                  </span>
-                </div>
-                {r.summary && (
-                  <p className="text-sm text-stone-600 mt-1">{r.summary}</p>
-                )}
-                {r.antiphon && (
-                  <p className="text-sm text-stone-500 mt-1 italic">
-                    &ldquo;{r.antiphon}&rdquo;
-                  </p>
-                )}
-              </div>
-            ))}
-          </div>
-        </div>
-      )}
-
-      {/* Antiphons */}
-      {occasion.antiphons.length > 0 && (
-        <div className="mb-6">
-          <h2 className="text-xs uppercase tracking-widest font-bold text-stone-400 mb-2">
-            Antiphons
-          </h2>
-          <div className="space-y-3">
-            {occasion.antiphons.map((a, i) => (
-              <div
-                key={i}
-                className="border border-stone-200 rounded-lg p-3 bg-white"
-              >
-                <span className="text-[10px] uppercase tracking-wider font-bold text-stone-400">
-                  {a.type} — Option {a.option}
-                </span>
-                <p className="text-sm font-medium text-stone-700 mt-1">
-                  {a.citation}
-                </p>
-                <p className="text-sm text-stone-600 italic mt-0.5">
-                  &ldquo;{a.text}&rdquo;
-                </p>
-              </div>
-            ))}
-          </div>
-        </div>
-      )}
-
       {/* Planning Notes */}
       {occasion.planningNotes.length > 0 && (
         <div className="mb-6">
@@ -160,20 +94,17 @@ export default async function OccasionPage({
         </div>
       )}
 
-      {/* Music Plans */}
+      {/* Order of Worship — unified music + readings + antiphons + resources */}
       {occasion.musicPlans.length > 0 && (
-        <div className="mt-10">
-          <h2 className="text-lg font-bold text-stone-900 mb-4">
-            Music Plans
-          </h2>
-          <div className="border border-stone-200 rounded-lg overflow-hidden bg-white">
-            <MusicPlanTabs
-              plans={occasion.musicPlans}
-              seasonColor={colors.primary}
-              resolvedSongs={resolvedSongs}
-            />
-          </div>
-        </div>
+        <OccasionMusicSection
+          plans={occasion.musicPlans}
+          readings={occasion.readings}
+          antiphons={occasion.antiphons}
+          occasionResources={occasion.occasionResources}
+          seasonColor={colors.primary}
+          resolvedSongs={resolvedSongs}
+          librarySongs={librarySongs}
+        />
       )}
     </div>
   );
