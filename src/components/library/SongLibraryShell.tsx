@@ -90,6 +90,7 @@ export default function SongLibraryShell({ songs, title = "Song Library", subtit
   const [newTitle, setNewTitle] = useState("");
   const [newComposer, setNewComposer] = useState("");
   const [savingNew, setSavingNew] = useState(false);
+  const [duplicateWarning, setDuplicateWarning] = useState<{ id: string; title: string; composer: string | null; resourceCount: number; usageCount: number }[] | null>(null);
   const [filtersVisible, setFiltersVisible] = useState(true);
   const listRef = useRef<HTMLDivElement>(null);
 
@@ -110,11 +111,17 @@ export default function SongLibraryShell({ songs, title = "Song Library", subtit
   const [calendarSongMeta, setCalendarSongMeta] = useState<Map<string, { positions: Set<string>; communities: Set<string> }> | null>(null);
   const [loadingOccasion, setLoadingOccasion] = useState(false);
 
-  // Build a normalized title -> song id lookup for fuzzy matching
+  // Build a normalized title -> song ids lookup for fuzzy matching
   const normalizedTitleIndex = useMemo(() => {
-    const map = new Map<string, string>();
+    const map = new Map<string, string[]>();
     for (const song of songs) {
-      map.set(normalizeTitle(song.title), song.id);
+      const key = normalizeTitle(song.title);
+      const existing = map.get(key);
+      if (existing) {
+        existing.push(song.id);
+      } else {
+        map.set(key, [song.id]);
+      }
     }
     return map;
   }, [songs]);
@@ -170,16 +177,18 @@ export default function SongLibraryShell({ songs, title = "Song Library", subtit
           const positioned = extractSongEntriesWithPosition(plan);
           for (const { entry: songEntry, position } of positioned) {
             const normalized = normalizeTitle(songEntry.title);
-            const id = normalizedTitleIndex.get(normalized);
-            if (id) {
-              matchedIds.add(id);
-              let m = meta.get(id);
-              if (!m) {
-                m = { positions: new Set(), communities: new Set() };
-                meta.set(id, m);
+            const ids = normalizedTitleIndex.get(normalized);
+            if (ids) {
+              for (const id of ids) {
+                matchedIds.add(id);
+                let m = meta.get(id);
+                if (!m) {
+                  m = { positions: new Set(), communities: new Set() };
+                  meta.set(id, m);
+                }
+                m.positions.add(position);
+                m.communities.add(plan.communityId);
               }
-              m.positions.add(position);
-              m.communities.add(plan.communityId);
             }
           }
         }
@@ -529,7 +538,7 @@ export default function SongLibraryShell({ songs, title = "Song Library", subtit
       {/* Add Song Dialog */}
       {addingSong && (
         <>
-          <div className="fixed inset-0 bg-black/40 z-50" onClick={() => setAddingSong(false)} />
+          <div className="fixed inset-0 bg-black/40 z-50" onClick={() => { setAddingSong(false); setDuplicateWarning(null); }} />
           <div className="fixed inset-0 z-50 flex items-center justify-center p-4">
             <div className="bg-white rounded-lg shadow-xl w-full max-w-sm p-5">
               <h2 className="text-base font-bold text-stone-900 mb-4">Add Song</h2>
@@ -539,7 +548,7 @@ export default function SongLibraryShell({ songs, title = "Song Library", subtit
                   <input
                     type="text"
                     value={newTitle}
-                    onChange={(e) => setNewTitle(e.target.value)}
+                    onChange={(e) => { setNewTitle(e.target.value); setDuplicateWarning(null); }}
                     className="w-full text-sm border border-stone-200 rounded-md px-3 py-2 focus:outline-none focus:ring-1 focus:ring-stone-400"
                     placeholder="Song title"
                     autoFocus
@@ -556,37 +565,89 @@ export default function SongLibraryShell({ songs, title = "Song Library", subtit
                   />
                 </div>
               </div>
+
+              {/* Duplicate warning */}
+              {duplicateWarning && (
+                <div className="mt-3 p-3 bg-amber-50 border border-amber-200 rounded-md">
+                  <p className="text-xs font-medium text-amber-800 mb-2">
+                    Potential duplicates found:
+                  </p>
+                  <div className="space-y-1.5">
+                    {duplicateWarning.map((m) => (
+                      <div key={m.id} className="text-xs text-amber-700 bg-white rounded px-2 py-1.5 border border-amber-100">
+                        <span className="font-medium">{m.title}</span>
+                        {m.composer && <span className="text-amber-500"> — {m.composer}</span>}
+                        <span className="text-amber-400 ml-1">
+                          ({m.resourceCount} resources, used {m.usageCount}x)
+                        </span>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              )}
+
               <div className="flex gap-2 mt-4 justify-end">
                 <button
-                  onClick={() => { setAddingSong(false); setNewTitle(""); setNewComposer(""); }}
+                  onClick={() => { setAddingSong(false); setNewTitle(""); setNewComposer(""); setDuplicateWarning(null); }}
                   className="px-4 py-2 text-sm text-stone-600 hover:bg-stone-100 rounded-md"
                 >
                   Cancel
                 </button>
-                <button
-                  disabled={savingNew || !newTitle.trim()}
-                  onClick={async () => {
-                    setSavingNew(true);
-                    try {
-                      const res = await fetch("/api/songs", {
-                        method: "POST",
-                        headers: { "Content-Type": "application/json" },
-                        body: JSON.stringify({ title: newTitle.trim(), composer: newComposer.trim() || undefined }),
-                      });
-                      if (res.ok) {
-                        setAddingSong(false);
-                        setNewTitle("");
-                        setNewComposer("");
-                        window.location.reload();
+                {duplicateWarning ? (
+                  <button
+                    disabled={savingNew}
+                    onClick={async () => {
+                      setSavingNew(true);
+                      try {
+                        const res = await fetch("/api/songs?force=true", {
+                          method: "POST",
+                          headers: { "Content-Type": "application/json" },
+                          body: JSON.stringify({ title: newTitle.trim(), composer: newComposer.trim() || undefined }),
+                        });
+                        if (res.ok) {
+                          setAddingSong(false);
+                          setNewTitle("");
+                          setNewComposer("");
+                          setDuplicateWarning(null);
+                          window.location.reload();
+                        }
+                      } finally {
+                        setSavingNew(false);
                       }
-                    } finally {
-                      setSavingNew(false);
-                    }
-                  }}
-                  className="px-4 py-2 text-sm font-medium text-white bg-stone-900 rounded-md hover:bg-stone-800 disabled:opacity-50"
-                >
-                  {savingNew ? "Adding..." : "Add Song"}
-                </button>
+                    }}
+                    className="px-4 py-2 text-sm font-medium text-white bg-amber-600 rounded-md hover:bg-amber-700 disabled:opacity-50"
+                  >
+                    {savingNew ? "Adding..." : "Create Anyway"}
+                  </button>
+                ) : (
+                  <button
+                    disabled={savingNew || !newTitle.trim()}
+                    onClick={async () => {
+                      setSavingNew(true);
+                      try {
+                        const res = await fetch("/api/songs", {
+                          method: "POST",
+                          headers: { "Content-Type": "application/json" },
+                          body: JSON.stringify({ title: newTitle.trim(), composer: newComposer.trim() || undefined }),
+                        });
+                        const data = await res.json();
+                        if (data.warning === "potential_duplicates") {
+                          setDuplicateWarning(data.matches);
+                        } else if (res.ok) {
+                          setAddingSong(false);
+                          setNewTitle("");
+                          setNewComposer("");
+                          window.location.reload();
+                        }
+                      } finally {
+                        setSavingNew(false);
+                      }
+                    }}
+                    className="px-4 py-2 text-sm font-medium text-white bg-stone-900 rounded-md hover:bg-stone-800 disabled:opacity-50"
+                  >
+                    {savingNew ? "Adding..." : "Add Song"}
+                  </button>
+                )}
               </div>
             </div>
           </div>

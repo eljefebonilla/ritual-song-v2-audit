@@ -128,17 +128,93 @@ export function getSongDisplayCategories(song: LibrarySong): Set<ResourceDisplay
 }
 
 /**
- * Build a Map<normalizedTitle, LibrarySong> for fast title matching.
+ * Build a Map<normalizedTitle, LibrarySong[]> for fast title matching.
+ * Groups all songs that share the same normalized title.
  */
-let _titleIndex: Map<string, LibrarySong> | null = null;
+let _titleIndex: Map<string, LibrarySong[]> | null = null;
 
-export function getTitleIndex(): Map<string, LibrarySong> {
+export function getTitleIndex(): Map<string, LibrarySong[]> {
   if (_titleIndex) return _titleIndex;
   _titleIndex = new Map();
   for (const song of getSongLibrary()) {
-    _titleIndex.set(normalizeTitle(song.title), song);
+    const key = normalizeTitle(song.title);
+    const existing = _titleIndex.get(key);
+    if (existing) {
+      existing.push(song);
+    } else {
+      _titleIndex.set(key, [song]);
+    }
   }
   return _titleIndex;
+}
+
+/**
+ * Normalize a composer name for comparison.
+ * Strips religious titles, "Arr. by", punctuation, collapses whitespace.
+ */
+export function normalizeComposer(composer: string): string {
+  return composer
+    .toLowerCase()
+    .replace(/\b(sj|rsm|csp|op|osb|csc|osf|cj|ofm|ssj|ssnd|bvm|ihm|rscj|ocd)\b/gi, "")
+    .replace(/\barr\.?\s*by\b/gi, "")
+    .replace(/[^\w\s]/g, "")
+    .replace(/\s+/g, " ")
+    .trim();
+}
+
+/**
+ * Token-based overlap score (0-1) between two composer strings.
+ * Splits on whitespace, counts shared tokens (length > 2),
+ * divides by the smaller token count.
+ */
+export function composerSimilarity(a: string, b: string): number {
+  const tokensA = normalizeComposer(a).split(" ").filter((t) => t.length > 2);
+  const tokensB = normalizeComposer(b).split(" ").filter((t) => t.length > 2);
+  if (tokensA.length === 0 || tokensB.length === 0) return 0;
+
+  const setB = new Set(tokensB);
+  const shared = tokensA.filter((t) => setB.has(t)).length;
+  return shared / Math.min(tokensA.length, tokensB.length);
+}
+
+/**
+ * Pick the best match from a list of candidate songs sharing the same normalized title.
+ * Uses composer hint for disambiguation when available.
+ */
+export function pickBestMatch(candidates: LibrarySong[], composerHint?: string): LibrarySong | null {
+  if (candidates.length === 0) return null;
+  if (candidates.length === 1) return candidates[0];
+
+  if (composerHint) {
+    // Exact normalized composer match
+    const normHint = normalizeComposer(composerHint);
+    const exact = candidates.find(
+      (c) => c.composer && normalizeComposer(c.composer) === normHint
+    );
+    if (exact) return exact;
+
+    // Fuzzy composer match — pick highest score above threshold
+    let bestScore = 0;
+    let bestMatch: LibrarySong | null = null;
+    for (const c of candidates) {
+      if (!c.composer) continue;
+      const score = composerSimilarity(composerHint, c.composer);
+      if (score > bestScore) {
+        bestScore = score;
+        bestMatch = c;
+      }
+    }
+    if (bestMatch && bestScore > 0.3) return bestMatch;
+  }
+
+  // Prefer candidate with most resources
+  const withResources = [...candidates].sort(
+    (a, b) => b.resources.length - a.resources.length
+  );
+  if (withResources[0].resources.length > 0) return withResources[0];
+
+  // Fall back to highest usageCount
+  return [...candidates].sort((a, b) => b.usageCount - a.usageCount)[0];
 }
 
 /**
@@ -186,10 +262,12 @@ export function resolveFullSongs(plans: MusicPlan[]): Record<string, LibrarySong
   const index = getTitleIndex();
   const result: Record<string, LibrarySong> = {};
 
-  function tryAdd(title: string) {
+  function tryAdd(title: string, composer?: string) {
     const key = normalizeTitle(title);
     if (result[key]) return;
-    const song = index.get(key);
+    const candidates = index.get(key);
+    if (!candidates) return;
+    const song = pickBestMatch(candidates, composer);
     if (song) result[key] = song;
   }
 
@@ -201,13 +279,16 @@ export function resolveFullSongs(plans: MusicPlan[]): Record<string, LibrarySong
     for (const field of songFields) {
       const val = plan[field];
       if (val && typeof val === "object" && "title" in val) {
-        tryAdd((val as { title: string }).title);
+        const entry = val as { title: string; composer?: string };
+        tryAdd(entry.title, entry.composer);
       }
     }
-    if (plan.gospelAcclamation?.title) tryAdd(plan.gospelAcclamation.title);
+    if (plan.gospelAcclamation?.title) {
+      tryAdd(plan.gospelAcclamation.title, plan.gospelAcclamation.composer);
+    }
     if (plan.responsorialPsalm?.psalm) tryAdd(plan.responsorialPsalm.psalm);
     if (plan.communionSongs) {
-      for (const s of plan.communionSongs) tryAdd(s.title);
+      for (const s of plan.communionSongs) tryAdd(s.title, s.composer);
     }
   }
 
@@ -231,10 +312,12 @@ export function resolveAllSongs(
     ?.find((r) => r.category === "gospel_acclamation" && r.type === "audio")
     ?.filePath;
 
-  function tryResolve(title: string, category?: "gospel_acclamation") {
+  function tryResolve(title: string, composerHint?: string, category?: "gospel_acclamation") {
     const key = normalizeTitle(title);
     if (result[key]) return; // already resolved
-    const song = index.get(key);
+    const candidates = index.get(key);
+    if (!candidates) return;
+    const song = pickBestMatch(candidates, composerHint);
     if (!song) return;
 
     const playable = findPlayableResource(song);
@@ -264,13 +347,14 @@ export function resolveAllSongs(
     for (const field of songFields) {
       const val = plan[field];
       if (val && typeof val === "object" && "title" in val) {
-        tryResolve((val as { title: string }).title);
+        const entry = val as { title: string; composer?: string };
+        tryResolve(entry.title, entry.composer);
       }
     }
 
     // Gospel acclamation — pass category so occasion audio can be injected
     if (plan.gospelAcclamation?.title) {
-      tryResolve(plan.gospelAcclamation.title, "gospel_acclamation");
+      tryResolve(plan.gospelAcclamation.title, plan.gospelAcclamation.composer, "gospel_acclamation");
     }
 
     // Responsorial psalm
@@ -281,7 +365,7 @@ export function resolveAllSongs(
     // Communion songs
     if (plan.communionSongs) {
       for (const s of plan.communionSongs) {
-        tryResolve(s.title);
+        tryResolve(s.title, s.composer);
       }
     }
   }

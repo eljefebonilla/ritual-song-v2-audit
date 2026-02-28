@@ -1,6 +1,7 @@
 import { NextRequest, NextResponse } from "next/server";
 import { verifyAdmin } from "@/lib/admin";
 import { getSongLibrary } from "@/lib/song-library";
+import { normalizeTitle } from "@/lib/occasion-helpers";
 import fs from "fs";
 import path from "path";
 
@@ -70,9 +71,31 @@ export async function POST(request: NextRequest) {
     const raw = fs.readFileSync(SONG_LIBRARY_PATH, "utf-8");
     const library = JSON.parse(raw);
 
-    // Check for duplicate
+    // Check for exact slug duplicate
     if (library.some((s: { id: string }) => s.id === slug)) {
       return NextResponse.json({ error: "Song already exists" }, { status: 409 });
+    }
+
+    // Check for normalized title duplicates (unless force=true)
+    const force = new URL(request.url).searchParams.get("force") === "true";
+    if (!force) {
+      const normTitle = normalizeTitle(title.trim());
+      const matches = library.filter(
+        (s: { title: string; composer?: string; resources: unknown[]; usageCount: number }) =>
+          normalizeTitle(s.title) === normTitle
+      );
+      if (matches.length > 0) {
+        return NextResponse.json({
+          warning: "potential_duplicates",
+          matches: matches.map((s: { id: string; title: string; composer?: string; resources: unknown[]; usageCount: number }) => ({
+            id: s.id,
+            title: s.title,
+            composer: s.composer || null,
+            resourceCount: s.resources.length,
+            usageCount: s.usageCount,
+          })),
+        });
+      }
     }
 
     const newSong = {
