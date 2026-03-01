@@ -74,7 +74,14 @@ export default function DuplicateReviewShell({ groups: initialGroups, junk: init
           .filter((id) => id !== keeperId)
       ),
     ];
-    if (secondarySongIds.length === 0) return;
+    // All entries share the same song ID (community-split of a single song) —
+    // nothing to merge, just dismiss the group
+    if (secondarySongIds.length === 0) {
+      setGroups((prev) => prev.filter((g) => g.normalizedTitle !== group.normalizedTitle));
+      setExpandedGroup(null);
+      setSelectedIds([]);
+      return;
+    }
 
     setMerging(group.normalizedTitle);
     try {
