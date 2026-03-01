@@ -33,6 +33,7 @@ export async function PUT(
     if (body.title !== undefined) library[idx].title = body.title;
     if (body.composer !== undefined) library[idx].composer = body.composer || undefined;
     if (body.category !== undefined) library[idx].category = body.category;
+    if (body.recordedKey !== undefined) library[idx].recordedKey = body.recordedKey || undefined;
 
     fs.writeFileSync(SONG_LIBRARY_PATH, JSON.stringify(library, null, 2), "utf-8");
 
@@ -65,10 +66,10 @@ export async function DELETE(
       return NextResponse.json({ error: "Song not found" }, { status: 404 });
     }
 
-    library.splice(idx, 1);
+    const deletedSong = library.splice(idx, 1)[0];
     fs.writeFileSync(SONG_LIBRARY_PATH, JSON.stringify(library, null, 2), "utf-8");
 
-    return NextResponse.json({ success: true });
+    return NextResponse.json({ success: true, deletedSong });
   } catch (err) {
     const message = err instanceof Error ? err.message : "Unknown error";
     return NextResponse.json({ error: message }, { status: 500 });

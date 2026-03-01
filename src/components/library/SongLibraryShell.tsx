@@ -19,6 +19,7 @@ import LibraryFilters from "./LibraryFilters";
 
 interface SongLibraryShellProps {
   songs: LibrarySong[];
+
   title?: string;
   subtitle?: string;
 }
@@ -101,6 +102,19 @@ export default function SongLibraryShell({ songs, title = "Song Library", subtit
   const [duplicateWarning, setDuplicateWarning] = useState<{ id: string; title: string; composer: string | null; resourceCount: number; usageCount: number }[] | null>(null);
   const [filtersVisible, setFiltersVisible] = useState(true);
   const listRef = useRef<HTMLDivElement>(null);
+
+  // Supabase-uploaded audio URLs: songId → audioUrl
+  const [uploadedAudio, setUploadedAudio] = useState<Record<string, string>>({});
+  useEffect(() => {
+    const ids = songs.map((s) => s.id).join(",");
+    if (!ids) return;
+    fetch(`/api/songs/batch-audio?ids=${ids}`)
+      .then((res) => (res.ok ? res.json() : null))
+      .then((data) => {
+        if (data?.audioUrls) setUploadedAudio(data.audioUrls);
+      })
+      .catch(() => {});
+  }, [songs]);
 
   // Pre-built maps (computed before state so we can derive initial date)
   const dateOccasionMap = useMemo(() => getDateToOccasionMap(), []);
@@ -354,7 +368,7 @@ export default function SongLibraryShell({ songs, title = "Song Library", subtit
   const placedLetters = new Set<string>();
 
   return (
-    <div className="flex h-screen">
+    <div className="flex h-full">
       {/* Main content area */}
       <div className="flex-1 flex flex-col overflow-hidden">
         {/* Toolbar */}
@@ -496,7 +510,7 @@ export default function SongLibraryShell({ songs, title = "Song Library", subtit
         <div className="flex-1 flex overflow-hidden">
           {/* Filter panel — desktop sidebar, mobile expandable */}
           {filtersVisible && (
-            <div className="w-full sm:w-56 sm:shrink-0 border-r border-stone-100 bg-stone-50/50 overflow-y-auto p-3 sm:block">
+            <div className="w-full sm:w-56 sm:shrink-0 border-r border-stone-100 bg-stone-50 overflow-y-auto p-3 sm:block">
               <LibraryFilters
                 orderOfMassFilters={orderOfMassFilters}
                 seasonFilters={seasonFilters}
@@ -520,7 +534,7 @@ export default function SongLibraryShell({ songs, title = "Song Library", subtit
           {!filtersVisible && (
             <button
               onClick={() => setFiltersVisible(true)}
-              className="hidden sm:flex items-center justify-center w-8 shrink-0 border-r border-stone-100 bg-stone-50/50 hover:bg-stone-100 transition-colors"
+              className="hidden sm:flex items-center justify-center w-8 shrink-0 border-r border-stone-100 bg-stone-50 hover:bg-stone-100 transition-colors"
               title="Show filters"
             >
               <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-stone-400">
@@ -538,7 +552,7 @@ export default function SongLibraryShell({ songs, title = "Song Library", subtit
                   : "No songs in library yet."}
               </div>
             ) : (
-              <div className="flex flex-col">
+              <div className="flex flex-col pb-8">
                 {filtered.map((song) => {
                   const firstChar = song.title.charAt(0).toUpperCase();
                   const isAnchor = sort === "alpha" && /[A-Z]/.test(firstChar) && !placedLetters.has(firstChar);
@@ -556,6 +570,7 @@ export default function SongLibraryShell({ songs, title = "Song Library", subtit
                         isSelected={song.id === selectedSongId}
                         onClick={() => setSelectedSongId(song.id === selectedSongId ? null : song.id)}
                         calendarMeta={calendarSongMeta?.get(song.id) ?? null}
+                        uploadedAudioUrl={uploadedAudio[song.id]}
                       />
                     </div>
                   );

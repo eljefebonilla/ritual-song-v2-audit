@@ -10,6 +10,7 @@ import type {
 } from "@/lib/types";
 import { useUser } from "@/lib/user-context";
 import { useMedia } from "@/lib/media-context";
+import { extractChartKeys } from "@/lib/key-utils";
 import Link from "next/link";
 
 interface SongDetailPanelProps {
@@ -54,16 +55,22 @@ function ResourceLink({
   songTitle,
   isAdmin,
   onDelete,
+  songId,
+  recordedKey,
+  chartKeys,
 }: {
   resource: SongResource;
   songTitle?: string;
   isAdmin?: boolean;
   onDelete?: () => void;
+  songId?: string;
+  recordedKey?: string;
+  chartKeys?: string[];
 }) {
   const { play } = useMedia();
   const url = resourceUrl(resource);
   const isAudio = resource.type === "audio";
-  const isLocalAudio = isAudio && resource.filePath;
+  const isPlayableAudio = isAudio && (resource.filePath || resource.url);
   const isYouTube = resource.type === "youtube" && resource.url;
 
   const openInPlayer = (type: "audio" | "youtube", mediaUrl: string) => {
@@ -72,6 +79,9 @@ function ResourceLink({
       url: mediaUrl,
       title: songTitle || resource.label,
       subtitle: resource.label,
+      songId,
+      recordedKey,
+      chartKeys,
     });
   };
 
@@ -92,7 +102,7 @@ function ResourceLink({
     </button>
   ) : null;
 
-  if (isLocalAudio && url) {
+  if (isPlayableAudio && url) {
     return (
       <div
         className={`flex items-center gap-2 px-3 py-2 rounded-md border transition-colors ${
@@ -395,6 +405,13 @@ export default function SongDetailPanel({
     "youtube",
     "manual",
   ];
+
+  // Compute chart keys from sheet music file paths for media player
+  const chartKeys = extractChartKeys(
+    allResources
+      .filter((r) => r.type === "sheet_music" && r.filePath)
+      .map((r) => r.filePath!)
+  );
 
   // --- Handlers ---
 
@@ -723,6 +740,9 @@ export default function SongDetailPanel({
                             songTitle={song.title}
                             isAdmin={isAdmin}
                             onDelete={() => setDeletingResourceId(r.id)}
+                            songId={song.id}
+                            recordedKey={song.recordedKey}
+                            chartKeys={chartKeys}
                           />
                         </div>
                       ))}

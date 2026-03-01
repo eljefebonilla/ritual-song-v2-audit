@@ -3,6 +3,7 @@
 import type { LibrarySong, ResourceDisplayCategory, SongResource } from "@/lib/types";
 import { getResourceDisplayCategory } from "@/lib/song-library";
 import { useMedia } from "@/lib/media-context";
+import { extractChartKeys } from "@/lib/key-utils";
 import { MASS_POSITION_LABELS, MASS_POSITION_ORDER, COMMUNITY_BADGES } from "@/lib/occasion-helpers";
 
 interface CalendarMeta {
@@ -15,6 +16,8 @@ interface SongRowProps {
   isSelected: boolean;
   onClick: () => void;
   calendarMeta?: CalendarMeta | null;
+
+  uploadedAudioUrl?: string;
 }
 
 const BUTTON_STYLES: Record<ResourceDisplayCategory, { bg: string; text: string; label: string }> = {
@@ -67,7 +70,7 @@ function MusicNoteIcon() {
 
 const CATEGORY_ORDER: ResourceDisplayCategory[] = ["aim", "audio", "lead_sheet", "choral", "color"];
 
-export default function SongCard({ song, isSelected, onClick, calendarMeta }: SongRowProps) {
+export default function SongCard({ song, isSelected, onClick, calendarMeta, uploadedAudioUrl }: SongRowProps) {
   const { play } = useMedia();
 
   // Determine which resource categories are available
@@ -77,17 +80,34 @@ export default function SongCard({ song, isSelected, onClick, calendarMeta }: So
     if (r) available.set(cat, r);
   }
 
+  // If no local audio but there's uploaded audio, add a synthetic entry
+  if (!available.has("audio") && uploadedAudioUrl) {
+    available.set("audio", {
+      id: `uploaded-${song.id}`,
+      type: "audio",
+      label: "Uploaded Audio",
+      url: uploadedAudioUrl,
+      source: "supabase",
+    });
+  }
+
   const handleResourceClick = (e: React.MouseEvent, cat: ResourceDisplayCategory, resource: SongResource) => {
     e.stopPropagation();
     const url = resourceUrl(resource);
     if (!url) return;
 
     if (cat === "audio") {
+      const sheetPaths = song.resources
+        .filter((r) => r.type === "sheet_music" && r.filePath)
+        .map((r) => r.filePath!);
       play({
         type: resource.type === "youtube" ? "youtube" : "audio",
         url,
         title: song.title,
         subtitle: resource.label,
+        songId: song.id,
+        recordedKey: song.recordedKey,
+        chartKeys: extractChartKeys(sheetPaths),
       });
     } else {
       window.open(url, "_blank");

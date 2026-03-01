@@ -177,6 +177,7 @@ export interface LibrarySong {
   composer?: string;
   category?: SongCategory;
   functions?: string[]; // liturgical functions: gathering, offertory, communion, etc.
+  recordedKey?: string; // Key of the primary audio recording (e.g., "C", "Bb")
   resources: SongResource[];
   usageCount: number; // how many times this song appears in music plans
   occasions: string[]; // occasion IDs where this song is used
