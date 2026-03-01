@@ -2,6 +2,8 @@ import type { LibrarySong, SongResource, SongCategory, ResourceDisplayCategory, 
 import { normalizeTitle } from "./occasion-helpers";
 
 let songLibraryData: LibrarySong[] | null = null;
+let songLibraryCachedAt = 0;
+const CACHE_TTL_MS = 5 * 60 * 1000; // 5 minutes
 
 /**
  * Get the song library. Reads from the cached in-memory data.
@@ -27,17 +29,33 @@ export function getSongLibrary(): LibrarySong[] {
 
 /**
  * Load the song library from Supabase (server-side only).
- * Must be called from a Server Component or API route before getSongLibrary().
+ * Caches in-memory with 5-minute TTL to avoid re-fetching 2,660 songs on every page load.
  */
 export async function loadSongLibrary(): Promise<LibrarySong[]> {
+  // Return cached data if still fresh
+  const now = Date.now();
+  if (songLibraryData && (now - songLibraryCachedAt) < CACHE_TTL_MS) {
+    return songLibraryData;
+  }
+
   try {
     const { getSongsFromSupabase } = await import("./supabase/songs");
     songLibraryData = await getSongsFromSupabase();
+    songLibraryCachedAt = now;
     return songLibraryData;
   } catch (err) {
     console.error("Failed to load songs from Supabase, falling back to JSON:", err);
     return getSongLibrary();
   }
+}
+
+/**
+ * Invalidate the song library cache. Call after song create/update/delete.
+ */
+export function invalidateSongLibraryCache(): void {
+  songLibraryCachedAt = 0;
+  songLibraryData = null;
+  _titleIndex = null;
 }
 
 export function getSongById(id: string): LibrarySong | null {
@@ -98,11 +116,15 @@ export function classifySong(title: string): SongCategory {
 }
 
 /**
- * Filter out local-only resources when running on Vercel (read-only filesystem).
+ * Filter out resources that can't be accessed in the current environment.
+ * On Vercel: show resources with url, storagePath, or external links.
+ * On local dev: show everything.
  */
 export function getVisibleResources(resources: SongResource[]): SongResource[] {
   if (process.env.VERCEL) {
-    return resources.filter((r) => r.source !== "local");
+    return resources.filter(
+      (r) => r.url || r.storagePath || r.type === "youtube" || r.type === "ocp_link" || r.type === "hymnal_ref"
+    );
   }
   return resources;
 }
@@ -240,9 +262,21 @@ export function pickBestMatch(candidates: LibrarySong[], composerHint?: string):
 
 /**
  * Get a playable URL from a SongResource.
+ * Priority: url (Supabase public URL) > storagePath (construct URL) > filePath (local fallback)
  */
 export function resourceUrl(resource: SongResource): string | null {
+  // Supabase public URL (set by storage migration)
   if (resource.url) return resource.url;
+
+  // Construct URL from Supabase storage path
+  if (resource.storagePath) {
+    const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL;
+    if (supabaseUrl) {
+      return `${supabaseUrl}/storage/v1/object/public/song-resources/${resource.storagePath}`;
+    }
+  }
+
+  // Local file fallback (only works on dev server with Jeff's machine)
   if (resource.filePath) {
     return `/api/music/${encodeURIComponent(resource.filePath)}`;
   }
@@ -251,11 +285,19 @@ export function resourceUrl(resource: SongResource): string | null {
 
 /**
  * Find the best playable resource (audio or youtube) for a library song.
+ * Priority: Supabase-hosted audio > local audio > YouTube > any audio with URL
  */
 function findPlayableResource(song: LibrarySong): { url: string; type: "audio" | "youtube" } | null {
-  // Prefer local audio first
+  // Prefer Supabase-hosted audio (works everywhere)
   for (const r of song.resources) {
-    if (r.type === "audio" && r.filePath) {
+    if (r.type === "audio" && (r.url || r.storagePath)) {
+      const url = resourceUrl(r);
+      if (url) return { url, type: "audio" };
+    }
+  }
+  // Then local audio (only works on dev server)
+  for (const r of song.resources) {
+    if (r.type === "audio" && r.filePath && !r.url && !r.storagePath) {
       const url = resourceUrl(r);
       if (url) return { url, type: "audio" };
     }
@@ -264,12 +306,6 @@ function findPlayableResource(song: LibrarySong): { url: string; type: "audio" |
   for (const r of song.resources) {
     if (r.type === "youtube" && r.url) {
       return { url: r.url, type: "youtube" };
-    }
-  }
-  // Then any audio with a URL
-  for (const r of song.resources) {
-    if (r.type === "audio" && r.url) {
-      return { url: r.url, type: "audio" };
     }
   }
   return null;

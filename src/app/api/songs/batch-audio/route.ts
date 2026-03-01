@@ -19,23 +19,47 @@ export async function GET(request: NextRequest) {
   try {
     const supabase = createAdminClient();
 
+    // Query song_resources_v2 for audio with Supabase URLs or storage paths
     const { data: rows, error } = await supabase
-      .from("song_resources")
-      .select("song_id, type, url")
+      .from("song_resources_v2")
+      .select("song_id, type, url, storage_path")
       .in("song_id", ids)
       .in("type", ["audio", "practice_track"])
-      .not("url", "is", null)
       .order("created_at", { ascending: true });
 
     if (error) {
-      return NextResponse.json({ error: error.message }, { status: 500 });
+      // Fallback to legacy table
+      const { data: legacyRows, error: legacyError } = await supabase
+        .from("song_resources")
+        .select("song_id, type, url")
+        .in("song_id", ids)
+        .in("type", ["audio", "practice_track"])
+        .not("url", "is", null)
+        .order("created_at", { ascending: true });
+
+      if (legacyError) {
+        return NextResponse.json({ error: legacyError.message }, { status: 500 });
+      }
+
+      const audioUrls: Record<string, string> = {};
+      for (const row of legacyRows || []) {
+        if (!audioUrls[row.song_id] && row.url) {
+          audioUrls[row.song_id] = row.url;
+        }
+      }
+      return NextResponse.json({ audioUrls });
     }
 
-    // First audio resource per song wins
+    const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL;
+
+    // First audio resource per song wins. Prefer resources with URLs.
     const audioUrls: Record<string, string> = {};
     for (const row of rows || []) {
-      if (!audioUrls[row.song_id] && row.url) {
+      if (audioUrls[row.song_id]) continue;
+      if (row.url) {
         audioUrls[row.song_id] = row.url;
+      } else if (row.storage_path && supabaseUrl) {
+        audioUrls[row.song_id] = `${supabaseUrl}/storage/v1/object/public/song-resources/${row.storage_path}`;
       }
     }
 

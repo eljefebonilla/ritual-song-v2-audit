@@ -1,6 +1,7 @@
 import { NextRequest, NextResponse } from "next/server";
 import { verifyAdmin } from "@/lib/admin";
 import { createAdminClient } from "@/lib/supabase/admin";
+import { invalidateSongLibraryCache } from "@/lib/song-library";
 import fs from "fs";
 import path from "path";
 
@@ -83,6 +84,27 @@ export async function PUT(
       return NextResponse.json(data2);
     }
 
+    // Invalidate server-side song cache
+    invalidateSongLibraryCache();
+
+    // Log changes to change_log for audit trail
+    try {
+      for (const [key, value] of Object.entries(body)) {
+        const dbKey = FIELD_MAP[key];
+        if (dbKey) {
+          await supabase.from("change_log").insert({
+            entity_type: "song",
+            entity_id: data.id,
+            field_changed: dbKey,
+            new_value: JSON.stringify(value),
+            changed_by: "admin",
+          });
+        }
+      }
+    } catch {
+      // Change log is best-effort, don't fail the request
+    }
+
     // Also update JSON backup for basic fields
     try {
       const raw = fs.readFileSync(SONG_LIBRARY_PATH, "utf-8");
@@ -141,6 +163,9 @@ export async function DELETE(
         return NextResponse.json({ error: error2.message }, { status: 404 });
       }
     }
+
+    // Invalidate server-side song cache
+    invalidateSongLibraryCache();
 
     // Also remove from JSON backup
     try {

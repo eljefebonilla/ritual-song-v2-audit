@@ -44,7 +44,18 @@ const SOURCE_LABELS: Record<SongResourceSource, string> = {
 const UPLOAD_ACCEPT = ".pdf,.mp3,.wav,.m4a,.aif,.aiff,.png,.jpg,.jpeg,.musx,.mxl,.txt";
 
 function resourceUrl(resource: SongResource): string | null {
+  // Supabase public URL (set by storage migration)
   if (resource.url) return resource.url;
+  // Construct URL from storage path
+  if (resource.storagePath) {
+    const supabaseUrl = typeof window !== "undefined"
+      ? process.env.NEXT_PUBLIC_SUPABASE_URL
+      : undefined;
+    if (supabaseUrl) {
+      return `${supabaseUrl}/storage/v1/object/public/song-resources/${resource.storagePath}`;
+    }
+  }
+  // Local file fallback
   if (resource.filePath) {
     return `/api/music/${encodeURIComponent(resource.filePath)}`;
   }
@@ -71,7 +82,7 @@ function ResourceLink({
   const { play } = useMedia();
   const url = resourceUrl(resource);
   const isAudio = resource.type === "audio";
-  const isPlayableAudio = isAudio && (resource.filePath || resource.url);
+  const isPlayableAudio = isAudio && (resource.url || resource.storagePath || resource.filePath);
   const isYouTube = resource.type === "youtube" && resource.url;
 
   const openInPlayer = (type: "audio" | "youtube", mediaUrl: string) => {

@@ -109,6 +109,52 @@ export const COMMUNITY_BADGES: Record<string, { letter: string; bg: string; text
   elevations:   { letter: "E", bg: "#eeebf6", text: "#6b5a8a" },
 };
 
+/**
+ * Community-to-psalter source mapping.
+ * Lyric Psalter serves Reflections, Foundations, Heritage.
+ * Spirit & Psalm serves Generations, Elevations.
+ */
+export const COMMUNITY_PSALTER: Record<string, "lyric_psalter" | "spirit_and_psalm"> = {
+  reflections: "lyric_psalter",
+  foundations: "lyric_psalter",
+  heritage: "lyric_psalter",
+  generations: "spirit_and_psalm",
+  elevations: "spirit_and_psalm",
+};
+
+/**
+ * Determine the psalter source from a resource label.
+ * Returns null if the label doesn't indicate a specific psalter.
+ */
+export function getPsalterSourceFromLabel(label: string): "lyric_psalter" | "spirit_and_psalm" | null {
+  const lower = label.toLowerCase();
+  if (lower.includes("lyric psalter")) return "lyric_psalter";
+  if (lower.includes("spirit") && lower.includes("psalm")) return "spirit_and_psalm";
+  return null;
+}
+
+/**
+ * Filter psalm resources to show the correct psalter for a given community.
+ * When no community is specified, returns all resources.
+ */
+export function filterPsalmResourcesByCommunity<T extends { label: string }>(
+  resources: T[],
+  community?: string
+): T[] {
+  if (!community) return resources;
+
+  const psalter = COMMUNITY_PSALTER[community.toLowerCase()];
+  if (!psalter) return resources;
+
+  return resources.filter((r) => {
+    const source = getPsalterSourceFromLabel(r.label);
+    // If resource has no identified psalter source, keep it (generic resource)
+    if (!source) return true;
+    // Match to community's psalter
+    return source === psalter;
+  });
+}
+
 export interface PositionedSongEntry {
   entry: SongEntry;
   position: string; // field name: "gathering", "communion", etc.

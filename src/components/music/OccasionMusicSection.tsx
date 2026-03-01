@@ -12,7 +12,7 @@ import type {
   OccasionDate,
   LiturgicalDay,
 } from "@/lib/types";
-import { COMMUNITY_BADGES } from "@/lib/occasion-helpers";
+import { COMMUNITY_BADGES, COMMUNITY_PSALTER, getPsalterSourceFromLabel } from "@/lib/occasion-helpers";
 import { planToSlots } from "@/lib/worship-slots";
 import { validateMusicPlan, type ValidationWarning } from "@/lib/liturgical-validation";
 import { rowToLiturgicalDay } from "@/lib/liturgical-helpers";
