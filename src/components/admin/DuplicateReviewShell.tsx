@@ -142,6 +142,22 @@ export default function DuplicateReviewShell({ groups: initialGroups, junk: init
     }
   }
 
+  async function handleDeleteGroup(group: DuplicateGroup) {
+    const uniqueIds = [...new Set(group.songs.map((s) => s.id))];
+    setDeleting(group.normalizedTitle);
+    try {
+      for (const id of uniqueIds) {
+        const res = await fetch(`/api/songs/${id}`, { method: "DELETE" });
+        if (!res.ok) return;
+      }
+      setGroups((prev) => prev.filter((g) => g.normalizedTitle !== group.normalizedTitle));
+      setExpandedGroup(null);
+      setSelectedIds([]);
+    } finally {
+      setDeleting(null);
+    }
+  }
+
   async function handleDeleteJunk(entry: JunkEntry) {
     setDeleting(entry.id);
     try {
@@ -190,6 +206,7 @@ export default function DuplicateReviewShell({ groups: initialGroups, junk: init
             const isExpanded = expandedGroup === group.normalizedTitle;
             const isMerging = merging === group.normalizedTitle;
             const isDismissing = dismissing === group.normalizedTitle;
+            const isDeleting = deleting === group.normalizedTitle;
 
             return (
               <div
@@ -333,7 +350,14 @@ export default function DuplicateReviewShell({ groups: initialGroups, junk: init
                       </div>
                     )}
 
-                    <div className="flex justify-end mt-3 pt-3 border-t border-stone-100">
+                    <div className="flex justify-end gap-2 mt-3 pt-3 border-t border-stone-100">
+                      <button
+                        disabled={isDeleting}
+                        onClick={() => handleDeleteGroup(group)}
+                        className="px-3 py-1.5 text-xs font-medium text-red-600 border border-red-200 rounded hover:bg-red-50 disabled:opacity-50"
+                      >
+                        {isDeleting ? "Deleting..." : "Delete All"}
+                      </button>
                       <button
                         disabled={isDismissing}
                         onClick={() => handleDismiss(group)}
