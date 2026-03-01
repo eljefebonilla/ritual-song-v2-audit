@@ -3,6 +3,7 @@
 import { useState, useMemo, useCallback } from "react";
 import { useRouter } from "next/navigation";
 import type { MinistryCalendar, CalendarView, CalendarEvent } from "@/lib/calendar-types";
+import type { LiturgicalDay } from "@/lib/types";
 import type { CommunityId } from "@/lib/grid-types";
 import { getVisibleWeeks } from "@/lib/calendar-utils";
 import { useUser } from "@/lib/user-context";
@@ -13,11 +14,12 @@ import EventEditor from "./EventEditor";
 
 interface CalendarShellProps {
   calendar: MinistryCalendar;
+  liturgicalDays?: LiturgicalDay[];
 }
 
 const HIDDEN_WEEKS_KEY = "rs_hidden_weeks";
 
-export default function CalendarShell({ calendar }: CalendarShellProps) {
+export default function CalendarShell({ calendar, liturgicalDays }: CalendarShellProps) {
   const { isAdmin } = useUser();
   const router = useRouter();
 
@@ -129,9 +131,10 @@ export default function CalendarShell({ calendar }: CalendarShellProps) {
             communityFilter={communityFilter}
             hiddenWeekIds={hiddenWeekIds}
             onToggleHidden={toggleHiddenWeek}
+            liturgicalDays={liturgicalDays}
           />
         ) : (
-          <MonthView weeks={calendar.weeks} currentMonth={currentMonth} />
+          <MonthView weeks={calendar.weeks} currentMonth={currentMonth} liturgicalDays={liturgicalDays} />
         )}
       </div>
 

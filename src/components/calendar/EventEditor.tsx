@@ -1,7 +1,11 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import type { CalendarEvent, CalendarEventType } from "@/lib/calendar-types";
+import type { LiturgicalDay } from "@/lib/types";
+import { rowToLiturgicalDay } from "@/lib/liturgical-helpers";
+import { LITURGICAL_COLOR_HEX, LITURGICAL_COLOR_LABEL } from "@/lib/liturgical-colors";
+import { rankLabel } from "@/lib/liturgical-helpers";
 
 interface EventEditorProps {
   event?: CalendarEvent & { id?: string }; // existing event to edit, or undefined for new
@@ -46,7 +50,34 @@ export default function EventEditor({ event, onSave, onDelete, onClose }: EventE
   const [celebrant, setCelebrant] = useState(event?.celebrant || "");
   const [location, setLocation] = useState(event?.location || "");
   const [notes, setNotes] = useState(event?.notes || "");
+  const [sidebarNote, setSidebarNote] = useState(event?.sidebarNote || "");
   const [hasMusic, setHasMusic] = useState(event?.hasMusic ?? true);
+  const [isAutoMix, setIsAutoMix] = useState(event?.isAutoMix ?? false);
+  const [litDay, setLitDay] = useState<LiturgicalDay | null>(null);
+  const [litLoading, setLitLoading] = useState(false);
+
+  // Fetch liturgical context when date changes
+  useEffect(() => {
+    if (!date) { setLitDay(null); return; }
+    let cancelled = false;
+    setLitLoading(true);
+    fetch(`/api/liturgical-days?date=${date}`)
+      .then((r) => r.json())
+      .then((data) => {
+        if (cancelled) return;
+        if (Array.isArray(data) && data.length > 0) {
+          const universal = data.find(
+            (d: Record<string, unknown>) => d.ecclesiastical_province === "__universal__"
+          );
+          setLitDay(rowToLiturgicalDay(universal || data[0]));
+        } else {
+          setLitDay(null);
+        }
+      })
+      .catch(() => { if (!cancelled) setLitDay(null); })
+      .finally(() => { if (!cancelled) setLitLoading(false); });
+    return () => { cancelled = true; };
+  }, [date]);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -64,7 +95,9 @@ export default function EventEditor({ event, onSave, onDelete, onClose }: EventE
         celebrant: celebrant || null,
         location: location || null,
         notes: notes || null,
+        sidebar_note: sidebarNote || null,
         has_music: hasMusic,
+        is_auto_mix: isAutoMix,
       });
       onClose();
     } finally {
@@ -131,6 +164,36 @@ export default function EventEditor({ event, onSave, onDelete, onClose }: EventE
               className="w-full text-sm border border-stone-200 rounded-md px-3 py-2 focus:outline-none focus:ring-1 focus:ring-stone-400"
             />
           </div>
+
+          {/* Liturgical Context Card */}
+          {(litDay || litLoading) && (
+            <div className="p-3 rounded-lg border border-stone-200 bg-stone-50">
+              <p className="text-[10px] uppercase tracking-wide text-stone-400 font-semibold mb-2">
+                Liturgical Context
+              </p>
+              {litLoading ? (
+                <p className="text-xs text-stone-400">Loading...</p>
+              ) : litDay ? (
+                <div className="space-y-1.5">
+                  <div className="flex items-center gap-2">
+                    <span
+                      className="w-3 h-3 rounded-full shrink-0"
+                      style={{ backgroundColor: LITURGICAL_COLOR_HEX[litDay.colorPrimary] }}
+                    />
+                    <span className="text-sm font-medium text-stone-800">
+                      {litDay.celebrationName}
+                    </span>
+                  </div>
+                  <div className="flex flex-wrap gap-3 text-xs text-stone-500">
+                    <span>{rankLabel(litDay.rank)}</span>
+                    <span>{LITURGICAL_COLOR_LABEL[litDay.colorPrimary]}</span>
+                    <span>Gloria: {litDay.gloria ? "Yes" : "No"}</span>
+                    <span>Alleluia: {litDay.alleluia ? "Yes" : "No"}</span>
+                  </div>
+                </div>
+              ) : null}
+            </div>
+          )}
 
           {/* Time */}
           <div className="grid grid-cols-2 gap-3">
@@ -217,16 +280,39 @@ export default function EventEditor({ event, onSave, onDelete, onClose }: EventE
             />
           </div>
 
-          {/* Has Music */}
-          <label className="flex items-center gap-2 cursor-pointer">
+          {/* Sidebar Note */}
+          <div>
+            <label className="block text-xs font-medium text-stone-500 uppercase tracking-wide mb-1">Sidebar Note</label>
             <input
-              type="checkbox"
-              checked={hasMusic}
-              onChange={(e) => setHasMusic(e.target.checked)}
-              className="rounded border-stone-300 text-parish-burgundy focus:ring-parish-burgundy"
+              type="text"
+              value={sidebarNote}
+              onChange={(e) => setSidebarNote(e.target.value)}
+              className="w-full text-sm border border-stone-200 rounded-md px-3 py-2 focus:outline-none focus:ring-1 focus:ring-stone-400"
+              placeholder="Brief annotation shown on calendar"
             />
-            <span className="text-sm text-stone-700">Has live music</span>
-          </label>
+          </div>
+
+          {/* Toggles */}
+          <div className="space-y-2">
+            <label className="flex items-center gap-2 cursor-pointer">
+              <input
+                type="checkbox"
+                checked={hasMusic}
+                onChange={(e) => setHasMusic(e.target.checked)}
+                className="rounded border-stone-300 text-parish-burgundy focus:ring-parish-burgundy"
+              />
+              <span className="text-sm text-stone-700">Has live music</span>
+            </label>
+            <label className="flex items-center gap-2 cursor-pointer">
+              <input
+                type="checkbox"
+                checked={isAutoMix}
+                onChange={(e) => setIsAutoMix(e.target.checked)}
+                className="rounded border-stone-300 text-parish-burgundy focus:ring-parish-burgundy"
+              />
+              <span className="text-sm text-stone-700">Auto-Mix</span>
+            </label>
+          </div>
         </form>
 
         {/* Footer actions */}

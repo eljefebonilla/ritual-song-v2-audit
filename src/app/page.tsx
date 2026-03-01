@@ -1,7 +1,10 @@
 import Link from "next/link";
 import { getAllOccasions, getSeasons, getCurrentWeekOccasions, getSynopsis } from "@/lib/data";
 import { SEASON_COLORS } from "@/lib/liturgical-colors";
-import type { SeasonGroup } from "@/lib/types";
+import type { SeasonGroup, LiturgicalDay } from "@/lib/types";
+import { createAdminClient } from "@/lib/supabase/admin";
+import { rowToLiturgicalDay } from "@/lib/liturgical-helpers";
+import SeasonAlert from "@/components/calendar/SeasonAlert";
 
 /**
  * Liturgical year display order, splitting Ordinary Time into two halves:
@@ -53,12 +56,35 @@ function getNearestDate(dates: { date: string; label: string }[]): string | null
   });
 }
 
-export default function DashboardPage() {
+export const dynamic = "force-dynamic";
+
+export default async function DashboardPage() {
   const occasions = getAllOccasions();
   const seasons = getSeasons();
   const { thisWeek, nextWeek } = getCurrentWeekOccasions();
   const thisWeekSynopsis = thisWeek ? getSynopsis(thisWeek.id) : null;
   const nextWeekSynopsis = nextWeek ? getSynopsis(nextWeek.id) : null;
+
+  // Fetch liturgical days for season alert (next 21 days)
+  let liturgicalDays: LiturgicalDay[] = [];
+  try {
+    const adminClient = createAdminClient();
+    const today = new Date().toISOString().split("T")[0];
+    const future = new Date();
+    future.setDate(future.getDate() + 21);
+    const futureStr = future.toISOString().split("T")[0];
+    const { data } = await adminClient
+      .from("liturgical_days")
+      .select("*")
+      .gte("date", today)
+      .lte("date", futureStr)
+      .order("date", { ascending: true });
+    if (data) {
+      liturgicalDays = data.map((row: Record<string, unknown>) => rowToLiturgicalDay(row));
+    }
+  } catch {
+    // Silently fail — season alert is non-critical
+  }
 
   const seasonMap = new Map<string, SeasonGroup>();
   for (const s of seasons) {
@@ -71,6 +97,13 @@ export default function DashboardPage() {
       <p className="text-sm text-stone-500 mb-8">
         {occasions.length} liturgical occasions across the 3-year lectionary cycle
       </p>
+
+      {/* Season transition alert */}
+      {liturgicalDays.length > 0 && (
+        <div className="mb-6">
+          <SeasonAlert liturgicalDays={liturgicalDays} />
+        </div>
+      )}
 
       {/* This Week / Next Week */}
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-10">

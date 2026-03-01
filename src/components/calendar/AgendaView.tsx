@@ -1,6 +1,8 @@
 "use client";
 
+import { useMemo } from "react";
 import type { CalendarWeek } from "@/lib/calendar-types";
+import type { LiturgicalDay } from "@/lib/types";
 import type { CommunityId } from "@/lib/grid-types";
 import {
   filterEventsByCommunity,
@@ -8,6 +10,9 @@ import {
   formatDateLabel,
   isDatePast,
 } from "@/lib/calendar-utils";
+import { LITURGICAL_COLOR_HEX, LITURGICAL_COLOR_LIGHT } from "@/lib/liturgical-colors";
+import { buildLiturgicalDayMap, isSignificantRank } from "@/lib/liturgical-helpers";
+import { SEASON_COLORS } from "@/lib/liturgical-colors";
 import WeekHeader from "./WeekHeader";
 import EventCard from "./EventCard";
 
@@ -16,6 +21,7 @@ interface AgendaViewProps {
   communityFilter: CommunityId | "all";
   hiddenWeekIds: string[];
   onToggleHidden: (weekId: string) => void;
+  liturgicalDays?: LiturgicalDay[];
 }
 
 export default function AgendaView({
@@ -23,7 +29,13 @@ export default function AgendaView({
   communityFilter,
   hiddenWeekIds,
   onToggleHidden,
+  liturgicalDays,
 }: AgendaViewProps) {
+  const litMap = useMemo(
+    () => (liturgicalDays ? buildLiturgicalDayMap(liturgicalDays) : new Map<string, LiturgicalDay>()),
+    [liturgicalDays]
+  );
+
   if (weeks.length === 0) {
     return (
       <div className="flex items-center justify-center h-64 text-stone-400">
@@ -53,6 +65,9 @@ export default function AgendaView({
     );
   }
 
+  // Track previous season for transition markers
+  let prevSeason: string | null = null;
+
   return (
     <div className="divide-y divide-stone-100">
       {weeks.map((week) => {
@@ -67,8 +82,60 @@ export default function AgendaView({
         const eventsByDate = groupEventsByDate(filteredEvents);
         const sortedDates = Array.from(eventsByDate.keys()).sort();
 
+        // Check for season transition at the start of this week
+        let seasonTransition: { from: string; to: string; label: string } | null = null;
+        if (litMap.size > 0 && sortedDates.length > 0) {
+          const firstDate = sortedDates[0];
+          const litDay = litMap.get(firstDate);
+          if (litDay && prevSeason && litDay.season !== prevSeason) {
+            const seasonInfo = SEASON_COLORS[litDay.season];
+            seasonTransition = {
+              from: prevSeason,
+              to: litDay.season,
+              label: seasonInfo?.label || litDay.season,
+            };
+          }
+          // Update prevSeason for next iteration
+          const lastDate = sortedDates[sortedDates.length - 1];
+          const lastLitDay = litMap.get(lastDate);
+          if (lastLitDay) prevSeason = lastLitDay.season;
+          else if (litDay) prevSeason = litDay.season;
+        }
+
         return (
           <div key={week.weekId} className="py-3">
+            {/* Season transition marker */}
+            {seasonTransition && (
+              <div className="flex items-center gap-2 px-3 py-2 mb-2">
+                <div
+                  className="h-[3px] flex-1 rounded"
+                  style={{
+                    backgroundColor:
+                      SEASON_COLORS[seasonTransition.to as keyof typeof SEASON_COLORS]?.primary ||
+                      "#78716c",
+                  }}
+                />
+                <span
+                  className="text-xs font-semibold uppercase tracking-wide px-2"
+                  style={{
+                    color:
+                      SEASON_COLORS[seasonTransition.to as keyof typeof SEASON_COLORS]?.primary ||
+                      "#78716c",
+                  }}
+                >
+                  {seasonTransition.label}
+                </span>
+                <div
+                  className="h-[3px] flex-1 rounded"
+                  style={{
+                    backgroundColor:
+                      SEASON_COLORS[seasonTransition.to as keyof typeof SEASON_COLORS]?.primary ||
+                      "#78716c",
+                  }}
+                />
+              </div>
+            )}
+
             <WeekHeader
               week={week}
               isHidden={isHidden}
@@ -80,11 +147,21 @@ export default function AgendaView({
                 {sortedDates.map((date) => {
                   const events = eventsByDate.get(date) || [];
                   const past = isDatePast(date);
+                  const litDay = litMap.get(date);
 
                   return (
                     <div key={date}>
-                      {/* Date subheader */}
+                      {/* Date subheader with liturgical color dot */}
                       <div className="flex items-center gap-2 px-3 py-1">
+                        {litDay && (
+                          <span
+                            className="w-2 h-2 rounded-full shrink-0"
+                            style={{
+                              backgroundColor: LITURGICAL_COLOR_HEX[litDay.colorPrimary],
+                            }}
+                            title={litDay.colorPrimary}
+                          />
+                        )}
                         <span
                           className={`text-xs font-medium ${
                             past ? "text-stone-400" : "text-stone-600"
@@ -92,6 +169,12 @@ export default function AgendaView({
                         >
                           {formatDateLabel(date)}
                         </span>
+                        {/* Show celebration name for significant days */}
+                        {litDay && isSignificantRank(litDay.rank) && (
+                          <span className="text-[10px] text-stone-400 truncate">
+                            {litDay.celebrationName}
+                          </span>
+                        )}
                         <div className="flex-1 h-px bg-stone-100" />
                       </div>
 
@@ -103,6 +186,25 @@ export default function AgendaView({
                           isPast={past}
                         />
                       ))}
+
+                      {/* Ghost row for liturgical days without events */}
+                      {events.length === 0 && litDay && isSignificantRank(litDay.rank) && (
+                        <div
+                          className="mx-3 px-3 py-2 rounded-md border-l-[3px] flex items-center gap-2"
+                          style={{
+                            backgroundColor: LITURGICAL_COLOR_LIGHT[litDay.colorPrimary],
+                            borderLeftColor: LITURGICAL_COLOR_HEX[litDay.colorPrimary],
+                            opacity: past ? 0.5 : 0.7,
+                          }}
+                        >
+                          <span className="text-xs text-stone-500">
+                            {litDay.celebrationName}
+                          </span>
+                          <span className="text-[10px] text-stone-400 capitalize">
+                            {litDay.rank.replace("_", " ")}
+                          </span>
+                        </div>
+                      )}
                     </div>
                   );
                 })}

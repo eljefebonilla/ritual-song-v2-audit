@@ -1,4 +1,4 @@
-import { LiturgicalSeason } from "./types";
+import { LiturgicalColor, LiturgicalSeason } from "./types";
 
 export const SEASON_COLORS: Record<
   LiturgicalSeason,
@@ -58,3 +58,33 @@ export const SEASON_COLORS: Record<
 export function getSeasonColor(season: LiturgicalSeason) {
   return SEASON_COLORS[season] || SEASON_COLORS.ordinary;
 }
+
+// ===== Day-level liturgical color maps =====
+// Used for calendar enrichment (color band month view, /today page, etc.)
+
+export const LITURGICAL_COLOR_HEX: Record<LiturgicalColor, string> = {
+  violet: "#6B21A8",
+  white: "#D4A017",
+  red: "#B91C1C",
+  green: "#166534",
+  rose: "#DB2777",
+  black: "#1C1917",
+};
+
+export const LITURGICAL_COLOR_LIGHT: Record<LiturgicalColor, string> = {
+  violet: "#f3e8ff",
+  white: "#fefce8",
+  red: "#fef2f2",
+  green: "#f0fdf4",
+  rose: "#fdf2f8",
+  black: "#f5f5f4",
+};
+
+export const LITURGICAL_COLOR_LABEL: Record<LiturgicalColor, string> = {
+  violet: "Violet",
+  white: "White",
+  red: "Red",
+  green: "Green",
+  rose: "Rose",
+  black: "Black",
+};

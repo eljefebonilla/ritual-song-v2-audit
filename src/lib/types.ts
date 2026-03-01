@@ -183,6 +183,25 @@ export const RESOURCE_DISPLAY_LABELS: Record<ResourceDisplayCategory, string> = 
   audio: "Audio",
 };
 
+export interface CreditPerson {
+  name: string;
+  dates?: string; // e.g. "1707-1788", "b. 1950", "c.760-821"
+}
+
+export interface SongCredits {
+  textAuthors?: CreditPerson[];
+  composers?: CreditPerson[];
+  arrangers?: CreditPerson[];
+  textSources?: string[];
+  tuneSources?: string[];
+}
+
+export interface TuneMeter {
+  tuneName?: string;
+  meter?: string; // e.g. "8.7.8.7.D", "6.6.8.6"
+  incipit?: string; // melodic incipit (numeric string)
+}
+
 export interface LibrarySong {
   id: string; // slug from title+composer
   title: string;
@@ -190,6 +209,18 @@ export interface LibrarySong {
   category?: SongCategory;
   functions?: string[]; // liturgical functions: gathering, offertory, communion, etc.
   recordedKey?: string; // Key of the primary audio recording (e.g., "C", "Bb")
+
+  // Cross-publisher enrichment fields
+  catalogs?: { bb2026?: number; gather4?: number; spiritSong?: number; voices?: number; novum?: number; aahh?: number };
+  credits?: SongCredits;
+  tuneMeter?: TuneMeter;
+  firstLine?: string;
+  refrainFirstLine?: string;
+  languages?: string[];
+  topics?: string[];
+  scriptureRefs?: string[];
+  liturgicalUse?: string[];
+
   resources: SongResource[];
   usageCount: number; // how many times this song appears in music plans
   occasions: string[]; // occasion IDs where this song is used

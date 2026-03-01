@@ -1,13 +1,15 @@
 import CalendarShell from "@/components/calendar/CalendarShell";
 import calendarData from "@/data/ministry-calendar.json";
 import { createClient } from "@/lib/supabase/server";
+import { createAdminClient } from "@/lib/supabase/admin";
 import type {
   MinistryCalendar,
   CalendarWeek,
   CalendarEvent,
   CalendarEventType,
 } from "@/lib/calendar-types";
-import type { LiturgicalSeason } from "@/lib/types";
+import type { LiturgicalSeason, LiturgicalDay } from "@/lib/types";
+import { rowToLiturgicalDay } from "@/lib/liturgical-helpers";
 
 const SEASON_EMOJI: Record<string, string> = {
   advent: "\u{1F7E3}",
@@ -95,29 +97,43 @@ function buildCalendarFromRows(
 
 export default async function CalendarPage() {
   let calendar: MinistryCalendar;
+  let liturgicalDays: LiturgicalDay[] = [];
 
   try {
     const supabase = await createClient();
-    const { data, error } = await supabase
-      .from("mass_events")
-      .select("*")
-      .order("event_date", { ascending: true })
-      .order("start_time", { ascending: true });
+    const adminClient = createAdminClient();
 
-    if (!error && data && data.length > 0) {
-      calendar = buildCalendarFromRows(data);
+    // Fetch mass_events and liturgical_days in parallel
+    const [eventsResult, litResult] = await Promise.all([
+      supabase
+        .from("mass_events")
+        .select("*")
+        .order("event_date", { ascending: true })
+        .order("start_time", { ascending: true }),
+      adminClient
+        .from("liturgical_days")
+        .select("*")
+        .order("date", { ascending: true }),
+    ]);
+
+    if (!eventsResult.error && eventsResult.data && eventsResult.data.length > 0) {
+      calendar = buildCalendarFromRows(eventsResult.data);
     } else {
-      // Fallback to static JSON if Supabase is empty or errors
       calendar = calendarData as MinistryCalendar;
     }
+
+    if (!litResult.error && litResult.data) {
+      liturgicalDays = litResult.data.map((row: Record<string, unknown>) =>
+        rowToLiturgicalDay(row)
+      );
+    }
   } catch {
-    // Fallback to static JSON on any error
     calendar = calendarData as MinistryCalendar;
   }
 
   return (
     <div className="min-h-screen">
-      <CalendarShell calendar={calendar} />
+      <CalendarShell calendar={calendar} liturgicalDays={liturgicalDays} />
     </div>
   );
 }

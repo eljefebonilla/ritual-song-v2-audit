@@ -7,7 +7,9 @@
     "build": "next build",
     "start": "next start",
     "lint": "eslint",
-    "build:date-index": "npx tsx scripts/build-date-index.ts"
+    "build:date-index": "npx tsx scripts/build-date-index.ts",
+    "build:liturgical-calendar": "npx tsx scripts/parse-usccb-calendar.ts && npx tsx scripts/populate-liturgical-days.ts",
+    "scan:alleluia": "npx tsx scripts/scan-song-lyrics.ts"
   },
   "dependencies": {
     "@supabase/ssr": "^0.8.0",
@@ -16,16 +18,19 @@
     "papaparse": "^5.5.3",
     "react": "19.2.3",
     "react-dom": "19.2.3",
+    "soundtouchjs": "^0.3.0",
     "xlsx": "^0.18.5"
   },
   "devDependencies": {
     "@tailwindcss/postcss": "^4",
     "@types/node": "^20",
     "@types/papaparse": "^5.5.2",
+    "@types/pdf-parse": "^1.1.5",
     "@types/react": "^19",
     "@types/react-dom": "^19",
     "eslint": "^9",
     "eslint-config-next": "16.1.6",
+    "pdf-parse": "^2.4.5",
     "tailwindcss": "^4",
     "typescript": "^5"
   }
