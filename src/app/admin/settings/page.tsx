@@ -15,6 +15,7 @@ export default function AdminSettingsPage() {
   const [settings, setSettings] = useState<SettingsData>({});
   const [loading, setLoading] = useState(true);
   const [saving, setSaving] = useState(false);
+  const [regenerating, setRegenerating] = useState(false);
   const [message, setMessage] = useState<{ type: "success" | "error"; text: string } | null>(null);
 
   useEffect(() => {
@@ -202,6 +203,30 @@ export default function AdminSettingsPage() {
             className="px-5 py-2 text-sm font-medium text-white bg-stone-900 rounded-md hover:bg-stone-800 disabled:opacity-50"
           >
             {saving ? "Saving..." : "Save Settings"}
+          </button>
+
+          <button
+            onClick={async () => {
+              setRegenerating(true);
+              setMessage(null);
+              try {
+                const res = await fetch("/api/admin/regenerate-calendar", { method: "POST" });
+                const data = await res.json();
+                if (res.ok) {
+                  setMessage({ type: "success", text: `Calendar regenerated: ${data.updatedRows} of ${data.totalRows} rows updated.` });
+                } else {
+                  setMessage({ type: "error", text: data.error || "Failed to regenerate." });
+                }
+              } catch {
+                setMessage({ type: "error", text: "Network error." });
+              } finally {
+                setRegenerating(false);
+              }
+            }}
+            disabled={regenerating}
+            className="px-5 py-2 text-sm font-medium text-stone-700 border border-stone-300 rounded-md hover:bg-stone-50 disabled:opacity-50"
+          >
+            {regenerating ? "Regenerating..." : "Regenerate Calendar"}
           </button>
 
           {message && (

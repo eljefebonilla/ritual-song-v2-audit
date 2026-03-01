@@ -11,7 +11,7 @@ import {
   isDatePast,
 } from "@/lib/calendar-utils";
 import { LITURGICAL_COLOR_HEX, LITURGICAL_COLOR_LIGHT } from "@/lib/liturgical-colors";
-import { buildLiturgicalDayMap, isSignificantRank } from "@/lib/liturgical-helpers";
+import { buildLiturgicalDayMap, isSignificantRank, rankLabel } from "@/lib/liturgical-helpers";
 import { SEASON_COLORS } from "@/lib/liturgical-colors";
 import WeekHeader from "./WeekHeader";
 import EventCard from "./EventCard";
@@ -77,15 +77,41 @@ export default function AgendaView({
           communityFilter
         );
 
-        if (filteredEvents.length === 0 && !isHidden) return null;
+        if (filteredEvents.length === 0 && !isHidden && litMap.size === 0) return null;
 
         const eventsByDate = groupEventsByDate(filteredEvents);
-        const sortedDates = Array.from(eventsByDate.keys()).sort();
+        const sortedEventDates = Array.from(eventsByDate.keys()).sort();
+
+        // Compute full week date range (Sun through Sat)
+        const weekStart = new Date(week.sundayDate + "T12:00:00");
+        const allDatesInWeek: string[] = [];
+        for (let i = 0; i <= 6; i++) {
+          const d = new Date(weekStart);
+          d.setDate(d.getDate() + i);
+          allDatesInWeek.push(d.toISOString().split("T")[0]);
+        }
+
+        // Merge: event dates + dates with liturgical significance
+        const mergedDates = new Set([...sortedEventDates]);
+        for (const d of allDatesInWeek) {
+          const ld = litMap.get(d);
+          if (ld) {
+            // Include optional_memorial and above
+            const showableRanks = ["solemnity", "feast", "memorial", "optional_memorial", "sunday"];
+            if (showableRanks.includes(ld.rank) || ld.saintName) {
+              mergedDates.add(d);
+            }
+          }
+        }
+        const finalDates = Array.from(mergedDates).sort();
+
+        // If no dates to show in this week at all, skip
+        if (finalDates.length === 0 && !isHidden) return null;
 
         // Check for season transition at the start of this week
         let seasonTransition: { from: string; to: string; label: string } | null = null;
-        if (litMap.size > 0 && sortedDates.length > 0) {
-          const firstDate = sortedDates[0];
+        if (litMap.size > 0 && finalDates.length > 0) {
+          const firstDate = finalDates[0];
           const litDay = litMap.get(firstDate);
           if (litDay && prevSeason && litDay.season !== prevSeason) {
             const seasonInfo = SEASON_COLORS[litDay.season];
@@ -96,10 +122,13 @@ export default function AgendaView({
             };
           }
           // Update prevSeason for next iteration
-          const lastDate = sortedDates[sortedDates.length - 1];
+          const lastDate = finalDates[finalDates.length - 1];
           const lastLitDay = litMap.get(lastDate);
           if (lastLitDay) prevSeason = lastLitDay.season;
-          else if (litDay) prevSeason = litDay.season;
+          else {
+            const firstLitDay = litMap.get(finalDates[0]);
+            if (firstLitDay) prevSeason = firstLitDay.season;
+          }
         }
 
         return (
@@ -144,10 +173,12 @@ export default function AgendaView({
 
             {!isHidden && (
               <div className="mt-2 space-y-1">
-                {sortedDates.map((date) => {
+                {finalDates.map((date) => {
                   const events = eventsByDate.get(date) || [];
                   const past = isDatePast(date);
                   const litDay = litMap.get(date);
+                  const hasEvents = events.length > 0;
+                  const isSignificant = litDay && isSignificantRank(litDay.rank);
 
                   return (
                     <div key={date}>
@@ -164,15 +195,21 @@ export default function AgendaView({
                         )}
                         <span
                           className={`text-xs font-medium ${
-                            past ? "text-stone-400" : "text-stone-600"
+                            past ? "text-stone-400" : hasEvents ? "text-stone-600" : "text-stone-400"
                           }`}
                         >
                           {formatDateLabel(date)}
                         </span>
-                        {/* Show celebration name for significant days */}
-                        {litDay && isSignificantRank(litDay.rank) && (
-                          <span className="text-[10px] text-stone-400 truncate">
+                        {/* Celebration name for significant days or days with saint */}
+                        {litDay && (isSignificant || litDay.saintName) && (
+                          <span className={`text-[10px] truncate ${hasEvents ? "text-stone-400" : "text-stone-500"}`}>
                             {litDay.celebrationName}
+                          </span>
+                        )}
+                        {/* Rank badge for non-event liturgical days */}
+                        {litDay && !hasEvents && isSignificant && (
+                          <span className="text-[9px] text-stone-400 capitalize shrink-0">
+                            {rankLabel(litDay.rank)}
                           </span>
                         )}
                         <div className="flex-1 h-px bg-stone-100" />
@@ -187,8 +224,8 @@ export default function AgendaView({
                         />
                       ))}
 
-                      {/* Ghost row for liturgical days without events */}
-                      {events.length === 0 && litDay && isSignificantRank(litDay.rank) && (
+                      {/* Ghost row for liturgical days without events — significant rank */}
+                      {!hasEvents && litDay && isSignificant && (
                         <div
                           className="mx-3 px-3 py-2 rounded-md border-l-[3px] flex items-center gap-2"
                           style={{
@@ -202,6 +239,23 @@ export default function AgendaView({
                           </span>
                           <span className="text-[10px] text-stone-400 capitalize">
                             {litDay.rank.replace("_", " ")}
+                          </span>
+                          {litDay.saintName && (
+                            <span className="text-[10px] text-stone-400 italic truncate">
+                              {litDay.saintName}
+                            </span>
+                          )}
+                        </div>
+                      )}
+
+                      {/* Minimal row for non-event, non-significant days (optional memorials, saint days) */}
+                      {!hasEvents && litDay && !isSignificant && litDay.saintName && (
+                        <div
+                          className="mx-3 px-3 py-1 flex items-center gap-2"
+                          style={{ opacity: past ? 0.4 : 0.6 }}
+                        >
+                          <span className="text-[10px] text-stone-400">
+                            {litDay.celebrationName}
                           </span>
                         </div>
                       )}

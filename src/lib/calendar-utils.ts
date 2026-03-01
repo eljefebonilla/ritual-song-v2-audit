@@ -198,6 +198,40 @@ export function formatMonthYear(date: Date): string {
 }
 
 /**
+ * Converts JS getDay() (Sun=0..Sat=6) to a grid column index.
+ * When mondayStart=true: Mon=0, Tue=1, ..., Sun=6
+ * When mondayStart=false: Sun=0, Mon=1, ..., Sat=6
+ */
+export function dayOfWeekToGridIndex(jsDay: number, mondayStart: boolean): number {
+  if (!mondayStart) return jsDay;
+  return (jsDay + 6) % 7;
+}
+
+/**
+ * Gets events for a specific month from all weeks, keyed by date string.
+ */
+export function getEventsForMonthByDateStr(
+  weeks: CalendarWeek[],
+  year: number,
+  month: number // 0-indexed
+): Map<string, CalendarEvent[]> {
+  const map = new Map<string, CalendarEvent[]>();
+
+  for (const week of weeks) {
+    for (const event of week.events) {
+      const eventDate = new Date(event.date + "T12:00:00");
+      if (eventDate.getFullYear() === year && eventDate.getMonth() === month) {
+        const existing = map.get(event.date) || [];
+        existing.push(event);
+        map.set(event.date, existing);
+      }
+    }
+  }
+
+  return map;
+}
+
+/**
  * Gets the community display color for badges as inline styles.
  * Uses the canonical hex values from COMMUNITY_BADGES.
  */

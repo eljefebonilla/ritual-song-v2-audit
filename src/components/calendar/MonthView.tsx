@@ -1,28 +1,35 @@
 "use client";
 
+import { useState, useMemo } from "react";
 import type { CalendarWeek } from "@/lib/calendar-types";
 import type { LiturgicalDay } from "@/lib/types";
-import { getEventsForMonth } from "@/lib/calendar-utils";
+import { getEventsForMonthByDateStr, dayOfWeekToGridIndex, getCommunityColor } from "@/lib/calendar-utils";
 import { LITURGICAL_COLOR_LIGHT, LITURGICAL_COLOR_HEX } from "@/lib/liturgical-colors";
 import { buildLiturgicalDayMap, isSignificantRank } from "@/lib/liturgical-helpers";
-import { useMemo } from "react";
+import DayDetailPanel from "./DayDetailPanel";
 
 interface MonthViewProps {
   weeks: CalendarWeek[];
   currentMonth: Date;
   liturgicalDays?: LiturgicalDay[];
+  weekStartsOnMonday?: boolean;
 }
 
-const DAY_HEADERS = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+const MON_HEADERS = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"];
+const SUN_HEADERS = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
 
-export default function MonthView({ weeks, currentMonth, liturgicalDays }: MonthViewProps) {
+export default function MonthView({
+  weeks,
+  currentMonth,
+  liturgicalDays,
+  weekStartsOnMonday = true,
+}: MonthViewProps) {
   const year = currentMonth.getFullYear();
   const month = currentMonth.getMonth();
+  const [selectedDate, setSelectedDate] = useState<string | null>(null);
 
-  // Get events for this month
-  const eventsMap = getEventsForMonth(weeks, year, month);
+  const eventsMap = getEventsForMonthByDateStr(weeks, year, month);
 
-  // Build liturgical day lookup
   const litMap = useMemo(
     () => (liturgicalDays ? buildLiturgicalDayMap(liturgicalDays) : new Map<string, LiturgicalDay>()),
     [liturgicalDays]
@@ -31,40 +38,51 @@ export default function MonthView({ weeks, currentMonth, liturgicalDays }: Month
   // Build calendar grid
   const firstDay = new Date(year, month, 1);
   const lastDay = new Date(year, month + 1, 0);
-  const startDayOfWeek = firstDay.getDay(); // 0=Sun
+  const startDayOfWeek = dayOfWeekToGridIndex(firstDay.getDay(), weekStartsOnMonday);
   const daysInMonth = lastDay.getDate();
 
   const today = new Date();
   const todayStr = today.toISOString().split("T")[0];
-  const isCurrentMonth =
-    today.getFullYear() === year && today.getMonth() === month;
+  const isCurrentMonth = today.getFullYear() === year && today.getMonth() === month;
 
   // Build grid cells
-  const cells: Array<{ day: number | null; dateStr: string; isToday: boolean }> = [];
+  const cells: Array<{ day: number | null; dateStr: string; isToday: boolean; gridCol: number }> = [];
 
   // Leading empty cells
   for (let i = 0; i < startDayOfWeek; i++) {
-    cells.push({ day: null, dateStr: "", isToday: false });
+    cells.push({ day: null, dateStr: "", isToday: false, gridCol: i });
   }
 
   // Day cells
   for (let d = 1; d <= daysInMonth; d++) {
-    const dateStr = `${year}-${(month + 1).toString().padStart(2, "0")}-${d
-      .toString()
-      .padStart(2, "0")}`;
-    cells.push({ day: d, dateStr, isToday: dateStr === todayStr });
+    const dateStr = `${year}-${(month + 1).toString().padStart(2, "0")}-${d.toString().padStart(2, "0")}`;
+    const jsDay = new Date(year, month, d).getDay();
+    const gridCol = dayOfWeekToGridIndex(jsDay, weekStartsOnMonday);
+    cells.push({ day: d, dateStr, isToday: dateStr === todayStr, gridCol });
   }
 
-  // Trailing empty cells to fill the last row
+  // Trailing empty cells
   while (cells.length % 7 !== 0) {
-    cells.push({ day: null, dateStr: "", isToday: false });
+    cells.push({ day: null, dateStr: "", isToday: false, gridCol: cells.length % 7 });
   }
+
+  const dayHeaders = weekStartsOnMonday ? MON_HEADERS : SUN_HEADERS;
+  // Sunday column index
+  const sundayCol = weekStartsOnMonday ? 6 : 0;
+
+  const handleDayClick = (dateStr: string) => {
+    setSelectedDate((prev) => (prev === dateStr ? null : dateStr));
+  };
+
+  // Data for selected day
+  const selectedLitDay = selectedDate ? litMap.get(selectedDate) ?? null : null;
+  const selectedEvents = selectedDate ? eventsMap.get(selectedDate) || [] : [];
 
   return (
     <div className="p-4">
       {/* Day headers */}
       <div className="grid grid-cols-7 gap-px mb-1">
-        {DAY_HEADERS.map((d) => (
+        {dayHeaders.map((d) => (
           <div
             key={d}
             className="text-center text-xs font-medium text-stone-500 py-1"
@@ -86,12 +104,10 @@ export default function MonthView({ weeks, currentMonth, liturgicalDays }: Month
             );
           }
 
-          const dayEvents = eventsMap.get(cell.day) || [];
+          const dayEvents = eventsMap.get(cell.dateStr) || [];
           const litDay = litMap.get(cell.dateStr);
-          const isPast =
-            isCurrentMonth &&
-            cell.day < today.getDate() &&
-            !cell.isToday;
+          const isPast = isCurrentMonth && cell.day < today.getDate() && !cell.isToday;
+          const isSelected = selectedDate === cell.dateStr;
 
           // Liturgical color tint for cell background
           const bgColor = litDay
@@ -101,14 +117,17 @@ export default function MonthView({ weeks, currentMonth, liturgicalDays }: Month
           // Show celebration name for Sundays and significant ranks
           const showName =
             litDay &&
-            (isSignificantRank(litDay.rank) || idx % 7 === 0); // idx%7===0 is Sunday column
+            (isSignificantRank(litDay.rank) || cell.gridCol === sundayCol);
 
           return (
             <div
               key={cell.day}
-              className={`min-h-[5rem] p-1 relative ${
-                cell.isToday ? "ring-2 ring-parish-burgundy ring-inset" : ""
-              } ${isPast ? "opacity-50" : ""}`}
+              onClick={() => handleDayClick(cell.dateStr)}
+              className={`min-h-[5rem] p-1 relative cursor-pointer transition-shadow ${
+                isSelected ? "ring-2 ring-parish-burgundy ring-inset" : ""
+              } ${cell.isToday && !isSelected ? "ring-1 ring-parish-burgundy/40 ring-inset" : ""} ${
+                isPast ? "opacity-50" : ""
+              }`}
               style={{ backgroundColor: bgColor || "#ffffff" }}
             >
               {/* Liturgical color bar — 3px top border */}
@@ -121,9 +140,9 @@ export default function MonthView({ weeks, currentMonth, liturgicalDays }: Month
 
               {/* Day number */}
               <span
-                className={`text-xs font-medium ${
+                className={`text-xs font-medium inline-flex ${
                   cell.isToday
-                    ? "bg-parish-burgundy text-white rounded-full w-5 h-5 flex items-center justify-center"
+                    ? "bg-parish-burgundy text-white rounded-full w-5 h-5 items-center justify-center"
                     : "text-stone-700"
                 }`}
               >
@@ -140,24 +159,16 @@ export default function MonthView({ weeks, currentMonth, liturgicalDays }: Month
                 </div>
               )}
 
-              {/* Event dots */}
+              {/* Event dots — community-colored */}
               {dayEvents.length > 0 && (
                 <div className="mt-0.5 space-y-0.5">
                   {dayEvents.slice(0, 3).map((evt, i) => {
-                    // Determine dot color based on event type
                     let dotColor = "bg-stone-300";
+                    let dotHex: string | undefined;
+
                     if (evt.eventType === "mass") {
                       if (evt.community) {
-                        const communityDotColors: Record<string, string> = {
-                          reflections: "#5a6a78",
-                          foundations: "#8b6b5a",
-                          generations: "#8a7a3a",
-                          heritage: "#5a6b54",
-                          elevations: "#6b5a8a",
-                        };
-                        dotColor =
-                          communityDotColors[evt.community.toLowerCase()] ||
-                          "";
+                        dotHex = getCommunityColor(evt.community).color;
                       } else {
                         dotColor = "bg-parish-burgundy";
                       }
@@ -167,12 +178,11 @@ export default function MonthView({ weeks, currentMonth, liturgicalDays }: Month
                       dotColor = "bg-indigo-400";
                     }
 
-                    const isHex = dotColor.startsWith("#");
                     return (
                       <div
                         key={i}
-                        className={`h-1 rounded-full ${isHex ? "" : dotColor}`}
-                        style={isHex ? { backgroundColor: dotColor } : undefined}
+                        className={`h-1 rounded-full ${dotHex ? "" : dotColor}`}
+                        style={dotHex ? { backgroundColor: dotHex } : undefined}
                         title={`${evt.startTime12h || ""} ${evt.title}`}
                       />
                     );
@@ -220,6 +230,18 @@ export default function MonthView({ weeks, currentMonth, liturgicalDays }: Month
           ))}
         </div>
       </div>
+
+      {/* Day detail panel */}
+      {selectedDate && (
+        <div className="mt-4">
+          <DayDetailPanel
+            date={selectedDate}
+            litDay={selectedLitDay}
+            events={selectedEvents}
+            onClose={() => setSelectedDate(null)}
+          />
+        </div>
+      )}
     </div>
   );
 }

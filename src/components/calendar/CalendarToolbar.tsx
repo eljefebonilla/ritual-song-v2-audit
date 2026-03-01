@@ -19,6 +19,8 @@ interface CalendarToolbarProps {
   totalWeeks: number;
   visibleWeeks: number;
   onAddEvent?: () => void;
+  weekStartsOnMonday?: boolean;
+  onToggleWeekStart?: () => void;
 }
 
 export default function CalendarToolbar({
@@ -33,6 +35,8 @@ export default function CalendarToolbar({
   totalWeeks,
   visibleWeeks,
   onAddEvent,
+  weekStartsOnMonday,
+  onToggleWeekStart,
 }: CalendarToolbarProps) {
   const { isAdmin } = useUser();
   const [showSubscribe, setShowSubscribe] = useState(false);
@@ -199,7 +203,7 @@ export default function CalendarToolbar({
           </span>
         )}
 
-        {/* Month navigation (visible in month view) */}
+        {/* Month navigation + week start toggle (visible in month view) */}
         {view === "month" && (
           <>
             <div className="w-px h-6 bg-stone-200" />
@@ -242,6 +246,35 @@ export default function CalendarToolbar({
                 </svg>
               </button>
             </div>
+
+            {/* Mon / Sun toggle */}
+            {onToggleWeekStart && (
+              <>
+                <div className="w-px h-6 bg-stone-200" />
+                <div className="flex bg-stone-100 rounded-lg p-0.5">
+                  <button
+                    onClick={weekStartsOnMonday ? undefined : onToggleWeekStart}
+                    className={`px-2 py-0.5 text-[10px] font-medium rounded-md transition-colors ${
+                      weekStartsOnMonday
+                        ? "bg-white text-stone-900 shadow-sm"
+                        : "text-stone-500 hover:text-stone-700"
+                    }`}
+                  >
+                    Mon
+                  </button>
+                  <button
+                    onClick={weekStartsOnMonday ? onToggleWeekStart : undefined}
+                    className={`px-2 py-0.5 text-[10px] font-medium rounded-md transition-colors ${
+                      !weekStartsOnMonday
+                        ? "bg-white text-stone-900 shadow-sm"
+                        : "text-stone-500 hover:text-stone-700"
+                    }`}
+                  >
+                    Sun
+                  </button>
+                </div>
+              </>
+            )}
           </>
         )}
       </div>

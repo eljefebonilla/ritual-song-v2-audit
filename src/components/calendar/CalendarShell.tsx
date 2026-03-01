@@ -30,6 +30,7 @@ export default function CalendarShell({ calendar, liturgicalDays }: CalendarShel
     "all"
   );
   const [currentMonth, setCurrentMonth] = useState(() => new Date());
+  const [weekStartsOnMonday, setWeekStartsOnMonday] = useState(true);
 
   // Admin hidden weeks (localStorage — lazy init)
   const [hiddenWeekIds, setHiddenWeekIds] = useState<string[]>(() => {
@@ -122,6 +123,8 @@ export default function CalendarShell({ calendar, liturgicalDays }: CalendarShel
         totalWeeks={calendar.weeks.length}
         visibleWeeks={visibleWeeks.length}
         onAddEvent={isAdmin ? handleAddEvent : undefined}
+        weekStartsOnMonday={weekStartsOnMonday}
+        onToggleWeekStart={() => setWeekStartsOnMonday((v) => !v)}
       />
 
       <div className="flex-1 overflow-y-auto">
@@ -134,7 +137,7 @@ export default function CalendarShell({ calendar, liturgicalDays }: CalendarShel
             liturgicalDays={liturgicalDays}
           />
         ) : (
-          <MonthView weeks={calendar.weeks} currentMonth={currentMonth} liturgicalDays={liturgicalDays} />
+          <MonthView weeks={calendar.weeks} currentMonth={currentMonth} liturgicalDays={liturgicalDays} weekStartsOnMonday={weekStartsOnMonday} />
         )}
       </div>
 

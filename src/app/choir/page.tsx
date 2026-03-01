@@ -16,6 +16,7 @@ export default async function ChoirPage() {
     .eq("event_type", "mass")
     .eq("has_music", true)
     .or("choir_descriptor.in.(Volunteers,Volunteers + SMPREP,SMPREP),needs_volunteers.eq.true")
+    .in("community", ["Generations", "Heritage", "Elevations"])
     .order("event_date", { ascending: true })
     .order("start_time", { ascending: true });
 
