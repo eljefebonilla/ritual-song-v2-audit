@@ -171,7 +171,50 @@ export interface SongResource {
   isHighlighted?: boolean; // true for "AIM" files (priority lead sheets)
 }
 
-export type SongCategory = "song" | "mass_part" | "psalm" | "gospel_acclamation";
+export type SongCategory =
+  | "song" | "antiphon" | "kyrie" | "gloria" | "sprinkling_rite"
+  | "psalm" | "gospel_acclamation_refrain" | "gospel_acclamation_verse"
+  | "holy_holy" | "memorial_acclamation" | "great_amen"
+  | "lamb_of_god" | "lords_prayer" | "sequence"
+  // Legacy categories (kept for backward compat with existing code)
+  | "mass_part" | "gospel_acclamation";
+
+/** New expanded categories (14 values, no legacy) */
+export type ExpandedSongCategory =
+  | "song" | "antiphon" | "kyrie" | "gloria" | "sprinkling_rite"
+  | "psalm" | "gospel_acclamation_refrain" | "gospel_acclamation_verse"
+  | "holy_holy" | "memorial_acclamation" | "great_amen"
+  | "lamb_of_god" | "lords_prayer" | "sequence";
+
+/** Mass parts = all expanded categories that are parts of the Mass Ordinary/Proper */
+export const MASS_PART_CATEGORIES: ExpandedSongCategory[] = [
+  "kyrie", "gloria", "sprinkling_rite", "holy_holy",
+  "memorial_acclamation", "great_amen", "lamb_of_god",
+  "lords_prayer", "sequence",
+];
+
+/** Gospel acclamation categories */
+export const GOSPEL_ACCLAMATION_CATEGORIES: ExpandedSongCategory[] = [
+  "gospel_acclamation_refrain", "gospel_acclamation_verse",
+];
+
+/** Map expanded category to display label */
+export const SONG_CATEGORY_LABELS: Record<ExpandedSongCategory, string> = {
+  song: "Song",
+  antiphon: "Antiphon",
+  kyrie: "Kyrie",
+  gloria: "Gloria",
+  sprinkling_rite: "Sprinkling Rite",
+  psalm: "Psalm",
+  gospel_acclamation_refrain: "Gospel Accl. Refrain",
+  gospel_acclamation_verse: "Gospel Accl. Verse",
+  holy_holy: "Holy, Holy",
+  memorial_acclamation: "Memorial Accl.",
+  great_amen: "Great Amen",
+  lamb_of_god: "Lamb of God",
+  lords_prayer: "Lord's Prayer",
+  sequence: "Sequence",
+};
 
 export type ResourceDisplayCategory = "lead_sheet" | "choral" | "aim" | "color" | "audio";
 
@@ -203,12 +246,16 @@ export interface TuneMeter {
 }
 
 export interface LibrarySong {
-  id: string; // slug from title+composer
+  id: string; // slug from title+composer (legacy_id in Supabase)
+  supabaseId?: string; // UUID from Supabase songs table
   title: string;
   composer?: string;
   category?: SongCategory;
   functions?: string[]; // liturgical functions: gathering, offertory, communion, etc.
   recordedKey?: string; // Key of the primary audio recording (e.g., "C", "Bb")
+  psalmNumber?: number; // Psalm 1-150 (only for category=psalm)
+  massSettingId?: string; // FK to mass_settings table
+  massSettingName?: string; // Denormalized name for display
 
   // Cross-publisher enrichment fields
   catalogs?: { bb2026?: number; gather4?: number; spiritSong?: number; voices?: number; novum?: number; aahh?: number };
@@ -224,6 +271,39 @@ export interface LibrarySong {
   resources: SongResource[];
   usageCount: number; // how many times this song appears in music plans
   occasions: string[]; // occasion IDs where this song is used
+  isHiddenGlobal?: boolean; // admin-hidden from all users
+}
+
+export interface MassSetting {
+  id: string;
+  name: string;
+  composer?: string;
+  notes?: string;
+  pieces: LibrarySong[];
+}
+
+export interface SongRanking {
+  songId: string;
+  userId: string;
+  ranking: number;
+  notes?: string;
+}
+
+export interface CalendarDay {
+  id: string;
+  date: string;
+  liturgicalDayName?: string;
+  celebrationRank?: string;
+  liturgicalColor?: string;
+  season?: string;
+  ordoNotes?: string;
+  isHolyDay: boolean;
+  isHoliday: boolean;
+  holidayName?: string;
+  occasionId?: string;
+  isRecurring: boolean;
+  recurrenceType?: string;
+  customNotes?: string;
 }
 
 export interface ResolvedSong {

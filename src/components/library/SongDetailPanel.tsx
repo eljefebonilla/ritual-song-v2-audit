@@ -315,6 +315,309 @@ function getLastName(composer: string | undefined): string {
   return parts[parts.length - 1];
 }
 
+// === Song Metadata Section ===
+function SongMetadataSection({ song }: { song: LibrarySong }) {
+  const hasCatalogs = song.catalogs && Object.values(song.catalogs).some(Boolean);
+  const hasTopics = song.topics && song.topics.length > 0;
+  const hasScriptureRefs = song.scriptureRefs && song.scriptureRefs.length > 0;
+  const hasLiturgicalUse = song.liturgicalUse && song.liturgicalUse.length > 0;
+  const hasCredits = song.credits && (song.credits.textAuthors?.length || song.credits.composers?.length || song.credits.arrangers?.length);
+  const hasTuneMeter = song.tuneMeter && (song.tuneMeter.tuneName || song.tuneMeter.meter);
+  const hasFunctions = song.functions && song.functions.length > 0;
+  const hasAnyMetadata = hasCatalogs || hasTopics || hasScriptureRefs || hasLiturgicalUse || hasCredits || hasTuneMeter || hasFunctions || song.firstLine || song.refrainFirstLine || song.psalmNumber || song.languages?.length;
+
+  if (!hasAnyMetadata) return null;
+
+  const catalogLabels: Record<string, string> = {
+    bb2026: "BB",
+    gather4: "G4",
+    spiritSong: "SS",
+    voices: "V",
+    novum: "N",
+    aahh: "AAHH",
+  };
+
+  return (
+    <div className="mt-4 pt-4 border-t border-stone-100">
+      <h3 className="text-[10px] uppercase tracking-widest font-bold text-stone-400 mb-2">
+        Metadata
+      </h3>
+      <div className="space-y-2">
+        {/* Category badge */}
+        <div className="flex items-center gap-1.5">
+          <span className="text-[10px] font-medium text-stone-400 w-16 shrink-0">Category</span>
+          <span className="text-[10px] font-bold px-1.5 py-0.5 bg-stone-100 text-stone-600 rounded">
+            {song.category || "song"}
+          </span>
+        </div>
+
+        {/* Psalm Number */}
+        {song.psalmNumber && (
+          <div className="flex items-center gap-1.5">
+            <span className="text-[10px] font-medium text-stone-400 w-16 shrink-0">Psalm</span>
+            <span className="text-sm font-bold text-stone-700">Psalm {song.psalmNumber}</span>
+          </div>
+        )}
+
+        {/* Catalogs */}
+        {hasCatalogs && (
+          <div className="flex items-start gap-1.5">
+            <span className="text-[10px] font-medium text-stone-400 w-16 shrink-0 mt-0.5">Catalogs</span>
+            <div className="flex flex-wrap gap-1">
+              {Object.entries(song.catalogs!).map(([key, num]) => {
+                if (!num) return null;
+                return (
+                  <span key={key} className="text-[10px] font-bold px-1.5 py-0.5 bg-blue-50 text-blue-700 rounded">
+                    {catalogLabels[key] || key}#{num}
+                  </span>
+                );
+              })}
+            </div>
+          </div>
+        )}
+
+        {/* Topics */}
+        {hasTopics && (
+          <div className="flex items-start gap-1.5">
+            <span className="text-[10px] font-medium text-stone-400 w-16 shrink-0 mt-0.5">Topics</span>
+            <div className="flex flex-wrap gap-1">
+              {song.topics!.slice(0, 12).map((t) => (
+                <span key={t} className="text-[10px] px-1.5 py-0.5 bg-stone-100 text-stone-600 rounded">
+                  {t}
+                </span>
+              ))}
+              {song.topics!.length > 12 && (
+                <span className="text-[10px] text-stone-400">+{song.topics!.length - 12}</span>
+              )}
+            </div>
+          </div>
+        )}
+
+        {/* Scripture Refs */}
+        {hasScriptureRefs && (
+          <div className="flex items-start gap-1.5">
+            <span className="text-[10px] font-medium text-stone-400 w-16 shrink-0 mt-0.5">Scripture</span>
+            <div className="flex flex-wrap gap-1">
+              {song.scriptureRefs!.slice(0, 8).map((ref) => (
+                <span key={ref} className="text-[10px] px-1.5 py-0.5 bg-amber-50 text-amber-700 rounded">
+                  {ref}
+                </span>
+              ))}
+            </div>
+          </div>
+        )}
+
+        {/* Liturgical Use */}
+        {hasLiturgicalUse && (
+          <div className="flex items-start gap-1.5">
+            <span className="text-[10px] font-medium text-stone-400 w-16 shrink-0 mt-0.5">Liturgical</span>
+            <div className="flex flex-wrap gap-1">
+              {song.liturgicalUse!.map((u) => (
+                <span key={u} className="text-[10px] px-1.5 py-0.5 bg-violet-50 text-violet-700 rounded">
+                  {u}
+                </span>
+              ))}
+            </div>
+          </div>
+        )}
+
+        {/* Functions */}
+        {hasFunctions && (
+          <div className="flex items-start gap-1.5">
+            <span className="text-[10px] font-medium text-stone-400 w-16 shrink-0 mt-0.5">Functions</span>
+            <div className="flex flex-wrap gap-1">
+              {song.functions!.map((f) => (
+                <span key={f} className="text-[10px] px-1.5 py-0.5 bg-green-50 text-green-700 rounded">
+                  {f}
+                </span>
+              ))}
+            </div>
+          </div>
+        )}
+
+        {/* First Line / Refrain First Line */}
+        {song.firstLine && (
+          <div className="flex items-start gap-1.5">
+            <span className="text-[10px] font-medium text-stone-400 w-16 shrink-0">First Line</span>
+            <span className="text-[10px] text-stone-600 italic">{song.firstLine}</span>
+          </div>
+        )}
+        {song.refrainFirstLine && (
+          <div className="flex items-start gap-1.5">
+            <span className="text-[10px] font-medium text-stone-400 w-16 shrink-0">Refrain</span>
+            <span className="text-[10px] text-stone-600 italic">{song.refrainFirstLine}</span>
+          </div>
+        )}
+
+        {/* Credits */}
+        {hasCredits && (
+          <div className="flex items-start gap-1.5">
+            <span className="text-[10px] font-medium text-stone-400 w-16 shrink-0 mt-0.5">Credits</span>
+            <div className="text-[10px] text-stone-600 space-y-0.5">
+              {song.credits!.textAuthors?.map((a) => (
+                <div key={a.name}>Text: {a.name}{a.dates ? ` (${a.dates})` : ""}</div>
+              ))}
+              {song.credits!.composers?.map((c) => (
+                <div key={c.name}>Music: {c.name}{c.dates ? ` (${c.dates})` : ""}</div>
+              ))}
+              {song.credits!.arrangers?.map((a) => (
+                <div key={a.name}>Arr: {a.name}{a.dates ? ` (${a.dates})` : ""}</div>
+              ))}
+            </div>
+          </div>
+        )}
+
+        {/* Tune / Meter */}
+        {hasTuneMeter && (
+          <div className="flex items-start gap-1.5">
+            <span className="text-[10px] font-medium text-stone-400 w-16 shrink-0">Tune</span>
+            <span className="text-[10px] text-stone-600">
+              {song.tuneMeter!.tuneName && <span className="font-medium">{song.tuneMeter!.tuneName}</span>}
+              {song.tuneMeter!.meter && <span className="ml-1 text-stone-400">{song.tuneMeter!.meter}</span>}
+            </span>
+          </div>
+        )}
+
+        {/* Languages */}
+        {song.languages && song.languages.length > 0 && (
+          <div className="flex items-center gap-1.5">
+            <span className="text-[10px] font-medium text-stone-400 w-16 shrink-0">Languages</span>
+            <span className="text-[10px] text-stone-600">{song.languages.join(", ")}</span>
+          </div>
+        )}
+      </div>
+    </div>
+  );
+}
+
+// === Star Rating Component ===
+function StarRating({ songId }: { songId: string }) {
+  const [userRating, setUserRating] = useState<number>(0);
+  const [avgRating, setAvgRating] = useState<number>(0);
+  const [ratingCount, setRatingCount] = useState<number>(0);
+  const [hoveredStar, setHoveredStar] = useState<number>(0);
+  const [saving, setSaving] = useState(false);
+
+  // Fetch ratings on mount
+  useEffect(() => {
+    fetch(`/api/songs/${songId}/rankings`)
+      .then((res) => res.ok ? res.json() : null)
+      .then((data) => {
+        if (data) {
+          setAvgRating(data.average || 0);
+          setRatingCount(data.count || 0);
+          // Find current user's rating (first one for now)
+          if (data.rankings?.length > 0) {
+            setUserRating(data.rankings[0].ranking);
+          }
+        }
+      })
+      .catch(() => {});
+  }, [songId]);
+
+  const handleRate = async (rating: number) => {
+    setSaving(true);
+    try {
+      const res = await fetch(`/api/songs/${songId}/ranking`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ ranking: rating }),
+      });
+      if (res.ok) {
+        setUserRating(rating);
+        // Re-fetch to update average
+        const rankRes = await fetch(`/api/songs/${songId}/rankings`);
+        if (rankRes.ok) {
+          const data = await rankRes.json();
+          setAvgRating(data.average || 0);
+          setRatingCount(data.count || 0);
+        }
+      }
+    } finally {
+      setSaving(false);
+    }
+  };
+
+  return (
+    <div className="mt-4 pt-4 border-t border-stone-100">
+      <h3 className="text-[10px] uppercase tracking-widest font-bold text-stone-400 mb-2">
+        Rating
+      </h3>
+      <div className="flex items-center gap-2">
+        <div className="flex items-center gap-0.5" onMouseLeave={() => setHoveredStar(0)}>
+          {[1, 2, 3, 4, 5].map((star) => {
+            const filled = star <= (hoveredStar || userRating);
+            return (
+              <button
+                key={star}
+                disabled={saving}
+                onClick={() => handleRate(star)}
+                onMouseEnter={() => setHoveredStar(star)}
+                className={`w-5 h-5 transition-colors ${filled ? "text-amber-400" : "text-stone-200"} hover:text-amber-300`}
+              >
+                <svg viewBox="0 0 24 24" fill="currentColor">
+                  <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+                </svg>
+              </button>
+            );
+          })}
+        </div>
+        {ratingCount > 0 && (
+          <span className="text-[10px] text-stone-400">
+            {avgRating.toFixed(1)} avg ({ratingCount})
+          </span>
+        )}
+      </div>
+    </div>
+  );
+}
+
+// === Visibility Toggle ===
+function VisibilityToggle({ songId }: { songId: string }) {
+  const [isHidden, setIsHidden] = useState(false);
+  const [saving, setSaving] = useState(false);
+
+  const toggle = async () => {
+    setSaving(true);
+    try {
+      const res = await fetch(`/api/songs/${songId}/visibility`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ isHidden: !isHidden }),
+      });
+      if (res.ok) {
+        setIsHidden(!isHidden);
+      }
+    } finally {
+      setSaving(false);
+    }
+  };
+
+  return (
+    <button
+      onClick={toggle}
+      disabled={saving}
+      className={`p-1 transition-colors ${isHidden ? "text-red-400 hover:text-red-600" : "text-stone-300 hover:text-stone-500"}`}
+      title={isHidden ? "Song is hidden — click to show" : "Click to hide this song"}
+    >
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+        {isHidden ? (
+          <>
+            <path d="M17.94 17.94A10.07 10.07 0 0 1 12 20c-7 0-11-8-11-8a18.45 18.45 0 0 1 5.06-5.94" />
+            <path d="M9.9 4.24A9.12 9.12 0 0 1 12 4c7 0 11 8 11 8a18.5 18.5 0 0 1-2.16 3.19" />
+            <line x1="1" y1="1" x2="23" y2="23" />
+          </>
+        ) : (
+          <>
+            <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z" />
+            <circle cx="12" cy="12" r="3" />
+          </>
+        )}
+      </svg>
+    </button>
+  );
+}
+
 export default function SongDetailPanel({
   song,
   onClose,
@@ -633,6 +936,7 @@ export default function SongDetailPanel({
               )}
             </div>
             <div className="flex items-center gap-1 shrink-0">
+              <VisibilityToggle songId={song.id} />
               {isAdmin && !editing && (
                 <button
                   onClick={() => setConfirmDelete(true)}
@@ -953,6 +1257,12 @@ export default function SongDetailPanel({
           {isAdmin && (
             <LyricsEditor songId={song.id} songTitle={song.title} />
           )}
+
+          {/* Enrichment Metadata */}
+          <SongMetadataSection song={song} />
+
+          {/* Star Rating */}
+          <StarRating songId={song.id} />
         </div>
 
         {/* Occasions list */}

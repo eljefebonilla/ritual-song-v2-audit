@@ -2,7 +2,8 @@
 
 import { useState, useMemo, useCallback, useRef, useEffect } from "react";
 import { useSearchParams } from "next/navigation";
-import type { LibrarySong, LiturgicalOccasion, SongCategory } from "@/lib/types";
+import type { LibrarySong, LiturgicalOccasion, SongCategory, ExpandedSongCategory } from "@/lib/types";
+import { MASS_PART_CATEGORIES, GOSPEL_ACCLAMATION_CATEGORIES } from "@/lib/types";
 import { useUser } from "@/lib/user-context";
 import { getSongDisplayCategories } from "@/lib/song-library";
 import {
@@ -16,10 +17,11 @@ import SongCard from "./SongCard";
 import SongDetailPanel from "./SongDetailPanel";
 import AlphabetJump from "./AlphabetJump";
 import LibraryFilters from "./LibraryFilters";
+import PsalmNumberPicker from "./PsalmNumberPicker";
+import SubFilterChips from "./MassPartChips";
 
 interface SongLibraryShellProps {
   songs: LibrarySong[];
-
   title?: string;
   subtitle?: string;
 }
@@ -32,12 +34,27 @@ const SORT_OPTIONS = [
 
 type SortOption = (typeof SORT_OPTIONS)[number]["id"];
 
-const CATEGORY_TABS: { id: SongCategory; label: string }[] = [
-  { id: "song", label: "Songs" },
-  { id: "mass_part", label: "Mass Parts" },
-  { id: "psalm", label: "Psalms" },
-  { id: "gospel_acclamation", label: "Gospel Acclamations" },
+// 5 library tabs
+type LibraryTab = "songs" | "mass_parts" | "psalms" | "gospel_acclamations" | "antiphons";
+
+const LIBRARY_TABS: { id: LibraryTab; label: string }[] = [
+  { id: "songs", label: "Songs" },
+  { id: "mass_parts", label: "Mass Parts" },
+  { id: "psalms", label: "Psalms" },
+  { id: "gospel_acclamations", label: "Gospel Accl." },
+  { id: "antiphons", label: "Antiphons" },
 ];
+
+// Map tabs to categories
+function getCategoriesForTab(tab: LibraryTab): SongCategory[] {
+  switch (tab) {
+    case "songs": return ["song"];
+    case "mass_parts": return [...MASS_PART_CATEGORIES, "mass_part"] as SongCategory[];
+    case "psalms": return ["psalm"];
+    case "gospel_acclamations": return [...GOSPEL_ACCLAMATION_CATEGORIES, "gospel_acclamation"] as SongCategory[];
+    case "antiphons": return ["antiphon"] as SongCategory[];
+  }
+}
 
 // Map from Order of Mass filter values to how songs match them
 const ORDER_FILTER_TO_FUNCTIONS: Record<string, string[]> = {
@@ -66,10 +83,6 @@ const ORDER_FILTER_TO_CATEGORY: Record<string, string> = {
   fraction_rite: "mass_part",
 };
 
-/**
- * Find the nearest occasion date on or after today.
- * date-index.json is sorted by date, so we can scan linearly.
- */
 function findNearestOccasionDate(
   map: Map<string, { date: string; occasionId: string; season: string; name: string }>
 ): string | null {
@@ -89,7 +102,7 @@ function findNearestOccasionDate(
 export default function SongLibraryShell({ songs, title = "Song Library", subtitle }: SongLibraryShellProps) {
   const { role, setRole, isAdmin } = useUser();
   const searchParams = useSearchParams();
-  const [categoryTab, setCategoryTab] = useState<SongCategory>("song");
+  const [activeTab, setActiveTab] = useState<LibraryTab>("songs");
   const [search, setSearch] = useState("");
   const [sort, setSort] = useState<SortOption>("usage");
   const [selectedSongId, setSelectedSongId] = useState<string | null>(
@@ -102,6 +115,16 @@ export default function SongLibraryShell({ songs, title = "Song Library", subtit
   const [duplicateWarning, setDuplicateWarning] = useState<{ id: string; title: string; composer: string | null; resourceCount: number; usageCount: number }[] | null>(null);
   const [filtersVisible, setFiltersVisible] = useState(true);
   const listRef = useRef<HTMLDivElement>(null);
+
+  // Sub-filter state for Mass Parts and Gospel Acclamations tabs
+  const [massPartSubFilter, setMassPartSubFilter] = useState<string>("all");
+  const [gaSubFilter, setGaSubFilter] = useState<string>("all");
+
+  // Psalm number picker state
+  const [selectedPsalmNumber, setSelectedPsalmNumber] = useState<number | null>(null);
+
+  // Group by setting toggle for Mass Parts
+  const [groupBySetting, setGroupBySetting] = useState(false);
 
   // Supabase-uploaded audio URLs: songId → audioUrl
   const [uploadedAudio, setUploadedAudio] = useState<Record<string, string>>({});
@@ -116,25 +139,19 @@ export default function SongLibraryShell({ songs, title = "Song Library", subtit
       .catch(() => {});
   }, [songs]);
 
-  // Determine if we're in Lent (for alleluia badge styling)
+  // Determine if we're in Lent
   const isLent = useMemo(() => {
     const now = new Date();
     const month = now.getMonth() + 1;
-    // Approximate: Lent runs roughly mid-Feb to mid-Apr. We use a simple heuristic.
-    // Ash Wednesday 2026: Feb 18, Easter 2026: Apr 5
-    // Ash Wednesday 2027: Feb 10, Easter 2027: Mar 28
-    // For precision, this would check liturgical_days, but a season check suffices.
     return (month >= 2 && month <= 4);
   }, []);
 
-  // Pre-built maps (computed before state so we can derive initial date)
+  // Pre-built maps
   const dateOccasionMap = useMemo(() => getDateToOccasionMap(), []);
   const occasionSeasonMap = useMemo(() => getOccasionSeasonMap(), []);
-
-  // Auto-select nearest upcoming occasion date on mount
   const initialDate = useMemo(() => findNearestOccasionDate(dateOccasionMap), [dateOccasionMap]);
 
-  // New filter state
+  // Filter state
   const [orderOfMassFilters, setOrderOfMassFilters] = useState<Set<string>>(new Set());
   const [seasonFilters, setSeasonFilters] = useState<Set<string>>(new Set());
   const [resourceFilters, setResourceFilters] = useState<Set<string>>(new Set());
@@ -144,7 +161,7 @@ export default function SongLibraryShell({ songs, title = "Song Library", subtit
   const [calendarSongMeta, setCalendarSongMeta] = useState<Map<string, { positions: Set<string>; communities: Set<string> }> | null>(null);
   const [loadingOccasion, setLoadingOccasion] = useState(false);
 
-  // Build a normalized title -> song ids lookup for fuzzy matching
+  // Normalized title index for fuzzy matching
   const normalizedTitleIndex = useMemo(() => {
     const map = new Map<string, string[]>();
     for (const song of songs) {
@@ -159,14 +176,48 @@ export default function SongLibraryShell({ songs, title = "Song Library", subtit
     return map;
   }, [songs]);
 
-  const categoryCounts = useMemo(() => {
-    const counts: Record<string, number> = {};
-    for (const tab of CATEGORY_TABS) counts[tab.id] = 0;
+  // Tab counts — using expanded categories
+  const tabCounts = useMemo(() => {
+    const counts: Record<LibraryTab, number> = {
+      songs: 0,
+      mass_parts: 0,
+      psalms: 0,
+      gospel_acclamations: 0,
+      antiphons: 0,
+    };
+
+    // Sub-category counts for chips
+    const subCounts: Record<string, number> = {};
+
     for (const s of songs) {
-      const cat = s.category || "song";
-      if (counts[cat] !== undefined) counts[cat]++;
+      const cat = (s.category || "song") as string;
+
+      if (cat === "song") counts.songs++;
+      else if (MASS_PART_CATEGORIES.includes(cat as ExpandedSongCategory) || cat === "mass_part") {
+        counts.mass_parts++;
+        subCounts[cat] = (subCounts[cat] || 0) + 1;
+      }
+      else if (cat === "psalm") counts.psalms++;
+      else if (GOSPEL_ACCLAMATION_CATEGORIES.includes(cat as ExpandedSongCategory) || cat === "gospel_acclamation") {
+        counts.gospel_acclamations++;
+        subCounts[cat] = (subCounts[cat] || 0) + 1;
+      }
+      else if (cat === "antiphon") counts.antiphons++;
+      else counts.songs++; // fallback
     }
-    return counts;
+
+    return { counts, subCounts };
+  }, [songs]);
+
+  // Available psalm numbers
+  const availablePsalmNumbers = useMemo(() => {
+    const nums = new Set<number>();
+    for (const s of songs) {
+      if (s.category === "psalm" && s.psalmNumber) {
+        nums.add(s.psalmNumber);
+      }
+    }
+    return nums;
   }, [songs]);
 
   const activeFilterCount =
@@ -255,7 +306,26 @@ export default function SongLibraryShell({ songs, title = "Song Library", subtit
   }, [selectedDate, selectedEnsemble, dateOccasionMap, normalizedTitleIndex]);
 
   const filtered = useMemo(() => {
-    let list = songs.filter(s => (s.category || "song") === categoryTab);
+    const tabCategories = getCategoriesForTab(activeTab);
+    let list = songs.filter(s => {
+      const cat = (s.category || "song") as string;
+      return tabCategories.includes(cat as SongCategory);
+    });
+
+    // Sub-filter for Mass Parts
+    if (activeTab === "mass_parts" && massPartSubFilter !== "all") {
+      list = list.filter(s => s.category === massPartSubFilter);
+    }
+
+    // Sub-filter for Gospel Acclamations
+    if (activeTab === "gospel_acclamations" && gaSubFilter !== "all") {
+      list = list.filter(s => s.category === gaSubFilter);
+    }
+
+    // Psalm number filter
+    if (activeTab === "psalms" && selectedPsalmNumber !== null) {
+      list = list.filter(s => s.psalmNumber === selectedPsalmNumber);
+    }
 
     // Search filter
     if (search.trim()) {
@@ -271,18 +341,11 @@ export default function SongLibraryShell({ songs, title = "Song Library", subtit
     if (orderOfMassFilters.size > 0) {
       list = list.filter((s) => {
         for (const filterVal of orderOfMassFilters) {
-          // Check song.functions
           const funcMatches = ORDER_FILTER_TO_FUNCTIONS[filterVal] || [filterVal];
           if (s.functions?.some((fn) => funcMatches.includes(fn))) return true;
 
-          // Check song.category
           const catMatch = ORDER_FILTER_TO_CATEGORY[filterVal];
-          if (catMatch && s.category === catMatch) {
-            // For generic mass_part category, we match any mass part filter
-            if (catMatch === "mass_part") return true;
-            // For psalm/gospel_acclamation, exact match
-            return true;
-          }
+          if (catMatch && s.category === catMatch) return true;
         }
         return false;
       });
@@ -312,7 +375,7 @@ export default function SongLibraryShell({ songs, title = "Song Library", subtit
       });
     }
 
-    // Sort — when calendar is active, sort by Mass position order
+    // Sort
     if (calendarSongMeta && calendarSongMeta.size > 0) {
       list.sort((a, b) => {
         const metaA = calendarSongMeta.get(a.id);
@@ -320,6 +383,14 @@ export default function SongLibraryShell({ songs, title = "Song Library", subtit
         const posA = metaA ? Math.min(...[...metaA.positions].map((p) => MASS_POSITION_ORDER[p] ?? 99)) : 99;
         const posB = metaB ? Math.min(...[...metaB.positions].map((p) => MASS_POSITION_ORDER[p] ?? 99)) : 99;
         if (posA !== posB) return posA - posB;
+        return a.title.localeCompare(b.title);
+      });
+    } else if (activeTab === "psalms" && !search) {
+      // Sort psalms by psalm number
+      list.sort((a, b) => {
+        const numA = a.psalmNumber || 999;
+        const numB = b.psalmNumber || 999;
+        if (numA !== numB) return numA - numB;
         return a.title.localeCompare(b.title);
       });
     } else {
@@ -337,7 +408,7 @@ export default function SongLibraryShell({ songs, title = "Song Library", subtit
     }
 
     return list;
-  }, [songs, categoryTab, search, sort, orderOfMassFilters, seasonFilters, resourceFilters, calendarSongIds, calendarSongMeta, occasionSeasonMap]);
+  }, [songs, activeTab, massPartSubFilter, gaSubFilter, selectedPsalmNumber, search, sort, orderOfMassFilters, seasonFilters, resourceFilters, calendarSongIds, calendarSongMeta, occasionSeasonMap]);
 
   // Build letter groups for alphabet jump
   const { availableLetters, letterIndices } = useMemo(() => {
@@ -359,21 +430,15 @@ export default function SongLibraryShell({ songs, title = "Song Library", subtit
   }, [filtered, sort]);
 
   const handleLetterClick = useCallback((letter: string) => {
-    const idx = letterIndices.get(letter);
-    if (idx === undefined || !listRef.current) return;
-
-    const el = listRef.current.querySelector(`[data-letter-anchor="${letter}"]`);
+    const el = listRef.current?.querySelector(`[data-letter-anchor="${letter}"]`);
     if (el) {
       el.scrollIntoView({ behavior: "smooth", block: "start" });
     }
-  }, [letterIndices]);
+  }, []);
 
   const selectedSong = selectedSongId
     ? songs.find((s) => s.id === selectedSongId) || null
     : null;
-
-  const categorySongs = useMemo(() => songs.filter(s => (s.category || "song") === categoryTab), [songs, categoryTab]);
-  const songsWithResources = categorySongs.filter((s) => s.resources.length > 0).length;
 
   // Track which letters have had their anchor placed
   const placedLetters = new Set<string>();
@@ -388,7 +453,7 @@ export default function SongLibraryShell({ songs, title = "Song Library", subtit
             <div>
               <h1 className="text-lg font-bold text-stone-900">{title}</h1>
               <p className="text-xs text-stone-400">
-                {subtitle || `${categoryCounts[categoryTab]} ${CATEGORY_TABS.find(t => t.id === categoryTab)!.label.toLowerCase()} \u00b7 ${songsWithResources} with resources`}
+                {subtitle || `${filtered.length} of ${songs.length} songs`}
               </p>
             </div>
             <div className="flex items-center gap-2">
@@ -431,25 +496,73 @@ export default function SongLibraryShell({ songs, title = "Song Library", subtit
             </div>
           </div>
 
-          {/* Category tabs */}
+          {/* 5-tab system */}
           <div className="flex gap-1 mb-1 bg-stone-100 rounded-lg p-0.5 overflow-x-auto">
-            {CATEGORY_TABS.map((tab) => (
+            {LIBRARY_TABS.map((tab) => (
               <button
                 key={tab.id}
                 onClick={() => {
-                  setCategoryTab(tab.id);
+                  setActiveTab(tab.id);
                   setSearch("");
+                  setMassPartSubFilter("all");
+                  setGaSubFilter("all");
+                  setSelectedPsalmNumber(null);
                 }}
                 className={`px-3 py-1.5 text-xs font-medium rounded-md whitespace-nowrap transition-colors ${
-                  categoryTab === tab.id
+                  activeTab === tab.id
                     ? "bg-white text-stone-900 shadow-sm"
                     : "text-stone-500 hover:text-stone-700"
                 }`}
               >
-                {tab.label} ({categoryCounts[tab.id]})
+                {tab.label} ({tabCounts.counts[tab.id]})
               </button>
             ))}
           </div>
+
+          {/* Sub-filter chips for Mass Parts */}
+          {activeTab === "mass_parts" && (
+            <div className="mb-1">
+              <SubFilterChips
+                tab="mass_parts"
+                selected={massPartSubFilter}
+                onSelect={setMassPartSubFilter}
+                counts={tabCounts.subCounts}
+              />
+              {/* Group by setting toggle */}
+              <label className="flex items-center gap-1.5 mt-1 cursor-pointer">
+                <input
+                  type="checkbox"
+                  checked={groupBySetting}
+                  onChange={(e) => setGroupBySetting(e.target.checked)}
+                  className="w-3.5 h-3.5 rounded border-stone-300 text-stone-800 focus:ring-stone-400 focus:ring-1"
+                />
+                <span className="text-[11px] text-stone-500">Group by Setting</span>
+              </label>
+            </div>
+          )}
+
+          {/* Sub-filter chips for Gospel Acclamations */}
+          {activeTab === "gospel_acclamations" && (
+            <div className="mb-1">
+              <SubFilterChips
+                tab="gospel_acclamations"
+                selected={gaSubFilter}
+                onSelect={setGaSubFilter}
+                counts={tabCounts.subCounts}
+              />
+            </div>
+          )}
+
+          {/* Psalm number picker */}
+          {activeTab === "psalms" && (
+            <div className="mb-1">
+              <PsalmNumberPicker
+                availableNumbers={availablePsalmNumbers}
+                selectedNumber={selectedPsalmNumber}
+                onSelect={setSelectedPsalmNumber}
+              />
+            </div>
+          )}
 
           <div className="flex flex-col gap-2 sm:flex-row sm:items-center sm:gap-3">
             {/* Search */}
@@ -507,7 +620,7 @@ export default function SongLibraryShell({ songs, title = "Song Library", subtit
           </div>
 
           {/* Alphabet jump — inline, below toolbar when sorted A-Z */}
-          {sort === "alpha" && !search && (
+          {sort === "alpha" && !search && activeTab !== "psalms" && (
             <div className="mt-2 -mb-1">
               <AlphabetJump
                 availableLetters={availableLetters}
@@ -519,7 +632,7 @@ export default function SongLibraryShell({ songs, title = "Song Library", subtit
 
         {/* Filter sidebar + song list */}
         <div className="flex-1 flex overflow-hidden">
-          {/* Filter panel — desktop sidebar, mobile expandable */}
+          {/* Filter panel */}
           {filtersVisible && (
             <div className="w-full sm:w-56 sm:shrink-0 border-r border-stone-100 bg-stone-50 overflow-y-auto p-3 sm:block">
               <LibraryFilters
@@ -560,8 +673,13 @@ export default function SongLibraryShell({ songs, title = "Song Library", subtit
               <div className="text-center text-stone-400 text-sm py-12">
                 {search || activeFilterCount > 0
                   ? "No songs match your filters."
+                  : activeTab === "antiphons"
+                  ? "No antiphons in library yet."
                   : "No songs in library yet."}
               </div>
+            ) : activeTab === "mass_parts" && groupBySetting ? (
+              // Grouped by mass setting
+              <MassSettingGroups songs={filtered} selectedSongId={selectedSongId} onSelectSong={setSelectedSongId} isLent={isLent} uploadedAudio={uploadedAudio} calendarSongMeta={calendarSongMeta} />
             ) : (
               <div className="flex flex-col pb-8">
                 {filtered.map((song) => {
@@ -593,7 +711,7 @@ export default function SongLibraryShell({ songs, title = "Song Library", subtit
         </div>
       </div>
 
-      {/* Detail panel — side panel on desktop, full-screen modal on mobile */}
+      {/* Detail panel */}
       {selectedSong && (
         <SongDetailPanel
           song={selectedSong}
@@ -632,20 +750,15 @@ export default function SongLibraryShell({ songs, title = "Song Library", subtit
                 </div>
               </div>
 
-              {/* Duplicate warning */}
               {duplicateWarning && (
                 <div className="mt-3 p-3 bg-amber-50 border border-amber-200 rounded-md">
-                  <p className="text-xs font-medium text-amber-800 mb-2">
-                    Potential duplicates found:
-                  </p>
+                  <p className="text-xs font-medium text-amber-800 mb-2">Potential duplicates found:</p>
                   <div className="space-y-1.5">
                     {duplicateWarning.map((m) => (
                       <div key={m.id} className="text-xs text-amber-700 bg-white rounded px-2 py-1.5 border border-amber-100">
                         <span className="font-medium">{m.title}</span>
                         {m.composer && <span className="text-amber-500"> — {m.composer}</span>}
-                        <span className="text-amber-400 ml-1">
-                          ({m.resourceCount} resources, used {m.usageCount}x)
-                        </span>
+                        <span className="text-amber-400 ml-1">({m.resourceCount} resources, used {m.usageCount}x)</span>
                       </div>
                     ))}
                   </div>
@@ -717,6 +830,121 @@ export default function SongLibraryShell({ songs, title = "Song Library", subtit
               </div>
             </div>
           </div>
+        </>
+      )}
+    </div>
+  );
+}
+
+// === Mass Setting Grouping Sub-component ===
+
+function MassSettingGroups({
+  songs,
+  selectedSongId,
+  onSelectSong,
+  isLent,
+  uploadedAudio,
+  calendarSongMeta,
+}: {
+  songs: LibrarySong[];
+  selectedSongId: string | null;
+  onSelectSong: (id: string | null) => void;
+  isLent: boolean;
+  uploadedAudio: Record<string, string>;
+  calendarSongMeta: Map<string, { positions: Set<string>; communities: Set<string> }> | null;
+}) {
+  // Group by mass setting name
+  const groups = useMemo(() => {
+    const bySettingId = new Map<string, { name: string; composer?: string; songs: LibrarySong[] }>();
+    const ungrouped: LibrarySong[] = [];
+
+    for (const song of songs) {
+      if (song.massSettingId) {
+        const settingName = song.massSettingName || song.massSettingId;
+        const existing = bySettingId.get(song.massSettingId);
+        if (existing) {
+          existing.songs.push(song);
+        } else {
+          // Extract setting name from title parenthetical
+          const match = song.title.match(/\(([^)]*(?:Mass|Misa|Heritage|Storrington|Community)[^)]*)\)/i);
+          bySettingId.set(song.massSettingId, {
+            name: match?.[1] || settingName,
+            composer: song.composer,
+            songs: [song],
+          });
+        }
+      } else {
+        ungrouped.push(song);
+      }
+    }
+
+    return { grouped: [...bySettingId.values()].sort((a, b) => a.name.localeCompare(b.name)), ungrouped };
+  }, [songs]);
+
+  const [collapsedSettings, setCollapsedSettings] = useState<Set<string>>(new Set());
+
+  const toggleSetting = (name: string) => {
+    setCollapsedSettings(prev => {
+      const next = new Set(prev);
+      if (next.has(name)) next.delete(name);
+      else next.add(name);
+      return next;
+    });
+  };
+
+  return (
+    <div className="flex flex-col pb-8">
+      {groups.grouped.map((group) => (
+        <div key={group.name}>
+          <button
+            onClick={() => toggleSetting(group.name)}
+            className="sticky top-0 w-full flex items-center justify-between px-3 py-2 bg-stone-50 border-b border-stone-200 hover:bg-stone-100 transition-colors z-10"
+          >
+            <div className="text-left">
+              <span className="text-xs font-bold text-stone-700">{group.name}</span>
+              {group.composer && (
+                <span className="text-[10px] text-stone-400 ml-2">{group.composer}</span>
+              )}
+              <span className="text-[10px] text-stone-300 ml-2">{group.songs.length} pieces</span>
+            </div>
+            <svg
+              width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"
+              className={`text-stone-400 transition-transform ${collapsedSettings.has(group.name) ? "" : "rotate-90"}`}
+            >
+              <polyline points="9 18 15 12 9 6" />
+            </svg>
+          </button>
+          {!collapsedSettings.has(group.name) && group.songs.map((song) => (
+            <SongCard
+              key={song.id}
+              song={song}
+              isSelected={song.id === selectedSongId}
+              onClick={() => onSelectSong(song.id === selectedSongId ? null : song.id)}
+              calendarMeta={calendarSongMeta?.get(song.id) ?? null}
+              isLent={isLent}
+              uploadedAudioUrl={uploadedAudio[song.id]}
+            />
+          ))}
+        </div>
+      ))}
+
+      {groups.ungrouped.length > 0 && (
+        <>
+          <div className="sticky top-0 px-3 py-2 bg-stone-50 border-b border-stone-200 z-10">
+            <span className="text-xs font-bold text-stone-500">Other Mass Parts</span>
+            <span className="text-[10px] text-stone-300 ml-2">{groups.ungrouped.length}</span>
+          </div>
+          {groups.ungrouped.map((song) => (
+            <SongCard
+              key={song.id}
+              song={song}
+              isSelected={song.id === selectedSongId}
+              onClick={() => onSelectSong(song.id === selectedSongId ? null : song.id)}
+              calendarMeta={calendarSongMeta?.get(song.id) ?? null}
+              isLent={isLent}
+              uploadedAudioUrl={uploadedAudio[song.id]}
+            />
+          ))}
         </>
       )}
     </div>

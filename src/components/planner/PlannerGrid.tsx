@@ -18,6 +18,7 @@ import { useUser } from "@/lib/user-context";
 import GridColumnHeader from "./GridColumnHeader";
 import GridCell from "./GridCell";
 import CellEditor from "./CellEditor";
+import RecommendationChips from "./RecommendationChips";
 import type { PlannerViewMode } from "./PlannerShell";
 
 const MASS_SETTING_SUB_SET = new Set<GridRowKey>(MASS_SETTING_SUB_ROWS);
@@ -72,6 +73,31 @@ function OccasionCard({ column, hideMassParts = false, hideReadings = false, hid
             )}
           </div>
         </div>
+        {/* Season + reading tags */}
+        <div className="flex flex-wrap items-center gap-1 mt-1.5">
+          <span
+            className="inline-block px-1.5 py-0.5 text-[9px] font-bold uppercase tracking-wider rounded-sm text-white"
+            style={{ backgroundColor: colors.primary }}
+          >
+            {occasion.seasonLabel}
+          </span>
+          {occasion.lectionary?.thematicTag && (
+            <span className="inline-block px-1.5 py-0.5 text-[9px] font-medium rounded-sm bg-stone-100 text-stone-600">
+              {occasion.lectionary.thematicTag}
+            </span>
+          )}
+          {(() => {
+            const gospel = occasion.readings?.find((r) => r.type === "gospel");
+            if (!gospel) return null;
+            const m = gospel.citation.match(/^(\d?\s*[A-Za-z]+)\s+(\d+)/);
+            const label = m ? `${m[1]} ${m[2]}` : gospel.citation.slice(0, 12);
+            return (
+              <span className="inline-block px-1.5 py-0.5 text-[9px] font-medium rounded-sm bg-amber-50 text-amber-700">
+                {label}
+              </span>
+            );
+          })()}
+        </div>
       </div>
 
       {/* Synopsis (when visible) */}
@@ -124,6 +150,34 @@ function OccasionCard({ column, hideMassParts = false, hideReadings = false, hid
           );
         })}
       </div>
+
+      {/* Recommendation suggestions for key empty slots */}
+      {(() => {
+        const keyPositions = ["gathering", "offertory", "communion1", "sending"] as const;
+        const emptyPositions = keyPositions.filter((pos) => {
+          const data = extractCellData(plan, pos as GridRowKey, occasion);
+          return data.isEmpty;
+        });
+        if (emptyPositions.length === 0) return null;
+        return (
+          <div className="px-4 py-2 border-t border-stone-100 bg-stone-50/50">
+            <p className="text-[9px] font-bold text-stone-400 uppercase tracking-wider mb-1">
+              Suggestions
+            </p>
+            {emptyPositions.map((pos) => (
+              <div key={pos} className="mb-1.5">
+                <span className="text-[9px] font-medium text-stone-500">
+                  {GRID_ROW_LABELS[pos as GridRowKey]}:
+                </span>
+                <RecommendationChips
+                  occasionId={occasion.id}
+                  position={pos}
+                />
+              </div>
+            ))}
+          </div>
+        );
+      })()}
     </div>
   );
 }
@@ -241,7 +295,7 @@ export default function PlannerGrid({ columns, viewMode, hideMassParts = false, 
 
   const COL_WIDTH = 280;
   const LABEL_WIDTH = 130;
-  const HEADER_HEIGHT = 72;
+  const HEADER_HEIGHT = 110;
 
   return (
     <div className="h-full overflow-auto planner-scroll">

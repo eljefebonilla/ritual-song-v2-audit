@@ -3,9 +3,15 @@ import { normalizeTitle } from "./occasion-helpers";
 
 let songLibraryData: LibrarySong[] | null = null;
 
+/**
+ * Get the song library. Reads from the cached in-memory data.
+ * For server components, call loadSongLibrary() first to populate from Supabase.
+ * Falls back to JSON file if Supabase data isn't loaded.
+ */
 export function getSongLibrary(): LibrarySong[] {
   if (songLibraryData) return songLibraryData;
   try {
+    // Fallback to JSON when Supabase data hasn't been loaded
     songLibraryData = require("../data/song-library.json") as LibrarySong[];
     // Auto-classify songs that don't have a category yet
     for (const song of songLibraryData) {
@@ -16,6 +22,21 @@ export function getSongLibrary(): LibrarySong[] {
     return songLibraryData;
   } catch {
     return [];
+  }
+}
+
+/**
+ * Load the song library from Supabase (server-side only).
+ * Must be called from a Server Component or API route before getSongLibrary().
+ */
+export async function loadSongLibrary(): Promise<LibrarySong[]> {
+  try {
+    const { getSongsFromSupabase } = await import("./supabase/songs");
+    songLibraryData = await getSongsFromSupabase();
+    return songLibraryData;
+  } catch (err) {
+    console.error("Failed to load songs from Supabase, falling back to JSON:", err);
+    return getSongLibrary();
   }
 }
 

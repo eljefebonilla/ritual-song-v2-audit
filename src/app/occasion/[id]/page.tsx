@@ -4,6 +4,7 @@ import { getOccasion, getAllOccasions, getSynopsis } from "@/lib/data";
 import { SEASON_COLORS } from "@/lib/liturgical-colors";
 import { resolveAllSongs, resolveFullSongs } from "@/lib/song-library";
 import OccasionMusicSection from "@/components/music/OccasionMusicSection";
+import OccasionRecommendations from "@/components/planner/OccasionRecommendations";
 
 export function generateStaticParams() {
   return getAllOccasions().map((o) => ({ id: o.id }));
@@ -128,6 +129,12 @@ export default async function OccasionPage({
           </div>
         </div>
       )}
+
+      {/* Recommended Songs */}
+      <OccasionRecommendations
+        occasionId={id}
+        seasonColor={colors.primary}
+      />
 
       {/* Order of Worship — unified music + readings + antiphons + resources */}
       {occasion.musicPlans.length > 0 && (
