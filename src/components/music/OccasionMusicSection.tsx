@@ -8,6 +8,7 @@ import type {
   OccasionResource,
   ResolvedSong,
   LibrarySong,
+  LectionarySynopsis,
 } from "@/lib/types";
 import { COMMUNITY_BADGES } from "@/lib/occasion-helpers";
 import { planToSlots } from "@/lib/worship-slots";
@@ -22,6 +23,7 @@ interface OccasionMusicSectionProps {
   seasonColor: string;
   resolvedSongs: Record<string, ResolvedSong>;
   librarySongs: Record<string, LibrarySong>;
+  synopsis?: LectionarySynopsis | null;
 }
 
 const COMMUNITY_ORDER = [
@@ -40,6 +42,7 @@ export default function OccasionMusicSection({
   seasonColor,
   resolvedSongs,
   librarySongs,
+  synopsis,
 }: OccasionMusicSectionProps) {
   const sorted = useMemo(
     () =>
@@ -206,6 +209,7 @@ export default function OccasionMusicSection({
             audioOverrides={audioOverrides}
             presider={activePlan.presider}
             massNotes={activePlan.massNotes}
+            synopsis={synopsis}
           />
         </div>
 

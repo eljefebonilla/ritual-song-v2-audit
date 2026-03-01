@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { getAllOccasions, getSeasons, getCurrentWeekOccasions } from "@/lib/data";
+import { getAllOccasions, getSeasons, getCurrentWeekOccasions, getSynopsis } from "@/lib/data";
 import { SEASON_COLORS } from "@/lib/liturgical-colors";
 import type { SeasonGroup } from "@/lib/types";
 
@@ -57,6 +57,8 @@ export default function DashboardPage() {
   const occasions = getAllOccasions();
   const seasons = getSeasons();
   const { thisWeek, nextWeek } = getCurrentWeekOccasions();
+  const thisWeekSynopsis = thisWeek ? getSynopsis(thisWeek.id) : null;
+  const nextWeekSynopsis = nextWeek ? getSynopsis(nextWeek.id) : null;
 
   const seasonMap = new Map<string, SeasonGroup>();
   for (const s of seasons) {
@@ -91,6 +93,11 @@ export default function DashboardPage() {
             <p className="text-sm text-stone-500 mt-1">
               {thisWeek.lectionary.thematicTag}
             </p>
+            {thisWeekSynopsis?.logline && (
+              <p className="text-xs text-stone-400 mt-1 line-clamp-2">
+                {thisWeekSynopsis.logline}
+              </p>
+            )}
           </Link>
         )}
         {nextWeek && (
@@ -112,6 +119,11 @@ export default function DashboardPage() {
             <p className="text-sm text-stone-500 mt-1">
               {nextWeek.lectionary.thematicTag}
             </p>
+            {nextWeekSynopsis?.logline && (
+              <p className="text-xs text-stone-400 mt-1 line-clamp-2">
+                {nextWeekSynopsis.logline}
+              </p>
+            )}
           </Link>
         )}
       </div>

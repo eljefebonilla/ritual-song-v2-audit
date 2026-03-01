@@ -1,6 +1,6 @@
 import { notFound } from "next/navigation";
 import Link from "next/link";
-import { getOccasion, getAllOccasions } from "@/lib/data";
+import { getOccasion, getAllOccasions, getSynopsis } from "@/lib/data";
 import { SEASON_COLORS } from "@/lib/liturgical-colors";
 import { resolveAllSongs, resolveFullSongs } from "@/lib/song-library";
 import OccasionMusicSection from "@/components/music/OccasionMusicSection";
@@ -20,6 +20,7 @@ export default async function OccasionPage({
   if (!occasion) notFound();
 
   const colors = SEASON_COLORS[occasion.season] || SEASON_COLORS.ordinary;
+  const synopsis = getSynopsis(id);
   const resolvedSongs = resolveAllSongs(occasion.musicPlans, occasion.occasionResources);
   const librarySongs = resolveFullSongs(occasion.musicPlans);
 
@@ -94,6 +95,40 @@ export default async function OccasionPage({
         </div>
       )}
 
+      {/* Lectionary Synopsis */}
+      {synopsis && (
+        <div className="mb-6">
+          <div
+            className="w-12 h-1 rounded-full mb-3"
+            style={{ backgroundColor: colors.primary }}
+          />
+          <h2 className="text-xs uppercase tracking-widest font-bold text-stone-400 mb-2">
+            Lectionary Synopsis
+          </h2>
+          <p className="text-sm font-medium text-stone-700">{synopsis.logline}</p>
+          {synopsis.trajectory && (
+            <p className="text-xs text-stone-500 mt-1">{synopsis.trajectory}</p>
+          )}
+          <div className="border border-stone-200 rounded-lg p-3 bg-white mt-3 space-y-3">
+            {(["first", "second", "gospel"] as const).map((key) => {
+              const r = synopsis.readings[key];
+              const label = key === "gospel" ? "Gospel" : key === "first" ? "First Reading" : "Second Reading";
+              return (
+                <div key={key}>
+                  <p className="text-[10px] uppercase tracking-widest font-bold text-stone-400">
+                    {label}{r.citation ? ` — ${r.citation}` : ""}
+                  </p>
+                  <p className="text-sm text-stone-600 mt-0.5">{r.synopsis}</p>
+                </div>
+              );
+            })}
+          </div>
+          <div className="bg-stone-50 border-l-2 rounded-r-md p-3 mt-3 italic text-sm text-stone-600" style={{ borderColor: colors.primary }}>
+            {synopsis.invitesUsTo}
+          </div>
+        </div>
+      )}
+
       {/* Order of Worship — unified music + readings + antiphons + resources */}
       {occasion.musicPlans.length > 0 && (
         <OccasionMusicSection
@@ -104,6 +139,7 @@ export default async function OccasionPage({
           seasonColor={colors.primary}
           resolvedSongs={resolvedSongs}
           librarySongs={librarySongs}
+          synopsis={synopsis}
         />
       )}
     </div>

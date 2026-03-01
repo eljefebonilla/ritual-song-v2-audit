@@ -26,6 +26,8 @@ interface FilterToolbarProps {
   setHideMassParts: (v: boolean) => void;
   hideReadings: boolean;
   setHideReadings: (v: boolean) => void;
+  hideSynopses: boolean;
+  setHideSynopses: (v: boolean) => void;
   viewMode: PlannerViewMode;
   setViewMode: (v: PlannerViewMode) => void;
 }
@@ -62,6 +64,8 @@ export default function FilterToolbar({
   setHideMassParts,
   hideReadings,
   setHideReadings,
+  hideSynopses,
+  setHideSynopses,
   viewMode,
   setViewMode,
 }: FilterToolbarProps) {
@@ -329,6 +333,17 @@ export default function FilterToolbar({
               className="rounded border-stone-300 text-parish-burgundy focus:ring-parish-burgundy"
             />
             <span className="text-xs text-stone-600">Hide readings</span>
+          </label>
+
+          {/* Show synopses toggle */}
+          <label className="flex items-center gap-1.5 cursor-pointer select-none">
+            <input
+              type="checkbox"
+              checked={!hideSynopses}
+              onChange={(e) => setHideSynopses(!e.target.checked)}
+              className="rounded border-stone-300 text-parish-burgundy focus:ring-parish-burgundy"
+            />
+            <span className="text-xs text-stone-600">Show synopses</span>
           </label>
         </div>
       </div>

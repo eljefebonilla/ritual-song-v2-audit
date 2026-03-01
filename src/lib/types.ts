@@ -107,6 +107,18 @@ export interface OccasionResource {
   category: "antiphon" | "gospel_acclamation";
 }
 
+export interface LectionarySynopsis {
+  occasion_id: string;
+  logline: string;
+  trajectory: string | null;
+  readings: {
+    first: { citation: string | null; synopsis: string };
+    second: { citation: string | null; synopsis: string };
+    gospel: { citation: string | null; synopsis: string };
+  };
+  invitesUsTo: string;
+}
+
 export interface SeasonGroup {
   id: LiturgicalSeason;
   label: string;
@@ -224,4 +236,47 @@ export interface WorshipSlot {
 
   // Annotations
   annotations?: string[];
+}
+
+// ===== LITURGICAL CALENDAR TYPES =====
+
+export type LiturgicalColor = "violet" | "white" | "red" | "green" | "rose" | "black";
+
+export type CelebrationRank =
+  | "solemnity"
+  | "feast"
+  | "memorial"
+  | "optional_memorial"
+  | "sunday"
+  | "weekday";
+
+export interface LiturgicalDay {
+  id: string;
+  date: string;
+  celebrationName: string;
+  rank: CelebrationRank;
+  season: LiturgicalSeason;
+  colorPrimary: LiturgicalColor;
+  colorSecondary: LiturgicalColor | null;
+  gloria: boolean;
+  alleluia: boolean;
+  lectionaryNumber: number | null;
+  psalterWeek: string | null;
+  occasionId: string | null;
+  saintName: string | null;
+  saintTitle: string | null;
+  isHolyday: boolean;
+  isTransferred: boolean;
+  ecclesiasticalProvince: string | null;
+  optionalMemorials: string[];
+  isBVM: boolean;
+  readings?: LiturgicalDayReading[];
+}
+
+export interface LiturgicalDayReading {
+  readingOrder: number;
+  readingType: "first" | "psalm" | "second" | "gospel_verse" | "gospel";
+  bookAbbrev: string;
+  chapterVerse: string;
+  fullCitation: string;
 }

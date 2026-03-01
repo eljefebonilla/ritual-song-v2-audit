@@ -1,6 +1,6 @@
 import { notFound } from "next/navigation";
 import Link from "next/link";
-import { getSeasons, getOccasionsByseason } from "@/lib/data";
+import { getSeasons, getOccasionsByseason, getSynopsis } from "@/lib/data";
 import { SEASON_COLORS } from "@/lib/liturgical-colors";
 import type { LiturgicalSeason } from "@/lib/types";
 
@@ -42,22 +42,30 @@ export default async function SeasonPage({
       </p>
 
       <div className="space-y-2">
-        {occasions.map((occ) => (
-          <Link
-            key={occ.id}
-            href={`/occasion/${occ.id}`}
-            className="flex items-center gap-3 p-3 border border-stone-200 rounded-lg bg-white hover:shadow-sm transition-shadow"
-          >
-            <span
-              className="w-2 h-2 rounded-full shrink-0"
-              style={{ backgroundColor: colors.primary }}
-            />
-            <div className="min-w-0">
-              <p className="text-sm font-semibold text-stone-800">{occ.name}</p>
-              <p className="text-xs text-stone-400">Year {occ.year}</p>
-            </div>
-          </Link>
-        ))}
+        {occasions.map((occ) => {
+          const synopsis = getSynopsis(occ.id);
+          return (
+            <Link
+              key={occ.id}
+              href={`/occasion/${occ.id}`}
+              className="flex items-center gap-3 p-3 border border-stone-200 rounded-lg bg-white hover:shadow-sm transition-shadow"
+            >
+              <span
+                className="w-2 h-2 rounded-full shrink-0 mt-0.5"
+                style={{ backgroundColor: colors.primary }}
+              />
+              <div className="min-w-0">
+                <p className="text-sm font-semibold text-stone-800">{occ.name}</p>
+                <p className="text-xs text-stone-400">Year {occ.year}</p>
+                {synopsis?.logline && (
+                  <p className="text-xs text-stone-400 mt-0.5 line-clamp-1">
+                    {synopsis.logline}
+                  </p>
+                )}
+              </div>
+            </Link>
+          );
+        })}
       </div>
     </div>
   );

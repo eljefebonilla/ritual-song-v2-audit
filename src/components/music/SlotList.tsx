@@ -1,7 +1,8 @@
 "use client";
 
+import { useState } from "react";
 import type { RefObject } from "react";
-import type { WorshipSlot, OccasionResource } from "@/lib/types";
+import type { WorshipSlot, OccasionResource, LectionarySynopsis } from "@/lib/types";
 import { SECTION_LABELS } from "@/lib/worship-slots";
 import { useMedia } from "@/lib/media-context";
 import InteractiveSongSlot from "./InteractiveSongSlot";
@@ -16,6 +17,7 @@ interface SlotListProps {
   audioOverrides?: Record<string, string>;
   presider?: string;
   massNotes?: string[];
+  synopsis?: LectionarySynopsis | null;
 }
 
 function SectionHeader({ title, color }: { title: string; color: string }) {
@@ -85,27 +87,70 @@ function SlotPlayButton({ resources }: { resources?: OccasionResource[] }) {
   );
 }
 
-function ReadingRow({ slot }: { slot: WorshipSlot }) {
+const READING_TYPE_TO_SYNOPSIS_KEY: Record<string, "first" | "second" | "gospel"> = {
+  first: "first",
+  second: "second",
+  gospel: "gospel",
+};
+
+function ReadingRow({ slot, synopsis, isExpanded, onToggle }: {
+  slot: WorshipSlot;
+  synopsis?: LectionarySynopsis | null;
+  isExpanded?: boolean;
+  onToggle?: () => void;
+}) {
   if (!slot.reading) return null;
   const r = slot.reading;
+  const synopsisKey = READING_TYPE_TO_SYNOPSIS_KEY[r.type];
+  const readingSynopsis = synopsisKey ? synopsis?.readings[synopsisKey] : null;
+
   return (
-    <div className="flex items-start gap-3 py-2 px-3">
-      <span className="text-[10px] uppercase tracking-wider font-semibold text-stone-400 w-28 shrink-0 pt-0.5">
-        {slot.label}
-      </span>
-      <span className="w-7 shrink-0 flex items-start justify-center pt-0.5">
-        <SlotPlayButton resources={slot.resources} />
-      </span>
-      <div className="min-w-0 flex-1">
-        <p className="text-sm font-medium text-stone-700">{r.citation}</p>
-        {r.summary && (
-          <p className="text-xs text-stone-500 mt-0.5">{r.summary}</p>
-        )}
-        {r.antiphon && (
-          <p className="text-xs text-stone-400 italic mt-0.5">
-            &ldquo;{r.antiphon}&rdquo;
-          </p>
-        )}
+    <div className="py-2 px-3">
+      <div className="flex items-start gap-3">
+        <span className="text-[10px] uppercase tracking-wider font-semibold text-stone-400 w-28 shrink-0 pt-0.5">
+          {slot.label}
+        </span>
+        <span className="w-7 shrink-0 flex items-start justify-center pt-0.5">
+          <SlotPlayButton resources={slot.resources} />
+        </span>
+        <div className="min-w-0 flex-1">
+          <div className="flex items-center gap-1.5">
+            <p className="text-sm font-medium text-stone-700">{r.citation}</p>
+            {readingSynopsis && (
+              <button
+                onClick={onToggle}
+                className="text-stone-300 hover:text-stone-500 transition-colors shrink-0"
+                title={isExpanded ? "Hide synopsis" : "Show synopsis"}
+              >
+                <svg
+                  width="12" height="12"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2.5"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  className={`transition-transform ${isExpanded ? "rotate-90" : ""}`}
+                >
+                  <polyline points="9 18 15 12 9 6" />
+                </svg>
+              </button>
+            )}
+          </div>
+          {r.summary && (
+            <p className="text-xs text-stone-500 mt-0.5">{r.summary}</p>
+          )}
+          {r.antiphon && (
+            <p className="text-xs text-stone-400 italic mt-0.5">
+              &ldquo;{r.antiphon}&rdquo;
+            </p>
+          )}
+          {isExpanded && readingSynopsis && (
+            <p className="text-xs text-stone-500 mt-1.5 bg-stone-50 rounded p-2 border-l-2 border-stone-300">
+              {readingSynopsis.synopsis}
+            </p>
+          )}
+        </div>
       </div>
     </div>
   );
@@ -226,7 +271,18 @@ export default function SlotList({
   audioOverrides,
   presider,
   massNotes,
+  synopsis,
 }: SlotListProps) {
+  const [expandedReadings, setExpandedReadings] = useState<Set<string>>(new Set());
+
+  const toggleReading = (type: string) => {
+    setExpandedReadings((prev) => {
+      const next = new Set(prev);
+      if (next.has(type)) next.delete(type);
+      else next.add(type);
+      return next;
+    });
+  };
   if (slots.length === 0) {
     return (
       <div className="px-4 py-8 text-center text-sm text-stone-400">
@@ -286,7 +342,15 @@ export default function SlotList({
                     />
                   );
                 case "reading":
-                  return <ReadingRow key={slot.id} slot={slot} />;
+                  return (
+                    <ReadingRow
+                      key={slot.id}
+                      slot={slot}
+                      synopsis={synopsis}
+                      isExpanded={slot.reading ? expandedReadings.has(slot.reading.type) : false}
+                      onToggle={slot.reading ? () => toggleReading(slot.reading!.type) : undefined}
+                    />
+                  );
                 case "antiphon":
                   return <AntiphonRow key={slot.id} slot={slot} />;
                 case "mass_setting":

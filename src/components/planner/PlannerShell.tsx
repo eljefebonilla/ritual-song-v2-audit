@@ -14,6 +14,7 @@ import PlannerGrid from "./PlannerGrid";
 const HIDE_PAST_KEY = "rs_hide_past_weeks";
 const HIDE_MASS_PARTS_KEY = "rs_hide_mass_parts";
 const HIDE_READINGS_KEY = "rs_hide_readings";
+const HIDE_SYNOPSES_KEY = "rs_hide_synopses";
 
 export type PlannerViewMode = "grid" | "cards";
 
@@ -67,16 +68,28 @@ export default function PlannerShell({ occasions }: PlannerShellProps) {
     }
   });
 
+  // Hide synopses toggle (hidden by default, persisted to localStorage)
+  const [hideSynopses, setHideSynopses] = useState(() => {
+    if (typeof window === "undefined") return true;
+    try {
+      const stored = localStorage.getItem(HIDE_SYNOPSES_KEY);
+      return stored !== null ? stored !== "false" : true;
+    } catch {
+      return true;
+    }
+  });
+
   // Persist to localStorage when changed
   useEffect(() => {
     try {
       localStorage.setItem(HIDE_PAST_KEY, String(hidePastWeeks));
       localStorage.setItem(HIDE_MASS_PARTS_KEY, String(hideMassParts));
       localStorage.setItem(HIDE_READINGS_KEY, String(hideReadings));
+      localStorage.setItem(HIDE_SYNOPSES_KEY, String(hideSynopses));
     } catch {
       // ignore
     }
-  }, [hidePastWeeks, hideMassParts, hideReadings]);
+  }, [hidePastWeeks, hideMassParts, hideReadings, hideSynopses]);
 
   const filteredOccasions = useMemo(
     () => getFilteredOccasions(occasions, yearCycle, season),
@@ -141,11 +154,13 @@ export default function PlannerShell({ occasions }: PlannerShellProps) {
         setHideMassParts={setHideMassParts}
         hideReadings={hideReadings}
         setHideReadings={setHideReadings}
+        hideSynopses={hideSynopses}
+        setHideSynopses={setHideSynopses}
         viewMode={viewMode}
         setViewMode={setViewMode}
       />
       <div className="flex-1 overflow-hidden">
-        <PlannerGrid columns={columns} viewMode={viewMode} hideMassParts={hideMassParts} hideReadings={hideReadings} communityId={communityId} />
+        <PlannerGrid columns={columns} viewMode={viewMode} hideMassParts={hideMassParts} hideReadings={hideReadings} hideSynopses={hideSynopses} communityId={communityId} />
       </div>
     </div>
   );

@@ -1,7 +1,8 @@
-import type { LiturgicalOccasion, LiturgicalYear, LiturgicalSeason, SeasonGroup } from "./types";
+import type { LiturgicalOccasion, LiturgicalYear, LiturgicalSeason, SeasonGroup, LectionarySynopsis } from "./types";
 import allOccasionsData from "../data/all-occasions.json";
 import seasonsData from "../data/seasons.json";
 import calendarData from "../data/calendar.json";
+import synopsesData from "../data/lectionary-synopses.json";
 
 export interface OccasionSummary {
   id: string;
@@ -14,6 +15,7 @@ export interface OccasionSummary {
 }
 
 const typedOccasions = allOccasionsData as OccasionSummary[];
+const typedSynopses = synopsesData as Record<string, LectionarySynopsis>;
 
 export function getAllOccasions(): OccasionSummary[] {
   return typedOccasions;
@@ -62,4 +64,12 @@ export function getAllFullOccasions(): LiturgicalOccasion[] {
   return typedOccasions
     .map((summary) => getOccasion(summary.id))
     .filter(Boolean) as LiturgicalOccasion[];
+}
+
+export function getSynopsis(id: string): LectionarySynopsis | null {
+  return typedSynopses[id] ?? null;
+}
+
+export function getAllSynopses(): Record<string, LectionarySynopsis> {
+  return typedSynopses;
 }

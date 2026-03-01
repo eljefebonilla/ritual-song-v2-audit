@@ -13,6 +13,7 @@ import {
 } from "@/lib/grid-types";
 import { extractCellData, getOccasionDisplayDate } from "@/lib/grid-data";
 import { SEASON_COLORS } from "@/lib/liturgical-colors";
+import { getAllSynopses } from "@/lib/data";
 import { useUser } from "@/lib/user-context";
 import GridColumnHeader from "./GridColumnHeader";
 import GridCell from "./GridCell";
@@ -26,6 +27,7 @@ interface PlannerGridProps {
   viewMode: PlannerViewMode;
   hideMassParts?: boolean;
   hideReadings?: boolean;
+  hideSynopses?: boolean;
   communityId?: string;
 }
 
@@ -36,10 +38,12 @@ interface EditingCell {
   anchorRect: DOMRect;
 }
 
-function OccasionCard({ column, hideMassParts = false, hideReadings = false }: { column: GridColumn; hideMassParts?: boolean; hideReadings?: boolean }) {
+function OccasionCard({ column, hideMassParts = false, hideReadings = false, hideSynopses = true }: { column: GridColumn; hideMassParts?: boolean; hideReadings?: boolean; hideSynopses?: boolean }) {
   const { occasion, plan } = column;
   const colors = SEASON_COLORS[occasion.season] || SEASON_COLORS.ordinary;
   const displayDate = getOccasionDisplayDate(occasion);
+  const synopses = getAllSynopses();
+  const synopsis = synopses[occasion.id];
 
   const shortName = occasion.name
     .replace(/\[([ABC])\]/, "")
@@ -69,6 +73,16 @@ function OccasionCard({ column, hideMassParts = false, hideReadings = false }: {
           </div>
         </div>
       </div>
+
+      {/* Synopsis (when visible) */}
+      {!hideSynopses && synopsis && (
+        <div className="px-4 py-2 border-b border-stone-100">
+          <p className="text-xs font-medium text-stone-600">{synopsis.logline}</p>
+          <p className="text-xs text-stone-400 italic mt-1 border-l-2 pl-2" style={{ borderColor: colors.primary }}>
+            {synopsis.invitesUsTo.length > 200 ? synopsis.invitesUsTo.slice(0, 200) + "…" : synopsis.invitesUsTo}
+          </p>
+        </div>
+      )}
 
       {/* Card body — music plan rows + readings */}
       <div className="divide-y divide-stone-50">
@@ -114,7 +128,7 @@ function OccasionCard({ column, hideMassParts = false, hideReadings = false }: {
   );
 }
 
-export default function PlannerGrid({ columns, viewMode, hideMassParts = false, hideReadings = false, communityId }: PlannerGridProps) {
+export default function PlannerGrid({ columns, viewMode, hideMassParts = false, hideReadings = false, hideSynopses = true, communityId }: PlannerGridProps) {
   const { isAdmin } = useUser();
   const [massSettingExpanded, setMassSettingExpanded] = useState(false);
   const [editingCell, setEditingCell] = useState<EditingCell | null>(null);
@@ -193,7 +207,7 @@ export default function PlannerGrid({ columns, viewMode, hideMassParts = false, 
     return (
       <div className="h-full overflow-y-auto p-4 space-y-3">
         {columns.map((col) => (
-          <OccasionCard key={col.occasion.id} column={col} hideMassParts={hideMassParts} hideReadings={hideReadings} />
+          <OccasionCard key={col.occasion.id} column={col} hideMassParts={hideMassParts} hideReadings={hideReadings} hideSynopses={hideSynopses} />
         ))}
       </div>
     );
@@ -259,6 +273,41 @@ export default function PlannerGrid({ columns, viewMode, hideMassParts = false, 
             </div>
           ))}
         </div>
+
+        {/* Synopsis logline row */}
+        {!hideSynopses && (() => {
+          const synopses = getAllSynopses();
+          return (
+            <div className="flex">
+              <div
+                className="shrink-0 sticky left-0 z-10 bg-stone-50 border-b border-r border-stone-200 flex items-center px-3"
+                style={{ width: LABEL_WIDTH, minHeight: 44 }}
+              >
+                <span className="text-[11px] font-medium text-stone-400 italic uppercase tracking-wide">
+                  Synopsis
+                </span>
+              </div>
+              {columns.map((col, ci) => {
+                const syn = synopses[col.occasion.id];
+                return (
+                  <div
+                    key={`${col.occasion.id}-synopsis`}
+                    className={`shrink-0 border-b border-r border-stone-100 px-2 py-1.5 flex items-center ${
+                      ci % 2 === 0 ? "bg-stone-50/50" : "bg-white"
+                    }`}
+                    style={{ width: COL_WIDTH, minHeight: 44 }}
+                  >
+                    {syn ? (
+                      <p className="text-xs italic text-stone-500 line-clamp-2">
+                        {syn.logline}
+                      </p>
+                    ) : null}
+                  </div>
+                );
+              })}
+            </div>
+          );
+        })()}
 
         {/* Grid body */}
         {rows.map((row, ri) => {
