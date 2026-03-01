@@ -16,7 +16,8 @@ interface SongRowProps {
   isSelected: boolean;
   onClick: () => void;
   calendarMeta?: CalendarMeta | null;
-
+  hasAlleluia?: boolean;
+  isLent?: boolean;
   uploadedAudioUrl?: string;
 }
 
@@ -70,7 +71,14 @@ function MusicNoteIcon() {
 
 const CATEGORY_ORDER: ResourceDisplayCategory[] = ["aim", "audio", "lead_sheet", "choral", "color"];
 
-export default function SongCard({ song, isSelected, onClick, calendarMeta, uploadedAudioUrl }: SongRowProps) {
+function titleContainsAlleluia(title: string): boolean {
+  const lower = title.toLowerCase();
+  return lower.includes("alleluia") || lower.includes("hallelujah");
+}
+
+export default function SongCard({ song, isSelected, onClick, calendarMeta, hasAlleluia, isLent, uploadedAudioUrl }: SongRowProps) {
+  // If hasAlleluia not explicitly passed, infer from title
+  const showAlleluiaBadge = hasAlleluia ?? titleContainsAlleluia(song.title);
   const { play } = useMedia();
 
   // Determine which resource categories are available
@@ -181,6 +189,18 @@ export default function SongCard({ song, isSelected, onClick, calendarMeta, uplo
           <span className="text-[10px] text-stone-300 shrink-0">
             Used {song.usageCount}x
           </span>
+          {showAlleluiaBadge && (
+            <span
+              className={`text-[9px] font-bold px-1.5 py-0.5 rounded shrink-0 ${
+                isLent
+                  ? "bg-red-100 text-red-700"
+                  : "bg-amber-50 text-amber-600"
+              }`}
+              title={isLent ? "Contains Alleluia — not suitable for Lenten liturgy" : "Contains Alleluia"}
+            >
+              {isLent ? "Alleluia!" : "Alleluia"}
+            </span>
+          )}
         </div>
 
         {/* Resource action buttons — left-aligned under title */}

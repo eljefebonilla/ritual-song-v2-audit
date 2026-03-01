@@ -78,6 +78,7 @@ export async function POST(request: NextRequest) {
       day_of_week: body.day_of_week || null,
       has_music: body.has_music ?? false,
       is_auto_mix: body.is_auto_mix ?? false,
+      needs_volunteers: body.needs_volunteers ?? false,
       celebrant: body.celebrant || null,
       notes: body.notes || null,
       sidebar_note: body.sidebar_note || null,

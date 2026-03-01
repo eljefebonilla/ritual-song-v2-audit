@@ -140,6 +140,7 @@ export default async function OccasionPage({
           resolvedSongs={resolvedSongs}
           librarySongs={librarySongs}
           synopsis={synopsis}
+          occasionDates={occasion.dates}
         />
       )}
     </div>

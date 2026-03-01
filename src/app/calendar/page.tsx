@@ -66,6 +66,7 @@ function buildCalendarFromRows(
       notes: (row.notes as string) || null,
       sidebarNote: (row.sidebar_note as string) || null,
       occasionId: (row.occasion_id as string) || null,
+      needsVolunteers: (row.needs_volunteers as boolean) ?? false,
     };
 
     week.events.push(event);

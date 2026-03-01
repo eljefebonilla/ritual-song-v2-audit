@@ -9,7 +9,8 @@
     "lint": "eslint",
     "build:date-index": "npx tsx scripts/build-date-index.ts",
     "build:liturgical-calendar": "npx tsx scripts/parse-usccb-calendar.ts && npx tsx scripts/populate-liturgical-days.ts",
-    "scan:alleluia": "npx tsx scripts/scan-song-lyrics.ts"
+    "scan:alleluia": "npx tsx scripts/scan-song-lyrics.ts",
+    "populate:saints": "npx tsx scripts/populate-saints.ts"
   },
   "dependencies": {
     "@supabase/ssr": "^0.8.0",
@@ -28,6 +29,7 @@
     "@types/pdf-parse": "^1.1.5",
     "@types/react": "^19",
     "@types/react-dom": "^19",
+    "dotenv": "^17.3.1",
     "eslint": "^9",
     "eslint-config-next": "16.1.6",
     "pdf-parse": "^2.4.5",

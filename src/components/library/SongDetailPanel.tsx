@@ -11,6 +11,7 @@ import type {
 import { useUser } from "@/lib/user-context";
 import { useMedia } from "@/lib/media-context";
 import { extractChartKeys } from "@/lib/key-utils";
+import LyricsEditor from "./LyricsEditor";
 import Link from "next/link";
 
 interface SongDetailPanelProps {
@@ -946,6 +947,11 @@ export default function SongDetailPanel({
                 </button>
               )}
             </div>
+          )}
+
+          {/* Lyrics & Metadata (admin only) */}
+          {isAdmin && (
+            <LyricsEditor songId={song.id} songTitle={song.title} />
           )}
         </div>
 

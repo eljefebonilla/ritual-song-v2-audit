@@ -53,6 +53,7 @@ export default function EventEditor({ event, onSave, onDelete, onClose }: EventE
   const [sidebarNote, setSidebarNote] = useState(event?.sidebarNote || "");
   const [hasMusic, setHasMusic] = useState(event?.hasMusic ?? true);
   const [isAutoMix, setIsAutoMix] = useState(event?.isAutoMix ?? false);
+  const [needsVolunteers, setNeedsVolunteers] = useState(event?.needsVolunteers ?? false);
   const [litDay, setLitDay] = useState<LiturgicalDay | null>(null);
   const [litLoading, setLitLoading] = useState(false);
 
@@ -98,6 +99,7 @@ export default function EventEditor({ event, onSave, onDelete, onClose }: EventE
         sidebar_note: sidebarNote || null,
         has_music: hasMusic,
         is_auto_mix: isAutoMix,
+        needs_volunteers: needsVolunteers,
       });
       onClose();
     } finally {
@@ -311,6 +313,15 @@ export default function EventEditor({ event, onSave, onDelete, onClose }: EventE
                 className="rounded border-stone-300 text-parish-burgundy focus:ring-parish-burgundy"
               />
               <span className="text-sm text-stone-700">Auto-Mix</span>
+            </label>
+            <label className="flex items-center gap-2 cursor-pointer">
+              <input
+                type="checkbox"
+                checked={needsVolunteers}
+                onChange={(e) => setNeedsVolunteers(e.target.checked)}
+                className="rounded border-stone-300 text-parish-burgundy focus:ring-parish-burgundy"
+              />
+              <span className="text-sm text-stone-700">Needs Volunteers</span>
             </label>
           </div>
         </form>

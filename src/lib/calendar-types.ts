@@ -38,6 +38,7 @@ export interface CalendarEvent {
   notes: string | null;       // General notes
   sidebarNote: string | null; // ← sidebar annotation
   occasionId: string | null;  // Link to occasion JSON e.g. "advent-01-a"
+  needsVolunteers: boolean;   // true if additional choir volunteers are needed
 }
 
 export type CalendarEventType =

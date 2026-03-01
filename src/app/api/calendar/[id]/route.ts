@@ -33,6 +33,7 @@ export async function PUT(
       day_of_week: body.day_of_week,
       has_music: body.has_music,
       is_auto_mix: body.is_auto_mix,
+      needs_volunteers: body.needs_volunteers,
       celebrant: body.celebrant,
       notes: body.notes,
       sidebar_note: body.sidebar_note,

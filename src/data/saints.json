@@ -1,0 +1,1253 @@
+[
+  {
+    "name": "St. Basil the Great",
+    "title": "Bishop and Doctor of the Church",
+    "feastMonth": 1,
+    "feastDay": 2,
+    "rank": "memorial",
+    "description": "4th-century bishop of Caesarea, theologian, and monastic reformer. Co-author of the Liturgy of St. Basil. Defender of Nicene orthodoxy.",
+    "patronOf": "hospital administrators, monks"
+  },
+  {
+    "name": "St. Gregory Nazianzen",
+    "title": "Bishop and Doctor of the Church",
+    "feastMonth": 1,
+    "feastDay": 2,
+    "rank": "memorial",
+    "description": "4th-century Archbishop of Constantinople, poet-theologian. Called 'The Theologian' for his masterful orations on the Trinity.",
+    "patronOf": "poets"
+  },
+  {
+    "name": "St. Elizabeth Ann Seton",
+    "title": "Religious",
+    "feastMonth": 1,
+    "feastDay": 4,
+    "rank": "memorial",
+    "description": "First native-born US citizen canonized. Founded the Sisters of Charity and established the first Catholic school in America (1810).",
+    "patronOf": "Catholic schools, widows"
+  },
+  {
+    "name": "St. John Neumann",
+    "title": "Bishop",
+    "feastMonth": 1,
+    "feastDay": 5,
+    "rank": "memorial",
+    "description": "Fourth Bishop of Philadelphia, Czech-born missionary. Built over 100 churches and established the first Catholic diocesan school system in the US.",
+    "patronOf": "Catholic education"
+  },
+  {
+    "name": "St. André Bessette",
+    "title": "Religious",
+    "feastMonth": 1,
+    "feastDay": 6,
+    "rank": "optional_memorial",
+    "description": "Canadian Holy Cross Brother known as the 'Miracle Man of Montreal.' Built St. Joseph's Oratory on Mount Royal through faith and persistence.",
+    "patronOf": "the sick"
+  },
+  {
+    "name": "St. Raymond of Penyafort",
+    "title": "Priest",
+    "feastMonth": 1,
+    "feastDay": 7,
+    "rank": "optional_memorial",
+    "description": "13th-century Dominican friar and canon lawyer. Compiled the Decretals of Gregory IX, the authoritative collection of papal decrees.",
+    "patronOf": "canon lawyers"
+  },
+  {
+    "name": "St. Hilary",
+    "title": "Bishop and Doctor of the Church",
+    "feastMonth": 1,
+    "feastDay": 13,
+    "rank": "optional_memorial",
+    "description": "4th-century Bishop of Poitiers, called the 'Hammer of the Arians.' Wrote extensively on the Trinity and biblical interpretation.",
+    "patronOf": "against snake bites"
+  },
+  {
+    "name": "St. Anthony",
+    "title": "Abbot",
+    "feastMonth": 1,
+    "feastDay": 17,
+    "rank": "memorial",
+    "description": "Father of Christian Monasticism (c. 251-356). Lived as a hermit in the Egyptian desert for decades, attracting disciples who formed the first monastic communities.",
+    "patronOf": "animals, gravediggers"
+  },
+  {
+    "name": "St. Agnes",
+    "title": "Virgin and Martyr",
+    "feastMonth": 1,
+    "feastDay": 21,
+    "rank": "memorial",
+    "description": "Young Roman martyr (c. 291-304) who chose death over marriage to a pagan. One of the most venerated early martyrs; her name is in the Roman Canon.",
+    "patronOf": "young women, chastity"
+  },
+  {
+    "name": "St. Francis de Sales",
+    "title": "Bishop and Doctor of the Church",
+    "feastMonth": 1,
+    "feastDay": 24,
+    "rank": "memorial",
+    "description": "Bishop of Geneva, author of 'Introduction to the Devout Life.' Pioneer of spiritual direction for laypeople and co-founder of the Visitation Order.",
+    "patronOf": "journalists, writers, the deaf"
+  },
+  {
+    "name": "Conversion of St. Paul the Apostle",
+    "title": "Apostle",
+    "feastMonth": 1,
+    "feastDay": 25,
+    "rank": "feast",
+    "description": "Commemorates Paul's dramatic conversion on the road to Damascus (c. 33 AD). From persecutor of Christians to the greatest missionary of the early Church.",
+    "patronOf": "missionaries, theologians"
+  },
+  {
+    "name": "St. Timothy and St. Titus",
+    "title": "Bishops",
+    "feastMonth": 1,
+    "feastDay": 26,
+    "rank": "memorial",
+    "description": "Companions and co-workers of St. Paul. Timothy became Bishop of Ephesus; Titus became Bishop of Crete. Recipients of three Pastoral Epistles.",
+    "patronOf": "stomach disorders"
+  },
+  {
+    "name": "St. Thomas Aquinas",
+    "title": "Priest and Doctor of the Church",
+    "feastMonth": 1,
+    "feastDay": 28,
+    "rank": "memorial",
+    "description": "Dominican friar (1225-1274), the 'Angelic Doctor.' Author of the Summa Theologiae. Wrote Tantum Ergo, Pange Lingua, O Salutaris Hostia, and Adoro Te Devote.",
+    "patronOf": "students, Catholic schools, theologians"
+  },
+  {
+    "name": "St. John Bosco",
+    "title": "Priest",
+    "feastMonth": 1,
+    "feastDay": 31,
+    "rank": "memorial",
+    "description": "Italian priest (1815-1888) who dedicated his life to educating disadvantaged youth. Founded the Salesians. Pioneered the 'preventive system' of education.",
+    "patronOf": "young people, apprentices, editors"
+  },
+  {
+    "name": "Presentation of the Lord",
+    "title": "",
+    "feastMonth": 2,
+    "feastDay": 2,
+    "rank": "feast",
+    "description": "Commemorates Mary and Joseph presenting Jesus in the Temple 40 days after his birth. Simeon recognized him as 'a light for revelation to the Gentiles.' Candlemas.",
+    "patronOf": ""
+  },
+  {
+    "name": "St. Blaise",
+    "title": "Bishop and Martyr",
+    "feastMonth": 2,
+    "feastDay": 3,
+    "rank": "optional_memorial",
+    "description": "Early Christian bishop martyred c. 316. Patron of throat ailments. The Blessing of Throats is traditionally celebrated on his feast day.",
+    "patronOf": "throat ailments, wool workers"
+  },
+  {
+    "name": "St. Ansgar",
+    "title": "Bishop",
+    "feastMonth": 2,
+    "feastDay": 3,
+    "rank": "optional_memorial",
+    "description": "9th-century Benedictine monk known as the 'Apostle of the North.' Missionary bishop who brought Christianity to Denmark and Sweden.",
+    "patronOf": "Denmark, Scandinavia"
+  },
+  {
+    "name": "St. Agatha",
+    "title": "Virgin and Martyr",
+    "feastMonth": 2,
+    "feastDay": 5,
+    "rank": "memorial",
+    "description": "Sicilian martyr (c. 231-251) who refused a Roman governor's advances. One of seven women commemorated by name in the Roman Canon.",
+    "patronOf": "breast cancer patients, nurses"
+  },
+  {
+    "name": "St. Paul Miki and Companions",
+    "title": "Martyrs",
+    "feastMonth": 2,
+    "feastDay": 6,
+    "rank": "memorial",
+    "description": "Twenty-six Catholics crucified in Nagasaki, Japan in 1597. Included Jesuits, Franciscans, and Japanese laypeople. Paul Miki preached from his cross.",
+    "patronOf": "Japan"
+  },
+  {
+    "name": "St. Scholastica",
+    "title": "Virgin",
+    "feastMonth": 2,
+    "feastDay": 10,
+    "rank": "memorial",
+    "description": "Twin sister of St. Benedict (c. 480-543). Founded a convent near Monte Cassino. Tradition holds that her prayers caused a miraculous storm to extend her last visit with Benedict.",
+    "patronOf": "Benedictine nuns, convulsive children"
+  },
+  {
+    "name": "Our Lady of Lourdes",
+    "title": "",
+    "feastMonth": 2,
+    "feastDay": 11,
+    "rank": "optional_memorial",
+    "description": "Commemorates the 1858 apparitions of the Blessed Virgin Mary to St. Bernadette Soubirous in Lourdes, France. World Day of the Sick.",
+    "patronOf": "the sick"
+  },
+  {
+    "name": "Ss. Cyril and Methodius",
+    "title": "Bishops",
+    "feastMonth": 2,
+    "feastDay": 14,
+    "rank": "memorial",
+    "description": "9th-century brothers who evangelized the Slavic peoples. Created the Glagolitic alphabet. Co-patron saints of Europe with St. Benedict.",
+    "patronOf": "Europe, Slavic peoples"
+  },
+  {
+    "name": "Chair of St. Peter the Apostle",
+    "title": "",
+    "feastMonth": 2,
+    "feastDay": 22,
+    "rank": "feast",
+    "description": "Celebrates Peter's authority as the first Bishop of Rome. Symbolizes the unity of the Church built on the rock of Peter's confession of faith.",
+    "patronOf": ""
+  },
+  {
+    "name": "St. Polycarp",
+    "title": "Bishop and Martyr",
+    "feastMonth": 2,
+    "feastDay": 23,
+    "rank": "memorial",
+    "description": "Bishop of Smyrna (c. 69-155), disciple of St. John the Apostle. Martyred at age 86; his account is the earliest detailed martyrdom narrative outside Scripture.",
+    "patronOf": "against earache"
+  },
+  {
+    "name": "St. Katharine Drexel",
+    "title": "Virgin",
+    "feastMonth": 3,
+    "feastDay": 3,
+    "rank": "optional_memorial",
+    "description": "Philadelphia heiress (1858-1955) who gave away her fortune to serve Native Americans and African Americans. Founded the Sisters of the Blessed Sacrament and Xavier University.",
+    "patronOf": "racial justice, philanthropists"
+  },
+  {
+    "name": "St. Casimir",
+    "title": "",
+    "feastMonth": 3,
+    "feastDay": 4,
+    "rank": "optional_memorial",
+    "description": "Lithuanian prince (1458-1484) who refused a crown and lived an ascetic life. Known for his devotion to the Eucharist and the Blessed Virgin Mary.",
+    "patronOf": "Poland, Lithuania"
+  },
+  {
+    "name": "St. Perpetua and St. Felicity",
+    "title": "Martyrs",
+    "feastMonth": 3,
+    "feastDay": 7,
+    "rank": "memorial",
+    "description": "North African martyrs (c. 203). Perpetua was a noblewoman; Felicity her slave. Their prison diary is one of the earliest Christian writings by a woman.",
+    "patronOf": "expectant mothers, ranchers"
+  },
+  {
+    "name": "St. John of God",
+    "title": "Religious",
+    "feastMonth": 3,
+    "feastDay": 8,
+    "rank": "optional_memorial",
+    "description": "Portuguese soldier turned saint (1495-1550) who devoted himself to caring for the sick and poor. Founded the Brothers Hospitallers.",
+    "patronOf": "hospitals, the sick, heart patients"
+  },
+  {
+    "name": "St. Frances of Rome",
+    "title": "Religious",
+    "feastMonth": 3,
+    "feastDay": 9,
+    "rank": "optional_memorial",
+    "description": "Roman noblewoman (1384-1440) who served the poor during plague and famine. Founded the Oblates of Mary. Known for her mystical experiences.",
+    "patronOf": "automobile drivers"
+  },
+  {
+    "name": "St. Patrick",
+    "title": "Bishop",
+    "feastMonth": 3,
+    "feastDay": 17,
+    "rank": "optional_memorial",
+    "description": "Romano-British missionary (c. 385-461) who converted Ireland to Christianity. Used the shamrock to explain the Trinity. Wrote the Confessio.",
+    "patronOf": "Ireland, engineers"
+  },
+  {
+    "name": "St. Cyril of Jerusalem",
+    "title": "Bishop and Doctor of the Church",
+    "feastMonth": 3,
+    "feastDay": 18,
+    "rank": "optional_memorial",
+    "description": "4th-century Bishop of Jerusalem whose Catechetical Lectures are a primary source for early baptismal and eucharistic theology.",
+    "patronOf": "catechists"
+  },
+  {
+    "name": "St. Joseph",
+    "title": "Spouse of the Blessed Virgin Mary",
+    "feastMonth": 3,
+    "feastDay": 19,
+    "rank": "solemnity",
+    "description": "Foster father of Jesus, patron of the universal Church. A just man who trusted God's plan. Principal patron of workers and of a happy death.",
+    "patronOf": "the universal Church, workers, fathers"
+  },
+  {
+    "name": "Annunciation of the Lord",
+    "title": "",
+    "feastMonth": 3,
+    "feastDay": 25,
+    "rank": "solemnity",
+    "description": "Gabriel announces to Mary that she will conceive and bear the Son of God. Mary's 'yes' — the Fiat — marks the moment of the Incarnation.",
+    "patronOf": ""
+  },
+  {
+    "name": "St. Isidore",
+    "title": "Bishop and Doctor of the Church",
+    "feastMonth": 4,
+    "feastDay": 4,
+    "rank": "optional_memorial",
+    "description": "Archbishop of Seville (c. 560-636). Compiled the Etymologies, a 20-volume encyclopedia that preserved classical learning through the Dark Ages.",
+    "patronOf": "the internet, computer users"
+  },
+  {
+    "name": "St. Vincent Ferrer",
+    "title": "Priest",
+    "feastMonth": 4,
+    "feastDay": 5,
+    "rank": "optional_memorial",
+    "description": "Spanish Dominican (1350-1419), one of the greatest preachers in Church history. Preached throughout Europe during the Western Schism.",
+    "patronOf": "builders, plumbers"
+  },
+  {
+    "name": "St. Mark",
+    "title": "Evangelist",
+    "feastMonth": 4,
+    "feastDay": 25,
+    "rank": "feast",
+    "description": "Author of the earliest Gospel. Companion of Sts. Peter and Paul. Tradition holds he founded the Church in Alexandria, Egypt.",
+    "patronOf": "notaries, Venice"
+  },
+  {
+    "name": "St. Catherine of Siena",
+    "title": "Virgin and Doctor of the Church",
+    "feastMonth": 4,
+    "feastDay": 29,
+    "rank": "memorial",
+    "description": "Dominican mystic (1347-1380) who persuaded Pope Gregory XI to return to Rome from Avignon. Author of The Dialogue. Co-patroness of Europe and Italy.",
+    "patronOf": "Europe, Italy, fire prevention"
+  },
+  {
+    "name": "St. Pius V",
+    "title": "Pope",
+    "feastMonth": 4,
+    "feastDay": 30,
+    "rank": "optional_memorial",
+    "description": "Dominican pope (1566-1572) who implemented the reforms of the Council of Trent, including the standardized Roman Missal and Breviary.",
+    "patronOf": ""
+  },
+  {
+    "name": "St. Joseph the Worker",
+    "title": "",
+    "feastMonth": 5,
+    "feastDay": 1,
+    "rank": "optional_memorial",
+    "description": "Established by Pius XII in 1955 to honor the dignity of human labor through the example of Joseph, the carpenter who raised the Son of God.",
+    "patronOf": "workers"
+  },
+  {
+    "name": "St. Athanasius",
+    "title": "Bishop and Doctor of the Church",
+    "feastMonth": 5,
+    "feastDay": 2,
+    "rank": "memorial",
+    "description": "Bishop of Alexandria (c. 296-373), 'Champion of Orthodoxy.' Exiled five times for defending the divinity of Christ against Arianism.",
+    "patronOf": "theologians"
+  },
+  {
+    "name": "Ss. Philip and James",
+    "title": "Apostles",
+    "feastMonth": 5,
+    "feastDay": 3,
+    "rank": "feast",
+    "description": "Philip brought Nathanael to Jesus; James 'the Less' was first bishop of Jerusalem and author of the Epistle of James.",
+    "patronOf": "hatmakers, pastry chefs"
+  },
+  {
+    "name": "St. Damien de Veuster",
+    "title": "Priest",
+    "feastMonth": 5,
+    "feastDay": 10,
+    "rank": "optional_memorial",
+    "description": "Belgian missionary (1840-1889) who served the leper colony on Molokai, Hawaii for 16 years. Contracted and died of leprosy himself.",
+    "patronOf": "lepers, Hawaii, outcasts"
+  },
+  {
+    "name": "Ss. Nereus and Achilleus",
+    "title": "Martyrs",
+    "feastMonth": 5,
+    "feastDay": 12,
+    "rank": "optional_memorial",
+    "description": "Roman soldiers martyred in the late 1st century. Their tomb in the Catacombs of Domitilla is among the earliest Christian burial sites in Rome.",
+    "patronOf": ""
+  },
+  {
+    "name": "Our Lady of Fatima",
+    "title": "",
+    "feastMonth": 5,
+    "feastDay": 13,
+    "rank": "optional_memorial",
+    "description": "Commemorates the 1917 apparitions of the Blessed Virgin Mary to three shepherd children in Fatima, Portugal, with messages of prayer and penance.",
+    "patronOf": ""
+  },
+  {
+    "name": "St. Matthias",
+    "title": "Apostle",
+    "feastMonth": 5,
+    "feastDay": 14,
+    "rank": "feast",
+    "description": "Chosen by lot to replace Judas as the twelfth apostle (Acts 1:15-26). Tradition holds he preached in Judea and was martyred.",
+    "patronOf": "alcoholics, tailors"
+  },
+  {
+    "name": "St. Isidore the Farmer",
+    "title": "",
+    "feastMonth": 5,
+    "feastDay": 15,
+    "rank": "optional_memorial",
+    "description": "Spanish layman (c. 1070-1130) who worked as a farm laborer his entire life. Known for his devotion to daily Mass and generosity to the poor.",
+    "patronOf": "farmers, rural communities, US National Rural Life Conference"
+  },
+  {
+    "name": "Visitation of the Blessed Virgin Mary",
+    "title": "",
+    "feastMonth": 5,
+    "feastDay": 31,
+    "rank": "feast",
+    "description": "Mary visits her cousin Elizabeth, who greets her: 'Blessed are you among women.' Mary responds with the Magnificat. Source of the Hail Mary.",
+    "patronOf": ""
+  },
+  {
+    "name": "St. Justin",
+    "title": "Martyr",
+    "feastMonth": 6,
+    "feastDay": 1,
+    "rank": "memorial",
+    "description": "Christian philosopher (c. 100-165) whose Apologies and Dialogue with Trypho are among the earliest defenses of the faith. Gives the first detailed description of the Eucharistic liturgy.",
+    "patronOf": "philosophers"
+  },
+  {
+    "name": "Ss. Marcellinus and Peter",
+    "title": "Martyrs",
+    "feastMonth": 6,
+    "feastDay": 2,
+    "rank": "optional_memorial",
+    "description": "Roman priest and exorcist martyred during the Diocletian persecution (c. 304). Named in the Roman Canon of the Mass.",
+    "patronOf": ""
+  },
+  {
+    "name": "St. Charles Lwanga and Companions",
+    "title": "Martyrs",
+    "feastMonth": 6,
+    "feastDay": 3,
+    "rank": "memorial",
+    "description": "Twenty-two Ugandan martyrs killed by King Mwanga II (1885-1887). Young men who chose death rather than submit to the king's demands. Both Catholic and Anglican.",
+    "patronOf": "African youth"
+  },
+  {
+    "name": "St. Boniface",
+    "title": "Bishop and Martyr",
+    "feastMonth": 6,
+    "feastDay": 5,
+    "rank": "memorial",
+    "description": "English Benedictine missionary (c. 675-754), 'Apostle to the Germans.' Organized the Church in Germany and reformed the Frankish Church.",
+    "patronOf": "Germany, brewers"
+  },
+  {
+    "name": "St. Barnabas",
+    "title": "Apostle",
+    "feastMonth": 6,
+    "feastDay": 11,
+    "rank": "memorial",
+    "description": "Levite from Cyprus, companion of St. Paul on his first missionary journey. His name means 'son of encouragement.' Sold his field and gave the proceeds to the apostles.",
+    "patronOf": "Cyprus"
+  },
+  {
+    "name": "St. Anthony of Padua",
+    "title": "Priest and Doctor of the Church",
+    "feastMonth": 6,
+    "feastDay": 13,
+    "rank": "memorial",
+    "description": "Portuguese Franciscan friar (1195-1231), one of the most beloved saints. Renowned preacher whose sermons drew thousands. Patron of lost things.",
+    "patronOf": "lost things, the poor, travelers"
+  },
+  {
+    "name": "Birth of St. John the Baptist",
+    "title": "",
+    "feastMonth": 6,
+    "feastDay": 24,
+    "rank": "solemnity",
+    "description": "The birth of the Precursor, announced by the angel Gabriel to Zechariah. Elizabeth and Zechariah's son would prepare the way for the Messiah.",
+    "patronOf": ""
+  },
+  {
+    "name": "St. Irenaeus",
+    "title": "Bishop and Martyr, Doctor of the Church",
+    "feastMonth": 6,
+    "feastDay": 28,
+    "rank": "memorial",
+    "description": "Bishop of Lyon (c. 130-202), disciple of St. Polycarp. His 'Against Heresies' is a foundational work of Christian theology and the first systematic theology.",
+    "patronOf": ""
+  },
+  {
+    "name": "Ss. Peter and Paul",
+    "title": "Apostles",
+    "feastMonth": 6,
+    "feastDay": 29,
+    "rank": "solemnity",
+    "description": "The twin pillars of the Church: Peter, the rock on whom Christ built the Church; Paul, the apostle to the Gentiles. Both martyred in Rome under Nero.",
+    "patronOf": "Rome, the papacy"
+  },
+  {
+    "name": "St. Thomas",
+    "title": "Apostle",
+    "feastMonth": 7,
+    "feastDay": 3,
+    "rank": "feast",
+    "description": "Called 'Doubting Thomas' for demanding to touch Jesus' wounds, then proclaiming 'My Lord and my God!' Tradition holds he evangelized India.",
+    "patronOf": "architects, India"
+  },
+  {
+    "name": "St. Benedict",
+    "title": "Abbot",
+    "feastMonth": 7,
+    "feastDay": 11,
+    "rank": "memorial",
+    "description": "Father of Western Monasticism (c. 480-547). His Rule of St. Benedict shaped religious life for 1,500 years. Founded Monte Cassino. Co-patron of Europe.",
+    "patronOf": "Europe, monks, students"
+  },
+  {
+    "name": "St. Kateri Tekakwitha",
+    "title": "Virgin",
+    "feastMonth": 7,
+    "feastDay": 14,
+    "rank": "memorial",
+    "description": "Mohawk-Algonquin laywoman (1656-1680), first Native American to be canonized. Called 'Lily of the Mohawks.' Lived a life of prayer and penance.",
+    "patronOf": "ecology, the environment, Native Americans"
+  },
+  {
+    "name": "St. Bonaventure",
+    "title": "Bishop and Doctor of the Church",
+    "feastMonth": 7,
+    "feastDay": 15,
+    "rank": "memorial",
+    "description": "Franciscan theologian (1221-1274), 'Seraphic Doctor.' Minister General of the Franciscans, cardinal. Authored The Journey of the Mind into God.",
+    "patronOf": "bowel disorders"
+  },
+  {
+    "name": "Our Lady of Mount Carmel",
+    "title": "",
+    "feastMonth": 7,
+    "feastDay": 16,
+    "rank": "optional_memorial",
+    "description": "Honors the Blessed Virgin's patronage of the Carmelite Order. Tradition associates this feast with the Brown Scapular given to St. Simon Stock.",
+    "patronOf": "Carmelite Order"
+  },
+  {
+    "name": "St. Mary Magdalene",
+    "title": "",
+    "feastMonth": 7,
+    "feastDay": 22,
+    "rank": "feast",
+    "description": "Disciple of Jesus, witness to the Crucifixion, first witness of the Resurrection. Called 'Apostle to the Apostles.' Elevated to feast rank by Pope Francis in 2016.",
+    "patronOf": "penitents, hairdressers, women"
+  },
+  {
+    "name": "St. James",
+    "title": "Apostle",
+    "feastMonth": 7,
+    "feastDay": 25,
+    "rank": "feast",
+    "description": "Son of Zebedee, brother of John, first apostle martyred (c. 44 AD). Pilgrimage to his shrine in Santiago de Compostela is one of the great Christian pilgrimages.",
+    "patronOf": "Spain, pilgrims"
+  },
+  {
+    "name": "Ss. Joachim and Anne",
+    "title": "Parents of the Blessed Virgin Mary",
+    "feastMonth": 7,
+    "feastDay": 26,
+    "rank": "memorial",
+    "description": "Parents of Mary and grandparents of Jesus. Though not mentioned in Scripture, their names come from the Protoevangelium of James (c. 150 AD).",
+    "patronOf": "grandparents"
+  },
+  {
+    "name": "St. Martha",
+    "title": "",
+    "feastMonth": 7,
+    "feastDay": 29,
+    "rank": "memorial",
+    "description": "Sister of Mary and Lazarus, friend and host of Jesus in Bethany. Professed faith in Jesus as 'the Christ, the Son of God' (John 11:27).",
+    "patronOf": "cooks, homemakers, hospitality"
+  },
+  {
+    "name": "St. Ignatius of Loyola",
+    "title": "Priest",
+    "feastMonth": 7,
+    "feastDay": 31,
+    "rank": "memorial",
+    "description": "Spanish soldier-turned-mystic (1491-1556). Founded the Society of Jesus (Jesuits). Author of the Spiritual Exercises, a cornerstone of Catholic spirituality.",
+    "patronOf": "Jesuits, soldiers, retreats"
+  },
+  {
+    "name": "St. Alphonsus Liguori",
+    "title": "Bishop and Doctor of the Church",
+    "feastMonth": 8,
+    "feastDay": 1,
+    "rank": "memorial",
+    "description": "Italian bishop (1696-1787), founder of the Redemptorists. Moral theologian, author of The Glories of Mary. Prolific hymn writer.",
+    "patronOf": "moral theologians, confessors"
+  },
+  {
+    "name": "St. Eusebius of Vercelli",
+    "title": "Bishop",
+    "feastMonth": 8,
+    "feastDay": 2,
+    "rank": "optional_memorial",
+    "description": "4th-century Bishop of Vercelli, first to unite monastic life with clerical life. Exiled for defending Nicene orthodoxy.",
+    "patronOf": "Vercelli"
+  },
+  {
+    "name": "St. John Vianney",
+    "title": "Priest",
+    "feastMonth": 8,
+    "feastDay": 4,
+    "rank": "memorial",
+    "description": "The Curé of Ars (1786-1859). Nearly failed seminary, became the most famous confessor in Church history. Spent 16-18 hours daily in the confessional.",
+    "patronOf": "parish priests"
+  },
+  {
+    "name": "Dedication of the Basilica of St. Mary Major",
+    "title": "",
+    "feastMonth": 8,
+    "feastDay": 5,
+    "rank": "optional_memorial",
+    "description": "Celebrates the dedication of the oldest church in the West dedicated to the Blessed Virgin Mary, built in Rome after the Council of Ephesus (431).",
+    "patronOf": ""
+  },
+  {
+    "name": "Transfiguration of the Lord",
+    "title": "",
+    "feastMonth": 8,
+    "feastDay": 6,
+    "rank": "feast",
+    "description": "Jesus reveals his divine glory to Peter, James, and John on the mountain. Moses and Elijah appear. The Father declares: 'This is my beloved Son.'",
+    "patronOf": ""
+  },
+  {
+    "name": "St. Dominic",
+    "title": "Priest",
+    "feastMonth": 8,
+    "feastDay": 8,
+    "rank": "memorial",
+    "description": "Spanish priest (1170-1221), founder of the Order of Preachers (Dominicans). Promoted the Rosary and intellectual rigor in preaching and theology.",
+    "patronOf": "astronomers, Dominican Republic"
+  },
+  {
+    "name": "St. Teresa Benedicta of the Cross (Edith Stein)",
+    "title": "Virgin and Martyr",
+    "feastMonth": 8,
+    "feastDay": 9,
+    "rank": "optional_memorial",
+    "description": "Jewish philosopher who converted to Catholicism and became a Carmelite nun. Murdered at Auschwitz in 1942. Co-patroness of Europe.",
+    "patronOf": "Europe, Jewish converts"
+  },
+  {
+    "name": "St. Lawrence",
+    "title": "Deacon and Martyr",
+    "feastMonth": 8,
+    "feastDay": 10,
+    "rank": "feast",
+    "description": "Roman deacon martyred in 258. When ordered to hand over the Church's treasures, he presented the poor and sick. Tradition holds he was roasted on a gridiron.",
+    "patronOf": "deacons, cooks, comedians"
+  },
+  {
+    "name": "St. Clare",
+    "title": "Virgin",
+    "feastMonth": 8,
+    "feastDay": 11,
+    "rank": "memorial",
+    "description": "Follower of St. Francis of Assisi (1194-1253). Founded the Poor Clares, the second Franciscan order. Known for radical poverty and contemplative prayer.",
+    "patronOf": "television, eye disease"
+  },
+  {
+    "name": "St. Maximilian Kolbe",
+    "title": "Priest and Martyr",
+    "feastMonth": 8,
+    "feastDay": 14,
+    "rank": "memorial",
+    "description": "Polish Franciscan (1894-1941) who volunteered to die in place of a stranger at Auschwitz. Founded the Militia of the Immaculata.",
+    "patronOf": "drug addicts, political prisoners, journalists"
+  },
+  {
+    "name": "Assumption of the Blessed Virgin Mary",
+    "title": "",
+    "feastMonth": 8,
+    "feastDay": 15,
+    "rank": "solemnity",
+    "description": "Dogma proclaimed by Pius XII in 1950: Mary was assumed body and soul into heavenly glory at the end of her earthly life. Holy day of obligation.",
+    "patronOf": ""
+  },
+  {
+    "name": "St. Stephen of Hungary",
+    "title": "",
+    "feastMonth": 8,
+    "feastDay": 16,
+    "rank": "optional_memorial",
+    "description": "First King of Hungary (c. 975-1038). Converted the Magyars to Christianity and organized the Hungarian Church.",
+    "patronOf": "Hungary, kings"
+  },
+  {
+    "name": "St. Bernard",
+    "title": "Abbot and Doctor of the Church",
+    "feastMonth": 8,
+    "feastDay": 20,
+    "rank": "memorial",
+    "description": "Cistercian monk (1090-1153), 'Honey-Tongued Doctor.' His writings on love of God and mystical theology influenced centuries of Christian spirituality.",
+    "patronOf": "beekeepers, candle makers"
+  },
+  {
+    "name": "St. Pius X",
+    "title": "Pope",
+    "feastMonth": 8,
+    "feastDay": 21,
+    "rank": "memorial",
+    "description": "Pope (1903-1914) who lowered the age of First Communion, reformed Church music (Tra le sollecitudini), and reorganized canon law.",
+    "patronOf": "First Communicants"
+  },
+  {
+    "name": "Queenship of the Blessed Virgin Mary",
+    "title": "",
+    "feastMonth": 8,
+    "feastDay": 22,
+    "rank": "memorial",
+    "description": "Celebrates Mary's queenship over heaven and earth, established by Pius XII in 1954. Occurs one week after the Assumption.",
+    "patronOf": ""
+  },
+  {
+    "name": "St. Rose of Lima",
+    "title": "Virgin",
+    "feastMonth": 8,
+    "feastDay": 23,
+    "rank": "optional_memorial",
+    "description": "First saint canonized from the Americas (1586-1617). Peruvian Dominican tertiary who lived a life of severe penance and mystical prayer.",
+    "patronOf": "Latin America, Peru, florists"
+  },
+  {
+    "name": "St. Bartholomew",
+    "title": "Apostle",
+    "feastMonth": 8,
+    "feastDay": 24,
+    "rank": "feast",
+    "description": "One of the Twelve Apostles, often identified with Nathanael whom Philip brought to Jesus. Tradition holds he was martyred by being flayed alive.",
+    "patronOf": "Armenia"
+  },
+  {
+    "name": "St. Monica",
+    "title": "",
+    "feastMonth": 8,
+    "feastDay": 27,
+    "rank": "memorial",
+    "description": "Mother of St. Augustine of Hippo (c. 331-387). Her persistent prayers for her son's conversion over many years are a model of maternal faith and intercession.",
+    "patronOf": "mothers, married women, alcoholics"
+  },
+  {
+    "name": "St. Augustine",
+    "title": "Bishop and Doctor of the Church",
+    "feastMonth": 8,
+    "feastDay": 28,
+    "rank": "memorial",
+    "description": "Bishop of Hippo (354-430), one of the most influential theologians in Western Christianity. Author of Confessions and The City of God. Convert from a dissolute youth.",
+    "patronOf": "brewers, printers, theologians"
+  },
+  {
+    "name": "Passion of St. John the Baptist",
+    "title": "",
+    "feastMonth": 8,
+    "feastDay": 29,
+    "rank": "memorial",
+    "description": "Commemorates the beheading of John the Baptist by Herod Antipas, at the request of Salome. The last and greatest of the prophets.",
+    "patronOf": ""
+  },
+  {
+    "name": "Birth of the Blessed Virgin Mary",
+    "title": "",
+    "feastMonth": 9,
+    "feastDay": 8,
+    "rank": "feast",
+    "description": "Celebrates the birthday of the Mother of God. One of the few birthdays celebrated liturgically (along with Jesus and John the Baptist).",
+    "patronOf": ""
+  },
+  {
+    "name": "Most Holy Name of Mary",
+    "title": "",
+    "feastMonth": 9,
+    "feastDay": 12,
+    "rank": "optional_memorial",
+    "description": "Honors the holy name of the Blessed Virgin Mary. Originally celebrated to commemorate the victory at the Battle of Vienna (1683).",
+    "patronOf": ""
+  },
+  {
+    "name": "Exaltation of the Holy Cross",
+    "title": "",
+    "feastMonth": 9,
+    "feastDay": 14,
+    "rank": "feast",
+    "description": "Celebrates the finding of the True Cross by St. Helena in 326 and its recovery from the Persians in 629. The cross is the sign of victory over death.",
+    "patronOf": ""
+  },
+  {
+    "name": "Our Lady of Sorrows",
+    "title": "",
+    "feastMonth": 9,
+    "feastDay": 15,
+    "rank": "memorial",
+    "description": "Commemorates the Seven Sorrows of Mary, from the prophecy of Simeon to the burial of Jesus. The Stabat Mater is the traditional hymn.",
+    "patronOf": ""
+  },
+  {
+    "name": "Ss. Cornelius and Cyprian",
+    "title": "Pope and Bishop, Martyrs",
+    "feastMonth": 9,
+    "feastDay": 16,
+    "rank": "memorial",
+    "description": "3rd-century martyrs. Cornelius was pope; Cyprian was Bishop of Carthage. Both dealt with the question of readmitting Christians who had lapsed during persecution.",
+    "patronOf": ""
+  },
+  {
+    "name": "St. Robert Bellarmine",
+    "title": "Bishop and Doctor of the Church",
+    "feastMonth": 9,
+    "feastDay": 17,
+    "rank": "optional_memorial",
+    "description": "Jesuit cardinal (1542-1621), chief defender of Catholic doctrine during the Reformation. His catechism was used for 300 years.",
+    "patronOf": "catechists, canon lawyers"
+  },
+  {
+    "name": "St. Januarius",
+    "title": "Bishop and Martyr",
+    "feastMonth": 9,
+    "feastDay": 19,
+    "rank": "optional_memorial",
+    "description": "Bishop of Benevento martyred during Diocletian's persecution (c. 305). Famous for the liquefaction of his blood relic in Naples Cathedral.",
+    "patronOf": "Naples, blood banks"
+  },
+  {
+    "name": "St. Matthew",
+    "title": "Apostle and Evangelist",
+    "feastMonth": 9,
+    "feastDay": 21,
+    "rank": "feast",
+    "description": "Tax collector called by Jesus to be one of the Twelve. Author of the first Gospel. His call narrative emphasizes that Jesus came for sinners.",
+    "patronOf": "accountants, bankers, tax collectors"
+  },
+  {
+    "name": "St. Vincent de Paul",
+    "title": "Priest",
+    "feastMonth": 9,
+    "feastDay": 27,
+    "rank": "memorial",
+    "description": "French priest (1581-1660) who organized charitable works on a massive scale. Founded the Congregation of the Mission (Vincentians) and co-founded the Daughters of Charity.",
+    "patronOf": "charitable organizations, volunteers"
+  },
+  {
+    "name": "Ss. Michael, Gabriel, and Raphael",
+    "title": "Archangels",
+    "feastMonth": 9,
+    "feastDay": 29,
+    "rank": "feast",
+    "description": "The three archangels named in Scripture: Michael ('Who is like God?'), Gabriel ('God is my strength'), and Raphael ('God heals').",
+    "patronOf": "police, paramedics, the sick"
+  },
+  {
+    "name": "St. Jerome",
+    "title": "Priest and Doctor of the Church",
+    "feastMonth": 9,
+    "feastDay": 30,
+    "rank": "memorial",
+    "description": "Scholar (c. 347-420) who translated the Bible into Latin (the Vulgate). Known for his fiery temperament and brilliant scholarship.",
+    "patronOf": "librarians, translators, scholars"
+  },
+  {
+    "name": "St. Thérèse of the Child Jesus",
+    "title": "Virgin and Doctor of the Church",
+    "feastMonth": 10,
+    "feastDay": 1,
+    "rank": "memorial",
+    "description": "Carmelite nun (1873-1897), the 'Little Flower.' Her 'Little Way' of spiritual childhood transformed Catholic spirituality. Youngest Doctor of the Church.",
+    "patronOf": "missionaries, florists, France"
+  },
+  {
+    "name": "Holy Guardian Angels",
+    "title": "",
+    "feastMonth": 10,
+    "feastDay": 2,
+    "rank": "memorial",
+    "description": "Celebrates the angels God assigns to guard and guide each person. Based on Jesus' words: 'Their angels in heaven always see the face of my Father.'",
+    "patronOf": ""
+  },
+  {
+    "name": "St. Francis of Assisi",
+    "title": "",
+    "feastMonth": 10,
+    "feastDay": 4,
+    "rank": "memorial",
+    "description": "Italian friar (1181/82-1226) who embraced radical poverty and founded the Franciscan Order. Received the stigmata. Author of the Canticle of the Sun.",
+    "patronOf": "animals, ecology, Italy, merchants"
+  },
+  {
+    "name": "Blessed Francis Xavier Seelos",
+    "title": "Priest",
+    "feastMonth": 10,
+    "feastDay": 5,
+    "rank": "optional_memorial",
+    "description": "German-born Redemptorist (1819-1867) who served as a parish priest and itinerant preacher in the United States. Died of yellow fever in New Orleans.",
+    "patronOf": ""
+  },
+  {
+    "name": "Our Lady of the Rosary",
+    "title": "",
+    "feastMonth": 10,
+    "feastDay": 7,
+    "rank": "memorial",
+    "description": "Celebrates the Rosary, the great Marian prayer. Originally commemorated the victory at Lepanto (1571), attributed to the Rosary's intercession.",
+    "patronOf": ""
+  },
+  {
+    "name": "St. Teresa of Jesus (Ávila)",
+    "title": "Virgin and Doctor of the Church",
+    "feastMonth": 10,
+    "feastDay": 15,
+    "rank": "memorial",
+    "description": "Spanish Carmelite mystic (1515-1582) who reformed the Carmelite Order. Author of The Interior Castle and The Way of Perfection. First female Doctor of the Church.",
+    "patronOf": "headache sufferers, Spain"
+  },
+  {
+    "name": "St. Ignatius of Antioch",
+    "title": "Bishop and Martyr",
+    "feastMonth": 10,
+    "feastDay": 17,
+    "rank": "memorial",
+    "description": "Third Bishop of Antioch (c. 35-108). His seven letters, written en route to martyrdom in Rome, are foundational documents of early Church theology and structure.",
+    "patronOf": "the Church in the Eastern Mediterranean"
+  },
+  {
+    "name": "St. Luke",
+    "title": "Evangelist",
+    "feastMonth": 10,
+    "feastDay": 18,
+    "rank": "feast",
+    "description": "Physician and companion of St. Paul. Author of the third Gospel and Acts of the Apostles. Tradition holds he painted icons of the Virgin Mary.",
+    "patronOf": "physicians, artists, surgeons"
+  },
+  {
+    "name": "Ss. John de Brébeuf and Isaac Jogues and Companions",
+    "title": "Priests and Martyrs",
+    "feastMonth": 10,
+    "feastDay": 19,
+    "rank": "memorial",
+    "description": "North American Martyrs: eight Jesuit missionaries killed between 1642-1649 while evangelizing the Huron and Iroquois peoples in present-day US and Canada.",
+    "patronOf": "North America, Canada"
+  },
+  {
+    "name": "Ss. Simon and Jude",
+    "title": "Apostles",
+    "feastMonth": 10,
+    "feastDay": 28,
+    "rank": "feast",
+    "description": "Simon 'the Zealot' and Jude (Thaddaeus), two of the Twelve Apostles. Jude is the author of the Epistle of Jude and patron of impossible causes.",
+    "patronOf": "desperate situations, lost causes"
+  },
+  {
+    "name": "All Saints",
+    "title": "",
+    "feastMonth": 11,
+    "feastDay": 1,
+    "rank": "solemnity",
+    "description": "Celebrates all the saints, known and unknown, in heaven. Holy day of obligation. A day of hope that reminds us of our call to holiness.",
+    "patronOf": ""
+  },
+  {
+    "name": "All Souls",
+    "title": "Commemoration of All the Faithful Departed",
+    "feastMonth": 11,
+    "feastDay": 2,
+    "rank": "feast",
+    "description": "Day of prayer for all who have died. Three Masses may be celebrated. Honors the communion of saints and our hope in the resurrection.",
+    "patronOf": ""
+  },
+  {
+    "name": "St. Martin de Porres",
+    "title": "Religious",
+    "feastMonth": 11,
+    "feastDay": 3,
+    "rank": "optional_memorial",
+    "description": "Peruvian Dominican lay brother (1579-1639) of mixed African and Spanish descent. Known for his charity, humility, and miraculous healings.",
+    "patronOf": "mixed-race people, barbers, public health"
+  },
+  {
+    "name": "St. Charles Borromeo",
+    "title": "Bishop",
+    "feastMonth": 11,
+    "feastDay": 4,
+    "rank": "memorial",
+    "description": "Archbishop of Milan (1538-1584), key figure in implementing the Council of Trent. Established seminaries, catechetical schools, and personally served during plague.",
+    "patronOf": "seminarians, catechists"
+  },
+  {
+    "name": "Dedication of the Lateran Basilica",
+    "title": "",
+    "feastMonth": 11,
+    "feastDay": 9,
+    "rank": "feast",
+    "description": "The cathedral of the Bishop of Rome, mother church of all churches. Dedicated in 324 under Constantine. Symbol of unity with the Holy See.",
+    "patronOf": ""
+  },
+  {
+    "name": "St. Leo the Great",
+    "title": "Pope and Doctor of the Church",
+    "feastMonth": 11,
+    "feastDay": 10,
+    "rank": "memorial",
+    "description": "Pope (440-461) who defined Christ's two natures at the Council of Chalcedon. Persuaded Attila the Hun to turn back from Rome.",
+    "patronOf": "popes"
+  },
+  {
+    "name": "St. Martin of Tours",
+    "title": "Bishop",
+    "feastMonth": 11,
+    "feastDay": 11,
+    "rank": "memorial",
+    "description": "Roman soldier who shared his cloak with a beggar (c. 316-397). Became Bishop of Tours. One of the first non-martyrs venerated as a saint.",
+    "patronOf": "soldiers, beggars, winemakers"
+  },
+  {
+    "name": "St. Frances Xavier Cabrini",
+    "title": "Virgin",
+    "feastMonth": 11,
+    "feastDay": 13,
+    "rank": "memorial",
+    "description": "Italian-American saint (1850-1917), first US citizen canonized. Founded the Missionary Sisters of the Sacred Heart and 67 institutions for immigrants.",
+    "patronOf": "immigrants, hospital administrators"
+  },
+  {
+    "name": "St. Albert the Great",
+    "title": "Bishop and Doctor of the Church",
+    "feastMonth": 11,
+    "feastDay": 15,
+    "rank": "optional_memorial",
+    "description": "Dominican friar (c. 1200-1280), 'Universal Doctor.' Teacher of St. Thomas Aquinas. Encyclopedic scholar of theology, philosophy, and natural science.",
+    "patronOf": "scientists, natural philosophers"
+  },
+  {
+    "name": "St. Margaret of Scotland",
+    "title": "",
+    "feastMonth": 11,
+    "feastDay": 16,
+    "rank": "optional_memorial",
+    "description": "Queen of Scotland (c. 1045-1093) who reformed the Scottish Church and was known for her generous care of the poor and orphans.",
+    "patronOf": "Scotland, widows"
+  },
+  {
+    "name": "St. Gertrude",
+    "title": "Virgin",
+    "feastMonth": 11,
+    "feastDay": 16,
+    "rank": "optional_memorial",
+    "description": "Benedictine mystic (1256-1302), author of The Herald of Divine Love. Pioneer of devotion to the Sacred Heart of Jesus.",
+    "patronOf": "the West Indies"
+  },
+  {
+    "name": "St. Elizabeth of Hungary",
+    "title": "",
+    "feastMonth": 11,
+    "feastDay": 17,
+    "rank": "memorial",
+    "description": "Hungarian princess (1207-1231) who renounced wealth to serve the poor. Founded a hospital, cared for lepers. Franciscan tertiary.",
+    "patronOf": "bakers, homeless, hospitals"
+  },
+  {
+    "name": "Presentation of the Blessed Virgin Mary",
+    "title": "",
+    "feastMonth": 11,
+    "feastDay": 21,
+    "rank": "memorial",
+    "description": "Commemorates the presentation of the young Mary in the Temple. Though based on apocryphal sources, celebrates Mary's lifelong dedication to God.",
+    "patronOf": ""
+  },
+  {
+    "name": "St. Cecilia",
+    "title": "Virgin and Martyr",
+    "feastMonth": 11,
+    "feastDay": 22,
+    "rank": "memorial",
+    "description": "Roman martyr (c. 200-230). Tradition holds she sang to God in her heart during her wedding. One of the most venerated early Roman martyrs.",
+    "patronOf": "musicians, singers, church music"
+  },
+  {
+    "name": "St. Andrew Dũng-Lạc and Companions",
+    "title": "Martyrs",
+    "feastMonth": 11,
+    "feastDay": 24,
+    "rank": "memorial",
+    "description": "117 Vietnamese martyrs killed between 1745-1862. Includes priests, religious, and laypeople. Andrew Dũng-Lạc was a Vietnamese diocesan priest.",
+    "patronOf": "Vietnam"
+  },
+  {
+    "name": "St. Andrew",
+    "title": "Apostle",
+    "feastMonth": 11,
+    "feastDay": 30,
+    "rank": "feast",
+    "description": "Brother of Simon Peter, first called by Jesus. Tradition holds he was crucified on an X-shaped cross. Patron of fishermen and Scotland.",
+    "patronOf": "fishermen, Scotland, Russia"
+  },
+  {
+    "name": "St. Francis Xavier",
+    "title": "Priest",
+    "feastMonth": 12,
+    "feastDay": 3,
+    "rank": "memorial",
+    "description": "Jesuit co-founder (1506-1552), greatest missionary since St. Paul. Evangelized India, Southeast Asia, and Japan. Baptized tens of thousands.",
+    "patronOf": "missionaries, foreign missions"
+  },
+  {
+    "name": "St. John Damascene",
+    "title": "Priest and Doctor of the Church",
+    "feastMonth": 12,
+    "feastDay": 4,
+    "rank": "optional_memorial",
+    "description": "Last of the Greek Fathers (c. 676-749). Defender of icons during the Iconoclast controversy. Author of 'An Exact Exposition of the Orthodox Faith.'",
+    "patronOf": "icon painters, pharmacists"
+  },
+  {
+    "name": "St. Nicholas",
+    "title": "Bishop",
+    "feastMonth": 12,
+    "feastDay": 6,
+    "rank": "optional_memorial",
+    "description": "Bishop of Myra (c. 270-343), legendary for secret gift-giving. Attended the Council of Nicaea. Inspiration for the Santa Claus tradition.",
+    "patronOf": "children, sailors, pawnbrokers"
+  },
+  {
+    "name": "St. Ambrose",
+    "title": "Bishop and Doctor of the Church",
+    "feastMonth": 12,
+    "feastDay": 7,
+    "rank": "memorial",
+    "description": "Bishop of Milan (c. 339-397) who baptized St. Augustine. Introduced antiphonal chanting to the Western Church. Powerful preacher and defender of orthodoxy.",
+    "patronOf": "beekeepers, learning, Milan"
+  },
+  {
+    "name": "Immaculate Conception of the Blessed Virgin Mary",
+    "title": "",
+    "feastMonth": 12,
+    "feastDay": 8,
+    "rank": "solemnity",
+    "description": "Dogma that Mary was conceived without original sin. Patronal feast of the United States. Holy day of obligation.",
+    "patronOf": "United States"
+  },
+  {
+    "name": "St. Juan Diego Cuauhtlatoatzin",
+    "title": "",
+    "feastMonth": 12,
+    "feastDay": 9,
+    "rank": "optional_memorial",
+    "description": "Indigenous Mexican (1474-1548) to whom Our Lady of Guadalupe appeared in 1531. His tilma bearing her image remains on display in Mexico City.",
+    "patronOf": "indigenous peoples"
+  },
+  {
+    "name": "Our Lady of Guadalupe",
+    "title": "",
+    "feastMonth": 12,
+    "feastDay": 12,
+    "rank": "feast",
+    "description": "Patroness of the Americas. Appeared to St. Juan Diego in 1531. Her miraculous image led to millions of conversions. Feast in the US.",
+    "patronOf": "the Americas, Mexico, unborn children"
+  },
+  {
+    "name": "St. Lucy",
+    "title": "Virgin and Martyr",
+    "feastMonth": 12,
+    "feastDay": 13,
+    "rank": "memorial",
+    "description": "Sicilian martyr (c. 283-304) whose name means 'light.' Commemorated in the Roman Canon. Feast falls near the winter solstice.",
+    "patronOf": "the blind, eye diseases"
+  },
+  {
+    "name": "St. John of the Cross",
+    "title": "Priest and Doctor of the Church",
+    "feastMonth": 12,
+    "feastDay": 14,
+    "rank": "memorial",
+    "description": "Spanish Carmelite mystic (1542-1591), co-reformer of the Carmelite Order with St. Teresa of Ávila. Author of The Dark Night of the Soul.",
+    "patronOf": "mystics, contemplatives, Spanish poets"
+  },
+  {
+    "name": "St. Peter Canisius",
+    "title": "Priest and Doctor of the Church",
+    "feastMonth": 12,
+    "feastDay": 21,
+    "rank": "optional_memorial",
+    "description": "Dutch Jesuit (1521-1597), 'Second Apostle of Germany.' His catechisms were used for over 200 years. Tireless preacher of the Counter-Reformation.",
+    "patronOf": "Germany, Catholic press"
+  },
+  {
+    "name": "St. John of Kanty",
+    "title": "Priest",
+    "feastMonth": 12,
+    "feastDay": 23,
+    "rank": "optional_memorial",
+    "description": "Polish priest and professor of theology (1390-1473) at the University of Kraków. Known for his generosity to the poor and students.",
+    "patronOf": "Poland, Lithuania"
+  },
+  {
+    "name": "St. Stephen",
+    "title": "First Martyr",
+    "feastMonth": 12,
+    "feastDay": 26,
+    "rank": "feast",
+    "description": "One of the first seven deacons. First Christian martyr, stoned to death while praying for his persecutors (Acts 6-7). His feast follows Christmas.",
+    "patronOf": "deacons, stonemasons"
+  },
+  {
+    "name": "St. John",
+    "title": "Apostle and Evangelist",
+    "feastMonth": 12,
+    "feastDay": 27,
+    "rank": "feast",
+    "description": "The 'Beloved Disciple,' son of Zebedee. Author of the fourth Gospel, three Epistles, and Revelation. The only apostle not to die a martyr.",
+    "patronOf": "loyalty, friendships, writers"
+  },
+  {
+    "name": "Holy Innocents",
+    "title": "Martyrs",
+    "feastMonth": 12,
+    "feastDay": 28,
+    "rank": "feast",
+    "description": "Commemorates the infants killed by Herod in Bethlehem in his attempt to destroy the newborn King. The first martyrs for Christ.",
+    "patronOf": "babies, foundlings"
+  },
+  {
+    "name": "St. Thomas Becket",
+    "title": "Bishop and Martyr",
+    "feastMonth": 12,
+    "feastDay": 29,
+    "rank": "optional_memorial",
+    "description": "Archbishop of Canterbury (1118-1170) murdered in his cathedral by knights of King Henry II. Symbol of the Church's independence from the state.",
+    "patronOf": "clergy"
+  },
+  {
+    "name": "St. Sylvester I",
+    "title": "Pope",
+    "feastMonth": 12,
+    "feastDay": 31,
+    "rank": "optional_memorial",
+    "description": "Pope during Constantine's reign (314-335). Presided over the Church's transition from persecution to imperial patronage. Built the original St. Peter's Basilica.",
+    "patronOf": ""
+  }
+]

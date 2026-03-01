@@ -116,6 +116,17 @@ export default function SongLibraryShell({ songs, title = "Song Library", subtit
       .catch(() => {});
   }, [songs]);
 
+  // Determine if we're in Lent (for alleluia badge styling)
+  const isLent = useMemo(() => {
+    const now = new Date();
+    const month = now.getMonth() + 1;
+    // Approximate: Lent runs roughly mid-Feb to mid-Apr. We use a simple heuristic.
+    // Ash Wednesday 2026: Feb 18, Easter 2026: Apr 5
+    // Ash Wednesday 2027: Feb 10, Easter 2027: Mar 28
+    // For precision, this would check liturgical_days, but a season check suffices.
+    return (month >= 2 && month <= 4);
+  }, []);
+
   // Pre-built maps (computed before state so we can derive initial date)
   const dateOccasionMap = useMemo(() => getDateToOccasionMap(), []);
   const occasionSeasonMap = useMemo(() => getOccasionSeasonMap(), []);
@@ -570,6 +581,7 @@ export default function SongLibraryShell({ songs, title = "Song Library", subtit
                         isSelected={song.id === selectedSongId}
                         onClick={() => setSelectedSongId(song.id === selectedSongId ? null : song.id)}
                         calendarMeta={calendarSongMeta?.get(song.id) ?? null}
+                        isLent={isLent}
                         uploadedAudioUrl={uploadedAudio[song.id]}
                       />
                     </div>
