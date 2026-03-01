@@ -125,9 +125,14 @@ export async function GET() {
     }
 
     const filteredGroups = groups.filter((g) => {
-      if (g.songs.length !== 2) return true;
-      const key = `${g.songs[0].id}::${g.songs[1].id}`;
-      return !dismissedPairs.has(key);
+      // Check if ALL pairs in the group have been dismissed
+      const ids = g.songs.map((s) => s.id);
+      for (let i = 0; i < ids.length; i++) {
+        for (let j = i + 1; j < ids.length; j++) {
+          if (!dismissedPairs.has(`${ids[i]}::${ids[j]}`)) return true;
+        }
+      }
+      return false;
     });
 
     return NextResponse.json({
@@ -174,6 +179,10 @@ export async function POST(request: NextRequest) {
     const primary = library[primaryIdx];
     const secondary = library[secondaryIdx];
 
+    // Capture pre-mutation state for undo
+    const preMergePrimary = JSON.parse(JSON.stringify(primary));
+    const removedSong = JSON.parse(JSON.stringify(secondary));
+
     // Combine resources (dedup by id)
     const existingResourceIds = new Set(primary.resources.map((r: { id: string }) => r.id));
     for (const r of secondary.resources) {
@@ -210,6 +219,8 @@ export async function POST(request: NextRequest) {
     return NextResponse.json({
       merged: primary,
       removedId: secondaryId,
+      removedSong,
+      preMergePrimary,
     });
   } catch (err) {
     const message = err instanceof Error ? err.message : "Unknown error";

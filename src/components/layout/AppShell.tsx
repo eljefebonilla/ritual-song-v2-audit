@@ -17,7 +17,7 @@ export default function AppShell({ children }: { children: React.ReactNode }) {
   }
 
   return (
-    <>
+    <div className="h-screen overflow-hidden">
       {/* Mobile hamburger button */}
       <button
         onClick={() => setSidebarOpen(true)}
@@ -42,8 +42,8 @@ export default function AppShell({ children }: { children: React.ReactNode }) {
       </button>
 
       <Sidebar open={sidebarOpen} onClose={() => setSidebarOpen(false)} />
-      <main className="min-h-screen md:ml-64">{children}</main>
+      <main className="h-full overflow-auto md:ml-64">{children}</main>
       <MediaPlayer />
-    </>
+    </div>
   );
 }

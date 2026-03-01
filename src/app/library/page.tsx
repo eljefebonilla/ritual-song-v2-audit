@@ -6,7 +6,7 @@ export default function LibraryPage() {
   const songs = getSongLibrary();
 
   return (
-    <div className="min-h-screen">
+    <div className="h-full overflow-hidden">
       <Suspense>
         <SongLibraryShell songs={songs} />
       </Suspense>

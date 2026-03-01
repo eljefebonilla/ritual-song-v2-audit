@@ -13,6 +13,18 @@ const TAB_CONFIG: { id: TabId; label: string; confidence?: DuplicateConfidence }
   { id: "junk", label: "Junk Entries" },
 ];
 
+interface UndoAction {
+  label: string;
+  type: "merge" | "delete" | "dismiss";
+  previousGroups: DuplicateGroup[];
+  previousJunk: JunkEntry[];
+  payload: {
+    preMergePrimary?: unknown;
+    removedSongs?: unknown[];
+    dismissedPairs?: { songIdA: string; songIdB: string }[];
+  };
+}
+
 interface DuplicateReviewShellProps {
   groups: DuplicateGroup[];
   junk: JunkEntry[];
@@ -27,6 +39,8 @@ export default function DuplicateReviewShell({ groups: initialGroups, junk: init
   const [merging, setMerging] = useState<string | null>(null);
   const [dismissing, setDismissing] = useState<string | null>(null);
   const [deleting, setDeleting] = useState<string | null>(null);
+  const [undoAction, setUndoAction] = useState<UndoAction | null>(null);
+  const [undoing, setUndoing] = useState(false);
 
   const counts = useMemo(() => ({
     high: groups.filter((g) => g.confidence === "high").length,
@@ -47,6 +61,8 @@ export default function DuplicateReviewShell({ groups: initialGroups, junk: init
   }
 
   async function handleMerge(group: DuplicateGroup, primaryId: string, secondaryId: string) {
+    const prevGroups = groups;
+    const prevJunk = junk;
     setMerging(group.normalizedTitle);
     try {
       const res = await fetch("/api/songs/duplicates", {
@@ -55,14 +71,27 @@ export default function DuplicateReviewShell({ groups: initialGroups, junk: init
         body: JSON.stringify({ primaryId, secondaryId }),
       });
       if (!res.ok) return;
+      const data = await res.json();
       setGroups((prev) => prev.filter((g) => g.normalizedTitle !== group.normalizedTitle));
       setExpandedGroup(null);
+      setUndoAction({
+        label: `Merged "${group.displayTitle}"`,
+        type: "merge",
+        previousGroups: prevGroups,
+        previousJunk: prevJunk,
+        payload: {
+          preMergePrimary: data.preMergePrimary,
+          removedSongs: [data.removedSong],
+        },
+      });
     } finally {
       setMerging(null);
     }
   }
 
   async function handleClusterMerge(group: DuplicateGroup, keeperKey: string) {
+    const prevGroups = groups;
+    const prevJunk = junk;
     const keeper = group.songs.find((s) => s._key === keeperKey)!;
     const keeperId = keeper.id;
     // Resolve selected _keys to unique song IDs, excluding the keeper
@@ -74,11 +103,22 @@ export default function DuplicateReviewShell({ groups: initialGroups, junk: init
           .filter((id) => id !== keeperId)
       ),
     ];
-    // All entries share the same song ID (community-split of a single song) —
-    // nothing to merge, just dismiss the group
+    // All selected entries share the keeper's song ID (community-split copies) —
+    // nothing to merge on disk, but collapse them in the UI and keep unselected entries
     if (secondarySongIds.length === 0) {
-      setGroups((prev) => prev.filter((g) => g.normalizedTitle !== group.normalizedTitle));
-      setExpandedGroup(null);
+      const selectedKeySet = new Set(selectedIds);
+      const remaining = group.songs.filter((s) => !selectedKeySet.has(s._key) || s._key === keeperKey);
+      if (remaining.length <= 1) {
+        setGroups((prev) => prev.filter((g) => g.normalizedTitle !== group.normalizedTitle));
+        setExpandedGroup(null);
+      } else {
+        setGroups((prev) =>
+          prev.map((g) => {
+            if (g.normalizedTitle !== group.normalizedTitle) return g;
+            return { ...g, songs: remaining };
+          })
+        );
+      }
       setSelectedIds([]);
       return;
     }
@@ -86,7 +126,11 @@ export default function DuplicateReviewShell({ groups: initialGroups, junk: init
     setMerging(group.normalizedTitle);
     try {
       let latestMerged: { resources: { id: string }[]; usageCount: number } | null = null;
-      for (const secondaryId of secondarySongIds) {
+      let preMergePrimary: unknown = null;
+      const removedSongs: unknown[] = [];
+
+      for (let i = 0; i < secondarySongIds.length; i++) {
+        const secondaryId = secondarySongIds[i];
         const res = await fetch("/api/songs/duplicates", {
           method: "POST",
           headers: { "Content-Type": "application/json" },
@@ -95,6 +139,9 @@ export default function DuplicateReviewShell({ groups: initialGroups, junk: init
         if (!res.ok) return;
         const data = await res.json();
         latestMerged = data.merged;
+        // Only the first call's preMergePrimary represents the true original state
+        if (i === 0) preMergePrimary = data.preMergePrimary;
+        removedSongs.push(data.removedSong);
       }
 
       // Remove all entries whose song ID was merged (including split siblings)
@@ -120,22 +167,46 @@ export default function DuplicateReviewShell({ groups: initialGroups, junk: init
         );
       }
       setSelectedIds([]);
+      setUndoAction({
+        label: `Merged "${group.displayTitle}"`,
+        type: "merge",
+        previousGroups: prevGroups,
+        previousJunk: prevJunk,
+        payload: { preMergePrimary, removedSongs },
+      });
     } finally {
       setMerging(null);
     }
   }
 
   async function handleDismiss(group: DuplicateGroup) {
+    const prevGroups = groups;
+    const prevJunk = junk;
     setDismissing(group.normalizedTitle);
     try {
+      const songIds = group.songs.map((s) => s.id);
       const res = await fetch("/api/songs/duplicates", {
         method: "DELETE",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ songIds: group.songs.map((s) => s.id) }),
+        body: JSON.stringify({ songIds }),
       });
       if (res.ok) {
         setGroups((prev) => prev.filter((g) => g.normalizedTitle !== group.normalizedTitle));
         setExpandedGroup(null);
+        // Build pairs matching the insert pattern used by the dismiss API
+        const dismissedPairs: { songIdA: string; songIdB: string }[] = [];
+        for (let i = 0; i < songIds.length; i++) {
+          for (let j = i + 1; j < songIds.length; j++) {
+            dismissedPairs.push({ songIdA: songIds[i], songIdB: songIds[j] });
+          }
+        }
+        setUndoAction({
+          label: `Dismissed "${group.displayTitle}"`,
+          type: "dismiss",
+          previousGroups: prevGroups,
+          previousJunk: prevJunk,
+          payload: { dismissedPairs },
+        });
       }
     } finally {
       setDismissing(null);
@@ -143,30 +214,72 @@ export default function DuplicateReviewShell({ groups: initialGroups, junk: init
   }
 
   async function handleDeleteGroup(group: DuplicateGroup) {
+    const prevGroups = groups;
+    const prevJunk = junk;
     const uniqueIds = [...new Set(group.songs.map((s) => s.id))];
     setDeleting(group.normalizedTitle);
     try {
+      const removedSongs: unknown[] = [];
       for (const id of uniqueIds) {
         const res = await fetch(`/api/songs/${id}`, { method: "DELETE" });
         if (!res.ok) return;
+        const data = await res.json();
+        if (data.deletedSong) removedSongs.push(data.deletedSong);
       }
       setGroups((prev) => prev.filter((g) => g.normalizedTitle !== group.normalizedTitle));
       setExpandedGroup(null);
       setSelectedIds([]);
+      setUndoAction({
+        label: `Deleted "${group.displayTitle}"`,
+        type: "delete",
+        previousGroups: prevGroups,
+        previousJunk: prevJunk,
+        payload: { removedSongs },
+      });
     } finally {
       setDeleting(null);
     }
   }
 
   async function handleDeleteJunk(entry: JunkEntry) {
+    const prevJunk = junk;
+    const prevGroups = groups;
     setDeleting(entry.id);
     try {
       const res = await fetch(`/api/songs/${entry.id}`, { method: "DELETE" });
-      if (res.ok) {
-        setJunk((prev) => prev.filter((j) => j.id !== entry.id));
+      if (!res.ok) return;
+      const data = await res.json();
+      setJunk((prev) => prev.filter((j) => j.id !== entry.id));
+      if (data.deletedSong) {
+        setUndoAction({
+          label: `Deleted "${entry.title}"`,
+          type: "delete",
+          previousGroups: prevGroups,
+          previousJunk: prevJunk,
+          payload: { removedSongs: [data.deletedSong] },
+        });
       }
     } finally {
       setDeleting(null);
+    }
+  }
+
+  async function handleUndo() {
+    if (!undoAction) return;
+    setUndoing(true);
+    try {
+      const res = await fetch("/api/songs/duplicates/undo", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ type: undoAction.type, ...undoAction.payload }),
+      });
+      if (res.ok) {
+        setGroups(undoAction.previousGroups);
+        setJunk(undoAction.previousJunk);
+        setUndoAction(null);
+      }
+    } finally {
+      setUndoing(false);
     }
   }
 
@@ -338,15 +451,25 @@ export default function DuplicateReviewShell({ groups: initialGroups, junk: init
                       })}
                     </div>
 
-                    {/* Clear selection link for 3+ groups */}
-                    {group.songs.length > 2 && selectedIds.length > 0 && (
-                      <div className="mt-2">
-                        <button
-                          onClick={() => setSelectedIds([])}
-                          className="text-xs text-stone-400 hover:text-stone-600"
-                        >
-                          Clear selection
-                        </button>
+                    {/* Select all / Clear selection for 3+ groups */}
+                    {group.songs.length > 2 && (
+                      <div className="mt-2 flex gap-3">
+                        {selectedIds.length < group.songs.length && (
+                          <button
+                            onClick={() => setSelectedIds(group.songs.map((s) => s._key))}
+                            className="text-xs text-blue-500 hover:text-blue-700"
+                          >
+                            Select all
+                          </button>
+                        )}
+                        {selectedIds.length > 0 && (
+                          <button
+                            onClick={() => setSelectedIds([])}
+                            className="text-xs text-stone-400 hover:text-stone-600"
+                          >
+                            Clear selection
+                          </button>
+                        )}
                       </div>
                     )}
 
@@ -401,6 +524,30 @@ export default function DuplicateReviewShell({ groups: initialGroups, junk: init
               </button>
             </div>
           ))}
+        </div>
+      )}
+
+      {/* Undo toast bar */}
+      {undoAction && (
+        <div className="fixed bottom-4 left-1/2 -translate-x-1/2 z-50 flex items-center gap-3 bg-stone-900 text-white px-4 py-2.5 rounded-lg shadow-lg max-w-md">
+          <span className="text-xs truncate">{undoAction.label}</span>
+          <button
+            disabled={undoing}
+            onClick={handleUndo}
+            className="shrink-0 px-2.5 py-1 text-xs font-medium bg-white text-stone-900 rounded hover:bg-stone-100 disabled:opacity-50"
+          >
+            {undoing ? "Undoing..." : "Undo"}
+          </button>
+          <button
+            onClick={() => setUndoAction(null)}
+            className="shrink-0 text-stone-400 hover:text-white"
+            aria-label="Dismiss"
+          >
+            <svg className="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+              <line x1="18" y1="6" x2="6" y2="18" />
+              <line x1="6" y1="6" x2="18" y2="18" />
+            </svg>
+          </button>
         </div>
       )}
     </div>

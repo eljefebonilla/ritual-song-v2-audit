@@ -21,6 +21,11 @@
   --font-serif: "Garamond", "Georgia", "Times New Roman", serif;
 }
 
+html, body {
+  height: 100%;
+  overflow: hidden;
+}
+
 body {
   background: var(--color-background);
   color: var(--color-foreground);

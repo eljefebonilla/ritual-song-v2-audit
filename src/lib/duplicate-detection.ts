@@ -55,9 +55,9 @@ export function detectDuplicateGroups(songs: LibrarySong[]): DuplicateGroup[] {
       normalizedTitle: normTitle,
       displayTitle: members[0].title,
       confidence,
-      songs: members.map((s) => ({
+      songs: members.map((s, i) => ({
         id: s.id,
-        _key: s.id,
+        _key: `${s.id}::${i}`,
         title: s.title,
         composer: s.composer || null,
         resourceCount: s.resources.length,
