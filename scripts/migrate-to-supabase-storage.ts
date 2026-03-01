@@ -83,7 +83,7 @@ function sanitizeStoragePath(songLegacyId: string, fileName: string): string {
   const safe = fileName
     .normalize("NFD")
     .replace(/[\u0300-\u036f]/g, "") // Strip combining diacriticals (é→e, ó→o, etc.)
-    .replace(/[#%&{}\\<>*?/$!'":@+`|=˙]/g, "_")
+    .replace(/[#%&{}\[\]\\<>*?/$!'":@+`|=˙]/g, "_")
     .replace(/[^\x20-\x7E]/g, "_") // Strip any remaining non-ASCII
     .replace(/\s+/g, "_")
     .replace(/_+/g, "_");
