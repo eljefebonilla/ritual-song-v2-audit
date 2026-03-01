@@ -4781,6 +4781,17 @@
     "category": "song",
     "functions": [
       "sending"
+    ],
+    "catalogs": {
+      "spiritSong": 155
+    },
+    "topics": [
+      "Christian Life",
+      "Faith",
+      "God's Presence",
+      "God's Strength",
+      "Holy Spirit",
+      "Renewal"
     ]
   },
   {
@@ -6300,8 +6311,16 @@
     ],
     "catalogs": {
       "bb2026": 215,
-      "voices": 341
-    }
+      "voices": 341,
+      "spiritSong": 308
+    },
+    "topics": [
+      "Cross",
+      "Devotional",
+      "Forgiveness",
+      "Jesus Christ",
+      "Love of God for Us"
+    ]
   },
   {
     "id": "there-is-a-longing--anne-quigley",
@@ -7001,8 +7020,15 @@
       "offertory"
     ],
     "catalogs": {
-      "bb2026": 70
-    }
+      "bb2026": 70,
+      "spiritSong": 143
+    },
+    "topics": [
+      "Forgiveness",
+      "Healing",
+      "Protection",
+      "Suffering"
+    ]
   },
   {
     "id": "holy-is-his-name--john-michael-talbot",
@@ -7058,8 +7084,14 @@
       "prelude"
     ],
     "catalogs": {
-      "bb2026": 688
-    }
+      "bb2026": 688,
+      "spiritSong": 110
+    },
+    "topics": [
+      "Devotional",
+      "Love for God",
+      "Worship"
+    ]
   },
   {
     "id": "god-of-peace--jeffrey-bonilla-david-lockwood",
@@ -7352,8 +7384,15 @@
     "catalogs": {
       "bb2026": 503,
       "gather4": 834,
-      "voices": 49
-    }
+      "voices": 49,
+      "spiritSong": 278
+    },
+    "topics": [
+      "Christmas",
+      "Praise",
+      "Redemption",
+      "Salvation"
+    ]
   },
   {
     "id": "a-place-at-your-table--ben-walther",
@@ -7791,7 +7830,10 @@
     "category": "song",
     "functions": [
       "communion"
-    ]
+    ],
+    "catalogs": {
+      "spiritSong": 258
+    }
   },
   {
     "id": "go-into-the-world--tom-booth",
@@ -7955,8 +7997,13 @@
     ],
     "catalogs": {
       "bb2026": 521,
-      "voices": 310
-    }
+      "voices": 310,
+      "spiritSong": 369
+    },
+    "topics": [
+      "Light",
+      "Praise"
+    ]
   },
   {
     "id": "o-god-you-search-me--bernadette-farrell",
@@ -8254,8 +8301,13 @@
       "communion"
     ],
     "catalogs": {
-      "bb2026": 591
-    }
+      "bb2026": 591,
+      "spiritSong": 194
+    },
+    "topics": [
+      "Holy Week",
+      "Jesus Christ"
+    ]
   },
   {
     "id": "jesus-i-trust-in-you--sarah-hart-josh-blakesley-sarah-kroger",
@@ -9679,8 +9731,16 @@
     ],
     "catalogs": {
       "bb2026": 40,
-      "gather4": 463
-    }
+      "gather4": 463,
+      "spiritSong": 283
+    },
+    "topics": [
+      "Comfort and Consolation",
+      "Longing for God",
+      "Ministry/Mission",
+      "Petition/Prayer",
+      "Renewal"
+    ]
   },
   {
     "id": "mass-of-glory-christmas-intro",
@@ -9745,8 +9805,14 @@
       "sending"
     ],
     "catalogs": {
-      "novum": 84
-    }
+      "novum": 84,
+      "spiritSong": 214
+    },
+    "topics": [
+      "Creation",
+      "Praise",
+      "Redemption"
+    ]
   },
   {
     "id": "bread-of-life--michael-john-poirier",
@@ -9967,8 +10033,15 @@
     ],
     "catalogs": {
       "bb2026": 728,
-      "voices": 4
-    }
+      "voices": 4,
+      "spiritSong": 202
+    },
+    "topics": [
+      "Cross",
+      "Kingdom/Reign of God",
+      "Light",
+      "Second Coming"
+    ]
   },
   {
     "id": "give-us-your-peace--jesse-manibusan-sarah-hart",
@@ -10027,8 +10100,12 @@
     ],
     "catalogs": {
       "bb2026": 515,
-      "gather4": 892
-    }
+      "gather4": 892,
+      "spiritSong": 299
+    },
+    "topics": [
+      "Peace"
+    ]
   },
   {
     "id": "ps-1-blessed-are-they-who-hope-in-the-lord--the-lyric-psalter-tony-alonso-marty-haugen",
@@ -10878,8 +10955,15 @@
     ],
     "catalogs": {
       "voices": 56,
-      "novum": 46
-    }
+      "novum": 46,
+      "spiritSong": 191
+    },
+    "topics": [
+      "Easter",
+      "Redemption",
+      "Salvation",
+      "Saints"
+    ]
   },
   {
     "id": "ps-8-o-lord-our-god-how-wonderful--spirit-psalm-trevor-thomson",
@@ -13413,8 +13497,14 @@
     ],
     "catalogs": {
       "bb2026": 676,
-      "gather4": 1082
-    }
+      "gather4": 1082,
+      "spiritSong": 130
+    },
+    "topics": [
+      "Discipleship",
+      "Eucharist",
+      "Funeral"
+    ]
   },
   {
     "id": "to-you-o-god-i-lift-up-my-soul--bob-hurd",
@@ -13775,8 +13865,13 @@
       "sending"
     ],
     "catalogs": {
-      "bb2026": 58
-    }
+      "bb2026": 58,
+      "spiritSong": 140
+    },
+    "topics": [
+      "Christian Life",
+      "Renewal"
+    ]
   },
   {
     "id": "my-soul-in-stillness-waits--marty-haugen",
@@ -15110,8 +15205,15 @@
       "communion"
     ],
     "catalogs": {
-      "bb2026": 196
-    }
+      "bb2026": 196,
+      "spiritSong": 189
+    },
+    "topics": [
+      "Eucharist",
+      "God's Glory",
+      "Jesus Christ",
+      "Love for God"
+    ]
   },
   {
     "id": "eye-has-not-seen--marty-haugen",
@@ -18098,8 +18200,13 @@
     ],
     "catalogs": {
       "bb2026": 516,
-      "gather4": 900
-    }
+      "gather4": 900,
+      "spiritSong": 287
+    },
+    "topics": [
+      "Peace",
+      "Petition/Prayer"
+    ]
   },
   {
     "id": "we-are-many-parts--marty-haugen",
@@ -19051,8 +19158,12 @@
       "sending"
     ],
     "catalogs": {
-      "bb2026": 608
-    }
+      "bb2026": 608,
+      "spiritSong": 374
+    },
+    "topics": [
+      "Mercy"
+    ]
   },
   {
     "id": "i-lift-my-soul-to-you--lori-true",
@@ -19419,7 +19530,8 @@
       "sending"
     ],
     "catalogs": {
-      "bb2026": 189
+      "bb2026": 189,
+      "spiritSong": 177
     }
   },
   {
@@ -19545,8 +19657,12 @@
       "communion"
     ],
     "catalogs": {
-      "bb2026": 581
-    }
+      "bb2026": 581,
+      "spiritSong": 125
+    },
+    "topics": [
+      "Eternal Life"
+    ]
   },
   {
     "id": "lead-me-guide-me--doris-akers-richard-smallwood-1",
@@ -19868,6 +19984,14 @@
     "category": "song",
     "functions": [
       "communion"
+    ],
+    "catalogs": {
+      "spiritSong": 255
+    },
+    "topics": [
+      "People of God",
+      "Service/Social Concerns",
+      "Trust"
     ]
   },
   {
@@ -22608,6 +22732,15 @@
     "category": "song",
     "functions": [
       "communion"
+    ],
+    "catalogs": {
+      "spiritSong": 159
+    },
+    "topics": [
+      "Christmas",
+      "Epiphany",
+      "Journey",
+      "Peace"
     ]
   },
   {
@@ -28325,7 +28458,10 @@
     "category": "song",
     "functions": [
       "communion"
-    ]
+    ],
+    "catalogs": {
+      "spiritSong": 224
+    }
   },
   {
     "id": "pentecost-sequence-archer--pent-abc-come-holy-spirit-fill",
@@ -28554,8 +28690,19 @@
     ],
     "catalogs": {
       "bb2026": 308,
-      "gather4": 1041
-    }
+      "gather4": 1041,
+      "spiritSong": 219
+    },
+    "topics": [
+      "Eternal Life",
+      "Eucharist",
+      "Faith",
+      "Grace",
+      "Hope",
+      "Jesus Christ",
+      "Longing for God",
+      "Trust"
+    ]
   },
   {
     "id": "ps-15-he-who-does-justice-will-live-in-the--the-lyric-psalter-tony-alonso-marty-haugen",
@@ -28701,6 +28848,12 @@
     "category": "song",
     "functions": [
       "offertory"
+    ],
+    "catalogs": {
+      "spiritSong": 346
+    },
+    "topics": [
+      "Longing for God"
     ]
   },
   {
@@ -30076,8 +30229,15 @@
       "communion"
     ],
     "catalogs": {
-      "bb2026": 334
-    }
+      "bb2026": 334,
+      "spiritSong": 254
+    },
+    "topics": [
+      "Discipleship",
+      "God's Presence",
+      "Holy Spirit",
+      "Service/Social Concerns"
+    ]
   },
   {
     "id": "ps-23-the-lord-is-my-shepherd--the-lyric-psalter-tony-alonso-marty-haugen",
@@ -32895,8 +33055,14 @@
       "offertory"
     ],
     "catalogs": {
-      "bb2026": 645
-    }
+      "bb2026": 645,
+      "spiritSong": 298
+    },
+    "topics": [
+      "Jesus Christ",
+      "Love for Others",
+      "Service/Social Concerns"
+    ]
   },
   {
     "id": "now-the-green-blade-rises--noel-nouvelet-john-m-c-crum",
@@ -33732,8 +33898,14 @@
     "catalogs": {
       "bb2026": 440,
       "gather4": 601,
-      "novum": 45
-    }
+      "novum": 45,
+      "spiritSong": 193
+    },
+    "topics": [
+      "Renewal",
+      "Witness",
+      "Worship"
+    ]
   },
   {
     "id": "pentecost-sequence-archer--refrain-by-leonard-cohen-adapted-for-liturgy",
@@ -34956,8 +35128,15 @@
     ],
     "catalogs": {
       "bb2026": 147,
-      "gather4": 544
-    }
+      "gather4": 544,
+      "spiritSong": 170
+    },
+    "topics": [
+      "Advent",
+      "Faith",
+      "Jesus Christ",
+      "Second Coming"
+    ]
   },
   {
     "id": "build-a-family--ed-bolduc-arranged-by-daniel-houze",
@@ -37494,7 +37673,8 @@
     "composer": "Charlene Moore Cooper",
     "category": "song",
     "catalogs": {
-      "aahh": 635
+      "aahh": 635,
+      "spiritSong": 277
     },
     "resources": [],
     "usageCount": 0,
@@ -37509,6 +37689,11 @@
     "firstLine": "The peace of God be with you",
     "languages": [
       "English"
+    ],
+    "topics": [
+      "Easter",
+      "Eternal Life",
+      "Jesus Christ"
     ]
   },
   {
@@ -38772,7 +38957,8 @@
     "category": "song",
     "catalogs": {
       "aahh": 354,
-      "voices": 58
+      "voices": 58,
+      "spiritSong": 208
     },
     "resources": [],
     "usageCount": 0,
@@ -38799,6 +38985,13 @@
     "firstLine": "Come to Jesus, Come to Jesus",
     "languages": [
       "English"
+    ],
+    "topics": [
+      "Eucharist",
+      "Grace",
+      "Mercy",
+      "Peace",
+      "Thanksgiving"
     ]
   },
   {
@@ -41626,7 +41819,8 @@
     "composer": "George Whelpton",
     "category": "song",
     "catalogs": {
-      "aahh": 658
+      "aahh": 658,
+      "spiritSong": 52
     },
     "resources": [],
     "usageCount": 0,
@@ -41645,6 +41839,12 @@
     "firstLine": "Hear our prayer, O Lord",
     "languages": [
       "English"
+    ],
+    "topics": [
+      "Healing",
+      "Help in Distress",
+      "Petition/Prayer",
+      "Suffering"
     ]
   },
   {
@@ -57278,11 +57478,15 @@
     "category": "song",
     "catalogs": {
       "gather4": 457,
-      "voices": 55
+      "voices": 55,
+      "spiritSong": 137
     },
     "resources": [],
     "usageCount": 0,
-    "occasions": []
+    "occasions": [],
+    "topics": [
+      "Witness"
+    ]
   },
   {
     "id": "come-holy-spirit-come--jefferson-thomas-w-robertson-jalonda",
@@ -62196,11 +62400,15 @@
     "composer": "Clark, Francis A. • Tindley, Charles A.",
     "category": "song",
     "catalogs": {
-      "gather4": 794
+      "gather4": 794,
+      "spiritSong": 352
     },
     "resources": [],
     "usageCount": 0,
-    "occasions": []
+    "occasions": [],
+    "topics": [
+      "Longing for God"
+    ]
   },
   {
     "id": "stand-firm--bell-john-l-cameroon-traditional-iona-community",
@@ -65552,8 +65760,8 @@
   },
   {
     "id": "christ-be-our-light--andrews-meredith-bolduc-ed-garrard-stuart-ingram-jason-macdonald-james-rozier-andi",
-    "title": "Christ, Be Our Light",
-    "composer": "Andrews, Meredith • Bolduc, Ed • Garrard, Stuart • Ingram, Jason • MacDonald, James • Rozier, Andi",
+    "title": "Christ, Be Our Light!",
+    "composer": "Farrell, Bernadette • Lockwood",
     "category": "song",
     "catalogs": {
       "spiritSong": 207
@@ -65767,11 +65975,19 @@
     "title": "10,000 Reasons (Bless the Lord)",
     "category": "song",
     "catalogs": {
-      "voices": 2
+      "voices": 2,
+      "spiritSong": 270
     },
     "resources": [],
     "usageCount": 0,
-    "occasions": []
+    "occasions": [],
+    "topics": [
+      "Faith",
+      "God's Presence",
+      "Holy Spirit",
+      "Love of God for Us",
+      "Music Ministry"
+    ]
   },
   {
     "id": "a-life-transformed-by-gratitude",
@@ -65858,11 +66074,16 @@
     "title": "All Who Are Thirsty",
     "category": "song",
     "catalogs": {
-      "voices": 12
+      "voices": 12,
+      "spiritSong": 204
     },
     "resources": [],
     "usageCount": 0,
-    "occasions": []
+    "occasions": [],
+    "topics": [
+      "God's Glory",
+      "Longing for God"
+    ]
   },
   {
     "id": "all-who-enter-here",
@@ -65946,11 +66167,19 @@
     "title": "As It Is in Heaven",
     "category": "song",
     "catalogs": {
-      "voices": 21
+      "voices": 21,
+      "spiritSong": 267
     },
     "resources": [],
     "usageCount": 0,
-    "occasions": []
+    "occasions": [],
+    "topics": [
+      "Advent",
+      "Faithfulness",
+      "Light",
+      "Longing for God",
+      "Mercy"
+    ]
   },
   {
     "id": "as-one",
@@ -66012,11 +66241,19 @@
     "title": "Beautiful One",
     "category": "song",
     "catalogs": {
-      "voices": 28
+      "voices": 28,
+      "spiritSong": 274
     },
     "resources": [],
     "usageCount": 0,
-    "occasions": []
+    "occasions": [],
+    "topics": [
+      "Advent",
+      "Humility",
+      "Justice",
+      "Love for God",
+      "Praise"
+    ]
   },
   {
     "id": "beautiful-to-me",
@@ -66057,7 +66294,8 @@
     "title": "Behold the Lamb of God",
     "category": "mass_part",
     "catalogs": {
-      "voices": 32
+      "voices": 32,
+      "spiritSong": 275
     },
     "resources": [],
     "usageCount": 0,
@@ -66101,11 +66339,17 @@
     "title": "Blessed Are You, Lord",
     "category": "song",
     "catalogs": {
-      "voices": 37
+      "voices": 37,
+      "spiritSong": 276
     },
     "resources": [],
     "usageCount": 0,
-    "occasions": []
+    "occasions": [],
+    "topics": [
+      "Advent",
+      "Prayer",
+      "Saints"
+    ]
   },
   {
     "id": "blessed-be-the-name-of-the-lord",
@@ -66178,11 +66422,19 @@
     "title": "Can We Love?",
     "category": "song",
     "catalogs": {
-      "voices": 45
+      "voices": 45,
+      "spiritSong": 280
     },
     "resources": [],
     "usageCount": 0,
-    "occasions": []
+    "occasions": [],
+    "topics": [
+      "Holy Week",
+      "Jesus Christ",
+      "Love of God for Us",
+      "Ministry/Mission",
+      "Reconciliation"
+    ]
   },
   {
     "id": "canticle-of-daniel",
@@ -66310,11 +66562,16 @@
     "title": "Christians, to the Paschal Victim",
     "category": "song",
     "catalogs": {
-      "voices": 66
+      "voices": 66,
+      "spiritSong": 176
     },
     "resources": [],
     "usageCount": 0,
-    "occasions": []
+    "occasions": [],
+    "topics": [
+      "Faithfulness",
+      "Thanksgiving"
+    ]
   },
   {
     "id": "easter-song",
@@ -66343,11 +66600,17 @@
     "title": "Everlasting God",
     "category": "song",
     "catalogs": {
-      "voices": 69
+      "voices": 69,
+      "spiritSong": 286
     },
     "resources": [],
     "usageCount": 0,
-    "occasions": []
+    "occasions": [],
+    "topics": [
+      "God's Presence",
+      "Holy Spirit",
+      "Service/Social Concerns"
+    ]
   },
   {
     "id": "every-day",
@@ -66588,11 +66851,16 @@
     "title": "God of Wonders",
     "category": "song",
     "catalogs": {
-      "voices": 95
+      "voices": 95,
+      "spiritSong": 217
     },
     "resources": [],
     "usageCount": 0,
-    "occasions": []
+    "occasions": [],
+    "topics": [
+      "Creation",
+      "Faithfulness"
+    ]
   },
   {
     "id": "god-so-loved-the-world",
@@ -66654,11 +66922,18 @@
     "title": "He Is Exalted",
     "category": "song",
     "catalogs": {
-      "voices": 101
+      "voices": 101,
+      "spiritSong": 196
     },
     "resources": [],
     "usageCount": 0,
-    "occasions": []
+    "occasions": [],
+    "topics": [
+      "Kingdom/Reign of God",
+      "Praise",
+      "Redemption",
+      "Salvation"
+    ]
   },
   {
     "id": "he-lives-in-us",
@@ -66687,11 +66962,19 @@
     "title": "Healing Waters",
     "category": "song",
     "catalogs": {
-      "voices": 104
+      "voices": 104,
+      "spiritSong": 294
     },
     "resources": [],
     "usageCount": 0,
-    "occasions": []
+    "occasions": [],
+    "topics": [
+      "Funeral",
+      "Mercy",
+      "Petition/Prayer",
+      "Sending",
+      "Witness"
+    ]
   },
   {
     "id": "hear-me-o-god",
@@ -66720,22 +67003,42 @@
     "title": "Here I Am (Booth)",
     "category": "song",
     "catalogs": {
-      "voices": 107
+      "voices": 107,
+      "spiritSong": 307
     },
     "resources": [],
     "usageCount": 0,
-    "occasions": []
+    "occasions": [],
+    "topics": [
+      "Cross",
+      "Jesus Christ",
+      "Mercy"
+    ]
   },
   {
     "id": "here-i-am-to-worship",
     "title": "Here I Am to Worship",
     "category": "song",
     "catalogs": {
-      "voices": 109
+      "voices": 109,
+      "spiritSong": 309
     },
     "resources": [],
     "usageCount": 0,
-    "occasions": []
+    "occasions": [],
+    "topics": [
+      "Courage",
+      "Evening/Evening Prayer",
+      "Faith",
+      "God's Strength",
+      "Healing",
+      "Help in Distress",
+      "Hope",
+      "Protection",
+      "Redemption",
+      "Salvation",
+      "Trust"
+    ]
   },
   {
     "id": "here-in-this-place",
@@ -66865,11 +67168,19 @@
     "title": "I Could Sing of Your Love Forever",
     "category": "song",
     "catalogs": {
-      "voices": 126
+      "voices": 126,
+      "spiritSong": 313
     },
     "resources": [],
     "usageCount": 0,
-    "occasions": []
+    "occasions": [],
+    "topics": [
+      "Faithfulness",
+      "Freedom",
+      "Joy",
+      "Love for God",
+      "Music Ministry"
+    ]
   },
   {
     "id": "i-do-believe-thomas",
@@ -67419,11 +67730,16 @@
     "title": "Many and One",
     "category": "song",
     "catalogs": {
-      "voices": 190
+      "voices": 190,
+      "spiritSong": 331
     },
     "resources": [],
     "usageCount": 0,
-    "occasions": []
+    "occasions": [],
+    "topics": [
+      "Peace",
+      "People of God"
+    ]
   },
   {
     "id": "everyone-needs-compassion",
@@ -67595,11 +67911,16 @@
     "title": "Open the Eyes of My Heart",
     "category": "song",
     "catalogs": {
-      "voices": 206
+      "voices": 206,
+      "spiritSong": 335
     },
     "resources": [],
     "usageCount": 0,
-    "occasions": []
+    "occasions": [],
+    "topics": [
+      "Longing for God",
+      "Petition/Prayer"
+    ]
   },
   {
     "id": "open-up-the-heavens",
@@ -68435,11 +68756,15 @@
     "title": "You Alone",
     "category": "song",
     "catalogs": {
-      "voices": 304
+      "voices": 304,
+      "spiritSong": 365
     },
     "resources": [],
     "usageCount": 0,
-    "occasions": []
+    "occasions": [],
+    "topics": [
+      "Mercy"
+    ]
   },
   {
     "id": "lord-on-the-day-i-called-for-help",
@@ -68732,11 +69057,16 @@
     "title": "Gospel Acclamation (Mass of Saint Ann)",
     "category": "gospel_acclamation",
     "catalogs": {
-      "voices": 339
+      "voices": 339,
+      "spiritSong": 41
     },
     "resources": [],
     "usageCount": 0,
-    "occasions": []
+    "occasions": [],
+    "topics": [
+      "Christian Life",
+      "Service/Social Concerns"
+    ]
   },
   {
     "id": "lenten-gospel-acclamation-mass-of-saint-ann",
@@ -68787,11 +69117,17 @@
     "title": "Great Amen (Mass of Saint Ann)",
     "category": "mass_part",
     "catalogs": {
-      "voices": 345
+      "voices": 345,
+      "spiritSong": 47
     },
     "resources": [],
     "usageCount": 0,
-    "occasions": []
+    "occasions": [],
+    "topics": [
+      "Blessed Virgin Mary",
+      "Evening/Evening Prayer",
+      "Service/Social Concerns"
+    ]
   },
   {
     "id": "psalm-19-words-of-everlasting-life",
@@ -69782,5 +70118,2619 @@
     "resources": [],
     "usageCount": 0,
     "occasions": []
+  },
+  {
+    "id": "lord-have-mercy-mass-of-the-desert--bolduc-ed-myrin-jonas-redman-matt",
+    "title": "Lord, Have Mercy (Mass of the Desert)",
+    "composer": "Bolduc, Ed • Myrin, Jonas • Redman, Matt",
+    "category": "mass_part",
+    "catalogs": {
+      "spiritSong": 2
+    },
+    "resources": [],
+    "usageCount": 0,
+    "occasions": [],
+    "topics": [
+      "Praise",
+      "Song and Singing",
+      "Worship"
+    ]
+  },
+  {
+    "id": "glory-to-god-mass-of-the-desert--bolduc-ed-thomson-trevor",
+    "title": "Glory to God (Mass of the Desert)",
+    "composer": "Bolduc, Ed • Thomson, Trevor",
+    "category": "mass_part",
+    "catalogs": {
+      "spiritSong": 3
+    },
+    "resources": [],
+    "usageCount": 0,
+    "occasions": [],
+    "topics": [
+      "Love of God for Us",
+      "Suffering"
+    ]
+  },
+  {
+    "id": "alleluia-mass-of-the-desert--angrisano-steve-modlin-rick",
+    "title": "Alleluia (Mass of the Desert)",
+    "composer": "Angrisano, Steve • Modlin, Rick",
+    "category": "gospel_acclamation",
+    "catalogs": {
+      "spiritSong": 4
+    },
+    "resources": [],
+    "usageCount": 0,
+    "occasions": [],
+    "topics": [
+      "Witness"
+    ]
+  },
+  {
+    "id": "lenten-gospel-acclamation-mass-of-the-desert--baloche-paul-fife-brian-le-blanc-lenny",
+    "title": "Lenten Gospel Acclamation (Mass of the Desert)",
+    "composer": "Baloche, Paul • Fife, Brian • Le Blanc, Lenny",
+    "category": "gospel_acclamation",
+    "catalogs": {
+      "spiritSong": 5
+    },
+    "resources": [],
+    "usageCount": 0,
+    "occasions": [],
+    "topics": [
+      "Cross",
+      "Holy Week",
+      "Jesus Christ",
+      "Love of God for Us"
+    ]
+  },
+  {
+    "id": "holy-mass-of-the-desert--bolduc-ed-leon-marc-leon-matthew-g-leon-michael-paul-leon-monica-stanton-david",
+    "title": "Holy (Mass of the Desert)",
+    "composer": "Bolduc, Ed • Leon, Marc • Leon, Matthew G. • Leon, Michael Paul • Leon, Monica • Stanton, David",
+    "category": "song",
+    "catalogs": {
+      "spiritSong": 6
+    },
+    "resources": [],
+    "usageCount": 0,
+    "occasions": [],
+    "topics": [
+      "Adoration",
+      "Humility",
+      "Love of God for Us"
+    ]
+  },
+  {
+    "id": "we-proclaim-your-death-mass-of-the-desert--bolduc-ed-leon-matthew-g-leon-michael-paul-villalobos-jacob-israel",
+    "title": "We Proclaim Your Death (Mass of the Desert)",
+    "composer": "Bolduc, Ed • Leon, Matthew G. • Leon, Michael Paul • Villalobos, Jacob Israel",
+    "category": "mass_part",
+    "catalogs": {
+      "spiritSong": 7
+    },
+    "resources": [],
+    "usageCount": 0,
+    "occasions": [],
+    "topics": [
+      "Praise",
+      "Redemption",
+      "Salvation"
+    ]
+  },
+  {
+    "id": "when-we-eat-this-bread-mass-of-the-desert--bolduc-ed-draper-william-h-francis-of-assisi",
+    "title": "When We Eat this Bread (Mass of the Desert)",
+    "composer": "Bolduc, Ed • Draper, William H. • Francis of Assisi",
+    "category": "mass_part",
+    "catalogs": {
+      "spiritSong": 8
+    },
+    "resources": [],
+    "usageCount": 0,
+    "occasions": [],
+    "topics": [
+      "Creation",
+      "Praise",
+      "Song and Singing"
+    ]
+  },
+  {
+    "id": "save-us-savior-mass-of-the-desert--bolduc-ed-needleman-mikey",
+    "title": "Save Us, Savior (Mass of the Desert)",
+    "composer": "Bolduc, Ed • Needleman, Mikey",
+    "category": "mass_part",
+    "catalogs": {
+      "spiritSong": 9
+    },
+    "resources": [],
+    "usageCount": 0,
+    "occasions": [],
+    "topics": [
+      "Gathering",
+      "Song and Singing"
+    ]
+  },
+  {
+    "id": "amen-mass-of-the-desert--bolduc-ed-booth-tom-brewster-lincoln-chambers-danny-houghton-israel",
+    "title": "Amen (Mass of the Desert)",
+    "composer": "Bolduc, Ed • Booth, Tom • Brewster, Lincoln • Chambers, Danny • Houghton, Israel",
+    "category": "mass_part",
+    "catalogs": {
+      "spiritSong": 10
+    },
+    "resources": [],
+    "usageCount": 0,
+    "occasions": [],
+    "topics": [
+      "Eucharist",
+      "Faith",
+      "God's Presence",
+      "Help in Distress",
+      "Protection",
+      "Renewal"
+    ]
+  },
+  {
+    "id": "lamb-of-god-mass-of-the-desert--bolduc-ed",
+    "title": "Lamb of God (Mass of the Desert)",
+    "composer": "Bolduc, Ed",
+    "category": "mass_part",
+    "catalogs": {
+      "spiritSong": 11
+    },
+    "resources": [],
+    "usageCount": 0,
+    "occasions": [],
+    "topics": [
+      "Salvation",
+      "Song and Singing"
+    ]
+  },
+  {
+    "id": "i-saw-water-flowing-mass-of-renewal--brown-brenton-crandal-scot-robertson-glenn",
+    "title": "I Saw Water Flowing (Mass of Renewal)",
+    "composer": "Brown, Brenton • Crandal, Scot • Robertson, Glenn",
+    "category": "mass_part",
+    "catalogs": {
+      "spiritSong": 12
+    },
+    "resources": [],
+    "usageCount": 0,
+    "occasions": [],
+    "topics": [
+      "Comfort and Consolation",
+      "God's Presence",
+      "Holy Spirit",
+      "Suffering"
+    ]
+  },
+  {
+    "id": "kyrie-eleison-lord-have-mercy-mass-of-renewal--angotti-john-bolduc-ed-houze-daniel",
+    "title": "Kyrie, Eleison/Lord, Have Mercy (Mass of Renewal)",
+    "composer": "Angotti, John • Bolduc, Ed • Houze, Daniel",
+    "category": "mass_part",
+    "catalogs": {
+      "spiritSong": 13
+    },
+    "resources": [],
+    "usageCount": 0,
+    "occasions": [],
+    "topics": [
+      "Gathering",
+      "Service/Social Concerns"
+    ]
+  },
+  {
+    "id": "glory-to-god-mass-of-renewal--angotti-john-bolduc-ed",
+    "title": "Glory to God (Mass of Renewal)",
+    "composer": "Angotti, John • Bolduc, Ed",
+    "category": "mass_part",
+    "catalogs": {
+      "spiritSong": 14
+    },
+    "resources": [],
+    "usageCount": 0,
+    "occasions": [],
+    "topics": [
+      "Praise"
+    ]
+  },
+  {
+    "id": "alleluia-mass-of-renewal--bolduc-ed-diliberto-jamie-hess-lorraine-m",
+    "title": "Alleluia (Mass of Renewal)",
+    "composer": "Bolduc, Ed • Diliberto, Jamie • Hess, Lorraine M.",
+    "category": "gospel_acclamation",
+    "catalogs": {
+      "spiritSong": 15
+    },
+    "resources": [],
+    "usageCount": 0,
+    "occasions": [],
+    "topics": [
+      "Adoration",
+      "Eucharist",
+      "Hope"
+    ]
+  },
+  {
+    "id": "lenten-gospel-acclamation-mass-of-renewal--giglio-louie-modlin-rick-newton-john-tomlin-chris",
+    "title": "Lenten Gospel Acclamation (Mass of Renewal)",
+    "composer": "Giglio, Louie • Modlin, Rick • Newton, John • Tomlin, Chris",
+    "category": "gospel_acclamation",
+    "catalogs": {
+      "spiritSong": 16
+    },
+    "resources": [],
+    "usageCount": 0,
+    "occasions": [],
+    "topics": [
+      "Grace",
+      "Redemption"
+    ]
+  },
+  {
+    "id": "holy-mass-of-renewal--bolduc-ed-thompson-aaron",
+    "title": "Holy (Mass of Renewal)",
+    "composer": "Bolduc, Ed • Thompson, Aaron",
+    "category": "song",
+    "catalogs": {
+      "spiritSong": 17
+    },
+    "resources": [],
+    "usageCount": 0,
+    "occasions": [],
+    "topics": [
+      "God's Glory",
+      "Trinity"
+    ]
+  },
+  {
+    "id": "we-proclaim-your-death-mass-of-renewal--bolduc-ed-thomas-donn",
+    "title": "We Proclaim Your Death (Mass of Renewal)",
+    "composer": "Bolduc, Ed • Thomas, Donn",
+    "category": "mass_part",
+    "catalogs": {
+      "spiritSong": 18
+    },
+    "resources": [],
+    "usageCount": 0,
+    "occasions": [],
+    "topics": [
+      "Baptism",
+      "Christian Initiation",
+      "Confirmation",
+      "Holy Spirit",
+      "Vocation"
+    ]
+  },
+  {
+    "id": "when-we-eat-this-bread-mass-of-renewal--bolduc-ed",
+    "title": "When We Eat This Bread (Mass of Renewal)",
+    "composer": "Bolduc, Ed",
+    "category": "mass_part",
+    "catalogs": {
+      "spiritSong": 19
+    },
+    "resources": [],
+    "usageCount": 0,
+    "occasions": [],
+    "topics": [
+      "Faith"
+    ]
+  },
+  {
+    "id": "save-us-savior-mass-of-renewal--angotti-john-bolduc-ed-nienaber-paul",
+    "title": "Save Us, Savior (Mass of Renewal)",
+    "composer": "Angotti, John • Bolduc, Ed • Nienaber, Paul",
+    "category": "mass_part",
+    "catalogs": {
+      "spiritSong": 20
+    },
+    "resources": [],
+    "usageCount": 0,
+    "occasions": [],
+    "topics": [
+      "Church",
+      "God's Presence",
+      "Jesus Christ",
+      "Redemption",
+      "Service/Social Concerns"
+    ]
+  },
+  {
+    "id": "amen-mass-of-renewal--bolduc-ed-cash-ed-maher-matt",
+    "title": "Amen (Mass of Renewal)",
+    "composer": "Bolduc, Ed • Cash, Ed • Maher, Matt",
+    "category": "mass_part",
+    "catalogs": {
+      "spiritSong": 21
+    },
+    "resources": [],
+    "usageCount": 0,
+    "occasions": [],
+    "topics": [
+      "God the Father",
+      "Song and Singing"
+    ]
+  },
+  {
+    "id": "lamb-of-god-mass-of-renewal--bolduc-ed-leon-matthew-g-leon-michael-paul-villalobos-jacob-israel",
+    "title": "Lamb of God (Mass of Renewal)",
+    "composer": "Bolduc, Ed • Leon, Matthew G. • Leon, Michael Paul • Villalobos, Jacob Israel",
+    "category": "mass_part",
+    "catalogs": {
+      "spiritSong": 22
+    },
+    "resources": [],
+    "usageCount": 0,
+    "occasions": [],
+    "topics": [
+      "Gathering",
+      "Unity"
+    ]
+  },
+  {
+    "id": "kyrie-mass-of-st-timothy--barker-john-bolduc-ed-noel-caroline-maria",
+    "title": "Kyrie (Mass of St. Timothy)",
+    "composer": "Barker, John • Bolduc, Ed • Noel, Caroline Maria",
+    "category": "mass_part",
+    "catalogs": {
+      "spiritSong": 23
+    },
+    "resources": [],
+    "usageCount": 0,
+    "occasions": [],
+    "topics": [
+      "Adoration",
+      "Jesus Christ",
+      "Praise"
+    ]
+  },
+  {
+    "id": "glory-to-god-mass-of-st-timothy--barker-john-bolduc-ed",
+    "title": "Glory to God (Mass of St. Timothy)",
+    "composer": "Barker, John • Bolduc, Ed",
+    "category": "mass_part",
+    "catalogs": {
+      "spiritSong": 24
+    },
+    "resources": [],
+    "usageCount": 0,
+    "occasions": [],
+    "topics": [
+      "Advent",
+      "God's Glory",
+      "Jesus Christ",
+      "Second Coming"
+    ]
+  },
+  {
+    "id": "holy-mass-of-st-timothy--krzystofczyk-christine-rose-danielle",
+    "title": "Holy (Mass of St. Timothy)",
+    "composer": "Krzystofczyk, Christine • Rose, Danielle",
+    "category": "song",
+    "catalogs": {
+      "spiritSong": 25
+    },
+    "resources": [],
+    "usageCount": 0,
+    "occasions": [],
+    "topics": [
+      "Church",
+      "Discipleship",
+      "God's Presence",
+      "Graduation",
+      "Sending",
+      "Vocation",
+      "Witness"
+    ]
+  },
+  {
+    "id": "amen-mass-of-st-timothy--bolduc-ed-busche-jack",
+    "title": "Amen (Mass of St. Timothy)",
+    "composer": "Bolduc, Ed • Busche, Jack",
+    "category": "mass_part",
+    "catalogs": {
+      "spiritSong": 27
+    },
+    "resources": [],
+    "usageCount": 0,
+    "occasions": [],
+    "topics": [
+      "Advent"
+    ]
+  },
+  {
+    "id": "lamb-of-god-mass-of-st-timothy--bolduc-ed-hughes-tim",
+    "title": "Lamb of God (Mass of St. Timothy)",
+    "composer": "Bolduc, Ed • Hughes, Tim",
+    "category": "mass_part",
+    "catalogs": {
+      "spiritSong": 28
+    },
+    "resources": [],
+    "usageCount": 0,
+    "occasions": [],
+    "topics": [
+      "Adoration",
+      "God's Glory",
+      "Song and Singing"
+    ]
+  },
+  {
+    "id": "glory-to-god-mass-of-a-joyful-heart--bolduc-ed-carson-daniel-cash-ed-gaither-gloria-gaither-william-j-ingram-jason-maher-matt-tomaszek-tom-tomlin-chris",
+    "title": "Glory to God (Mass of a Joyful Heart)",
+    "composer": "Bolduc, Ed • Carson, Daniel • Cash, Ed • Gaither, Gloria • Gaither, William J. • Ingram, Jason • Maher, Matt • Tomaszek, Tom • Tomlin, Chris",
+    "category": "mass_part",
+    "catalogs": {
+      "spiritSong": 30
+    },
+    "resources": [],
+    "usageCount": 0,
+    "occasions": [],
+    "topics": [
+      "Faith",
+      "Jesus Christ",
+      "Salvation",
+      "Witness"
+    ]
+  },
+  {
+    "id": "alleluia-mass-of-a-joyful-heart--bolduc-ed-leon-matthew-g-leon-michael-paul-stanton-david-tomaszek-tom",
+    "title": "Alleluia (Mass of a Joyful Heart)",
+    "composer": "Bolduc, Ed • Leon, Matthew G. • Leon, Michael Paul • Stanton, David • Tomaszek, Tom",
+    "category": "gospel_acclamation",
+    "catalogs": {
+      "spiritSong": 31
+    },
+    "resources": [],
+    "usageCount": 0,
+    "occasions": [],
+    "topics": [
+      "Eucharist"
+    ]
+  },
+  {
+    "id": "lenten-gospel-acclamation-mass-of-a-joyful-heart--maher-matt-tomaszek-tom",
+    "title": "Lenten Gospel Acclamation (Mass of a Joyful Heart)",
+    "composer": "Maher, Matt • Tomaszek, Tom",
+    "category": "gospel_acclamation",
+    "catalogs": {
+      "spiritSong": 32
+    },
+    "resources": [],
+    "usageCount": 0,
+    "occasions": [],
+    "topics": [
+      "Adoration",
+      "God's Glory",
+      "Redemption"
+    ]
+  },
+  {
+    "id": "holy-mass-of-a-joyful-heart--bolduc-ed-houston-joel-tomaszek-tom",
+    "title": "Holy (Mass of a Joyful Heart)",
+    "composer": "Bolduc, Ed • Houston, Joel • Tomaszek, Tom",
+    "category": "song",
+    "catalogs": {
+      "spiritSong": 33
+    },
+    "resources": [],
+    "usageCount": 0,
+    "occasions": [],
+    "topics": [
+      "Love of God for Us",
+      "Song and Singing",
+      "Trinity"
+    ]
+  },
+  {
+    "id": "we-proclaim-your-death-mass-of-a-joyful-heart--fife-brian-redman-matt-tomaszek-tom",
+    "title": "We Proclaim Your Death (Mass of a Joyful Heart)",
+    "composer": "Fife, Brian • Redman, Matt • Tomaszek, Tom",
+    "category": "mass_part",
+    "catalogs": {
+      "spiritSong": 34
+    },
+    "resources": [],
+    "usageCount": 0,
+    "occasions": [],
+    "topics": [
+      "Comfort and Consolation",
+      "Funeral"
+    ]
+  },
+  {
+    "id": "when-we-eat-this-bread-mass-of-a-joyful-heart--tomaszek-tom-weckler-barr-marcy-anthony",
+    "title": "When We Eat This Bread (Mass of a Joyful Heart)",
+    "composer": "Tomaszek, Tom • Weckler Barr, Marcy Anthony",
+    "category": "mass_part",
+    "catalogs": {
+      "spiritSong": 35
+    },
+    "resources": [],
+    "usageCount": 0,
+    "occasions": [],
+    "topics": [
+      "Christian Initiation",
+      "Confirmation",
+      "Holy Spirit"
+    ]
+  },
+  {
+    "id": "save-us-savior-mass-of-a-joyful-heart--bolduc-ed-thomson-trevor",
+    "title": "Save Us, Savior (Mass of a Joyful Heart)",
+    "composer": "Bolduc, Ed • Thomson, Trevor",
+    "category": "mass_part",
+    "catalogs": {
+      "spiritSong": 36
+    },
+    "resources": [],
+    "usageCount": 0,
+    "occasions": [],
+    "topics": [
+      "Blessing",
+      "Sending",
+      "Service/Social Concerns"
+    ]
+  },
+  {
+    "id": "amen-mass-of-a-joyful-heart--brinker-david-francois-jackie",
+    "title": "Amen (Mass of a Joyful Heart)",
+    "composer": "Brinker, David • Francois, Jackie",
+    "category": "mass_part",
+    "catalogs": {
+      "spiritSong": 37
+    },
+    "resources": [],
+    "usageCount": 0,
+    "occasions": [],
+    "topics": [
+      "Church",
+      "Praise",
+      "Unity"
+    ]
+  },
+  {
+    "id": "lamb-of-god-mass-of-a-joyful-heart--fife-brian-redman-matt",
+    "title": "Lamb of God (Mass of a Joyful Heart)",
+    "composer": "Fife, Brian • Redman, Matt",
+    "category": "mass_part",
+    "catalogs": {
+      "spiritSong": 38
+    },
+    "resources": [],
+    "usageCount": 0,
+    "occasions": [],
+    "topics": [
+      "Christian Life",
+      "God's Glory",
+      "God's Presence",
+      "Praise"
+    ]
+  },
+  {
+    "id": "kyrie-lord-have-mercy-mass-of-saint-ann--king-feargal",
+    "title": "Kyrie/Lord, Have Mercy (Mass of Saint Ann)",
+    "composer": "King, Feargal",
+    "category": "mass_part",
+    "catalogs": {
+      "spiritSong": 39
+    },
+    "resources": [],
+    "usageCount": 0,
+    "occasions": [],
+    "topics": [
+      "Holy Week"
+    ]
+  },
+  {
+    "id": "glory-to-god-mass-of-saint-ann--bolduc-ed-thompson-aaron",
+    "title": "Glory to God (Mass of Saint Ann)",
+    "composer": "Bolduc, Ed • Thompson, Aaron",
+    "category": "mass_part",
+    "catalogs": {
+      "spiritSong": 40
+    },
+    "resources": [],
+    "usageCount": 0,
+    "occasions": [],
+    "topics": [
+      "Blessed Virgin Mary",
+      "Devotional"
+    ]
+  },
+  {
+    "id": "holy-holy-holy-mass-of-saint-ann--bolduc-ed-hatch-edwin",
+    "title": "Holy, Holy, Holy (Mass of Saint Ann)",
+    "composer": "Bolduc, Ed • Hatch, Edwin",
+    "category": "mass_part",
+    "catalogs": {
+      "spiritSong": 43
+    },
+    "resources": [],
+    "usageCount": 0,
+    "occasions": [],
+    "topics": [
+      "Discipleship"
+    ]
+  },
+  {
+    "id": "we-proclaim-your-death-o-lord-mass-of-saint-ann--bolduc-ed",
+    "title": "We Proclaim Your Death, O Lord (Mass of Saint Ann)",
+    "composer": "Bolduc, Ed",
+    "category": "mass_part",
+    "catalogs": {
+      "spiritSong": 44
+    },
+    "resources": [],
+    "usageCount": 0,
+    "occasions": [],
+    "topics": [
+      "Discipleship"
+    ]
+  },
+  {
+    "id": "when-we-eat-this-bread-mass-of-saint-ann--booth-tom",
+    "title": "When We Eat This Bread (Mass of Saint Ann)",
+    "composer": "Booth, Tom",
+    "category": "mass_part",
+    "catalogs": {
+      "spiritSong": 45
+    },
+    "resources": [],
+    "usageCount": 0,
+    "occasions": [],
+    "topics": [
+      "Courage",
+      "Discipleship",
+      "Humility",
+      "Witness"
+    ]
+  },
+  {
+    "id": "save-us-savior-mass-of-saint-ann--angotti-john-tate-paul-a",
+    "title": "Save Us, Savior (Mass of Saint Ann)",
+    "composer": "Angotti, John • Tate, Paul A.",
+    "category": "mass_part",
+    "catalogs": {
+      "spiritSong": 46
+    },
+    "resources": [],
+    "usageCount": 0,
+    "occasions": [],
+    "topics": [
+      "Blessing",
+      "Creation",
+      "God the Father",
+      "Praise",
+      "Worship"
+    ]
+  },
+  {
+    "id": "lamb-of-god-mass-of-saint-ann--yackley-david",
+    "title": "Lamb of God (Mass of Saint Ann)",
+    "composer": "Yackley, David",
+    "category": "mass_part",
+    "catalogs": {
+      "spiritSong": 48
+    },
+    "resources": [],
+    "usageCount": 0,
+    "occasions": [],
+    "topics": [
+      "Eucharist",
+      "Grace",
+      "Renewal",
+      "Salvation"
+    ]
+  },
+  {
+    "id": "celtic-alleluia--mattingly-joe",
+    "title": "Celtic Alleluia",
+    "composer": "Mattingly, Joe",
+    "category": "gospel_acclamation",
+    "catalogs": {
+      "spiritSong": 50
+    },
+    "resources": [],
+    "usageCount": 0,
+    "occasions": [],
+    "topics": [
+      "Christmas"
+    ]
+  },
+  {
+    "id": "come-to-the-river--angotti-john-tate-paul-a",
+    "title": "Come to the River",
+    "composer": "Angotti, John • Tate, Paul A.",
+    "category": "song",
+    "catalogs": {
+      "spiritSong": 51
+    },
+    "resources": [],
+    "usageCount": 0,
+    "occasions": [],
+    "topics": [
+      "Discipleship",
+      "People of God",
+      "Vocation",
+      "Witness"
+    ]
+  },
+  {
+    "id": "oyenos-se-or-listen-to-your-people--bolduc-ed-garcia-noelle",
+    "title": "Oyenos, Señor/Listen to Your People",
+    "composer": "Bolduc, Ed • Garcia, Noelle",
+    "category": "mass_part",
+    "catalogs": {
+      "spiritSong": 53
+    },
+    "resources": [],
+    "usageCount": 0,
+    "occasions": [],
+    "topics": [
+      "Help in Distress",
+      "Salvation",
+      "Trust"
+    ]
+  },
+  {
+    "id": "benedictus-angrisano-stephan--bolduc-ed-needleman-mikey",
+    "title": "Benedictus (Angrisano/Stephan)",
+    "composer": "Bolduc, Ed • Needleman, Mikey",
+    "category": "song",
+    "catalogs": {
+      "spiritSong": 103
+    },
+    "resources": [],
+    "usageCount": 0,
+    "occasions": [],
+    "topics": [
+      "Baptism",
+      "Grace",
+      "Healing",
+      "Kingdom/Reign of God",
+      "Love for God"
+    ]
+  },
+  {
+    "id": "there-is-a-light--bolduc-ed-booth-tom-crandal-scot",
+    "title": "There Is a Light",
+    "composer": "Bolduc, Ed • Booth, Tom • Crandal, Scot",
+    "category": "song",
+    "catalogs": {
+      "spiritSong": 107
+    },
+    "resources": [],
+    "usageCount": 0,
+    "occasions": [],
+    "topics": [
+      "Comfort and Consolation",
+      "Courage",
+      "Faithfulness",
+      "Help in Distress",
+      "Jesus Christ",
+      "Light",
+      "Trust"
+    ]
+  },
+  {
+    "id": "radiant-light-divine--alonso-tony-crandal-scot",
+    "title": "Radiant Light Divine",
+    "composer": "Alonso, Tony • Crandal, Scot",
+    "category": "song",
+    "catalogs": {
+      "spiritSong": 108
+    },
+    "resources": [],
+    "usageCount": 0,
+    "occasions": [],
+    "topics": [
+      "Vocation",
+      "Witness"
+    ]
+  },
+  {
+    "id": "my-soul-rejoices--bolduc-ed-hughes-tim",
+    "title": "My Soul Rejoices",
+    "composer": "Bolduc, Ed • Hughes, Tim",
+    "category": "song",
+    "catalogs": {
+      "spiritSong": 109
+    },
+    "resources": [],
+    "usageCount": 0,
+    "occasions": [],
+    "topics": [
+      "Devotional",
+      "Jesus Christ",
+      "Mary",
+      "Praise",
+      "Worship"
+    ]
+  },
+  {
+    "id": "daylight-s-ending--bolduc-ed-davis-geron",
+    "title": "Daylight's Ending",
+    "composer": "Bolduc, Ed • Davis, Geron",
+    "category": "song",
+    "catalogs": {
+      "spiritSong": 112
+    },
+    "resources": [],
+    "usageCount": 0,
+    "occasions": [],
+    "topics": [
+      "Jesus Christ",
+      "Renewal"
+    ]
+  },
+  {
+    "id": "compline-hymn--talbot-john-michael",
+    "title": "Compline Hymn",
+    "composer": "Talbot, John Michael",
+    "category": "song",
+    "catalogs": {
+      "spiritSong": 114
+    },
+    "resources": [],
+    "usageCount": 0,
+    "occasions": [],
+    "topics": [
+      "God's Glory"
+    ]
+  },
+  {
+    "id": "adoration--bolduc-ed-torwalt-bryan-torwalt-katie",
+    "title": "Adoration",
+    "composer": "Bolduc, Ed • Torwalt, Bryan • Torwalt, Katie",
+    "category": "song",
+    "catalogs": {
+      "spiritSong": 117
+    },
+    "resources": [],
+    "usageCount": 0,
+    "occasions": [],
+    "topics": [
+      "Devotional",
+      "God the Father",
+      "God's Presence",
+      "Holy Spirit",
+      "Love for God"
+    ]
+  },
+  {
+    "id": "pange-lingua-sing-my-tongue--paris-twila",
+    "title": "Pange, Lingua/Sing, My Tongue",
+    "composer": "Paris, Twila",
+    "category": "song",
+    "catalogs": {
+      "spiritSong": 118
+    },
+    "resources": [],
+    "usageCount": 0,
+    "occasions": [],
+    "topics": [
+      "Church",
+      "Eucharist",
+      "Second Coming"
+    ]
+  },
+  {
+    "id": "from-glory-to-glory-we-adore-you--bolduc-ed-cash-ed-reeves-jesse-tomlin-chris",
+    "title": "From Glory to Glory (We Adore You)",
+    "composer": "Bolduc, Ed • Cash, Ed • Reeves, Jesse • Tomlin, Chris",
+    "category": "song",
+    "catalogs": {
+      "spiritSong": 119
+    },
+    "resources": [],
+    "usageCount": 0,
+    "occasions": [],
+    "topics": [
+      "God's Glory",
+      "Longing for God",
+      "Praise"
+    ]
+  },
+  {
+    "id": "o-salutaris-hostia-o-saving-lamb--kaczmarek-tom-tate-paul-a",
+    "title": "O Salutaris Hostia/O Saving Lamb",
+    "composer": "Kaczmarek, Tom • Tate, Paul A.",
+    "category": "song",
+    "catalogs": {
+      "spiritSong": 120
+    },
+    "resources": [],
+    "usageCount": 0,
+    "occasions": [],
+    "topics": [
+      "Eternal Life",
+      "Eucharist",
+      "Funeral"
+    ]
+  },
+  {
+    "id": "holy-spirit-come-to-me--bolduc-ed-thomson-trevor",
+    "title": "Holy Spirit, Come to Me",
+    "composer": "Bolduc, Ed • Thomson, Trevor",
+    "category": "song",
+    "catalogs": {
+      "spiritSong": 123
+    },
+    "resources": [],
+    "usageCount": 0,
+    "occasions": [],
+    "topics": [
+      "Discipleship",
+      "Eucharist",
+      "Holy Week",
+      "Petition/Prayer"
+    ]
+  },
+  {
+    "id": "holy-spirit-come-now--angotti-john-bolduc-ed",
+    "title": "Holy Spirit, Come Now",
+    "composer": "Angotti, John • Bolduc, Ed",
+    "category": "song",
+    "catalogs": {
+      "spiritSong": 124
+    },
+    "resources": [],
+    "usageCount": 0,
+    "occasions": [],
+    "topics": [
+      "Courage",
+      "God's Strength",
+      "Trust"
+    ]
+  },
+  {
+    "id": "signing-of-the-senses--fife-brian-smith-martin",
+    "title": "Signing of the Senses",
+    "composer": "Fife, Brian • Smith, Martin",
+    "category": "song",
+    "catalogs": {
+      "spiritSong": 126
+    },
+    "resources": [],
+    "usageCount": 0,
+    "occasions": [],
+    "topics": [
+      "Love of God for Us",
+      "Song and Singing"
+    ]
+  },
+  {
+    "id": "put-on-christ--yackley-david",
+    "title": "Put On Christ",
+    "composer": "Yackley, David",
+    "category": "song",
+    "catalogs": {
+      "spiritSong": 127
+    },
+    "resources": [],
+    "usageCount": 0,
+    "occasions": [],
+    "topics": [
+      "Easter",
+      "Eternal Life",
+      "Faith"
+    ]
+  },
+  {
+    "id": "go-forth--bolduc-ed-bonar-horatius",
+    "title": "Go Forth",
+    "composer": "Bolduc, Ed • Bonar, Horatius",
+    "category": "song",
+    "catalogs": {
+      "spiritSong": 129
+    },
+    "resources": [],
+    "usageCount": 0,
+    "occasions": [],
+    "topics": [
+      "All Saints and All Souls",
+      "Comfort and Consolation",
+      "Eucharist",
+      "Funeral",
+      "Trust"
+    ]
+  },
+  {
+    "id": "come-and-set-us-free--bolduc-ed",
+    "title": "Come and Set Us Free",
+    "composer": "Bolduc, Ed",
+    "category": "song",
+    "catalogs": {
+      "spiritSong": 134
+    },
+    "resources": [],
+    "usageCount": 0,
+    "occasions": []
+  },
+  {
+    "id": "come-to-us-angrisano--petty-w-clifford",
+    "title": "Come to Us (Angrisano)",
+    "composer": "Petty, W. Clifford",
+    "category": "song",
+    "catalogs": {
+      "spiritSong": 135
+    },
+    "resources": [],
+    "usageCount": 0,
+    "occasions": []
+  },
+  {
+    "id": "come-to-us-walton--weckler-barr-marcy-anthony",
+    "title": "Come to Us (Walton)",
+    "composer": "Weckler Barr, Marcy Anthony",
+    "category": "song",
+    "catalogs": {
+      "spiritSong": 144
+    },
+    "resources": [],
+    "usageCount": 0,
+    "occasions": [],
+    "topics": [
+      "Comfort and Consolation",
+      "Easter",
+      "Funeral",
+      "Healing",
+      "Hope",
+      "Jesus Christ",
+      "Protection",
+      "Reconciliation",
+      "Trust"
+    ]
+  },
+  {
+    "id": "love-has-captured-the-night--bolduc-ed",
+    "title": "Love Has Captured the Night",
+    "composer": "Bolduc, Ed",
+    "category": "song",
+    "catalogs": {
+      "spiritSong": 148
+    },
+    "resources": [],
+    "usageCount": 0,
+    "occasions": [],
+    "topics": [
+      "Faith",
+      "Healing",
+      "Hope",
+      "Jesus Christ",
+      "Prayer",
+      "Trust"
+    ]
+  },
+  {
+    "id": "gracious-god--draper-william-h-francis-of-assisi-tate-paul-a",
+    "title": "Gracious God",
+    "composer": "Draper, William H. • Francis of Assisi • Tate, Paul A.",
+    "category": "song",
+    "catalogs": {
+      "spiritSong": 157
+    },
+    "resources": [],
+    "usageCount": 0,
+    "occasions": [],
+    "topics": [
+      "Creation",
+      "Gathering",
+      "God the Father",
+      "God's Glory",
+      "Mercy",
+      "Praise",
+      "Song and Singing"
+    ]
+  },
+  {
+    "id": "purify-my-heart--bolduc-ed-ubowski-adam",
+    "title": "Purify My Heart",
+    "composer": "Bolduc, Ed • Ubowski, Adam",
+    "category": "song",
+    "catalogs": {
+      "spiritSong": 160
+    },
+    "resources": [],
+    "usageCount": 0,
+    "occasions": [],
+    "topics": [
+      "Blessed Virgin Mary",
+      "God's Strength",
+      "Petition/Prayer"
+    ]
+  },
+  {
+    "id": "run-to-the-cross--bolduc-ed-needleman-mikey",
+    "title": "Run to the Cross",
+    "composer": "Bolduc, Ed • Needleman, Mikey",
+    "category": "song",
+    "catalogs": {
+      "spiritSong": 162
+    },
+    "resources": [],
+    "usageCount": 0,
+    "occasions": []
+  },
+  {
+    "id": "sing-hosanna--bolduc-ed-thomson-trevor",
+    "title": "Sing Hosanna",
+    "composer": "Bolduc, Ed • Thomson, Trevor",
+    "category": "song",
+    "catalogs": {
+      "spiritSong": 166
+    },
+    "resources": [],
+    "usageCount": 0,
+    "occasions": [],
+    "topics": [
+      "Renewal"
+    ]
+  },
+  {
+    "id": "song-of-the-cross--bolduc-ed",
+    "title": "Song of the Cross",
+    "composer": "Bolduc, Ed",
+    "category": "song",
+    "catalogs": {
+      "spiritSong": 167
+    },
+    "resources": [],
+    "usageCount": 0,
+    "occasions": [],
+    "topics": [
+      "Love for God"
+    ]
+  },
+  {
+    "id": "above-all--bolduc-ed-thomson-trevor",
+    "title": "Above All",
+    "composer": "Bolduc, Ed • Thomson, Trevor",
+    "category": "song",
+    "catalogs": {
+      "spiritSong": 168
+    },
+    "resources": [],
+    "usageCount": 0,
+    "occasions": [],
+    "topics": [
+      "Discipleship",
+      "Kingdom/Reign of God",
+      "Love for Others",
+      "Service/Social Concerns"
+    ]
+  },
+  {
+    "id": "behold-the-cross--bolduc-ed-hart-sarah-ubowski-adam-ubowski-lori",
+    "title": "Behold the Cross",
+    "composer": "Bolduc, Ed • Hart, Sarah • Ubowski, Adam • Ubowski, Lori",
+    "category": "song",
+    "catalogs": {
+      "spiritSong": 169
+    },
+    "resources": [],
+    "usageCount": 0,
+    "occasions": [],
+    "topics": [
+      "Adoration",
+      "Devotional",
+      "Eucharist",
+      "Redemption"
+    ]
+  },
+  {
+    "id": "o-sacred-head-hurd--bolduc-ed-thompson-aaron",
+    "title": "O Sacred Head (Hurd)",
+    "composer": "Bolduc, Ed • Thompson, Aaron",
+    "category": "song",
+    "catalogs": {
+      "spiritSong": 171
+    },
+    "resources": [],
+    "usageCount": 0,
+    "occasions": []
+  },
+  {
+    "id": "your-only-son--bolduc-ed-founds-rick",
+    "title": "Your Only Son",
+    "composer": "Bolduc, Ed • Founds, Rick",
+    "category": "song",
+    "catalogs": {
+      "spiritSong": 174
+    },
+    "resources": [],
+    "usageCount": 0,
+    "occasions": [],
+    "topics": [
+      "Jesus Christ",
+      "Salvation",
+      "Worship"
+    ]
+  },
+  {
+    "id": "alleluia-festival--bolduc-ed-brown-brenton",
+    "title": "Alleluia Festivalé",
+    "composer": "Bolduc, Ed • Brown, Brenton",
+    "category": "gospel_acclamation",
+    "catalogs": {
+      "spiritSong": 179
+    },
+    "resources": [],
+    "usageCount": 0,
+    "occasions": [],
+    "topics": [
+      "Creation",
+      "Praise",
+      "Worship"
+    ]
+  },
+  {
+    "id": "tell-it-out--bolduc-ed-thompson-aaron",
+    "title": "Tell It Out",
+    "composer": "Bolduc, Ed • Thompson, Aaron",
+    "category": "song",
+    "catalogs": {
+      "spiritSong": 180
+    },
+    "resources": [],
+    "usageCount": 0,
+    "occasions": [],
+    "topics": [
+      "Christian Initiation",
+      "Confirmation",
+      "Holy Spirit"
+    ]
+  },
+  {
+    "id": "christ-is-risen--bolduc-ed-pena-donna",
+    "title": "Christ Is Risen",
+    "composer": "Bolduc, Ed • Pena, Donna",
+    "category": "song",
+    "catalogs": {
+      "spiritSong": 181
+    },
+    "resources": [],
+    "usageCount": 0,
+    "occasions": [],
+    "topics": [
+      "All Saints and All Souls",
+      "Eternal Life"
+    ]
+  },
+  {
+    "id": "holy-holy-holy-cry--bolduc-ed",
+    "title": "Holy, Holy, Holy Cry",
+    "composer": "Bolduc, Ed",
+    "category": "mass_part",
+    "catalogs": {
+      "spiritSong": 183
+    },
+    "resources": [],
+    "usageCount": 0,
+    "occasions": [],
+    "topics": [
+      "Forgiveness",
+      "Kingdom/Reign of God"
+    ]
+  },
+  {
+    "id": "happy-day--bolduc-ed-crandal-scot",
+    "title": "Happy Day",
+    "composer": "Bolduc, Ed • Crandal, Scot",
+    "category": "song",
+    "catalogs": {
+      "spiritSong": 184
+    },
+    "resources": [],
+    "usageCount": 0,
+    "occasions": [],
+    "topics": [
+      "Faith",
+      "Providence"
+    ]
+  },
+  {
+    "id": "resurrection-day--king-feargal",
+    "title": "Resurrection Day",
+    "composer": "King, Feargal",
+    "category": "song",
+    "catalogs": {
+      "spiritSong": 186
+    },
+    "resources": [],
+    "usageCount": 0,
+    "occasions": [],
+    "topics": [
+      "Love for Others"
+    ]
+  },
+  {
+    "id": "pentecost-sequence--modlin-rick-stephan-curtis",
+    "title": "Pentecost Sequence",
+    "composer": "Modlin, Rick • Stephan, Curtis",
+    "category": "song",
+    "catalogs": {
+      "spiritSong": 192
+    },
+    "resources": [],
+    "usageCount": 0,
+    "occasions": [],
+    "topics": [
+      "Covenant",
+      "Eternal Life",
+      "Eucharist",
+      "Grace",
+      "Holy Spirit"
+    ]
+  },
+  {
+    "id": "jesus-christ-is-lord--angrisano-steve-modlin-rick",
+    "title": "Jesus Christ Is Lord",
+    "composer": "Angrisano, Steve • Modlin, Rick",
+    "category": "song",
+    "catalogs": {
+      "spiritSong": 195
+    },
+    "resources": [],
+    "usageCount": 0,
+    "occasions": [],
+    "topics": [
+      "Comfort and Consolation",
+      "Community",
+      "Funeral"
+    ]
+  },
+  {
+    "id": "mighty-king--baker-henry-w-bolduc-ed",
+    "title": "Mighty King",
+    "composer": "Baker, Henry W. • Bolduc, Ed",
+    "category": "song",
+    "catalogs": {
+      "spiritSong": 197
+    },
+    "resources": [],
+    "usageCount": 0,
+    "occasions": [],
+    "topics": [
+      "Joy",
+      "Kingdom/Reign of God",
+      "Love for God",
+      "Trust"
+    ]
+  },
+  {
+    "id": "your-kingdom-is-glorious--haugen-marty",
+    "title": "Your Kingdom Is Glorious",
+    "composer": "Haugen, Marty",
+    "category": "song",
+    "catalogs": {
+      "spiritSong": 198
+    },
+    "resources": [],
+    "usageCount": 0,
+    "occasions": [],
+    "topics": [
+      "Comfort and Consolation",
+      "Eucharist",
+      "Praise"
+    ]
+  },
+  {
+    "id": "bless-the-lord--bolduc-ed-manibusan-jesse",
+    "title": "Bless the Lord",
+    "composer": "Bolduc, Ed • Manibusan, Jesse",
+    "category": "song",
+    "catalogs": {
+      "spiritSong": 205
+    },
+    "resources": [],
+    "usageCount": 0,
+    "occasions": [],
+    "topics": [
+      "Comfort and Consolation",
+      "God's Presence",
+      "Holy Week",
+      "Jesus Christ",
+      "Prayer"
+    ]
+  },
+  {
+    "id": "fish-with-me--beddia-stephen-a-smith-leonard-e-jr",
+    "title": "Fish with Me",
+    "composer": "Beddia, Stephen A. • Smith, Leonard E., Jr.",
+    "category": "song",
+    "catalogs": {
+      "spiritSong": 211
+    },
+    "resources": [],
+    "usageCount": 0,
+    "occasions": [],
+    "topics": [
+      "Advent",
+      "Jesus Christ",
+      "Praise",
+      "Sending"
+    ]
+  },
+  {
+    "id": "go-ye-out--bolduc-ed",
+    "title": "Go Ye Out",
+    "composer": "Bolduc, Ed",
+    "category": "song",
+    "catalogs": {
+      "spiritSong": 215
+    },
+    "resources": [],
+    "usageCount": 0,
+    "occasions": [],
+    "topics": [
+      "Ministry/Mission",
+      "Praise",
+      "Service/Social Concerns"
+    ]
+  },
+  {
+    "id": "i-rejoiced--pappelis-gus-stephan-curtis",
+    "title": "I Rejoiced",
+    "composer": "Pappelis, Gus • Stephan, Curtis",
+    "category": "song",
+    "catalogs": {
+      "spiritSong": 218
+    },
+    "resources": [],
+    "usageCount": 0,
+    "occasions": [],
+    "topics": [
+      "Advent",
+      "Joy"
+    ]
+  },
+  {
+    "id": "i-will-choose-christ--yackley-david",
+    "title": "I Will Choose Christ",
+    "composer": "Yackley, David",
+    "category": "song",
+    "catalogs": {
+      "spiritSong": 220
+    },
+    "resources": [],
+    "usageCount": 0,
+    "occasions": [],
+    "topics": [
+      "Discipleship",
+      "Journey",
+      "Obedience",
+      "Service/Social Concerns"
+    ]
+  },
+  {
+    "id": "isaiah-61--maher-matt-modlin-rick-redman-matt",
+    "title": "Isaiah 61",
+    "composer": "Maher, Matt • Modlin, Rick • Redman, Matt",
+    "category": "song",
+    "catalogs": {
+      "spiritSong": 222
+    },
+    "resources": [],
+    "usageCount": 0,
+    "occasions": [],
+    "topics": [
+      "Eucharist",
+      "Grace",
+      "Ministry/Mission"
+    ]
+  },
+  {
+    "id": "malo-malo-thanks-be-to-god--bolduc-ed-ubowski-adam",
+    "title": "Malo! Malo! Thanks Be to God",
+    "composer": "Bolduc, Ed • Ubowski, Adam",
+    "category": "song",
+    "catalogs": {
+      "spiritSong": 223
+    },
+    "resources": [],
+    "usageCount": 0,
+    "occasions": [],
+    "topics": [
+      "Praise"
+    ]
+  },
+  {
+    "id": "our-god-is-here--angotti-john-tate-paul-a",
+    "title": "Our God Is Here",
+    "composer": "Angotti, John • Tate, Paul A.",
+    "category": "song",
+    "catalogs": {
+      "spiritSong": 226
+    },
+    "resources": [],
+    "usageCount": 0,
+    "occasions": [],
+    "topics": [
+      "Advent",
+      "Kingdom/Reign of God",
+      "Praise",
+      "Second Coming"
+    ]
+  },
+  {
+    "id": "our-god-is-good--bolduc-ed-howard-adrian-turner-pat",
+    "title": "Our God Is Good",
+    "composer": "Bolduc, Ed • Howard, Adrian • Turner, Pat",
+    "category": "song",
+    "catalogs": {
+      "spiritSong": 227
+    },
+    "resources": [],
+    "usageCount": 0,
+    "occasions": [],
+    "topics": [
+      "Discipleship",
+      "Kingdom/Reign of God",
+      "Vocation"
+    ]
+  },
+  {
+    "id": "send-your-glory-down--angotti-john",
+    "title": "Send Your Glory Down",
+    "composer": "Angotti, John",
+    "category": "song",
+    "catalogs": {
+      "spiritSong": 229
+    },
+    "resources": [],
+    "usageCount": 0,
+    "occasions": [],
+    "topics": [
+      "Christian Initiation",
+      "Confirmation",
+      "Holy Spirit",
+      "Light"
+    ]
+  },
+  {
+    "id": "with-one-voice--rose-danielle",
+    "title": "With One Voice",
+    "composer": "Rose, Danielle",
+    "category": "song",
+    "catalogs": {
+      "spiritSong": 232
+    },
+    "resources": [],
+    "usageCount": 0,
+    "occasions": [],
+    "topics": [
+      "Cross",
+      "Justice",
+      "Light",
+      "Love for God",
+      "Ministry/Mission",
+      "Renewal"
+    ]
+  },
+  {
+    "id": "the-eyes-and-hands-of-christ--bolduc-ed-leon-matthew-g-leon-michael-paul-stanton-david",
+    "title": "The Eyes and Hands of Christ",
+    "composer": "Bolduc, Ed • Leon, Matthew G. • Leon, Michael Paul • Stanton, David",
+    "category": "song",
+    "catalogs": {
+      "spiritSong": 234
+    },
+    "resources": [],
+    "usageCount": 0,
+    "occasions": [],
+    "topics": [
+      "Ministry/Mission"
+    ]
+  },
+  {
+    "id": "unidos--crandal-scot-fife-brian-zschech-darlene",
+    "title": "Unidos",
+    "composer": "Crandal, Scot • Fife, Brian • Zschech, Darlene",
+    "category": "song",
+    "catalogs": {
+      "spiritSong": 235
+    },
+    "resources": [],
+    "usageCount": 0,
+    "occasions": [],
+    "topics": [
+      "Comfort and Consolation",
+      "Faithfulness",
+      "Praise",
+      "Song and Singing"
+    ]
+  },
+  {
+    "id": "we-are-the-light-manibusan--bolduc-ed-smith-martin",
+    "title": "We Are the Light (Manibusan)",
+    "composer": "Bolduc, Ed • Smith, Martin",
+    "category": "song",
+    "catalogs": {
+      "spiritSong": 236
+    },
+    "resources": [],
+    "usageCount": 0,
+    "occasions": [],
+    "topics": [
+      "Church",
+      "Ministry/Mission",
+      "Song and Singing",
+      "Witness"
+    ]
+  },
+  {
+    "id": "you-are-mine--angotti-john",
+    "title": "You Are Mine",
+    "composer": "Angotti, John",
+    "category": "song",
+    "catalogs": {
+      "spiritSong": 238
+    },
+    "resources": [],
+    "usageCount": 0,
+    "occasions": [],
+    "topics": [
+      "Holy Week",
+      "Jesus Christ",
+      "Love of God for Us",
+      "Praise",
+      "Song and Singing"
+    ]
+  },
+  {
+    "id": "bread-of-heaven--mattingly-joe",
+    "title": "Bread of Heaven",
+    "composer": "Mattingly, Joe",
+    "category": "song",
+    "catalogs": {
+      "spiritSong": 241
+    },
+    "resources": [],
+    "usageCount": 0,
+    "occasions": [],
+    "topics": [
+      "Christmas"
+    ]
+  },
+  {
+    "id": "grateful--tate-paul-a-tomaszek-tom",
+    "title": "Grateful",
+    "composer": "Tate, Paul A. • Tomaszek, Tom",
+    "category": "song",
+    "catalogs": {
+      "spiritSong": 242
+    },
+    "resources": [],
+    "usageCount": 0,
+    "occasions": [],
+    "topics": [
+      "Eucharist",
+      "Faith",
+      "Forgiveness",
+      "Healing",
+      "Hope",
+      "Jesus Christ",
+      "Joy",
+      "Thanksgiving"
+    ]
+  },
+  {
+    "id": "bread-of-life--jefferson-thomas-w-petty-w-clifford-wesley-charles",
+    "title": "Bread of Life",
+    "composer": "Jefferson, Thomas W. • Petty, W. Clifford • Wesley, Charles",
+    "category": "song",
+    "catalogs": {
+      "spiritSong": 243
+    },
+    "resources": [],
+    "usageCount": 0,
+    "occasions": [],
+    "topics": [
+      "Redemption",
+      "Salvation"
+    ]
+  },
+  {
+    "id": "like-the-bread--bolduc-ed-thomson-trevor",
+    "title": "Like the Bread",
+    "composer": "Bolduc, Ed • Thomson, Trevor",
+    "category": "song",
+    "catalogs": {
+      "spiritSong": 247
+    },
+    "resources": [],
+    "usageCount": 0,
+    "occasions": [],
+    "topics": [
+      "Eucharist",
+      "God's Glory",
+      "Jesus Christ"
+    ]
+  },
+  {
+    "id": "here-at-this-table--cheri-richard-jefferson-thomas-w-robertson-jalonda",
+    "title": "Here at This Table",
+    "composer": "Cheri, Richard • Jefferson, Thomas W. • Robertson, Jalonda",
+    "category": "song",
+    "catalogs": {
+      "spiritSong": 248
+    },
+    "resources": [],
+    "usageCount": 0,
+    "occasions": [],
+    "topics": [
+      "Faithfulness",
+      "Jesus Christ"
+    ]
+  },
+  {
+    "id": "king-of-my-heart--bolduc-ed",
+    "title": "King of My Heart",
+    "composer": "Bolduc, Ed",
+    "category": "song",
+    "catalogs": {
+      "spiritSong": 252
+    },
+    "resources": [],
+    "usageCount": 0,
+    "occasions": [],
+    "topics": [
+      "Eternal Life",
+      "Jesus Christ"
+    ]
+  },
+  {
+    "id": "lead-us-to-your-table--bolduc-ed-tomaszek-tom",
+    "title": "Lead Us to Your Table",
+    "composer": "Bolduc, Ed • Tomaszek, Tom",
+    "category": "song",
+    "catalogs": {
+      "spiritSong": 253
+    },
+    "resources": [],
+    "usageCount": 0,
+    "occasions": [],
+    "topics": [
+      "Comfort and Consolation",
+      "Faith",
+      "Journey",
+      "Love of God for Us",
+      "Renewal"
+    ]
+  },
+  {
+    "id": "ubi-caritas-hurd--bolduc-ed-jefferson-thomas-w-thompson-aaron",
+    "title": "Ubi Caritas (Hurd)",
+    "composer": "Bolduc, Ed • Jefferson, Thomas W. • Thompson, Aaron",
+    "category": "song",
+    "catalogs": {
+      "spiritSong": 259
+    },
+    "resources": [],
+    "usageCount": 0,
+    "occasions": [],
+    "topics": [
+      "Creation"
+    ]
+  },
+  {
+    "id": "we-come-to-you--jefferson-thomas-w-thompson-aaron",
+    "title": "We Come to You",
+    "composer": "Jefferson, Thomas W. • Thompson, Aaron",
+    "category": "song",
+    "catalogs": {
+      "spiritSong": 262
+    },
+    "resources": [],
+    "usageCount": 0,
+    "occasions": [],
+    "topics": [
+      "All Saints and All Souls",
+      "Comfort and Consolation",
+      "Funeral",
+      "Longing for God"
+    ]
+  },
+  {
+    "id": "we-remember-we-believe--bolduc-ed-thompson-aaron",
+    "title": "We Remember, We Believe",
+    "composer": "Bolduc, Ed • Thompson, Aaron",
+    "category": "song",
+    "catalogs": {
+      "spiritSong": 263
+    },
+    "resources": [],
+    "usageCount": 0,
+    "occasions": [],
+    "topics": [
+      "Mercy",
+      "Praise",
+      "Redemption",
+      "Salvation"
+    ]
+  },
+  {
+    "id": "amazing-grace--bolduc-ed",
+    "title": "Amazing Grace",
+    "composer": "Bolduc, Ed",
+    "category": "song",
+    "catalogs": {
+      "spiritSong": 265
+    },
+    "resources": [],
+    "usageCount": 0,
+    "occasions": [],
+    "topics": [
+      "Faith",
+      "Joy"
+    ]
+  },
+  {
+    "id": "awake-o-sleeper--baloche-paul-bolduc-ed-rossback-michael",
+    "title": "Awake, O Sleeper",
+    "composer": "Baloche, Paul • Bolduc, Ed • Rossback, Michael",
+    "category": "song",
+    "catalogs": {
+      "spiritSong": 266
+    },
+    "resources": [],
+    "usageCount": 0,
+    "occasions": [],
+    "topics": [
+      "Cross",
+      "Light",
+      "Ministry/Mission"
+    ]
+  },
+  {
+    "id": "at-the-name--yackley-david",
+    "title": "At the Name",
+    "composer": "Yackley, David",
+    "category": "song",
+    "catalogs": {
+      "spiritSong": 268
+    },
+    "resources": [],
+    "usageCount": 0,
+    "occasions": [],
+    "topics": [
+      "Faith",
+      "Jesus Christ"
+    ]
+  },
+  {
+    "id": "be-with-us-mary--angotti-john-bolduc-ed",
+    "title": "Be with Us, Mary",
+    "composer": "Angotti, John • Bolduc, Ed",
+    "category": "song",
+    "catalogs": {
+      "spiritSong": 272
+    },
+    "resources": [],
+    "usageCount": 0,
+    "occasions": [],
+    "topics": [
+      "Easter",
+      "Mary",
+      "Redemption",
+      "Salvation"
+    ]
+  },
+  {
+    "id": "be-with-me-lord-booth-traditional--bolduc-ed-traditional",
+    "title": "Be with Me, Lord (Booth/Traditional)",
+    "composer": "Bolduc, Ed • Traditional",
+    "category": "song",
+    "catalogs": {
+      "spiritSong": 273
+    },
+    "resources": [],
+    "usageCount": 0,
+    "occasions": [],
+    "topics": [
+      "Easter",
+      "Longing for God",
+      "Petition/Prayer",
+      "Redemption",
+      "Salvation"
+    ]
+  },
+  {
+    "id": "come-to-the-water-i-will-run-to-you--bolduc-ed-thomson-trevor",
+    "title": "Come to the Water/I Will Run to You",
+    "composer": "Bolduc, Ed • Thomson, Trevor",
+    "category": "song",
+    "catalogs": {
+      "spiritSong": 281
+    },
+    "resources": [],
+    "usageCount": 0,
+    "occasions": [],
+    "topics": [
+      "Labor",
+      "Reconciliation",
+      "Repentance"
+    ]
+  },
+  {
+    "id": "cornerstone--angotti-john-bolduc-ed",
+    "title": "Cornerstone",
+    "composer": "Angotti, John • Bolduc, Ed",
+    "category": "song",
+    "catalogs": {
+      "spiritSong": 282
+    },
+    "resources": [],
+    "usageCount": 0,
+    "occasions": [],
+    "topics": [
+      "Christian Initiation",
+      "Comfort and Consolation",
+      "Confirmation",
+      "Holy Spirit",
+      "Power of God"
+    ]
+  },
+  {
+    "id": "cristo-s-name-jesus-heal-me--bolduc-ed-raus-randy-s",
+    "title": "Cristo, Sáname/Jesus, Heal Me",
+    "composer": "Bolduc, Ed • Raus, Randy S.",
+    "category": "song",
+    "catalogs": {
+      "spiritSong": 285
+    },
+    "resources": [],
+    "usageCount": 0,
+    "occasions": [],
+    "topics": [
+      "Covenant",
+      "Discipleship",
+      "Faith",
+      "Light",
+      "Longing for God",
+      "Mercy",
+      "Petition/Prayer",
+      "Renewal",
+      "Unity"
+    ]
+  },
+  {
+    "id": "every-day-i-will-sing--blakesley-josh-brinker-david",
+    "title": "Every Day I Will Sing",
+    "composer": "Blakesley, Josh • Brinker, David",
+    "category": "song",
+    "catalogs": {
+      "spiritSong": 288
+    },
+    "resources": [],
+    "usageCount": 0,
+    "occasions": [],
+    "topics": [
+      "Eucharist",
+      "Gathering",
+      "God the Father",
+      "Praise",
+      "Word of God"
+    ]
+  },
+  {
+    "id": "eternity--bolduc-ed-tomlin-chris",
+    "title": "Eternity",
+    "composer": "Bolduc, Ed • Tomlin, Chris",
+    "category": "song",
+    "catalogs": {
+      "spiritSong": 289
+    },
+    "resources": [],
+    "usageCount": 0,
+    "occasions": [],
+    "topics": [
+      "Easter",
+      "Eternal Life",
+      "Jesus Christ",
+      "Longing for God",
+      "Second Coming"
+    ]
+  },
+  {
+    "id": "fragrance-prayer--angotti-john-bolduc-ed",
+    "title": "Fragrance Prayer",
+    "composer": "Angotti, John • Bolduc, Ed",
+    "category": "song",
+    "catalogs": {
+      "spiritSong": 290
+    },
+    "resources": [],
+    "usageCount": 0,
+    "occasions": [],
+    "topics": [
+      "Gathering",
+      "God the Father",
+      "Petition/Prayer",
+      "Unity"
+    ]
+  },
+  {
+    "id": "god-our-source-and-life-unite-us--angotti-john-bolduc-ed",
+    "title": "God, Our Source and Life, Unite Us",
+    "composer": "Angotti, John • Bolduc, Ed",
+    "category": "song",
+    "catalogs": {
+      "spiritSong": 291
+    },
+    "resources": [],
+    "usageCount": 0,
+    "occasions": [],
+    "topics": [
+      "Church",
+      "Eucharist",
+      "Gathering",
+      "God the Father",
+      "Light",
+      "Unity"
+    ]
+  },
+  {
+    "id": "fill-me-o-god--alford-henry-bolduc-ed",
+    "title": "Fill Me, O God",
+    "composer": "Alford, Henry • Bolduc, Ed",
+    "category": "song",
+    "catalogs": {
+      "spiritSong": 293
+    },
+    "resources": [],
+    "usageCount": 0,
+    "occasions": [],
+    "topics": [
+      "Easter",
+      "Faith",
+      "Longing for God",
+      "Petition/Prayer"
+    ]
+  },
+  {
+    "id": "for-your-glory--angotti-john-bolduc-ed-marchionda-james-v",
+    "title": "For Your Glory",
+    "composer": "Angotti, John • Bolduc, Ed • Marchionda, James V.",
+    "category": "song",
+    "catalogs": {
+      "spiritSong": 297
+    },
+    "resources": [],
+    "usageCount": 0,
+    "occasions": [],
+    "topics": [
+      "Holy Week",
+      "Jesus Christ",
+      "Love for Others",
+      "Praise",
+      "Service/Social Concerns"
+    ]
+  },
+  {
+    "id": "god-my-father--bolduc-ed-rose-danielle",
+    "title": "God, My Father",
+    "composer": "Bolduc, Ed • Rose, Danielle",
+    "category": "song",
+    "catalogs": {
+      "spiritSong": 301
+    },
+    "resources": [],
+    "usageCount": 0,
+    "occasions": [],
+    "topics": [
+      "Praise"
+    ]
+  },
+  {
+    "id": "heart-of-my-god--bolduc-ed-hess-lorraine-m",
+    "title": "Heart of My God",
+    "composer": "Bolduc, Ed • Hess, Lorraine M.",
+    "category": "song",
+    "catalogs": {
+      "spiritSong": 302
+    },
+    "resources": [],
+    "usageCount": 0,
+    "occasions": [],
+    "topics": [
+      "Second Coming"
+    ]
+  },
+  {
+    "id": "god-with-us--bolduc-ed",
+    "title": "God with Us",
+    "composer": "Bolduc, Ed",
+    "category": "song",
+    "catalogs": {
+      "spiritSong": 303
+    },
+    "resources": [],
+    "usageCount": 0,
+    "occasions": [],
+    "topics": [
+      "Eternal Life",
+      "Faith"
+    ]
+  },
+  {
+    "id": "how-great-is-our-god--tate-paul-a",
+    "title": "How Great Is Our God",
+    "composer": "Tate, Paul A.",
+    "category": "song",
+    "catalogs": {
+      "spiritSong": 306
+    },
+    "resources": [],
+    "usageCount": 0,
+    "occasions": [],
+    "topics": [
+      "Praise"
+    ]
+  },
+  {
+    "id": "i-know-you-are-near--bolduc-ed",
+    "title": "I Know You Are Near",
+    "composer": "Bolduc, Ed",
+    "category": "song",
+    "catalogs": {
+      "spiritSong": 310
+    },
+    "resources": [],
+    "usageCount": 0,
+    "occasions": [],
+    "topics": [
+      "Witness"
+    ]
+  },
+  {
+    "id": "jesus-i-trust-in-you--bolduc-ed-ruis-david",
+    "title": "Jesus, I Trust in You",
+    "composer": "Bolduc, Ed • Ruis, David",
+    "category": "song",
+    "catalogs": {
+      "spiritSong": 316
+    },
+    "resources": [],
+    "usageCount": 0,
+    "occasions": [],
+    "topics": [
+      "Praise",
+      "Refuge"
+    ]
+  },
+  {
+    "id": "infinite-grace--bolduc-ed-thomson-trevor",
+    "title": "Infinite Grace",
+    "composer": "Bolduc, Ed • Thomson, Trevor",
+    "category": "song",
+    "catalogs": {
+      "spiritSong": 319
+    },
+    "resources": [],
+    "usageCount": 0,
+    "occasions": [],
+    "topics": [
+      "Kingdom/Reign of God"
+    ]
+  },
+  {
+    "id": "in-christ-alone--bolduc-ed-thomson-trevor-townend-stuart",
+    "title": "In Christ Alone",
+    "composer": "Bolduc, Ed • Thomson, Trevor • Townend, Stuart",
+    "category": "song",
+    "catalogs": {
+      "spiritSong": 320
+    },
+    "resources": [],
+    "usageCount": 0,
+    "occasions": []
+  },
+  {
+    "id": "jesus-my-everything--bolduc-ed-thomson-trevor",
+    "title": "Jesus, My Everything",
+    "composer": "Bolduc, Ed • Thomson, Trevor",
+    "category": "song",
+    "catalogs": {
+      "spiritSong": 321
+    },
+    "resources": [],
+    "usageCount": 0,
+    "occasions": [],
+    "topics": [
+      "Petition/Prayer"
+    ]
+  },
+  {
+    "id": "just-like-you--bolduc-ed-thomson-trevor",
+    "title": "Just Like You",
+    "composer": "Bolduc, Ed • Thomson, Trevor",
+    "category": "song",
+    "catalogs": {
+      "spiritSong": 322
+    },
+    "resources": [],
+    "usageCount": 0,
+    "occasions": [],
+    "topics": [
+      "Longing for God",
+      "Love of God for Us"
+    ]
+  },
+  {
+    "id": "let-it-be-done--bolduc-ed-thomson-trevor",
+    "title": "Let It Be Done",
+    "composer": "Bolduc, Ed • Thomson, Trevor",
+    "category": "song",
+    "catalogs": {
+      "spiritSong": 323
+    },
+    "resources": [],
+    "usageCount": 0,
+    "occasions": [],
+    "topics": [
+      "Mary"
+    ]
+  },
+  {
+    "id": "let-us-rejoice-in-the-lord--bolduc-ed-thomson-trevor",
+    "title": "Let Us Rejoice in the Lord",
+    "composer": "Bolduc, Ed • Thomson, Trevor",
+    "category": "song",
+    "catalogs": {
+      "spiritSong": 325
+    },
+    "resources": [],
+    "usageCount": 0,
+    "occasions": [],
+    "topics": [
+      "Joy",
+      "Saints"
+    ]
+  },
+  {
+    "id": "meditation--bolduc-ed-thomson-trevor",
+    "title": "Meditation",
+    "composer": "Bolduc, Ed • Thomson, Trevor",
+    "category": "song",
+    "catalogs": {
+      "spiritSong": 326
+    },
+    "resources": [],
+    "usageCount": 0,
+    "occasions": []
+  },
+  {
+    "id": "may-your-kingdom-come--angotti-john-bolduc-ed",
+    "title": "May Your Kingdom Come",
+    "composer": "Angotti, John • Bolduc, Ed",
+    "category": "song",
+    "catalogs": {
+      "spiritSong": 328
+    },
+    "resources": [],
+    "usageCount": 0,
+    "occasions": [],
+    "topics": [
+      "Justice",
+      "Kingdom/Reign of God",
+      "Ministry/Mission"
+    ]
+  },
+  {
+    "id": "more-of-you--angotti-john-bolduc-ed",
+    "title": "More of You",
+    "composer": "Angotti, John • Bolduc, Ed",
+    "category": "song",
+    "catalogs": {
+      "spiritSong": 330
+    },
+    "resources": [],
+    "usageCount": 0,
+    "occasions": []
+  },
+  {
+    "id": "mighty-to-save--angotti-john-bolduc-ed",
+    "title": "Mighty to Save",
+    "composer": "Angotti, John • Bolduc, Ed",
+    "category": "song",
+    "catalogs": {
+      "spiritSong": 332
+    },
+    "resources": [],
+    "usageCount": 0,
+    "occasions": []
+  },
+  {
+    "id": "overflow--bolduc-ed",
+    "title": "Overflow",
+    "composer": "Bolduc, Ed",
+    "category": "song",
+    "catalogs": {
+      "spiritSong": 336
+    },
+    "resources": [],
+    "usageCount": 0,
+    "occasions": [],
+    "topics": [
+      "Love for God"
+    ]
+  },
+  {
+    "id": "prosper-the-work-of-our-hands--bolduc-ed-tomaszek-tom",
+    "title": "Prosper the Work of Our Hands",
+    "composer": "Bolduc, Ed • Tomaszek, Tom",
+    "category": "song",
+    "catalogs": {
+      "spiritSong": 341
+    },
+    "resources": [],
+    "usageCount": 0,
+    "occasions": [],
+    "topics": [
+      "Peace"
+    ]
+  },
+  {
+    "id": "rain-on-me--bolduc-ed",
+    "title": "Rain on Me",
+    "composer": "Bolduc, Ed",
+    "category": "song",
+    "catalogs": {
+      "spiritSong": 342
+    },
+    "resources": [],
+    "usageCount": 0,
+    "occasions": [],
+    "topics": [
+      "Light"
+    ]
+  },
+  {
+    "id": "rejoice-with-all-the-saints--bolduc-ed",
+    "title": "Rejoice with All the Saints",
+    "composer": "Bolduc, Ed",
+    "category": "song",
+    "catalogs": {
+      "spiritSong": 343
+    },
+    "resources": [],
+    "usageCount": 0,
+    "occasions": [],
+    "topics": [
+      "Kingdom/Reign of God",
+      "Saints"
+    ]
+  },
+  {
+    "id": "renew--bolduc-ed",
+    "title": "Renew",
+    "composer": "Bolduc, Ed",
+    "category": "song",
+    "catalogs": {
+      "spiritSong": 344
+    },
+    "resources": [],
+    "usageCount": 0,
+    "occasions": []
+  },
+  {
+    "id": "revive-us-o-god--bolduc-ed",
+    "title": "Revive Us, O God",
+    "composer": "Bolduc, Ed",
+    "category": "song",
+    "catalogs": {
+      "spiritSong": 345
+    },
+    "resources": [],
+    "usageCount": 0,
+    "occasions": [],
+    "topics": [
+      "Longing for God",
+      "Petition/Prayer"
+    ]
+  },
+  {
+    "id": "sacred-silence",
+    "title": "Sacred Silence",
+    "category": "song",
+    "catalogs": {
+      "spiritSong": 347
+    },
+    "resources": [],
+    "usageCount": 0,
+    "occasions": [],
+    "topics": [
+      "Saints"
+    ]
+  },
+  {
+    "id": "shout-to-the-lord",
+    "title": "Shout to the Lord",
+    "category": "song",
+    "catalogs": {
+      "spiritSong": 350
+    },
+    "resources": [],
+    "usageCount": 0,
+    "occasions": [],
+    "topics": [
+      "Love of God for Us"
+    ]
+  },
+  {
+    "id": "sound-of-hope",
+    "title": "Sound of Hope",
+    "category": "song",
+    "catalogs": {
+      "spiritSong": 351
+    },
+    "resources": [],
+    "usageCount": 0,
+    "occasions": [],
+    "topics": [
+      "Kingdom/Reign of God"
+    ]
+  },
+  {
+    "id": "sweet-redeemer",
+    "title": "Sweet Redeemer",
+    "category": "song",
+    "catalogs": {
+      "spiritSong": 353
+    },
+    "resources": [],
+    "usageCount": 0,
+    "occasions": []
+  },
+  {
+    "id": "take-up-our-cross",
+    "title": "Take Up Our Cross",
+    "category": "song",
+    "catalogs": {
+      "spiritSong": 354
+    },
+    "resources": [],
+    "usageCount": 0,
+    "occasions": []
+  },
+  {
+    "id": "the-heart-of-worship",
+    "title": "The Heart of Worship",
+    "category": "song",
+    "catalogs": {
+      "spiritSong": 355
+    },
+    "resources": [],
+    "usageCount": 0,
+    "occasions": []
+  },
+  {
+    "id": "the-breastplate-of-st-patrick",
+    "title": "The Breastplate of St. Patrick",
+    "category": "song",
+    "catalogs": {
+      "spiritSong": 356
+    },
+    "resources": [],
+    "usageCount": 0,
+    "occasions": []
+  },
+  {
+    "id": "the-wonders-of-your-love",
+    "title": "The Wonders of Your Love",
+    "category": "song",
+    "catalogs": {
+      "spiritSong": 358
+    },
+    "resources": [],
+    "usageCount": 0,
+    "occasions": [],
+    "topics": [
+      "Holy Spirit",
+      "Mercy",
+      "Praise"
+    ]
+  },
+  {
+    "id": "we-ever-will-praise-you",
+    "title": "We Ever Will Praise You",
+    "category": "song",
+    "catalogs": {
+      "spiritSong": 363
+    },
+    "resources": [],
+    "usageCount": 0,
+    "occasions": [],
+    "topics": [
+      "Praise"
+    ]
+  },
+  {
+    "id": "we-live-to-love",
+    "title": "We Live to Love",
+    "category": "song",
+    "catalogs": {
+      "spiritSong": 367
+    },
+    "resources": [],
+    "usageCount": 0,
+    "occasions": [],
+    "topics": [
+      "Love of God for Us",
+      "Ministry/Mission"
+    ]
+  },
+  {
+    "id": "we-belong-to-you--thomson-victoria",
+    "title": "We Belong to You",
+    "composer": "Thomson, Victoria",
+    "category": "song",
+    "catalogs": {
+      "spiritSong": 368
+    },
+    "resources": [],
+    "usageCount": 0,
+    "occasions": []
+  },
+  {
+    "id": "you-stand-knocking",
+    "title": "You Stand Knocking",
+    "category": "song",
+    "catalogs": {
+      "spiritSong": 370
+    },
+    "resources": [],
+    "usageCount": 0,
+    "occasions": [],
+    "topics": [
+      "Ministry/Mission"
+    ]
+  },
+  {
+    "id": "you-know-who-i-am",
+    "title": "You Know Who I Am",
+    "category": "song",
+    "catalogs": {
+      "spiritSong": 371
+    },
+    "resources": [],
+    "usageCount": 0,
+    "occasions": [],
+    "topics": [
+      "Petition/Prayer"
+    ]
+  },
+  {
+    "id": "with-all-your-strength",
+    "title": "With All Your Strength",
+    "category": "song",
+    "catalogs": {
+      "spiritSong": 372
+    },
+    "resources": [],
+    "usageCount": 0,
+    "occasions": []
+  },
+  {
+    "id": "you-never-let-go--crandal-scot",
+    "title": "You Never Let Go",
+    "composer": "Crandal, Scot",
+    "category": "song",
+    "catalogs": {
+      "spiritSong": 373
+    },
+    "resources": [],
+    "usageCount": 0,
+    "occasions": [],
+    "topics": [
+      "Mercy"
+    ]
   }
 ]
