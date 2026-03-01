@@ -37,7 +37,7 @@ const RESOURCE_OPTIONS = [
 ];
 
 const ENSEMBLE_OPTIONS = [
-  { value: "all", label: "All Communities" },
+  { value: "all", label: "All Ensembles" },
   { value: "reflections", label: "Reflections (Vigil)" },
   { value: "foundations", label: "Foundations" },
   { value: "generations", label: "Generations" },
