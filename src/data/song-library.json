@@ -3735,8 +3735,24 @@
       "offertory"
     ],
     "catalogs": {
-      "bb2026": 563
-    }
+      "bb2026": 563,
+      "gather4": 754,
+      "spiritSong": 271
+    },
+    "topics": [
+      "Forgiveness",
+      "Healing",
+      "Humility",
+      "Ministry/Mission",
+      "Reconciliation"
+    ],
+    "scriptureRefs": [
+      "Isaiah 43:2-3",
+      "Matthew 5:3-4,10",
+      "Matthew 5:5",
+      "Matthew 5:15",
+      "Ephesians 5:3-4,10"
+    ]
   },
   {
     "id": "advent-christmas-2-missa-pacem--l-randolph-babin",
@@ -3861,7 +3877,8 @@
       "gathering"
     ],
     "catalogs": {
-      "bb2026": 611
+      "bb2026": 611,
+      "gather4": 640
     }
   },
   {
@@ -5680,8 +5697,33 @@
       "sending"
     ],
     "catalogs": {
-      "bb2026": 197
-    }
+      "bb2026": 197,
+      "gather4": 584,
+      "spiritSong": 188
+    },
+    "topics": [
+      "Discipleship",
+      "Faith",
+      "Funeral",
+      "Love for Others",
+      "Prayer",
+      "Protection",
+      "Reconciliation",
+      "Unity"
+    ],
+    "scriptureRefs": [
+      "Psalms 24:7-10",
+      "Matthew 28:16-20",
+      "Mark 16:19",
+      "Luke 24:46-53",
+      "Luke 24:50-53",
+      "John 14:2-3,16",
+      "John 28:16-20",
+      "Acts 1:6-11",
+      "Romans 8:17",
+      "Hebrews 7:25",
+      "Revelation 14:4"
+    ]
   },
   {
     "id": "missa-veni-emmanuel--ed-archer",
@@ -6567,8 +6609,13 @@
       "communion"
     ],
     "catalogs": {
-      "bb2026": 309
-    }
+      "bb2026": 309,
+      "spiritSong": 248
+    },
+    "topics": [
+      "Faithfulness",
+      "Jesus Christ"
+    ]
   },
   {
     "id": "act-justly-love-mercy-walk-humbly--pat-barrett",
@@ -7291,6 +7338,17 @@
     "functions": [
       "communion",
       "offertory"
+    ],
+    "catalogs": {
+      "gather4": 749,
+      "spiritSong": 333
+    },
+    "topics": [
+      "Refuge"
+    ],
+    "scriptureRefs": [
+      "Exodus 19:4",
+      "Psalms 91"
     ]
   },
   {
@@ -8066,8 +8124,13 @@
       "offertory"
     ],
     "catalogs": {
-      "bb2026": 566
-    }
+      "bb2026": 566,
+      "gather4": 644,
+      "spiritSong": 334
+    },
+    "scriptureRefs": [
+      "Psalms 139"
+    ]
   },
   {
     "id": "hosanna--francis-patrick-o-brien",
@@ -8213,7 +8276,8 @@
       "sending"
     ],
     "catalogs": {
-      "bb2026": 631
+      "bb2026": 631,
+      "gather4": 932
     }
   },
   {
@@ -8971,7 +9035,11 @@
     "category": "song",
     "functions": [
       "sending"
-    ]
+    ],
+    "catalogs": {
+      "aahh": 398,
+      "gather4": 905
+    }
   },
   {
     "id": "one-bread-one-body--john-foley-sj-upbeat",
@@ -9095,8 +9163,21 @@
       "communion"
     ],
     "catalogs": {
-      "bb2026": 327
-    }
+      "bb2026": 327,
+      "gather4": 1042,
+      "spiritSong": 249
+    },
+    "topics": [
+      "Peace",
+      "People of God",
+      "Prayer"
+    ],
+    "scriptureRefs": [
+      "1 Corinthians 10:16-17",
+      "1 Corinthians 12:4,12-13,20",
+      "Galatians 3:28",
+      "Ephesians 4:4-6"
+    ]
   },
   {
     "id": "christ-be-our-light--bernadette-farrell-arr-bonilla",
@@ -9309,7 +9390,12 @@
     "functions": [
       "communion",
       "offertory"
-    ]
+    ],
+    "catalogs": {
+      "gather4": 705,
+      "voices": 281,
+      "novum": 136
+    }
   },
   {
     "id": "i-am-the-bread-of-life--sr-suzanne-toolan-rsm-arr-by-dan-houze",
@@ -9953,7 +10039,10 @@
       "communion",
       "offertory",
       "prelude"
-    ]
+    ],
+    "catalogs": {
+      "voices": 44
+    }
   },
   {
     "id": "a-rightful-place--steve-angrisano",
@@ -10477,7 +10566,11 @@
     "category": "song",
     "functions": [
       "sending"
-    ]
+    ],
+    "catalogs": {
+      "aahh": 148,
+      "gather4": 630
+    }
   },
   {
     "id": "see-taiz-setlist",
@@ -10570,7 +10663,8 @@
       "communion"
     ],
     "catalogs": {
-      "bb2026": 323
+      "bb2026": 323,
+      "gather4": 1022
     }
   },
   {
@@ -10645,6 +10739,16 @@
     "functions": [
       "communion",
       "offertory"
+    ],
+    "catalogs": {
+      "voices": 5,
+      "spiritSong": 168
+    },
+    "topics": [
+      "Discipleship",
+      "Kingdom/Reign of God",
+      "Love for Others",
+      "Service/Social Concerns"
     ]
   },
   {
@@ -11442,7 +11546,11 @@
     "functions": [
       "communion",
       "sending"
-    ]
+    ],
+    "catalogs": {
+      "gather4": 833,
+      "spiritSong": 368
+    }
   },
   {
     "id": "immaculate-mary-lowered--lourdes-hymn-arr-by-randall-debruyn",
@@ -11585,7 +11693,12 @@
     "category": "song",
     "functions": [
       "gathering"
-    ]
+    ],
+    "catalogs": {
+      "gather4": 929,
+      "voices": 13,
+      "novum": 25
+    }
   },
   {
     "id": "love-never-fails--brandon-heath",
@@ -11670,6 +11783,23 @@
     "functions": [
       "communion",
       "prelude"
+    ],
+    "catalogs": {
+      "spiritSong": 132
+    },
+    "topics": [
+      "Ascension",
+      "Baptism",
+      "Christian Initiation",
+      "Confirmation",
+      "Discipleship",
+      "Sending",
+      "Trinity",
+      "Vocation",
+      "Witness"
+    ],
+    "scriptureRefs": [
+      "1 Corinthians 13:1-2,4-8b,11"
     ]
   },
   {
@@ -11829,7 +11959,8 @@
       "offertory"
     ],
     "catalogs": {
-      "bb2026": 483
+      "bb2026": 483,
+      "gather4": 740
     }
   },
   {
@@ -11951,7 +12082,8 @@
       "offertory"
     ],
     "catalogs": {
-      "bb2026": 415
+      "bb2026": 415,
+      "aahh": 230
     }
   },
   {
@@ -12161,7 +12293,8 @@
       "communion"
     ],
     "catalogs": {
-      "bb2026": 604
+      "bb2026": 604,
+      "gather4": 910
     }
   },
   {
@@ -12461,6 +12594,25 @@
     "category": "song",
     "functions": [
       "prelude"
+    ],
+    "catalogs": {
+      "gather4": 483,
+      "spiritSong": 149
+    },
+    "topics": [
+      "Faith",
+      "God's Strength",
+      "Trust"
+    ],
+    "scriptureRefs": [
+      "Psalms 33:9",
+      "John 1:14-17",
+      "Philippians 2:7-11",
+      "Colossians 1:15-17",
+      "1 Timothy 3:16",
+      "Revelation 1:8,18",
+      "Revelation 4:8",
+      "Revelation 21:6"
     ]
   },
   {
@@ -12883,8 +13035,15 @@
       "offertory"
     ],
     "catalogs": {
-      "bb2026": 495
-    }
+      "bb2026": 495,
+      "spiritSong": 220
+    },
+    "topics": [
+      "Discipleship",
+      "Journey",
+      "Obedience",
+      "Service/Social Concerns"
+    ]
   },
   {
     "id": "lift-every-voice-and-sing",
@@ -13425,7 +13584,9 @@
       "gathering"
     ],
     "catalogs": {
-      "bb2026": 525
+      "bb2026": 525,
+      "gather4": 698,
+      "voices": 77
     }
   },
   {
@@ -14520,7 +14681,9 @@
       "sending"
     ],
     "catalogs": {
-      "bb2026": 402
+      "bb2026": 402,
+      "aahh": 474,
+      "gather4": 712
     }
   },
   {
@@ -14643,7 +14806,10 @@
     "category": "song",
     "functions": [
       "sending"
-    ]
+    ],
+    "catalogs": {
+      "gather4": 904
+    }
   },
   {
     "id": "as-christ-to-the-world--tom-kendzia",
@@ -14767,8 +14933,22 @@
       "offertory"
     ],
     "catalogs": {
-      "bb2026": 520
-    }
+      "bb2026": 520,
+      "spiritSong": 237
+    },
+    "topics": [
+      "Eternal Life",
+      "Hope",
+      "Jesus Christ",
+      "Justice",
+      "Light",
+      "Ministry/Mission",
+      "Song and Singing"
+    ],
+    "scriptureRefs": [
+      "Matthew 5:3-12,14-16",
+      "Ephesians 5:3-12,14-16"
+    ]
   },
   {
     "id": "jesus-the-bread-of-life--grayson-warren-brown",
@@ -15014,7 +15194,10 @@
     "category": "song",
     "functions": [
       "communion"
-    ]
+    ],
+    "catalogs": {
+      "gather4": 969
+    }
   },
   {
     "id": "god-of-mercy--rick-manalo-csp-bob-hurd",
@@ -15375,8 +15558,39 @@
       "gathering"
     ],
     "catalogs": {
-      "bb2026": 537
-    }
+      "bb2026": 537,
+      "aahh": 147,
+      "gather4": 665,
+      "spiritSong": 203,
+      "voices": 8,
+      "novum": 21
+    },
+    "topics": [
+      "Baptism",
+      "Christian Initiation",
+      "Church",
+      "Confirmation",
+      "Forgiveness",
+      "Joy",
+      "Mercy",
+      "Praise"
+    ],
+    "scriptureRefs": [
+      "Psalms 105",
+      "Psalms 148",
+      "Psalms 19:2",
+      "Psalms 96:1-6",
+      "Psalms 97:6",
+      "Psalms 145:2-3,8-9,17-18",
+      "Psalms 145:10-13",
+      "Psalms 150:6",
+      "Jeremiah 32:17-29",
+      "Daniel 3:57",
+      "Romans 8:6",
+      "Romans 11:36",
+      "1 Corinthians 8:6",
+      "Revelation 14:7"
+    ]
   },
   {
     "id": "lamb-of-god-mass-setting",
@@ -15960,7 +16174,8 @@
       "sending"
     ],
     "catalogs": {
-      "bb2026": 508
+      "bb2026": 508,
+      "aahh": 498
     }
   },
   {
@@ -16559,7 +16774,8 @@
       "gathering"
     ],
     "catalogs": {
-      "bb2026": 443
+      "bb2026": 443,
+      "gather4": 915
     }
   },
   {
@@ -17442,7 +17658,10 @@
     "functions": [
       "gathering",
       "sending"
-    ]
+    ],
+    "catalogs": {
+      "aahh": 595
+    }
   },
   {
     "id": "lift-high-the-cross--crucifer-sydney-h-nicholson",
@@ -17511,7 +17730,8 @@
       "sending"
     ],
     "catalogs": {
-      "bb2026": 705
+      "bb2026": 705,
+      "aahh": 242
     }
   },
   {
@@ -17885,8 +18105,17 @@
       "prelude"
     ],
     "catalogs": {
-      "bb2026": 684
-    }
+      "bb2026": 684,
+      "spiritSong": 305
+    },
+    "topics": [
+      "Mary",
+      "Praise",
+      "Providence"
+    ],
+    "scriptureRefs": [
+      "Luke 1:28,42"
+    ]
   },
   {
     "id": "ps-34-the-lord-hears-the-cry-of-the-poor--the-lyric-psalter-tony-alonso-marty-haugen",
@@ -18310,6 +18539,18 @@
     "functions": [
       "communion",
       "offertory"
+    ],
+    "catalogs": {
+      "gather4": 869,
+      "spiritSong": 230
+    },
+    "topics": [
+      "Easter",
+      "Ministry/Mission",
+      "Obedience"
+    ],
+    "scriptureRefs": [
+      "John 1:41-42"
     ]
   },
   {
@@ -19010,8 +19251,26 @@
       "communion"
     ],
     "catalogs": {
-      "bb2026": 393
-    }
+      "bb2026": 393,
+      "aahh": 567,
+      "gather4": 844,
+      "spiritSong": 250
+    },
+    "topics": [
+      "Creation",
+      "Ministry/Mission",
+      "Witness"
+    ],
+    "scriptureRefs": [
+      "Exodus 3:7-12",
+      "1 Samuel 3:1-10",
+      "Psalms 81:17",
+      "Isaiah 6",
+      "Jeremiah 5:23",
+      "Ezekiel 11:19-20",
+      "Ezekiel 36:26-27",
+      "Luke 12:22-40"
+    ]
   },
   {
     "id": "the-summons--john-l-bell-arranged-by-david-lockwood",
@@ -19281,7 +19540,9 @@
       "prelude"
     ],
     "catalogs": {
-      "bb2026": 602
+      "bb2026": 602,
+      "aahh": 540,
+      "gather4": 1087
     }
   },
   {
@@ -20969,7 +21230,11 @@
     "functions": [
       "communion",
       "gathering"
-    ]
+    ],
+    "catalogs": {
+      "gather4": 458,
+      "novum": 50
+    }
   },
   {
     "id": "rejoice-the-lord-is-king--darwall-s-148th-charles-wesley-1",
@@ -21059,7 +21324,8 @@
       "gathering"
     ],
     "catalogs": {
-      "bb2026": 52
+      "bb2026": 52,
+      "gather4": 467
     }
   },
   {
@@ -22235,7 +22501,9 @@
       "communion"
     ],
     "catalogs": {
-      "bb2026": 332
+      "bb2026": 332,
+      "aahh": 680,
+      "gather4": 1006
     }
   },
   {
@@ -22371,7 +22639,10 @@
     "category": "song",
     "functions": [
       "sending"
-    ]
+    ],
+    "catalogs": {
+      "gather4": 837
+    }
   },
   {
     "id": "misa-del-mundo",
@@ -23234,6 +23505,18 @@
       "communion",
       "offertory",
       "prelude"
+    ],
+    "catalogs": {
+      "gather4": 716,
+      "spiritSong": 337,
+      "voices": 205
+    },
+    "topics": [
+      "Longing for God",
+      "Petition/Prayer"
+    ],
+    "scriptureRefs": [
+      "Mark 8:22-25"
     ]
   },
   {
@@ -23482,7 +23765,10 @@
     "category": "song",
     "functions": [
       "communion"
-    ]
+    ],
+    "catalogs": {
+      "voices": 118
+    }
   },
   {
     "id": "ps-22-my-god-why-have-you-abandoned-me--the-lyric-psalter-sarah-hart",
@@ -23548,7 +23834,12 @@
     "category": "song",
     "functions": [
       "gathering"
-    ]
+    ],
+    "catalogs": {
+      "aahh": 224,
+      "gather4": 534,
+      "novum": 76
+    }
   },
   {
     "id": "ps-22-my-god-why-have-you-abandoned-me--micah-jones",
@@ -23847,7 +24138,9 @@
       "sending"
     ],
     "catalogs": {
-      "bb2026": 718
+      "bb2026": 718,
+      "voices": 23,
+      "novum": 32
     }
   },
   {
@@ -24104,7 +24397,10 @@
     "category": "song",
     "functions": [
       "communion"
-    ]
+    ],
+    "catalogs": {
+      "voices": 130
+    }
   },
   {
     "id": "ps-110-you-are-a-priest-for-ever-in-the-line--lyric-psalter-tony-alonso-marty-haugen",
@@ -28219,7 +28515,8 @@
       "offertory"
     ],
     "catalogs": {
-      "bb2026": 182
+      "bb2026": 182,
+      "gather4": 564
     }
   },
   {
@@ -28795,7 +29092,10 @@
       "sending"
     ],
     "catalogs": {
-      "bb2026": 458
+      "bb2026": 458,
+      "gather4": 781,
+      "voices": 129,
+      "novum": 82
     }
   },
   {
@@ -29984,7 +30284,8 @@
     ],
     "catalogs": {
       "bb2026": 571,
-      "aahh": 271
+      "aahh": 271,
+      "spiritSong": 265
     },
     "credits": {
       "textAuthors": [
@@ -30014,6 +30315,10 @@
     "firstLine": "Amazing grace! How sweet the sound",
     "languages": [
       "English"
+    ],
+    "topics": [
+      "Faith",
+      "Joy"
     ]
   },
   {
@@ -31990,8 +32295,13 @@
       "communion"
     ],
     "catalogs": {
-      "bb2026": 374
-    }
+      "bb2026": 374,
+      "spiritSong": 243
+    },
+    "topics": [
+      "Redemption",
+      "Salvation"
+    ]
   },
   {
     "id": "alleluia-mass-of-joy-peace--ordinary-time-07a",
@@ -32146,7 +32456,11 @@
     "functions": [
       "prelude",
       "sending"
-    ]
+    ],
+    "catalogs": {
+      "aahh": 549,
+      "gather4": 651
+    }
   },
   {
     "id": "mass-of-endless-mercy--ordinary-time-08c",
@@ -33000,8 +33314,20 @@
       "sending"
     ],
     "catalogs": {
-      "bb2026": 434
-    }
+      "bb2026": 434,
+      "gather4": 767,
+      "spiritSong": 26
+    },
+    "topics": [
+      "Adoration",
+      "God's Glory",
+      "God's Presence"
+    ],
+    "scriptureRefs": [
+      "Malachi 3:1",
+      "Matthew 14:14",
+      "Matthew 28:18-20"
+    ]
   },
   {
     "id": "give-me-ears-to-listen--timothy-r-smith",
@@ -33735,7 +34061,8 @@
       "offertory"
     ],
     "catalogs": {
-      "bb2026": 414
+      "bb2026": 414,
+      "spiritSong": 320
     }
   },
   {
@@ -35812,7 +36139,8 @@
       "communion"
     ],
     "catalogs": {
-      "bb2026": 490
+      "bb2026": 490,
+      "gather4": 868
     }
   },
   {
@@ -36456,47 +36784,6 @@
     ]
   },
   {
-    "id": "all-creatures-of-our-god-and-king--francis-of-assisi-william-h-draper-norman-johnson",
-    "title": "All Creatures of Our God and King",
-    "composer": "Francis of Assisi • William H. Draper • Norman Johnson",
-    "category": "song",
-    "catalogs": {
-      "aahh": 147
-    },
-    "resources": [],
-    "usageCount": 0,
-    "occasions": [],
-    "credits": {
-      "textAuthors": [
-        {
-          "name": "Francis of Assisi",
-          "dates": "1182-1226"
-        },
-        {
-          "name": "William H. Draper",
-          "dates": "1855-1933"
-        }
-      ],
-      "composers": [
-        {
-          "name": "Norman Johnson"
-        }
-      ],
-      "tuneSources": [
-        "Geistliche Kirchengesäng, 1623"
-      ]
-    },
-    "tuneMeter": {
-      "tuneName": "LASST UNS ERFREUEN",
-      "meter": "8.8.8.8 with alleluias",
-      "incipit": "112313451123134"
-    },
-    "firstLine": "All creatures of our God and King",
-    "languages": [
-      "English"
-    ]
-  },
-  {
     "id": "all-glory-laud-and-honor--theodulph-of-orleans-john-m-neale-melchoir-teschner",
     "title": "All Glory, Laud, and Honor",
     "composer": "Theodulph of Orleans • John M. Neale • Melchoir Teschner",
@@ -36951,36 +37238,6 @@
       ]
     },
     "firstLine": "Am I a soldier of the cross",
-    "languages": [
-      "English"
-    ]
-  },
-  {
-    "id": "amazing-grace--john-newton-evelyn-simpson-curenton",
-    "title": "Amazing Grace",
-    "composer": "John Newton • Evelyn Simpson-Curenton",
-    "category": "song",
-    "catalogs": {
-      "aahh": 272
-    },
-    "resources": [],
-    "usageCount": 0,
-    "occasions": [],
-    "credits": {
-      "textAuthors": [
-        {
-          "name": "John Newton",
-          "dates": "1725-1807"
-        }
-      ],
-      "composers": [
-        {
-          "name": "Evelyn Simpson-Curenton",
-          "dates": "b. 1953"
-        }
-      ]
-    },
-    "firstLine": "Amazing grace! How sweet the sound",
     "languages": [
       "English"
     ]
@@ -41962,46 +42219,6 @@
     ]
   },
   {
-    "id": "here-i-am-lord--dan-schutte-michael-pope-sj-john-weissrock",
-    "title": "Here I Am, Lord",
-    "composer": "Dan Schutte • Michael Pope, SJ • John Weissrock",
-    "category": "song",
-    "catalogs": {
-      "aahh": 567
-    },
-    "resources": [],
-    "usageCount": 0,
-    "occasions": [],
-    "credits": {
-      "textAuthors": [
-        {
-          "name": "Dan Schutte",
-          "dates": "b. 1947"
-        }
-      ],
-      "composers": [
-        {
-          "name": "Dan Schutte",
-          "dates": "b. 1947"
-        },
-        {
-          "name": "Michael Pope, SJ"
-        },
-        {
-          "name": "John Weissrock"
-        }
-      ]
-    },
-    "tuneMeter": {
-      "incipit": "17154551716512321717"
-    },
-    "firstLine": "I the Lord of sea and sky",
-    "refrainFirstLine": "Here I am Lord",
-    "languages": [
-      "English"
-    ]
-  },
-  {
     "id": "he-s-done-so-much-for-me--theodore-r-frye-lillian-bowles-nolan-williams-jr",
     "title": "He's Done So Much for Me",
     "composer": "Theodore R. Frye • Lillian Bowles • Nolan Williams, Jr.",
@@ -42517,36 +42734,6 @@
     ]
   },
   {
-    "id": "hosanna--evelyn-simpson-curenton-patrick-roach",
-    "title": "Hosanna",
-    "composer": "Evelyn Simpson-Curenton • Patrick Roaché",
-    "category": "song",
-    "catalogs": {
-      "aahh": 224
-    },
-    "resources": [],
-    "usageCount": 0,
-    "occasions": [],
-    "credits": {
-      "composers": [
-        {
-          "name": "Evelyn Simpson-Curenton",
-          "dates": "b. 1953"
-        },
-        {
-          "name": "Patrick Roaché"
-        }
-      ]
-    },
-    "tuneMeter": {
-      "incipit": "553553444332231666"
-    },
-    "firstLine": "Hosanna Hosanna",
-    "languages": [
-      "English"
-    ]
-  },
-  {
     "id": "how-can-you-recognize-a-child-of-god--margaret-pleasant-douroux",
     "title": "How Can You Recognize a Child of God",
     "composer": "Margaret Pleasant Douroux",
@@ -42572,42 +42759,6 @@
       ]
     },
     "firstLine": "How can you recognize a child of God?",
-    "languages": [
-      "English"
-    ]
-  },
-  {
-    "id": "how-great-thou-art--stuart-k-hine-2",
-    "title": "How Great Thou Art",
-    "composer": "Stuart K. Hine",
-    "category": "song",
-    "catalogs": {
-      "aahh": 148
-    },
-    "resources": [],
-    "usageCount": 0,
-    "occasions": [],
-    "credits": {
-      "textAuthors": [
-        {
-          "name": "Stuart K. Hine",
-          "dates": "1899-1989"
-        }
-      ],
-      "composers": [
-        {
-          "name": "Stuart K. Hine",
-          "dates": "1899-1989"
-        }
-      ]
-    },
-    "tuneMeter": {
-      "tuneName": "O STORE GUD",
-      "meter": "11.10.11.10 with refrain",
-      "incipit": "555355566466665"
-    },
-    "firstLine": "O Lord my God, when I in awesome wonder",
-    "refrainFirstLine": "Then sings my soul, my Savior God to Thee",
     "languages": [
       "English"
     ]
@@ -44298,78 +44449,6 @@
     ]
   },
   {
-    "id": "in-christ-there-is-no-east-or-west--john-oxenham-alexander-r-reinagle",
-    "title": "In Christ There Is No East or West",
-    "composer": "John Oxenham • Alexander R. Reinagle",
-    "category": "song",
-    "catalogs": {
-      "aahh": 398
-    },
-    "resources": [],
-    "usageCount": 0,
-    "occasions": [],
-    "credits": {
-      "textAuthors": [
-        {
-          "name": "John Oxenham",
-          "dates": "1852-1941"
-        }
-      ],
-      "composers": [
-        {
-          "name": "Alexander R. Reinagle",
-          "dates": "1799-1877"
-        }
-      ]
-    },
-    "tuneMeter": {
-      "tuneName": "ST. PETER",
-      "meter": "8.6.8.6",
-      "incipit": "517655433214323"
-    },
-    "firstLine": "In Christ there is no east or west",
-    "languages": [
-      "English"
-    ]
-  },
-  {
-    "id": "in-christ-there-is-no-east-or-west--john-oxenham-harry-t-burleigh",
-    "title": "In Christ There Is No East or West",
-    "composer": "John Oxenham • Harry T. Burleigh",
-    "category": "song",
-    "catalogs": {
-      "aahh": 399
-    },
-    "resources": [],
-    "usageCount": 0,
-    "occasions": [],
-    "credits": {
-      "textAuthors": [
-        {
-          "name": "John Oxenham"
-        }
-      ],
-      "composers": [
-        {
-          "name": "Harry T. Burleigh",
-          "dates": "1866-1949"
-        }
-      ],
-      "tuneSources": [
-        "African-American"
-      ]
-    },
-    "tuneMeter": {
-      "tuneName": "MC KEE",
-      "meter": "8.6.8.6",
-      "incipit": "155557765611511"
-    },
-    "firstLine": "In Christ there is no east or west",
-    "languages": [
-      "English"
-    ]
-  },
-  {
     "id": "in-his-presence--dick-tunney-melodie-tunney",
     "title": "In His Presence",
     "composer": "Dick Tunney • Melodie Tunney",
@@ -45599,38 +45678,6 @@
     ]
   },
   {
-    "id": "jesus-remember-me--taiz-community-jacques-berthier",
-    "title": "Jesus, Remember Me",
-    "composer": "Taizé Community • Jacques Berthier",
-    "category": "song",
-    "catalogs": {
-      "aahh": 230
-    },
-    "resources": [],
-    "usageCount": 0,
-    "occasions": [],
-    "credits": {
-      "textAuthors": [
-        {
-          "name": "Taizé Community"
-        }
-      ],
-      "composers": [
-        {
-          "name": "Jacques Berthier",
-          "dates": "1923-1994"
-        }
-      ]
-    },
-    "tuneMeter": {
-      "incipit": "333434222212323"
-    },
-    "firstLine": "Jesus, remember me when you come into your kingdom",
-    "languages": [
-      "English"
-    ]
-  },
-  {
     "id": "jesus-saves--priscilla-j-owens-william-j-kirkpatrick",
     "title": "Jesus Saves",
     "composer": "Priscilla J. Owens • William J. Kirkpatrick",
@@ -46419,43 +46466,6 @@
     ]
   },
   {
-    "id": "lead-me-guide-me--doris-m-akers-richard-smallwood",
-    "title": "Lead Me, Guide Me",
-    "composer": "Doris M. Akers • Richard Smallwood",
-    "category": "song",
-    "catalogs": {
-      "aahh": 474
-    },
-    "resources": [],
-    "usageCount": 0,
-    "occasions": [],
-    "credits": {
-      "textAuthors": [
-        {
-          "name": "Doris M. Akers",
-          "dates": "b.1922"
-        }
-      ],
-      "composers": [
-        {
-          "name": "Doris M. Akers",
-          "dates": "b.1922"
-        },
-        {
-          "name": "Richard Smallwood"
-        }
-      ]
-    },
-    "tuneMeter": {
-      "incipit": "3(2)13(2)11222666543"
-    },
-    "firstLine": "I am weak and I need Thy strength and pow'r",
-    "refrainFirstLine": "Lead me, guide me, along the way",
-    "languages": [
-      "English"
-    ]
-  },
-  {
     "id": "lead-me-lord--samuel-sebastian-wesley",
     "title": "Lead Me, Lord",
     "composer": "Samuel Sebastian Wesley",
@@ -46796,49 +46806,6 @@
     ]
   },
   {
-    "id": "let-there-be-peace-on-earth--sy-miller-jill-jackson-diana-kodner",
-    "title": "Let There Be Peace on Earth",
-    "composer": "Sy Miller • Jill Jackson • Diana Kodner",
-    "category": "song",
-    "catalogs": {
-      "aahh": 498
-    },
-    "resources": [],
-    "usageCount": 0,
-    "occasions": [],
-    "credits": {
-      "textAuthors": [
-        {
-          "name": "Sy Miller",
-          "dates": "1908-1941"
-        },
-        {
-          "name": "Jill Jackson"
-        }
-      ],
-      "composers": [
-        {
-          "name": "Sy Miller",
-          "dates": "1908-1941"
-        },
-        {
-          "name": "Jill Jackson"
-        },
-        {
-          "name": "Diana Kodner",
-          "dates": "b.1957"
-        }
-      ]
-    },
-    "tuneMeter": {
-      "incipit": "117123451641233"
-    },
-    "firstLine": "Let there be peace on earth",
-    "languages": [
-      "English"
-    ]
-  },
-  {
     "id": "let-us-break-bread-together--jimmie-abbington",
     "title": "Let Us Break Bread Together",
     "composer": "Jimmie Abbington",
@@ -46979,80 +46946,6 @@
     },
     "firstLine": "Life is like a mountain railroad",
     "refrainFirstLine": "Blessed Savior, Thou wilt guide us",
-    "languages": [
-      "English"
-    ]
-  },
-  {
-    "id": "lift-every-voice-and-sing--james-w-johnson-j-rosamund-johnson",
-    "title": "Lift Every Voice and Sing",
-    "composer": "James W. Johnson • J. Rosamund Johnson",
-    "category": "song",
-    "catalogs": {
-      "aahh": 540
-    },
-    "resources": [],
-    "usageCount": 0,
-    "occasions": [],
-    "credits": {
-      "textAuthors": [
-        {
-          "name": "James W. Johnson",
-          "dates": "1871-1938"
-        }
-      ],
-      "composers": [
-        {
-          "name": "J. Rosamund Johnson",
-          "dates": "1873-1954"
-        }
-      ]
-    },
-    "tuneMeter": {
-      "tuneName": "ANTHEM",
-      "meter": "6.6.10.6.6.10.14.14.6.6.10",
-      "incipit": "345666671654456"
-    },
-    "firstLine": "Lift ev'ry voice and sing",
-    "languages": [
-      "English"
-    ]
-  },
-  {
-    "id": "lift-high-the-cross--george-w-kitchin-michael-r-newbolt-sydney-h-nicholson",
-    "title": "Lift High the Cross",
-    "composer": "George W. Kitchin • Michael R. Newbolt • Sydney H. Nicholson",
-    "category": "song",
-    "catalogs": {
-      "aahh": 242
-    },
-    "resources": [],
-    "usageCount": 0,
-    "occasions": [],
-    "credits": {
-      "textAuthors": [
-        {
-          "name": "George W. Kitchin",
-          "dates": "1827-1912"
-        },
-        {
-          "name": "Michael R. Newbolt",
-          "dates": "1874-1956"
-        }
-      ],
-      "composers": [
-        {
-          "name": "Sydney H. Nicholson",
-          "dates": "1875-1956"
-        }
-      ]
-    },
-    "tuneMeter": {
-      "tuneName": "CRUCIFER",
-      "incipit": "515453456223516"
-    },
-    "firstLine": "Come, Christians, follow where the Master trod",
-    "refrainFirstLine": "Lift high the cross, the love of Christ proclaim",
     "languages": [
       "English"
     ]
@@ -51637,40 +51530,6 @@
     ]
   },
   {
-    "id": "taste-and-see--james-e-moore-jr",
-    "title": "Taste and See",
-    "composer": "James E. Moore, Jr.",
-    "category": "song",
-    "catalogs": {
-      "aahh": 680
-    },
-    "resources": [],
-    "usageCount": 0,
-    "occasions": [],
-    "credits": {
-      "textAuthors": [
-        {
-          "name": "James E. Moore, Jr.",
-          "dates": "b. 1951"
-        }
-      ],
-      "composers": [
-        {
-          "name": "James E. Moore, Jr.",
-          "dates": "b. 1951"
-        }
-      ]
-    },
-    "tuneMeter": {
-      "incipit": "3121D6U115551543121"
-    },
-    "firstLine": "I will bless the Lord at all times",
-    "refrainFirstLine": "Taste and see, taste and see",
-    "languages": [
-      "English"
-    ]
-  },
-  {
     "id": "tell-me-the-stories-of-jesus--william-h-parker-frederic-a-challinor",
     "title": "Tell Me the Stories of Jesus",
     "composer": "William H. Parker • Frederic A. Challinor",
@@ -53309,42 +53168,6 @@
       "incipit": "55555566534543216551"
     },
     "firstLine": "This is the day which the Lord hath made",
-    "languages": [
-      "English"
-    ]
-  },
-  {
-    "id": "this-little-light-of-mine--nolan-williams-jr",
-    "title": "This Little Light of Mine",
-    "composer": "Nolan Williams, Jr.",
-    "category": "song",
-    "catalogs": {
-      "aahh": 549
-    },
-    "resources": [],
-    "usageCount": 0,
-    "occasions": [],
-    "credits": {
-      "composers": [
-        {
-          "name": "Nolan Williams, Jr.",
-          "dates": "b. 1969"
-        }
-      ],
-      "textSources": [
-        "Negro Spiritual"
-      ],
-      "tuneSources": [
-        "Negro Spiritual"
-      ]
-    },
-    "tuneMeter": {
-      "tuneName": "LIGHT OF MINE",
-      "meter": "12.12.12.9",
-      "incipit": "55553155553111116411"
-    },
-    "firstLine": "This little light of mine, I'm gonna let it shine",
-    "refrainFirstLine": "Let it shine, let it shine",
     "languages": [
       "English"
     ]
@@ -55300,40 +55123,6 @@
     ]
   },
   {
-    "id": "when-the-saints-go-marching-in--stephen-key",
-    "title": "When the Saints Go Marching In",
-    "composer": "Stephen Key",
-    "category": "song",
-    "catalogs": {
-      "aahh": 595
-    },
-    "resources": [],
-    "usageCount": 0,
-    "occasions": [],
-    "credits": {
-      "composers": [
-        {
-          "name": "Stephen Key"
-        }
-      ],
-      "textSources": [
-        "Negro Spiritual"
-      ],
-      "tuneSources": [
-        "Negro Spiritual"
-      ]
-    },
-    "tuneMeter": {
-      "tuneName": "WHEN THE SAINTS",
-      "meter": "8.8.10.7",
-      "incipit": "1345134513453132"
-    },
-    "firstLine": "O when the saints go marching in",
-    "languages": [
-      "English"
-    ]
-  },
-  {
     "id": "when-we-all-get-to-heaven--eliza-e-hewitt-emily-d-wilson-valeria-a-foster",
     "title": "When We All Get to Heaven",
     "composer": "Eliza E. Hewitt • Emily D. Wilson • Valeria A. Foster",
@@ -56151,35 +55940,12 @@
     "occasions": []
   },
   {
-    "id": "all-are-welcome",
-    "title": "All Are Welcome",
-    "category": "song",
-    "catalogs": {
-      "gather4": 915
-    },
-    "resources": [],
-    "usageCount": 0,
-    "occasions": []
-  },
-  {
     "id": "all-are-welcome-in-this-place--canedo-ken-manibusan-jennah-manibusan-jesse",
     "title": "All are welcome in this place",
     "composer": "Canedo, Ken • Manibusan, Jennah • Manibusan, Jesse",
     "category": "song",
     "catalogs": {
       "gather4": 924
-    },
-    "resources": [],
-    "usageCount": 0,
-    "occasions": []
-  },
-  {
-    "id": "all-creatures-of-our-god-and-king--bolduc-ed-draper-william-h-francis-of-assisi-st-geistliche-kirchengesang-vaughan-williams-ralph",
-    "title": "All Creatures of Our God and King",
-    "composer": "Bolduc, Ed • Draper, William H. • Francis of Assisi, St. • Geistliche Kirchengesang • Vaughan Williams, Ralph",
-    "category": "song",
-    "catalogs": {
-      "gather4": 665
     },
     "resources": [],
     "usageCount": 0,
@@ -56255,18 +56021,6 @@
     "catalogs": {
       "gather4": 75,
       "voices": 11
-    },
-    "resources": [],
-    "usageCount": 0,
-    "occasions": []
-  },
-  {
-    "id": "all-who-enter-here--angotti-john-bolduc-ed-houze-daniel",
-    "title": "All Who Enter Here",
-    "composer": "Angotti, John • Bolduc, Ed • Houze, Daniel",
-    "category": "song",
-    "catalogs": {
-      "gather4": 929
     },
     "resources": [],
     "usageCount": 0,
@@ -56708,18 +56462,6 @@
     "category": "song",
     "catalogs": {
       "gather4": 569
-    },
-    "resources": [],
-    "usageCount": 0,
-    "occasions": []
-  },
-  {
-    "id": "be-not-afraid--bob-dufford-sj-hynck-theophane-osf",
-    "title": "Be Not Afraid",
-    "composer": "Bob Dufford, SJ • Hynck, Theophane, OSF",
-    "category": "song",
-    "catalogs": {
-      "gather4": 754
     },
     "resources": [],
     "usageCount": 0,
@@ -57646,30 +57388,6 @@
     "occasions": []
   },
   {
-    "id": "come-to-the-water--foley-john-sj",
-    "title": "Come to the Water",
-    "composer": "Foley, John, SJ",
-    "category": "song",
-    "catalogs": {
-      "gather4": 640
-    },
-    "resources": [],
-    "usageCount": 0,
-    "occasions": []
-  },
-  {
-    "id": "come-to-the-water--moore-bob",
-    "title": "Come to the water",
-    "composer": "Moore, Bob",
-    "category": "song",
-    "catalogs": {
-      "gather4": 995
-    },
-    "resources": [],
-    "usageCount": 0,
-    "occasions": []
-  },
-  {
     "id": "come-you-sinners-poor-and-needy--anonymous-hymns-composed-on-various-subjects-mims-george-e-southern-harmony",
     "title": "Come, You Sinners, Poor and Needy",
     "composer": "Anonymous • Hymns Composed on Various Subjects • Mims, George E. • Southern Harmony",
@@ -57754,18 +57472,6 @@
     "occasions": []
   },
   {
-    "id": "creator-of-the-stars-of-night--batastini-robert-j-browning-carol-hymnal-1982-the-latin",
-    "title": "Creator of the Stars of Night",
-    "composer": "Batastini, Robert J. • Browning, Carol • Hymnal 1982, The • Latin",
-    "category": "song",
-    "catalogs": {
-      "gather4": 458
-    },
-    "resources": [],
-    "usageCount": 0,
-    "occasions": []
-  },
-  {
     "id": "cristo-jesus--berliner-jacques-taize-community",
     "title": "Cristo Jesus",
     "composer": "Berliner, Jacques • Taize Community",
@@ -57784,18 +57490,6 @@
     "category": "song",
     "catalogs": {
       "gather4": 602
-    },
-    "resources": [],
-    "usageCount": 0,
-    "occasions": []
-  },
-  {
-    "id": "crux-fidelis--confirmation-of-the-congregation-of-the-holy-cross-warner-steven-c",
-    "title": "Crux Fidelis",
-    "composer": "Confirmation of the Congregation of the Holy Cross • Warner, Steven C.",
-    "category": "song",
-    "catalogs": {
-      "gather4": 969
     },
     "resources": [],
     "usageCount": 0,
@@ -57989,18 +57683,6 @@
     "category": "song",
     "catalogs": {
       "gather4": 1002
-    },
-    "resources": [],
-    "usageCount": 0,
-    "occasions": []
-  },
-  {
-    "id": "eat-this-bread--berliner-jacques-taize-community",
-    "title": "Eat This Bread",
-    "composer": "Berliner, Jacques • Taize Community",
-    "category": "song",
-    "catalogs": {
-      "gather4": 1022
     },
     "resources": [],
     "usageCount": 0,
@@ -58305,18 +57987,6 @@
     "category": "song",
     "catalogs": {
       "gather4": 638
-    },
-    "resources": [],
-    "usageCount": 0,
-    "occasions": []
-  },
-  {
-    "id": "for-the-beauty-of-the-earth--kocher-conrad-monk-william-h-piarpoint-folliott-s",
-    "title": "For the Beauty of the Earth",
-    "composer": "Kocher, Conrad • Monk, William H. • Piarpoint, Folliott S.",
-    "category": "song",
-    "catalogs": {
-      "gather4": 698
     },
     "resources": [],
     "usageCount": 0,
@@ -58709,18 +58379,6 @@
     "occasions": []
   },
   {
-    "id": "god-of-day-and-god-of-darkness--alonso-tony-e-sacred-harp-the",
-    "title": "God of Day and God of Darkness",
-    "composer": "Alonso, Tony E. • Sacred Harp, The",
-    "category": "song",
-    "catalogs": {
-      "gather4": 932
-    },
-    "resources": [],
-    "usageCount": 0,
-    "occasions": []
-  },
-  {
     "id": "god-of-love-whose-mercies-daily--nelson-ronald-a-sacred-harp-the-thompson-j-michael",
     "title": "God of Love, Whose Mercies Daily",
     "composer": "Nelson, Ronald A. • Sacred Harp, The • Thompson, J. Michael",
@@ -58877,18 +58535,6 @@
     "occasions": []
   },
   {
-    "id": "hail-the-day-that-sees-him-rise--new-century-hymnal-the-wesley-charles-williams-robert",
-    "title": "Hail the Day That Sees Him Rise",
-    "composer": "New Century Hymnal, The • Wesley, Charles • Williams, Robert",
-    "category": "song",
-    "catalogs": {
-      "gather4": 584
-    },
-    "resources": [],
-    "usageCount": 0,
-    "occasions": []
-  },
-  {
     "id": "hail-holy-queen--maher-matt-rose-danielle",
     "title": "Hail, Holy Queen",
     "composer": "Maher, Matt • Rose, Danielle",
@@ -59021,18 +58667,6 @@
     "occasions": []
   },
   {
-    "id": "here-i-am-lord--pope-michael-sj-schutter-dan-weissrock-john",
-    "title": "Here I Am, Lord",
-    "composer": "Pope, Michael, SJ • Schutter, Dan • Weissrock, John",
-    "category": "song",
-    "catalogs": {
-      "gather4": 844
-    },
-    "resources": [],
-    "usageCount": 0,
-    "occasions": []
-  },
-  {
     "id": "here-in-this-place-new-light-is-streaming--gillard-richard-pulkingham-betty",
     "title": "Here in this place new light is streaming",
     "composer": "Gillard, Richard • Pulkingham, Betty",
@@ -59111,18 +58745,6 @@
     "category": "song",
     "catalogs": {
       "gather4": 596
-    },
-    "resources": [],
-    "usageCount": 0,
-    "occasions": []
-  },
-  {
-    "id": "hosanna--soper-scott",
-    "title": "Hosanna",
-    "composer": "Soper, Scott",
-    "category": "song",
-    "catalogs": {
-      "gather4": 534
     },
     "resources": [],
     "usageCount": 0,
@@ -59211,18 +58833,6 @@
     "category": "song",
     "catalogs": {
       "gather4": 28
-    },
-    "resources": [],
-    "usageCount": 0,
-    "occasions": []
-  },
-  {
-    "id": "how-great-thou-art--hine-stuart-k-swedish-folk-melody",
-    "title": "How Great Thou Art",
-    "composer": "Hine, Stuart K. • Swedish folk melody",
-    "category": "song",
-    "catalogs": {
-      "gather4": 630
     },
     "resources": [],
     "usageCount": 0,
@@ -59405,18 +59015,6 @@
     "category": "song",
     "catalogs": {
       "gather4": 92
-    },
-    "resources": [],
-    "usageCount": 0,
-    "occasions": []
-  },
-  {
-    "id": "i-heard-the-voice-of-jesus-say--bonar-horatius-english-melody-vaughan-williams-ralph",
-    "title": "I Heard the Voice of Jesus Say",
-    "composer": "Bonar, Horatius • English melody • Vaughan Williams, Ralph",
-    "category": "song",
-    "catalogs": {
-      "gather4": 781
     },
     "resources": [],
     "usageCount": 0,
@@ -59707,18 +59305,6 @@
     "category": "song",
     "catalogs": {
       "gather4": 1057
-    },
-    "resources": [],
-    "usageCount": 0,
-    "occasions": []
-  },
-  {
-    "id": "in-christ-there-is-no-east-or-west--african-american-alonso-tony-e-burleigh-harry-t-dunkerley-william-a",
-    "title": "In Christ There Is No East or West",
-    "composer": "African American • Alonso, Tony E. • Burleigh, Harry T. • Dunkerley, William A.",
-    "category": "song",
-    "catalogs": {
-      "gather4": 905
     },
     "resources": [],
     "usageCount": 0,
@@ -60264,18 +59850,6 @@
     "occasions": []
   },
   {
-    "id": "lead-me-guide-me--akers-doris-m-smallwood-richard",
-    "title": "Lead Me, Guide Me",
-    "composer": "Akers, Doris M. • Smallwood, Richard",
-    "category": "song",
-    "catalogs": {
-      "gather4": 712
-    },
-    "resources": [],
-    "usageCount": 0,
-    "occasions": []
-  },
-  {
     "id": "lead-us-to-your-light--newman-john-henry-warner-steven-c",
     "title": "Lead Us to Your Light",
     "composer": "Newman, John Henry • Warner, Steven C.",
@@ -60389,18 +59963,6 @@
     "category": "song",
     "catalogs": {
       "gather4": 50
-    },
-    "resources": [],
-    "usageCount": 0,
-    "occasions": []
-  },
-  {
-    "id": "lift-every-voice-and-sing--johnson-james-w-johnson-rosamond",
-    "title": "Lift Every Voice and Sing",
-    "composer": "Johnson, James W. • Johnson, Rosamond",
-    "category": "song",
-    "catalogs": {
-      "gather4": 1087
     },
     "resources": [],
     "usageCount": 0,
@@ -60649,18 +60211,6 @@
     "occasions": []
   },
   {
-    "id": "lord-you-give-the-great-commission--beethoven-ludwig-van-hodges-edward-rowthhorn-jeffery",
-    "title": "Lord, You Give the Great Commission",
-    "composer": "Beethoven, Ludwig van • Hodges, Edward • Rowthhorn, Jeffery",
-    "category": "song",
-    "catalogs": {
-      "gather4": 837
-    },
-    "resources": [],
-    "usageCount": 0,
-    "occasions": []
-  },
-  {
     "id": "lord-you-have-the-words-psalm-19--de-silva-chris",
     "title": "Lord, You Have the Words - Psalm 19",
     "composer": "de Silva, Chris",
@@ -60679,18 +60229,6 @@
     "category": "song",
     "catalogs": {
       "gather4": 955
-    },
-    "resources": [],
-    "usageCount": 0,
-    "occasions": []
-  },
-  {
-    "id": "love-divine-all-loves-excelling--o-brien-francis-patrick-prichard-rowland-h-wesley-charles",
-    "title": "Love Divine, All Loves Excelling",
-    "composer": "O'Brien, Francis Patrick • Prichard, Rowland H. • Wesley, Charles",
-    "category": "song",
-    "catalogs": {
-      "gather4": 767
     },
     "resources": [],
     "usageCount": 0,
@@ -61273,18 +60811,6 @@
     "occasions": []
   },
   {
-    "id": "now-the-green-blade-rises--crum-john-m-c-foster-thomas-french-carol-oxford-book-of-carols",
-    "title": "Now the Green Blade Rises",
-    "composer": "Crum, John M. C. • Foster, Thomas • French carol • Oxford Book of Carols",
-    "category": "song",
-    "catalogs": {
-      "gather4": 564
-    },
-    "resources": [],
-    "usageCount": 0,
-    "occasions": []
-  },
-  {
     "id": "now-this-day-gives-way-to-darkness--flenebaker-mary-frances-french-carol-proulx-richard",
     "title": "Now This Day Gives Way to Darkness",
     "composer": "Flenebaker, Mary Frances • French carol • Proulx, Richard",
@@ -61453,18 +60979,6 @@
     "occasions": []
   },
   {
-    "id": "o-god-you-search-me--farrell-bernadette",
-    "title": "O God, You Search Me",
-    "composer": "Farrell, Bernadette",
-    "category": "song",
-    "catalogs": {
-      "gather4": 644
-    },
-    "resources": [],
-    "usageCount": 0,
-    "occasions": []
-  },
-  {
     "id": "o-god-your-church-is-singing--hola-gustay-hornaday-alan-j",
     "title": "O God, your Church is singing",
     "composer": "Hola, Gustay • Hornaday, Alan J.",
@@ -61597,30 +61111,6 @@
     "occasions": []
   },
   {
-    "id": "of-the-father-s-love-begotten--baker-henry-w-chant-neale-john-m-proulx-richard-prudentius-aurelius",
-    "title": "Of the Father's Love Begotten",
-    "composer": "Baker, Henry W. • Chant • Neale, John M. • Proulx, Richard • Prudentius, Aurelius",
-    "category": "song",
-    "catalogs": {
-      "gather4": 483
-    },
-    "resources": [],
-    "usageCount": 0,
-    "occasions": []
-  },
-  {
-    "id": "on-eagle-s-wings--joncas-michael",
-    "title": "On Eagle's Wings",
-    "composer": "Joncas, Michael",
-    "category": "song",
-    "catalogs": {
-      "gather4": 749
-    },
-    "resources": [],
-    "usageCount": 0,
-    "occasions": []
-  },
-  {
     "id": "on-the-journey-to-emmaus--gaelic-melody",
     "title": "On the Journey to Emmaus",
     "composer": "Gaelic melody",
@@ -61639,30 +61129,6 @@
     "category": "song",
     "catalogs": {
       "gather4": 497
-    },
-    "resources": [],
-    "usageCount": 0,
-    "occasions": []
-  },
-  {
-    "id": "one-bread-one-body--didache-foley-john-sj",
-    "title": "One Bread, One Body",
-    "composer": "Didache • Foley, John, SJ",
-    "category": "song",
-    "catalogs": {
-      "gather4": 1042
-    },
-    "resources": [],
-    "usageCount": 0,
-    "occasions": []
-  },
-  {
-    "id": "open-my-eyes--manibusan-jesse",
-    "title": "Open My Eyes",
-    "composer": "Manibusan, Jesse",
-    "category": "song",
-    "catalogs": {
-      "gather4": 716
     },
     "resources": [],
     "usageCount": 0,
@@ -62484,18 +61950,6 @@
     "occasions": []
   },
   {
-    "id": "taste-and-see--moore-james-e-jr",
-    "title": "Taste and See",
-    "composer": "Moore, James E., Jr.",
-    "category": "song",
-    "catalogs": {
-      "gather4": 1006
-    },
-    "resources": [],
-    "usageCount": 0,
-    "occasions": []
-  },
-  {
     "id": "te-has-revestido-de-cristo--kolar-peter-m-rubalcava-pedro",
     "title": "Te has revestido de Cristo",
     "composer": "Kolar, Peter M. • Rubalcava, Pedro",
@@ -62526,18 +61980,6 @@
     "category": "song",
     "catalogs": {
       "gather4": 17
-    },
-    "resources": [],
-    "usageCount": 0,
-    "occasions": []
-  },
-  {
-    "id": "the-angel-gabriel-from-heaven-came--baring-gould-sabine-basque-carol-pettman-charles-e",
-    "title": "The Angel Gabriel from Heaven Came",
-    "composer": "Baring-Gould, Sabine • Basque carol • Pettman, Charles E.",
-    "category": "song",
-    "catalogs": {
-      "gather4": 467
     },
     "resources": [],
     "usageCount": 0,
@@ -62700,18 +62142,6 @@
     "occasions": []
   },
   {
-    "id": "the-summons--bell-john-l-iona-community-maule-graham-scottish-melody",
-    "title": "The Summons",
-    "composer": "Bell, John L. • Iona Community • Maule, Graham • Scottish melody",
-    "category": "song",
-    "catalogs": {
-      "gather4": 869
-    },
-    "resources": [],
-    "usageCount": 0,
-    "occasions": []
-  },
-  {
     "id": "there-is-a-place-dunblane-primary--bell-john-l-iona-community",
     "title": "There Is a Place (DUNBLANE PRIMARY)",
     "composer": "Bell, John L. • Iona Community",
@@ -62749,18 +62179,6 @@
     "occasions": []
   },
   {
-    "id": "they-ll-know-we-are-christians--scholtes-peter",
-    "title": "They'll Know We Are Christians",
-    "composer": "Scholtes, Peter",
-    "category": "song",
-    "catalogs": {
-      "gather4": 904
-    },
-    "resources": [],
-    "usageCount": 0,
-    "occasions": []
-  },
-  {
     "id": "this-is-my-song--harkness-georgia-sibelius-jean-stone-lloyd",
     "title": "This Is My Song",
     "composer": "Harkness, Georgia • Sibelius, Jean • Stone, Lloyd",
@@ -62791,18 +62209,6 @@
     "category": "song",
     "catalogs": {
       "gather4": 558
-    },
-    "resources": [],
-    "usageCount": 0,
-    "occasions": []
-  },
-  {
-    "id": "this-little-light-of-mine--african-american-spiritual-boyer-horace-clarence",
-    "title": "This Little Light of Mine",
-    "composer": "African American spiritual • Boyer, Horace Clarence",
-    "category": "song",
-    "catalogs": {
-      "gather4": 651
     },
     "resources": [],
     "usageCount": 0,
@@ -62953,18 +62359,6 @@
     "occasions": []
   },
   {
-    "id": "turn-our-hearts-around--bolduc-ed-thomson-trevor",
-    "title": "Turn Our Hearts Around",
-    "composer": "Bolduc, Ed • Thomson, Trevor",
-    "category": "song",
-    "catalogs": {
-      "gather4": 705
-    },
-    "resources": [],
-    "usageCount": 0,
-    "occasions": []
-  },
-  {
     "id": "two-fishermen--dufner-delores-osb-toolan-suzanne-rsm",
     "title": "Two Fishermen",
     "composer": "Dufner, Delores, OSB • Toolan, Suzanne, RSM",
@@ -63007,18 +62401,6 @@
     "category": "song",
     "catalogs": {
       "gather4": 773
-    },
-    "resources": [],
-    "usageCount": 0,
-    "occasions": []
-  },
-  {
-    "id": "unless-a-grain-of-wheat--farrell-bernadette",
-    "title": "Unless a Grain of Wheat",
-    "composer": "Farrell, Bernadette",
-    "category": "song",
-    "catalogs": {
-      "gather4": 868
     },
     "resources": [],
     "usageCount": 0,
@@ -63085,17 +62467,6 @@
     "occasions": []
   },
   {
-    "id": "we-are-many-parts",
-    "title": "We Are Many Parts",
-    "category": "song",
-    "catalogs": {
-      "gather4": 910
-    },
-    "resources": [],
-    "usageCount": 0,
-    "occasions": []
-  },
-  {
     "id": "we-are-your-people--stempfle-herman-g-jr-vaughan-williams-ralph",
     "title": "We Are Your People",
     "composer": "Stempfle, Herman G., Jr. • Vaughan Williams, Ralph",
@@ -63115,18 +62486,6 @@
     "catalogs": {
       "gather4": 930,
       "novum": 141
-    },
-    "resources": [],
-    "usageCount": 0,
-    "occasions": []
-  },
-  {
-    "id": "we-belong-to-you--thomson-trevor",
-    "title": "We Belong to You",
-    "composer": "Thomson, Trevor",
-    "category": "song",
-    "catalogs": {
-      "gather4": 833
     },
     "resources": [],
     "usageCount": 0,
@@ -63248,18 +62607,6 @@
     "category": "song",
     "catalogs": {
       "gather4": 127
-    },
-    "resources": [],
-    "usageCount": 0,
-    "occasions": []
-  },
-  {
-    "id": "we-walk-by-faith--alford-henry",
-    "title": "We Walk by Faith",
-    "composer": "Alford, Henry",
-    "category": "song",
-    "catalogs": {
-      "gather4": 740
     },
     "resources": [],
     "usageCount": 0,
@@ -64380,33 +63727,6 @@
     ]
   },
   {
-    "id": "here-i-am-lord--field-paul-fife-brian-pool-henk-riekerk-robert-van-manen-ralph",
-    "title": "Here I Am, Lord",
-    "composer": "Field, Paul • Fife, Brian • Pool, Henk • Riekerk, Robert • Van Manen, Ralph",
-    "category": "song",
-    "catalogs": {
-      "spiritSong": 250
-    },
-    "resources": [],
-    "usageCount": 0,
-    "occasions": [],
-    "topics": [
-      "Creation",
-      "Ministry/Mission",
-      "Witness"
-    ],
-    "scriptureRefs": [
-      "Exodus 3:7-12",
-      "1 Samuel 3:1-10",
-      "Psalms 81:17",
-      "Isaiah 6",
-      "Jeremiah 5:23",
-      "Ezekiel 11:19-20",
-      "Ezekiel 36:26-27",
-      "Luke 12:22-40"
-    ]
-  },
-  {
     "id": "o-come-o-come-emmanuel--bolduc-ed",
     "title": "O Come, O Come, Emmanuel",
     "composer": "Bolduc, Ed",
@@ -64462,25 +63782,6 @@
     ],
     "scriptureRefs": [
       "Exodus 15:19-21"
-    ]
-  },
-  {
-    "id": "on-eagle-s-wings--angotti-john-augustin-meredith-bolduc-ed",
-    "title": "On Eagle's Wings",
-    "composer": "Angotti, John • Augustin, Meredith • Bolduc, Ed",
-    "category": "song",
-    "catalogs": {
-      "spiritSong": 333
-    },
-    "resources": [],
-    "usageCount": 0,
-    "occasions": [],
-    "topics": [
-      "Refuge"
-    ],
-    "scriptureRefs": [
-      "Exodus 19:4",
-      "Psalms 91"
     ]
   },
   {
@@ -64570,59 +63871,6 @@
     ]
   },
   {
-    "id": "all-creatures-of-our-god-and-king--bolduc-ed-talbot-john-michael",
-    "title": "All Creatures of Our God and King",
-    "composer": "Bolduc, Ed • Talbot, John Michael",
-    "category": "song",
-    "catalogs": {
-      "spiritSong": 203
-    },
-    "resources": [],
-    "usageCount": 0,
-    "occasions": [],
-    "topics": [
-      "Baptism",
-      "Christian Initiation",
-      "Church",
-      "Confirmation",
-      "Forgiveness",
-      "Joy",
-      "Mercy",
-      "Praise"
-    ],
-    "scriptureRefs": [
-      "Psalms 105",
-      "Psalms 148",
-      "Psalms 19:2",
-      "Psalms 96:1-6",
-      "Psalms 97:6",
-      "Psalms 145:2-3,8-9,17-18",
-      "Psalms 145:10-13",
-      "Psalms 150:6",
-      "Jeremiah 32:17-29",
-      "Daniel 3:57",
-      "Romans 8:6",
-      "Romans 11:36",
-      "1 Corinthians 8:6",
-      "Revelation 14:7"
-    ]
-  },
-  {
-    "id": "o-god-you-search-me--angotti-john-bolduc-ed",
-    "title": "O God, You Search Me",
-    "composer": "Angotti, John • Bolduc, Ed",
-    "category": "song",
-    "catalogs": {
-      "spiritSong": 334
-    },
-    "resources": [],
-    "usageCount": 0,
-    "occasions": [],
-    "scriptureRefs": [
-      "Psalms 139"
-    ]
-  },
-  {
     "id": "lord-let-your-face-shine-upon-us--bolduc-ed-thomson-trevor",
     "title": "Lord, Let Your Face Shine upon Us",
     "composer": "Bolduc, Ed • Thomson, Trevor",
@@ -64701,41 +63949,6 @@
     ]
   },
   {
-    "id": "hail-the-day-that-sees-him-rise--angotti-john-bolduc-ed-francis-of-assisi-jefferson-thomas-w-krzystofczyk-christine",
-    "title": "Hail the Day That Sees Him Rise",
-    "composer": "Angotti, John • Bolduc, Ed • Francis of Assisi • Jefferson, Thomas W. • Krzystofczyk, Christine",
-    "category": "song",
-    "catalogs": {
-      "spiritSong": 188
-    },
-    "resources": [],
-    "usageCount": 0,
-    "occasions": [],
-    "topics": [
-      "Discipleship",
-      "Faith",
-      "Funeral",
-      "Love for Others",
-      "Prayer",
-      "Protection",
-      "Reconciliation",
-      "Unity"
-    ],
-    "scriptureRefs": [
-      "Psalms 24:7-10",
-      "Matthew 28:16-20",
-      "Mark 16:19",
-      "Luke 24:46-53",
-      "Luke 24:50-53",
-      "John 14:2-3,16",
-      "John 28:16-20",
-      "Acts 1:6-11",
-      "Romans 8:17",
-      "Hebrews 7:25",
-      "Revelation 14:4"
-    ]
-  },
-  {
     "id": "the-lord-is-my-light-and-my-salvation-manibusan",
     "title": "The Lord Is My Light and My Salvation (Manibusan)",
     "category": "song",
@@ -64750,33 +63963,6 @@
     ],
     "scriptureRefs": [
       "Psalms 27:1,7-8,8-9,13-14"
-    ]
-  },
-  {
-    "id": "of-the-father-s-love-begotten--bolduc-ed-dimarco-kristene",
-    "title": "Of the Father's Love Begotten",
-    "composer": "Bolduc, Ed • DiMarco, Kristene",
-    "category": "song",
-    "catalogs": {
-      "spiritSong": 149
-    },
-    "resources": [],
-    "usageCount": 0,
-    "occasions": [],
-    "topics": [
-      "Faith",
-      "God's Strength",
-      "Trust"
-    ],
-    "scriptureRefs": [
-      "Psalms 33:9",
-      "John 1:14-17",
-      "Philippians 2:7-11",
-      "Colossians 1:15-17",
-      "1 Timothy 3:16",
-      "Revelation 1:8,18",
-      "Revelation 4:8",
-      "Revelation 21:6"
     ]
   },
   {
@@ -65257,32 +64443,6 @@
     ]
   },
   {
-    "id": "be-not-afraid--bolduc-ed-faber-frederick-w",
-    "title": "Be Not Afraid",
-    "composer": "Bolduc, Ed • Faber, Frederick W.",
-    "category": "song",
-    "catalogs": {
-      "spiritSong": 271
-    },
-    "resources": [],
-    "usageCount": 0,
-    "occasions": [],
-    "topics": [
-      "Forgiveness",
-      "Healing",
-      "Humility",
-      "Ministry/Mission",
-      "Reconciliation"
-    ],
-    "scriptureRefs": [
-      "Isaiah 43:2-3",
-      "Matthew 5:3-4,10",
-      "Matthew 5:5",
-      "Matthew 5:15",
-      "Ephesians 5:3-4,10"
-    ]
-  },
-  {
     "id": "table-of-life--bolduc-ed",
     "title": "Table of Life",
     "composer": "Bolduc, Ed",
@@ -65365,28 +64525,6 @@
     ]
   },
   {
-    "id": "love-divine-all-loves-excelling--evans-david-j",
-    "title": "Love Divine, All Loves Excelling",
-    "composer": "Evans, David J.",
-    "category": "song",
-    "catalogs": {
-      "spiritSong": 26
-    },
-    "resources": [],
-    "usageCount": 0,
-    "occasions": [],
-    "topics": [
-      "Adoration",
-      "God's Glory",
-      "God's Presence"
-    ],
-    "scriptureRefs": [
-      "Malachi 3:1",
-      "Matthew 14:14",
-      "Matthew 28:18-20"
-    ]
-  },
-  {
     "id": "pescador-de-hombres-lord-you-have-come--petty-w-clifford",
     "title": "Pescador de Hombres/Lord, You Have Come",
     "composer": "Petty, W. Clifford",
@@ -65426,31 +64564,6 @@
     ],
     "scriptureRefs": [
       "Matthew 5:3,5,8,10"
-    ]
-  },
-  {
-    "id": "we-are-the-light-of-the-world--bolduc-ed-rose-danielle-skorich-daniel-n-tomaszek-tom",
-    "title": "We Are the Light of the World",
-    "composer": "Bolduc, Ed • Rose, Danielle • Skorich, Daniel N. • Tomaszek, Tom",
-    "category": "song",
-    "catalogs": {
-      "spiritSong": 237
-    },
-    "resources": [],
-    "usageCount": 0,
-    "occasions": [],
-    "topics": [
-      "Eternal Life",
-      "Hope",
-      "Jesus Christ",
-      "Justice",
-      "Light",
-      "Ministry/Mission",
-      "Song and Singing"
-    ],
-    "scriptureRefs": [
-      "Matthew 5:3-12,14-16",
-      "Ephesians 5:3-12,14-16"
     ]
   },
   {
@@ -65496,25 +64609,6 @@
     ]
   },
   {
-    "id": "open-my-eyes--bolduc-ed",
-    "title": "Open My Eyes",
-    "composer": "Bolduc, Ed",
-    "category": "song",
-    "catalogs": {
-      "spiritSong": 337
-    },
-    "resources": [],
-    "usageCount": 0,
-    "occasions": [],
-    "topics": [
-      "Longing for God",
-      "Petition/Prayer"
-    ],
-    "scriptureRefs": [
-      "Mark 8:22-25"
-    ]
-  },
-  {
     "id": "ye-sons-and-daughters--bolduc-ed-tisserand-jean",
     "title": "Ye Sons and Daughters",
     "composer": "Bolduc, Ed • Tisserand, Jean",
@@ -65533,26 +64627,6 @@
       "Luke 24:6",
       "John 20:19-29",
       "2 Corinthians 6:18"
-    ]
-  },
-  {
-    "id": "hail-mary-gentle-woman--thompson-aaron",
-    "title": "Hail Mary: Gentle Woman",
-    "composer": "Thompson, Aaron",
-    "category": "song",
-    "catalogs": {
-      "spiritSong": 305
-    },
-    "resources": [],
-    "usageCount": 0,
-    "occasions": [],
-    "topics": [
-      "Mary",
-      "Praise",
-      "Providence"
-    ],
-    "scriptureRefs": [
-      "Luke 1:28,42"
     ]
   },
   {
@@ -65656,26 +64730,6 @@
     ],
     "scriptureRefs": [
       "John 14"
-    ]
-  },
-  {
-    "id": "the-summons--mattingly-joe-traditional-scottish-melody",
-    "title": "The Summons",
-    "composer": "Mattingly, Joe • Traditional Scottish Melody",
-    "category": "song",
-    "catalogs": {
-      "spiritSong": 230
-    },
-    "resources": [],
-    "usageCount": 0,
-    "occasions": [],
-    "topics": [
-      "Easter",
-      "Ministry/Mission",
-      "Obedience"
-    ],
-    "scriptureRefs": [
-      "John 1:41-42"
     ]
   },
   {
@@ -65818,29 +64872,6 @@
     ]
   },
   {
-    "id": "one-bread-one-body--angotti-john-tate-paul-a",
-    "title": "One Bread, One Body",
-    "composer": "Angotti, John • Tate, Paul A.",
-    "category": "song",
-    "catalogs": {
-      "spiritSong": 249
-    },
-    "resources": [],
-    "usageCount": 0,
-    "occasions": [],
-    "topics": [
-      "Peace",
-      "People of God",
-      "Prayer"
-    ],
-    "scriptureRefs": [
-      "1 Corinthians 10:16-17",
-      "1 Corinthians 12:4,12-13,20",
-      "Galatians 3:28",
-      "Ephesians 4:4-6"
-    ]
-  },
-  {
     "id": "o-love-of-god-amor-de-dios--thompson-aaron",
     "title": "O Love of God/Amor de Dios",
     "composer": "Thompson, Aaron",
@@ -65861,32 +64892,6 @@
     ],
     "scriptureRefs": [
       "1 Corinthians 12:4-6,12-13"
-    ]
-  },
-  {
-    "id": "love-never-fails--angotti-john-tate-paul-a",
-    "title": "Love Never Fails",
-    "composer": "Angotti, John • Tate, Paul A.",
-    "category": "song",
-    "catalogs": {
-      "spiritSong": 132
-    },
-    "resources": [],
-    "usageCount": 0,
-    "occasions": [],
-    "topics": [
-      "Ascension",
-      "Baptism",
-      "Christian Initiation",
-      "Confirmation",
-      "Discipleship",
-      "Sending",
-      "Trinity",
-      "Vocation",
-      "Witness"
-    ],
-    "scriptureRefs": [
-      "1 Corinthians 13:1-2,4-8b,11"
     ]
   },
   {
@@ -66002,17 +65007,6 @@
     "occasions": []
   },
   {
-    "id": "above-all",
-    "title": "Above All",
-    "category": "song",
-    "catalogs": {
-      "voices": 5
-    },
-    "resources": [],
-    "usageCount": 0,
-    "occasions": []
-  },
-  {
     "id": "adore",
     "title": "Adore",
     "category": "song",
@@ -66031,17 +65025,6 @@
     "catalogs": {
       "voices": 7,
       "novum": 20
-    },
-    "resources": [],
-    "usageCount": 0,
-    "occasions": []
-  },
-  {
-    "id": "all-creatures-of-our-god-and-king",
-    "title": "All Creatures of Our God and King",
-    "category": "song",
-    "catalogs": {
-      "voices": 8
     },
     "resources": [],
     "usageCount": 0,
@@ -66084,17 +65067,6 @@
       "God's Glory",
       "Longing for God"
     ]
-  },
-  {
-    "id": "all-who-enter-here",
-    "title": "All Who Enter Here",
-    "category": "song",
-    "catalogs": {
-      "voices": 13
-    },
-    "resources": [],
-    "usageCount": 0,
-    "occasions": []
   },
   {
     "id": "alle-alle-gospel-acclamation",
@@ -66187,17 +65159,6 @@
     "category": "song",
     "catalogs": {
       "voices": 22
-    },
-    "resources": [],
-    "usageCount": 0,
-    "occasions": []
-  },
-  {
-    "id": "at-the-name-of-jesus",
-    "title": "At the Name of Jesus",
-    "category": "song",
-    "catalogs": {
-      "voices": 23
     },
     "resources": [],
     "usageCount": 0,
@@ -66401,17 +65362,6 @@
     "category": "song",
     "catalogs": {
       "voices": 43
-    },
-    "resources": [],
-    "usageCount": 0,
-    "occasions": []
-  },
-  {
-    "id": "build-a-family",
-    "title": "Build a Family",
-    "category": "song",
-    "catalogs": {
-      "voices": 44
     },
     "resources": [],
     "usageCount": 0,
@@ -66663,17 +65613,6 @@
     "category": "song",
     "catalogs": {
       "voices": 75
-    },
-    "resources": [],
-    "usageCount": 0,
-    "occasions": []
-  },
-  {
-    "id": "for-the-beauty-of-the-earth",
-    "title": "For the Beauty of the Earth",
-    "category": "song",
-    "catalogs": {
-      "voices": 77
     },
     "resources": [],
     "usageCount": 0,
@@ -67096,17 +66035,6 @@
     "occasions": []
   },
   {
-    "id": "how-beautiful-2",
-    "title": "How Beautiful",
-    "category": "song",
-    "catalogs": {
-      "voices": 118
-    },
-    "resources": [],
-    "usageCount": 0,
-    "occasions": []
-  },
-  {
     "id": "the-splendor-of-the-king",
     "title": "The splendor of the King",
     "category": "song",
@@ -67188,28 +66116,6 @@
     "category": "song",
     "catalogs": {
       "voices": 127
-    },
-    "resources": [],
-    "usageCount": 0,
-    "occasions": []
-  },
-  {
-    "id": "i-heard-the-voice-of-jesus-say",
-    "title": "I Heard the Voice of Jesus Say",
-    "category": "song",
-    "catalogs": {
-      "voices": 129
-    },
-    "resources": [],
-    "usageCount": 0,
-    "occasions": []
-  },
-  {
-    "id": "i-received-the-living-god",
-    "title": "I Received the Living God",
-    "category": "song",
-    "catalogs": {
-      "voices": 130
     },
     "resources": [],
     "usageCount": 0,
@@ -67896,17 +66802,6 @@
     "occasions": []
   },
   {
-    "id": "open-my-eyes",
-    "title": "Open My Eyes",
-    "category": "song",
-    "catalogs": {
-      "voices": 205
-    },
-    "resources": [],
-    "usageCount": 0,
-    "occasions": []
-  },
-  {
     "id": "open-the-eyes-of-my-heart",
     "title": "Open the Eyes of My Heart",
     "category": "song",
@@ -68548,17 +67443,6 @@
     "catalogs": {
       "voices": 280,
       "novum": 135
-    },
-    "resources": [],
-    "usageCount": 0,
-    "occasions": []
-  },
-  {
-    "id": "turn-our-hearts-around-2",
-    "title": "Turn Our Hearts Around",
-    "category": "song",
-    "catalogs": {
-      "voices": 281
     },
     "resources": [],
     "usageCount": 0,
@@ -69262,33 +68146,11 @@
     "occasions": []
   },
   {
-    "id": "all-creatures-of-our-god-and-king-2",
-    "title": "All Creatures of Our God and King",
-    "category": "song",
-    "catalogs": {
-      "novum": 21
-    },
-    "resources": [],
-    "usageCount": 0,
-    "occasions": []
-  },
-  {
     "id": "all-the-earth-adores-you",
     "title": "All the Earth Adores You",
     "category": "song",
     "catalogs": {
       "novum": 24
-    },
-    "resources": [],
-    "usageCount": 0,
-    "occasions": []
-  },
-  {
-    "id": "all-who-enter-here-2",
-    "title": "All Who Enter Here",
-    "category": "song",
-    "catalogs": {
-      "novum": 25
     },
     "resources": [],
     "usageCount": 0,
@@ -69322,17 +68184,6 @@
     "category": "song",
     "catalogs": {
       "novum": 31
-    },
-    "resources": [],
-    "usageCount": 0,
-    "occasions": []
-  },
-  {
-    "id": "at-the-name-of-jesus-2",
-    "title": "At the Name of Jesus",
-    "category": "song",
-    "catalogs": {
-      "novum": 32
     },
     "resources": [],
     "usageCount": 0,
@@ -69399,17 +68250,6 @@
     "category": "song",
     "catalogs": {
       "novum": 48
-    },
-    "resources": [],
-    "usageCount": 0,
-    "occasions": []
-  },
-  {
-    "id": "creator-of-the-stars-of-night",
-    "title": "Creator of the Stars of Night",
-    "category": "song",
-    "catalogs": {
-      "novum": 50
     },
     "resources": [],
     "usageCount": 0,
@@ -69559,17 +68399,6 @@
     "occasions": []
   },
   {
-    "id": "hosanna",
-    "title": "Hosanna",
-    "category": "song",
-    "catalogs": {
-      "novum": 76
-    },
-    "resources": [],
-    "usageCount": 0,
-    "occasions": []
-  },
-  {
     "id": "i-am-loved-by-god",
     "title": "I Am Loved by God",
     "category": "song",
@@ -69586,17 +68415,6 @@
     "category": "song",
     "catalogs": {
       "novum": 78
-    },
-    "resources": [],
-    "usageCount": 0,
-    "occasions": []
-  },
-  {
-    "id": "i-heard-the-voice-of-jesus-say-2",
-    "title": "I Heard the Voice of Jesus Say",
-    "category": "song",
-    "catalogs": {
-      "novum": 82
     },
     "resources": [],
     "usageCount": 0,
@@ -69905,17 +68723,6 @@
     "category": "song",
     "catalogs": {
       "novum": 134
-    },
-    "resources": [],
-    "usageCount": 0,
-    "occasions": []
-  },
-  {
-    "id": "turn-our-hearts-around-3",
-    "title": "Turn Our Hearts Around",
-    "category": "song",
-    "catalogs": {
-      "novum": 136
     },
     "resources": [],
     "usageCount": 0,
@@ -71288,24 +70095,6 @@
     ]
   },
   {
-    "id": "above-all--bolduc-ed-thomson-trevor",
-    "title": "Above All",
-    "composer": "Bolduc, Ed • Thomson, Trevor",
-    "category": "song",
-    "catalogs": {
-      "spiritSong": 168
-    },
-    "resources": [],
-    "usageCount": 0,
-    "occasions": [],
-    "topics": [
-      "Discipleship",
-      "Kingdom/Reign of God",
-      "Love for Others",
-      "Service/Social Concerns"
-    ]
-  },
-  {
     "id": "behold-the-cross--bolduc-ed-hart-sarah-ubowski-adam-ubowski-lori",
     "title": "Behold the Cross",
     "composer": "Bolduc, Ed • Hart, Sarah • Ubowski, Adam • Ubowski, Lori",
@@ -71591,24 +70380,6 @@
     ]
   },
   {
-    "id": "i-will-choose-christ--yackley-david",
-    "title": "I Will Choose Christ",
-    "composer": "Yackley, David",
-    "category": "song",
-    "catalogs": {
-      "spiritSong": 220
-    },
-    "resources": [],
-    "usageCount": 0,
-    "occasions": [],
-    "topics": [
-      "Discipleship",
-      "Journey",
-      "Obedience",
-      "Service/Social Concerns"
-    ]
-  },
-  {
     "id": "isaiah-61--maher-matt-modlin-rick-redman-matt",
     "title": "Isaiah 61",
     "composer": "Maher, Matt • Modlin, Rick • Redman, Matt",
@@ -71821,22 +70592,6 @@
     ]
   },
   {
-    "id": "bread-of-life--jefferson-thomas-w-petty-w-clifford-wesley-charles",
-    "title": "Bread of Life",
-    "composer": "Jefferson, Thomas W. • Petty, W. Clifford • Wesley, Charles",
-    "category": "song",
-    "catalogs": {
-      "spiritSong": 243
-    },
-    "resources": [],
-    "usageCount": 0,
-    "occasions": [],
-    "topics": [
-      "Redemption",
-      "Salvation"
-    ]
-  },
-  {
     "id": "like-the-bread--bolduc-ed-thomson-trevor",
     "title": "Like the Bread",
     "composer": "Bolduc, Ed • Thomson, Trevor",
@@ -71850,22 +70605,6 @@
     "topics": [
       "Eucharist",
       "God's Glory",
-      "Jesus Christ"
-    ]
-  },
-  {
-    "id": "here-at-this-table--cheri-richard-jefferson-thomas-w-robertson-jalonda",
-    "title": "Here at This Table",
-    "composer": "Cheri, Richard • Jefferson, Thomas W. • Robertson, Jalonda",
-    "category": "song",
-    "catalogs": {
-      "spiritSong": 248
-    },
-    "resources": [],
-    "usageCount": 0,
-    "occasions": [],
-    "topics": [
-      "Faithfulness",
       "Jesus Christ"
     ]
   },
@@ -71953,22 +70692,6 @@
       "Praise",
       "Redemption",
       "Salvation"
-    ]
-  },
-  {
-    "id": "amazing-grace--bolduc-ed",
-    "title": "Amazing Grace",
-    "composer": "Bolduc, Ed",
-    "category": "song",
-    "catalogs": {
-      "spiritSong": 265
-    },
-    "resources": [],
-    "usageCount": 0,
-    "occasions": [],
-    "topics": [
-      "Faith",
-      "Joy"
     ]
   },
   {
@@ -72321,18 +71044,6 @@
     ]
   },
   {
-    "id": "in-christ-alone--bolduc-ed-thomson-trevor-townend-stuart",
-    "title": "In Christ Alone",
-    "composer": "Bolduc, Ed • Thomson, Trevor • Townend, Stuart",
-    "category": "song",
-    "catalogs": {
-      "spiritSong": 320
-    },
-    "resources": [],
-    "usageCount": 0,
-    "occasions": []
-  },
-  {
     "id": "jesus-my-everything--bolduc-ed-thomson-trevor",
     "title": "Jesus, My Everything",
     "composer": "Bolduc, Ed • Thomson, Trevor",
@@ -72666,18 +71377,6 @@
       "Love of God for Us",
       "Ministry/Mission"
     ]
-  },
-  {
-    "id": "we-belong-to-you--thomson-victoria",
-    "title": "We Belong to You",
-    "composer": "Thomson, Victoria",
-    "category": "song",
-    "catalogs": {
-      "spiritSong": 368
-    },
-    "resources": [],
-    "usageCount": 0,
-    "occasions": []
   },
   {
     "id": "you-stand-knocking",
