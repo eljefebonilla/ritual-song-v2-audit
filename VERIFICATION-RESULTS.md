@@ -86,6 +86,6 @@
 
 4. **233 Organized Psalms files unmatched** — Mostly instrumentals without psalm numbers in filename (Ps-X) and canticles (Luke 1, Isaiah 12). Would need psalm songs created for these canticles.
 
-5. **Community psalter filtering not yet wired into UI** — The `filterPsalmResourcesByCommunity()` function exists but isn't called in SongDetailPanel or OccasionMusicSection yet. The data infrastructure is ready.
+5. **Community psalter filtering wired into UI** — SongDetailPanel now filters psalm resources by community psalter when viewed from occasion pages. Reflections/Foundations/Heritage see Lyric Psalter; Generations/Elevations see Spirit & Psalm.
 
 6. **Planner inline editing** — Not implemented yet. Songs can be edited from the library detail panel but not directly from the planner grid.
