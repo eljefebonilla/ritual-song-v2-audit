@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import type { RefObject } from "react";
-import type { WorshipSlot, OccasionResource, LectionarySynopsis, LibrarySong } from "@/lib/types";
+import type { WorshipSlot, OccasionResource, LectionarySynopsis } from "@/lib/types";
 import { SECTION_LABELS } from "@/lib/worship-slots";
 import { useMedia } from "@/lib/media-context";
 import InteractiveSongSlot from "./InteractiveSongSlot";
@@ -18,7 +18,6 @@ interface SlotListProps {
   presider?: string;
   massNotes?: string[];
   synopsis?: LectionarySynopsis | null;
-  psalmSuggestions?: LibrarySong[];
   songHints?: Map<string, string>;
 }
 
@@ -186,42 +185,6 @@ function AntiphonRow({ slot }: { slot: WorshipSlot }) {
   );
 }
 
-function PsalmSuggestionRow({ suggestions }: { suggestions: LibrarySong[] }) {
-  const [expanded, setExpanded] = useState(false);
-  if (suggestions.length === 0) return null;
-
-  const shown = expanded ? suggestions : suggestions.slice(0, 3);
-
-  return (
-    <div className="px-3 py-2 bg-stone-50/50">
-      <div className="flex items-center gap-3">
-        <span className="w-28 shrink-0" />
-        <span className="w-7 shrink-0" />
-        <div className="min-w-0 flex-1">
-          <p className="text-[10px] uppercase tracking-wider font-semibold text-stone-400 mb-1">
-            Suggested settings ({suggestions.length})
-          </p>
-          <div className="space-y-0.5">
-            {shown.map((s) => (
-              <p key={s.id} className="text-xs text-stone-500">
-                <span className="font-medium text-stone-600">{s.title}</span>
-                {s.composer && <span className="text-stone-400"> — {s.composer}</span>}
-              </p>
-            ))}
-          </div>
-          {suggestions.length > 3 && (
-            <button
-              onClick={() => setExpanded(!expanded)}
-              className="text-[10px] text-stone-400 hover:text-stone-600 mt-1"
-            >
-              {expanded ? "Show less" : `+${suggestions.length - 3} more`}
-            </button>
-          )}
-        </div>
-      </div>
-    </div>
-  );
-}
 
 function MassSettingRow({ slot }: { slot: WorshipSlot }) {
   if (!slot.massSetting) return null;
@@ -336,7 +299,6 @@ export default function SlotList({
   presider,
   massNotes,
   synopsis,
-  psalmSuggestions,
   songHints,
 }: SlotListProps) {
   const [expandedReadings, setExpandedReadings] = useState<Set<string>>(new Set());
@@ -395,38 +357,29 @@ export default function SlotList({
           />
           <div className="divide-y divide-stone-100">
             {section.slots.map((slot) => {
-              const isPsalmSlot = slot.role === "responsorial_psalm";
               const slotHint = slot.song?.title ? songHints?.get(slot.song.title) : undefined;
               switch (slot.kind) {
                 case "song":
                   return (
-                    <div key={slot.id}>
-                      <SongSlotRow
-                        slot={slot}
-                        selectedSongId={selectedSongId}
-                        onSongSelect={onSongSelect}
-                        selectedRowRef={selectedRowRef}
-                        audioOverrides={audioOverrides}
-                        hint={slotHint}
-                      />
-                      {isPsalmSlot && psalmSuggestions && psalmSuggestions.length > 0 && (
-                        <PsalmSuggestionRow suggestions={psalmSuggestions} />
-                      )}
-                    </div>
+                    <SongSlotRow
+                      key={slot.id}
+                      slot={slot}
+                      selectedSongId={selectedSongId}
+                      onSongSelect={onSongSelect}
+                      selectedRowRef={selectedRowRef}
+                      audioOverrides={audioOverrides}
+                      hint={slotHint}
+                    />
                   );
                 case "reading":
                   return (
-                    <div key={slot.id}>
-                      <ReadingRow
-                        slot={slot}
-                        synopsis={synopsis}
-                        isExpanded={slot.reading ? expandedReadings.has(slot.reading.type) : false}
-                        onToggle={slot.reading ? () => toggleReading(slot.reading!.type) : undefined}
-                      />
-                      {isPsalmSlot && psalmSuggestions && psalmSuggestions.length > 0 && (
-                        <PsalmSuggestionRow suggestions={psalmSuggestions} />
-                      )}
-                    </div>
+                    <ReadingRow
+                      key={slot.id}
+                      slot={slot}
+                      synopsis={synopsis}
+                      isExpanded={slot.reading ? expandedReadings.has(slot.reading.type) : false}
+                      onToggle={slot.reading ? () => toggleReading(slot.reading!.type) : undefined}
+                    />
                   );
                 case "antiphon":
                   return <AntiphonRow key={slot.id} slot={slot} />;

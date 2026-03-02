@@ -380,7 +380,6 @@ export default function OccasionMusicSection({
             presider={activePlan.presider}
             massNotes={activePlan.massNotes}
             synopsis={synopsis}
-            psalmSuggestions={psalmSuggestions}
             songHints={songHints}
           />
         </div>
@@ -404,6 +403,8 @@ export default function OccasionMusicSection({
                 onClose={() => setSelectedSongId(null)}
                 onAudioUploaded={handleAudioUploaded}
                 communityId={activePlan.communityId}
+                psalmSuggestions={selectedSong.category === "psalm" ? psalmSuggestions.filter((s) => s.id !== selectedSong.id) : undefined}
+                onSelectSuggestion={handleSongSelect}
               />
             </div>
           </div>
@@ -417,6 +418,8 @@ export default function OccasionMusicSection({
             song={selectedSong}
             onClose={() => setSelectedSongId(null)}
             communityId={activePlan.communityId}
+            psalmSuggestions={selectedSong.category === "psalm" ? psalmSuggestions.filter((s) => s.id !== selectedSong.id) : undefined}
+            onSelectSuggestion={handleSongSelect}
           />
         </div>
       )}

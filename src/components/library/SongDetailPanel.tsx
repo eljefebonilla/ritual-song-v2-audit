@@ -20,6 +20,8 @@ interface SongDetailPanelProps {
   onClose: () => void;
   onAudioUploaded?: (songId: string, url: string) => void;
   communityId?: string;
+  psalmSuggestions?: LibrarySong[];
+  onSelectSuggestion?: (songId: string) => void;
 }
 
 const RESOURCE_TYPE_LABELS: Record<SongResourceType, string> = {
@@ -636,6 +638,8 @@ export default function SongDetailPanel({
   onClose,
   onAudioUploaded,
   communityId,
+  psalmSuggestions,
+  onSelectSuggestion,
 }: SongDetailPanelProps) {
   const router = useRouter();
   const { role } = useUser();
@@ -651,6 +655,7 @@ export default function SongDetailPanel({
   const [newUrl, setNewUrl] = useState("");
   const [uploadFile, setUploadFile] = useState<File | null>(null);
   const [saving, setSaving] = useState(false);
+  const [saveError, setSaveError] = useState<string | null>(null);
   const uploadingRef = useRef(false);
   const [localResources, setLocalResources] = useState<SongResource[]>([]);
 
@@ -793,6 +798,7 @@ export default function SongDetailPanel({
 
   const handleAddLink = async () => {
     setSaving(true);
+    setSaveError(null);
     try {
       const res = await fetch(`/api/songs/${song.id}/resources`, {
         method: "POST",
@@ -809,7 +815,12 @@ export default function SongDetailPanel({
         setAddingResource(false);
         setNewLabel("");
         setNewUrl("");
+      } else {
+        const data = await res.json().catch(() => ({}));
+        setSaveError(data.error || `Failed (${res.status})`);
       }
+    } catch (err) {
+      setSaveError(err instanceof Error ? err.message : "Network error");
     } finally {
       setSaving(false);
     }
@@ -845,6 +856,7 @@ export default function SongDetailPanel({
     if (!uploadFile || !newLabel.trim() || uploadingRef.current) return;
     uploadingRef.current = true;
     setSaving(true);
+    setSaveError(null);
     try {
       const formData = new FormData();
       formData.append("file", uploadFile);
@@ -875,7 +887,12 @@ export default function SongDetailPanel({
         setNewLabel("");
         setUploadFile(null);
         if (fileInputRef.current) fileInputRef.current.value = "";
+      } else {
+        const data = await res.json().catch(() => ({}));
+        setSaveError(data.error || `Upload failed (${res.status})`);
       }
+    } catch (err) {
+      setSaveError(err instanceof Error ? err.message : "Network error");
     } finally {
       setSaving(false);
       uploadingRef.current = false;
@@ -1152,6 +1169,9 @@ export default function SongDetailPanel({
                         placeholder="URL (YouTube, Dropbox, etc.)"
                         className="w-full text-xs border border-stone-200 rounded-md px-2 py-1.5"
                       />
+                      {saveError && (
+                        <p className="text-[10px] text-red-600 bg-red-50 border border-red-200 rounded px-2 py-1">{saveError}</p>
+                      )}
                       <div className="flex gap-2">
                         <button
                           disabled={saving || !newLabel.trim()}
@@ -1161,7 +1181,7 @@ export default function SongDetailPanel({
                           {saving ? "Saving..." : "Add Link"}
                         </button>
                         <button
-                          onClick={() => setAddingResource(false)}
+                          onClick={() => { setAddingResource(false); setSaveError(null); }}
                           className="px-3 py-1.5 text-xs font-medium text-stone-500 rounded-md hover:bg-stone-100 transition-colors"
                         >
                           Cancel
@@ -1243,6 +1263,9 @@ export default function SongDetailPanel({
                         placeholder="Label (e.g., Lead Sheet, LS AIM)"
                         className="w-full text-xs border border-stone-200 rounded-md px-2 py-1.5"
                       />
+                      {saveError && (
+                        <p className="text-[10px] text-red-600 bg-red-50 border border-red-200 rounded px-2 py-1">{saveError}</p>
+                      )}
                       <div className="flex gap-2">
                         <button
                           disabled={saving || !uploadFile || !newLabel.trim()}
@@ -1256,6 +1279,7 @@ export default function SongDetailPanel({
                             setAddingResource(false);
                             setUploadFile(null);
                             setDragOver(false);
+                            setSaveError(null);
                             if (fileInputRef.current) fileInputRef.current.value = "";
                           }}
                           className="px-3 py-1.5 text-xs font-medium text-stone-500 rounded-md hover:bg-stone-100 transition-colors"
@@ -1288,6 +1312,31 @@ export default function SongDetailPanel({
           {/* Star Rating */}
           <StarRating songId={song.id} />
         </div>
+
+        {/* Psalm Suggestions */}
+        {psalmSuggestions && psalmSuggestions.length > 0 && onSelectSuggestion && (
+          <div className="border-t border-stone-200 p-4">
+            <h3 className="text-[10px] uppercase tracking-widest font-bold text-stone-400 mb-2">
+              Other Settings ({psalmSuggestions.length})
+            </h3>
+            <div className="space-y-1">
+              {psalmSuggestions.map((s) => (
+                <button
+                  key={s.id}
+                  onClick={() => onSelectSuggestion(s.id)}
+                  className="w-full text-left px-2 py-1.5 rounded hover:bg-stone-50 transition-colors group"
+                >
+                  <p className="text-xs font-medium text-stone-600 group-hover:text-stone-900 truncate">
+                    {s.title}
+                  </p>
+                  {s.composer && (
+                    <p className="text-[10px] text-stone-400">{s.composer}</p>
+                  )}
+                </button>
+              ))}
+            </div>
+          </div>
+        )}
 
         {/* Occasions list */}
         {song.occasions.length > 0 && (
