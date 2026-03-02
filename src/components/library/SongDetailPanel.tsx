@@ -22,6 +22,9 @@ interface SongDetailPanelProps {
   communityId?: string;
   psalmSuggestions?: LibrarySong[];
   onSelectSuggestion?: (songId: string) => void;
+  occasionId?: string;
+  slotRole?: string;
+  onSlotReplace?: (songId: string, title: string, composer: string) => void;
 }
 
 const RESOURCE_TYPE_LABELS: Record<SongResourceType, string> = {
@@ -328,6 +331,159 @@ function getLastName(composer: string | undefined): string {
   const first = composer.split(/[\/&,]/).map((s) => s.trim())[0];
   const parts = first.split(/\s+/);
   return parts[parts.length - 1];
+}
+
+// === Slot Recommendations ===
+
+const SLOT_TO_REC_POSITION: Record<string, string> = {
+  prelude: "prelude",
+  gathering: "gathering",
+  offertory: "offertory",
+  communion: "communion1",
+  sending: "sending",
+  responsorial_psalm: "psalm",
+  gospel_acclamation: "gospelAcclamation",
+};
+
+const REC_POSITION_LABELS: Record<string, string> = {
+  prelude: "Prelude",
+  gathering: "Gathering",
+  offertory: "Offertory",
+  communion1: "Communion",
+  sending: "Sending",
+  psalm: "Psalm",
+  gospelAcclamation: "Gospel Accl.",
+};
+
+interface SlimRec {
+  id: string;
+  title: string;
+  composer?: string;
+  score: number;
+  reasons: string[];
+}
+
+function getDismissedRecs(): string[] {
+  try {
+    const raw = localStorage.getItem("rs_dismissed_recs");
+    return raw ? JSON.parse(raw) : [];
+  } catch {
+    return [];
+  }
+}
+
+function addDismissedRec(songId: string) {
+  const current = getDismissedRecs();
+  if (!current.includes(songId)) {
+    current.push(songId);
+    localStorage.setItem("rs_dismissed_recs", JSON.stringify(current));
+  }
+}
+
+function SlotRecommendations({
+  occasionId,
+  slotRole,
+  currentSongId,
+  onReplace,
+}: {
+  occasionId: string;
+  slotRole: string;
+  currentSongId: string;
+  onReplace?: (songId: string, title: string, composer: string) => void;
+}) {
+  const recPosition = SLOT_TO_REC_POSITION[slotRole];
+  const [recs, setRecs] = useState<SlimRec[]>([]);
+  const [loading, setLoading] = useState(true);
+  const [dismissed, setDismissed] = useState<Set<string>>(() => new Set(getDismissedRecs()));
+
+  useEffect(() => {
+    if (!recPosition) {
+      setLoading(false);
+      return;
+    }
+    const excludeIds = [currentSongId, ...dismissed].filter(Boolean).join(",");
+    fetch(`/api/recommendations/${occasionId}?limit=8&exclude=${excludeIds}`)
+      .then((res) => res.json())
+      .then((data) => {
+        const posRecs: SlimRec[] = data[recPosition] || [];
+        setRecs(posRecs.filter((r) => r.id !== currentSongId && !dismissed.has(r.id)));
+      })
+      .catch(() => setRecs([]))
+      .finally(() => setLoading(false));
+  }, [occasionId, recPosition, currentSongId, dismissed]);
+
+  if (!recPosition) return null;
+  if (loading) {
+    return (
+      <div className="mt-4 pt-4 border-t border-stone-100">
+        <h3 className="text-[10px] uppercase tracking-widest font-bold text-stone-400 mb-2">
+          Alternatives for {REC_POSITION_LABELS[recPosition] || recPosition}
+        </h3>
+        <p className="text-xs text-stone-300 animate-pulse">Loading...</p>
+      </div>
+    );
+  }
+  if (recs.length === 0) return null;
+
+  const handleDismiss = (songId: string) => {
+    addDismissedRec(songId);
+    setDismissed((prev) => new Set(prev).add(songId));
+    setRecs((prev) => prev.filter((r) => r.id !== songId));
+  };
+
+  return (
+    <div className="mt-4 pt-4 border-t border-stone-100">
+      <h3 className="text-[10px] uppercase tracking-widest font-bold text-stone-400 mb-2">
+        Alternatives for {REC_POSITION_LABELS[recPosition] || recPosition}
+      </h3>
+      <div className="space-y-1">
+        {recs.map((rec) => (
+          <div
+            key={rec.id}
+            className="flex items-start gap-2 px-2 py-1.5 rounded hover:bg-stone-50 transition-colors cursor-pointer"
+            onDoubleClick={() => onReplace?.(rec.id, rec.title, rec.composer || "")}
+            title="Double-click to use this song"
+          >
+            <div className="min-w-0 flex-1">
+              <p className="text-xs font-medium text-stone-700 truncate">
+                {rec.title}
+              </p>
+              {rec.composer && (
+                <p className="text-[10px] text-stone-400 truncate">{rec.composer}</p>
+              )}
+              {rec.reasons.length > 0 && (
+                <div className="flex flex-wrap gap-0.5 mt-0.5">
+                  {rec.reasons.slice(0, 3).map((reason, j) => (
+                    <span
+                      key={j}
+                      className="inline-block px-1 py-0 text-[7px] font-medium rounded bg-amber-50 text-amber-600"
+                    >
+                      {reason}
+                    </span>
+                  ))}
+                </div>
+              )}
+            </div>
+            <button
+              onClick={(e) => {
+                e.stopPropagation();
+                handleDismiss(rec.id);
+              }}
+              className="shrink-0 p-0.5 text-stone-200 hover:text-red-400 transition-colors mt-0.5"
+              title="Don't recommend this"
+            >
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                <path d="M10 15v4a3 3 0 0 0 3 3l4-9V2H5.72a2 2 0 0 0-2 1.7l-1.38 9a2 2 0 0 0 2 2.3zm7-13h2.67A2.31 2.31 0 0 1 22 4v7a2.31 2.31 0 0 1-2.33 2H17" />
+              </svg>
+            </button>
+          </div>
+        ))}
+      </div>
+      <p className="text-[9px] text-stone-300 mt-1.5 px-2">
+        Double-click to replace current song
+      </p>
+    </div>
+  );
 }
 
 // === Song Metadata Section ===
@@ -640,6 +796,9 @@ export default function SongDetailPanel({
   communityId,
   psalmSuggestions,
   onSelectSuggestion,
+  occasionId,
+  slotRole,
+  onSlotReplace,
 }: SongDetailPanelProps) {
   const router = useRouter();
   const { role } = useUser();
@@ -1322,6 +1481,16 @@ export default function SongDetailPanel({
                 </button>
               )}
             </div>
+          )}
+
+          {/* Slot Recommendations */}
+          {occasionId && slotRole && (
+            <SlotRecommendations
+              occasionId={occasionId}
+              slotRole={slotRole}
+              currentSongId={song.id}
+              onReplace={onSlotReplace}
+            />
           )}
 
           {/* Lyrics & Metadata (admin only) */}

@@ -19,9 +19,12 @@ import { rowToLiturgicalDay } from "@/lib/liturgical-helpers";
 import { findPsalmSettings } from "@/lib/psalm-matching";
 import { getTitleIndex, pickBestMatch } from "@/lib/song-library";
 import SlotList from "./SlotList";
+import SlotEditPopover from "./SlotEditPopover";
 import SongDetailPanel from "@/components/library/SongDetailPanel";
+import { useUser } from "@/lib/user-context";
 
 interface OccasionMusicSectionProps {
+  occasionId: string;
   plans: MusicPlan[];
   readings: Reading[];
   antiphons: Antiphon[];
@@ -118,7 +121,22 @@ function extractSongTitles(plan: MusicPlan): string[] {
   return titles;
 }
 
+// Map WorshipSlot.role → MusicPlan field name
+const ROLE_TO_FIELD: Record<string, string> = {
+  prelude: "prelude",
+  gathering: "gathering",
+  penitential_act: "penitentialAct",
+  gloria: "gloria",
+  responsorial_psalm: "responsorialPsalm",
+  gospel_acclamation: "gospelAcclamation",
+  offertory: "offertory",
+  lords_prayer: "lordsPrayer",
+  fraction_rite: "fractionRite",
+  sending: "sending",
+};
+
 export default function OccasionMusicSection({
+  occasionId,
   plans,
   readings,
   antiphons,
@@ -141,9 +159,17 @@ export default function OccasionMusicSection({
 
   const [activeIdx, setActiveIdx] = useState(0);
   const [selectedSongId, setSelectedSongId] = useState<string | null>(null);
+  const [selectedSlotRole, setSelectedSlotRole] = useState<string | null>(null);
   const [panelOffset, setPanelOffset] = useState(0);
   const [audioOverrides, setAudioOverrides] = useState<Record<string, string>>({});
   const [liturgicalDay, setLiturgicalDay] = useState<LiturgicalDay | null>(null);
+  const [editingSlot, setEditingSlot] = useState<{
+    role: string;
+    anchorRect: DOMRect;
+    currentSong?: { title: string; composer?: string };
+  } | null>(null);
+
+  const { isAdmin } = useUser();
 
   const containerRef = useRef<HTMLDivElement>(null);
   const selectedRowRef = useRef<HTMLDivElement>(null);
@@ -175,13 +201,102 @@ export default function OccasionMusicSection({
     return null;
   }, [selectedSongId, librarySongs]);
 
-  const handleSongSelect = (songId: string) => {
+  const handleSongSelect = (songId: string, slotRole?: string) => {
     setSelectedSongId((prev) => (prev === songId ? null : songId));
+    setSelectedSlotRole(slotRole ?? null);
   };
 
   const handleAudioUploaded = useCallback((songId: string, url: string) => {
     setAudioOverrides((prev) => ({ ...prev, [songId]: url }));
   }, []);
+
+  const handleSlotEdit = useCallback(
+    (role: string, anchorRect: DOMRect, currentSong?: { title: string; composer?: string }) => {
+      setEditingSlot({ role, anchorRect, currentSong });
+    },
+    []
+  );
+
+  const handleSlotSave = useCallback(
+    async (role: string, title: string, composer: string) => {
+      // Communion songs use array indexing: "communion_0", "communion_1", etc.
+      const communionMatch = role.match(/^communion_(\d+)$/);
+      let field: string;
+      let value: unknown;
+
+      if (communionMatch) {
+        // For communion songs, we update the whole communionSongs array
+        const idx = parseInt(communionMatch[1], 10);
+        const current = activePlan.communionSongs ? [...activePlan.communionSongs] : [];
+        while (current.length <= idx) current.push({ title: "" });
+        current[idx] = { title, composer };
+        field = "communionSongs";
+        value = current;
+      } else if (role === "responsorial_psalm") {
+        field = "responsorialPsalm";
+        value = { psalm: title, setting: composer || undefined };
+      } else {
+        field = ROLE_TO_FIELD[role] || role;
+        value = { title, composer: composer || undefined };
+      }
+
+      try {
+        const res = await fetch(`/api/occasions/${occasionId}/music-plan`, {
+          method: "PUT",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ communityId: activePlan.communityId, field, value }),
+        });
+        if (res.ok) {
+          window.location.reload();
+        }
+      } catch {
+        // Silently fail — user can retry
+      }
+    },
+    [occasionId, activePlan]
+  );
+
+  const handleSlotClear = useCallback(
+    async (role: string) => {
+      const communionMatch = role.match(/^communion_(\d+)$/);
+      let field: string;
+      let value: unknown = null;
+
+      if (communionMatch) {
+        const idx = parseInt(communionMatch[1], 10);
+        const current = activePlan.communionSongs ? [...activePlan.communionSongs] : [];
+        current.splice(idx, 1);
+        field = "communionSongs";
+        value = current.length > 0 ? current : null;
+      } else if (role === "responsorial_psalm") {
+        field = "responsorialPsalm";
+      } else {
+        field = ROLE_TO_FIELD[role] || role;
+      }
+
+      try {
+        const res = await fetch(`/api/occasions/${occasionId}/music-plan`, {
+          method: "PUT",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ communityId: activePlan.communityId, field, value }),
+        });
+        if (res.ok) {
+          window.location.reload();
+        }
+      } catch {
+        // Silently fail
+      }
+    },
+    [occasionId, activePlan]
+  );
+
+  const handleSlotReplace = useCallback(
+    async (_songId: string, title: string, composer: string) => {
+      if (!selectedSlotRole) return;
+      await handleSlotSave(selectedSlotRole, title, composer);
+    },
+    [selectedSlotRole, handleSlotSave]
+  );
 
   // Fetch liturgical day for this occasion
   useEffect(() => {
@@ -314,6 +429,7 @@ export default function OccasionMusicSection({
                   onClick={() => {
                     setActiveIdx(i);
                     setSelectedSongId(null);
+                    setSelectedSlotRole(null);
                   }}
                   className={`relative px-4 py-2.5 text-xs font-semibold uppercase tracking-wider transition-colors ${
                     isActive ? "" : "hover:opacity-80"
@@ -381,6 +497,8 @@ export default function OccasionMusicSection({
             massNotes={activePlan.massNotes}
             synopsis={synopsis}
             songHints={songHints}
+            isAdmin={isAdmin}
+            onSlotEdit={handleSlotEdit}
           />
         </div>
 
@@ -405,6 +523,9 @@ export default function OccasionMusicSection({
                 communityId={activePlan.communityId}
                 psalmSuggestions={selectedSong.category === "psalm" ? psalmSuggestions.filter((s) => s.id !== selectedSong.id) : undefined}
                 onSelectSuggestion={handleSongSelect}
+                occasionId={occasionId}
+                slotRole={selectedSlotRole ?? undefined}
+                onSlotReplace={handleSlotReplace}
               />
             </div>
           </div>
@@ -420,8 +541,23 @@ export default function OccasionMusicSection({
             communityId={activePlan.communityId}
             psalmSuggestions={selectedSong.category === "psalm" ? psalmSuggestions.filter((s) => s.id !== selectedSong.id) : undefined}
             onSelectSuggestion={handleSongSelect}
+            occasionId={occasionId}
+            slotRole={selectedSlotRole ?? undefined}
+            onSlotReplace={handleSlotReplace}
           />
         </div>
+      )}
+
+      {/* Slot edit popover */}
+      {editingSlot && (
+        <SlotEditPopover
+          role={editingSlot.role}
+          currentSong={editingSlot.currentSong}
+          anchorRect={editingSlot.anchorRect}
+          onSave={handleSlotSave}
+          onClear={handleSlotClear}
+          onClose={() => setEditingSlot(null)}
+        />
       )}
     </div>
   );

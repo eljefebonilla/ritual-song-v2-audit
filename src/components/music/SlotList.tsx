@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useRef } from "react";
 import type { RefObject } from "react";
 import type { WorshipSlot, OccasionResource, LectionarySynopsis } from "@/lib/types";
 import { SECTION_LABELS } from "@/lib/worship-slots";
@@ -12,13 +12,15 @@ interface SlotListProps {
   slots: WorshipSlot[];
   seasonColor: string;
   selectedSongId?: string | null;
-  onSongSelect?: (songId: string) => void;
+  onSongSelect?: (songId: string, slotRole: string) => void;
   selectedRowRef?: RefObject<HTMLDivElement | null>;
   audioOverrides?: Record<string, string>;
   presider?: string;
   massNotes?: string[];
   synopsis?: LectionarySynopsis | null;
   songHints?: Map<string, string>;
+  isAdmin?: boolean;
+  onSlotEdit?: (role: string, anchorRect: DOMRect, currentSong?: { title: string; composer?: string }) => void;
 }
 
 function SectionHeader({ title, color }: { title: string; color: string }) {
@@ -235,15 +237,40 @@ function SongSlotRow({
   selectedRowRef,
   audioOverrides,
   hint,
+  isAdmin,
+  onSlotEdit,
 }: {
   slot: WorshipSlot;
   selectedSongId?: string | null;
-  onSongSelect?: (songId: string) => void;
+  onSongSelect?: (songId: string, slotRole: string) => void;
   selectedRowRef?: RefObject<HTMLDivElement | null>;
   audioOverrides?: Record<string, string>;
   hint?: string;
+  isAdmin?: boolean;
+  onSlotEdit?: (role: string, anchorRect: DOMRect, currentSong?: { title: string; composer?: string }) => void;
 }) {
+  const rowRef = useRef<HTMLDivElement>(null);
+
   if (!slot.song) return null;
+
+  const handleEditClick = (e: React.MouseEvent) => {
+    e.stopPropagation();
+    const el = rowRef.current;
+    if (!el || !onSlotEdit) return;
+    onSlotEdit(slot.role, el.getBoundingClientRect(), slot.song);
+  };
+
+  const editButton = isAdmin && onSlotEdit ? (
+    <button
+      onClick={handleEditClick}
+      className="shrink-0 p-1 text-stone-300 hover:text-stone-600 hover:bg-stone-100 rounded transition-colors"
+      title="Edit slot"
+    >
+      <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+        <path d="M17 3a2.828 2.828 0 1 1 4 4L7.5 20.5 2 22l1.5-5.5L17 3z" />
+      </svg>
+    </button>
+  ) : null;
 
   const hintEl = hint ? (
     <div className="px-3 pb-1 -mt-1">
@@ -263,14 +290,17 @@ function SongSlotRow({
       : slot.resolvedSong;
     return (
       <>
-        <InteractiveSongSlot
-          label={slot.label}
-          song={slot.song}
-          resolved={resolved}
-          isSelected={isSelected}
-          onSelect={onSongSelect ? () => onSongSelect(slot.resolvedSong!.id) : undefined}
-          rowRef={isSelected ? selectedRowRef : undefined}
-        />
+        <div ref={rowRef}>
+          <InteractiveSongSlot
+            label={slot.label}
+            song={slot.song}
+            resolved={resolved}
+            isSelected={isSelected}
+            onSelect={onSongSelect ? () => onSongSelect(slot.resolvedSong!.id, slot.role) : undefined}
+            rowRef={isSelected ? selectedRowRef : undefined}
+            rightAction={editButton}
+          />
+        </div>
         {hintEl}
       </>
     );
@@ -279,10 +309,11 @@ function SongSlotRow({
   return (
     <>
       <div
+        ref={rowRef}
         className={onSongSelect ? "cursor-pointer hover:bg-stone-50 rounded transition-colors" : ""}
-        onClick={onSongSelect ? () => onSongSelect(`unresolved:${slot.song!.title}`) : undefined}
+        onClick={onSongSelect ? () => onSongSelect(`unresolved:${slot.song!.title}`, slot.role) : undefined}
       >
-        <SongSlot label={slot.label} song={slot.song} />
+        <SongSlot label={slot.label} song={slot.song} rightAction={editButton} />
       </div>
       {hintEl}
     </>
@@ -300,6 +331,8 @@ export default function SlotList({
   massNotes,
   synopsis,
   songHints,
+  isAdmin,
+  onSlotEdit,
 }: SlotListProps) {
   const [expandedReadings, setExpandedReadings] = useState<Set<string>>(new Set());
 
@@ -369,6 +402,8 @@ export default function SlotList({
                       selectedRowRef={selectedRowRef}
                       audioOverrides={audioOverrides}
                       hint={slotHint}
+                      isAdmin={isAdmin}
+                      onSlotEdit={onSlotEdit}
                     />
                   );
                 case "reading":

@@ -12,6 +12,7 @@ interface InteractiveSongSlotProps {
   isSelected?: boolean;
   onSelect?: () => void;
   rowRef?: RefObject<HTMLDivElement | null>;
+  rightAction?: React.ReactNode;
 }
 
 const RESOURCE_TYPES = [
@@ -37,6 +38,7 @@ export default function InteractiveSongSlot({
   isSelected,
   onSelect,
   rowRef,
+  rightAction,
 }: InteractiveSongSlotProps) {
   const { play, stop, current } = useMedia();
   const fileInputRef = useRef<HTMLInputElement>(null);
@@ -190,6 +192,8 @@ export default function InteractiveSongSlot({
           <p className="text-xs text-stone-400 italic">{song.description}</p>
         )}
       </div>
+
+      {rightAction}
 
       {/* Drop zone indicator */}
       {dragOver && (

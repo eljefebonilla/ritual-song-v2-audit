@@ -1,4 +1,5 @@
 import { NextRequest, NextResponse } from "next/server";
+import { revalidatePath } from "next/cache";
 import { verifyAdmin } from "@/lib/admin";
 import fs from "fs";
 import path from "path";
@@ -68,6 +69,8 @@ export async function PUT(
 
     // Write back
     fs.writeFileSync(filePath, JSON.stringify(occasion, null, 2), "utf-8");
+
+    revalidatePath(`/occasion/${id}`);
 
     return NextResponse.json({ success: true, plan });
   } catch (err) {
