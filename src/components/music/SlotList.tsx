@@ -453,6 +453,7 @@ export default function SlotList({
                   case "mass_setting":
                     return <MassSettingRow key={slot.id} slot={slot} isAdmin={isAdmin} onSlotEdit={onSlotEdit} />;
                   case "resource":
+                    if (!isAdmin && slot.role === "gospel_acclamation") return null;
                     return <ResourceRow key={slot.id} slot={slot} />;
                   default:
                     return null;

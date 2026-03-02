@@ -12,7 +12,7 @@ interface SongResult {
 }
 
 const ROLE_CATEGORY_FILTER: Record<string, string> = {
-  gospel_acclamation: "gospel_acclamation_refrain",
+  gospel_acclamation: "gospel_acclamation",
   responsorial_psalm: "psalm",
   gloria: "gloria",
 };
@@ -209,6 +209,19 @@ export default function SlotEditPopover({
                     Enter manually
                   </button>
                 </p>
+              )}
+              {currentSong && (
+                <div className="mt-3 pt-2 border-t border-stone-100 flex items-center justify-between">
+                  <p className="text-xs text-stone-400 truncate">
+                    Current: <span className="text-stone-600">{currentSong.title}</span>
+                  </p>
+                  <button
+                    onClick={handleClear}
+                    className="text-xs text-red-500 hover:text-red-700 shrink-0 ml-2"
+                  >
+                    Clear
+                  </button>
+                </div>
               )}
             </>
           ) : (
