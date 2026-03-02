@@ -57,7 +57,7 @@ interface SidebarProps {
 export default function Sidebar({ open, onClose }: SidebarProps) {
   const pathname = usePathname();
   const [collapsed, setCollapsed] = useState(false);
-  const { isAuthenticated, isAdmin, displayName, signOut } = useUser();
+  const { role, setRole, isAuthenticated, isAdmin, displayName, signOut } = useUser();
 
   // Close mobile sidebar on route change
   useEffect(() => {
@@ -393,6 +393,34 @@ export default function Sidebar({ open, onClose }: SidebarProps) {
           </>
         )}
       </nav>
+
+      {/* Role Toggle */}
+      {!collapsed && (
+        <div className="px-4 py-2 border-t border-parish-gold/20">
+          <div className="flex rounded-md bg-stone-800 p-0.5">
+            <button
+              onClick={() => setRole("admin")}
+              className={`flex-1 px-2 py-1 text-[10px] font-medium rounded transition-colors ${
+                role === "admin"
+                  ? "bg-parish-gold text-stone-900"
+                  : "text-stone-400 hover:text-stone-200"
+              }`}
+            >
+              Music Director
+            </button>
+            <button
+              onClick={() => setRole("member")}
+              className={`flex-1 px-2 py-1 text-[10px] font-medium rounded transition-colors ${
+                role === "member"
+                  ? "bg-parish-gold text-stone-900"
+                  : "text-stone-400 hover:text-stone-200"
+              }`}
+            >
+              Choir Member
+            </button>
+          </div>
+        </div>
+      )}
 
       {/* Footer */}
       {!collapsed && (

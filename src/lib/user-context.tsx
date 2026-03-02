@@ -49,7 +49,11 @@ const UserContext = createContext<UserContextType>({
 export function UserProvider({ children }: { children: ReactNode }) {
   const [user, setUser] = useState<User | null>(null);
   const [profile, setProfile] = useState<Profile | null>(null);
-  const [roleOverride, setRoleOverride] = useState<UserRole | null>(null);
+  const [roleOverride, setRoleOverride] = useState<UserRole | null>(() => {
+    if (typeof window === "undefined") return null;
+    const stored = localStorage.getItem("rs_role_override");
+    return stored === "admin" || stored === "member" ? stored : null;
+  });
   const [loading, setLoading] = useState(true);
 
   // Defer Supabase client creation to avoid SSR prerender failures
@@ -120,6 +124,7 @@ export function UserProvider({ children }: { children: ReactNode }) {
   // Allow role toggle for anyone (gate-code users can switch to Music Director view)
   function setRole(newRole: UserRole) {
     setRoleOverride(newRole);
+    localStorage.setItem("rs_role_override", newRole);
   }
 
   const displayName = profile?.full_name ?? (user ? "Member" : "Guest");
