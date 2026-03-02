@@ -1,0 +1,444 @@
+{
+  "_meta": {
+    "title": "Music Features — GIRM + Sing to the Lord Consolidation",
+    "description": "Music-related feature specifications derived from the General Instruction of the Roman Missal (2011) and Sing to the Lord: Music in Divine Worship (USCCB, 2007). These features are scoped to music planning, song selection, cantor/accompanist roles, and the musical dimensions of liturgical celebration.",
+    "sources": [
+      "General Instruction of the Roman Missal (GIRM), Third Typical Edition, 2011",
+      "Sing to the Lord: Music in Divine Worship (STL), USCCB, 2007"
+    ],
+    "generatedDate": "2026-03-01",
+    "totalFeatures": 14
+  },
+  "features": [
+    {
+      "id": "chant_hierarchy",
+      "name": "Chant Hierarchy Engine",
+      "category": "song_selection",
+      "priority": 5,
+      "effort": "medium",
+      "impact": "very_high",
+      "status": "planned",
+      "summary": "The GIRM prescribes a 4-option hierarchy for processional chants. Surface proper antiphon texts alongside hymn selections so planners see the full liturgical picture.",
+      "girmRefs": [48, 87, 61, 74, 83],
+      "stlRefs": [142, 144, 173, 189, 190],
+      "details": {
+        "hierarchy": [
+          { "level": 1, "label": "Proper antiphon from the Roman Missal" },
+          { "level": 2, "label": "Antiphon from the Graduale Romanum" },
+          { "level": 3, "label": "Psalm/antiphon from the Graduale Simplex" },
+          { "level": 4, "label": "Approved liturgical song (hymn from approved hymnal)" }
+        ],
+        "appliesTo": ["entrance", "communion", "offertory"],
+        "stlEnrichment": "STL 144 confirms 4 options for Entrance in US dioceses (footnote 110 citing GIRM 48). STL 190 confirms same 4 options for Communion (footnote 159 citing GIRM 87). STL 117 elevates proper antiphons: 'Proper antiphons from the liturgical books are to be esteemed and used especially because they are the very voice of God speaking to us in the Scriptures.'"
+      },
+      "implementation": {
+        "dataModel": "Add entranceAntiphon and communionAntiphon text fields to occasion JSON files. Add girmOptionLevel (1-4) to planner slot selections, defaulting to 4 for existing hymn choices.",
+        "ui": "Display proper antiphon text above song selection in planner grid as a subtle reference block. On Occasion Detail, show all 4 options with antiphon prominently featured. Tag songs in library that are antiphon-based settings using Enriched Song Index scriptureRefs.",
+        "existingAssets": "362 occasion files, song-library.json with scriptureRefs, Enriched Song Index catalogs"
+      }
+    },
+    {
+      "id": "singing_priority",
+      "name": "Singing Priority Indicator",
+      "category": "planner_grid",
+      "priority": 7,
+      "effort": "low",
+      "impact": "medium",
+      "status": "planned",
+      "summary": "Tag each planner grid row with its GIRM classification and singing priority level so planners know what to sing first when resources are limited.",
+      "girmRefs": [37, 39, 40, 41],
+      "stlRefs": [110, 111, 112, 113, 114, 115, 116],
+      "details": {
+        "classifications": {
+          "independent_rite": ["responsorial_psalm", "gospel_acclamation", "sanctus", "memorial_acclamation", "great_amen", "lords_prayer", "agnus_dei"],
+          "accompanying_rite": ["entrance", "offertory", "communion_1", "communion_2", "communion_3", "sending"],
+          "optional_rite": ["prelude", "gloria", "penitential_act"]
+        },
+        "priorityLevels": [
+          { "level": 1, "label": "Dialogues & Acclamations", "parts": ["sanctus", "memorial_acclamation", "great_amen", "gospel_acclamation"], "source": "GIRM 40, STL 115-116" },
+          { "level": 2, "label": "Litanies & Psalm", "parts": ["kyrie", "agnus_dei", "responsorial_psalm"], "source": "STL 116" },
+          { "level": 3, "label": "Processional Songs & Hymns", "parts": ["entrance", "offertory", "communion", "sending", "gloria"], "source": "STL 116" }
+        ],
+        "stlEnrichment": "STL 110-114 codifies Progressive Solemnity: music scales to the rank of the celebration. STL 116 gives explicit daily Mass priority order: 'dialogues and acclamations; litanies; Responsorial Psalm; and finally, a hymn or even two on more important days.' STL 112: 'greater feasts such as Easter Sunday or Pentecost might suggest a chanted Gospel, but a recited Gospel might be more appropriate for Ordinary Time.'"
+      },
+      "implementation": {
+        "dataModel": "Add girmClassification and singingPriority (1-3) to each planner grid row definition.",
+        "ui": "Small numbered badge (1-3) on each planner row. Progressive Solemnity banner on occasion detail showing recommended level of musical solemnity based on rank."
+      }
+    },
+    {
+      "id": "instrument_restrictions",
+      "name": "Instrument Restriction Flags",
+      "category": "seasonal_compliance",
+      "priority": 3,
+      "effort": "low",
+      "impact": "high",
+      "status": "planned",
+      "summary": "Flag Advent moderation and Lent singing-support-only rules per GIRM 313, with exceptions for Laetare Sunday and Solemnities/Feasts.",
+      "girmRefs": [313],
+      "stlRefs": [114],
+      "details": {
+        "restrictionLevels": [
+          { "level": "none", "seasons": ["ordinary_time", "easter", "christmas"], "description": "Full use of all instruments" },
+          { "level": "moderate", "seasons": ["advent"], "description": "Instruments used with moderation; should not anticipate full joy of Nativity (STL 114)" },
+          { "level": "singing_support_only", "seasons": ["lent"], "description": "Instruments used only to support the singing of the gathered assembly (GIRM 313, STL 114). No instrumental preludes, interludes, or postludes." },
+          { "level": "exception_in_restricted", "occasions": ["laetare_sunday", "solemnities_in_lent", "feasts_in_lent"], "description": "Laetare Sunday, Solemnities, and Feasts override Lenten restriction (GIRM 313 footnote 88)" }
+        ],
+        "stlEnrichment": "STL 114: 'In Advent, musical instruments should be used with moderation and should not anticipate the full joy of the Nativity of the Lord. In Lent, musical instruments should be used only to support the singing of the gathered assembly.'"
+      },
+      "implementation": {
+        "dataModel": "Add instrumentRestriction field to each occasion JSON, derived from season + rank. Compute automatically from liturgical_days data.",
+        "ui": "Banner or badge on Occasion Detail and planner grid column header. Accompanist view auto-flags prelude/postlude slots during Lent."
+      }
+    },
+    {
+      "id": "gloria_penitential_logic",
+      "name": "Gloria / Penitential Act Logic",
+      "category": "planner_grid",
+      "priority": 2,
+      "effort": "low",
+      "impact": "high",
+      "status": "partially_done",
+      "summary": "Auto-determine Gloria inclusion/omission per occasion and support Penitential Act form selection. Gloria boolean already exists in liturgical_days table.",
+      "girmRefs": [46, 51, 52, 53],
+      "stlRefs": [145, 146, 147, 148, 149, 150],
+      "details": {
+        "gloriaRules": {
+          "required": "Sundays outside Advent and Lent; all Solemnities and Feasts; special celebrations of more solemn character (GIRM 53)",
+          "omitted": "Advent Sundays, Lent Sundays, weekdays (except Solemnities/Feasts)",
+          "positioning": "Gloria may NOT be moved to a different part of Mass (STL 150). May not replace Entrance chant or Sprinkling Rite song.",
+          "performance": "Intoned by priest, cantor, or choir. Sung by all, alternately with choir/cantor, or by choir alone. Refrains permitted if they encourage congregational participation (STL 149)."
+        },
+        "penitentialActForms": [
+          { "form": "A", "name": "Confiteor", "musical": false },
+          { "form": "B", "name": "Miserere", "musical": false },
+          { "form": "C", "name": "Kyrie Tropes", "musical": true, "description": "Variable invocations of Christ's mercy, sung in dialogue. Requires specific musical setting." }
+        ],
+        "sprinklingRite": "May replace Penitential Act on Sundays, especially in Easter season (GIRM 51, STL 147). Song should have explicitly baptismal character.",
+        "stlEnrichment": "STL 148: Gloria text 'may not be replaced by any other text.' STL 150: Gloria 'may not be moved to a different part of the Mass.' STL 146: Kyrie is 'a chant by which the faithful acclaim the Lord and implore his mercy.'"
+      },
+      "implementation": {
+        "dataModel": "gloria boolean already in liturgical_days. Add penitentialActForm selector (A/B/C) to planner. Add sprinklingRite boolean toggle.",
+        "ui": "When gloria is false, gray out or collapse Gloria row with note. Penitential Act row shows form selector; Form C triggers musical setting selection."
+      }
+    },
+    {
+      "id": "liturgical_colors",
+      "name": "Liturgical Color Automation",
+      "category": "visual_system",
+      "priority": 1,
+      "effort": "low",
+      "impact": "high",
+      "status": "done",
+      "summary": "Color-code every occasion by liturgical color for visual planning. Already implemented via liturgical_days.colorPrimary and the LITURGICAL_COLOR_HEX/LIGHT system.",
+      "girmRefs": [346],
+      "stlRefs": [],
+      "details": {
+        "colors": {
+          "white": "Easter, Christmas, Feasts of Lord (non-Passion), BVM, Angels, non-martyr Saints, All Saints, John the Baptist (6/24), Chair of Peter, Conversion of Paul",
+          "red": "Palm Sunday, Good Friday, Pentecost, Passion feasts, martyrs, Apostles/Evangelists, Holy Cross, Confirmation",
+          "green": "Ordinary Time",
+          "violet": "Advent, Lent, Penitential rites, All Souls",
+          "rose": "Gaudete Sunday (Advent III), Laetare Sunday (Lent IV)",
+          "black": "Funeral Masses (optional, may use Violet)",
+          "gold": "May substitute for White, Red, or Green on solemn occasions"
+        }
+      },
+      "implementation": {
+        "dataModel": "liturgical_days.colorPrimary already populated. LITURGICAL_COLOR_HEX and LITURGICAL_COLOR_LIGHT maps in liturgical-colors.ts.",
+        "ui": "Color dots in AgendaView, color bars in MonthView DayDetailPanel, season transition markers. All implemented."
+      }
+    },
+    {
+      "id": "three_judgments",
+      "name": "Three Judgments Framework",
+      "category": "song_selection",
+      "priority": 4,
+      "effort": "medium",
+      "impact": "high",
+      "status": "planned",
+      "summary": "Embed the Liturgical, Pastoral, and Musical judgments into the song selection workflow as a guiding framework for music choices.",
+      "girmRefs": [],
+      "stlRefs": [126, 127, 128, 129, 130, 131, 132, 133, 134, 135, 136],
+      "details": {
+        "judgments": [
+          {
+            "name": "Liturgical Judgment",
+            "question": "Is this composition capable of meeting the structural and textual requirements set forth by the liturgical books for this particular rite?",
+            "considerations": [
+              "Structural demands of the rite guide the choice of parts to be sung (STL 128)",
+              "Balance among various elements so less important don't overshadow more important (STL 128)",
+              "Textual fidelity to liturgical text and Church teaching (STL 128)",
+              "Progressive solemnity: more singing for greater feasts (STL 128, referencing 110ff)"
+            ],
+            "stlRef": "127-129"
+          },
+          {
+            "name": "Pastoral Judgment",
+            "question": "Does this composition promote the sanctification of the members of the liturgical assembly by drawing them closer to the holy mysteries being celebrated?",
+            "considerations": [
+              "Age, culture, language, and education of the assembly (STL 132)",
+              "Musical experience of the given liturgical assembly (STL 132)",
+              "Capacity to learn something new when properly introduced (STL 132)",
+              "Will this composition draw people closer to the mystery of Christ? (STL 133)"
+            ],
+            "stlRef": "130-133"
+          },
+          {
+            "name": "Musical Judgment",
+            "question": "Is this composition technically, aesthetically, and expressively worthy?",
+            "considerations": [
+              "Necessary aesthetic qualities to bear the weight of the mysteries (STL 134)",
+              "Musical competence — only artistically sound music endures (STL 135)",
+              "No particular style is adopted as the Church's own (STL 136)",
+              "The cheap, trite, or musical cliche is to be avoided (STL 135)"
+            ],
+            "stlRef": "134-136"
+          }
+        ],
+        "integrationPrinciple": "All three judgments are aspects of ONE evaluation. No individual judgment can be applied in isolation from the other two (STL 126)."
+      },
+      "implementation": {
+        "dataModel": "Add optional threeJudgments metadata to songs in Enriched Song Index: liturgicalFit (slot types this song serves well), pastoralFit (community styles it suits), musicalQuality (difficulty level, style tags).",
+        "ui": "Song selection drawer could show fit indicators. When choosing a song for a slot, show how well it meets the liturgical judgment (correct slot type + text match), pastoral judgment (community match), and musical judgment (difficulty appropriate for available musicians)."
+      }
+    },
+    {
+      "id": "progressive_solemnity",
+      "name": "Progressive Solemnity Engine",
+      "category": "planner_grid",
+      "priority": 6,
+      "effort": "medium",
+      "impact": "high",
+      "status": "planned",
+      "summary": "Scale the amount and style of music to the rank of the celebration. Auto-suggest how many parts of the rite should be sung based on the occasion's liturgical importance.",
+      "girmRefs": [40],
+      "stlRefs": [110, 111, 112, 113, 114],
+      "details": {
+        "principle": "Between the solemn, fuller form of liturgical celebration, in which everything that demands singing is in fact sung, and the simplest form, in which singing is not used, there can be various degrees according to the greater or lesser place allotted to singing (STL 111, citing MS 7).",
+        "levels": [
+          {
+            "level": "solemn",
+            "ranks": ["solemnity", "triduum"],
+            "description": "Everything that can be sung is sung. Chanted Gospel. Additional instruments. Full choir. Extended prelude/postlude. All acclamations sung. Multiple Communion songs.",
+            "sungParts": "all"
+          },
+          {
+            "level": "festive",
+            "ranks": ["feast", "sunday"],
+            "description": "Most parts sung. Dialogues, acclamations, psalm, processional hymns. Choir anthems at Offertory or post-Communion.",
+            "sungParts": "most"
+          },
+          {
+            "level": "moderate",
+            "ranks": ["memorial", "weekday_special"],
+            "description": "Key acclamations sung (Gospel Acclamation, Sanctus, Memorial Acclamation, Amen). Psalm sung. One or two hymns.",
+            "sungParts": "core_acclamations_plus_hymns"
+          },
+          {
+            "level": "simple",
+            "ranks": ["weekday"],
+            "description": "Dialogues and acclamations. Perhaps a simple psalm setting. A hymn on more important days. Even without accompaniment, acclamations and dialogues should be sung (STL 116).",
+            "sungParts": "acclamations_only"
+          }
+        ],
+        "seasonalModifiers": {
+          "advent": "Musical restraint — do not anticipate full joy of Christmas (STL 114)",
+          "lent": "Instruments support singing only. No Gloria. Alleluia replaced with Lenten acclamation. Silence given greater emphasis.",
+          "easter": "Fullest musical expression. Alleluia sung with special emphasis (Universal Norms 22). Sequence required Easter Sunday and Pentecost.",
+          "christmas": "Full musical expression. Extended celebration warrants fuller music."
+        }
+      },
+      "implementation": {
+        "dataModel": "Derive solemnityLevel from celebration rank + season. Add to each occasion as a computed field.",
+        "ui": "Planner grid shows recommended solemnity level as a banner. Rows that 'should' be sung at this level are highlighted; rows that are optional are dimmed. Director can override."
+      }
+    },
+    {
+      "id": "silence_markers",
+      "name": "Sacred Silence Markers",
+      "category": "planner_grid",
+      "priority": 8,
+      "effort": "low",
+      "impact": "medium",
+      "status": "planned",
+      "summary": "Insert non-musical silence markers at GIRM-prescribed moments in the planner grid and flag them for accompanists.",
+      "girmRefs": [45, 54, 56, 88, 128],
+      "stlRefs": [118],
+      "details": {
+        "silenceMoments": [
+          { "when": "After 'Let us pray' (before Collect)", "girmRef": 54, "description": "Brief silence for personal prayer" },
+          { "when": "After First Reading", "girmRef": 56, "description": "Silence before Responsorial Psalm" },
+          { "when": "After Second Reading", "girmRef": 56, "description": "Silence before Gospel Acclamation" },
+          { "when": "After the Homily", "girmRef": 56, "description": "Silence for reflection" },
+          { "when": "After Communion distribution", "girmRef": 88, "description": "Period of silent reflection for the entire congregation. Distinct from the Song after Communion." }
+        ],
+        "stlEnrichment": "STL 118: 'Music arises out of silence and returns to silence. God is revealed both in the beauty of song and in the power of silence. The Sacred Liturgy has its rhythm of texts, actions, songs, and silence.' The importance of silence 'cannot be overemphasized.'"
+      },
+      "implementation": {
+        "dataModel": "Add silence markers as non-song rows in the planner grid between appropriate musical slots.",
+        "ui": "Thin divider rows with a silence icon and label. Accompanist view highlights: 'No playing during post-Communion silence.'"
+      }
+    },
+    {
+      "id": "cantor_preparation",
+      "name": "Cantor Preparation Sheet",
+      "category": "cantor",
+      "priority": 9,
+      "effort": "medium",
+      "impact": "high",
+      "status": "planned",
+      "summary": "Extend Cantor Welcomes into a full preparation sheet aggregating all cantor responsibilities per occasion, including psalm designation, acclamation texts, and Communion leadership notes.",
+      "girmRefs": [61, 86, 102, 104],
+      "stlRefs": [34, 35, 36, 37, 155, 156, 161, 189, 192],
+      "details": {
+        "sections": [
+          { "name": "Welcome Script", "description": "Existing Cantor Welcomes content for applicable Sundays" },
+          { "name": "Psalm Designation", "description": "Psalm number, setting/tone, response text from song library. STL 156: 'As a rule the Responsorial Psalm should be sung.' Preferably responsorially." },
+          { "name": "Gospel Acclamation Verse", "description": "Verse text from readings data. STL 161-163: Alleluia during most of year; alternate acclamation in Lent. 'The Gospel Acclamation may be omitted when it is not sung' (STL 163)." },
+          { "name": "Eucharistic Acclamations", "description": "Sanctus, Memorial Acclamation, Great Amen from the selected Mass Setting. People should know these by heart (STL 115: 'Ideally, the people should know the acclamations by heart and should be able to sing them readily, even without accompaniment')." },
+          { "name": "Communion Leadership", "description": "STL 192: responsorial style or songs with easily memorized refrains recommended. Cantor begins, alternates with people (GIRM 86-87). Song starts while priest receives." },
+          { "name": "Special Rites", "description": "Any occasion-specific sung elements: Sprinkling Rite song, Renewal of Baptismal Promises responses, Litany of Saints, Sequence." }
+        ],
+        "psalmistDistinction": "GIRM 61: 'the psalmist or cantor' at the ambo. GIRM 102: psalmist is a distinct ministry requiring 'ability for singing and a facility in correct pronunciation and diction.' May be same person as cantor but GIRM treats them as separable roles."
+      },
+      "implementation": {
+        "dataModel": "Aggregate existing data: Cantor Welcomes, psalm selection from planner, readings from occasion data, Mass Setting acclamations from selected setting.",
+        "ui": "New /cantor/[date] view or printable sheet. Extends existing Cantor Welcomes feature."
+      }
+    },
+    {
+      "id": "accompanist_view",
+      "name": "Accompanist-Specific View",
+      "category": "accompanist",
+      "priority": 12,
+      "effort": "medium",
+      "impact": "medium",
+      "status": "planned",
+      "summary": "Create an accompanist-focused view showing only musical slots with key signatures, linked sheet music, instrument restriction warnings, and modulation notes.",
+      "girmRefs": [313, 37],
+      "stlRefs": [80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 91],
+      "details": {
+        "organPrideOfPlace": "GIRM 313: 'the pipe organ is to be held in high esteem, for it is the traditional musical instrument which adds a wonderful splendor to the Church's ceremonies and powerfully lifts up man's mind to God.' STL 87: organ has 'pride of place.'",
+        "otherInstruments": "STL 88-89: Other instruments admitted by judgment of local Ordinary. Should be suited to sacred use, contribute to edification of faithful, not dominate. Wind, string, and percussion instruments 'can contribute to the beauty of worship' (STL 89).",
+        "recordedMusic": "STL 93: recorded music 'is never a substitute for the live singing and playing of the liturgical assembly.' Permitted exceptions: providing music before/after liturgy, aiding preparation for liturgical singing.",
+        "sections": [
+          "Musical slots only (no readings, presider notes)",
+          "Key signatures per song (from recordedKey + chartKeys)",
+          "Linked sheet music / lead sheets",
+          "Instrument restriction warnings (Advent/Lent)",
+          "Prelude/Postlude flags (first to cut in Lent)",
+          "Key modulation notes between consecutive songs"
+        ]
+      },
+      "implementation": {
+        "dataModel": "Filter planner grid to musical rows. Leverage existing key-utils.ts, recordedKey, chartKeys fields.",
+        "ui": "New /accompanist mode or role-based toggle in planner. Printable layout optimized for music stand."
+      }
+    },
+    {
+      "id": "eucharistic_prayer_music",
+      "name": "Eucharistic Prayer Music Norms",
+      "category": "planner_grid",
+      "priority": 10,
+      "effort": "low",
+      "impact": "medium",
+      "status": "planned",
+      "summary": "Enforce the rule that no other music plays during the Eucharistic Prayer except the three congregational acclamations, and recommend stylistic unity among them.",
+      "girmRefs": [78, 79],
+      "stlRefs": [176, 177, 178, 180, 181, 182],
+      "details": {
+        "epStructure": ["Preface Dialogue", "Preface", "Sanctus", "Epiclesis", "Institution Narrative", "Memorial Acclamation", "Anamnesis", "Intercessions", "Doxology + Great Amen"],
+        "musicRules": {
+          "sungAcclamations": ["sanctus", "memorial_acclamation", "great_amen"],
+          "stylisticUnity": "STL 178: 'it is recommended that there be a stylistic unity to the musical elements of the prayer, especially the Sanctus, the Memorial Acclamation, and the Great Amen.' Preface dialogue and preface chanted at pitch that matches key/modality of acclamations.",
+          "noOtherMusic": "STL 182 (citing Redemptionis Sacramentum 53): 'While the Priest proclaims the Eucharistic Prayer there should be no other prayers or singing, and the organ or other musical instruments should be silent, except for the people's acclamations.'",
+          "priestSinging": "STL 181-182: Priests should sing at least the opening dialogue, Preface, invitation to Memorial Acclamation, and concluding doxology on Sundays and solemn occasions."
+        }
+      },
+      "implementation": {
+        "dataModel": "Mass Setting selection already groups these acclamations. Add EP selection guide linking to matching acclamation settings.",
+        "ui": "Planner grid note: when Sanctus/Memorial/Amen are from different Mass Settings, show a 'stylistic unity' warning."
+      }
+    },
+    {
+      "id": "communion_rite_music",
+      "name": "Communion Rite Music Norms",
+      "category": "planner_grid",
+      "priority": 11,
+      "effort": "low",
+      "impact": "medium",
+      "status": "planned",
+      "summary": "Codify the Communion Rite music sequence: Lord's Prayer, no Sign of Peace song, Agnus Dei as litany, Communion processional chant, optional song after Communion, then sacred silence.",
+      "girmRefs": [80, 82, 83, 86, 87, 88],
+      "stlRefs": [184, 185, 186, 187, 188, 189, 190, 191, 192, 193, 194, 195, 196, 197],
+      "details": {
+        "sequence": [
+          { "element": "Lord's Prayer", "notes": "STL 186: When sung, doxology should also be sung by all. Invitation and embolism should also be sung by priest if possible." },
+          { "element": "Sign of Peace", "notes": "STL 187: 'The brief period of time needed for the exchange of the Sign of Peace must not be protracted by the singing of a song.' NO SONG." },
+          { "element": "Agnus Dei", "notes": "STL 188: Litanic chant accompanying Fraction Rite. Repeated as needed until rite concludes. Last invocation always ends 'dona nobis pacem.' When repeated, Christological invocations with other texts may be used. First and final invocations always 'Agnus Dei.'" },
+          { "element": "Communion Chant", "notes": "STL 189-192: Begins while priest receives. Continues as long as Sacrament is administered. Communal singing is preeminent. Responsorial style or songs with easily memorized refrains recommended. May include combination of congregational and choir-alone pieces. Instrumental music also appropriate." },
+          { "element": "Song After Communion", "notes": "STL 196: Optional. Psalm, canticle, or hymn by entire congregation. Focus on mystery of Holy Communion, not the choir. Congregation may stand if nature of music calls for it." },
+          { "element": "Sacred Silence", "notes": "STL 193: 'A period of silent reflection for the entire congregation after the reception of Communion is also appropriate.' If song after Communion is used, Communion music should end 'in a timely manner.'" }
+        ],
+        "communionSongThemes": "STL 191: joy, wonder, unity, gratitude, praise. May reflect Gospel themes. May reflect liturgical action (eating and drinking the Body and Blood). Seasonal spirit should be considered (STL 194). Traditional psalms: 23, 34, 147.",
+        "musiciansCommunion": "STL 195: 'Care should be taken to ensure that the musicians, too, can receive Communion with ease.' Musicians may receive at or near the end of the procession."
+      },
+      "implementation": {
+        "dataModel": "Existing 3 Communion slots in planner grid. Add Song After Communion as distinct from Communion processional. Add duration guidance based on community size.",
+        "ui": "Planner grid clearly separates Communion processional songs from post-Communion meditation song. Sign of Peace row shows 'no song' indicator."
+      }
+    },
+    {
+      "id": "mass_structure_metadata",
+      "name": "Mass Structure Metadata Layer",
+      "category": "planner_grid",
+      "priority": 13,
+      "effort": "medium",
+      "impact": "medium",
+      "status": "planned",
+      "summary": "Enhance the 14-row planner grid with GIRM paragraph references and add currently missing slots (Sprinkling Rite, Sequence, Universal Prayer).",
+      "girmRefs": [27, 46, 47, 48, 51, 52, 53, 54, 55, 61, 62, 64, 69, 70, 71, 72, 74, 78, 82, 83, 86, 87, 88, 90],
+      "stlRefs": [137, 138, 139, 140, 141],
+      "details": {
+        "missingSlots": [
+          { "name": "Sprinkling Rite", "girmRef": 51, "stlRef": 147, "when": "Replaces Penitential Act on Sundays, especially Easter season. Song should have baptismal character." },
+          { "name": "Sequence", "girmRef": 64, "stlRef": 165, "when": "Required: Easter Sunday (Victimae paschali laudes), Pentecost (Veni Sancte Spiritus). Optional: Corpus Christi (Lauda Sion), Our Lady of Sorrows (Stabat Mater)." },
+          { "name": "Universal Prayer / Prayer of the Faithful", "girmRef": 69, "stlRef": 171, "when": "Every Mass. May be sung: the invitation and response, or even the response only. Has litanic structure." },
+          { "name": "Post-Communion Meditation", "girmRef": 88, "stlRef": 196, "when": "Distinct from processional Communion music. Optional psalm, canticle, or hymn by congregation." }
+        ],
+        "stlEnrichment": "STL 140: Introductory Rites designed so faithful 'come together as one, establish communion and dispose themselves to listen properly to God's word and to celebrate the Eucharist worthily.' People should sing at least one piece as congregation in introductory rites — Entrance, Kyrie, or Gloria."
+      },
+      "implementation": {
+        "dataModel": "Add conditional rows to planner grid: Sprinkling Rite (toggle), Sequence (auto on Easter/Pentecost), Universal Prayer response, Post-Communion song.",
+        "ui": "GIRM paragraph references as tooltips on grid row headers. Conditional rows appear/hide based on occasion settings."
+      }
+    },
+    {
+      "id": "recessional_norms",
+      "name": "Recessional & Concluding Rites Music",
+      "category": "planner_grid",
+      "priority": 14,
+      "effort": "low",
+      "impact": "low",
+      "status": "planned",
+      "summary": "Codify that the recessional hymn is optional per GIRM, and surface alternatives (choral piece, instrumental, silence during Lent).",
+      "girmRefs": [90],
+      "stlRefs": [198, 199],
+      "details": {
+        "blessingAndDismissal": "STL 198: Blessing may be sung by priest (especially Sundays and solemn occasions). Dismissal may be sung by deacon or priest with assembly responding 'Thanks be to God.'",
+        "recessionalOptions": [
+          "Congregational hymn (most common custom)",
+          "Choral or instrumental piece",
+          "Silence (particularly during Lent)",
+          "If Song after Communion was used, consider non-congregational option for recessional (STL 199)"
+        ],
+        "processingNote": "STL 199: 'the procession of ministers should be arranged in such a way that it finishes during the final stanza.'"
+      },
+      "implementation": {
+        "dataModel": "Sending/Recessional slot already exists. Add recessionalType selector: hymn, choral, instrumental, silence.",
+        "ui": "During Lent, default to silence option with note. Show processing timing guidance."
+      }
+    }
+  ]
+}

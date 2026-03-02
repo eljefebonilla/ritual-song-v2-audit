@@ -1,0 +1,402 @@
+{
+  "_meta": {
+    "title": "Ministry Expansion Features — GIRM + Sing to the Lord",
+    "description": "Non-music ministry features derived from GIRM and STL, stored for later scaling. These features expand Ritual Song from a music planning tool into a full liturgical coordination platform serving lectors, EMHCs, hospitality, presiders, and cross-ministry preparation.",
+    "sources": [
+      "General Instruction of the Roman Missal (GIRM), Third Typical Edition, 2011",
+      "Sing to the Lord: Music in Divine Worship (STL), USCCB, 2007",
+      "Norms for the Distribution and Reception of Holy Communion Under Both Kinds (2002)"
+    ],
+    "generatedDate": "2026-03-01",
+    "totalFeatures": 12,
+    "strategicVision": "Right now, Ritual Song is a music planning tool. The GIRM reveals that it could become a liturgical coordination platform — the single place where every minister (music director, cantor, lector, EMHC, hospitality) prepares for Sunday."
+  },
+  "features": [
+    {
+      "id": "lector_preparation",
+      "name": "Lector Preparation Module",
+      "category": "lector",
+      "priority": 9,
+      "effort": "medium",
+      "impact": "high",
+      "status": "planned",
+      "summary": "Full lector preparation view per occasion: reading texts, pronunciation guides, ritual choreography cues, and Universal Prayer text.",
+      "girmRefs": [99, 100, 101, 128, 129, 130, 194, 195, 196, 197, 198],
+      "stlRefs": [152, 153, 154],
+      "details": {
+        "roleDefinition": "GIRM 99: Reader has a proper liturgical function. GIRM 101: 'truly suited... and should receive careful preparation.' GIRM 99: Reader carries out First and Second Readings, but not the Gospel.",
+        "sections": [
+          {
+            "name": "Reading Texts",
+            "description": "Full text of First and Second Reading from occasion readings data. STL 153: 'readings are ordinarily read in a clear, audible, and intelligent way.' They may also be sung, but singing 'must serve to bring out the sense of the words, not obscure them' (STL 153)."
+          },
+          {
+            "name": "Pronunciation Guide",
+            "description": "Auto-generated pronunciation aids for difficult proper nouns: Melchizedek, Colossae, Thessalonica, Sirach, etc."
+          },
+          {
+            "name": "Ritual Choreography",
+            "description": "GIRM 128: First Reading proclaimed from ambo. Lector remains at ambo after First Reading during Psalm response (GIRM 129). Second Reading from ambo (GIRM 130). Reader may carry Book of Gospels in entrance procession (GIRM 194-195). Two readers may be used (GIRM 196-197)."
+          },
+          {
+            "name": "Preamble & Conclusion",
+            "description": "Reading preamble: 'A reading from the Book of [X]' / 'A reading from the Letter of Saint Paul to the [X]'. Conclusion: 'The Word of the Lord' with assembly responding 'Thanks be to God' (GIRM 128). STL 154: Even if readings are not sung, concluding acclamation may be sung."
+          },
+          {
+            "name": "Universal Prayer / Prayer of the Faithful",
+            "description": "Add intercessions text field to data model. Reader or deacon announces the intentions (GIRM 71)."
+          }
+        ],
+        "bookingIntegration": "Support Reader I and Reader II per Mass event (GIRM 196-197) in booking system."
+      },
+      "implementation": {
+        "dataModel": "Leverage existing occasion readings data. Add pronunciationGuide field. Add intercessions[] array to occasion model.",
+        "ui": "New /lector/[date] view or role-based toggle. Printable layout."
+      }
+    },
+    {
+      "id": "readings_music_connection",
+      "name": "Readings-to-Music Connection Display",
+      "category": "lector",
+      "priority": 15,
+      "effort": "medium",
+      "impact": "medium",
+      "status": "planned",
+      "summary": "Show explicit connections between readings and song selections on Occasion Detail, using Enriched Song Index scripture references.",
+      "girmRefs": [61, 391],
+      "stlRefs": [155, 157, 191],
+      "details": {
+        "principle": "GIRM 61: Responsorial Psalm 'forms an integral part of the Liturgy of the Word.' STL 191: Communion song 'might reflect themes of the Gospel reading of the day.'",
+        "examples": [
+          "First Reading: Isaiah 40:1-5 -> Suggested songs: 'On Eagle's Wings', 'Be Not Afraid'",
+          "Psalm: Ps 23 -> Setting used: 'Shepherd Me, O God' (BB#43)",
+          "Gospel: John 6:35 -> Communion songs: 'I Am the Bread of Life', 'Gift of Finest Wheat'"
+        ]
+      },
+      "implementation": {
+        "dataModel": "Cross-reference occasion readings with Enriched Song Index scriptureRefs. Build mapping layer.",
+        "ui": "On Occasion Detail, add explicit Readings -> Songs map showing why each song was chosen."
+      }
+    },
+    {
+      "id": "emhc_scheduling",
+      "name": "EMHC Scheduling with Communion Mode",
+      "category": "emhc",
+      "priority": 11,
+      "effort": "medium",
+      "impact": "medium",
+      "status": "planned",
+      "summary": "Add Communion mode (bread only vs. both kinds) per mass event and auto-calculate required EMHC count with sub-role assignments.",
+      "girmRefs": [162],
+      "normsRefs": [27, 28, 29, 30],
+      "details": {
+        "communionModes": [
+          { "mode": "bread_only", "description": "Communion under one kind. Fewer ministers needed." },
+          { "mode": "both_kinds", "description": "Communion under both kinds. Approximately 2 ministers of Precious Blood per minister of Body." }
+        ],
+        "roleSubTypes": ["body", "blood"],
+        "calculationFormula": "Based on community size and communion mode. E.g., Heritage (800+ attendance): both_kinds -> 2 Body + 4 Blood = 6 EMHCs minimum.",
+        "normsDetail": "Norms 27: 'sufficient ministers' must be provided. Norms 28: 'a deacon, acolytes, or other extraordinary ministers should distribute the Precious Blood.' Norms 30: Vessels for Precious Blood prepared in advance."
+      },
+      "implementation": {
+        "dataModel": "Add communionMode enum to mass_events. Add EMHC slots to booking system with body/blood sub-roles. Add communitySize estimate per community for calculation.",
+        "ui": "Mass event detail shows: 'This Mass: Communion under both kinds — 6 EMHCs needed (2 Body + 4 Blood)'"
+      }
+    },
+    {
+      "id": "emhc_procedure_reference",
+      "name": "EMHC Procedure Reference",
+      "category": "emhc",
+      "priority": 16,
+      "effort": "low",
+      "impact": "low",
+      "status": "planned",
+      "summary": "Static reference page with plain-language EMHC procedure derived from GIRM and Norms.",
+      "normsRefs": [36, 37, 38, 39, 40, 41, 43, 45, 52, 53, 55],
+      "details": {
+        "procedure": [
+          "Approach altar after Priest has received (Norms 38)",
+          "Receive vessels from Priest/Deacon (Norms 40)",
+          "Words: 'The Body of Christ' / 'The Blood of Christ' (Norms 41, 43)",
+          "Purificator protocol (Norms 45)",
+          "Spill/shortage procedures (Norms 29, 52, 55)",
+          "Vessel purification: Priest, Deacon, or instituted Acolyte only (Norms 53)"
+        ]
+      },
+      "implementation": {
+        "ui": "Static page at /ministry-guides/emhc. Printable."
+      }
+    },
+    {
+      "id": "hospitality_integration",
+      "name": "Hospitality Ministry Integration",
+      "category": "hospitality",
+      "priority": 18,
+      "effort": "medium",
+      "impact": "low_medium",
+      "status": "planned",
+      "summary": "Add hospitality/usher slots to the booking system and generate per-occasion notes for special processions and Communion flow logistics.",
+      "girmRefs": [105],
+      "details": {
+        "roleDefinition": "GIRM 105d: persons who 'welcome the faithful at the doors of the church, assist them... and direct processions.'",
+        "specialOccasionNotes": [
+          "Palm Sunday: staging outside for procession, palm distribution",
+          "Easter Vigil: candle distribution, fire procession, neophyte seating",
+          "Corpus Christi: Eucharistic procession marshaling",
+          "Funeral: casket/urn entrance, family seating, pallbearer coordination",
+          "Wedding: guest seating, participation aid distribution"
+        ],
+        "communionFlowLogistics": "Communion under both kinds — ushers direct to N stations. Coordinate with EMHC count."
+      },
+      "implementation": {
+        "dataModel": "Add hospitality slots to booking system per mass event.",
+        "ui": "Booking page shows hospitality slots alongside existing minister bookings."
+      }
+    },
+    {
+      "id": "posture_gesture_guide",
+      "name": "Posture & Gesture Cue Sheet",
+      "category": "hospitality",
+      "priority": 18,
+      "effort": "low",
+      "impact": "low_medium",
+      "status": "planned",
+      "summary": "Auto-generate a printable posture timeline per occasion for hospitality ministers and assembly guides.",
+      "girmRefs": [42, 43],
+      "details": {
+        "postureTimeline": [
+          { "action": "STAND", "during": "Entrance Song through Collect" },
+          { "action": "SIT", "during": "First Reading, Responsorial Psalm, Second Reading" },
+          { "action": "STAND", "during": "Gospel Acclamation through Gospel" },
+          { "action": "SIT", "during": "Homily" },
+          { "action": "STAND", "during": "Creed, Universal Prayer" },
+          { "action": "SIT", "during": "Preparation of the Gifts (Offertory)" },
+          { "action": "STAND", "during": "'Pray brethren...' through Sanctus" },
+          { "action": "KNEEL", "during": "Consecration (epiclesis through doxology)" },
+          { "action": "STAND", "during": "Our Father through Sign of Peace" },
+          { "action": "KNEEL", "during": "Agnus Dei (US adaptation: may kneel until receiving Communion)" },
+          { "action": "SIT", "during": "Silence after Communion" },
+          { "action": "STAND", "during": "Prayer after Communion through Dismissal" }
+        ],
+        "usAdaptation": "GIRM 43 (US adaptation): faithful kneel after the Agnus Dei unless the Diocesan Bishop determines otherwise."
+      },
+      "implementation": {
+        "ui": "Auto-generated printable PDF per occasion linked on Occasion Detail under 'Assembly Guides.'"
+      }
+    },
+    {
+      "id": "eucharistic_prayer_selection",
+      "name": "Eucharistic Prayer Selection Guide",
+      "category": "presider",
+      "priority": 14,
+      "effort": "low",
+      "impact": "low_medium",
+      "status": "planned",
+      "summary": "Suggest which Eucharistic Prayer is most appropriate per occasion based on GIRM 365, and cross-reference with selected Mass Setting for matching acclamations.",
+      "girmRefs": [365],
+      "details": {
+        "prayers": [
+          {
+            "name": "Eucharistic Prayer I (Roman Canon)",
+            "when": "Days with proper Communicantes (Christmas, Epiphany, Easter through Octave, Ascension, Pentecost) + Masses with proper Hanc igitur + feasts of Apostles/Saints in Canon"
+          },
+          {
+            "name": "Eucharistic Prayer II",
+            "when": "Weekdays, special circumstances. Has own Preface but can use others. Shortest EP."
+          },
+          {
+            "name": "Eucharistic Prayer III",
+            "when": "Preferred on Sundays and Feasts. Can use any Preface."
+          },
+          {
+            "name": "Eucharistic Prayer IV",
+            "when": "Only when Mass has no proper Preface. Has own fixed Preface surveying salvation history."
+          }
+        ]
+      },
+      "implementation": {
+        "dataModel": "Add suggestedEucharisticPrayer to each occasion JSON with brief rationale.",
+        "ui": "Display in Occasion Detail under 'Celebrant Notes' section. Cross-reference with Mass Setting."
+      }
+    },
+    {
+      "id": "preparation_checklist",
+      "name": "Ministry Preparation Checklist Generator",
+      "category": "cross_cutting",
+      "priority": 10,
+      "effort": "medium",
+      "impact": "very_high",
+      "status": "planned",
+      "summary": "Per-occasion Liturgy Preparation Checklist aggregating all ministry needs into a single coordination view. The 'liturgist feature.'",
+      "girmRefs": [111],
+      "stlRefs": [119, 120, 121, 122, 123],
+      "details": {
+        "principle": "GIRM 111: 'In preparing the celebration of Mass, it is of the greatest importance that the arrangement of the whole celebration truly fosters the devotion of the faithful.' STL 120: 'the pastor may designate that the director of music or a Liturgy or music committee meet regularly to make the preparations necessary.'",
+        "checklistItems": [
+          "Readings assigned? (Lector I, Lector II)",
+          "Psalmist assigned? Psalm setting selected?",
+          "Cantor assigned? Welcome script prepared?",
+          "Musicians confirmed? (from booking system)",
+          "EMHCs scheduled? Count sufficient for communion mode?",
+          "Hospitality/Ushers assigned?",
+          "Liturgical color confirmed -> vestments, environment",
+          "Instrument restrictions noted (Advent/Lent)?",
+          "Mass Setting selected? Acclamations consistent?",
+          "Eucharistic Prayer selected?",
+          "Special rites flagged? (Sprinkling Rite, RCIA dismissal, Children's Liturgy, incensation)",
+          "Participation aids prepared (if needed: wedding, special liturgy)?"
+        ]
+      },
+      "implementation": {
+        "dataModel": "Aggregate from booking system, planner grid, occasion data. Compute completeness percentage.",
+        "ui": "Per-occasion checklist view. Dashboard widget showing preparation status across upcoming weeks."
+      }
+    },
+    {
+      "id": "celebration_rank_system",
+      "name": "Celebration Rank System",
+      "category": "cross_cutting",
+      "priority": 4,
+      "effort": "medium",
+      "impact": "high",
+      "status": "partially_done",
+      "summary": "Full celebration rank system with precedence levels for conflict resolution. Rank field already exists in liturgical_days but needs precedence numbering for calendar generation.",
+      "girmRefs": [],
+      "universalNormsRefs": [10, 11, 12, 13, 14],
+      "details": {
+        "precedenceLevels": [
+          { "level": 1, "description": "Paschal Triduum" },
+          { "level": 2, "description": "Nativity, Epiphany, Ascension, Pentecost; Sundays of Advent/Lent/Easter; Ash Wednesday; Holy Week weekdays; Easter Octave" },
+          { "level": 3, "description": "Solemnities in General Calendar" },
+          { "level": 4, "description": "Proper Solemnities (Patron, Dedication, Title)" },
+          { "level": 5, "description": "Feasts of the Lord in General Calendar" },
+          { "level": 6, "description": "Sundays of Christmas/Ordinary Time" },
+          { "level": 7, "description": "Feasts of BVM and Saints in General Calendar" },
+          { "level": 8, "description": "Proper Feasts" },
+          { "level": 9, "description": "Weekdays of Advent Dec 17-24, Octave of Christmas, Lent weekdays" },
+          { "level": 10, "description": "Obligatory Memorials in General Calendar" },
+          { "level": 11, "description": "Proper Obligatory Memorials" },
+          { "level": 12, "description": "Optional Memorials" },
+          { "level": 13, "description": "Weekdays of Advent (before Dec 17), Christmas (after Octave), Ordinary Time" }
+        ]
+      },
+      "implementation": {
+        "dataModel": "liturgical_days.rank already populated. Add precedenceLevel (1-13) for year-over-year calendar generation and conflict resolution.",
+        "ui": "Rank badge already displayed in DayDetailPanel and AgendaView."
+      }
+    },
+    {
+      "id": "la_proper_calendar",
+      "name": "Proper Calendar for the Archdiocese of Los Angeles",
+      "category": "cross_cutting",
+      "priority": 15,
+      "effort": "high",
+      "impact": "high",
+      "status": "planned",
+      "summary": "Overlay LA diocesan proper celebrations on top of the General Roman Calendar. Includes St. Junipero Serra, Our Lady of the Angels dedication, and US-proper saints.",
+      "universalNormsRefs": [52],
+      "details": {
+        "usProperEntries": [
+          "Jan 4: St. Elizabeth Ann Seton (Memorial)",
+          "Jan 5: St. John Neumann (Memorial)",
+          "Jan 22: Day of Prayer for Legal Protection of Unborn Children",
+          "May 15: St. Isidore (Memorial, US patron of farmers)",
+          "Jul 1: St. Junipero Serra (Memorial)",
+          "Jul 4: Independence Day",
+          "Sep 9: St. Peter Claver (Memorial)",
+          "Oct 6: Bl. Marie Rose Durocher (Optional Memorial)",
+          "Oct 19: Sts. Jean de Brébeuf, Isaac Jogues, and Companions (Memorial)",
+          "Nov 13: St. Frances Xavier Cabrini (Memorial)",
+          "Nov 18: Bl. Miguel Agustin Pro (Optional Memorial)",
+          "Nov 23: Bl. Miguel Agustin Pro (Optional Memorial, some calendars)",
+          "4th Thursday of November: Thanksgiving Day"
+        ],
+        "laProperEntries": [
+          "Sep 2: Anniversary of Dedication of Cathedral of Our Lady of the Angels",
+          "Sep 19: Our Lady of La Salette (local devotion)"
+        ]
+      },
+      "implementation": {
+        "dataModel": "Ingest General Roman Calendar into general-calendar.json. Overlay LA proper celebrations. Merge with liturgical_days data.",
+        "ui": "Show saint days and memorials on Ministry Calendar. Flag when weekday celebrations affect Sunday planning (e.g., Solemnity transferred to Sunday)."
+      }
+    },
+    {
+      "id": "funeral_wedding_variants",
+      "name": "Funeral & Wedding Mass Variants",
+      "category": "cross_cutting",
+      "priority": 17,
+      "effort": "high",
+      "impact": "medium",
+      "status": "planned",
+      "summary": "Create Mass type variants for the planner grid: Sunday, funeral, wedding, and weekday with modified row configurations and special rite slots.",
+      "girmRefs": [380, 381, 382, 383, 384, 385],
+      "stlRefs": [216, 217, 218, 219, 220, 221, 222, 244, 245, 246, 247, 248],
+      "details": {
+        "massTypes": [
+          {
+            "type": "sunday",
+            "description": "Standard 14-row grid",
+            "modifications": "None — this is the base template"
+          },
+          {
+            "type": "funeral",
+            "description": "Modified grid: no Gloria, specific readings, Final Commendation/Song of Farewell added",
+            "modifications": "Remove Gloria row. Add Final Commendation slot. Add Song of Farewell slot (STL 254: 'should affirm hope and trust in the paschal mystery, is the climax of the rite of final commendation'). Secular music not appropriate (STL 246, 248). Funeral choir encouraged (STL 257).",
+            "girmRef": 384,
+            "stlRef": "244-257"
+          },
+          {
+            "type": "wedding",
+            "description": "Modified grid: Nuptial Blessing slot, specific readings, participation aids note",
+            "modifications": "Add Nuptial Blessing slot. Song after ring exchange optional (STL 222). Secular music not appropriate even if reflecting spousal love (STL 220). Soloists may sing during Preparation of Gifts or after Communion but 'should not usurp parts of the Mass designated for congregational participation' (STL 221). Participation aids should be provided (STL 224).",
+            "stlRef": "216-224"
+          },
+          {
+            "type": "weekday",
+            "description": "Simplified grid: typically fewer sung elements per Progressive Solemnity",
+            "modifications": "Collapse optional rows. Show Priority 1 (acclamations) prominently."
+          }
+        ],
+        "otherSacraments": {
+          "rcia": "STL 202-206: Music for scrutinies, Rite of Election, Easter Vigil initiation. Scrutinies use Year A texts always (STL 205). Assembly joins in Litany of Saints, baptismal acclamations (STL 206).",
+          "baptismOfChildren": "STL 207-212: Cantors need unaccompanied singing skill (STL 207). Processional songs, acclamations after each baptism, baptismal song (STL 208-210).",
+          "confirmation": "STL 213-215: Festive and solemn character (STL 213). Songs during anointing, e.g. Veni Creator Spiritus (STL 214).",
+          "anointingOfSick": "STL 227-228: Music fosters Easter joy. Musical litany settings may be developed. Instrumental music during anointing if large numbers (STL 228).",
+          "penance": "STL 229: Communal celebration requires entrance song, Responsorial Psalm, Gospel Acclamation, optional hymn after homily, hymn of praise after absolution. Lord's Prayer may be sung.",
+          "ordination": "STL 225-226: Entrance antiphon, Litany of Supplication, vesting antiphon, kiss of peace psalm, thanksgiving song after Communion."
+        }
+      },
+      "implementation": {
+        "dataModel": "Add massType field to mass_events: 'sunday' | 'funeral' | 'wedding' | 'weekday'. Planner grid configuration varies by type.",
+        "ui": "Grid template switches based on massType. Type selector on planner creation."
+      }
+    },
+    {
+      "id": "liturgy_of_hours",
+      "name": "Liturgy of the Hours Music Support",
+      "category": "cross_cutting",
+      "priority": 19,
+      "effort": "high",
+      "impact": "low",
+      "status": "planned",
+      "summary": "Future expansion to support communal celebration of Morning and Evening Prayer with psalm singing methods (responsorial, antiphonal, through-composed, metrical, formula tones).",
+      "stlRefs": [230, 231, 232, 233, 234, 235, 236, 237, 238, 239, 240],
+      "details": {
+        "principle": "STL 230-231: Public celebration of Liturgy of the Hours, especially Morning and Evening Prayer, 'sanctifies time and participates in the prayer of Christ and his Church.' Communal celebration with singing preferred over private recitation.",
+        "psalmSingingMethods": [
+          { "method": "responsorial", "description": "STL 233: Psalmist/choir sings verses, assembly responds with brief antiphon (refrain). Original congregational style." },
+          { "method": "antiphonal", "description": "STL 234: Assembly divided into two groups, sharing the psalm text. Refrain sung before and after." },
+          { "method": "through_composed", "description": "STL 235: In directum. Musical material not repeated. For soloist, soloist + choir, or choir alone. Complements literary structure." },
+          { "method": "metrical", "description": "STL 236: Psalm text transformed into strophic hymn with recurring metrical structure. 400+ year tradition." },
+          { "method": "formula_tones", "description": "STL 237: Psalm tones, Anglican chants, faux-bourdons. Care needed with vernacular accent patterns vs. Gregorian cadences." }
+        ],
+        "otherElements": "STL 240: Hymns should be sung. Responsories lend themselves to singing. Readings not usually chanted. Versicles and greetings easily learned. Lord's Prayer and intercessions suited to singing."
+      },
+      "implementation": {
+        "dataModel": "New event type for communal prayer celebrations. Separate grid template for Morning/Evening Prayer.",
+        "ui": "Future module, well beyond current scope."
+      }
+    }
+  ]
+}
