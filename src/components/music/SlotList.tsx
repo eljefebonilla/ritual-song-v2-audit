@@ -108,7 +108,7 @@ function ReadingRow({ slot, synopsis, isExpanded, onToggle }: {
   const readingSynopsis = synopsisKey ? synopsis?.readings[synopsisKey] : null;
 
   return (
-    <div className="py-2 px-3">
+    <div className="py-2 px-3 bg-stone-50/50 border-l-2 border-stone-200">
       <div className="flex items-start gap-3">
         <span className="text-[10px] uppercase tracking-wider font-semibold text-stone-400 w-28 shrink-0 pt-0.5">
           {slot.label}
@@ -163,7 +163,7 @@ function AntiphonRow({ slot }: { slot: WorshipSlot }) {
   if (!slot.antiphon) return null;
   const a = slot.antiphon;
   return (
-    <div className="flex items-start gap-3 py-2 px-3">
+    <div className="flex items-start gap-3 py-2 px-3 bg-stone-50/50 border-l-2 border-stone-200">
       <span className="text-[10px] uppercase tracking-wider font-semibold text-stone-400 w-28 shrink-0 pt-0.5">
         {slot.label}
       </span>
@@ -359,7 +359,9 @@ export default function SlotList({
   isAdmin,
   onSlotEdit,
 }: SlotListProps) {
-  const [expandedReadings, setExpandedReadings] = useState<Set<string>>(new Set());
+  const [expandedReadings, setExpandedReadings] = useState<Set<string>>(
+    new Set(["first", "second", "gospel"])
+  );
 
   const toggleReading = (type: string) => {
     setExpandedReadings((prev) => {

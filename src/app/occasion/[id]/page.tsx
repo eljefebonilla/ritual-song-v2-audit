@@ -95,7 +95,7 @@ export default async function OccasionPage({
         </div>
       )}
 
-      {/* Lectionary Synopsis */}
+      {/* Lectionary Synopsis — logline + invites-us-to (per-reading synopses live in SlotList reading rows) */}
       {synopsis && (
         <div className="mb-6">
           <div
@@ -109,20 +109,6 @@ export default async function OccasionPage({
           {synopsis.trajectory && (
             <p className="text-xs text-stone-500 mt-1">{synopsis.trajectory}</p>
           )}
-          <div className="border border-stone-200 rounded-lg p-3 bg-white mt-3 space-y-3">
-            {(["first", "second", "gospel"] as const).map((key) => {
-              const r = synopsis.readings[key];
-              const label = key === "gospel" ? "Gospel" : key === "first" ? "First Reading" : "Second Reading";
-              return (
-                <div key={key}>
-                  <p className="text-[10px] uppercase tracking-widest font-bold text-stone-400">
-                    {label}{r.citation ? ` — ${r.citation}` : ""}
-                  </p>
-                  <p className="text-sm text-stone-600 mt-0.5">{r.synopsis}</p>
-                </div>
-              );
-            })}
-          </div>
           <div className="bg-stone-50 border-l-2 rounded-r-md p-3 mt-3 italic text-sm text-stone-600" style={{ borderColor: colors.primary }}>
             {synopsis.invitesUsTo}
           </div>

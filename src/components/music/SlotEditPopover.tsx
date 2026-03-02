@@ -11,6 +11,12 @@ interface SongResult {
   usageCount: number;
 }
 
+const ROLE_CATEGORY_FILTER: Record<string, string> = {
+  gospel_acclamation: "gospel_acclamation_refrain",
+  responsorial_psalm: "psalm",
+  gloria: "gloria",
+};
+
 interface SlotEditPopoverProps {
   role: string;
   currentSong?: SongEntry;
@@ -60,7 +66,9 @@ export default function SlotEditPopover({
     }
     setSearching(true);
     try {
-      const res = await fetch(`/api/songs?q=${encodeURIComponent(q)}&limit=10`);
+      const cat = ROLE_CATEGORY_FILTER[role];
+      const catParam = cat ? `&category=${encodeURIComponent(cat)}` : "";
+      const res = await fetch(`/api/songs?q=${encodeURIComponent(q)}&limit=10${catParam}`);
       const data = await res.json();
       setResults(data);
     } catch {
@@ -68,7 +76,7 @@ export default function SlotEditPopover({
     } finally {
       setSearching(false);
     }
-  }, []);
+  }, [role]);
 
   const handleQueryChange = (val: string) => {
     setQuery(val);
@@ -81,8 +89,8 @@ export default function SlotEditPopover({
     setError(null);
     try {
       await onSave(role, song.title, song.composer || "");
-    } catch {
-      setError("Failed to save. Please try again.");
+    } catch (err) {
+      setError(err instanceof Error ? err.message : "Failed to save.");
       setSaving(false);
     }
   };
@@ -93,8 +101,8 @@ export default function SlotEditPopover({
     setError(null);
     try {
       await onSave(role, title.trim(), composer.trim());
-    } catch {
-      setError("Failed to save. Please try again.");
+    } catch (err) {
+      setError(err instanceof Error ? err.message : "Failed to save.");
       setSaving(false);
     }
   };
@@ -104,8 +112,8 @@ export default function SlotEditPopover({
     setError(null);
     try {
       await onClear(role);
-    } catch {
-      setError("Failed to clear. Please try again.");
+    } catch (err) {
+      setError(err instanceof Error ? err.message : "Failed to clear.");
       setSaving(false);
     }
   };
