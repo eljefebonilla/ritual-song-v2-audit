@@ -464,10 +464,12 @@ export default function Sidebar({ open, onClose }: SidebarProps) {
               Sign In
             </Link>
           )}
-          <p className="text-[10px] text-parish-gold/60 uppercase tracking-wider">
-            St. Monica Catholic Community
-            <span className="ml-1.5 text-parish-gold/30">v1.4.0</span>
-          </p>
+          <div className="flex items-center justify-between">
+            <p className="text-[10px] text-parish-gold/60 uppercase tracking-wider">
+              St. Monica Catholic Community
+            </p>
+            <span className="text-[9px] text-stone-500">v1.4.0</span>
+          </div>
         </div>
       )}
     </>
