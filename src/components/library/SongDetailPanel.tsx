@@ -858,39 +858,64 @@ export default function SongDetailPanel({
     setSaving(true);
     setSaveError(null);
     try {
-      const formData = new FormData();
-      formData.append("file", uploadFile);
-      formData.append("label", newLabel.trim());
-      if (newType !== "youtube" && newType !== "ocp_link") {
-        formData.append("type", newType);
-      }
-      const res = await fetch(`/api/songs/${song.id}/resources/upload`, {
+      const label = newLabel.trim();
+      const type = (newType !== "youtube" && newType !== "ocp_link") ? newType : "other";
+
+      // Step 1: Get signed upload URL (lightweight JSON call)
+      const urlRes = await fetch(`/api/songs/${song.id}/resources/signed-url`, {
         method: "POST",
-        body: formData,
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ label, fileName: uploadFile.name }),
       });
-      if (res.ok) {
-        const data = await res.json();
-        // Only add if not already present (dedup)
-        setLocalResources((prev) => {
-          if (prev.some((r) => r.id === data.resource.id)) return prev;
-          return [...prev, data.resource];
-        });
-        // Signal audio upload so play button appears in Order of Worship
-        if (
-          (newType === "audio" || newType === "practice_track") &&
-          data.resource.url &&
-          onAudioUploaded
-        ) {
-          onAudioUploaded(song.id, data.resource.url);
-        }
-        setAddingResource(false);
-        setNewLabel("");
-        setUploadFile(null);
-        if (fileInputRef.current) fileInputRef.current.value = "";
-      } else {
-        const data = await res.json().catch(() => ({}));
-        setSaveError(data.error || `Upload failed (${res.status})`);
+      if (!urlRes.ok) {
+        const d = await urlRes.json().catch(() => ({}));
+        setSaveError(d.error || `Prepare failed (${urlRes.status})`);
+        return;
       }
+      const { signedUrl, storagePath } = await urlRes.json();
+
+      // Step 2: Upload file directly to Supabase Storage (bypasses Vercel limit)
+      const storageRes = await fetch(signedUrl, {
+        method: "PUT",
+        headers: { "Content-Type": uploadFile.type || "application/octet-stream" },
+        body: uploadFile,
+      });
+      if (!storageRes.ok) {
+        const text = await storageRes.text().catch(() => "");
+        setSaveError(`Storage upload failed (${storageRes.status}): ${text}`);
+        return;
+      }
+
+      // Step 3: Register resource metadata (lightweight JSON call)
+      const regRes = await fetch(`/api/songs/${song.id}/resources`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ type, label, storagePath }),
+      });
+      if (!regRes.ok) {
+        const d = await regRes.json().catch(() => ({}));
+        setSaveError(d.error || `Register failed (${regRes.status})`);
+        return;
+      }
+
+      const data = await regRes.json();
+      // Only add if not already present (dedup)
+      setLocalResources((prev) => {
+        if (prev.some((r) => r.id === data.resource.id)) return prev;
+        return [...prev, data.resource];
+      });
+      // Signal audio upload so play button appears in Order of Worship
+      if (
+        (type === "audio" || type === "practice_track") &&
+        data.resource.url &&
+        onAudioUploaded
+      ) {
+        onAudioUploaded(song.id, data.resource.url);
+      }
+      setAddingResource(false);
+      setNewLabel("");
+      setUploadFile(null);
+      if (fileInputRef.current) fileInputRef.current.value = "";
     } catch (err) {
       setSaveError(err instanceof Error ? err.message : "Network error");
     } finally {

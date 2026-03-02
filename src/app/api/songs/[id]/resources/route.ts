@@ -15,7 +15,7 @@ export async function POST(
 
   try {
     const body = await request.json();
-    const { type, label, url, source } = body;
+    const { type, label, url, source, storagePath } = body;
 
     if (!type || !label) {
       return NextResponse.json(
@@ -32,9 +32,22 @@ export async function POST(
 
     // Determine source from URL or explicit source
     let resolvedSource = source || "manual";
-    if (url && (url.includes("youtube.com") || url.includes("youtu.be"))) {
+    if (storagePath) {
+      resolvedSource = "supabase";
+    } else if (url && (url.includes("youtube.com") || url.includes("youtu.be"))) {
       resolvedSource = "youtube";
     }
+
+    // If storagePath provided (direct upload), derive public URL
+    let resolvedUrl = url || null;
+    if (storagePath && !resolvedUrl) {
+      const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL;
+      if (supabaseUrl) {
+        resolvedUrl = `${supabaseUrl}/storage/v1/object/public/song-resources/${storagePath}`;
+      }
+    }
+
+    const isHighlighted = label.toUpperCase().includes("AIM") || undefined;
 
     const supabase = createAdminClient();
 
@@ -44,8 +57,10 @@ export async function POST(
         song_id: id,
         type,
         label,
-        url: url || null,
+        url: resolvedUrl,
+        storage_path: storagePath || null,
         source: resolvedSource,
+        is_highlighted: isHighlighted || false,
       })
       .select()
       .single();
@@ -60,6 +75,7 @@ export async function POST(
         type: resource.type,
         label: resource.label,
         url: resource.url,
+        storagePath: resource.storage_path,
         source: resource.source,
         isHighlighted: resource.is_highlighted,
       },
