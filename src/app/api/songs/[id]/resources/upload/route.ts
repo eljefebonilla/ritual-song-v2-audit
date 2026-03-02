@@ -5,6 +5,14 @@ import { getSongById } from "@/lib/song-library";
 import type { SongResourceType } from "@/lib/types";
 import path from "path";
 
+function sanitizeForStorage(str: string): string {
+  return str
+    .replace(/[^\w\s.-]/g, "")
+    .replace(/\s+/g, "_")
+    .replace(/_+/g, "_")
+    .slice(0, 120);
+}
+
 function classifyByExtension(ext: string): SongResourceType {
   const lower = ext.toLowerCase();
   if ([".mp3", ".wav", ".m4a", ".aif", ".aiff", ".ogg", ".flac"].includes(lower)) return "audio";
@@ -46,13 +54,13 @@ export async function POST(
 
     const supabase = createAdminClient();
 
-    // Build filename
+    // Build filename (sanitized for Supabase Storage)
     const ext = path.extname(file.name);
-    const fileName = song.composer
-      ? `${song.title} - ${song.composer} ${label}${ext}`
-      : `${song.title} ${label}${ext}`;
-
-    const storagePath = `${id}/${fileName}`;
+    const safeName = sanitizeForStorage(
+      song.composer ? `${song.title} - ${song.composer}` : song.title
+    );
+    const safeLabel = sanitizeForStorage(label);
+    const storagePath = `${id}/${safeName}_${safeLabel}${ext}`;
 
     // Check for duplicate
     const { data: existing } = await supabase

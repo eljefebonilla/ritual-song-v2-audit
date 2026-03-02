@@ -4,6 +4,18 @@ import { createAdminClient } from "@/lib/supabase/admin";
 import { getSongById } from "@/lib/song-library";
 
 /**
+ * Sanitize a string for use as a Supabase Storage key.
+ * Keeps alphanumeric, hyphens, underscores, dots. Replaces everything else.
+ */
+function sanitizeForStorage(str: string): string {
+  return str
+    .replace(/[^\w\s.-]/g, "")   // strip special chars (•, &, etc.)
+    .replace(/\s+/g, "_")        // spaces → underscores
+    .replace(/_+/g, "_")         // collapse multiple underscores
+    .slice(0, 120);              // cap length
+}
+
+/**
  * Generate a signed upload URL for direct browser-to-Supabase upload.
  * Bypasses Vercel's 4.5 MB body size limit for serverless functions.
  */
@@ -33,10 +45,11 @@ export async function POST(
     }
 
     const ext = fileName.includes(".") ? fileName.slice(fileName.lastIndexOf(".")) : "";
-    const baseName = song.composer
-      ? `${song.title} - ${song.composer} ${label}${ext}`
-      : `${song.title} ${label}${ext}`;
-    const storagePath = `${id}/${baseName}`;
+    const safeName = sanitizeForStorage(
+      song.composer ? `${song.title} - ${song.composer}` : song.title
+    );
+    const safeLabel = sanitizeForStorage(label);
+    const storagePath = `${id}/${safeName}_${safeLabel}${ext}`;
 
     const supabase = createAdminClient();
 
