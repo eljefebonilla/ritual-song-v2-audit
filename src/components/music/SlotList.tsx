@@ -167,9 +167,7 @@ function AntiphonRow({ slot }: { slot: WorshipSlot }) {
       <span className="text-[10px] uppercase tracking-wider font-semibold text-stone-400 w-28 shrink-0 pt-0.5">
         {slot.label}
       </span>
-      <span className="w-7 shrink-0 flex items-start justify-center pt-0.5">
-        <SlotPlayButton resources={slot.resources} />
-      </span>
+      <span className="w-7 shrink-0" />
       <div className="min-w-0 flex-1">
         <p className="text-sm font-medium text-stone-700">
           {a.citation}
@@ -409,53 +407,81 @@ export default function SlotList({
         </div>
       )}
 
-      {sections.map((section) => (
-        <div key={section.key}>
-          <SectionHeader
-            title={SECTION_LABELS[section.key]}
-            color={seasonColor}
-          />
-          <div className="divide-y divide-stone-100">
-            {section.slots.map((slot) => {
-              const slotHint = slot.song?.title ? songHints?.get(slot.song.title) : undefined;
-              switch (slot.kind) {
-                case "song":
-                  return (
-                    <SongSlotRow
-                      key={slot.id}
-                      slot={slot}
-                      selectedSongId={selectedSongId}
-                      onSongSelect={onSongSelect}
-                      selectedRowRef={selectedRowRef}
-                      audioOverrides={audioOverrides}
-                      hint={slotHint}
-                      isAdmin={isAdmin}
-                      onSlotEdit={onSlotEdit}
-                    />
-                  );
-                case "reading":
-                  return (
-                    <ReadingRow
-                      key={slot.id}
-                      slot={slot}
-                      synopsis={synopsis}
-                      isExpanded={slot.reading ? expandedReadings.has(slot.reading.type) : false}
-                      onToggle={slot.reading ? () => toggleReading(slot.reading!.type) : undefined}
-                    />
-                  );
-                case "antiphon":
-                  return <AntiphonRow key={slot.id} slot={slot} />;
-                case "mass_setting":
-                  return <MassSettingRow key={slot.id} slot={slot} isAdmin={isAdmin} onSlotEdit={onSlotEdit} />;
-                case "resource":
-                  return <ResourceRow key={slot.id} slot={slot} />;
-                default:
-                  return null;
-              }
-            })}
+      {sections.map((section) => {
+        const communionCount = section.key === "eucharist"
+          ? section.slots.filter((s) => s.role.startsWith("communion_")).length
+          : 0;
+
+        return (
+          <div key={section.key}>
+            <SectionHeader
+              title={SECTION_LABELS[section.key]}
+              color={seasonColor}
+            />
+            <div className="divide-y divide-stone-100">
+              {section.slots.map((slot) => {
+                const slotHint = slot.song?.title ? songHints?.get(slot.song.title) : undefined;
+                switch (slot.kind) {
+                  case "song":
+                    return (
+                      <SongSlotRow
+                        key={slot.id}
+                        slot={slot}
+                        selectedSongId={selectedSongId}
+                        onSongSelect={onSongSelect}
+                        selectedRowRef={selectedRowRef}
+                        audioOverrides={audioOverrides}
+                        hint={slotHint}
+                        isAdmin={isAdmin}
+                        onSlotEdit={onSlotEdit}
+                      />
+                    );
+                  case "reading":
+                    return (
+                      <ReadingRow
+                        key={slot.id}
+                        slot={slot}
+                        synopsis={synopsis}
+                        isExpanded={slot.reading ? expandedReadings.has(slot.reading.type) : false}
+                        onToggle={slot.reading ? () => toggleReading(slot.reading!.type) : undefined}
+                      />
+                    );
+                  case "antiphon":
+                    return <AntiphonRow key={slot.id} slot={slot} />;
+                  case "mass_setting":
+                    return <MassSettingRow key={slot.id} slot={slot} isAdmin={isAdmin} onSlotEdit={onSlotEdit} />;
+                  case "resource":
+                    return <ResourceRow key={slot.id} slot={slot} />;
+                  default:
+                    return null;
+                }
+              })}
+              {/* Add Communion Song button */}
+              {section.key === "eucharist" && isAdmin && onSlotEdit && (
+                <div className="py-2 px-3">
+                  <div className="flex items-center gap-3">
+                    <span className="w-28 shrink-0" />
+                    <span className="w-7 shrink-0" />
+                    <button
+                      onClick={(e) => {
+                        const rect = (e.currentTarget as HTMLElement).getBoundingClientRect();
+                        onSlotEdit(`communion_${communionCount}`, rect);
+                      }}
+                      className="text-xs text-stone-400 hover:text-stone-600 transition-colors flex items-center gap-1"
+                    >
+                      <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                        <line x1="12" y1="5" x2="12" y2="19" />
+                        <line x1="5" y1="12" x2="19" y2="12" />
+                      </svg>
+                      Add Communion Song
+                    </button>
+                  </div>
+                </div>
+              )}
+            </div>
           </div>
-        </div>
-      ))}
+        );
+      })}
     </div>
   );
 }
