@@ -21,6 +21,7 @@ interface SlotListProps {
   songHints?: Map<string, string>;
   isAdmin?: boolean;
   onSlotEdit?: (role: string, anchorRect: DOMRect, currentSong?: { title: string; composer?: string }) => void;
+  onSlotReorder?: (fromIndex: number, toIndex: number) => void;
 }
 
 function SectionHeader({ title, color }: { title: string; color: string }) {
@@ -358,10 +359,13 @@ export default function SlotList({
   songHints,
   isAdmin,
   onSlotEdit,
+  onSlotReorder,
 }: SlotListProps) {
   const [expandedReadings, setExpandedReadings] = useState<Set<string>>(
     new Set(["first", "second", "gospel"])
   );
+  const [dragFromIdx, setDragFromIdx] = useState<number | null>(null);
+  const [dragOverIdx, setDragOverIdx] = useState<number | null>(null);
 
   const toggleReading = (type: string) => {
     setExpandedReadings((prev) => {
@@ -424,7 +428,70 @@ export default function SlotList({
               {section.slots.map((slot) => {
                 const slotHint = slot.song?.title ? songHints?.get(slot.song.title) : undefined;
                 switch (slot.kind) {
-                  case "song":
+                  case "song": {
+                    const communionMatch = slot.role.match(/^communion_(\d+)$/);
+                    const communionIdx = communionMatch ? parseInt(communionMatch[1], 10) : -1;
+                    const isDraggable = communionIdx >= 0 && communionCount >= 2 && isAdmin && !!onSlotReorder;
+
+                    if (isDraggable) {
+                      return (
+                        <div
+                          key={slot.id}
+                          draggable
+                          onDragStart={(e) => {
+                            e.dataTransfer.effectAllowed = "move";
+                            e.dataTransfer.setData("text/x-communion-idx", String(communionIdx));
+                            setDragFromIdx(communionIdx);
+                          }}
+                          onDragOver={(e) => {
+                            if (!e.dataTransfer.types.includes("text/x-communion-idx")) return;
+                            e.preventDefault();
+                            setDragOverIdx(communionIdx);
+                          }}
+                          onDragEnd={() => {
+                            setDragFromIdx(null);
+                            setDragOverIdx(null);
+                          }}
+                          onDrop={(e) => {
+                            e.preventDefault();
+                            if (dragFromIdx !== null && dragFromIdx !== communionIdx) {
+                              onSlotReorder!(dragFromIdx, communionIdx);
+                            }
+                            setDragFromIdx(null);
+                            setDragOverIdx(null);
+                          }}
+                          className={`relative group ${dragFromIdx === communionIdx ? "opacity-40" : ""}`}
+                        >
+                          {dragOverIdx === communionIdx && dragFromIdx !== null && dragFromIdx !== communionIdx && (
+                            <div className="absolute top-0 left-3 right-3 h-0.5 bg-stone-400 rounded-full z-10" />
+                          )}
+                          <span
+                            className="absolute left-0 top-1/2 -translate-y-1/2 text-stone-300 cursor-grab opacity-0 group-hover:opacity-100 transition-opacity z-10"
+                            title="Drag to reorder"
+                          >
+                            <svg width="8" height="14" viewBox="0 0 8 14" fill="currentColor">
+                              <circle cx="2" cy="2" r="1.2" />
+                              <circle cx="6" cy="2" r="1.2" />
+                              <circle cx="2" cy="7" r="1.2" />
+                              <circle cx="6" cy="7" r="1.2" />
+                              <circle cx="2" cy="12" r="1.2" />
+                              <circle cx="6" cy="12" r="1.2" />
+                            </svg>
+                          </span>
+                          <SongSlotRow
+                            slot={slot}
+                            selectedSongId={selectedSongId}
+                            onSongSelect={onSongSelect}
+                            selectedRowRef={selectedRowRef}
+                            audioOverrides={audioOverrides}
+                            hint={slotHint}
+                            isAdmin={isAdmin}
+                            onSlotEdit={onSlotEdit}
+                          />
+                        </div>
+                      );
+                    }
+
                     return (
                       <SongSlotRow
                         key={slot.id}
@@ -438,6 +505,7 @@ export default function SlotList({
                         onSlotEdit={onSlotEdit}
                       />
                     );
+                  }
                   case "reading":
                     return (
                       <ReadingRow

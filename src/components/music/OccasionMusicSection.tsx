@@ -315,6 +315,45 @@ export default function OccasionMusicSection({
     [occasionId, mergedPlan]
   );
 
+  const handleCommunionReorder = useCallback(
+    async (fromIndex: number, toIndex: number) => {
+      if (fromIndex === toIndex) return;
+      const current = mergedPlan.communionSongs ? [...mergedPlan.communionSongs] : [];
+      if (current.length < 2) return;
+      const [moved] = current.splice(fromIndex, 1);
+      current.splice(toIndex, 0, moved);
+
+      const field = "communionSongs";
+      const prev = mergedPlan.communionSongs;
+
+      // Optimistic local update
+      setPlanOverrides(p => ({
+        ...p,
+        [mergedPlan.communityId]: {
+          ...(p[mergedPlan.communityId] || {}),
+          [field]: current,
+        },
+      }));
+
+      const res = await fetch(`/api/occasions/${occasionId}/music-plan`, {
+        method: "PUT",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ communityId: mergedPlan.communityId, field, value: current }),
+      });
+      if (!res.ok) {
+        // Revert on failure
+        setPlanOverrides(p => ({
+          ...p,
+          [mergedPlan.communityId]: {
+            ...(p[mergedPlan.communityId] || {}),
+            [field]: prev,
+          },
+        }));
+      }
+    },
+    [occasionId, mergedPlan]
+  );
+
   const handleSlotReplace = useCallback(
     async (_songId: string, title: string, composer: string) => {
       if (!selectedSlotRole) return;
@@ -536,6 +575,7 @@ export default function OccasionMusicSection({
             songHints={songHints}
             isAdmin={isAdmin}
             onSlotEdit={handleSlotEdit}
+            onSlotReorder={handleCommunionReorder}
           />
         </div>
 

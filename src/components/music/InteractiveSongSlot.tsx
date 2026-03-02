@@ -71,18 +71,21 @@ export default function InteractiveSongSlot({
   };
 
   const handleDragOver = (e: React.DragEvent) => {
+    if (!e.dataTransfer.types.includes("Files")) return;
     e.preventDefault();
     e.stopPropagation();
     setDragOver(true);
   };
 
   const handleDragLeave = (e: React.DragEvent) => {
+    if (!e.dataTransfer.types.includes("Files")) return;
     e.preventDefault();
     e.stopPropagation();
     setDragOver(false);
   };
 
   const handleDrop = (e: React.DragEvent) => {
+    if (!e.dataTransfer.types.includes("Files")) return;
     e.preventDefault();
     e.stopPropagation();
     setDragOver(false);
