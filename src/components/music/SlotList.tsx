@@ -315,7 +315,12 @@ function SongSlotRow({
 
   return (
     <>
-      <SongSlot label={slot.label} song={slot.song} />
+      <div
+        className={onSongSelect ? "cursor-pointer hover:bg-stone-50 rounded transition-colors" : ""}
+        onClick={onSongSelect ? () => onSongSelect(`unresolved:${slot.song!.title}`) : undefined}
+      >
+        <SongSlot label={slot.label} song={slot.song} />
+      </div>
       {hintEl}
     </>
   );

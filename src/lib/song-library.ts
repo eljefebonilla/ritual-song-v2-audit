@@ -343,7 +343,7 @@ export function resolveFullSongs(plans: MusicPlan[]): Record<string, LibrarySong
     if (plan.gospelAcclamation?.title) {
       tryAdd(plan.gospelAcclamation.title, plan.gospelAcclamation.composer);
     }
-    if (plan.responsorialPsalm?.psalm) tryAdd(plan.responsorialPsalm.psalm);
+    if (plan.responsorialPsalm?.psalm) tryAdd(plan.responsorialPsalm.psalm, plan.responsorialPsalm.setting);
     if (plan.communionSongs) {
       for (const s of plan.communionSongs) tryAdd(s.title, s.composer);
     }
@@ -416,7 +416,7 @@ export function resolveAllSongs(
 
     // Responsorial psalm
     if (plan.responsorialPsalm?.psalm) {
-      tryResolve(plan.responsorialPsalm.psalm);
+      tryResolve(plan.responsorialPsalm.psalm, plan.responsorialPsalm.setting);
     }
 
     // Communion songs

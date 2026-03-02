@@ -12,11 +12,12 @@ import type {
   OccasionDate,
   LiturgicalDay,
 } from "@/lib/types";
-import { COMMUNITY_BADGES } from "@/lib/occasion-helpers";
+import { COMMUNITY_BADGES, normalizeTitle } from "@/lib/occasion-helpers";
 import { planToSlots } from "@/lib/worship-slots";
 import { validateMusicPlan, type ValidationWarning } from "@/lib/liturgical-validation";
 import { rowToLiturgicalDay } from "@/lib/liturgical-helpers";
 import { findPsalmSettings } from "@/lib/psalm-matching";
+import { getTitleIndex, pickBestMatch } from "@/lib/song-library";
 import SlotList from "./SlotList";
 import SongDetailPanel from "@/components/library/SongDetailPanel";
 
@@ -159,9 +160,20 @@ export default function OccasionMusicSection({
     resolvedSongs,
   );
 
-  const selectedSong = selectedSongId
-    ? Object.values(librarySongs).find((s) => s.id === selectedSongId) ?? null
-    : null;
+  const selectedSong = useMemo(() => {
+    if (!selectedSongId) return null;
+    // Direct ID match from resolved songs
+    const direct = Object.values(librarySongs).find((s) => s.id === selectedSongId);
+    if (direct) return direct;
+    // Unresolved fallback — search library by title
+    if (selectedSongId.startsWith("unresolved:")) {
+      const title = selectedSongId.slice("unresolved:".length);
+      const key = normalizeTitle(title);
+      const candidates = getTitleIndex().get(key);
+      if (candidates) return pickBestMatch(candidates) ?? null;
+    }
+    return null;
+  }, [selectedSongId, librarySongs]);
 
   const handleSongSelect = (songId: string) => {
     setSelectedSongId((prev) => (prev === songId ? null : songId));
