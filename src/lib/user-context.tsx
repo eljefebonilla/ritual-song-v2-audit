@@ -52,7 +52,12 @@ export function UserProvider({ children }: { children: ReactNode }) {
   const [roleOverride, setRoleOverride] = useState<UserRole | null>(() => {
     if (typeof window === "undefined") return null;
     const stored = localStorage.getItem("rs_role_override");
-    return stored === "admin" || stored === "member" ? stored : null;
+    if (stored === "admin" || stored === "member") {
+      // Sync cookie for server-side verifyAdmin()
+      document.cookie = `rs_role_override=${stored};path=/;max-age=${60 * 60 * 24 * 365};SameSite=Lax`;
+      return stored;
+    }
+    return null;
   });
   const [loading, setLoading] = useState(true);
 
@@ -125,6 +130,8 @@ export function UserProvider({ children }: { children: ReactNode }) {
   function setRole(newRole: UserRole) {
     setRoleOverride(newRole);
     localStorage.setItem("rs_role_override", newRole);
+    // Also set as cookie so server-side verifyAdmin() can read it
+    document.cookie = `rs_role_override=${newRole};path=/;max-age=${60 * 60 * 24 * 365};SameSite=Lax`;
   }
 
   const displayName = profile?.full_name ?? (user ? "Member" : "Guest");
