@@ -466,6 +466,7 @@ export default function Sidebar({ open, onClose }: SidebarProps) {
           )}
           <p className="text-[10px] text-parish-gold/60 uppercase tracking-wider">
             St. Monica Catholic Community
+            <span className="ml-1.5 text-parish-gold/30">v1.4.0</span>
           </p>
         </div>
       )}
