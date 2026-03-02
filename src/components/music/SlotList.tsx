@@ -188,15 +188,31 @@ function AntiphonRow({ slot }: { slot: WorshipSlot }) {
 }
 
 
-function MassSettingRow({ slot }: { slot: WorshipSlot }) {
+function MassSettingRow({ slot, isAdmin, onSlotEdit }: {
+  slot: WorshipSlot;
+  isAdmin?: boolean;
+  onSlotEdit?: (role: string, anchorRect: DOMRect, currentSong?: { title: string; composer?: string }) => void;
+}) {
+  const rowRef = useRef<HTMLDivElement>(null);
   if (!slot.massSetting) return null;
+
+  const handleEditClick = (e: React.MouseEvent) => {
+    e.stopPropagation();
+    const el = rowRef.current;
+    if (!el || !onSlotEdit) return;
+    onSlotEdit(slot.role, el.getBoundingClientRect(), {
+      title: slot.massSetting!.name,
+      composer: slot.massSetting!.composer,
+    });
+  };
+
   return (
-    <div className="flex items-start gap-3 py-2 px-3">
+    <div ref={rowRef} className="flex items-start gap-3 py-2 px-3">
       <span className="text-[10px] uppercase tracking-wider font-semibold text-stone-400 w-28 shrink-0 pt-0.5">
         {slot.label}
       </span>
       <span className="w-7 shrink-0 flex items-start justify-center pt-0.5" />
-      <div>
+      <div className="min-w-0 flex-1">
         <p className="text-sm font-medium text-stone-800">
           {slot.massSetting.name}
         </p>
@@ -206,6 +222,17 @@ function MassSettingRow({ slot }: { slot: WorshipSlot }) {
           </p>
         )}
       </div>
+      {isAdmin && onSlotEdit && (
+        <button
+          onClick={handleEditClick}
+          className="shrink-0 p-1 text-stone-300 hover:text-stone-600 hover:bg-stone-100 rounded transition-colors"
+          title="Edit mass setting"
+        >
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+            <path d="M17 3a2.828 2.828 0 1 1 4 4L7.5 20.5 2 22l1.5-5.5L17 3z" />
+          </svg>
+        </button>
+      )}
     </div>
   );
 }
@@ -419,7 +446,7 @@ export default function SlotList({
                 case "antiphon":
                   return <AntiphonRow key={slot.id} slot={slot} />;
                 case "mass_setting":
-                  return <MassSettingRow key={slot.id} slot={slot} />;
+                  return <MassSettingRow key={slot.id} slot={slot} isAdmin={isAdmin} onSlotEdit={onSlotEdit} />;
                 case "resource":
                   return <ResourceRow key={slot.id} slot={slot} />;
                 default:

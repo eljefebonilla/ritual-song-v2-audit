@@ -361,7 +361,7 @@ export function planToSlots(
       slots.push({
         id: nextId(),
         section: "eucharist",
-        role: "communion",
+        role: `communion_${i}`,
         label: i === 0 ? "Communion" : `Comm. ${i + 1}`,
         kind: "song",
         order: euchOrder++,

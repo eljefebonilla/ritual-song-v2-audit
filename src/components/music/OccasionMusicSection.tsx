@@ -130,6 +130,7 @@ const ROLE_TO_FIELD: Record<string, string> = {
   responsorial_psalm: "responsorialPsalm",
   gospel_acclamation: "gospelAcclamation",
   offertory: "offertory",
+  mass_setting: "eucharisticAcclamations",
   lords_prayer: "lordsPrayer",
   fraction_rite: "fractionRite",
   sending: "sending",
@@ -235,23 +236,24 @@ export default function OccasionMusicSection({
       } else if (role === "responsorial_psalm") {
         field = "responsorialPsalm";
         value = { psalm: title, setting: composer || undefined };
+      } else if (role === "mass_setting") {
+        field = "eucharisticAcclamations";
+        value = { massSettingName: title, composer: composer || undefined };
       } else {
         field = ROLE_TO_FIELD[role] || role;
         value = { title, composer: composer || undefined };
       }
 
-      try {
-        const res = await fetch(`/api/occasions/${occasionId}/music-plan`, {
-          method: "PUT",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({ communityId: activePlan.communityId, field, value }),
-        });
-        if (res.ok) {
-          window.location.reload();
-        }
-      } catch {
-        // Silently fail — user can retry
+      const res = await fetch(`/api/occasions/${occasionId}/music-plan`, {
+        method: "PUT",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ communityId: activePlan.communityId, field, value }),
+      });
+      if (!res.ok) {
+        const data = await res.json().catch(() => ({}));
+        throw new Error(data.error || `Save failed (${res.status})`);
       }
+      window.location.reload();
     },
     [occasionId, activePlan]
   );
@@ -270,22 +272,22 @@ export default function OccasionMusicSection({
         value = current.length > 0 ? current : null;
       } else if (role === "responsorial_psalm") {
         field = "responsorialPsalm";
+      } else if (role === "mass_setting") {
+        field = "eucharisticAcclamations";
       } else {
         field = ROLE_TO_FIELD[role] || role;
       }
 
-      try {
-        const res = await fetch(`/api/occasions/${occasionId}/music-plan`, {
-          method: "PUT",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({ communityId: activePlan.communityId, field, value }),
-        });
-        if (res.ok) {
-          window.location.reload();
-        }
-      } catch {
-        // Silently fail
+      const res = await fetch(`/api/occasions/${occasionId}/music-plan`, {
+        method: "PUT",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ communityId: activePlan.communityId, field, value }),
+      });
+      if (!res.ok) {
+        const data = await res.json().catch(() => ({}));
+        throw new Error(data.error || `Clear failed (${res.status})`);
       }
+      window.location.reload();
     },
     [occasionId, activePlan]
   );

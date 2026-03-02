@@ -15,8 +15,8 @@ interface SlotEditPopoverProps {
   role: string;
   currentSong?: SongEntry;
   anchorRect: DOMRect;
-  onSave: (role: string, title: string, composer: string) => void;
-  onClear: (role: string) => void;
+  onSave: (role: string, title: string, composer: string) => Promise<void>;
+  onClear: (role: string) => Promise<void>;
   onClose: () => void;
 }
 
@@ -34,6 +34,8 @@ export default function SlotEditPopover({
   const [title, setTitle] = useState(currentSong?.title || "");
   const [composer, setComposer] = useState(currentSong?.composer || "");
   const [mode, setMode] = useState<"search" | "manual">("search");
+  const [saving, setSaving] = useState(false);
+  const [error, setError] = useState<string | null>(null);
   const inputRef = useRef<HTMLInputElement>(null);
   const searchTimeout = useRef<ReturnType<typeof setTimeout>>(undefined);
 
@@ -74,20 +76,38 @@ export default function SlotEditPopover({
     searchTimeout.current = setTimeout(() => searchSongs(val), 200);
   };
 
-  const handleSelectSong = (song: SongResult) => {
-    onSave(role, song.title, song.composer || "");
-    onClose();
+  const handleSelectSong = async (song: SongResult) => {
+    setSaving(true);
+    setError(null);
+    try {
+      await onSave(role, song.title, song.composer || "");
+    } catch {
+      setError("Failed to save. Please try again.");
+      setSaving(false);
+    }
   };
 
-  const handleManualSave = () => {
+  const handleManualSave = async () => {
     if (!title.trim()) return;
-    onSave(role, title.trim(), composer.trim());
-    onClose();
+    setSaving(true);
+    setError(null);
+    try {
+      await onSave(role, title.trim(), composer.trim());
+    } catch {
+      setError("Failed to save. Please try again.");
+      setSaving(false);
+    }
   };
 
-  const handleClear = () => {
-    onClear(role);
-    onClose();
+  const handleClear = async () => {
+    setSaving(true);
+    setError(null);
+    try {
+      await onClear(role);
+    } catch {
+      setError("Failed to clear. Please try again.");
+      setSaving(false);
+    }
   };
 
   // Position the popover relative to the anchor row
@@ -129,7 +149,12 @@ export default function SlotEditPopover({
         </div>
 
         <div className="p-3">
-          {mode === "search" ? (
+          {error && (
+            <p className="text-xs text-red-600 bg-red-50 border border-red-200 rounded px-2 py-1.5 mb-2">{error}</p>
+          )}
+          {saving ? (
+            <p className="text-xs text-stone-500 py-4 text-center">Saving...</p>
+          ) : mode === "search" ? (
             <>
               <input
                 ref={inputRef}
