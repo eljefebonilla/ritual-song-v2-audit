@@ -12,7 +12,7 @@ import type {
   OccasionDate,
   LiturgicalDay,
 } from "@/lib/types";
-import { COMMUNITY_BADGES, COMMUNITY_PSALTER, getPsalterSourceFromLabel } from "@/lib/occasion-helpers";
+import { COMMUNITY_BADGES } from "@/lib/occasion-helpers";
 import { planToSlots } from "@/lib/worship-slots";
 import { validateMusicPlan, type ValidationWarning } from "@/lib/liturgical-validation";
 import { rowToLiturgicalDay } from "@/lib/liturgical-helpers";
@@ -391,6 +391,7 @@ export default function OccasionMusicSection({
                 song={selectedSong}
                 onClose={() => setSelectedSongId(null)}
                 onAudioUploaded={handleAudioUploaded}
+                communityId={activePlan.communityId}
               />
             </div>
           </div>
@@ -403,6 +404,7 @@ export default function OccasionMusicSection({
           <SongDetailPanel
             song={selectedSong}
             onClose={() => setSelectedSongId(null)}
+            communityId={activePlan.communityId}
           />
         </div>
       )}

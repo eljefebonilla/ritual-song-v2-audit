@@ -11,6 +11,7 @@ import type {
 import { useUser } from "@/lib/user-context";
 import { useMedia } from "@/lib/media-context";
 import { extractChartKeys } from "@/lib/key-utils";
+import { filterPsalmResourcesByCommunity } from "@/lib/occasion-helpers";
 import LyricsEditor from "./LyricsEditor";
 import Link from "next/link";
 
@@ -18,6 +19,7 @@ interface SongDetailPanelProps {
   song: LibrarySong;
   onClose: () => void;
   onAudioUploaded?: (songId: string, url: string) => void;
+  communityId?: string;
 }
 
 const RESOURCE_TYPE_LABELS: Record<SongResourceType, string> = {
@@ -633,6 +635,7 @@ export default function SongDetailPanel({
   song,
   onClose,
   onAudioUploaded,
+  communityId,
 }: SongDetailPanelProps) {
   const router = useRouter();
   const { role } = useUser();
@@ -702,6 +705,16 @@ export default function SongDetailPanel({
     (acc[source] = acc[source] || []).push(r);
     return acc;
   }, {});
+
+  // Filter psalm resources by community psalter when viewing from an occasion
+  if (communityId && song.category === "psalm") {
+    for (const source of Object.keys(resourcesBySource)) {
+      resourcesBySource[source] = filterPsalmResourcesByCommunity(
+        resourcesBySource[source],
+        communityId
+      );
+    }
+  }
 
   // Sort: highlighted (AIM) first within each group
   for (const resources of Object.values(resourcesBySource)) {
