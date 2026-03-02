@@ -163,6 +163,7 @@ export default function OccasionMusicSection({
   const [selectedSlotRole, setSelectedSlotRole] = useState<string | null>(null);
   const [panelOffset, setPanelOffset] = useState(0);
   const [audioOverrides, setAudioOverrides] = useState<Record<string, string>>({});
+  const [planOverrides, setPlanOverrides] = useState<Record<string, Record<string, unknown>>>({});
   const [liturgicalDay, setLiturgicalDay] = useState<LiturgicalDay | null>(null);
   const [editingSlot, setEditingSlot] = useState<{
     role: string;
@@ -179,8 +180,14 @@ export default function OccasionMusicSection({
   const activePlan = sorted[activeIdx];
   if (!activePlan) return null;
 
+  // Merge Supabase overrides on top of static JSON plan
+  const communityOverrides = planOverrides[activePlan.communityId];
+  const mergedPlan = communityOverrides && Object.keys(communityOverrides).length > 0
+    ? { ...activePlan, ...communityOverrides } as MusicPlan
+    : activePlan;
+
   const slots = planToSlots(
-    activePlan,
+    mergedPlan,
     readings,
     antiphons,
     occasionResources,
@@ -228,7 +235,7 @@ export default function OccasionMusicSection({
       if (communionMatch) {
         // For communion songs, we update the whole communionSongs array
         const idx = parseInt(communionMatch[1], 10);
-        const current = activePlan.communionSongs ? [...activePlan.communionSongs] : [];
+        const current = mergedPlan.communionSongs ? [...mergedPlan.communionSongs] : [];
         while (current.length <= idx) current.push({ title: "" });
         current[idx] = { title, composer };
         field = "communionSongs";
@@ -247,15 +254,23 @@ export default function OccasionMusicSection({
       const res = await fetch(`/api/occasions/${occasionId}/music-plan`, {
         method: "PUT",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ communityId: activePlan.communityId, field, value }),
+        body: JSON.stringify({ communityId: mergedPlan.communityId, field, value }),
       });
       if (!res.ok) {
         const data = await res.json().catch(() => ({}));
         throw new Error(data.error || `Save failed (${res.status})`);
       }
-      window.location.reload();
+      // Update local overrides so UI reflects the change immediately
+      setPlanOverrides(prev => ({
+        ...prev,
+        [mergedPlan.communityId]: {
+          ...(prev[mergedPlan.communityId] || {}),
+          [field]: value,
+        },
+      }));
+      setEditingSlot(null);
     },
-    [occasionId, activePlan]
+    [occasionId, mergedPlan]
   );
 
   const handleSlotClear = useCallback(
@@ -266,7 +281,7 @@ export default function OccasionMusicSection({
 
       if (communionMatch) {
         const idx = parseInt(communionMatch[1], 10);
-        const current = activePlan.communionSongs ? [...activePlan.communionSongs] : [];
+        const current = mergedPlan.communionSongs ? [...mergedPlan.communionSongs] : [];
         current.splice(idx, 1);
         field = "communionSongs";
         value = current.length > 0 ? current : null;
@@ -281,15 +296,23 @@ export default function OccasionMusicSection({
       const res = await fetch(`/api/occasions/${occasionId}/music-plan`, {
         method: "PUT",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ communityId: activePlan.communityId, field, value }),
+        body: JSON.stringify({ communityId: mergedPlan.communityId, field, value }),
       });
       if (!res.ok) {
         const data = await res.json().catch(() => ({}));
         throw new Error(data.error || `Clear failed (${res.status})`);
       }
-      window.location.reload();
+      // Update local overrides so UI reflects the change immediately
+      setPlanOverrides(prev => ({
+        ...prev,
+        [mergedPlan.communityId]: {
+          ...(prev[mergedPlan.communityId] || {}),
+          [field]: value,
+        },
+      }));
+      setEditingSlot(null);
     },
-    [occasionId, activePlan]
+    [occasionId, mergedPlan]
   );
 
   const handleSlotReplace = useCallback(
@@ -317,24 +340,36 @@ export default function OccasionMusicSection({
     return () => { cancelled = true; };
   }, [occasionDates]);
 
+  // Fetch music plan overrides from Supabase (edits made via slot editor)
+  useEffect(() => {
+    let cancelled = false;
+    fetch(`/api/occasions/${occasionId}/music-plan`)
+      .then((res) => (res.ok ? res.json() : {}))
+      .then((data) => {
+        if (!cancelled) setPlanOverrides(data);
+      })
+      .catch(() => {});
+    return () => { cancelled = true; };
+  }, [occasionId]);
+
   // Run validation when liturgical day and active plan are available
   const warnings: ValidationWarning[] = useMemo(() => {
-    if (!liturgicalDay || !activePlan) return [];
-    const titles = extractSongTitles(activePlan);
+    if (!liturgicalDay || !mergedPlan) return [];
+    const titles = extractSongTitles(mergedPlan);
     return validateMusicPlan(liturgicalDay, titles);
-  }, [liturgicalDay, activePlan]);
+  }, [liturgicalDay, mergedPlan]);
 
   // Compute "why this song" hints by matching titles to readings
   const songHints: Map<string, string> = useMemo(() => {
     const hints = new Map<string, string>();
-    if (!activePlan) return hints;
-    const titles = extractSongTitles(activePlan);
+    if (!mergedPlan) return hints;
+    const titles = extractSongTitles(mergedPlan);
     for (const title of titles) {
       const hint = findSongHint(title, readings, synopsis);
       if (hint) hints.set(title, hint);
     }
     return hints;
-  }, [activePlan, readings, synopsis]);
+  }, [mergedPlan, readings, synopsis]);
 
   // Compute psalm suggestions from the psalm reading citation
   const psalmSuggestions = useMemo(() => {
@@ -495,8 +530,8 @@ export default function OccasionMusicSection({
             onSongSelect={handleSongSelect}
             selectedRowRef={selectedRowRef}
             audioOverrides={audioOverrides}
-            presider={activePlan.presider}
-            massNotes={activePlan.massNotes}
+            presider={mergedPlan.presider}
+            massNotes={mergedPlan.massNotes}
             synopsis={synopsis}
             songHints={songHints}
             isAdmin={isAdmin}

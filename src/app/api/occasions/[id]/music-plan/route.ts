@@ -1,19 +1,52 @@
 import { NextRequest, NextResponse } from "next/server";
-import { revalidatePath } from "next/cache";
 import { verifyAdmin } from "@/lib/admin";
-import fs from "fs";
-import path from "path";
+import { createAdminClient } from "@/lib/supabase/admin";
 
-const OCCASIONS_DIR = path.join(process.cwd(), "src/data/occasions");
+/**
+ * GET /api/occasions/[id]/music-plan
+ * Returns all music plan edits (overrides) for an occasion, grouped by community.
+ */
+export async function GET(
+  _request: NextRequest,
+  { params }: { params: Promise<{ id: string }> }
+) {
+  const { id } = await params;
+
+  try {
+    const supabase = createAdminClient();
+    const { data, error } = await supabase
+      .from("music_plan_edits")
+      .select("community_id, field, value")
+      .eq("occasion_id", id);
+
+    if (error) {
+      return NextResponse.json({ error: error.message }, { status: 500 });
+    }
+
+    // Group by community_id → { [field]: value }
+    const overrides: Record<string, Record<string, unknown>> = {};
+    for (const row of data ?? []) {
+      if (!overrides[row.community_id]) {
+        overrides[row.community_id] = {};
+      }
+      overrides[row.community_id][row.field] = row.value;
+    }
+
+    return NextResponse.json(overrides);
+  } catch (err) {
+    const message = err instanceof Error ? err.message : "Unknown error";
+    return NextResponse.json({ error: message }, { status: 500 });
+  }
+}
 
 /**
  * PUT /api/occasions/[id]/music-plan
- * Updates a single music plan field for a specific community within an occasion JSON file.
+ * Upserts a single music plan field override into Supabase.
  *
  * Body: {
- *   communityId: string;    // "reflections", "foundations", etc.
- *   field: string;          // "gathering", "psalm", "offertory", etc.
- *   value: unknown;         // SongEntry object, psalm object, etc.
+ *   communityId: string;
+ *   field: string;
+ *   value: unknown;   // null = clear the field
  * }
  */
 export async function PUT(
@@ -36,43 +69,26 @@ export async function PUT(
     );
   }
 
-  // Read the occasion JSON file
-  const filePath = path.join(OCCASIONS_DIR, `${id}.json`);
-
-  if (!fs.existsSync(filePath)) {
-    return NextResponse.json(
-      { error: `Occasion ${id} not found` },
-      { status: 404 }
-    );
-  }
-
   try {
-    const raw = fs.readFileSync(filePath, "utf-8");
-    const occasion = JSON.parse(raw);
+    const supabase = createAdminClient();
+    const { error } = await supabase
+      .from("music_plan_edits")
+      .upsert(
+        {
+          occasion_id: id,
+          community_id: communityId,
+          field,
+          value: value ?? null,
+          updated_at: new Date().toISOString(),
+        },
+        { onConflict: "occasion_id,community_id,field" }
+      );
 
-    // Find or create the music plan for this community
-    if (!occasion.musicPlans) {
-      occasion.musicPlans = [];
+    if (error) {
+      return NextResponse.json({ error: error.message }, { status: 500 });
     }
 
-    let plan = occasion.musicPlans.find(
-      (p: { communityId: string }) => p.communityId === communityId
-    );
-
-    if (!plan) {
-      plan = { community: communityId, communityId };
-      occasion.musicPlans.push(plan);
-    }
-
-    // Update the field
-    plan[field] = value;
-
-    // Write back
-    fs.writeFileSync(filePath, JSON.stringify(occasion, null, 2), "utf-8");
-
-    revalidatePath(`/occasion/${id}`);
-
-    return NextResponse.json({ success: true, plan });
+    return NextResponse.json({ success: true });
   } catch (err) {
     const message = err instanceof Error ? err.message : "Unknown error";
     return NextResponse.json({ error: message }, { status: 500 });
