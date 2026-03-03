@@ -15,7 +15,7 @@
     "season": "advent",
     "seasonLabel": "Advent",
     "seasonOrder": 1,
-    "nextDate": "2023-12-03"
+    "nextDate": "2026-11-29"
   },
   {
     "id": "advent-01-c",
@@ -24,7 +24,7 @@
     "season": "advent",
     "seasonLabel": "Advent",
     "seasonOrder": 1,
-    "nextDate": "2024-12-01"
+    "nextDate": "2027-11-28"
   },
   {
     "id": "advent-02-a",
@@ -42,7 +42,7 @@
     "season": "advent",
     "seasonLabel": "Advent",
     "seasonOrder": 2,
-    "nextDate": "2023-12-10"
+    "nextDate": "2026-12-06"
   },
   {
     "id": "advent-02-c",
@@ -51,7 +51,7 @@
     "season": "advent",
     "seasonLabel": "Advent",
     "seasonOrder": 2,
-    "nextDate": "2024-12-08"
+    "nextDate": "2027-12-05"
   },
   {
     "id": "solemnity-immaculate-conception",
@@ -60,7 +60,12 @@
     "season": "solemnity",
     "seasonLabel": "Solemnity",
     "seasonOrder": 0,
-    "nextDate": "2025-12-08"
+    "nextDate": "2025-12-08",
+    "nextDates": {
+      "a": "2025-12-08",
+      "b": "2026-12-08",
+      "c": "2027-12-08"
+    }
   },
   {
     "id": "feast-our-lady-of-guadalupe-abc",
@@ -69,7 +74,12 @@
     "season": "feast",
     "seasonLabel": "Feast",
     "seasonOrder": 0,
-    "nextDate": "2025-12-12"
+    "nextDate": "2025-12-12",
+    "nextDates": {
+      "a": "2025-12-12",
+      "b": "2026-12-12",
+      "c": "2027-12-12"
+    }
   },
   {
     "id": "advent-03-a",
@@ -87,7 +97,7 @@
     "season": "advent",
     "seasonLabel": "Advent",
     "seasonOrder": 3,
-    "nextDate": "2023-12-17"
+    "nextDate": "2026-12-13"
   },
   {
     "id": "advent-03-c",
@@ -96,7 +106,7 @@
     "season": "advent",
     "seasonLabel": "Advent",
     "seasonOrder": 3,
-    "nextDate": "2024-12-15"
+    "nextDate": "2027-12-12"
   },
   {
     "id": "advent-04-a",
@@ -114,7 +124,7 @@
     "season": "advent",
     "seasonLabel": "Advent",
     "seasonOrder": 4,
-    "nextDate": "2023-12-24"
+    "nextDate": "2026-12-20"
   },
   {
     "id": "advent-04-c",
@@ -123,7 +133,7 @@
     "season": "advent",
     "seasonLabel": "Advent",
     "seasonOrder": 4,
-    "nextDate": "2024-12-22"
+    "nextDate": "2027-12-19"
   },
   {
     "id": "nativity",
@@ -132,7 +142,12 @@
     "season": "christmas",
     "seasonLabel": "Christmas",
     "seasonOrder": 0,
-    "nextDate": "2026-12-25"
+    "nextDate": "2025-12-25",
+    "nextDates": {
+      "a": "2025-12-25",
+      "b": "2026-12-25",
+      "c": "2027-12-25"
+    }
   },
   {
     "id": "holy-family-a",
@@ -150,7 +165,7 @@
     "season": "christmas",
     "seasonLabel": "Christmas",
     "seasonOrder": 0,
-    "nextDate": "2023-12-31"
+    "nextDate": "2026-12-27"
   },
   {
     "id": "holy-family-c",
@@ -159,7 +174,7 @@
     "season": "christmas",
     "seasonLabel": "Christmas",
     "seasonOrder": 0,
-    "nextDate": "2024-12-29"
+    "nextDate": "2027-12-26"
   },
   {
     "id": "jan-1-mary-mother-of-god-abc",
@@ -168,7 +183,12 @@
     "season": "christmas",
     "seasonLabel": "Christmas",
     "seasonOrder": 1,
-    "nextDate": "2026-01-01"
+    "nextDate": "2026-01-01",
+    "nextDates": {
+      "a": "2026-01-01",
+      "b": "2027-01-01",
+      "c": "2028-01-01"
+    }
   },
   {
     "id": "2nd-sun-after-christmas-abc-epiphany-replaces-in-adla",
@@ -177,7 +197,12 @@
     "season": "christmas",
     "seasonLabel": "Christmas",
     "seasonOrder": 2,
-    "nextDate": "2026-01-04"
+    "nextDate": "2026-01-04",
+    "nextDates": {
+      "a": "2026-01-04",
+      "b": "2027-01-03",
+      "c": "2028-01-02"
+    }
   },
   {
     "id": "the-epiphany-of-the-lord-abc",
@@ -186,7 +211,12 @@
     "season": "christmas",
     "seasonLabel": "Christmas",
     "seasonOrder": 0,
-    "nextDate": "2026-01-04"
+    "nextDate": "2026-01-04",
+    "nextDates": {
+      "a": "2026-01-04",
+      "b": "2027-01-03",
+      "c": "2028-01-02"
+    }
   },
   {
     "id": "baptism-of-the-lord-a",
@@ -195,7 +225,7 @@
     "season": "ordinary",
     "seasonLabel": "Ordinary Time",
     "seasonOrder": 0,
-    "nextDate": "2023-01-09"
+    "nextDate": "2026-01-11"
   },
   {
     "id": "baptism-of-the-lord-b",
@@ -204,7 +234,7 @@
     "season": "ordinary",
     "seasonLabel": "Ordinary Time",
     "seasonOrder": 0,
-    "nextDate": "2024-01-08"
+    "nextDate": "2027-01-10"
   },
   {
     "id": "baptism-of-the-lord-c",
@@ -213,7 +243,7 @@
     "season": "ordinary",
     "seasonLabel": "Ordinary Time",
     "seasonOrder": 0,
-    "nextDate": "2025-01-12"
+    "nextDate": "2028-01-09"
   },
   {
     "id": "ordinary-time-02-a",
@@ -222,7 +252,7 @@
     "season": "ordinary",
     "seasonLabel": "Ordinary Time",
     "seasonOrder": 2,
-    "nextDate": "2023-01-15"
+    "nextDate": "2026-01-18"
   },
   {
     "id": "ordinary-time-02-b",
@@ -231,7 +261,7 @@
     "season": "ordinary",
     "seasonLabel": "Ordinary Time",
     "seasonOrder": 2,
-    "nextDate": "2024-01-14"
+    "nextDate": "2027-01-17"
   },
   {
     "id": "ordinary-time-02-c",
@@ -240,7 +270,7 @@
     "season": "ordinary",
     "seasonLabel": "Ordinary Time",
     "seasonOrder": 2,
-    "nextDate": "2025-01-19"
+    "nextDate": "2028-01-16"
   },
   {
     "id": "mlk-day",
@@ -249,7 +279,12 @@
     "season": "ordinary",
     "seasonLabel": "Ordinary Time",
     "seasonOrder": 0,
-    "nextDate": "2026-01-19"
+    "nextDate": "2026-01-19",
+    "nextDates": {
+      "a": "2026-01-19",
+      "b": "2027-01-18",
+      "c": "2028-01-17"
+    }
   },
   {
     "id": "ordinary-time-03-a-word-of-god-sunday",
@@ -258,7 +293,7 @@
     "season": "ordinary",
     "seasonLabel": "Ordinary Time",
     "seasonOrder": 3,
-    "nextDate": "2023-01-22"
+    "nextDate": "2026-01-25"
   },
   {
     "id": "ordinary-time-03-b-word-of-god-sunday",
@@ -267,7 +302,7 @@
     "season": "ordinary",
     "seasonLabel": "Ordinary Time",
     "seasonOrder": 3,
-    "nextDate": "2024-01-21"
+    "nextDate": "2027-01-24"
   },
   {
     "id": "ordinary-time-03-c-word-of-god-sunday",
@@ -276,7 +311,7 @@
     "season": "ordinary",
     "seasonLabel": "Ordinary Time",
     "seasonOrder": 3,
-    "nextDate": "2025-01-26"
+    "nextDate": "2028-01-23"
   },
   {
     "id": "ordinary-time-04-a",
@@ -285,7 +320,7 @@
     "season": "ordinary",
     "seasonLabel": "Ordinary Time",
     "seasonOrder": 4,
-    "nextDate": "2023-01-29"
+    "nextDate": "2026-02-01"
   },
   {
     "id": "ordinary-time-04-b",
@@ -294,7 +329,7 @@
     "season": "ordinary",
     "seasonLabel": "Ordinary Time",
     "seasonOrder": 4,
-    "nextDate": "2024-01-28"
+    "nextDate": "2027-01-31"
   },
   {
     "id": "ordinary-time-04-c",
@@ -303,7 +338,7 @@
     "season": "ordinary",
     "seasonLabel": "Ordinary Time",
     "seasonOrder": 4,
-    "nextDate": "2037-02-01"
+    "nextDate": "2028-01-30"
   },
   {
     "id": "feast-abc-feb-2-presentation-of-the-lord",
@@ -312,7 +347,12 @@
     "season": "feast",
     "seasonLabel": "Feast",
     "seasonOrder": 2,
-    "nextDate": "2026-02-02"
+    "nextDate": "2026-02-02",
+    "nextDates": {
+      "a": "2026-02-02",
+      "b": "2027-02-02",
+      "c": "2028-02-02"
+    }
   },
   {
     "id": "ordinary-time-05-a",
@@ -321,7 +361,7 @@
     "season": "ordinary",
     "seasonLabel": "Ordinary Time",
     "seasonOrder": 5,
-    "nextDate": "2023-02-05"
+    "nextDate": "2026-02-08"
   },
   {
     "id": "ordinary-time-05-b",
@@ -330,7 +370,7 @@
     "season": "ordinary",
     "seasonLabel": "Ordinary Time",
     "seasonOrder": 5,
-    "nextDate": "2024-02-04"
+    "nextDate": "2027-02-07"
   },
   {
     "id": "ordinary-time-05-c",
@@ -339,7 +379,7 @@
     "season": "ordinary",
     "seasonLabel": "Ordinary Time",
     "seasonOrder": 5,
-    "nextDate": "2025-02-09"
+    "nextDate": "2028-02-06"
   },
   {
     "id": "ordinary-time-06-a",
@@ -348,7 +388,7 @@
     "season": "ordinary",
     "seasonLabel": "Ordinary Time",
     "seasonOrder": 6,
-    "nextDate": "2023-02-12"
+    "nextDate": "2026-02-15"
   },
   {
     "id": "ordinary-time-06-b",
@@ -357,7 +397,7 @@
     "season": "ordinary",
     "seasonLabel": "Ordinary Time",
     "seasonOrder": 6,
-    "nextDate": "2024-02-11"
+    "nextDate": null
   },
   {
     "id": "ordinary-time-06-c",
@@ -366,7 +406,7 @@
     "season": "ordinary",
     "seasonLabel": "Ordinary Time",
     "seasonOrder": 6,
-    "nextDate": "2025-02-16"
+    "nextDate": "2028-02-13"
   },
   {
     "id": "ordinary-time-07-a",
@@ -375,7 +415,7 @@
     "season": "ordinary",
     "seasonLabel": "Ordinary Time",
     "seasonOrder": 7,
-    "nextDate": "2023-02-19"
+    "nextDate": null
   },
   {
     "id": "ordinary-time-07-b",
@@ -384,7 +424,7 @@
     "season": "ordinary",
     "seasonLabel": "Ordinary Time",
     "seasonOrder": 7,
-    "nextDate": "2024-02-04"
+    "nextDate": null
   },
   {
     "id": "ordinary-time-07-c",
@@ -393,7 +433,7 @@
     "season": "ordinary",
     "seasonLabel": "Ordinary Time",
     "seasonOrder": 7,
-    "nextDate": "2025-02-09"
+    "nextDate": "2028-02-20"
   },
   {
     "id": "ordinary-time-08-a",
@@ -420,7 +460,7 @@
     "season": "ordinary",
     "seasonLabel": "Ordinary Time",
     "seasonOrder": 8,
-    "nextDate": "2025-03-02"
+    "nextDate": "2028-02-27"
   },
   {
     "id": "ash-wednesday",
@@ -429,7 +469,12 @@
     "season": "lent",
     "seasonLabel": "Lent",
     "seasonOrder": 0,
-    "nextDate": "2026-02-18"
+    "nextDate": "2026-02-18",
+    "nextDates": {
+      "a": "2026-02-18",
+      "b": "2027-02-10",
+      "c": "2028-03-01"
+    }
   },
   {
     "id": "lent-01-a",
@@ -438,7 +483,7 @@
     "season": "lent",
     "seasonLabel": "Lent",
     "seasonOrder": 1,
-    "nextDate": "2023-02-26"
+    "nextDate": "2026-02-22"
   },
   {
     "id": "lent-01-b",
@@ -447,7 +492,7 @@
     "season": "lent",
     "seasonLabel": "Lent",
     "seasonOrder": 1,
-    "nextDate": "2024-02-18"
+    "nextDate": "2027-02-14"
   },
   {
     "id": "lent-01-c",
@@ -456,7 +501,7 @@
     "season": "lent",
     "seasonLabel": "Lent",
     "seasonOrder": 1,
-    "nextDate": "2025-03-09"
+    "nextDate": "2028-03-05"
   },
   {
     "id": "lent-02-a",
@@ -465,7 +510,7 @@
     "season": "lent",
     "seasonLabel": "Lent",
     "seasonOrder": 2,
-    "nextDate": "2023-03-05"
+    "nextDate": "2026-03-01"
   },
   {
     "id": "lent-02-b",
@@ -474,7 +519,7 @@
     "season": "lent",
     "seasonLabel": "Lent",
     "seasonOrder": 2,
-    "nextDate": "2024-02-25"
+    "nextDate": "2027-02-21"
   },
   {
     "id": "lent-02-c",
@@ -483,7 +528,7 @@
     "season": "lent",
     "seasonLabel": "Lent",
     "seasonOrder": 2,
-    "nextDate": "2025-03-16"
+    "nextDate": "2028-03-12"
   },
   {
     "id": "lent-03-a-first-scrutiny",
@@ -492,7 +537,7 @@
     "season": "lent",
     "seasonLabel": "Lent",
     "seasonOrder": 3,
-    "nextDate": "2023-03-12"
+    "nextDate": "2026-03-08"
   },
   {
     "id": "lent-03-b",
@@ -501,7 +546,7 @@
     "season": "lent",
     "seasonLabel": "Lent",
     "seasonOrder": 3,
-    "nextDate": "2024-03-03"
+    "nextDate": "2027-02-28"
   },
   {
     "id": "lent-03-c",
@@ -510,7 +555,7 @@
     "season": "lent",
     "seasonLabel": "Lent",
     "seasonOrder": 3,
-    "nextDate": "2025-03-23"
+    "nextDate": "2028-03-19"
   },
   {
     "id": "lent-04-a-second-scrutiny",
@@ -519,7 +564,7 @@
     "season": "lent",
     "seasonLabel": "Lent",
     "seasonOrder": 4,
-    "nextDate": "2023-03-19"
+    "nextDate": "2026-03-15"
   },
   {
     "id": "lent-04-b",
@@ -528,7 +573,7 @@
     "season": "lent",
     "seasonLabel": "Lent",
     "seasonOrder": 4,
-    "nextDate": "2024-03-10"
+    "nextDate": "2027-03-07"
   },
   {
     "id": "lent-04-c",
@@ -537,7 +582,7 @@
     "season": "lent",
     "seasonLabel": "Lent",
     "seasonOrder": 4,
-    "nextDate": "2025-03-30"
+    "nextDate": "2028-03-26"
   },
   {
     "id": "lent-05-a-third-scrutiny",
@@ -546,7 +591,7 @@
     "season": "lent",
     "seasonLabel": "Lent",
     "seasonOrder": 5,
-    "nextDate": "2023-03-26"
+    "nextDate": "2026-03-22"
   },
   {
     "id": "lent-05-b",
@@ -555,7 +600,7 @@
     "season": "lent",
     "seasonLabel": "Lent",
     "seasonOrder": 5,
-    "nextDate": "2024-03-17"
+    "nextDate": "2027-03-14"
   },
   {
     "id": "lent-05-c",
@@ -564,7 +609,7 @@
     "season": "lent",
     "seasonLabel": "Lent",
     "seasonOrder": 5,
-    "nextDate": "2025-04-06"
+    "nextDate": "2028-04-02"
   },
   {
     "id": "palm-sunday-a",
@@ -573,7 +618,7 @@
     "season": "lent",
     "seasonLabel": "Lent",
     "seasonOrder": 0,
-    "nextDate": "2023-04-02"
+    "nextDate": "2026-03-29"
   },
   {
     "id": "palm-sunday-b",
@@ -582,7 +627,7 @@
     "season": "lent",
     "seasonLabel": "Lent",
     "seasonOrder": 0,
-    "nextDate": "2024-03-24"
+    "nextDate": "2027-03-21"
   },
   {
     "id": "palm-sunday-c",
@@ -591,7 +636,7 @@
     "season": "lent",
     "seasonLabel": "Lent",
     "seasonOrder": 0,
-    "nextDate": "2025-04-13"
+    "nextDate": "2028-04-09"
   },
   {
     "id": "easter-sunday-abc",
@@ -600,7 +645,12 @@
     "season": "easter",
     "seasonLabel": "Easter",
     "seasonOrder": 0,
-    "nextDate": "2026-04-05"
+    "nextDate": "2026-04-05",
+    "nextDates": {
+      "a": "2026-04-05",
+      "b": "2027-03-28",
+      "c": "2028-04-16"
+    }
   },
   {
     "id": "easter-02-divine-mercy-a",
@@ -609,7 +659,7 @@
     "season": "easter",
     "seasonLabel": "Easter",
     "seasonOrder": 2,
-    "nextDate": "2023-04-16"
+    "nextDate": "2026-04-12"
   },
   {
     "id": "easter-02-divine-mercy-b",
@@ -618,7 +668,7 @@
     "season": "easter",
     "seasonLabel": "Easter",
     "seasonOrder": 2,
-    "nextDate": "2024-04-07"
+    "nextDate": "2027-04-04"
   },
   {
     "id": "easter-02-divine-mercy-c",
@@ -627,7 +677,7 @@
     "season": "easter",
     "seasonLabel": "Easter",
     "seasonOrder": 2,
-    "nextDate": "2025-04-27"
+    "nextDate": "2028-04-23"
   },
   {
     "id": "easter-03-a",
@@ -636,7 +686,7 @@
     "season": "easter",
     "seasonLabel": "Easter",
     "seasonOrder": 3,
-    "nextDate": "2023-04-23"
+    "nextDate": "2026-04-19"
   },
   {
     "id": "easter-03-b",
@@ -645,7 +695,7 @@
     "season": "easter",
     "seasonLabel": "Easter",
     "seasonOrder": 3,
-    "nextDate": "2024-04-14"
+    "nextDate": "2027-04-11"
   },
   {
     "id": "easter-03-c",
@@ -654,7 +704,7 @@
     "season": "easter",
     "seasonLabel": "Easter",
     "seasonOrder": 3,
-    "nextDate": "2025-05-04"
+    "nextDate": "2028-04-30"
   },
   {
     "id": "easter-04-a",
@@ -663,7 +713,7 @@
     "season": "easter",
     "seasonLabel": "Easter",
     "seasonOrder": 4,
-    "nextDate": "2023-04-30"
+    "nextDate": "2026-04-26"
   },
   {
     "id": "easter-04-b",
@@ -672,7 +722,7 @@
     "season": "easter",
     "seasonLabel": "Easter",
     "seasonOrder": 4,
-    "nextDate": "2024-04-21"
+    "nextDate": "2027-04-18"
   },
   {
     "id": "easter-04-c",
@@ -681,7 +731,7 @@
     "season": "easter",
     "seasonLabel": "Easter",
     "seasonOrder": 4,
-    "nextDate": "2025-05-11"
+    "nextDate": "2028-05-07"
   },
   {
     "id": "easter-05-a",
@@ -690,7 +740,7 @@
     "season": "easter",
     "seasonLabel": "Easter",
     "seasonOrder": 5,
-    "nextDate": "2023-05-07"
+    "nextDate": "2026-05-03"
   },
   {
     "id": "easter-05-b",
@@ -699,7 +749,7 @@
     "season": "easter",
     "seasonLabel": "Easter",
     "seasonOrder": 5,
-    "nextDate": "2024-04-28"
+    "nextDate": "2027-04-25"
   },
   {
     "id": "easter-05-c",
@@ -708,7 +758,7 @@
     "season": "easter",
     "seasonLabel": "Easter",
     "seasonOrder": 5,
-    "nextDate": "2025-05-18"
+    "nextDate": "2028-05-14"
   },
   {
     "id": "easter-06-a",
@@ -717,7 +767,7 @@
     "season": "easter",
     "seasonLabel": "Easter",
     "seasonOrder": 6,
-    "nextDate": "2023-05-14"
+    "nextDate": "2026-05-10"
   },
   {
     "id": "easter-06-b",
@@ -726,7 +776,7 @@
     "season": "easter",
     "seasonLabel": "Easter",
     "seasonOrder": 6,
-    "nextDate": "2024-05-05"
+    "nextDate": "2027-05-02"
   },
   {
     "id": "easter-06-c",
@@ -735,7 +785,7 @@
     "season": "easter",
     "seasonLabel": "Easter",
     "seasonOrder": 6,
-    "nextDate": "2025-05-25"
+    "nextDate": "2028-05-21"
   },
   {
     "id": "easter-07-a",
@@ -744,7 +794,7 @@
     "season": "easter",
     "seasonLabel": "Easter",
     "seasonOrder": 7,
-    "nextDate": "2023-05-14"
+    "nextDate": "2026-05-17"
   },
   {
     "id": "easter-07-b",
@@ -753,7 +803,7 @@
     "season": "easter",
     "seasonLabel": "Easter",
     "seasonOrder": 7,
-    "nextDate": "2024-05-05"
+    "nextDate": "2027-05-09"
   },
   {
     "id": "easter-07-c",
@@ -762,7 +812,7 @@
     "season": "easter",
     "seasonLabel": "Easter",
     "seasonOrder": 7,
-    "nextDate": "2025-05-25"
+    "nextDate": "2028-05-28"
   },
   {
     "id": "ascension-a",
@@ -771,7 +821,7 @@
     "season": "easter",
     "seasonLabel": "Easter",
     "seasonOrder": 0,
-    "nextDate": "2023-05-21"
+    "nextDate": "2026-05-17"
   },
   {
     "id": "ascension-b",
@@ -780,7 +830,7 @@
     "season": "easter",
     "seasonLabel": "Easter",
     "seasonOrder": 0,
-    "nextDate": "2024-05-12"
+    "nextDate": "2027-05-09"
   },
   {
     "id": "ascension-c",
@@ -789,7 +839,7 @@
     "season": "easter",
     "seasonLabel": "Easter",
     "seasonOrder": 0,
-    "nextDate": "2025-06-01"
+    "nextDate": "2028-05-28"
   },
   {
     "id": "pentecost-ext-vigil-abc",
@@ -798,7 +848,12 @@
     "season": "easter",
     "seasonLabel": "Easter",
     "seasonOrder": 0,
-    "nextDate": "2025-06-07"
+    "nextDate": "2026-05-23",
+    "nextDates": {
+      "a": "2026-05-23",
+      "b": "2027-05-15",
+      "c": "2028-06-03"
+    }
   },
   {
     "id": "pentecost-vigil-abc",
@@ -807,7 +862,12 @@
     "season": "easter",
     "seasonLabel": "Easter",
     "seasonOrder": 0,
-    "nextDate": "2025-06-07"
+    "nextDate": "2026-05-23",
+    "nextDates": {
+      "a": "2026-05-23",
+      "b": "2027-05-15",
+      "c": "2028-06-03"
+    }
   },
   {
     "id": "pentecost-a",
@@ -816,7 +876,7 @@
     "season": "easter",
     "seasonLabel": "Easter",
     "seasonOrder": 0,
-    "nextDate": "2023-05-28"
+    "nextDate": "2026-05-24"
   },
   {
     "id": "pentecost-b",
@@ -825,7 +885,7 @@
     "season": "easter",
     "seasonLabel": "Easter",
     "seasonOrder": 0,
-    "nextDate": "2024-05-19"
+    "nextDate": "2027-05-16"
   },
   {
     "id": "pentecost-c",
@@ -834,7 +894,7 @@
     "season": "easter",
     "seasonLabel": "Easter",
     "seasonOrder": 0,
-    "nextDate": "2025-06-08"
+    "nextDate": "2028-06-04"
   },
   {
     "id": "memorial-day",
@@ -843,7 +903,12 @@
     "season": "ordinary",
     "seasonLabel": "Ordinary Time",
     "seasonOrder": 0,
-    "nextDate": null
+    "nextDate": "2026-05-25",
+    "nextDates": {
+      "a": "2026-05-25",
+      "b": "2027-05-31",
+      "c": "2028-05-29"
+    }
   },
   {
     "id": "solemnity-most-holy-trinity-a",
@@ -852,7 +917,7 @@
     "season": "solemnity",
     "seasonLabel": "Solemnity",
     "seasonOrder": 0,
-    "nextDate": "2023-06-04"
+    "nextDate": "2026-05-31"
   },
   {
     "id": "solemnity-most-holy-trinity-b",
@@ -861,7 +926,7 @@
     "season": "solemnity",
     "seasonLabel": "Solemnity",
     "seasonOrder": 0,
-    "nextDate": "2024-05-26"
+    "nextDate": "2027-05-23"
   },
   {
     "id": "solemnity-most-holy-trinity-c",
@@ -870,7 +935,7 @@
     "season": "solemnity",
     "seasonLabel": "Solemnity",
     "seasonOrder": 0,
-    "nextDate": "2025-06-15"
+    "nextDate": "2028-06-11"
   },
   {
     "id": "solemnity-body-blood-of-christ-a",
@@ -879,7 +944,7 @@
     "season": "solemnity",
     "seasonLabel": "Solemnity",
     "seasonOrder": 0,
-    "nextDate": "2023-06-11"
+    "nextDate": "2026-06-07"
   },
   {
     "id": "solemnity-body-blood-of-christ-b",
@@ -888,7 +953,7 @@
     "season": "solemnity",
     "seasonLabel": "Solemnity",
     "seasonOrder": 0,
-    "nextDate": "2024-06-02"
+    "nextDate": "2027-05-30"
   },
   {
     "id": "solemnity-body-blood-of-christ-c",
@@ -897,7 +962,7 @@
     "season": "solemnity",
     "seasonLabel": "Solemnity",
     "seasonOrder": 0,
-    "nextDate": "2025-06-22"
+    "nextDate": "2028-06-18"
   },
   {
     "id": "ordinary-time-09-a",
@@ -906,7 +971,7 @@
     "season": "ordinary",
     "seasonLabel": "Ordinary Time",
     "seasonOrder": 9,
-    "nextDate": "2035-06-03"
+    "nextDate": null
   },
   {
     "id": "ordinary-time-09-b",
@@ -933,7 +998,7 @@
     "season": "ordinary",
     "seasonLabel": "Ordinary Time",
     "seasonOrder": 10,
-    "nextDate": "2035-06-10"
+    "nextDate": null
   },
   {
     "id": "ordinary-time-10-b",
@@ -942,7 +1007,7 @@
     "season": "ordinary",
     "seasonLabel": "Ordinary Time",
     "seasonOrder": 10,
-    "nextDate": "2024-06-09"
+    "nextDate": "2027-06-06"
   },
   {
     "id": "ordinary-time-10-c",
@@ -960,7 +1025,7 @@
     "season": "ordinary",
     "seasonLabel": "Ordinary Time",
     "seasonOrder": 11,
-    "nextDate": "2023-06-18"
+    "nextDate": "2026-06-14"
   },
   {
     "id": "ordinary-time-11-b",
@@ -969,7 +1034,7 @@
     "season": "ordinary",
     "seasonLabel": "Ordinary Time",
     "seasonOrder": 11,
-    "nextDate": "2024-06-16"
+    "nextDate": "2027-06-13"
   },
   {
     "id": "ordinary-time-11-c",
@@ -978,7 +1043,7 @@
     "season": "ordinary",
     "seasonLabel": "Ordinary Time",
     "seasonOrder": 11,
-    "nextDate": "2037-06-14"
+    "nextDate": null
   },
   {
     "id": "ordinary-time-12-a",
@@ -987,7 +1052,7 @@
     "season": "ordinary",
     "seasonLabel": "Ordinary Time",
     "seasonOrder": 12,
-    "nextDate": "2023-06-25"
+    "nextDate": "2026-06-21"
   },
   {
     "id": "ordinary-time-12-b",
@@ -996,7 +1061,7 @@
     "season": "ordinary",
     "seasonLabel": "Ordinary Time",
     "seasonOrder": 12,
-    "nextDate": "2024-06-23"
+    "nextDate": "2027-06-20"
   },
   {
     "id": "ordinary-time-12-c",
@@ -1005,7 +1070,7 @@
     "season": "ordinary",
     "seasonLabel": "Ordinary Time",
     "seasonOrder": 12,
-    "nextDate": "2037-06-21"
+    "nextDate": "2028-06-25"
   },
   {
     "id": "ordinary-time-13-a",
@@ -1014,7 +1079,7 @@
     "season": "ordinary",
     "seasonLabel": "Ordinary Time",
     "seasonOrder": 13,
-    "nextDate": "2023-07-02"
+    "nextDate": "2026-06-28"
   },
   {
     "id": "ordinary-time-13-b",
@@ -1023,7 +1088,7 @@
     "season": "ordinary",
     "seasonLabel": "Ordinary Time",
     "seasonOrder": 13,
-    "nextDate": "2024-06-30"
+    "nextDate": "2027-06-27"
   },
   {
     "id": "ordinary-time-13-c",
@@ -1032,7 +1097,7 @@
     "season": "ordinary",
     "seasonLabel": "Ordinary Time",
     "seasonOrder": 13,
-    "nextDate": "2037-06-28"
+    "nextDate": "2028-07-02"
   },
   {
     "id": "ss-peter-paul-apostles-jun-29-at-the-vigil-mass-abc",
@@ -1041,7 +1106,12 @@
     "season": "ordinary",
     "seasonLabel": "Ordinary Time",
     "seasonOrder": 29,
-    "nextDate": "2025-06-28"
+    "nextDate": "2026-06-28",
+    "nextDates": {
+      "a": "2026-06-28",
+      "b": "2027-06-28",
+      "c": "2028-06-28"
+    }
   },
   {
     "id": "ss-peter-paul-apostles-jun-29-mass-during-the-day-abc",
@@ -1050,7 +1120,12 @@
     "season": "ordinary",
     "seasonLabel": "Ordinary Time",
     "seasonOrder": 29,
-    "nextDate": "2025-06-29"
+    "nextDate": "2026-06-29",
+    "nextDates": {
+      "a": "2026-06-29",
+      "b": "2027-06-29",
+      "c": "2028-06-29"
+    }
   },
   {
     "id": "independence-day",
@@ -1059,7 +1134,12 @@
     "season": "ordinary",
     "seasonLabel": "Ordinary Time",
     "seasonOrder": 0,
-    "nextDate": "2025-07-04"
+    "nextDate": "2026-07-04",
+    "nextDates": {
+      "a": "2026-07-04",
+      "b": "2027-07-04",
+      "c": "2028-07-04"
+    }
   },
   {
     "id": "ordinary-time-14-a",
@@ -1068,7 +1148,7 @@
     "season": "ordinary",
     "seasonLabel": "Ordinary Time",
     "seasonOrder": 14,
-    "nextDate": "2023-07-09"
+    "nextDate": "2026-07-05"
   },
   {
     "id": "ordinary-time-14-b",
@@ -1077,7 +1157,7 @@
     "season": "ordinary",
     "seasonLabel": "Ordinary Time",
     "seasonOrder": 14,
-    "nextDate": "2024-07-07"
+    "nextDate": "2027-07-04"
   },
   {
     "id": "ordinary-time-14-c",
@@ -1086,7 +1166,7 @@
     "season": "ordinary",
     "seasonLabel": "Ordinary Time",
     "seasonOrder": 14,
-    "nextDate": "2025-07-06"
+    "nextDate": "2028-07-09"
   },
   {
     "id": "ordinary-time-15-a",
@@ -1095,7 +1175,7 @@
     "season": "ordinary",
     "seasonLabel": "Ordinary Time",
     "seasonOrder": 15,
-    "nextDate": "2023-07-16"
+    "nextDate": "2026-07-12"
   },
   {
     "id": "ordinary-time-15-b",
@@ -1104,7 +1184,7 @@
     "season": "ordinary",
     "seasonLabel": "Ordinary Time",
     "seasonOrder": 15,
-    "nextDate": "2024-07-14"
+    "nextDate": "2027-07-11"
   },
   {
     "id": "ordinary-time-15-c",
@@ -1113,7 +1193,7 @@
     "season": "ordinary",
     "seasonLabel": "Ordinary Time",
     "seasonOrder": 15,
-    "nextDate": "2025-07-13"
+    "nextDate": "2028-07-16"
   },
   {
     "id": "ordinary-time-16-a",
@@ -1122,7 +1202,7 @@
     "season": "ordinary",
     "seasonLabel": "Ordinary Time",
     "seasonOrder": 16,
-    "nextDate": "2023-07-23"
+    "nextDate": "2026-07-19"
   },
   {
     "id": "ordinary-time-16-b",
@@ -1131,7 +1211,7 @@
     "season": "ordinary",
     "seasonLabel": "Ordinary Time",
     "seasonOrder": 16,
-    "nextDate": "2024-07-21"
+    "nextDate": "2027-07-18"
   },
   {
     "id": "ordinary-time-16-c",
@@ -1140,7 +1220,7 @@
     "season": "ordinary",
     "seasonLabel": "Ordinary Time",
     "seasonOrder": 16,
-    "nextDate": "2025-07-20"
+    "nextDate": "2028-07-23"
   },
   {
     "id": "ordinary-time-17-a",
@@ -1149,7 +1229,7 @@
     "season": "ordinary",
     "seasonLabel": "Ordinary Time",
     "seasonOrder": 17,
-    "nextDate": "2023-07-30"
+    "nextDate": "2026-07-26"
   },
   {
     "id": "ordinary-time-17-b",
@@ -1158,7 +1238,7 @@
     "season": "ordinary",
     "seasonLabel": "Ordinary Time",
     "seasonOrder": 17,
-    "nextDate": "2024-07-28"
+    "nextDate": "2027-07-25"
   },
   {
     "id": "ordinary-time-17-c",
@@ -1167,7 +1247,7 @@
     "season": "ordinary",
     "seasonLabel": "Ordinary Time",
     "seasonOrder": 17,
-    "nextDate": "2025-07-27"
+    "nextDate": "2028-07-30"
   },
   {
     "id": "ordinary-time-18-a",
@@ -1176,7 +1256,7 @@
     "season": "ordinary",
     "seasonLabel": "Ordinary Time",
     "seasonOrder": 18,
-    "nextDate": "2035-08-05"
+    "nextDate": "2026-08-02"
   },
   {
     "id": "ordinary-time-18-b",
@@ -1185,7 +1265,7 @@
     "season": "ordinary",
     "seasonLabel": "Ordinary Time",
     "seasonOrder": 18,
-    "nextDate": "2024-08-04"
+    "nextDate": "2027-08-01"
   },
   {
     "id": "ordinary-time-18-c",
@@ -1194,7 +1274,7 @@
     "season": "ordinary",
     "seasonLabel": "Ordinary Time",
     "seasonOrder": 18,
-    "nextDate": "2025-08-03"
+    "nextDate": "2028-08-06"
   },
   {
     "id": "ordinary-time-19-a",
@@ -1203,7 +1283,7 @@
     "season": "ordinary",
     "seasonLabel": "Ordinary Time",
     "seasonOrder": 19,
-    "nextDate": "2023-08-13"
+    "nextDate": "2026-08-09"
   },
   {
     "id": "ordinary-time-19-b",
@@ -1212,7 +1292,7 @@
     "season": "ordinary",
     "seasonLabel": "Ordinary Time",
     "seasonOrder": 19,
-    "nextDate": "2024-08-11"
+    "nextDate": "2027-08-08"
   },
   {
     "id": "ordinary-time-19-c",
@@ -1221,7 +1301,7 @@
     "season": "ordinary",
     "seasonLabel": "Ordinary Time",
     "seasonOrder": 19,
-    "nextDate": "2025-08-10"
+    "nextDate": "2028-08-13"
   },
   {
     "id": "ordinary-time-20-a",
@@ -1230,7 +1310,7 @@
     "season": "ordinary",
     "seasonLabel": "Ordinary Time",
     "seasonOrder": 20,
-    "nextDate": "2023-08-20"
+    "nextDate": "2026-08-16"
   },
   {
     "id": "ordinary-time-20-b",
@@ -1239,7 +1319,7 @@
     "season": "ordinary",
     "seasonLabel": "Ordinary Time",
     "seasonOrder": 20,
-    "nextDate": "2024-08-18"
+    "nextDate": "2027-08-15"
   },
   {
     "id": "ordinary-time-20-c",
@@ -1248,7 +1328,7 @@
     "season": "ordinary",
     "seasonLabel": "Ordinary Time",
     "seasonOrder": 20,
-    "nextDate": "2025-08-17"
+    "nextDate": "2028-08-20"
   },
   {
     "id": "ordinary-time-21-a",
@@ -1257,7 +1337,7 @@
     "season": "ordinary",
     "seasonLabel": "Ordinary Time",
     "seasonOrder": 21,
-    "nextDate": "2023-08-27"
+    "nextDate": "2026-08-23"
   },
   {
     "id": "ordinary-time-21-b",
@@ -1266,7 +1346,7 @@
     "season": "ordinary",
     "seasonLabel": "Ordinary Time",
     "seasonOrder": 21,
-    "nextDate": "2024-08-25"
+    "nextDate": "2027-08-22"
   },
   {
     "id": "ordinary-time-21-c",
@@ -1275,7 +1355,7 @@
     "season": "ordinary",
     "seasonLabel": "Ordinary Time",
     "seasonOrder": 21,
-    "nextDate": "2025-08-24"
+    "nextDate": "2028-08-27"
   },
   {
     "id": "feast-of-st-monica",
@@ -1284,7 +1364,12 @@
     "season": "feast",
     "seasonLabel": "Feast",
     "seasonOrder": 0,
-    "nextDate": "2025-08-27"
+    "nextDate": "2026-08-27",
+    "nextDates": {
+      "a": "2026-08-27",
+      "b": "2027-08-27",
+      "c": "2028-08-27"
+    }
   },
   {
     "id": "ordinary-time-22-a",
@@ -1293,7 +1378,7 @@
     "season": "ordinary",
     "seasonLabel": "Ordinary Time",
     "seasonOrder": 22,
-    "nextDate": "2023-09-03"
+    "nextDate": "2026-08-30"
   },
   {
     "id": "ordinary-time-22-b",
@@ -1302,7 +1387,7 @@
     "season": "ordinary",
     "seasonLabel": "Ordinary Time",
     "seasonOrder": 22,
-    "nextDate": "2024-09-01"
+    "nextDate": "2027-08-29"
   },
   {
     "id": "ordinary-time-22-c",
@@ -1311,7 +1396,7 @@
     "season": "ordinary",
     "seasonLabel": "Ordinary Time",
     "seasonOrder": 22,
-    "nextDate": "2025-08-31"
+    "nextDate": "2028-09-03"
   },
   {
     "id": "ordinary-time-23-a",
@@ -1320,7 +1405,7 @@
     "season": "ordinary",
     "seasonLabel": "Ordinary Time",
     "seasonOrder": 23,
-    "nextDate": "2023-09-10"
+    "nextDate": "2026-09-06"
   },
   {
     "id": "ordinary-time-23-b",
@@ -1329,7 +1414,7 @@
     "season": "ordinary",
     "seasonLabel": "Ordinary Time",
     "seasonOrder": 23,
-    "nextDate": "2024-09-08"
+    "nextDate": "2027-09-05"
   },
   {
     "id": "ordinary-time-23-c",
@@ -1338,7 +1423,7 @@
     "season": "ordinary",
     "seasonLabel": "Ordinary Time",
     "seasonOrder": 23,
-    "nextDate": "2025-09-07"
+    "nextDate": "2028-09-10"
   },
   {
     "id": "feast-the-exaltation-sep-14-of-the-holy-cross-abc",
@@ -1347,7 +1432,12 @@
     "season": "feast",
     "seasonLabel": "Feast",
     "seasonOrder": 14,
-    "nextDate": "2025-09-14"
+    "nextDate": "2026-09-14",
+    "nextDates": {
+      "a": "2026-09-14",
+      "b": "2027-09-14",
+      "c": "2028-09-14"
+    }
   },
   {
     "id": "ordinary-time-24-a",
@@ -1356,7 +1446,7 @@
     "season": "ordinary",
     "seasonLabel": "Ordinary Time",
     "seasonOrder": 24,
-    "nextDate": "2023-09-17"
+    "nextDate": "2026-09-13"
   },
   {
     "id": "ordinary-time-24-b",
@@ -1365,7 +1455,7 @@
     "season": "ordinary",
     "seasonLabel": "Ordinary Time",
     "seasonOrder": 24,
-    "nextDate": "2024-09-15"
+    "nextDate": "2027-09-12"
   },
   {
     "id": "ordinary-time-24-c",
@@ -1374,7 +1464,7 @@
     "season": "ordinary",
     "seasonLabel": "Ordinary Time",
     "seasonOrder": 24,
-    "nextDate": "2037-09-13"
+    "nextDate": "2028-09-17"
   },
   {
     "id": "ordinary-time-25-a",
@@ -1383,7 +1473,7 @@
     "season": "ordinary",
     "seasonLabel": "Ordinary Time",
     "seasonOrder": 25,
-    "nextDate": "2023-09-24"
+    "nextDate": "2026-09-20"
   },
   {
     "id": "ordinary-time-25-b",
@@ -1392,7 +1482,7 @@
     "season": "ordinary",
     "seasonLabel": "Ordinary Time",
     "seasonOrder": 25,
-    "nextDate": "2024-09-22"
+    "nextDate": "2027-09-19"
   },
   {
     "id": "ordinary-time-25-c",
@@ -1401,7 +1491,7 @@
     "season": "ordinary",
     "seasonLabel": "Ordinary Time",
     "seasonOrder": 25,
-    "nextDate": "2025-09-21"
+    "nextDate": "2028-09-24"
   },
   {
     "id": "ordinary-time-26-a",
@@ -1410,7 +1500,7 @@
     "season": "ordinary",
     "seasonLabel": "Ordinary Time",
     "seasonOrder": 26,
-    "nextDate": "2023-10-01"
+    "nextDate": "2026-09-27"
   },
   {
     "id": "ordinary-time-26-b",
@@ -1419,7 +1509,7 @@
     "season": "ordinary",
     "seasonLabel": "Ordinary Time",
     "seasonOrder": 26,
-    "nextDate": "2024-09-29"
+    "nextDate": "2027-09-26"
   },
   {
     "id": "ordinary-time-26-c",
@@ -1428,7 +1518,7 @@
     "season": "ordinary",
     "seasonLabel": "Ordinary Time",
     "seasonOrder": 26,
-    "nextDate": "2025-09-28"
+    "nextDate": "2028-10-01"
   },
   {
     "id": "memorial-abc-feast-of-st-francis-oct-4",
@@ -1437,7 +1527,12 @@
     "season": "feast",
     "seasonLabel": "Feast",
     "seasonOrder": 4,
-    "nextDate": "2025-10-04"
+    "nextDate": "2026-10-04",
+    "nextDates": {
+      "a": "2026-10-04",
+      "b": "2027-10-04",
+      "c": "2028-10-04"
+    }
   },
   {
     "id": "ordinary-time-27-a",
@@ -1446,7 +1541,7 @@
     "season": "ordinary",
     "seasonLabel": "Ordinary Time",
     "seasonOrder": 27,
-    "nextDate": "2023-10-08"
+    "nextDate": "2026-10-04"
   },
   {
     "id": "ordinary-time-27-b",
@@ -1455,7 +1550,7 @@
     "season": "ordinary",
     "seasonLabel": "Ordinary Time",
     "seasonOrder": 27,
-    "nextDate": "2024-10-06"
+    "nextDate": "2027-10-03"
   },
   {
     "id": "ordinary-time-27-c",
@@ -1464,7 +1559,7 @@
     "season": "ordinary",
     "seasonLabel": "Ordinary Time",
     "seasonOrder": 27,
-    "nextDate": "2025-10-05"
+    "nextDate": "2028-10-08"
   },
   {
     "id": "ordinary-time-28-a",
@@ -1473,7 +1568,7 @@
     "season": "ordinary",
     "seasonLabel": "Ordinary Time",
     "seasonOrder": 28,
-    "nextDate": "2023-10-15"
+    "nextDate": "2026-10-11"
   },
   {
     "id": "ordinary-time-28-b",
@@ -1482,7 +1577,7 @@
     "season": "ordinary",
     "seasonLabel": "Ordinary Time",
     "seasonOrder": 28,
-    "nextDate": "2024-10-13"
+    "nextDate": "2027-10-10"
   },
   {
     "id": "ordinary-time-28-c",
@@ -1491,7 +1586,7 @@
     "season": "ordinary",
     "seasonLabel": "Ordinary Time",
     "seasonOrder": 28,
-    "nextDate": "2025-10-12"
+    "nextDate": "2028-10-15"
   },
   {
     "id": "ordinary-time-29-a",
@@ -1500,7 +1595,7 @@
     "season": "ordinary",
     "seasonLabel": "Ordinary Time",
     "seasonOrder": 29,
-    "nextDate": "2023-10-22"
+    "nextDate": "2026-10-18"
   },
   {
     "id": "ordinary-time-29-b",
@@ -1509,7 +1604,7 @@
     "season": "ordinary",
     "seasonLabel": "Ordinary Time",
     "seasonOrder": 29,
-    "nextDate": "2024-10-20"
+    "nextDate": "2027-10-17"
   },
   {
     "id": "ordinary-time-29-c",
@@ -1518,7 +1613,7 @@
     "season": "ordinary",
     "seasonLabel": "Ordinary Time",
     "seasonOrder": 29,
-    "nextDate": "2025-10-19"
+    "nextDate": "2028-10-22"
   },
   {
     "id": "ordinary-time-30-a",
@@ -1527,7 +1622,7 @@
     "season": "ordinary",
     "seasonLabel": "Ordinary Time",
     "seasonOrder": 30,
-    "nextDate": "2023-10-29"
+    "nextDate": "2026-10-25"
   },
   {
     "id": "ordinary-time-30-b",
@@ -1536,7 +1631,7 @@
     "season": "ordinary",
     "seasonLabel": "Ordinary Time",
     "seasonOrder": 30,
-    "nextDate": "2024-10-27"
+    "nextDate": "2027-10-24"
   },
   {
     "id": "ordinary-time-30-c",
@@ -1545,7 +1640,7 @@
     "season": "ordinary",
     "seasonLabel": "Ordinary Time",
     "seasonOrder": 30,
-    "nextDate": "2025-10-26"
+    "nextDate": "2028-10-29"
   },
   {
     "id": "ordinary-time-31-a",
@@ -1554,7 +1649,7 @@
     "season": "ordinary",
     "seasonLabel": "Ordinary Time",
     "seasonOrder": 31,
-    "nextDate": "2023-11-05"
+    "nextDate": "2026-11-01"
   },
   {
     "id": "ordinary-time-31-b",
@@ -1563,7 +1658,7 @@
     "season": "ordinary",
     "seasonLabel": "Ordinary Time",
     "seasonOrder": 31,
-    "nextDate": "2024-11-03"
+    "nextDate": "2027-10-31"
   },
   {
     "id": "ordinary-time-31-c",
@@ -1572,7 +1667,7 @@
     "season": "ordinary",
     "seasonLabel": "Ordinary Time",
     "seasonOrder": 31,
-    "nextDate": "2034-11-05"
+    "nextDate": "2028-11-05"
   },
   {
     "id": "ordinary-time-32-a",
@@ -1581,7 +1676,7 @@
     "season": "ordinary",
     "seasonLabel": "Ordinary Time",
     "seasonOrder": 32,
-    "nextDate": "2023-11-12"
+    "nextDate": "2026-11-08"
   },
   {
     "id": "ordinary-time-32-b",
@@ -1590,7 +1685,7 @@
     "season": "ordinary",
     "seasonLabel": "Ordinary Time",
     "seasonOrder": 32,
-    "nextDate": "2024-11-10"
+    "nextDate": "2027-11-07"
   },
   {
     "id": "ordinary-time-32-c",
@@ -1599,7 +1694,7 @@
     "season": "ordinary",
     "seasonLabel": "Ordinary Time",
     "seasonOrder": 32,
-    "nextDate": "2037-11-08"
+    "nextDate": "2028-11-12"
   },
   {
     "id": "solemnity-nov-1-all-saints-abc",
@@ -1608,7 +1703,12 @@
     "season": "solemnity",
     "seasonLabel": "Solemnity",
     "seasonOrder": 1,
-    "nextDate": "2025-11-01"
+    "nextDate": "2026-11-01",
+    "nextDates": {
+      "a": "2026-11-01",
+      "b": "2027-11-01",
+      "c": "2028-11-01"
+    }
   },
   {
     "id": "solemnity-nov-1-all-souls-abc",
@@ -1617,7 +1717,12 @@
     "season": "solemnity",
     "seasonLabel": "Solemnity",
     "seasonOrder": 1,
-    "nextDate": "2025-11-02"
+    "nextDate": "2026-11-02",
+    "nextDates": {
+      "a": "2026-11-02",
+      "b": "2027-11-02",
+      "c": "2028-11-02"
+    }
   },
   {
     "id": "the-dedication-of-nov-9-the-lateran-basilica-abc",
@@ -1626,7 +1731,12 @@
     "season": "ordinary",
     "seasonLabel": "Ordinary Time",
     "seasonOrder": 9,
-    "nextDate": "2025-11-09"
+    "nextDate": "2026-11-09",
+    "nextDates": {
+      "a": "2026-11-09",
+      "b": "2027-11-09",
+      "c": "2028-11-09"
+    }
   },
   {
     "id": "veteran-s-day",
@@ -1635,7 +1745,12 @@
     "season": "ordinary",
     "seasonLabel": "Ordinary Time",
     "seasonOrder": 0,
-    "nextDate": "2025-11-11"
+    "nextDate": "2026-11-11",
+    "nextDates": {
+      "a": "2026-11-11",
+      "b": "2027-11-11",
+      "c": "2028-11-11"
+    }
   },
   {
     "id": "ordinary-time-33-a",
@@ -1644,7 +1759,7 @@
     "season": "ordinary",
     "seasonLabel": "Ordinary Time",
     "seasonOrder": 33,
-    "nextDate": "2023-11-19"
+    "nextDate": "2026-11-15"
   },
   {
     "id": "ordinary-time-33-b",
@@ -1653,7 +1768,7 @@
     "season": "ordinary",
     "seasonLabel": "Ordinary Time",
     "seasonOrder": 33,
-    "nextDate": "2024-11-17"
+    "nextDate": "2027-11-14"
   },
   {
     "id": "ordinary-time-33-c",
@@ -1662,7 +1777,7 @@
     "season": "ordinary",
     "seasonLabel": "Ordinary Time",
     "seasonOrder": 33,
-    "nextDate": "2025-11-16"
+    "nextDate": "2028-11-19"
   },
   {
     "id": "solemnity-christ-the-king-a",
@@ -1671,7 +1786,7 @@
     "season": "solemnity",
     "seasonLabel": "Solemnity",
     "seasonOrder": 0,
-    "nextDate": "2023-11-26"
+    "nextDate": "2026-11-22"
   },
   {
     "id": "solemnity-christ-the-king-b",
@@ -1680,7 +1795,7 @@
     "season": "solemnity",
     "seasonLabel": "Solemnity",
     "seasonOrder": 0,
-    "nextDate": "2024-11-24"
+    "nextDate": "2027-11-21"
   },
   {
     "id": "solemnity-christ-the-king-c",
@@ -1689,7 +1804,7 @@
     "season": "solemnity",
     "seasonLabel": "Solemnity",
     "seasonOrder": 0,
-    "nextDate": "2025-11-23"
+    "nextDate": "2028-11-26"
   },
   {
     "id": "thanksgiving",
@@ -1698,7 +1813,12 @@
     "season": "ordinary",
     "seasonLabel": "Ordinary Time",
     "seasonOrder": 0,
-    "nextDate": "2025-11-27"
+    "nextDate": "2026-11-26",
+    "nextDates": {
+      "a": "2026-11-26",
+      "b": "2027-11-25",
+      "c": "2028-11-23"
+    }
   },
   {
     "id": "holy-thursday-lords-supper",
@@ -1707,7 +1827,12 @@
     "season": "lent",
     "seasonLabel": "Lent",
     "seasonOrder": 0,
-    "nextDate": "2026-04-02"
+    "nextDate": "2026-04-02",
+    "nextDates": {
+      "a": "2026-04-02",
+      "b": "2027-03-25",
+      "c": "2028-04-13"
+    }
   },
   {
     "id": "good-friday-passion",
@@ -1716,7 +1841,12 @@
     "season": "lent",
     "seasonLabel": "Lent",
     "seasonOrder": 0,
-    "nextDate": "2026-04-03"
+    "nextDate": "2026-04-03",
+    "nextDates": {
+      "a": "2026-04-03",
+      "b": "2027-03-26",
+      "c": "2028-04-14"
+    }
   },
   {
     "id": "easter-vigil",
@@ -1725,7 +1855,12 @@
     "season": "easter",
     "seasonLabel": "Easter",
     "seasonOrder": 0,
-    "nextDate": "2026-04-04"
+    "nextDate": "2026-04-04",
+    "nextDates": {
+      "a": "2026-04-04",
+      "b": "2027-03-27",
+      "c": "2028-04-15"
+    }
   },
   {
     "id": "easter-sunday-resurrection",
@@ -1734,6 +1869,11 @@
     "season": "easter",
     "seasonLabel": "Easter",
     "seasonOrder": 0,
-    "nextDate": "2026-04-05"
+    "nextDate": "2026-04-05",
+    "nextDates": {
+      "a": "2026-04-05",
+      "b": "2027-03-28",
+      "c": "2028-04-16"
+    }
   }
 ]

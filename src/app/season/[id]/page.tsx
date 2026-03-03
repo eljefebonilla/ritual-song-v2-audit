@@ -9,14 +9,18 @@ export function generateStaticParams() {
   return getSeasons().map((s) => ({ id: s.id }));
 }
 
-function formatNextDate(dateStr: string | null): string | null {
-  if (!dateStr) return null;
+function formatDate(dateStr: string): string {
   const d = new Date(dateStr + "T00:00:00");
   return d.toLocaleDateString("en-US", {
     month: "short",
     day: "numeric",
     year: "numeric",
   });
+}
+
+function formatDateShort(dateStr: string): string {
+  const d = new Date(dateStr + "T00:00:00");
+  return String(d.getFullYear());
 }
 
 interface SeasonRow {
@@ -73,6 +77,29 @@ function buildRows(occasions: OccasionSummary[]): SeasonRow[] {
   return entries.map((e) => e.row);
 }
 
+/** Format multi-year dates for ABC occasions. Shows "Mon D, YYYY · YYYY · YYYY" when all share
+ *  the same month+day, otherwise shows each date in full separated by " · ". */
+function formatAbcDates(nextDates: { a: string; b: string; c: string }): string {
+  const dA = new Date(nextDates.a + "T00:00:00");
+  const dB = new Date(nextDates.b + "T00:00:00");
+  const dC = new Date(nextDates.c + "T00:00:00");
+
+  const sameMonthDay =
+    dA.getMonth() === dB.getMonth() &&
+    dA.getMonth() === dC.getMonth() &&
+    dA.getDate() === dB.getDate() &&
+    dA.getDate() === dC.getDate();
+
+  if (sameMonthDay) {
+    // e.g. "Dec 25, 2025 · 2026 · 2027"
+    const base = formatDate(nextDates.a);
+    return `${base} · ${formatDateShort(nextDates.b)} · ${formatDateShort(nextDates.c)}`;
+  }
+
+  // Different dates — show all three in full
+  return `${formatDate(nextDates.a)} · ${formatDate(nextDates.b)} · ${formatDate(nextDates.c)}`;
+}
+
 function OccasionCard({
   occ,
   colors,
@@ -81,7 +108,16 @@ function OccasionCard({
   colors: { primary: string };
 }) {
   const synopsis = getSynopsis(occ.id);
-  const nextDate = formatNextDate(occ.nextDate);
+
+  // Build date display
+  let dateDisplay: string | null = null;
+  if (occ.year === "ABC" && occ.nextDates) {
+    dateDisplay = formatAbcDates(occ.nextDates);
+  } else if (occ.nextDate) {
+    dateDisplay = formatDate(occ.nextDate);
+  }
+
+  const isNotCelebrated = occ.year !== "ABC" && !occ.nextDate;
 
   return (
     <Link
@@ -96,8 +132,13 @@ function OccasionCard({
         <p className="text-sm font-semibold text-stone-800 whitespace-pre-line leading-tight">
           {occ.name}
         </p>
-        {nextDate && (
-          <p className="text-[11px] text-stone-400 mt-0.5">{nextDate}</p>
+        {dateDisplay && (
+          <p className="text-[11px] text-stone-400 mt-0.5">{dateDisplay}</p>
+        )}
+        {isNotCelebrated && (
+          <p className="text-[11px] text-stone-300 italic mt-0.5">
+            Not celebrated this cycle
+          </p>
         )}
         {synopsis?.logline && (
           <p className="text-xs text-stone-400 mt-0.5 line-clamp-1">

@@ -12,6 +12,7 @@ export interface OccasionSummary {
   seasonLabel: string;
   seasonOrder: number;
   nextDate: string | null;
+  nextDates?: { a: string; b: string; c: string };
 }
 
 const typedOccasions = allOccasionsData as OccasionSummary[];
