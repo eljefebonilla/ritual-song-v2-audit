@@ -1,6 +1,7 @@
 export const dynamic = "force-dynamic";
 
 import { createAdminClient } from "@/lib/supabase/admin";
+import type { ChoirSignup } from "@/lib/booking-types";
 import ChoirShell from "@/components/choir/ChoirShell";
 
 export default async function ChoirPage() {
@@ -20,19 +21,19 @@ export default async function ChoirPage() {
     .order("event_date", { ascending: true })
     .order("start_time", { ascending: true });
 
-  // Fetch signups for these masses
+  // Fetch signups for these masses (includes vocalist + instrumentalist signups)
   const massIds = (masses || []).map((m) => m.id);
   const { data: signups } = massIds.length
     ? await supabase
         .from("choir_signups")
-        .select("*, profile:profiles (id, full_name, avatar_url, ensemble)")
+        .select("id, mass_event_id, user_id, voice_part, musician_role, instrument_detail, notes, status, created_at, updated_at, profile:profiles (id, full_name, avatar_url, ensemble)")
         .in("mass_event_id", massIds)
         .eq("status", "confirmed")
     : { data: [] };
 
   return (
     <div className="min-h-screen">
-      <ChoirShell masses={masses || []} signups={signups || []} />
+      <ChoirShell masses={masses || []} signups={(signups || []) as unknown as ChoirSignup[]} />
     </div>
   );
 }

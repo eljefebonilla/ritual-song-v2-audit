@@ -12,9 +12,11 @@ interface DayDetailPanelProps {
   litDay: LiturgicalDay | null;
   events: CalendarEvent[];
   onClose: () => void;
+  onEditEvent?: (event: CalendarEvent) => void;
+  onAddEvent?: () => void;
 }
 
-export default function DayDetailPanel({ date, litDay, events, onClose }: DayDetailPanelProps) {
+export default function DayDetailPanel({ date, litDay, events, onClose, onEditEvent, onAddEvent }: DayDetailPanelProps) {
   const displayDate = new Date(date + "T12:00:00").toLocaleDateString("en-US", {
     weekday: "long",
     month: "long",
@@ -174,14 +176,28 @@ export default function DayDetailPanel({ date, litDay, events, onClose }: DayDet
       {/* Masses & Events */}
       {events.length > 0 && (
         <div className="px-4 pt-3 pb-2">
-          <p className="text-[9px] uppercase tracking-wide text-stone-400 font-semibold mb-2">
-            Masses &amp; Events
-          </p>
+          <div className="flex items-center justify-between mb-2">
+            <p className="text-[9px] uppercase tracking-wide text-stone-400 font-semibold">
+              Masses &amp; Events
+            </p>
+            {onAddEvent && (
+              <button
+                onClick={onAddEvent}
+                className="text-[10px] text-stone-500 hover:text-stone-900 flex items-center gap-0.5 transition-colors"
+                title="Add event for this day"
+              >
+                <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                  <line x1="12" y1="5" x2="12" y2="19" /><line x1="5" y1="12" x2="19" y2="12" />
+                </svg>
+                Add
+              </button>
+            )}
+          </div>
           <div className="space-y-1.5">
             {events.map((evt, i) => {
               const ensembleStyle = getEnsembleColor(evt.ensemble);
               const content = (
-                <div className="flex items-center gap-2 px-2.5 py-1.5 rounded-md bg-stone-50 hover:bg-stone-100 transition-colors">
+                <div className="flex items-center gap-2 px-2.5 py-1.5 rounded-md bg-stone-50 hover:bg-stone-100 transition-colors group">
                   <span className="text-xs font-medium text-stone-700 w-12 shrink-0">
                     {evt.startTime12h || "—"}
                   </span>
@@ -201,6 +217,22 @@ export default function DayDetailPanel({ date, litDay, events, onClose }: DayDet
                       {evt.celebrant}
                     </span>
                   )}
+                  {onEditEvent && evt.id && (
+                    <button
+                      onClick={(e) => {
+                        e.preventDefault();
+                        e.stopPropagation();
+                        onEditEvent(evt);
+                      }}
+                      className="shrink-0 p-0.5 text-stone-300 hover:text-stone-600 opacity-0 group-hover:opacity-100 transition-all"
+                      title="Edit event"
+                    >
+                      <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                        <path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7" />
+                        <path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z" />
+                      </svg>
+                    </button>
+                  )}
                 </div>
               );
 
@@ -213,6 +245,21 @@ export default function DayDetailPanel({ date, litDay, events, onClose }: DayDet
               );
             })}
           </div>
+        </div>
+      )}
+
+      {/* Add event button when no events exist */}
+      {events.length === 0 && onAddEvent && (
+        <div className="px-4 pt-3 pb-2">
+          <button
+            onClick={onAddEvent}
+            className="text-xs text-stone-400 hover:text-stone-700 flex items-center gap-1 transition-colors"
+          >
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+              <line x1="12" y1="5" x2="12" y2="19" /><line x1="5" y1="12" x2="19" y2="12" />
+            </svg>
+            Add event for this day
+          </button>
         </div>
       )}
 

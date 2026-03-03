@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
-import type { ChoirSignup, ChoirSummary, VoicePart } from "@/lib/booking-types";
+import type { ChoirSignup, ChoirSummary, VoicePart, MusicianRole } from "@/lib/booking-types";
 import { getEnsembleColor } from "@/lib/calendar-utils";
 import MassComments from "@/components/comments/MassComments";
 
@@ -29,11 +29,18 @@ interface MassSignupCardProps {
   summary: ChoirSummary;
   mySignup: ChoirSignup | null;
   defaultVoicePart: VoicePart | null;
+  defaultMusicianRole: MusicianRole;
+  defaultInstrumentDetail: string | null;
   isAuthenticated: boolean;
   isLoading: boolean;
-  onSignUp: (voicePart: VoicePart) => void;
+  onSignUp: (
+    voicePart: VoicePart | null,
+    musicianRole: MusicianRole,
+    instrumentDetail: string | null,
+    notes: string | null
+  ) => void;
   onCancel: () => void;
-  onChangeVoicePart: (voicePart: VoicePart) => void;
+  onChangeVoicePart: (voicePart: VoicePart | null) => void;
 }
 
 export default function MassSignupCard({
@@ -41,6 +48,8 @@ export default function MassSignupCard({
   summary,
   mySignup,
   defaultVoicePart,
+  defaultMusicianRole,
+  defaultInstrumentDetail,
   isAuthenticated,
   isLoading,
   onSignUp,
@@ -49,17 +58,59 @@ export default function MassSignupCard({
 }: MassSignupCardProps) {
   const [expanded, setExpanded] = useState(false);
   const [showComments, setShowComments] = useState(false);
-  const [showPartPicker, setShowPartPicker] = useState(false);
+  const [showPicker, setShowPicker] = useState(false);
+  // picker state
+  const [pickerRole, setPickerRole] = useState<MusicianRole>(defaultMusicianRole);
+  const [pickerVoicePart, setPickerVoicePart] = useState<VoicePart | null>(defaultVoicePart);
+  const [pickerInstrument, setPickerInstrument] = useState(defaultInstrumentDetail || "");
+  const [pickerNotes, setPickerNotes] = useState("");
+
   const ensembleStyle = getEnsembleColor(mass.ensemble);
   const isSignedUp = mySignup !== null;
 
+  const isInstrumentalist =
+    defaultMusicianRole === "instrumentalist" ||
+    defaultMusicianRole === "both";
+
   const handleSignUp = () => {
-    if (defaultVoicePart) {
-      onSignUp(defaultVoicePart);
+    // If we have enough info without a picker, submit directly
+    const needsPicker =
+      !defaultVoicePart &&
+      (defaultMusicianRole === "vocalist" || defaultMusicianRole === "cantor");
+    if (needsPicker) {
+      setShowPicker(true);
+    } else if (isInstrumentalist && defaultMusicianRole !== "both") {
+      // Instrumentalist — submit directly with instrument detail from profile
+      onSignUp(null, "instrumentalist", defaultInstrumentDetail, null);
     } else {
-      setShowPartPicker(true);
+      // Vocalist/cantor with a default voice part, or 'both' — open picker for confirmation
+      setPickerRole(defaultMusicianRole);
+      setPickerVoicePart(defaultVoicePart);
+      setPickerInstrument(defaultInstrumentDetail || "");
+      setShowPicker(true);
     }
   };
+
+  const handlePickerSubmit = () => {
+    const vp =
+      pickerRole === "instrumentalist" ? null : pickerVoicePart;
+    const instr =
+      pickerRole === "instrumentalist" || pickerRole === "both"
+        ? pickerInstrument || null
+        : null;
+    onSignUp(vp, pickerRole, instr, pickerNotes || null);
+    setShowPicker(false);
+  };
+
+  // Label shown when already signed up
+  const signedUpLabel = (() => {
+    if (!mySignup) return "";
+    if (mySignup.musician_role === "instrumentalist") {
+      return mySignup.instrument_detail || "Instrumentalist";
+    }
+    if (mySignup.voice_part) return mySignup.voice_part;
+    return mySignup.musician_role || "Signed Up";
+  })();
 
   return (
     <div
@@ -99,9 +150,9 @@ export default function MassSignupCard({
             )}
           </div>
 
-          {/* SATB summary */}
+          {/* Roster summary */}
           {summary.total > 0 && (
-            <div className="flex items-center gap-1.5 mt-1">
+            <div className="flex items-center gap-1.5 mt-1 flex-wrap">
               {VOICE_PARTS.map((part) => {
                 const count = summary.roster[part].length;
                 if (count === 0) return null;
@@ -114,6 +165,11 @@ export default function MassSignupCard({
                   </span>
                 );
               })}
+              {summary.instrumentalists > 0 && (
+                <span className="text-[10px] px-1.5 py-0.5 bg-stone-100 text-stone-600 rounded tabular-nums">
+                  {summary.instrumentalists} instr.
+                </span>
+              )}
               <span className="text-[10px] text-stone-400">
                 ({summary.total} total)
               </span>
@@ -133,7 +189,7 @@ export default function MassSignupCard({
             isSignedUp ? (
               <div className="flex items-center gap-1.5">
                 <span className="text-xs font-medium text-green-700">
-                  {mySignup!.voice_part}
+                  {signedUpLabel}
                 </span>
                 <button
                   onClick={onCancel}
@@ -201,29 +257,102 @@ export default function MassSignupCard({
         </div>
       </div>
 
-      {/* Voice part picker (when no default) */}
-      {showPartPicker && !isSignedUp && (
-        <div className="px-3 pb-2.5 flex items-center gap-1.5 ml-[76px]">
-          <span className="text-xs text-stone-500 mr-1">Voice part:</span>
-          {VOICE_PARTS.map((part) => (
+      {/* Sign-up picker */}
+      {showPicker && !isSignedUp && (
+        <div className="px-3 pb-3 ml-[76px] space-y-2.5">
+          {/* Musician role */}
+          <div>
+            <p className="text-[10px] uppercase tracking-wide text-stone-400 font-semibold mb-1">
+              Your role
+            </p>
+            <div className="flex gap-1.5 flex-wrap">
+              {(["vocalist", "cantor", "instrumentalist", "both"] as MusicianRole[]).map((r) => (
+                <button
+                  key={r}
+                  onClick={() => setPickerRole(r)}
+                  className={`text-xs px-2 py-1 border rounded transition-colors capitalize ${
+                    pickerRole === r
+                      ? "border-stone-700 bg-stone-900 text-white"
+                      : "border-stone-300 text-stone-600 hover:bg-stone-50"
+                  }`}
+                >
+                  {r}
+                </button>
+              ))}
+            </div>
+          </div>
+
+          {/* Voice part (vocalists/cantors/both) */}
+          {(pickerRole === "vocalist" || pickerRole === "cantor" || pickerRole === "both") && (
+            <div>
+              <p className="text-[10px] uppercase tracking-wide text-stone-400 font-semibold mb-1">
+                Voice part (optional)
+              </p>
+              <div className="flex gap-1.5 flex-wrap">
+                {VOICE_PARTS.map((part) => (
+                  <button
+                    key={part}
+                    onClick={() =>
+                      setPickerVoicePart((prev) => (prev === part ? null : part))
+                    }
+                    className={`text-xs px-2 py-1 border rounded transition-colors ${
+                      pickerVoicePart === part
+                        ? "border-stone-700 bg-stone-900 text-white"
+                        : "border-stone-300 text-stone-600 hover:bg-stone-50"
+                    }`}
+                  >
+                    {part}
+                  </button>
+                ))}
+              </div>
+            </div>
+          )}
+
+          {/* Instrument (instrumentalists/both) */}
+          {(pickerRole === "instrumentalist" || pickerRole === "both") && (
+            <div>
+              <p className="text-[10px] uppercase tracking-wide text-stone-400 font-semibold mb-1">
+                Instrument
+              </p>
+              <input
+                type="text"
+                value={pickerInstrument}
+                onChange={(e) => setPickerInstrument(e.target.value)}
+                placeholder="e.g. Violin, Flute, Acoustic Guitar"
+                className="text-xs w-full border border-stone-200 rounded px-2 py-1.5 focus:outline-none focus:ring-1 focus:ring-stone-400"
+              />
+            </div>
+          )}
+
+          {/* Optional notes */}
+          <div>
+            <p className="text-[10px] uppercase tracking-wide text-stone-400 font-semibold mb-1">
+              Notes (optional)
+            </p>
+            <input
+              type="text"
+              value={pickerNotes}
+              onChange={(e) => setPickerNotes(e.target.value)}
+              placeholder="e.g. I can bring my acoustic guitar"
+              className="text-xs w-full border border-stone-200 rounded px-2 py-1.5 focus:outline-none focus:ring-1 focus:ring-stone-400"
+            />
+          </div>
+
+          <div className="flex gap-2">
             <button
-              key={part}
-              onClick={() => {
-                setShowPartPicker(false);
-                onSignUp(part);
-              }}
+              onClick={handlePickerSubmit}
               disabled={isLoading}
-              className="text-xs px-2 py-1 border border-stone-300 rounded hover:bg-stone-50 text-stone-700 transition-colors disabled:opacity-50"
+              className="text-xs px-3 py-1.5 bg-stone-900 text-white rounded-md hover:bg-stone-800 transition-colors disabled:opacity-50"
             >
-              {part}
+              {isLoading ? "..." : "Confirm"}
             </button>
-          ))}
-          <button
-            onClick={() => setShowPartPicker(false)}
-            className="text-xs text-stone-400 hover:text-stone-600 ml-1"
-          >
-            Cancel
-          </button>
+            <button
+              onClick={() => setShowPicker(false)}
+              className="text-xs text-stone-400 hover:text-stone-600"
+            >
+              Cancel
+            </button>
+          </div>
         </div>
       )}
 
@@ -256,10 +385,38 @@ export default function MassSignupCard({
                 </div>
               );
             })}
+
+            {/* Instrumentalists column */}
+            {summary.instrumentalistList.length > 0 && (
+              <div>
+                <p className="text-[10px] uppercase tracking-wide text-stone-400 font-semibold mb-1">
+                  Instruments ({summary.instrumentalistList.length})
+                </p>
+                <ul className="space-y-0.5">
+                  {summary.instrumentalistList.map((m) => (
+                    <li
+                      key={m.id}
+                      className={`text-xs ${
+                        m.user_id === mySignup?.user_id
+                          ? "text-green-700 font-medium"
+                          : "text-stone-600"
+                      }`}
+                    >
+                      {m.profile?.full_name || "Unknown"}
+                      {m.instrument_detail && (
+                        <span className="text-stone-400 ml-1">
+                          ({m.instrument_detail})
+                        </span>
+                      )}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            )}
           </div>
 
-          {/* Change voice part (if signed up) */}
-          {isSignedUp && (
+          {/* Change voice part (if signed up as vocalist) */}
+          {isSignedUp && mySignup?.voice_part && (
             <div className="mt-2 pt-2 border-t border-stone-100 flex items-center gap-1.5">
               <span className="text-[10px] text-stone-400">Change to:</span>
               {VOICE_PARTS.filter((p) => p !== mySignup!.voice_part).map(

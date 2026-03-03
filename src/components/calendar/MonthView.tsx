@@ -3,7 +3,7 @@
 import { useState, useMemo } from "react";
 import type { CalendarWeek } from "@/lib/calendar-types";
 import type { LiturgicalDay } from "@/lib/types";
-import { getEventsForMonthByDateStr, dayOfWeekToGridIndex, getEnsembleColor } from "@/lib/calendar-utils";
+import { getEventsForMonthByDateStr, dayOfWeekToGridIndex } from "@/lib/calendar-utils";
 import { LITURGICAL_COLOR_LIGHT, LITURGICAL_COLOR_HEX } from "@/lib/liturgical-colors";
 import { buildLiturgicalDayMap, isSignificantRank } from "@/lib/liturgical-helpers";
 import DayDetailPanel from "./DayDetailPanel";
@@ -13,6 +13,8 @@ interface MonthViewProps {
   currentMonth: Date;
   liturgicalDays?: LiturgicalDay[];
   weekStartsOnMonday?: boolean;
+  onEditEvent?: (event: CalendarWeek["events"][number]) => void;
+  onAddEventForDate?: (dateStr: string) => void;
 }
 
 const MON_HEADERS = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"];
@@ -23,6 +25,8 @@ export default function MonthView({
   currentMonth,
   liturgicalDays,
   weekStartsOnMonday = true,
+  onEditEvent,
+  onAddEventForDate,
 }: MonthViewProps) {
   const year = currentMonth.getFullYear();
   const month = currentMonth.getMonth();
@@ -159,37 +163,26 @@ export default function MonthView({
                 </div>
               )}
 
-              {/* Event dots — ensemble-colored */}
+              {/* Event text labels */}
               {dayEvents.length > 0 && (
                 <div className="mt-0.5 space-y-0.5">
-                  {dayEvents.slice(0, 3).map((evt, i) => {
-                    let dotColor = "bg-stone-300";
-                    let dotHex: string | undefined;
-
-                    if (evt.eventType === "mass") {
-                      if (evt.ensemble) {
-                        dotHex = getEnsembleColor(evt.ensemble).color;
-                      } else {
-                        dotColor = "bg-parish-burgundy";
-                      }
-                    } else if (evt.eventType === "rehearsal") {
-                      dotColor = "bg-parish-gold";
-                    } else if (evt.eventType === "devotion") {
-                      dotColor = "bg-indigo-400";
-                    }
-
-                    return (
-                      <div
-                        key={i}
-                        className={`h-1 rounded-full ${dotHex ? "" : dotColor}`}
-                        style={dotHex ? { backgroundColor: dotHex } : undefined}
-                        title={`${evt.startTime12h || ""} ${evt.title}`}
-                      />
-                    );
-                  })}
+                  {dayEvents.slice(0, 3).map((evt, i) => (
+                    <div
+                      key={i}
+                      className="text-[9px] leading-tight text-stone-600 truncate"
+                      title={`${evt.startTime12h || ""} ${evt.title}`}
+                    >
+                      {evt.startTime12h && (
+                        <span className="text-stone-400 mr-0.5 tabular-nums">
+                          {evt.startTime12h}
+                        </span>
+                      )}
+                      {evt.title}
+                    </div>
+                  ))}
                   {dayEvents.length > 3 && (
                     <span className="text-[9px] text-stone-400">
-                      +{dayEvents.length - 3}
+                      +{dayEvents.length - 3} more
                     </span>
                   )}
                 </div>
@@ -199,36 +192,18 @@ export default function MonthView({
         })}
       </div>
 
-      {/* Legend */}
-      <div className="flex flex-wrap items-center gap-3 mt-3 px-1">
-        <div className="flex items-center gap-1">
-          <div className="w-2 h-2 rounded-full bg-parish-burgundy" />
-          <span className="text-[10px] text-stone-500">Mass</span>
-        </div>
-        <div className="flex items-center gap-1">
-          <div className="w-2 h-2 rounded-full bg-parish-gold" />
-          <span className="text-[10px] text-stone-500">Rehearsal</span>
-        </div>
-        <div className="flex items-center gap-1">
-          <div className="w-2 h-2 rounded-full bg-indigo-400" />
-          <span className="text-[10px] text-stone-500">Devotion</span>
-        </div>
-        <div className="flex items-center gap-1">
-          <div className="w-2 h-2 rounded-full bg-stone-300" />
-          <span className="text-[10px] text-stone-500">Other</span>
-        </div>
-        {/* Liturgical color swatches */}
-        <div className="border-l border-stone-300 pl-3 flex items-center gap-2">
-          {(["violet", "white", "red", "green", "rose"] as const).map((c) => (
-            <div key={c} className="flex items-center gap-0.5" title={c}>
-              <div
-                className="w-2 h-2 rounded-full border border-stone-200"
-                style={{ backgroundColor: LITURGICAL_COLOR_HEX[c] }}
-              />
-              <span className="text-[9px] text-stone-400 capitalize">{c}</span>
-            </div>
-          ))}
-        </div>
+      {/* Legend — liturgical colors only */}
+      <div className="flex flex-wrap items-center gap-2 mt-3 px-1">
+        <span className="text-[10px] text-stone-400 font-medium uppercase tracking-wide mr-1">Liturgical color:</span>
+        {(["violet", "white", "red", "green", "rose"] as const).map((c) => (
+          <div key={c} className="flex items-center gap-0.5" title={c}>
+            <div
+              className="w-2 h-2 rounded-full border border-stone-200"
+              style={{ backgroundColor: LITURGICAL_COLOR_HEX[c] }}
+            />
+            <span className="text-[9px] text-stone-400 capitalize">{c}</span>
+          </div>
+        ))}
       </div>
 
       {/* Day detail panel */}
@@ -239,6 +214,12 @@ export default function MonthView({
             litDay={selectedLitDay}
             events={selectedEvents}
             onClose={() => setSelectedDate(null)}
+            onEditEvent={onEditEvent}
+            onAddEvent={
+              onAddEventForDate
+                ? () => onAddEventForDate(selectedDate)
+                : undefined
+            }
           />
         </div>
       )}

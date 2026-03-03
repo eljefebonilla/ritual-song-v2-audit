@@ -79,8 +79,35 @@ export default function CalendarShell({ calendar, liturgicalDays }: CalendarShel
     [calendar.weeks, showPastDates, hiddenWeekIds, isAdmin]
   );
 
-  const handleAddEvent = () => {
-    setEditingEvent(undefined);
+  const handleAddEvent = (prefillDate?: string) => {
+    if (prefillDate) {
+      // Pre-fill with the selected date from the month view
+      setEditingEvent({
+        date: prefillDate,
+        dayOfWeek: "",
+        startTime: null,
+        endTime: null,
+        startTime12h: "",
+        endTime12h: "",
+        title: "",
+        ensemble: null,
+        eventType: "mass",
+        hasMusic: true,
+        isAutoMix: false,
+        celebrant: null,
+        location: null,
+        notes: null,
+        sidebarNote: null,
+        occasionId: null,
+      });
+    } else {
+      setEditingEvent(undefined);
+    }
+    setEditorOpen(true);
+  };
+
+  const handleEditEvent = (event: CalendarEvent) => {
+    setEditingEvent(event);
     setEditorOpen(true);
   };
 
@@ -122,7 +149,7 @@ export default function CalendarShell({ calendar, liturgicalDays }: CalendarShel
         setCurrentMonth={setCurrentMonth}
         totalWeeks={calendar.weeks.length}
         visibleWeeks={visibleWeeks.length}
-        onAddEvent={isAdmin ? handleAddEvent : undefined}
+        onAddEvent={isAdmin ? () => handleAddEvent() : undefined}
         weekStartsOnMonday={weekStartsOnMonday}
         onToggleWeekStart={() => setWeekStartsOnMonday((v) => !v)}
       />
@@ -137,7 +164,14 @@ export default function CalendarShell({ calendar, liturgicalDays }: CalendarShel
             liturgicalDays={liturgicalDays}
           />
         ) : (
-          <MonthView weeks={calendar.weeks} currentMonth={currentMonth} liturgicalDays={liturgicalDays} weekStartsOnMonday={weekStartsOnMonday} />
+          <MonthView
+            weeks={calendar.weeks}
+            currentMonth={currentMonth}
+            liturgicalDays={liturgicalDays}
+            weekStartsOnMonday={weekStartsOnMonday}
+            onEditEvent={isAdmin ? handleEditEvent : undefined}
+            onAddEventForDate={isAdmin ? (date) => handleAddEvent(date) : undefined}
+          />
         )}
       </div>
 

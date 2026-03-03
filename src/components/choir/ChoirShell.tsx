@@ -3,7 +3,7 @@
 import { useState, useMemo, useCallback } from "react";
 import { useRouter } from "next/navigation";
 import { useUser } from "@/lib/user-context";
-import type { ChoirSignup, VoicePart, ChoirSummary } from "@/lib/booking-types";
+import type { ChoirSignup, VoicePart, MusicianRole, ChoirSummary } from "@/lib/booking-types";
 import MassSignupCard from "./MassSignupCard";
 
 interface MassEvent {
@@ -36,25 +36,35 @@ function buildChoirSummary(
     Tenor: [],
     Bass: [],
   };
+  const instrumentalistList: ChoirSignup[] = [];
   for (const s of confirmed) {
-    roster[s.voice_part]?.push(s);
+    if (s.musician_role === "instrumentalist") {
+      instrumentalistList.push(s);
+    } else if (s.voice_part) {
+      roster[s.voice_part]?.push(s);
+    } else {
+      // vocalist/cantor/both without a voice_part — treat as vocal
+      roster.Soprano.push(s);
+    }
   }
   const soprano = roster.Soprano.length;
   const alto = roster.Alto.length;
   const tenor = roster.Tenor.length;
   const bass = roster.Bass.length;
-  const total = soprano + alto + tenor + bass;
+  const instrumentalists = instrumentalistList.length;
+  const total = soprano + alto + tenor + bass + instrumentalists;
   const parts = [
     soprano && `${soprano}S`,
     alto && `${alto}A`,
     tenor && `${tenor}T`,
     bass && `${bass}B`,
+    instrumentalists && `${instrumentalists} instr.`,
   ]
     .filter(Boolean)
     .join(", ");
   const label = descriptor || "Volunteers";
   const display = total > 0 ? `${label} [${parts}]` : label;
-  return { total, soprano, alto, tenor, bass, display, roster };
+  return { total, soprano, alto, tenor, bass, instrumentalists, display, roster, instrumentalistList };
 }
 
 function formatDateHeading(dateStr: string): string {
@@ -95,13 +105,25 @@ export default function ChoirShell({ masses, signups }: ChoirShellProps) {
   }, [signups, user]);
 
   const handleSignUp = useCallback(
-    async (massEventId: string, voicePart: VoicePart) => {
+    async (
+      massEventId: string,
+      voicePart: VoicePart | null,
+      musicianRole: MusicianRole,
+      instrumentDetail: string | null,
+      notes: string | null
+    ) => {
       setLoading(massEventId);
       try {
         const res = await fetch("/api/choir-signups", {
           method: "POST",
           headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({ mass_event_id: massEventId, voice_part: voicePart }),
+          body: JSON.stringify({
+            mass_event_id: massEventId,
+            voice_part: voicePart,
+            musician_role: musicianRole,
+            instrument_detail: instrumentDetail,
+            notes,
+          }),
         });
         if (res.ok) {
           router.refresh();
@@ -131,7 +153,7 @@ export default function ChoirShell({ masses, signups }: ChoirShellProps) {
   );
 
   const handleChangeVoicePart = useCallback(
-    async (signupId: string, massEventId: string, voicePart: VoicePart) => {
+    async (signupId: string, massEventId: string, voicePart: VoicePart | null) => {
       setLoading(massEventId);
       try {
         const res = await fetch(`/api/choir-signups/${signupId}`, {
@@ -166,6 +188,8 @@ export default function ChoirShell({ masses, signups }: ChoirShellProps) {
   );
 
   const defaultVoicePart = (profile?.voice_part as VoicePart) || null;
+  const defaultMusicianRole = (profile?.musician_role as MusicianRole) || "vocalist";
+  const defaultInstrumentDetail = profile?.instrument_detail || null;
 
   return (
     <div className="flex flex-col h-screen">
@@ -173,15 +197,24 @@ export default function ChoirShell({ masses, signups }: ChoirShellProps) {
       <div className="shrink-0 border-b border-stone-200 bg-white px-4 py-3 md:px-6">
         <div className="flex items-center justify-between">
           <div>
-            <h1 className="text-lg font-bold text-stone-900">Choir Sign-Up</h1>
+            <h1 className="text-lg font-bold text-stone-900">Musician Availability</h1>
             <p className="text-xs text-stone-500 mt-0.5">
-              Sign up for upcoming Masses that need choir volunteers
+              Sign up for upcoming Masses — vocalists, cantors, and instrumentalists
             </p>
           </div>
-          {isAuthenticated && defaultVoicePart && (
-            <span className="text-xs px-2 py-1 bg-stone-100 text-stone-600 rounded-md font-medium">
-              {defaultVoicePart}
-            </span>
+          {isAuthenticated && (
+            <div className="flex items-center gap-1.5">
+              {defaultVoicePart && (
+                <span className="text-xs px-2 py-1 bg-stone-100 text-stone-600 rounded-md font-medium">
+                  {defaultVoicePart}
+                </span>
+              )}
+              {defaultMusicianRole !== "vocalist" && (
+                <span className="text-xs px-2 py-1 bg-stone-100 text-stone-600 rounded-md font-medium capitalize">
+                  {defaultMusicianRole}
+                </span>
+              )}
+            </div>
           )}
         </div>
       </div>
@@ -206,7 +239,7 @@ export default function ChoirShell({ masses, signups }: ChoirShellProps) {
                 <circle cx="6" cy="18" r="3" />
                 <circle cx="18" cy="16" r="3" />
               </svg>
-              <p className="text-sm">No upcoming Masses need choir volunteers</p>
+              <p className="text-sm">No upcoming Masses need musicians</p>
               <p className="text-xs mt-1">Check back later for new openings</p>
             </div>
           </div>
@@ -240,9 +273,13 @@ export default function ChoirShell({ masses, signups }: ChoirShellProps) {
                           summary={summary}
                           mySignup={mySignup}
                           defaultVoicePart={defaultVoicePart}
+                          defaultMusicianRole={defaultMusicianRole}
+                          defaultInstrumentDetail={defaultInstrumentDetail}
                           isAuthenticated={isAuthenticated}
                           isLoading={loading === mass.id}
-                          onSignUp={(vp) => handleSignUp(mass.id, vp)}
+                          onSignUp={(vp, role, instr, notes) =>
+                            handleSignUp(mass.id, vp, role, instr, notes)
+                          }
                           onCancel={() =>
                             mySignup && handleCancel(mySignup.id, mass.id)
                           }

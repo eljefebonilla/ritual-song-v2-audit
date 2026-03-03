@@ -70,9 +70,18 @@ export async function POST(request: NextRequest) {
 
   const body = await request.json();
 
-  if (!body.mass_event_id || !body.voice_part) {
+  if (!body.mass_event_id) {
     return NextResponse.json(
-      { error: "mass_event_id and voice_part are required" },
+      { error: "mass_event_id is required" },
+      { status: 400 }
+    );
+  }
+
+  // Require either voice_part or musician_role=instrumentalist
+  const musicianRole = body.musician_role || "vocalist";
+  if (musicianRole !== "instrumentalist" && !body.voice_part) {
+    return NextResponse.json(
+      { error: "voice_part is required for vocalists and cantors" },
       { status: 400 }
     );
   }
@@ -82,7 +91,10 @@ export async function POST(request: NextRequest) {
     .insert({
       mass_event_id: body.mass_event_id,
       user_id: user.id,
-      voice_part: body.voice_part,
+      voice_part: body.voice_part || null,
+      musician_role: musicianRole,
+      instrument_detail: body.instrument_detail || null,
+      notes: body.notes || null,
       status: "confirmed",
     })
     .select(`

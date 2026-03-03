@@ -20,12 +20,16 @@ export async function PUT(
   const body = await request.json();
 
   // RLS ensures users can only update their own signups
+  const updateData: Record<string, unknown> = {};
+  if (body.voice_part !== undefined) updateData.voice_part = body.voice_part;
+  if (body.status !== undefined) updateData.status = body.status;
+  if (body.musician_role !== undefined) updateData.musician_role = body.musician_role;
+  if (body.instrument_detail !== undefined) updateData.instrument_detail = body.instrument_detail;
+  if (body.notes !== undefined) updateData.notes = body.notes;
+
   const { data, error } = await supabase
     .from("choir_signups")
-    .update({
-      voice_part: body.voice_part,
-      status: body.status,
-    })
+    .update(updateData)
     .eq("id", id)
     .select(`
       *,

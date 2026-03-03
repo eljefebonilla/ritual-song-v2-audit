@@ -74,11 +74,16 @@ export interface BookingRow {
 
 export type VoicePart = 'Soprano' | 'Alto' | 'Tenor' | 'Bass';
 
+export type MusicianRole = 'vocalist' | 'instrumentalist' | 'cantor' | 'both';
+
 export interface ChoirSignup {
   id: string;
   mass_event_id: string;
   user_id: string;
-  voice_part: VoicePart;
+  voice_part: VoicePart | null;
+  musician_role: MusicianRole;
+  instrument_detail: string | null;
+  notes: string | null;
   status: 'confirmed' | 'cancelled';
   created_at: string;
   updated_at: string;
@@ -97,8 +102,10 @@ export interface ChoirSummary {
   alto: number;
   tenor: number;
   bass: number;
+  instrumentalists: number;
   display: string;  // "Volunteers [3S, 2A, 1T, 1B]"
   roster: Record<VoicePart, ChoirSignup[]>;
+  instrumentalistList: ChoirSignup[];
 }
 
 // ===== MASS COMMENTS =====
