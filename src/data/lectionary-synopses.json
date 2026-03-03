@@ -3878,5 +3878,85 @@
       }
     },
     "invitesUsTo": "This observance invites us to honor the men and women who have served with more than words — with a commitment to the peace and justice their service was meant to protect. Isaiah's vision of security rooted in righteousness reminds us that lasting peace is built, not merely won. Paul calls us to weep with those who weep — to accompany veterans in the wounds they carry home. And Jesus names the deepest truth: that laying down one's life for others is the highest expression of love. We are invited to give thanks for their courage and to work for the world they fought to make possible."
+  },
+  "holy-thursday-lords-supper": {
+    "occasion_id": "holy-thursday-lords-supper",
+    "logline": "Holy Thursday — The night Jesus redefines love as service and gives himself as food: the Last Supper, the washing of feet, and the beginning of the Triduum.",
+    "trajectory": "The Triduum is one continuous liturgy across three days: Holy Thursday opens with the institution of the Eucharist and priesthood; Good Friday continues with the Passion and death; the Easter Vigil completes the movement through baptism and resurrection.",
+    "readings": {
+      "first": {
+        "citation": "Ex 12:1-8, 11-14",
+        "synopsis": "The Lord gives Moses and Aaron the detailed instructions for the Passover meal — the lamb, the blood on the doorposts, the unleavened bread, the belt fastened, sandals on. This meal must be eaten in haste; it is the Lord's Passover. The blood on the doorposts will be a sign of protection when the destroyer passes through Egypt. And this day will be a memorial to keep as a perpetual feast. The entire Passover ritual that Jesus fulfills at the Last Supper has its roots in these precise, urgent instructions."
+      },
+      "second": {
+        "citation": "1 Cor 11:23-26",
+        "synopsis": "Paul delivers what is almost certainly the earliest written account of the Lord's Supper, predating the Gospels. He received this from the Lord himself: on the night he was handed over, Jesus took bread, broke it, and said 'This is my body that is for you.' Then the cup: 'This cup is the new covenant in my blood.' Paul adds the interpretive key: every time you eat and drink this, you proclaim the death of the Lord until he comes. This is not a memorial in the sense of merely remembering — it is a proclamation, an announcement of the Paschal Mystery to the world."
+      },
+      "gospel": {
+        "citation": "Jn 13:1-15",
+        "synopsis": "John's account of the Last Supper has no bread-breaking or cup-sharing — instead it centers entirely on Jesus washing the feet of his disciples. Knowing that his hour has come, knowing who he is and where he is going, Jesus gets up from dinner, ties a towel around his waist, and kneels before his disciples. Peter resists violently; Jesus insists. When Jesus finishes, he asks: do you know what I have done to you? You call me Teacher and Lord, and rightly so. Then he gives them the model: if I, your Lord and Teacher, have washed your feet, you ought to wash one another's feet. I have given you an example."
+      }
+    },
+    "invitesUsTo": "Holy Thursday invites us into the paradox at the heart of the faith: the one who is Lord becomes servant, the one who gives life gives his body as food. John's gospel and Paul's letter together frame the Eucharist not as passive reception but as commissioning — to be broken and poured out for others. The foot-washing is the enacted parable of the meal: both say the same thing about what love looks like when it has no agenda. The Passover reading grounds it all in salvation history — this is not a new thing God is doing, but the fulfillment of the oldest thing: liberation purchased through sacrifice. We are invited to receive this gift with open hands and to take seriously the towel Jesus has placed in ours."
+  },
+  "good-friday-passion": {
+    "occasion_id": "good-friday-passion",
+    "logline": "Good Friday — The servant who suffers in silence, the high priest who has been through every trial, and the Passion of John: how the death of Jesus transforms everything it touches.",
+    "trajectory": "Good Friday is the second movement of the one Triduum liturgy — no Mass, no consecration, just the long listening to the Passion, the solemn intercessions for the whole world, and the slow, silent veneration of the Cross.",
+    "readings": {
+      "first": {
+        "citation": "Is 52:13—53:12",
+        "synopsis": "The fourth Servant Song is one of the most haunting texts in all of scripture. Isaiah describes a figure disfigured beyond recognition, despised and rejected, a man of sorrows. He bore our infirmities, carried our sorrows, and was pierced for our offenses. Upon him was the punishment that makes us whole; by his wounds we were healed. The servant does not protest — he is led like a lamb to slaughter and opens not his mouth. But the conclusion is startling: the Lord's will shall be accomplished through him, and he shall see his descendants and justify many. Suffering is not the end of this story — vindication is."
+      },
+      "second": {
+        "citation": "Heb 4:14-16; 5:7-9",
+        "synopsis": "The Letter to the Hebrews makes a claim that would have sounded radical: Jesus is our great high priest — not because he was untouched by human weakness, but because he was tested in every way that we are, yet without sin. In the days of his flesh, he offered prayers and supplications with loud cries and tears, and he was heard. He learned obedience through what he suffered. This is a God who has been through it. The invitation that flows from this is extraordinary: let us approach the throne of grace with confidence, so that we may receive mercy and find grace in our time of need."
+      },
+      "gospel": {
+        "citation": "Jn 18:1—19:42",
+        "synopsis": "John's Passion is written by someone who wants you to see clearly who is in charge. Jesus steps forward to identify himself to the soldiers — and they fall to the ground. He tells Pilate that Pilate would have no power if it had not been given from above. He carries his own cross to Calvary. From the cross he gives his mother and the beloved disciple to each other. He says 'I thirst' — and then 'It is finished.' He bows his head and hands over the spirit. John's Passion is not a story of victimhood but of sovereign love choosing to go all the way. The burial is careful, costly, and regal — anointed with a hundred pounds of myrrh and aloes."
+      }
+    },
+    "invitesUsTo": "Good Friday invites us into the hardest mystery: that God chose the cross. Isaiah's servant absorbs violence without retaliating and becomes, paradoxically, the instrument of healing for those who wounded him. Hebrews tells us this suffering was not incidental but formative — Jesus learned through it, became complete through it, and as a result can accompany us through ours. John's Passion refuses to let us pity Jesus; instead it asks us to see the cross as the moment of exaltation, the completion of love's logic. We are invited to come forward — slowly, in silence — and venerate the wood on which the salvation of the world has hung."
+  },
+  "easter-vigil": {
+    "occasion_id": "easter-vigil",
+    "logline": "Easter Vigil — The longest liturgy of the year: creation, exodus, covenant, baptism, and resurrection, all gathered into one holy night that changes everything.",
+    "trajectory": "The Easter Vigil is the third and culminating movement of the Triduum. It moves from darkness to light, from silence to the first Alleluia, from the old covenant to the new, and from death to life — often anchored by the reception of new members of the Church.",
+    "readings": {
+      "first": {
+        "citation": "Gen 1:1—2:2 / Ex 14:15—15:1 / Is 55:1-11",
+        "synopsis": "The Vigil offers up to seven Old Testament readings; the minimum is three, including Exodus 14. The Creation account (Gen 1–2) opens with God speaking the world into existence — light from darkness, order from chaos, goodness from nothing. Each day ends: it was good. The Exodus account is the Passover reading in motion — Moses stretches out his hand, the sea parts, Israel walks through on dry ground, and the Egyptians are swallowed. Then the Song of Moses: I will sing to the Lord, glorious in triumph! Isaiah 55 is the invitation of the covenant: come to the water, come without cost, come and eat. My word shall not return to me empty but shall achieve what I will."
+      },
+      "second": {
+        "citation": "Rom 6:3-11",
+        "synopsis": "This is the baptismal epistle — the reading that makes explicit what the water means. Paul asks: do you not know that all of us who were baptized into Christ Jesus were baptized into his death? We were buried with him through baptism into death, so that just as Christ was raised from the dead, we too might live in newness of life. The logic is compressed and stunning: if we have grown into union with him through a death like his, we shall also be united with him in a resurrection like his. The old self was crucified with him. The life he lives, he lives for God. This is the night that makes this true for the newly baptized."
+      },
+      "gospel": {
+        "citation": "Lk 24:1-12",
+        "synopsis": "Luke's resurrection account belongs to the women. At dawn on the first day of the week, they come to the tomb with the spices they had prepared — and find the stone rolled away, the body gone. Two men in dazzling garments appear and ask the question that will echo through every Easter: why do you seek the living among the dead? He is not here; he has been raised. Remember what he told you in Galilee. The women remember. They go and tell the eleven and all the others. Peter runs to the tomb, sees only the burial cloths, and goes home amazed at what had happened."
+      }
+    },
+    "invitesUsTo": "The Easter Vigil invites us to inhabit the entire arc of salvation history in a single night — to feel the weight of darkness before the first flame is struck, to hear creation pronounced good, to stand with Israel at the sea, to receive the invitation of the covenant. Then, at the Epistle, the turn: baptism is death and resurrection. The first Alleluia breaks open everything that has been held in silence since Ash Wednesday. The Gospel is spare and luminous — women with spices, an empty tomb, two shining men with the greatest question ever asked. This night invites us to be amazed, to remember, to believe that what happened then is happening now: the living Christ, not among the dead."
+  },
+  "easter-sunday-resurrection": {
+    "occasion_id": "easter-sunday-resurrection",
+    "logline": "Easter Sunday — The tomb is empty, Mary Magdalene is running, and Peter sees only burial cloths and wonder: the resurrection has begun.",
+    "trajectory": "Easter Sunday launches the 50-day Easter season. The readings move from Peter's proclamation of the resurrection to the baptismal ethics of Colossians to the empty tomb in John — three angles on the same inexhaustible mystery.",
+    "readings": {
+      "first": {
+        "citation": "Acts 10:34a, 37-43",
+        "synopsis": "Peter is speaking to Cornelius — a Gentile, the first non-Jewish person to receive the Gospel — and he gives the earliest kerygmatic summary in the New Testament. You know what happened: Jesus of Nazareth was anointed with the Holy Spirit and power; he went about doing good and healing all those oppressed by the devil. They killed him, hanging him on a tree. But God raised him on the third day and granted that he be visible — not to all, but to witnesses chosen beforehand, to us who ate and drank with him after he rose from the dead. He commanded us to testify. Everyone who believes in him receives forgiveness. This is the proclamation at the heart of the Easter season."
+      },
+      "second": {
+        "citation": "Col 3:1-4",
+        "synopsis": "Four crisp verses with an enormous claim: if you have been raised with Christ — and you have — then seek what is above, where Christ is seated at the right hand of God. Set your mind on things that are above, not on things that are on earth. For you have died, and your life is hidden with Christ in God. When Christ who is your life appears, then you also will appear with him in glory. Paul is writing to people who were baptized, telling them that their resurrection is not a future event but a present reality already underway. The life they are living now is already hidden in God."
+      },
+      "gospel": {
+        "citation": "Jn 20:1-9",
+        "synopsis": "John's Easter morning is intimate and precise. Mary Magdalene comes to the tomb while it is still dark — and finds the stone removed. She runs to Peter and the beloved disciple: they have taken the Lord. The two men run; the beloved disciple arrives first but does not go in. Peter arrives and goes straight in: burial cloths lying there, the cloth that covered Jesus' head rolled up separately. Then the other disciple goes in, sees, and believes — though as yet they did not understand the scripture that he had to rise from the dead. John invites us to linger in the details: the folded cloth, the darkness giving way, two people running toward something they cannot yet explain."
+      }
+    },
+    "invitesUsTo": "Easter Sunday invites us to stand at the entrance of the empty tomb and make a decision: to believe, as the beloved disciple believed, even before fully understanding. Peter's speech in Acts tells us what the church has been saying since the beginning — not an abstraction but a testimony, from people who ate and drank with the risen Christ. Colossians tells us that this resurrection is not only past and future but present: our life is already hidden with Christ in God. John's gospel asks us to notice what is absent — not the body but the grave clothes, neatly folded, as if to say: he had all the time in the world. We are invited to run toward the impossible and find it true."
   }
 }

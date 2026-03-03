@@ -1,9 +1,11 @@
 "use client";
 
+import { Fragment, useState } from "react";
 import type { BookingSlot, BookingStatus, ChoirDescriptor } from "@/lib/booking-types";
 import { getEnsembleColor } from "@/lib/calendar-utils";
 import { CONFIRMATION_DISPLAY } from "@/lib/booking-types";
 import type { ConfirmationStatus } from "@/lib/booking-types";
+import MassComments from "@/components/comments/MassComments";
 
 interface MinistryRole {
   id: string;
@@ -72,6 +74,9 @@ export default function BookingGrid({
   onCellClick,
   onStatusChange,
 }: BookingGridProps) {
+  const [commentMassId, setCommentMassId] = useState<string | null>(null);
+  const totalCols = 2 + roles.length; // mass info + status + role columns
+
   if (masses.length === 0) {
     return (
       <div className="flex items-center justify-center h-64 text-stone-400">
@@ -114,8 +119,8 @@ export default function BookingGrid({
             }
 
             return (
+              <Fragment key={mass.id}>
               <tr
-                key={mass.id}
                 className="border-b border-stone-100 hover:bg-stone-50/50"
               >
                 {/* Mass info (frozen column) */}
@@ -147,6 +152,32 @@ export default function BookingGrid({
                         {mass.celebrant}
                       </span>
                     )}
+                    <button
+                      onClick={(e) => {
+                        e.stopPropagation();
+                        setCommentMassId(commentMassId === mass.id ? null : mass.id);
+                      }}
+                      className={`mt-0.5 inline-flex items-center gap-0.5 text-[10px] transition-colors ${
+                        commentMassId === mass.id
+                          ? "text-stone-700"
+                          : "text-stone-300 hover:text-stone-500"
+                      }`}
+                      title="Comments"
+                    >
+                      <svg
+                        width="10"
+                        height="10"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        strokeWidth="2"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                      >
+                        <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" />
+                      </svg>
+                      notes
+                    </button>
                   </div>
                 </td>
 
@@ -203,6 +234,23 @@ export default function BookingGrid({
                   );
                 })}
               </tr>
+              {/* Comment expansion row */}
+              {commentMassId === mass.id && (
+                <tr className="border-b border-stone-200 bg-stone-50/50">
+                  <td
+                    colSpan={totalCols}
+                    className="px-4 py-3"
+                  >
+                    <div className="max-w-lg">
+                      <p className="text-[10px] uppercase tracking-wider font-semibold text-stone-400 mb-2">
+                        Notes &amp; Comments
+                      </p>
+                      <MassComments massEventId={mass.id} />
+                    </div>
+                  </td>
+                </tr>
+              )}
+              </Fragment>
             );
           })}
         </tbody>

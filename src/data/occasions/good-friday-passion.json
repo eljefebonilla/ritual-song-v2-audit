@@ -1,0 +1,110 @@
+{
+  "id": "good-friday-passion",
+  "name": "GOOD FRIDAY\nTHE PASSION OF THE LORD",
+  "year": "ABC",
+  "season": "lent",
+  "seasonLabel": "Lent",
+  "seasonOrder": 0,
+  "dates": [
+    {
+      "date": "2026-04-03",
+      "label": "Year C — Apr 3, 2026 (Fri)",
+      "dayOfWeek": "Fri"
+    },
+    {
+      "date": "2027-03-26",
+      "label": "Year A — Mar 26, 2027 (Fri)",
+      "dayOfWeek": "Fri"
+    },
+    {
+      "date": "2028-04-14",
+      "label": "Year B — Apr 14, 2028 (Fri)",
+      "dayOfWeek": "Fri"
+    }
+  ],
+  "lectionary": {
+    "number": "040•ABC",
+    "gospelTitle": "The Passion of Our Lord Jesus Christ (Jn 18–19)",
+    "thematicTag": "Good Friday — The Passion of the Lord"
+  },
+  "readings": [
+    {
+      "type": "first",
+      "citation": "Is 52:13—53:12",
+      "summary": "The servant of the Lord shall prosper."
+    },
+    {
+      "type": "psalm",
+      "citation": "Ps 31:2, 6, 12-13, 15-16, 17, 25\nFather, into your hands I commend my spirit.",
+      "summary": "",
+      "antiphon": "Father, into your hands I commend my spirit."
+    },
+    {
+      "type": "second",
+      "citation": "Heb 4:14-16; 5:7-9",
+      "summary": "Christ experienced all human weakness."
+    },
+    {
+      "type": "gospel",
+      "citation": "Jn 18:1—19:42",
+      "summary": "The Passion narrative."
+    }
+  ],
+  "antiphons": [
+    {
+      "type": "communion",
+      "option": 1,
+      "citation": "Jn 19:34",
+      "text": "One of the soldiers opened his side with a lance,\nand immediately Blood and water flowed out."
+    }
+  ],
+  "planningNotes": [
+    "FRI 7 PM — single combined celebration, no Mass",
+    "Solemn Intercessions follow the homily",
+    "Adoration of the Holy Cross with Veneration follows Intercessions",
+    "No Gloria, no Alleluia",
+    "No consecration — pre-sanctified hosts from Holy Thursday"
+  ],
+  "musicPlans": [
+    {
+      "ensemble": "All Ensembles",
+      "ensembleId": "reflections",
+      "date": "Apr 3, 2026 (Fri) 7 PM",
+      "presider": "TBD",
+      "massNotes": [
+        "FRI 7 PM — all ensembles combined",
+        "Chant before Gospel: Through His Sacrifice We Are Freed (Lockwood, BPM 80)",
+        "Gospel with sung acclamation — John's full Passion narrative",
+        "Solemn Intercessions: Hold Us, Jesus (Chris de Silva, BPM 60)",
+        "Adoration of Holy Cross Acclamation: Behold the Wood (Dan Schutte)"
+      ],
+      "responsorialPsalm": {
+        "psalm": "Ps 31 My Life Is in Your Hands",
+        "setting": "Scott Soper • BPM 66"
+      },
+      "offertory": {
+        "title": "Lamb of God, What Wondrous Love",
+        "composer": "Fauré / Kane • Arr. Petker",
+        "description": "Offertory Chant — BPM 76"
+      },
+      "communionSongs": [
+        {
+          "title": "Ave Verum",
+          "composer": "Mozart",
+          "description": "Veneration"
+        },
+        {
+          "title": "Pietà",
+          "composer": "Tom Kendzia & Theresa Donohoo",
+          "description": "BPM 58 — alt: Crux Fidelis (Steven C. Warner)"
+        },
+        {
+          "title": "Behold the Cross",
+          "composer": "Bob Hurd",
+          "description": "BPM 84 — alt: Sunday Is Coming (Phil Wickham), At The Cross Love Ran Red (Chris Tomlin, BPM 73)"
+        }
+      ]
+    }
+  ],
+  "occasionResources": []
+}

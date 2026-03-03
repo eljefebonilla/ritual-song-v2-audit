@@ -12,6 +12,13 @@ const ENSEMBLES = [
   { id: "elevations", label: "Elevations" },
 ];
 
+const MUSICIAN_ROLES = [
+  { id: "vocalist", label: "Vocalist" },
+  { id: "instrumentalist", label: "Instrumentalist" },
+  { id: "cantor", label: "Cantor" },
+  { id: "both", label: "Vocalist + Instrumentalist" },
+];
+
 const VOICE_PARTS = ["Soprano", "Alto", "Tenor", "Bass"];
 
 interface ProfileData {
@@ -19,8 +26,10 @@ interface ProfileData {
   email: string;
   phone: string;
   ensemble: string;
+  musician_role: string;
   voice_part: string;
   instrument: string;
+  instrument_detail: string;
 }
 
 export default function ProfilePage() {
@@ -36,8 +45,10 @@ export default function ProfilePage() {
     email: "",
     phone: "",
     ensemble: "",
+    musician_role: "vocalist",
     voice_part: "",
     instrument: "",
+    instrument_detail: "",
   });
 
   const syncFormFromProfile = useCallback(() => {
@@ -47,8 +58,10 @@ export default function ProfilePage() {
         email: profile.email ?? "",
         phone: profile.phone ?? "",
         ensemble: profile.ensemble ?? "",
+        musician_role: profile.musician_role ?? "vocalist",
         voice_part: profile.voice_part ?? "",
         instrument: profile.instrument ?? "",
+        instrument_detail: profile.instrument_detail ?? "",
       });
     }
   }, [profile]);
@@ -73,6 +86,9 @@ export default function ProfilePage() {
     setEditing(false);
   }
 
+  const showVoicePart = ["vocalist", "cantor", "both"].includes(formData.musician_role);
+  const showInstrument = ["instrumentalist", "both"].includes(formData.musician_role);
+
   async function handleSave(e: React.FormEvent) {
     e.preventDefault();
     if (!user) return;
@@ -86,8 +102,10 @@ export default function ProfilePage() {
         full_name: formData.full_name,
         phone: formData.phone || null,
         ensemble: formData.ensemble || null,
-        voice_part: formData.voice_part || null,
-        instrument: formData.instrument || null,
+        musician_role: formData.musician_role || "vocalist",
+        voice_part: showVoicePart ? (formData.voice_part || null) : null,
+        instrument: showInstrument ? (formData.instrument_detail || null) : null,
+        instrument_detail: showInstrument ? (formData.instrument_detail || null) : null,
         updated_at: new Date().toISOString(),
       })
       .eq("id", user.id);
@@ -106,6 +124,8 @@ export default function ProfilePage() {
 
   const ensembleLabel =
     ENSEMBLES.find((c) => c.id === formData.ensemble)?.label ?? "Not set";
+  const musicianRoleLabel =
+    MUSICIAN_ROLES.find((r) => r.id === formData.musician_role)?.label ?? "Vocalist";
   const voicePartLabel = formData.voice_part
     ? formData.voice_part.charAt(0).toUpperCase() + formData.voice_part.slice(1)
     : "Not set";
@@ -259,8 +279,30 @@ export default function ProfilePage() {
               </select>
             </div>
 
-            {/* Voice Part & Instrument */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            {/* Musician Role */}
+            <div>
+              <label
+                htmlFor="musician_role"
+                className="block text-sm font-medium text-stone-700 mb-1"
+              >
+                Musician Role
+              </label>
+              <select
+                id="musician_role"
+                value={formData.musician_role}
+                onChange={(e) => update("musician_role", e.target.value)}
+                className={inputClass}
+              >
+                {MUSICIAN_ROLES.map((r) => (
+                  <option key={r.id} value={r.id}>
+                    {r.label}
+                  </option>
+                ))}
+              </select>
+            </div>
+
+            {/* Voice Part (conditional) */}
+            {showVoicePart && (
               <div>
                 <label
                   htmlFor="voice_part"
@@ -282,23 +324,27 @@ export default function ProfilePage() {
                   ))}
                 </select>
               </div>
+            )}
+
+            {/* Instrument (conditional) */}
+            {showInstrument && (
               <div>
                 <label
-                  htmlFor="instrument"
+                  htmlFor="instrument_detail"
                   className="block text-sm font-medium text-stone-700 mb-1"
                 >
                   Instrument
                 </label>
                 <input
-                  id="instrument"
+                  id="instrument_detail"
                   type="text"
-                  value={formData.instrument}
-                  onChange={(e) => update("instrument", e.target.value)}
-                  placeholder="e.g. Piano, Guitar"
+                  value={formData.instrument_detail}
+                  onChange={(e) => update("instrument_detail", e.target.value)}
+                  placeholder="e.g. Piano, Guitar, Violin"
                   className={inputClass}
                 />
               </div>
-            </div>
+            )}
 
             {/* Actions */}
             <div className="flex items-center gap-3 pt-2">
@@ -348,17 +394,27 @@ export default function ProfilePage() {
                 </dd>
               </div>
               <div className="py-3 sm:grid sm:grid-cols-3 sm:gap-4">
-                <dt className="text-sm font-medium text-stone-500">Voice Part</dt>
+                <dt className="text-sm font-medium text-stone-500">Musician Role</dt>
                 <dd className="mt-1 text-sm text-stone-900 sm:col-span-2 sm:mt-0">
-                  {voicePartLabel}
+                  {musicianRoleLabel}
                 </dd>
               </div>
-              <div className="py-3 sm:grid sm:grid-cols-3 sm:gap-4">
-                <dt className="text-sm font-medium text-stone-500">Instrument</dt>
-                <dd className="mt-1 text-sm text-stone-900 sm:col-span-2 sm:mt-0">
-                  {formData.instrument || "Not set"}
-                </dd>
-              </div>
+              {showVoicePart && (
+                <div className="py-3 sm:grid sm:grid-cols-3 sm:gap-4">
+                  <dt className="text-sm font-medium text-stone-500">Voice Part</dt>
+                  <dd className="mt-1 text-sm text-stone-900 sm:col-span-2 sm:mt-0">
+                    {voicePartLabel}
+                  </dd>
+                </div>
+              )}
+              {showInstrument && (
+                <div className="py-3 sm:grid sm:grid-cols-3 sm:gap-4">
+                  <dt className="text-sm font-medium text-stone-500">Instrument</dt>
+                  <dd className="mt-1 text-sm text-stone-900 sm:col-span-2 sm:mt-0">
+                    {formData.instrument_detail || "Not set"}
+                  </dd>
+                </div>
+              )}
             </dl>
           </div>
         )}

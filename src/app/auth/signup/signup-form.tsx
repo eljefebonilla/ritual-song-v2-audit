@@ -12,6 +12,13 @@ const ENSEMBLES = [
   { id: "elevations", label: "Elevations" },
 ];
 
+const MUSICIAN_ROLES = [
+  { id: "vocalist", label: "Vocalist" },
+  { id: "instrumentalist", label: "Instrumentalist" },
+  { id: "cantor", label: "Cantor" },
+  { id: "both", label: "Vocalist + Instrumentalist" },
+];
+
 const VOICE_PARTS = ["Soprano", "Alto", "Tenor", "Bass"];
 
 export function SignupForm() {
@@ -21,8 +28,9 @@ export function SignupForm() {
     email: "",
     password: "",
     phone: "",
+    musicianRole: "vocalist",
     voicePart: "",
-    instrument: "",
+    instrumentDetail: "",
     ensembleId: "",
   });
   const [error, setError] = useState("");
@@ -31,6 +39,9 @@ export function SignupForm() {
   function update(field: string, value: string) {
     setFormData((prev) => ({ ...prev, [field]: value }));
   }
+
+  const showVoicePart = ["vocalist", "cantor", "both"].includes(formData.musicianRole);
+  const showInstrument = ["instrumentalist", "both"].includes(formData.musicianRole);
 
   async function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
@@ -63,8 +74,10 @@ export function SignupForm() {
         full_name: formData.fullName,
         email: formData.email,
         phone: formData.phone || null,
-        voice_part: formData.voicePart || null,
-        instrument: formData.instrument || null,
+        musician_role: formData.musicianRole,
+        voice_part: showVoicePart ? (formData.voicePart || null) : null,
+        instrument: showInstrument ? (formData.instrumentDetail || null) : null,
+        instrument_detail: showInstrument ? (formData.instrumentDetail || null) : null,
         ensemble: formData.ensembleId || null,
         role: "member",
       });
@@ -165,8 +178,27 @@ export function SignupForm() {
         </select>
       </div>
 
-      {/* Voice Part & Instrument (side by side) */}
-      <div className="grid grid-cols-2 gap-3">
+      {/* Musician Role */}
+      <div>
+        <label htmlFor="musicianRole" className="block text-sm font-medium text-stone-700 mb-1">
+          Musician Role <span className="text-red-500">*</span>
+        </label>
+        <select
+          id="musicianRole"
+          value={formData.musicianRole}
+          onChange={(e) => update("musicianRole", e.target.value)}
+          className={inputClass}
+        >
+          {MUSICIAN_ROLES.map((r) => (
+            <option key={r.id} value={r.id}>
+              {r.label}
+            </option>
+          ))}
+        </select>
+      </div>
+
+      {/* Voice Part (conditional) */}
+      {showVoicePart && (
         <div>
           <label htmlFor="voicePart" className="block text-sm font-medium text-stone-700 mb-1">
             Voice Part
@@ -185,20 +217,24 @@ export function SignupForm() {
             ))}
           </select>
         </div>
+      )}
+
+      {/* Instrument (conditional) */}
+      {showInstrument && (
         <div>
-          <label htmlFor="instrument" className="block text-sm font-medium text-stone-700 mb-1">
+          <label htmlFor="instrumentDetail" className="block text-sm font-medium text-stone-700 mb-1">
             Instrument
           </label>
           <input
-            id="instrument"
+            id="instrumentDetail"
             type="text"
-            value={formData.instrument}
-            onChange={(e) => update("instrument", e.target.value)}
-            placeholder="e.g. Piano, Guitar"
+            value={formData.instrumentDetail}
+            onChange={(e) => update("instrumentDetail", e.target.value)}
+            placeholder="e.g. Piano, Guitar, Violin"
             className={inputClass}
           />
         </div>
-      </div>
+      )}
 
       {error && <p className="text-red-600 text-sm">{error}</p>}
 

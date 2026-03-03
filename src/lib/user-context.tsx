@@ -19,6 +19,8 @@ interface Profile {
   phone: string | null;
   voice_part: string | null;
   instrument: string | null;
+  instrument_detail: string | null;
+  musician_role: string | null;
   ensemble: string | null;
   role: UserRole;
   avatar_url: string | null;

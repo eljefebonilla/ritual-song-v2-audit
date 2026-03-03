@@ -16,8 +16,12 @@ create table public.profiles (
   ensemble text check (ensemble in (
     'reflections', 'foundations', 'generations', 'heritage', 'elevations'
   )),
+  musician_role text default 'vocalist' check (musician_role in (
+    'vocalist', 'instrumentalist', 'cantor', 'both'
+  )),
   voice_part text check (voice_part in ('Soprano', 'Alto', 'Tenor', 'Bass')),
   instrument text,
+  instrument_detail text,
   role text not null default 'member' check (role in ('admin', 'member')),
   avatar_url text,
   created_at timestamptz default now(),

@@ -1,0 +1,156 @@
+{
+  "id": "holy-thursday-lords-supper",
+  "name": "HOLY THURSDAY\nMASS OF THE LORD'S SUPPER",
+  "year": "ABC",
+  "season": "lent",
+  "seasonLabel": "Lent",
+  "seasonOrder": 0,
+  "dates": [
+    {
+      "date": "2026-04-02",
+      "label": "Year C — Apr 2, 2026 (Thu)",
+      "dayOfWeek": "Thu"
+    },
+    {
+      "date": "2027-03-25",
+      "label": "Year A — Mar 25, 2027 (Thu)",
+      "dayOfWeek": "Thu"
+    },
+    {
+      "date": "2028-04-13",
+      "label": "Year B — Apr 13, 2028 (Thu)",
+      "dayOfWeek": "Thu"
+    }
+  ],
+  "lectionary": {
+    "number": "039•ABC",
+    "gospelTitle": "Jesus Washes the Disciples' Feet (Jn 13)",
+    "thematicTag": "Holy Thursday — Mass of the Lord's Supper"
+  },
+  "readings": [
+    {
+      "type": "first",
+      "citation": "Ex 12:1-8, 11-14",
+      "summary": "The Lord instructs Moses for the first Passover."
+    },
+    {
+      "type": "psalm",
+      "citation": "Ps 116:12-13, 15-16bc, 17-18\nOur blessing-cup is a communion with the Blood of Christ.",
+      "summary": "",
+      "antiphon": "Our blessing-cup is a communion with the Blood of Christ."
+    },
+    {
+      "type": "second",
+      "citation": "1 Cor 11:23-26",
+      "summary": "Paul recounts the Last Supper."
+    },
+    {
+      "type": "gospel_verse",
+      "citation": "Jn 13:34",
+      "summary": "I give you a new commandment, says the Lord:\nlove one another as I have loved you."
+    },
+    {
+      "type": "gospel",
+      "citation": "Jn 13:1-15",
+      "summary": "Jesus washes the feet of his disciples."
+    }
+  ],
+  "antiphons": [
+    {
+      "type": "entrance",
+      "option": 1,
+      "citation": "Cf. Gal 6:14",
+      "text": "We should glory in the Cross of our Lord Jesus Christ,\nin whom is our salvation, life and resurrection,\nthrough whom we are saved and delivered."
+    },
+    {
+      "type": "communion",
+      "option": 1,
+      "citation": "1 Cor 11:24-25",
+      "text": "This is the Body that will be given up for you;\nthis is the Chalice of the new covenant in my Blood, says the Lord;\ndo this, whenever you receive it, in memory of me."
+    }
+  ],
+  "planningNotes": [
+    "THU 7 PM — single combined celebration, all ensembles",
+    "Foot Washing follows the homily; Transfer of Blessed Sacrament closes the liturgy",
+    "Reception of Oils: Musical Setting by Ed Archer",
+    "Dismissal of Catechumens: Trevor Thomson"
+  ],
+  "musicPlans": [
+    {
+      "ensemble": "All Ensembles",
+      "ensembleId": "reflections",
+      "date": "Apr 2, 2026 (Thu) 7 PM",
+      "presider": "TBD",
+      "massNotes": [
+        "THU 7 PM — all ensembles combined",
+        "Reception of Oils: Musical Setting by Ed Archer",
+        "Dismissal of Catechumens: Trevor Thomson"
+      ],
+      "prelude": {
+        "title": "Call to Remembrance",
+        "composer": "Joseph M. Martin"
+      },
+      "gathering": {
+        "title": "The House that Love Is Building",
+        "composer": "Sarah Hart • Arr. Arielle Phan",
+        "description": "BPM 78/83 — alt: Song TBD (BPM 78/83)"
+      },
+      "gloria": {
+        "title": "Glory, Glory, Gloria",
+        "composer": "Jeffrey Bonilla & Drew Wilson",
+        "description": "BPM 120"
+      },
+      "responsorialPsalm": {
+        "psalm": "Ps 116 Our Blessing Cup",
+        "setting": "Sarah Hart • BPM 86"
+      },
+      "gospelAcclamation": {
+        "title": "Praise to You, Lord Jesus Christ",
+        "composer": "Ed Archer",
+        "description": "BPM 108",
+        "verse": "I give you a new commandment, says the Lord: love one another as I have loved you."
+      },
+      "offertory": {
+        "title": "From An Upper Room",
+        "composer": "Joseph M. Martin",
+        "description": "BPM 94 — alt: Do Not Be Afraid (Jeanne Cotter)"
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "Mass of Creation",
+        "composer": "Marty Haugen • Arr. David Lockwood"
+      },
+      "lordsPrayer": {
+        "title": "Chanted Our Father",
+        "composer": "Robert J. Snow"
+      },
+      "fractionRite": {
+        "title": "Lamb of God (Mass of Creation)",
+        "composer": "Marty Haugen • Arr. Lockwood",
+        "description": "BPM 76"
+      },
+      "communionSongs": [
+        {
+          "title": "Bread of Angels",
+          "composer": "Curtis Stephan",
+          "description": "BPM 82"
+        },
+        {
+          "title": "Do This In Memory of Me",
+          "composer": "Chris Muglia",
+          "description": "BPM 106"
+        },
+        {
+          "title": "The Table of the Lord",
+          "composer": "Dana Catherine & Sarah Hart",
+          "description": "BPM 72 — alt: Here I Am Lord (Dan Schutte, arr. Lockwood & Bonilla)"
+        }
+      ],
+      "sending": {
+        "title": "Ubi Caritas",
+        "composer": "Jacques Berthier / Taizé",
+        "description": "BPM 76 — Transfer of Blessed Sacrament"
+      }
+    }
+  ],
+  "occasionResources": []
+}

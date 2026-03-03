@@ -1699,5 +1699,41 @@
     "seasonLabel": "Ordinary Time",
     "seasonOrder": 0,
     "nextDate": "2025-11-27"
+  },
+  {
+    "id": "holy-thursday-lords-supper",
+    "name": "HOLY THURSDAY\nMASS OF THE LORD'S SUPPER",
+    "year": "ABC",
+    "season": "lent",
+    "seasonLabel": "Lent",
+    "seasonOrder": 0,
+    "nextDate": "2026-04-02"
+  },
+  {
+    "id": "good-friday-passion",
+    "name": "GOOD FRIDAY\nTHE PASSION OF THE LORD",
+    "year": "ABC",
+    "season": "lent",
+    "seasonLabel": "Lent",
+    "seasonOrder": 0,
+    "nextDate": "2026-04-03"
+  },
+  {
+    "id": "easter-vigil",
+    "name": "EASTER VIGIL\nIN THE HOLY NIGHT",
+    "year": "ABC",
+    "season": "easter",
+    "seasonLabel": "Easter",
+    "seasonOrder": 0,
+    "nextDate": "2026-04-04"
+  },
+  {
+    "id": "easter-sunday-resurrection",
+    "name": "EASTER SUNDAY\nTHE RESURRECTION OF THE LORD",
+    "year": "ABC",
+    "season": "easter",
+    "seasonLabel": "Easter",
+    "seasonOrder": 0,
+    "nextDate": "2026-04-05"
   }
 ]
