@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useMemo, useEffect } from "react";
+import { useState, useMemo, useEffect, useCallback } from "react";
 import type { LiturgicalOccasion, LiturgicalSeason, MusicPlan } from "@/lib/types";
 import type { YearCycleFilter, CommunityId } from "@/lib/grid-types";
 import {
@@ -122,6 +122,11 @@ export default function PlannerShell({ occasions }: PlannerShellProps) {
 
   // Fetch Supabase music plan overrides for visible occasions
   const [planOverrides, setPlanOverrides] = useState<Record<string, Record<string, Record<string, unknown>>>>({});
+  const [refreshVersion, setRefreshVersion] = useState(0);
+
+  const handlePlanChange = useCallback(() => {
+    setRefreshVersion(v => v + 1);
+  }, []);
 
   useEffect(() => {
     let cancelled = false;
@@ -146,7 +151,7 @@ export default function PlannerShell({ occasions }: PlannerShellProps) {
     });
 
     return () => { cancelled = true; };
-  }, [visibleOccasions]);
+  }, [visibleOccasions, refreshVersion]);
 
   const columns = useMemo(() => {
     const base = buildGridColumns(visibleOccasions, communityId);
@@ -195,7 +200,7 @@ export default function PlannerShell({ occasions }: PlannerShellProps) {
         setViewMode={setViewMode}
       />
       <div className="flex-1 overflow-hidden">
-        <PlannerGrid columns={columns} viewMode={viewMode} hideMassParts={hideMassParts} hideReadings={hideReadings} hideSynopses={hideSynopses} communityId={communityId} />
+        <PlannerGrid columns={columns} viewMode={viewMode} hideMassParts={hideMassParts} hideReadings={hideReadings} hideSynopses={hideSynopses} communityId={communityId} onPlanChange={handlePlanChange} />
       </div>
     </div>
   );

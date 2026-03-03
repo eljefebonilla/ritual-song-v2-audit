@@ -2,13 +2,15 @@
 
 import { useState, useCallback } from "react";
 import Link from "next/link";
-import type { GridColumn } from "@/lib/grid-types";
+import type { GridColumn, SongDragPayload } from "@/lib/grid-types";
 import {
   GRID_SECTIONS,
   GRID_ROW_LABELS,
   READING_ROWS,
   MASS_PART_ROWS,
   MASS_SETTING_SUB_ROWS,
+  SONG_DRAG_ROWS,
+  SONG_COPY_MIME,
   type GridRowKey,
 } from "@/lib/grid-types";
 import { extractCellData, getOccasionDisplayDate } from "@/lib/grid-data";
@@ -30,6 +32,7 @@ interface PlannerGridProps {
   hideReadings?: boolean;
   hideSynopses?: boolean;
   communityId?: string;
+  onPlanChange?: () => void;
 }
 
 interface EditingCell {
@@ -182,10 +185,11 @@ function OccasionCard({ column, hideMassParts = false, hideReadings = false, hid
   );
 }
 
-export default function PlannerGrid({ columns, viewMode, hideMassParts = false, hideReadings = false, hideSynopses = true, communityId }: PlannerGridProps) {
+export default function PlannerGrid({ columns, viewMode, hideMassParts = false, hideReadings = false, hideSynopses = true, communityId, onPlanChange }: PlannerGridProps) {
   const { isAdmin } = useUser();
   const [massSettingExpanded, setMassSettingExpanded] = useState(false);
   const [editingCell, setEditingCell] = useState<EditingCell | null>(null);
+  const [dragOverCell, setDragOverCell] = useState<{ occasionId: string; rowKey: GridRowKey } | null>(null);
 
   // Map rowKey to the MusicPlan field name for the API
   const rowKeyToField = useCallback((key: GridRowKey): string => {
@@ -208,17 +212,42 @@ export default function PlannerGrid({ columns, viewMode, hideMassParts = false, 
     }
   }, []);
 
+  // Helper: get communion index from rowKey (0, 1, 2)
+  const communionIndex = (rk: GridRowKey): number | null => {
+    if (rk === "communion1") return 0;
+    if (rk === "communion2") return 1;
+    if (rk === "communion3") return 2;
+    return null;
+  };
+
+  // Helper: build the communion array value for a save at a specific index
+  const buildCommunionValue = (plan: import("@/lib/types").MusicPlan | null, idx: number, entry: { title: string; composer?: string } | null) => {
+    const current = plan?.communionSongs ? [...plan.communionSongs] : [];
+    // Extend array if needed
+    while (current.length <= idx) current.push({ title: "" });
+    if (entry) {
+      current[idx] = entry;
+    } else {
+      current.splice(idx, 1);
+    }
+    // Trim trailing empty entries
+    while (current.length > 0 && !current[current.length - 1].title) current.pop();
+    return current.length > 0 ? current : null;
+  };
+
   const handleCellSave = useCallback(async (rk: GridRowKey, title: string, composer: string) => {
     if (!editingCell || !communityId) return;
     const field = rowKeyToField(rk);
     let value: unknown;
 
-    if (rk === "psalm") {
+    const cIdx = communionIndex(rk);
+    if (cIdx !== null) {
+      const plan = columns[editingCell.columnIndex]?.plan ?? null;
+      value = buildCommunionValue(plan, cIdx, { title, composer: composer || undefined });
+    } else if (rk === "psalm") {
       value = { psalm: title, setting: composer || undefined };
     } else if (rk === "massSetting") {
       value = { massSettingName: title, composer: composer || undefined };
-    } else if (rk === "gospelAcclamation") {
-      value = { title, composer: composer || undefined };
     } else {
       value = { title, composer: composer || undefined };
     }
@@ -229,24 +258,96 @@ export default function PlannerGrid({ columns, viewMode, hideMassParts = false, 
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ communityId, field, value }),
       });
+      onPlanChange?.();
     } catch {
       // Silently fail for now — future: toast notification
     }
-  }, [editingCell, communityId, rowKeyToField]);
+  }, [editingCell, communityId, rowKeyToField, columns, onPlanChange]);
 
   const handleCellClear = useCallback(async (rk: GridRowKey) => {
     if (!editingCell || !communityId) return;
     const field = rowKeyToField(rk);
+
+    const cIdx = communionIndex(rk);
+    let value: unknown = null;
+    if (cIdx !== null) {
+      const plan = columns[editingCell.columnIndex]?.plan ?? null;
+      value = buildCommunionValue(plan, cIdx, null);
+    }
+
     try {
       await fetch(`/api/occasions/${editingCell.occasionId}/music-plan`, {
         method: "PUT",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ communityId, field, value: null }),
+        body: JSON.stringify({ communityId, field, value }),
       });
+      onPlanChange?.();
     } catch {
       // Silent
     }
-  }, [editingCell, communityId, rowKeyToField]);
+  }, [editingCell, communityId, rowKeyToField, columns, onPlanChange]);
+
+  // --- Drag-and-copy handlers ---
+  const handleDragStart = useCallback((e: React.DragEvent, occasionId: string, rowKey: GridRowKey, cellData: { title: string; composer?: string }) => {
+    const payload: SongDragPayload = {
+      title: cellData.title,
+      composer: cellData.composer,
+      sourceOccasionId: occasionId,
+      sourceRowKey: rowKey,
+    };
+    e.dataTransfer.setData(SONG_COPY_MIME, JSON.stringify(payload));
+    e.dataTransfer.effectAllowed = "copy";
+  }, []);
+
+  const handleDragOver = useCallback((e: React.DragEvent, occasionId: string, rowKey: GridRowKey) => {
+    // Only accept our custom MIME type (reject OS file drops etc.)
+    if (!e.dataTransfer.types.includes(SONG_COPY_MIME)) return;
+    e.preventDefault();
+    e.dataTransfer.dropEffect = "copy";
+    setDragOverCell({ occasionId, rowKey });
+  }, []);
+
+  const handleDragLeave = useCallback(() => {
+    setDragOverCell(null);
+  }, []);
+
+  const handleDrop = useCallback(async (e: React.DragEvent, targetOccasionId: string, targetRowKey: GridRowKey, targetColumnIndex: number) => {
+    e.preventDefault();
+    setDragOverCell(null);
+
+    const raw = e.dataTransfer.getData(SONG_COPY_MIME);
+    if (!raw || !communityId) return;
+
+    let payload: SongDragPayload;
+    try {
+      payload = JSON.parse(raw);
+    } catch {
+      return;
+    }
+
+    const field = rowKeyToField(targetRowKey);
+    const entry = { title: payload.title, composer: payload.composer };
+
+    const cIdx = communionIndex(targetRowKey);
+    let value: unknown;
+    if (cIdx !== null) {
+      const plan = columns[targetColumnIndex]?.plan ?? null;
+      value = buildCommunionValue(plan, cIdx, entry);
+    } else {
+      value = entry;
+    }
+
+    try {
+      await fetch(`/api/occasions/${targetOccasionId}/music-plan`, {
+        method: "PUT",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ communityId, field, value }),
+      });
+      onPlanChange?.();
+    } catch {
+      // Silent
+    }
+  }, [communityId, rowKeyToField, columns, onPlanChange]);
 
   if (columns.length === 0) {
     return (
@@ -423,24 +524,36 @@ export default function PlannerGrid({ columns, viewMode, hideMassParts = false, 
                   </span>
                 )}
               </div>
-              {columns.map((col, ci) => (
-                <div
-                  key={`${col.occasion.id}-${rowKey}`}
-                  className="shrink-0"
-                  style={{ width: COL_WIDTH, height: 44 }}
-                >
-                  <GridCell
-                    data={extractCellData(col.plan, rowKey, col.occasion)}
-                    isEven={ci % 2 === 0}
-                    onEdit={isAdmin ? (rect) => setEditingCell({
-                      occasionId: col.occasion.id,
-                      rowKey,
-                      columnIndex: ci,
-                      anchorRect: rect,
-                    }) : undefined}
-                  />
-                </div>
-              ))}
+              {columns.map((col, ci) => {
+                const cellData = extractCellData(col.plan, rowKey, col.occasion);
+                const isDraggable = isAdmin && SONG_DRAG_ROWS.has(rowKey);
+                const isOver = dragOverCell?.occasionId === col.occasion.id && dragOverCell?.rowKey === rowKey;
+
+                return (
+                  <div
+                    key={`${col.occasion.id}-${rowKey}`}
+                    className="shrink-0"
+                    style={{ width: COL_WIDTH, height: 44 }}
+                  >
+                    <GridCell
+                      data={cellData}
+                      isEven={ci % 2 === 0}
+                      onEdit={isAdmin ? (rect) => setEditingCell({
+                        occasionId: col.occasion.id,
+                        rowKey,
+                        columnIndex: ci,
+                        anchorRect: rect,
+                      }) : undefined}
+                      draggable={isDraggable && !cellData.isEmpty ? true : undefined}
+                      onDragStart={isDraggable && !cellData.isEmpty ? (e) => handleDragStart(e, col.occasion.id, rowKey, cellData) : undefined}
+                      isDragOver={isDraggable ? isOver : undefined}
+                      onDragOver={isDraggable ? (e) => handleDragOver(e, col.occasion.id, rowKey) : undefined}
+                      onDragLeave={isDraggable ? handleDragLeave : undefined}
+                      onDrop={isDraggable ? (e) => handleDrop(e, col.occasion.id, rowKey, ci) : undefined}
+                    />
+                  </div>
+                );
+              })}
             </div>
           );
         })}

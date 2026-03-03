@@ -72,6 +72,23 @@ export const MASS_PART_ROWS: Set<GridRowKey> = new Set([
   "fractionRite",
 ]);
 
+// Song rows eligible for drag-and-copy (title+composer format)
+// Excludes psalm (psalm+setting) and massSetting (massSettingName+composer)
+export const SONG_DRAG_ROWS: Set<GridRowKey> = new Set([
+  "prelude", "gathering", "penitentialAct", "gloria", "gospelAcclamation",
+  "offertory", "lordsPrayer", "fractionRite", "communion1", "communion2",
+  "communion3", "sending",
+]);
+
+export const SONG_COPY_MIME = "text/x-song-copy";
+
+export interface SongDragPayload {
+  title: string;
+  composer?: string;
+  sourceOccasionId: string;
+  sourceRowKey: GridRowKey;
+}
+
 // Maps row keys to display labels
 export const GRID_ROW_LABELS: Record<GridRowKey, string> = {
   prelude: "Prelude",

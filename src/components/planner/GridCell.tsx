@@ -7,9 +7,15 @@ interface GridCellProps {
   data: GridCellData;
   isEven: boolean;
   onEdit?: (rect: DOMRect) => void;
+  draggable?: boolean;
+  onDragStart?: (e: React.DragEvent) => void;
+  isDragOver?: boolean;
+  onDragOver?: (e: React.DragEvent) => void;
+  onDragLeave?: (e: React.DragEvent) => void;
+  onDrop?: (e: React.DragEvent) => void;
 }
 
-export default function GridCell({ data, isEven, onEdit }: GridCellProps) {
+export default function GridCell({ data, isEven, onEdit, draggable, onDragStart, isDragOver, onDragOver, onDragLeave, onDrop }: GridCellProps) {
   const { role } = useUser();
 
   const handleClick = (e: React.MouseEvent<HTMLDivElement>) => {
@@ -18,6 +24,7 @@ export default function GridCell({ data, isEven, onEdit }: GridCellProps) {
     }
   };
 
+  // Empty cells — can be drop targets for song copy
   if (data.isEmpty) {
     return (
       <div
@@ -25,14 +32,18 @@ export default function GridCell({ data, isEven, onEdit }: GridCellProps) {
           data.isReading
             ? "bg-stone-50/80"
             : isEven ? "bg-stone-50/50" : "bg-white"
-        }`}
+        } ${isDragOver ? "ring-2 ring-inset ring-amber-400" : ""}`}
+        onClick={handleClick}
+        onDragOver={onDragOver}
+        onDragLeave={onDragLeave}
+        onDrop={onDrop}
       >
         <span className="text-stone-200 text-xs">&mdash;</span>
       </div>
     );
   }
 
-  // Reading rows: non-editable, lighter background, italic
+  // Reading rows: non-editable, no drag
   if (data.isReading) {
     return (
       <div
@@ -51,13 +62,20 @@ export default function GridCell({ data, isEven, onEdit }: GridCellProps) {
     );
   }
 
-  // Music rows: editable
+  // Music rows: editable + draggable + drop target
   return (
     <div
       onClick={handleClick}
+      draggable={draggable}
+      onDragStart={onDragStart}
+      onDragOver={onDragOver}
+      onDragLeave={onDragLeave}
+      onDrop={onDrop}
       className={`px-2 py-1.5 h-full border-b border-r border-stone-100 group ${
         isEven ? "bg-stone-50/50" : "bg-white"
-      } ${role === "admin" ? "hover:bg-amber-50/60 cursor-pointer" : ""}`}
+      } ${role === "admin" ? "hover:bg-amber-50/60" : ""} ${
+        draggable ? "cursor-grab active:cursor-grabbing" : role === "admin" ? "cursor-pointer" : ""
+      } ${isDragOver ? "ring-2 ring-inset ring-amber-400" : ""}`}
       title={data.composer ? `${data.title} — ${data.composer}` : data.title}
     >
       <p className="text-[11px] font-medium text-stone-800 leading-tight truncate">
