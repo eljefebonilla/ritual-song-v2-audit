@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useMemo, useEffect } from "react";
-import type { LiturgicalOccasion, LiturgicalSeason } from "@/lib/types";
+import type { LiturgicalOccasion, LiturgicalSeason, MusicPlan } from "@/lib/types";
 import type { YearCycleFilter, CommunityId } from "@/lib/grid-types";
 import {
   getFilteredOccasions,
@@ -115,12 +115,47 @@ export default function PlannerShell({ occasions }: PlannerShellProps) {
   const clampedStart = Math.min(effectiveStart, maxEnd);
   const clampedEnd = Math.min(effectiveEnd, maxEnd);
 
-  const visibleOccasions = filteredOccasions.slice(clampedStart, clampedEnd);
-
-  const columns = useMemo(
-    () => buildGridColumns(visibleOccasions, communityId),
-    [visibleOccasions, communityId]
+  const visibleOccasions = useMemo(
+    () => filteredOccasions.slice(clampedStart, clampedEnd),
+    [filteredOccasions, clampedStart, clampedEnd]
   );
+
+  // Fetch Supabase music plan overrides for visible occasions
+  const [planOverrides, setPlanOverrides] = useState<Record<string, Record<string, Record<string, unknown>>>>({});
+
+  useEffect(() => {
+    let cancelled = false;
+    const ids = visibleOccasions.map(o => o.id);
+    if (ids.length === 0) return;
+
+    Promise.all(
+      ids.map(id =>
+        fetch(`/api/occasions/${id}/music-plan`)
+          .then(res => res.ok ? res.json() : {})
+          .catch(() => ({}))
+      )
+    ).then(results => {
+      if (cancelled) return;
+      const next: Record<string, Record<string, Record<string, unknown>>> = {};
+      ids.forEach((id, i) => {
+        if (results[i] && Object.keys(results[i]).length > 0) {
+          next[id] = results[i];
+        }
+      });
+      setPlanOverrides(next);
+    });
+
+    return () => { cancelled = true; };
+  }, [visibleOccasions]);
+
+  const columns = useMemo(() => {
+    const base = buildGridColumns(visibleOccasions, communityId);
+    return base.map(col => {
+      const overrides = planOverrides[col.occasion.id]?.[communityId];
+      if (!overrides || !col.plan) return col;
+      return { ...col, plan: { ...col.plan, ...overrides } as MusicPlan };
+    });
+  }, [visibleOccasions, communityId, planOverrides]);
 
   // When hidePastWeeks changes, reset range to start from 0 offset
   const handleHidePastToggle = (v: boolean) => {
