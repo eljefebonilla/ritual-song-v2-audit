@@ -1,14 +1,14 @@
 "use client";
 
 import { useState, useMemo } from "react";
-import { getCommunityColor } from "@/lib/calendar-utils";
+import { getEnsembleColor } from "@/lib/calendar-utils";
 
 interface Profile {
   id: string;
   full_name: string;
   email: string;
   phone: string | null;
-  community: string | null;
+  ensemble: string | null;
   voice_part: string | null;
   instrument: string | null;
   role: string;
@@ -22,13 +22,13 @@ interface MembersShellProps {
 
 export default function MembersShell({ profiles }: MembersShellProps) {
   const [search, setSearch] = useState("");
-  const [communityFilter, setCommunityFilter] = useState<string>("all");
+  const [ensembleFilter, setEnsembleFilter] = useState<string>("all");
   const [roleFilter, setRoleFilter] = useState<string>("all");
   const [expandedId, setExpandedId] = useState<string | null>(null);
 
   const filtered = useMemo(() => {
     return profiles.filter((p) => {
-      if (communityFilter !== "all" && p.community !== communityFilter) return false;
+      if (ensembleFilter !== "all" && p.ensemble !== ensembleFilter) return false;
       if (roleFilter !== "all" && p.role !== roleFilter) return false;
       if (search) {
         const q = search.toLowerCase();
@@ -41,10 +41,10 @@ export default function MembersShell({ profiles }: MembersShellProps) {
       }
       return true;
     });
-  }, [profiles, search, communityFilter, roleFilter]);
+  }, [profiles, search, ensembleFilter, roleFilter]);
 
-  const communities = useMemo(() => {
-    const set = new Set(profiles.map((p) => p.community).filter(Boolean));
+  const ensembles = useMemo(() => {
+    const set = new Set(profiles.map((p) => p.ensemble).filter(Boolean));
     return Array.from(set).sort();
   }, [profiles]);
 
@@ -76,12 +76,12 @@ export default function MembersShell({ profiles }: MembersShellProps) {
           className="text-sm border border-stone-200 rounded-md px-3 py-1.5 w-64 focus:outline-none focus:ring-1 focus:ring-stone-400"
         />
         <select
-          value={communityFilter}
-          onChange={(e) => setCommunityFilter(e.target.value)}
+          value={ensembleFilter}
+          onChange={(e) => setEnsembleFilter(e.target.value)}
           className="text-sm border border-stone-200 rounded-md px-2 py-1.5 bg-white"
         >
-          <option value="all">All Communities</option>
-          {communities.map((c) => (
+          <option value="all">All Ensembles</option>
+          {ensembles.map((c) => (
             <option key={c} value={c!}>{c}</option>
           ))}
         </select>
@@ -105,7 +105,7 @@ export default function MembersShell({ profiles }: MembersShellProps) {
           <thead>
             <tr className="border-b border-stone-200 bg-stone-50">
               <th className="text-left text-[10px] uppercase tracking-wider font-semibold text-stone-500 px-4 py-2.5">Name</th>
-              <th className="text-left text-[10px] uppercase tracking-wider font-semibold text-stone-500 px-4 py-2.5 hidden md:table-cell">Community</th>
+              <th className="text-left text-[10px] uppercase tracking-wider font-semibold text-stone-500 px-4 py-2.5 hidden md:table-cell">Ensemble</th>
               <th className="text-left text-[10px] uppercase tracking-wider font-semibold text-stone-500 px-4 py-2.5 hidden md:table-cell">Voice</th>
               <th className="text-left text-[10px] uppercase tracking-wider font-semibold text-stone-500 px-4 py-2.5 hidden lg:table-cell">Instrument</th>
               <th className="text-left text-[10px] uppercase tracking-wider font-semibold text-stone-500 px-4 py-2.5">Role</th>
@@ -114,7 +114,7 @@ export default function MembersShell({ profiles }: MembersShellProps) {
           </thead>
           <tbody className="divide-y divide-stone-100">
             {filtered.map((p) => {
-              const communityStyle = p.community ? getCommunityColor(p.community) : null;
+              const ensembleStyle = p.ensemble ? getEnsembleColor(p.ensemble) : null;
               const isExpanded = expandedId === p.id;
 
               return (
@@ -132,8 +132,8 @@ export default function MembersShell({ profiles }: MembersShellProps) {
                         <p className="text-sm font-medium text-stone-900 truncate">{p.full_name}</p>
                         {isExpanded && (
                           <div className="mt-1 space-y-0.5 md:hidden">
-                            {p.community && (
-                              <span className="text-[10px] px-1.5 py-0.5 rounded font-medium inline-block" style={communityStyle!}>{p.community}</span>
+                            {p.ensemble && (
+                              <span className="text-[10px] px-1.5 py-0.5 rounded font-medium inline-block" style={ensembleStyle!}>{p.ensemble}</span>
                             )}
                             {p.voice_part && <p className="text-xs text-stone-500">{p.voice_part}</p>}
                             {p.instrument && <p className="text-xs text-stone-500">{p.instrument}</p>}
@@ -145,9 +145,9 @@ export default function MembersShell({ profiles }: MembersShellProps) {
                     </div>
                   </td>
                   <td className="px-4 py-3 hidden md:table-cell">
-                    {p.community ? (
-                      <span className="text-[10px] px-1.5 py-0.5 rounded font-medium" style={communityStyle!}>
-                        {p.community}
+                    {p.ensemble ? (
+                      <span className="text-[10px] px-1.5 py-0.5 rounded font-medium" style={ensembleStyle!}>
+                        {p.ensemble}
                       </span>
                     ) : (
                       <span className="text-xs text-stone-300">&mdash;</span>

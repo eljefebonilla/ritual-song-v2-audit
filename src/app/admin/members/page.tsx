@@ -8,7 +8,7 @@ export default async function MembersPage() {
 
   const { data: profiles } = await supabase
     .from("profiles")
-    .select("id, full_name, email, phone, community, voice_part, instrument, role, avatar_url, created_at")
+    .select("id, full_name, email, phone, ensemble, voice_part, instrument, role, avatar_url, created_at")
     .order("full_name");
 
   return (

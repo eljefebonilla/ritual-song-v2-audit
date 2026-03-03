@@ -1,7 +1,7 @@
 "use client";
 
 import type { BookingSlot, BookingStatus, ChoirDescriptor } from "@/lib/booking-types";
-import { getCommunityColor } from "@/lib/calendar-utils";
+import { getEnsembleColor } from "@/lib/calendar-utils";
 import { CONFIRMATION_DISPLAY } from "@/lib/booking-types";
 import type { ConfirmationStatus } from "@/lib/booking-types";
 
@@ -16,7 +16,7 @@ interface MassWithSlots {
   title: string;
   event_date: string;
   start_time_12h: string | null;
-  community: string | null;
+  ensemble: string | null;
   celebrant: string | null;
   liturgical_name: string | null;
   season: string | null;
@@ -103,7 +103,7 @@ export default function BookingGrid({
         </thead>
         <tbody>
           {masses.map((mass) => {
-            const communityStyle = getCommunityColor(mass.community);
+            const ensembleStyle = getEnsembleColor(mass.ensemble);
             // Index slots by role id
             const slotsByRole = new Map<string, BookingSlot[]>();
             for (const slot of mass.booking_slots || []) {
@@ -133,12 +133,12 @@ export default function BookingGrid({
                       <span className="text-stone-600 truncate max-w-[120px]">
                         {mass.liturgical_name || mass.title}
                       </span>
-                      {mass.community && (
+                      {mass.ensemble && (
                         <span
                           className="text-[9px] px-1 py-0.5 rounded font-medium"
-                          style={communityStyle}
+                          style={ensembleStyle}
                         >
-                          {mass.community}
+                          {mass.ensemble}
                         </span>
                       )}
                     </div>

@@ -1,7 +1,7 @@
 // Date and filtering utilities for the Ministry Calendar
 
 import type { CalendarWeek, CalendarEvent } from "./calendar-types";
-import type { CommunityId } from "./grid-types";
+import type { EnsembleId } from "./grid-types";
 
 /**
  * Returns the next upcoming Sunday (or today if it's Sunday) as an ISO date string.
@@ -37,17 +37,17 @@ export function isWeekPast(week: CalendarWeek): boolean {
 }
 
 /**
- * Filters events in a week by community. "all" returns everything.
+ * Filters events in a week by ensemble. "all" returns everything.
  */
-export function filterEventsByCommunity(
+export function filterEventsByEnsemble(
   events: CalendarEvent[],
-  community: CommunityId | "all"
+  ensemble: EnsembleId | "all"
 ): CalendarEvent[] {
-  if (community === "all") return events;
+  if (ensemble === "all") return events;
   return events.filter(
     (e) =>
-      e.community === null || // non-community events always show
-      e.community?.toLowerCase() === community
+      e.ensemble === null || // non-ensemble events always show
+      e.ensemble?.toLowerCase() === ensemble
   );
 }
 
@@ -232,10 +232,10 @@ export function getEventsForMonthByDateStr(
 }
 
 /**
- * Gets the community display color for badges as inline styles.
- * Uses the canonical hex values from COMMUNITY_BADGES.
+ * Gets the ensemble display color for badges as inline styles.
+ * Uses the canonical hex values from ENSEMBLE_BADGES.
  */
-export function getCommunityColor(community: string | null): { backgroundColor: string; color: string } {
+export function getEnsembleColor(ensemble: string | null): { backgroundColor: string; color: string } {
   const COLORS: Record<string, { backgroundColor: string; color: string }> = {
     reflections:  { backgroundColor: "#f1f4f6", color: "#5a6a78" },
     foundations:  { backgroundColor: "#f5e9e5", color: "#8b6b5a" },
@@ -243,6 +243,6 @@ export function getCommunityColor(community: string | null): { backgroundColor: 
     heritage:     { backgroundColor: "#eef1eb", color: "#5a6b54" },
     elevations:   { backgroundColor: "#eeebf6", color: "#6b5a8a" },
   };
-  if (!community) return { backgroundColor: "#f5f5f4", color: "#78716c" };
-  return COLORS[community.toLowerCase()] || { backgroundColor: "#f5f5f4", color: "#78716c" };
+  if (!ensemble) return { backgroundColor: "#f5f5f4", color: "#78716c" };
+  return COLORS[ensemble.toLowerCase()] || { backgroundColor: "#f5f5f4", color: "#78716c" };
 }

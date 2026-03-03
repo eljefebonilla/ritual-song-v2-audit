@@ -4,11 +4,11 @@ import type { LibrarySong, ResourceDisplayCategory, SongResource } from "@/lib/t
 import { getResourceDisplayCategory } from "@/lib/song-library";
 import { useMedia } from "@/lib/media-context";
 import { extractChartKeys } from "@/lib/key-utils";
-import { MASS_POSITION_LABELS, MASS_POSITION_ORDER, COMMUNITY_BADGES } from "@/lib/occasion-helpers";
+import { MASS_POSITION_LABELS, MASS_POSITION_ORDER, ENSEMBLE_BADGES } from "@/lib/occasion-helpers";
 
 interface CalendarMeta {
   positions: Set<string>;
-  communities: Set<string>;
+  ensembles: Set<string>;
 }
 
 interface SongRowProps {
@@ -150,8 +150,8 @@ export default function SongCard({ song, isSelected, onClick, calendarMeta, hasA
                 .map((p) => MASS_POSITION_LABELS[p] || p)
                 .join(" / ")}
             </span>
-            {[...calendarMeta.communities].map((c) => {
-              const badge = COMMUNITY_BADGES[c];
+            {[...calendarMeta.ensembles].map((c) => {
+              const badge = ENSEMBLE_BADGES[c];
               if (!badge) return null;
               return (
                 <span

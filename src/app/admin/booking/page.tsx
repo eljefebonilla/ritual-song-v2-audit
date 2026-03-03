@@ -25,7 +25,7 @@ export default async function BookingPage() {
   const { data: masses } = await supabase
     .from("mass_events")
     .select(`
-      id, title, event_date, start_time, start_time_12h, community, celebrant,
+      id, title, event_date, start_time, start_time_12h, ensemble, celebrant,
       liturgical_name, occasion_id, season, booking_status, choir_descriptor,
       has_music, day_of_week,
       booking_slots (
@@ -48,7 +48,7 @@ export default async function BookingPage() {
 
   const { data: profiles } = await supabase
     .from("profiles")
-    .select("id, full_name, avatar_url, role, community, voice_part, instrument")
+    .select("id, full_name, avatar_url, role, ensemble, voice_part, instrument")
     .order("full_name");
 
   return (

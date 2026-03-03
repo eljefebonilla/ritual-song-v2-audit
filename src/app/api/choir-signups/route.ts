@@ -19,7 +19,7 @@ export async function GET(request: NextRequest) {
       .from("choir_signups")
       .select(`
         *,
-        profile:profiles (id, full_name, avatar_url, community)
+        profile:profiles (id, full_name, avatar_url, ensemble)
       `)
       .eq("mass_event_id", massEventId)
       .eq("status", "confirmed")
@@ -38,7 +38,7 @@ export async function GET(request: NextRequest) {
       .from("choir_signups")
       .select(`
         *,
-        mass_event:mass_events (id, title, event_date, start_time_12h, community, liturgical_name)
+        mass_event:mass_events (id, title, event_date, start_time_12h, ensemble, liturgical_name)
       `)
       .eq("user_id", userId)
       .eq("status", "confirmed")
@@ -87,7 +87,7 @@ export async function POST(request: NextRequest) {
     })
     .select(`
       *,
-      profile:profiles (id, full_name, avatar_url, community)
+      profile:profiles (id, full_name, avatar_url, ensemble)
     `)
     .single();
 

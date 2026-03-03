@@ -5,10 +5,10 @@ import { createClient } from "@/lib/supabase/server";
 /**
  * GET /api/calendar — Fetch calendar events
  * Query params:
- *   ?community=Reflections  — filter by community
- *   ?from=2025-11-01        — start date filter
- *   ?to=2026-06-01          — end date filter
- *   ?week=advent-01          — filter by liturgical week
+ *   ?ensemble=Reflections     — filter by ensemble
+ *   ?from=2025-11-01          — start date filter
+ *   ?to=2026-06-01            — end date filter
+ *   ?week=advent-01           — filter by liturgical week
  */
 export async function GET(request: NextRequest) {
   const supabase = await createClient();
@@ -20,9 +20,9 @@ export async function GET(request: NextRequest) {
     .order("event_date", { ascending: true })
     .order("start_time", { ascending: true });
 
-  const community = searchParams.get("community");
-  if (community && community !== "all") {
-    query = query.eq("community", community);
+  const ensemble = searchParams.get("ensemble");
+  if (ensemble && ensemble !== "all") {
+    query = query.eq("ensemble", ensemble);
   }
 
   const from = searchParams.get("from");
@@ -74,7 +74,7 @@ export async function POST(request: NextRequest) {
       end_time_12h: body.end_time_12h || null,
       location: body.location || "St. Monica Catholic Community",
       event_type: body.event_type || "mass",
-      community: body.community || null,
+      ensemble: body.ensemble || null,
       day_of_week: body.day_of_week || null,
       has_music: body.has_music ?? false,
       is_auto_mix: body.is_auto_mix ?? false,

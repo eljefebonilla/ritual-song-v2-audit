@@ -219,7 +219,7 @@ export function buildPersonnelFromSlots(
  */
 export function bootstrapSetlist(
   occasion: LiturgicalOccasion | null,
-  communityId: string | null,
+  ensembleId: string | null,
   bookingSlots: BookingSlot[]
 ): {
   songs: SetlistSongRow[];
@@ -228,10 +228,10 @@ export function bootstrapSetlist(
   occasion_id: string | null;
 } {
   let plan: MusicPlan | null = null;
-  if (occasion && communityId) {
+  if (occasion && ensembleId) {
     plan =
       occasion.musicPlans.find(
-        (p) => p.communityId === communityId.toLowerCase()
+        (p) => p.ensembleId === ensembleId.toLowerCase()
       ) || null;
   }
 

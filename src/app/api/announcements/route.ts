@@ -46,7 +46,7 @@ export async function POST(request: Request) {
   }
 
   const body = await request.json();
-  const { title, content, community, pinned } = body;
+  const { title, content, ensemble, pinned } = body;
 
   if (!title || !content) {
     return NextResponse.json(
@@ -62,7 +62,7 @@ export async function POST(request: Request) {
     .insert({
       title,
       body: content,
-      community: community || null,
+      ensemble: ensemble || null,
       pinned: pinned || false,
     })
     .select()

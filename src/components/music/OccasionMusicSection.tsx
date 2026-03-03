@@ -12,7 +12,7 @@ import type {
   OccasionDate,
   LiturgicalDay,
 } from "@/lib/types";
-import { COMMUNITY_BADGES, normalizeTitle } from "@/lib/occasion-helpers";
+import { ENSEMBLE_BADGES, normalizeTitle } from "@/lib/occasion-helpers";
 import { planToSlots } from "@/lib/worship-slots";
 import { validateMusicPlan, type ValidationWarning } from "@/lib/liturgical-validation";
 import { rowToLiturgicalDay } from "@/lib/liturgical-helpers";
@@ -36,7 +36,7 @@ interface OccasionMusicSectionProps {
   occasionDates?: OccasionDate[];
 }
 
-const COMMUNITY_ORDER = [
+const ENSEMBLE_ORDER = [
   "reflections",
   "foundations",
   "generations",
@@ -152,8 +152,8 @@ export default function OccasionMusicSection({
     () =>
       [...plans].sort(
         (a, b) =>
-          COMMUNITY_ORDER.indexOf(a.communityId) -
-          COMMUNITY_ORDER.indexOf(b.communityId)
+          ENSEMBLE_ORDER.indexOf(a.ensembleId) -
+          ENSEMBLE_ORDER.indexOf(b.ensembleId)
       ),
     [plans]
   );
@@ -181,9 +181,9 @@ export default function OccasionMusicSection({
   if (!activePlan) return null;
 
   // Merge Supabase overrides on top of static JSON plan
-  const communityOverrides = planOverrides[activePlan.communityId];
-  const mergedPlan = communityOverrides && Object.keys(communityOverrides).length > 0
-    ? { ...activePlan, ...communityOverrides } as MusicPlan
+  const ensembleOverrides = planOverrides[activePlan.ensembleId];
+  const mergedPlan = ensembleOverrides && Object.keys(ensembleOverrides).length > 0
+    ? { ...activePlan, ...ensembleOverrides } as MusicPlan
     : activePlan;
 
   const slots = planToSlots(
@@ -254,7 +254,7 @@ export default function OccasionMusicSection({
       const res = await fetch(`/api/occasions/${occasionId}/music-plan`, {
         method: "PUT",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ communityId: mergedPlan.communityId, field, value }),
+        body: JSON.stringify({ ensembleId: mergedPlan.ensembleId, field, value }),
       });
       if (!res.ok) {
         const data = await res.json().catch(() => ({}));
@@ -263,8 +263,8 @@ export default function OccasionMusicSection({
       // Update local overrides so UI reflects the change immediately
       setPlanOverrides(prev => ({
         ...prev,
-        [mergedPlan.communityId]: {
-          ...(prev[mergedPlan.communityId] || {}),
+        [mergedPlan.ensembleId]: {
+          ...(prev[mergedPlan.ensembleId] || {}),
           [field]: value,
         },
       }));
@@ -296,7 +296,7 @@ export default function OccasionMusicSection({
       const res = await fetch(`/api/occasions/${occasionId}/music-plan`, {
         method: "PUT",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ communityId: mergedPlan.communityId, field, value }),
+        body: JSON.stringify({ ensembleId: mergedPlan.ensembleId, field, value }),
       });
       if (!res.ok) {
         const data = await res.json().catch(() => ({}));
@@ -305,8 +305,8 @@ export default function OccasionMusicSection({
       // Update local overrides so UI reflects the change immediately
       setPlanOverrides(prev => ({
         ...prev,
-        [mergedPlan.communityId]: {
-          ...(prev[mergedPlan.communityId] || {}),
+        [mergedPlan.ensembleId]: {
+          ...(prev[mergedPlan.ensembleId] || {}),
           [field]: value,
         },
       }));
@@ -329,8 +329,8 @@ export default function OccasionMusicSection({
       // Optimistic local update
       setPlanOverrides(p => ({
         ...p,
-        [mergedPlan.communityId]: {
-          ...(p[mergedPlan.communityId] || {}),
+        [mergedPlan.ensembleId]: {
+          ...(p[mergedPlan.ensembleId] || {}),
           [field]: current,
         },
       }));
@@ -338,14 +338,14 @@ export default function OccasionMusicSection({
       const res = await fetch(`/api/occasions/${occasionId}/music-plan`, {
         method: "PUT",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ communityId: mergedPlan.communityId, field, value: current }),
+        body: JSON.stringify({ ensembleId: mergedPlan.ensembleId, field, value: current }),
       });
       if (!res.ok) {
         // Revert on failure
         setPlanOverrides(p => ({
           ...p,
-          [mergedPlan.communityId]: {
-            ...(p[mergedPlan.communityId] || {}),
+          [mergedPlan.ensembleId]: {
+            ...(p[mergedPlan.ensembleId] || {}),
             [field]: prev,
           },
         }));
@@ -488,7 +488,7 @@ export default function OccasionMusicSection({
           ref={containerRef}
           className="border border-stone-200 rounded-lg overflow-hidden bg-white flex-1 min-w-0"
         >
-          {/* Community Tabs */}
+          {/* Ensemble Tabs */}
           <div className="flex border-b border-stone-200 bg-stone-50">
             {sorted.map((plan, i) => {
               const isActive = i === activeIdx;
@@ -497,11 +497,11 @@ export default function OccasionMusicSection({
                 plan.gathering ||
                 plan.offertory ||
                 plan.sending;
-              const badge = COMMUNITY_BADGES[plan.communityId];
+              const badge = ENSEMBLE_BADGES[plan.ensembleId];
 
               return (
                 <button
-                  key={plan.communityId}
+                  key={plan.ensembleId}
                   onClick={() => {
                     setActiveIdx(i);
                     setSelectedSongId(null);
@@ -516,7 +516,7 @@ export default function OccasionMusicSection({
                   }}
                 >
                   <span className="flex items-center gap-1.5">
-                    {plan.community}
+                    {plan.ensemble}
                     {!hasData && (
                       <span className="w-1.5 h-1.5 rounded-full bg-stone-200" />
                     )}
@@ -597,7 +597,7 @@ export default function OccasionMusicSection({
                 song={selectedSong}
                 onClose={() => setSelectedSongId(null)}
                 onAudioUploaded={handleAudioUploaded}
-                communityId={activePlan.communityId}
+                ensembleId={activePlan.ensembleId}
                 psalmSuggestions={selectedSong.category === "psalm" ? psalmSuggestions.filter((s) => s.id !== selectedSong.id) : undefined}
                 onSelectSuggestion={handleSongSelect}
                 occasionId={occasionId}
@@ -615,7 +615,7 @@ export default function OccasionMusicSection({
           <SongDetailPanel
             song={selectedSong}
             onClose={() => setSelectedSongId(null)}
-            communityId={activePlan.communityId}
+            ensembleId={activePlan.ensembleId}
             psalmSuggestions={selectedSong.category === "psalm" ? psalmSuggestions.filter((s) => s.id !== selectedSong.id) : undefined}
             onSelectSuggestion={handleSongSelect}
             occasionId={occasionId}

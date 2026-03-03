@@ -36,7 +36,7 @@ export async function GET(request: NextRequest) {
     .from("setlists")
     .select(`
       *,
-      mass_event:mass_events (id, title, event_date, start_time_12h, community, liturgical_name)
+      mass_event:mass_events (id, title, event_date, start_time_12h, ensemble, liturgical_name)
     `)
     .order("created_at", { ascending: false });
 

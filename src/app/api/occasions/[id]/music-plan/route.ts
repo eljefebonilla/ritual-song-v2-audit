@@ -4,7 +4,7 @@ import { createAdminClient } from "@/lib/supabase/admin";
 
 /**
  * GET /api/occasions/[id]/music-plan
- * Returns all music plan edits (overrides) for an occasion, grouped by community.
+ * Returns all music plan edits (overrides) for an occasion, grouped by ensemble.
  */
 export async function GET(
   _request: NextRequest,
@@ -16,20 +16,20 @@ export async function GET(
     const supabase = createAdminClient();
     const { data, error } = await supabase
       .from("music_plan_edits")
-      .select("community_id, field, value")
+      .select("ensemble_id, field, value")
       .eq("occasion_id", id);
 
     if (error) {
       return NextResponse.json({ error: error.message }, { status: 500 });
     }
 
-    // Group by community_id → { [field]: value }
+    // Group by ensemble_id → { [field]: value }
     const overrides: Record<string, Record<string, unknown>> = {};
     for (const row of data ?? []) {
-      if (!overrides[row.community_id]) {
-        overrides[row.community_id] = {};
+      if (!overrides[row.ensemble_id]) {
+        overrides[row.ensemble_id] = {};
       }
-      overrides[row.community_id][row.field] = row.value;
+      overrides[row.ensemble_id][row.field] = row.value;
     }
 
     return NextResponse.json(overrides);
@@ -44,7 +44,7 @@ export async function GET(
  * Upserts a single music plan field override into Supabase.
  *
  * Body: {
- *   communityId: string;
+ *   ensembleId: string;
  *   field: string;
  *   value: unknown;   // null = clear the field
  * }
@@ -60,11 +60,11 @@ export async function PUT(
   }
 
   const body = await request.json();
-  const { communityId, field, value } = body;
+  const { ensembleId, field, value } = body;
 
-  if (!communityId || !field) {
+  if (!ensembleId || !field) {
     return NextResponse.json(
-      { error: "communityId and field are required" },
+      { error: "ensembleId and field are required" },
       { status: 400 }
     );
   }
@@ -76,12 +76,12 @@ export async function PUT(
       .upsert(
         {
           occasion_id: id,
-          community_id: communityId,
+          ensemble_id: ensembleId,
           field,
           value: value ?? null,
           updated_at: new Date().toISOString(),
         },
-        { onConflict: "occasion_id,community_id,field" }
+        { onConflict: "occasion_id,ensemble_id,field" }
       );
 
     if (error) {

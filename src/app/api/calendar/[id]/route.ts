@@ -29,7 +29,7 @@ export async function PUT(
       end_time_12h: body.end_time_12h,
       location: body.location,
       event_type: body.event_type,
-      community: body.community,
+      ensemble: body.ensemble,
       day_of_week: body.day_of_week,
       has_music: body.has_music,
       is_auto_mix: body.is_auto_mix,

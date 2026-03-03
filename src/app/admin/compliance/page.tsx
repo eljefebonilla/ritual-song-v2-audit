@@ -8,7 +8,7 @@ export default async function CompliancePage() {
 
   const { data: profiles } = await supabase
     .from("profiles")
-    .select("id, full_name, email, community, role")
+    .select("id, full_name, email, ensemble, role")
     .order("full_name");
 
   const { data: complianceTypes } = await supabase

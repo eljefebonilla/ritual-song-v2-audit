@@ -6,7 +6,7 @@ interface Profile {
   id: string;
   full_name: string;
   email: string;
-  community: string | null;
+  ensemble: string | null;
   role: string;
 }
 
@@ -191,7 +191,7 @@ export default function ComplianceShell({
               <tr key={profile.id} className="hover:bg-stone-50">
                 <td className="px-4 py-3 sticky left-0 bg-white">
                   <p className="text-sm font-medium text-stone-900">{profile.full_name}</p>
-                  <p className="text-[10px] text-stone-400">{profile.community || "No community"}</p>
+                  <p className="text-[10px] text-stone-400">{profile.ensemble || "No ensemble"}</p>
                 </td>
                 {statuses.map(({ compType, record, status }) => {
                   const style = STATUS_STYLES[status];

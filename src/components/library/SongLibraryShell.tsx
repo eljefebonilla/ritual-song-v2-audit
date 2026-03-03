@@ -100,7 +100,7 @@ function findNearestOccasionDate(
 }
 
 export default function SongLibraryShell({ songs, title = "Song Library", subtitle }: SongLibraryShellProps) {
-  const { role, setRole, isAdmin } = useUser();
+  const { role, isAdmin } = useUser();
   const searchParams = useSearchParams();
   const [activeTab, setActiveTab] = useState<LibraryTab>("songs");
   const [search, setSearch] = useState("");
@@ -158,7 +158,7 @@ export default function SongLibraryShell({ songs, title = "Song Library", subtit
   const [selectedDate, setSelectedDate] = useState<string | null>(initialDate);
   const [selectedEnsemble, setSelectedEnsemble] = useState<string | null>(null);
   const [calendarSongIds, setCalendarSongIds] = useState<Set<string> | null>(null);
-  const [calendarSongMeta, setCalendarSongMeta] = useState<Map<string, { positions: Set<string>; communities: Set<string> }> | null>(null);
+  const [calendarSongMeta, setCalendarSongMeta] = useState<Map<string, { positions: Set<string>; ensembles: Set<string> }> | null>(null);
   const [loadingOccasion, setLoadingOccasion] = useState(false);
 
   // Normalized title index for fuzzy matching
@@ -261,11 +261,11 @@ export default function SongLibraryShell({ songs, title = "Song Library", subtit
 
         let plans = occasion.musicPlans || [];
         if (selectedEnsemble) {
-          plans = plans.filter((p) => p.communityId === selectedEnsemble);
+          plans = plans.filter((p) => p.ensembleId === selectedEnsemble);
         }
 
         const matchedIds = new Set<string>();
-        const meta = new Map<string, { positions: Set<string>; communities: Set<string> }>();
+        const meta = new Map<string, { positions: Set<string>; ensembles: Set<string> }>();
 
         for (const plan of plans) {
           const positioned = extractSongEntriesWithPosition(plan);
@@ -277,11 +277,11 @@ export default function SongLibraryShell({ songs, title = "Song Library", subtit
                 matchedIds.add(id);
                 let m = meta.get(id);
                 if (!m) {
-                  m = { positions: new Set(), communities: new Set() };
+                  m = { positions: new Set(), ensembles: new Set() };
                   meta.set(id, m);
                 }
                 m.positions.add(position);
-                m.communities.add(plan.communityId);
+                m.ensembles.add(plan.ensembleId);
               }
             }
           }
@@ -468,31 +468,11 @@ export default function SongLibraryShell({ songs, title = "Song Library", subtit
                   Add Song
                 </button>
               )}
-              <div className="hidden sm:flex items-center gap-2">
-                <span className="text-xs text-stone-400">View as:</span>
-                <div className="flex bg-stone-100 rounded-lg p-0.5">
-                  <button
-                    onClick={() => setRole("admin")}
-                    className={`px-3 py-1 text-xs font-medium rounded-md transition-colors ${
-                      role === "admin"
-                        ? "bg-white text-stone-900 shadow-sm"
-                        : "text-stone-500 hover:text-stone-700"
-                    }`}
-                  >
-                    Music Director
-                  </button>
-                  <button
-                    onClick={() => setRole("member")}
-                    className={`px-3 py-1 text-xs font-medium rounded-md transition-colors ${
-                      role === "member"
-                        ? "bg-white text-stone-900 shadow-sm"
-                        : "text-stone-500 hover:text-stone-700"
-                    }`}
-                  >
-                    Choir Member
-                  </button>
-                </div>
-              </div>
+              {isAdmin && (
+                <span className="hidden sm:inline text-[10px] font-medium text-stone-400 uppercase tracking-wide">
+                  Music Director
+                </span>
+              )}
             </div>
           </div>
 
@@ -851,7 +831,7 @@ function MassSettingGroups({
   onSelectSong: (id: string | null) => void;
   isLent: boolean;
   uploadedAudio: Record<string, string>;
-  calendarSongMeta: Map<string, { positions: Set<string>; communities: Set<string> }> | null;
+  calendarSongMeta: Map<string, { positions: Set<string>; ensembles: Set<string> }> | null;
 }) {
   // Group by mass setting name
   const groups = useMemo(() => {

@@ -4,7 +4,7 @@ import { createClient } from "@/lib/supabase/server";
 /**
  * GET /api/calendar/ical — Generate RFC 5545 .ics feed
  * Query params:
- *   ?community=Reflections  — filter by community
+ *   ?ensemble=Reflections  — filter by ensemble
  */
 export async function GET(request: NextRequest) {
   const supabase = await createClient();
@@ -16,9 +16,9 @@ export async function GET(request: NextRequest) {
     .order("event_date", { ascending: true })
     .order("start_time", { ascending: true });
 
-  const community = searchParams.get("community");
-  if (community && community !== "all") {
-    query = query.eq("community", community);
+  const ensemble = searchParams.get("ensemble");
+  if (ensemble && ensemble !== "all") {
+    query = query.eq("ensemble", ensemble);
   }
 
   const { data: events, error } = await query;
@@ -27,8 +27,8 @@ export async function GET(request: NextRequest) {
     return NextResponse.json({ error: error.message }, { status: 500 });
   }
 
-  const calName = community
-    ? `St. Monica Music — ${community}`
+  const calName = ensemble
+    ? `St. Monica Music — ${ensemble}`
     : "St. Monica Music Ministry";
 
   const lines: string[] = [
@@ -71,7 +71,7 @@ export async function GET(request: NextRequest) {
 
     if (location) lines.push(`LOCATION:${location}`);
     if (description) lines.push(`DESCRIPTION:${description}`);
-    if (evt.community) lines.push(`CATEGORIES:${escapeIcal(evt.community)}`);
+    if (evt.ensemble) lines.push(`CATEGORIES:${escapeIcal(evt.ensemble)}`);
 
     lines.push("END:VEVENT");
   }
@@ -116,7 +116,7 @@ function escapeIcal(text: string): string {
 /** Build a description string from event metadata */
 function buildDescription(evt: Record<string, unknown>): string {
   const parts: string[] = [];
-  if (evt.community) parts.push(`Community: ${evt.community}`);
+  if (evt.ensemble) parts.push(`Ensemble: ${evt.ensemble}`);
   if (evt.celebrant) parts.push(`Celebrant: ${evt.celebrant}`);
   if (evt.event_type) parts.push(`Type: ${evt.event_type}`);
   if (evt.has_music) parts.push("Live music");

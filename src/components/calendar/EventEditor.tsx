@@ -26,7 +26,7 @@ const EVENT_TYPES: { id: CalendarEventType; label: string }[] = [
   { id: "other", label: "Other" },
 ];
 
-const COMMUNITIES = [
+const ENSEMBLES = [
   { id: "", label: "None (Parish-wide)" },
   { id: "Reflections", label: "Reflections" },
   { id: "Foundations", label: "Foundations" },
@@ -46,7 +46,7 @@ export default function EventEditor({ event, onSave, onDelete, onClose }: EventE
   const [startTime, setStartTime] = useState(event?.startTime || "");
   const [endTime, setEndTime] = useState(event?.endTime || "");
   const [eventType, setEventType] = useState<CalendarEventType>(event?.eventType || "mass");
-  const [community, setCommunity] = useState(event?.community || "");
+  const [ensemble, setEnsemble] = useState(event?.ensemble || "");
   const [celebrant, setCelebrant] = useState(event?.celebrant || "");
   const [location, setLocation] = useState(event?.location || "");
   const [notes, setNotes] = useState(event?.notes || "");
@@ -92,7 +92,7 @@ export default function EventEditor({ event, onSave, onDelete, onClose }: EventE
         start_time: startTime || null,
         end_time: endTime || null,
         event_type: eventType,
-        community: community || null,
+        ensemble: ensemble || null,
         celebrant: celebrant || null,
         location: location || null,
         notes: notes || null,
@@ -233,15 +233,15 @@ export default function EventEditor({ event, onSave, onDelete, onClose }: EventE
             </select>
           </div>
 
-          {/* Community */}
+          {/* Ensemble */}
           <div>
-            <label className="block text-xs font-medium text-stone-500 uppercase tracking-wide mb-1">Community</label>
+            <label className="block text-xs font-medium text-stone-500 uppercase tracking-wide mb-1">Ensemble</label>
             <select
-              value={community}
-              onChange={(e) => setCommunity(e.target.value)}
+              value={ensemble}
+              onChange={(e) => setEnsemble(e.target.value)}
               className="w-full text-sm border border-stone-200 rounded-md px-3 py-2 focus:outline-none focus:ring-1 focus:ring-stone-400"
             >
-              {COMMUNITIES.map((c) => (
+              {ENSEMBLES.map((c) => (
                 <option key={c.id} value={c.id}>{c.label}</option>
               ))}
             </select>

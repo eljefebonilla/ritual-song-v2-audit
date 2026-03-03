@@ -11,7 +11,7 @@ import type {
 import { useUser } from "@/lib/user-context";
 import { useMedia } from "@/lib/media-context";
 import { extractChartKeys } from "@/lib/key-utils";
-import { filterPsalmResourcesByCommunity } from "@/lib/occasion-helpers";
+import { filterPsalmResourcesByEnsemble } from "@/lib/occasion-helpers";
 import LyricsEditor from "./LyricsEditor";
 import Link from "next/link";
 
@@ -19,7 +19,7 @@ interface SongDetailPanelProps {
   song: LibrarySong;
   onClose: () => void;
   onAudioUploaded?: (songId: string, url: string) => void;
-  communityId?: string;
+  ensembleId?: string;
   psalmSuggestions?: LibrarySong[];
   onSelectSuggestion?: (songId: string) => void;
   occasionId?: string;
@@ -795,7 +795,7 @@ export default function SongDetailPanel({
   song,
   onClose,
   onAudioUploaded,
-  communityId,
+  ensembleId,
   psalmSuggestions,
   onSelectSuggestion,
   occasionId,
@@ -872,12 +872,12 @@ export default function SongDetailPanel({
     return acc;
   }, {});
 
-  // Filter psalm resources by community psalter when viewing from an occasion
-  if (communityId && song.category === "psalm") {
+  // Filter psalm resources by ensemble psalter when viewing from an occasion
+  if (ensembleId && song.category === "psalm") {
     for (const source of Object.keys(resourcesBySource)) {
-      resourcesBySource[source] = filterPsalmResourcesByCommunity(
+      resourcesBySource[source] = filterPsalmResourcesByEnsemble(
         resourcesBySource[source],
-        communityId
+        ensembleId
       );
     }
   }
@@ -1149,7 +1149,7 @@ export default function SongDetailPanel({
               )}
             </div>
             <div className="flex items-center gap-1 shrink-0">
-              {isAdmin && !editing && !communityId && (
+              {isAdmin && !editing && !ensembleId && (
                 <button
                   onClick={() => setEditing(true)}
                   className="p-1 text-stone-300 hover:text-stone-600 transition-colors"
@@ -1161,8 +1161,8 @@ export default function SongDetailPanel({
                   </svg>
                 </button>
               )}
-              {!communityId && <VisibilityToggle songId={song.id} />}
-              {isAdmin && !editing && !communityId && (
+              {!ensembleId && <VisibilityToggle songId={song.id} />}
+              {isAdmin && !editing && !ensembleId && (
                 <button
                   onClick={() => setConfirmDelete(true)}
                   className="p-1 text-stone-300 hover:text-red-500 transition-colors"

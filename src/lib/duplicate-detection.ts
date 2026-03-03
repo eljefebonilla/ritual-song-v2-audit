@@ -15,7 +15,7 @@ export interface DuplicateGroup {
     composer: string | null;
     resourceCount: number;
     usageCount: number;
-    communityUsage: Record<string, number>;
+    ensembleUsage: Record<string, number>;
   }[];
 }
 
@@ -62,7 +62,7 @@ export function detectDuplicateGroups(songs: LibrarySong[]): DuplicateGroup[] {
         composer: s.composer || null,
         resourceCount: s.resources.length,
         usageCount: s.usageCount,
-        communityUsage: {},
+        ensembleUsage: {},
       })),
     });
   }

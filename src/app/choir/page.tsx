@@ -11,12 +11,12 @@ export default async function ChoirPage() {
   // Include both traditional volunteer masses AND those flagged with needs_volunteers
   const { data: masses } = await supabase
     .from("mass_events")
-    .select("id, title, event_date, start_time_12h, community, choir_descriptor, liturgical_name, occasion_id, celebrant, day_of_week, season, needs_volunteers")
+    .select("id, title, event_date, start_time_12h, ensemble, choir_descriptor, liturgical_name, occasion_id, celebrant, day_of_week, season, needs_volunteers")
     .gte("event_date", today)
     .eq("event_type", "mass")
     .eq("has_music", true)
     .or("choir_descriptor.in.(Volunteers,Volunteers + SMPREP,SMPREP),needs_volunteers.eq.true")
-    .in("community", ["Generations", "Heritage", "Elevations"])
+    .in("ensemble", ["Generations", "Heritage", "Elevations"])
     .order("event_date", { ascending: true })
     .order("start_time", { ascending: true });
 
@@ -25,7 +25,7 @@ export default async function ChoirPage() {
   const { data: signups } = massIds.length
     ? await supabase
         .from("choir_signups")
-        .select("*, profile:profiles (id, full_name, avatar_url, community)")
+        .select("*, profile:profiles (id, full_name, avatar_url, ensemble)")
         .in("mass_event_id", massIds)
         .eq("status", "confirmed")
     : { data: [] };

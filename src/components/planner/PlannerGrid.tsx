@@ -31,7 +31,7 @@ interface PlannerGridProps {
   hideMassParts?: boolean;
   hideReadings?: boolean;
   hideSynopses?: boolean;
-  communityId?: string;
+  ensembleId?: string;
   onPlanChange?: () => void;
 }
 
@@ -185,7 +185,7 @@ function OccasionCard({ column, hideMassParts = false, hideReadings = false, hid
   );
 }
 
-export default function PlannerGrid({ columns, viewMode, hideMassParts = false, hideReadings = false, hideSynopses = true, communityId, onPlanChange }: PlannerGridProps) {
+export default function PlannerGrid({ columns, viewMode, hideMassParts = false, hideReadings = false, hideSynopses = true, ensembleId, onPlanChange }: PlannerGridProps) {
   const { isAdmin } = useUser();
   const [massSettingExpanded, setMassSettingExpanded] = useState(false);
   const [editingCell, setEditingCell] = useState<EditingCell | null>(null);
@@ -236,7 +236,7 @@ export default function PlannerGrid({ columns, viewMode, hideMassParts = false, 
   };
 
   const handleCellSave = useCallback(async (rk: GridRowKey, title: string, composer: string) => {
-    if (!editingCell || !communityId) return;
+    if (!editingCell || !ensembleId) return;
     const field = rowKeyToField(rk);
     let value: unknown;
 
@@ -256,16 +256,16 @@ export default function PlannerGrid({ columns, viewMode, hideMassParts = false, 
       await fetch(`/api/occasions/${editingCell.occasionId}/music-plan`, {
         method: "PUT",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ communityId, field, value }),
+        body: JSON.stringify({ ensembleId, field, value }),
       });
       onPlanChange?.();
     } catch {
       // Silently fail for now — future: toast notification
     }
-  }, [editingCell, communityId, rowKeyToField, columns, onPlanChange]);
+  }, [editingCell, ensembleId, rowKeyToField, columns, onPlanChange]);
 
   const handleCellClear = useCallback(async (rk: GridRowKey) => {
-    if (!editingCell || !communityId) return;
+    if (!editingCell || !ensembleId) return;
     const field = rowKeyToField(rk);
 
     const cIdx = communionIndex(rk);
@@ -279,13 +279,13 @@ export default function PlannerGrid({ columns, viewMode, hideMassParts = false, 
       await fetch(`/api/occasions/${editingCell.occasionId}/music-plan`, {
         method: "PUT",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ communityId, field, value }),
+        body: JSON.stringify({ ensembleId, field, value }),
       });
       onPlanChange?.();
     } catch {
       // Silent
     }
-  }, [editingCell, communityId, rowKeyToField, columns, onPlanChange]);
+  }, [editingCell, ensembleId, rowKeyToField, columns, onPlanChange]);
 
   // --- Drag-and-copy handlers ---
   const handleDragStart = useCallback((e: React.DragEvent, occasionId: string, rowKey: GridRowKey, cellData: { title: string; composer?: string }) => {
@@ -316,7 +316,7 @@ export default function PlannerGrid({ columns, viewMode, hideMassParts = false, 
     setDragOverCell(null);
 
     const raw = e.dataTransfer.getData(SONG_COPY_MIME);
-    if (!raw || !communityId) return;
+    if (!raw || !ensembleId) return;
 
     let payload: SongDragPayload;
     try {
@@ -341,13 +341,13 @@ export default function PlannerGrid({ columns, viewMode, hideMassParts = false, 
       await fetch(`/api/occasions/${targetOccasionId}/music-plan`, {
         method: "PUT",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ communityId, field, value }),
+        body: JSON.stringify({ ensembleId, field, value }),
       });
       onPlanChange?.();
     } catch {
       // Silent
     }
-  }, [communityId, rowKeyToField, columns, onPlanChange]);
+  }, [ensembleId, rowKeyToField, columns, onPlanChange]);
 
   if (columns.length === 0) {
     return (
@@ -560,10 +560,10 @@ export default function PlannerGrid({ columns, viewMode, hideMassParts = false, 
       </div>
 
       {/* Cell Editor Popover */}
-      {editingCell && communityId && (
+      {editingCell && ensembleId && (
         <CellEditor
           occasionId={editingCell.occasionId}
-          communityId={communityId}
+          ensembleId={ensembleId}
           rowKey={editingCell.rowKey}
           currentData={extractCellData(
             columns[editingCell.columnIndex]?.plan ?? null,

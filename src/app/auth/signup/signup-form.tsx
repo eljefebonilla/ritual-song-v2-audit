@@ -4,7 +4,7 @@ import { createClient } from "@/lib/supabase/client";
 import { useRouter } from "next/navigation";
 import { useState } from "react";
 
-const COMMUNITIES = [
+const ENSEMBLES = [
   { id: "reflections", label: "Reflections" },
   { id: "foundations", label: "Foundations" },
   { id: "generations", label: "Generations" },
@@ -23,7 +23,7 @@ export function SignupForm() {
     phone: "",
     voicePart: "",
     instrument: "",
-    communityId: "",
+    ensembleId: "",
   });
   const [error, setError] = useState("");
   const [loading, setLoading] = useState(false);
@@ -65,7 +65,7 @@ export function SignupForm() {
         phone: formData.phone || null,
         voice_part: formData.voicePart || null,
         instrument: formData.instrument || null,
-        community_id: formData.communityId || null,
+        ensemble: formData.ensembleId || null,
         role: "member",
       });
 
@@ -145,19 +145,19 @@ export function SignupForm() {
         />
       </div>
 
-      {/* Community */}
+      {/* Ensemble */}
       <div>
-        <label htmlFor="community" className="block text-sm font-medium text-stone-700 mb-1">
-          Community
+        <label htmlFor="ensemble" className="block text-sm font-medium text-stone-700 mb-1">
+          Ensemble
         </label>
         <select
-          id="community"
-          value={formData.communityId}
-          onChange={(e) => update("communityId", e.target.value)}
+          id="ensemble"
+          value={formData.ensembleId}
+          onChange={(e) => update("ensembleId", e.target.value)}
           className={inputClass}
         >
-          <option value="">Select a community...</option>
-          {COMMUNITIES.map((c) => (
+          <option value="">Select an ensemble...</option>
+          {ENSEMBLES.map((c) => (
             <option key={c.id} value={c.id}>
               {c.label}
             </option>

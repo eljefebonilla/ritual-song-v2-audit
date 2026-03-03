@@ -100,8 +100,8 @@ export const MASS_POSITION_LABELS: Record<string, string> = {
   sending: "Sending",
 };
 
-/** Community badge config: letter, background color, text color. */
-export const COMMUNITY_BADGES: Record<string, { letter: string; bg: string; text: string }> = {
+/** Ensemble badge config: letter, background color, text color. */
+export const ENSEMBLE_BADGES: Record<string, { letter: string; bg: string; text: string }> = {
   reflections:  { letter: "R", bg: "#f1f4f6", text: "#5a6a78" },
   foundations:  { letter: "F", bg: "#f5e9e5", text: "#8b6b5a" },
   generations:  { letter: "G", bg: "#fff8da", text: "#8a7a3a" },
@@ -110,11 +110,11 @@ export const COMMUNITY_BADGES: Record<string, { letter: string; bg: string; text
 };
 
 /**
- * Community-to-psalter source mapping.
+ * Ensemble-to-psalter source mapping.
  * Lyric Psalter serves Reflections, Foundations, Heritage.
  * Spirit & Psalm serves Generations, Elevations.
  */
-export const COMMUNITY_PSALTER: Record<string, "lyric_psalter" | "spirit_and_psalm"> = {
+export const ENSEMBLE_PSALTER: Record<string, "lyric_psalter" | "spirit_and_psalm"> = {
   reflections: "lyric_psalter",
   foundations: "lyric_psalter",
   heritage: "lyric_psalter",
@@ -134,23 +134,23 @@ export function getPsalterSourceFromLabel(label: string): "lyric_psalter" | "spi
 }
 
 /**
- * Filter psalm resources to show the correct psalter for a given community.
- * When no community is specified, returns all resources.
+ * Filter psalm resources to show the correct psalter for a given ensemble.
+ * When no ensemble is specified, returns all resources.
  */
-export function filterPsalmResourcesByCommunity<T extends { label: string }>(
+export function filterPsalmResourcesByEnsemble<T extends { label: string }>(
   resources: T[],
-  community?: string
+  ensemble?: string
 ): T[] {
-  if (!community) return resources;
+  if (!ensemble) return resources;
 
-  const psalter = COMMUNITY_PSALTER[community.toLowerCase()];
+  const psalter = ENSEMBLE_PSALTER[ensemble.toLowerCase()];
   if (!psalter) return resources;
 
   return resources.filter((r) => {
     const source = getPsalterSourceFromLabel(r.label);
     // If resource has no identified psalter source, keep it (generic resource)
     if (!source) return true;
-    // Match to community's psalter
+    // Match to ensemble's psalter
     return source === psalter;
   });
 }

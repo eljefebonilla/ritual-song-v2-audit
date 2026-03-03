@@ -3,9 +3,9 @@
 import { useMemo } from "react";
 import type { CalendarWeek } from "@/lib/calendar-types";
 import type { LiturgicalDay } from "@/lib/types";
-import type { CommunityId } from "@/lib/grid-types";
+import type { EnsembleId } from "@/lib/grid-types";
 import {
-  filterEventsByCommunity,
+  filterEventsByEnsemble,
   groupEventsByDate,
   formatDateLabel,
   isDatePast,
@@ -18,7 +18,7 @@ import EventCard from "./EventCard";
 
 interface AgendaViewProps {
   weeks: CalendarWeek[];
-  communityFilter: CommunityId | "all";
+  ensembleFilter: EnsembleId | "all";
   hiddenWeekIds: string[];
   onToggleHidden: (weekId: string) => void;
   liturgicalDays?: LiturgicalDay[];
@@ -26,7 +26,7 @@ interface AgendaViewProps {
 
 export default function AgendaView({
   weeks,
-  communityFilter,
+  ensembleFilter,
   hiddenWeekIds,
   onToggleHidden,
   liturgicalDays,
@@ -58,7 +58,7 @@ export default function AgendaView({
           </svg>
           <p className="text-sm">No upcoming events</p>
           <p className="text-xs mt-1">
-            Try showing past dates or changing the community filter
+            Try showing past dates or changing the ensemble filter
           </p>
         </div>
       </div>
@@ -72,9 +72,9 @@ export default function AgendaView({
     <div className="divide-y divide-stone-100">
       {weeks.map((week) => {
         const isHidden = hiddenWeekIds.includes(week.weekId);
-        const filteredEvents = filterEventsByCommunity(
+        const filteredEvents = filterEventsByEnsemble(
           week.events,
-          communityFilter
+          ensembleFilter
         );
 
         if (filteredEvents.length === 0 && !isHidden && litMap.size === 0) return null;

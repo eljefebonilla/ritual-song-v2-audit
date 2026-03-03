@@ -17,7 +17,7 @@ interface ProfileOption {
   full_name: string;
   avatar_url: string | null;
   role: string;
-  community: string | null;
+  ensemble: string | null;
   voice_part: string | null;
   instrument: string | null;
 }
@@ -28,7 +28,7 @@ interface MassWithSlots {
   event_date: string;
   start_time: string | null;
   start_time_12h: string | null;
-  community: string | null;
+  ensemble: string | null;
   celebrant: string | null;
   liturgical_name: string | null;
   occasion_id: string | null;

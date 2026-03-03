@@ -2,7 +2,7 @@
 
 import { useState, useMemo, useEffect, useCallback } from "react";
 import type { LiturgicalOccasion, LiturgicalSeason, MusicPlan } from "@/lib/types";
-import type { YearCycleFilter, CommunityId } from "@/lib/grid-types";
+import type { YearCycleFilter, EnsembleId } from "@/lib/grid-types";
 import {
   getFilteredOccasions,
   buildGridColumns,
@@ -25,7 +25,7 @@ interface PlannerShellProps {
 export default function PlannerShell({ occasions }: PlannerShellProps) {
   const [yearCycle, setYearCycle] = useState<YearCycleFilter>("A");
   const [season, setSeason] = useState<LiturgicalSeason | "all">("all");
-  const [communityId, setCommunityId] = useState<CommunityId>("reflections");
+  const [ensembleId, setEnsembleId] = useState<EnsembleId>("reflections");
   const [rangeStart, setRangeStart] = useState(0);
   const [rangeEnd, setRangeEnd] = useState(12);
 
@@ -154,13 +154,13 @@ export default function PlannerShell({ occasions }: PlannerShellProps) {
   }, [visibleOccasions, refreshVersion]);
 
   const columns = useMemo(() => {
-    const base = buildGridColumns(visibleOccasions, communityId);
+    const base = buildGridColumns(visibleOccasions, ensembleId);
     return base.map(col => {
-      const overrides = planOverrides[col.occasion.id]?.[communityId];
+      const overrides = planOverrides[col.occasion.id]?.[ensembleId];
       if (!overrides || !col.plan) return col;
       return { ...col, plan: { ...col.plan, ...overrides } as MusicPlan };
     });
-  }, [visibleOccasions, communityId, planOverrides]);
+  }, [visibleOccasions, ensembleId, planOverrides]);
 
   // When hidePastWeeks changes, reset range to start from 0 offset
   const handleHidePastToggle = (v: boolean) => {
@@ -176,8 +176,8 @@ export default function PlannerShell({ occasions }: PlannerShellProps) {
         setYearCycle={setYearCycle}
         season={season}
         setSeason={setSeason}
-        communityId={communityId}
-        setCommunityId={setCommunityId}
+        ensembleId={ensembleId}
+        setEnsembleId={setEnsembleId}
         rangeStart={rangeStart}
         rangeEnd={Math.min(rangeEnd - rangeStart + rangeStart, maxEnd - (hidePastWeeks ? futureStartIndex : 0))}
         setRangeStart={setRangeStart}
@@ -200,7 +200,7 @@ export default function PlannerShell({ occasions }: PlannerShellProps) {
         setViewMode={setViewMode}
       />
       <div className="flex-1 overflow-hidden">
-        <PlannerGrid columns={columns} viewMode={viewMode} hideMassParts={hideMassParts} hideReadings={hideReadings} hideSynopses={hideSynopses} communityId={communityId} onPlanChange={handlePlanChange} />
+        <PlannerGrid columns={columns} viewMode={viewMode} hideMassParts={hideMassParts} hideReadings={hideReadings} hideSynopses={hideSynopses} ensembleId={ensembleId} onPlanChange={handlePlanChange} />
       </div>
     </div>
   );

@@ -13,7 +13,7 @@ export default async function DuplicatesPage() {
   const groups = detectDuplicateGroups(songs);
   const junk = detectJunkEntries(songs);
 
-  // Enrich with per-community usage
+  // Enrich with per-ensemble usage
   const songKeyToId = new Map<string, string>();
   for (const group of groups) {
     for (const song of group.songs) {
@@ -23,21 +23,21 @@ export default async function DuplicatesPage() {
     }
   }
 
-  const communityUsageMap = new Map<string, Record<string, number>>();
+  const ensembleUsageMap = new Map<string, Record<string, number>>();
   const allOccasions = getAllFullOccasions();
 
   for (const occasion of allOccasions) {
     for (const plan of occasion.musicPlans) {
-      const communityId = plan.communityId;
+      const ensembleId = plan.ensembleId;
 
       for (const entry of extractSongEntries(plan)) {
         const base = normalizeTitle(entry.title);
         const key = entry.composer ? `${base}|||${entry.composer.toLowerCase()}` : base;
         const songId = songKeyToId.get(key);
         if (songId) {
-          if (!communityUsageMap.has(songId)) communityUsageMap.set(songId, {});
-          const usage = communityUsageMap.get(songId)!;
-          usage[communityId] = (usage[communityId] || 0) + 1;
+          if (!ensembleUsageMap.has(songId)) ensembleUsageMap.set(songId, {});
+          const usage = ensembleUsageMap.get(songId)!;
+          usage[ensembleId] = (usage[ensembleId] || 0) + 1;
         }
       }
 
@@ -45,9 +45,9 @@ export default async function DuplicatesPage() {
         const key = normalizeTitle(plan.responsorialPsalm.setting);
         const songId = songKeyToId.get(key);
         if (songId) {
-          if (!communityUsageMap.has(songId)) communityUsageMap.set(songId, {});
-          const usage = communityUsageMap.get(songId)!;
-          usage[communityId] = (usage[communityId] || 0) + 1;
+          if (!ensembleUsageMap.has(songId)) ensembleUsageMap.set(songId, {});
+          const usage = ensembleUsageMap.get(songId)!;
+          usage[ensembleId] = (usage[ensembleId] || 0) + 1;
         }
       }
 
@@ -58,9 +58,9 @@ export default async function DuplicatesPage() {
           : base;
         const songId = songKeyToId.get(key);
         if (songId) {
-          if (!communityUsageMap.has(songId)) communityUsageMap.set(songId, {});
-          const usage = communityUsageMap.get(songId)!;
-          usage[communityId] = (usage[communityId] || 0) + 1;
+          if (!ensembleUsageMap.has(songId)) ensembleUsageMap.set(songId, {});
+          const usage = ensembleUsageMap.get(songId)!;
+          usage[ensembleId] = (usage[ensembleId] || 0) + 1;
         }
       }
     }
@@ -68,23 +68,23 @@ export default async function DuplicatesPage() {
 
   for (const group of groups) {
     for (const song of group.songs) {
-      song.communityUsage = communityUsageMap.get(song.id) || {};
+      song.ensembleUsage = ensembleUsageMap.get(song.id) || {};
     }
   }
 
-  // Split songs used by multiple communities into separate entries
+  // Split songs used by multiple ensembles into separate entries
   // so each can be merged into the correct arrangement independently
   for (const group of groups) {
     const expanded: typeof group.songs = [];
     for (const song of group.songs) {
-      const communities = Object.keys(song.communityUsage);
-      if (communities.length > 1) {
-        for (const communityId of communities) {
+      const ensembles = Object.keys(song.ensembleUsage);
+      if (ensembles.length > 1) {
+        for (const ensembleId of ensembles) {
           expanded.push({
             ...song,
-            _key: `${song.id}::${communityId}`,
-            usageCount: song.communityUsage[communityId],
-            communityUsage: { [communityId]: song.communityUsage[communityId] },
+            _key: `${song.id}::${ensembleId}`,
+            usageCount: song.ensembleUsage[ensembleId],
+            ensembleUsage: { [ensembleId]: song.ensembleUsage[ensembleId] },
           });
         }
       } else {

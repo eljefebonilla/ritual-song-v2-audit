@@ -21,7 +21,7 @@ interface Announcement {
   title: string;
   body: string;
   pinned: boolean;
-  community: string | null;
+  ensemble: string | null;
   created_at: string;
   updated_at: string;
   author: Author | null;
@@ -100,9 +100,9 @@ function AnnouncementCard({
               <span className="text-xs text-stone-400">
                 {timeAgo(announcement.created_at)}
               </span>
-              {announcement.community && (
+              {announcement.ensemble && (
                 <span className="text-[10px] px-1.5 py-0.5 rounded bg-stone-100 text-stone-600 font-medium">
-                  {announcement.community}
+                  {announcement.ensemble}
                 </span>
               )}
             </div>
@@ -187,7 +187,7 @@ export default function AnnouncementsPage() {
   const [showForm, setShowForm] = useState(false);
   const [title, setTitle] = useState("");
   const [content, setContent] = useState("");
-  const [community, setCommunity] = useState("");
+  const [ensemble, setEnsemble] = useState("");
   const [submitting, setSubmitting] = useState(false);
 
   const fetchAnnouncements = useCallback(async () => {
@@ -213,13 +213,13 @@ export default function AnnouncementsPage() {
       body: JSON.stringify({
         title: title.trim(),
         content: content.trim(),
-        community: community || null,
+        ensemble: ensemble || null,
       }),
     });
     if (res.ok) {
       setTitle("");
       setContent("");
-      setCommunity("");
+      setEnsemble("");
       setShowForm(false);
       fetchAnnouncements();
     }
@@ -282,8 +282,8 @@ export default function AnnouncementsPage() {
           />
           <div className="flex items-center gap-3">
             <select
-              value={community}
-              onChange={(e) => setCommunity(e.target.value)}
+              value={ensemble}
+              onChange={(e) => setEnsemble(e.target.value)}
               className="text-xs border border-stone-200 rounded-md px-2 py-1.5 bg-white"
             >
               <option value="">All Communities</option>

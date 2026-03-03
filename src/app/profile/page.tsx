@@ -4,7 +4,7 @@ import { useState, useEffect, useCallback } from "react";
 import { createClient } from "@/lib/supabase/client";
 import { useUser } from "@/lib/user-context";
 
-const COMMUNITIES = [
+const ENSEMBLES = [
   { id: "reflections", label: "Reflections" },
   { id: "foundations", label: "Foundations" },
   { id: "generations", label: "Generations" },
@@ -18,7 +18,7 @@ interface ProfileData {
   full_name: string;
   email: string;
   phone: string;
-  community_id: string;
+  ensemble: string;
   voice_part: string;
   instrument: string;
 }
@@ -35,7 +35,7 @@ export default function ProfilePage() {
     full_name: "",
     email: "",
     phone: "",
-    community_id: "",
+    ensemble: "",
     voice_part: "",
     instrument: "",
   });
@@ -46,7 +46,7 @@ export default function ProfilePage() {
         full_name: profile.full_name ?? "",
         email: profile.email ?? "",
         phone: profile.phone ?? "",
-        community_id: profile.community_id ?? "",
+        ensemble: profile.ensemble ?? "",
         voice_part: profile.voice_part ?? "",
         instrument: profile.instrument ?? "",
       });
@@ -85,7 +85,7 @@ export default function ProfilePage() {
       .update({
         full_name: formData.full_name,
         phone: formData.phone || null,
-        community_id: formData.community_id || null,
+        ensemble: formData.ensemble || null,
         voice_part: formData.voice_part || null,
         instrument: formData.instrument || null,
         updated_at: new Date().toISOString(),
@@ -104,8 +104,8 @@ export default function ProfilePage() {
     }
   }
 
-  const communityLabel =
-    COMMUNITIES.find((c) => c.id === formData.community_id)?.label ?? "Not set";
+  const ensembleLabel =
+    ENSEMBLES.find((c) => c.id === formData.ensemble)?.label ?? "Not set";
   const voicePartLabel = formData.voice_part
     ? formData.voice_part.charAt(0).toUpperCase() + formData.voice_part.slice(1)
     : "Not set";
@@ -236,22 +236,22 @@ export default function ProfilePage() {
               />
             </div>
 
-            {/* Community */}
+            {/* Ensemble */}
             <div>
               <label
-                htmlFor="community"
+                htmlFor="ensemble"
                 className="block text-sm font-medium text-stone-700 mb-1"
               >
-                Community
+                Ensemble
               </label>
               <select
-                id="community"
-                value={formData.community_id}
-                onChange={(e) => update("community_id", e.target.value)}
+                id="ensemble"
+                value={formData.ensemble}
+                onChange={(e) => update("ensemble", e.target.value)}
                 className={inputClass}
               >
-                <option value="">Select a community...</option>
-                {COMMUNITIES.map((c) => (
+                <option value="">Select an ensemble...</option>
+                {ENSEMBLES.map((c) => (
                   <option key={c.id} value={c.id}>
                     {c.label}
                   </option>
@@ -342,9 +342,9 @@ export default function ProfilePage() {
                 </dd>
               </div>
               <div className="py-3 sm:grid sm:grid-cols-3 sm:gap-4">
-                <dt className="text-sm font-medium text-stone-500">Community</dt>
+                <dt className="text-sm font-medium text-stone-500">Ensemble</dt>
                 <dd className="mt-1 text-sm text-stone-900 sm:col-span-2 sm:mt-0">
-                  {communityLabel}
+                  {ensembleLabel}
                 </dd>
               </div>
               <div className="py-3 sm:grid sm:grid-cols-3 sm:gap-4">

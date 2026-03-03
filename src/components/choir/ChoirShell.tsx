@@ -11,7 +11,7 @@ interface MassEvent {
   title: string;
   event_date: string;
   start_time_12h: string;
-  community: string | null;
+  ensemble: string | null;
   choir_descriptor: string | null;
   liturgical_name: string | null;
   occasion_id: string | null;

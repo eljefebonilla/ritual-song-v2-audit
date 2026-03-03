@@ -63,7 +63,7 @@ export default async function TodayPage() {
         startTime12h: (row.start_time_12h as string) || "",
         endTime12h: (row.end_time_12h as string) || "",
         title: (row.title as string) || "",
-        community: (row.community as string) || null,
+        ensemble: (row.ensemble as string) || null,
         eventType: ((row.event_type as string) || "mass") as CalendarEventType,
         hasMusic: (row.has_music as boolean) ?? false,
         isAutoMix: (row.is_auto_mix as boolean) ?? false,

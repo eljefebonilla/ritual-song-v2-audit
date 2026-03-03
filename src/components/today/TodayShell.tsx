@@ -5,7 +5,7 @@ import type { CalendarEvent } from "@/lib/calendar-types";
 import { LITURGICAL_COLOR_HEX, LITURGICAL_COLOR_LIGHT, LITURGICAL_COLOR_LABEL } from "@/lib/liturgical-colors";
 import { SEASON_COLORS } from "@/lib/liturgical-colors";
 import { rankLabel } from "@/lib/liturgical-helpers";
-import { getCommunityColor } from "@/lib/calendar-utils";
+import { getEnsembleColor } from "@/lib/calendar-utils";
 import CantorBriefingCard from "./CantorBriefingCard";
 
 interface TodayShellProps {
@@ -163,7 +163,7 @@ export default function TodayShell({
           </h2>
           <div className="space-y-2">
             {massEvents.map((evt, i) => {
-              const communityStyle = getCommunityColor(evt.community);
+              const ensembleStyle = getEnsembleColor(evt.ensemble);
               return (
                 <div
                   key={i}
@@ -173,12 +173,12 @@ export default function TodayShell({
                     {evt.startTime12h || "TBD"}
                   </span>
                   <span className="text-sm text-stone-800">{evt.title}</span>
-                  {evt.community && (
+                  {evt.ensemble && (
                     <span
                       className="text-[10px] font-medium px-2 py-0.5 rounded-full"
-                      style={communityStyle}
+                      style={ensembleStyle}
                     >
-                      {evt.community}
+                      {evt.ensemble}
                     </span>
                   )}
                   {evt.celebrant && (

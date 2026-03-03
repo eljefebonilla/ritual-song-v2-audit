@@ -61,7 +61,7 @@ export interface BookingRow {
   celebration: string;       // occasion liturgical_name
   date: string;
   time_12h: string;
-  community: string | null;
+  ensemble: string | null;
   celebrant: string | null;
   booking_status: BookingStatus;
   choir_descriptor: ChoirDescriptor | null;
@@ -87,7 +87,7 @@ export interface ChoirSignup {
     id: string;
     full_name: string;
     avatar_url: string | null;
-    community: string | null;
+    ensemble: string | null;
   };
 }
 
@@ -173,7 +173,7 @@ export interface SetlistPDFData {
   occasion_name: string;
   date_display: string;         // "January 25, 2026"
   time_display: string;         // "9:30am"
-  community?: string;           // "Heritage", "Generations"
+  ensemble?: string;            // "Heritage", "Generations"
   special_designation?: string; // "Catholic Schools' Week"
   season: string;
   song_rows: SetlistSongRow[];

@@ -15,7 +15,7 @@ export default async function SetlistPage({ params }: Props) {
   // Fetch mass event
   const { data: mass } = await supabase
     .from("mass_events")
-    .select("id, title, event_date, start_time_12h, community, liturgical_name, occasion_id, season, choir_descriptor, celebrant")
+    .select("id, title, event_date, start_time_12h, ensemble, liturgical_name, occasion_id, season, choir_descriptor, celebrant")
     .eq("id", massEventId)
     .single();
 

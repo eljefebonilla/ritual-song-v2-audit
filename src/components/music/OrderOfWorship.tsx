@@ -64,7 +64,7 @@ export default function OrderOfWorship({
   if (!hasAnyData) {
     return (
       <div className="px-4 py-8 text-center text-sm text-stone-400">
-        No music data for this community yet.
+        No music data for this ensemble yet.
       </div>
     );
   }

@@ -13,8 +13,8 @@ create table public.profiles (
   full_name text not null,
   email text not null,
   phone text,
-  community text check (community in (
-    'Reflections', 'Foundations', 'Generations', 'Heritage', 'Elevations'
+  ensemble text check (ensemble in (
+    'reflections', 'foundations', 'generations', 'heritage', 'elevations'
   )),
   voice_part text check (voice_part in ('Soprano', 'Alto', 'Tenor', 'Bass')),
   instrument text,
@@ -184,7 +184,7 @@ create table public.mass_events (
   event_type text default 'mass' check (event_type in (
     'mass', 'rehearsal', 'special', 'holy_day', 'funeral', 'wedding'
   )),
-  community text check (community in (
+  ensemble text check (ensemble in (
     'Reflections', 'Foundations', 'Generations', 'Heritage', 'Elevations'
   )),
   created_by uuid references public.profiles(id),
@@ -325,7 +325,7 @@ create table public.announcements (
   body text not null,
   author_id uuid references public.profiles(id) on delete set null,
   pinned boolean default false,
-  community text, -- null = all communities
+  ensemble text, -- null = all ensembles
   created_at timestamptz default now(),
   updated_at timestamptz default now()
 );

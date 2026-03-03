@@ -1,17 +1,17 @@
 "use client";
 
 import { useState } from "react";
-import type { CommunityId } from "@/lib/grid-types";
+import type { EnsembleId } from "@/lib/grid-types";
 import type { CalendarView } from "@/lib/calendar-types";
-import { COMMUNITY_OPTIONS } from "@/lib/grid-types";
+import { ENSEMBLE_OPTIONS } from "@/lib/grid-types";
 import { formatMonthYear } from "@/lib/calendar-utils";
 import { useUser } from "@/lib/user-context";
 
 interface CalendarToolbarProps {
   view: CalendarView;
   setView: (v: CalendarView) => void;
-  communityFilter: CommunityId | "all";
-  setCommunityFilter: (v: CommunityId | "all") => void;
+  ensembleFilter: EnsembleId | "all";
+  setEnsembleFilter: (v: EnsembleId | "all") => void;
   showPastDates: boolean;
   setShowPastDates: (v: boolean) => void;
   currentMonth: Date;
@@ -26,8 +26,8 @@ interface CalendarToolbarProps {
 export default function CalendarToolbar({
   view,
   setView,
-  communityFilter,
-  setCommunityFilter,
+  ensembleFilter,
+  setEnsembleFilter,
   showPastDates,
   setShowPastDates,
   currentMonth,
@@ -42,7 +42,7 @@ export default function CalendarToolbar({
   const [showSubscribe, setShowSubscribe] = useState(false);
 
   const icalUrl = typeof window !== "undefined"
-    ? `${window.location.origin}/api/calendar/ical${communityFilter !== "all" ? `?community=${communityFilter}` : ""}`
+    ? `${window.location.origin}/api/calendar/ical${ensembleFilter !== "all" ? `?ensemble=${ensembleFilter}` : ""}`
     : "";
 
   const handleCopyIcal = () => {
@@ -106,9 +106,9 @@ export default function CalendarToolbar({
                       Copy
                     </button>
                   </div>
-                  {communityFilter !== "all" && (
+                  {ensembleFilter !== "all" && (
                     <p className="text-xs text-amber-600 mt-2">
-                      Filtered to: {communityFilter}
+                      Filtered to: {ensembleFilter}
                     </p>
                   )}
                 </div>
@@ -163,20 +163,20 @@ export default function CalendarToolbar({
 
         <div className="w-px h-6 bg-stone-200" />
 
-        {/* Community filter */}
+        {/* Ensemble filter */}
         <div className="flex items-center gap-1.5">
           <label className="text-xs font-medium text-stone-500 uppercase tracking-wide">
-            Community
+            Ensemble
           </label>
           <select
-            value={communityFilter}
+            value={ensembleFilter}
             onChange={(e) =>
-              setCommunityFilter(e.target.value as CommunityId | "all")
+              setEnsembleFilter(e.target.value as EnsembleId | "all")
             }
             className="text-xs border border-stone-200 rounded-md px-2 py-1.5 bg-white text-stone-700 focus:outline-none focus:ring-1 focus:ring-stone-400"
           >
-            <option value="all">All Communities</option>
-            {COMMUNITY_OPTIONS.map((c) => (
+            <option value="all">All Ensembles</option>
+            {ENSEMBLE_OPTIONS.map((c) => (
               <option key={c.id} value={c.id}>
                 {c.label}
               </option>

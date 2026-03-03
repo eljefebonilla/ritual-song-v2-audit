@@ -3,7 +3,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import type { ChoirSignup, ChoirSummary, VoicePart } from "@/lib/booking-types";
-import { getCommunityColor } from "@/lib/calendar-utils";
+import { getEnsembleColor } from "@/lib/calendar-utils";
 import MassComments from "@/components/comments/MassComments";
 
 const VOICE_PARTS: VoicePart[] = ["Soprano", "Alto", "Tenor", "Bass"];
@@ -19,7 +19,7 @@ interface MassSignupCardProps {
     id: string;
     title: string;
     start_time_12h: string;
-    community: string | null;
+    ensemble: string | null;
     choir_descriptor: string | null;
     liturgical_name: string | null;
     occasion_id: string | null;
@@ -50,7 +50,7 @@ export default function MassSignupCard({
   const [expanded, setExpanded] = useState(false);
   const [showComments, setShowComments] = useState(false);
   const [showPartPicker, setShowPartPicker] = useState(false);
-  const communityStyle = getCommunityColor(mass.community);
+  const ensembleStyle = getEnsembleColor(mass.ensemble);
   const isSignedUp = mySignup !== null;
 
   const handleSignUp = () => {
@@ -84,12 +84,12 @@ export default function MassSignupCard({
             <span className="text-sm font-medium text-stone-900">
               {mass.liturgical_name || mass.title}
             </span>
-            {mass.community && (
+            {mass.ensemble && (
               <span
                 className="text-[10px] px-1.5 py-0.5 rounded font-medium"
-                style={communityStyle}
+                style={ensembleStyle}
               >
-                {mass.community}
+                {mass.ensemble}
               </span>
             )}
             {mass.choir_descriptor && (

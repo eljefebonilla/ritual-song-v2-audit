@@ -38,8 +38,8 @@ export interface SongEntry {
 }
 
 export interface MusicPlan {
-  community: string; // "Reflections", "Foundations", etc.
-  communityId: string;
+  ensemble: string; // "Reflections", "Foundations", etc.
+  ensembleId: string;
   date?: string;
   presider?: string;
   massNotes?: string[];
@@ -94,7 +94,7 @@ export interface LiturgicalOccasion {
   // Occasion-specific resources (gospel acclamations, antiphon recordings, etc.)
   occasionResources?: OccasionResource[];
 
-  // Music plans (one per community)
+  // Music plans (one per ensemble)
   musicPlans: MusicPlan[];
 }
 

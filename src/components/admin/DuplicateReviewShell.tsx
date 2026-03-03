@@ -2,7 +2,7 @@
 
 import { useState, useMemo } from "react";
 import type { DuplicateGroup, DuplicateConfidence, JunkEntry } from "@/lib/duplicate-detection";
-import { COMMUNITY_BADGES } from "@/lib/occasion-helpers";
+import { ENSEMBLE_BADGES } from "@/lib/occasion-helpers";
 
 type TabId = "high" | "medium" | "low" | "junk";
 
@@ -103,7 +103,7 @@ export default function DuplicateReviewShell({ groups: initialGroups, junk: init
           .filter((id) => id !== keeperId)
       ),
     ];
-    // All selected entries share the keeper's song ID (community-split copies) —
+    // All selected entries share the keeper's song ID (ensemble-split copies) —
     // nothing to merge on disk, but collapse them in the UI and keep unselected entries
     if (secondarySongIds.length === 0) {
       const selectedKeySet = new Set(selectedIds);
@@ -386,16 +386,16 @@ export default function DuplicateReviewShell({ groups: initialGroups, junk: init
                             </p>
                             <div className="flex items-center gap-3 mt-2 text-xs text-stone-400">
                               <span>{song.resourceCount} resources</span>
-                              {Object.keys(song.communityUsage).length > 0 ? (
+                              {Object.keys(song.ensembleUsage).length > 0 ? (
                                 <div className="flex gap-1 flex-wrap">
-                                  {Object.entries(song.communityUsage)
+                                  {Object.entries(song.ensembleUsage)
                                     .sort(([, a], [, b]) => b - a)
-                                    .map(([communityId, count]) => {
-                                      const badge = COMMUNITY_BADGES[communityId];
+                                    .map(([ensembleId, count]) => {
+                                      const badge = ENSEMBLE_BADGES[ensembleId];
                                       if (!badge) return null;
                                       return (
                                         <span
-                                          key={communityId}
+                                          key={ensembleId}
                                           className="inline-flex items-center gap-0.5 px-1.5 py-0.5 rounded text-[10px] font-semibold"
                                           style={{ backgroundColor: badge.bg, color: badge.text }}
                                         >

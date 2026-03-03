@@ -5,7 +5,7 @@ import type { CalendarEvent } from "@/lib/calendar-types";
 import { LITURGICAL_COLOR_HEX, LITURGICAL_COLOR_LABEL } from "@/lib/liturgical-colors";
 import { SEASON_COLORS } from "@/lib/liturgical-colors";
 import { rankLabel } from "@/lib/liturgical-helpers";
-import { getCommunityColor } from "@/lib/calendar-utils";
+import { getEnsembleColor } from "@/lib/calendar-utils";
 
 interface CantorBriefingCardProps {
   event: CalendarEvent;
@@ -29,7 +29,7 @@ export default function CantorBriefingCard({
 }: CantorBriefingCardProps) {
   const colorHex = LITURGICAL_COLOR_HEX[liturgicalDay.colorPrimary];
   const colorName = LITURGICAL_COLOR_LABEL[liturgicalDay.colorPrimary];
-  const communityStyle = getCommunityColor(event.community);
+  const ensembleStyle = getEnsembleColor(event.ensemble);
 
   return (
     <div className="bg-white border border-stone-200 rounded-lg overflow-hidden print:break-inside-avoid">
@@ -43,12 +43,12 @@ export default function CantorBriefingCard({
             {event.startTime12h || "TBD"}
           </span>
           <span className="text-sm text-stone-600">{event.title}</span>
-          {event.community && (
+          {event.ensemble && (
             <span
               className="text-[10px] font-medium px-2 py-0.5 rounded-full"
-              style={communityStyle}
+              style={ensembleStyle}
             >
-              {event.community}
+              {event.ensemble}
             </span>
           )}
         </div>

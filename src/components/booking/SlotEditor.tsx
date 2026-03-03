@@ -8,7 +8,7 @@ interface ProfileOption {
   full_name: string;
   avatar_url: string | null;
   role: string;
-  community: string | null;
+  ensemble: string | null;
   voice_part: string | null;
   instrument: string | null;
 }

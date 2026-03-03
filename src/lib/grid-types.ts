@@ -4,7 +4,7 @@ import type { LiturgicalSeason, LiturgicalOccasion, MusicPlan } from "./types";
 
 export type YearCycleFilter = "A" | "B" | "C" | "all";
 
-export type CommunityId =
+export type EnsembleId =
   | "reflections"
   | "foundations"
   | "generations"
@@ -162,7 +162,7 @@ export const GRID_SECTIONS = [
 export interface GridFilters {
   yearCycle: YearCycleFilter;
   season: LiturgicalSeason | "all";
-  communityId: CommunityId;
+  ensembleId: EnsembleId;
   rangeStart: number;
   rangeEnd: number;
 }
@@ -180,7 +180,7 @@ export interface GridCellData {
   isReading?: boolean; // true for reading/antiphon rows (non-editable)
 }
 
-export const COMMUNITY_OPTIONS: { id: CommunityId; label: string }[] = [
+export const ENSEMBLE_OPTIONS: { id: EnsembleId; label: string }[] = [
   { id: "reflections", label: "Reflections" },
   { id: "foundations", label: "Foundations" },
   { id: "generations", label: "Generations" },

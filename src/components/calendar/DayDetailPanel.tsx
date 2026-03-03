@@ -4,7 +4,7 @@ import type { LiturgicalDay } from "@/lib/types";
 import type { CalendarEvent } from "@/lib/calendar-types";
 import { LITURGICAL_COLOR_HEX, LITURGICAL_COLOR_LIGHT, LITURGICAL_COLOR_LABEL, SEASON_COLORS } from "@/lib/liturgical-colors";
 import { rankLabel } from "@/lib/liturgical-helpers";
-import { getCommunityColor } from "@/lib/calendar-utils";
+import { getEnsembleColor } from "@/lib/calendar-utils";
 import Link from "next/link";
 
 interface DayDetailPanelProps {
@@ -179,7 +179,7 @@ export default function DayDetailPanel({ date, litDay, events, onClose }: DayDet
           </p>
           <div className="space-y-1.5">
             {events.map((evt, i) => {
-              const communityStyle = getCommunityColor(evt.community);
+              const ensembleStyle = getEnsembleColor(evt.ensemble);
               const content = (
                 <div className="flex items-center gap-2 px-2.5 py-1.5 rounded-md bg-stone-50 hover:bg-stone-100 transition-colors">
                   <span className="text-xs font-medium text-stone-700 w-12 shrink-0">
@@ -188,12 +188,12 @@ export default function DayDetailPanel({ date, litDay, events, onClose }: DayDet
                   <span className="text-xs text-stone-800 flex-1 truncate">
                     {evt.title}
                   </span>
-                  {evt.community && (
+                  {evt.ensemble && (
                     <span
                       className="text-[9px] font-semibold px-1.5 py-0.5 rounded shrink-0"
-                      style={communityStyle}
+                      style={ensembleStyle}
                     >
-                      {evt.community}
+                      {evt.ensemble}
                     </span>
                   )}
                   {evt.celebrant && (

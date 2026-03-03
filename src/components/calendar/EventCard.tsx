@@ -3,7 +3,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import type { CalendarEvent } from "@/lib/calendar-types";
-import { getCommunityColor } from "@/lib/calendar-utils";
+import { getEnsembleColor } from "@/lib/calendar-utils";
 import MassComments from "@/components/comments/MassComments";
 
 interface EventCardProps {
@@ -12,7 +12,7 @@ interface EventCardProps {
 }
 
 export default function EventCard({ event, isPast }: EventCardProps) {
-  const communityStyle = getCommunityColor(event.community);
+  const ensembleStyle = getEnsembleColor(event.ensemble);
   const hasOccasionLink = event.occasionId && event.eventType === "mass";
   const hasComments = !!event.id;
   const [showComments, setShowComments] = useState(false);
@@ -71,13 +71,13 @@ export default function EventCard({ event, isPast }: EventCardProps) {
             </span>
           )}
 
-          {/* Community badge */}
-          {event.community && (
+          {/* Ensemble badge */}
+          {event.ensemble && (
             <span
               className="text-[10px] px-1.5 py-0.5 rounded font-medium"
-              style={communityStyle}
+              style={ensembleStyle}
             >
-              {event.community}
+              {event.ensemble}
             </span>
           )}
         </div>

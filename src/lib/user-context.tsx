@@ -19,14 +19,13 @@ interface Profile {
   phone: string | null;
   voice_part: string | null;
   instrument: string | null;
-  community_id: string | null;
+  ensemble: string | null;
   role: UserRole;
   avatar_url: string | null;
 }
 
 interface UserContextType {
   role: UserRole;
-  setRole: (role: UserRole) => void;
   displayName: string;
   user: User | null;
   profile: Profile | null;
@@ -37,7 +36,6 @@ interface UserContextType {
 
 const UserContext = createContext<UserContextType>({
   role: "member",
-  setRole: () => {},
   displayName: "Guest",
   user: null,
   profile: null,
@@ -49,16 +47,6 @@ const UserContext = createContext<UserContextType>({
 export function UserProvider({ children }: { children: ReactNode }) {
   const [user, setUser] = useState<User | null>(null);
   const [profile, setProfile] = useState<Profile | null>(null);
-  const [roleOverride, setRoleOverride] = useState<UserRole | null>(() => {
-    if (typeof window === "undefined") return null;
-    const stored = localStorage.getItem("rs_role_override");
-    if (stored === "admin" || stored === "member") {
-      // Sync cookie for server-side verifyAdmin()
-      document.cookie = `rs_role_override=${stored};path=/;max-age=${60 * 60 * 24 * 365};SameSite=Lax`;
-      return stored;
-    }
-    return null;
-  });
   const [loading, setLoading] = useState(true);
 
   // Defer Supabase client creation to avoid SSR prerender failures
@@ -93,7 +81,6 @@ export function UserProvider({ children }: { children: ReactNode }) {
         fetchProfile(newUser.id);
       } else {
         setProfile(null);
-        setRoleOverride(null);
       }
     });
 
@@ -116,23 +103,14 @@ export function UserProvider({ children }: { children: ReactNode }) {
     await getSupabase().auth.signOut();
     setUser(null);
     setProfile(null);
-    setRoleOverride(null);
   }
 
-  // Determine effective role
+  // Determine effective role from profile DB data only
   // In local dev, default to admin so gate-code users get full access
   const isDev = process.env.NODE_ENV === "development";
   const dbRole = profile?.role ?? (isDev ? "admin" : "member");
-  const role: UserRole = roleOverride ?? (user ? dbRole : (isDev ? "admin" : "member"));
+  const role: UserRole = user ? dbRole : (isDev ? "admin" : "member");
   const isAdmin = role === "admin";
-
-  // Allow role toggle for anyone (gate-code users can switch to Music Director view)
-  function setRole(newRole: UserRole) {
-    setRoleOverride(newRole);
-    localStorage.setItem("rs_role_override", newRole);
-    // Also set as cookie so server-side verifyAdmin() can read it
-    document.cookie = `rs_role_override=${newRole};path=/;max-age=${60 * 60 * 24 * 365};SameSite=Lax`;
-  }
 
   const displayName = profile?.full_name ?? (user ? "Member" : "Guest");
   const isAuthenticated = !!user;
@@ -142,7 +120,6 @@ export function UserProvider({ children }: { children: ReactNode }) {
       <UserContext.Provider
         value={{
           role: "member",
-          setRole: () => {},
           displayName: "Loading...",
           user: null,
           profile: null,
@@ -160,7 +137,6 @@ export function UserProvider({ children }: { children: ReactNode }) {
     <UserContext.Provider
       value={{
         role,
-        setRole,
         displayName,
         user,
         profile,

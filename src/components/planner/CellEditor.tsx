@@ -14,7 +14,7 @@ interface SongResult {
 
 interface CellEditorProps {
   occasionId: string;
-  communityId: string;
+  ensembleId: string;
   rowKey: GridRowKey;
   currentData: GridCellData;
   anchorRect: DOMRect;

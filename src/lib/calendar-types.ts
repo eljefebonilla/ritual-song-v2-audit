@@ -29,7 +29,7 @@ export interface CalendarEvent {
   startTime12h: string;       // "5:30p" original display format
   endTime12h: string;         // "6:30p"
   title: string;              // "Vigil Mass"
-  community: string | null;   // "Reflections" | "Foundations" | etc.
+  ensemble: string | null;    // "Reflections" | "Foundations" | etc.
   eventType: CalendarEventType;
   hasMusic: boolean;          // true if ♫ present
   isAutoMix: boolean;         // true if "Auto-Mix" in notes
@@ -38,7 +38,7 @@ export interface CalendarEvent {
   notes: string | null;       // General notes
   sidebarNote: string | null; // ← sidebar annotation
   occasionId: string | null;  // Link to occasion JSON e.g. "advent-01-a"
-  needsVolunteers: boolean;   // true if additional choir volunteers are needed
+  needsVolunteers?: boolean;  // true if additional choir volunteers are needed
 }
 
 export type CalendarEventType =

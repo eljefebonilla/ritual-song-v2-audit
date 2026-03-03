@@ -20,7 +20,7 @@ interface MassEvent {
   title: string;
   event_date: string;
   start_time_12h: string | null;
-  community: string | null;
+  ensemble: string | null;
   liturgical_name: string | null;
   occasion_id: string | null;
   season: string | null;
@@ -54,8 +54,8 @@ export default function SetlistShell({
 
   // Bootstrap if no existing setlist
   const bootstrapped = useMemo(
-    () => bootstrapSetlist(occasion, mass.community, bookingSlots),
-    [occasion, mass.community, bookingSlots]
+    () => bootstrapSetlist(occasion, mass.ensemble, bookingSlots),
+    [occasion, mass.ensemble, bookingSlots]
   );
 
   const [songs, setSongs] = useState<SetlistSongRow[]>(
@@ -168,7 +168,7 @@ export default function SetlistShell({
             <h1 className="text-lg font-bold text-stone-900">Setlist Builder</h1>
             <p className="text-xs text-stone-500 mt-0.5">
               {mass.liturgical_name || mass.title} — {formatDate(mass.event_date)}{" "}
-              {mass.start_time_12h} {mass.community && `(${mass.community})`}
+              {mass.start_time_12h} {mass.ensemble && `(${mass.ensemble})`}
             </p>
           </div>
           <div className="flex items-center gap-2">

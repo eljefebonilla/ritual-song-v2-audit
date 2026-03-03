@@ -2,8 +2,8 @@
 
 import { useState } from "react";
 import type { LiturgicalOccasion, LiturgicalSeason } from "@/lib/types";
-import type { YearCycleFilter, CommunityId } from "@/lib/grid-types";
-import { COMMUNITY_OPTIONS, SEASON_OPTIONS } from "@/lib/grid-types";
+import type { YearCycleFilter, EnsembleId } from "@/lib/grid-types";
+import { ENSEMBLE_OPTIONS, SEASON_OPTIONS } from "@/lib/grid-types";
 import { useUser } from "@/lib/user-context";
 import type { PlannerViewMode } from "./PlannerShell";
 
@@ -12,8 +12,8 @@ interface FilterToolbarProps {
   setYearCycle: (v: YearCycleFilter) => void;
   season: LiturgicalSeason | "all";
   setSeason: (v: LiturgicalSeason | "all") => void;
-  communityId: CommunityId;
-  setCommunityId: (v: CommunityId) => void;
+  ensembleId: EnsembleId;
+  setEnsembleId: (v: EnsembleId) => void;
   rangeStart: number;
   rangeEnd: number;
   setRangeStart: (v: number) => void;
@@ -51,8 +51,8 @@ export default function FilterToolbar({
   setYearCycle,
   season,
   setSeason,
-  communityId,
-  setCommunityId,
+  ensembleId,
+  setEnsembleId,
   rangeStart,
   rangeEnd,
   setRangeStart,
@@ -69,7 +69,7 @@ export default function FilterToolbar({
   viewMode,
   setViewMode,
 }: FilterToolbarProps) {
-  const { role, setRole } = useUser();
+  const { role } = useUser();
   const [filtersExpanded, setFiltersExpanded] = useState(false);
 
   const handleRangePreset = (count: number) => {
@@ -139,32 +139,12 @@ export default function FilterToolbar({
             </button>
           </div>
 
-          {/* Role toggle — hidden on small screens to save space */}
-          <div className="hidden sm:flex items-center gap-2">
-            <span className="text-xs text-stone-400">View as:</span>
-            <div className="flex bg-stone-100 rounded-lg p-0.5">
-              <button
-                onClick={() => setRole("admin")}
-                className={`px-3 py-1 text-xs font-medium rounded-md transition-colors ${
-                  role === "admin"
-                    ? "bg-white text-stone-900 shadow-sm"
-                    : "text-stone-500 hover:text-stone-700"
-                }`}
-              >
-                Music Director
-              </button>
-              <button
-                onClick={() => setRole("member")}
-                className={`px-3 py-1 text-xs font-medium rounded-md transition-colors ${
-                  role === "member"
-                    ? "bg-white text-stone-900 shadow-sm"
-                    : "text-stone-500 hover:text-stone-700"
-                }`}
-              >
-                Choir Member
-              </button>
-            </div>
-          </div>
+          {/* Role indicator */}
+          {role === "admin" && (
+            <span className="hidden sm:inline text-[10px] font-medium text-stone-400 uppercase tracking-wide">
+              Music Director
+            </span>
+          )}
         </div>
       </div>
 
@@ -233,15 +213,15 @@ export default function FilterToolbar({
 
           <div className="hidden md:block w-px h-6 bg-stone-200" />
 
-          {/* Community */}
+          {/* Ensemble */}
           <div className="flex items-center gap-1.5">
-            <label className="text-xs font-medium text-stone-500 uppercase tracking-wide">Community</label>
+            <label className="text-xs font-medium text-stone-500 uppercase tracking-wide">Ensemble</label>
             <select
-              value={communityId}
-              onChange={(e) => setCommunityId(e.target.value as CommunityId)}
+              value={ensembleId}
+              onChange={(e) => setEnsembleId(e.target.value as EnsembleId)}
               className="text-xs border border-stone-200 rounded-md px-2 py-1.5 bg-white text-stone-700 focus:outline-none focus:ring-1 focus:ring-stone-400"
             >
-              {COMMUNITY_OPTIONS.map((c) => (
+              {ENSEMBLE_OPTIONS.map((c) => (
                 <option key={c.id} value={c.id}>{c.label}</option>
               ))}
             </select>

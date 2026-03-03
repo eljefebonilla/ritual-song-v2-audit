@@ -3,7 +3,7 @@
 import { useState, useMemo } from "react";
 import type { CalendarWeek } from "@/lib/calendar-types";
 import type { LiturgicalDay } from "@/lib/types";
-import { getEventsForMonthByDateStr, dayOfWeekToGridIndex, getCommunityColor } from "@/lib/calendar-utils";
+import { getEventsForMonthByDateStr, dayOfWeekToGridIndex, getEnsembleColor } from "@/lib/calendar-utils";
 import { LITURGICAL_COLOR_LIGHT, LITURGICAL_COLOR_HEX } from "@/lib/liturgical-colors";
 import { buildLiturgicalDayMap, isSignificantRank } from "@/lib/liturgical-helpers";
 import DayDetailPanel from "./DayDetailPanel";
@@ -159,7 +159,7 @@ export default function MonthView({
                 </div>
               )}
 
-              {/* Event dots — community-colored */}
+              {/* Event dots — ensemble-colored */}
               {dayEvents.length > 0 && (
                 <div className="mt-0.5 space-y-0.5">
                   {dayEvents.slice(0, 3).map((evt, i) => {
@@ -167,8 +167,8 @@ export default function MonthView({
                     let dotHex: string | undefined;
 
                     if (evt.eventType === "mass") {
-                      if (evt.community) {
-                        dotHex = getCommunityColor(evt.community).color;
+                      if (evt.ensemble) {
+                        dotHex = getEnsembleColor(evt.ensemble).color;
                       } else {
                         dotColor = "bg-parish-burgundy";
                       }

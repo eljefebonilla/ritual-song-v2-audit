@@ -5,7 +5,7 @@ import type {
   GridColumn,
   GridCellData,
   GridRowKey,
-  CommunityId,
+  EnsembleId,
   YearCycleFilter,
 } from "./grid-types";
 import type { LiturgicalSeason } from "./types";
@@ -40,15 +40,15 @@ export function getFilteredOccasions(
 }
 
 /**
- * Builds grid columns from filtered occasions and a selected community.
+ * Builds grid columns from filtered occasions and a selected ensemble.
  */
 export function buildGridColumns(
   occasions: LiturgicalOccasion[],
-  communityId: CommunityId
+  ensembleId: EnsembleId
 ): GridColumn[] {
   return occasions.map((occasion) => {
     const plan =
-      occasion.musicPlans.find((p) => p.communityId === communityId) || null;
+      occasion.musicPlans.find((p) => p.ensembleId === ensembleId) || null;
     return { occasion, plan };
   });
 }

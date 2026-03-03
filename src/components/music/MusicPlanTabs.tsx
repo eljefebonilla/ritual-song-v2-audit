@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import type { MusicPlan, ResolvedSong } from "@/lib/types";
-import { COMMUNITY_BADGES } from "@/lib/occasion-helpers";
+import { ENSEMBLE_BADGES } from "@/lib/occasion-helpers";
 import OrderOfWorship from "./OrderOfWorship";
 
 interface MusicPlanTabsProps {
@@ -11,7 +11,7 @@ interface MusicPlanTabsProps {
   resolvedSongs?: Record<string, ResolvedSong>;
 }
 
-const COMMUNITY_ORDER = [
+const ENSEMBLE_ORDER = [
   "reflections",
   "foundations",
   "generations",
@@ -26,8 +26,8 @@ export default function MusicPlanTabs({
 }: MusicPlanTabsProps) {
   const sorted = [...plans].sort(
     (a, b) =>
-      COMMUNITY_ORDER.indexOf(a.communityId) -
-      COMMUNITY_ORDER.indexOf(b.communityId)
+      ENSEMBLE_ORDER.indexOf(a.ensembleId) -
+      ENSEMBLE_ORDER.indexOf(b.ensembleId)
   );
 
   const [activeIdx, setActiveIdx] = useState(0);
@@ -47,11 +47,11 @@ export default function MusicPlanTabs({
             plan.offertory ||
             plan.sending;
 
-          const badge = COMMUNITY_BADGES[plan.communityId];
+          const badge = ENSEMBLE_BADGES[plan.ensembleId];
 
           return (
             <button
-              key={plan.communityId}
+              key={plan.ensembleId}
               onClick={() => setActiveIdx(i)}
               className={`relative px-4 py-2.5 text-xs font-semibold uppercase tracking-wider transition-colors ${
                 isActive
@@ -64,7 +64,7 @@ export default function MusicPlanTabs({
               }}
             >
               <span className="flex items-center gap-1.5">
-                {plan.community}
+                {plan.ensemble}
                 {!hasData && (
                   <span className="w-1.5 h-1.5 rounded-full bg-stone-200" />
                 )}

@@ -74,7 +74,7 @@ export default async function SetlistPrintPage({ params }: Props) {
 
   const { data: mass } = await supabase
     .from("mass_events")
-    .select("id, title, event_date, start_time_12h, community, liturgical_name, season, choir_descriptor, celebrant")
+    .select("id, title, event_date, start_time_12h, ensemble, liturgical_name, season, choir_descriptor, celebrant")
     .eq("id", massEventId)
     .single();
 
@@ -283,7 +283,7 @@ export default async function SetlistPrintPage({ params }: Props) {
           <div className="setlist-meta">
             {formatPrintDate(mass.event_date)}
             {mass.start_time_12h && ` — ${mass.start_time_12h}`}
-            {mass.community && ` — ${mass.community}`}
+            {mass.ensemble && ` — ${mass.ensemble}`}
           </div>
         </div>
 

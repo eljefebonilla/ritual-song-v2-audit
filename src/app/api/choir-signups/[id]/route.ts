@@ -29,7 +29,7 @@ export async function PUT(
     .eq("id", id)
     .select(`
       *,
-      profile:profiles (id, full_name, avatar_url, community)
+      profile:profiles (id, full_name, avatar_url, ensemble)
     `)
     .single();
 

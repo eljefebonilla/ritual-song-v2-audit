@@ -4,7 +4,7 @@ import { useState, useMemo, useCallback } from "react";
 import { useRouter } from "next/navigation";
 import type { MinistryCalendar, CalendarView, CalendarEvent } from "@/lib/calendar-types";
 import type { LiturgicalDay } from "@/lib/types";
-import type { CommunityId } from "@/lib/grid-types";
+import type { EnsembleId } from "@/lib/grid-types";
 import { getVisibleWeeks } from "@/lib/calendar-utils";
 import { useUser } from "@/lib/user-context";
 import CalendarToolbar from "./CalendarToolbar";
@@ -26,7 +26,7 @@ export default function CalendarShell({ calendar, liturgicalDays }: CalendarShel
   // View state
   const [view, setView] = useState<CalendarView>("agenda");
   const [showPastDates, setShowPastDates] = useState(false);
-  const [communityFilter, setCommunityFilter] = useState<CommunityId | "all">(
+  const [ensembleFilter, setEnsembleFilter] = useState<EnsembleId | "all">(
     "all"
   );
   const [currentMonth, setCurrentMonth] = useState(() => new Date());
@@ -114,8 +114,8 @@ export default function CalendarShell({ calendar, liturgicalDays }: CalendarShel
       <CalendarToolbar
         view={view}
         setView={setView}
-        communityFilter={communityFilter}
-        setCommunityFilter={setCommunityFilter}
+        ensembleFilter={ensembleFilter}
+        setEnsembleFilter={setEnsembleFilter}
         showPastDates={showPastDates}
         setShowPastDates={setShowPastDates}
         currentMonth={currentMonth}
@@ -131,7 +131,7 @@ export default function CalendarShell({ calendar, liturgicalDays }: CalendarShel
         {view === "agenda" ? (
           <AgendaView
             weeks={visibleWeeks}
-            communityFilter={communityFilter}
+            ensembleFilter={ensembleFilter}
             hiddenWeekIds={hiddenWeekIds}
             onToggleHidden={toggleHiddenWeek}
             liturgicalDays={liturgicalDays}
