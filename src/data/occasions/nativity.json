@@ -2,8 +2,8 @@
   "id": "nativity",
   "name": "Nativity",
   "year": "ABC",
-  "season": "ordinary",
-  "seasonLabel": "Ordinary Time",
+  "season": "christmas",
+  "seasonLabel": "Christmas",
   "seasonOrder": 0,
   "dates": [
     {

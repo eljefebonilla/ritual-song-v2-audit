@@ -129,8 +129,8 @@
     "id": "nativity",
     "name": "Nativity",
     "year": "ABC",
-    "season": "ordinary",
-    "seasonLabel": "Ordinary Time",
+    "season": "christmas",
+    "seasonLabel": "Christmas",
     "seasonOrder": 0,
     "nextDate": "2026-12-25"
   },
@@ -165,8 +165,8 @@
     "id": "jan-1-mary-mother-of-god-abc",
     "name": "Jan 1 • MARY, MOTHER OF GOD [ABC]",
     "year": "ABC",
-    "season": "ordinary",
-    "seasonLabel": "Ordinary Time",
+    "season": "christmas",
+    "seasonLabel": "Christmas",
     "seasonOrder": 1,
     "nextDate": "2026-01-01"
   },
