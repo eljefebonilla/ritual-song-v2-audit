@@ -13,11 +13,14 @@ import {
   getResourceGroup,
   RESOURCE_GROUP_LABELS,
   RESOURCE_GROUP_ORDER,
+  FILE_TYPE_TAG_IDS,
+  MODIFIER_TAG_IDS,
   type ResourceDisplayGroup,
 } from "@/lib/resource-tags";
 import LyricsEditor from "./LyricsEditor";
 import ResourceLink from "./ResourceLink";
 import ResourceUploadForm from "./ResourceUploadForm";
+import TagSelector from "./TagSelector";
 import Link from "next/link";
 
 interface SongDetailPanelProps {
@@ -550,6 +553,15 @@ export default function SongDetailPanel({
   const [deletingResourceId, setDeletingResourceId] = useState<string | null>(null);
   const [removedResourceIds, setRemovedResourceIds] = useState<Set<string>>(new Set());
 
+  // Edit resource state
+  const [editingResourceId, setEditingResourceId] = useState<string | null>(null);
+  const [editTypeTag, setEditTypeTag] = useState("");
+  const [editModifiers, setEditModifiers] = useState<Set<string>>(new Set());
+  const [editCustomTags, setEditCustomTags] = useState("");
+  const [editVisibility, setEditVisibility] = useState<"all" | "admin">("all");
+  const [editSavingResource, setEditSavingResource] = useState(false);
+  const [editResourceError, setEditResourceError] = useState<string | null>(null);
+
   // Combine static JSON + Supabase + locally-added, dedup by ID, minus removed
   const allResources = (() => {
     const seen = new Set<string>();
@@ -655,6 +667,76 @@ export default function SongDetailPanel({
       return [...prev, resource];
     });
     setAddingResource(false);
+  };
+
+  const handleStartEditResource = (id: string, tags: string[], vis: "all" | "admin") => {
+    const typeTag = tags.find((t) => FILE_TYPE_TAG_IDS.includes(t)) || "";
+    const modifiers = tags.filter((t) => MODIFIER_TAG_IDS.includes(t));
+    const custom = tags.filter((t) => !FILE_TYPE_TAG_IDS.includes(t) && !MODIFIER_TAG_IDS.includes(t));
+    setEditingResourceId(id);
+    setEditTypeTag(typeTag);
+    setEditModifiers(new Set(modifiers));
+    setEditCustomTags(custom.join(", "));
+    setEditVisibility(vis);
+    setEditResourceError(null);
+  };
+
+  const handleSaveEditResource = async () => {
+    if (!editingResourceId) return;
+    setEditSavingResource(true);
+    setEditResourceError(null);
+
+    // Assemble tags
+    const tags: string[] = [];
+    if (editTypeTag) tags.push(editTypeTag);
+    for (const m of editModifiers) tags.push(m);
+    if (editCustomTags.trim()) {
+      const custom = editCustomTags.split(/[,\s]+/).map((t) => t.trim().toUpperCase()).filter(Boolean);
+      for (const t of custom) {
+        if (!tags.includes(t)) tags.push(t);
+      }
+    }
+
+    try {
+      const res = await fetch(
+        `/api/songs/${song.id}/resources/${editingResourceId}`,
+        {
+          method: "PATCH",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ tags, visibility: editVisibility }),
+        }
+      );
+      if (!res.ok) {
+        const data = await res.json().catch(() => ({}));
+        setEditResourceError(data.error || `Failed (${res.status})`);
+        return;
+      }
+      const data = await res.json();
+      const updated = data.resource as SongResource;
+
+      // Update in supabaseResources
+      setSupabaseResources((prev) =>
+        prev.map((r) => (r.id === updated.id ? updated : r))
+      );
+      // Also update in localResources if present
+      setLocalResources((prev) =>
+        prev.map((r) => (r.id === updated.id ? updated : r))
+      );
+      setEditingResourceId(null);
+    } catch {
+      setEditResourceError("Network error");
+    } finally {
+      setEditSavingResource(false);
+    }
+  };
+
+  const toggleEditModifier = (id: string) => {
+    setEditModifiers((prev) => {
+      const next = new Set(prev);
+      if (next.has(id)) next.delete(id);
+      else next.add(id);
+      return next;
+    });
   };
 
   return (
@@ -837,15 +919,52 @@ export default function SongDetailPanel({
                               </button>
                             </div>
                           )}
+                          {/* Inline tag editor */}
+                          {editingResourceId === r.id ? (
+                            <div className="border border-blue-200 rounded-md p-2 bg-blue-50/30 space-y-2">
+                              <TagSelector
+                                selectedTypeTag={editTypeTag}
+                                selectedModifiers={editModifiers}
+                                customTags={editCustomTags}
+                                visibility={editVisibility}
+                                onTypeTagChange={setEditTypeTag}
+                                onToggleModifier={toggleEditModifier}
+                                onCustomTagsChange={setEditCustomTags}
+                                onVisibilityChange={setEditVisibility}
+                              />
+                              {editResourceError && (
+                                <p className="text-[10px] text-red-600 bg-red-50 border border-red-200 rounded px-2 py-1">
+                                  {editResourceError}
+                                </p>
+                              )}
+                              <div className="flex gap-2">
+                                <button
+                                  disabled={editSavingResource}
+                                  onClick={handleSaveEditResource}
+                                  className="px-2.5 py-1 text-[10px] font-medium bg-stone-900 text-white rounded hover:bg-stone-800 disabled:opacity-50"
+                                >
+                                  {editSavingResource ? "Saving..." : "Save"}
+                                </button>
+                                <button
+                                  onClick={() => setEditingResourceId(null)}
+                                  className="px-2.5 py-1 text-[10px] font-medium text-stone-500 rounded hover:bg-stone-100"
+                                >
+                                  Cancel
+                                </button>
+                              </div>
+                            </div>
+                          ) : (
                           <ResourceLink
                             resource={r}
                             songTitle={song.title}
                             isAdmin={isAdmin}
                             onDelete={() => setDeletingResourceId(r.id)}
+                            onEdit={handleStartEditResource}
                             songId={song.id}
                             recordedKey={song.recordedKey}
                             chartKeys={chartKeys}
                           />
+                          )}
                         </div>
                       ))}
                     </div>

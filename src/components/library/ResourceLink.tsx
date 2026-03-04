@@ -136,6 +136,7 @@ interface ResourceLinkProps {
   songTitle?: string;
   isAdmin?: boolean;
   onDelete?: () => void;
+  onEdit?: (id: string, tags: string[], visibility: "all" | "admin") => void;
   songId?: string;
   recordedKey?: string;
   chartKeys?: string[];
@@ -146,6 +147,7 @@ export default function ResourceLink({
   songTitle,
   isAdmin,
   onDelete,
+  onEdit,
   songId,
   recordedKey,
   chartKeys,
@@ -186,6 +188,26 @@ export default function ResourceLink({
       chartKeys,
     });
   };
+
+  // UUID format = Supabase resource (editable)
+  const isSupabaseResource = /^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/i.test(resource.id);
+
+  const editButton = isAdmin && onEdit && isSupabaseResource ? (
+    <button
+      onClick={(e) => {
+        e.preventDefault();
+        e.stopPropagation();
+        onEdit(resource.id, resource.tags || [], resource.visibility || "all");
+      }}
+      className="p-0.5 text-stone-300 hover:text-stone-600 transition-colors shrink-0"
+      title="Edit tags"
+    >
+      <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+        <path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7" />
+        <path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z" />
+      </svg>
+    </button>
+  ) : null;
 
   const deleteButton = isAdmin && onDelete ? (
     <button
@@ -241,6 +263,7 @@ export default function ResourceLink({
           </p>
         </div>
         {url && <DownloadButton url={url} label={resource.label} />}
+        {editButton}
         {deleteButton}
       </div>
     );
@@ -284,6 +307,7 @@ export default function ResourceLink({
             <line x1="10" y1="14" x2="21" y2="3" />
           </svg>
         </a>
+        {editButton}
         {deleteButton}
       </div>
     );
@@ -335,6 +359,7 @@ export default function ResourceLink({
               <line x1="10" y1="14" x2="21" y2="3" />
             </svg>
           )}
+          {editButton}
           {deleteButton}
         </div>
       </div>
@@ -354,6 +379,7 @@ export default function ResourceLink({
           <p className="text-[10px] text-stone-500">{resource.value}</p>
         )}
       </div>
+      {editButton}
       {deleteButton}
     </div>
   );
