@@ -186,9 +186,10 @@ export default function OccasionMusicSection({
   if (!activePlan) return null;
 
   // Merge Supabase overrides on top of static JSON plan
+  // Exclude ensembleId from overrides to prevent accidental overwrites
   const ensembleOverrides = planOverrides[activePlan.ensembleId];
   const mergedPlan = ensembleOverrides && Object.keys(ensembleOverrides).length > 0
-    ? { ...activePlan, ...ensembleOverrides } as MusicPlan
+    ? { ...activePlan, ...ensembleOverrides, ensembleId: activePlan.ensembleId } as MusicPlan
     : activePlan;
 
   // Occasion-specific label overrides for special liturgies
@@ -279,7 +280,7 @@ export default function OccasionMusicSection({
         value = { title, composer: composer || undefined, ...(description ? { description } : {}) };
       }
 
-      const eid = mergedPlan.ensembleId || activePlan.ensembleId;
+      const eid = activePlan.ensembleId;
       if (!eid) throw new Error("No ensemble selected");
 
       const res = await fetch(`/api/occasions/${occasionId}/music-plan`, {
@@ -324,7 +325,7 @@ export default function OccasionMusicSection({
         field = ROLE_TO_FIELD[role] || role;
       }
 
-      const eid = mergedPlan.ensembleId || activePlan.ensembleId;
+      const eid = activePlan.ensembleId;
       if (!eid) throw new Error("No ensemble selected");
 
       const res = await fetch(`/api/occasions/${occasionId}/music-plan`, {
@@ -363,8 +364,8 @@ export default function OccasionMusicSection({
       // Optimistic local update
       setPlanOverrides(p => ({
         ...p,
-        [mergedPlan.ensembleId]: {
-          ...(p[mergedPlan.ensembleId] || {}),
+        [activePlan.ensembleId]: {
+          ...(p[activePlan.ensembleId] || {}),
           [field]: current,
         },
       }));
@@ -372,14 +373,14 @@ export default function OccasionMusicSection({
       const res = await fetch(`/api/occasions/${occasionId}/music-plan`, {
         method: "PUT",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ ensembleId: mergedPlan.ensembleId, field, value: current }),
+        body: JSON.stringify({ ensembleId: activePlan.ensembleId, field, value: current }),
       });
       if (!res.ok) {
         // Revert on failure
         setPlanOverrides(p => ({
           ...p,
-          [mergedPlan.ensembleId]: {
-            ...(p[mergedPlan.ensembleId] || {}),
+          [activePlan.ensembleId]: {
+            ...(p[activePlan.ensembleId] || {}),
             [field]: prev,
           },
         }));
