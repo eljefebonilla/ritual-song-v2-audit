@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useCallback } from "react";
+import React, { useState, useCallback } from "react";
 import Link from "next/link";
 import type { GridColumn, SongDragPayload } from "@/lib/grid-types";
 import {
@@ -357,12 +357,38 @@ export default function PlannerGrid({ columns, viewMode, hideMassParts = false, 
     );
   }
 
+  // Detect where Holy Week divider should be inserted.
+  // Insert before the first Easter column that follows a Lent column.
+  const holyWeekDividerIndex = (() => {
+    for (let i = 1; i < columns.length; i++) {
+      const prev = columns[i - 1].occasion.season;
+      const curr = columns[i].occasion.season;
+      if ((prev === "lent" || prev === "holyweek") && curr === "easter") {
+        return i;
+      }
+    }
+    return -1;
+  })();
+  const DIVIDER_WIDTH = 48;
+  const HOLY_WEEK_COLOR = "#7F1D1D";
+
   // Card view (mobile)
   if (viewMode === "cards") {
     return (
       <div className="h-full overflow-y-auto p-4 space-y-3">
-        {columns.map((col) => (
-          <OccasionCard key={col.occasion.id} column={col} hideMassParts={hideMassParts} hideReadings={hideReadings} hideSynopses={hideSynopses} />
+        {columns.map((col, ci) => (
+          <React.Fragment key={col.occasion.id}>
+            {ci === holyWeekDividerIndex && (
+              <div className="flex items-center gap-3 py-2">
+                <div className="flex-1 h-px" style={{ backgroundColor: HOLY_WEEK_COLOR }} />
+                <span className="text-xs font-bold uppercase tracking-wider" style={{ color: HOLY_WEEK_COLOR }}>
+                  Holy Week
+                </span>
+                <div className="flex-1 h-px" style={{ backgroundColor: HOLY_WEEK_COLOR }} />
+              </div>
+            )}
+            <OccasionCard column={col} hideMassParts={hideMassParts} hideReadings={hideReadings} hideSynopses={hideSynopses} />
+          </React.Fragment>
         ))}
       </div>
     );
@@ -397,13 +423,14 @@ export default function PlannerGrid({ columns, viewMode, hideMassParts = false, 
   const COL_WIDTH = 280;
   const LABEL_WIDTH = 130;
   const HEADER_HEIGHT = 110;
+  const totalWidth = LABEL_WIDTH + columns.length * COL_WIDTH + (holyWeekDividerIndex >= 0 ? DIVIDER_WIDTH : 0);
 
   return (
     <div className="h-full overflow-auto planner-scroll">
       <div
         className="relative"
         style={{
-          width: LABEL_WIDTH + columns.length * COL_WIDTH,
+          width: totalWidth,
           minHeight: "100%",
         }}
       >
@@ -417,15 +444,26 @@ export default function PlannerGrid({ columns, viewMode, hideMassParts = false, 
             style={{ width: LABEL_WIDTH }}
           />
           {columns.map((col, ci) => (
-            <div
-              key={col.occasion.id}
-              className={`shrink-0 border-r border-stone-100 ${
-                ci % 2 === 0 ? "bg-stone-50/50" : "bg-white"
-              }`}
-              style={{ width: COL_WIDTH }}
-            >
-              <GridColumnHeader occasion={col.occasion} />
-            </div>
+            <React.Fragment key={col.occasion.id}>
+              {ci === holyWeekDividerIndex && (
+                <div
+                  className="shrink-0 flex flex-col items-center justify-center border-r border-stone-100"
+                  style={{ width: DIVIDER_WIDTH, backgroundColor: HOLY_WEEK_COLOR }}
+                >
+                  <span className="text-[9px] font-bold text-white uppercase tracking-widest [writing-mode:vertical-lr] rotate-180">
+                    Holy Week
+                  </span>
+                </div>
+              )}
+              <div
+                className={`shrink-0 border-r border-stone-100 ${
+                  ci % 2 === 0 ? "bg-stone-50/50" : "bg-white"
+                }`}
+                style={{ width: COL_WIDTH }}
+              >
+                <GridColumnHeader occasion={col.occasion} />
+              </div>
+            </React.Fragment>
           ))}
         </div>
 
@@ -445,19 +483,23 @@ export default function PlannerGrid({ columns, viewMode, hideMassParts = false, 
               {columns.map((col, ci) => {
                 const syn = synopses[col.occasion.id];
                 return (
-                  <div
-                    key={`${col.occasion.id}-synopsis`}
-                    className={`shrink-0 border-b border-r border-stone-100 px-2 py-1.5 flex items-center ${
-                      ci % 2 === 0 ? "bg-stone-50/50" : "bg-white"
-                    }`}
-                    style={{ width: COL_WIDTH, minHeight: 44 }}
-                  >
-                    {syn ? (
-                      <p className="text-xs italic text-stone-500 line-clamp-2">
-                        {syn.logline}
-                      </p>
-                    ) : null}
-                  </div>
+                  <React.Fragment key={`${col.occasion.id}-synopsis`}>
+                    {ci === holyWeekDividerIndex && (
+                      <div className="shrink-0 border-b border-r border-stone-100" style={{ width: DIVIDER_WIDTH, minHeight: 44, backgroundColor: HOLY_WEEK_COLOR }} />
+                    )}
+                    <div
+                      className={`shrink-0 border-b border-r border-stone-100 px-2 py-1.5 flex items-center ${
+                        ci % 2 === 0 ? "bg-stone-50/50" : "bg-white"
+                      }`}
+                      style={{ width: COL_WIDTH, minHeight: 44 }}
+                    >
+                      {syn ? (
+                        <p className="text-xs italic text-stone-500 line-clamp-2">
+                          {syn.logline}
+                        </p>
+                      ) : null}
+                    </div>
+                  </React.Fragment>
                 );
               })}
             </div>
@@ -477,12 +519,16 @@ export default function PlannerGrid({ columns, viewMode, hideMassParts = false, 
                     {row.label}
                   </span>
                 </div>
-                {columns.map((col) => (
-                  <div
-                    key={`${col.occasion.id}-section-${ri}`}
-                    className="shrink-0 bg-stone-100 border-b border-r border-stone-100"
-                    style={{ width: COL_WIDTH, height: 28 }}
-                  />
+                {columns.map((col, ci) => (
+                  <React.Fragment key={`${col.occasion.id}-section-${ri}`}>
+                    {ci === holyWeekDividerIndex && (
+                      <div className="shrink-0 border-b border-r border-stone-100" style={{ width: DIVIDER_WIDTH, height: 28, backgroundColor: HOLY_WEEK_COLOR }} />
+                    )}
+                    <div
+                      className="shrink-0 bg-stone-100 border-b border-r border-stone-100"
+                      style={{ width: COL_WIDTH, height: 28 }}
+                    />
+                  </React.Fragment>
                 ))}
               </div>
             );
@@ -530,28 +576,32 @@ export default function PlannerGrid({ columns, viewMode, hideMassParts = false, 
                 const isOver = dragOverCell?.occasionId === col.occasion.id && dragOverCell?.rowKey === rowKey;
 
                 return (
-                  <div
-                    key={`${col.occasion.id}-${rowKey}`}
-                    className="shrink-0"
-                    style={{ width: COL_WIDTH, height: 44 }}
-                  >
-                    <GridCell
-                      data={cellData}
-                      isEven={ci % 2 === 0}
-                      onEdit={isAdmin ? (rect) => setEditingCell({
-                        occasionId: col.occasion.id,
-                        rowKey,
-                        columnIndex: ci,
-                        anchorRect: rect,
-                      }) : undefined}
-                      draggable={isDraggable && !cellData.isEmpty ? true : undefined}
-                      onDragStart={isDraggable && !cellData.isEmpty ? (e) => handleDragStart(e, col.occasion.id, rowKey, cellData) : undefined}
-                      isDragOver={isDraggable ? isOver : undefined}
-                      onDragOver={isDraggable ? (e) => handleDragOver(e, col.occasion.id, rowKey) : undefined}
-                      onDragLeave={isDraggable ? handleDragLeave : undefined}
-                      onDrop={isDraggable ? (e) => handleDrop(e, col.occasion.id, rowKey, ci) : undefined}
-                    />
-                  </div>
+                  <React.Fragment key={`${col.occasion.id}-${rowKey}`}>
+                    {ci === holyWeekDividerIndex && (
+                      <div className="shrink-0 border-b border-r border-stone-100" style={{ width: DIVIDER_WIDTH, height: 44, backgroundColor: HOLY_WEEK_COLOR, opacity: 0.15 }} />
+                    )}
+                    <div
+                      className="shrink-0"
+                      style={{ width: COL_WIDTH, height: 44 }}
+                    >
+                      <GridCell
+                        data={cellData}
+                        isEven={ci % 2 === 0}
+                        onEdit={isAdmin ? (rect) => setEditingCell({
+                          occasionId: col.occasion.id,
+                          rowKey,
+                          columnIndex: ci,
+                          anchorRect: rect,
+                        }) : undefined}
+                        draggable={isDraggable && !cellData.isEmpty ? true : undefined}
+                        onDragStart={isDraggable && !cellData.isEmpty ? (e) => handleDragStart(e, col.occasion.id, rowKey, cellData) : undefined}
+                        isDragOver={isDraggable ? isOver : undefined}
+                        onDragOver={isDraggable ? (e) => handleDragOver(e, col.occasion.id, rowKey) : undefined}
+                        onDragLeave={isDraggable ? handleDragLeave : undefined}
+                        onDrop={isDraggable ? (e) => handleDrop(e, col.occasion.id, rowKey, ci) : undefined}
+                      />
+                    </div>
+                  </React.Fragment>
                 );
               })}
             </div>

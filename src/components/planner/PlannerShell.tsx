@@ -157,8 +157,9 @@ export default function PlannerShell({ occasions }: PlannerShellProps) {
     const base = buildGridColumns(visibleOccasions, ensembleId);
     return base.map(col => {
       const overrides = planOverrides[col.occasion.id]?.[ensembleId];
-      if (!overrides || !col.plan) return col;
-      return { ...col, plan: { ...col.plan, ...overrides } as MusicPlan };
+      if (!overrides) return col;
+      const basePlan = col.plan ?? ({} as MusicPlan);
+      return { ...col, plan: { ...basePlan, ...overrides } as MusicPlan };
     });
   }, [visibleOccasions, ensembleId, planOverrides]);
 
