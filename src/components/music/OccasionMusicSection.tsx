@@ -568,21 +568,10 @@ export default function OccasionMusicSection({
     return validateMusicPlan(liturgicalDay, titles, undefined, occasionId);
   }, [liturgicalDay, mergedPlan, occasionId]);
 
-  // Compute "why this song" hints by matching titles to readings.
-  // Skip for Triduum occasions — every song is inherently tied to the readings,
-  // so hints are noisy rather than informative.
+  // Song hints disabled — too noisy and not deletable by user.
   const songHints: Map<string, string> = useMemo(() => {
-    const hints = new Map<string, string>();
-    if (!isAdmin) return hints;
-    if (!mergedPlan) return hints;
-    if (HINT_SUPPRESSED_PREFIXES.some((p) => occasionId.startsWith(p))) return hints;
-    const titles = extractSongTitles(mergedPlan);
-    for (const title of titles) {
-      const hint = findSongHint(title, readings, synopsis);
-      if (hint) hints.set(title, hint);
-    }
-    return hints;
-  }, [mergedPlan, readings, synopsis, occasionId, isAdmin]);
+    return new Map<string, string>();
+  }, []);
 
   // Compute psalm suggestions from the psalm reading citation
   const psalmSuggestions = useMemo(() => {
