@@ -6,7 +6,7 @@ export type LiturgicalSeason =
   | "advent"
   | "christmas"
   | "lent"
-  | "triduum"
+  | "holyweek"
   | "easter"
   | "ordinary"
   | "solemnity"
@@ -19,7 +19,7 @@ export interface OccasionDate {
 }
 
 export interface Reading {
-  type: "first" | "psalm" | "second" | "gospel_verse" | "gospel";
+  type: "first" | "psalm" | "second" | "gospel_verse" | "gospel" | "custom";
   citation: string;
   summary: string;
   antiphon?: string; // For psalms
@@ -316,7 +316,7 @@ export interface ResolvedSong {
 
 // ===== WORSHIP SLOT TYPES =====
 
-export type SlotKind = "song" | "reading" | "antiphon" | "mass_setting" | "resource" | "note";
+export type SlotKind = "song" | "reading" | "antiphon" | "mass_setting" | "resource" | "note" | "ritual_moment";
 
 export interface WorshipSlot {
   id: string;
@@ -348,6 +348,23 @@ export interface WorshipSlot {
 
   // Annotations
   annotations?: string[];
+
+  // Custom slot fields (from custom_worship_slots table)
+  customContent?: Record<string, unknown>;  // raw content from custom_worship_slots
+  customSlotId?: string;                     // UUID from DB, for edit/delete operations
+  isCustom?: boolean;                        // true for custom slots
+}
+
+export interface CustomSlotRow {
+  id: string;
+  occasion_id: string;
+  ensemble_id: string;
+  slot_type: 'song' | 'reading' | 'ritual_moment' | 'note' | 'mass_part';
+  label: string;
+  order_position: number;
+  content: Record<string, unknown>;
+  created_at: string;
+  updated_at: string;
 }
 
 // ===== LITURGICAL CALENDAR TYPES =====

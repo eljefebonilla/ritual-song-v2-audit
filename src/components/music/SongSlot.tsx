@@ -5,9 +5,10 @@ interface SongSlotProps {
   song?: SongEntry;
   section?: "introductory" | "word" | "eucharist" | "concluding";
   rightAction?: React.ReactNode;
+  isLiturgicalText?: boolean;
 }
 
-export default function SongSlot({ label, song, rightAction }: SongSlotProps) {
+export default function SongSlot({ label, song, rightAction, isLiturgicalText }: SongSlotProps) {
   return (
     <div className="flex items-start gap-3 py-2 px-3">
       <span className="text-[10px] uppercase tracking-wider font-semibold text-stone-400 w-28 shrink-0 pt-0.5">
@@ -24,7 +25,7 @@ export default function SongSlot({ label, song, rightAction }: SongSlotProps) {
             <p className="text-xs text-stone-500">{song.composer}</p>
           )}
           {song.description && song.description !== "Description" && (
-            <p className="text-xs text-stone-400 italic">{song.description}</p>
+            <p className={`text-xs italic ${isLiturgicalText ? "text-parish-burgundy" : "text-stone-400"}`}>{song.description}</p>
           )}
         </div>
       ) : (

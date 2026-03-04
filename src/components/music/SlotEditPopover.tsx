@@ -21,7 +21,7 @@ interface SlotEditPopoverProps {
   role: string;
   currentSong?: SongEntry;
   anchorRect: DOMRect;
-  onSave: (role: string, title: string, composer: string) => Promise<void>;
+  onSave: (role: string, title: string, composer: string, description?: string) => Promise<void>;
   onClear: (role: string) => Promise<void>;
   onClose: () => void;
 }
@@ -39,6 +39,7 @@ export default function SlotEditPopover({
   const [searching, setSearching] = useState(false);
   const [title, setTitle] = useState(currentSong?.title || "");
   const [composer, setComposer] = useState(currentSong?.composer || "");
+  const [description, setDescription] = useState(currentSong?.description || "");
   const [mode, setMode] = useState<"search" | "manual">("search");
   const [saving, setSaving] = useState(false);
   const [error, setError] = useState<string | null>(null);
@@ -100,7 +101,7 @@ export default function SlotEditPopover({
     setSaving(true);
     setError(null);
     try {
-      await onSave(role, title.trim(), composer.trim());
+      await onSave(role, title.trim(), composer.trim(), description.trim() || undefined);
     } catch (err) {
       setError(err instanceof Error ? err.message : "Failed to save.");
       setSaving(false);
@@ -250,6 +251,18 @@ export default function SlotEditPopover({
                     onChange={(e) => setComposer(e.target.value)}
                     className="w-full text-sm border border-stone-200 rounded-md px-3 py-1.5 focus:outline-none focus:ring-1 focus:ring-stone-400"
                     placeholder="Composer/arranger"
+                  />
+                </div>
+                <div>
+                  <label className="block text-[10px] font-medium text-stone-500 uppercase tracking-wide mb-0.5">
+                    Director Notes
+                  </label>
+                  <textarea
+                    value={description}
+                    onChange={(e) => setDescription(e.target.value)}
+                    rows={2}
+                    className="w-full text-sm border border-stone-200 rounded-md px-3 py-1.5 focus:outline-none focus:ring-1 focus:ring-stone-400 resize-none"
+                    placeholder="Choral Dir, BPM, track #, etc."
                   />
                 </div>
               </div>

@@ -25,12 +25,12 @@ export const SEASON_COLORS: Record<
     text: "text-purple-900",
     label: "Lent",
   },
-  triduum: {
+  holyweek: {
     primary: "#7F1D1D",
     bg: "bg-red-900",
     bgLight: "bg-red-50",
     text: "text-red-900",
-    label: "Triduum",
+    label: "Holy Week",
   },
   easter: {
     primary: "#CA8A04",
@@ -87,6 +87,12 @@ export const OCCASION_COLOR_OVERRIDES: Record<string, string> = {
   "holy-thursday-lords-supper": "#2563EB",
   // Good Friday — Red
   "good-friday-passion": "#DC2626",
+  // Pentecost — Red
+  "pentecost-a": "#DC2626",
+  "pentecost-b": "#DC2626",
+  "pentecost-c": "#DC2626",
+  "pentecost-vigil-abc": "#DC2626",
+  "pentecost-ext-vigil-abc": "#DC2626",
 };
 
 /**

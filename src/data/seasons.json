@@ -992,7 +992,14 @@
         "name": "LENT 05 [C]",
         "year": "C",
         "seasonOrder": 5
-      },
+      }
+    ]
+  },
+  {
+    "id": "holyweek",
+    "label": "Holy Week",
+    "color": "#7F1D1D",
+    "occasions": [
       {
         "id": "palm-sunday-a",
         "name": "Palm Sunday [A]",
@@ -1010,14 +1017,7 @@
         "name": "Palm Sunday [C]",
         "year": "C",
         "seasonOrder": 0
-      }
-    ]
-  },
-  {
-    "id": "triduum",
-    "label": "Triduum",
-    "color": "#7F1D1D",
-    "occasions": [
+      },
       {
         "id": "holy-thursday-lords-supper",
         "name": "HOLY THURSDAY\nMASS OF THE LORD'S SUPPER",

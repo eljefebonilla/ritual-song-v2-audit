@@ -193,7 +193,7 @@ export const SEASON_OPTIONS: { id: LiturgicalSeason | "all"; label: string }[] =
   { id: "advent", label: "Advent" },
   { id: "christmas", label: "Christmas" },
   { id: "lent", label: "Lent" },
-  { id: "triduum", label: "Triduum" },
+  { id: "holyweek", label: "Holy Week" },
   { id: "easter", label: "Easter" },
   { id: "ordinary", label: "Ordinary Time" },
   { id: "solemnity", label: "Solemnities" },

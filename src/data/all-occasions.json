@@ -615,8 +615,8 @@
     "id": "palm-sunday-a",
     "name": "Palm Sunday [A]",
     "year": "A",
-    "season": "lent",
-    "seasonLabel": "Lent",
+    "season": "holyweek",
+    "seasonLabel": "Holy Week",
     "seasonOrder": 0,
     "nextDate": "2026-03-29"
   },
@@ -624,8 +624,8 @@
     "id": "palm-sunday-b",
     "name": "Palm Sunday [B]",
     "year": "B",
-    "season": "lent",
-    "seasonLabel": "Lent",
+    "season": "holyweek",
+    "seasonLabel": "Holy Week",
     "seasonOrder": 0,
     "nextDate": "2027-03-21"
   },
@@ -633,8 +633,8 @@
     "id": "palm-sunday-c",
     "name": "Palm Sunday [C]",
     "year": "C",
-    "season": "lent",
-    "seasonLabel": "Lent",
+    "season": "holyweek",
+    "seasonLabel": "Holy Week",
     "seasonOrder": 0,
     "nextDate": "2028-04-09"
   },
@@ -820,7 +820,7 @@
     "year": "A",
     "season": "easter",
     "seasonLabel": "Easter",
-    "seasonOrder": 0,
+    "seasonOrder": 7,
     "nextDate": "2026-05-17"
   },
   {
@@ -829,7 +829,7 @@
     "year": "B",
     "season": "easter",
     "seasonLabel": "Easter",
-    "seasonOrder": 0,
+    "seasonOrder": 7,
     "nextDate": "2027-05-09"
   },
   {
@@ -838,7 +838,7 @@
     "year": "C",
     "season": "easter",
     "seasonLabel": "Easter",
-    "seasonOrder": 0,
+    "seasonOrder": 7,
     "nextDate": "2028-05-28"
   },
   {
@@ -847,7 +847,7 @@
     "year": "ABC",
     "season": "easter",
     "seasonLabel": "Easter",
-    "seasonOrder": 0,
+    "seasonOrder": 8,
     "nextDate": "2026-05-23",
     "nextDates": {
       "a": "2026-05-23",
@@ -861,7 +861,7 @@
     "year": "ABC",
     "season": "easter",
     "seasonLabel": "Easter",
-    "seasonOrder": 0,
+    "seasonOrder": 8,
     "nextDate": "2026-05-23",
     "nextDates": {
       "a": "2026-05-23",
@@ -875,7 +875,7 @@
     "year": "A",
     "season": "easter",
     "seasonLabel": "Easter",
-    "seasonOrder": 0,
+    "seasonOrder": 8,
     "nextDate": "2026-05-24"
   },
   {
@@ -884,7 +884,7 @@
     "year": "B",
     "season": "easter",
     "seasonLabel": "Easter",
-    "seasonOrder": 0,
+    "seasonOrder": 8,
     "nextDate": "2027-05-16"
   },
   {
@@ -893,7 +893,7 @@
     "year": "C",
     "season": "easter",
     "seasonLabel": "Easter",
-    "seasonOrder": 0,
+    "seasonOrder": 8,
     "nextDate": "2028-06-04"
   },
   {
@@ -1824,8 +1824,8 @@
     "id": "holy-thursday-lords-supper",
     "name": "HOLY THURSDAY\nMASS OF THE LORD'S SUPPER",
     "year": "ABC",
-    "season": "triduum",
-    "seasonLabel": "Triduum",
+    "season": "holyweek",
+    "seasonLabel": "Holy Week",
     "seasonOrder": 1,
     "nextDate": "2026-04-02",
     "nextDates": {
@@ -1838,8 +1838,8 @@
     "id": "good-friday-passion",
     "name": "GOOD FRIDAY\nTHE PASSION OF THE LORD",
     "year": "ABC",
-    "season": "triduum",
-    "seasonLabel": "Triduum",
+    "season": "holyweek",
+    "seasonLabel": "Holy Week",
     "seasonOrder": 2,
     "nextDate": "2026-04-03",
     "nextDates": {
@@ -1852,8 +1852,8 @@
     "id": "easter-vigil",
     "name": "EASTER VIGIL\nIN THE HOLY NIGHT",
     "year": "ABC",
-    "season": "triduum",
-    "seasonLabel": "Triduum",
+    "season": "holyweek",
+    "seasonLabel": "Holy Week",
     "seasonOrder": 3,
     "nextDate": "2026-04-04",
     "nextDates": {
@@ -1866,8 +1866,8 @@
     "id": "easter-sunday-resurrection",
     "name": "EASTER SUNDAY\nTHE RESURRECTION OF THE LORD",
     "year": "ABC",
-    "season": "triduum",
-    "seasonLabel": "Triduum",
+    "season": "holyweek",
+    "seasonLabel": "Holy Week",
     "seasonOrder": 4,
     "nextDate": "2026-04-05",
     "nextDates": {

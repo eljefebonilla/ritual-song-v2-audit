@@ -122,7 +122,7 @@ const SEASON_LITURGICAL_TAGS: Record<string, string[]> = {
   advent: ["advent"],
   christmas: ["christmas", "nativity"],
   lent: ["lent", "lenten"],
-  triduum: ["triduum", "holy week", "paschal", "easter"],
+  holyweek: ["triduum", "holy week", "paschal", "easter"],
   easter: ["easter", "paschal"],
   ordinary: ["ordinary time", "ordinary"],
   solemnity: ["solemnity"],

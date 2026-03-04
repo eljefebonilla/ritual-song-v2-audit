@@ -39,11 +39,14 @@ export function isLentenPeriod(day: LiturgicalDay): boolean {
 /**
  * Validate a music plan against liturgical rules.
  * Takes the liturgical day and an array of song titles used in the plan.
+ * Pass occasionId to handle edge cases like Easter Vigil (same date as
+ * Holy Saturday but Alleluia IS permitted — it's the first Alleluia of Easter).
  */
 export function validateMusicPlan(
   day: LiturgicalDay,
   songTitles: string[],
-  songAlleluiaFlags?: Map<string, boolean>
+  songAlleluiaFlags?: Map<string, boolean>,
+  occasionId?: string
 ): ValidationWarning[] {
   const warnings: ValidationWarning[] = [];
 
@@ -56,8 +59,12 @@ export function validateMusicPlan(
   // Check: Gloria NOT expected — warn if someone added one
   // (This is less common, skip for MVP)
 
+  // Easter Vigil IS Easter — the first Alleluia of the season is sung here.
+  // Skip the Lent Alleluia restriction even though it falls on Holy Saturday's date.
+  const isEasterVigil = occasionId === "easter-vigil";
+
   // Check: Alleluia in Lent
-  if (isLentenPeriod(day)) {
+  if (isLentenPeriod(day) && !isEasterVigil) {
     for (const title of songTitles) {
       if (songContainsAlleluia(title)) {
         warnings.push({

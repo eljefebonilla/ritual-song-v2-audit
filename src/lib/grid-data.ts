@@ -189,7 +189,7 @@ function getSeasonSortOrder(season: string): number {
     christmas: 1,
     ordinary: 2,
     lent: 3,
-    triduum: 4,
+    holyweek: 4,
     easter: 5,
     solemnity: 6,
     feast: 7,

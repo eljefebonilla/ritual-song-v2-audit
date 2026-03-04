@@ -5,14 +5,15 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState, useEffect } from "react";
 import { useUser } from "@/lib/user-context";
+import { useViewMode } from "@/hooks/useViewMode";
 
 const SEASONS = [
   { id: "advent", label: "Advent", color: "bg-purple-700" },
-  { id: "christmas", label: "Christmas", color: "bg-yellow-600" },
+  { id: "christmas", label: "Christmas", color: "bg-white ring-1 ring-black/30" },
   { id: "ordinary", label: "Ordinary Time", color: "bg-green-700" },
   { id: "lent", label: "Lent", color: "bg-purple-900" },
-  { id: "triduum", label: "Triduum", color: "bg-red-900" },
-  { id: "easter", label: "Easter", color: "bg-amber-600" },
+  { id: "holyweek", label: "Holy Week", color: "bg-red-900" },
+  { id: "easter", label: "Easter", color: "bg-white ring-1 ring-black/30" },
   { id: "solemnity", label: "Solemnities", color: "bg-red-800" },
   { id: "feast", label: "Feasts", color: "bg-red-700" },
 ];
@@ -59,6 +60,7 @@ export default function Sidebar({ open, onClose }: SidebarProps) {
   const pathname = usePathname();
   const [collapsed, setCollapsed] = useState(false);
   const { role, isAuthenticated, isAdmin, displayName, signOut } = useUser();
+  const { viewMode, toggleViewMode, isRealAdmin } = useViewMode();
 
   // Close mobile sidebar on route change
   useEffect(() => {
@@ -411,12 +413,29 @@ export default function Sidebar({ open, onClose }: SidebarProps) {
         )}
       </nav>
 
-      {/* Role indicator */}
-      {!collapsed && isAdmin && (
+      {/* View mode toggle — admin only */}
+      {!collapsed && isRealAdmin && (
         <div className="px-4 py-2 border-t border-parish-gold/20">
-          <span className="text-[10px] font-medium text-parish-gold uppercase tracking-wide">
-            Music Director
-          </span>
+          <button
+            onClick={toggleViewMode}
+            className="flex items-center gap-2 w-full group"
+            title={viewMode === "director" ? "Switch to Member View" : "Switch to Director View"}
+          >
+            <span
+              className={`relative w-7 h-4 rounded-full transition-colors ${
+                viewMode === "director" ? "bg-parish-gold" : "bg-stone-600"
+              }`}
+            >
+              <span
+                className={`absolute top-0.5 w-3 h-3 rounded-full bg-white transition-transform ${
+                  viewMode === "director" ? "left-3.5" : "left-0.5"
+                }`}
+              />
+            </span>
+            <span className="text-[10px] font-medium text-parish-gold uppercase tracking-wide group-hover:text-parish-gold/80 transition-colors">
+              {viewMode === "director" ? "Director View" : "Member View"}
+            </span>
+          </button>
         </div>
       )}
 

@@ -2,7 +2,7 @@ import { notFound } from "next/navigation";
 import Link from "next/link";
 import { getSeasons, getOccasionsByseason, getSynopsis } from "@/lib/data";
 import type { OccasionSummary } from "@/lib/data";
-import { SEASON_COLORS, getOccasionColor } from "@/lib/liturgical-colors";
+import { SEASON_COLORS, getOccasionColor, OCCASION_COLOR_OVERRIDES } from "@/lib/liturgical-colors";
 import type { LiturgicalSeason } from "@/lib/types";
 
 export function generateStaticParams() {
@@ -109,6 +109,9 @@ function OccasionCard({
 }) {
   const synopsis = getSynopsis(occ.id);
   const dotColor = getOccasionColor(occ.id, season);
+  // Easter and Christmas seasons use white dots (unless individually overridden)
+  const hasOverride = !!OCCASION_COLOR_OVERRIDES[occ.id];
+  const isWhiteDot = !hasOverride && (season === "easter" || season === "christmas");
 
   // Build date display
   let dateDisplay: string | null = null;
@@ -126,8 +129,8 @@ function OccasionCard({
       className="flex items-start gap-2.5 p-3 border border-stone-200 rounded-lg bg-white hover:shadow-sm transition-shadow"
     >
       <span
-        className="w-2 h-2 rounded-full shrink-0 mt-1"
-        style={{ backgroundColor: dotColor }}
+        className={`w-2 h-2 rounded-full shrink-0 mt-1 ${isWhiteDot ? "ring-1 ring-black/30" : ""}`}
+        style={{ backgroundColor: isWhiteDot ? "#FFFFFF" : dotColor }}
       />
       <div className="min-w-0 flex-1">
         <p className="text-sm font-semibold text-stone-800 whitespace-pre-line leading-tight">

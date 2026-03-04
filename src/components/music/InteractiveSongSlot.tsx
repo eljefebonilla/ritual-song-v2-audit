@@ -13,6 +13,7 @@ interface InteractiveSongSlotProps {
   onSelect?: () => void;
   rowRef?: RefObject<HTMLDivElement | null>;
   rightAction?: React.ReactNode;
+  isLiturgicalText?: boolean;
 }
 
 const RESOURCE_TYPES = [
@@ -39,6 +40,7 @@ export default function InteractiveSongSlot({
   onSelect,
   rowRef,
   rightAction,
+  isLiturgicalText,
 }: InteractiveSongSlotProps) {
   const { play, stop, current } = useMedia();
   const fileInputRef = useRef<HTMLInputElement>(null);
@@ -192,7 +194,7 @@ export default function InteractiveSongSlot({
           <p className="text-xs text-stone-500">{song.composer}</p>
         )}
         {song.description && song.description !== "Description" && (
-          <p className="text-xs text-stone-400 italic">{song.description}</p>
+          <p className={`text-xs italic ${isLiturgicalText ? "text-parish-burgundy" : "text-stone-400"}`}>{song.description}</p>
         )}
       </div>
 

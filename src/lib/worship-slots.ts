@@ -5,6 +5,8 @@ import type {
   OccasionResource,
   ResolvedSong,
   WorshipSlot,
+  SlotKind,
+  CustomSlotRow,
 } from "./types";
 import { normalizeTitle } from "./occasion-helpers";
 
@@ -61,6 +63,9 @@ function nextId(): string {
 /**
  * Convert a MusicPlan + occasion data into an ordered WorshipSlot array.
  * Skips slots where there is no data.
+ *
+ * slotLabelOverrides: optional map of role → custom label (e.g. Easter Vigil:
+ * prelude → "Procession of the Candle", gathering → "Exultet")
  */
 export function planToSlots(
   plan: MusicPlan,
@@ -68,9 +73,15 @@ export function planToSlots(
   antiphons?: Antiphon[],
   occasionResources?: OccasionResource[],
   resolvedSongs?: Record<string, ResolvedSong>,
+  slotLabelOverrides?: Record<string, string>,
 ): WorshipSlot[] {
   _slotId = 0;
   const slots: WorshipSlot[] = [];
+
+  /** Return the override label for a role, or the default. */
+  function lbl(role: string, defaultLabel: string): string {
+    return slotLabelOverrides?.[role] ?? defaultLabel;
+  }
 
   function resolve(title: string): ResolvedSong | undefined {
     return resolvedSongs?.[normalizeTitle(title)];
@@ -82,9 +93,9 @@ export function planToSlots(
       id: nextId(),
       section: "pre_mass",
       role: "prelude",
-      label: "Prelude",
+      label: lbl("prelude", "Prelude"),
       kind: "song",
-      order: 0,
+      order: 1000,
       song: plan.prelude,
       resolvedSong: resolve(plan.prelude.title),
     });
@@ -119,7 +130,7 @@ export function planToSlots(
         role: "entrance_antiphon",
         label: "Entrance Antiphon",
         kind: "antiphon",
-        order: i,
+        order: 1500 + i * 10,
         antiphon: { ...ant, citation: cleanCitation(ant.citation) },
         optionNumber: hasMultipleEntrance ? ant.option : undefined,
         resources: matchedResources.length > 0 ? matchedResources : undefined,
@@ -127,16 +138,14 @@ export function planToSlots(
     }
   }
 
-  let introOrder = entranceAntiphons.length;
-
   if (plan.gathering) {
     slots.push({
       id: nextId(),
       section: "introductory",
       role: "gathering",
-      label: "Gathering",
+      label: lbl("gathering", "Gathering"),
       kind: "song",
-      order: introOrder++,
+      order: 2000,
       song: plan.gathering,
       resolvedSong: resolve(plan.gathering.title),
     });
@@ -149,7 +158,7 @@ export function planToSlots(
       role: "penitential_act",
       label: "Penitential Act",
       kind: "song",
-      order: introOrder++,
+      order: 2500,
       song: plan.penitentialAct,
       resolvedSong: resolve(plan.penitentialAct.title),
     });
@@ -162,15 +171,13 @@ export function planToSlots(
       role: "gloria",
       label: "Gloria",
       kind: "song",
-      order: introOrder++,
+      order: 3000,
       song: plan.gloria,
       resolvedSong: resolve(plan.gloria.title),
     });
   }
 
   // --- LITURGY OF THE WORD ---
-  let wordOrder = 0;
-
   const firstReading = readings?.find((r) => r.type === "first");
   if (firstReading) {
     slots.push({
@@ -179,21 +186,24 @@ export function planToSlots(
       role: "first_reading",
       label: "1st Reading",
       kind: "reading",
-      order: wordOrder++,
+      order: 4000,
       reading: firstReading,
     });
   }
 
   // Responsorial Psalm
   const psalmReading = readings?.find((r) => r.type === "psalm");
+  // Extract psalm number from the reading citation (e.g. "Ps 31:2, 6..." → "Psalm 31")
+  const psalmNumMatch = psalmReading?.citation.match(/Ps(?:alm)?\.?\s*(\d+)/i);
+  const psalmLabel = psalmNumMatch ? `Psalm ${psalmNumMatch[1]}` : "Psalm";
   if (plan.responsorialPsalm) {
     slots.push({
       id: nextId(),
       section: "word",
       role: "responsorial_psalm",
-      label: "Psalm",
+      label: psalmLabel,
       kind: "song",
-      order: wordOrder++,
+      order: 5000,
       psalm: plan.responsorialPsalm,
       song: { title: plan.responsorialPsalm.psalm, description: plan.responsorialPsalm.setting },
       resolvedSong: resolve(plan.responsorialPsalm.psalm),
@@ -204,9 +214,9 @@ export function planToSlots(
       id: nextId(),
       section: "word",
       role: "responsorial_psalm",
-      label: "Psalm",
+      label: psalmLabel,
       kind: "reading",
-      order: wordOrder++,
+      order: 5000,
       reading: psalmReading,
     });
   }
@@ -219,7 +229,7 @@ export function planToSlots(
       role: "second_reading",
       label: "2nd Reading",
       kind: "reading",
-      order: wordOrder++,
+      order: 6000,
       reading: secondReading,
     });
   }
@@ -237,7 +247,7 @@ export function planToSlots(
       role: "gospel_acclamation",
       label: "Gospel Accl.",
       kind: "song",
-      order: wordOrder++,
+      order: 7000,
       song: {
         title: plan.gospelAcclamation.title,
         composer: plan.gospelAcclamation.composer,
@@ -254,7 +264,7 @@ export function planToSlots(
       role: "gospel_acclamation",
       label: "Gospel Accl.",
       kind: "resource",
-      order: wordOrder++,
+      order: 7500,
       resources: gaResources,
       reading: gospelVerse,
     });
@@ -269,14 +279,12 @@ export function planToSlots(
       role: "gospel",
       label: "Gospel",
       kind: "reading",
-      order: wordOrder++,
+      order: 8000,
       reading: gospel,
     });
   }
 
   // --- LITURGY OF THE EUCHARIST ---
-  let euchOrder = 0;
-
   if (plan.offertory) {
     slots.push({
       id: nextId(),
@@ -284,7 +292,7 @@ export function planToSlots(
       role: "offertory",
       label: "Offertory",
       kind: "song",
-      order: euchOrder++,
+      order: 10000,
       song: plan.offertory,
       resolvedSong: resolve(plan.offertory.title),
     });
@@ -297,7 +305,7 @@ export function planToSlots(
       role: "mass_setting",
       label: "Mass Setting",
       kind: "mass_setting",
-      order: euchOrder++,
+      order: 11000,
       massSetting: {
         name: plan.eucharisticAcclamations.massSettingName,
         composer: plan.eucharisticAcclamations.composer,
@@ -312,7 +320,7 @@ export function planToSlots(
       role: "lords_prayer",
       label: "Lord's Prayer",
       kind: "song",
-      order: euchOrder++,
+      order: 12000,
       song: plan.lordsPrayer,
       resolvedSong: resolve(plan.lordsPrayer.title),
     });
@@ -325,7 +333,7 @@ export function planToSlots(
       role: "fraction_rite",
       label: "Fraction Rite",
       kind: "song",
-      order: euchOrder++,
+      order: 13000,
       song: plan.fractionRite,
       resolvedSong: resolve(plan.fractionRite.title),
     });
@@ -347,7 +355,7 @@ export function planToSlots(
         role: "communion_antiphon",
         label: "Comm. Antiphon",
         kind: "antiphon",
-        order: euchOrder++,
+        order: 14000 + i * 10,
         antiphon: { ...ant, citation: cleanCitation(ant.citation) },
         optionNumber: hasMultipleCommunion ? ant.option : undefined,
         resources: matchedResources.length > 0 ? matchedResources : undefined,
@@ -364,7 +372,7 @@ export function planToSlots(
         role: `communion_${i}`,
         label: i === 0 ? "Communion" : `Comm. ${i + 1}`,
         kind: "song",
-        order: euchOrder++,
+        order: 15000 + i * 100,
         song: s,
         resolvedSong: resolve(s.title),
       });
@@ -379,11 +387,70 @@ export function planToSlots(
       role: "sending",
       label: "Sending",
       kind: "song",
-      order: 0,
+      order: 16000,
       song: plan.sending,
       resolvedSong: resolve(plan.sending.title),
     });
   }
 
   return slots;
+}
+
+// --- Custom slot helpers ---
+
+function inferSection(orderPosition: number): WorshipSlot['section'] {
+  if (orderPosition < 2000) return 'pre_mass';
+  if (orderPosition < 4000) return 'introductory';
+  if (orderPosition < 9000) return 'word';
+  if (orderPosition < 16000) return 'eucharist';
+  return 'concluding';
+}
+
+function mapSlotType(slotType: string): SlotKind {
+  switch (slotType) {
+    case 'mass_part': return 'mass_setting';
+    case 'ritual_moment': return 'ritual_moment';
+    case 'reading': return 'reading';
+    case 'note': return 'note';
+    case 'song': return 'song';
+    default: return 'note';
+  }
+}
+
+/**
+ * Merge custom slots (from Supabase) into the base slot array.
+ * Custom slots are converted to WorshipSlot format and interleaved by order.
+ */
+export function mergeCustomSlots(
+  baseSlots: WorshipSlot[],
+  customSlots: CustomSlotRow[],
+): WorshipSlot[] {
+  if (!customSlots || customSlots.length === 0) return baseSlots;
+
+  const customWorshipSlots: WorshipSlot[] = customSlots.map((cs) => ({
+    id: `custom-${cs.id}`,
+    section: inferSection(cs.order_position),
+    role: cs.slot_type,
+    label: cs.label,
+    kind: mapSlotType(cs.slot_type),
+    order: cs.order_position,
+    // Map content fields based on type
+    ...(cs.slot_type === 'song' && cs.content.title ? {
+      song: { title: cs.content.title as string, composer: cs.content.composer as string | undefined },
+    } : {}),
+    ...(cs.slot_type === 'reading' && cs.content.citation ? {
+      reading: { type: 'custom' as Reading['type'], citation: cs.content.citation as string, summary: (cs.content.text as string) || '' },
+    } : {}),
+    ...(cs.slot_type === 'mass_part' ? {
+      massSetting: { name: (cs.content.name as string) || cs.label, composer: cs.content.composer as string | undefined },
+    } : {}),
+    // Store full custom content for rendering
+    customContent: cs.content,
+    customSlotId: cs.id,
+    isCustom: true,
+  }));
+
+  const merged = [...baseSlots, ...customWorshipSlots];
+  merged.sort((a, b) => a.order - b.order);
+  return merged;
 }

@@ -2,8 +2,8 @@
   "id": "good-friday-passion",
   "name": "GOOD FRIDAY\nTHE PASSION OF THE LORD",
   "year": "ABC",
-  "season": "triduum",
-  "seasonLabel": "Triduum",
+  "season": "holyweek",
+  "seasonLabel": "Holy Week",
   "seasonOrder": 2,
   "dates": [
     {
@@ -118,12 +118,12 @@
       ]
     },
     {
-      "ensemble": "All Ensembles — Taking a Break",
+      "ensemble": "All Ensembles — Simplified Plan",
       "ensembleId": "reflections-alt",
       "date": "Apr 3, 2026 (Fri) 7 PM",
       "presider": "TBD",
       "massNotes": [
-        "FRI 7 PM — alternate 'Taking a Break' plan",
+        "FRI 7 PM — alternate simplified plan",
         "Chant before Gospel: Through His Sacrifice, We Are Freed (David Lockwood, SATB, BPM 80) — also used as acclamation during Passion reading",
         "Solemn Intercessions: Hold Us, Jesus (Chris de Silva, SATB, BPM 60, Choral Dir: Merrick)",
         "Offertory Chant: Lamb of God, What Wondrous Love (Fauré/Kane, arr. Allan Robert Petker, BPM 76, Choral Dir: Merrick)",

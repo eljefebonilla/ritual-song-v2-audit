@@ -2,8 +2,8 @@
   "id": "easter-vigil",
   "name": "EASTER VIGIL\nIN THE HOLY NIGHT",
   "year": "ABC",
-  "season": "triduum",
-  "seasonLabel": "Triduum",
+  "season": "holyweek",
+  "seasonLabel": "Holy Week",
   "seasonOrder": 3,
   "dates": [
     {

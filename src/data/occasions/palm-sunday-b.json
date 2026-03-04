@@ -2,8 +2,8 @@
   "id": "palm-sunday-b",
   "name": "Palm Sunday [B]",
   "year": "B",
-  "season": "lent",
-  "seasonLabel": "Lent",
+  "season": "holyweek",
+  "seasonLabel": "Holy Week",
   "seasonOrder": 0,
   "dates": [
     {

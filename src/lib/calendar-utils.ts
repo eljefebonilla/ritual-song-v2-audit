@@ -134,7 +134,7 @@ export function getSeasonColorClass(season: string): string {
     solemnity: "bg-solemnity",
     feast: "bg-feast",
     "holy-week": "bg-solemnity",
-    triduum: "bg-solemnity",
+    holyweek: "bg-solemnity",
   };
   return colors[season] || "bg-stone-400";
 }
@@ -152,7 +152,7 @@ export function getSeasonTextClass(season: string): string {
     solemnity: "text-solemnity",
     feast: "text-feast",
     "holy-week": "text-solemnity",
-    triduum: "text-solemnity",
+    holyweek: "text-solemnity",
   };
   return colors[season] || "text-stone-500";
 }
@@ -170,7 +170,7 @@ export function getSeasonBorderClass(season: string): string {
     solemnity: "border-l-solemnity",
     feast: "border-l-feast",
     "holy-week": "border-l-solemnity",
-    triduum: "border-l-solemnity",
+    holyweek: "border-l-solemnity",
   };
   return colors[season] || "border-l-stone-400";
 }

@@ -2,8 +2,8 @@
   "id": "holy-thursday-lords-supper",
   "name": "HOLY THURSDAY\nMASS OF THE LORD'S SUPPER",
   "year": "ABC",
-  "season": "triduum",
-  "seasonLabel": "Triduum",
+  "season": "holyweek",
+  "seasonLabel": "Holy Week",
   "seasonOrder": 1,
   "dates": [
     {
@@ -167,12 +167,12 @@
       }
     },
     {
-      "ensemble": "All Ensembles — Taking a Break",
+      "ensemble": "All Ensembles — Simplified Plan",
       "ensembleId": "reflections-alt",
       "date": "Apr 2, 2026 (Thu) 7 PM",
       "presider": "TBD",
       "massNotes": [
-        "THU 7 PM — alternate 'Taking a Break' plan",
+        "THU 7 PM — alternate simplified plan",
         "Reception of Oils: Musical Setting by Ed Archer (Choral Dir: Tica)",
         "Dismissal of Catechumens: Trevor Thomson (Choral Dir: Tica)",
         "FOOT WASHING — This Is How (Chris de Silva, BPM 66/78, Choral Dir: Merrick)",

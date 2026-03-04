@@ -25,6 +25,15 @@ export default async function OccasionPage({
   const resolvedSongs = resolveAllSongs(occasion.musicPlans, occasion.occasionResources);
   const librarySongs = resolveFullSongs(occasion.musicPlans);
 
+  // Compute prev/next occasions within the same season and year
+  const allOccasions = getAllOccasions();
+  const sameSeasonYear = allOccasions
+    .filter((o) => o.season === occasion.season && o.year === occasion.year)
+    .sort((a, b) => a.seasonOrder - b.seasonOrder);
+  const currentIdx = sameSeasonYear.findIndex((o) => o.id === id);
+  const prevOccasion = currentIdx > 0 ? sameSeasonYear[currentIdx - 1] : null;
+  const nextOccasion = currentIdx >= 0 && currentIdx < sameSeasonYear.length - 1 ? sameSeasonYear[currentIdx + 1] : null;
+
   return (
     <div className="p-4 pt-14 md:p-8 md:pt-8 max-w-5xl">
       {/* Breadcrumb */}
@@ -42,6 +51,38 @@ export default async function OccasionPage({
         <span>/</span>
         <span className="text-stone-600">{occasion.name}</span>
       </div>
+
+      {/* Prev / Next navigation */}
+      {(prevOccasion || nextOccasion) && (
+        <div className="flex items-center justify-between mb-4">
+          {prevOccasion ? (
+            <Link
+              href={`/occasion/${prevOccasion.id}`}
+              className="flex items-center gap-1.5 text-xs text-stone-400 hover:text-stone-600 transition-colors"
+            >
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                <polyline points="15 18 9 12 15 6" />
+              </svg>
+              <span className="max-w-[200px] truncate">{prevOccasion.name}</span>
+            </Link>
+          ) : (
+            <span />
+          )}
+          {nextOccasion ? (
+            <Link
+              href={`/occasion/${nextOccasion.id}`}
+              className="flex items-center gap-1.5 text-xs text-stone-400 hover:text-stone-600 transition-colors"
+            >
+              <span className="max-w-[200px] truncate">{nextOccasion.name}</span>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                <polyline points="9 18 15 12 9 6" />
+              </svg>
+            </Link>
+          ) : (
+            <span />
+          )}
+        </div>
+      )}
 
       {/* Header */}
       <div className="mb-8">
@@ -106,11 +147,11 @@ export default async function OccasionPage({
           <h2 className="text-xs uppercase tracking-widest font-bold text-stone-400 mb-2">
             Lectionary Synopsis
           </h2>
-          <p className="text-sm font-medium text-stone-700">{synopsis.logline}</p>
+          <p className="text-sm font-medium text-[#4A5568]">{synopsis.logline}</p>
           {synopsis.trajectory && (
-            <p className="text-xs text-stone-500 mt-1">{synopsis.trajectory}</p>
+            <p className="text-xs text-[#4A5568] mt-1">{synopsis.trajectory}</p>
           )}
-          <div className="bg-stone-50 border-l-2 rounded-r-md p-3 mt-3 italic text-sm text-stone-600" style={{ borderColor: occasionColor }}>
+          <div className="bg-stone-50/50 rounded-lg p-3 mt-3 border border-stone-200 italic text-sm text-[#4A5568]">
             {synopsis.invitesUsTo}
           </div>
         </div>

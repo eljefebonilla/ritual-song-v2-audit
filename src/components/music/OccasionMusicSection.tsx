@@ -11,9 +11,10 @@ import type {
   LectionarySynopsis,
   OccasionDate,
   LiturgicalDay,
+  CustomSlotRow,
 } from "@/lib/types";
 import { ENSEMBLE_BADGES, normalizeTitle } from "@/lib/occasion-helpers";
-import { planToSlots } from "@/lib/worship-slots";
+import { planToSlots, mergeCustomSlots } from "@/lib/worship-slots";
 import { validateMusicPlan, type ValidationWarning } from "@/lib/liturgical-validation";
 import { rowToLiturgicalDay } from "@/lib/liturgical-helpers";
 import { findPsalmSettings } from "@/lib/psalm-matching";
@@ -21,7 +22,7 @@ import { getTitleIndex, pickBestMatch } from "@/lib/song-library";
 import SlotList from "./SlotList";
 import SlotEditPopover from "./SlotEditPopover";
 import SongDetailPanel from "@/components/library/SongDetailPanel";
-import { useUser } from "@/lib/user-context";
+import { useViewMode } from "@/hooks/useViewMode";
 
 interface OccasionMusicSectionProps {
   occasionId: string;
@@ -43,6 +44,9 @@ const ENSEMBLE_ORDER = [
   "heritage",
   "elevations",
 ];
+
+/** Triduum occasions where songHints are suppressed (every song relates to the readings) */
+const HINT_SUPPRESSED_PREFIXES = ["good-friday", "holy-thursday", "easter-vigil"];
 
 /** Common words to ignore when matching song titles to readings */
 const STOP_WORDS = new Set([
@@ -168,10 +172,11 @@ export default function OccasionMusicSection({
   const [editingSlot, setEditingSlot] = useState<{
     role: string;
     anchorRect: DOMRect;
-    currentSong?: { title: string; composer?: string };
+    currentSong?: { title: string; composer?: string; description?: string };
   } | null>(null);
+  const [customSlots, setCustomSlots] = useState<Record<string, CustomSlotRow[]>>({});
 
-  const { isAdmin } = useUser();
+  const { effectiveIsAdmin: isAdmin } = useViewMode();
 
   const containerRef = useRef<HTMLDivElement>(null);
   const selectedRowRef = useRef<HTMLDivElement>(null);
@@ -186,13 +191,36 @@ export default function OccasionMusicSection({
     ? { ...activePlan, ...ensembleOverrides } as MusicPlan
     : activePlan;
 
-  const slots = planToSlots(
+  // Occasion-specific label overrides for special liturgies
+  const slotLabelOverrides = useMemo<Record<string, string> | undefined>(() => {
+    if (occasionId === "easter-vigil") {
+      return {
+        prelude: "Procession of the Candle",
+        gathering: "Exultet",
+      };
+    }
+    return undefined;
+  }, [occasionId]);
+
+  const sectionLabelOverrides = useMemo<Record<string, string> | undefined>(() => {
+    if (occasionId === "good-friday-passion") {
+      return {
+        eucharist: "Veneration of the Cross and Holy Communion",
+      };
+    }
+    return undefined;
+  }, [occasionId]);
+
+  const baseSlots = planToSlots(
     mergedPlan,
     readings,
     antiphons,
     occasionResources,
     resolvedSongs,
+    slotLabelOverrides,
   );
+  const ensembleCustom = customSlots[activePlan.ensembleId] || [];
+  const slots = mergeCustomSlots(baseSlots, ensembleCustom);
 
   const selectedSong = useMemo(() => {
     if (!selectedSongId) return null;
@@ -219,14 +247,14 @@ export default function OccasionMusicSection({
   }, []);
 
   const handleSlotEdit = useCallback(
-    (role: string, anchorRect: DOMRect, currentSong?: { title: string; composer?: string }) => {
+    (role: string, anchorRect: DOMRect, currentSong?: { title: string; composer?: string; description?: string }) => {
       setEditingSlot({ role, anchorRect, currentSong });
     },
     []
   );
 
   const handleSlotSave = useCallback(
-    async (role: string, title: string, composer: string) => {
+    async (role: string, title: string, composer: string, description?: string) => {
       // Communion songs use array indexing: "communion_0", "communion_1", etc.
       const communionMatch = role.match(/^communion_(\d+)$/);
       let field: string;
@@ -237,7 +265,7 @@ export default function OccasionMusicSection({
         const idx = parseInt(communionMatch[1], 10);
         const current = mergedPlan.communionSongs ? [...mergedPlan.communionSongs] : [];
         while (current.length <= idx) current.push({ title: "" });
-        current[idx] = { title, composer };
+        current[idx] = { title, composer, ...(description ? { description } : {}) };
         field = "communionSongs";
         value = current;
       } else if (role === "responsorial_psalm") {
@@ -248,7 +276,7 @@ export default function OccasionMusicSection({
         value = { massSettingName: title, composer: composer || undefined };
       } else {
         field = ROLE_TO_FIELD[role] || role;
-        value = { title, composer: composer || undefined };
+        value = { title, composer: composer || undefined, ...(description ? { description } : {}) };
       }
 
       const res = await fetch(`/api/occasions/${occasionId}/music-plan`, {
@@ -354,6 +382,130 @@ export default function OccasionMusicSection({
     [occasionId, mergedPlan]
   );
 
+  // --- Custom slot CRUD handlers ---
+  const handleCustomSlotCreate = useCallback(
+    async (
+      ensembleId: string,
+      slotType: string,
+      label: string,
+      orderPosition: number,
+      content: Record<string, unknown>,
+    ) => {
+      // Optimistic: create a temporary row
+      const tempId = `temp-${Date.now()}`;
+      const tempRow: CustomSlotRow = {
+        id: tempId,
+        occasion_id: occasionId,
+        ensemble_id: ensembleId,
+        slot_type: slotType as CustomSlotRow["slot_type"],
+        label,
+        order_position: orderPosition,
+        content,
+        created_at: new Date().toISOString(),
+        updated_at: new Date().toISOString(),
+      };
+
+      setCustomSlots((prev) => {
+        const existing = prev[ensembleId] || [];
+        return { ...prev, [ensembleId]: [...existing, tempRow] };
+      });
+
+      try {
+        const res = await fetch(`/api/occasions/${occasionId}/custom-slots`, {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ ensembleId, slotType, label, orderPosition, content }),
+        });
+        if (!res.ok) {
+          const data = await res.json().catch(() => ({}));
+          throw new Error(data.error || `Create failed (${res.status})`);
+        }
+        const created = await res.json();
+        // Replace temp row with real row
+        setCustomSlots((prev) => {
+          const existing = (prev[ensembleId] || []).map((r) =>
+            r.id === tempId ? (created as CustomSlotRow) : r,
+          );
+          return { ...prev, [ensembleId]: existing };
+        });
+      } catch {
+        // Revert optimistic update
+        setCustomSlots((prev) => {
+          const existing = (prev[ensembleId] || []).filter((r) => r.id !== tempId);
+          return { ...prev, [ensembleId]: existing };
+        });
+      }
+    },
+    [occasionId],
+  );
+
+  const handleCustomSlotUpdate = useCallback(
+    async (slotId: string, ensembleId: string, updates: { label?: string; content?: Record<string, unknown> }) => {
+      // Snapshot for revert
+      const prevSlots = customSlots[ensembleId] || [];
+
+      // Optimistic update
+      setCustomSlots((prev) => {
+        const existing = (prev[ensembleId] || []).map((r) => {
+          if (r.id !== slotId) return r;
+          return {
+            ...r,
+            ...(updates.label !== undefined && { label: updates.label }),
+            ...(updates.content !== undefined && { content: updates.content }),
+          };
+        });
+        return { ...prev, [ensembleId]: existing };
+      });
+
+      try {
+        const res = await fetch(`/api/occasions/${occasionId}/custom-slots/${slotId}`, {
+          method: "PUT",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(updates),
+        });
+        if (!res.ok) {
+          throw new Error("Update failed");
+        }
+        const updated = await res.json();
+        setCustomSlots((prev) => {
+          const existing = (prev[ensembleId] || []).map((r) =>
+            r.id === slotId ? (updated as CustomSlotRow) : r,
+          );
+          return { ...prev, [ensembleId]: existing };
+        });
+      } catch {
+        // Revert
+        setCustomSlots((prev) => ({ ...prev, [ensembleId]: prevSlots }));
+      }
+    },
+    [occasionId, customSlots],
+  );
+
+  const handleCustomSlotDelete = useCallback(
+    async (slotId: string, ensembleId: string) => {
+      const prevSlots = customSlots[ensembleId] || [];
+
+      // Optimistic remove
+      setCustomSlots((prev) => {
+        const existing = (prev[ensembleId] || []).filter((r) => r.id !== slotId);
+        return { ...prev, [ensembleId]: existing };
+      });
+
+      try {
+        const res = await fetch(`/api/occasions/${occasionId}/custom-slots/${slotId}`, {
+          method: "DELETE",
+        });
+        if (!res.ok) {
+          throw new Error("Delete failed");
+        }
+      } catch {
+        // Revert
+        setCustomSlots((prev) => ({ ...prev, [ensembleId]: prevSlots }));
+      }
+    },
+    [occasionId, customSlots],
+  );
+
   const handleSlotReplace = useCallback(
     async (_songId: string, title: string, composer: string) => {
       if (!selectedSlotRole) return;
@@ -391,24 +543,39 @@ export default function OccasionMusicSection({
     return () => { cancelled = true; };
   }, [occasionId]);
 
+  // Fetch custom worship slots from Supabase
+  useEffect(() => {
+    let cancelled = false;
+    fetch(`/api/occasions/${occasionId}/custom-slots`)
+      .then((res) => (res.ok ? res.json() : {}))
+      .then((data) => {
+        if (!cancelled) setCustomSlots(data);
+      })
+      .catch(() => {});
+    return () => { cancelled = true; };
+  }, [occasionId]);
+
   // Run validation when liturgical day and active plan are available
   const warnings: ValidationWarning[] = useMemo(() => {
     if (!liturgicalDay || !mergedPlan) return [];
     const titles = extractSongTitles(mergedPlan);
-    return validateMusicPlan(liturgicalDay, titles);
-  }, [liturgicalDay, mergedPlan]);
+    return validateMusicPlan(liturgicalDay, titles, undefined, occasionId);
+  }, [liturgicalDay, mergedPlan, occasionId]);
 
-  // Compute "why this song" hints by matching titles to readings
+  // Compute "why this song" hints by matching titles to readings.
+  // Skip for Triduum occasions — every song is inherently tied to the readings,
+  // so hints are noisy rather than informative.
   const songHints: Map<string, string> = useMemo(() => {
     const hints = new Map<string, string>();
     if (!mergedPlan) return hints;
+    if (HINT_SUPPRESSED_PREFIXES.some((p) => occasionId.startsWith(p))) return hints;
     const titles = extractSongTitles(mergedPlan);
     for (const title of titles) {
       const hint = findSongHint(title, readings, synopsis);
       if (hint) hints.set(title, hint);
     }
     return hints;
-  }, [mergedPlan, readings, synopsis]);
+  }, [mergedPlan, readings, synopsis, occasionId]);
 
   // Compute psalm suggestions from the psalm reading citation
   const psalmSuggestions = useMemo(() => {
@@ -576,6 +743,12 @@ export default function OccasionMusicSection({
             isAdmin={isAdmin}
             onSlotEdit={handleSlotEdit}
             onSlotReorder={handleCommunionReorder}
+            sectionLabelOverrides={sectionLabelOverrides}
+            occasionId={occasionId}
+            ensembleId={activePlan.ensembleId}
+            onCustomSlotCreate={handleCustomSlotCreate}
+            onCustomSlotUpdate={handleCustomSlotUpdate}
+            onCustomSlotDelete={handleCustomSlotDelete}
           />
         </div>
 

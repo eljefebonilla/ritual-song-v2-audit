@@ -26,7 +26,7 @@ const LITURGICAL_DISPLAY_ORDER: {
     filter: (occ) => occ.seasonOrder > 0 && occ.seasonOrder <= 8,
   },
   { key: "lent", seasonId: "lent", label: "Lent" },
-  { key: "triduum", seasonId: "triduum", label: "Triduum" },
+  { key: "holyweek", seasonId: "holyweek", label: "Holy Week" },
   { key: "easter", seasonId: "easter", label: "Easter" },
   {
     key: "ordinary-ii",
