@@ -2,6 +2,7 @@ import { NextRequest, NextResponse } from "next/server";
 import { verifyAdmin } from "@/lib/admin";
 import { createAdminClient } from "@/lib/supabase/admin";
 import { getSongById } from "@/lib/song-library";
+import { buildStorageName, FILE_TYPE_TAG_IDS } from "@/lib/resource-tags";
 
 /**
  * Sanitize a string for use as a Supabase Storage key.
@@ -18,6 +19,10 @@ function sanitizeForStorage(str: string): string {
 /**
  * Generate a signed upload URL for direct browser-to-Supabase upload.
  * Bypasses Vercel's 4.5 MB body size limit for serverless functions.
+ *
+ * Accepts either:
+ *   - { tags, fileName } — new tag-based upload (auto-generates storage name)
+ *   - { label, fileName } — legacy upload (uses label for storage path)
  */
 export async function POST(
   request: NextRequest,
@@ -30,11 +35,12 @@ export async function POST(
   }
 
   try {
-    const { label, fileName } = await request.json();
+    const body = await request.json();
+    const { fileName, tags, label } = body;
 
-    if (!label || !fileName) {
+    if (!fileName || (!tags && !label)) {
       return NextResponse.json(
-        { error: "label and fileName are required" },
+        { error: "fileName and either tags or label are required" },
         { status: 400 }
       );
     }
@@ -45,11 +51,29 @@ export async function POST(
     }
 
     const ext = fileName.includes(".") ? fileName.slice(fileName.lastIndexOf(".")) : "";
-    const safeName = sanitizeForStorage(
-      song.composer ? `${song.title} - ${song.composer}` : song.title
-    );
-    const safeLabel = sanitizeForStorage(label);
-    const storagePath = `${id}/${safeName}_${safeLabel}${ext}`;
+
+    let storagePath: string;
+
+    if (tags && Array.isArray(tags) && tags.length > 0) {
+      // New tag-based path: {songId}/{Title}_{Composer}_{TAG}_{MODIFIER}.ext
+      const typeTag = tags.find((t: string) => FILE_TYPE_TAG_IDS.includes(t));
+      const modifiers = tags.filter((t: string) => !FILE_TYPE_TAG_IDS.includes(t));
+      const storageName = buildStorageName(
+        song.title,
+        song.composer,
+        typeTag || "FILE",
+        modifiers,
+        ext,
+      );
+      storagePath = `${id}/${storageName}`;
+    } else {
+      // Legacy label-based path
+      const safeName = sanitizeForStorage(
+        song.composer ? `${song.title} - ${song.composer}` : song.title
+      );
+      const safeLabel = sanitizeForStorage(label);
+      storagePath = `${id}/${safeName}_${safeLabel}${ext}`;
+    }
 
     const supabase = createAdminClient();
 

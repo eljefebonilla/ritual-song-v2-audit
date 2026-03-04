@@ -5,14 +5,19 @@ import { useRouter } from "next/navigation";
 import type {
   LibrarySong,
   SongResource,
-  SongResourceType,
-  SongResourceSource,
 } from "@/lib/types";
 import { useUser } from "@/lib/user-context";
-import { useMedia } from "@/lib/media-context";
 import { extractChartKeys } from "@/lib/key-utils";
 import { filterPsalmResourcesByEnsemble } from "@/lib/occasion-helpers";
+import {
+  getResourceGroup,
+  RESOURCE_GROUP_LABELS,
+  RESOURCE_GROUP_ORDER,
+  type ResourceDisplayGroup,
+} from "@/lib/resource-tags";
 import LyricsEditor from "./LyricsEditor";
+import ResourceLink from "./ResourceLink";
+import ResourceUploadForm from "./ResourceUploadForm";
 import Link from "next/link";
 
 interface SongDetailPanelProps {
@@ -27,304 +32,10 @@ interface SongDetailPanelProps {
   onSlotReplace?: (songId: string, title: string, composer: string) => void;
 }
 
-const RESOURCE_TYPE_LABELS: Record<SongResourceType, string> = {
-  audio: "Audio",
-  sheet_music: "Sheet Music",
-  practice_track: "Practice Track",
-  hymnal_ref: "Hymnal Reference",
-  notation: "Notation",
-  lyrics: "Lyrics",
-  ocp_link: "OCP",
-  youtube: "YouTube",
-  other: "Other",
-};
+/* SOURCE_LABELS removed — resources now grouped by tag category */
 
-const SOURCE_LABELS: Record<SongResourceSource, string> = {
-  local: "Local Files",
-  supabase: "Uploaded Files",
-  ocp_bb: "Breaking Bread (OCP)",
-  ocp_ss: "Spirit & Song (OCP)",
-  youtube: "YouTube",
-  manual: "Manual Links",
-};
-
-const UPLOAD_ACCEPT = ".pdf,.mp3,.wav,.m4a,.aif,.aiff,.png,.jpg,.jpeg,.musx,.mxl,.txt";
-
-function resourceUrl(resource: SongResource): string | null {
-  // Supabase public URL (set by storage migration)
-  if (resource.url) return resource.url;
-  // Construct URL from storage path
-  if (resource.storagePath) {
-    const supabaseUrl = typeof window !== "undefined"
-      ? process.env.NEXT_PUBLIC_SUPABASE_URL
-      : undefined;
-    if (supabaseUrl) {
-      return `${supabaseUrl}/storage/v1/object/public/song-resources/${resource.storagePath}`;
-    }
-  }
-  // Local file fallback
-  if (resource.filePath) {
-    return `/api/music/${encodeURIComponent(resource.filePath)}`;
-  }
-  return null;
-}
-
-function ResourceLink({
-  resource,
-  songTitle,
-  isAdmin,
-  onDelete,
-  songId,
-  recordedKey,
-  chartKeys,
-}: {
-  resource: SongResource;
-  songTitle?: string;
-  isAdmin?: boolean;
-  onDelete?: () => void;
-  songId?: string;
-  recordedKey?: string;
-  chartKeys?: string[];
-}) {
-  const { play } = useMedia();
-  const url = resourceUrl(resource);
-  const isAudio = resource.type === "audio";
-  const isPlayableAudio = isAudio && (resource.url || resource.storagePath || resource.filePath);
-  const isYouTube = resource.type === "youtube" && resource.url;
-
-  const openInPlayer = (type: "audio" | "youtube", mediaUrl: string) => {
-    play({
-      type,
-      url: mediaUrl,
-      title: songTitle || resource.label,
-      subtitle: resource.label,
-      songId,
-      recordedKey,
-      chartKeys,
-    });
-  };
-
-  const deleteButton = isAdmin && onDelete ? (
-    <button
-      onClick={(e) => {
-        e.preventDefault();
-        e.stopPropagation();
-        onDelete();
-      }}
-      className="p-0.5 text-stone-300 hover:text-red-500 transition-colors shrink-0"
-      title="Delete resource"
-    >
-      <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-        <line x1="18" y1="6" x2="6" y2="18" />
-        <line x1="6" y1="6" x2="18" y2="18" />
-      </svg>
-    </button>
-  ) : null;
-
-  if (isPlayableAudio && url) {
-    return (
-      <div
-        className={`flex items-center gap-2 px-3 py-2 rounded-md border transition-colors ${
-          resource.isHighlighted
-            ? "border-amber-300 bg-amber-50"
-            : "border-stone-200 bg-white"
-        }`}
-      >
-        <button
-          onClick={() => openInPlayer("audio", url)}
-          className="w-6 h-6 flex items-center justify-center rounded-full shrink-0 transition-all active:scale-95"
-          style={{
-            background: "linear-gradient(145deg, #4CAF500a, transparent)",
-            border: "2px solid #4CAF50",
-            boxShadow: "0 1px 4px #4CAF5015",
-          }}
-        >
-          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#4CAF50" strokeWidth="2.5" strokeLinejoin="round">
-            <polygon points="5,3 19,12 5,21" />
-          </svg>
-        </button>
-        <div className="min-w-0 flex-1">
-          <p className="text-xs font-medium text-stone-700 truncate">
-            {resource.label}
-            {resource.isHighlighted && (
-              <span className="ml-1 px-1 py-0.5 text-[9px] font-bold bg-amber-200 text-amber-800 rounded">
-                AIM
-              </span>
-            )}
-          </p>
-        </div>
-        {deleteButton}
-      </div>
-    );
-  }
-
-  if (isYouTube && resource.url) {
-    return (
-      <div
-        className={`flex items-center gap-2 px-3 py-2 rounded-md border hover:border-stone-300 transition-colors group ${
-          resource.isHighlighted
-            ? "border-amber-300 bg-amber-50 hover:bg-amber-100"
-            : "border-stone-200 bg-white hover:bg-stone-50"
-        }`}
-      >
-        <a
-          href={resource.url}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="flex items-center gap-2 min-w-0 flex-1"
-        >
-          <TypeIcon type={resource.type} />
-          <div className="min-w-0 flex-1 text-left">
-            <p className="text-xs font-medium text-stone-700 truncate">
-              {resource.label}
-              {resource.isHighlighted && (
-                <span className="ml-1 px-1 py-0.5 text-[9px] font-bold bg-amber-200 text-amber-800 rounded">
-                  AIM
-                </span>
-              )}
-            </p>
-            <p className="text-[10px] text-stone-400 truncate">
-              Opens on YouTube
-            </p>
-          </div>
-          <svg
-            className="w-3 h-3 text-stone-300 group-hover:text-stone-500 shrink-0"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            strokeWidth="2"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-          >
-            <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
-            <polyline points="15 3 21 3 21 9" />
-            <line x1="10" y1="14" x2="21" y2="3" />
-          </svg>
-        </a>
-        {deleteButton}
-      </div>
-    );
-  }
-
-  if (url) {
-    const isExternal = resource.url?.startsWith("http");
-    return (
-      <div
-        className={`flex items-center gap-2 px-3 py-2 rounded-md border hover:border-stone-300 transition-colors group ${
-          resource.isHighlighted
-            ? "border-amber-300 bg-amber-50 hover:bg-amber-100"
-            : "border-stone-200 bg-white hover:bg-stone-50"
-        }`}
-      >
-        <a
-          href={url}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="flex items-center gap-2 min-w-0 flex-1"
-        >
-          <TypeIcon type={resource.type} />
-          <div className="min-w-0 flex-1">
-            <p className="text-xs font-medium text-stone-700 truncate">
-              {resource.label}
-              {resource.isHighlighted && (
-                <span className="ml-1 px-1 py-0.5 text-[9px] font-bold bg-amber-200 text-amber-800 rounded">
-                  AIM
-                </span>
-              )}
-            </p>
-            {resource.url && (
-              <p className="text-[10px] text-stone-400 truncate">
-                {resource.url}
-              </p>
-            )}
-          </div>
-          <svg
-            className="w-3 h-3 text-stone-300 group-hover:text-stone-500 shrink-0"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            strokeWidth="2"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-          >
-            {isExternal ? (
-              <>
-                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
-                <polyline points="15 3 21 3 21 9" />
-                <line x1="10" y1="14" x2="21" y2="3" />
-              </>
-            ) : (
-              <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3" />
-            )}
-          </svg>
-        </a>
-        {deleteButton}
-      </div>
-    );
-  }
-
-  return (
-    <div className="flex items-center gap-2 px-3 py-2 rounded-md border border-stone-200 bg-white">
-      <TypeIcon type={resource.type} />
-      <div className="min-w-0 flex-1">
-        <p className="text-xs font-medium text-stone-700">{resource.label}</p>
-        {resource.value && (
-          <p className="text-[10px] text-stone-500">{resource.value}</p>
-        )}
-      </div>
-      {deleteButton}
-    </div>
-  );
-}
-
-function TypeIcon({ type }: { type: SongResourceType }) {
-  const cls = "w-4 h-4 text-stone-400 shrink-0";
-  switch (type) {
-    case "audio":
-    case "practice_track":
-      return (
-        <svg className={cls} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-          <path d="M9 18V5l12-2v13" />
-          <circle cx="6" cy="18" r="3" /><circle cx="18" cy="16" r="3" />
-        </svg>
-      );
-    case "sheet_music":
-      return (
-        <svg className={cls} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-          <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
-          <polyline points="14 2 14 8 20 8" />
-        </svg>
-      );
-    case "notation":
-      return (
-        <svg className={cls} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-          <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
-          <path d="M8 13h2M8 17h6" />
-        </svg>
-      );
-    case "ocp_link":
-      return (
-        <svg className={cls} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-          <circle cx="12" cy="12" r="10" />
-          <path d="M8 12h8M12 8v8" />
-        </svg>
-      );
-    case "youtube":
-      return (
-        <svg className={cls} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-          <path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19.13C5.12 19.56 12 19.56 12 19.56s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.43z" />
-          <polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02" />
-        </svg>
-      );
-    default:
-      return (
-        <svg className={cls} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-          <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71" />
-          <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71" />
-        </svg>
-      );
-  }
-}
+/* ResourceLink and TypeIcon extracted to ./ResourceLink.tsx */
+/* ResourceUploadForm extracted to ./ResourceUploadForm.tsx */
 
 function getLastName(composer: string | undefined): string {
   if (!composer) return "";
@@ -805,19 +516,8 @@ export default function SongDetailPanel({
   const router = useRouter();
   const { role } = useUser();
   const isAdmin = role === "admin";
-  const fileInputRef = useRef<HTMLInputElement>(null);
-  const [dragOver, setDragOver] = useState(false);
-
   // Add resource state
   const [addingResource, setAddingResource] = useState(false);
-  const [addMode, setAddMode] = useState<"link" | "upload">("link");
-  const [newType, setNewType] = useState<SongResourceType>("youtube");
-  const [newLabel, setNewLabel] = useState("");
-  const [newUrl, setNewUrl] = useState("");
-  const [uploadFile, setUploadFile] = useState<File | null>(null);
-  const [saving, setSaving] = useState(false);
-  const [saveError, setSaveError] = useState<string | null>(null);
-  const uploadingRef = useRef(false);
   const [localResources, setLocalResources] = useState<SongResource[]>([]);
 
   // Edit song state
@@ -863,42 +563,34 @@ export default function SongDetailPanel({
     return result;
   })();
 
-  // Group resources by source
-  const resourcesBySource = allResources.reduce<
-    Record<string, SongResource[]>
-  >((acc, r) => {
-    const source = r.source || "manual";
-    (acc[source] = acc[source] || []).push(r);
-    return acc;
-  }, {});
-
   // Filter psalm resources by ensemble psalter when viewing from an occasion
+  let filteredResources = allResources;
   if (ensembleId && song.category === "psalm") {
-    for (const source of Object.keys(resourcesBySource)) {
-      resourcesBySource[source] = filterPsalmResourcesByEnsemble(
-        resourcesBySource[source],
-        ensembleId
-      );
-    }
+    filteredResources = filterPsalmResourcesByEnsemble(allResources, ensembleId);
   }
 
+  // Filter admin-only resources for non-admin users
+  const visibleResources = isAdmin
+    ? filteredResources
+    : filteredResources.filter((r) => r.visibility !== "admin");
+
+  // Group resources by display group (tag-based)
+  const resourcesByGroup = visibleResources.reduce<
+    Record<ResourceDisplayGroup, SongResource[]>
+  >((acc, r) => {
+    const group = getResourceGroup(r.tags, r.type);
+    (acc[group] = acc[group] || []).push(r);
+    return acc;
+  }, { score_parts: [], choral: [], audio: [], other: [] });
+
   // Sort: highlighted (AIM) first within each group
-  for (const resources of Object.values(resourcesBySource)) {
+  for (const resources of Object.values(resourcesByGroup)) {
     resources.sort((a, b) => {
       if (a.isHighlighted && !b.isHighlighted) return -1;
       if (!a.isHighlighted && b.isHighlighted) return 1;
       return 0;
     });
   }
-
-  const sourceOrder: SongResourceSource[] = [
-    "local",
-    "supabase",
-    "ocp_bb",
-    "ocp_ss",
-    "youtube",
-    "manual",
-  ];
 
   // Compute chart keys from sheet music file paths for media player
   const chartKeys = extractChartKeys(
@@ -957,132 +649,12 @@ export default function SongDetailPanel({
     }
   };
 
-  const handleAddLink = async () => {
-    setSaving(true);
-    setSaveError(null);
-    try {
-      const res = await fetch(`/api/songs/${song.id}/resources`, {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          type: newType,
-          label: newLabel.trim(),
-          url: newUrl.trim() || undefined,
-        }),
-      });
-      if (res.ok) {
-        const data = await res.json();
-        setLocalResources((prev) => [...prev, data.resource]);
-        setAddingResource(false);
-        setNewLabel("");
-        setNewUrl("");
-      } else {
-        const data = await res.json().catch(() => ({}));
-        setSaveError(data.error || `Failed (${res.status})`);
-      }
-    } catch (err) {
-      setSaveError(err instanceof Error ? err.message : "Network error");
-    } finally {
-      setSaving(false);
-    }
-  };
-
-  const handleFileSelected = (file: File) => {
-    setUploadFile(file);
-    const ext = file.name.split(".").pop()?.toLowerCase();
-    let detectedType: SongResourceType = "other";
-    let suffix = "";
-
-    if (ext === "pdf" || ext === "png" || ext === "jpg" || ext === "jpeg") {
-      detectedType = "sheet_music";
-    } else if (["mp3", "wav", "m4a", "aif", "aiff"].includes(ext || "")) {
-      detectedType = "audio";
-    } else if (["musx", "mxl", "musicxml"].includes(ext || "")) {
-      detectedType = "notation";
-      suffix = " - Notation";
-    } else if (ext === "txt") {
-      detectedType = "lyrics";
-      suffix = " - Lyrics";
-    }
-
-    setNewType(detectedType);
-
-    // Auto-fill label: "Title (LastName)" + optional suffix
-    const lastName = getLastName(song.composer);
-    const base = `${song.title}${lastName ? ` (${lastName})` : ""}`;
-    setNewLabel(`${base}${suffix}`);
-  };
-
-  const handleUploadFile = async () => {
-    if (!uploadFile || !newLabel.trim() || uploadingRef.current) return;
-    uploadingRef.current = true;
-    setSaving(true);
-    setSaveError(null);
-    try {
-      const label = newLabel.trim();
-      const type = (newType !== "youtube" && newType !== "ocp_link") ? newType : "other";
-
-      // Step 1: Get signed upload URL (lightweight JSON call)
-      const urlRes = await fetch(`/api/songs/${song.id}/resources/signed-url`, {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ label, fileName: uploadFile.name }),
-      });
-      if (!urlRes.ok) {
-        const d = await urlRes.json().catch(() => ({}));
-        setSaveError(d.error || `Prepare failed (${urlRes.status})`);
-        return;
-      }
-      const { signedUrl, storagePath } = await urlRes.json();
-
-      // Step 2: Upload file directly to Supabase Storage (bypasses Vercel limit)
-      const storageRes = await fetch(signedUrl, {
-        method: "PUT",
-        headers: { "Content-Type": uploadFile.type || "application/octet-stream" },
-        body: uploadFile,
-      });
-      if (!storageRes.ok) {
-        const text = await storageRes.text().catch(() => "");
-        setSaveError(`Storage upload failed (${storageRes.status}): ${text}`);
-        return;
-      }
-
-      // Step 3: Register resource metadata (lightweight JSON call)
-      const regRes = await fetch(`/api/songs/${song.id}/resources`, {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ type, label, storagePath }),
-      });
-      if (!regRes.ok) {
-        const d = await regRes.json().catch(() => ({}));
-        setSaveError(d.error || `Register failed (${regRes.status})`);
-        return;
-      }
-
-      const data = await regRes.json();
-      // Only add if not already present (dedup)
-      setLocalResources((prev) => {
-        if (prev.some((r) => r.id === data.resource.id)) return prev;
-        return [...prev, data.resource];
-      });
-      // Signal audio upload so play button appears in Order of Worship
-      if (
-        (type === "audio" || type === "practice_track") &&
-        data.resource.url &&
-        onAudioUploaded
-      ) {
-        onAudioUploaded(song.id, data.resource.url);
-      }
-      setAddingResource(false);
-      setNewLabel("");
-      setUploadFile(null);
-      if (fileInputRef.current) fileInputRef.current.value = "";
-    } catch (err) {
-      setSaveError(err instanceof Error ? err.message : "Network error");
-    } finally {
-      setSaving(false);
-      uploadingRef.current = false;
-    }
+  const handleResourceAdded = (resource: SongResource) => {
+    setLocalResources((prev) => {
+      if (prev.some((r) => r.id === resource.id)) return prev;
+      return [...prev, resource];
+    });
+    setAddingResource(false);
   };
 
   return (
@@ -1225,7 +797,7 @@ export default function SongDetailPanel({
 
         {/* Resources */}
         <div className="flex-1 overflow-y-auto p-4">
-          {allResources.length === 0 ? (
+          {visibleResources.length === 0 ? (
             <div className="text-center py-6">
               <p className="text-sm text-stone-400">No resources linked yet.</p>
               {isAdmin && (
@@ -1236,13 +808,13 @@ export default function SongDetailPanel({
             </div>
           ) : (
             <div className="space-y-4">
-              {sourceOrder.map((source) => {
-                const resources = resourcesBySource[source];
+              {RESOURCE_GROUP_ORDER.map((group) => {
+                const resources = resourcesByGroup[group];
                 if (!resources || resources.length === 0) return null;
                 return (
-                  <div key={source}>
+                  <div key={group}>
                     <h3 className="text-[10px] uppercase tracking-widest font-bold text-stone-400 mb-1.5">
-                      {SOURCE_LABELS[source] || source}
+                      {RESOURCE_GROUP_LABELS[group]}
                     </h3>
                     <div className="space-y-1.5">
                       {resources.map((r) => (
@@ -1287,193 +859,14 @@ export default function SongDetailPanel({
           {isAdmin && (
             <div className="mt-4 pt-4 border-t border-stone-100">
               {addingResource ? (
-                <div className="space-y-2">
-                  {/* Mode toggle */}
-                  <div className="flex rounded-md border border-stone-200 overflow-hidden">
-                    <button
-                      onClick={() => setAddMode("link")}
-                      className={`flex-1 px-2 py-1 text-[10px] font-medium transition-colors ${
-                        addMode === "link"
-                          ? "bg-stone-900 text-white"
-                          : "bg-white text-stone-500 hover:bg-stone-50"
-                      }`}
-                    >
-                      Add Link
-                    </button>
-                    <button
-                      onClick={() => setAddMode("upload")}
-                      className={`flex-1 px-2 py-1 text-[10px] font-medium transition-colors ${
-                        addMode === "upload"
-                          ? "bg-stone-900 text-white"
-                          : "bg-white text-stone-500 hover:bg-stone-50"
-                      }`}
-                    >
-                      Upload File
-                    </button>
-                  </div>
-
-                  {addMode === "link" ? (
-                    /* Link mode — existing form */
-                    <>
-                      <select
-                        value={newType}
-                        onChange={(e) =>
-                          setNewType(e.target.value as SongResourceType)
-                        }
-                        className="w-full text-xs border border-stone-200 rounded-md px-2 py-1.5"
-                      >
-                        {Object.entries(RESOURCE_TYPE_LABELS).map(([k, v]) => (
-                          <option key={k} value={k}>
-                            {v}
-                          </option>
-                        ))}
-                      </select>
-                      <input
-                        type="text"
-                        value={newLabel}
-                        onChange={(e) => setNewLabel(e.target.value)}
-                        placeholder="Label (e.g., YouTube Recording)"
-                        className="w-full text-xs border border-stone-200 rounded-md px-2 py-1.5"
-                      />
-                      <input
-                        type="text"
-                        value={newUrl}
-                        onChange={(e) => {
-                          const url = e.target.value;
-                          setNewUrl(url);
-                          if (
-                            (url.includes("youtube.com") ||
-                              url.includes("youtu.be")) &&
-                            newType !== "youtube"
-                          ) {
-                            setNewType("youtube");
-                            if (!newLabel) setNewLabel("YouTube");
-                          }
-                        }}
-                        placeholder="URL (YouTube, Dropbox, etc.)"
-                        className="w-full text-xs border border-stone-200 rounded-md px-2 py-1.5"
-                      />
-                      {saveError && (
-                        <p className="text-[10px] text-red-600 bg-red-50 border border-red-200 rounded px-2 py-1">{saveError}</p>
-                      )}
-                      <div className="flex gap-2">
-                        <button
-                          disabled={saving || !newLabel.trim()}
-                          onClick={handleAddLink}
-                          className="flex-1 px-3 py-1.5 text-xs font-medium bg-stone-900 text-white rounded-md hover:bg-stone-800 transition-colors disabled:opacity-50"
-                        >
-                          {saving ? "Saving..." : "Add Link"}
-                        </button>
-                        <button
-                          onClick={() => { setAddingResource(false); setSaveError(null); }}
-                          className="px-3 py-1.5 text-xs font-medium text-stone-500 rounded-md hover:bg-stone-100 transition-colors"
-                        >
-                          Cancel
-                        </button>
-                      </div>
-                    </>
-                  ) : (
-                    /* Upload mode */
-                    <>
-                      <input
-                        ref={fileInputRef}
-                        type="file"
-                        accept={UPLOAD_ACCEPT}
-                        onChange={(e) => {
-                          const file = e.target.files?.[0];
-                          if (file) handleFileSelected(file);
-                        }}
-                        className="hidden"
-                      />
-                      {uploadFile ? (
-                        <div className="flex items-center gap-2 px-3 py-2 bg-stone-50 border border-stone-200 rounded-md">
-                          <svg className="w-4 h-4 text-stone-400 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
-                            <polyline points="14 2 14 8 20 8" />
-                          </svg>
-                          <span className="text-xs text-stone-700 truncate flex-1">{uploadFile.name}</span>
-                          <button
-                            onClick={() => {
-                              setUploadFile(null);
-                              if (fileInputRef.current) fileInputRef.current.value = "";
-                            }}
-                            className="text-stone-400 hover:text-stone-600"
-                          >
-                            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><line x1="18" y1="6" x2="6" y2="18" /><line x1="6" y1="6" x2="18" y2="18" /></svg>
-                          </button>
-                        </div>
-                      ) : (
-                        <div
-                          onDragOver={(e) => { e.preventDefault(); setDragOver(true); }}
-                          onDragLeave={() => setDragOver(false)}
-                          onDrop={(e) => {
-                            e.preventDefault();
-                            setDragOver(false);
-                            const file = e.dataTransfer.files?.[0];
-                            if (file) handleFileSelected(file);
-                          }}
-                          onClick={() => fileInputRef.current?.click()}
-                          className={`flex flex-col items-center justify-center gap-1 px-3 py-4 border-2 border-dashed rounded-md cursor-pointer transition-colors ${
-                            dragOver
-                              ? "border-stone-900 bg-stone-50"
-                              : "border-stone-300 hover:border-stone-400"
-                          }`}
-                        >
-                          <svg className="w-5 h-5 text-stone-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
-                            <polyline points="17 8 12 3 7 8" />
-                            <line x1="12" y1="3" x2="12" y2="15" />
-                          </svg>
-                          <p className="text-xs text-stone-500">Drop file here or click to browse</p>
-                          <p className="text-[10px] text-stone-400">PDF, audio, images, notation</p>
-                        </div>
-                      )}
-                      {/* Type selector */}
-                      {uploadFile && (
-                        <select
-                          value={newType}
-                          onChange={(e) => setNewType(e.target.value as SongResourceType)}
-                          className="w-full text-xs border border-stone-200 rounded-md px-2 py-1.5"
-                        >
-                          {Object.entries(RESOURCE_TYPE_LABELS).map(([k, v]) => (
-                            <option key={k} value={k}>{v}</option>
-                          ))}
-                        </select>
-                      )}
-                      <input
-                        type="text"
-                        value={newLabel}
-                        onChange={(e) => setNewLabel(e.target.value)}
-                        placeholder="Label (e.g., Lead Sheet, LS AIM)"
-                        className="w-full text-xs border border-stone-200 rounded-md px-2 py-1.5"
-                      />
-                      {saveError && (
-                        <p className="text-[10px] text-red-600 bg-red-50 border border-red-200 rounded px-2 py-1">{saveError}</p>
-                      )}
-                      <div className="flex gap-2">
-                        <button
-                          disabled={saving || !uploadFile || !newLabel.trim()}
-                          onClick={handleUploadFile}
-                          className="flex-1 px-3 py-1.5 text-xs font-medium bg-stone-900 text-white rounded-md hover:bg-stone-800 transition-colors disabled:opacity-50"
-                        >
-                          {saving ? "Uploading..." : "Upload"}
-                        </button>
-                        <button
-                          onClick={() => {
-                            setAddingResource(false);
-                            setUploadFile(null);
-                            setDragOver(false);
-                            setSaveError(null);
-                            if (fileInputRef.current) fileInputRef.current.value = "";
-                          }}
-                          className="px-3 py-1.5 text-xs font-medium text-stone-500 rounded-md hover:bg-stone-100 transition-colors"
-                        >
-                          Cancel
-                        </button>
-                      </div>
-                    </>
-                  )}
-                </div>
+                <ResourceUploadForm
+                  songId={song.id}
+                  songTitle={song.title}
+                  songComposer={song.composer}
+                  onResourceAdded={handleResourceAdded}
+                  onAudioUploaded={onAudioUploaded}
+                  onCancel={() => setAddingResource(false)}
+                />
               ) : (
                 <button
                   onClick={() => setAddingResource(true)}

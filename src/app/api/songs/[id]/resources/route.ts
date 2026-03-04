@@ -15,7 +15,7 @@ export async function POST(
 
   try {
     const body = await request.json();
-    const { type, label, url, source, storagePath } = body;
+    const { type, label, url, source, storagePath, tags, visibility } = body;
 
     if (!type || !label) {
       return NextResponse.json(
@@ -47,21 +47,34 @@ export async function POST(
       }
     }
 
-    const isHighlighted = label.toUpperCase().includes("AIM") || undefined;
+    // Determine isHighlighted from tags or label
+    const resolvedTags: string[] = Array.isArray(tags) ? tags : [];
+    const isHighlighted =
+      resolvedTags.includes("AIM") || label.toUpperCase().includes("AIM") || undefined;
 
     const supabase = createAdminClient();
 
+    const insertData: Record<string, unknown> = {
+      song_id: id,
+      type,
+      label,
+      url: resolvedUrl,
+      storage_path: storagePath || null,
+      source: resolvedSource,
+      is_highlighted: isHighlighted || false,
+    };
+
+    // Only include tags/visibility if provided (avoids errors before migration runs)
+    if (resolvedTags.length > 0) {
+      insertData.tags = resolvedTags;
+    }
+    if (visibility && (visibility === "all" || visibility === "admin")) {
+      insertData.visibility = visibility;
+    }
+
     const { data: resource, error: insertError } = await supabase
       .from("song_resources")
-      .insert({
-        song_id: id,
-        type,
-        label,
-        url: resolvedUrl,
-        storage_path: storagePath || null,
-        source: resolvedSource,
-        is_highlighted: isHighlighted || false,
-      })
+      .insert(insertData)
       .select()
       .single();
 
@@ -78,6 +91,8 @@ export async function POST(
         storagePath: resource.storage_path,
         source: resource.source,
         isHighlighted: resource.is_highlighted,
+        tags: resource.tags || [],
+        visibility: resource.visibility || "all",
       },
     });
   } catch {

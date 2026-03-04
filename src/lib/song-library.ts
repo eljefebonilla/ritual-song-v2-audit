@@ -131,15 +131,31 @@ export function getVisibleResources(resources: SongResource[]): SongResource[] {
 
 /**
  * Classify a resource into a display category for badge/filter purposes.
+ * Uses tags when available, falls back to label/type parsing for legacy resources.
  */
 export function getResourceDisplayCategory(resource: SongResource): ResourceDisplayCategory | null {
-  // AIM (highlighted lead sheets)
+  const tags = resource.tags || [];
+
+  // Tag-based detection (preferred)
+  if (tags.includes("AIM")) return "aim";
+  if (tags.includes("CLR")) return "color";
+
+  // Choral tags
+  const choralTags = ["SAT", "SATB", "SATB-S", "SATB-A", "SATB-T", "SATB-B", "OCTAVO"];
+  if (tags.some((t) => choralTags.includes(t))) return "choral";
+
+  // Score/parts tags
+  const scoreTags = ["SCORE", "GTR", "KYB", "4SC", "4SS"];
+  const instrPrefix = "INSTR";
+  if (tags.some((t) => scoreTags.includes(t) || t.startsWith(instrPrefix))) return "lead_sheet";
+
+  // Legacy fallback: AIM (highlighted lead sheets)
   if (resource.isHighlighted) return "aim";
 
   // Audio
   if (resource.type === "audio" || resource.type === "practice_track") return "audio";
 
-  // Choral (SAT arrangements)
+  // Legacy label-based choral detection
   const label = resource.label.toLowerCase();
   if (label.includes("sat") || label.includes("choral") || label.includes("arrangement")) {
     return "choral";
@@ -147,7 +163,6 @@ export function getResourceDisplayCategory(resource: SongResource): ResourceDisp
 
   // Lead sheets (sheet_music PDFs)
   if (resource.type === "sheet_music") {
-    // Color PDFs (check filename for clr/color pattern)
     if (resource.filePath) {
       const fp = resource.filePath.toLowerCase();
       if (fp.includes("clr") || fp.includes("color")) return "color";

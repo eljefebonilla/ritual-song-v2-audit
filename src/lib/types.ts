@@ -170,6 +170,8 @@ export interface SongResource {
   value?: string; // For non-URL resources like hymnal numbers
   source?: SongResourceSource;
   isHighlighted?: boolean; // true for "AIM" files (priority lead sheets)
+  tags?: string[]; // e.g. ["GTR", "AIM"] — structured classification
+  visibility?: "all" | "admin"; // who can see this resource
 }
 
 export type SongCategory =

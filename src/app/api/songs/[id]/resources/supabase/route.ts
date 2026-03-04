@@ -12,7 +12,7 @@ export async function GET(
 
     const { data: rows, error } = await supabase
       .from("song_resources")
-      .select("id, type, label, url, storage_path, source, is_highlighted")
+      .select("id, type, label, url, storage_path, source, is_highlighted, tags, visibility")
       .eq("song_id", id)
       .order("created_at", { ascending: true });
 
@@ -29,6 +29,8 @@ export async function GET(
       storagePath: r.storage_path,
       source: r.source,
       isHighlighted: r.is_highlighted,
+      tags: r.tags || [],
+      visibility: r.visibility || "all",
     }));
 
     return NextResponse.json({ resources });
