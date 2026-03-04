@@ -9,6 +9,7 @@ export interface OccasionSummary {
   name: string;
   year: LiturgicalYear;
   season: LiturgicalSeason;
+  secondarySeason?: LiturgicalSeason;
   seasonLabel: string;
   seasonOrder: number;
   nextDate: string | null;
@@ -40,7 +41,9 @@ export function getOccasion(id: string): LiturgicalOccasion | null {
 }
 
 export function getOccasionsByseason(season: string): OccasionSummary[] {
-  return typedOccasions.filter((o) => o.season === season);
+  return typedOccasions.filter(
+    (o) => o.season === season || o.secondarySeason === season
+  );
 }
 
 export function getCurrentWeekOccasions() {

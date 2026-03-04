@@ -11,6 +11,20 @@ import type {
 import type { LiturgicalSeason } from "./types";
 
 /**
+ * Occasions excluded from the Planner grid because they require
+ * non-standard liturgical structures (processions, vigils, etc.)
+ * and cannot be meaningfully planned in the Sunday Mass grid format.
+ */
+const PLANNER_EXCLUDED_IDS = new Set([
+  "palm-sunday-a",
+  "palm-sunday-b",
+  "palm-sunday-c",
+  "holy-thursday-lords-supper",
+  "good-friday-passion",
+  "easter-vigil",
+]);
+
+/**
  * Filters occasions by year cycle and season.
  */
 export function getFilteredOccasions(
@@ -19,6 +33,9 @@ export function getFilteredOccasions(
   season: LiturgicalSeason | "all"
 ): LiturgicalOccasion[] {
   let filtered = all;
+
+  // Remove occasions that don't fit the standard Sunday Mass grid
+  filtered = filtered.filter((o) => !PLANNER_EXCLUDED_IDS.has(o.id));
 
   if (yearCycle !== "all") {
     filtered = filtered.filter(

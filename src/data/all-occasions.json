@@ -1867,6 +1867,7 @@
     "name": "EASTER SUNDAY\nTHE RESURRECTION OF THE LORD",
     "year": "ABC",
     "season": "holyweek",
+    "secondarySeason": "easter",
     "seasonLabel": "Holy Week",
     "seasonOrder": 4,
     "nextDate": "2026-04-05",

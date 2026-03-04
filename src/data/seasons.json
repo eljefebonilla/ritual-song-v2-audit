@@ -1050,6 +1050,12 @@
     "color": "#CA8A04",
     "occasions": [
       {
+        "id": "easter-sunday-resurrection",
+        "name": "EASTER SUNDAY\nTHE RESURRECTION OF THE LORD",
+        "year": "ABC",
+        "seasonOrder": 0
+      },
+      {
         "id": "easter-sunday-abc",
         "name": "EASTER SUNDAY [ABC]",
         "year": "ABC",
