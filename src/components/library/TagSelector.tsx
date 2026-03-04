@@ -3,6 +3,8 @@
 import {
   FILE_TYPE_GROUPS,
   MODIFIER_TAGS,
+  SEASON_TAGS,
+  FUNCTION_TAGS,
 } from "@/lib/resource-tags";
 
 interface TagSelectorProps {
@@ -62,6 +64,42 @@ export default function TagSelector({
             <span className="text-[10px] text-stone-400">({mod.id})</span>
           </label>
         ))}
+      </div>
+
+      {/* Season tags */}
+      <div>
+        <p className="text-[9px] uppercase tracking-wider font-bold text-stone-300 mb-1">Season</p>
+        <div className="flex flex-wrap gap-1.5">
+          {SEASON_TAGS.map((tag) => (
+            <label key={tag.id} className="flex items-center gap-1 cursor-pointer">
+              <input
+                type="checkbox"
+                checked={selectedModifiers.has(tag.id)}
+                onChange={() => onToggleModifier(tag.id)}
+                className="w-3 h-3 rounded border-stone-300"
+              />
+              <span className="text-[11px] text-stone-600">{tag.label}</span>
+            </label>
+          ))}
+        </div>
+      </div>
+
+      {/* Function / Mass part tags */}
+      <div>
+        <p className="text-[9px] uppercase tracking-wider font-bold text-stone-300 mb-1">Mass Part</p>
+        <div className="flex flex-wrap gap-1.5">
+          {FUNCTION_TAGS.map((tag) => (
+            <label key={tag.id} className="flex items-center gap-1 cursor-pointer">
+              <input
+                type="checkbox"
+                checked={selectedModifiers.has(tag.id)}
+                onChange={() => onToggleModifier(tag.id)}
+                className="w-3 h-3 rounded border-stone-300"
+              />
+              <span className="text-[11px] text-stone-600">{tag.label}</span>
+            </label>
+          ))}
+        </div>
       </div>
 
       {/* Additional custom tags */}

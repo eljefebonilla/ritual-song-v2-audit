@@ -15,6 +15,8 @@ import {
   RESOURCE_GROUP_ORDER,
   FILE_TYPE_TAG_IDS,
   MODIFIER_TAG_IDS,
+  SEASON_TAG_IDS,
+  FUNCTION_TAG_IDS,
   type ResourceDisplayGroup,
 } from "@/lib/resource-tags";
 import LyricsEditor from "./LyricsEditor";
@@ -670,12 +672,13 @@ export default function SongDetailPanel({
   };
 
   const handleStartEditResource = (id: string, tags: string[], vis: "all" | "admin") => {
+    const knownIds = [...FILE_TYPE_TAG_IDS, ...MODIFIER_TAG_IDS, ...SEASON_TAG_IDS, ...FUNCTION_TAG_IDS];
     const typeTag = tags.find((t) => FILE_TYPE_TAG_IDS.includes(t)) || "";
-    const modifiers = tags.filter((t) => MODIFIER_TAG_IDS.includes(t));
-    const custom = tags.filter((t) => !FILE_TYPE_TAG_IDS.includes(t) && !MODIFIER_TAG_IDS.includes(t));
+    const checkable = tags.filter((t) => MODIFIER_TAG_IDS.includes(t) || SEASON_TAG_IDS.includes(t) || FUNCTION_TAG_IDS.includes(t));
+    const custom = tags.filter((t) => !knownIds.includes(t));
     setEditingResourceId(id);
     setEditTypeTag(typeTag);
-    setEditModifiers(new Set(modifiers));
+    setEditModifiers(new Set(checkable));
     setEditCustomTags(custom.join(", "));
     setEditVisibility(vis);
     setEditResourceError(null);
@@ -997,8 +1000,8 @@ export default function SongDetailPanel({
             </div>
           )}
 
-          {/* Slot Recommendations */}
-          {occasionId && slotRole && (
+          {/* Slot Recommendations (admin only) */}
+          {isAdmin && occasionId && slotRole && (
             <SlotRecommendations
               occasionId={occasionId}
               slotRole={slotRole}

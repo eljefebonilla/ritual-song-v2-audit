@@ -7,6 +7,12 @@
  * Modifier Tags (optional, stackable):
  *   AIM (Assembly in Motion — priority lead sheet)
  *   CLR (Color copy)
+ *
+ * Season Tags (optional, stackable):
+ *   ADV, XMAS, LENT, TRI, EAST, ORD
+ *
+ * Function Tags (optional, stackable — part of Mass):
+ *   PREL, GATH, OFF, COMM, SEND
  */
 
 export interface FileTypeTag {
@@ -55,11 +61,38 @@ export const MODIFIER_TAGS: ModifierTag[] = [
   { id: "CLR", label: "Color", description: "Color copy" },
 ];
 
+export interface ClassificationTag {
+  id: string;
+  label: string;
+}
+
+export const SEASON_TAGS: ClassificationTag[] = [
+  { id: "ADV", label: "Advent" },
+  { id: "XMAS", label: "Christmas" },
+  { id: "LENT", label: "Lent" },
+  { id: "TRI", label: "Triduum" },
+  { id: "EAST", label: "Easter" },
+  { id: "ORD", label: "Ordinary" },
+];
+
+export const FUNCTION_TAGS: ClassificationTag[] = [
+  { id: "PREL", label: "Prelude" },
+  { id: "GATH", label: "Gathering" },
+  { id: "OFF", label: "Offertory" },
+  { id: "COMM", label: "Communion" },
+  { id: "SEND", label: "Sending" },
+];
+
 export const FILE_TYPE_TAG_IDS = FILE_TYPE_TAGS.map((t) => t.id);
 export const MODIFIER_TAG_IDS = MODIFIER_TAGS.map((t) => t.id);
+export const SEASON_TAG_IDS = SEASON_TAGS.map((t) => t.id);
+export const FUNCTION_TAG_IDS = FUNCTION_TAGS.map((t) => t.id);
+
+/** Tag IDs that should NOT appear in storage filenames */
+export const METADATA_TAG_IDS = [...SEASON_TAG_IDS, ...FUNCTION_TAG_IDS];
 
 /** All valid tag IDs */
-export const ALL_TAG_IDS = [...FILE_TYPE_TAG_IDS, ...MODIFIER_TAG_IDS];
+export const ALL_TAG_IDS = [...FILE_TYPE_TAG_IDS, ...MODIFIER_TAG_IDS, ...SEASON_TAG_IDS, ...FUNCTION_TAG_IDS];
 
 /** Grouped file type tags for UI selectors */
 export const FILE_TYPE_GROUPS: { label: string; group: FileTypeTag["group"]; tags: FileTypeTag[] }[] = [
@@ -100,18 +133,32 @@ export function buildStorageName(
 /**
  * Build a display label from tags.
  * Example: "Guitar (AIM)" for tags ["GTR", "AIM"]
+ * Season/function tags appear as suffixes: "Guitar (AIM) — Lent, Communion"
  */
 export function buildLabelFromTags(tags: string[]): string {
   const typeTag = tags.find((t) => FILE_TYPE_TAG_IDS.includes(t));
   const modifiers = tags.filter((t) => MODIFIER_TAG_IDS.includes(t));
+  const seasons = tags.filter((t) => SEASON_TAG_IDS.includes(t));
+  const functions = tags.filter((t) => FUNCTION_TAG_IDS.includes(t));
 
   if (!typeTag) return tags.join(", ");
 
   const typeDef = FILE_TYPE_TAGS.find((t) => t.id === typeTag);
-  const label = typeDef?.label || typeTag;
+  let label = typeDef?.label || typeTag;
 
-  if (modifiers.length === 0) return label;
-  return `${label} (${modifiers.join(", ")})`;
+  if (modifiers.length > 0) {
+    label = `${label} (${modifiers.join(", ")})`;
+  }
+
+  const meta = [
+    ...seasons.map((id) => SEASON_TAGS.find((t) => t.id === id)?.label || id),
+    ...functions.map((id) => FUNCTION_TAGS.find((t) => t.id === id)?.label || id),
+  ];
+  if (meta.length > 0) {
+    label = `${label} — ${meta.join(", ")}`;
+  }
+
+  return label;
 }
 
 /**
@@ -228,4 +275,17 @@ export const TAG_COLORS: Record<string, { bg: string; text: string }> = {
   // Modifiers
   AIM: { bg: "bg-amber-200", text: "text-amber-800" },
   CLR: { bg: "bg-sky-100", text: "text-sky-700" },
+  // Seasons
+  ADV: { bg: "bg-violet-100", text: "text-violet-700" },
+  XMAS: { bg: "bg-red-100", text: "text-red-700" },
+  LENT: { bg: "bg-purple-100", text: "text-purple-700" },
+  TRI: { bg: "bg-purple-200", text: "text-purple-800" },
+  EAST: { bg: "bg-yellow-100", text: "text-yellow-700" },
+  ORD: { bg: "bg-green-100", text: "text-green-700" },
+  // Functions
+  PREL: { bg: "bg-stone-200", text: "text-stone-600" },
+  GATH: { bg: "bg-teal-100", text: "text-teal-700" },
+  OFF: { bg: "bg-rose-100", text: "text-rose-700" },
+  COMM: { bg: "bg-cyan-100", text: "text-cyan-700" },
+  SEND: { bg: "bg-lime-100", text: "text-lime-700" },
 };

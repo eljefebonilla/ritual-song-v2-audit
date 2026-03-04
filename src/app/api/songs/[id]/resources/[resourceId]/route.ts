@@ -7,6 +7,7 @@ import {
   buildStorageName,
   FILE_TYPE_TAG_IDS,
   MODIFIER_TAG_IDS,
+  METADATA_TAG_IDS,
 } from "@/lib/resource-tags";
 import fs from "fs";
 import path from "path";
@@ -161,11 +162,12 @@ export async function PATCH(
         const ext = oldPath.includes(".")
           ? oldPath.slice(oldPath.lastIndexOf("."))
           : "";
-        const modifiers = tags.filter(
-          (t: string) => !FILE_TYPE_TAG_IDS.includes(t) && !MODIFIER_TAG_IDS.includes(t)
-        );
+        // Only include modifier tags (AIM, CLR) and custom tags in filename — exclude season/function
         const modifierTags = tags.filter((t: string) => MODIFIER_TAG_IDS.includes(t));
-        const allModifiers = [...modifierTags, ...modifiers];
+        const customTags = tags.filter(
+          (t: string) => !FILE_TYPE_TAG_IDS.includes(t) && !MODIFIER_TAG_IDS.includes(t) && !METADATA_TAG_IDS.includes(t)
+        );
+        const allModifiers = [...modifierTags, ...customTags];
 
         // Storage paths include song_id prefix: "songId/filename"
         const dirPrefix = oldPath.includes("/")

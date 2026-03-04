@@ -279,10 +279,13 @@ export default function OccasionMusicSection({
         value = { title, composer: composer || undefined, ...(description ? { description } : {}) };
       }
 
+      const eid = mergedPlan.ensembleId || activePlan.ensembleId;
+      if (!eid) throw new Error("No ensemble selected");
+
       const res = await fetch(`/api/occasions/${occasionId}/music-plan`, {
         method: "PUT",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ ensembleId: mergedPlan.ensembleId, field, value }),
+        body: JSON.stringify({ ensembleId: eid, field, value }),
       });
       if (!res.ok) {
         const data = await res.json().catch(() => ({}));
@@ -291,14 +294,14 @@ export default function OccasionMusicSection({
       // Update local overrides so UI reflects the change immediately
       setPlanOverrides(prev => ({
         ...prev,
-        [mergedPlan.ensembleId]: {
-          ...(prev[mergedPlan.ensembleId] || {}),
+        [eid]: {
+          ...(prev[eid] || {}),
           [field]: value,
         },
       }));
       setEditingSlot(null);
     },
-    [occasionId, mergedPlan]
+    [occasionId, mergedPlan, activePlan]
   );
 
   const handleSlotClear = useCallback(
@@ -321,10 +324,13 @@ export default function OccasionMusicSection({
         field = ROLE_TO_FIELD[role] || role;
       }
 
+      const eid = mergedPlan.ensembleId || activePlan.ensembleId;
+      if (!eid) throw new Error("No ensemble selected");
+
       const res = await fetch(`/api/occasions/${occasionId}/music-plan`, {
         method: "PUT",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ ensembleId: mergedPlan.ensembleId, field, value }),
+        body: JSON.stringify({ ensembleId: eid, field, value }),
       });
       if (!res.ok) {
         const data = await res.json().catch(() => ({}));
@@ -333,14 +339,14 @@ export default function OccasionMusicSection({
       // Update local overrides so UI reflects the change immediately
       setPlanOverrides(prev => ({
         ...prev,
-        [mergedPlan.ensembleId]: {
-          ...(prev[mergedPlan.ensembleId] || {}),
+        [eid]: {
+          ...(prev[eid] || {}),
           [field]: value,
         },
       }));
       setEditingSlot(null);
     },
-    [occasionId, mergedPlan]
+    [occasionId, mergedPlan, activePlan]
   );
 
   const handleCommunionReorder = useCallback(
@@ -567,6 +573,7 @@ export default function OccasionMusicSection({
   // so hints are noisy rather than informative.
   const songHints: Map<string, string> = useMemo(() => {
     const hints = new Map<string, string>();
+    if (!isAdmin) return hints;
     if (!mergedPlan) return hints;
     if (HINT_SUPPRESSED_PREFIXES.some((p) => occasionId.startsWith(p))) return hints;
     const titles = extractSongTitles(mergedPlan);
@@ -575,7 +582,7 @@ export default function OccasionMusicSection({
       if (hint) hints.set(title, hint);
     }
     return hints;
-  }, [mergedPlan, readings, synopsis, occasionId]);
+  }, [mergedPlan, readings, synopsis, occasionId, isAdmin]);
 
   // Compute psalm suggestions from the psalm reading citation
   const psalmSuggestions = useMemo(() => {
