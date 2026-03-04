@@ -2,7 +2,7 @@ import { notFound } from "next/navigation";
 import Link from "next/link";
 import { getSeasons, getOccasionsByseason, getSynopsis } from "@/lib/data";
 import type { OccasionSummary } from "@/lib/data";
-import { SEASON_COLORS } from "@/lib/liturgical-colors";
+import { SEASON_COLORS, getOccasionColor } from "@/lib/liturgical-colors";
 import type { LiturgicalSeason } from "@/lib/types";
 
 export function generateStaticParams() {
@@ -102,12 +102,13 @@ function formatAbcDates(nextDates: { a: string; b: string; c: string }): string 
 
 function OccasionCard({
   occ,
-  colors,
+  season,
 }: {
   occ: OccasionSummary;
-  colors: { primary: string };
+  season: LiturgicalSeason;
 }) {
   const synopsis = getSynopsis(occ.id);
+  const dotColor = getOccasionColor(occ.id, season);
 
   // Build date display
   let dateDisplay: string | null = null;
@@ -126,7 +127,7 @@ function OccasionCard({
     >
       <span
         className="w-2 h-2 rounded-full shrink-0 mt-1"
-        style={{ backgroundColor: colors.primary }}
+        style={{ backgroundColor: dotColor }}
       />
       <div className="min-w-0 flex-1">
         <p className="text-sm font-semibold text-stone-800 whitespace-pre-line leading-tight">
@@ -199,7 +200,7 @@ export default async function SeasonPage({
           if (row.type === "abc" && row.abc) {
             return (
               <div key={row.abc.id} className="md:col-span-3">
-                <OccasionCard occ={row.abc} colors={colors} />
+                <OccasionCard occ={row.abc} season={id as LiturgicalSeason} />
               </div>
             );
           }
@@ -209,21 +210,21 @@ export default async function SeasonPage({
             <div key={`row-${row.seasonOrder}-${i}`} className="grid grid-cols-1 md:grid-cols-3 gap-2">
               <div>
                 {row.a ? (
-                  <OccasionCard occ={row.a} colors={colors} />
+                  <OccasionCard occ={row.a} season={id as LiturgicalSeason} />
                 ) : (
                   <div className="hidden md:block h-full" />
                 )}
               </div>
               <div>
                 {row.b ? (
-                  <OccasionCard occ={row.b} colors={colors} />
+                  <OccasionCard occ={row.b} season={id as LiturgicalSeason} />
                 ) : (
                   <div className="hidden md:block h-full" />
                 )}
               </div>
               <div>
                 {row.c ? (
-                  <OccasionCard occ={row.c} colors={colors} />
+                  <OccasionCard occ={row.c} season={id as LiturgicalSeason} />
                 ) : (
                   <div className="hidden md:block h-full" />
                 )}

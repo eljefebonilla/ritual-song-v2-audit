@@ -1014,6 +1014,37 @@
     ]
   },
   {
+    "id": "triduum",
+    "label": "Triduum",
+    "color": "#7F1D1D",
+    "occasions": [
+      {
+        "id": "holy-thursday-lords-supper",
+        "name": "HOLY THURSDAY\nMASS OF THE LORD'S SUPPER",
+        "year": "ABC",
+        "seasonOrder": 1
+      },
+      {
+        "id": "good-friday-passion",
+        "name": "GOOD FRIDAY\nTHE PASSION OF THE LORD",
+        "year": "ABC",
+        "seasonOrder": 2
+      },
+      {
+        "id": "easter-vigil",
+        "name": "EASTER VIGIL\nIN THE HOLY NIGHT",
+        "year": "ABC",
+        "seasonOrder": 3
+      },
+      {
+        "id": "easter-sunday-resurrection",
+        "name": "EASTER SUNDAY\nTHE RESURRECTION OF THE LORD",
+        "year": "ABC",
+        "seasonOrder": 4
+      }
+    ]
+  },
+  {
     "id": "easter",
     "label": "Easter",
     "color": "#CA8A04",

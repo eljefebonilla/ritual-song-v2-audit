@@ -2,9 +2,9 @@
   "id": "good-friday-passion",
   "name": "GOOD FRIDAY\nTHE PASSION OF THE LORD",
   "year": "ABC",
-  "season": "lent",
-  "seasonLabel": "Lent",
-  "seasonOrder": 0,
+  "season": "triduum",
+  "seasonLabel": "Triduum",
+  "seasonOrder": 2,
   "dates": [
     {
       "date": "2026-04-03",
@@ -73,10 +73,15 @@
       "presider": "TBD",
       "massNotes": [
         "FRI 7 PM — all ensembles combined",
-        "Chant before Gospel: Through His Sacrifice We Are Freed (Lockwood, BPM 80)",
-        "Gospel with sung acclamation — John's full Passion narrative",
-        "Solemn Intercessions: Hold Us, Jesus (Chris de Silva, BPM 60)",
-        "Adoration of Holy Cross Acclamation: Behold the Wood (Dan Schutte)"
+        "Psalm: Choral Dir — Jeffrey",
+        "Chant before Gospel: Through His Sacrifice We Are Freed (Lockwood, SATB, BPM 80) — also used as acclamation during Passion reading",
+        "Gospel with sung acclamation — John's full Passion narrative (Jn 18:1—19:42)",
+        "Solemn Intercessions: Hold Us, Jesus (Chris de Silva, SATB, BPM 60, Choral Dir: Merrick)",
+        "Offertory Chant: Lamb of God What Wondrous Love (Faure/Kane/Petker, BPM 76, Choral Dir: Merrick)",
+        "Adoration of Holy Cross Acclamation: Behold the Wood (Dan Schutte, SATB, Choral Dir: Tica)",
+        "Veneration: Ave Verum (Mozart, SATB, Choral Dir: Merrick)",
+        "Veneration: Pieta (Kendzia/Donohoo, SATB, BPM 58, Choral Dir: Tica) — alt: Crux Fidelis (Warner, Choral Dir: Merrick)",
+        "Behold the Cross (Bob Hurd, BPM 84, Choral Dir: Tica) — only if needed; alt: Sunday Is Coming (Phil Wickham, Choral Dir: Arielle), At The Cross Love Ran Red (Chris Tomlin, BPM 73, Choral Dir: Arielle)"
       ],
       "responsorialPsalm": {
         "psalm": "Ps 31 My Life Is in Your Hands",

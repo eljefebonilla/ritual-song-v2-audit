@@ -1,6 +1,6 @@
 import Link from "next/link";
 import type { LiturgicalOccasion } from "@/lib/types";
-import { SEASON_COLORS } from "@/lib/liturgical-colors";
+import { SEASON_COLORS, getOccasionColor } from "@/lib/liturgical-colors";
 import { getOccasionDisplayDate } from "@/lib/grid-data";
 
 interface GridColumnHeaderProps {
@@ -10,6 +10,7 @@ interface GridColumnHeaderProps {
 
 export default function GridColumnHeader({ occasion, showTags = true }: GridColumnHeaderProps) {
   const colors = SEASON_COLORS[occasion.season] || SEASON_COLORS.ordinary;
+  const occColor = getOccasionColor(occasion.id, occasion.season);
   const displayDate = getOccasionDisplayDate(occasion);
 
   const shortName = occasion.name
@@ -25,7 +26,7 @@ export default function GridColumnHeader({ occasion, showTags = true }: GridColu
     <div className="px-2 py-2 h-full flex flex-col items-center text-center">
       <div
         className="w-full h-1 rounded-full mb-1.5"
-        style={{ backgroundColor: colors.primary }}
+        style={{ backgroundColor: occColor }}
       />
       {displayDate && (
         <span className="text-[10px] font-medium text-stone-400 mb-0.5">

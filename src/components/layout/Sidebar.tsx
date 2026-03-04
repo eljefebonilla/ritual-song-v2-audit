@@ -11,6 +11,7 @@ const SEASONS = [
   { id: "christmas", label: "Christmas", color: "bg-yellow-600" },
   { id: "ordinary", label: "Ordinary Time", color: "bg-green-700" },
   { id: "lent", label: "Lent", color: "bg-purple-900" },
+  { id: "triduum", label: "Triduum", color: "bg-red-900" },
   { id: "easter", label: "Easter", color: "bg-amber-600" },
   { id: "solemnity", label: "Solemnities", color: "bg-red-800" },
   { id: "feast", label: "Feasts", color: "bg-red-700" },

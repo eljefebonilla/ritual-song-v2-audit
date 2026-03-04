@@ -2,9 +2,9 @@
   "id": "holy-thursday-lords-supper",
   "name": "HOLY THURSDAY\nMASS OF THE LORD'S SUPPER",
   "year": "ABC",
-  "season": "lent",
-  "seasonLabel": "Lent",
-  "seasonOrder": 0,
+  "season": "triduum",
+  "seasonLabel": "Triduum",
+  "seasonOrder": 1,
   "dates": [
     {
       "date": "2026-04-02",
@@ -72,8 +72,16 @@
   "planningNotes": [
     "THU 7 PM — single combined celebration, all ensembles",
     "Foot Washing follows the homily; Transfer of Blessed Sacrament closes the liturgy",
-    "Reception of Oils: Musical Setting by Ed Archer",
-    "Dismissal of Catechumens: Trevor Thomson"
+    "Reception of Oils: Musical Setting by Ed Archer (Choral Dir: Tica)",
+    "Dismissal of Catechumens: Trevor Thomson (Choral Dir: Tica)",
+    "Foot Washing: Wash Their Feet (Pepper Choplin) → This Is How (Chris de Silva, BPM 66/78, Choral Dir: Merrick) → The Servant Song (Richard Gillard, arr. Ed Archer, SATB, BPM ca.80/78, Choral Dir: Merrick) → Make Me a Channel of Your Peace (John Angotti, ATB, BPM ca.60/66, Choral Dir: Tica) → Jesus Christ Yesterday Today and Forever (Suzanne Toolan, ostinato refrain only, Choral Dir: Tica)",
+    "Emergency Foot Washing Tunes: Healing Waters (Trevor Thomson, BPM 96/86, Choral Dir: Merrick), More Like Jesus (Passion, BPM 144, Choral Dir: Arielle), Healed In Christ (Sarah Hart, BPM 76, Choral Dir: Arielle)",
+    "Presentation of Gifts: Take Lord Receive (John Foley, BPM 65/68, Choral Dir: Tica)",
+    "Meditation (after Communion): Unless A Grain of Wheat (John Angotti, SATB, BPM ca.60/64, Choral Dir: Tica)",
+    "Transfer of Eucharist: Ubi Caritas (Berthier/Taize, BPM 76, Choral Dir: Tica)",
+    "Adoration: Pange Lingua (Chant Mode III, Liber Hymnarius, Randall DeBruyn, Choral Dir: Tica)",
+    "Adoration: Stay With Me (Berthier/Taize, Choral Dir: Tica)",
+    "BUY: From An Upper Room (Joseph M. Martin)"
   ],
   "musicPlans": [
     {
@@ -83,12 +91,21 @@
       "presider": "TBD",
       "massNotes": [
         "THU 7 PM — all ensembles combined",
-        "Reception of Oils: Musical Setting by Ed Archer",
-        "Dismissal of Catechumens: Trevor Thomson"
+        "Reception of Oils: Musical Setting by Ed Archer (Choral Dir: Tica)",
+        "Gloria Vocal Arr: David Lockwood & Arielle Phan (Choral Dir: Arielle, minimal direction needed)",
+        "Foot Washing: Wash Their Feet (Choplin) → This Is How (de Silva) → The Servant Song (Gillard/Archer, SATB) → Make Me a Channel (Angotti, ATB) → Jesus Christ Yesterday (Toolan, ostinato only)",
+        "Emergency FW: Healing Waters (Thomson), More Like Jesus (Passion), Healed In Christ (Hart)",
+        "Dismissal of Catechumens: Trevor Thomson (Choral Dir: Tica)",
+        "Preparation of Altar: From An Upper Room (Martin, SATB, BUY) — alt: Do Not Be Afraid (Jeanne Cotter)",
+        "Presentation of Gifts: Take Lord Receive (John Foley, BPM 65/68)",
+        "Meditation: Unless A Grain of Wheat (Angotti, SATB, BPM ca.60/64)",
+        "Transfer of Eucharist: Ubi Caritas (Berthier/Taize, BPM 76)",
+        "Adoration: Pange Lingua (Chant Mode III) → Stay With Me (Berthier/Taize)"
       ],
       "prelude": {
         "title": "Call to Remembrance",
-        "composer": "Joseph M. Martin"
+        "composer": "Joseph M. Martin",
+        "description": "SATB — alt: Shelter Your Name (Danielle Rose, SATB, Choral Dir: Arielle)"
       },
       "gathering": {
         "title": "The House that Love Is Building",

@@ -6,6 +6,7 @@ export type LiturgicalSeason =
   | "advent"
   | "christmas"
   | "lent"
+  | "triduum"
   | "easter"
   | "ordinary"
   | "solemnity"

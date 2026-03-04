@@ -1,7 +1,7 @@
 import { notFound } from "next/navigation";
 import Link from "next/link";
 import { getOccasion, getAllOccasions, getSynopsis } from "@/lib/data";
-import { SEASON_COLORS } from "@/lib/liturgical-colors";
+import { SEASON_COLORS, getOccasionColor } from "@/lib/liturgical-colors";
 import { resolveAllSongs, resolveFullSongs } from "@/lib/song-library";
 import OccasionMusicSection from "@/components/music/OccasionMusicSection";
 
@@ -20,6 +20,7 @@ export default async function OccasionPage({
   if (!occasion) notFound();
 
   const colors = SEASON_COLORS[occasion.season] || SEASON_COLORS.ordinary;
+  const occasionColor = getOccasionColor(id, occasion.season);
   const synopsis = getSynopsis(id);
   const resolvedSongs = resolveAllSongs(occasion.musicPlans, occasion.occasionResources);
   const librarySongs = resolveFullSongs(occasion.musicPlans);
@@ -46,7 +47,7 @@ export default async function OccasionPage({
       <div className="mb-8">
         <div
           className="w-12 h-1 rounded-full mb-3"
-          style={{ backgroundColor: colors.primary }}
+          style={{ backgroundColor: occasionColor }}
         />
         <h1 className="text-2xl font-bold text-stone-900">{occasion.name}</h1>
         <p className="text-sm text-stone-500 mt-1">
@@ -100,7 +101,7 @@ export default async function OccasionPage({
         <div className="mb-6">
           <div
             className="w-12 h-1 rounded-full mb-3"
-            style={{ backgroundColor: colors.primary }}
+            style={{ backgroundColor: occasionColor }}
           />
           <h2 className="text-xs uppercase tracking-widest font-bold text-stone-400 mb-2">
             Lectionary Synopsis
@@ -109,7 +110,7 @@ export default async function OccasionPage({
           {synopsis.trajectory && (
             <p className="text-xs text-stone-500 mt-1">{synopsis.trajectory}</p>
           )}
-          <div className="bg-stone-50 border-l-2 rounded-r-md p-3 mt-3 italic text-sm text-stone-600" style={{ borderColor: colors.primary }}>
+          <div className="bg-stone-50 border-l-2 rounded-r-md p-3 mt-3 italic text-sm text-stone-600" style={{ borderColor: occasionColor }}>
             {synopsis.invitesUsTo}
           </div>
         </div>
@@ -123,7 +124,7 @@ export default async function OccasionPage({
           readings={occasion.readings}
           antiphons={occasion.antiphons}
           occasionResources={occasion.occasionResources}
-          seasonColor={colors.primary}
+          seasonColor={occasionColor}
           resolvedSongs={resolvedSongs}
           librarySongs={librarySongs}
           synopsis={synopsis}

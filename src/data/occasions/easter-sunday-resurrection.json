@@ -2,9 +2,9 @@
   "id": "easter-sunday-resurrection",
   "name": "EASTER SUNDAY\nTHE RESURRECTION OF THE LORD",
   "year": "ABC",
-  "season": "easter",
-  "seasonLabel": "Easter",
-  "seasonOrder": 0,
+  "season": "triduum",
+  "seasonLabel": "Triduum",
+  "seasonOrder": 4,
   "dates": [
     {
       "date": "2026-04-05",

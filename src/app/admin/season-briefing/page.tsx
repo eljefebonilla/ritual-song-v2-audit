@@ -11,6 +11,7 @@ const SEASON_LABELS: Record<LiturgicalSeason, string> = {
   advent: "Advent",
   christmas: "Christmas",
   lent: "Lent",
+  triduum: "Triduum",
   easter: "Easter",
   ordinary: "Ordinary Time",
   solemnity: "Solemnity",
@@ -22,6 +23,7 @@ const SEASON_ORDER: LiturgicalSeason[] = [
   "christmas",
   "ordinary",
   "lent",
+  "triduum",
   "easter",
 ];
 

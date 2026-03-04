@@ -2,9 +2,9 @@
   "id": "easter-vigil",
   "name": "EASTER VIGIL\nIN THE HOLY NIGHT",
   "year": "ABC",
-  "season": "easter",
-  "seasonLabel": "Easter",
-  "seasonOrder": 0,
+  "season": "triduum",
+  "seasonLabel": "Triduum",
+  "seasonOrder": 3,
   "dates": [
     {
       "date": "2026-04-04",
@@ -65,13 +65,28 @@
   "planningNotes": [
     "SAT 7 PM — Easter Vigil, all ensembles combined",
     "Procession with Paschal Candle; Exultet; Service of Readings; Baptismal Liturgy; Liturgy of the Eucharist",
-    "First Alleluia of Easter sung after 7th reading / Epistle",
+    "First Alleluia of Easter sung after Epistle (Rom 6:3-11)",
     "Litany of Saints during procession to font",
     "Neophytes receive Eucharist for first time",
-    "Reading 1 Musical Setting: Genesis Reading (Rory Cooney)",
-    "Reading 2 Musical Setting: Exodus Reading Acclamation (Fr. Jerome Kaywell)",
-    "Canticle: Is 12 You Will Draw Water (Ed Archer, BPM 112)",
-    "Psalm 118 from Mass of New Beginnings (Clifford Petty / verses adapt. David Lockwood, BPM 138)"
+    "Procession of Candle: Lumen de Lumine (Berthier/Taize, adapt. Ed Archer, Choral Dir: Tica)",
+    "Exultet: This Is the Night (Tony Alonso, Choral Dir: Arielle)",
+    "Reading 1 (Gen 1:1-2:2) Musical Setting: Genesis Reading for the Great Vigil (Rory Cooney, SATB, Choral Dir: Tica)",
+    "Reading 2 (Ex 14:15-15:1) Musical Setting: Exodus Reading Acclamation (Fr. Jerome Kaywell, SATB)",
+    "Reading 3 (Is 55:1-11) — no musical element during reading",
+    "Canticle: Is 12:2-3, 4, 5-6 You Will Draw Water (Ed Archer, SATB, BPM 112, Choral Dir: Tica)",
+    "Gloria: Glory to God from Mass of Joy & Peace (Tony Alonso, arr. Dan Houze, BPM 124)",
+    "Epistle: Rom 6:3-11 — The Lord returns the people to their land",
+    "Psalm 118: Refrain from Mass of New Beginnings (Clifford Petty, verses adapt. David Lockwood, BPM 138, Choral Dir: Merrick)",
+    "Reprise of Gospel Acclamation after Gospel (Lk 24:1-12)",
+    "Homily Song: You Say (Lauren Daigle, arr. Dan Galbraith, BPM 74, keys of F or G available)",
+    "Litany of the Saints (Tony Alonso, SATB, BPM 98)",
+    "Baptismal Acclamation: Springs of Water (Petty, adapt. Lockwood, BPM 120, Choral Dir: Merrick)",
+    "Acclamation for Baptisms: Gospel Acclamation from Mass of New Beginnings (Petty, BPM 138, Choral Dir: Merrick)",
+    "Sprinkling: Lead Us to the Water (Kendzia & Daigle, Choral Dir: Merrick)",
+    "Anointing: Veni Sancte Spiritus (Christopher Walker, Choral Dir: Tica)",
+    "Communion: I Am the Bread of Life (SAT, BPM 80, Choral Dir: Tica)",
+    "Meditation: Sunday Is Coming (BPM 80, Choral Dir: Arielle)",
+    "Sending: Hallelujah Chorus (Handel, SATB, BPM 100, Choral Dir: Tica)"
   ],
   "musicPlans": [
     {
