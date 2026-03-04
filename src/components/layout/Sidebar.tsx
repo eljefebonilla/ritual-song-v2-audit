@@ -3,9 +3,24 @@
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useCallback } from "react";
 import { useUser } from "@/lib/user-context";
 import { useViewMode } from "@/hooks/useViewMode";
+
+const HIDDEN_NAV_KEY = "rs_hidden_nav";
+
+function getHiddenNav(): Set<string> {
+  try {
+    const raw = localStorage.getItem(HIDDEN_NAV_KEY);
+    return raw ? new Set(JSON.parse(raw)) : new Set();
+  } catch {
+    return new Set();
+  }
+}
+
+function saveHiddenNav(hidden: Set<string>) {
+  localStorage.setItem(HIDDEN_NAV_KEY, JSON.stringify([...hidden]));
+}
 
 const SEASONS = [
   { id: "advent", label: "Advent", color: "bg-purple-700" },
@@ -18,6 +33,39 @@ const SEASONS = [
   { id: "feast", label: "Feasts", color: "bg-red-700" },
 ];
 
+function VisibilityToggleIcon({ visible, onClick }: { visible: boolean; onClick: () => void }) {
+  return (
+    <button
+      onClick={(e) => {
+        e.preventDefault();
+        e.stopPropagation();
+        onClick();
+      }}
+      className={`p-0.5 rounded transition-colors shrink-0 ${
+        visible
+          ? "text-stone-500 hover:text-parish-gold"
+          : "text-stone-700 hover:text-stone-500"
+      }`}
+      title={visible ? "Hide from members" : "Show to members"}
+    >
+      <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+        {visible ? (
+          <>
+            <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z" />
+            <circle cx="12" cy="12" r="3" />
+          </>
+        ) : (
+          <>
+            <path d="M17.94 17.94A10.07 10.07 0 0 1 12 20c-7 0-11-8-11-8a18.45 18.45 0 0 1 5.06-5.94" />
+            <path d="M9.9 4.24A9.12 9.12 0 0 1 12 4c7 0 11 8 11 8a18.5 18.5 0 0 1-2.16 3.19" />
+            <line x1="1" y1="1" x2="23" y2="23" />
+          </>
+        )}
+      </svg>
+    </button>
+  );
+}
+
 function NavLink({
   href,
   pathname,
@@ -25,6 +73,10 @@ function NavLink({
   icon,
   label,
   onClick,
+  navId,
+  showToggle,
+  isVisible,
+  onToggleVisibility,
 }: {
   href: string;
   pathname: string;
@@ -32,22 +84,33 @@ function NavLink({
   icon: React.ReactNode;
   label: string;
   onClick?: () => void;
+  navId?: string;
+  showToggle?: boolean;
+  isVisible?: boolean;
+  onToggleVisibility?: () => void;
 }) {
   const isActive =
     href === "/" ? pathname === "/" : pathname.startsWith(href);
   return (
-    <Link
-      href={href}
-      onClick={onClick}
-      className={`flex items-center gap-3 px-4 py-2.5 text-sm transition-colors ${
-        isActive
-          ? "bg-stone-700 text-white"
-          : "text-stone-300 hover:bg-stone-800 hover:text-white"
-      }`}
-    >
-      {icon}
-      {!collapsed && <span>{label}</span>}
-    </Link>
+    <div className="flex items-center">
+      <Link
+        href={href}
+        onClick={onClick}
+        className={`flex items-center gap-3 px-4 py-2.5 text-sm transition-colors flex-1 ${
+          isActive
+            ? "bg-stone-700 text-white"
+            : "text-stone-300 hover:bg-stone-800 hover:text-white"
+        } ${showToggle && !isVisible ? "opacity-40" : ""}`}
+      >
+        {icon}
+        {!collapsed && <span>{label}</span>}
+      </Link>
+      {showToggle && !collapsed && navId && onToggleVisibility && (
+        <div className="pr-2">
+          <VisibilityToggleIcon visible={!!isVisible} onClick={onToggleVisibility} />
+        </div>
+      )}
+    </div>
   );
 }
 
@@ -60,12 +123,38 @@ export default function Sidebar({ open, onClose }: SidebarProps) {
   const pathname = usePathname();
   const [collapsed, setCollapsed] = useState(false);
   const { role, isAuthenticated, isAdmin, displayName, signOut } = useUser();
-  const { viewMode, toggleViewMode, isRealAdmin } = useViewMode();
+  const { viewMode, toggleViewMode, isRealAdmin, effectiveIsAdmin } = useViewMode();
+  const [hiddenNav, setHiddenNav] = useState<Set<string>>(new Set());
+
+  useEffect(() => {
+    setHiddenNav(getHiddenNav());
+  }, []);
 
   // Close mobile sidebar on route change
   useEffect(() => {
     onClose();
   }, [pathname]); // eslint-disable-line react-hooks/exhaustive-deps
+
+  const toggleNavVisibility = useCallback((id: string) => {
+    setHiddenNav((prev) => {
+      const next = new Set(prev);
+      if (next.has(id)) next.delete(id);
+      else next.add(id);
+      saveHiddenNav(next);
+      return next;
+    });
+  }, []);
+
+  // In Director View, show everything (with toggle icons).
+  // In Member View, hide items in hiddenNav set.
+  const isDirector = effectiveIsAdmin;
+  const showToggle = isRealAdmin && viewMode === "director";
+
+  const shouldShow = (id: string) => {
+    if (showToggle) return true; // Director always sees everything
+    if (isDirector) return true; // Admin without toggle mode
+    return !hiddenNav.has(id); // Member: respect hidden set
+  };
 
   // Don't render sidebar on gate or auth pages
   if (pathname.startsWith("/gate") || pathname.startsWith("/auth")) {
@@ -137,6 +226,10 @@ export default function Sidebar({ open, onClose }: SidebarProps) {
           collapsed={collapsed}
           label="Dashboard"
           onClick={onClose}
+          navId="dashboard"
+          showToggle={showToggle}
+          isVisible={!hiddenNav.has("dashboard")}
+          onToggleVisibility={() => toggleNavVisibility("dashboard")}
           icon={
             <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
               <path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
@@ -145,65 +238,89 @@ export default function Sidebar({ open, onClose }: SidebarProps) {
           }
         />
 
-        <NavLink
-          href="/today"
-          pathname={pathname}
-          collapsed={collapsed}
-          label="Today"
-          onClick={onClose}
-          icon={
-            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-              <circle cx="12" cy="12" r="10" />
-              <polyline points="12 6 12 12 16 14" />
-            </svg>
-          }
-        />
+        {shouldShow("today") && (
+          <NavLink
+            href="/today"
+            pathname={pathname}
+            collapsed={collapsed}
+            label="Today"
+            onClick={onClose}
+            navId="today"
+            showToggle={showToggle}
+            isVisible={!hiddenNav.has("today")}
+            onToggleVisibility={() => toggleNavVisibility("today")}
+            icon={
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                <circle cx="12" cy="12" r="10" />
+                <polyline points="12 6 12 12 16 14" />
+              </svg>
+            }
+          />
+        )}
 
-        <NavLink
-          href="/calendar"
-          pathname={pathname}
-          collapsed={collapsed}
-          label="Calendar"
-          onClick={onClose}
-          icon={
-            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-              <rect width="18" height="18" x="3" y="4" rx="2" ry="2" />
-              <line x1="16" x2="16" y1="2" y2="6" />
-              <line x1="8" x2="8" y1="2" y2="6" />
-              <line x1="3" x2="21" y1="10" y2="10" />
-            </svg>
-          }
-        />
+        {shouldShow("calendar") && (
+          <NavLink
+            href="/calendar"
+            pathname={pathname}
+            collapsed={collapsed}
+            label="Calendar"
+            onClick={onClose}
+            navId="calendar"
+            showToggle={showToggle}
+            isVisible={!hiddenNav.has("calendar")}
+            onToggleVisibility={() => toggleNavVisibility("calendar")}
+            icon={
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                <rect width="18" height="18" x="3" y="4" rx="2" ry="2" />
+                <line x1="16" x2="16" y1="2" y2="6" />
+                <line x1="8" x2="8" y1="2" y2="6" />
+                <line x1="3" x2="21" y1="10" y2="10" />
+              </svg>
+            }
+          />
+        )}
 
-        <NavLink
-          href="/announcements"
-          pathname={pathname}
-          collapsed={collapsed}
-          label="Announcements"
-          onClick={onClose}
-          icon={
-            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-              <path d="m3 11 18-5v12L3 13v-2z" />
-              <path d="M11.6 16.8a3 3 0 1 1-5.8-1.6" />
-            </svg>
-          }
-        />
+        {shouldShow("announcements") && (
+          <NavLink
+            href="/announcements"
+            pathname={pathname}
+            collapsed={collapsed}
+            label="Announcements"
+            onClick={onClose}
+            navId="announcements"
+            showToggle={showToggle}
+            isVisible={!hiddenNav.has("announcements")}
+            onToggleVisibility={() => toggleNavVisibility("announcements")}
+            icon={
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                <path d="m3 11 18-5v12L3 13v-2z" />
+                <path d="M11.6 16.8a3 3 0 1 1-5.8-1.6" />
+              </svg>
+            }
+          />
+        )}
 
-        <NavLink
-          href="/choir"
-          pathname={pathname}
-          collapsed={collapsed}
-          label="Choir Sign-Up"
-          onClick={onClose}
-          icon={
-            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-              <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" />
-              <circle cx="9" cy="7" r="4" />
-              <line x1="19" y1="8" x2="19" y2="14" />
-              <line x1="22" y1="11" x2="16" y2="11" />
-            </svg>
-          }
-        />
+        {shouldShow("choir") && (
+          <NavLink
+            href="/choir"
+            pathname={pathname}
+            collapsed={collapsed}
+            label="Choir Sign-Up"
+            onClick={onClose}
+            navId="choir"
+            showToggle={showToggle}
+            isVisible={!hiddenNav.has("choir")}
+            onToggleVisibility={() => toggleNavVisibility("choir")}
+            icon={
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" />
+                <circle cx="9" cy="7" r="4" />
+                <line x1="19" y1="8" x2="19" y2="14" />
+                <line x1="22" y1="11" x2="16" y2="11" />
+              </svg>
+            }
+          />
+        )}
 
         {/* Music Section */}
         {!collapsed && (
@@ -214,21 +331,27 @@ export default function Sidebar({ open, onClose }: SidebarProps) {
           </div>
         )}
 
-        <NavLink
-          href="/planner"
-          pathname={pathname}
-          collapsed={collapsed}
-          label="Planner"
-          onClick={onClose}
-          icon={
-            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-              <rect x="3" y="3" width="7" height="7" />
-              <rect x="14" y="3" width="7" height="7" />
-              <rect x="3" y="14" width="7" height="7" />
-              <rect x="14" y="14" width="7" height="7" />
-            </svg>
-          }
-        />
+        {shouldShow("planner") && (
+          <NavLink
+            href="/planner"
+            pathname={pathname}
+            collapsed={collapsed}
+            label="Planner"
+            onClick={onClose}
+            navId="planner"
+            showToggle={showToggle}
+            isVisible={!hiddenNav.has("planner")}
+            onToggleVisibility={() => toggleNavVisibility("planner")}
+            icon={
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                <rect x="3" y="3" width="7" height="7" />
+                <rect x="14" y="3" width="7" height="7" />
+                <rect x="3" y="14" width="7" height="7" />
+                <rect x="14" y="14" width="7" height="7" />
+              </svg>
+            }
+          />
+        )}
 
         <NavLink
           href="/library"
@@ -245,20 +368,26 @@ export default function Sidebar({ open, onClose }: SidebarProps) {
           }
         />
 
-        <NavLink
-          href="/planner/triduum"
-          pathname={pathname}
-          collapsed={collapsed}
-          label="Triduum"
-          onClick={onClose}
-          icon={
-            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-              <path d="M12 2L2 7l10 5 10-5-10-5z" />
-              <path d="M2 17l10 5 10-5" />
-              <path d="M2 12l10 5 10-5" />
-            </svg>
-          }
-        />
+        {shouldShow("triduum") && (
+          <NavLink
+            href="/planner/triduum"
+            pathname={pathname}
+            collapsed={collapsed}
+            label="Triduum"
+            onClick={onClose}
+            navId="triduum"
+            showToggle={showToggle}
+            isVisible={!hiddenNav.has("triduum")}
+            onToggleVisibility={() => toggleNavVisibility("triduum")}
+            icon={
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                <path d="M12 2L2 7l10 5 10-5-10-5z" />
+                <path d="M2 17l10 5 10-5" />
+                <path d="M2 12l10 5 10-5" />
+              </svg>
+            }
+          />
+        )}
 
         {/* Seasonal View */}
         {!collapsed && (
@@ -269,39 +398,58 @@ export default function Sidebar({ open, onClose }: SidebarProps) {
           </div>
         )}
 
-        <NavLink
-          href="/planner"
-          pathname={pathname}
-          collapsed={collapsed}
-          label="Planner View"
-          onClick={onClose}
-          icon={
-            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-              <rect x="3" y="3" width="7" height="7" />
-              <rect x="14" y="3" width="7" height="7" />
-              <rect x="3" y="14" width="7" height="7" />
-              <rect x="14" y="14" width="7" height="7" />
-            </svg>
-          }
-        />
-
-        {SEASONS.map((season) => (
-          <Link
-            key={season.id}
-            href={`/season/${season.id}`}
+        {shouldShow("planner-view") && (
+          <NavLink
+            href="/planner"
+            pathname={pathname}
+            collapsed={collapsed}
+            label="Planner View"
             onClick={onClose}
-            className={`flex items-center gap-3 px-4 py-2 text-sm transition-colors ${
-              pathname === `/season/${season.id}`
-                ? "bg-stone-700 text-white"
-                : "text-stone-300 hover:bg-stone-800 hover:text-white"
-            }`}
-          >
-            <span
-              className={`w-3 h-3 rounded-full ${season.color} shrink-0`}
-            />
-            {!collapsed && <span>{season.label}</span>}
-          </Link>
-        ))}
+            navId="planner-view"
+            showToggle={showToggle}
+            isVisible={!hiddenNav.has("planner-view")}
+            onToggleVisibility={() => toggleNavVisibility("planner-view")}
+            icon={
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                <rect x="3" y="3" width="7" height="7" />
+                <rect x="14" y="3" width="7" height="7" />
+                <rect x="3" y="14" width="7" height="7" />
+                <rect x="14" y="14" width="7" height="7" />
+              </svg>
+            }
+          />
+        )}
+
+        {SEASONS.map((season) => {
+          const navId = `season-${season.id}`;
+          if (!shouldShow(navId)) return null;
+          return (
+            <div key={season.id} className="flex items-center">
+              <Link
+                href={`/season/${season.id}`}
+                onClick={onClose}
+                className={`flex items-center gap-3 px-4 py-2 text-sm transition-colors flex-1 ${
+                  pathname === `/season/${season.id}`
+                    ? "bg-stone-700 text-white"
+                    : "text-stone-300 hover:bg-stone-800 hover:text-white"
+                } ${showToggle && hiddenNav.has(navId) ? "opacity-40" : ""}`}
+              >
+                <span
+                  className={`w-3 h-3 rounded-full ${season.color} shrink-0`}
+                />
+                {!collapsed && <span>{season.label}</span>}
+              </Link>
+              {showToggle && !collapsed && (
+                <div className="pr-2">
+                  <VisibilityToggleIcon
+                    visible={!hiddenNav.has(navId)}
+                    onClick={() => toggleNavVisibility(navId)}
+                  />
+                </div>
+              )}
+            </div>
+          );
+        })}
 
         {/* Admin Section */}
         {isAdmin && !collapsed && (
