@@ -65,12 +65,14 @@
     }
   ],
   "planningNotes": [
-    "Multiple Masses — outdoor and indoor configurations differ",
-    "Outdoor Gospel Acclamation: Halle, Halle, Halle (Marty Haugen)",
-    "Indoor Gospel Acclamation: Hallelujah (Leonard Cohen, arr. Gary Denk & Dan Houze)",
+    "Multiple Masses — outdoor (7:30a, outdoor Masses) and indoor (9:30a, 11:30a, 5:30p) configurations differ",
+    "Outdoor Gospel Acclamation: Halle, Halle, Halle (Marty Haugen) + lectionary verse",
+    "Indoor Gospel Acclamation: Hallelujah (Leonard Cohen, arr. Gary Denk & Dan Houze) + verse by Gary Denk",
     "Outdoor Offertory: Hallelujah Is Our Song (Sarah Hart & Sarah Kroger)",
     "Indoor Offertory: He Is Not Here (Derek Campbell, BPM 150)",
-    "Homily Meditation (11:30a only): You Say (Lauren Daigle, arr. Galbraith)"
+    "Homily Meditation (11:30a only): You Say (Lauren Daigle, arr. Dan Galbraith, keys of F or G)",
+    "Sprinkling Rite: Lead Us to the Water (Tom Kendzia & Gary Daigle)",
+    "Meditation: What A Beautiful Name — Gospel Version (Hillsong, BPM 70)"
   ],
   "musicPlans": [
     {
@@ -78,6 +80,17 @@
       "ensembleId": "reflections",
       "date": "Apr 5, 2026 (Sun)",
       "presider": "TBD",
+      "massNotes": [
+        "Welcome Litany: Easter Welcome Litany (All Are Welcome)",
+        "Sprinkling Rite: Lead Us to the Water (Tom Kendzia & Gary Daigle)",
+        "Gospel Acclamation — OUTDOOR (7:30a + outdoor Masses): Halle, Halle, Halle (Marty Haugen) + verse: 'Christ, our paschal lamb, has been sacrificed; let us then feast with joy in the Lord.'",
+        "Gospel Acclamation — INDOOR (9:30a, 11:30a, 5:30p): Hallelujah (Leonard Cohen, arr. Gary Denk & Dan Houze) + verse by Gary Denk: 'Christians praise the paschal victim...'",
+        "Homily Meditation (11:30a only): You Say (Lauren Daigle, arr. Dan Galbraith, BPM 74, charts in key of F or G)",
+        "Offertory — OUTDOOR: Hallelujah Is Our Song (Sarah Hart & Sarah Kroger)",
+        "Offertory — INDOOR: He Is Not Here (Derek Campbell, BPM 150)",
+        "Meditation: What A Beautiful Name — Gospel Version (Hillsong, BPM 70) — 'Death could not hold you...'",
+        "Eucharistic Acclamations from Mass of Glory (Bob Hurd, arr. Dan Houze) — Holy Holy BPM 120, We Proclaim Your Death BPM 110, Amen BPM 115"
+      ],
       "gathering": {
         "title": "Jesus Christ Is Risen Today",
         "composer": "Praisecharts",
@@ -85,7 +98,7 @@
       },
       "penitentialAct": {
         "title": "Easter Welcome Litany (All Are Welcome)",
-        "description": "Sprinkling Rite: Lead Us to the Water (Kendzia & Daigle)"
+        "description": "Sprinkling Rite: Lead Us to the Water (Tom Kendzia & Gary Daigle)"
       },
       "gloria": {
         "title": "Glory to God (Mass of Joy & Peace)",
@@ -93,13 +106,14 @@
         "description": "BPM 120"
       },
       "responsorialPsalm": {
-        "psalm": "Ps 118 This is the day...",
+        "psalm": "Ps 118 This is the day the Lord has made",
         "setting": "Bobby Fisher • BPM 92"
       },
       "gospelAcclamation": {
         "title": "Halle, Halle, Halle",
         "composer": "Marty Haugen",
-        "description": "Outdoor — Indoor: Hallelujah (Cohen, arr. Gary Denk & Dan Houze)"
+        "description": "Outdoor — Indoor: Hallelujah (Leonard Cohen, arr. Gary Denk & Dan Houze)",
+        "verse": "Christ, our paschal lamb, has been sacrificed; let us then feast with joy in the Lord."
       },
       "offertory": {
         "title": "Hallelujah Is Our Song",
@@ -133,14 +147,14 @@
         },
         {
           "title": "In Christ Alone",
-          "composer": "Getty & Townend • Arr. Micah Jones",
+          "composer": "Keith Getty & Stuart Townend • Arr. Micah Jones",
           "description": "BPM 69"
         }
       ],
       "sending": {
         "title": "Oh Happy Day",
         "composer": "Edwin Hawkins • Arr. Micah Jones",
-        "description": "BPM 105 — meditation: What A Beautiful Name (Hillsong, Gospel Version, BPM 70)"
+        "description": "BPM 105"
       }
     },
     {
@@ -148,6 +162,17 @@
       "ensembleId": "foundations",
       "date": "Apr 5, 2026 (Sun)",
       "presider": "TBD",
+      "massNotes": [
+        "Welcome Litany: Easter Welcome Litany (All Are Welcome)",
+        "Sprinkling Rite: Lead Us to the Water (Tom Kendzia & Gary Daigle)",
+        "Gospel Acclamation — OUTDOOR (7:30a + outdoor Masses): Halle, Halle, Halle (Marty Haugen) + verse: 'Christ, our paschal lamb, has been sacrificed; let us then feast with joy in the Lord.'",
+        "Gospel Acclamation — INDOOR (9:30a, 11:30a, 5:30p): Hallelujah (Leonard Cohen, arr. Gary Denk & Dan Houze) + verse by Gary Denk: 'Christians praise the paschal victim...'",
+        "Homily Meditation (11:30a only): You Say (Lauren Daigle, arr. Dan Galbraith, BPM 74, charts in key of F or G)",
+        "Offertory — OUTDOOR: Hallelujah Is Our Song (Sarah Hart & Sarah Kroger)",
+        "Offertory — INDOOR: He Is Not Here (Derek Campbell, BPM 150)",
+        "Meditation: What A Beautiful Name — Gospel Version (Hillsong, BPM 70) — 'Death could not hold you...'",
+        "Eucharistic Acclamations from Mass of Glory (Bob Hurd, arr. Dan Houze) — Holy Holy BPM 120, We Proclaim Your Death BPM 110, Amen BPM 115"
+      ],
       "gathering": {
         "title": "Jesus Christ Is Risen Today",
         "composer": "Praisecharts",
@@ -155,7 +180,7 @@
       },
       "penitentialAct": {
         "title": "Easter Welcome Litany (All Are Welcome)",
-        "description": "Sprinkling Rite: Lead Us to the Water (Kendzia & Daigle)"
+        "description": "Sprinkling Rite: Lead Us to the Water (Tom Kendzia & Gary Daigle)"
       },
       "gloria": {
         "title": "Glory to God (Mass of Joy & Peace)",
@@ -163,13 +188,14 @@
         "description": "BPM 120"
       },
       "responsorialPsalm": {
-        "psalm": "Ps 118 This is the day...",
+        "psalm": "Ps 118 This is the day the Lord has made",
         "setting": "Bobby Fisher • BPM 92"
       },
       "gospelAcclamation": {
         "title": "Halle, Halle, Halle",
         "composer": "Marty Haugen",
-        "description": "Outdoor — Indoor: Hallelujah (Cohen, arr. Gary Denk & Dan Houze)"
+        "description": "Outdoor — Indoor: Hallelujah (Leonard Cohen, arr. Gary Denk & Dan Houze)",
+        "verse": "Christ, our paschal lamb, has been sacrificed; let us then feast with joy in the Lord."
       },
       "offertory": {
         "title": "Hallelujah Is Our Song",
@@ -203,14 +229,14 @@
         },
         {
           "title": "In Christ Alone",
-          "composer": "Getty & Townend • Arr. Micah Jones",
+          "composer": "Keith Getty & Stuart Townend • Arr. Micah Jones",
           "description": "BPM 69"
         }
       ],
       "sending": {
         "title": "Oh Happy Day",
         "composer": "Edwin Hawkins • Arr. Micah Jones",
-        "description": "BPM 105 — meditation: What A Beautiful Name (Hillsong, Gospel Version, BPM 70)"
+        "description": "BPM 105"
       }
     },
     {
@@ -218,6 +244,17 @@
       "ensembleId": "generations",
       "date": "Apr 5, 2026 (Sun)",
       "presider": "TBD",
+      "massNotes": [
+        "Welcome Litany: Easter Welcome Litany (All Are Welcome)",
+        "Sprinkling Rite: Lead Us to the Water (Tom Kendzia & Gary Daigle)",
+        "Gospel Acclamation — OUTDOOR (7:30a + outdoor Masses): Halle, Halle, Halle (Marty Haugen) + verse: 'Christ, our paschal lamb, has been sacrificed; let us then feast with joy in the Lord.'",
+        "Gospel Acclamation — INDOOR (9:30a, 11:30a, 5:30p): Hallelujah (Leonard Cohen, arr. Gary Denk & Dan Houze) + verse by Gary Denk: 'Christians praise the paschal victim...'",
+        "Homily Meditation (11:30a only): You Say (Lauren Daigle, arr. Dan Galbraith, BPM 74, charts in key of F or G)",
+        "Offertory — OUTDOOR: Hallelujah Is Our Song (Sarah Hart & Sarah Kroger)",
+        "Offertory — INDOOR: He Is Not Here (Derek Campbell, BPM 150)",
+        "Meditation: What A Beautiful Name — Gospel Version (Hillsong, BPM 70) — 'Death could not hold you...'",
+        "Eucharistic Acclamations from Mass of Glory (Bob Hurd, arr. Dan Houze) — Holy Holy BPM 120, We Proclaim Your Death BPM 110, Amen BPM 115"
+      ],
       "gathering": {
         "title": "Jesus Christ Is Risen Today",
         "composer": "Praisecharts",
@@ -225,7 +262,7 @@
       },
       "penitentialAct": {
         "title": "Easter Welcome Litany (All Are Welcome)",
-        "description": "Sprinkling Rite: Lead Us to the Water (Kendzia & Daigle)"
+        "description": "Sprinkling Rite: Lead Us to the Water (Tom Kendzia & Gary Daigle)"
       },
       "gloria": {
         "title": "Glory to God (Mass of Joy & Peace)",
@@ -233,13 +270,14 @@
         "description": "BPM 120"
       },
       "responsorialPsalm": {
-        "psalm": "Ps 118 This is the day...",
+        "psalm": "Ps 118 This is the day the Lord has made",
         "setting": "Bobby Fisher • BPM 92"
       },
       "gospelAcclamation": {
         "title": "Halle, Halle, Halle",
         "composer": "Marty Haugen",
-        "description": "Outdoor — Indoor: Hallelujah (Cohen, arr. Gary Denk & Dan Houze)"
+        "description": "Outdoor — Indoor: Hallelujah (Leonard Cohen, arr. Gary Denk & Dan Houze)",
+        "verse": "Christ, our paschal lamb, has been sacrificed; let us then feast with joy in the Lord."
       },
       "offertory": {
         "title": "Hallelujah Is Our Song",
@@ -273,14 +311,14 @@
         },
         {
           "title": "In Christ Alone",
-          "composer": "Getty & Townend • Arr. Micah Jones",
+          "composer": "Keith Getty & Stuart Townend • Arr. Micah Jones",
           "description": "BPM 69"
         }
       ],
       "sending": {
         "title": "Oh Happy Day",
         "composer": "Edwin Hawkins • Arr. Micah Jones",
-        "description": "BPM 105 — meditation: What A Beautiful Name (Hillsong, Gospel Version, BPM 70)"
+        "description": "BPM 105"
       }
     },
     {
@@ -288,6 +326,17 @@
       "ensembleId": "heritage",
       "date": "Apr 5, 2026 (Sun)",
       "presider": "TBD",
+      "massNotes": [
+        "Welcome Litany: Easter Welcome Litany (All Are Welcome)",
+        "Sprinkling Rite: Lead Us to the Water (Tom Kendzia & Gary Daigle)",
+        "Gospel Acclamation — OUTDOOR (7:30a + outdoor Masses): Halle, Halle, Halle (Marty Haugen) + verse: 'Christ, our paschal lamb, has been sacrificed; let us then feast with joy in the Lord.'",
+        "Gospel Acclamation — INDOOR (9:30a, 11:30a, 5:30p): Hallelujah (Leonard Cohen, arr. Gary Denk & Dan Houze) + verse by Gary Denk: 'Christians praise the paschal victim...'",
+        "Homily Meditation (11:30a only): You Say (Lauren Daigle, arr. Dan Galbraith, BPM 74, charts in key of F or G)",
+        "Offertory — OUTDOOR: Hallelujah Is Our Song (Sarah Hart & Sarah Kroger)",
+        "Offertory — INDOOR: He Is Not Here (Derek Campbell, BPM 150)",
+        "Meditation: What A Beautiful Name — Gospel Version (Hillsong, BPM 70) — 'Death could not hold you...'",
+        "Eucharistic Acclamations from Mass of Glory (Bob Hurd, arr. Dan Houze) — Holy Holy BPM 120, We Proclaim Your Death BPM 110, Amen BPM 115"
+      ],
       "gathering": {
         "title": "Jesus Christ Is Risen Today",
         "composer": "Praisecharts",
@@ -295,7 +344,7 @@
       },
       "penitentialAct": {
         "title": "Easter Welcome Litany (All Are Welcome)",
-        "description": "Sprinkling Rite: Lead Us to the Water (Kendzia & Daigle)"
+        "description": "Sprinkling Rite: Lead Us to the Water (Tom Kendzia & Gary Daigle)"
       },
       "gloria": {
         "title": "Glory to God (Mass of Joy & Peace)",
@@ -303,13 +352,14 @@
         "description": "BPM 120"
       },
       "responsorialPsalm": {
-        "psalm": "Ps 118 This is the day...",
+        "psalm": "Ps 118 This is the day the Lord has made",
         "setting": "Bobby Fisher • BPM 92"
       },
       "gospelAcclamation": {
         "title": "Halle, Halle, Halle",
         "composer": "Marty Haugen",
-        "description": "Outdoor — Indoor: Hallelujah (Cohen, arr. Gary Denk & Dan Houze)"
+        "description": "Outdoor — Indoor: Hallelujah (Leonard Cohen, arr. Gary Denk & Dan Houze)",
+        "verse": "Christ, our paschal lamb, has been sacrificed; let us then feast with joy in the Lord."
       },
       "offertory": {
         "title": "Hallelujah Is Our Song",
@@ -343,14 +393,14 @@
         },
         {
           "title": "In Christ Alone",
-          "composer": "Getty & Townend • Arr. Micah Jones",
+          "composer": "Keith Getty & Stuart Townend • Arr. Micah Jones",
           "description": "BPM 69"
         }
       ],
       "sending": {
         "title": "Oh Happy Day",
         "composer": "Edwin Hawkins • Arr. Micah Jones",
-        "description": "BPM 105 — meditation: What A Beautiful Name (Hillsong, Gospel Version, BPM 70)"
+        "description": "BPM 105"
       }
     },
     {
@@ -358,6 +408,17 @@
       "ensembleId": "elevations",
       "date": "Apr 5, 2026 (Sun)",
       "presider": "TBD",
+      "massNotes": [
+        "Welcome Litany: Easter Welcome Litany (All Are Welcome)",
+        "Sprinkling Rite: Lead Us to the Water (Tom Kendzia & Gary Daigle)",
+        "Gospel Acclamation — OUTDOOR (7:30a + outdoor Masses): Halle, Halle, Halle (Marty Haugen) + verse: 'Christ, our paschal lamb, has been sacrificed; let us then feast with joy in the Lord.'",
+        "Gospel Acclamation — INDOOR (9:30a, 11:30a, 5:30p): Hallelujah (Leonard Cohen, arr. Gary Denk & Dan Houze) + verse by Gary Denk: 'Christians praise the paschal victim...'",
+        "Homily Meditation (11:30a only): You Say (Lauren Daigle, arr. Dan Galbraith, BPM 74, charts in key of F or G)",
+        "Offertory — OUTDOOR: Hallelujah Is Our Song (Sarah Hart & Sarah Kroger)",
+        "Offertory — INDOOR: He Is Not Here (Derek Campbell, BPM 150)",
+        "Meditation: What A Beautiful Name — Gospel Version (Hillsong, BPM 70) — 'Death could not hold you...'",
+        "Eucharistic Acclamations from Mass of Glory (Bob Hurd, arr. Dan Houze) — Holy Holy BPM 120, We Proclaim Your Death BPM 110, Amen BPM 115"
+      ],
       "gathering": {
         "title": "Jesus Christ Is Risen Today",
         "composer": "Praisecharts",
@@ -365,7 +426,7 @@
       },
       "penitentialAct": {
         "title": "Easter Welcome Litany (All Are Welcome)",
-        "description": "Sprinkling Rite: Lead Us to the Water (Kendzia & Daigle)"
+        "description": "Sprinkling Rite: Lead Us to the Water (Tom Kendzia & Gary Daigle)"
       },
       "gloria": {
         "title": "Glory to God (Mass of Joy & Peace)",
@@ -373,13 +434,14 @@
         "description": "BPM 120"
       },
       "responsorialPsalm": {
-        "psalm": "Ps 118 This is the day...",
+        "psalm": "Ps 118 This is the day the Lord has made",
         "setting": "Bobby Fisher • BPM 92"
       },
       "gospelAcclamation": {
         "title": "Halle, Halle, Halle",
         "composer": "Marty Haugen",
-        "description": "Outdoor — Indoor: Hallelujah (Cohen, arr. Gary Denk & Dan Houze)"
+        "description": "Outdoor — Indoor: Hallelujah (Leonard Cohen, arr. Gary Denk & Dan Houze)",
+        "verse": "Christ, our paschal lamb, has been sacrificed; let us then feast with joy in the Lord."
       },
       "offertory": {
         "title": "Hallelujah Is Our Song",
@@ -413,14 +475,14 @@
         },
         {
           "title": "In Christ Alone",
-          "composer": "Getty & Townend • Arr. Micah Jones",
+          "composer": "Keith Getty & Stuart Townend • Arr. Micah Jones",
           "description": "BPM 69"
         }
       ],
       "sending": {
         "title": "Oh Happy Day",
         "composer": "Edwin Hawkins • Arr. Micah Jones",
-        "description": "BPM 105 — meditation: What A Beautiful Name (Hillsong, Gospel Version, BPM 70)"
+        "description": "BPM 105"
       }
     }
   ],

@@ -74,13 +74,6 @@
     "Foot Washing follows the homily; Transfer of Blessed Sacrament closes the liturgy",
     "Reception of Oils: Musical Setting by Ed Archer (Choral Dir: Tica)",
     "Dismissal of Catechumens: Trevor Thomson (Choral Dir: Tica)",
-    "Foot Washing: Wash Their Feet (Pepper Choplin) → This Is How (Chris de Silva, BPM 66/78, Choral Dir: Merrick) → The Servant Song (Richard Gillard, arr. Ed Archer, SATB, BPM ca.80/78, Choral Dir: Merrick) → Make Me a Channel of Your Peace (John Angotti, ATB, BPM ca.60/66, Choral Dir: Tica) → Jesus Christ Yesterday Today and Forever (Suzanne Toolan, ostinato refrain only, Choral Dir: Tica)",
-    "Emergency Foot Washing Tunes: Healing Waters (Trevor Thomson, BPM 96/86, Choral Dir: Merrick), More Like Jesus (Passion, BPM 144, Choral Dir: Arielle), Healed In Christ (Sarah Hart, BPM 76, Choral Dir: Arielle)",
-    "Presentation of Gifts: Take Lord Receive (John Foley, BPM 65/68, Choral Dir: Tica)",
-    "Meditation (after Communion): Unless A Grain of Wheat (John Angotti, SATB, BPM ca.60/64, Choral Dir: Tica)",
-    "Transfer of Eucharist: Ubi Caritas (Berthier/Taize, BPM 76, Choral Dir: Tica)",
-    "Adoration: Pange Lingua (Chant Mode III, Liber Hymnarius, Randall DeBruyn, Choral Dir: Tica)",
-    "Adoration: Stay With Me (Berthier/Taize, Choral Dir: Tica)",
     "BUY: From An Upper Room (Joseph M. Martin)"
   ],
   "musicPlans": [
@@ -93,44 +86,48 @@
         "THU 7 PM — all ensembles combined",
         "Reception of Oils: Musical Setting by Ed Archer (Choral Dir: Tica)",
         "Gloria Vocal Arr: David Lockwood & Arielle Phan (Choral Dir: Arielle, minimal direction needed)",
-        "Foot Washing: Wash Their Feet (Choplin) → This Is How (de Silva) → The Servant Song (Gillard/Archer, SATB) → Make Me a Channel (Angotti, ATB) → Jesus Christ Yesterday (Toolan, ostinato only)",
-        "Emergency FW: Healing Waters (Thomson), More Like Jesus (Passion), Healed In Christ (Hart)",
         "Dismissal of Catechumens: Trevor Thomson (Choral Dir: Tica)",
-        "Preparation of Altar: From An Upper Room (Martin, SATB, BUY) — alt: Do Not Be Afraid (Jeanne Cotter)",
-        "Presentation of Gifts: Take Lord Receive (John Foley, BPM 65/68)",
-        "Meditation: Unless A Grain of Wheat (Angotti, SATB, BPM ca.60/64)",
-        "Transfer of Eucharist: Ubi Caritas (Berthier/Taize, BPM 76)",
-        "Adoration: Pange Lingua (Chant Mode III) → Stay With Me (Berthier/Taize)"
+        "FOOT WASHING — Wash Their Feet (Pepper Choplin) → This Is How (Chris de Silva, BPM 66/78, Choral Dir: Merrick) → The Servant Song (Richard Gillard, arr. Ed Archer, SATB, BPM ca.80/78, Choral Dir: Merrick) → Make Me a Channel of Your Peace (John Angotti, ATB, BPM ca.60/66, Choral Dir: Tica) → Jesus Christ Yesterday Today and Forever (Suzanne Toolan RSM, ostinato refrain only, Choral Dir: Tica)",
+        "EMERGENCY FOOT WASHING TUNES — Healing Waters (Trevor Thomson, BPM 96/86, Choral Dir: Merrick) | More Like Jesus (Passion, BPM 144, Choral Dir: Arielle) | Healed In Christ (Sarah Hart, BPM 76, Choral Dir: Arielle)",
+        "ALTERNATE PLAN — Emergency FW tunes same for both plans",
+        "Preparation of Altar: From An Upper Room (Joseph M. Martin, SATB, BPM ca.94/86-90, BUY, Choral Dir: Merrick) — alt: Do Not Be Afraid (Jeanne Cotter, Choral Dir: Merrick)",
+        "Presentation of Gifts: Take Lord Receive (John Foley, BPM 65/68, Choral Dir: Tica) — same both plans",
+        "Eucharistic Acclamations from Mass of Creation (Marty Haugen, arr. David Lockwood) — Holy Holy BPM 130/160, When We Eat This Bread BPM 80/82, Amen BPM 80/100 (Choral Dir: Arielle, minimal direction needed)",
+        "Lord's Prayer: Chanted Our Father (Robert J. Snow) — sing in unison with assembly",
+        "Fraction Rite: Lamb of God from Mass of Creation (Haugen, arr. Lockwood, BPM 76/78, Choral Dir: Arielle, minimal direction needed) — same both plans",
+        "Meditation: Unless A Grain of Wheat (John Angotti, SATB, BPM ca.60/64, Choral Dir: Tica) — same both plans",
+        "Transfer of Eucharist: Ubi Caritas (Jacques Berthier/Taizé, BPM 76, Choral Dir: Tica) — same both plans",
+        "Adoration 1: Pange Lingua (Chant Mode III, Liber Hymnarius, Randall DeBruyn, Choral Dir: Tica) — same both plans",
+        "Adoration 2: Stay With Me (Jacques Berthier/Taizé, Choral Dir: Tica) — same both plans"
       ],
       "prelude": {
         "title": "Call to Remembrance",
         "composer": "Joseph M. Martin",
-        "description": "SATB — alt: Shelter Your Name (Danielle Rose, SATB, Choral Dir: Arielle)"
+        "description": "SATB — Choral Dir: TBD"
       },
       "gathering": {
-        "title": "The House that Love Is Building",
-        "composer": "Sarah Hart • Arr. Arielle Phan",
-        "description": "BPM 78/83 — alt: Song TBD (BPM 78/83)"
+        "title": "Song Title TBD",
+        "description": "BPM 78/83 — Choral Dir: TBD"
       },
       "gloria": {
         "title": "Glory, Glory, Gloria",
         "composer": "Jeffrey Bonilla & Drew Wilson",
-        "description": "BPM 120"
+        "description": "BPM 120 — Vocal Arr. David Lockwood & Arielle Phan — Choral Dir: Arielle (minimal direction needed)"
       },
       "responsorialPsalm": {
         "psalm": "Ps 116 Our Blessing Cup",
-        "setting": "Sarah Hart • BPM 86"
+        "setting": "Sarah Hart • BPM 86 — Choral Dir: Tica"
       },
       "gospelAcclamation": {
         "title": "Praise to You, Lord Jesus Christ",
         "composer": "Ed Archer",
-        "description": "BPM 108",
+        "description": "SATB — BPM 108/116 — Choral Dir: Arielle",
         "verse": "I give you a new commandment, says the Lord: love one another as I have loved you."
       },
       "offertory": {
         "title": "From An Upper Room",
         "composer": "Joseph M. Martin",
-        "description": "BPM 94 — alt: Do Not Be Afraid (Jeanne Cotter)"
+        "description": "SATB — BPM ca.94/86-90 — BUY — Choral Dir: Merrick"
       },
       "eucharisticAcclamations": {
         "massSettingName": "Mass of Creation",
@@ -138,34 +135,123 @@
       },
       "lordsPrayer": {
         "title": "Chanted Our Father",
-        "composer": "Robert J. Snow"
+        "composer": "Robert J. Snow",
+        "description": "Sing in unison with assembly"
       },
       "fractionRite": {
         "title": "Lamb of God (Mass of Creation)",
-        "composer": "Marty Haugen • Arr. Lockwood",
-        "description": "BPM 76"
+        "composer": "Marty Haugen • Arr. David Lockwood",
+        "description": "BPM 76/78 — Choral Dir: Arielle (minimal direction needed)"
       },
       "communionSongs": [
         {
           "title": "Bread of Angels",
           "composer": "Curtis Stephan",
-          "description": "BPM 82"
+          "description": "BPM 82/78 — Choral Dir: Merrick"
         },
         {
           "title": "Do This In Memory of Me",
           "composer": "Chris Muglia",
-          "description": "BPM 106"
+          "description": "SATB — BPM 106/108 — Choral Dir: TBD"
         },
         {
           "title": "The Table of the Lord",
           "composer": "Dana Catherine & Sarah Hart",
-          "description": "BPM 72 — alt: Here I Am Lord (Dan Schutte, arr. Lockwood & Bonilla)"
+          "description": "BPM 72 — Choral Dir: Arielle"
         }
       ],
       "sending": {
         "title": "Ubi Caritas",
         "composer": "Jacques Berthier / Taizé",
-        "description": "BPM 76 — Transfer of Blessed Sacrament"
+        "description": "BPM 76 — Transfer of Blessed Sacrament — Choral Dir: Tica"
+      }
+    },
+    {
+      "ensemble": "All Ensembles — Taking a Break",
+      "ensembleId": "reflections-alt",
+      "date": "Apr 2, 2026 (Thu) 7 PM",
+      "presider": "TBD",
+      "massNotes": [
+        "THU 7 PM — alternate 'Taking a Break' plan",
+        "Reception of Oils: Musical Setting by Ed Archer (Choral Dir: Tica)",
+        "Dismissal of Catechumens: Trevor Thomson (Choral Dir: Tica)",
+        "FOOT WASHING — This Is How (Chris de Silva, BPM 66/78, Choral Dir: Merrick)",
+        "EMERGENCY FOOT WASHING TUNES — Healing Waters (Trevor Thomson, BPM 96/86, Choral Dir: Merrick) | More Like Jesus (Passion, BPM 144, Choral Dir: Arielle) | Healed In Christ (Sarah Hart, BPM 76, Choral Dir: Arielle)",
+        "Preparation of Altar: Do Not Be Afraid (Jeanne Cotter, Choral Dir: Merrick)",
+        "Presentation of Gifts: Take Lord Receive (John Foley, BPM 65/68, Choral Dir: Tica)",
+        "Eucharistic Acclamations from Mass of Creation (Marty Haugen, arr. David Lockwood) — Holy Holy BPM 130/160, When We Eat This Bread BPM 80/82, Amen BPM 80/100 (Choral Dir: Arielle, minimal direction needed)",
+        "Lord's Prayer: Chanted Our Father (Robert J. Snow) — sing in unison with assembly",
+        "Fraction Rite: Lamb of God from Mass of Creation (Haugen, arr. Lockwood, BPM 76/78, Choral Dir: Arielle, minimal direction needed)",
+        "Meditation: Unless A Grain of Wheat (John Angotti, SATB, BPM ca.60/64, Choral Dir: Tica)",
+        "Transfer of Eucharist: Ubi Caritas (Jacques Berthier/Taizé, BPM 76, Choral Dir: Tica)",
+        "Adoration 1: Pange Lingua (Chant Mode III, Liber Hymnarius, Randall DeBruyn, Choral Dir: Tica)",
+        "Adoration 2: Stay With Me (Jacques Berthier/Taizé, Choral Dir: Tica)"
+      ],
+      "prelude": {
+        "title": "Shelter Your Name",
+        "composer": "Danielle Rose",
+        "description": "SATB — Choral Dir: Arielle"
+      },
+      "gathering": {
+        "title": "The House that Love Is Building",
+        "composer": "Sarah Hart • Arr. Arielle Phan",
+        "description": "SATB — BPM 78/83 — Choral Dir: Arielle"
+      },
+      "gloria": {
+        "title": "Glory, Glory, Gloria",
+        "composer": "Jeffrey Bonilla & Drew Wilson",
+        "description": "BPM 120 — Vocal Arr. David Lockwood & Arielle Phan — Choral Dir: Arielle (minimal direction needed)"
+      },
+      "responsorialPsalm": {
+        "psalm": "Ps 116 Our Blessing Cup",
+        "setting": "Sarah Hart • BPM 86 — Choral Dir: Tica"
+      },
+      "gospelAcclamation": {
+        "title": "Praise to You, Lord Jesus Christ",
+        "composer": "Ed Archer",
+        "description": "SATB — BPM 108/116 — Choral Dir: Arielle",
+        "verse": "I give you a new commandment, says the Lord: love one another as I have loved you."
+      },
+      "offertory": {
+        "title": "Do Not Be Afraid",
+        "composer": "Jeanne Cotter",
+        "description": "Preparation of Altar — Choral Dir: Merrick"
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "Mass of Creation",
+        "composer": "Marty Haugen • Arr. David Lockwood"
+      },
+      "lordsPrayer": {
+        "title": "Chanted Our Father",
+        "composer": "Robert J. Snow",
+        "description": "Sing in unison with assembly"
+      },
+      "fractionRite": {
+        "title": "Lamb of God (Mass of Creation)",
+        "composer": "Marty Haugen • Arr. David Lockwood",
+        "description": "BPM 76/78 — Choral Dir: Arielle (minimal direction needed)"
+      },
+      "communionSongs": [
+        {
+          "title": "Bread of Angels",
+          "composer": "Curtis Stephan",
+          "description": "BPM 82/78 — Choral Dir: Merrick"
+        },
+        {
+          "title": "Here I Am, Lord",
+          "composer": "Dan Schutte • Arr. Lockwood & Bonilla",
+          "description": "SATB — Choral Dir: Arielle"
+        },
+        {
+          "title": "The Table of the Lord",
+          "composer": "Dana Catherine & Sarah Hart",
+          "description": "BPM 72 — Choral Dir: Arielle"
+        }
+      ],
+      "sending": {
+        "title": "Ubi Caritas",
+        "composer": "Jacques Berthier / Taizé",
+        "description": "BPM 76 — Transfer of Blessed Sacrament — Choral Dir: Tica"
       }
     }
   ],

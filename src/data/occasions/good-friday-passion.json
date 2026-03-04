@@ -73,40 +73,97 @@
       "presider": "TBD",
       "massNotes": [
         "FRI 7 PM — all ensembles combined",
-        "Psalm: Choral Dir — Jeffrey",
-        "Chant before Gospel: Through His Sacrifice We Are Freed (Lockwood, SATB, BPM 80) — also used as acclamation during Passion reading",
-        "Gospel with sung acclamation — John's full Passion narrative (Jn 18:1—19:42)",
+        "Chant before Gospel: Through His Sacrifice, We Are Freed (David Lockwood, SATB, BPM 80) — also used as acclamation during Passion reading (Jn 18:1—19:42)",
         "Solemn Intercessions: Hold Us, Jesus (Chris de Silva, SATB, BPM 60, Choral Dir: Merrick)",
-        "Offertory Chant: Lamb of God What Wondrous Love (Faure/Kane/Petker, BPM 76, Choral Dir: Merrick)",
-        "Adoration of Holy Cross Acclamation: Behold the Wood (Dan Schutte, SATB, Choral Dir: Tica)",
-        "Veneration: Ave Verum (Mozart, SATB, Choral Dir: Merrick)",
-        "Veneration: Pieta (Kendzia/Donohoo, SATB, BPM 58, Choral Dir: Tica) — alt: Crux Fidelis (Warner, Choral Dir: Merrick)",
-        "Behold the Cross (Bob Hurd, BPM 84, Choral Dir: Tica) — only if needed; alt: Sunday Is Coming (Phil Wickham, Choral Dir: Arielle), At The Cross Love Ran Red (Chris Tomlin, BPM 73, Choral Dir: Arielle)"
+        "Offertory Chant: Lamb of God, What Wondrous Love (Fauré/Kane, arr. Allan Robert Petker, BPM 76, Choral Dir: Merrick)",
+        "ADORATION OF THE HOLY CROSS — Acclamation: Behold the Wood (Dan Schutte, SATB, Choral Dir: Tica)",
+        "VENERATION & HOLY COMMUNION — Ave Verum (Mozart, SATB, Choral Dir: Merrick) → Pietà (Tom Kendzia & Theresa Donohoo, SATB, BPM 58/80, Choral Dir: Tica) → Behold the Cross (Bob Hurd, BPM 84/91, Choral Dir: Tica, only if needed) → At The Cross / Love Ran Red (Chris Tomlin, BPM 73, Choral Dir: Arielle)",
+        "ALT VENERATION — Crux Fidelis (Steven C. Warner, BPM ca.72, Choral Dir: Merrick) in place of Ave Verum | Sunday Is Coming (Phil Wickham, Choral Dir: Arielle) in place of Pietà"
       ],
       "responsorialPsalm": {
         "psalm": "Ps 31 My Life Is in Your Hands",
-        "setting": "Scott Soper • BPM 66"
+        "setting": "Scott Soper • SATB — BPM 66 — Choral Dir: Jeffrey"
+      },
+      "gospelAcclamation": {
+        "title": "Through His Sacrifice, We Are Freed",
+        "composer": "David Lockwood",
+        "description": "SATB — BPM 80 — also used as acclamation during Passion reading"
       },
       "offertory": {
         "title": "Lamb of God, What Wondrous Love",
-        "composer": "Fauré / Kane • Arr. Petker",
-        "description": "Offertory Chant — BPM 76"
+        "composer": "Fauré / Kane • Arr. Allan Robert Petker",
+        "description": "Offertory Chant — BPM 76 — Choral Dir: Merrick"
       },
       "communionSongs": [
         {
           "title": "Ave Verum",
           "composer": "Mozart",
-          "description": "Veneration"
+          "description": "SATB — Veneration — Choral Dir: Merrick"
         },
         {
           "title": "Pietà",
           "composer": "Tom Kendzia & Theresa Donohoo",
-          "description": "BPM 58 — alt: Crux Fidelis (Steven C. Warner)"
+          "description": "SATB — BPM 58/80 — Choral Dir: Tica"
         },
         {
           "title": "Behold the Cross",
           "composer": "Bob Hurd",
-          "description": "BPM 84 — alt: Sunday Is Coming (Phil Wickham), At The Cross Love Ran Red (Chris Tomlin, BPM 73)"
+          "description": "BPM 84/91 — Choral Dir: Tica — only if needed"
+        },
+        {
+          "title": "At The Cross (Love Ran Red)",
+          "composer": "Chris Tomlin",
+          "description": "BPM 73 — Choral Dir: Arielle"
+        }
+      ]
+    },
+    {
+      "ensemble": "All Ensembles — Taking a Break",
+      "ensembleId": "reflections-alt",
+      "date": "Apr 3, 2026 (Fri) 7 PM",
+      "presider": "TBD",
+      "massNotes": [
+        "FRI 7 PM — alternate 'Taking a Break' plan",
+        "Chant before Gospel: Through His Sacrifice, We Are Freed (David Lockwood, SATB, BPM 80) — also used as acclamation during Passion reading",
+        "Solemn Intercessions: Hold Us, Jesus (Chris de Silva, SATB, BPM 60, Choral Dir: Merrick)",
+        "Offertory Chant: Lamb of God, What Wondrous Love (Fauré/Kane, arr. Allan Robert Petker, BPM 76, Choral Dir: Merrick)",
+        "ADORATION OF THE HOLY CROSS — Acclamation: Behold the Wood (Dan Schutte, SATB, Choral Dir: Tica)",
+        "VENERATION & HOLY COMMUNION — Crux Fidelis (Steven C. Warner, BPM ca.72, Choral Dir: Merrick) → Sunday Is Coming (Phil Wickham, Choral Dir: Arielle) → Behold the Cross (Bob Hurd, BPM 84/91, Choral Dir: Tica, only if needed) → At The Cross / Love Ran Red (Chris Tomlin, BPM 73, Choral Dir: Arielle)"
+      ],
+      "responsorialPsalm": {
+        "psalm": "Ps 31 My Life Is in Your Hands",
+        "setting": "Scott Soper • SATB — BPM 66 — Choral Dir: Jeffrey"
+      },
+      "gospelAcclamation": {
+        "title": "Through His Sacrifice, We Are Freed",
+        "composer": "David Lockwood",
+        "description": "SATB — BPM 80 — also used as acclamation during Passion reading"
+      },
+      "offertory": {
+        "title": "Lamb of God, What Wondrous Love",
+        "composer": "Fauré / Kane • Arr. Allan Robert Petker",
+        "description": "Offertory Chant — BPM 76 — Choral Dir: Merrick"
+      },
+      "communionSongs": [
+        {
+          "title": "Crux Fidelis",
+          "composer": "Steven C. Warner",
+          "description": "BPM ca.72 — Veneration — Choral Dir: Merrick"
+        },
+        {
+          "title": "Sunday Is Coming",
+          "composer": "Phil Wickham",
+          "description": "Choral Dir: Arielle"
+        },
+        {
+          "title": "Behold the Cross",
+          "composer": "Bob Hurd",
+          "description": "BPM 84/91 — Choral Dir: Tica — only if needed"
+        },
+        {
+          "title": "At The Cross (Love Ran Red)",
+          "composer": "Chris Tomlin",
+          "description": "BPM 73 — Choral Dir: Arielle"
         }
       ]
     }

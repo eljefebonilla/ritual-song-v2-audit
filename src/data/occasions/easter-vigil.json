@@ -36,17 +36,29 @@
     {
       "type": "first",
       "citation": "Ex 14:15—15:1",
-      "summary": "Moses parts the waters."
+      "summary": "The Egyptian army pursues the Israelites, Moses parts the waters."
     },
     {
       "type": "first",
       "citation": "Is 55:1-11",
-      "summary": "The Lord calls and will make a lasting covenant."
+      "summary": "The Lord calls and will make a lasting covenant with you."
+    },
+    {
+      "type": "psalm",
+      "citation": "Is 12:2-3, 4, 5-6, R. v.3\nYou will draw water joyfully from the springs of salvation.",
+      "summary": "",
+      "antiphon": "You will draw water joyfully from the springs of salvation."
     },
     {
       "type": "second",
       "citation": "Rom 6:3-11",
       "summary": "The Lord returns the people to their land."
+    },
+    {
+      "type": "psalm",
+      "citation": "Ps 118:1-2, 16-17, 22-23\nThis is the day the Lord has made; let us rejoice and be glad.",
+      "summary": "",
+      "antiphon": "This is the day the Lord has made; let us rejoice and be glad."
     },
     {
       "type": "gospel",
@@ -67,26 +79,7 @@
     "Procession with Paschal Candle; Exultet; Service of Readings; Baptismal Liturgy; Liturgy of the Eucharist",
     "First Alleluia of Easter sung after Epistle (Rom 6:3-11)",
     "Litany of Saints during procession to font",
-    "Neophytes receive Eucharist for first time",
-    "Procession of Candle: Lumen de Lumine (Berthier/Taize, adapt. Ed Archer, Choral Dir: Tica)",
-    "Exultet: This Is the Night (Tony Alonso, Choral Dir: Arielle)",
-    "Reading 1 (Gen 1:1-2:2) Musical Setting: Genesis Reading for the Great Vigil (Rory Cooney, SATB, Choral Dir: Tica)",
-    "Reading 2 (Ex 14:15-15:1) Musical Setting: Exodus Reading Acclamation (Fr. Jerome Kaywell, SATB)",
-    "Reading 3 (Is 55:1-11) — no musical element during reading",
-    "Canticle: Is 12:2-3, 4, 5-6 You Will Draw Water (Ed Archer, SATB, BPM 112, Choral Dir: Tica)",
-    "Gloria: Glory to God from Mass of Joy & Peace (Tony Alonso, arr. Dan Houze, BPM 124)",
-    "Epistle: Rom 6:3-11 — The Lord returns the people to their land",
-    "Psalm 118: Refrain from Mass of New Beginnings (Clifford Petty, verses adapt. David Lockwood, BPM 138, Choral Dir: Merrick)",
-    "Reprise of Gospel Acclamation after Gospel (Lk 24:1-12)",
-    "Homily Song: You Say (Lauren Daigle, arr. Dan Galbraith, BPM 74, keys of F or G available)",
-    "Litany of the Saints (Tony Alonso, SATB, BPM 98)",
-    "Baptismal Acclamation: Springs of Water (Petty, adapt. Lockwood, BPM 120, Choral Dir: Merrick)",
-    "Acclamation for Baptisms: Gospel Acclamation from Mass of New Beginnings (Petty, BPM 138, Choral Dir: Merrick)",
-    "Sprinkling: Lead Us to the Water (Kendzia & Daigle, Choral Dir: Merrick)",
-    "Anointing: Veni Sancte Spiritus (Christopher Walker, Choral Dir: Tica)",
-    "Communion: I Am the Bread of Life (SAT, BPM 80, Choral Dir: Tica)",
-    "Meditation: Sunday Is Coming (BPM 80, Choral Dir: Arielle)",
-    "Sending: Hallelujah Chorus (Handel, SATB, BPM 100, Choral Dir: Tica)"
+    "Neophytes receive Eucharist for first time"
   ],
   "musicPlans": [
     {
@@ -96,64 +89,94 @@
       "presider": "TBD",
       "massNotes": [
         "SAT 7 PM — Easter Vigil, all ensembles combined",
-        "Procession: Lumen de Lumine (Berthier/Taizé, adapt. Ed Archer)",
-        "Exultet: This Is the Night (Tony Alonso)",
-        "Homily Song: You Say (Lauren Daigle, arr. Dan Galbraith, BPM 74)",
-        "Litany of the Saints (Tony Alonso, BPM 98)",
-        "Baptismal Acclamation: Springs of Water (Clifford Petty, adapt. David Lockwood, BPM 120)",
-        "Acclamation for Baptisms: Gospel Acclamation from Mass of New Beginnings (Petty, BPM 138)",
-        "Sprinkling: Lead Us to the Water (Tom Kendzia & Gary Daigle)",
-        "Anointing: Veni Sancte Spiritus (Christopher Walker)"
+        "LUCERNARIUM — Procession of Candle: Lumen de Lumine (Jacques Berthier/Taizé, adapted Ed Archer, Choral Dir: Tica) [Track 01a]",
+        "EXULTET — This Is the Night (Tony Alonso, Choral Dir: Arielle) [Track 01c]",
+        "READING 1 (Gen 1:1—2:2) Musical Setting: Genesis Reading for the Great Vigil (Rory Cooney, SATB, Choral Dir: Tica) [Track 02a]",
+        "READING 2 (Ex 14:15—15:1) Musical Setting: Exodus Reading Acclamation (Fr. Jerome Kaywell, SATB) [Track 03]",
+        "READING 3 (Is 55:1-11) — No musical element during reading",
+        "CANTICLE (Is 12:2-3, 4, 5-6, R. v.3): You Will Draw Water (Ed Archer, SATB, BPM 112, Choral Dir: Tica) [Track 04]",
+        "GLORIA: Glory to God from Mass of Joy & Peace (Tony Alonso, arr. Dan Houze, BPM 124) [Track 05]",
+        "EPISTLE (Rom 6:3-11): The Lord returns the people to their land",
+        "PSALM 118: Refrain from Mass of New Beginnings (Clifford Petty, verses adapted by David Lockwood, BPM 138, Choral Dir: Merrick) [Track 06a] — 3 verses: v1 Ps 118:1-2, v2 Ps 118:16-17, v3 Ps 118:22-23",
+        "GOSPEL (Lk 24:1-12) — No musical element during reading",
+        "Reprise of Gospel Acclamation from Mass of New Beginnings (Clifford Petty, BPM 138, Choral Dir: Merrick) [Track 06a]",
+        "HOMILY SONG: You Say (Lauren Daigle, arr. Dan Galbraith, BPM 74, charts in key of F or G) [Track 07]",
+        "BAPTISMAL LITURGY — Litany of the Saints (Tony Alonso, SATB, BPM 98) [Track 08]",
+        "Baptismal Acclamation: Springs of Water (Clifford Petty, adapted David Lockwood, BPM 120, Choral Dir: Merrick) [Track 09]",
+        "Acclamation for Baptisms: Gospel Acclamation from Mass of New Beginnings (Clifford Petty, BPM 138, Choral Dir: Merrick) [Track 10]",
+        "Sprinkling with Baptismal Water: Lead Us to the Water (Tom Kendzia & Gary Daigle, Choral Dir: Merrick) [Track 11]",
+        "Song for Anointing: Veni Sancte Spiritus (Christopher Walker, Choral Dir: Tica) [Track 13]",
+        "OFFERTORY: He Is Not Here (Derek Campbell, BPM 154, Choral Dir: Arielle) [Track 14]",
+        "EUCHARISTIC ACCLAMATIONS from Mass of Glory (Bob Hurd, arr. Dan Houze) — Holy Holy BPM 120, We Proclaim Your Death BPM 110, Amen BPM 115 [Track 15]",
+        "LORD'S PRAYER: The Echo Our Father (Jerome Andrews, arr. Dan Houze, BPM 145) [Track 16]",
+        "FRACTION RITE: Lamb of God from Mass of Glory (Bob Hurd, arr. Dan Houze, BPM 100) [Track 17]",
+        "COMMUNION: Put On Christ (Bob Hurd, BPM 160, Choral Dir: Merrick) [Track 18] → Three Days (BPM 82, Choral Dir: Arielle) [Track 19] → I Am the Bread of Life (SAT, BPM 80, Choral Dir: Tica) [Track 20]",
+        "MEDITATION: Sunday Is Coming (BPM 80, Choral Dir: Arielle) [Track 21]",
+        "SENDING: Hallelujah Chorus (Handel, SATB, BPM 100, Choral Dir: Tica) [Track 22]"
       ],
+      "prelude": {
+        "title": "Lumen de Lumine",
+        "composer": "Jacques Berthier (Taizé) • Adapted Ed Archer",
+        "description": "Procession of Candle — Choral Dir: Tica — Track 01a"
+      },
+      "gathering": {
+        "title": "This Is the Night",
+        "composer": "Tony Alonso",
+        "description": "Exultet — Choral Dir: Arielle — Track 01c"
+      },
       "gloria": {
         "title": "Glory to God from Mass of Joy & Peace",
         "composer": "Tony Alonso • Arr. Dan Houze",
-        "description": "BPM 124 — First Gloria of Easter"
+        "description": "BPM 124 — First Gloria of Easter — Track 05"
+      },
+      "responsorialPsalm": {
+        "psalm": "Ps 118 This is the day the Lord has made",
+        "setting": "Refrain from Mass of New Beginnings — Clifford Petty, verses adapted by David Lockwood • BPM 138 — Choral Dir: Merrick — Track 06a"
       },
       "gospelAcclamation": {
         "title": "Gospel Acclamation from Mass of New Beginnings",
         "composer": "Clifford Petty",
-        "description": "BPM 138",
+        "description": "BPM 138 — Choral Dir: Merrick — Track 06a — Reprised after Gospel",
         "verse": "Alleluia, alleluia!"
       },
       "offertory": {
         "title": "He Is Not Here",
         "composer": "Derek Campbell",
-        "description": "BPM 154"
+        "description": "BPM 154 — Choral Dir: Arielle — Track 14"
       },
       "eucharisticAcclamations": {
         "massSettingName": "Mass of Glory",
         "composer": "Bob Hurd • Arr. Dan Houze"
       },
       "lordsPrayer": {
-        "title": "Echo Our Father",
+        "title": "The Echo Our Father",
         "composer": "Jerome Andrews • Arr. Dan Houze",
-        "description": "BPM 145"
+        "description": "BPM 145 — Track 16"
       },
       "fractionRite": {
         "title": "Lamb of God (Mass of Glory)",
         "composer": "Bob Hurd • Arr. Dan Houze",
-        "description": "BPM 100"
+        "description": "BPM 100 — Track 17"
       },
       "communionSongs": [
         {
           "title": "Put On Christ",
           "composer": "Bob Hurd",
-          "description": "BPM 160"
+          "description": "BPM 160 — Choral Dir: Merrick — Track 18"
         },
         {
           "title": "Three Days",
-          "description": "BPM 82"
+          "description": "BPM 82 — Choral Dir: Arielle — Track 19"
         },
         {
           "title": "I Am the Bread of Life",
-          "description": "BPM 80"
+          "description": "SAT — BPM 80 — Choral Dir: Tica — Track 20"
         }
       ],
       "sending": {
         "title": "Hallelujah Chorus",
         "composer": "G.F. Handel",
-        "description": "BPM 100 — meditation: Sunday Is Coming (BPM 80)"
+        "description": "SATB — BPM 100 — Choral Dir: Tica — Track 22"
       }
     }
   ],
