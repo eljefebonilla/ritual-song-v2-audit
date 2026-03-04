@@ -34,6 +34,17 @@ export function getCalendar() {
 export function getOccasion(id: string): LiturgicalOccasion | null {
   try {
     const data = require(`../data/occasions/${id}.json`);
+    // Normalize legacy communityId → ensembleId in music plans
+    if (data.musicPlans) {
+      for (const plan of data.musicPlans) {
+        if (!plan.ensembleId && plan.communityId) {
+          plan.ensembleId = plan.communityId;
+        }
+        if (!plan.ensemble && plan.community) {
+          plan.ensemble = plan.community;
+        }
+      }
+    }
     return data as LiturgicalOccasion;
   } catch {
     return null;
