@@ -191,19 +191,73 @@ function EventCard({
   );
 }
 
+function USFlag({ className }: { className?: string }) {
+  return (
+    <svg className={className ?? "h-3.5 w-5"} viewBox="0 0 60 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+      {/* Stripes */}
+      <rect width="60" height="40" fill="#B22234" />
+      <rect y="3.08" width="60" height="3.08" fill="white" />
+      <rect y="9.23" width="60" height="3.08" fill="white" />
+      <rect y="15.38" width="60" height="3.08" fill="white" />
+      <rect y="21.54" width="60" height="3.08" fill="white" />
+      <rect y="27.69" width="60" height="3.08" fill="white" />
+      <rect y="33.85" width="60" height="3.08" fill="white" />
+      {/* Canton */}
+      <rect width="24" height="21.54" fill="#3C3B6E" />
+      {/* Stars (simplified 3x3 grid) */}
+      <circle cx="4" cy="3.5" r="1.2" fill="white" />
+      <circle cx="8" cy="3.5" r="1.2" fill="white" />
+      <circle cx="12" cy="3.5" r="1.2" fill="white" />
+      <circle cx="16" cy="3.5" r="1.2" fill="white" />
+      <circle cx="20" cy="3.5" r="1.2" fill="white" />
+      <circle cx="6" cy="7" r="1.2" fill="white" />
+      <circle cx="10" cy="7" r="1.2" fill="white" />
+      <circle cx="14" cy="7" r="1.2" fill="white" />
+      <circle cx="18" cy="7" r="1.2" fill="white" />
+      <circle cx="4" cy="10.5" r="1.2" fill="white" />
+      <circle cx="8" cy="10.5" r="1.2" fill="white" />
+      <circle cx="12" cy="10.5" r="1.2" fill="white" />
+      <circle cx="16" cy="10.5" r="1.2" fill="white" />
+      <circle cx="20" cy="10.5" r="1.2" fill="white" />
+      <circle cx="6" cy="14" r="1.2" fill="white" />
+      <circle cx="10" cy="14" r="1.2" fill="white" />
+      <circle cx="14" cy="14" r="1.2" fill="white" />
+      <circle cx="18" cy="14" r="1.2" fill="white" />
+      <circle cx="4" cy="17.5" r="1.2" fill="white" />
+      <circle cx="8" cy="17.5" r="1.2" fill="white" />
+      <circle cx="12" cy="17.5" r="1.2" fill="white" />
+      <circle cx="16" cy="17.5" r="1.2" fill="white" />
+      <circle cx="20" cy="17.5" r="1.2" fill="white" />
+    </svg>
+  );
+}
+
+function StateFlag({ state, className }: { state: string; className?: string }) {
+  return (
+    <svg className={className ?? "h-3.5 w-5"} viewBox="0 0 60 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <rect width="60" height="40" rx="2" fill="#1E3A5F" />
+      <text x="30" y="25" textAnchor="middle" fill="white" fontSize="16" fontWeight="bold" fontFamily="sans-serif">
+        {state}
+      </text>
+    </svg>
+  );
+}
+
 function HolidayBadge({ holiday }: { holiday: Holiday }) {
   const isFederal = holiday.type === "federal";
   return (
     <span
-      className={`ml-8 mb-1 inline-flex items-center gap-1 rounded-full px-2.5 py-0.5 text-xs font-medium ${
+      className={`ml-8 mb-1 inline-flex items-center gap-1.5 rounded-full px-2.5 py-0.5 text-xs font-medium ${
         isFederal
-          ? "bg-slate-100 text-slate-600"
-          : "bg-amber-50 text-amber-700"
+          ? "bg-slate-50 text-slate-600 border border-slate-150"
+          : "bg-amber-50/70 text-amber-700 border border-amber-200/60"
       }`}
     >
-      <svg className="h-3 w-3" viewBox="0 0 16 16" fill="currentColor">
-        <path d="M3.5 1a.5.5 0 0 1 .5.5V3h8V1.5a.5.5 0 0 1 1 0V3h1a1 1 0 0 1 1 1v1H1V4a1 1 0 0 1 1-1h1V1.5a.5.5 0 0 1 .5-.5zM1 6v8a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V6H1z" />
-      </svg>
+      {isFederal ? (
+        <USFlag className="h-3 w-4 rounded-[1px] shadow-[0_0_0_0.5px_rgba(0,0,0,0.1)]" />
+      ) : (
+        <StateFlag state={holiday.state ?? ""} className="h-3 w-4 rounded-[1px] shadow-[0_0_0_0.5px_rgba(0,0,0,0.1)]" />
+      )}
       {holiday.name}
     </span>
   );
