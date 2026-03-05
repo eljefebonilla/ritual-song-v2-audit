@@ -8116,11 +8116,12 @@
         "source": "ocp_bb"
       }
     ],
-    "usageCount": 12,
+    "usageCount": 13,
     "occasions": [
       "lent-03-a-first-scrutiny",
       "ordinary-time-27-c",
-      "ordinary-time-29-c"
+      "ordinary-time-29-c",
+      "easter-04-c"
     ],
     "category": "song",
     "functions": [
@@ -33737,20 +33738,6 @@
       "communion",
       "offertory",
       "prelude"
-    ]
-  },
-  {
-    "id": "o-god-you-search-me--bernadette-farrell-1",
-    "title": "O God, You Search Me ·",
-    "composer": "Bernadette Farrell",
-    "resources": [],
-    "usageCount": 1,
-    "occasions": [
-      "easter-04-c"
-    ],
-    "category": "song",
-    "functions": [
-      "offertory"
     ]
   },
   {
