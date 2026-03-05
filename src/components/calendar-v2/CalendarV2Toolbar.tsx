@@ -1,5 +1,14 @@
 "use client";
 
+const ENSEMBLES = [
+  { value: "all", label: "All Ensembles" },
+  { value: "reflections", label: "Reflections" },
+  { value: "foundations", label: "Foundations" },
+  { value: "generations", label: "Generations" },
+  { value: "heritage", label: "Heritage" },
+  { value: "elevations", label: "Elevations" },
+];
+
 interface CalendarV2ToolbarProps {
   showFederalHolidays: boolean;
   setShowFederalHolidays: (v: boolean) => void;
@@ -9,6 +18,11 @@ interface CalendarV2ToolbarProps {
   setZipCode: (v: string) => void;
   stateLabel: string;
   onScrollToToday: () => void;
+  ensembleFilter: string;
+  setEnsembleFilter: (v: string) => void;
+  hidePast: boolean;
+  setHidePast: (v: boolean) => void;
+  totalDays: number;
 }
 
 export default function CalendarV2Toolbar({
@@ -20,10 +34,20 @@ export default function CalendarV2Toolbar({
   setZipCode,
   stateLabel,
   onScrollToToday,
+  ensembleFilter,
+  setEnsembleFilter,
+  hidePast,
+  setHidePast,
+  totalDays,
 }: CalendarV2ToolbarProps) {
+  // Calculate days elapsed
+  const today = new Date();
+  const startDate = new Date("2025-11-30");
+  const elapsed = Math.max(0, Math.min(totalDays, Math.floor((today.getTime() - startDate.getTime()) / 86400000)));
+
   return (
-    <div className="flex shrink-0 items-center gap-5 border-b border-stone-100 bg-white px-5 py-4">
-      {/* Title */}
+    <div className="flex shrink-0 flex-wrap items-center gap-x-5 gap-y-2 border-b border-stone-100 bg-white px-5 py-3">
+      {/* Title + progress */}
       <div className="flex items-center gap-2.5">
         <h1 className="font-serif text-lg font-light tracking-wide text-stone-700">
           Calendar
@@ -31,11 +55,29 @@ export default function CalendarV2Toolbar({
         <span className="rounded-full border border-amber-300 bg-amber-50 px-2 py-0.5 text-[10px] font-semibold uppercase tracking-wider text-amber-700">
           Sandbox
         </span>
+        <span className="text-[10px] tabular-nums text-stone-400">
+          Day {elapsed} of {totalDays}
+        </span>
       </div>
 
       <div className="h-5 w-px bg-stone-200" />
 
-      {/* Federal holidays toggle */}
+      {/* Ensemble filter */}
+      <select
+        value={ensembleFilter}
+        onChange={(e) => setEnsembleFilter(e.target.value)}
+        className="rounded border border-stone-200 bg-stone-50 px-2 py-1 text-xs text-stone-600 focus:border-stone-400 focus:outline-none"
+      >
+        {ENSEMBLES.map((e) => (
+          <option key={e.value} value={e.value}>
+            {e.label}
+          </option>
+        ))}
+      </select>
+
+      <div className="h-5 w-px bg-stone-200" />
+
+      {/* Holiday toggles */}
       <label className="flex cursor-pointer items-center gap-1.5 text-xs text-stone-500">
         <input
           type="checkbox"
@@ -43,10 +85,9 @@ export default function CalendarV2Toolbar({
           onChange={(e) => setShowFederalHolidays(e.target.checked)}
           className="h-3.5 w-3.5 rounded border-stone-300 text-stone-600 accent-stone-600"
         />
-        Federal Holidays
+        Federal
       </label>
 
-      {/* State holidays toggle */}
       <label
         className={`flex items-center gap-1.5 text-xs ${
           !stateLabel
@@ -61,7 +102,7 @@ export default function CalendarV2Toolbar({
           disabled={!stateLabel}
           className="h-3.5 w-3.5 rounded border-stone-300 text-stone-600 accent-stone-600 disabled:opacity-40"
         />
-        State Holidays
+        State
       </label>
 
       {/* Zip code input */}
@@ -75,14 +116,27 @@ export default function CalendarV2Toolbar({
           }}
           placeholder="ZIP"
           maxLength={5}
-          className="w-16 rounded border border-stone-200 bg-stone-50 px-2 py-1 text-xs text-stone-600 placeholder:text-stone-300 focus:border-stone-400 focus:outline-none"
+          className="w-14 rounded border border-stone-200 bg-stone-50 px-2 py-1 text-xs text-stone-600 placeholder:text-stone-300 focus:border-stone-400 focus:outline-none"
         />
         {stateLabel && (
-          <span className="text-xs font-medium text-stone-500">
+          <span className="text-[10px] font-medium text-stone-500">
             {stateLabel}
           </span>
         )}
       </div>
+
+      <div className="h-5 w-px bg-stone-200" />
+
+      {/* Hide past toggle */}
+      <label className="flex cursor-pointer items-center gap-1.5 text-xs text-stone-500">
+        <input
+          type="checkbox"
+          checked={hidePast}
+          onChange={(e) => setHidePast(e.target.checked)}
+          className="h-3.5 w-3.5 rounded border-stone-300 text-stone-600 accent-stone-600"
+        />
+        Hide past
+      </label>
 
       <div className="flex-1" />
 

@@ -19,6 +19,9 @@ interface MassEventRow {
   celebrant: string | null;
   location: string | null;
   notes: string | null;
+  occasion_id: string | null;
+  sidebar_note: string | null;
+  is_auto_mix: boolean;
 }
 
 interface BookingRow {
@@ -78,6 +81,9 @@ export default async function CalendarV2Page() {
     celebrant: e.celebrant,
     location: e.location,
     notes: e.notes,
+    occasionId: e.occasion_id ?? null,
+    sidebarNote: e.sidebar_note ?? null,
+    isAutoMix: e.is_auto_mix ?? false,
   }));
 
   // Transform bookings

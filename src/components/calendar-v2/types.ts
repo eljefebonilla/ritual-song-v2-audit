@@ -37,6 +37,9 @@ export interface MassEventV2 {
   celebrant: string | null;
   location: string | null;
   notes: string | null;
+  occasionId: string | null;
+  sidebarNote: string | null;
+  isAutoMix: boolean;
 }
 
 export interface BookingPersonnel {

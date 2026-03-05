@@ -46,6 +46,8 @@ export default function CalendarV2Shell({
   const [zipCode, setZipCode] = useState("");
   const [stateLabel, setStateLabel] = useState("");
   const [eventCreatorDate, setEventCreatorDate] = useState<string | null>(null);
+  const [ensembleFilter, setEnsembleFilter] = useState("all");
+  const [hidePast, setHidePast] = useState(false);
 
   // Holiday data (placeholder — files may not exist yet)
   const [holidays, setHolidays] = useState<Holiday[]>([]);
@@ -107,16 +109,20 @@ export default function CalendarV2Shell({
     return map;
   }, [bookings]);
 
-  // Build events lookup: date -> MassEventV2[]
+  // Build events lookup: date -> MassEventV2[] (with ensemble filter)
   const eventsMap = useMemo(() => {
     const map = new Map<string, MassEventV2[]>();
     for (const e of massEvents) {
+      if (ensembleFilter !== "all") {
+        // Non-ensemble events always show; ensemble events filtered
+        if (e.ensemble && e.ensemble.toLowerCase() !== ensembleFilter) continue;
+      }
       const arr = map.get(e.date) ?? [];
       arr.push(e);
       map.set(e.date, arr);
     }
     return map;
-  }, [massEvents]);
+  }, [massEvents, ensembleFilter]);
 
   // Build holidays lookup: date -> Holiday[]
   const holidaysMap = useMemo(() => {
@@ -229,6 +235,11 @@ export default function CalendarV2Shell({
         setZipCode={setZipCode}
         stateLabel={stateLabel}
         onScrollToToday={scrollToToday}
+        ensembleFilter={ensembleFilter}
+        setEnsembleFilter={setEnsembleFilter}
+        hidePast={hidePast}
+        setHidePast={setHidePast}
+        totalDays={allDates.length}
       />
 
       <div ref={scrollRef} className="flex-1 overflow-y-auto scroll-smooth">
@@ -246,6 +257,8 @@ export default function CalendarV2Shell({
                     key={dateStr}
                     day={buildDayData(dateStr)}
                     isToday={dateStr === today}
+                    isPast={dateStr < today}
+                    hidePast={hidePast}
                     onAddEvent={handleAddEvent}
                   />
                 ))}

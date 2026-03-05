@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Link from "next/link";
 import { LITURGICAL_COLOR_HEX } from "@/lib/liturgical-colors";
 import type { LiturgicalColor } from "@/lib/types";
 import type { DayData, BookingPersonnel, MassEventV2, Holiday } from "./types";
@@ -41,6 +42,18 @@ function getColorLabel(colorPrimary: string): string {
     black: "black",
   };
   return labels[colorPrimary] ?? colorPrimary;
+}
+
+function getEnsembleStyle(ensemble: string | null): { backgroundColor: string; color: string } {
+  const COLORS: Record<string, { backgroundColor: string; color: string }> = {
+    reflections:  { backgroundColor: "#f1f4f6", color: "#5a6a78" },
+    foundations:  { backgroundColor: "#f5e9e5", color: "#8b6b5a" },
+    generations:  { backgroundColor: "#fff8da", color: "#8a7a3a" },
+    heritage:     { backgroundColor: "#eef1eb", color: "#5a6b54" },
+    elevations:   { backgroundColor: "#eeebf6", color: "#6b5a8a" },
+  };
+  if (!ensemble) return { backgroundColor: "#f5f5f4", color: "#78716c" };
+  return COLORS[ensemble.toLowerCase()] || { backgroundColor: "#f5f5f4", color: "#78716c" };
 }
 
 function groupPersonnelByRole(personnel: BookingPersonnel[]): [string, string[]][] {
@@ -161,34 +174,88 @@ function PersonnelRow({ role, names }: { role: string; names: string }) {
 function EventCard({
   event,
   personnel,
+  isPast,
 }: {
   event: MassEventV2;
   personnel: BookingPersonnel[];
+  isPast: boolean;
 }) {
   const personnelGroups = groupPersonnelByRole(personnel);
+  const ensembleStyle = getEnsembleStyle(event.ensemble);
+  const hasOccasionLink = event.occasionId && event.eventType === "mass";
 
-  return (
-    <div className="group/event ml-8 mr-2 mb-1.5 rounded-lg border border-stone-100 bg-white px-3.5 py-2.5 shadow-[0_1px_2px_rgba(0,0,0,0.04)] transition-all hover:border-stone-200 hover:shadow-[0_2px_8px_rgba(0,0,0,0.06)]">
-      <div className="flex items-baseline gap-2">
-        <span className="text-sm font-medium text-stone-800">
+  const card = (
+    <div
+      className={`group/event ml-8 mr-2 mb-1.5 rounded-lg border border-stone-100 bg-white px-3.5 py-2.5 shadow-[0_1px_2px_rgba(0,0,0,0.04)] transition-all hover:border-stone-200 hover:shadow-[0_2px_8px_rgba(0,0,0,0.06)] ${
+        isPast ? "opacity-50" : ""
+      } ${hasOccasionLink ? "cursor-pointer" : ""}`}
+    >
+      <div className="flex items-center gap-2 flex-wrap">
+        <span className="text-sm font-medium text-stone-800 tabular-nums">
           {event.startTime12h}
+          {event.endTime12h && (
+            <span className="text-stone-400"> – {event.endTime12h}</span>
+          )}
         </span>
-        <span className="text-sm text-stone-700">{event.title}</span>
+        <span className={`text-sm text-stone-700 ${hasOccasionLink ? "group-hover/event:text-parish-burgundy" : ""}`}>
+          {event.title}
+        </span>
         {event.ensemble && (
-          <>
-            <span className="text-stone-300">&middot;</span>
-            <span className="text-sm font-medium text-stone-500">
-              {event.ensemble}
-            </span>
-          </>
+          <span
+            className="rounded px-1.5 py-0.5 text-[10px] font-medium"
+            style={ensembleStyle}
+          >
+            {event.ensemble}
+          </span>
+        )}
+        {event.isAutoMix && (
+          <span className="rounded bg-stone-100 px-1.5 py-0.5 text-[10px] font-medium text-stone-500">
+            Auto-Mix
+          </span>
+        )}
+        {hasOccasionLink && (
+          <svg
+            className="h-3.5 w-3.5 text-stone-300 opacity-0 transition-opacity group-hover/event:opacity-100"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth="2"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          >
+            <polyline points="9 18 15 12 9 6" />
+          </svg>
         )}
       </div>
-      <PersonnelSection celebrant={event.celebrant} personnel={personnelGroups} />
-      {event.notes && (
-        <div className="mt-1.5 text-xs italic text-stone-400">{event.notes}</div>
+      {/* Details row */}
+      {(event.location || event.notes) && (
+        <div className="mt-1 flex items-center gap-2 flex-wrap text-xs text-stone-400">
+          {event.location && event.location !== "Church" && (
+            <span className="flex items-center gap-0.5">
+              <svg className="h-3 w-3" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+                <circle cx="12" cy="10" r="3" />
+              </svg>
+              {event.location}
+            </span>
+          )}
+          {event.notes && (
+            <span>{event.notes}</span>
+          )}
+        </div>
       )}
+      {/* Sidebar note */}
+      {event.sidebarNote && (
+        <div className="mt-1 text-xs italic text-amber-600">{event.sidebarNote}</div>
+      )}
+      <PersonnelSection celebrant={event.celebrant} personnel={personnelGroups} />
     </div>
   );
+
+  if (hasOccasionLink) {
+    return <Link href={`/occasion/${event.occasionId}`}>{card}</Link>;
+  }
+  return card;
 }
 
 function USFlag({ className }: { className?: string }) {
@@ -469,13 +536,16 @@ function ColorDot({ color }: { color: string }) {
 interface DayRowProps {
   day: DayData;
   isToday: boolean;
+  isPast: boolean;
+  hidePast: boolean;
   onAddEvent: (date: string) => void;
 }
 
-export default function DayRow({ day, isToday, onAddEvent }: DayRowProps) {
+export default function DayRow({ day, isToday, isPast, hidePast, onAddEvent }: DayRowProps) {
   const [hovered, setHovered] = useState(false);
   const lit = day.liturgical;
   if (!lit) return null;
+  if (hidePast && isPast) return null;
 
   const isHighRank = HIGH_RANKS.has(lit.rank);
   const showCitations = SHOW_CITATIONS_RANKS.has(lit.rank);
@@ -561,13 +631,23 @@ export default function DayRow({ day, isToday, onAddEvent }: DayRowProps) {
         </span>
       </div>
 
-      {/* Rank + Holyday line */}
-      {(RANK_LABELS[lit.rank] || lit.isHolyday) && (
-        <div className="mt-1 flex items-center gap-2 pl-[68px]">
+      {/* Rank + Holyday + Liturgical indicators */}
+      {(RANK_LABELS[lit.rank] || lit.isHolyday || lit.lectionaryNumber || lit.psalterWeek) && (
+        <div className="mt-1 flex items-center gap-2 pl-[68px] flex-wrap">
           <RankBadge rank={lit.rank} />
           {lit.isHolyday && (
             <span className="text-[10px] font-medium uppercase tracking-wider text-amber-700">
               Holyday of Obligation
+            </span>
+          )}
+          {lit.lectionaryNumber && (
+            <span className="rounded bg-stone-100 px-1.5 py-0.5 text-[10px] tabular-nums font-medium text-stone-500">
+              #{lit.lectionaryNumber}
+            </span>
+          )}
+          {lit.psalterWeek && (
+            <span className="rounded bg-stone-100 px-1.5 py-0.5 text-[10px] font-medium text-stone-500">
+              Wk {lit.psalterWeek}
             </span>
           )}
         </div>
@@ -587,6 +667,13 @@ export default function DayRow({ day, isToday, onAddEvent }: DayRowProps) {
         </div>
       )}
 
+      {/* BVM indicator */}
+      {lit.isBVM && (
+        <div className="mt-1.5 ml-[68px] mr-4 rounded-md bg-blue-50/60 px-3 py-1.5 text-[11px] text-blue-600">
+          Optional Memorial of the Blessed Virgin Mary
+        </div>
+      )}
+
       {/* Events */}
       {hasEvents && (
         <div className="mt-2.5 space-y-1.5">
@@ -595,6 +682,7 @@ export default function DayRow({ day, isToday, onAddEvent }: DayRowProps) {
               key={event.id}
               event={event}
               personnel={day.personnel.get(event.id) ?? []}
+              isPast={isPast}
             />
           ))}
         </div>
