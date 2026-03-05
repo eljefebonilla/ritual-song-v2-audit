@@ -1,5 +1,5 @@
 import { NextRequest, NextResponse } from "next/server";
-import { getSongLibrary } from "@/lib/song-library";
+import { getSongLibrary, invalidateSongLibraryCache } from "@/lib/song-library";
 import { createAdminClient } from "@/lib/supabase/admin";
 import { detectDuplicateGroups, detectJunkEntries } from "@/lib/duplicate-detection";
 import { getAllFullOccasions } from "@/lib/data";
@@ -205,6 +205,54 @@ export async function POST(request: NextRequest) {
       .update({ song_id: primaryId })
       .eq("song_id", secondaryId);
 
+    // Update music_plan_edits — replace secondary title with primary
+    const SONG_FIELDS = [
+      "prelude", "gathering", "penitentialAct", "gloria",
+      "gospelAcclamation", "offertory", "lordsPrayer",
+      "fractionRite", "sending", "communionSongs",
+    ];
+    const { data: planRows } = await supabase
+      .from("music_plan_edits")
+      .select("occasion_id, ensemble_id, field, value")
+      .in("field", SONG_FIELDS);
+
+    let updatedOverrides = 0;
+    if (planRows) {
+      for (const row of planRows) {
+        const val = row.value;
+        if (!val) continue;
+        let changed = false;
+
+        if (row.field === "communionSongs" && Array.isArray(val)) {
+          for (const entry of val) {
+            if (entry?.title === secondary.title) {
+              entry.title = primary.title;
+              entry.composer = primary.composer || undefined;
+              changed = true;
+            }
+          }
+        } else if (val.title === secondary.title) {
+          val.title = primary.title;
+          val.composer = primary.composer || undefined;
+          changed = true;
+        }
+
+        if (changed) {
+          await supabase.from("music_plan_edits").upsert(
+            {
+              occasion_id: row.occasion_id,
+              ensemble_id: row.ensemble_id,
+              field: row.field,
+              value: val,
+              updated_at: new Date().toISOString(),
+            },
+            { onConflict: "occasion_id,ensemble_id,field" }
+          );
+          updatedOverrides++;
+        }
+      }
+    }
+
     // Record the merge decision
     await supabase.from("song_merge_decisions").insert({
       song_id_a: primaryId,
@@ -215,6 +263,9 @@ export async function POST(request: NextRequest) {
     // Remove secondary from library
     library.splice(secondaryIdx, 1);
     fs.writeFileSync(SONG_LIBRARY_PATH, JSON.stringify(library, null, 2), "utf-8");
+
+    // Invalidate cache
+    invalidateSongLibraryCache();
 
     return NextResponse.json({
       merged: primary,
