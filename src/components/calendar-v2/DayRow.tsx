@@ -43,21 +43,59 @@ function getColorLabel(colorPrimary: string): string {
   return labels[colorPrimary] ?? colorPrimary;
 }
 
-function groupPersonnelByRole(personnel: BookingPersonnel[]): string {
+function groupPersonnelByRole(personnel: BookingPersonnel[]): [string, string[]][] {
   const roleMap = new Map<string, string[]>();
   for (const p of personnel) {
     const arr = roleMap.get(p.roleName) ?? [];
     arr.push(p.personName);
     roleMap.set(p.roleName, arr);
   }
-  return Array.from(roleMap.entries())
-    .map(([role, names]) => `${role}: ${names.join(", ")}`)
-    .join(" \u00B7 ");
+  return Array.from(roleMap.entries());
 }
+
+const ROLE_COLORS: Record<string, string> = {
+  Cantor: "bg-violet-50 text-violet-700 border-violet-200",
+  Organist: "bg-sky-50 text-sky-700 border-sky-200",
+  Guitarist: "bg-amber-50 text-amber-700 border-amber-200",
+  "A. Guitar": "bg-amber-50 text-amber-700 border-amber-200",
+  Pianist: "bg-sky-50 text-sky-700 border-sky-200",
+  Piano: "bg-sky-50 text-sky-700 border-sky-200",
+  Bassist: "bg-emerald-50 text-emerald-700 border-emerald-200",
+  "E. Bass": "bg-emerald-50 text-emerald-700 border-emerald-200",
+  Drummer: "bg-orange-50 text-orange-700 border-orange-200",
+  "Drums/Percussion": "bg-orange-50 text-orange-700 border-orange-200",
+  Choir: "bg-rose-50 text-rose-700 border-rose-200",
+  Director: "bg-stone-100 text-stone-700 border-stone-300",
+  "Music Director": "bg-stone-100 text-stone-700 border-stone-300",
+  Psalmist: "bg-indigo-50 text-indigo-700 border-indigo-200",
+  Sound: "bg-slate-50 text-slate-600 border-slate-200",
+  Instrumentalist: "bg-teal-50 text-teal-700 border-teal-200",
+};
 
 // ---------------------------------------------------------------------------
 // Sub-components
 // ---------------------------------------------------------------------------
+
+function PersonnelChip({ role, names }: { role: string; names: string[] }) {
+  const colorClass = ROLE_COLORS[role] ?? "bg-stone-50 text-stone-600 border-stone-200";
+  return (
+    <span className={`inline-flex items-center gap-1 rounded-full border px-2 py-0.5 text-[11px] leading-tight ${colorClass}`}>
+      <span className="font-medium">{role}</span>
+      <span className="opacity-70">{names.join(", ")}</span>
+    </span>
+  );
+}
+
+function CelebrantChip({ name }: { name: string }) {
+  return (
+    <span className="inline-flex items-center gap-1 rounded-full border border-parish-gold/30 bg-amber-50/60 px-2 py-0.5 text-[11px] leading-tight text-stone-700">
+      <svg className="h-3 w-3 text-parish-gold" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+        <path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2" /><circle cx="12" cy="7" r="4" />
+      </svg>
+      <span className="font-medium">{name}</span>
+    </span>
+  );
+}
 
 function EventCard({
   event,
@@ -66,7 +104,7 @@ function EventCard({
   event: MassEventV2;
   personnel: BookingPersonnel[];
 }) {
-  const personnelStr = groupPersonnelByRole(personnel);
+  const personnelGroups = groupPersonnelByRole(personnel);
 
   return (
     <div className="group/event ml-8 mr-2 mb-1.5 rounded-lg border border-stone-100 bg-white px-3.5 py-2.5 shadow-[0_1px_2px_rgba(0,0,0,0.04)] transition-all hover:border-stone-200 hover:shadow-[0_2px_8px_rgba(0,0,0,0.06)]">
@@ -83,19 +121,17 @@ function EventCard({
             </span>
           </>
         )}
-        {event.hasMusic && (
-          <span className="text-xs text-amber-600" title="Has music">
-            &#9835;
-          </span>
-        )}
       </div>
-      {(event.celebrant || personnelStr) && (
-        <div className="mt-1 text-xs text-stone-400">
-          {[event.celebrant, personnelStr].filter(Boolean).join(" \u00B7 ")}
+      {(event.celebrant || personnelGroups.length > 0) && (
+        <div className="mt-1.5 flex flex-wrap items-center gap-1.5">
+          {event.celebrant && <CelebrantChip name={event.celebrant} />}
+          {personnelGroups.map(([role, names]) => (
+            <PersonnelChip key={role} role={role} names={names} />
+          ))}
         </div>
       )}
       {event.notes && (
-        <div className="mt-1 text-xs italic text-stone-400">{event.notes}</div>
+        <div className="mt-1.5 text-xs italic text-stone-400">{event.notes}</div>
       )}
     </div>
   );
