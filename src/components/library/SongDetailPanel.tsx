@@ -29,6 +29,7 @@ import Link from "next/link";
 interface SongDetailPanelProps {
   song: LibrarySong;
   onClose: () => void;
+  onSongRemoved?: (songId: string) => void;
   onAudioUploaded?: (songId: string, url: string) => void;
   ensembleId?: string;
   psalmSuggestions?: LibrarySong[];
@@ -511,6 +512,7 @@ function VisibilityToggle({ songId }: { songId: string }) {
 export default function SongDetailPanel({
   song,
   onClose,
+  onSongRemoved,
   onAudioUploaded,
   ensembleId,
   psalmSuggestions,
@@ -651,6 +653,7 @@ export default function SongDetailPanel({
     try {
       const res = await fetch(`/api/songs/${song.id}`, { method: "DELETE" });
       if (res.ok) {
+        onSongRemoved?.(song.id);
         onClose();
         router.refresh();
       }
@@ -693,6 +696,7 @@ export default function SongDetailPanel({
         body: JSON.stringify({ replacementId: replaceTarget.id, oldTitle: song.title, oldComposer: song.composer }),
       });
       if (res.ok) {
+        onSongRemoved?.(song.id);
         onClose();
         router.refresh();
       } else {

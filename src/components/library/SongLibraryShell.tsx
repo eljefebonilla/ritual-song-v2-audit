@@ -126,10 +126,17 @@ export default function SongLibraryShell({ songs, title = "Song Library", subtit
   // Group by setting toggle for Mass Parts
   const [groupBySetting, setGroupBySetting] = useState(false);
 
+  // Track songs removed client-side (replace/delete) for instant UI update
+  const [removedSongIds, setRemovedSongIds] = useState<Set<string>>(new Set());
+  const activeSongs = useMemo(
+    () => removedSongIds.size > 0 ? songs.filter(s => !removedSongIds.has(s.id)) : songs,
+    [songs, removedSongIds]
+  );
+
   // Supabase-uploaded audio URLs: songId → audioUrl
   const [uploadedAudio, setUploadedAudio] = useState<Record<string, string>>({});
   useEffect(() => {
-    const ids = songs.map((s) => s.id).join(",");
+    const ids = activeSongs.map((s) => s.id).join(",");
     if (!ids) return;
     fetch(`/api/songs/batch-audio?ids=${ids}`)
       .then((res) => (res.ok ? res.json() : null))
@@ -137,7 +144,7 @@ export default function SongLibraryShell({ songs, title = "Song Library", subtit
         if (data?.audioUrls) setUploadedAudio(data.audioUrls);
       })
       .catch(() => {});
-  }, [songs]);
+  }, [activeSongs]);
 
   // Determine if we're in Lent
   const isLent = useMemo(() => {
@@ -164,7 +171,7 @@ export default function SongLibraryShell({ songs, title = "Song Library", subtit
   // Normalized title index for fuzzy matching
   const normalizedTitleIndex = useMemo(() => {
     const map = new Map<string, string[]>();
-    for (const song of songs) {
+    for (const song of activeSongs) {
       const key = normalizeTitle(song.title);
       const existing = map.get(key);
       if (existing) {
@@ -174,7 +181,7 @@ export default function SongLibraryShell({ songs, title = "Song Library", subtit
       }
     }
     return map;
-  }, [songs]);
+  }, [activeSongs]);
 
   // Tab counts — using expanded categories
   const tabCounts = useMemo(() => {
@@ -189,7 +196,7 @@ export default function SongLibraryShell({ songs, title = "Song Library", subtit
     // Sub-category counts for chips
     const subCounts: Record<string, number> = {};
 
-    for (const s of songs) {
+    for (const s of activeSongs) {
       const cat = (s.category || "song") as string;
 
       if (cat === "song") counts.songs++;
@@ -207,18 +214,18 @@ export default function SongLibraryShell({ songs, title = "Song Library", subtit
     }
 
     return { counts, subCounts };
-  }, [songs]);
+  }, [activeSongs]);
 
   // Available psalm numbers
   const availablePsalmNumbers = useMemo(() => {
     const nums = new Set<number>();
-    for (const s of songs) {
+    for (const s of activeSongs) {
       if (s.category === "psalm" && s.psalmNumber) {
         nums.add(s.psalmNumber);
       }
     }
     return nums;
-  }, [songs]);
+  }, [activeSongs]);
 
   const activeFilterCount =
     orderOfMassFilters.size +
@@ -307,7 +314,7 @@ export default function SongLibraryShell({ songs, title = "Song Library", subtit
 
   const filtered = useMemo(() => {
     const tabCategories = getCategoriesForTab(activeTab);
-    let list = songs.filter(s => {
+    let list = activeSongs.filter(s => {
       const cat = (s.category || "song") as string;
       return tabCategories.includes(cat as SongCategory);
     });
@@ -408,7 +415,7 @@ export default function SongLibraryShell({ songs, title = "Song Library", subtit
     }
 
     return list;
-  }, [songs, activeTab, massPartSubFilter, gaSubFilter, selectedPsalmNumber, search, sort, orderOfMassFilters, seasonFilters, resourceFilters, calendarSongIds, calendarSongMeta, occasionSeasonMap]);
+  }, [activeSongs, activeTab, massPartSubFilter, gaSubFilter, selectedPsalmNumber, search, sort, orderOfMassFilters, seasonFilters, resourceFilters, calendarSongIds, calendarSongMeta, occasionSeasonMap]);
 
   // Build letter groups for alphabet jump
   const { availableLetters, letterIndices } = useMemo(() => {
@@ -437,7 +444,7 @@ export default function SongLibraryShell({ songs, title = "Song Library", subtit
   }, []);
 
   const selectedSong = selectedSongId
-    ? songs.find((s) => s.id === selectedSongId) || null
+    ? activeSongs.find((s) => s.id === selectedSongId) || null
     : null;
 
   // Track which letters have had their anchor placed
@@ -453,7 +460,7 @@ export default function SongLibraryShell({ songs, title = "Song Library", subtit
             <div>
               <h1 className="text-lg font-bold text-stone-900">{title}</h1>
               <p className="text-xs text-stone-400">
-                {subtitle || `${filtered.length} of ${songs.length} songs`}
+                {subtitle || `${filtered.length} of ${activeSongs.length} songs`}
               </p>
             </div>
             <div className="flex items-center gap-2">
@@ -696,6 +703,7 @@ export default function SongLibraryShell({ songs, title = "Song Library", subtit
         <SongDetailPanel
           song={selectedSong}
           onClose={() => setSelectedSongId(null)}
+          onSongRemoved={(id) => setRemovedSongIds(prev => new Set(prev).add(id))}
         />
       )}
 
