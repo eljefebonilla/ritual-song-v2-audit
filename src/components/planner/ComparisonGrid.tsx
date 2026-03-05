@@ -1,7 +1,7 @@
 "use client";
 
-import React, { useState, useCallback } from "react";
-import type { LiturgicalOccasion, MusicPlan } from "@/lib/types";
+import React, { useState, useCallback, useMemo } from "react";
+import type { LiturgicalOccasion, MusicPlan, LibrarySong } from "@/lib/types";
 import type { GridColumn, SongDragPayload, EnsembleId } from "@/lib/grid-types";
 import {
   GRID_SECTIONS,
@@ -14,8 +14,10 @@ import {
   type GridRowKey,
 } from "@/lib/grid-types";
 import { extractCellData } from "@/lib/grid-data";
-import { ENSEMBLE_BADGES } from "@/lib/occasion-helpers";
+import { ENSEMBLE_BADGES, normalizeTitle } from "@/lib/occasion-helpers";
 import { useUser } from "@/lib/user-context";
+import { useMedia } from "@/lib/media-context";
+import { getTitleIndex, pickBestMatch, resourceUrl } from "@/lib/song-library";
 import GridCell from "./GridCell";
 import CellEditor from "./CellEditor";
 
@@ -32,6 +34,8 @@ interface ComparisonGridProps {
   hideMassParts?: boolean;
   hideReadings?: boolean;
   onPlanChange?: () => void;
+  songs: LibrarySong[];
+  onSelectSong?: (song: LibrarySong) => void;
 }
 
 interface EditingCell {
@@ -40,20 +44,64 @@ interface EditingCell {
   anchorRect: DOMRect;
 }
 
+/** Find the best playable audio/youtube resource for a song */
+function findPlayable(song: LibrarySong): { url: string; type: "audio" | "youtube"; label?: string } | null {
+  // Supabase-hosted audio first
+  for (const r of song.resources) {
+    if (r.type === "audio" && (r.url || r.storagePath)) {
+      const url = resourceUrl(r);
+      if (url) return { url, type: "audio", label: r.label };
+    }
+  }
+  // Local audio
+  for (const r of song.resources) {
+    if (r.type === "audio" && r.filePath && !r.url && !r.storagePath) {
+      const url = resourceUrl(r);
+      if (url) return { url, type: "audio", label: r.label };
+    }
+  }
+  // YouTube
+  for (const r of song.resources) {
+    if (r.type === "youtube" && r.url) {
+      return { url: r.url, type: "youtube", label: r.label };
+    }
+  }
+  return null;
+}
+
 export default function ComparisonGrid({
   occasion,
   columns,
   hideMassParts = false,
   hideReadings = false,
   onPlanChange,
+  songs,
+  onSelectSong,
 }: ComparisonGridProps) {
   const { isAdmin } = useUser();
+  const { play } = useMedia();
   const [massSettingExpanded, setMassSettingExpanded] = useState(false);
   const [editingCell, setEditingCell] = useState<EditingCell | null>(null);
   const [dragOverCell, setDragOverCell] = useState<{
     columnIndex: number;
     rowKey: GridRowKey;
   } | null>(null);
+
+  // Build a normalized title → LibrarySong index
+  const songIndex = useMemo(() => {
+    const titleIdx = getTitleIndex();
+    return titleIdx;
+  }, [songs]); // eslint-disable-line react-hooks/exhaustive-deps
+
+  const lookupSong = useCallback(
+    (title: string, composer?: string): LibrarySong | null => {
+      const key = normalizeTitle(title);
+      const candidates = songIndex.get(key);
+      if (!candidates) return null;
+      return pickBestMatch(candidates, composer);
+    },
+    [songIndex]
+  );
 
   const rowKeyToField = useCallback((key: GridRowKey): string => {
     switch (key) {
@@ -342,6 +390,7 @@ export default function ComparisonGrid({
           }
 
           const rowKey = row.key!;
+          const isPsalmText = rowKey === "psalmText";
           const cellDataArr = columns.map((cc) =>
             extractCellData(cc.column.plan, rowKey, occasion)
           );
@@ -369,7 +418,9 @@ export default function ComparisonGrid({
             >
               {/* Row label */}
               <div
-                className={`border-b border-r border-stone-200 flex items-center px-3 h-11 ${
+                className={`border-b border-r border-stone-200 flex items-center px-3 ${
+                  isPsalmText ? "h-auto min-h-[2.75rem]" : "h-11"
+                } ${
                   row.isReading ? "bg-stone-50" : row.isSubRow ? "bg-stone-50/70" : "bg-white"
                 }`}
               >
@@ -423,10 +474,22 @@ export default function ComparisonGrid({
                   diffClass = "bg-red-50/30";
                 }
 
+                // Lookup song for music rows
+                let matchedSong: LibrarySong | null = null;
+                let playable: ReturnType<typeof findPlayable> = null;
+                if (!row.isReading && !cellIsEmpty && cellData.title) {
+                  matchedSong = lookupSong(cellData.title, cellData.composer);
+                  if (matchedSong) {
+                    playable = findPlayable(matchedSong);
+                  }
+                }
+
                 return (
                   <div
                     key={ci}
-                    className={`border-b border-stone-100 h-11 ${ci < colCount - 1 ? "border-r" : ""} ${diffClass}`}
+                    className={`border-b border-stone-100 ${
+                      isPsalmText ? "h-auto min-h-[2.75rem]" : "h-11"
+                    } ${ci < colCount - 1 ? "border-r" : ""} ${diffClass}`}
                   >
                     <GridCell
                       data={cellData}
@@ -450,6 +513,25 @@ export default function ComparisonGrid({
                       onDragLeave={isDraggable ? handleDragLeave : undefined}
                       onDrop={
                         isDraggable ? (e) => handleDrop(e, ci, rowKey) : undefined
+                      }
+                      hasAudio={!!playable}
+                      onPlay={
+                        playable && matchedSong
+                          ? () => {
+                              play({
+                                type: playable!.type,
+                                url: playable!.url,
+                                title: matchedSong!.title,
+                                subtitle: playable!.label,
+                                songId: matchedSong!.id,
+                              });
+                            }
+                          : undefined
+                      }
+                      onDetail={
+                        matchedSong && onSelectSong
+                          ? () => onSelectSong(matchedSong!)
+                          : undefined
                       }
                     />
                   </div>

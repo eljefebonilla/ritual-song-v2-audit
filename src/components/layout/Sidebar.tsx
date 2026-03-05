@@ -108,7 +108,7 @@ function buildOrderedItems(savedOrder: string[] | null): NavItemDef[] {
     const labels: Record<string, string> = {
       today: "Today", calendar: "Calendar", announcements: "Announcements",
       choir: "Choir Sign-Up", "planner-view": "Planner View",
-      compare: "Compare Masses",
+      compare: "Comparison View",
       library: "Song Library",
     };
     const hrefs: Record<string, string> = {
@@ -379,7 +379,7 @@ export default function Sidebar({ open, onClose }: SidebarProps) {
           )}
           <div className="flex items-center justify-between">
             <p className="text-[10px] text-parish-gold/60 uppercase tracking-wider">St. Monica Catholic Community</p>
-            <span className="text-[9px] text-stone-500">v1.10.6</span>
+            <span className="text-[9px] text-stone-500">v1.11.1</span>
           </div>
         </div>
       )}

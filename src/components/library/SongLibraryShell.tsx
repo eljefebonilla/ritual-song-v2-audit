@@ -9,6 +9,7 @@ import {
 } from "@/lib/types";
 import {
   PSALM_FILTERS, PSALTER_BOOKS, PSALM_SEASON_FILTERS, PSALM_YEAR_FILTERS,
+  PSALM_LENS_OPTIONS, PSALM_TYPE_OPTIONS, type PsalmLens,
   parsePsalmNumber, getPsalmCategories, getPsalmSeasons, isInPsalterBook, getSeasonPsalmNumbers,
 } from "@/lib/psalm-categories";
 import { useUser } from "@/lib/user-context";
@@ -185,11 +186,14 @@ export default function SongLibraryShell({ songs, title = "Song Library", subtit
   // Unified sub-filter state (resets on tab switch)
   const [subFilter, setSubFilter] = useState<string>("all");
 
-  // Psalm number picker state
+  // Psalm tiered filter state
+  const [psalmLens, setPsalmLens] = useState<PsalmLens>("all");
   const [selectedPsalmNumber, setSelectedPsalmNumber] = useState<number | null>(null);
   const [selectedBook, setSelectedBook] = useState<string>("book1");
   const [psalmSeasonFilter, setPsalmSeasonFilter] = useState<string>("all");
   const [psalmYearFilter, setPsalmYearFilter] = useState<string>("all");
+  const [psalmTypeFilter, setPsalmTypeFilter] = useState<string>("all");
+  const [showCommonOnly, setShowCommonOnly] = useState(false);
 
   // Group by setting toggle for Mass Parts
   const [groupBySetting, setGroupBySetting] = useState(false);
@@ -337,24 +341,26 @@ export default function SongLibraryShell({ songs, title = "Song Library", subtit
       if (s.category !== "psalm") continue;
       const num = s.psalmNumber || parsePsalmNumber(s.title);
       if (!num) continue;
-      // Filter by scholarly category sub-filter
-      if (subFilter !== "all") {
-        if (subFilter === "common") {
-          const threshold = tabCounts.subCounts["_common_threshold"] || 1;
-          if (s.usageCount < threshold) continue;
-        } else if (!getPsalmCategories(num).includes(subFilter)) {
-          continue;
-        }
+      // Common filter
+      if (showCommonOnly) {
+        const threshold = tabCounts.subCounts["_common_threshold"] || 1;
+        if (s.usageCount < threshold) continue;
       }
-      // Filter by season + year
-      if (psalmSeasonFilter !== "all") {
+      // Lens-specific filters
+      if (psalmLens === "season" && psalmSeasonFilter !== "all") {
         const seasonNums = getSeasonPsalmNumbers(psalmSeasonFilter, psalmYearFilter);
         if (!seasonNums.has(num)) continue;
+      }
+      if (psalmLens === "type" && psalmTypeFilter !== "all") {
+        if (!getPsalmCategories(num).includes(psalmTypeFilter)) continue;
+      }
+      if (psalmLens === "book") {
+        if (!isInPsalterBook(num, selectedBook)) continue;
       }
       nums.add(num);
     }
     return nums;
-  }, [activeSongs, subFilter, psalmSeasonFilter, psalmYearFilter, tabCounts.subCounts]);
+  }, [activeSongs, psalmLens, psalmSeasonFilter, psalmYearFilter, psalmTypeFilter, selectedBook, showCommonOnly, tabCounts.subCounts]);
 
   const activeFilterCount =
     orderOfMassFilters.size +
@@ -456,46 +462,51 @@ export default function SongLibraryShell({ songs, title = "Song Library", subtit
         list = list.filter(s => (s.functions || []).includes(subFilter));
       } else if (activeTab === "service_music" || activeTab === "gospel_acclamations") {
         list = list.filter(s => s.category === subFilter);
-      } else if (activeTab === "psalms") {
-        if (subFilter === "common") {
-          const threshold = tabCounts.subCounts["_common_threshold"] || 1;
-          list = list.filter(s => s.usageCount >= threshold);
-        } else {
-          list = list.filter(s => {
-            const psalmNum = s.psalmNumber || parsePsalmNumber(s.title);
-            if (!psalmNum) return false;
-            return getPsalmCategories(psalmNum).includes(subFilter);
-          });
-        }
       } else if (activeTab === "antiphons") {
         list = list.filter(s => (s.functions || []).includes(subFilter));
       }
     }
 
-    // Psalter Book filter — always active for psalms tab
+    // Psalm tiered lens filtering
     if (activeTab === "psalms") {
-      list = list.filter(s => {
-        const num = s.psalmNumber || parsePsalmNumber(s.title);
-        return isInPsalterBook(num, selectedBook);
-      });
-    }
+      // Common toggle — works with any lens
+      if (showCommonOnly) {
+        const threshold = tabCounts.subCounts["_common_threshold"] || 1;
+        list = list.filter(s => s.usageCount >= threshold);
+      }
 
-    // Psalm season filter (with optional year)
-    if (activeTab === "psalms" && psalmSeasonFilter !== "all") {
-      const seasonNums = getSeasonPsalmNumbers(psalmSeasonFilter, psalmYearFilter);
-      list = list.filter(s => {
-        const psalmNum = s.psalmNumber || parsePsalmNumber(s.title);
-        if (!psalmNum) return false;
-        return seasonNums.has(psalmNum);
-      });
-    }
+      // Lens-specific filters
+      if (psalmLens === "season" && psalmSeasonFilter !== "all") {
+        const seasonNums = getSeasonPsalmNumbers(psalmSeasonFilter, psalmYearFilter);
+        list = list.filter(s => {
+          const psalmNum = s.psalmNumber || parsePsalmNumber(s.title);
+          if (!psalmNum) return false;
+          return seasonNums.has(psalmNum);
+        });
+      }
 
-    // Psalm number filter
-    if (activeTab === "psalms" && selectedPsalmNumber !== null) {
-      list = list.filter(s => {
-        const num = s.psalmNumber || parsePsalmNumber(s.title);
-        return num === selectedPsalmNumber;
-      });
+      if (psalmLens === "book") {
+        list = list.filter(s => {
+          const num = s.psalmNumber || parsePsalmNumber(s.title);
+          return isInPsalterBook(num, selectedBook);
+        });
+      }
+
+      if (psalmLens === "type" && psalmTypeFilter !== "all") {
+        list = list.filter(s => {
+          const psalmNum = s.psalmNumber || parsePsalmNumber(s.title);
+          if (!psalmNum) return false;
+          return getPsalmCategories(psalmNum).includes(psalmTypeFilter);
+        });
+      }
+
+      // Specific psalm number
+      if (selectedPsalmNumber !== null) {
+        list = list.filter(s => {
+          const num = s.psalmNumber || parsePsalmNumber(s.title);
+          return num === selectedPsalmNumber;
+        });
+      }
     }
 
     // Search filter
@@ -581,7 +592,7 @@ export default function SongLibraryShell({ songs, title = "Song Library", subtit
     }
 
     return list;
-  }, [activeSongs, activeTab, subFilter, selectedPsalmNumber, selectedBook, psalmSeasonFilter, psalmYearFilter, search, sort, orderOfMassFilters, seasonFilters, resourceFilters, calendarSongIds, calendarSongMeta, occasionSeasonMap, tabCounts.subCounts]);
+  }, [activeSongs, activeTab, subFilter, psalmLens, selectedPsalmNumber, selectedBook, psalmSeasonFilter, psalmYearFilter, psalmTypeFilter, showCommonOnly, search, sort, orderOfMassFilters, seasonFilters, resourceFilters, calendarSongIds, calendarSongMeta, occasionSeasonMap, tabCounts.subCounts]);
 
   // Build letter groups for alphabet jump
   const { availableLetters, letterIndices } = useMemo(() => {
@@ -658,10 +669,13 @@ export default function SongLibraryShell({ songs, title = "Song Library", subtit
                   setActiveTab(tab.id);
                   setSearch("");
                   setSubFilter("all");
+                  setPsalmLens("all");
                   setSelectedPsalmNumber(null);
                   setSelectedBook("book1");
                   setPsalmSeasonFilter("all");
                   setPsalmYearFilter("all");
+                  setPsalmTypeFilter("all");
+                  setShowCommonOnly(false);
                   clearAllFilters();
                 }}
                 className={`px-3 py-1.5 text-xs font-medium rounded-md whitespace-nowrap transition-colors ${
@@ -675,28 +689,29 @@ export default function SongLibraryShell({ songs, title = "Song Library", subtit
             ))}
           </div>
 
-          {/* Sub-filter chips — every tab gets them */}
+          {/* Sub-filter chips — non-psalm tabs */}
           <div className="mb-1">
-            <SubFilterChips
-              filters={
-                activeTab === "songs" ? SONG_FUNCTION_FILTERS :
-                activeTab === "service_music" ? SERVICE_MUSIC_FILTERS :
-                activeTab === "psalms" ? PSALM_FILTERS :
-                activeTab === "gospel_acclamations" ? GA_FILTERS :
-                ANTIPHON_FUNCTION_FILTERS
-              }
-              selected={subFilter}
-              onSelect={setSubFilter}
-              counts={
-                activeTab === "antiphons"
-                  ? Object.fromEntries(
-                      Object.entries(tabCounts.subCounts)
-                        .filter(([k]) => k.startsWith("antiphon_"))
-                        .map(([k, v]) => [k.replace("antiphon_", ""), v])
-                    )
-                  : tabCounts.subCounts
-              }
-            />
+            {activeTab !== "psalms" && (
+              <SubFilterChips
+                filters={
+                  activeTab === "songs" ? SONG_FUNCTION_FILTERS :
+                  activeTab === "service_music" ? SERVICE_MUSIC_FILTERS :
+                  activeTab === "gospel_acclamations" ? GA_FILTERS :
+                  ANTIPHON_FUNCTION_FILTERS
+                }
+                selected={subFilter}
+                onSelect={setSubFilter}
+                counts={
+                  activeTab === "antiphons"
+                    ? Object.fromEntries(
+                        Object.entries(tabCounts.subCounts)
+                          .filter(([k]) => k.startsWith("antiphon_"))
+                          .map(([k, v]) => [k.replace("antiphon_", ""), v])
+                      )
+                    : tabCounts.subCounts
+                }
+              />
+            )}
             {/* Group by setting toggle — Service Music only */}
             {activeTab === "service_music" && (
               <label className="flex items-center gap-1.5 mt-1 cursor-pointer">
@@ -709,85 +724,162 @@ export default function SongLibraryShell({ songs, title = "Song Library", subtit
                 <span className="text-[11px] text-stone-500">Group by Setting</span>
               </label>
             )}
-            {/* Psalms: Season filter + Book selector + number picker */}
+            {/* Psalms: Tiered lens system */}
             {activeTab === "psalms" && (
               <>
-                {/* Seasonal common psalms */}
-                <div className="flex items-center gap-1 mt-1.5">
-                  <span className="text-[10px] font-medium text-stone-400 uppercase tracking-wide mr-1">Season</span>
-                  {PSALM_SEASON_FILTERS.map((sf) => (
-                    <button
-                      key={sf.id}
-                      onClick={() => {
-                        setPsalmSeasonFilter(sf.id);
-                        setPsalmYearFilter("all");
-                        setSelectedPsalmNumber(null);
-                      }}
-                      className={`shrink-0 px-2 py-0.5 text-[10px] font-medium rounded transition-colors ${
-                        psalmSeasonFilter === sf.id
-                          ? "bg-amber-600 text-white"
-                          : "bg-stone-100 text-stone-500 hover:bg-stone-200"
-                      }`}
-                    >
-                      {sf.label}{sf.id !== "all" ? ` ${tabCounts.subCounts[`season_${sf.id}`] || 0}` : ""}
-                    </button>
-                  ))}
-                </div>
-                {/* Year filter — shown when a season is selected */}
-                {psalmSeasonFilter !== "all" && (
-                  <div className="flex items-center gap-1 mt-1">
-                    <span className="text-[10px] font-medium text-stone-400 uppercase tracking-wide mr-1">Year</span>
-                    {PSALM_YEAR_FILTERS.map((yf) => (
+                {/* Lens selector + Common toggle */}
+                <div className="flex items-center gap-2 mt-0.5">
+                  <div className="flex items-center gap-1">
+                    {PSALM_LENS_OPTIONS.map((lens) => (
                       <button
-                        key={yf.id}
+                        key={lens.id}
                         onClick={() => {
-                          setPsalmYearFilter(yf.id);
+                          setPsalmLens(lens.id);
                           setSelectedPsalmNumber(null);
+                          // Reset lens-specific sub-filters
+                          if (lens.id !== "season") { setPsalmSeasonFilter("all"); setPsalmYearFilter("all"); }
+                          if (lens.id !== "book") setSelectedBook("book1");
+                          if (lens.id !== "type") setPsalmTypeFilter("all");
                         }}
-                        className={`shrink-0 px-2 py-0.5 text-[10px] font-medium rounded transition-colors ${
-                          psalmYearFilter === yf.id
-                            ? "bg-amber-600 text-white"
+                        className={`shrink-0 px-2.5 py-1 text-[11px] font-medium rounded-md transition-colors ${
+                          psalmLens === lens.id
+                            ? "bg-stone-800 text-white"
                             : "bg-stone-100 text-stone-500 hover:bg-stone-200"
                         }`}
                       >
-                        {yf.label}
+                        {lens.label}
+                      </button>
+                    ))}
+                  </div>
+                  <div className="w-px h-5 bg-stone-200" />
+                  <label className="flex items-center gap-1.5 cursor-pointer">
+                    <input
+                      type="checkbox"
+                      checked={showCommonOnly}
+                      onChange={(e) => setShowCommonOnly(e.target.checked)}
+                      className="w-3.5 h-3.5 rounded border-stone-300 text-amber-600 focus:ring-amber-400 focus:ring-1"
+                    />
+                    <span className="text-[11px] text-stone-500 font-medium">Common</span>
+                  </label>
+                </div>
+
+                {/* Season lens → Season pills + Year pills */}
+                {psalmLens === "season" && (
+                  <>
+                    <div className="flex items-center gap-1 mt-1.5">
+                      <span className="text-[10px] font-medium text-stone-400 uppercase tracking-wide mr-1">Season</span>
+                      {PSALM_SEASON_FILTERS.filter(sf => sf.id !== "all").map((sf) => (
+                        <button
+                          key={sf.id}
+                          onClick={() => {
+                            setPsalmSeasonFilter(psalmSeasonFilter === sf.id ? "all" : sf.id);
+                            setPsalmYearFilter("all");
+                            setSelectedPsalmNumber(null);
+                          }}
+                          className={`shrink-0 px-2 py-0.5 text-[10px] font-medium rounded transition-colors ${
+                            psalmSeasonFilter === sf.id
+                              ? "bg-amber-600 text-white"
+                              : "bg-stone-100 text-stone-500 hover:bg-stone-200"
+                          }`}
+                        >
+                          {sf.label}
+                        </button>
+                      ))}
+                    </div>
+                    {psalmSeasonFilter !== "all" && (
+                      <div className="flex items-center gap-1 mt-1">
+                        <span className="text-[10px] font-medium text-stone-400 uppercase tracking-wide mr-1">Year</span>
+                        {PSALM_YEAR_FILTERS.map((yf) => (
+                          <button
+                            key={yf.id}
+                            onClick={() => {
+                              setPsalmYearFilter(yf.id);
+                              setSelectedPsalmNumber(null);
+                            }}
+                            className={`shrink-0 px-2 py-0.5 text-[10px] font-medium rounded transition-colors ${
+                              psalmYearFilter === yf.id
+                                ? "bg-amber-600 text-white"
+                                : "bg-stone-100 text-stone-500 hover:bg-stone-200"
+                            }`}
+                          >
+                            {yf.label}
+                          </button>
+                        ))}
+                      </div>
+                    )}
+                  </>
+                )}
+
+                {/* Book lens → Psalter Book pills */}
+                {psalmLens === "book" && (
+                  <div className="flex items-center gap-1 mt-1.5">
+                    <span className="text-[10px] font-medium text-stone-400 uppercase tracking-wide mr-1">Book</span>
+                    {PSALTER_BOOKS.map((book) => (
+                      <button
+                        key={book.id}
+                        onClick={() => {
+                          setSelectedBook(book.id);
+                          setSelectedPsalmNumber(null);
+                        }}
+                        className={`shrink-0 px-2 py-0.5 text-[10px] font-medium rounded transition-colors ${
+                          selectedBook === book.id
+                            ? "bg-stone-700 text-white"
+                            : "bg-stone-100 text-stone-500 hover:bg-stone-200"
+                        }`}
+                      >
+                        {book.label}
                       </button>
                     ))}
                   </div>
                 )}
-                {/* Psalter Book selector */}
-                <div className="flex items-center gap-1 mt-1">
-                  <span className="text-[10px] font-medium text-stone-400 uppercase tracking-wide mr-1">Book</span>
-                  {PSALTER_BOOKS.map((book) => (
-                    <button
-                      key={book.id}
-                      onClick={() => {
-                        setSelectedBook(book.id);
-                        setSelectedPsalmNumber(null);
-                      }}
-                      className={`shrink-0 px-2 py-0.5 text-[10px] font-medium rounded transition-colors ${
-                        selectedBook === book.id
-                          ? "bg-stone-700 text-white"
-                          : "bg-stone-100 text-stone-500 hover:bg-stone-200"
-                      }`}
-                    >
-                      {book.label}
-                    </button>
-                  ))}
-                </div>
-                {/* Number picker — hidden for Canticles book */}
-                {selectedBook !== "canticles" && (() => {
-                  const book = PSALTER_BOOKS.find(b => b.id === selectedBook);
-                  const range = book?.range ?? [1, 150];
-                  const seasonNums = psalmSeasonFilter !== "all"
-                    ? getSeasonPsalmNumbers(psalmSeasonFilter, psalmYearFilter)
-                    : undefined;
+
+                {/* Type lens → Scholarly type pills */}
+                {psalmLens === "type" && (
+                  <div className="flex items-center gap-1 mt-1.5">
+                    <span className="text-[10px] font-medium text-stone-400 uppercase tracking-wide mr-1">Type</span>
+                    {PSALM_TYPE_OPTIONS.filter(t => t.id !== "all").map((t) => (
+                      <button
+                        key={t.id}
+                        onClick={() => {
+                          setPsalmTypeFilter(psalmTypeFilter === t.id ? "all" : t.id);
+                          setSelectedPsalmNumber(null);
+                        }}
+                        className={`shrink-0 px-2 py-0.5 text-[10px] font-medium rounded transition-colors ${
+                          psalmTypeFilter === t.id
+                            ? "bg-amber-600 text-white"
+                            : "bg-stone-100 text-stone-500 hover:bg-stone-200"
+                        }`}
+                      >
+                        {t.label}
+                      </button>
+                    ))}
+                  </div>
+                )}
+
+                {/* Number picker — show for all lenses except when viewing canticles */}
+                {!(psalmLens === "book" && selectedBook === "canticles") && (() => {
+                  // Determine number range based on lens
+                  let range: [number, number] = [1, 150];
+                  let seasonNums: Set<number> | undefined;
+
+                  if (psalmLens === "book") {
+                    const book = PSALTER_BOOKS.find(b => b.id === selectedBook);
+                    range = (book?.range ?? [1, 150]) as [number, number];
+                  }
+                  if (psalmLens === "season" && psalmSeasonFilter !== "all") {
+                    seasonNums = getSeasonPsalmNumbers(psalmSeasonFilter, psalmYearFilter);
+                  }
+                  if (psalmLens === "type" && psalmTypeFilter !== "all") {
+                    // Show only numbers that match the type
+                    seasonNums = availablePsalmNumbers;
+                  }
+
                   return (
                     <PsalmNumberPicker
-                      availableNumbers={new Set([...availablePsalmNumbers].filter(n => isInPsalterBook(n, selectedBook)))}
+                      availableNumbers={availablePsalmNumbers}
                       selectedNumber={selectedPsalmNumber}
                       onSelect={setSelectedPsalmNumber}
-                      range={range as [number, number]}
+                      range={range}
                       seasonNumbers={seasonNums}
                     />
                   );

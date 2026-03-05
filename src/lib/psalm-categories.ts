@@ -165,6 +165,27 @@ export const PSALM_FILTERS: { id: string; label: string }[] = [
   { id: "wisdom", label: "Wisdom" },
 ];
 
+/** Psalm browsing lens — the primary axis for psalm exploration */
+export type PsalmLens = "all" | "season" | "book" | "type";
+
+export const PSALM_LENS_OPTIONS: { id: PsalmLens; label: string }[] = [
+  { id: "all", label: "All" },
+  { id: "season", label: "By Season" },
+  { id: "book", label: "By Book" },
+  { id: "type", label: "By Type" },
+];
+
+/** Scholarly type options (used when lens = "type") */
+export const PSALM_TYPE_OPTIONS: { id: string; label: string }[] = [
+  { id: "all", label: "All Types" },
+  { id: "penitential", label: "Penitential" },
+  { id: "lament", label: "Lament" },
+  { id: "praise", label: "Praise" },
+  { id: "thanksgiving", label: "Thanksgiving" },
+  { id: "royal", label: "Royal" },
+  { id: "wisdom", label: "Wisdom" },
+];
+
 /** The five Books of the Psalter (Torah-like structure, each ending with a doxology) + Canticles */
 export const PSALTER_BOOKS: { id: string; label: string; range: [number, number] | null }[] = [
   { id: "book1", label: "Book I (1–41)", range: [1, 41] },

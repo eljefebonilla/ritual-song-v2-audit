@@ -1,27 +1,64 @@
 "use client";
 
-import { useState, useMemo, useEffect, useCallback } from "react";
-import type { LiturgicalOccasion, LiturgicalSeason, MusicPlan } from "@/lib/types";
+import { useState, useMemo, useEffect, useCallback, useRef } from "react";
+import type { LiturgicalOccasion, LiturgicalSeason, MusicPlan, LibrarySong } from "@/lib/types";
 import type { YearCycleFilter, EnsembleId, GridColumn } from "@/lib/grid-types";
 import { ENSEMBLE_OPTIONS, SEASON_OPTIONS } from "@/lib/grid-types";
 import { getFilteredOccasions, buildGridColumns } from "@/lib/grid-data";
 import { ENSEMBLE_BADGES } from "@/lib/occasion-helpers";
 import ComparisonGrid from "./ComparisonGrid";
+import SongDetailPanel from "@/components/library/SongDetailPanel";
 
 interface ComparisonShellProps {
   occasions: LiturgicalOccasion[];
+  songs: LibrarySong[];
 }
 
 const YEAR_CYCLES: YearCycleFilter[] = ["A", "B", "C", "all"];
 const MAX_ENSEMBLES = 3;
+const PANEL_MIN = 320;
+const LS_PANEL_WIDTH = "rs_compare_panel_width";
 
-export default function ComparisonShell({ occasions }: ComparisonShellProps) {
+export default function ComparisonShell({ occasions, songs }: ComparisonShellProps) {
   const [yearCycle, setYearCycle] = useState<YearCycleFilter>("A");
   const [season, setSeason] = useState<LiturgicalSeason | "all">("all");
   const [occasionId, setOccasionId] = useState<string>("");
   const [ensembles, setEnsembles] = useState<EnsembleId[]>(["reflections", "foundations"]);
   const [hideMassParts, setHideMassParts] = useState(false);
   const [hideReadings, setHideReadings] = useState(false);
+  const [selectedSong, setSelectedSong] = useState<LibrarySong | null>(null);
+
+  const [panelWidth, setPanelWidth] = useState<number>(() => {
+    if (typeof window === "undefined") return PANEL_MIN;
+    const saved = localStorage.getItem(LS_PANEL_WIDTH);
+    return saved ? Math.max(PANEL_MIN, parseInt(saved, 10) || PANEL_MIN) : PANEL_MIN;
+  });
+
+  const dragStartX = useRef(0);
+  const dragStartWidth = useRef(0);
+
+  const handleResizeStart = useCallback((e: React.MouseEvent) => {
+    e.preventDefault();
+    dragStartX.current = e.clientX;
+    dragStartWidth.current = panelWidth;
+
+    const onMove = (ev: MouseEvent) => {
+      const delta = dragStartX.current - ev.clientX;
+      const maxW = Math.floor(window.innerWidth * 0.65);
+      const next = Math.min(maxW, Math.max(PANEL_MIN, dragStartWidth.current + delta));
+      setPanelWidth(next);
+    };
+    const onUp = () => {
+      document.removeEventListener("mousemove", onMove);
+      document.removeEventListener("mouseup", onUp);
+      setPanelWidth((w) => {
+        localStorage.setItem(LS_PANEL_WIDTH, String(w));
+        return w;
+      });
+    };
+    document.addEventListener("mousemove", onMove);
+    document.addEventListener("mouseup", onUp);
+  }, [panelWidth]);
 
   const [planOverrides, setPlanOverrides] = useState<
     Record<string, Record<string, Record<string, unknown>>>
@@ -230,20 +267,33 @@ export default function ComparisonShell({ occasions }: ComparisonShellProps) {
         </div>
       </div>
 
-      {/* Grid */}
-      <div className="flex-1 overflow-hidden">
-        {compareColumns && compareColumns.length > 0 ? (
-          <ComparisonGrid
-            occasion={selectedOccasion!}
-            columns={compareColumns}
-            hideMassParts={hideMassParts}
-            hideReadings={hideReadings}
-            onPlanChange={handlePlanChange}
+      {/* Grid + Detail Panel */}
+      <div className="flex-1 flex overflow-hidden">
+        <div className="flex-1 overflow-hidden">
+          {compareColumns && compareColumns.length > 0 ? (
+            <ComparisonGrid
+              occasion={selectedOccasion!}
+              columns={compareColumns}
+              hideMassParts={hideMassParts}
+              hideReadings={hideReadings}
+              onPlanChange={handlePlanChange}
+              songs={songs}
+              onSelectSong={setSelectedSong}
+            />
+          ) : (
+            <div className="flex items-center justify-center h-full text-stone-400 text-sm">
+              Select an occasion to compare ensembles.
+            </div>
+          )}
+        </div>
+
+        {selectedSong && (
+          <SongDetailPanel
+            song={selectedSong}
+            onClose={() => setSelectedSong(null)}
+            panelWidth={panelWidth}
+            onResizeStart={handleResizeStart}
           />
-        ) : (
-          <div className="flex items-center justify-center h-full text-stone-400 text-sm">
-            Select an occasion to compare masses.
-          </div>
         )}
       </div>
     </div>

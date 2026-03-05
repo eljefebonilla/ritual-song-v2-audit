@@ -13,9 +13,25 @@ interface GridCellProps {
   onDragOver?: (e: React.DragEvent) => void;
   onDragLeave?: (e: React.DragEvent) => void;
   onDrop?: (e: React.DragEvent) => void;
+  onDetail?: () => void;
+  onPlay?: () => void;
+  hasAudio?: boolean;
 }
 
-export default function GridCell({ data, isEven, onEdit, draggable, onDragStart, isDragOver, onDragOver, onDragLeave, onDrop }: GridCellProps) {
+export default function GridCell({
+  data,
+  isEven,
+  onEdit,
+  draggable,
+  onDragStart,
+  isDragOver,
+  onDragOver,
+  onDragLeave,
+  onDrop,
+  onDetail,
+  onPlay,
+  hasAudio,
+}: GridCellProps) {
   const { role } = useUser();
 
   const handleClick = (e: React.MouseEvent<HTMLDivElement>) => {
@@ -50,11 +66,13 @@ export default function GridCell({ data, isEven, onEdit, draggable, onDragStart,
         className="px-2 py-1.5 h-full border-b border-r border-stone-100 bg-stone-50/80"
         title={data.description ? `${data.title} — ${data.description}` : data.title}
       >
-        <p className="text-[10px] italic text-stone-500 leading-tight truncate">
-          {data.title}
-        </p>
+        {data.title && (
+          <p className="text-[10px] font-semibold text-stone-600 leading-tight">
+            {data.title}
+          </p>
+        )}
         {data.description && (
-          <p className="text-[9px] italic text-stone-400 leading-tight truncate">
+          <p className="text-[10px] italic text-stone-400 leading-tight">
             {data.description}
           </p>
         )}
@@ -62,7 +80,7 @@ export default function GridCell({ data, isEven, onEdit, draggable, onDragStart,
     );
   }
 
-  // Music rows: editable + draggable + drop target
+  // Music rows: editable + draggable + drop target + detail/play
   return (
     <div
       onClick={handleClick}
@@ -71,14 +89,24 @@ export default function GridCell({ data, isEven, onEdit, draggable, onDragStart,
       onDragOver={onDragOver}
       onDragLeave={onDragLeave}
       onDrop={onDrop}
-      className={`px-2 py-1.5 h-full border-b border-r border-stone-100 group ${
+      className={`px-2 py-1.5 h-full border-b border-r border-stone-100 group relative ${
         isEven ? "bg-stone-50/50" : "bg-white"
       } ${role === "admin" ? "hover:bg-amber-50/60" : ""} ${
         draggable ? "cursor-grab active:cursor-grabbing" : role === "admin" ? "cursor-pointer" : ""
       } ${isDragOver ? "ring-2 ring-inset ring-amber-400" : ""}`}
       title={data.composer ? `${data.title} — ${data.composer}` : data.title}
     >
-      <p className="text-[11px] font-medium text-stone-800 leading-tight truncate">
+      <p
+        className={`text-[11px] font-medium text-stone-800 leading-tight truncate ${
+          onDetail ? "hover:text-amber-700 hover:underline cursor-pointer" : ""
+        }`}
+        onClick={(e) => {
+          if (onDetail) {
+            e.stopPropagation();
+            onDetail();
+          }
+        }}
+      >
         {data.title}
       </p>
       {data.composer && (
@@ -86,7 +114,21 @@ export default function GridCell({ data, isEven, onEdit, draggable, onDragStart,
           {data.composer}
         </p>
       )}
-      {role === "admin" && (
+      {hasAudio && onPlay && (
+        <button
+          onClick={(e) => {
+            e.stopPropagation();
+            onPlay();
+          }}
+          className="absolute right-1.5 top-1/2 -translate-y-1/2 hidden group-hover:flex items-center justify-center w-6 h-6 rounded-full bg-stone-800/80 text-white hover:bg-stone-800 transition-colors"
+          title="Play"
+        >
+          <svg width="10" height="10" viewBox="0 0 24 24" fill="currentColor">
+            <polygon points="5,3 19,12 5,21" />
+          </svg>
+        </button>
+      )}
+      {role === "admin" && !onDetail && (
         <span className="hidden group-hover:inline-block text-[9px] text-amber-500 mt-0.5">
           edit
         </span>

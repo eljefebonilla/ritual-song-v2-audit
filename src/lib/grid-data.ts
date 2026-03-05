@@ -93,7 +93,7 @@ export function extractCellData(
     }
     case "psalmText": {
       const r = occasion?.readings?.find((rd) => rd.type === "psalm");
-      if (r) return { title: r.antiphon || r.citation, description: r.summary, isEmpty: false, isReading: true };
+      if (r) return { title: r.citation, description: r.antiphon, isEmpty: false, isReading: true };
       return { title: "", isEmpty: true, isReading: true };
     }
     case "secondReading": {
