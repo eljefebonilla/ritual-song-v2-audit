@@ -1143,9 +1143,9 @@ export default function SongDetailPanel({
                               </button>
                             </div>
                           )}
-                          {/* Inline tag editor */}
-                          {editingResourceId === r.id ? (
-                            <div className="border border-blue-200 rounded-md p-2 bg-blue-50/30 space-y-2">
+                          {/* Inline tag editor (shown above resource, keeps preview open) */}
+                          {editingResourceId === r.id && (
+                            <div className="border border-blue-200 rounded-md p-2 bg-blue-50/30 space-y-2 mb-1.5">
                               <input
                                 type="text"
                                 value={editLabel}
@@ -1184,7 +1184,7 @@ export default function SongDetailPanel({
                                 </button>
                               </div>
                             </div>
-                          ) : (
+                          )}
                           <ResourceLink
                             resource={r}
                             songTitle={song.title}
@@ -1197,7 +1197,6 @@ export default function SongDetailPanel({
                             previewId={activePreviewId}
                             onPreviewToggle={handlePreviewToggle}
                           />
-                          )}
                         </div>
                       ))}
                     </div>

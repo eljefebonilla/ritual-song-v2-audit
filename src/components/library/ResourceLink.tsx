@@ -326,44 +326,37 @@ export default function ResourceLink({
               : resource.isHighlighted
                 ? "border-amber-300 bg-amber-50 hover:bg-amber-100"
                 : "border-stone-200 bg-white hover:bg-stone-50"
-          }`}
+          } ${isPreviewable ? "cursor-pointer" : ""}`}
+          onClick={isPreviewable ? togglePreview : undefined}
         >
-          <a
-            href={url}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="flex items-center gap-2 min-w-0 flex-1"
-          >
-            <TypeIcon type={resource.type} />
-            <div className="min-w-0 flex-1">
-              <p className="text-xs font-medium text-stone-700 truncate">
-                {resource.label}
-                <TagBadges tags={resource.tags} />
-                {visibilityBadge}
-              </p>
-              {resource.url && !isPreviewOpen && (
-                <p className="text-[10px] text-stone-400 truncate">{resource.url}</p>
-              )}
-            </div>
-          </a>
+          <TypeIcon type={resource.type} />
+          <div className="min-w-0 flex-1">
+            <p className="text-xs font-medium text-stone-700 truncate">
+              {resource.label}
+              <TagBadges tags={resource.tags} />
+              {visibilityBadge}
+            </p>
+            {resource.url && !isPreviewOpen && (
+              <p className="text-[10px] text-stone-400 truncate">{resource.url}</p>
+            )}
+          </div>
           <div className="flex items-center gap-0.5 shrink-0">
             {isPreviewable && <PreviewButton isOpen={isPreviewOpen} onClick={togglePreview} />}
-            {!isExternal && <DownloadButton url={url} label={resource.label} />}
-            {isExternal && (
-              <svg
-                className="w-3 h-3 text-stone-300 group-hover:text-stone-500"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="2"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              >
+            <a
+              href={url}
+              target="_blank"
+              rel="noopener noreferrer"
+              onClick={(e) => e.stopPropagation()}
+              className="p-1 text-stone-300 hover:text-stone-600 transition-colors shrink-0"
+              title="Open in new tab"
+            >
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                 <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
                 <polyline points="15 3 21 3 21 9" />
                 <line x1="10" y1="14" x2="21" y2="3" />
               </svg>
-            )}
+            </a>
+            {!isExternal && <DownloadButton url={url} label={resource.label} />}
             {editButton}
             {deleteButton}
           </div>
