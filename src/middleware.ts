@@ -6,7 +6,7 @@ import { createServerClient } from "@supabase/ssr";
 // Note: /api/ routes are already handled by STATIC_PREFIXES below
 const GATE_BYPASS_PATHS = [
   "/gate",
-  "/auth/callback",
+  "/auth",
   "/join",
   "/onboard",
   "/pending",
