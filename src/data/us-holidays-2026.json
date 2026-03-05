@@ -1,0 +1,65 @@
+{
+  "federal": [
+    { "date": "2026-01-01", "name": "New Year's Day" },
+    { "date": "2026-01-19", "name": "Martin Luther King Jr. Day" },
+    { "date": "2026-02-16", "name": "Presidents' Day" },
+    { "date": "2026-05-25", "name": "Memorial Day" },
+    { "date": "2026-06-19", "name": "Juneteenth" },
+    { "date": "2026-07-03", "name": "Independence Day (observed)" },
+    { "date": "2026-07-04", "name": "Independence Day" },
+    { "date": "2026-09-07", "name": "Labor Day" },
+    { "date": "2026-10-12", "name": "Columbus Day" },
+    { "date": "2026-11-11", "name": "Veterans Day" },
+    { "date": "2026-11-26", "name": "Thanksgiving Day" },
+    { "date": "2026-12-25", "name": "Christmas Day" }
+  ],
+  "statesByFips": {
+    "CA": [
+      { "date": "2026-03-31", "name": "Cesar Chavez Day" },
+      { "date": "2026-11-27", "name": "Day After Thanksgiving" }
+    ],
+    "NY": [
+      { "date": "2026-02-12", "name": "Lincoln's Birthday" },
+      { "date": "2026-11-03", "name": "Election Day" }
+    ],
+    "TX": [
+      { "date": "2026-01-19", "name": "Confederate Heroes Day" },
+      { "date": "2026-03-02", "name": "Texas Independence Day" },
+      { "date": "2026-04-21", "name": "San Jacinto Day" },
+      { "date": "2026-06-19", "name": "Emancipation Day" },
+      { "date": "2026-08-27", "name": "Lyndon B. Johnson Day" },
+      { "date": "2026-11-27", "name": "Day After Thanksgiving" }
+    ],
+    "FL": [
+      { "date": "2026-11-27", "name": "Day After Thanksgiving" },
+      { "date": "2026-04-03", "name": "Good Friday" }
+    ],
+    "IL": [
+      { "date": "2026-02-12", "name": "Lincoln's Birthday" },
+      { "date": "2026-03-02", "name": "Casimir Pulaski Day" },
+      { "date": "2026-11-03", "name": "Election Day" }
+    ],
+    "PA": [
+      { "date": "2026-06-14", "name": "Flag Day" },
+      { "date": "2026-11-27", "name": "Day After Thanksgiving" }
+    ],
+    "OH": [
+      { "date": "2026-11-27", "name": "Day After Thanksgiving" }
+    ],
+    "GA": [
+      { "date": "2026-04-27", "name": "Confederate Memorial Day" },
+      { "date": "2026-11-27", "name": "Day After Thanksgiving" },
+      { "date": "2026-12-24", "name": "Washington's Birthday (state holiday)" }
+    ],
+    "NC": [
+      { "date": "2026-04-03", "name": "Good Friday" },
+      { "date": "2026-11-27", "name": "Day After Thanksgiving" },
+      { "date": "2026-12-24", "name": "Christmas Eve" }
+    ],
+    "MA": [
+      { "date": "2026-03-17", "name": "Evacuation Day (Suffolk County)" },
+      { "date": "2026-04-20", "name": "Patriots' Day" },
+      { "date": "2026-06-17", "name": "Bunker Hill Day (Suffolk County)" }
+    ]
+  }
+}
