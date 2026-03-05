@@ -656,6 +656,7 @@ export default function SongLibraryShell({ songs, title = "Song Library", subtit
                   setSelectedPsalmNumber(null);
                   setSelectedBook("book1");
                   setPsalmSeasonFilter("all");
+                  clearAllFilters();
                 }}
                 className={`px-3 py-1.5 text-xs font-medium rounded-md whitespace-nowrap transition-colors ${
                   activeTab === tab.id
