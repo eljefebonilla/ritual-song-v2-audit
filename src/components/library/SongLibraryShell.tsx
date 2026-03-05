@@ -8,8 +8,8 @@ import {
   SONG_FUNCTION_FILTERS, SERVICE_MUSIC_FILTERS, GA_FILTERS, ANTIPHON_FUNCTION_FILTERS,
 } from "@/lib/types";
 import {
-  PSALM_FILTERS, PSALTER_BOOKS, PSALM_SEASON_FILTERS,
-  parsePsalmNumber, getPsalmCategories, getPsalmSeasons, isInPsalterBook,
+  PSALM_FILTERS, PSALTER_BOOKS, PSALM_SEASON_FILTERS, PSALM_YEAR_FILTERS,
+  parsePsalmNumber, getPsalmCategories, getPsalmSeasons, isInPsalterBook, getSeasonPsalmNumbers,
 } from "@/lib/psalm-categories";
 import { useUser } from "@/lib/user-context";
 import { getSongDisplayCategories } from "@/lib/song-library";
@@ -189,6 +189,7 @@ export default function SongLibraryShell({ songs, title = "Song Library", subtit
   const [selectedPsalmNumber, setSelectedPsalmNumber] = useState<number | null>(null);
   const [selectedBook, setSelectedBook] = useState<string>("book1");
   const [psalmSeasonFilter, setPsalmSeasonFilter] = useState<string>("all");
+  const [psalmYearFilter, setPsalmYearFilter] = useState<string>("all");
 
   // Group by setting toggle for Mass Parts
   const [groupBySetting, setGroupBySetting] = useState(false);
@@ -345,14 +346,15 @@ export default function SongLibraryShell({ songs, title = "Song Library", subtit
           continue;
         }
       }
-      // Filter by season
+      // Filter by season + year
       if (psalmSeasonFilter !== "all") {
-        if (!getPsalmSeasons(num).includes(psalmSeasonFilter)) continue;
+        const seasonNums = getSeasonPsalmNumbers(psalmSeasonFilter, psalmYearFilter);
+        if (!seasonNums.has(num)) continue;
       }
       nums.add(num);
     }
     return nums;
-  }, [activeSongs, subFilter, psalmSeasonFilter, tabCounts.subCounts]);
+  }, [activeSongs, subFilter, psalmSeasonFilter, psalmYearFilter, tabCounts.subCounts]);
 
   const activeFilterCount =
     orderOfMassFilters.size +
@@ -365,6 +367,8 @@ export default function SongLibraryShell({ songs, title = "Song Library", subtit
     setSeasonFilters(new Set());
     setResourceFilters(new Set());
     setSelectedDate(null);
+    setCalendarSongIds(null);
+    setCalendarSongMeta(null);
     setSelectedEnsemble(null);
     setCalendarSongIds(null);
     setCalendarSongMeta(null);
@@ -476,12 +480,13 @@ export default function SongLibraryShell({ songs, title = "Song Library", subtit
       });
     }
 
-    // Psalm season filter
+    // Psalm season filter (with optional year)
     if (activeTab === "psalms" && psalmSeasonFilter !== "all") {
+      const seasonNums = getSeasonPsalmNumbers(psalmSeasonFilter, psalmYearFilter);
       list = list.filter(s => {
         const psalmNum = s.psalmNumber || parsePsalmNumber(s.title);
         if (!psalmNum) return false;
-        return getPsalmSeasons(psalmNum).includes(psalmSeasonFilter);
+        return seasonNums.has(psalmNum);
       });
     }
 
@@ -576,7 +581,7 @@ export default function SongLibraryShell({ songs, title = "Song Library", subtit
     }
 
     return list;
-  }, [activeSongs, activeTab, subFilter, selectedPsalmNumber, selectedBook, psalmSeasonFilter, search, sort, orderOfMassFilters, seasonFilters, resourceFilters, calendarSongIds, calendarSongMeta, occasionSeasonMap, tabCounts.subCounts]);
+  }, [activeSongs, activeTab, subFilter, selectedPsalmNumber, selectedBook, psalmSeasonFilter, psalmYearFilter, search, sort, orderOfMassFilters, seasonFilters, resourceFilters, calendarSongIds, calendarSongMeta, occasionSeasonMap, tabCounts.subCounts]);
 
   // Build letter groups for alphabet jump
   const { availableLetters, letterIndices } = useMemo(() => {
@@ -656,6 +661,7 @@ export default function SongLibraryShell({ songs, title = "Song Library", subtit
                   setSelectedPsalmNumber(null);
                   setSelectedBook("book1");
                   setPsalmSeasonFilter("all");
+                  setPsalmYearFilter("all");
                   clearAllFilters();
                 }}
                 className={`px-3 py-1.5 text-xs font-medium rounded-md whitespace-nowrap transition-colors ${
@@ -712,7 +718,11 @@ export default function SongLibraryShell({ songs, title = "Song Library", subtit
                   {PSALM_SEASON_FILTERS.map((sf) => (
                     <button
                       key={sf.id}
-                      onClick={() => setPsalmSeasonFilter(sf.id)}
+                      onClick={() => {
+                        setPsalmSeasonFilter(sf.id);
+                        setPsalmYearFilter("all");
+                        setSelectedPsalmNumber(null);
+                      }}
                       className={`shrink-0 px-2 py-0.5 text-[10px] font-medium rounded transition-colors ${
                         psalmSeasonFilter === sf.id
                           ? "bg-amber-600 text-white"
@@ -723,6 +733,28 @@ export default function SongLibraryShell({ songs, title = "Song Library", subtit
                     </button>
                   ))}
                 </div>
+                {/* Year filter — shown when a season is selected */}
+                {psalmSeasonFilter !== "all" && (
+                  <div className="flex items-center gap-1 mt-1">
+                    <span className="text-[10px] font-medium text-stone-400 uppercase tracking-wide mr-1">Year</span>
+                    {PSALM_YEAR_FILTERS.map((yf) => (
+                      <button
+                        key={yf.id}
+                        onClick={() => {
+                          setPsalmYearFilter(yf.id);
+                          setSelectedPsalmNumber(null);
+                        }}
+                        className={`shrink-0 px-2 py-0.5 text-[10px] font-medium rounded transition-colors ${
+                          psalmYearFilter === yf.id
+                            ? "bg-amber-600 text-white"
+                            : "bg-stone-100 text-stone-500 hover:bg-stone-200"
+                        }`}
+                      >
+                        {yf.label}
+                      </button>
+                    ))}
+                  </div>
+                )}
                 {/* Psalter Book selector */}
                 <div className="flex items-center gap-1 mt-1">
                   <span className="text-[10px] font-medium text-stone-400 uppercase tracking-wide mr-1">Book</span>
@@ -747,12 +779,16 @@ export default function SongLibraryShell({ songs, title = "Song Library", subtit
                 {selectedBook !== "canticles" && (() => {
                   const book = PSALTER_BOOKS.find(b => b.id === selectedBook);
                   const range = book?.range ?? [1, 150];
+                  const seasonNums = psalmSeasonFilter !== "all"
+                    ? getSeasonPsalmNumbers(psalmSeasonFilter, psalmYearFilter)
+                    : undefined;
                   return (
                     <PsalmNumberPicker
                       availableNumbers={new Set([...availablePsalmNumbers].filter(n => isInPsalterBook(n, selectedBook)))}
                       selectedNumber={selectedPsalmNumber}
                       onSelect={setSelectedPsalmNumber}
                       range={range as [number, number]}
+                      seasonNumbers={seasonNums}
                     />
                   );
                 })()}
@@ -867,10 +903,12 @@ export default function SongLibraryShell({ songs, title = "Song Library", subtit
           <div ref={listRef} className="flex-1 overflow-y-auto">
             {filtered.length === 0 ? (
               <div className="text-center text-stone-400 text-sm py-12">
-                {search || activeFilterCount > 0
+                {search || activeFilterCount > 0 || subFilter !== "all" || psalmSeasonFilter !== "all" || selectedPsalmNumber !== null
                   ? "No songs match your filters."
                   : activeTab === "antiphons"
                   ? "No antiphons in library yet."
+                  : activeTab === "psalms" && selectedBook === "canticles"
+                  ? "No canticles in library yet."
                   : "No songs in library yet."}
               </div>
             ) : activeTab === "service_music" && groupBySetting ? (
