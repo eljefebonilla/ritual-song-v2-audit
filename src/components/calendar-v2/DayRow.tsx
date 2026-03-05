@@ -66,8 +66,20 @@ function PersonnelGrid({
 }) {
   if (!celebrant && personnel.length === 0) return null;
 
-  // Split into two columns: liturgical roles and music roles
-  const liturgicalRoles = new Set(["Cantor", "Psalmist", "Choir", "Soprano", "Alto", "Tenor", "Bass (Vocal)"]);
+  // First column: ministry/vocal roles in a specific order
+  // Second column: everything else (instruments, tech, etc.)
+  const FIRST_COL_ORDER = [
+    "Celebrant",
+    "Music Director", "Director",
+    "Cantor", "Cantor & Piano",
+    "Psalmist",
+    "Accompanist",
+    "Section Leaders",
+    "Soprano", "Alto", "Tenor", "Bass (Vocal)",
+    "Choir",
+  ];
+  const firstColSet = new Set(FIRST_COL_ORDER);
+
   const leftCol: [string, string][] = [];
   const rightCol: [string, string][] = [];
 
@@ -75,12 +87,24 @@ function PersonnelGrid({
     leftCol.push(["Celebrant", celebrant]);
   }
 
+  // Collect first-column entries preserving the defined order
+  const personnelMap = new Map<string, string>();
   for (const [role, names] of personnel) {
-    const entry: [string, string] = [role, names.join(", ")];
-    if (liturgicalRoles.has(role)) {
-      leftCol.push(entry);
-    } else {
-      rightCol.push(entry);
+    personnelMap.set(role, names.join(", "));
+  }
+
+  for (const role of FIRST_COL_ORDER) {
+    const names = personnelMap.get(role);
+    if (names) {
+      leftCol.push([role, names]);
+      personnelMap.delete(role);
+    }
+  }
+
+  // Everything else goes to right column
+  for (const [role, names] of personnelMap) {
+    if (!firstColSet.has(role)) {
+      rightCol.push([role, names]);
     }
   }
 
