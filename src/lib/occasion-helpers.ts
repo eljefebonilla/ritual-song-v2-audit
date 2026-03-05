@@ -48,6 +48,30 @@ export function getOccasionSeasonMap(): Map<string, string> {
 }
 
 /**
+ * Get the current liturgical season from the date index.
+ * Finds today's entry or the nearest future entry.
+ */
+export function getCurrentLiturgicalSeason(): string {
+  const map = getDateToOccasionMap();
+  const today = new Date().toISOString().split("T")[0];
+
+  // Exact match
+  const exact = map.get(today);
+  if (exact) return exact.season;
+
+  // Find nearest future date
+  let bestDate = "";
+  let bestSeason = "ordinary";
+  for (const [date, entry] of map) {
+    if (date >= today && (bestDate === "" || date < bestDate)) {
+      bestDate = date;
+      bestSeason = entry.season;
+    }
+  }
+  return bestSeason;
+}
+
+/**
  * Lowercase, strip punctuation, collapse whitespace.
  */
 export function normalizeTitle(title: string): string {

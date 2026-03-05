@@ -35,9 +35,9 @@ export default function PsalmNumberPicker({ availableNumbers, selectedNumber, on
   }
 
   return (
-    <div className="py-1.5 px-1 space-y-0.5">
+    <div className="py-1.5 px-1 space-y-0.5 overflow-x-auto scrollbar-hide">
       {rows.map((row) => (
-        <div key={row[0]} className="flex items-center gap-0.5">
+        <div key={row[0]} className="flex items-center gap-0.5 min-w-max">
           {row.map((num) => (
             <NumButton key={num} num={num} available={availableNumbers.has(num)} selected={selectedNumber === num} onSelect={onSelect} />
           ))}

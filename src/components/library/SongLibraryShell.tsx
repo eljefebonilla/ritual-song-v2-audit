@@ -18,6 +18,7 @@ import { getSongDisplayCategories } from "@/lib/song-library";
 import {
   getDateToOccasionMap,
   getOccasionSeasonMap,
+  getCurrentLiturgicalSeason,
   normalizeTitle,
   extractSongEntriesWithPosition,
   MASS_POSITION_ORDER,
@@ -739,7 +740,16 @@ export default function SongLibraryShell({ songs, title = "Song Library", subtit
                           setPsalmLens(lens.id);
                           setSelectedPsalmNumber(null);
                           // Reset lens-specific sub-filters
-                          if (lens.id !== "season") { setPsalmSeasonFilter("all"); setPsalmYearFilter("all"); }
+                          if (lens.id === "season") {
+                            // Auto-select current liturgical season
+                            const current = getCurrentLiturgicalSeason();
+                            // Map holyweek → holy_week for psalm season filter
+                            const mapped = current === "holyweek" ? "holy_week" : current;
+                            setPsalmSeasonFilter(mapped);
+                            setPsalmYearFilter("all");
+                          } else {
+                            setPsalmSeasonFilter("all"); setPsalmYearFilter("all");
+                          }
                           if (lens.id !== "book") setSelectedBook("book1");
                           if (lens.id !== "type") setPsalmTypeFilter("all");
                         }}
