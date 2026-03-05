@@ -743,13 +743,18 @@ export default function SongLibraryShell({ songs, title = "Song Library", subtit
                   ))}
                 </div>
                 {/* Number picker — hidden for Canticles book */}
-                {selectedBook !== "canticles" && (
-                  <PsalmNumberPicker
-                    availableNumbers={new Set([...availablePsalmNumbers].filter(n => isInPsalterBook(n, selectedBook)))}
-                    selectedNumber={selectedPsalmNumber}
-                    onSelect={setSelectedPsalmNumber}
-                  />
-                )}
+                {selectedBook !== "canticles" && (() => {
+                  const book = PSALTER_BOOKS.find(b => b.id === selectedBook);
+                  const range = book?.range ?? [1, 150];
+                  return (
+                    <PsalmNumberPicker
+                      availableNumbers={new Set([...availablePsalmNumbers].filter(n => isInPsalterBook(n, selectedBook)))}
+                      selectedNumber={selectedPsalmNumber}
+                      onSelect={setSelectedPsalmNumber}
+                      range={range as [number, number]}
+                    />
+                  );
+                })()}
               </>
             )}
           </div>

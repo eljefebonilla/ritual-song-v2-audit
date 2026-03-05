@@ -379,7 +379,7 @@ export default function Sidebar({ open, onClose }: SidebarProps) {
           )}
           <div className="flex items-center justify-between">
             <p className="text-[10px] text-parish-gold/60 uppercase tracking-wider">St. Monica Catholic Community</p>
-            <span className="text-[9px] text-stone-500">v1.10.2</span>
+            <span className="text-[9px] text-stone-500">v1.10.3</span>
           </div>
         </div>
       )}
