@@ -680,9 +680,12 @@ export default function SongDetailPanel({
     replaceSearchTimeout.current = setTimeout(() => searchReplacements(val), 200);
   };
 
+  const [replaceError, setReplaceError] = useState<string | null>(null);
+
   const handleReplaceSong = async () => {
     if (!replaceTarget) return;
     setReplaceLoading(true);
+    setReplaceError(null);
     try {
       const res = await fetch(`/api/songs/${song.id}/replace`, {
         method: "POST",
@@ -692,7 +695,12 @@ export default function SongDetailPanel({
       if (res.ok) {
         onClose();
         router.refresh();
+      } else {
+        const data = await res.json().catch(() => ({}));
+        setReplaceError(data.error || `Replace failed (${res.status})`);
       }
+    } catch {
+      setReplaceError("Network error");
     } finally {
       setReplaceLoading(false);
     }
@@ -1014,6 +1022,11 @@ export default function SongDetailPanel({
                   <p className="text-[10px] text-blue-600 mt-1">
                     Resources and planner references will be transferred.
                   </p>
+                  {replaceError && (
+                    <p className="text-[10px] text-red-600 bg-red-50 border border-red-200 rounded px-2 py-1 mt-1">
+                      {replaceError}
+                    </p>
+                  )}
                   <div className="flex gap-2 mt-2">
                     <button
                       disabled={replaceLoading}

@@ -128,9 +128,13 @@ export async function POST(
       decision: "merged",
     });
 
-    // 7. Remove old song from JSON
-    library.splice(oldIdx, 1);
-    fs.writeFileSync(SONG_LIBRARY_PATH, JSON.stringify(library, null, 2), "utf-8");
+    // 7. Remove old song from JSON (best-effort — read-only on Vercel)
+    try {
+      library.splice(oldIdx, 1);
+      fs.writeFileSync(SONG_LIBRARY_PATH, JSON.stringify(library, null, 2), "utf-8");
+    } catch {
+      // JSON backup write failed — Supabase is source of truth
+    }
 
     // 8. Invalidate cache
     invalidateSongLibraryCache();
