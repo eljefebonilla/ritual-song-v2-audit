@@ -239,7 +239,6 @@ export default function DayRow({ day, isToday, onAddEvent }: DayRowProps) {
             [{lit.optionalMemorials.join("; ")}]
           </span>
         )}
-        <ColorDot color={lit.colorPrimary} />
         {hovered && (
           <button
             onClick={() => onAddEvent(day.date)}
@@ -286,7 +285,6 @@ export default function DayRow({ day, isToday, onAddEvent }: DayRowProps) {
         >
           {lit.celebrationName}
         </span>
-        <ColorDot color={lit.colorPrimary} />
       </div>
 
       {/* Rank + Holyday line */}
