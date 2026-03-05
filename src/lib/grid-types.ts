@@ -87,6 +87,7 @@ export interface SongDragPayload {
   composer?: string;
   sourceOccasionId: string;
   sourceRowKey: GridRowKey;
+  sourceEnsembleId?: string;
 }
 
 // Maps row keys to display labels

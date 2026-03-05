@@ -118,7 +118,7 @@ export async function PATCH(
 
   try {
     const body = await request.json();
-    const { tags, visibility } = body;
+    const { tags, visibility, label: requestLabel } = body;
 
     if (!Array.isArray(tags)) {
       return NextResponse.json({ error: "tags must be an array" }, { status: 400 });
@@ -138,8 +138,10 @@ export async function PATCH(
       return NextResponse.json({ error: "Resource not found" }, { status: 404 });
     }
 
-    // Compute new label from tags
-    const newLabel = tags.length > 0 ? buildLabelFromTags(tags) : resource.label;
+    // Use provided label if non-empty, otherwise auto-generate from tags
+    const newLabel = typeof requestLabel === "string" && requestLabel.trim()
+      ? requestLabel.trim()
+      : tags.length > 0 ? buildLabelFromTags(tags) : resource.label;
     const isHighlighted = tags.includes("AIM");
 
     // Prepare DB update

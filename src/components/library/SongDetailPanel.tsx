@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useRef, useEffect } from "react";
+import { useState, useRef, useEffect, useCallback } from "react";
 import { useRouter } from "next/navigation";
 import type {
   LibrarySong,
@@ -11,6 +11,7 @@ import { extractChartKeys } from "@/lib/key-utils";
 import { filterPsalmResourcesByEnsemble } from "@/lib/occasion-helpers";
 import {
   getResourceGroup,
+  buildLabelFromTags,
   RESOURCE_GROUP_LABELS,
   RESOURCE_GROUP_ORDER,
   FILE_TYPE_TAG_IDS,
@@ -535,6 +536,14 @@ export default function SongDetailPanel({
   const [confirmDelete, setConfirmDelete] = useState(false);
   const [deleting, setDeleting] = useState(false);
 
+  // Replace song state
+  const [replacing, setReplacing] = useState(false);
+  const [replaceQuery, setReplaceQuery] = useState("");
+  const [replaceResults, setReplaceResults] = useState<{ id: string; title: string; composer: string | null; usageCount: number }[]>([]);
+  const [replaceTarget, setReplaceTarget] = useState<{ id: string; title: string; composer: string | null } | null>(null);
+  const [replaceLoading, setReplaceLoading] = useState(false);
+  const replaceSearchTimeout = useRef<ReturnType<typeof setTimeout>>(undefined);
+
   // Supabase resources state
   const [supabaseResources, setSupabaseResources] = useState<SongResource[]>([]);
 
@@ -561,6 +570,8 @@ export default function SongDetailPanel({
   const [editModifiers, setEditModifiers] = useState<Set<string>>(new Set());
   const [editCustomTags, setEditCustomTags] = useState("");
   const [editVisibility, setEditVisibility] = useState<"all" | "admin">("all");
+  const [editLabel, setEditLabel] = useState("");
+  const [editLabelDirty, setEditLabelDirty] = useState(false);
   const [editSavingResource, setEditSavingResource] = useState(false);
   const [editResourceError, setEditResourceError] = useState<string | null>(null);
 
@@ -648,7 +659,49 @@ export default function SongDetailPanel({
     }
   };
 
+  const searchReplacements = useCallback(async (q: string) => {
+    if (!q.trim()) {
+      setReplaceResults([]);
+      return;
+    }
+    try {
+      const res = await fetch(`/api/songs?q=${encodeURIComponent(q)}&limit=10`);
+      const data = await res.json();
+      setReplaceResults(data.filter((s: { id: string }) => s.id !== song.id));
+    } catch {
+      setReplaceResults([]);
+    }
+  }, [song.id]);
+
+  const handleReplaceQueryChange = (val: string) => {
+    setReplaceQuery(val);
+    setReplaceTarget(null);
+    clearTimeout(replaceSearchTimeout.current);
+    replaceSearchTimeout.current = setTimeout(() => searchReplacements(val), 200);
+  };
+
+  const handleReplaceSong = async () => {
+    if (!replaceTarget) return;
+    setReplaceLoading(true);
+    try {
+      const res = await fetch(`/api/songs/${song.id}/replace`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ replacementId: replaceTarget.id }),
+      });
+      if (res.ok) {
+        onClose();
+        router.refresh();
+      }
+    } finally {
+      setReplaceLoading(false);
+    }
+  };
+
+  const [deleteResourceError, setDeleteResourceError] = useState<string | null>(null);
+
   const handleDeleteResource = async (resourceId: string) => {
+    setDeleteResourceError(null);
     try {
       const res = await fetch(
         `/api/songs/${song.id}/resources/${resourceId}`,
@@ -657,8 +710,13 @@ export default function SongDetailPanel({
       if (res.ok) {
         setRemovedResourceIds((prev) => new Set(prev).add(resourceId));
         setDeletingResourceId(null);
+      } else {
+        const data = await res.json().catch(() => ({}));
+        setDeleteResourceError(data.error || `Delete failed (${res.status})`);
+        setDeletingResourceId(null);
       }
     } catch {
+      setDeleteResourceError("Network error");
       setDeletingResourceId(null);
     }
   };
@@ -682,6 +740,10 @@ export default function SongDetailPanel({
     setEditCustomTags(custom.join(", "));
     setEditVisibility(vis);
     setEditResourceError(null);
+    // Initialize label from the resource's current label
+    const resource = allResources.find((r) => r.id === id);
+    setEditLabel(resource?.label || (tags.length > 0 ? buildLabelFromTags(tags) : ""));
+    setEditLabelDirty(false);
   };
 
   const handleSaveEditResource = async () => {
@@ -706,7 +768,7 @@ export default function SongDetailPanel({
         {
           method: "PATCH",
           headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({ tags, visibility: editVisibility }),
+          body: JSON.stringify({ tags, visibility: editVisibility, label: editLabel }),
         }
       );
       if (!res.ok) {
@@ -733,13 +795,37 @@ export default function SongDetailPanel({
     }
   };
 
+  // Auto-update label from current tag state (when label hasn't been manually edited)
+  const autoUpdateLabel = (typeTag: string, modifiers: Set<string>, customTags: string) => {
+    if (editLabelDirty) return;
+    const tags: string[] = [];
+    if (typeTag) tags.push(typeTag);
+    for (const m of modifiers) tags.push(m);
+    if (customTags.trim()) {
+      const custom = customTags.split(/[,\s]+/).map((t) => t.trim().toUpperCase()).filter(Boolean);
+      for (const t of custom) { if (!tags.includes(t)) tags.push(t); }
+    }
+    setEditLabel(tags.length > 0 ? buildLabelFromTags(tags) : "");
+  };
+
+  const handleEditTypeTagChange = (val: string) => {
+    setEditTypeTag(val);
+    autoUpdateLabel(val, editModifiers, editCustomTags);
+  };
+
   const toggleEditModifier = (id: string) => {
     setEditModifiers((prev) => {
       const next = new Set(prev);
       if (next.has(id)) next.delete(id);
       else next.add(id);
+      autoUpdateLabel(editTypeTag, next, editCustomTags);
       return next;
     });
+  };
+
+  const handleEditCustomTagsChange = (val: string) => {
+    setEditCustomTags(val);
+    autoUpdateLabel(editTypeTag, editModifiers, val);
   };
 
   return (
@@ -821,7 +907,21 @@ export default function SongDetailPanel({
               {!ensembleId && <VisibilityToggle songId={song.id} />}
               {isAdmin && !editing && !ensembleId && (
                 <button
-                  onClick={() => setConfirmDelete(true)}
+                  onClick={() => { setReplacing(true); setConfirmDelete(false); }}
+                  className="p-1 text-stone-300 hover:text-blue-500 transition-colors"
+                  title="Replace with another song"
+                >
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                    <polyline points="17 1 21 5 17 9" />
+                    <path d="M3 11V9a4 4 0 0 1 4-4h14" />
+                    <polyline points="7 23 3 19 7 15" />
+                    <path d="M21 13v2a4 4 0 0 1-4 4H3" />
+                  </svg>
+                </button>
+              )}
+              {isAdmin && !editing && !ensembleId && (
+                <button
+                  onClick={() => { setConfirmDelete(true); setReplacing(false); }}
                   className="p-1 text-stone-300 hover:text-red-500 transition-colors"
                   title="Delete song from library"
                 >
@@ -867,6 +967,79 @@ export default function SongDetailPanel({
             </div>
           )}
 
+          {/* Replace song */}
+          {replacing && (
+            <div className="mt-3 p-2.5 bg-blue-50 border border-blue-200 rounded-md">
+              {!replaceTarget ? (
+                <>
+                  <p className="text-xs text-blue-800 font-medium mb-2">
+                    Replace &ldquo;{song.title}&rdquo; with...
+                  </p>
+                  <input
+                    type="text"
+                    value={replaceQuery}
+                    onChange={(e) => handleReplaceQueryChange(e.target.value)}
+                    placeholder="Search for replacement song..."
+                    className="w-full px-2 py-1 text-xs border border-blue-300 rounded bg-white focus:outline-none focus:ring-1 focus:ring-blue-400"
+                    autoFocus
+                  />
+                  {replaceResults.length > 0 && (
+                    <div className="mt-1 max-h-40 overflow-y-auto border border-blue-200 rounded bg-white">
+                      {replaceResults.map((r) => (
+                        <button
+                          key={r.id}
+                          onClick={() => setReplaceTarget(r)}
+                          className="w-full text-left px-2 py-1.5 text-xs hover:bg-blue-50 border-b border-blue-100 last:border-b-0"
+                        >
+                          <span className="font-medium">{r.title}</span>
+                          {r.composer && <span className="text-stone-500"> — {r.composer}</span>}
+                          <span className="text-stone-400 ml-1">({r.usageCount}x)</span>
+                        </button>
+                      ))}
+                    </div>
+                  )}
+                  <button
+                    onClick={() => { setReplacing(false); setReplaceQuery(""); setReplaceResults([]); }}
+                    className="mt-2 px-2.5 py-1 text-[10px] font-medium text-stone-500 rounded hover:bg-stone-100"
+                  >
+                    Cancel
+                  </button>
+                </>
+              ) : (
+                <>
+                  <p className="text-xs text-blue-800 font-medium">
+                    Replace <strong>{song.title}</strong>{song.composer ? ` (${song.composer})` : ""} with{" "}
+                    <strong>{replaceTarget.title}</strong>{replaceTarget.composer ? ` (${replaceTarget.composer})` : ""}?
+                  </p>
+                  <p className="text-[10px] text-blue-600 mt-1">
+                    Resources and planner references will be transferred.
+                  </p>
+                  <div className="flex gap-2 mt-2">
+                    <button
+                      disabled={replaceLoading}
+                      onClick={handleReplaceSong}
+                      className="px-2.5 py-1 text-[10px] font-medium bg-blue-600 text-white rounded hover:bg-blue-700 disabled:opacity-50"
+                    >
+                      {replaceLoading ? "Replacing..." : "Confirm"}
+                    </button>
+                    <button
+                      onClick={() => setReplaceTarget(null)}
+                      className="px-2.5 py-1 text-[10px] font-medium text-stone-500 rounded hover:bg-stone-100"
+                    >
+                      Back
+                    </button>
+                    <button
+                      onClick={() => { setReplacing(false); setReplaceTarget(null); setReplaceQuery(""); setReplaceResults([]); }}
+                      className="px-2.5 py-1 text-[10px] font-medium text-stone-500 rounded hover:bg-stone-100"
+                    >
+                      Cancel
+                    </button>
+                  </div>
+                </>
+              )}
+            </div>
+          )}
+
           <div className="flex items-center gap-2 mt-2">
             <p className="text-[10px] text-stone-400">
               Used {song.usageCount}x
@@ -893,6 +1066,11 @@ export default function SongDetailPanel({
             </div>
           ) : (
             <div className="space-y-4">
+              {deleteResourceError && (
+                <p className="text-[10px] text-red-600 bg-red-50 border border-red-200 rounded px-2 py-1">
+                  {deleteResourceError}
+                </p>
+              )}
               {RESOURCE_GROUP_ORDER.map((group) => {
                 const resources = resourcesByGroup[group];
                 if (!resources || resources.length === 0) return null;
@@ -925,14 +1103,21 @@ export default function SongDetailPanel({
                           {/* Inline tag editor */}
                           {editingResourceId === r.id ? (
                             <div className="border border-blue-200 rounded-md p-2 bg-blue-50/30 space-y-2">
+                              <input
+                                type="text"
+                                value={editLabel}
+                                onChange={(e) => { setEditLabel(e.target.value); setEditLabelDirty(true); }}
+                                placeholder="Resource name"
+                                className="w-full px-2 py-1 text-xs border border-stone-200 rounded bg-white focus:outline-none focus:ring-1 focus:ring-blue-300"
+                              />
                               <TagSelector
                                 selectedTypeTag={editTypeTag}
                                 selectedModifiers={editModifiers}
                                 customTags={editCustomTags}
                                 visibility={editVisibility}
-                                onTypeTagChange={setEditTypeTag}
+                                onTypeTagChange={handleEditTypeTagChange}
                                 onToggleModifier={toggleEditModifier}
-                                onCustomTagsChange={setEditCustomTags}
+                                onCustomTagsChange={handleEditCustomTagsChange}
                                 onVisibilityChange={setEditVisibility}
                               />
                               {editResourceError && (

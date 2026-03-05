@@ -144,7 +144,10 @@ export async function DELETE(
   try {
     const supabase = createAdminClient();
 
-    // Delete from Supabase (cascade deletes resources)
+    // Delete orphaned song_resources (text FK, no cascade)
+    await supabase.from("song_resources").delete().eq("song_id", id);
+
+    // Delete from Supabase
     const { data, error } = await supabase
       .from("songs")
       .delete()

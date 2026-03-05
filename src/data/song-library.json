@@ -3863,13 +3863,17 @@
         "source": "ocp_bb"
       }
     ],
-    "usageCount": 24,
+    "usageCount": 32,
     "occasions": [
       "baptism-of-the-lord-a",
       "baptism-of-the-lord-b",
       "baptism-of-the-lord-c",
       "lent-03-a-first-scrutiny",
-      "ordinary-time-18-a"
+      "ordinary-time-18-a",
+      "ss-peter-paul-apostles-jun-29-mass-during-the-day-abc",
+      "ordinary-time-14-c",
+      "ordinary-time-06-b",
+      "ordinary-time-06-c"
     ],
     "category": "song",
     "functions": [
@@ -10715,41 +10719,6 @@
       "palm-sunday-c"
     ],
     "category": "psalm"
-  },
-  {
-    "id": "above-all--lenny-leblanc-paul-baloche-arr-by-ed-bolduc",
-    "title": "Above All",
-    "composer": "Lenny LeBlanc • Paul Baloche • Arr. by Ed Bolduc",
-    "resources": [
-      {
-        "id": "local-above-all-baloche-leblanc-above-all-lenny-leblanc-clr-pdf",
-        "type": "sheet_music",
-        "label": "Sheet Music",
-        "filePath": "Above All - Baloche_LeBlanc/Above All - Lenny LeBlanc CLR.pdf",
-        "source": "local"
-      }
-    ],
-    "usageCount": 9,
-    "occasions": [
-      "palm-sunday-a",
-      "palm-sunday-b",
-      "palm-sunday-c"
-    ],
-    "category": "song",
-    "functions": [
-      "communion",
-      "offertory"
-    ],
-    "catalogs": {
-      "voices": 5,
-      "spiritSong": 168
-    },
-    "topics": [
-      "Discipleship",
-      "Kingdom/Reign of God",
-      "Love for Others",
-      "Service/Social Concerns"
-    ]
   },
   {
     "id": "ps-118-give-thanks-to-the-lord--spirit-psalm-tom-kendzia",
@@ -17599,22 +17568,6 @@
     }
   },
   {
-    "id": "come-to-the-water--john-foley-sj-matt-maher-adapt-by-arielle-phan",
-    "title": "Come to the Water",
-    "composer": "John Foley SJ • Matt Maher • Adapt by Arielle Phan",
-    "resources": [],
-    "usageCount": 5,
-    "occasions": [
-      "ss-peter-paul-apostles-jun-29-mass-during-the-day-abc",
-      "ordinary-time-14-c"
-    ],
-    "category": "song",
-    "functions": [
-      "communion",
-      "gathering"
-    ]
-  },
-  {
     "id": "when-the-saints-go-marching-in--traditional-arr-bonilla-rubato-intro",
     "title": "When the Saints Go Marching In",
     "composer": "TRADITIONAL Arr. Bonilla (Rubato Intro)",
@@ -22551,22 +22504,6 @@
     }
   },
   {
-    "id": "come-to-the-water--arr-by-arielle-phan",
-    "title": "Come to the Water",
-    "composer": "Arr. by Arielle Phan",
-    "resources": [],
-    "usageCount": 3,
-    "occasions": [
-      "ordinary-time-06-b",
-      "ordinary-time-06-c"
-    ],
-    "category": "song",
-    "functions": [
-      "communion",
-      "gathering"
-    ]
-  },
-  {
     "id": "as-we-gather-at-your-table--nettleton-carl-p-daw-jr",
     "title": "As We Gather at Your Table",
     "composer": "NETTLETON  • Carl P. Daw Jr.",
@@ -26732,9 +26669,10 @@
     "title": "Age to Age",
     "composer": "Janet Vogt • Arr. by Lockwood",
     "resources": [],
-    "usageCount": 2,
+    "usageCount": 4,
     "occasions": [
-      "ordinary-time-03-c-word-of-god-sunday"
+      "ordinary-time-03-c-word-of-god-sunday",
+      "easter-03-c"
     ],
     "category": "song",
     "functions": [
@@ -28289,22 +28227,6 @@
     "category": "psalm"
   },
   {
-    "id": "age-to-age--vogt-arr-by-david-lockwood",
-    "title": "Age to Age",
-    "composer": "Vogt • Arr. by David Lockwood",
-    "resources": [],
-    "usageCount": 2,
-    "occasions": [
-      "easter-03-c"
-    ],
-    "category": "song",
-    "functions": [
-      "communion",
-      "gathering",
-      "offertory"
-    ]
-  },
-  {
     "id": "i-love-you-lord--steffany-gretzinger",
     "title": "I Love You Lord",
     "composer": "Steffany Gretzinger",
@@ -28662,21 +28584,6 @@
     "catalogs": {
       "bb2026": 673
     }
-  },
-  {
-    "id": "pentecost-sequence--refrain-by-leonard-cohen-adapted-for-liturgy",
-    "title": "Pentecost Sequence",
-    "composer": "Refrain by Leonard Cohen • Adapted for Liturgy",
-    "resources": [],
-    "usageCount": 2,
-    "occasions": [
-      "pentecost-a",
-      "pentecost-b"
-    ],
-    "category": "song",
-    "functions": [
-      "gospel_acclamation"
-    ]
   },
   {
     "id": "lamb-of-god-mass-of-1",
@@ -31109,10 +31016,21 @@
     "id": "above-all--lenny-leblanc",
     "title": "Above All",
     "composer": "Lenny LeBlanc",
-    "resources": [],
-    "usageCount": 2,
+    "resources": [
+      {
+        "id": "local-above-all-baloche-leblanc-above-all-lenny-leblanc-clr-pdf",
+        "type": "sheet_music",
+        "label": "Sheet Music",
+        "filePath": "Above All - Baloche_LeBlanc/Above All - Lenny LeBlanc CLR.pdf",
+        "source": "local"
+      }
+    ],
+    "usageCount": 11,
     "occasions": [
-      "solemnity-christ-the-king-c"
+      "solemnity-christ-the-king-c",
+      "palm-sunday-a",
+      "palm-sunday-b",
+      "palm-sunday-c"
     ],
     "category": "song",
     "functions": [
@@ -34235,20 +34153,6 @@
     ]
   },
   {
-    "id": "pentecost-sequence-archer--refrain-by-leonard-cohen-adapted-for-liturgy",
-    "title": "Pentecost Sequence (Archer)",
-    "composer": "Refrain by Leonard Cohen • Adapted for Liturgy",
-    "resources": [],
-    "usageCount": 1,
-    "occasions": [
-      "pentecost-c"
-    ],
-    "category": "song",
-    "functions": [
-      "gospel_acclamation"
-    ]
-  },
-  {
     "id": "mass-of-glory-bob-hurd-arr-by-dan-houze--bob-hurd-ken-canedo",
     "title": "Mass of Glory • Bob Hurd • Arr. by Dan Houze",
     "composer": "Bob Hurd & Ken Canedo",
@@ -36330,36 +36234,6 @@
     "category": "song",
     "functions": [
       "gospel_acclamation"
-    ]
-  },
-  {
-    "id": "a-charge-to-keep-i-have--charles-wesley",
-    "title": "A Charge to Keep I Have",
-    "composer": "Charles Wesley",
-    "category": "song",
-    "catalogs": {
-      "aahh": 467
-    },
-    "resources": [],
-    "usageCount": 0,
-    "occasions": [],
-    "credits": {
-      "textAuthors": [
-        {
-          "name": "Charles Wesley",
-          "dates": "1707-1788"
-        }
-      ],
-      "tuneSources": [
-        "Negro Spiritual"
-      ]
-    },
-    "tuneMeter": {
-      "incipit": "11331757131715755431"
-    },
-    "firstLine": "A charge to keep I have",
-    "languages": [
-      "English"
     ]
   },
   {

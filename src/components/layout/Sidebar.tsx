@@ -80,14 +80,14 @@ function IconFor({ id }: { id: string }) {
         <rect x="3" y="3" width="7" height="7" /><rect x="14" y="3" width="7" height="7" /><rect x="3" y="14" width="7" height="7" /><rect x="14" y="14" width="7" height="7" />
       </svg>
     );
+    case "compare": return (
+      <svg className={cls} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+        <rect x="3" y="3" width="8" height="18" rx="1" /><rect x="13" y="3" width="8" height="18" rx="1" />
+      </svg>
+    );
     case "library": return (
       <svg className={cls} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
         <path d="M9 18V5l12-2v13" /><circle cx="6" cy="18" r="3" /><circle cx="18" cy="16" r="3" />
-      </svg>
-    );
-    case "triduum": return (
-      <svg className={cls} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-        <path d="M12 2L2 7l10 5 10-5-10-5z" /><path d="M2 17l10 5 10-5" /><path d="M2 12l10 5 10-5" />
       </svg>
     );
     default: return null;
@@ -96,7 +96,7 @@ function IconFor({ id }: { id: string }) {
 
 const DEFAULT_ORDER: string[] = [
   "today", "calendar", "announcements", "choir",
-  "planner-view", "library", "triduum",
+  "planner-view", "compare", "library",
   ...SEASON_ITEMS.map((s) => s.id),
 ];
 
@@ -104,15 +104,17 @@ function buildOrderedItems(savedOrder: string[] | null): NavItemDef[] {
   const allItems: Record<string, NavItemDef> = {};
 
   // Non-season items
-  for (const id of ["today", "calendar", "announcements", "choir", "planner-view", "library", "triduum"]) {
+  for (const id of ["today", "calendar", "announcements", "choir", "planner-view", "compare", "library"]) {
     const labels: Record<string, string> = {
       today: "Today", calendar: "Calendar", announcements: "Announcements",
       choir: "Choir Sign-Up", "planner-view": "Planner View",
-      library: "Song Library", triduum: "Triduum",
+      compare: "Compare Masses",
+      library: "Song Library",
     };
     const hrefs: Record<string, string> = {
       today: "/today", calendar: "/calendar", announcements: "/announcements",
-      choir: "/choir", "planner-view": "/planner", library: "/library", triduum: "/planner/triduum",
+      choir: "/choir", "planner-view": "/planner", compare: "/planner/compare",
+      library: "/library",
     };
     allItems[id] = { id, label: labels[id], href: hrefs[id], icon: <IconFor id={id} /> };
   }

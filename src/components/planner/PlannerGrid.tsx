@@ -420,7 +420,7 @@ export default function PlannerGrid({ columns, viewMode, hideMassParts = false, 
     }
   }
 
-  const COL_WIDTH = 280;
+  const COL_WIDTH = 300;
   const LABEL_WIDTH = 130;
   const HEADER_HEIGHT = 110;
   const totalWidth = LABEL_WIDTH + columns.length * COL_WIDTH + (holyWeekDividerIndex >= 0 ? DIVIDER_WIDTH : 0);
