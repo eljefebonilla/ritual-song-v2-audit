@@ -39,6 +39,7 @@ interface SongDetailPanelProps {
   onSlotReplace?: (songId: string, title: string, composer: string) => void;
   panelWidth?: number;
   onResizeStart?: (e: React.MouseEvent) => void;
+  onPreviewOpen?: () => void;
 }
 
 /* SOURCE_LABELS removed — resources now grouped by tag category */
@@ -524,6 +525,7 @@ export default function SongDetailPanel({
   onSlotReplace,
   panelWidth,
   onResizeStart,
+  onPreviewOpen,
 }: SongDetailPanelProps) {
   const router = useRouter();
   const { role } = useUser();
@@ -534,6 +536,10 @@ export default function SongDetailPanel({
 
   // Inline resource preview
   const [activePreviewId, setActivePreviewId] = useState<string | null>(null);
+  const handlePreviewToggle = useCallback((id: string | null) => {
+    setActivePreviewId(id);
+    if (id) onPreviewOpen?.();
+  }, [onPreviewOpen]);
 
   // Edit song state
   const [editing, setEditing] = useState(false);
@@ -1189,7 +1195,7 @@ export default function SongDetailPanel({
                             recordedKey={song.recordedKey}
                             chartKeys={chartKeys}
                             previewId={activePreviewId}
-                            onPreviewToggle={setActivePreviewId}
+                            onPreviewToggle={handlePreviewToggle}
                           />
                           )}
                         </div>

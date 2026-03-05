@@ -127,6 +127,18 @@ export default function SongLibraryShell({ songs, title = "Song Library", subtit
   const dragStartX = useRef(0);
   const dragStartWidth = useRef(0);
 
+  const PREVIEW_WIDTH = 640;
+  const handlePreviewOpen = useCallback(() => {
+    setPanelWidth((w) => {
+      if (w < PREVIEW_WIDTH) {
+        const capped = Math.min(PREVIEW_WIDTH, Math.floor(window.innerWidth * 0.65));
+        localStorage.setItem("rs_panel_width", String(capped));
+        return capped;
+      }
+      return w;
+    });
+  }, []);
+
   const handleResizeStart = useCallback((e: React.MouseEvent) => {
     e.preventDefault();
     isDragging.current = true;
@@ -753,6 +765,7 @@ export default function SongLibraryShell({ songs, title = "Song Library", subtit
           onSongRemoved={(id) => setRemovedSongIds(prev => new Set(prev).add(id))}
           panelWidth={panelWidth}
           onResizeStart={handleResizeStart}
+          onPreviewOpen={handlePreviewOpen}
         />
       )}
 
