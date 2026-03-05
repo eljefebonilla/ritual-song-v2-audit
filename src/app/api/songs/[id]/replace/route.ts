@@ -20,6 +20,10 @@ const SONG_FIELDS = [
  * POST /api/songs/[id]/replace
  * Replaces song [id] with { replacementId }.
  * Transfers resources, updates planner references, removes the old song.
+ *
+ * Body: { replacementId, oldTitle, oldComposer }
+ * oldTitle/oldComposer are used for planner JSONB matching (the old song
+ * may already be gone from song-library.json).
  */
 export async function POST(
   request: NextRequest,
@@ -31,7 +35,7 @@ export async function POST(
     return NextResponse.json({ error: "Admin access required" }, { status: 403 });
   }
 
-  const { replacementId } = await request.json();
+  const { replacementId, oldTitle, oldComposer } = await request.json();
   if (!replacementId) {
     return NextResponse.json({ error: "replacementId required" }, { status: 400 });
   }
@@ -46,12 +50,20 @@ export async function POST(
     const oldIdx = library.findIndex((s: { id: string }) => s.id === id);
     const newIdx = library.findIndex((s: { id: string }) => s.id === replacementId);
 
-    if (oldIdx === -1 || newIdx === -1) {
-      return NextResponse.json({ error: "Song not found" }, { status: 404 });
+    // Replacement song must exist
+    if (newIdx === -1) {
+      return NextResponse.json({ error: "Replacement song not found" }, { status: 404 });
     }
 
-    const oldSong = library[oldIdx];
+    const oldSong = oldIdx !== -1 ? library[oldIdx] : null;
     const newSong = library[newIdx];
+
+    // Use client-provided title for matching (old song may be gone from JSON)
+    const matchTitle = oldSong?.title || oldTitle;
+    if (!matchTitle) {
+      return NextResponse.json({ error: "Could not determine old song title" }, { status: 400 });
+    }
+
     const supabase = createAdminClient();
 
     // 1. Transfer Supabase song_resources to replacement
@@ -60,20 +72,18 @@ export async function POST(
       .update({ song_id: replacementId })
       .eq("song_id", id);
 
-    // 2. Merge JSON resources (dedup by id)
-    const existingIds = new Set(newSong.resources.map((r: { id: string }) => r.id));
-    for (const r of oldSong.resources) {
-      if (!existingIds.has(r.id)) {
-        newSong.resources.push(r);
+    // 2-4. Merge JSON data if old song exists in library
+    if (oldSong) {
+      const existingIds = new Set(newSong.resources.map((r: { id: string }) => r.id));
+      for (const r of oldSong.resources) {
+        if (!existingIds.has(r.id)) {
+          newSong.resources.push(r);
+        }
       }
+      const occasionSet = new Set([...newSong.occasions, ...oldSong.occasions]);
+      newSong.occasions = [...occasionSet];
+      newSong.usageCount += oldSong.usageCount;
     }
-
-    // 3. Union occasions
-    const occasionSet = new Set([...newSong.occasions, ...oldSong.occasions]);
-    newSong.occasions = [...occasionSet];
-
-    // 4. Sum usageCount
-    newSong.usageCount += oldSong.usageCount;
 
     // 5. Update music_plan_edits — song fields
     let updatedOverrides = 0;
@@ -93,13 +103,13 @@ export async function POST(
 
         if (row.field === "communionSongs" && Array.isArray(val)) {
           for (const entry of val) {
-            if (entry?.title === oldSong.title) {
+            if (entry?.title === matchTitle) {
               entry.title = newSong.title;
               entry.composer = newSong.composer || undefined;
               changed = true;
             }
           }
-        } else if (val.title === oldSong.title) {
+        } else if (val.title === matchTitle) {
           val.title = newSong.title;
           val.composer = newSong.composer || undefined;
           changed = true;
@@ -128,12 +138,14 @@ export async function POST(
       decision: "merged",
     });
 
-    // 7. Remove old song from JSON (best-effort — read-only on Vercel)
-    try {
-      library.splice(oldIdx, 1);
-      fs.writeFileSync(SONG_LIBRARY_PATH, JSON.stringify(library, null, 2), "utf-8");
-    } catch {
-      // JSON backup write failed — Supabase is source of truth
+    // 7. Remove old song from JSON (best-effort)
+    if (oldIdx !== -1) {
+      try {
+        library.splice(oldIdx, 1);
+        fs.writeFileSync(SONG_LIBRARY_PATH, JSON.stringify(library, null, 2), "utf-8");
+      } catch {
+        // JSON backup write failed — Supabase is source of truth
+      }
     }
 
     // 8. Invalidate cache

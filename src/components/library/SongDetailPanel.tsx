@@ -690,7 +690,7 @@ export default function SongDetailPanel({
       const res = await fetch(`/api/songs/${song.id}/replace`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ replacementId: replaceTarget.id }),
+        body: JSON.stringify({ replacementId: replaceTarget.id, oldTitle: song.title, oldComposer: song.composer }),
       });
       if (res.ok) {
         onClose();
