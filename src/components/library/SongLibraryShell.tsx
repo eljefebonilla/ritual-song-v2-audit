@@ -10,6 +10,7 @@ import {
 import {
   PSALM_FILTERS, PSALTER_BOOKS, PSALM_SEASON_FILTERS, PSALM_YEAR_FILTERS,
   PSALM_LENS_OPTIONS, PSALM_TYPE_OPTIONS, type PsalmLens,
+  ALL_COMMON_PSALM_NUMBERS,
   parsePsalmNumber, getPsalmCategories, getPsalmSeasons, isInPsalterBook, getSeasonPsalmNumbers,
 } from "@/lib/psalm-categories";
 import { useUser } from "@/lib/user-context";
@@ -341,10 +342,9 @@ export default function SongLibraryShell({ songs, title = "Song Library", subtit
       if (s.category !== "psalm") continue;
       const num = s.psalmNumber || parsePsalmNumber(s.title);
       if (!num) continue;
-      // Common filter
+      // Common filter — USCCB Lectionary #173-174
       if (showCommonOnly) {
-        const threshold = tabCounts.subCounts["_common_threshold"] || 1;
-        if (s.usageCount < threshold) continue;
+        if (!ALL_COMMON_PSALM_NUMBERS.has(num)) continue;
       }
       // Lens-specific filters
       if (psalmLens === "season" && psalmSeasonFilter !== "all") {
@@ -469,10 +469,12 @@ export default function SongLibraryShell({ songs, title = "Song Library", subtit
 
     // Psalm tiered lens filtering
     if (activeTab === "psalms") {
-      // Common toggle — works with any lens
+      // Common toggle — USCCB Lectionary #173-174 common psalms
       if (showCommonOnly) {
-        const threshold = tabCounts.subCounts["_common_threshold"] || 1;
-        list = list.filter(s => s.usageCount >= threshold);
+        list = list.filter(s => {
+          const psalmNum = s.psalmNumber || parsePsalmNumber(s.title);
+          return psalmNum !== null && ALL_COMMON_PSALM_NUMBERS.has(psalmNum);
+        });
       }
 
       // Lens-specific filters

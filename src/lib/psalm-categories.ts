@@ -387,6 +387,25 @@ export function parsePsalmNumber(title: string): number | null {
   return m ? parseInt(m[1], 10) : null;
 }
 
+/**
+ * Common Psalms — from the USCCB Lectionary #173-174
+ * "Common Texts for Sung Responsorial Psalms"
+ * These may be used in place of the assigned psalm during any Mass in their season.
+ */
+export const COMMON_PSALMS: Record<string, number[]> = {
+  advent: [25, 85],
+  christmas: [72, 98],
+  lent: [51, 91, 130],
+  holy_week: [22],
+  easter: [47, 66, 104, 118],
+  ordinary: [19, 27, 34, 63, 95, 100, 103, 122, 145],
+};
+
+/** All common psalm numbers (union across seasons) */
+export const ALL_COMMON_PSALM_NUMBERS: Set<number> = new Set(
+  Object.values(COMMON_PSALMS).flat()
+);
+
 /** Get scholarly/liturgical categories for a psalm number */
 export function getPsalmCategories(psalmNum: number): string[] {
   return PSALM_CATEGORY_MAP[psalmNum] || [];
