@@ -5,12 +5,22 @@ import type { DuplicateGroup, DuplicateConfidence, JunkEntry } from "@/lib/dupli
 import { ENSEMBLE_BADGES } from "@/lib/occasion-helpers";
 
 type TabId = "high" | "medium" | "low" | "junk";
+type CategoryFilter = "all" | "songs" | "service_music" | "psalms" | "gospel_acclamations" | "antiphons";
 
 const TAB_CONFIG: { id: TabId; label: string; confidence?: DuplicateConfidence }[] = [
   { id: "high", label: "Likely Duplicates", confidence: "high" },
   { id: "medium", label: "Possible Duplicates", confidence: "medium" },
   { id: "low", label: "Same Title, Different Song", confidence: "low" },
   { id: "junk", label: "Junk Entries" },
+];
+
+const CATEGORY_TABS: { id: CategoryFilter; label: string; categories: string[] }[] = [
+  { id: "all", label: "All", categories: [] },
+  { id: "songs", label: "Songs", categories: ["song"] },
+  { id: "service_music", label: "Service Music", categories: ["mass_part", "kyrie", "gloria", "sprinkling_rite", "holy_holy", "memorial_acclamation", "great_amen", "lamb_of_god", "lords_prayer", "sequence"] },
+  { id: "psalms", label: "Psalms", categories: ["psalm"] },
+  { id: "gospel_acclamations", label: "Gospel Accl.", categories: ["gospel_acclamation", "gospel_acclamation_refrain", "gospel_acclamation_verse"] },
+  { id: "antiphons", label: "Antiphons", categories: ["antiphon"] },
 ];
 
 interface UndoAction {
@@ -34,6 +44,7 @@ export default function DuplicateReviewShell({ groups: initialGroups, junk: init
   const [groups, setGroups] = useState(initialGroups);
   const [junk, setJunk] = useState(initialJunk);
   const [activeTab, setActiveTab] = useState<TabId>("high");
+  const [categoryFilter, setCategoryFilter] = useState<CategoryFilter>("all");
   const [expandedGroup, setExpandedGroup] = useState<string | null>(null);
   const [selectedIds, setSelectedIds] = useState<string[]>([]);
   const [merging, setMerging] = useState<string | null>(null);
@@ -42,16 +53,37 @@ export default function DuplicateReviewShell({ groups: initialGroups, junk: init
   const [undoAction, setUndoAction] = useState<UndoAction | null>(null);
   const [undoing, setUndoing] = useState(false);
 
+  // Filter groups by category
+  const categoryGroups = useMemo(() => {
+    if (categoryFilter === "all") return groups;
+    const cats = CATEGORY_TABS.find((t) => t.id === categoryFilter)?.categories ?? [];
+    return groups.filter((g) => g.songs.some((s) => cats.includes(s.category)));
+  }, [groups, categoryFilter]);
+
+  const categoryCounts = useMemo(() => {
+    const result: Record<CategoryFilter, number> = { all: 0, songs: 0, service_music: 0, psalms: 0, gospel_acclamations: 0, antiphons: 0 };
+    for (const g of groups) {
+      result.all++;
+      for (const tab of CATEGORY_TABS) {
+        if (tab.id === "all") continue;
+        if (g.songs.some((s) => tab.categories.includes(s.category))) {
+          result[tab.id]++;
+        }
+      }
+    }
+    return result;
+  }, [groups]);
+
   const counts = useMemo(() => ({
-    high: groups.filter((g) => g.confidence === "high").length,
-    medium: groups.filter((g) => g.confidence === "medium").length,
-    low: groups.filter((g) => g.confidence === "low").length,
+    high: categoryGroups.filter((g) => g.confidence === "high").length,
+    medium: categoryGroups.filter((g) => g.confidence === "medium").length,
+    low: categoryGroups.filter((g) => g.confidence === "low").length,
     junk: junk.length,
-  }), [groups, junk]);
+  }), [categoryGroups, junk]);
 
   const filteredGroups = useMemo(
-    () => groups.filter((g) => g.confidence === activeTab),
-    [groups, activeTab]
+    () => categoryGroups.filter((g) => g.confidence === activeTab),
+    [categoryGroups, activeTab]
   );
 
   function toggleSelected(songId: string) {
@@ -292,7 +324,24 @@ export default function DuplicateReviewShell({ groups: initialGroups, junk: init
         </p>
       </div>
 
-      {/* Tabs */}
+      {/* Category tabs */}
+      <div className="flex gap-1 mb-3 border-b border-stone-200 overflow-x-auto">
+        {CATEGORY_TABS.map((tab) => (
+          <button
+            key={tab.id}
+            onClick={() => setCategoryFilter(tab.id)}
+            className={`px-3 py-2 text-xs font-medium whitespace-nowrap transition-colors border-b-2 -mb-px ${
+              categoryFilter === tab.id
+                ? "border-stone-800 text-stone-900"
+                : "border-transparent text-stone-400 hover:text-stone-600"
+            }`}
+          >
+            {tab.label} ({categoryCounts[tab.id]})
+          </button>
+        ))}
+      </div>
+
+      {/* Confidence tabs */}
       <div className="flex gap-1 mb-4 bg-stone-100 rounded-lg p-0.5 overflow-x-auto">
         {TAB_CONFIG.map((tab) => (
           <button

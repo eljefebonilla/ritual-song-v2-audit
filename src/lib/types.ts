@@ -252,9 +252,44 @@ export const GA_FILTERS: { id: string; label: string }[] = [
   { id: "gospel_acclamation_verse", label: "Verses" },
 ];
 
+/** GA browsing lens — same pattern as psalms */
+export type GALens = "all" | "season" | "type";
+
+export const GA_LENS_OPTIONS: { id: GALens; label: string }[] = [
+  { id: "all", label: "All" },
+  { id: "season", label: "By Season" },
+  { id: "type", label: "By Type" },
+];
+
+export const GA_TYPE_OPTIONS: { id: string; label: string }[] = [
+  { id: "all", label: "All Types" },
+  { id: "alleluia", label: "Alleluia" },
+  { id: "lenten", label: "Lenten" },
+];
+
+/** Classify a GA as alleluia or lenten from its title */
+export function getGAType(title: string): "alleluia" | "lenten" {
+  return /lenten/i.test(title) ? "lenten" : "alleluia";
+}
+
 /** Sub-filter chips for Antiphons tab (by liturgical function) */
 export const ANTIPHON_FUNCTION_FILTERS: { id: string; label: string }[] = [
   { id: "all", label: "All" },
+  { id: "entrance", label: "Entrance" },
+  { id: "communion", label: "Communion" },
+];
+
+/** Antiphon browsing lens */
+export type AntiphonLens = "all" | "season" | "type";
+
+export const ANTIPHON_LENS_OPTIONS: { id: AntiphonLens; label: string }[] = [
+  { id: "all", label: "All" },
+  { id: "season", label: "By Season" },
+  { id: "type", label: "By Type" },
+];
+
+export const ANTIPHON_TYPE_OPTIONS: { id: string; label: string }[] = [
+  { id: "all", label: "All Types" },
   { id: "entrance", label: "Entrance" },
   { id: "communion", label: "Communion" },
 ];

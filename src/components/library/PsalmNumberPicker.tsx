@@ -27,9 +27,8 @@ export default function PsalmNumberPicker({ availableNumbers, selectedNumber, on
 
   // Full range — split into rows
   const total = max - min + 1;
-  // For small ranges (book view), split roughly in half (~21 per row)
-  // For full 1-150, use 25 per row
-  const rowSize = total > 50 ? 25 : Math.ceil(total / 2);
+  // ≤25: single row (Book III/IV). 26-50: split in half. 51+: rows of 25.
+  const rowSize = total <= 25 ? total : total > 50 ? 25 : Math.ceil(total / 2);
 
   const rows: number[][] = [];
   for (let start = min; start <= max; start += rowSize) {

@@ -32,10 +32,40 @@ interface SeasonRow {
   abc?: OccasionSummary;
 }
 
+// Civil holidays: ABC occasions that should display per-year (dates vary by cycle)
+const CIVIL_HOLIDAY_IDS = new Set([
+  "mlk-day",
+  "memorial-day",
+  "independence-day",
+  "veteran-s-day",
+  "thanksgiving",
+]);
+
 function buildRows(occasions: OccasionSummary[]): SeasonRow[] {
   // Separate ABC occasions from year-specific ones
-  const abcOccasions = occasions.filter((o) => o.year === "ABC");
+  // Civil holidays get converted to per-year cards
+  const abcOccasions = occasions.filter(
+    (o) => o.year === "ABC" && !CIVIL_HOLIDAY_IDS.has(o.id)
+  );
+  const civilHolidays = occasions.filter(
+    (o) => o.year === "ABC" && CIVIL_HOLIDAY_IDS.has(o.id)
+  );
   const yearlyOccasions = occasions.filter((o) => o.year !== "ABC");
+
+  // Expand civil holidays into synthetic per-year entries
+  for (const occ of civilHolidays) {
+    if (occ.nextDates) {
+      for (const yr of ["A", "B", "C"] as const) {
+        const key = yr.toLowerCase() as "a" | "b" | "c";
+        yearlyOccasions.push({
+          ...occ,
+          year: yr,
+          nextDate: occ.nextDates[key],
+          nextDates: undefined,
+        });
+      }
+    }
+  }
 
   // Group year-specific by seasonOrder
   const orderMap = new Map<number, { a?: OccasionSummary; b?: OccasionSummary; c?: OccasionSummary }>();

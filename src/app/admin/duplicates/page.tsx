@@ -9,9 +9,8 @@ import DuplicateReviewShell from "@/components/admin/DuplicateReviewShell";
 
 export default async function DuplicatesPage() {
   const allSongs = getSongLibrary();
-  const songs = allSongs.filter(s => s.category === "song" || s.category === "mass_part");
-  const groups = detectDuplicateGroups(songs);
-  const junk = detectJunkEntries(songs);
+  const groups = detectDuplicateGroups(allSongs);
+  const junk = detectJunkEntries(allSongs);
 
   // Enrich with per-ensemble usage
   const songKeyToId = new Map<string, string>();

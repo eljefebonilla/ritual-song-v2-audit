@@ -13,6 +13,7 @@ export interface DuplicateGroup {
     _key: string;
     title: string;
     composer: string | null;
+    category: string;
     resourceCount: number;
     usageCount: number;
     ensembleUsage: Record<string, number>;
@@ -60,6 +61,7 @@ export function detectDuplicateGroups(songs: LibrarySong[]): DuplicateGroup[] {
         _key: `${s.id}::${i}`,
         title: s.title,
         composer: s.composer || null,
+        category: s.category || "song",
         resourceCount: s.resources.length,
         usageCount: s.usageCount,
         ensembleUsage: {},

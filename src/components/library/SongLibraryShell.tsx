@@ -6,6 +6,8 @@ import type { LibrarySong, LiturgicalOccasion, SongCategory, ExpandedSongCategor
 import {
   MASS_PART_CATEGORIES, GOSPEL_ACCLAMATION_CATEGORIES,
   SONG_FUNCTION_FILTERS, SERVICE_MUSIC_FILTERS, GA_FILTERS, ANTIPHON_FUNCTION_FILTERS,
+  GA_LENS_OPTIONS, GA_TYPE_OPTIONS, type GALens, getGAType,
+  ANTIPHON_LENS_OPTIONS, ANTIPHON_TYPE_OPTIONS, type AntiphonLens,
 } from "@/lib/types";
 import {
   PSALM_FILTERS, PSALTER_BOOKS, PSALM_SEASON_FILTERS, PSALM_YEAR_FILTERS,
@@ -196,6 +198,18 @@ export default function SongLibraryShell({ songs, title = "Song Library", subtit
   const [psalmYearFilter, setPsalmYearFilter] = useState<string>("all");
   const [psalmTypeFilter, setPsalmTypeFilter] = useState<string>("all");
   const [showCommonOnly, setShowCommonOnly] = useState(false);
+
+  // GA tiered filter state
+  const [gaLens, setGALens] = useState<GALens>("all");
+  const [gaSeasonFilter, setGASeasonFilter] = useState<string>("all");
+  const [gaYearFilter, setGAYearFilter] = useState<string>("all");
+  const [gaTypeFilter, setGATypeFilter] = useState<string>("all");
+
+  // Antiphon tiered filter state
+  const [antiphonLens, setAntiphonLens] = useState<AntiphonLens>("all");
+  const [antiphonSeasonFilter, setAntiphonSeasonFilter] = useState<string>("all");
+  const [antiphonYearFilter, setAntiphonYearFilter] = useState<string>("all");
+  const [antiphonTypeFilter, setAntiphonTypeFilter] = useState<string>("all");
 
   // Group by setting toggle for Mass Parts
   const [groupBySetting, setGroupBySetting] = useState(false);
@@ -472,7 +486,8 @@ export default function SongLibraryShell({ songs, title = "Song Library", subtit
     // Psalm tiered lens filtering
     if (activeTab === "psalms") {
       // Common toggle — USCCB Lectionary #173-174 (season-aware)
-      if (showCommonOnly) {
+      // Skip common filter when viewing canticles (they have no psalm numbers)
+      if (showCommonOnly && !(psalmLens === "book" && selectedBook === "canticles")) {
         const commonNums = getCommonPsalmNumbers(psalmLens === "season" ? psalmSeasonFilter : undefined);
         list = list.filter(s => {
           const psalmNum = s.psalmNumber || parsePsalmNumber(s.title);
@@ -510,6 +525,47 @@ export default function SongLibraryShell({ songs, title = "Song Library", subtit
         list = list.filter(s => {
           const num = s.psalmNumber || parsePsalmNumber(s.title);
           return num === selectedPsalmNumber;
+        });
+      }
+    }
+
+    // GA tiered lens filtering
+    if (activeTab === "gospel_acclamations") {
+      if (gaLens === "type" && gaTypeFilter !== "all") {
+        list = list.filter(s => getGAType(s.title) === gaTypeFilter);
+      }
+      if (gaLens === "season" && gaSeasonFilter !== "all") {
+        list = list.filter(s => {
+          if (!s.occasions || s.occasions.length === 0) return false;
+          return s.occasions.some(occId => {
+            const season = occasionSeasonMap.get(occId);
+            if (season !== gaSeasonFilter) return false;
+            if (gaYearFilter !== "all") {
+              // Check if occasion ID ends with the year letter
+              return occId.endsWith("-" + gaYearFilter.toLowerCase());
+            }
+            return true;
+          });
+        });
+      }
+    }
+
+    // Antiphon tiered lens filtering
+    if (activeTab === "antiphons") {
+      if (antiphonLens === "type" && antiphonTypeFilter !== "all") {
+        list = list.filter(s => (s.functions || []).includes(antiphonTypeFilter));
+      }
+      if (antiphonLens === "season" && antiphonSeasonFilter !== "all") {
+        list = list.filter(s => {
+          if (!s.occasions || s.occasions.length === 0) return false;
+          return s.occasions.some(occId => {
+            const season = occasionSeasonMap.get(occId);
+            if (season !== antiphonSeasonFilter) return false;
+            if (antiphonYearFilter !== "all") {
+              return occId.endsWith("-" + antiphonYearFilter.toLowerCase());
+            }
+            return true;
+          });
         });
       }
     }
@@ -681,6 +737,14 @@ export default function SongLibraryShell({ songs, title = "Song Library", subtit
                   setPsalmYearFilter("all");
                   setPsalmTypeFilter("all");
                   setShowCommonOnly(false);
+                  setGALens("all");
+                  setGASeasonFilter("all");
+                  setGAYearFilter("all");
+                  setGATypeFilter("all");
+                  setAntiphonLens("all");
+                  setAntiphonSeasonFilter("all");
+                  setAntiphonYearFilter("all");
+                  setAntiphonTypeFilter("all");
                   clearAllFilters();
                 }}
                 className={`px-3 py-1.5 text-xs font-medium rounded-md whitespace-nowrap transition-colors ${
@@ -694,27 +758,16 @@ export default function SongLibraryShell({ songs, title = "Song Library", subtit
             ))}
           </div>
 
-          {/* Sub-filter chips — non-psalm tabs */}
+          {/* Sub-filter chips — songs & service music only */}
           <div className="mb-1">
-            {activeTab !== "psalms" && (
+            {(activeTab === "songs" || activeTab === "service_music") && (
               <SubFilterChips
                 filters={
-                  activeTab === "songs" ? SONG_FUNCTION_FILTERS :
-                  activeTab === "service_music" ? SERVICE_MUSIC_FILTERS :
-                  activeTab === "gospel_acclamations" ? GA_FILTERS :
-                  ANTIPHON_FUNCTION_FILTERS
+                  activeTab === "songs" ? SONG_FUNCTION_FILTERS : SERVICE_MUSIC_FILTERS
                 }
                 selected={subFilter}
                 onSelect={setSubFilter}
-                counts={
-                  activeTab === "antiphons"
-                    ? Object.fromEntries(
-                        Object.entries(tabCounts.subCounts)
-                          .filter(([k]) => k.startsWith("antiphon_"))
-                          .map(([k, v]) => [k.replace("antiphon_", ""), v])
-                      )
-                    : tabCounts.subCounts
-                }
+                counts={tabCounts.subCounts}
               />
             )}
             {/* Group by setting toggle — Service Music only */}
@@ -928,6 +981,254 @@ export default function SongLibraryShell({ songs, title = "Song Library", subtit
                 })()}
               </>
             )}
+            {/* Gospel Acclamations: Tiered lens system */}
+            {activeTab === "gospel_acclamations" && (
+              <>
+                <div className="flex items-center gap-2 mt-0.5">
+                  <div className="flex items-center gap-1">
+                    {GA_LENS_OPTIONS.map((lens) => (
+                      <button
+                        key={lens.id}
+                        onClick={() => {
+                          setGALens(lens.id);
+                          if (lens.id === "season") {
+                            const current = getCurrentLiturgicalSeason();
+                            const mapped = current === "holyweek" ? "holy_week" : current;
+                            setGASeasonFilter(mapped);
+                            setGAYearFilter("all");
+                          } else {
+                            setGASeasonFilter("all"); setGAYearFilter("all");
+                          }
+                          if (lens.id === "type") {
+                            setGATypeFilter("alleluia");
+                          } else {
+                            setGATypeFilter("all");
+                          }
+                        }}
+                        className={`shrink-0 px-2.5 py-1 text-[11px] font-medium rounded-md transition-colors ${
+                          gaLens === lens.id
+                            ? "bg-stone-800 text-white"
+                            : "bg-stone-100 text-stone-500 hover:bg-stone-200"
+                        }`}
+                      >
+                        {lens.label}
+                      </button>
+                    ))}
+                  </div>
+                </div>
+
+                {/* Season lens → Season pills + Year pills */}
+                {gaLens === "season" && (
+                  <>
+                    <div className="flex items-center gap-1 mt-1.5">
+                      <span className="text-[10px] font-medium text-stone-400 uppercase tracking-wide mr-1">Season</span>
+                      {PSALM_SEASON_FILTERS.filter(sf => sf.id !== "all").map((sf) => {
+                        const isActive = gaSeasonFilter === sf.id;
+                        const seasonColorMap: Record<string, string> = {
+                          advent: "var(--color-advent)",
+                          christmas: "var(--color-christmas)",
+                          lent: "var(--color-lent)",
+                          holy_week: "var(--color-solemnity)",
+                          easter: "var(--color-easter)",
+                          ordinary: "var(--color-ordinary)",
+                        };
+                        return (
+                          <button
+                            key={sf.id}
+                            onClick={() => {
+                              setGASeasonFilter(gaSeasonFilter === sf.id ? "all" : sf.id);
+                              setGAYearFilter("all");
+                            }}
+                            className={`shrink-0 px-2 py-0.5 text-[10px] font-medium rounded transition-colors ${
+                              isActive
+                                ? "text-white"
+                                : "bg-stone-100 text-stone-500 hover:bg-stone-200"
+                            }`}
+                            style={isActive ? { backgroundColor: seasonColorMap[sf.id] || "#78716c" } : undefined}
+                          >
+                            {sf.label}
+                          </button>
+                        );
+                      })}
+                    </div>
+                    {gaSeasonFilter !== "all" && (() => {
+                      const seasonColorMap: Record<string, string> = {
+                        advent: "var(--color-advent)",
+                        christmas: "var(--color-christmas)",
+                        lent: "var(--color-lent)",
+                        holy_week: "var(--color-solemnity)",
+                        easter: "var(--color-easter)",
+                        ordinary: "var(--color-ordinary)",
+                      };
+                      const activeColor = seasonColorMap[gaSeasonFilter] || "#78716c";
+                      return (
+                        <div className="flex items-center gap-1 mt-1">
+                          <span className="text-[10px] font-medium text-stone-400 uppercase tracking-wide mr-1">Year</span>
+                          {PSALM_YEAR_FILTERS.map((yf) => (
+                            <button
+                              key={yf.id}
+                              onClick={() => setGAYearFilter(yf.id)}
+                              className={`shrink-0 px-2 py-0.5 text-[10px] font-medium rounded transition-colors ${
+                                gaYearFilter === yf.id
+                                  ? "text-white"
+                                  : "bg-stone-100 text-stone-500 hover:bg-stone-200"
+                              }`}
+                              style={gaYearFilter === yf.id ? { backgroundColor: activeColor } : undefined}
+                            >
+                              {yf.label}
+                            </button>
+                          ))}
+                        </div>
+                      );
+                    })()}
+                  </>
+                )}
+
+                {/* Type lens → Alleluia / Lenten pills */}
+                {gaLens === "type" && (
+                  <div className="flex items-center gap-1 mt-1.5">
+                    <span className="text-[10px] font-medium text-stone-400 uppercase tracking-wide mr-1">Type</span>
+                    {GA_TYPE_OPTIONS.filter(t => t.id !== "all").map((t) => (
+                      <button
+                        key={t.id}
+                        onClick={() => setGATypeFilter(gaTypeFilter === t.id ? "all" : t.id)}
+                        className={`shrink-0 px-2 py-0.5 text-[10px] font-medium rounded transition-colors ${
+                          gaTypeFilter === t.id
+                            ? "bg-amber-600 text-white"
+                            : "bg-stone-100 text-stone-500 hover:bg-stone-200"
+                        }`}
+                      >
+                        {t.label}
+                      </button>
+                    ))}
+                  </div>
+                )}
+              </>
+            )}
+            {/* Antiphons: Tiered lens system */}
+            {activeTab === "antiphons" && (
+              <>
+                <div className="flex items-center gap-2 mt-0.5">
+                  <div className="flex items-center gap-1">
+                    {ANTIPHON_LENS_OPTIONS.map((lens) => (
+                      <button
+                        key={lens.id}
+                        onClick={() => {
+                          setAntiphonLens(lens.id);
+                          if (lens.id === "season") {
+                            const current = getCurrentLiturgicalSeason();
+                            const mapped = current === "holyweek" ? "holy_week" : current;
+                            setAntiphonSeasonFilter(mapped);
+                            setAntiphonYearFilter("all");
+                          } else {
+                            setAntiphonSeasonFilter("all"); setAntiphonYearFilter("all");
+                          }
+                          if (lens.id === "type") {
+                            setAntiphonTypeFilter("entrance");
+                          } else {
+                            setAntiphonTypeFilter("all");
+                          }
+                        }}
+                        className={`shrink-0 px-2.5 py-1 text-[11px] font-medium rounded-md transition-colors ${
+                          antiphonLens === lens.id
+                            ? "bg-stone-800 text-white"
+                            : "bg-stone-100 text-stone-500 hover:bg-stone-200"
+                        }`}
+                      >
+                        {lens.label}
+                      </button>
+                    ))}
+                  </div>
+                </div>
+
+                {/* Season lens → Season pills + Year pills */}
+                {antiphonLens === "season" && (
+                  <>
+                    <div className="flex items-center gap-1 mt-1.5">
+                      <span className="text-[10px] font-medium text-stone-400 uppercase tracking-wide mr-1">Season</span>
+                      {PSALM_SEASON_FILTERS.filter(sf => sf.id !== "all").map((sf) => {
+                        const isActive = antiphonSeasonFilter === sf.id;
+                        const seasonColorMap: Record<string, string> = {
+                          advent: "var(--color-advent)",
+                          christmas: "var(--color-christmas)",
+                          lent: "var(--color-lent)",
+                          holy_week: "var(--color-solemnity)",
+                          easter: "var(--color-easter)",
+                          ordinary: "var(--color-ordinary)",
+                        };
+                        return (
+                          <button
+                            key={sf.id}
+                            onClick={() => {
+                              setAntiphonSeasonFilter(antiphonSeasonFilter === sf.id ? "all" : sf.id);
+                              setAntiphonYearFilter("all");
+                            }}
+                            className={`shrink-0 px-2 py-0.5 text-[10px] font-medium rounded transition-colors ${
+                              isActive
+                                ? "text-white"
+                                : "bg-stone-100 text-stone-500 hover:bg-stone-200"
+                            }`}
+                            style={isActive ? { backgroundColor: seasonColorMap[sf.id] || "#78716c" } : undefined}
+                          >
+                            {sf.label}
+                          </button>
+                        );
+                      })}
+                    </div>
+                    {antiphonSeasonFilter !== "all" && (() => {
+                      const seasonColorMap: Record<string, string> = {
+                        advent: "var(--color-advent)",
+                        christmas: "var(--color-christmas)",
+                        lent: "var(--color-lent)",
+                        holy_week: "var(--color-solemnity)",
+                        easter: "var(--color-easter)",
+                        ordinary: "var(--color-ordinary)",
+                      };
+                      const activeColor = seasonColorMap[antiphonSeasonFilter] || "#78716c";
+                      return (
+                        <div className="flex items-center gap-1 mt-1">
+                          <span className="text-[10px] font-medium text-stone-400 uppercase tracking-wide mr-1">Year</span>
+                          {PSALM_YEAR_FILTERS.map((yf) => (
+                            <button
+                              key={yf.id}
+                              onClick={() => setAntiphonYearFilter(yf.id)}
+                              className={`shrink-0 px-2 py-0.5 text-[10px] font-medium rounded transition-colors ${
+                                antiphonYearFilter === yf.id
+                                  ? "text-white"
+                                  : "bg-stone-100 text-stone-500 hover:bg-stone-200"
+                              }`}
+                              style={antiphonYearFilter === yf.id ? { backgroundColor: activeColor } : undefined}
+                            >
+                              {yf.label}
+                            </button>
+                          ))}
+                        </div>
+                      );
+                    })()}
+                  </>
+                )}
+
+                {/* Type lens → Entrance / Communion pills */}
+                {antiphonLens === "type" && (
+                  <div className="flex items-center gap-1 mt-1.5">
+                    <span className="text-[10px] font-medium text-stone-400 uppercase tracking-wide mr-1">Type</span>
+                    {ANTIPHON_TYPE_OPTIONS.filter(t => t.id !== "all").map((t) => (
+                      <button
+                        key={t.id}
+                        onClick={() => setAntiphonTypeFilter(antiphonTypeFilter === t.id ? "all" : t.id)}
+                        className={`shrink-0 px-2 py-0.5 text-[10px] font-medium rounded transition-colors ${
+                          antiphonTypeFilter === t.id
+                            ? "bg-amber-600 text-white"
+                            : "bg-stone-100 text-stone-500 hover:bg-stone-200"
+                        }`}
+                      >
+                        {t.label}
+                      </button>
+                    ))}
+                  </div>
+                )}
+              </>
+            )}
           </div>
 
           <div className="flex flex-col gap-2 sm:flex-row sm:items-center sm:gap-3">
@@ -1037,7 +1338,7 @@ export default function SongLibraryShell({ songs, title = "Song Library", subtit
           <div ref={listRef} className="flex-1 overflow-y-auto">
             {filtered.length === 0 ? (
               <div className="text-center text-stone-400 text-sm py-12">
-                {search || activeFilterCount > 0 || subFilter !== "all" || psalmSeasonFilter !== "all" || selectedPsalmNumber !== null
+                {search || activeFilterCount > 0 || subFilter !== "all" || psalmSeasonFilter !== "all" || selectedPsalmNumber !== null || showCommonOnly
                   ? "No songs match your filters."
                   : activeTab === "antiphons"
                   ? "No antiphons in library yet."
