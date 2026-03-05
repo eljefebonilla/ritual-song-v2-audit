@@ -329,17 +329,30 @@ export default function SongLibraryShell({ songs, title = "Song Library", subtit
     return { counts, subCounts };
   }, [activeSongs]);
 
-  // Available psalm numbers (parse from title if psalmNumber not stored)
+  // Available psalm numbers — filtered by scholarly category + season
   const availablePsalmNumbers = useMemo(() => {
     const nums = new Set<number>();
     for (const s of activeSongs) {
-      if (s.category === "psalm") {
-        const num = s.psalmNumber || parsePsalmNumber(s.title);
-        if (num) nums.add(num);
+      if (s.category !== "psalm") continue;
+      const num = s.psalmNumber || parsePsalmNumber(s.title);
+      if (!num) continue;
+      // Filter by scholarly category sub-filter
+      if (subFilter !== "all") {
+        if (subFilter === "common") {
+          const threshold = tabCounts.subCounts["_common_threshold"] || 1;
+          if (s.usageCount < threshold) continue;
+        } else if (!getPsalmCategories(num).includes(subFilter)) {
+          continue;
+        }
       }
+      // Filter by season
+      if (psalmSeasonFilter !== "all") {
+        if (!getPsalmSeasons(num).includes(psalmSeasonFilter)) continue;
+      }
+      nums.add(num);
     }
     return nums;
-  }, [activeSongs]);
+  }, [activeSongs, subFilter, psalmSeasonFilter, tabCounts.subCounts]);
 
   const activeFilterCount =
     orderOfMassFilters.size +
