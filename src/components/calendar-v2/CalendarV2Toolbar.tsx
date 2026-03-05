@@ -22,7 +22,7 @@ export default function CalendarV2Toolbar({
   onScrollToToday,
 }: CalendarV2ToolbarProps) {
   return (
-    <div className="flex shrink-0 items-center gap-5 border-b border-stone-100 bg-white px-5 py-3">
+    <div className="flex shrink-0 items-center gap-5 border-b border-stone-100 bg-white px-5 py-4">
       {/* Title */}
       <div className="flex items-center gap-2.5">
         <h1 className="font-serif text-lg font-light tracking-wide text-stone-700">

@@ -92,7 +92,7 @@ export default async function CalendarV2Page() {
   const liturgicalDays = (usccbData as USCCBDay[]).filter((d) => d.date);
 
   return (
-    <div className="h-full overflow-hidden">
+    <div className="h-full overflow-hidden pt-2">
       <CalendarV2Shell
         liturgicalDays={liturgicalDays}
         massEvents={massEvents}
