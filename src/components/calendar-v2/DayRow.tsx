@@ -57,104 +57,88 @@ function groupPersonnelByRole(personnel: BookingPersonnel[]): [string, string[]]
 // Sub-components
 // ---------------------------------------------------------------------------
 
-function PersonnelGrid({
+const ROLE_ORDER = [
+  "Celebrant",
+  "Music Director", "Director",
+  "Accompanist",
+  "Cantor & Piano", "Cantor",
+  "Psalmist",
+  "Section Leaders",
+  "Soprano", "Alto", "Tenor", "Bass",
+  "Choir",
+  "Piano", "Pianist", "Organist",
+  "A. Guitar", "E. Guitar", "B. Guitar", "Guitarist",
+  "E. Bass", "Bassist",
+  "Drums", "Drums/Percussion", "Percussion", "Drummer",
+  "Instrumentalist", "Other",
+  "Livestream TD", "Livestream",
+  "Sound", "Sound Person",
+  "Playback",
+];
+
+function PersonnelSection({
   celebrant,
   personnel,
 }: {
   celebrant: string | null;
   personnel: [string, string[]][];
 }) {
+  const [expanded, setExpanded] = useState(false);
+
   if (!celebrant && personnel.length === 0) return null;
 
-  // First column: ministry/vocal roles in a specific order
-  // Second column: everything else (instruments, tech, etc.)
-  const FIRST_COL_ORDER = [
-    "Celebrant",
-    "Music Director", "Director",
-    "Accompanist",
-    "Cantor & Piano", "Cantor",
-    "Psalmist",
-    "Section Leaders",
-    "Soprano", "Alto", "Tenor", "Bass",
-    "Choir",
-  ];
-
-  const SECOND_COL_ORDER = [
-    "Piano", "Pianist", "Organist",
-    "A. Guitar", "E. Guitar", "B. Guitar", "Guitarist",
-    "E. Bass", "Bassist",
-    "Drums", "Drums/Percussion", "Percussion", "Drummer",
-    "Instrumentalist", "Other",
-    "Livestream TD", "Livestream",
-    "Sound", "Sound Person",
-    "Playback",
-  ];
-
-  const firstColSet = new Set(FIRST_COL_ORDER);
-  const secondColSet = new Set(SECOND_COL_ORDER);
-
-  const leftCol: [string, string][] = [];
-  const rightCol: [string, string][] = [];
+  // Build ordered single-column list
+  const rows: [string, string][] = [];
 
   if (celebrant) {
-    leftCol.push(["Celebrant", celebrant]);
+    rows.push(["Celebrant", celebrant]);
   }
 
-  // Build lookup from personnel
   const personnelMap = new Map<string, string>();
   for (const [role, names] of personnel) {
-    // Normalize "Bass (Vocal)" to "Bass"
     const displayRole = role === "Bass (Vocal)" ? "Bass" : role;
     personnelMap.set(displayRole, names.join(", "));
   }
 
-  // First column in defined order
-  for (const role of FIRST_COL_ORDER) {
-    if (role === "Celebrant") continue; // already added
+  for (const role of ROLE_ORDER) {
+    if (role === "Celebrant") continue;
     const names = personnelMap.get(role);
     if (names) {
-      leftCol.push([role, names]);
+      rows.push([role, names]);
       personnelMap.delete(role);
     }
   }
-
-  // Second column in defined order
-  for (const role of SECOND_COL_ORDER) {
-    const names = personnelMap.get(role);
-    if (names) {
-      rightCol.push([role, names]);
-      personnelMap.delete(role);
-    }
-  }
-
-  // Anything not in either list goes to right column at the end
+  // Anything not in the defined order goes at the end
   for (const [role, names] of personnelMap) {
-    if (!firstColSet.has(role) && !secondColSet.has(role)) {
-      rightCol.push([role, names]);
-    }
+    rows.push([role, names]);
   }
 
-  // If everything fits in one column, don't force two
-  const useTwoColumns = leftCol.length > 0 && rightCol.length > 0;
+  const count = rows.length;
 
   return (
-    <div className={`mt-2 border-t border-stone-50 pt-2 ${useTwoColumns ? "grid grid-cols-2 gap-x-6" : ""}`}>
-      {useTwoColumns ? (
-        <>
-          <div className="space-y-0.5">
-            {leftCol.map(([role, names]) => (
-              <PersonnelRow key={role} role={role} names={names} />
-            ))}
-          </div>
-          <div className="space-y-0.5">
-            {rightCol.map(([role, names]) => (
-              <PersonnelRow key={role} role={role} names={names} />
-            ))}
-          </div>
-        </>
-      ) : (
-        <div className="space-y-0.5">
-          {leftCol.concat(rightCol).map(([role, names]) => (
+    <div className="mt-1.5">
+      <button
+        onClick={() => setExpanded(!expanded)}
+        className="flex items-center gap-1.5 text-[11px] text-stone-400 hover:text-stone-600 transition-colors"
+      >
+        <svg
+          className={`h-3 w-3 transition-transform ${expanded ? "rotate-90" : ""}`}
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          strokeWidth="2.5"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        >
+          <polyline points="9 18 15 12 9 6" />
+        </svg>
+        <span className="font-medium">
+          {count} {count === 1 ? "person" : "people"} assigned
+        </span>
+      </button>
+      {expanded && (
+        <div className="mt-1.5 ml-1 space-y-0.5 border-l-2 border-stone-100 pl-3">
+          {rows.map(([role, names]) => (
             <PersonnelRow key={role} role={role} names={names} />
           ))}
         </div>
@@ -199,7 +183,7 @@ function EventCard({
           </>
         )}
       </div>
-      <PersonnelGrid celebrant={event.celebrant} personnel={personnelGroups} />
+      <PersonnelSection celebrant={event.celebrant} personnel={personnelGroups} />
       {event.notes && (
         <div className="mt-1.5 text-xs italic text-stone-400">{event.notes}</div>
       )}
