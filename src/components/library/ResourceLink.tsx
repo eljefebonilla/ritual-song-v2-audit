@@ -372,7 +372,7 @@ export default function ResourceLink({
           <div className="mt-1.5 rounded-md border border-blue-200 overflow-hidden bg-white">
             {isPdf ? (
               <iframe
-                src={url}
+                src={`${url}#navpanes=0&view=FitH`}
                 className="w-full border-0"
                 style={{ height: "50vh", minHeight: 300 }}
                 title={`Preview: ${resource.label}`}
