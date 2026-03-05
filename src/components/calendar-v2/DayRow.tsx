@@ -476,6 +476,24 @@ function StateFlag({ state, className }: { state: string; className?: string }) 
   );
 }
 
+// Holidays that duplicate liturgical celebrations — suppress the badge
+const LITURGICAL_HOLIDAYS = new Set([
+  "christmas day",
+  "good friday",
+  "easter sunday",
+  "easter",
+]);
+
+function isRedundantHoliday(holiday: Holiday, litName: string | undefined): boolean {
+  if (!litName) return false;
+  const hLower = holiday.name.toLowerCase();
+  // Exact match on known liturgical holidays
+  if (LITURGICAL_HOLIDAYS.has(hLower)) return true;
+  // Christmas Eve when lit day is already a Christmas vigil
+  if (hLower === "christmas eve" && litName.toLowerCase().includes("nativity")) return true;
+  return false;
+}
+
 function HolidayBadge({ holiday }: { holiday: Holiday }) {
   const isFederal = holiday.type === "federal";
   return (
@@ -688,12 +706,14 @@ export default function DayRow({ day, isToday, isPast, hidePast, onAddEvent }: D
         </div>
       )}
 
-      {/* Holidays */}
+      {/* Holidays (suppress when redundant with liturgical day) */}
       {hasHolidays && (
         <div className="mt-2 flex flex-wrap gap-1.5">
-          {day.holidays.map((h, i) => (
-            <HolidayBadge key={`${h.name}-${i}`} holiday={h} />
-          ))}
+          {day.holidays
+            .filter((h) => !isRedundantHoliday(h, lit.celebrationName))
+            .map((h, i) => (
+              <HolidayBadge key={`${h.name}-${i}`} holiday={h} />
+            ))}
         </div>
       )}
 
