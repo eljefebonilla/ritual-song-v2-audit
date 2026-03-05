@@ -547,6 +547,15 @@ export default function SongDetailPanel({
   const [editComposer, setEditComposer] = useState(song.composer || "");
   const [editCategory, setEditCategory] = useState<string>(song.category || "song");
   const [editSaving, setEditSaving] = useState(false);
+  const [editError, setEditError] = useState<string | null>(null);
+
+  // Re-sync edit state when song prop changes (e.g. after router.refresh())
+  useEffect(() => {
+    setEditTitle(song.title);
+    setEditComposer(song.composer || "");
+    setEditCategory(song.category || "song");
+    setEditError(null);
+  }, [song.id, song.title, song.composer, song.category]);
 
   // Delete song state
   const [confirmDelete, setConfirmDelete] = useState(false);
@@ -647,6 +656,7 @@ export default function SongDetailPanel({
 
   const handleSaveEdit = async () => {
     setEditSaving(true);
+    setEditError(null);
     try {
       const res = await fetch(`/api/songs/${song.id}`, {
         method: "PUT",
@@ -660,7 +670,12 @@ export default function SongDetailPanel({
       if (res.ok) {
         setEditing(false);
         router.refresh();
+      } else {
+        const data = await res.json().catch(() => ({}));
+        setEditError(data.error || `Save failed (${res.status})`);
       }
+    } catch {
+      setEditError("Network error — could not save");
     } finally {
       setEditSaving(false);
     }
@@ -922,6 +937,9 @@ export default function SongDetailPanel({
                     <option value="gospel_acclamation_verse">Gospel Acc. Verse</option>
                     <option value="gospel_acclamation_refrain">Gospel Acc. Refrain</option>
                   </select>
+                  {editError && (
+                    <p className="text-[10px] text-red-600">{editError}</p>
+                  )}
                   <div className="flex gap-1.5">
                     <button
                       disabled={editSaving || !editTitle.trim()}
@@ -936,6 +954,7 @@ export default function SongDetailPanel({
                         setEditTitle(song.title);
                         setEditComposer(song.composer || "");
                         setEditCategory(song.category || "song");
+                        setEditError(null);
                       }}
                       className="px-2 py-0.5 text-[10px] font-medium text-stone-500 rounded hover:bg-stone-100"
                     >
@@ -959,7 +978,7 @@ export default function SongDetailPanel({
                 <button
                   onClick={() => setEditing(true)}
                   className="p-1 text-stone-300 hover:text-stone-600 transition-colors"
-                  title="Edit title/composer"
+                  title="Edit song metadata"
                 >
                   <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                     <path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7" />

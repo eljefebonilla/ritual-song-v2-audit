@@ -2854,8 +2854,8 @@
   },
   {
     "id": "mass-of-joy-peace-lenten-g-a-refrain--the-lyric-gospel-acclamations-tony-alonso",
-    "title": "Mass of Joy & Peace Lenten G.A. (Refrain)",
-    "composer": "The Lyric Gospel Acclamations • Tony Alonso",
+    "title": "Lenten Gospel Acclamation (Mass of Joy & Peace)",
+    "composer": "Tony Alonso",
     "resources": [],
     "usageCount": 36,
     "occasions": [
@@ -2878,7 +2878,7 @@
       "palm-sunday-b",
       "palm-sunday-c"
     ],
-    "category": "song",
+    "category": "gospel_acclamation_refrain",
     "functions": [
       "gospel_acclamation"
     ]
@@ -32631,7 +32631,7 @@
   },
   {
     "id": "o-come-to-the-altar-no-bridge--elevation-worship-david-begins-solo",
-    "title": "O Come to the Altar (NO BRIDGE!!!)",
+    "title": "O Come to the Altar",
     "composer": "Elevation Worship — David begins solo.",
     "resources": [
       {
