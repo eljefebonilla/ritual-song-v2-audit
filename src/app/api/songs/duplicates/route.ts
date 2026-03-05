@@ -1,6 +1,6 @@
 import { NextRequest, NextResponse } from "next/server";
 import { getSongLibrary, invalidateSongLibraryCache } from "@/lib/song-library";
-import { createAdminClient } from "@/lib/supabase/admin";
+import { createAdminClient, resolveSongUuid } from "@/lib/supabase/admin";
 import { detectDuplicateGroups, detectJunkEntries } from "@/lib/duplicate-detection";
 import { getAllFullOccasions } from "@/lib/data";
 import { extractSongEntries, normalizeTitle } from "@/lib/occasion-helpers";
@@ -198,12 +198,16 @@ export async function POST(request: NextRequest) {
     // Sum usageCount
     primary.usageCount += secondary.usageCount;
 
-    // Update Supabase song_resources to point to primary
+    // Update Supabase song_resources_v2 to point to primary
     const supabase = createAdminClient();
-    await supabase
-      .from("song_resources")
-      .update({ song_id: primaryId })
-      .eq("song_id", secondaryId);
+    const primaryUuid = await resolveSongUuid(supabase, primaryId);
+    const secondaryUuid = await resolveSongUuid(supabase, secondaryId);
+    if (primaryUuid && secondaryUuid) {
+      await supabase
+        .from("song_resources_v2")
+        .update({ song_id: primaryUuid })
+        .eq("song_id", secondaryUuid);
+    }
 
     // Update music_plan_edits — replace secondary title with primary
     const SONG_FIELDS = [

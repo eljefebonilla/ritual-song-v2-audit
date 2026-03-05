@@ -1,5 +1,5 @@
 import { NextRequest, NextResponse } from "next/server";
-import { createAdminClient } from "@/lib/supabase/admin";
+import { createAdminClient, resolveSongUuid } from "@/lib/supabase/admin";
 
 export async function GET(
   _request: NextRequest,
@@ -10,10 +10,15 @@ export async function GET(
   try {
     const supabase = createAdminClient();
 
+    const songUuid = await resolveSongUuid(supabase, id);
+    if (!songUuid) {
+      return NextResponse.json({ resources: [] });
+    }
+
     const { data: rows, error } = await supabase
-      .from("song_resources")
+      .from("song_resources_v2")
       .select("id, type, label, url, storage_path, source, is_highlighted, tags, visibility")
-      .eq("song_id", id)
+      .eq("song_id", songUuid)
       .order("created_at", { ascending: true });
 
     if (error) {

@@ -1,6 +1,6 @@
 import { NextRequest, NextResponse } from "next/server";
 import { verifyAdmin } from "@/lib/admin";
-import { createAdminClient } from "@/lib/supabase/admin";
+import { createAdminClient, resolveSongUuid } from "@/lib/supabase/admin";
 import { getSongById } from "@/lib/song-library";
 import { buildStorageName, FILE_TYPE_TAG_IDS } from "@/lib/resource-tags";
 
@@ -77,19 +77,23 @@ export async function POST(
 
     const supabase = createAdminClient();
 
-    // Check for duplicate
-    const { data: existing } = await supabase
-      .from("song_resources")
-      .select("id")
-      .eq("song_id", id)
-      .eq("storage_path", storagePath)
-      .maybeSingle();
+    const songUuid = await resolveSongUuid(supabase, id);
 
-    if (existing) {
-      return NextResponse.json(
-        { error: "Resource already exists" },
-        { status: 409 }
-      );
+    // Check for duplicate (only if song exists in DB)
+    if (songUuid) {
+      const { data: existing } = await supabase
+        .from("song_resources_v2")
+        .select("id")
+        .eq("song_id", songUuid)
+        .eq("storage_path", storagePath)
+        .maybeSingle();
+
+      if (existing) {
+        return NextResponse.json(
+          { error: "Resource already exists" },
+          { status: 409 }
+        );
+      }
     }
 
     // Generate signed upload URL (valid 5 minutes)

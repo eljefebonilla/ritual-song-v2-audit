@@ -1,5 +1,5 @@
 import { NextRequest, NextResponse } from "next/server";
-import { createAdminClient } from "@/lib/supabase/admin";
+import { createAdminClient, resolveSongUuid } from "@/lib/supabase/admin";
 import fs from "fs";
 import path from "path";
 
@@ -67,16 +67,17 @@ export async function POST(request: NextRequest) {
 
       fs.writeFileSync(SONG_LIBRARY_PATH, JSON.stringify(library, null, 2), "utf-8");
 
-      // Revert song_resources: reassign back to secondary IDs
+      // Revert song_resources_v2: reassign back to secondary UUIDs
+      const primaryUuid = await resolveSongUuid(supabase, primaryId);
       for (const song of removedSongs) {
         const secondaryId = song.id as string;
-        // Get resource IDs that belong to this secondary song
+        const secondaryUuid = await resolveSongUuid(supabase, secondaryId);
         const resourceIds = (song as { resources?: { id: string }[] }).resources?.map(r => r.id) || [];
-        if (resourceIds.length > 0) {
+        if (resourceIds.length > 0 && primaryUuid && secondaryUuid) {
           await supabase
-            .from("song_resources")
-            .update({ song_id: secondaryId })
-            .eq("song_id", primaryId)
+            .from("song_resources_v2")
+            .update({ song_id: secondaryUuid })
+            .eq("song_id", primaryUuid)
             .in("id", resourceIds);
         }
       }

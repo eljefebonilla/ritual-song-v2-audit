@@ -1,6 +1,6 @@
 import { NextRequest, NextResponse } from "next/server";
 import { verifyAdmin } from "@/lib/admin";
-import { createAdminClient } from "@/lib/supabase/admin";
+import { createAdminClient, resolveSongUuid } from "@/lib/supabase/admin";
 import { getSongById } from "@/lib/song-library";
 import type { SongResourceType } from "@/lib/types";
 import path from "path";
@@ -54,6 +54,11 @@ export async function POST(
 
     const supabase = createAdminClient();
 
+    const songUuid = await resolveSongUuid(supabase, id);
+    if (!songUuid) {
+      return NextResponse.json({ error: "Song not found in database" }, { status: 404 });
+    }
+
     // Build filename (sanitized for Supabase Storage)
     const ext = path.extname(file.name);
     const safeName = sanitizeForStorage(
@@ -64,9 +69,9 @@ export async function POST(
 
     // Check for duplicate
     const { data: existing } = await supabase
-      .from("song_resources")
+      .from("song_resources_v2")
       .select("id")
-      .eq("song_id", id)
+      .eq("song_id", songUuid)
       .eq("storage_path", storagePath)
       .maybeSingle();
 
@@ -99,9 +104,9 @@ export async function POST(
 
     // Insert metadata into DB
     const { data: resource, error: insertError } = await supabase
-      .from("song_resources")
+      .from("song_resources_v2")
       .insert({
-        song_id: id,
+        song_id: songUuid,
         type: resolvedType,
         label,
         url: urlData.publicUrl,

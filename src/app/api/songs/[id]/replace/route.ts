@@ -1,6 +1,6 @@
 import { NextRequest, NextResponse } from "next/server";
 import { verifyAdmin } from "@/lib/admin";
-import { createAdminClient } from "@/lib/supabase/admin";
+import { createAdminClient, resolveSongUuid } from "@/lib/supabase/admin";
 import { invalidateSongLibraryCache } from "@/lib/song-library";
 import fs from "fs";
 import path from "path";
@@ -66,11 +66,17 @@ export async function POST(
 
     const supabase = createAdminClient();
 
-    // 1. Transfer Supabase song_resources to replacement
-    await supabase
-      .from("song_resources")
-      .update({ song_id: replacementId })
-      .eq("song_id", id);
+    // Resolve legacy IDs to UUIDs for v2 resource operations
+    const oldUuid = await resolveSongUuid(supabase, id);
+    const newUuid = await resolveSongUuid(supabase, replacementId);
+
+    // 1. Transfer Supabase song_resources_v2 to replacement
+    if (oldUuid && newUuid) {
+      await supabase
+        .from("song_resources_v2")
+        .update({ song_id: newUuid })
+        .eq("song_id", oldUuid);
+    }
 
     // 2-4. Merge JSON data if old song exists in library
     if (oldSong) {
@@ -139,7 +145,9 @@ export async function POST(
     });
 
     // 7. Delete old song from Supabase
-    await supabase.from("song_resources").delete().eq("song_id", id);
+    if (oldUuid) {
+      await supabase.from("song_resources_v2").delete().eq("song_id", oldUuid);
+    }
     await supabase.from("songs").delete().eq("legacy_id", id);
     // Also try by UUID in case legacy_id doesn't match
     await supabase.from("songs").delete().eq("id", id);

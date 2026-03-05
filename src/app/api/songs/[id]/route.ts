@@ -1,6 +1,6 @@
 import { NextRequest, NextResponse } from "next/server";
 import { verifyAdmin } from "@/lib/admin";
-import { createAdminClient } from "@/lib/supabase/admin";
+import { createAdminClient, resolveSongUuid } from "@/lib/supabase/admin";
 import { invalidateSongLibraryCache } from "@/lib/song-library";
 import fs from "fs";
 import path from "path";
@@ -144,8 +144,11 @@ export async function DELETE(
   try {
     const supabase = createAdminClient();
 
-    // Delete orphaned song_resources (text FK, no cascade)
-    await supabase.from("song_resources").delete().eq("song_id", id);
+    // Delete orphaned song_resources_v2 (UUID FK)
+    const songUuid = await resolveSongUuid(supabase, id);
+    if (songUuid) {
+      await supabase.from("song_resources_v2").delete().eq("song_id", songUuid);
+    }
 
     // Delete from Supabase
     const { data, error } = await supabase

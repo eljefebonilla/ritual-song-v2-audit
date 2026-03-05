@@ -1,6 +1,6 @@
 import { NextRequest, NextResponse } from "next/server";
 import { verifyAdmin } from "@/lib/admin";
-import { createAdminClient } from "@/lib/supabase/admin";
+import { createAdminClient, resolveSongUuid } from "@/lib/supabase/admin";
 import { getSongById } from "@/lib/song-library";
 
 export async function POST(
@@ -54,8 +54,13 @@ export async function POST(
 
     const supabase = createAdminClient();
 
+    const songUuid = await resolveSongUuid(supabase, id);
+    if (!songUuid) {
+      return NextResponse.json({ error: "Song not found in database" }, { status: 404 });
+    }
+
     const insertData: Record<string, unknown> = {
-      song_id: id,
+      song_id: songUuid,
       type,
       label,
       url: resolvedUrl,
@@ -73,7 +78,7 @@ export async function POST(
     }
 
     const { data: resource, error: insertError } = await supabase
-      .from("song_resources")
+      .from("song_resources_v2")
       .insert(insertData)
       .select()
       .single();

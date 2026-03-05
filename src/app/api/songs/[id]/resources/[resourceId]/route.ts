@@ -33,12 +33,11 @@ export async function DELETE(
     if (isUuid) {
       const supabase = createAdminClient();
 
-      // Look up the resource
+      // Look up the resource (by UUID — globally unique)
       const { data: resource, error: fetchError } = await supabase
-        .from("song_resources")
+        .from("song_resources_v2")
         .select("id, storage_path")
         .eq("id", resourceId)
-        .eq("song_id", id)
         .single();
 
       if (fetchError || !resource) {
@@ -52,7 +51,7 @@ export async function DELETE(
 
       // Delete DB row
       const { error: deleteError } = await supabase
-        .from("song_resources")
+        .from("song_resources_v2")
         .delete()
         .eq("id", resourceId);
 
@@ -126,12 +125,11 @@ export async function PATCH(
 
     const supabase = createAdminClient();
 
-    // Fetch existing resource
+    // Fetch existing resource (by UUID — globally unique)
     const { data: resource, error: fetchError } = await supabase
-      .from("song_resources")
+      .from("song_resources_v2")
       .select("*")
       .eq("id", resourceId)
-      .eq("song_id", id)
       .single();
 
     if (fetchError || !resource) {
@@ -209,7 +207,7 @@ export async function PATCH(
 
     // Update DB
     const { data: updated, error: updateError } = await supabase
-      .from("song_resources")
+      .from("song_resources_v2")
       .update(updateData)
       .eq("id", resourceId)
       .select()
