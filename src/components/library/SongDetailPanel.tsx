@@ -37,6 +37,8 @@ interface SongDetailPanelProps {
   occasionId?: string;
   slotRole?: string;
   onSlotReplace?: (songId: string, title: string, composer: string) => void;
+  panelWidth?: number;
+  onResizeStart?: (e: React.MouseEvent) => void;
 }
 
 /* SOURCE_LABELS removed — resources now grouped by tag category */
@@ -520,6 +522,8 @@ export default function SongDetailPanel({
   occasionId,
   slotRole,
   onSlotReplace,
+  panelWidth,
+  onResizeStart,
 }: SongDetailPanelProps) {
   const router = useRouter();
   const { role } = useUser();
@@ -527,6 +531,9 @@ export default function SongDetailPanel({
   // Add resource state
   const [addingResource, setAddingResource] = useState(false);
   const [localResources, setLocalResources] = useState<SongResource[]>([]);
+
+  // Inline resource preview
+  const [activePreviewId, setActivePreviewId] = useState<string | null>(null);
 
   // Edit song state
   const [editing, setEditing] = useState(false);
@@ -561,6 +568,9 @@ export default function SongDetailPanel({
       .catch(() => {});
     return () => { cancelled = true; };
   }, [song.id]);
+
+  // Reset preview when switching songs
+  useEffect(() => { setActivePreviewId(null); }, [song.id]);
 
   // Delete resource state
   const [deletingResourceId, setDeletingResourceId] = useState<string | null>(null);
@@ -848,10 +858,20 @@ export default function SongDetailPanel({
         onClick={onClose}
       />
 
-      <div className="
-        fixed inset-0 z-50 bg-white flex flex-col
-        md:relative md:inset-auto md:z-auto md:w-80 md:border-l md:border-stone-200 md:shrink-0
-      ">
+      <div
+        className="
+          fixed inset-0 z-50 bg-white flex flex-col
+          md:relative md:inset-auto md:z-auto md:border-l md:border-stone-200 md:shrink-0 md:min-w-[320px]
+        "
+        style={panelWidth ? { width: panelWidth } : { width: 320 }}
+      >
+        {/* Resize drag handle (desktop only) */}
+        {onResizeStart && (
+          <div
+            className="hidden md:block absolute left-0 top-0 bottom-0 w-1.5 cursor-col-resize hover:bg-blue-400/40 transition-colors z-10"
+            onMouseDown={onResizeStart}
+          />
+        )}
         {/* Header */}
         <div className="p-4 border-b border-stone-200">
           <div className="flex items-start justify-between">
@@ -1168,6 +1188,8 @@ export default function SongDetailPanel({
                             songId={song.id}
                             recordedKey={song.recordedKey}
                             chartKeys={chartKeys}
+                            previewId={activePreviewId}
+                            onPreviewToggle={setActivePreviewId}
                           />
                           )}
                         </div>

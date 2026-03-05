@@ -116,6 +116,53 @@ export default function SongLibraryShell({ songs, title = "Song Library", subtit
   const [filtersVisible, setFiltersVisible] = useState(true);
   const listRef = useRef<HTMLDivElement>(null);
 
+  // Resizable detail panel
+  const PANEL_MIN = 320;
+  const [panelWidth, setPanelWidth] = useState<number>(() => {
+    if (typeof window === "undefined") return PANEL_MIN;
+    const saved = localStorage.getItem("rs_panel_width");
+    return saved ? Math.max(PANEL_MIN, parseInt(saved, 10) || PANEL_MIN) : PANEL_MIN;
+  });
+  const isDragging = useRef(false);
+  const dragStartX = useRef(0);
+  const dragStartWidth = useRef(0);
+
+  const handleResizeStart = useCallback((e: React.MouseEvent) => {
+    e.preventDefault();
+    isDragging.current = true;
+    dragStartX.current = e.clientX;
+    dragStartWidth.current = panelWidth;
+    document.body.style.userSelect = "none";
+    document.body.style.cursor = "col-resize";
+  }, [panelWidth]);
+
+  useEffect(() => {
+    const onMove = (e: MouseEvent) => {
+      if (!isDragging.current) return;
+      const delta = dragStartX.current - e.clientX; // drag left = positive = wider
+      const maxW = Math.floor(window.innerWidth * 0.65);
+      const newWidth = Math.min(maxW, Math.max(PANEL_MIN, dragStartWidth.current + delta));
+      setPanelWidth(newWidth);
+    };
+    const onUp = () => {
+      if (!isDragging.current) return;
+      isDragging.current = false;
+      document.body.style.userSelect = "";
+      document.body.style.cursor = "";
+      // Persist — read current DOM-driven width via a microtask
+      setPanelWidth((w) => {
+        localStorage.setItem("rs_panel_width", String(w));
+        return w;
+      });
+    };
+    window.addEventListener("mousemove", onMove);
+    window.addEventListener("mouseup", onUp);
+    return () => {
+      window.removeEventListener("mousemove", onMove);
+      window.removeEventListener("mouseup", onUp);
+    };
+  }, []);
+
   // Sub-filter state for Mass Parts and Gospel Acclamations tabs
   const [massPartSubFilter, setMassPartSubFilter] = useState<string>("all");
   const [gaSubFilter, setGaSubFilter] = useState<string>("all");
@@ -704,6 +751,8 @@ export default function SongLibraryShell({ songs, title = "Song Library", subtit
           song={selectedSong}
           onClose={() => setSelectedSongId(null)}
           onSongRemoved={(id) => setRemovedSongIds(prev => new Set(prev).add(id))}
+          panelWidth={panelWidth}
+          onResizeStart={handleResizeStart}
         />
       )}
 
