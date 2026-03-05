@@ -71,14 +71,27 @@ function PersonnelGrid({
   const FIRST_COL_ORDER = [
     "Celebrant",
     "Music Director", "Director",
-    "Cantor", "Cantor & Piano",
-    "Psalmist",
     "Accompanist",
+    "Cantor & Piano", "Cantor",
+    "Psalmist",
     "Section Leaders",
-    "Soprano", "Alto", "Tenor", "Bass (Vocal)",
+    "Soprano", "Alto", "Tenor", "Bass",
     "Choir",
   ];
+
+  const SECOND_COL_ORDER = [
+    "Piano", "Pianist", "Organist",
+    "A. Guitar", "E. Guitar", "B. Guitar", "Guitarist",
+    "E. Bass", "Bassist",
+    "Drums", "Drums/Percussion", "Percussion", "Drummer",
+    "Instrumentalist", "Other",
+    "Livestream TD", "Livestream",
+    "Sound", "Sound Person",
+    "Playback",
+  ];
+
   const firstColSet = new Set(FIRST_COL_ORDER);
+  const secondColSet = new Set(SECOND_COL_ORDER);
 
   const leftCol: [string, string][] = [];
   const rightCol: [string, string][] = [];
@@ -87,13 +100,17 @@ function PersonnelGrid({
     leftCol.push(["Celebrant", celebrant]);
   }
 
-  // Collect first-column entries preserving the defined order
+  // Build lookup from personnel
   const personnelMap = new Map<string, string>();
   for (const [role, names] of personnel) {
-    personnelMap.set(role, names.join(", "));
+    // Normalize "Bass (Vocal)" to "Bass"
+    const displayRole = role === "Bass (Vocal)" ? "Bass" : role;
+    personnelMap.set(displayRole, names.join(", "));
   }
 
+  // First column in defined order
   for (const role of FIRST_COL_ORDER) {
+    if (role === "Celebrant") continue; // already added
     const names = personnelMap.get(role);
     if (names) {
       leftCol.push([role, names]);
@@ -101,9 +118,18 @@ function PersonnelGrid({
     }
   }
 
-  // Everything else goes to right column
+  // Second column in defined order
+  for (const role of SECOND_COL_ORDER) {
+    const names = personnelMap.get(role);
+    if (names) {
+      rightCol.push([role, names]);
+      personnelMap.delete(role);
+    }
+  }
+
+  // Anything not in either list goes to right column at the end
   for (const [role, names] of personnelMap) {
-    if (!firstColSet.has(role)) {
+    if (!firstColSet.has(role) && !secondColSet.has(role)) {
       rightCol.push([role, names]);
     }
   }
