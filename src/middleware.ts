@@ -33,18 +33,6 @@ export async function middleware(request: NextRequest) {
   const bypassGate =
     GATE_BYPASS_PATHS.some((p) => pathname === p || pathname.startsWith(p + "/"));
 
-  if (!bypassGate) {
-    // Check access code gate
-    const accessCookie = request.cookies.get("rs_access")?.value;
-    const accessCode = process.env.SITE_ACCESS_CODE;
-
-    if (!accessCookie || accessCookie !== accessCode) {
-      const gateUrl = new URL("/gate", request.url);
-      gateUrl.searchParams.set("redirect", pathname);
-      return NextResponse.redirect(gateUrl);
-    }
-  }
-
   // Refresh Supabase auth session (keeps cookies fresh)
   let response = NextResponse.next({
     request: { headers: request.headers },
@@ -55,6 +43,9 @@ export async function middleware(request: NextRequest) {
 
   // Skip session refresh if Supabase env vars aren't available
   if (!supabaseUrl || !supabaseKey) {
+    if (!bypassGate) {
+      return enforceGate(request);
+    }
     return response;
   }
 
@@ -84,20 +75,46 @@ export async function middleware(request: NextRequest) {
   // Refresh the session so it doesn't expire
   const { data: { user } } = await supabase.auth.getUser();
 
-  // For authenticated users on gated paths (main app), check pending status
-  if (user && !bypassGate) {
+  if (user) {
     const { data: profile } = await supabase
       .from("profiles")
-      .select("status")
+      .select("status, role")
       .eq("id", user.id)
       .single();
 
-    if (profile?.status === "pending") {
+    // Admins skip the gate entirely
+    if (profile?.role === "admin") {
+      return response;
+    }
+
+    // Pending users get redirected to /pending
+    if (!bypassGate && profile?.status === "pending") {
       return NextResponse.redirect(new URL("/pending", request.url));
+    }
+
+    // Active authenticated users skip the gate
+    if (profile?.status === "active") {
+      return response;
     }
   }
 
+  // Unauthenticated or no profile — enforce gate on protected paths
+  if (!bypassGate) {
+    return enforceGate(request) ?? response;
+  }
+
   return response;
+}
+
+function enforceGate(request: NextRequest): NextResponse | null {
+  const accessCookie = request.cookies.get("rs_access")?.value;
+  const accessCode = process.env.SITE_ACCESS_CODE;
+  if (!accessCookie || accessCookie !== accessCode) {
+    const gateUrl = new URL("/gate", request.url);
+    gateUrl.searchParams.set("redirect", request.nextUrl.pathname);
+    return NextResponse.redirect(gateUrl);
+  }
+  return null;
 }
 
 export const config = {
