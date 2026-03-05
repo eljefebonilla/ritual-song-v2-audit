@@ -63,3 +63,15 @@ export interface DayData {
   personnel: Map<string, BookingPersonnel[]>;
   holidays: Holiday[];
 }
+
+export interface CalendarV2Filters {
+  eventTypes: Set<string>;
+  ranks: Set<string>;
+  colors: Set<string>;
+  staffingMode: "all" | "needs" | "has" | "role";
+  staffingRole: string | null;
+  holydaysOnly: boolean;
+  bvmOnly: boolean;
+  hasMusicOnly: boolean;
+  celebrant: string;
+}

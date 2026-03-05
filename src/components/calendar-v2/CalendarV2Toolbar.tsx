@@ -23,6 +23,8 @@ interface CalendarV2ToolbarProps {
   hidePast: boolean;
   setHidePast: (v: boolean) => void;
   totalDays: number;
+  activeFilterCount: number;
+  onToggleFilterPanel: () => void;
 }
 
 export default function CalendarV2Toolbar({
@@ -39,6 +41,8 @@ export default function CalendarV2Toolbar({
   hidePast,
   setHidePast,
   totalDays,
+  activeFilterCount,
+  onToggleFilterPanel,
 }: CalendarV2ToolbarProps) {
   // Calculate days elapsed
   const today = new Date();
@@ -139,6 +143,26 @@ export default function CalendarV2Toolbar({
       </label>
 
       <div className="flex-1" />
+
+      {/* Filter panel toggle */}
+      <button
+        onClick={onToggleFilterPanel}
+        className={`flex items-center gap-1.5 rounded-md border px-3 py-1.5 text-xs font-medium transition-colors ${
+          activeFilterCount > 0
+            ? "border-stone-400 bg-stone-800 text-white hover:bg-stone-700"
+            : "border-stone-200 bg-white text-stone-600 hover:border-stone-300 hover:bg-stone-50"
+        }`}
+      >
+        <svg className="h-3.5 w-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+          <polygon points="22 3 2 3 10 12.46 10 19 14 21 14 12.46 22 3" />
+        </svg>
+        Filters
+        {activeFilterCount > 0 && (
+          <span className="flex h-4 min-w-[16px] items-center justify-center rounded-full bg-white px-1 text-[9px] font-bold text-stone-800">
+            {activeFilterCount}
+          </span>
+        )}
+      </button>
 
       {/* Today button */}
       <button
