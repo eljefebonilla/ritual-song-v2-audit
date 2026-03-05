@@ -138,17 +138,23 @@ export async function POST(
       decision: "merged",
     });
 
-    // 7. Remove old song from JSON (best-effort)
+    // 7. Delete old song from Supabase
+    await supabase.from("song_resources").delete().eq("song_id", id);
+    await supabase.from("songs").delete().eq("legacy_id", id);
+    // Also try by UUID in case legacy_id doesn't match
+    await supabase.from("songs").delete().eq("id", id);
+
+    // 8. Remove old song from JSON backup (best-effort)
     if (oldIdx !== -1) {
       try {
         library.splice(oldIdx, 1);
         fs.writeFileSync(SONG_LIBRARY_PATH, JSON.stringify(library, null, 2), "utf-8");
       } catch {
-        // JSON backup write failed — Supabase is source of truth
+        // JSON backup write failed — OK
       }
     }
 
-    // 8. Invalidate cache
+    // 9. Invalidate cache
     invalidateSongLibraryCache();
 
     return NextResponse.json({ success: true, updatedOverrides });
