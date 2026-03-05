@@ -5,7 +5,7 @@ import { usePathname } from "next/navigation";
 import Sidebar from "./Sidebar";
 import MediaPlayer from "./MediaPlayer";
 
-const FULL_SCREEN_PATHS = ["/gate", "/auth"];
+const FULL_SCREEN_PATHS = ["/gate", "/auth", "/join", "/onboard", "/pending", "/privacy", "/terms"];
 
 export default function AppShell({ children }: { children: React.ReactNode }) {
   const pathname = usePathname();

@@ -55,7 +55,7 @@ export function LoginForm() {
           htmlFor="password"
           className="block text-sm font-medium text-stone-700 mb-1"
         >
-          Password
+          PIN
         </label>
         <input
           id="password"

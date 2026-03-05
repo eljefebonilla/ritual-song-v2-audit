@@ -7,6 +7,26 @@ import { useState, useEffect, useCallback, type ReactNode } from "react";
 import { useUser } from "@/lib/user-context";
 import { useViewMode } from "@/hooks/useViewMode";
 
+// ─── Pending badge ────────────────────────────────────────────────────────────
+
+function PendingBadge() {
+  const [count, setCount] = useState<number | null>(null);
+
+  useEffect(() => {
+    fetch("/api/admin/members/pending-count")
+      .then((r) => r.ok ? r.json() : null)
+      .then((d) => { if (d?.count != null) setCount(d.count); })
+      .catch(() => {});
+  }, []);
+
+  if (!count) return null;
+  return (
+    <span className="ml-auto text-[9px] font-bold px-1.5 py-0.5 rounded-full bg-amber-500 text-white leading-none">
+      {count}
+    </span>
+  );
+}
+
 // --- Persistence ---
 
 const HIDDEN_NAV_KEY = "rs_hidden_nav";
@@ -109,7 +129,7 @@ function buildOrderedItems(savedOrder: string[] | null): NavItemDef[] {
       today: "Today", calendar: "Calendar", announcements: "Announcements",
       choir: "Choir Sign-Up", "planner-view": "Planner View",
       compare: "Comparison View",
-      library: "Song Library",
+      library: "Music Library",
     };
     const hrefs: Record<string, string> = {
       today: "/today", calendar: "/calendar", announcements: "/announcements",
@@ -223,7 +243,7 @@ export default function Sidebar({ open, onClose }: SidebarProps) {
   const showToggle = isRealAdmin && viewMode === "director";
   const shouldShow = (id: string) => showToggle || isDirector || !hiddenNav.has(id);
 
-  if (pathname.startsWith("/gate") || pathname.startsWith("/auth")) return null;
+  if (pathname.startsWith("/gate") || pathname.startsWith("/auth") || pathname.startsWith("/join") || pathname.startsWith("/onboard") || pathname.startsWith("/pending") || pathname.startsWith("/privacy") || pathname.startsWith("/terms")) return null;
 
   const orderedItems = buildOrderedItems(navOrder);
 
@@ -309,28 +329,52 @@ export default function Sidebar({ open, onClose }: SidebarProps) {
             <div className="mt-6 px-4 mb-2">
               <p className="text-[10px] uppercase tracking-widest text-stone-500 font-semibold">Admin</p>
             </div>
-            {[
-              { href: "/admin/booking", label: "Booking Grid", icon: <svg className="w-[18px] h-[18px] shrink-0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect x="3" y="3" width="18" height="18" rx="2" /><line x1="3" y1="9" x2="21" y2="9" /><line x1="3" y1="15" x2="21" y2="15" /><line x1="9" y1="3" x2="9" y2="21" /><line x1="15" y1="3" x2="15" y2="21" /></svg> },
-              { href: "/admin/members", label: "Members", icon: <svg className="w-[18px] h-[18px] shrink-0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" /><circle cx="9" cy="7" r="4" /><path d="M22 21v-2a4 4 0 0 0-3-3.87" /><path d="M16 3.13a4 4 0 0 1 0 7.75" /></svg> },
-              { href: "/admin/compliance", label: "Compliance", icon: <svg className="w-[18px] h-[18px] shrink-0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10" /><path d="m9 12 2 2 4-4" /></svg> },
-              { href: "/admin/duplicates", label: "Duplicates", icon: <svg className="w-[18px] h-[18px] shrink-0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect x="8" y="2" width="13" height="13" rx="2" /><path d="M5 8H4a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h9a2 2 0 0 0 2-2v-1" /></svg> },
-              { href: "/admin/psalm-gaps", label: "Psalm Gaps", icon: <svg className="w-[18px] h-[18px] shrink-0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" /><polyline points="14 2 14 8 20 8" /><line x1="16" y1="13" x2="8" y2="13" /><line x1="16" y1="17" x2="8" y2="17" /></svg> },
-              { href: "/admin/season-briefing", label: "Season Briefing", icon: <svg className="w-[18px] h-[18px] shrink-0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z" /><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z" /></svg> },
-              { href: "/admin/settings", label: "Settings", icon: <svg className="w-[18px] h-[18px] shrink-0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="12" r="3" /><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06A1.65 1.65 0 0 0 4.68 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06A1.65 1.65 0 0 0 9 4.68a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06A1.65 1.65 0 0 0 19.4 9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z" /></svg> },
-              { href: "/calendar-v2", label: "Calendar V2", icon: <svg className="w-[18px] h-[18px] shrink-0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect width="18" height="18" x="3" y="4" rx="2" ry="2" /><line x1="16" x2="16" y1="2" y2="6" /><line x1="8" x2="8" y1="2" y2="6" /><line x1="3" x2="21" y1="10" y2="10" /><path d="m9 16 2 2 4-4" /></svg> },
-            ].map((item) => (
-              <Link
-                key={item.href}
-                href={item.href}
-                onClick={onClose}
-                className={`flex items-center gap-3 px-4 py-2.5 text-sm transition-colors ${
-                  pathname.startsWith(item.href) ? "bg-stone-700 text-white" : "text-stone-300 hover:bg-stone-800 hover:text-white"
-                }`}
-              >
-                {item.icon}
-                <span>{item.label}</span>
-              </Link>
-            ))}
+            {/* Booking Grid */}
+            <Link href="/admin/booking" onClick={onClose} className={`flex items-center gap-3 px-4 py-2.5 text-sm transition-colors ${pathname.startsWith("/admin/booking") ? "bg-stone-700 text-white" : "text-stone-300 hover:bg-stone-800 hover:text-white"}`}>
+              <svg className="w-[18px] h-[18px] shrink-0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect x="3" y="3" width="18" height="18" rx="2" /><line x1="3" y1="9" x2="21" y2="9" /><line x1="3" y1="15" x2="21" y2="15" /><line x1="9" y1="3" x2="9" y2="21" /><line x1="15" y1="3" x2="15" y2="21" /></svg>
+              <span>Booking Grid</span>
+            </Link>
+            {/* Members — with pending badge */}
+            <Link href="/admin/members" onClick={onClose} className={`flex items-center gap-3 px-4 py-2.5 text-sm transition-colors ${pathname.startsWith("/admin/members") ? "bg-stone-700 text-white" : "text-stone-300 hover:bg-stone-800 hover:text-white"}`}>
+              <svg className="w-[18px] h-[18px] shrink-0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" /><circle cx="9" cy="7" r="4" /><path d="M22 21v-2a4 4 0 0 0-3-3.87" /><path d="M16 3.13a4 4 0 0 1 0 7.75" /></svg>
+              <span>Members</span>
+              <PendingBadge />
+            </Link>
+            {/* Messages */}
+            <Link href="/admin/messages" onClick={onClose} className={`flex items-center gap-3 px-4 py-2.5 text-sm transition-colors ${pathname.startsWith("/admin/messages") ? "bg-stone-700 text-white" : "text-stone-300 hover:bg-stone-800 hover:text-white"}`}>
+              <svg className="w-[18px] h-[18px] shrink-0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" /><polyline points="22,6 12,13 2,6" /></svg>
+              <span>Messages</span>
+            </Link>
+            {/* Compliance */}
+            <Link href="/admin/compliance" onClick={onClose} className={`flex items-center gap-3 px-4 py-2.5 text-sm transition-colors ${pathname.startsWith("/admin/compliance") ? "bg-stone-700 text-white" : "text-stone-300 hover:bg-stone-800 hover:text-white"}`}>
+              <svg className="w-[18px] h-[18px] shrink-0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10" /><path d="m9 12 2 2 4-4" /></svg>
+              <span>Compliance</span>
+            </Link>
+            {/* Duplicates */}
+            <Link href="/admin/duplicates" onClick={onClose} className={`flex items-center gap-3 px-4 py-2.5 text-sm transition-colors ${pathname.startsWith("/admin/duplicates") ? "bg-stone-700 text-white" : "text-stone-300 hover:bg-stone-800 hover:text-white"}`}>
+              <svg className="w-[18px] h-[18px] shrink-0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect x="8" y="2" width="13" height="13" rx="2" /><path d="M5 8H4a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h9a2 2 0 0 0 2-2v-1" /></svg>
+              <span>Duplicates</span>
+            </Link>
+            {/* Psalm Gaps */}
+            <Link href="/admin/psalm-gaps" onClick={onClose} className={`flex items-center gap-3 px-4 py-2.5 text-sm transition-colors ${pathname.startsWith("/admin/psalm-gaps") ? "bg-stone-700 text-white" : "text-stone-300 hover:bg-stone-800 hover:text-white"}`}>
+              <svg className="w-[18px] h-[18px] shrink-0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" /><polyline points="14 2 14 8 20 8" /><line x1="16" y1="13" x2="8" y2="13" /><line x1="16" y1="17" x2="8" y2="17" /></svg>
+              <span>Psalm Gaps</span>
+            </Link>
+            {/* Season Briefing */}
+            <Link href="/admin/season-briefing" onClick={onClose} className={`flex items-center gap-3 px-4 py-2.5 text-sm transition-colors ${pathname.startsWith("/admin/season-briefing") ? "bg-stone-700 text-white" : "text-stone-300 hover:bg-stone-800 hover:text-white"}`}>
+              <svg className="w-[18px] h-[18px] shrink-0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z" /><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z" /></svg>
+              <span>Season Briefing</span>
+            </Link>
+            {/* Settings */}
+            <Link href="/admin/settings" onClick={onClose} className={`flex items-center gap-3 px-4 py-2.5 text-sm transition-colors ${pathname.startsWith("/admin/settings") ? "bg-stone-700 text-white" : "text-stone-300 hover:bg-stone-800 hover:text-white"}`}>
+              <svg className="w-[18px] h-[18px] shrink-0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="12" r="3" /><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06A1.65 1.65 0 0 0 4.68 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06A1.65 1.65 0 0 0 9 4.68a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06A1.65 1.65 0 0 0 19.4 9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z" /></svg>
+              <span>Settings</span>
+            </Link>
+            {/* Calendar V2 */}
+            <Link href="/calendar-v2" onClick={onClose} className={`flex items-center gap-3 px-4 py-2.5 text-sm transition-colors ${pathname.startsWith("/calendar-v2") ? "bg-stone-700 text-white" : "text-stone-300 hover:bg-stone-800 hover:text-white"}`}>
+              <svg className="w-[18px] h-[18px] shrink-0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect width="18" height="18" x="3" y="4" rx="2" ry="2" /><line x1="16" x2="16" y1="2" y2="6" /><line x1="8" x2="8" y1="2" y2="6" /><line x1="3" x2="21" y1="10" y2="10" /><path d="m9 16 2 2 4-4" /></svg>
+              <span>Calendar V2</span>
+            </Link>
           </>
         )}
       </nav>
@@ -380,7 +424,7 @@ export default function Sidebar({ open, onClose }: SidebarProps) {
           )}
           <div className="flex items-center justify-between">
             <p className="text-[10px] text-parish-gold/60 uppercase tracking-wider">St. Monica Catholic Community</p>
-            <span className="text-[9px] text-stone-500">v1.11.8</span>
+            <span className="text-[9px] text-stone-500">v1.15.0</span>
           </div>
         </div>
       )}

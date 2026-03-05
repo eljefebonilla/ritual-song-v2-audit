@@ -2,8 +2,18 @@ import { NextResponse } from "next/server";
 import type { NextRequest } from "next/server";
 import { createServerClient } from "@supabase/ssr";
 
-// Paths that don't require the access code gate
-const PUBLIC_PATHS = ["/gate", "/auth/callback"];
+// Paths that bypass the access code gate but KEEP auth session refresh
+// Note: /api/ routes are already handled by STATIC_PREFIXES below
+const GATE_BYPASS_PATHS = [
+  "/gate",
+  "/auth/callback",
+  "/join",
+  "/onboard",
+  "/pending",
+  "/privacy",
+  "/terms",
+];
+
 const STATIC_PREFIXES = ["/_next/", "/api/", "/favicon.ico"];
 
 export async function middleware(request: NextRequest) {
@@ -14,24 +24,25 @@ export async function middleware(request: NextRequest) {
     return NextResponse.next();
   }
 
-  // Allow public paths through
-  if (PUBLIC_PATHS.some((path) => pathname.startsWith(path))) {
-    return NextResponse.next();
-  }
-
   // Allow public logo files
   if (pathname.startsWith("/logo-")) {
     return NextResponse.next();
   }
 
-  // Check access code gate
-  const accessCookie = request.cookies.get("rs_access")?.value;
-  const accessCode = process.env.SITE_ACCESS_CODE;
+  // Gate-bypass paths — skip access code, but still refresh auth session
+  const bypassGate =
+    GATE_BYPASS_PATHS.some((p) => pathname === p || pathname.startsWith(p + "/"));
 
-  if (!accessCookie || accessCookie !== accessCode) {
-    const gateUrl = new URL("/gate", request.url);
-    gateUrl.searchParams.set("redirect", pathname);
-    return NextResponse.redirect(gateUrl);
+  if (!bypassGate) {
+    // Check access code gate
+    const accessCookie = request.cookies.get("rs_access")?.value;
+    const accessCode = process.env.SITE_ACCESS_CODE;
+
+    if (!accessCookie || accessCookie !== accessCode) {
+      const gateUrl = new URL("/gate", request.url);
+      gateUrl.searchParams.set("redirect", pathname);
+      return NextResponse.redirect(gateUrl);
+    }
   }
 
   // Refresh Supabase auth session (keeps cookies fresh)
@@ -71,7 +82,20 @@ export async function middleware(request: NextRequest) {
   );
 
   // Refresh the session so it doesn't expire
-  await supabase.auth.getUser();
+  const { data: { user } } = await supabase.auth.getUser();
+
+  // For authenticated users on gated paths (main app), check pending status
+  if (user && !bypassGate) {
+    const { data: profile } = await supabase
+      .from("profiles")
+      .select("status")
+      .eq("id", user.id)
+      .single();
+
+    if (profile?.status === "pending") {
+      return NextResponse.redirect(new URL("/pending", request.url));
+    }
+  }
 
   return response;
 }
