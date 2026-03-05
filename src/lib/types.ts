@@ -219,6 +219,46 @@ export const SONG_CATEGORY_LABELS: Record<ExpandedSongCategory, string> = {
   sequence: "Sequence",
 };
 
+/** Sub-filter chips for Songs tab (by liturgical function) */
+export const SONG_FUNCTION_FILTERS: { id: string; label: string }[] = [
+  { id: "all", label: "All" },
+  { id: "prelude", label: "Prelude" },
+  { id: "gathering", label: "Gathering" },
+  { id: "offertory", label: "Offertory" },
+  { id: "communion", label: "Communion" },
+  { id: "meditation", label: "Meditation" },
+  { id: "sending", label: "Sending" },
+  { id: "postlude", label: "Postlude" },
+];
+
+/** Sub-filter chips for Service Music tab (by expanded category) */
+export const SERVICE_MUSIC_FILTERS: { id: string; label: string }[] = [
+  { id: "all", label: "All" },
+  { id: "kyrie", label: "Kyries" },
+  { id: "gloria", label: "Glorias" },
+  { id: "sprinkling_rite", label: "Sprinkling" },
+  { id: "holy_holy", label: "Holy Holy" },
+  { id: "memorial_acclamation", label: "Memorial" },
+  { id: "great_amen", label: "Amen" },
+  { id: "lamb_of_god", label: "Lamb of God" },
+  { id: "lords_prayer", label: "Lord's Prayer" },
+  { id: "sequence", label: "Sequences" },
+];
+
+/** Sub-filter chips for Gospel Acclamations tab */
+export const GA_FILTERS: { id: string; label: string }[] = [
+  { id: "all", label: "All" },
+  { id: "gospel_acclamation_refrain", label: "Refrains" },
+  { id: "gospel_acclamation_verse", label: "Verses" },
+];
+
+/** Sub-filter chips for Antiphons tab (by liturgical function) */
+export const ANTIPHON_FUNCTION_FILTERS: { id: string; label: string }[] = [
+  { id: "all", label: "All" },
+  { id: "entrance", label: "Entrance" },
+  { id: "communion", label: "Communion" },
+];
+
 export type ResourceDisplayCategory = "lead_sheet" | "choral" | "aim" | "color" | "audio";
 
 export const RESOURCE_DISPLAY_LABELS: Record<ResourceDisplayCategory, string> = {

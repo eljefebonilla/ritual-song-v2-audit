@@ -921,7 +921,7 @@ export default function SongDetailPanel({
                     className="w-full text-xs text-stone-600 border border-stone-300 rounded px-1.5 py-0.5 bg-white"
                   >
                     <option value="song">Song</option>
-                    <option value="mass_part">Mass Part</option>
+                    <option value="mass_part">Service Music</option>
                     <option value="psalm">Psalm</option>
                     <option value="gospel_acclamation">Gospel Acclamation</option>
                     <option value="antiphon">Antiphon</option>

@@ -86,7 +86,7 @@ export default function TagSelector({
 
       {/* Function / Mass part tags */}
       <div>
-        <p className="text-[9px] uppercase tracking-wider font-bold text-stone-300 mb-1">Mass Part</p>
+        <p className="text-[9px] uppercase tracking-wider font-bold text-stone-300 mb-1">Service Music</p>
         <div className="flex flex-wrap gap-1.5">
           {FUNCTION_TAGS.map((tag) => (
             <label key={tag.id} className="flex items-center gap-1 cursor-pointer">
