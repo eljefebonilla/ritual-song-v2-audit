@@ -753,7 +753,11 @@ export default function SongLibraryShell({ songs, title = "Song Library", subtit
                             setPsalmSeasonFilter("all"); setPsalmYearFilter("all");
                           }
                           if (lens.id !== "book") setSelectedBook("book1");
-                          if (lens.id !== "type") setPsalmTypeFilter("all");
+                          if (lens.id === "type") {
+                            setPsalmTypeFilter("penitential");
+                          } else {
+                            setPsalmTypeFilter("all");
+                          }
                         }}
                         className={`shrink-0 px-2.5 py-1 text-[11px] font-medium rounded-md transition-colors ${
                           psalmLens === lens.id
@@ -782,45 +786,69 @@ export default function SongLibraryShell({ songs, title = "Song Library", subtit
                   <>
                     <div className="flex items-center gap-1 mt-1.5">
                       <span className="text-[10px] font-medium text-stone-400 uppercase tracking-wide mr-1">Season</span>
-                      {PSALM_SEASON_FILTERS.filter(sf => sf.id !== "all").map((sf) => (
-                        <button
-                          key={sf.id}
-                          onClick={() => {
-                            setPsalmSeasonFilter(psalmSeasonFilter === sf.id ? "all" : sf.id);
-                            setPsalmYearFilter("all");
-                            setSelectedPsalmNumber(null);
-                          }}
-                          className={`shrink-0 px-2 py-0.5 text-[10px] font-medium rounded transition-colors ${
-                            psalmSeasonFilter === sf.id
-                              ? "bg-amber-600 text-white"
-                              : "bg-stone-100 text-stone-500 hover:bg-stone-200"
-                          }`}
-                        >
-                          {sf.label}
-                        </button>
-                      ))}
-                    </div>
-                    {psalmSeasonFilter !== "all" && (
-                      <div className="flex items-center gap-1 mt-1">
-                        <span className="text-[10px] font-medium text-stone-400 uppercase tracking-wide mr-1">Year</span>
-                        {PSALM_YEAR_FILTERS.map((yf) => (
+                      {PSALM_SEASON_FILTERS.filter(sf => sf.id !== "all").map((sf) => {
+                        const isActive = psalmSeasonFilter === sf.id;
+                        const seasonColorMap: Record<string, string> = {
+                          advent: "var(--color-advent)",
+                          christmas: "var(--color-christmas)",
+                          lent: "var(--color-lent)",
+                          holy_week: "var(--color-solemnity)",
+                          easter: "var(--color-easter)",
+                          ordinary: "var(--color-ordinary)",
+                        };
+                        return (
                           <button
-                            key={yf.id}
+                            key={sf.id}
                             onClick={() => {
-                              setPsalmYearFilter(yf.id);
+                              setPsalmSeasonFilter(psalmSeasonFilter === sf.id ? "all" : sf.id);
+                              setPsalmYearFilter("all");
                               setSelectedPsalmNumber(null);
                             }}
                             className={`shrink-0 px-2 py-0.5 text-[10px] font-medium rounded transition-colors ${
-                              psalmYearFilter === yf.id
-                                ? "bg-amber-600 text-white"
+                              isActive
+                                ? "text-white"
                                 : "bg-stone-100 text-stone-500 hover:bg-stone-200"
                             }`}
+                            style={isActive ? { backgroundColor: seasonColorMap[sf.id] || "#78716c" } : undefined}
                           >
-                            {yf.label}
+                            {sf.label}
                           </button>
-                        ))}
-                      </div>
-                    )}
+                        );
+                      })}
+                    </div>
+                    {psalmSeasonFilter !== "all" && (() => {
+                      const seasonColorMap: Record<string, string> = {
+                        advent: "var(--color-advent)",
+                        christmas: "var(--color-christmas)",
+                        lent: "var(--color-lent)",
+                        holy_week: "var(--color-solemnity)",
+                        easter: "var(--color-easter)",
+                        ordinary: "var(--color-ordinary)",
+                      };
+                      const activeColor = seasonColorMap[psalmSeasonFilter] || "#78716c";
+                      return (
+                        <div className="flex items-center gap-1 mt-1">
+                          <span className="text-[10px] font-medium text-stone-400 uppercase tracking-wide mr-1">Year</span>
+                          {PSALM_YEAR_FILTERS.map((yf) => (
+                            <button
+                              key={yf.id}
+                              onClick={() => {
+                                setPsalmYearFilter(yf.id);
+                                setSelectedPsalmNumber(null);
+                              }}
+                              className={`shrink-0 px-2 py-0.5 text-[10px] font-medium rounded transition-colors ${
+                                psalmYearFilter === yf.id
+                                  ? "text-white"
+                                  : "bg-stone-100 text-stone-500 hover:bg-stone-200"
+                              }`}
+                              style={psalmYearFilter === yf.id ? { backgroundColor: activeColor } : undefined}
+                            >
+                              {yf.label}
+                            </button>
+                          ))}
+                        </div>
+                      );
+                    })()}
                   </>
                 )}
 

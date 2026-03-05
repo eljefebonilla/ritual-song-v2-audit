@@ -9,12 +9,10 @@ interface PsalmNumberPickerProps {
   seasonNumbers?: Set<number>;
 }
 
-const ROW_SIZE = 25;
-
 export default function PsalmNumberPicker({ availableNumbers, selectedNumber, onSelect, range, seasonNumbers }: PsalmNumberPickerProps) {
   const [min, max] = range;
 
-  // When season/type is active, show only relevant numbers in a single row
+  // When season/type is active, show only relevant numbers in a single wrapped row
   if (seasonNumbers) {
     const numbers = Array.from(seasonNumbers).filter(n => n >= min && n <= max).sort((a, b) => a - b);
     if (numbers.length === 0) return null;
@@ -27,10 +25,15 @@ export default function PsalmNumberPicker({ availableNumbers, selectedNumber, on
     );
   }
 
-  // Full range — group into rows of 25
+  // Full range — split into rows
+  const total = max - min + 1;
+  // For small ranges (book view), split roughly in half (~21 per row)
+  // For full 1-150, use 25 per row
+  const rowSize = total > 50 ? 25 : Math.ceil(total / 2);
+
   const rows: number[][] = [];
-  for (let start = min; start <= max; start += ROW_SIZE) {
-    const end = Math.min(start + ROW_SIZE - 1, max);
+  for (let start = min; start <= max; start += rowSize) {
+    const end = Math.min(start + rowSize - 1, max);
     rows.push(Array.from({ length: end - start + 1 }, (_, i) => start + i));
   }
 
