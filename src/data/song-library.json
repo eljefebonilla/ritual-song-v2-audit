@@ -9382,7 +9382,7 @@
         "source": "local"
       }
     ],
-    "usageCount": 10,
+    "usageCount": 14,
     "occasions": [
       "lent-03-a-first-scrutiny",
       "lent-03-b",
@@ -19530,21 +19530,6 @@
     "category": "song",
     "functions": [
       "communion"
-    ]
-  },
-  {
-    "id": "turn-our-hearts-around",
-    "title": "Turn Our Hearts Around",
-    "resources": [],
-    "usageCount": 4,
-    "occasions": [
-      "lent-03-a-first-scrutiny",
-      "lent-03-b"
-    ],
-    "category": "song",
-    "functions": [
-      "communion",
-      "offertory"
     ]
   },
   {

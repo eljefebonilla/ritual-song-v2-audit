@@ -545,6 +545,7 @@ export default function SongDetailPanel({
   const [editing, setEditing] = useState(false);
   const [editTitle, setEditTitle] = useState(song.title);
   const [editComposer, setEditComposer] = useState(song.composer || "");
+  const [editCategory, setEditCategory] = useState<string>(song.category || "song");
   const [editSaving, setEditSaving] = useState(false);
 
   // Delete song state
@@ -653,6 +654,7 @@ export default function SongDetailPanel({
         body: JSON.stringify({
           title: editTitle.trim(),
           composer: editComposer.trim() || undefined,
+          category: editCategory,
         }),
       });
       if (res.ok) {
@@ -898,6 +900,28 @@ export default function SongDetailPanel({
                     placeholder="Composer"
                     className="w-full text-xs text-stone-500 border border-stone-300 rounded px-1.5 py-0.5"
                   />
+                  <select
+                    value={editCategory}
+                    onChange={(e) => setEditCategory(e.target.value)}
+                    className="w-full text-xs text-stone-600 border border-stone-300 rounded px-1.5 py-0.5 bg-white"
+                  >
+                    <option value="song">Song</option>
+                    <option value="mass_part">Mass Part</option>
+                    <option value="psalm">Psalm</option>
+                    <option value="gospel_acclamation">Gospel Acclamation</option>
+                    <option value="antiphon">Antiphon</option>
+                    <option value="holy_holy">Holy Holy</option>
+                    <option value="memorial_acclamation">Memorial Acclamation</option>
+                    <option value="great_amen">Great Amen</option>
+                    <option value="lamb_of_god">Lamb of God</option>
+                    <option value="lords_prayer">Lord&apos;s Prayer</option>
+                    <option value="sprinkling_rite">Sprinkling Rite</option>
+                    <option value="kyrie">Kyrie</option>
+                    <option value="gloria">Gloria</option>
+                    <option value="sequence">Sequence</option>
+                    <option value="gospel_acclamation_verse">Gospel Acc. Verse</option>
+                    <option value="gospel_acclamation_refrain">Gospel Acc. Refrain</option>
+                  </select>
                   <div className="flex gap-1.5">
                     <button
                       disabled={editSaving || !editTitle.trim()}
@@ -911,6 +935,7 @@ export default function SongDetailPanel({
                         setEditing(false);
                         setEditTitle(song.title);
                         setEditComposer(song.composer || "");
+                        setEditCategory(song.category || "song");
                       }}
                       className="px-2 py-0.5 text-[10px] font-medium text-stone-500 rounded hover:bg-stone-100"
                     >
