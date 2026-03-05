@@ -53,47 +53,74 @@ function groupPersonnelByRole(personnel: BookingPersonnel[]): [string, string[]]
   return Array.from(roleMap.entries());
 }
 
-const ROLE_COLORS: Record<string, string> = {
-  Cantor: "bg-violet-50 text-violet-700 border-violet-200",
-  Organist: "bg-sky-50 text-sky-700 border-sky-200",
-  Guitarist: "bg-amber-50 text-amber-700 border-amber-200",
-  "A. Guitar": "bg-amber-50 text-amber-700 border-amber-200",
-  Pianist: "bg-sky-50 text-sky-700 border-sky-200",
-  Piano: "bg-sky-50 text-sky-700 border-sky-200",
-  Bassist: "bg-emerald-50 text-emerald-700 border-emerald-200",
-  "E. Bass": "bg-emerald-50 text-emerald-700 border-emerald-200",
-  Drummer: "bg-orange-50 text-orange-700 border-orange-200",
-  "Drums/Percussion": "bg-orange-50 text-orange-700 border-orange-200",
-  Choir: "bg-rose-50 text-rose-700 border-rose-200",
-  Director: "bg-stone-100 text-stone-700 border-stone-300",
-  "Music Director": "bg-stone-100 text-stone-700 border-stone-300",
-  Psalmist: "bg-indigo-50 text-indigo-700 border-indigo-200",
-  Sound: "bg-slate-50 text-slate-600 border-slate-200",
-  Instrumentalist: "bg-teal-50 text-teal-700 border-teal-200",
-};
-
 // ---------------------------------------------------------------------------
 // Sub-components
 // ---------------------------------------------------------------------------
 
-function PersonnelChip({ role, names }: { role: string; names: string[] }) {
-  const colorClass = ROLE_COLORS[role] ?? "bg-stone-50 text-stone-600 border-stone-200";
+function PersonnelGrid({
+  celebrant,
+  personnel,
+}: {
+  celebrant: string | null;
+  personnel: [string, string[]][];
+}) {
+  if (!celebrant && personnel.length === 0) return null;
+
+  // Split into two columns: liturgical roles and music roles
+  const liturgicalRoles = new Set(["Cantor", "Psalmist", "Choir", "Soprano", "Alto", "Tenor", "Bass (Vocal)"]);
+  const leftCol: [string, string][] = [];
+  const rightCol: [string, string][] = [];
+
+  if (celebrant) {
+    leftCol.push(["Celebrant", celebrant]);
+  }
+
+  for (const [role, names] of personnel) {
+    const entry: [string, string] = [role, names.join(", ")];
+    if (liturgicalRoles.has(role)) {
+      leftCol.push(entry);
+    } else {
+      rightCol.push(entry);
+    }
+  }
+
+  // If everything fits in one column, don't force two
+  const useTwoColumns = leftCol.length > 0 && rightCol.length > 0;
+
   return (
-    <span className={`inline-flex items-center gap-1 rounded-full border px-2 py-0.5 text-[11px] leading-tight ${colorClass}`}>
-      <span className="font-medium">{role}</span>
-      <span className="opacity-70">{names.join(", ")}</span>
-    </span>
+    <div className={`mt-2 border-t border-stone-50 pt-2 ${useTwoColumns ? "grid grid-cols-2 gap-x-6" : ""}`}>
+      {useTwoColumns ? (
+        <>
+          <div className="space-y-0.5">
+            {leftCol.map(([role, names]) => (
+              <PersonnelRow key={role} role={role} names={names} />
+            ))}
+          </div>
+          <div className="space-y-0.5">
+            {rightCol.map(([role, names]) => (
+              <PersonnelRow key={role} role={role} names={names} />
+            ))}
+          </div>
+        </>
+      ) : (
+        <div className="space-y-0.5">
+          {leftCol.concat(rightCol).map(([role, names]) => (
+            <PersonnelRow key={role} role={role} names={names} />
+          ))}
+        </div>
+      )}
+    </div>
   );
 }
 
-function CelebrantChip({ name }: { name: string }) {
+function PersonnelRow({ role, names }: { role: string; names: string }) {
   return (
-    <span className="inline-flex items-center gap-1 rounded-full border border-parish-gold/30 bg-amber-50/60 px-2 py-0.5 text-[11px] leading-tight text-stone-700">
-      <svg className="h-3 w-3 text-parish-gold" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-        <path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2" /><circle cx="12" cy="7" r="4" />
-      </svg>
-      <span className="font-medium">{name}</span>
-    </span>
+    <div className="flex items-baseline gap-2 text-[11px] leading-relaxed">
+      <span className="w-20 shrink-0 text-right font-medium uppercase tracking-wide text-stone-400">
+        {role}
+      </span>
+      <span className="text-stone-600">{names}</span>
+    </div>
   );
 }
 
@@ -122,14 +149,7 @@ function EventCard({
           </>
         )}
       </div>
-      {(event.celebrant || personnelGroups.length > 0) && (
-        <div className="mt-1.5 flex flex-wrap items-center gap-1.5">
-          {event.celebrant && <CelebrantChip name={event.celebrant} />}
-          {personnelGroups.map(([role, names]) => (
-            <PersonnelChip key={role} role={role} names={names} />
-          ))}
-        </div>
-      )}
+      <PersonnelGrid celebrant={event.celebrant} personnel={personnelGroups} />
       {event.notes && (
         <div className="mt-1.5 text-xs italic text-stone-400">{event.notes}</div>
       )}
