@@ -406,6 +406,13 @@ export const ALL_COMMON_PSALM_NUMBERS: Set<number> = new Set(
   Object.values(COMMON_PSALMS).flat()
 );
 
+/** Get common psalm numbers for a specific season, or all if no season specified */
+export function getCommonPsalmNumbers(season?: string): Set<number> {
+  if (!season || season === "all") return ALL_COMMON_PSALM_NUMBERS;
+  const nums = COMMON_PSALMS[season];
+  return nums ? new Set(nums) : ALL_COMMON_PSALM_NUMBERS;
+}
+
 /** Get scholarly/liturgical categories for a psalm number */
 export function getPsalmCategories(psalmNum: number): string[] {
   return PSALM_CATEGORY_MAP[psalmNum] || [];
