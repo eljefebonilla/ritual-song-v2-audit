@@ -182,6 +182,128 @@
         "composer": "Joshua Blakesley"
       },
       "communionSongs": null
+    },
+    {
+      "community": "Outdoor 9:30a",
+      "communityId": "outdoor-930a",
+      "date": "Apr 05, 2026 (Sun)",
+      "presider": "TBD",
+      "gathering": {
+        "title": "Jesus Christ Is Risen Today",
+        "composer": "Praisecharts Arrangement"
+      },
+      "sprinklingRite": {
+        "title": "Lead Us to the Water",
+        "composer": "Tom Kendzia • Gary Daigle"
+      },
+      "gloria": {
+        "title": "Glory to God (Mass of Joy & Peace)",
+        "composer": "Tony Alonso • Arranged by Dan Houze"
+      },
+      "responsorialPsalm": {
+        "psalm": "Ps 118 This is the day the Lord has made...",
+        "setting": "Bobby Fisher"
+      },
+      "gospelAcclamation": {
+        "title": "Halle, Halle, Halle",
+        "composer": "Marty Haugen",
+        "verse": "Christ, our paschal lamb, has been sacrificed; let us then feast with joy in the Lord."
+      },
+      "offertory": {
+        "title": "Hallelujah Is Our Song",
+        "composer": "Sarah Hart & Sarah Kroger"
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "Mass of Glory",
+        "composer": "Bob Hurd & Ken Canedo • Arranged by Dan Houze"
+      },
+      "lordsPrayer": {
+        "title": "(Echo) Our Father",
+        "composer": "Jerome Andrews • Arranged by Dan Houze"
+      },
+      "fractionRite": {
+        "title": "Lamb of God (Mass of Glory)",
+        "composer": "Bob Hurd • Arranged by Dan Houze"
+      },
+      "communionSongs": [
+        {
+          "title": "Remembrance",
+          "composer": "Hillsong"
+        },
+        {
+          "title": "I Am the Bread of Life",
+          "composer": "Tom Kaczmarek"
+        },
+        {
+          "title": "In Christ Alone",
+          "composer": "Keith Getty & Stuart Townend • Arranged by Micah Jones"
+        }
+      ],
+      "sending": {
+        "title": "Oh Happy Day",
+        "composer": "Edwin Hawkins • Arranged by Micah Jones"
+      }
+    },
+    {
+      "community": "Outdoor 11:30a",
+      "communityId": "outdoor-1130a",
+      "date": "Apr 05, 2026 (Sun)",
+      "presider": "TBD",
+      "gathering": {
+        "title": "Jesus Christ Is Risen Today",
+        "composer": "Praisecharts Arrangement"
+      },
+      "sprinklingRite": {
+        "title": "Lead Us to the Water",
+        "composer": "Tom Kendzia • Gary Daigle"
+      },
+      "gloria": {
+        "title": "Glory to God (Mass of Joy & Peace)",
+        "composer": "Tony Alonso • Arranged by Dan Houze"
+      },
+      "responsorialPsalm": {
+        "psalm": "Ps 118 This is the day the Lord has made...",
+        "setting": "Bobby Fisher"
+      },
+      "gospelAcclamation": {
+        "title": "Halle, Halle, Halle",
+        "composer": "Marty Haugen",
+        "verse": "Christ, our paschal lamb, has been sacrificed; let us then feast with joy in the Lord."
+      },
+      "offertory": {
+        "title": "Hallelujah Is Our Song",
+        "composer": "Sarah Hart & Sarah Kroger"
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "Mass of Glory",
+        "composer": "Bob Hurd & Ken Canedo • Arranged by Dan Houze"
+      },
+      "lordsPrayer": {
+        "title": "(Echo) Our Father",
+        "composer": "Jerome Andrews • Arranged by Dan Houze"
+      },
+      "fractionRite": {
+        "title": "Lamb of God (Mass of Glory)",
+        "composer": "Bob Hurd • Arranged by Dan Houze"
+      },
+      "communionSongs": [
+        {
+          "title": "Remembrance",
+          "composer": "Hillsong"
+        },
+        {
+          "title": "I Am the Bread of Life",
+          "composer": "Tom Kaczmarek"
+        },
+        {
+          "title": "In Christ Alone",
+          "composer": "Keith Getty & Stuart Townend • Arranged by Micah Jones"
+        }
+      ],
+      "sending": {
+        "title": "Oh Happy Day",
+        "composer": "Edwin Hawkins • Arranged by Micah Jones"
+      }
     }
   ],
   "occasionResources": [

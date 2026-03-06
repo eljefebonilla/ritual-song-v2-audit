@@ -536,8 +536,18 @@ function RankBadge({ rank }: { rank: string }) {
   );
 }
 
-function ColorDot({ color }: { color: string }) {
+function ColorDot({ color, celebrationName }: { color: string; celebrationName?: string }) {
   const hex = getBorderColor(color);
+  if (color === "white") {
+    const isHolyThursday = celebrationName?.toLowerCase().includes("holy thursday");
+    return (
+      <span
+        className="inline-block h-2 w-2 rounded-full"
+        style={{ backgroundColor: "#ffffff", border: `1.5px solid ${isHolyThursday ? "#2563EB" : hex}` }}
+        title={getColorLabel(color)}
+      />
+    );
+  }
   return (
     <span
       className="inline-block h-2 w-2 rounded-full"

@@ -234,10 +234,18 @@ export function planToSlots(
     });
   }
 
-  // Gospel Acclamation
+  // Gospel Acclamation — compound slot (setting + verse)
   const gaResources = occasionResources?.filter(
     (r) => r.category === "gospel_acclamation"
   ) ?? [];
+  // Untagged GA resources are verse recordings (bespoke per-week from Lyric Psalter etc.)
+  // Refrain audio comes from the resolved library song, not occasion resources.
+  const gaRefrainResources = gaResources.filter(
+    (r) => r.subcategory === "refrain"
+  );
+  const gaVerseResources = gaResources.filter(
+    (r) => !r.subcategory || r.subcategory === "verse" || r.subcategory === "combined"
+  );
   const gospelVerse = readings?.find((r) => r.type === "gospel_verse");
 
   if (plan.gospelAcclamation) {
@@ -248,25 +256,43 @@ export function planToSlots(
       label: "Gospel Accl.",
       kind: "song",
       order: 7000,
+      gospelAcclamation: {
+        title: plan.gospelAcclamation.title,
+        composer: plan.gospelAcclamation.composer,
+        verse: plan.gospelAcclamation.verse,
+      },
       song: {
         title: plan.gospelAcclamation.title,
         composer: plan.gospelAcclamation.composer,
-        description: plan.gospelAcclamation.verse,
       },
       resolvedSong: resolve(plan.gospelAcclamation.title),
-      resources: gaResources.length > 0 ? gaResources : undefined,
-      reading: gospelVerse,
+      resources: gaRefrainResources.length > 0 ? gaRefrainResources : undefined,
     });
-  } else if (gaResources.length > 0) {
+  } else if (gaResources.length > 0 || gospelVerse) {
+    // No setting assigned — show verse + resources as read-only
     slots.push({
       id: nextId(),
       section: "word",
       role: "gospel_acclamation",
       label: "Gospel Accl.",
       kind: "resource",
-      order: 7500,
-      resources: gaResources,
+      order: 7000,
+      resources: gaRefrainResources.length > 0 ? gaRefrainResources : undefined,
       reading: gospelVerse,
+    });
+  }
+
+  // Gospel Verse — separate row below the acclamation
+  if (gospelVerse) {
+    slots.push({
+      id: nextId(),
+      section: "word",
+      role: "gospel_verse",
+      label: "Gospel Verse",
+      kind: "reading",
+      order: 7500,
+      reading: gospelVerse,
+      resources: gaVerseResources.length > 0 ? gaVerseResources : undefined,
     });
   }
 

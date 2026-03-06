@@ -1,4 +1,5 @@
 import type { LibrarySong, LiturgicalOccasion, Reading } from "./types";
+import { parseCitation, scriptureMatch } from "./scripture-matching";
 
 export interface SongRecommendation {
   song: LibrarySong;
@@ -29,44 +30,6 @@ const POSITION_FUNCTION_MAP: Record<string, string[]> = {
   lordsPrayer: ["lords_prayer"],
   fractionRite: ["fraction_rite", "lamb_of_god"],
 };
-
-/**
- * Parse a scripture citation into book + chapter for matching.
- * e.g., "Mt 4:1-11" → { book: "mt", chapter: 4 }
- * e.g., "Gen 2:7-9; 3:1-7" → { book: "gen", chapter: 2 }
- */
-function parseCitation(citation: string): { book: string; chapter: number } | null {
-  const m = citation.match(/^(\d?\s*[A-Za-z]+)\s+(\d+)/);
-  if (!m) return null;
-  return {
-    book: m[1].replace(/\s+/g, "").toLowerCase(),
-    chapter: parseInt(m[2], 10),
-  };
-}
-
-/**
- * Check if a song's scripture reference matches a reading citation.
- * Matches on book + chapter (not verse level).
- */
-function scriptureMatch(songRef: string, readingCitation: string): boolean {
-  const songParsed = parseCitation(songRef);
-  const readParsed = parseCitation(readingCitation);
-  if (!songParsed || !readParsed) return false;
-
-  // Normalize common abbreviations
-  const normalize = (b: string) =>
-    b.replace(/^1/, "1").replace(/^2/, "2").replace(/^3/, "3")
-      .replace(/^gen$/, "gn").replace(/^exod$/, "ex").replace(/^deut$/, "dt")
-      .replace(/^matt?$/, "mt").replace(/^mark$/, "mk")
-      .replace(/^luke$/, "lk").replace(/^john$/, "jn")
-      .replace(/^rom$/, "rm").replace(/^phil$/, "ph")
-      .replace(/^rev$/, "rv").replace(/^isa?$/, "is");
-
-  const normSong = normalize(songParsed.book);
-  const normRead = normalize(readParsed.book);
-
-  return normSong === normRead && songParsed.chapter === readParsed.chapter;
-}
 
 /**
  * Extract key themes from reading summaries for topic matching.

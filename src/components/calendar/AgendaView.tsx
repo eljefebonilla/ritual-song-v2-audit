@@ -184,15 +184,23 @@ export default function AgendaView({
                     <div key={date}>
                       {/* Date subheader with liturgical color dot */}
                       <div className="flex items-center gap-2 px-3 py-1">
-                        {litDay && (
-                          <span
-                            className="w-2 h-2 rounded-full shrink-0"
-                            style={{
-                              backgroundColor: LITURGICAL_COLOR_HEX[litDay.colorPrimary],
-                            }}
-                            title={litDay.colorPrimary}
-                          />
-                        )}
+                        {litDay && (() => {
+                          const hex = LITURGICAL_COLOR_HEX[litDay.colorPrimary] ?? LITURGICAL_COLOR_HEX.green;
+                          const isHolyThursday = litDay.celebrationName?.toLowerCase().includes("holy thursday");
+                          const isWhite = litDay.colorPrimary === "white";
+                          return (
+                            <span
+                              className="w-2 h-2 rounded-full shrink-0"
+                              style={isWhite ? {
+                                backgroundColor: "#ffffff",
+                                border: `1.5px solid ${isHolyThursday ? "#2563EB" : hex}`,
+                              } : {
+                                backgroundColor: hex,
+                              }}
+                              title={litDay.colorPrimary}
+                            />
+                          );
+                        })()}
                         <span
                           className={`text-xs font-medium ${
                             past ? "text-stone-400" : hasEvents ? "text-stone-600" : "text-stone-400"

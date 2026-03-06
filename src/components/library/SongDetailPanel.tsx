@@ -669,6 +669,11 @@ export default function SongDetailPanel({
       });
       if (res.ok) {
         setEditing(false);
+        // If category changed, remove from current list so UI updates instantly
+        if (editCategory !== (song.category || "song")) {
+          onSongRemoved?.(song.id);
+          onClose();
+        }
         router.refresh();
       } else {
         const data = await res.json().catch(() => ({}));
@@ -921,21 +926,19 @@ export default function SongDetailPanel({
                     className="w-full text-xs text-stone-600 border border-stone-300 rounded px-1.5 py-0.5 bg-white"
                   >
                     <option value="song">Song</option>
-                    <option value="mass_part">Service Music</option>
-                    <option value="psalm">Psalm</option>
-                    <option value="gospel_acclamation">Gospel Acclamation</option>
                     <option value="antiphon">Antiphon</option>
+                    <option value="psalm">Psalm</option>
+                    <option value="sequence">Sequence</option>
+                    <option value="gospel_acclamation_refrain">Gospel Acclamation</option>
+                    <option value="gospel_acclamation_verse">Gospel Acc. Verse</option>
+                    <option value="kyrie">Kyrie</option>
+                    <option value="gloria">Gloria</option>
+                    <option value="sprinkling_rite">Sprinkling Rite</option>
                     <option value="holy_holy">Holy Holy</option>
                     <option value="memorial_acclamation">Memorial Acclamation</option>
                     <option value="great_amen">Great Amen</option>
                     <option value="lamb_of_god">Lamb of God</option>
                     <option value="lords_prayer">Lord&apos;s Prayer</option>
-                    <option value="sprinkling_rite">Sprinkling Rite</option>
-                    <option value="kyrie">Kyrie</option>
-                    <option value="gloria">Gloria</option>
-                    <option value="sequence">Sequence</option>
-                    <option value="gospel_acclamation_verse">Gospel Acc. Verse</option>
-                    <option value="gospel_acclamation_refrain">Gospel Acc. Refrain</option>
                   </select>
                   {editError && (
                     <p className="text-[10px] text-red-600">{editError}</p>

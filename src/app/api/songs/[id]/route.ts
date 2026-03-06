@@ -60,16 +60,25 @@ export async function PUT(
       return NextResponse.json({ error: "No valid fields to update" }, { status: 400 });
     }
 
-    // Update in Supabase (try by legacy_id first)
+    // Update in Supabase (try by legacy_id first, fall back to UUID)
     const { data, error } = await supabase
       .from("songs")
       .update(updates)
       .eq("legacy_id", id)
       .select()
-      .single();
+      .maybeSingle();
 
     if (error) {
-      // Try by UUID
+      return NextResponse.json({ error: error.message }, { status: 500 });
+    }
+
+    if (!data) {
+      // No legacy_id match — try by UUID only if id looks like one
+      const isUuid = /^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/i.test(id);
+      if (!isUuid) {
+        return NextResponse.json({ error: `Song not found: ${id}` }, { status: 404 });
+      }
+
       const { data: data2, error: error2 } = await supabase
         .from("songs")
         .update(updates)
@@ -81,6 +90,7 @@ export async function PUT(
         return NextResponse.json({ error: error2.message }, { status: 404 });
       }
 
+      invalidateSongLibraryCache();
       return NextResponse.json(data2);
     }
 
@@ -150,16 +160,24 @@ export async function DELETE(
       await supabase.from("song_resources_v2").delete().eq("song_id", songUuid);
     }
 
-    // Delete from Supabase
+    // Delete from Supabase (try by legacy_id first, fall back to UUID)
     const { data, error } = await supabase
       .from("songs")
       .delete()
       .eq("legacy_id", id)
       .select()
-      .single();
+      .maybeSingle();
 
     if (error) {
-      // Try by UUID
+      return NextResponse.json({ error: error.message }, { status: 500 });
+    }
+
+    if (!data) {
+      const isUuid = /^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/i.test(id);
+      if (!isUuid) {
+        return NextResponse.json({ error: `Song not found: ${id}` }, { status: 404 });
+      }
+
       const { error: error2 } = await supabase
         .from("songs")
         .delete()

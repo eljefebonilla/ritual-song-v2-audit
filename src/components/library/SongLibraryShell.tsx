@@ -25,6 +25,12 @@ import {
   extractSongEntriesWithPosition,
   MASS_POSITION_ORDER,
 } from "@/lib/occasion-helpers";
+import {
+  getReadingsForDate,
+  getCitationsForSubFilter,
+  scriptureMatch,
+  type ScriptureSubFilter,
+} from "@/lib/scripture-matching";
 import SongCard from "./SongCard";
 import SongDetailPanel from "./SongDetailPanel";
 import AlphabetJump from "./AlphabetJump";
@@ -68,33 +74,6 @@ function getCategoriesForTab(tab: LibraryTab): SongCategory[] {
   }
 }
 
-// Map from Order of Mass filter values to how songs match them
-const ORDER_FILTER_TO_FUNCTIONS: Record<string, string[]> = {
-  prelude: ["prelude"],
-  gathering: ["gathering"],
-  penitential_act: ["penitential_act", "penitentialAct"],
-  gloria: ["gloria"],
-  psalm: ["psalm"],
-  gospel_acclamation: ["gospel_acclamation", "gospelAcclamation"],
-  offertory: ["offertory"],
-  eucharistic_acclamation: ["eucharistic_acclamation", "eucharisticAcclamation"],
-  lords_prayer: ["lords_prayer", "lordsPrayer"],
-  fraction_rite: ["fraction_rite", "fractionRite"],
-  communion: ["communion"],
-  sending: ["sending"],
-};
-
-// Map from Order of Mass filter values to song categories
-const ORDER_FILTER_TO_CATEGORY: Record<string, string> = {
-  psalm: "psalm",
-  gospel_acclamation: "gospel_acclamation",
-  penitential_act: "mass_part",
-  gloria: "mass_part",
-  eucharistic_acclamation: "mass_part",
-  lords_prayer: "mass_part",
-  fraction_rite: "mass_part",
-};
-
 function findNearestOccasionDate(
   map: Map<string, { date: string; occasionId: string; season: string; name: string }>
 ): string | null {
@@ -111,7 +90,7 @@ function findNearestOccasionDate(
   return nearest;
 }
 
-export default function SongLibraryShell({ songs, title = "Song Library", subtitle }: SongLibraryShellProps) {
+export default function SongLibraryShell({ songs, title = "Music Library", subtitle }: SongLibraryShellProps) {
   const { role, isAdmin } = useUser();
   const searchParams = useSearchParams();
   const [activeTab, setActiveTab] = useState<LibraryTab>("songs");
@@ -247,7 +226,7 @@ export default function SongLibraryShell({ songs, title = "Song Library", subtit
   const initialDate = useMemo(() => findNearestOccasionDate(dateOccasionMap), [dateOccasionMap]);
 
   // Filter state
-  const [orderOfMassFilters, setOrderOfMassFilters] = useState<Set<string>>(new Set());
+  const [genreFilters, setGenreFilters] = useState<Set<string>>(new Set());
   const [seasonFilters, setSeasonFilters] = useState<Set<string>>(new Set());
   const [resourceFilters, setResourceFilters] = useState<Set<string>>(new Set());
   const [selectedDate, setSelectedDate] = useState<string | null>(initialDate);
@@ -255,6 +234,10 @@ export default function SongLibraryShell({ songs, title = "Song Library", subtit
   const [calendarSongIds, setCalendarSongIds] = useState<Set<string> | null>(null);
   const [calendarSongMeta, setCalendarSongMeta] = useState<Map<string, { positions: Set<string>; ensembles: Set<string> }> | null>(null);
   const [loadingOccasion, setLoadingOccasion] = useState(false);
+
+  // Scripture match filter state
+  const [scriptureMatchMode, setScriptureMatchMode] = useState(false);
+  const [scriptureSubFilter, setScriptureSubFilter] = useState<ScriptureSubFilter>("all");
 
   // Normalized title index for fuzzy matching
   const normalizedTitleIndex = useMemo(() => {
@@ -378,22 +361,16 @@ export default function SongLibraryShell({ songs, title = "Song Library", subtit
     return nums;
   }, [activeSongs, psalmLens, psalmSeasonFilter, psalmYearFilter, psalmTypeFilter, selectedBook, showCommonOnly, tabCounts.subCounts]);
 
-  const activeFilterCount =
-    orderOfMassFilters.size +
-    seasonFilters.size +
-    resourceFilters.size +
-    (calendarSongIds !== null ? 1 : 0);
-
   const clearAllFilters = useCallback(() => {
-    setOrderOfMassFilters(new Set());
+    setGenreFilters(new Set());
     setSeasonFilters(new Set());
     setResourceFilters(new Set());
     setSelectedDate(null);
     setCalendarSongIds(null);
     setCalendarSongMeta(null);
     setSelectedEnsemble(null);
-    setCalendarSongIds(null);
-    setCalendarSongMeta(null);
+    setScriptureMatchMode(false);
+    setScriptureSubFilter("all");
   }, []);
 
   // Load occasion songs when selectedDate or selectedEnsemble changes
@@ -464,6 +441,32 @@ export default function SongLibraryShell({ songs, title = "Song Library", subtit
       cancelled = true;
     };
   }, [selectedDate, selectedEnsemble, dateOccasionMap, normalizedTitleIndex]);
+
+  // Scripture match: compute matched song IDs when mode is active
+  const scriptureMatchedIds = useMemo(() => {
+    if (!scriptureMatchMode || !selectedDate) return null;
+    const readings = getReadingsForDate(selectedDate);
+    const citations = getCitationsForSubFilter(readings, scriptureSubFilter);
+    if (citations.length === 0) return new Set<string>();
+
+    const matched = new Set<string>();
+    for (const song of activeSongs) {
+      if (!song.scriptureRefs || song.scriptureRefs.length === 0) continue;
+      for (const ref of song.scriptureRefs) {
+        if (citations.some((c) => scriptureMatch(ref, c))) {
+          matched.add(song.id);
+          break;
+        }
+      }
+    }
+    return matched;
+  }, [scriptureMatchMode, selectedDate, scriptureSubFilter, activeSongs]);
+
+  const activeFilterCount =
+    genreFilters.size +
+    seasonFilters.size +
+    resourceFilters.size +
+    (scriptureMatchedIds !== null ? 1 : calendarSongIds !== null ? 1 : 0);
 
   const filtered = useMemo(() => {
     const tabCategories = getCategoriesForTab(activeTab);
@@ -580,17 +583,12 @@ export default function SongLibraryShell({ songs, title = "Song Library", subtit
       );
     }
 
-    // Order of Mass filter (OR within group)
-    if (orderOfMassFilters.size > 0) {
+    // Genre filter (OR within group)
+    if (genreFilters.size > 0) {
       list = list.filter((s) => {
-        for (const filterVal of orderOfMassFilters) {
-          const funcMatches = ORDER_FILTER_TO_FUNCTIONS[filterVal] || [filterVal];
-          if (s.functions?.some((fn) => funcMatches.includes(fn))) return true;
-
-          const catMatch = ORDER_FILTER_TO_CATEGORY[filterVal];
-          if (catMatch && s.category === catMatch) return true;
-        }
-        return false;
+        const genres = (s as unknown as Record<string, unknown>).genres as string[] | undefined;
+        if (!genres || genres.length === 0) return false;
+        return genres.some((g) => genreFilters.has(g));
       });
     }
 
@@ -605,8 +603,10 @@ export default function SongLibraryShell({ songs, title = "Song Library", subtit
       });
     }
 
-    // Calendar filter
-    if (calendarSongIds !== null) {
+    // Calendar filter — scripture match takes precedence when active
+    if (scriptureMatchedIds !== null) {
+      list = list.filter((s) => scriptureMatchedIds.has(s.id));
+    } else if (calendarSongIds !== null) {
       list = list.filter((s) => calendarSongIds.has(s.id));
     }
 
@@ -653,7 +653,7 @@ export default function SongLibraryShell({ songs, title = "Song Library", subtit
     }
 
     return list;
-  }, [activeSongs, activeTab, subFilter, psalmLens, selectedPsalmNumber, selectedBook, psalmSeasonFilter, psalmYearFilter, psalmTypeFilter, showCommonOnly, search, sort, orderOfMassFilters, seasonFilters, resourceFilters, calendarSongIds, calendarSongMeta, occasionSeasonMap, tabCounts.subCounts]);
+  }, [activeSongs, activeTab, subFilter, psalmLens, selectedPsalmNumber, selectedBook, psalmSeasonFilter, psalmYearFilter, psalmTypeFilter, showCommonOnly, search, sort, genreFilters, seasonFilters, resourceFilters, calendarSongIds, calendarSongMeta, scriptureMatchedIds, occasionSeasonMap, tabCounts.subCounts]);
 
   // Build letter groups for alphabet jump
   const { availableLetters, letterIndices } = useMemo(() => {
@@ -1303,13 +1303,13 @@ export default function SongLibraryShell({ songs, title = "Song Library", subtit
           {filtersVisible && (
             <div className="w-full sm:w-56 sm:shrink-0 border-r border-stone-100 bg-stone-50 overflow-y-auto p-3 sm:block">
               <LibraryFilters
-                orderOfMassFilters={orderOfMassFilters}
+                genreFilters={genreFilters}
                 seasonFilters={seasonFilters}
                 resourceFilters={resourceFilters}
                 selectedDate={selectedDate}
                 selectedEnsemble={selectedEnsemble}
                 dateOccasionMap={dateOccasionMap}
-                onOrderOfMassChange={setOrderOfMassFilters}
+                onGenreChange={setGenreFilters}
                 onSeasonChange={setSeasonFilters}
                 onResourceChange={setResourceFilters}
                 onDateSelect={setSelectedDate}
@@ -1317,6 +1317,10 @@ export default function SongLibraryShell({ songs, title = "Song Library", subtit
                 onClearAll={clearAllFilters}
                 activeCount={activeFilterCount}
                 loadingOccasion={loadingOccasion}
+                scriptureMatchMode={scriptureMatchMode}
+                onScriptureMatchToggle={setScriptureMatchMode}
+                scriptureSubFilter={scriptureSubFilter}
+                onScriptureSubFilterChange={setScriptureSubFilter}
               />
             </div>
           )}
@@ -1338,7 +1342,9 @@ export default function SongLibraryShell({ songs, title = "Song Library", subtit
           <div ref={listRef} className="flex-1 overflow-y-auto">
             {filtered.length === 0 ? (
               <div className="text-center text-stone-400 text-sm py-12">
-                {search || activeFilterCount > 0 || subFilter !== "all" || psalmSeasonFilter !== "all" || selectedPsalmNumber !== null || showCommonOnly
+                {scriptureMatchedIds !== null
+                  ? "No scripture matches for this date. Only 145 of 2,600+ songs have scripture references tagged so far."
+                  : search || activeFilterCount > 0 || subFilter !== "all" || psalmSeasonFilter !== "all" || selectedPsalmNumber !== null || showCommonOnly
                   ? "No songs match your filters."
                   : activeTab === "antiphons"
                   ? "No antiphons in library yet."

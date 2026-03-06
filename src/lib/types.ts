@@ -106,6 +106,7 @@ export interface OccasionResource {
   filePath: string;
   source: "local";
   category: "antiphon" | "gospel_acclamation";
+  subcategory?: "refrain" | "verse" | "combined";
 }
 
 export interface LectionarySynopsis {
@@ -409,6 +410,13 @@ export interface WorshipSlot {
 
   // Psalm slots
   psalm?: { psalm: string; setting?: string };
+
+  // Gospel Acclamation compound slots
+  gospelAcclamation?: {
+    title: string;
+    composer?: string;
+    verse?: string;
+  };
 
   // Mass setting slots
   massSetting?: { name: string; composer?: string };

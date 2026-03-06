@@ -165,8 +165,13 @@ function ReadingRow({ slot, synopsis, isExpanded, onToggle }: {
   const isPsalm = r.type === "psalm";
   const citationParts = r.citation.split("\n");
   const displayCitation = citationParts[0];
-  // Use the explicit antiphon field if set, otherwise extract from citation
-  const psalmRefrain = r.antiphon || (isPsalm && citationParts.length > 1 ? citationParts[1] : null);
+  // Extract just the refrain text (after the first line). The antiphon field often
+  // contains the full citation+refrain string, so prefer splitting from citation.
+  const psalmRefrain = isPsalm && citationParts.length > 1
+    ? citationParts.slice(1).join(" ").trim()
+    : (r.antiphon && r.antiphon !== r.citation
+      ? r.antiphon.split("\n").slice(1).join(" ").trim() || r.antiphon
+      : null);
 
   return (
     <div className="py-2 px-3 bg-stone-50/50 border-l-2 border-stone-200">
@@ -233,7 +238,9 @@ function AntiphonRow({ slot }: { slot: WorshipSlot }) {
       <span className="text-[10px] uppercase tracking-wider font-semibold text-stone-400 w-28 shrink-0 pt-0.5">
         {slot.label}
       </span>
-      <span className="w-7 shrink-0" />
+      <span className="w-7 shrink-0 flex items-start justify-center pt-0.5">
+        <SlotPlayButton resources={slot.resources} />
+      </span>
       <div className="min-w-0 flex-1">
         <p className="text-sm font-medium text-stone-700">
           {a.citation}
@@ -251,6 +258,98 @@ function AntiphonRow({ slot }: { slot: WorshipSlot }) {
   );
 }
 
+
+function GospelAcclamationRow({
+  slot,
+  isAdmin,
+  onSlotEdit,
+  selectedSongId,
+  onSongSelect,
+  selectedRowRef,
+  audioOverrides,
+}: {
+  slot: WorshipSlot;
+  isAdmin?: boolean;
+  onSlotEdit?: (role: string, anchorRect: DOMRect, currentSong?: { title: string; composer?: string; description?: string }) => void;
+  selectedSongId?: string | null;
+  onSongSelect?: (songId: string, slotRole: string) => void;
+  selectedRowRef?: RefObject<HTMLDivElement | null>;
+  audioOverrides?: Record<string, string>;
+}) {
+  const rowRef = useRef<HTMLDivElement>(null);
+  const ga = slot.gospelAcclamation;
+  if (!ga) return null;
+
+  const handleEditClick = (e: React.MouseEvent) => {
+    e.stopPropagation();
+    const el = rowRef.current;
+    if (!el || !onSlotEdit) return;
+    onSlotEdit(slot.role, el.getBoundingClientRect(), {
+      title: ga.title,
+      composer: ga.composer,
+    });
+  };
+
+  // Resolve for audio playback
+  const resolved = slot.resolvedSong;
+  const isSelected = resolved ? selectedSongId === resolved.id : false;
+  const overrideUrl = resolved ? audioOverrides?.[resolved.id] : undefined;
+  const finalResolved = resolved && overrideUrl
+    ? { ...resolved, audioUrl: overrideUrl, audioType: "audio" as const }
+    : resolved;
+
+  return (
+    <div ref={rowRef} className="py-2 px-3">
+      <div className="flex items-start gap-3">
+        <span className="text-[10px] uppercase tracking-wider font-semibold text-stone-400 w-28 shrink-0 pt-0.5">
+          {slot.label}
+        </span>
+        <span className="w-7 shrink-0 flex items-start justify-center pt-0.5">
+          {finalResolved?.audioUrl ? (
+            <button
+              onClick={() => onSongSelect?.(finalResolved.id, slot.role)}
+              className="w-7 h-7 rounded-full flex items-center justify-center transition-all"
+              style={{
+                background: isSelected
+                  ? "linear-gradient(145deg, #7f1d1d, #991b1b)"
+                  : "linear-gradient(145deg, #7f1d1d0a, transparent)",
+                border: `2px solid #7f1d1d`,
+                boxShadow: isSelected
+                  ? "0 0 8px #7f1d1d30, 0 1px 4px #7f1d1d20"
+                  : "0 1px 4px #7f1d1d15",
+              }}
+              title="Play"
+            >
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#7f1d1d" strokeWidth="2.5" strokeLinejoin="round">
+                <polygon points="6,3 20,12 6,21" />
+              </svg>
+            </button>
+          ) : (
+            <SlotPlayButton resources={slot.resources} />
+          )}
+        </span>
+        <div className="min-w-0 flex-1">
+          {/* Setting line — refrain title + composer */}
+          <p className="text-sm font-medium text-stone-800 leading-snug">
+            {ga.title}
+          </p>
+          {ga.composer && (
+            <p className="text-xs text-stone-500">{ga.composer}</p>
+          )}
+        </div>
+        {isAdmin && onSlotEdit && (
+          <button
+            onClick={handleEditClick}
+            className="shrink-0 p-1 text-stone-300 hover:text-stone-600 hover:bg-stone-100 rounded transition-colors"
+            title="Edit gospel acclamation"
+          >
+            <IconEdit />
+          </button>
+        )}
+      </div>
+    </div>
+  );
+}
 
 function MassSettingRow({ slot, isAdmin, onSlotEdit }: {
   slot: WorshipSlot;
@@ -896,6 +995,23 @@ export default function SlotList({
                 } else {
                   switch (slot.kind) {
                     case "song": {
+                      // Gospel Acclamation — dedicated compound row
+                      if (slot.role === "gospel_acclamation" && slot.gospelAcclamation) {
+                        slotElement = (
+                          <GospelAcclamationRow
+                            key={slot.id}
+                            slot={slot}
+                            isAdmin={isAdmin}
+                            onSlotEdit={onSlotEdit}
+                            selectedSongId={selectedSongId}
+                            onSongSelect={onSongSelect}
+                            selectedRowRef={selectedRowRef}
+                            audioOverrides={audioOverrides}
+                          />
+                        );
+                        break;
+                      }
+
                       const communionMatch = slot.role.match(/^communion_(\d+)$/);
                       const communionIdx = communionMatch ? parseInt(communionMatch[1], 10) : -1;
                       const isDraggable = communionIdx >= 0 && communionCount >= 2 && isAdmin && !!onSlotReorder;
@@ -992,8 +1108,33 @@ export default function SlotList({
                       slotElement = <MassSettingRow key={slot.id} slot={slot} isAdmin={isAdmin} onSlotEdit={onSlotEdit} />;
                       break;
                     case "resource":
-                      if (!isAdmin && slot.role === "gospel_acclamation") slotElement = null;
-                      else slotElement = <ResourceRow key={slot.id} slot={slot} />;
+                      if (!isAdmin && slot.role === "gospel_acclamation") {
+                        // Non-admin: show label + verse citation if available, but no resource links
+                        if (slot.reading) {
+                          slotElement = (
+                            <div key={slot.id} className="py-2 px-3 bg-stone-50/50 border-l-2 border-stone-200">
+                              <div className="flex items-start gap-3">
+                                <span className="text-[10px] uppercase tracking-wider font-semibold text-stone-400 w-28 shrink-0 pt-0.5">
+                                  {slot.label}
+                                </span>
+                                <span className="w-7 shrink-0" />
+                                <div className="min-w-0 flex-1">
+                                  <p className="text-xs text-stone-500">{slot.reading.citation}</p>
+                                  {slot.reading.summary && (
+                                    <p className="text-xs italic mt-0.5 text-parish-burgundy">
+                                      &ldquo;{slot.reading.summary}&rdquo;
+                                    </p>
+                                  )}
+                                </div>
+                              </div>
+                            </div>
+                          );
+                        } else {
+                          slotElement = null;
+                        }
+                      } else {
+                        slotElement = <ResourceRow key={slot.id} slot={slot} />;
+                      }
                       break;
                     default:
                       slotElement = null;

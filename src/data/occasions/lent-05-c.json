@@ -369,6 +369,15 @@
   ],
   "occasionResources": [
     {
+      "id": "gia-lyric-gospel-acclamations-lent-refrain-only",
+      "type": "audio",
+      "label": "Lenten Gospel Acclamation (Refrain)",
+      "filePath": "_Collections/GIA/The Lyric Gospel Acclamations/AudioFiles_LyricGospelAcclamations/Lent/LENT_RefrainOnly.mp3",
+      "source": "local",
+      "category": "gospel_acclamation",
+      "subcategory": "refrain"
+    },
+    {
       "id": "psalms--psalms-lent-len-05c-gospel-acclamations-len-05c-gospel-acclamation-spirit-psalm",
       "type": "sheet_music",
       "label": "Gospel Acclamation - Spirit & Psalm (Blakesley)",

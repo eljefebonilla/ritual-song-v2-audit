@@ -12,6 +12,26 @@ const SEASON_COLORS: Record<string, string> = {
   feast: "bg-red-700",
 };
 
+// Light background tints for liturgical seasons
+const SEASON_BG: Record<string, string> = {
+  advent: "bg-purple-50",
+  christmas: "bg-amber-50",
+  lent: "bg-violet-50",
+  easter: "bg-amber-50/60",
+  ordinary: "bg-emerald-50/50",
+  solemnity: "bg-red-50",
+  feast: "bg-red-50/60",
+};
+
+// Gaudete (3rd Advent) & Laetare (4th Lent) get rose
+function isRoseDay(name: string): boolean {
+  const upper = name.toUpperCase();
+  return upper.includes("THIRD SUNDAY OF ADVENT") || upper.includes("FOURTH SUNDAY OF LENT");
+}
+
+const ROSE_DOT = "bg-pink-400";
+const ROSE_BG = "bg-pink-50";
+
 const DAY_HEADERS = ["Su", "Mo", "Tu", "We", "Th", "Fr", "Sa"];
 
 interface DateOccasion {
@@ -125,6 +145,9 @@ export default function LiturgicalCalendar({
           const occasion = dateOccasionMap.get(dateStr);
           const isSelected = selectedDate === dateStr;
           const hasOccasion = !!occasion;
+          const isSunday = idx % 7 === 0;
+          const rose = occasion ? isRoseDay(occasion.name) : false;
+          const seasonBg = rose ? ROSE_BG : (occasion ? (SEASON_BG[occasion.season] || "") : "");
 
           return (
             <button
@@ -141,17 +164,19 @@ export default function LiturgicalCalendar({
                 h-6 flex flex-col items-center justify-center rounded text-[10px] leading-none transition-colors relative
                 ${isSelected
                   ? "bg-stone-800 text-white font-bold"
-                  : hasOccasion
-                    ? "text-stone-700 hover:bg-stone-200 cursor-pointer font-medium"
-                    : "text-stone-300 cursor-default"
+                  : hasOccasion && isSunday
+                    ? `${seasonBg} text-stone-900 hover:bg-stone-200 cursor-pointer font-bold ring-1 ring-inset ring-stone-300/60`
+                    : hasOccasion
+                      ? `${seasonBg} text-stone-700 hover:bg-stone-200 cursor-pointer font-medium`
+                      : "text-stone-300 cursor-default"
                 }
               `}
             >
               {day}
               {hasOccasion && (
                 <span
-                  className={`absolute bottom-0 w-1 h-1 rounded-full ${
-                    isSelected ? "bg-white" : (SEASON_COLORS[occasion.season] || "bg-stone-400")
+                  className={`absolute bottom-0 w-1.5 h-1 rounded-full ${
+                    isSelected ? "bg-white" : rose ? ROSE_DOT : (SEASON_COLORS[occasion.season] || "bg-stone-400")
                   }`}
                 />
               )}
@@ -161,11 +186,15 @@ export default function LiturgicalCalendar({
       </div>
 
       {/* Selected occasion label */}
-      {selectedOccasion && (
-        <div className="text-[10px] text-stone-600 bg-stone-100 rounded px-2 py-1 mt-1 leading-tight">
-          {selectedOccasion.name}
+      {selectedOccasion && (() => {
+        const selRose = isRoseDay(selectedOccasion.name);
+        return (
+        <div className={`text-[10px] text-stone-700 rounded px-2 py-1.5 mt-1 leading-tight flex items-center gap-1.5 ${selRose ? ROSE_BG : (SEASON_BG[selectedOccasion.season] || "bg-stone-100")}`}>
+          <span className={`w-2 h-2 rounded-full shrink-0 ${selRose ? ROSE_DOT : (SEASON_COLORS[selectedOccasion.season] || "bg-stone-400")}`} />
+          <span className="font-medium">{selectedOccasion.name}</span>
         </div>
-      )}
+        );
+      })()}
     </div>
   );
 }

@@ -2,23 +2,9 @@
 
 import { useState } from "react";
 import LiturgicalCalendar from "./LiturgicalCalendar";
+import type { ScriptureSubFilter } from "@/lib/scripture-matching";
 
 // --- Constants ---
-
-const ORDER_OF_MASS_OPTIONS = [
-  { value: "prelude", label: "Prelude" },
-  { value: "gathering", label: "Gathering" },
-  { value: "penitential_act", label: "Penitential Act" },
-  { value: "gloria", label: "Gloria" },
-  { value: "psalm", label: "Responsorial Psalm" },
-  { value: "gospel_acclamation", label: "Gospel Acclamation" },
-  { value: "offertory", label: "Offertory" },
-  { value: "eucharistic_acclamation", label: "Eucharistic Accl." },
-  { value: "lords_prayer", label: "Lord's Prayer" },
-  { value: "fraction_rite", label: "Fraction Rite" },
-  { value: "communion", label: "Communion" },
-  { value: "sending", label: "Sending" },
-];
 
 const SEASON_OPTIONS = [
   { value: "advent", label: "Advent", color: "bg-purple-700" },
@@ -30,6 +16,15 @@ const SEASON_OPTIONS = [
   { value: "feast", label: "Feasts", color: "bg-red-700" },
 ];
 
+const GENRE_OPTIONS = [
+  { value: "traditional", label: "Traditional" },
+  { value: "contemporary", label: "Contemporary" },
+  { value: "crossover", label: "Cross-Over" },
+  { value: "gospel", label: "Gospel" },
+  { value: "chant", label: "Chant" },
+  { value: "global", label: "Global/World" },
+];
+
 const RESOURCE_OPTIONS = [
   { value: "audio", label: "Has Audio" },
   { value: "lead_sheet", label: "Has Lead Sheet" },
@@ -37,12 +32,12 @@ const RESOURCE_OPTIONS = [
 ];
 
 const ENSEMBLE_OPTIONS = [
-  { value: "all", label: "All Ensembles" },
-  { value: "reflections", label: "Reflections (Vigil)" },
-  { value: "foundations", label: "Foundations" },
-  { value: "generations", label: "Generations" },
-  { value: "heritage", label: "Heritage" },
-  { value: "elevations", label: "Elevations" },
+  { value: "all", label: "All Ensembles", detail: "" },
+  { value: "reflections", label: "Reflections", detail: "Sat Vigil · 5:30p" },
+  { value: "foundations", label: "Foundations", detail: "Sun · 7:30a" },
+  { value: "generations", label: "Generations", detail: "Sun · 9:00a" },
+  { value: "heritage", label: "Heritage", detail: "Sun · 10:30a" },
+  { value: "elevations", label: "Elevations", detail: "Sun · 5:30p" },
 ];
 
 // --- Types ---
@@ -55,13 +50,13 @@ interface DateOccasion {
 }
 
 export interface LibraryFiltersProps {
-  orderOfMassFilters: Set<string>;
+  genreFilters: Set<string>;
   seasonFilters: Set<string>;
   resourceFilters: Set<string>;
   selectedDate: string | null;
   selectedEnsemble: string | null;
   dateOccasionMap: Map<string, DateOccasion>;
-  onOrderOfMassChange: (filters: Set<string>) => void;
+  onGenreChange: (filters: Set<string>) => void;
   onSeasonChange: (filters: Set<string>) => void;
   onResourceChange: (filters: Set<string>) => void;
   onDateSelect: (date: string | null) => void;
@@ -69,6 +64,10 @@ export interface LibraryFiltersProps {
   onClearAll: () => void;
   activeCount: number;
   loadingOccasion: boolean;
+  scriptureMatchMode: boolean;
+  onScriptureMatchToggle: (on: boolean) => void;
+  scriptureSubFilter: ScriptureSubFilter;
+  onScriptureSubFilterChange: (filter: ScriptureSubFilter) => void;
 }
 
 // --- Sub-components ---
@@ -116,13 +115,13 @@ function SectionHeader({
 // --- Main Component ---
 
 export default function LibraryFilters({
-  orderOfMassFilters,
+  genreFilters,
   seasonFilters,
   resourceFilters,
   selectedDate,
   selectedEnsemble,
   dateOccasionMap,
-  onOrderOfMassChange,
+  onGenreChange,
   onSeasonChange,
   onResourceChange,
   onDateSelect,
@@ -130,9 +129,13 @@ export default function LibraryFilters({
   onClearAll,
   activeCount,
   loadingOccasion,
+  scriptureMatchMode,
+  onScriptureMatchToggle,
+  scriptureSubFilter,
+  onScriptureSubFilterChange,
 }: LibraryFiltersProps) {
   const [openSections, setOpenSections] = useState<Set<string>>(
-    new Set(["calendar", "order"])
+    new Set(["calendar", "genre"])
   );
 
   const toggleSection = (id: string) => {
@@ -192,8 +195,50 @@ export default function LibraryFilters({
               dateOccasionMap={dateOccasionMap}
             />
 
-            {loadingOccasion && (
+            {loadingOccasion && !scriptureMatchMode && (
               <p className="text-[10px] text-stone-400 italic">Loading songs...</p>
+            )}
+
+            {/* Scripture Match toggle */}
+            {selectedDate && (
+              <div className="space-y-1">
+                <label className="flex items-center gap-2 px-1 py-1 rounded hover:bg-stone-50 cursor-pointer">
+                  <input
+                    type="checkbox"
+                    checked={scriptureMatchMode}
+                    onChange={(e) => onScriptureMatchToggle(e.target.checked)}
+                    className="w-3.5 h-3.5 rounded border-stone-300 text-amber-700 focus:ring-amber-400 focus:ring-1"
+                  />
+                  <span className="text-[11px] font-semibold text-amber-800">Scripture Match</span>
+                </label>
+
+                {scriptureMatchMode && (
+                  <div className="pl-6 space-y-0.5">
+                    {(
+                      [
+                        { value: "all", label: "All Readings" },
+                        { value: "first", label: "1st Reading" },
+                        { value: "second", label: "2nd Reading" },
+                        { value: "gospel", label: "Gospel" },
+                      ] as { value: ScriptureSubFilter; label: string }[]
+                    ).map((opt) => (
+                      <label
+                        key={opt.value}
+                        className="flex items-center gap-2 px-1 py-0.5 rounded hover:bg-stone-50 cursor-pointer"
+                      >
+                        <input
+                          type="radio"
+                          name="scripture-sub"
+                          checked={scriptureSubFilter === opt.value}
+                          onChange={() => onScriptureSubFilterChange(opt.value)}
+                          className="w-3 h-3 border-stone-300 text-amber-700 focus:ring-amber-400 focus:ring-1"
+                        />
+                        <span className="text-[11px] text-stone-600">{opt.label}</span>
+                      </label>
+                    ))}
+                  </div>
+                )}
+              </div>
             )}
 
             {/* Ensemble radio buttons */}
@@ -230,6 +275,9 @@ export default function LibraryFilters({
                     className="w-3.5 h-3.5 border-stone-300 text-stone-800 focus:ring-stone-400 focus:ring-1"
                   />
                   <span className="text-xs text-stone-600">{opt.label}</span>
+                  {opt.detail && (
+                    <span className="text-[9px] text-stone-400 ml-auto tabular-nums">{opt.detail}</span>
+                  )}
                 </label>
               ))}
             </div>
@@ -269,25 +317,25 @@ export default function LibraryFilters({
         )}
       </div>
 
-      {/* 3. Order of Mass */}
+      {/* 3. Genre */}
       <div className="border-t border-stone-100 pt-1">
         <SectionHeader
-          label="Order of Mass"
-          isOpen={openSections.has("order")}
-          onToggle={() => toggleSection("order")}
+          label="Genre"
+          isOpen={openSections.has("genre")}
+          onToggle={() => toggleSection("genre")}
         />
-        {openSections.has("order") && (
+        {openSections.has("genre") && (
           <div className="space-y-0.5 pb-1">
-            {ORDER_OF_MASS_OPTIONS.map((opt) => (
+            {GENRE_OPTIONS.map((opt) => (
               <label
                 key={opt.value}
                 className="flex items-center gap-2 px-1 py-1 rounded hover:bg-stone-50 cursor-pointer"
               >
                 <input
                   type="checkbox"
-                  checked={orderOfMassFilters.has(opt.value)}
+                  checked={genreFilters.has(opt.value)}
                   onChange={() =>
-                    toggleInSet(orderOfMassFilters, opt.value, onOrderOfMassChange)
+                    toggleInSet(genreFilters, opt.value, onGenreChange)
                   }
                   className="w-3.5 h-3.5 rounded border-stone-300 text-stone-800 focus:ring-stone-400 focus:ring-1"
                 />

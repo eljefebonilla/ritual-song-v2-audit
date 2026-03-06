@@ -383,6 +383,15 @@
   ],
   "occasionResources": [
     {
+      "id": "gia-lyric-gospel-acclamations-lent-refrain-only",
+      "type": "audio",
+      "label": "Lenten Gospel Acclamation (Refrain)",
+      "filePath": "_Collections/GIA/The Lyric Gospel Acclamations/AudioFiles_LyricGospelAcclamations/Lent/LENT_RefrainOnly.mp3",
+      "source": "local",
+      "category": "gospel_acclamation",
+      "subcategory": "refrain"
+    },
+    {
       "id": "psalms--psalms-lent-len-04c-gospel-acclamations-lent-4c-mp3",
       "type": "audio",
       "label": "Gospel Acclamation",

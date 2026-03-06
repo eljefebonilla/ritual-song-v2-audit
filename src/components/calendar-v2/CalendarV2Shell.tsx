@@ -344,27 +344,31 @@ export default function CalendarV2Shell({
 
       <div ref={scrollRef} className="flex-1 overflow-y-auto scroll-smooth">
         <div className="mx-auto max-w-4xl px-4 pb-24 pt-2">
-          {monthGroups.map((month) => (
-            <div key={month.key}>
-              <MonthHeader
-                month={month.label}
-                year={month.year}
-                season={month.season}
-              />
-              <div className="space-y-0">
-                {month.dates.map((dateStr) => (
-                  <DayRow
-                    key={dateStr}
-                    day={buildDayData(dateStr)}
-                    isToday={dateStr === today}
-                    isPast={dateStr < today}
-                    hidePast={hidePast}
-                    onAddEvent={handleAddEvent}
-                  />
-                ))}
+          {monthGroups.map((month) => {
+            // Skip entire month if hidePast and all dates are past
+            if (hidePast && month.dates[month.dates.length - 1] < today) return null;
+            return (
+              <div key={month.key}>
+                <MonthHeader
+                  month={month.label}
+                  year={month.year}
+                  season={month.season}
+                />
+                <div className="space-y-0">
+                  {month.dates.map((dateStr) => (
+                    <DayRow
+                      key={dateStr}
+                      day={buildDayData(dateStr)}
+                      isToday={dateStr === today}
+                      isPast={dateStr < today}
+                      hidePast={hidePast}
+                      onAddEvent={handleAddEvent}
+                    />
+                  ))}
+                </div>
               </div>
-            </div>
-          ))}
+            );
+          })}
           {monthGroups.length === 0 && (
             <div className="flex flex-col items-center justify-center py-24 text-center">
               <svg className="mb-4 h-12 w-12 text-stone-300" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">

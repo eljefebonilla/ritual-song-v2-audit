@@ -264,6 +264,59 @@ export default function MediaPlayer() {
     };
   }, []);
 
+  // Stable refs for keyboard shortcut handlers
+  const handleSetARef = useRef(() => {});
+  const handleSetBRef = useRef(() => {});
+  const pitchRef = useRef(pitchSemitones);
+  pitchRef.current = pitchSemitones;
+
+  // --- Keyboard shortcuts (only when player is open with audio) ---
+  useEffect(() => {
+    if (!isOpen || !isAudio) return;
+    const onKeyDown = (e: KeyboardEvent) => {
+      // Ignore when user is typing in an input/textarea/select
+      const tag = (e.target as HTMLElement).tagName;
+      if (tag === "INPUT" || tag === "TEXTAREA" || tag === "SELECT") return;
+      if ((e.target as HTMLElement).isContentEditable) return;
+
+      switch (e.key) {
+        case " ": // Spacebar → play/pause
+          e.preventDefault();
+          setPlaying((p) => !p);
+          break;
+        case "ArrowUp":
+        case "+":
+        case "=":
+          e.preventDefault();
+          setPitchSemitones(Math.min(12, pitchRef.current + 1));
+          setActiveChartKey(null);
+          break;
+        case "ArrowDown":
+        case "-":
+          e.preventDefault();
+          setPitchSemitones(Math.max(-12, pitchRef.current - 1));
+          setActiveChartKey(null);
+          break;
+        case "a":
+        case "A":
+          if (!e.metaKey && !e.ctrlKey) {
+            e.preventDefault();
+            handleSetARef.current();
+          }
+          break;
+        case "b":
+        case "B":
+          if (!e.metaKey && !e.ctrlKey) {
+            e.preventDefault();
+            handleSetBRef.current();
+          }
+          break;
+      }
+    };
+    window.addEventListener("keydown", onKeyDown);
+    return () => window.removeEventListener("keydown", onKeyDown);
+  }, [isOpen, isAudio, setPitchSemitones]);
+
   // Reset loop, key, and playing state when song changes
   const prevUrlRef = useState<string | null>(null);
   if (url !== prevUrlRef[0]) {
@@ -312,6 +365,10 @@ export default function MediaPlayer() {
       setLoopEnd(percentPlayed);
     }
   };
+
+  // Keep refs in sync for keyboard shortcuts
+  handleSetARef.current = handleSetA;
+  handleSetBRef.current = handleSetB;
 
   const handleClearLoop = () => {
     setLoopStart(null);
@@ -683,9 +740,10 @@ export default function MediaPlayer() {
       <div className="flex items-center gap-2">
         <span className="text-[10px] text-stone-400 w-10 shrink-0">Key</span>
         <button
-          onClick={() => {
+          onClick={(e) => {
             setPitchSemitones(pitchSemitones - 1);
             setActiveChartKey(null);
+            (e.currentTarget as HTMLElement).blur();
           }}
           disabled={pitchSemitones <= -12}
           className="w-7 h-7 rounded border border-stone-300 flex items-center justify-center text-stone-500 hover:bg-stone-50 disabled:opacity-30 text-sm font-bold"
@@ -700,9 +758,10 @@ export default function MediaPlayer() {
               : String(pitchSemitones)}
         </span>
         <button
-          onClick={() => {
+          onClick={(e) => {
             setPitchSemitones(pitchSemitones + 1);
             setActiveChartKey(null);
+            (e.currentTarget as HTMLElement).blur();
           }}
           disabled={pitchSemitones >= 12}
           className="w-7 h-7 rounded border border-stone-300 flex items-center justify-center text-stone-500 hover:bg-stone-50 disabled:opacity-30 text-sm font-bold"
