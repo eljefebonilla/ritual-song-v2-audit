@@ -1,0 +1,6590 @@
+[
+  {
+    "topic": "Alienation",
+    "number": 131,
+    "title": "There’s a Wideness in God’s",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Angels",
+    "number": 30,
+    "title": "Anima Christi",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Angels",
+    "number": 34,
+    "title": "Behold",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Angels",
+    "number": 43,
+    "title": "Christmas Lullaby",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Angels",
+    "number": 72,
+    "title": "Holy God, We Praise Thy",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Angels",
+    "number": 73,
+    "title": "Holy, Holy, Holy! Lord God",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Angels",
+    "number": 83,
+    "title": "I Know I’ve Been Changed",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Angels",
+    "number": 98,
+    "title": "Let All Mortal Flesh Keep",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Angels",
+    "number": 105,
+    "title": "Noel",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Angels",
+    "number": 106,
+    "title": "O Bethlehem",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Atonement",
+    "number": 16,
+    "title": "A Heart That’s Been Purified",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Atonement",
+    "number": 18,
+    "title": "Adore",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Beauty",
+    "number": 18,
+    "title": "Adore",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Beauty",
+    "number": 21,
+    "title": "All Creatures of Our God and",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Beauty",
+    "number": 34,
+    "title": "Behold",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Beauty",
+    "number": 121,
+    "title": "Something Beautiful",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Beauty",
+    "number": 142,
+    "title": "We Breathe in Love",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Blessing",
+    "number": 103,
+    "title": "Love One Another",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Blessing",
+    "number": 125,
+    "title": "Take Me to the Water",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Sisterhood",
+    "number": 154,
+    "title": "Where Charity and Love",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Celebration",
+    "number": 21,
+    "title": "All Creatures of Our God and",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Celebration",
+    "number": 66,
+    "title": "Hallelujah, He’s Risen!",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Christian Life",
+    "number": 22,
+    "title": "All Is Holy",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Christian Life",
+    "number": 27,
+    "title": "Altar of Hope",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Christian Life",
+    "number": 40,
+    "title": "By God Kept Pure",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Christian Life",
+    "number": 52,
+    "title": "Dona Nobis Pacem",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Christian Life",
+    "number": 55,
+    "title": "Every Day",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Christian Life",
+    "number": 58,
+    "title": "Follow Me",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Christian Life",
+    "number": 60,
+    "title": "Give Glory",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Christian Life",
+    "number": 70,
+    "title": "Healing Balm / Bálsamo de",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Christian Life",
+    "number": 80,
+    "title": "I Am Yours",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Christian Life",
+    "number": 84,
+    "title": "I Send You Out",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Christian Life",
+    "number": 91,
+    "title": "In Remembrance",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Christian Life",
+    "number": 96,
+    "title": "Journey for Home",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Christian Life",
+    "number": 97,
+    "title": "Lead Me, O Lord",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Christian Life",
+    "number": 99,
+    "title": "Let the Children Come to Me",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Christian Life",
+    "number": 102,
+    "title": "Love, Burn Bright",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Christian Life",
+    "number": 103,
+    "title": "Love One Another",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Christian Life",
+    "number": 107,
+    "title": "O Love of God, Dwelling Here",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Christian Life",
+    "number": 108,
+    "title": "On the Road of Mercy",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Christian Life",
+    "number": 109,
+    "title": "One Lord, One Faith",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Christian Life",
+    "number": 114,
+    "title": "Rejoice, Be Glad",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Christian Life",
+    "number": 117,
+    "title": "Sacred Heart Prayer",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Christian Life",
+    "number": 121,
+    "title": "Something Beautiful",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Christian Life",
+    "number": 123,
+    "title": "Stain Me",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Christian Life",
+    "number": 124,
+    "title": "Strong Enough",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Christian Life",
+    "number": 129,
+    "title": "The Rock of Faith",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Christian Life",
+    "number": 133,
+    "title": "This Is My Beloved Son",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Christian Life",
+    "number": 135,
+    "title": "Tree of Life",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Christian Life",
+    "number": 137,
+    "title": "Ubi Caritas / Where Charity",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Christian Life",
+    "number": 144,
+    "title": "We Gather in Love",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Christian Life",
+    "number": 150,
+    "title": "Wear the Crown",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Christian Life",
+    "number": 148,
+    "title": "We’re on a Journey",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Christian Life",
+    "number": 154,
+    "title": "Where Charity and Love",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Christian Life",
+    "number": 156,
+    "title": "With Great Love",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Church",
+    "number": 59,
+    "title": "For All the Saints",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Church",
+    "number": 144,
+    "title": "We Gather in Love",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Comfort",
+    "number": 21,
+    "title": "All Creatures of Our God and",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Comfort",
+    "number": 26,
+    "title": "Alleluia! Sing to Jesus",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Comfort",
+    "number": 27,
+    "title": "Altar of Hope",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Comfort",
+    "number": 28,
+    "title": "Among All",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Comfort",
+    "number": 31,
+    "title": "As I Pray",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Comfort",
+    "number": 34,
+    "title": "Behold",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Comfort",
+    "number": 45,
+    "title": "Come, Holy Ghost",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Comfort",
+    "number": 46,
+    "title": "Come, Holy Spirit / Ven,",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Comfort",
+    "number": 47,
+    "title": "Come to Me",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Comfort",
+    "number": 48,
+    "title": "Come to Me, All You Who",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Comfort",
+    "number": 63,
+    "title": "God of Promise",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Comfort",
+    "number": 67,
+    "title": "Have No Anxiety",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Comfort",
+    "number": 77,
+    "title": "I Am Loved by God",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Comfort",
+    "number": 78,
+    "title": "I Am the Bread of Life",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Comfort",
+    "number": 79,
+    "title": "I Am the Bread of Life",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Comfort",
+    "number": 82,
+    "title": "I Heard the Voice of Jesus Say",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Comfort",
+    "number": 92,
+    "title": "In the Morning, in the Evening",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Comfort",
+    "number": 107,
+    "title": "O Love of God, Dwelling Here",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Comfort",
+    "number": 110,
+    "title": "Paschal Mystery",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Comfort",
+    "number": 111,
+    "title": "Pentecost Sequence",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Comfort",
+    "number": 2,
+    "title": "Psalm 23: I Shall Live in the",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Comfort",
+    "number": 114,
+    "title": "Rejoice, Be Glad",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Comfort",
+    "number": 120,
+    "title": "So Longs My Soul",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Comfort",
+    "number": 124,
+    "title": "Strong Enough",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Comfort",
+    "number": 131,
+    "title": "There’s a Wideness in God’s",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Comfort",
+    "number": 145,
+    "title": "We Prepare",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Comfort",
+    "number": 159,
+    "title": "You Are Not Alone",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Commissioning",
+    "number": 41,
+    "title": "Christ Has No Body Now But",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Commissioning",
+    "number": 84,
+    "title": "I Send You Out",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Commissioning",
+    "number": 97,
+    "title": "Lead Me, O Lord",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Commissioning",
+    "number": 132,
+    "title": "This Is How",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Commissioning",
+    "number": 138,
+    "title": "Vayan por el Mundo Entero /",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Commitment",
+    "number": 151,
+    "title": "Were I the Perfect Child of",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Communion of Saints",
+    "number": 26,
+    "title": "Alleluia! Sing to Jesus",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Communion of Saints",
+    "number": 59,
+    "title": "For All the Saints",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Communion of Saints",
+    "number": 73,
+    "title": "Holy, Holy, Holy! Lord God",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Compassion",
+    "number": 26,
+    "title": "Love Divine, All Loves",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Compassion",
+    "number": 64,
+    "title": "Great River of Mercy",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Compassion",
+    "number": 70,
+    "title": "Healing Balm / Bálsamo de",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Compassion",
+    "number": 6,
+    "title": "Psalm 51: Create a Clean",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Compassion",
+    "number": 7,
+    "title": "Psalm 51: Have Mercy on Us",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Compassion",
+    "number": 142,
+    "title": "We Breathe in Love",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Compassion",
+    "number": 156,
+    "title": "With Great Love",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Conversion",
+    "number": 33,
+    "title": "Awake to the Day",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Conversion",
+    "number": 51,
+    "title": "Darkness Cannot Overcome",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Conversion",
+    "number": 83,
+    "title": "I Know I’ve Been Changed",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Conversion",
+    "number": 88,
+    "title": "If I Turn Away from You",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Conversion",
+    "number": 135,
+    "title": "Tree of Life",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Conversion",
+    "number": 136,
+    "title": "Turn Our Hearts Around",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Conversion",
+    "number": 146,
+    "title": "We Remember We Are Ashes,",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Conversion",
+    "number": 151,
+    "title": "Were I the Perfect Child of",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Courage",
+    "number": 59,
+    "title": "For All the Saints",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Courage",
+    "number": 68,
+    "title": "He Has Anointed Me",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Courage",
+    "number": 81,
+    "title": "I Can Do All Things",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Courage",
+    "number": 87,
+    "title": "I Will Lift My Eyes",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Courage",
+    "number": 14,
+    "title": "Isaiah 12: Cry Out with Joy",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Courage",
+    "number": 15,
+    "title": "Isaiah 12: You Will Draw",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Courage",
+    "number": 108,
+    "title": "On the Road of Mercy",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Courage",
+    "number": 142,
+    "title": "We Breathe in Love",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Courage",
+    "number": 148,
+    "title": "We’re on a Journey",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Courage",
+    "number": 159,
+    "title": "You Are Not Alone",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Creation",
+    "number": 21,
+    "title": "All Creatures of Our God and",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Creation",
+    "number": 23,
+    "title": "All People That on Earth Do",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Creation",
+    "number": 112,
+    "title": "Praise Be to You",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Cross",
+    "number": 19,
+    "title": "Al Partir el Pan / When We",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Cross",
+    "number": 31,
+    "title": "As I Pray",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Cross",
+    "number": 43,
+    "title": "Christmas Lullaby",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Cross",
+    "number": 58,
+    "title": "Follow Me",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Cross",
+    "number": 78,
+    "title": "I Am the Bread of Life",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Cross",
+    "number": 150,
+    "title": "Wear the Crown",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Dance",
+    "number": 31,
+    "title": "As I Pray",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Death",
+    "number": 30,
+    "title": "Anima Christi",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Death",
+    "number": 40,
+    "title": "By God Kept Pure",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Death",
+    "number": 48,
+    "title": "Come to Me, All You Who",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Death",
+    "number": 57,
+    "title": "Fieles, Te Alabamos / Faithful,",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Death",
+    "number": 78,
+    "title": "I Am the Bread of Life",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Discipleship",
+    "number": 28,
+    "title": "Among All",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Discipleship",
+    "number": 39,
+    "title": "Building Up the Kingdom",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Discipleship",
+    "number": 58,
+    "title": "Follow Me",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Discipleship",
+    "number": 59,
+    "title": "For All the Saints",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Discipleship",
+    "number": 62,
+    "title": "Go Out in the World",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Discipleship",
+    "number": 80,
+    "title": "I Am Yours",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Discipleship",
+    "number": 84,
+    "title": "I Send You Out",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Discipleship",
+    "number": 88,
+    "title": "If I Turn Away from You",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Discipleship",
+    "number": 89,
+    "title": "If You Love Me",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Discipleship",
+    "number": 91,
+    "title": "In Remembrance",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Discipleship",
+    "number": 97,
+    "title": "Lead Me, O Lord",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Discipleship",
+    "number": 99,
+    "title": "Let the Children Come to Me",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Discipleship",
+    "number": 102,
+    "title": "Love, Burn Bright",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Discipleship",
+    "number": 103,
+    "title": "Love One Another",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Discipleship",
+    "number": 107,
+    "title": "O Love of God, Dwelling Here",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Discipleship",
+    "number": 108,
+    "title": "On the Road of Mercy",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Discipleship",
+    "number": 109,
+    "title": "One Lord, One Faith",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Discipleship",
+    "number": 117,
+    "title": "Sacred Heart Prayer",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Discipleship",
+    "number": 123,
+    "title": "Stain Me",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Discipleship",
+    "number": 124,
+    "title": "Strong Enough",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Discipleship",
+    "number": 126,
+    "title": "Take, O Lord, and Receive",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Discipleship",
+    "number": 129,
+    "title": "The Rock of Faith",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Discipleship",
+    "number": 132,
+    "title": "This Is How",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Discipleship",
+    "number": 133,
+    "title": "This Is My Beloved Son",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Discipleship",
+    "number": 135,
+    "title": "Tree of Life",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Discipleship",
+    "number": 137,
+    "title": "Ubi Caritas / Where Charity",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Discipleship",
+    "number": 138,
+    "title": "Vayan por el Mundo Entero /",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Discipleship",
+    "number": 142,
+    "title": "We Breathe in Love",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Discipleship",
+    "number": 144,
+    "title": "We Gather in Love",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Discipleship",
+    "number": 150,
+    "title": "Wear the Crown",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Discipleship",
+    "number": 151,
+    "title": "Were I the Perfect Child of",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Discipleship",
+    "number": 148,
+    "title": "We’re on a Journey",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Discipleship",
+    "number": 154,
+    "title": "Where Charity and Love",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Discipleship",
+    "number": 156,
+    "title": "With Great Love",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Diversity",
+    "number": 153,
+    "title": "When You Come",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Diversity",
+    "number": 154,
+    "title": "Where Charity and Love",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Ecology",
+    "number": 21,
+    "title": "All Creatures of Our God and",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Ecumenism",
+    "number": 32,
+    "title": "At the Name of Jesus",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Ecumenism",
+    "number": 98,
+    "title": "Let All Mortal Flesh Keep",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Ecumenism",
+    "number": 154,
+    "title": "Where Charity and Love",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Eternal Life",
+    "number": 19,
+    "title": "Al Partir el Pan / When We",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Eternal Life",
+    "number": 44,
+    "title": "Come, Christians, Join to Sing",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Eternal Life",
+    "number": 69,
+    "title": "Heal Us",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Eternal Life",
+    "number": 73,
+    "title": "Holy, Holy, Holy! Lord God",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Eternal Life",
+    "number": 78,
+    "title": "I Am the Bread of Life",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Eternal Life",
+    "number": 79,
+    "title": "I Am the Bread of Life",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Eternal Life",
+    "number": 114,
+    "title": "Rejoice, Be Glad",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Eternal Life",
+    "number": 115,
+    "title": "Return to God",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Eternal Life",
+    "number": 119,
+    "title": "Seat in the Kingdom",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Eternal Life",
+    "number": 140,
+    "title": "We Adore You",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Eternal Life",
+    "number": 147,
+    "title": "We Walk by Faith (My Lord",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Evangelization",
+    "number": 39,
+    "title": "Building Up the Kingdom",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Evening",
+    "number": 50,
+    "title": "Creator of the Stars of Night",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Evening",
+    "number": 92,
+    "title": "In the Morning, in the Evening",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Exile",
+    "number": 145,
+    "title": "We Prepare",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Faith",
+    "number": 16,
+    "title": "A Heart That’s Been Purified",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Faith",
+    "number": 26,
+    "title": "Alleluia! Sing to Jesus",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Faith",
+    "number": 47,
+    "title": "Come to Me",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Faith",
+    "number": 45,
+    "title": "Come, Holy Ghost",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Faith",
+    "number": 53,
+    "title": "Easter Sequence",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Faith",
+    "number": 54,
+    "title": "Es Mi Cuerpo / Take and Eat",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Faith",
+    "number": 59,
+    "title": "For All the Saints",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Faith",
+    "number": 60,
+    "title": "Give Glory",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Faith",
+    "number": 69,
+    "title": "Heal Us",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Faith",
+    "number": 71,
+    "title": "Holy Family",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Faith",
+    "number": 78,
+    "title": "I Am the Bread of Life",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Faith",
+    "number": 94,
+    "title": "In You, O Lord",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Faith",
+    "number": 96,
+    "title": "Journey for Home",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Faith",
+    "number": 108,
+    "title": "On the Road of Mercy",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Faith",
+    "number": 109,
+    "title": "One Lord, One Faith",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Faith",
+    "number": 111,
+    "title": "Pentecost Sequence",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Faith",
+    "number": 121,
+    "title": "Something Beautiful",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Faith",
+    "number": 123,
+    "title": "Stain Me",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Faith",
+    "number": 129,
+    "title": "The Rock of Faith",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Faith",
+    "number": 130,
+    "title": "There’s a Presence",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Faith",
+    "number": 142,
+    "title": "We Breathe in Love",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Faith",
+    "number": 146,
+    "title": "We Remember We Are Ashes,",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Faith",
+    "number": 147,
+    "title": "We Walk by Faith (My Lord",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Faith",
+    "number": 148,
+    "title": "We’re on a Journey",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Faithfulness of God",
+    "number": 24,
+    "title": "All the Earth Adores You",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Faithfulness of God",
+    "number": 113,
+    "title": "Praise to the Lord, the",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Faithfulness of God",
+    "number": 136,
+    "title": "Turn Our Hearts Around",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Faithfulness of God",
+    "number": 141,
+    "title": "We Arise",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Faithfulness of God",
+    "number": 158,
+    "title": "Worthy God",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Fasting",
+    "number": 115,
+    "title": "Return to God",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Fear",
+    "number": 35,
+    "title": "Behold What You See",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Fear",
+    "number": 49,
+    "title": "Come to Me and Rest",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Fear",
+    "number": 48,
+    "title": "Come to Me, All You Who",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Fear",
+    "number": 77,
+    "title": "I Am Loved by God",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Fear",
+    "number": 87,
+    "title": "I Will Lift My Eyes",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Fear",
+    "number": 151,
+    "title": "Were I the Perfect Child of",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Fear",
+    "number": 159,
+    "title": "You Are Not Alone",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Food",
+    "number": 26,
+    "title": "Alleluia! Sing to Jesus",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Forgiveness",
+    "number": 47,
+    "title": "Come to Me",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Forgiveness",
+    "number": 64,
+    "title": "Great River of Mercy",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Forgiveness",
+    "number": 70,
+    "title": "Healing Balm / Bálsamo de",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Forgiveness",
+    "number": 71,
+    "title": "Holy Family",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Forgiveness",
+    "number": 86,
+    "title": "I Will Arise",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Forgiveness",
+    "number": 87,
+    "title": "I Will Lift My Eyes",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Forgiveness",
+    "number": 90,
+    "title": "In His Presence",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Forgiveness",
+    "number": 115,
+    "title": "Return to God",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Forgiveness",
+    "number": 154,
+    "title": "Where Charity and Love",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Freedom",
+    "number": 37,
+    "title": "Bethlehem",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Freedom",
+    "number": 50,
+    "title": "Creator of the Stars of Night",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Freedom",
+    "number": 55,
+    "title": "Every Day",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Freedom",
+    "number": 63,
+    "title": "God of Promise",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Freedom",
+    "number": 68,
+    "title": "He Has Anointed Me",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Freedom",
+    "number": 118,
+    "title": "Save Us, O Lord",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Freedom",
+    "number": 121,
+    "title": "Something Beautiful",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Freedom",
+    "number": 123,
+    "title": "Stain Me",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Freedom",
+    "number": 131,
+    "title": "There’s a Wideness in God’s",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Freedom",
+    "number": 136,
+    "title": "Turn Our Hearts Around",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Freedom",
+    "number": 145,
+    "title": "We Prepare",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Freedom",
+    "number": 158,
+    "title": "Worthy God",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Gathering",
+    "number": 23,
+    "title": "All People That on Earth Do",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Gathering",
+    "number": 25,
+    "title": "All Who Enter Here",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Gathering",
+    "number": 54,
+    "title": "Es Mi Cuerpo / Take and Eat",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Gathering",
+    "number": 66,
+    "title": "Hallelujah, He’s Risen!",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Gathering",
+    "number": 71,
+    "title": "Holy Family",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Gathering",
+    "number": 72,
+    "title": "Holy God, We Praise Thy",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Gathering",
+    "number": 93,
+    "title": "In the Name of the Father",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Gathering",
+    "number": 100,
+    "title": "Let Us Stand",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Gathering",
+    "number": 113,
+    "title": "Praise to the Lord, the",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Gathering",
+    "number": 137,
+    "title": "Ubi Caritas / Where Charity",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Gathering",
+    "number": 141,
+    "title": "We Arise",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Gathering",
+    "number": 144,
+    "title": "We Gather in Love",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Gathering",
+    "number": 153,
+    "title": "When You Come",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Gentleness",
+    "number": 64,
+    "title": "Great River of Mercy",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Gentleness",
+    "number": 156,
+    "title": "With Great Love",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Giving",
+    "number": 156,
+    "title": "With Great Love",
+    "catalog": "novum"
+  },
+  {
+    "topic": "God the Father (Creator)",
+    "number": 23,
+    "title": "All People That on Earth Do",
+    "catalog": "novum"
+  },
+  {
+    "topic": "God the Father (Creator)",
+    "number": 63,
+    "title": "God of Promise",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Grace",
+    "number": 18,
+    "title": "Adore",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Grace",
+    "number": 25,
+    "title": "All Who Enter Here",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Grace",
+    "number": 26,
+    "title": "Love Divine, All Loves",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Grace",
+    "number": 27,
+    "title": "Altar of Hope",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Grace",
+    "number": 28,
+    "title": "Among All",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Grace",
+    "number": 40,
+    "title": "By God Kept Pure",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Grace",
+    "number": 47,
+    "title": "Come to Me",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Grace",
+    "number": 45,
+    "title": "Come, Holy Ghost",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Grace",
+    "number": 46,
+    "title": "Come, Holy Spirit / Ven,",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Grace",
+    "number": 69,
+    "title": "Heal Us",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Grace",
+    "number": 71,
+    "title": "Holy Family",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Grace",
+    "number": 80,
+    "title": "I Am Yours",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Grace",
+    "number": 93,
+    "title": "In the Name of the Father",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Grace",
+    "number": 102,
+    "title": "Love, Burn Bright",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Grace",
+    "number": 109,
+    "title": "One Lord, One Faith",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Grace",
+    "number": 111,
+    "title": "Pentecost Sequence",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Grace",
+    "number": 115,
+    "title": "Return to God",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Grace",
+    "number": 120,
+    "title": "So Longs My Soul",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Grace",
+    "number": 124,
+    "title": "Strong Enough",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Grace",
+    "number": 126,
+    "title": "Take, O Lord, and Receive",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Grace",
+    "number": 131,
+    "title": "There’s a Wideness in God’s",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Grace",
+    "number": 141,
+    "title": "We Arise",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Grieving",
+    "number": 31,
+    "title": "As I Pray",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Grieving",
+    "number": 48,
+    "title": "Come to Me, All You Who",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Grieving",
+    "number": 51,
+    "title": "Darkness Cannot Overcome the",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Grieving",
+    "number": 77,
+    "title": "I Am Loved by God",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Guidance",
+    "number": 28,
+    "title": "Among All",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Guidance",
+    "number": 46,
+    "title": "Come, Holy Spirit / Ven,",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Guidance",
+    "number": 54,
+    "title": "Es Mi Cuerpo / Take and Eat",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Guidance",
+    "number": 88,
+    "title": "If I Turn Away from You",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Guidance",
+    "number": 93,
+    "title": "In the Name of the Father",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Guidance",
+    "number": 97,
+    "title": "Lead Me, O Lord",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Guidance",
+    "number": 99,
+    "title": "Let the Children Come to Me",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Guidance",
+    "number": 102,
+    "title": "Love, Burn Bright",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Guidance",
+    "number": 111,
+    "title": "Pentecost Sequence",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Guidance",
+    "number": 2,
+    "title": "Psalm 23: I Shall Live in the",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Guidance",
+    "number": 3,
+    "title": "Psalm 25: Remember Your",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Guidance",
+    "number": 118,
+    "title": "Save Us, O Lord",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Guidance",
+    "number": 133,
+    "title": "This Is My Beloved Son",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Guidance",
+    "number": 157,
+    "title": "Wonderfully Made",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Harvest",
+    "number": 8,
+    "title": "Psalm 65: The Seed That Falls",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Healing",
+    "number": 46,
+    "title": "Come, Holy Spirit / Ven,",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Healing",
+    "number": 64,
+    "title": "Great River of Mercy",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Healing",
+    "number": 68,
+    "title": "He Has Anointed Me",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Healing",
+    "number": 69,
+    "title": "Heal Us",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Healing",
+    "number": 70,
+    "title": "Healing Balm / Bálsamo de",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Healing",
+    "number": 77,
+    "title": "I Am Loved by God",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Healing",
+    "number": 79,
+    "title": "I Am the Bread of Life",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Healing",
+    "number": 94,
+    "title": "In You, O Lord",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Healing",
+    "number": 107,
+    "title": "O Love of God, Dwelling Here",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Healing",
+    "number": 117,
+    "title": "Sacred Heart Prayer",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Healing",
+    "number": 123,
+    "title": "Stain Me",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Healing",
+    "number": 131,
+    "title": "There’s a Wideness in God’s",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Healing",
+    "number": 136,
+    "title": "Turn Our Hearts Around",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Heaven",
+    "number": 26,
+    "title": "Love Divine, All Loves",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Heaven",
+    "number": 34,
+    "title": "Behold",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Heaven",
+    "number": 37,
+    "title": "Bethlehem",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Heaven",
+    "number": 40,
+    "title": "By God Kept Pure",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Heaven",
+    "number": 42,
+    "title": "Christ the Lord Is Risen Today",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Heaven",
+    "number": 44,
+    "title": "Come, Christians, Join to Sing",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Heaven",
+    "number": 59,
+    "title": "For All the Saints",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Heaven",
+    "number": 61,
+    "title": "Glory Be",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Heaven",
+    "number": 72,
+    "title": "Holy God, We Praise Thy",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Heaven",
+    "number": 119,
+    "title": "Seat in the Kingdom",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Heaven",
+    "number": 143,
+    "title": "We Bring Our Gifts",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Heaven",
+    "number": 147,
+    "title": "We Walk by Faith (My Lord",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Holiness",
+    "number": 28,
+    "title": "Among All",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Holiness",
+    "number": 30,
+    "title": "Anima Christi",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Holiness",
+    "number": 40,
+    "title": "By God Kept Pure",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Holiness",
+    "number": 57,
+    "title": "Fieles, Te Alabamos / Faithful,",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Holiness",
+    "number": 63,
+    "title": "God of Promise",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Holiness",
+    "number": 73,
+    "title": "Holy, Holy, Holy! Lord God",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Holiness",
+    "number": 97,
+    "title": "Lead Me, O Lord",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Holiness",
+    "number": 99,
+    "title": "Let the Children Come to Me",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Holiness",
+    "number": 102,
+    "title": "Love, Burn Bright",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Holiness",
+    "number": 6,
+    "title": "Psalm 51: Create a Clean",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Holiness",
+    "number": 7,
+    "title": "Psalm 51: Have Mercy on Us",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Holiness",
+    "number": 10,
+    "title": "Psalm 93: The Lord Is King",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Holiness",
+    "number": 117,
+    "title": "Sacred Heart Prayer",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Holiness",
+    "number": 125,
+    "title": "Take Me to the Water",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Holiness",
+    "number": 135,
+    "title": "Tree of Life",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Holiness",
+    "number": 136,
+    "title": "Turn Our Hearts Around",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Holiness",
+    "number": 143,
+    "title": "We Bring Our Gifts",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Holiness",
+    "number": 146,
+    "title": "We Remember We Are Ashes,",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Holiness",
+    "number": 154,
+    "title": "Where Charity and Love",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Holiness",
+    "number": 156,
+    "title": "With Great Love",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Holy Spirit",
+    "number": 45,
+    "title": "Come, Holy Ghost",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Holy Spirit",
+    "number": 46,
+    "title": "Come, Holy Spirit / Ven,",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Holy Spirit",
+    "number": 55,
+    "title": "Every Day",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Holy Spirit",
+    "number": 63,
+    "title": "God of Promise",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Holy Spirit",
+    "number": 68,
+    "title": "He Has Anointed Me",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Holy Spirit",
+    "number": 75,
+    "title": "Holy Spirit, We’re Calling You",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Holy Spirit",
+    "number": 100,
+    "title": "Let Us Stand",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Holy Spirit",
+    "number": 108,
+    "title": "On the Road of Mercy",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Holy Spirit",
+    "number": 109,
+    "title": "One Lord, One Faith",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Holy Spirit",
+    "number": 110,
+    "title": "Paschal Mystery",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Holy Spirit",
+    "number": 111,
+    "title": "Pentecost Sequence",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Holy Spirit",
+    "number": 115,
+    "title": "Return to God",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Homeless",
+    "number": 152,
+    "title": "Whatever You Do",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Hope",
+    "number": 16,
+    "title": "A Heart That’s Been Purified",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Hope",
+    "number": 28,
+    "title": "Among All",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Hope",
+    "number": 51,
+    "title": "Darkness Cannot Overcome",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Hope",
+    "number": 57,
+    "title": "Fieles, Te Alabamos / Faithful,",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Hope",
+    "number": 82,
+    "title": "I Heard the Voice of Jesus Say",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Hope",
+    "number": 94,
+    "title": "In You, O Lord",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Hope",
+    "number": 3,
+    "title": "Psalm 25: Remember Your",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Hope",
+    "number": 120,
+    "title": "So Longs My Soul",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Hope",
+    "number": 122,
+    "title": "Sometimes Our Only Song Is",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Hope",
+    "number": 124,
+    "title": "Strong Enough",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Hope",
+    "number": 142,
+    "title": "We Breathe in Love",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Hope",
+    "number": 145,
+    "title": "We Prepare",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Hope",
+    "number": 147,
+    "title": "We Walk by Faith (My Lord",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Hope",
+    "number": 154,
+    "title": "Where Charity and Love",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Humility",
+    "number": 17,
+    "title": "A Life Transformed by",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Humility",
+    "number": 18,
+    "title": "Adore",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Humility",
+    "number": 28,
+    "title": "Among All",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Humility",
+    "number": 37,
+    "title": "Bethlehem",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Humility",
+    "number": 54,
+    "title": "Es Mi Cuerpo / Take and Eat",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Humility",
+    "number": 71,
+    "title": "Holy Family",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Humility",
+    "number": 98,
+    "title": "Let All Mortal Flesh Keep",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Humility",
+    "number": 3,
+    "title": "Psalm 25: Remember Your",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Humility",
+    "number": 117,
+    "title": "Sacred Heart Prayer",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Humility",
+    "number": 118,
+    "title": "Save Us, O Lord",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Humility",
+    "number": 150,
+    "title": "Wear the Crown",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Humility",
+    "number": 156,
+    "title": "With Great Love",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Hunger and Thirst",
+    "number": 78,
+    "title": "I Am the Bread of Life",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Hunger and Thirst",
+    "number": 79,
+    "title": "I Am the Bread of Life",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Hunger and Thirst",
+    "number": 82,
+    "title": "I Heard the Voice of Jesus Say",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Hunger and Thirst",
+    "number": 135,
+    "title": "Tree of Life",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Hunger and Thirst",
+    "number": 136,
+    "title": "Turn Our Hearts Around",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Hunger and Thirst",
+    "number": 150,
+    "title": "Wear the Crown",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Incarnation",
+    "number": 26,
+    "title": "Alleluia! Sing to Jesus",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Incarnation",
+    "number": 50,
+    "title": "Creator of the Stars of Night",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Incarnation",
+    "number": 98,
+    "title": "Let All Mortal Flesh Keep",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Incarnation",
+    "number": 106,
+    "title": "O Bethlehem",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Jesus Christ",
+    "number": 20,
+    "title": "All Around",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Jesus Christ",
+    "number": 26,
+    "title": "Alleluia! Sing to Jesus / Love",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Jesus Christ",
+    "number": 30,
+    "title": "Anima Christi",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Jesus Christ",
+    "number": 31,
+    "title": "As I Pray",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Jesus Christ",
+    "number": 32,
+    "title": "At the Name of Jesus",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Jesus Christ",
+    "number": 34,
+    "title": "Behold",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Jesus Christ",
+    "number": 42,
+    "title": "Christ the Lord Is Risen Today",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Jesus Christ",
+    "number": 43,
+    "title": "Christmas Lullaby",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Jesus Christ",
+    "number": 53,
+    "title": "Easter Sequence",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Jesus Christ",
+    "number": 60,
+    "title": "Give Glory",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Jesus Christ",
+    "number": 63,
+    "title": "God of Promise",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Jesus Christ",
+    "number": 66,
+    "title": "Hallelujah, He’s Risen!",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Jesus Christ",
+    "number": 80,
+    "title": "I Am Yours",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Jesus Christ",
+    "number": 82,
+    "title": "I Heard the Voice of Jesus Say",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Jesus Christ",
+    "number": 85,
+    "title": "I Trust in You",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Jesus Christ",
+    "number": 91,
+    "title": "In Remembrance",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Jesus Christ",
+    "number": 98,
+    "title": "Let All Mortal Flesh Keep",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Jesus Christ",
+    "number": 99,
+    "title": "Let the Children Come to Me",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Jesus Christ",
+    "number": 123,
+    "title": "Stain Me",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Jesus Christ",
+    "number": 128,
+    "title": "The Name of Jesus",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Jesus Christ",
+    "number": 131,
+    "title": "There’s a Wideness in God’s",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Jesus Christ",
+    "number": 133,
+    "title": "This Is My Beloved Son",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Jesus Christ",
+    "number": 139,
+    "title": "Via, Veritas, Vita",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Jesus Christ",
+    "number": 143,
+    "title": "We Bring Our Gifts",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Jesus Christ",
+    "number": 144,
+    "title": "We Gather in Love",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Jesus Christ",
+    "number": 145,
+    "title": "We Prepare",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Jesus Christ",
+    "number": 147,
+    "title": "We Walk by Faith (My Lord",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Jesus Christ",
+    "number": 150,
+    "title": "Wear the Crown",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Journey",
+    "number": 82,
+    "title": "I Heard the Voice of Jesus Say",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Journey",
+    "number": 87,
+    "title": "I Will Lift My Eyes",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Journey",
+    "number": 90,
+    "title": "In His Presence",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Journey",
+    "number": 96,
+    "title": "Journey for Home",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Journey",
+    "number": 102,
+    "title": "Love, Burn Bright",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Journey",
+    "number": 108,
+    "title": "On the Road of Mercy",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Journey",
+    "number": 115,
+    "title": "Return to God",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Journey",
+    "number": 135,
+    "title": "Tree of Life",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Journey",
+    "number": 144,
+    "title": "We Gather in Love",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Journey",
+    "number": 148,
+    "title": "We’re on a Journey",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Joy",
+    "number": 23,
+    "title": "All People That on Earth Do",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Joy",
+    "number": 26,
+    "title": "Love Divine, All Loves",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Joy",
+    "number": 31,
+    "title": "As I Pray",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Joy",
+    "number": 33,
+    "title": "Awake to the Day",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Joy",
+    "number": 37,
+    "title": "Bethlehem",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Joy",
+    "number": 51,
+    "title": "Darkness Cannot Overcome",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Joy",
+    "number": 53,
+    "title": "Easter Sequence",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Joy",
+    "number": 57,
+    "title": "Fieles, Te Alabamos / Faithful,",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Joy",
+    "number": 77,
+    "title": "I Am Loved by God",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Joy",
+    "number": 78,
+    "title": "I Am the Bread of Life",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Joy",
+    "number": 82,
+    "title": "I Heard the Voice of Jesus Say",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Joy",
+    "number": 94,
+    "title": "In You, O Lord",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Joy",
+    "number": 14,
+    "title": "Isaiah 12: Cry Out with Joy",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Joy",
+    "number": 15,
+    "title": "Isaiah 12: You Will Draw",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Joy",
+    "number": 4,
+    "title": "Psalm 32: I Turn to You, Lord",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Joy",
+    "number": 5,
+    "title": "Psalm 34: Taste and See",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Joy",
+    "number": 12,
+    "title": "Psalm 126: We Are Filled with",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Joy",
+    "number": 115,
+    "title": "Return to God",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Joy",
+    "number": 131,
+    "title": "There’s a Wideness in God’s",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Joy",
+    "number": 142,
+    "title": "We Breathe in Love",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Joy",
+    "number": 149,
+    "title": "We’re Waiting for You, Lord",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Justice",
+    "number": 47,
+    "title": "Come to Me",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Justice",
+    "number": 55,
+    "title": "Every Day",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Justice",
+    "number": 1,
+    "title": "Psalm 19: Words of",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Justice",
+    "number": 3,
+    "title": "Psalm 25: Remember Your",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Justice",
+    "number": 131,
+    "title": "There’s a Wideness in God’s",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Justice",
+    "number": 149,
+    "title": "We’re Waiting for You, Lord",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Kingdom",
+    "number": 39,
+    "title": "Building Up the Kingdom",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Kingdom",
+    "number": 40,
+    "title": "By God Kept Pure",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Kingdom",
+    "number": 60,
+    "title": "Give Glory",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Kingdom",
+    "number": 114,
+    "title": "Rejoice, Be Glad",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Kingdom",
+    "number": 119,
+    "title": "Seat in the Kingdom",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Kingdom",
+    "number": 140,
+    "title": "We Adore You",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Kingdom",
+    "number": 150,
+    "title": "Wear the Crown",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Kingdom / Reign of God",
+    "number": 28,
+    "title": "Among All",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Kingdom / Reign of God",
+    "number": 33,
+    "title": "Awake to the Day",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Kingdom / Reign of God",
+    "number": 42,
+    "title": "Hail the Day That Sees Him",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Kingdom / Reign of God",
+    "number": 72,
+    "title": "Holy God, We Praise Thy",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Kingdom / Reign of God",
+    "number": 100,
+    "title": "Let Us Stand",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Kingdom / Reign of God",
+    "number": 110,
+    "title": "Paschal Mystery",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Kingdom / Reign of God",
+    "number": 152,
+    "title": "Whatever You Do",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Lamb of God",
+    "number": 34,
+    "title": "Behold",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Lamb of God",
+    "number": 53,
+    "title": "Easter Sequence",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Lamb of God",
+    "number": 63,
+    "title": "God of Promise",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Lamb of God",
+    "number": 110,
+    "title": "Paschal Mystery",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Lamb of God",
+    "number": 140,
+    "title": "We Adore You",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Lament",
+    "number": 122,
+    "title": "Sometimes Our Only Song Is",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Law",
+    "number": 79,
+    "title": "I Am the Bread of Life",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Law",
+    "number": 1,
+    "title": "Psalm 19: Words of Everlasting",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Life",
+    "number": 21,
+    "title": "All Creatures of Our God and",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Life",
+    "number": 78,
+    "title": "I Am the Bread of Life",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Life",
+    "number": 82,
+    "title": "I Heard the Voice of Jesus Say",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Life",
+    "number": 113,
+    "title": "Praise to the Lord, the Almighty",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Life",
+    "number": 1,
+    "title": "Psalm 19: Words of Everlasting",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Light",
+    "number": 31,
+    "title": "As I Pray",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Light",
+    "number": 34,
+    "title": "Behold",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Light",
+    "number": 36,
+    "title": "Belong",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Light",
+    "number": 37,
+    "title": "Bethlehem",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Light",
+    "number": 40,
+    "title": "By God Kept Pure",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Light",
+    "number": 48,
+    "title": "Come to Me, All You Who",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Light",
+    "number": 50,
+    "title": "Creator of the Stars of Night",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Light",
+    "number": 51,
+    "title": "Darkness Cannot Overcome the",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Light",
+    "number": 102,
+    "title": "Love, Burn Bright",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Light",
+    "number": 109,
+    "title": "One Lord, One Faith",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Light",
+    "number": 111,
+    "title": "Pentecost Sequence",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Light",
+    "number": 1,
+    "title": "Psalm 19: Words of Everlasting",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Light",
+    "number": 121,
+    "title": "Something Beautiful",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Light",
+    "number": 134,
+    "title": "Treasures Out of Darkness /",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Light",
+    "number": 141,
+    "title": "We Arise",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Light",
+    "number": 155,
+    "title": "Wide Open",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Loss",
+    "number": 48,
+    "title": "Come to Me, All You Who",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Loss",
+    "number": 51,
+    "title": "Darkness Cannot Overcome the",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Love for God",
+    "number": 18,
+    "title": "Adore",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Love for God",
+    "number": 58,
+    "title": "Follow Me",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Love for God",
+    "number": 80,
+    "title": "I Am Yours",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Love for God",
+    "number": 117,
+    "title": "Sacred Heart Prayer",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Love for God",
+    "number": 133,
+    "title": "This Is My Beloved Son",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Love for God",
+    "number": 154,
+    "title": "Where Charity and Love Prevail",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Love for Others",
+    "number": 17,
+    "title": "A Life Transformed by",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Love for Others",
+    "number": 64,
+    "title": "Great River of Mercy",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Love for Others",
+    "number": 70,
+    "title": "Healing Balm / Bálsamo de",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Love for Others",
+    "number": 71,
+    "title": "Holy Family",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Love for Others",
+    "number": 84,
+    "title": "I Send You Out",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Love for Others",
+    "number": 90,
+    "title": "In His Presence",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Love for Others",
+    "number": 91,
+    "title": "In Remembrance",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Love for Others",
+    "number": 97,
+    "title": "Lead Me, O Lord",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Love for Others",
+    "number": 103,
+    "title": "Love One Another",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Love for Others",
+    "number": 109,
+    "title": "One Lord, One Faith",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Love for Others",
+    "number": 121,
+    "title": "Something Beautiful",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Love for Others",
+    "number": 129,
+    "title": "The Rock of Faith",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Love for Others",
+    "number": 131,
+    "title": "There’s a Wideness in God’s",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Love for Others",
+    "number": 132,
+    "title": "This Is How",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Love for Others",
+    "number": 137,
+    "title": "Ubi Caritas / Where Charity",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Love for Others",
+    "number": 142,
+    "title": "We Breathe in Love",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Love for Others",
+    "number": 152,
+    "title": "Whatever You Do",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Love for Others",
+    "number": 153,
+    "title": "When You Come",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Love for Others",
+    "number": 154,
+    "title": "Where Charity and Love",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Love for Others",
+    "number": 156,
+    "title": "With Great Love",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Love of God for Us",
+    "number": 17,
+    "title": "A Life Transformed by",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Love of God for Us",
+    "number": 22,
+    "title": "All Is Holy",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Love of God for Us",
+    "number": 26,
+    "title": "Love Divine, All Loves",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Love of God for Us",
+    "number": 49,
+    "title": "Come to Me and Rest",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Love of God for Us",
+    "number": 44,
+    "title": "Come, Christians, Join to Sing",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Love of God for Us",
+    "number": 54,
+    "title": "Es Mi Cuerpo / Take and Eat",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Love of God for Us",
+    "number": 63,
+    "title": "God of Promise",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Love of God for Us",
+    "number": 70,
+    "title": "Healing Balm / Bálsamo de",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Love of God for Us",
+    "number": 71,
+    "title": "Holy Family",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Love of God for Us",
+    "number": 77,
+    "title": "I Am Loved by God",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Love of God for Us",
+    "number": 79,
+    "title": "I Am the Bread of Life",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Love of God for Us",
+    "number": 82,
+    "title": "I Heard the Voice of Jesus Say",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Love of God for Us",
+    "number": 87,
+    "title": "I Will Lift My Eyes",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Love of God for Us",
+    "number": 89,
+    "title": "If You Love Me",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Love of God for Us",
+    "number": 92,
+    "title": "In the Morning, in the Evening",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Love of God for Us",
+    "number": 93,
+    "title": "In the Name of the Father",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Love of God for Us",
+    "number": 103,
+    "title": "Love One Another",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Love of God for Us",
+    "number": 107,
+    "title": "O Love of God, Dwelling Here",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Love of God for Us",
+    "number": 108,
+    "title": "On the Road of Mercy",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Love of God for Us",
+    "number": 113,
+    "title": "Praise to the Lord, the",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Love of God for Us",
+    "number": 124,
+    "title": "Strong Enough",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Love of God for Us",
+    "number": 126,
+    "title": "Take, O Lord, and Receive",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Love of God for Us",
+    "number": 131,
+    "title": "There’s a Wideness in God’s",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Love of God for Us",
+    "number": 137,
+    "title": "Ubi Caritas / Where Charity",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Love of God for Us",
+    "number": 151,
+    "title": "Were I the Perfect Child of",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Love of God for Us",
+    "number": 154,
+    "title": "Where Charity and Love",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Love of God for Us",
+    "number": 156,
+    "title": "With Great Love",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Majesty and Power",
+    "number": 24,
+    "title": "All the Earth Adores You",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Majesty and Power",
+    "number": 37,
+    "title": "Bethlehem",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Majesty and Power",
+    "number": 63,
+    "title": "God of Promise",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Majesty and Power",
+    "number": 72,
+    "title": "Holy God, We Praise Thy",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Majesty and Power",
+    "number": 10,
+    "title": "Psalm 93: The Lord Is King",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Majesty and Power",
+    "number": 11,
+    "title": "Psalm 96: Give the Lord Glory",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Mercy",
+    "number": 24,
+    "title": "All the Earth Adores You",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Mercy",
+    "number": 25,
+    "title": "All Who Enter Here",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Mercy",
+    "number": 26,
+    "title": "Love Divine, All Loves",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Mercy",
+    "number": 31,
+    "title": "As I Pray",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Mercy",
+    "number": 38,
+    "title": "Blessed One",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Mercy",
+    "number": 42,
+    "title": "Christ the Lord Is Risen Today",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Mercy",
+    "number": 47,
+    "title": "Come to Me",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Mercy",
+    "number": 46,
+    "title": "Come, Holy Spirit / Ven,",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Mercy",
+    "number": 51,
+    "title": "Darkness Cannot Overcome",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Mercy",
+    "number": 55,
+    "title": "Every Day",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Mercy",
+    "number": 64,
+    "title": "Great River of Mercy",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Mercy",
+    "number": 69,
+    "title": "Heal Us",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Mercy",
+    "number": 70,
+    "title": "Healing Balm / Bálsamo de",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Mercy",
+    "number": 80,
+    "title": "I Am Yours",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Mercy",
+    "number": 93,
+    "title": "In the Name of the Father",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Mercy",
+    "number": 101,
+    "title": "Let Your Mercy Wash Over Us",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Mercy",
+    "number": 104,
+    "title": "Mercy",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Mercy",
+    "number": 108,
+    "title": "On the Road of Mercy",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Mercy",
+    "number": 113,
+    "title": "Praise to the Lord, the",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Mercy",
+    "number": 3,
+    "title": "Psalm 25: Remember Your",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Mercy",
+    "number": 6,
+    "title": "Psalm 51: Create a Clean",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Mercy",
+    "number": 7,
+    "title": "Psalm 51: Have Mercy on Us",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Mercy",
+    "number": 120,
+    "title": "So Longs My Soul",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Mercy",
+    "number": 124,
+    "title": "Strong Enough",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Mercy",
+    "number": 127,
+    "title": "The Memorare",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Mercy",
+    "number": 129,
+    "title": "The Rock of Faith",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Mercy",
+    "number": 131,
+    "title": "There’s a Wideness in God’s",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Mercy",
+    "number": 135,
+    "title": "Tree of Life",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Mercy",
+    "number": 136,
+    "title": "Turn Our Hearts Around",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Mercy",
+    "number": 141,
+    "title": "We Arise",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Mercy",
+    "number": 142,
+    "title": "We Breathe in Love",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Mercy",
+    "number": 144,
+    "title": "We Gather in Love",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Mercy",
+    "number": 151,
+    "title": "Were I the Perfect Child of",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Mercy",
+    "number": 154,
+    "title": "Where Charity and Love",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Ministry",
+    "number": 41,
+    "title": "Christ Has No Body Now But",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Ministry",
+    "number": 62,
+    "title": "Go Out in the World",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Ministry",
+    "number": 84,
+    "title": "I Send You Out",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Ministry",
+    "number": 89,
+    "title": "If You Love Me",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Ministry",
+    "number": 97,
+    "title": "Lead Me, O Lord",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Ministry",
+    "number": 118,
+    "title": "Save Us, O Lord",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Ministry",
+    "number": 132,
+    "title": "This Is How",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Ministry",
+    "number": 133,
+    "title": "This Is My Beloved Son",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Ministry",
+    "number": 156,
+    "title": "With Great Love",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Mission",
+    "number": 39,
+    "title": "Building Up the Kingdom",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Mission",
+    "number": 41,
+    "title": "Christ Has No Body Now But",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Mission",
+    "number": 62,
+    "title": "Go Out in the World",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Mission",
+    "number": 68,
+    "title": "He Has Anointed Me",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Mission",
+    "number": 84,
+    "title": "I Send You Out",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Mission",
+    "number": 97,
+    "title": "Lead Me, O Lord",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Mission",
+    "number": 118,
+    "title": "Save Us, O Lord",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Mission",
+    "number": 133,
+    "title": "This Is My Beloved Son",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Mission",
+    "number": 138,
+    "title": "Vayan por el Mundo Entero /",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Mission",
+    "number": 141,
+    "title": "We Arise",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Mission",
+    "number": 146,
+    "title": "We Remember We Are Ashes,",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Morning",
+    "number": 23,
+    "title": "All People That on Earth Do",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Morning",
+    "number": 73,
+    "title": "Holy, Holy, Holy! Lord God",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Morning",
+    "number": 92,
+    "title": "In the Morning, in the Evening",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Morning",
+    "number": 141,
+    "title": "We Arise",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Mystery of God",
+    "number": 18,
+    "title": "Adore",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Mystery of God",
+    "number": 27,
+    "title": "Altar of Hope",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Mystery of God",
+    "number": 72,
+    "title": "Holy God, We Praise Thy",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Mystery of God",
+    "number": 73,
+    "title": "Holy, Holy, Holy! Lord God",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Mystery of God",
+    "number": 98,
+    "title": "Let All Mortal Flesh Keep",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Mystery of God",
+    "number": 100,
+    "title": "Let Us Stand",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Mystery of God",
+    "number": 110,
+    "title": "Paschal Mystery",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Mystery of God",
+    "number": 140,
+    "title": "We Adore You",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Mystery of God",
+    "number": 157,
+    "title": "Wonderfully Made",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Name of God",
+    "number": 24,
+    "title": "All the Earth Adores You",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Name of God",
+    "number": 32,
+    "title": "At the Name of Jesus",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Name of God",
+    "number": 72,
+    "title": "Holy God, We Praise Thy",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Name of Jesus",
+    "number": 50,
+    "title": "Creator of the Stars of Night",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Name of Jesus",
+    "number": 59,
+    "title": "For All the Saints",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Name of Jesus",
+    "number": 71,
+    "title": "Holy Family",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Name of Jesus",
+    "number": 128,
+    "title": "The Name of Jesus",
+    "catalog": "novum"
+  },
+  {
+    "topic": "New Creation",
+    "number": 16,
+    "title": "A Heart That’s Been Purified",
+    "catalog": "novum"
+  },
+  {
+    "topic": "New Creation",
+    "number": 26,
+    "title": "Love Divine, All Loves",
+    "catalog": "novum"
+  },
+  {
+    "topic": "New Creation",
+    "number": 40,
+    "title": "By God Kept Pure",
+    "catalog": "novum"
+  },
+  {
+    "topic": "New Creation",
+    "number": 70,
+    "title": "Healing Balm / Bálsamo de",
+    "catalog": "novum"
+  },
+  {
+    "topic": "New Creation",
+    "number": 100,
+    "title": "Let Us Stand",
+    "catalog": "novum"
+  },
+  {
+    "topic": "New Creation",
+    "number": 106,
+    "title": "O Bethlehem",
+    "catalog": "novum"
+  },
+  {
+    "topic": "New Life",
+    "number": 16,
+    "title": "A Heart That’s Been Purified",
+    "catalog": "novum"
+  },
+  {
+    "topic": "New Life",
+    "number": 57,
+    "title": "Fieles, Te Alabamos / Faithful,",
+    "catalog": "novum"
+  },
+  {
+    "topic": "New Life",
+    "number": 63,
+    "title": "God of Promise",
+    "catalog": "novum"
+  },
+  {
+    "topic": "New Life",
+    "number": 89,
+    "title": "If You Love Me",
+    "catalog": "novum"
+  },
+  {
+    "topic": "New Life",
+    "number": 102,
+    "title": "Love, Burn Bright",
+    "catalog": "novum"
+  },
+  {
+    "topic": "New Life",
+    "number": 115,
+    "title": "Return to God",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Obedience",
+    "number": 32,
+    "title": "At the Name of Jesus",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Obedience",
+    "number": 40,
+    "title": "By God Kept Pure",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Obedience",
+    "number": 156,
+    "title": "With Great Love",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Offering",
+    "number": 27,
+    "title": "Altar of Hope",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Offering",
+    "number": 34,
+    "title": "Behold",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Offering",
+    "number": 108,
+    "title": "On the Road of Mercy",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Offering",
+    "number": 143,
+    "title": "We Bring Our Gifts",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Paschal Mystery",
+    "number": 42,
+    "title": "Christ the Lord Is Risen Today",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Paschal Mystery",
+    "number": 53,
+    "title": "Easter Sequence",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Paschal Mystery",
+    "number": 110,
+    "title": "Paschal Mystery",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Paschal Mystery",
+    "number": 115,
+    "title": "Return to God",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Paschal Mystery",
+    "number": 151,
+    "title": "Were I the Perfect Child of God",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Peace",
+    "number": 25,
+    "title": "All Who Enter Here",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Peace",
+    "number": 27,
+    "title": "Altar of Hope",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Peace",
+    "number": 28,
+    "title": "Among All",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Peace",
+    "number": 29,
+    "title": "An Instrument of Your Peace",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Peace",
+    "number": 37,
+    "title": "Bethlehem",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Peace",
+    "number": 43,
+    "title": "Christmas Lullaby",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Peace",
+    "number": 51,
+    "title": "Darkness Cannot Overcome the",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Peace",
+    "number": 52,
+    "title": "Dona Nobis Pacem",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Peace",
+    "number": 69,
+    "title": "Heal Us",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Peace",
+    "number": 80,
+    "title": "I Am Yours",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Peace",
+    "number": 90,
+    "title": "In His Presence",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Peace",
+    "number": 93,
+    "title": "In the Name of the Father",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Peace",
+    "number": 94,
+    "title": "In You, O Lord",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Peace",
+    "number": 102,
+    "title": "Love, Burn Bright",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Peace",
+    "number": 106,
+    "title": "O Bethlehem",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Peace",
+    "number": 109,
+    "title": "One Lord, One Faith",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Peace",
+    "number": 124,
+    "title": "Strong Enough",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Peace",
+    "number": 142,
+    "title": "We Breathe in Love",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Peace",
+    "number": 149,
+    "title": "We’re Waiting for You, Lord",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Peace",
+    "number": 154,
+    "title": "Where Charity and Love Prevail",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Peace",
+    "number": 156,
+    "title": "With Great Love",
+    "catalog": "novum"
+  },
+  {
+    "topic": "People of God",
+    "number": 23,
+    "title": "All People That on Earth Do",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Perseverance",
+    "number": 88,
+    "title": "If I Turn Away from You",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Perseverance",
+    "number": 119,
+    "title": "Seat in the Kingdom",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Perseverance",
+    "number": 136,
+    "title": "Turn Our Hearts Around",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Petition / Prayer",
+    "number": 26,
+    "title": "Love Divine, All Loves",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Petition / Prayer",
+    "number": 27,
+    "title": "Altar of Hope",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Petition / Prayer",
+    "number": 28,
+    "title": "Among All",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Petition / Prayer",
+    "number": 30,
+    "title": "Anima Christi",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Petition / Prayer",
+    "number": 31,
+    "title": "As I Pray",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Petition / Prayer",
+    "number": 40,
+    "title": "By God Kept Pure",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Petition / Prayer",
+    "number": 45,
+    "title": "Come, Holy Ghost",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Petition / Prayer",
+    "number": 63,
+    "title": "God of Promise",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Petition / Prayer",
+    "number": 67,
+    "title": "Have No Anxiety",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Petition / Prayer",
+    "number": 74,
+    "title": "Holy Mary, Pray for Us",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Petition / Prayer",
+    "number": 75,
+    "title": "Holy Spirit, We’re Calling You",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Petition / Prayer",
+    "number": 88,
+    "title": "If I Turn Away from You",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Petition / Prayer",
+    "number": 94,
+    "title": "In You, O Lord",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Petition / Prayer",
+    "number": 101,
+    "title": "Let Your Mercy Wash Over Us",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Petition / Prayer",
+    "number": 111,
+    "title": "Pentecost Sequence",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Petition / Prayer",
+    "number": 6,
+    "title": "Psalm 51: Create a Clean",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Petition / Prayer",
+    "number": 7,
+    "title": "Psalm 51: Have Mercy on Us",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Petition / Prayer",
+    "number": 115,
+    "title": "Return to God",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Petition / Prayer",
+    "number": 122,
+    "title": "Sometimes Our Only Song Is",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Petition / Prayer",
+    "number": 127,
+    "title": "The Memorare",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Petition / Prayer",
+    "number": 145,
+    "title": "We Prepare",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Petition / Prayer",
+    "number": 147,
+    "title": "We Walk by Faith (My Lord",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Petition / Prayer",
+    "number": 151,
+    "title": "Were I the Perfect Child of God",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Poverty",
+    "number": 49,
+    "title": "Come to Me and Rest",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Poverty of Spirit",
+    "number": 16,
+    "title": "A Heart That’s Been Purified",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Poverty of Spirit",
+    "number": 18,
+    "title": "Adore",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Poverty of Spirit",
+    "number": 49,
+    "title": "Come to Me and Rest",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Poverty of Spirit",
+    "number": 114,
+    "title": "Rejoice, Be Glad",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Praise",
+    "number": 20,
+    "title": "All Around",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Praise",
+    "number": 21,
+    "title": "All Creatures of Our God and",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Praise",
+    "number": 23,
+    "title": "All People That on Earth Do",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Praise",
+    "number": 24,
+    "title": "All the Earth Adores You",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Praise",
+    "number": 26,
+    "title": "Alleluia! Sing to Jesus",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Praise",
+    "number": 28,
+    "title": "Among All",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Praise",
+    "number": 30,
+    "title": "Anima Christi",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Praise",
+    "number": 32,
+    "title": "At the Name of Jesus",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Praise",
+    "number": 35,
+    "title": "Behold What You See",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Praise",
+    "number": 40,
+    "title": "By God Kept Pure",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Praise",
+    "number": 42,
+    "title": "Christ the Lord Is Risen Today",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Praise",
+    "number": 43,
+    "title": "Christmas Lullaby",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Praise",
+    "number": 44,
+    "title": "Come, Christians, Join to Sing",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Praise",
+    "number": 45,
+    "title": "Come, Holy Ghost",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Praise",
+    "number": 53,
+    "title": "Easter Sequence",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Praise",
+    "number": 55,
+    "title": "Every Day",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Praise",
+    "number": 57,
+    "title": "Fieles, Te Alabamos / Faithful,",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Praise",
+    "number": 59,
+    "title": "For All the Saints",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Praise",
+    "number": 61,
+    "title": "Glory Be",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Praise",
+    "number": 63,
+    "title": "God of Promise",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Praise",
+    "number": 66,
+    "title": "Hallelujah, He’s Risen!",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Praise",
+    "number": 72,
+    "title": "Holy God, We Praise Thy",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Praise",
+    "number": 73,
+    "title": "Holy, Holy, Holy! Lord God",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Praise",
+    "number": 76,
+    "title": "Hosanna",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Praise",
+    "number": 82,
+    "title": "I Heard the Voice of Jesus Say",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Praise",
+    "number": 93,
+    "title": "In the Name of the Father",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Praise",
+    "number": 14,
+    "title": "Isaiah 12: Cry Out with Joy",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Praise",
+    "number": 15,
+    "title": "Isaiah 12: You Will Draw",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Praise",
+    "number": 98,
+    "title": "Let All Mortal Flesh Keep",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Praise",
+    "number": 112,
+    "title": "Praise Be to You",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Praise",
+    "number": 5,
+    "title": "Psalm 34: Taste and See",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Praise",
+    "number": 9,
+    "title": "Psalm 92: Lord, It Is Good to",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Praise",
+    "number": 11,
+    "title": "Psalm 96: Give the Lord Glory",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Praise",
+    "number": 117,
+    "title": "Sacred Heart Prayer",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Praise",
+    "number": 125,
+    "title": "Take Me to the Water",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Praise",
+    "number": 128,
+    "title": "The Name of Jesus",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Praise",
+    "number": 137,
+    "title": "Ubi Caritas / Where Charity",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Praise",
+    "number": 140,
+    "title": "We Adore You",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Praise",
+    "number": 141,
+    "title": "We Arise",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Praise",
+    "number": 143,
+    "title": "We Bring Our Gifts",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Praise",
+    "number": 150,
+    "title": "Wear the Crown",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Praise",
+    "number": 157,
+    "title": "Wonderfully Made",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Praise",
+    "number": 158,
+    "title": "Worthy God",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Presence of God",
+    "number": 26,
+    "title": "Alleluia! Sing to Jesus",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Presence of God",
+    "number": 90,
+    "title": "In His Presence",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Presence of God",
+    "number": 96,
+    "title": "Journey for Home",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Presence of God",
+    "number": 107,
+    "title": "O Love of God, Dwelling Here",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Presence of God",
+    "number": 111,
+    "title": "Pentecost Sequence",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Presence of God",
+    "number": 115,
+    "title": "Return to God",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Presence of God",
+    "number": 117,
+    "title": "Sacred Heart Prayer",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Presence of God",
+    "number": 123,
+    "title": "Stain Me",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Presence of God",
+    "number": 130,
+    "title": "There’s a Presence",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Presence of God",
+    "number": 137,
+    "title": "Ubi Caritas / Where Charity and",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Presence of God",
+    "number": 140,
+    "title": "We Adore You",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Presence of God",
+    "number": 141,
+    "title": "We Arise",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Presence of God",
+    "number": 153,
+    "title": "When You Come",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Presence of God",
+    "number": 154,
+    "title": "Where Charity and Love Prevail",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Presence of God",
+    "number": 157,
+    "title": "Wonderfully Made",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Promise of God",
+    "number": 49,
+    "title": "Come to Me and Rest",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Promise of God",
+    "number": 63,
+    "title": "God of Promise",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Promise of God",
+    "number": 102,
+    "title": "Love, Burn Bright",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Promise of God",
+    "number": 136,
+    "title": "Turn Our Hearts Around",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Promise of God",
+    "number": 147,
+    "title": "We Walk by Faith (My Lord",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Promise of God",
+    "number": 148,
+    "title": "We’re on a Journey",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Promise of God",
+    "number": 159,
+    "title": "You Are Not Alone",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Providence",
+    "number": 17,
+    "title": "A Life Transformed by",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Providence",
+    "number": 23,
+    "title": "All People That on Earth Do",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Providence",
+    "number": 26,
+    "title": "Alleluia! Sing to Jesus",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Providence",
+    "number": 55,
+    "title": "Every Day",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Providence",
+    "number": 59,
+    "title": "For All the Saints",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Providence",
+    "number": 82,
+    "title": "I Heard the Voice of Jesus Say",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Providence",
+    "number": 87,
+    "title": "I Will Lift My Eyes",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Providence",
+    "number": 88,
+    "title": "If I Turn Away from You",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Providence",
+    "number": 113,
+    "title": "Praise to the Lord, the Almighty",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Providence",
+    "number": 123,
+    "title": "Stain Me",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Providence",
+    "number": 134,
+    "title": "Treasures Out of Darkness /",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Providence",
+    "number": 157,
+    "title": "Wonderfully Made",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Reconciliation",
+    "number": 26,
+    "title": "Love Divine, All Loves",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Reconciliation",
+    "number": 29,
+    "title": "An Instrument of Your Peace",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Reconciliation",
+    "number": 42,
+    "title": "Christ the Lord Is Risen Today",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Reconciliation",
+    "number": 53,
+    "title": "Easter Sequence",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Reconciliation",
+    "number": 64,
+    "title": "Great River of Mercy",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Reconciliation",
+    "number": 86,
+    "title": "I Will Arise",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Reconciliation",
+    "number": 102,
+    "title": "Love, Burn Bright",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Reconciliation",
+    "number": 113,
+    "title": "Praise to the Lord, the Almighty",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Reconciliation",
+    "number": 115,
+    "title": "Return to God",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Reconciliation",
+    "number": 131,
+    "title": "There’s a Wideness in God’s",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Reconciliation",
+    "number": 135,
+    "title": "Tree of Life",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Reconciliation",
+    "number": 154,
+    "title": "Where Charity and Love Prevail",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Redemption",
+    "number": 20,
+    "title": "All Around",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Redemption",
+    "number": 26,
+    "title": "Alleluia! Sing to Jesus",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Redemption",
+    "number": 42,
+    "title": "Christ the Lord Is Risen Today",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Redemption",
+    "number": 50,
+    "title": "Creator of the Stars of Night",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Redemption",
+    "number": 53,
+    "title": "Easter Sequence",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Redemption",
+    "number": 98,
+    "title": "Let All Mortal Flesh Keep",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Redemption",
+    "number": 131,
+    "title": "There’s a Wideness in God’s",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Refuge",
+    "number": 27,
+    "title": "Altar of Hope",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Refuge",
+    "number": 36,
+    "title": "Belong",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Refuge",
+    "number": 48,
+    "title": "Come to Me, All You Who",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Refuge",
+    "number": 49,
+    "title": "Come to Me and Rest",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Refuge",
+    "number": 50,
+    "title": "Creator of the Stars of Night",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Refuge",
+    "number": 67,
+    "title": "Have No Anxiety",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Refuge",
+    "number": 78,
+    "title": "I Am the Bread of Life",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Refuge",
+    "number": 79,
+    "title": "I Am the Bread of Life",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Refuge",
+    "number": 104,
+    "title": "Mercy",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Refuge",
+    "number": 110,
+    "title": "Paschal Mystery",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Refuge",
+    "number": 111,
+    "title": "Pentecost Sequence",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Refuge",
+    "number": 2,
+    "title": "Psalm 23: I Shall Live in the",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Refuge",
+    "number": 124,
+    "title": "Strong Enough",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Refuge",
+    "number": 156,
+    "title": "With Great Love",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Refuge",
+    "number": 159,
+    "title": "You Are Not Alone",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Reign of Christ",
+    "number": 60,
+    "title": "Give Glory",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Remembrance",
+    "number": 91,
+    "title": "In Remembrance",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Remembrance",
+    "number": 127,
+    "title": "The Memorare",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Remembrance",
+    "number": 146,
+    "title": "We Remember We Are Ashes,",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Renewal",
+    "number": 47,
+    "title": "Come to Me",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Renewal",
+    "number": 46,
+    "title": "Come, Holy Spirit / Ven,",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Renewal",
+    "number": 69,
+    "title": "Heal Us",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Renewal",
+    "number": 96,
+    "title": "Journey for Home",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Renewal",
+    "number": 101,
+    "title": "Let Your Mercy Wash Over",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Renewal",
+    "number": 111,
+    "title": "Pentecost Sequence",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Renewal",
+    "number": 115,
+    "title": "Return to God",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Renewal",
+    "number": 146,
+    "title": "We Remember We Are Ashes,",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Renewal",
+    "number": 155,
+    "title": "Wide Open",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Renewal",
+    "number": 156,
+    "title": "With Great Love",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Repentance",
+    "number": 86,
+    "title": "I Will Arise",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Repentance",
+    "number": 6,
+    "title": "Psalm 51: Create a Clean",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Repentance",
+    "number": 7,
+    "title": "Psalm 51: Have Mercy on Us",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Repentance",
+    "number": 115,
+    "title": "Return to God",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Repentance",
+    "number": 117,
+    "title": "Sacred Heart Prayer",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Repentance",
+    "number": 125,
+    "title": "Take Me to the Water",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Repentance",
+    "number": 135,
+    "title": "Tree of Life",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Repentance",
+    "number": 136,
+    "title": "Turn Our Hearts Around",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Repentance",
+    "number": 146,
+    "title": "We Remember We Are Ashes,",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Rest",
+    "number": 27,
+    "title": "Altar of Hope",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Rest",
+    "number": 40,
+    "title": "By God Kept Pure",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Rest",
+    "number": 47,
+    "title": "Come to Me",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Rest",
+    "number": 49,
+    "title": "Come to Me and Rest",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Rest",
+    "number": 59,
+    "title": "For All the Saints",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Rest",
+    "number": 82,
+    "title": "I Heard the Voice of Jesus Say",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Rest",
+    "number": 156,
+    "title": "With Great Love",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Sacrifice",
+    "number": 19,
+    "title": "Al Partir el Pan / When We",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Sacrifice",
+    "number": 26,
+    "title": "Alleluia! Sing to Jesus",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Sacrifice",
+    "number": 56,
+    "title": "Feed Us, Lord",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Sacrifice",
+    "number": 60,
+    "title": "Give Glory",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Sacrifice",
+    "number": 79,
+    "title": "I Am the Bread of Life",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Sacrifice",
+    "number": 143,
+    "title": "We Bring Our Gifts",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Saints",
+    "number": 30,
+    "title": "Anima Christi",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Saints",
+    "number": 34,
+    "title": "Behold",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Saints",
+    "number": 40,
+    "title": "By God Kept Pure",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Saints",
+    "number": 114,
+    "title": "Rejoice, Be Glad",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Saints",
+    "number": 137,
+    "title": "Ubi Caritas / Where Charity",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Saints",
+    "number": 148,
+    "title": "We’re on a Journey",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Salvation",
+    "number": 20,
+    "title": "All Around",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Salvation",
+    "number": 26,
+    "title": "Love Divine, All Loves",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Salvation",
+    "number": 30,
+    "title": "Anima Christi",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Salvation",
+    "number": 35,
+    "title": "Behold What You See",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Salvation",
+    "number": 36,
+    "title": "Belong",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Salvation",
+    "number": 37,
+    "title": "Bethlehem",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Salvation",
+    "number": 42,
+    "title": "Christ the Lord Is Risen Today",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Salvation",
+    "number": 57,
+    "title": "Fieles, Te Alabamos / Faithful,",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Salvation",
+    "number": 14,
+    "title": "Isaiah 12: Cry Out with Joy",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Salvation",
+    "number": 15,
+    "title": "Isaiah 12: You Will Draw",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Salvation",
+    "number": 98,
+    "title": "Let All Mortal Flesh Keep",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Salvation",
+    "number": 111,
+    "title": "Pentecost Sequence",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Salvation",
+    "number": 113,
+    "title": "Praise to the Lord, the",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Salvation",
+    "number": 4,
+    "title": "Psalm 32: I Turn to You, Lord",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Salvation",
+    "number": 5,
+    "title": "Psalm 34: Taste and See",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Salvation",
+    "number": 118,
+    "title": "Save Us, O Lord",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Salvation",
+    "number": 131,
+    "title": "There’s a Wideness in God’s",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Salvation",
+    "number": 141,
+    "title": "We Arise",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Salvation",
+    "number": 145,
+    "title": "We Prepare",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Salvation",
+    "number": 148,
+    "title": "We’re on a Journey",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Salvation",
+    "number": 154,
+    "title": "Where Charity and Love",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Second Coming",
+    "number": 26,
+    "title": "Love Divine, All Loves",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Second Coming",
+    "number": 33,
+    "title": "Awake to the Day",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Second Coming",
+    "number": 59,
+    "title": "For All the Saints",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Second Coming",
+    "number": 116,
+    "title": "Rise Up, My People",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Seeking",
+    "number": 147,
+    "title": "We Walk by Faith (My Lord",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Seeking",
+    "number": 151,
+    "title": "Were I the Perfect Child of",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Seeking",
+    "number": 156,
+    "title": "With Great Love",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Sending Forth",
+    "number": 39,
+    "title": "Building Up the Kingdom",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Sending Forth",
+    "number": 41,
+    "title": "Christ Has No Body Now But",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Sending Forth",
+    "number": 60,
+    "title": "Give Glory",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Sending Forth",
+    "number": 62,
+    "title": "Go Out in the World",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Sending Forth",
+    "number": 68,
+    "title": "He Has Anointed Me",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Sending Forth",
+    "number": 70,
+    "title": "Healing Balm / Bálsamo de",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Sending Forth",
+    "number": 72,
+    "title": "Holy God, We Praise Thy",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Sending Forth",
+    "number": 84,
+    "title": "I Send You Out",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Sending Forth",
+    "number": 121,
+    "title": "Something Beautiful",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Sending Forth",
+    "number": 138,
+    "title": "Vayan por el Mundo Entero /",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Service",
+    "number": 17,
+    "title": "A Life Transformed by",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Service",
+    "number": 23,
+    "title": "All People That on Earth Do",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Service",
+    "number": 54,
+    "title": "Es Mi Cuerpo / Take and Eat",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Service",
+    "number": 62,
+    "title": "Go Out in the World",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Service",
+    "number": 70,
+    "title": "Healing Balm / Bálsamo de",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Service",
+    "number": 71,
+    "title": "Holy Family",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Service",
+    "number": 90,
+    "title": "In His Presence",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Service",
+    "number": 91,
+    "title": "In Remembrance",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Service",
+    "number": 97,
+    "title": "Lead Me, O Lord",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Service",
+    "number": 102,
+    "title": "Love, Burn Bright",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Service",
+    "number": 103,
+    "title": "Love One Another",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Service",
+    "number": 108,
+    "title": "On the Road of Mercy",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Service",
+    "number": 109,
+    "title": "One Lord, One Faith",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Service",
+    "number": 115,
+    "title": "Return to God",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Service",
+    "number": 118,
+    "title": "Save Us, O Lord",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Service",
+    "number": 133,
+    "title": "This Is My Beloved Son",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Service",
+    "number": 142,
+    "title": "We Breathe in Love",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Service",
+    "number": 152,
+    "title": "Whatever You Do",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Service",
+    "number": 156,
+    "title": "With Great Love",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Shepherd",
+    "number": 23,
+    "title": "All People That on Earth Do",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Shepherd",
+    "number": 58,
+    "title": "Follow Me",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Shepherd",
+    "number": 63,
+    "title": "God of Promise",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Shepherd",
+    "number": 89,
+    "title": "If You Love Me",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Shepherd",
+    "number": 97,
+    "title": "Lead Me, O Lord",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Shepherd",
+    "number": 2,
+    "title": "Psalm 23: I Shall Live in the",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Sin",
+    "number": 4,
+    "title": "Psalm 32: I Turn to You, Lord",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Sin",
+    "number": 6,
+    "title": "Psalm 51: Create a Clean",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Sin",
+    "number": 7,
+    "title": "Psalm 51: Have Mercy on Us",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Sin",
+    "number": 115,
+    "title": "Return to God",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Sin",
+    "number": 117,
+    "title": "Sacred Heart Prayer",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Sin",
+    "number": 131,
+    "title": "There’s a Wideness in God’s",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Sin",
+    "number": 135,
+    "title": "Tree of Life",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Sin",
+    "number": 136,
+    "title": "Turn Our Hearts Around",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Sin",
+    "number": 151,
+    "title": "Were I the Perfect Child of",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Social Concern",
+    "number": 25,
+    "title": "All Who Enter Here",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Social Concern",
+    "number": 114,
+    "title": "Rejoice, Be Glad",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Social Concern",
+    "number": 132,
+    "title": "This Is How",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Social Concern",
+    "number": 152,
+    "title": "Whatever You Do",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Social Concern",
+    "number": 153,
+    "title": "When You Come",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Social Concern",
+    "number": 154,
+    "title": "Where Charity and Love",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Song",
+    "number": 20,
+    "title": "All Around",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Song",
+    "number": 21,
+    "title": "All Creatures of Our God and",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Song",
+    "number": 23,
+    "title": "All People That on Earth Do",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Song",
+    "number": 24,
+    "title": "All the Earth Adores You",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Song",
+    "number": 26,
+    "title": "Alleluia! Sing to Jesus",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Song",
+    "number": 31,
+    "title": "As I Pray",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Song",
+    "number": 43,
+    "title": "Christmas Lullaby",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Song",
+    "number": 44,
+    "title": "Come, Christians, Join to Sing",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Song",
+    "number": 57,
+    "title": "Fieles, Te Alabamos / Faithful,",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Song",
+    "number": 59,
+    "title": "For All the Saints",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Song",
+    "number": 72,
+    "title": "Holy God, We Praise Thy",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Song",
+    "number": 73,
+    "title": "Holy, Holy, Holy! Lord God",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Song",
+    "number": 113,
+    "title": "Praise to the Lord, the",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Song",
+    "number": 11,
+    "title": "Psalm 96: Give the Lord Glory",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Story",
+    "number": 47,
+    "title": "Come to Me",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Strength",
+    "number": 16,
+    "title": "A Heart That’s Been Purified",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Strength",
+    "number": 51,
+    "title": "Darkness Cannot Overcome",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Strength",
+    "number": 59,
+    "title": "For All the Saints",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Strength",
+    "number": 69,
+    "title": "Heal Us",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Strength",
+    "number": 70,
+    "title": "Healing Balm / Bálsamo de",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Strength",
+    "number": 77,
+    "title": "I Am Loved by God",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Strength",
+    "number": 81,
+    "title": "I Can Do All Things",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Strength",
+    "number": 90,
+    "title": "In His Presence",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Strength",
+    "number": 10,
+    "title": "Psalm 93: The Lord Is King",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Strength",
+    "number": 124,
+    "title": "Strong Enough",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Struggle",
+    "number": 18,
+    "title": "Adore",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Struggle",
+    "number": 31,
+    "title": "As I Pray",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Struggle",
+    "number": 47,
+    "title": "Come to Me",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Struggle",
+    "number": 49,
+    "title": "Come to Me and Rest",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Struggle",
+    "number": 51,
+    "title": "Darkness Cannot Overcome",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Struggle",
+    "number": 53,
+    "title": "Easter Sequence",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Struggle",
+    "number": 59,
+    "title": "For All the Saints",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Struggle",
+    "number": 77,
+    "title": "I Am Loved by God",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Suffering",
+    "number": 51,
+    "title": "Darkness Cannot Overcome",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Suffering",
+    "number": 64,
+    "title": "Great River of Mercy",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Suffering",
+    "number": 69,
+    "title": "Heal Us",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Suffering",
+    "number": 77,
+    "title": "I Am Loved by God",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Suffering",
+    "number": 78,
+    "title": "I Am the Bread of Life",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Suffering",
+    "number": 85,
+    "title": "I Trust in You",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Suffering",
+    "number": 122,
+    "title": "Sometimes Our Only Song Is",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Thanksgiving",
+    "number": 17,
+    "title": "A Life Transformed by",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Thanksgiving",
+    "number": 23,
+    "title": "All People That on Earth Do",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Thanksgiving",
+    "number": 27,
+    "title": "Altar of Hope",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Thanksgiving",
+    "number": 53,
+    "title": "Easter Sequence",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Thanksgiving",
+    "number": 56,
+    "title": "Feed Us, Lord",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Thanksgiving",
+    "number": 57,
+    "title": "Fieles, Te Alabamos / Faithful,",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Thanksgiving",
+    "number": 66,
+    "title": "Hallelujah, He’s Risen!",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Thanksgiving",
+    "number": 67,
+    "title": "Have No Anxiety",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Thanksgiving",
+    "number": 14,
+    "title": "Isaiah 12: Cry Out with Joy",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Thanksgiving",
+    "number": 15,
+    "title": "Isaiah 12: You Will Draw",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Thanksgiving",
+    "number": 9,
+    "title": "Psalm 92: Lord, It Is Good to",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Thanksgiving",
+    "number": 141,
+    "title": "We Arise",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Times and Seasons",
+    "number": 22,
+    "title": "All Is Holy",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Transcendence",
+    "number": 98,
+    "title": "Let All Mortal Flesh Keep",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Transfiguration",
+    "number": 133,
+    "title": "This Is My Beloved Son",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Transfiguration",
+    "number": 146,
+    "title": "We Remember We Are Ashes,",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Trinity",
+    "number": 21,
+    "title": "All Creatures of Our God and",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Trinity",
+    "number": 45,
+    "title": "Come, Holy Ghost",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Trinity",
+    "number": 61,
+    "title": "Glory Be",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Trinity",
+    "number": 63,
+    "title": "God of Promise",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Trinity",
+    "number": 72,
+    "title": "Holy God, We Praise Thy",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Trinity",
+    "number": 73,
+    "title": "Holy, Holy, Holy! Lord God",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Trinity",
+    "number": 84,
+    "title": "I Send You Out",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Trinity",
+    "number": 93,
+    "title": "In the Name of the Father",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Trust",
+    "number": 16,
+    "title": "A Heart That’s Been Purified",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Trust",
+    "number": 35,
+    "title": "Behold What You See",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Trust",
+    "number": 49,
+    "title": "Come to Me and Rest",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Trust",
+    "number": 48,
+    "title": "Come to Me, All You Who",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Trust",
+    "number": 59,
+    "title": "For All the Saints",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Trust",
+    "number": 71,
+    "title": "Holy Family",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Trust",
+    "number": 81,
+    "title": "I Can Do All Things",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Trust",
+    "number": 82,
+    "title": "I Heard the Voice of Jesus Say",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Trust",
+    "number": 85,
+    "title": "I Trust in You",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Trust",
+    "number": 87,
+    "title": "I Will Lift My Eyes",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Trust",
+    "number": 92,
+    "title": "In the Morning, in the Evening",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Trust",
+    "number": 94,
+    "title": "In You, O Lord",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Trust",
+    "number": 104,
+    "title": "Mercy",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Trust",
+    "number": 3,
+    "title": "Psalm 25: Remember Your",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Trust",
+    "number": 10,
+    "title": "Psalm 93: The Lord Is King",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Trust",
+    "number": 115,
+    "title": "Return to God",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Trust",
+    "number": 124,
+    "title": "Strong Enough",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Trust",
+    "number": 145,
+    "title": "We Prepare",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Trust",
+    "number": 146,
+    "title": "We Remember We Are Ashes,",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Trust",
+    "number": 147,
+    "title": "We Walk by Faith (My Lord",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Truth",
+    "number": 18,
+    "title": "Adore",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Truth",
+    "number": 57,
+    "title": "Fieles, Te Alabamos / Faithful,",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Truth",
+    "number": 79,
+    "title": "I Am the Bread of Life",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Truth",
+    "number": 3,
+    "title": "Psalm 25: Remember Your",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Truth",
+    "number": 144,
+    "title": "We Gather in Love",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Truth",
+    "number": 148,
+    "title": "We’re on a Journey",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Truth",
+    "number": 155,
+    "title": "Wide Open",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Understanding",
+    "number": 91,
+    "title": "In Remembrance",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Understanding",
+    "number": 156,
+    "title": "With Great Love",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Unity",
+    "number": 19,
+    "title": "Al Partir el Pan / When We",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Unity",
+    "number": 25,
+    "title": "All Who Enter Here",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Unity",
+    "number": 34,
+    "title": "Behold",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Unity",
+    "number": 37,
+    "title": "Bethlehem",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Unity",
+    "number": 52,
+    "title": "Dona Nobis Pacem",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Unity",
+    "number": 54,
+    "title": "Es Mi Cuerpo / Take and Eat",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Unity",
+    "number": 57,
+    "title": "Fieles, Te Alabamos / Faithful,",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Unity",
+    "number": 71,
+    "title": "Holy Family",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Unity",
+    "number": 84,
+    "title": "I Send You Out",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Unity",
+    "number": 86,
+    "title": "I Will Arise",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Unity",
+    "number": 93,
+    "title": "In the Name of the Father",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Unity",
+    "number": 99,
+    "title": "Let the Children Come to Me",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Unity",
+    "number": 103,
+    "title": "Love One Another",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Unity",
+    "number": 108,
+    "title": "On the Road of Mercy",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Unity",
+    "number": 137,
+    "title": "Ubi Caritas / Where Charity and",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Unity",
+    "number": 141,
+    "title": "We Arise",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Unity",
+    "number": 144,
+    "title": "We Gather in Love",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Unity",
+    "number": 154,
+    "title": "Where Charity and Love Prevail",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Universe",
+    "number": 72,
+    "title": "Holy God, We Praise Thy",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Vocation",
+    "number": 84,
+    "title": "I Send You Out",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Vocation",
+    "number": 134,
+    "title": "Treasures Out of Darkness /",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Water",
+    "number": 54,
+    "title": "Es Mi Cuerpo / Take and Eat",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Water",
+    "number": 57,
+    "title": "Fieles, Te Alabamos / Faithful,",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Water",
+    "number": 64,
+    "title": "Great River of Mercy",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Water",
+    "number": 82,
+    "title": "I Heard the Voice of Jesus Say",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Water",
+    "number": 83,
+    "title": "I Know I’ve Been Changed",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Water",
+    "number": 14,
+    "title": "Isaiah 12: Cry Out with Joy",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Water",
+    "number": 15,
+    "title": "Isaiah 12: You Will Draw",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Water",
+    "number": 101,
+    "title": "Let Your Mercy Wash Over Us",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Water",
+    "number": 115,
+    "title": "Return to God",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Water",
+    "number": 125,
+    "title": "Take Me to the Water",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Way, Truth, & Life",
+    "number": 79,
+    "title": "I Am the Bread of Life",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Way, Truth, & Life",
+    "number": 139,
+    "title": "Via, Veritas, Vita",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Way, Truth, & Life",
+    "number": 147,
+    "title": "We Walk by Faith (My Lord",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Wisdom",
+    "number": 1,
+    "title": "Psalm 19: Words of",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Witness",
+    "number": 55,
+    "title": "Every Day",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Witness",
+    "number": 57,
+    "title": "Fieles, Te Alabamos / Faithful,",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Witness",
+    "number": 60,
+    "title": "Give Glory",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Witness",
+    "number": 62,
+    "title": "Go Out in the World",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Witness",
+    "number": 68,
+    "title": "He Has Anointed Me",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Witness",
+    "number": 70,
+    "title": "Healing Balm / Bálsamo de",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Witness",
+    "number": 84,
+    "title": "I Send You Out",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Witness",
+    "number": 102,
+    "title": "Love, Burn Bright",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Witness",
+    "number": 138,
+    "title": "Vayan por el Mundo Entero /",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Witness",
+    "number": 151,
+    "title": "Were I the Perfect Child of",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Word of God",
+    "number": 28,
+    "title": "Among All",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Word of God",
+    "number": 63,
+    "title": "God of Promise",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Word of God",
+    "number": 79,
+    "title": "I Am the Bread of Life",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Word of God",
+    "number": 1,
+    "title": "Psalm 19: Words of",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Word of God",
+    "number": 115,
+    "title": "Return to God",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Word of God",
+    "number": 155,
+    "title": "Wide Open",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Worship",
+    "number": 47,
+    "title": "Come to Me",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Worship",
+    "number": 11,
+    "title": "Psalm 96: Give the Lord Glory",
+    "catalog": "novum"
+  },
+  {
+    "topic": "Worship",
+    "number": 128,
+    "title": "The Name of Jesus",
+    "catalog": "novum"
+  }
+]
