@@ -1355,6 +1355,7 @@ export default function SongLibraryShell({ songs, title = "Music Library", subti
                 onScriptureMatchToggle={setScriptureMatchMode}
                 scriptureSubFilter={scriptureSubFilter}
                 onScriptureSubFilterChange={setScriptureSubFilter}
+                scriptureMatchCount={scriptureMatchedIds?.size}
               />
             </div>
           )}

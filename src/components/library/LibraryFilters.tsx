@@ -3,6 +3,10 @@
 import { useState } from "react";
 import LiturgicalCalendar from "./LiturgicalCalendar";
 import type { ScriptureSubFilter } from "@/lib/scripture-matching";
+import {
+  getReadingsForDate,
+  type DayReadings,
+} from "@/lib/scripture-matching";
 
 // --- Constants ---
 
@@ -107,6 +111,7 @@ export interface LibraryFiltersProps {
   onScriptureMatchToggle: (on: boolean) => void;
   scriptureSubFilter: ScriptureSubFilter;
   onScriptureSubFilterChange: (filter: ScriptureSubFilter) => void;
+  scriptureMatchCount?: number;
 }
 
 // --- Sub-components ---
@@ -175,6 +180,7 @@ export default function LibraryFilters({
   onScriptureMatchToggle,
   scriptureSubFilter,
   onScriptureSubFilterChange,
+  scriptureMatchCount,
 }: LibraryFiltersProps) {
   const [openSections, setOpenSections] = useState<Set<string>>(
     new Set(["calendar", "genre"])
@@ -254,33 +260,69 @@ export default function LibraryFilters({
                   <span className="text-[11px] font-semibold text-amber-800">Scripture Match</span>
                 </label>
 
-                {scriptureMatchMode && (
-                  <div className="pl-6 space-y-0.5">
-                    {(
-                      [
-                        { value: "all", label: "All Readings" },
-                        { value: "first", label: "1st Reading" },
-                        { value: "psalm", label: "Psalm" },
-                        { value: "second", label: "2nd Reading" },
-                        { value: "gospel", label: "Gospel" },
-                      ] as { value: ScriptureSubFilter; label: string }[]
-                    ).map((opt) => (
-                      <label
-                        key={opt.value}
-                        className="flex items-center gap-2 px-1 py-0.5 rounded hover:bg-stone-50 cursor-pointer"
-                      >
-                        <input
-                          type="radio"
-                          name="scripture-sub"
-                          checked={scriptureSubFilter === opt.value}
-                          onChange={() => onScriptureSubFilterChange(opt.value)}
-                          className="w-3 h-3 border-stone-300 text-amber-700 focus:ring-amber-400 focus:ring-1"
-                        />
-                        <span className="text-[11px] text-stone-600">{opt.label}</span>
-                      </label>
-                    ))}
-                  </div>
-                )}
+                {scriptureMatchMode && (() => {
+                  const readings = selectedDate ? getReadingsForDate(selectedDate) : null;
+                  return (
+                    <div className="pl-6 space-y-1">
+                      <div className="space-y-0.5">
+                        {(
+                          [
+                            { value: "all", label: "All Readings" },
+                            { value: "first", label: "1st Reading" },
+                            { value: "psalm", label: "Psalm" },
+                            { value: "second", label: "2nd Reading" },
+                            { value: "gospel", label: "Gospel" },
+                          ] as { value: ScriptureSubFilter; label: string }[]
+                        ).map((opt) => (
+                          <label
+                            key={opt.value}
+                            className="flex items-center gap-2 px-1 py-0.5 rounded hover:bg-stone-50 cursor-pointer"
+                          >
+                            <input
+                              type="radio"
+                              name="scripture-sub"
+                              checked={scriptureSubFilter === opt.value}
+                              onChange={() => onScriptureSubFilterChange(opt.value)}
+                              className="w-3 h-3 border-stone-300 text-amber-700 focus:ring-amber-400 focus:ring-1"
+                            />
+                            <span className="text-[11px] text-stone-600">{opt.label}</span>
+                          </label>
+                        ))}
+                      </div>
+
+                      {/* Readings summary */}
+                      {readings && readings.all.length > 0 && (
+                        <div className="mt-1.5 px-1 py-1.5 bg-amber-50/60 rounded space-y-0.5">
+                          {readings.first && (
+                            <p className="text-[10px] text-amber-800">
+                              <span className="font-semibold">1st:</span> {readings.first}
+                            </p>
+                          )}
+                          {readings.psalm && (
+                            <p className="text-[10px] text-amber-800">
+                              <span className="font-semibold">Ps:</span> {readings.psalm}
+                            </p>
+                          )}
+                          {readings.second && (
+                            <p className="text-[10px] text-amber-800">
+                              <span className="font-semibold">2nd:</span> {readings.second}
+                            </p>
+                          )}
+                          {readings.gospel && (
+                            <p className="text-[10px] text-amber-800">
+                              <span className="font-semibold">Gos:</span> {readings.gospel}
+                            </p>
+                          )}
+                          {scriptureMatchCount !== undefined && (
+                            <p className="text-[10px] font-bold text-amber-900 pt-0.5 border-t border-amber-200/60">
+                              {scriptureMatchCount} song{scriptureMatchCount !== 1 ? "s" : ""} match
+                            </p>
+                          )}
+                        </div>
+                      )}
+                    </div>
+                  );
+                })()}
               </div>
             )}
 
