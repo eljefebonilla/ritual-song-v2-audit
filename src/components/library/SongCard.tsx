@@ -19,6 +19,7 @@ interface SongRowProps {
   hasAlleluia?: boolean;
   isLent?: boolean;
   uploadedAudioUrl?: string;
+  scriptureMatchRefs?: string[];
 }
 
 const BUTTON_STYLES: Record<ResourceDisplayCategory, { bg: string; text: string; label: string }> = {
@@ -76,7 +77,7 @@ function titleContainsAlleluia(title: string): boolean {
   return lower.includes("alleluia") || lower.includes("hallelujah");
 }
 
-export default function SongCard({ song, isSelected, onClick, calendarMeta, hasAlleluia, isLent, uploadedAudioUrl }: SongRowProps) {
+export default function SongCard({ song, isSelected, onClick, calendarMeta, hasAlleluia, isLent, uploadedAudioUrl, scriptureMatchRefs }: SongRowProps) {
   // If hasAlleluia not explicitly passed, infer from title
   const showAlleluiaBadge = hasAlleluia ?? titleContainsAlleluia(song.title);
   const { play } = useMedia();
@@ -202,6 +203,20 @@ export default function SongCard({ song, isSelected, onClick, calendarMeta, hasA
             </span>
           )}
         </div>
+
+        {/* Scripture match badges — shown when scripture match filter is active */}
+        {scriptureMatchRefs && scriptureMatchRefs.length > 0 && (
+          <div className="flex flex-wrap gap-1 mt-1">
+            {scriptureMatchRefs.slice(0, 3).map((ref) => (
+              <span
+                key={ref}
+                className="inline-block text-[9px] font-medium px-1.5 py-0.5 rounded bg-amber-50 text-amber-700 border border-amber-200/60"
+              >
+                {ref}
+              </span>
+            ))}
+          </div>
+        )}
 
         {/* Resource action buttons — left-aligned under title */}
         {available.size > 0 && (

@@ -229,6 +229,7 @@ export default function SongLibraryShell({ songs, title = "Music Library", subti
   const [genreFilters, setGenreFilters] = useState<Set<string>>(new Set());
   const [seasonFilters, setSeasonFilters] = useState<Set<string>>(new Set());
   const [resourceFilters, setResourceFilters] = useState<Set<string>>(new Set());
+  const [topicFilters, setTopicFilters] = useState<Set<string>>(new Set());
   const [selectedDate, setSelectedDate] = useState<string | null>(initialDate);
   const [selectedEnsemble, setSelectedEnsemble] = useState<string | null>(null);
   const [calendarSongIds, setCalendarSongIds] = useState<Set<string> | null>(null);
@@ -361,10 +362,24 @@ export default function SongLibraryShell({ songs, title = "Music Library", subti
     return nums;
   }, [activeSongs, psalmLens, psalmSeasonFilter, psalmYearFilter, psalmTypeFilter, selectedBook, showCommonOnly, tabCounts.subCounts]);
 
+  // Pre-compute topic counts for filter UI
+  const topicCounts = useMemo(() => {
+    const counts: Record<string, number> = {};
+    for (const s of activeSongs) {
+      if (s.topics) {
+        for (const t of s.topics) {
+          counts[t] = (counts[t] || 0) + 1;
+        }
+      }
+    }
+    return counts;
+  }, [activeSongs]);
+
   const clearAllFilters = useCallback(() => {
     setGenreFilters(new Set());
     setSeasonFilters(new Set());
     setResourceFilters(new Set());
+    setTopicFilters(new Set());
     setSelectedDate(null);
     setCalendarSongIds(null);
     setCalendarSongMeta(null);
@@ -442,30 +457,36 @@ export default function SongLibraryShell({ songs, title = "Music Library", subti
     };
   }, [selectedDate, selectedEnsemble, dateOccasionMap, normalizedTitleIndex]);
 
-  // Scripture match: compute matched song IDs when mode is active
-  const scriptureMatchedIds = useMemo(() => {
-    if (!scriptureMatchMode || !selectedDate) return null;
+  // Scripture match: compute matched song IDs + matching refs when mode is active
+  const { scriptureMatchedIds, scriptureMatchedRefs } = useMemo(() => {
+    if (!scriptureMatchMode || !selectedDate) return { scriptureMatchedIds: null, scriptureMatchedRefs: new Map<string, string[]>() };
     const readings = getReadingsForDate(selectedDate);
     const citations = getCitationsForSubFilter(readings, scriptureSubFilter);
-    if (citations.length === 0) return new Set<string>();
+    if (citations.length === 0) return { scriptureMatchedIds: new Set<string>(), scriptureMatchedRefs: new Map<string, string[]>() };
 
     const matched = new Set<string>();
+    const refs = new Map<string, string[]>();
     for (const song of activeSongs) {
       if (!song.scriptureRefs || song.scriptureRefs.length === 0) continue;
+      const matchingRefs: string[] = [];
       for (const ref of song.scriptureRefs) {
         if (citations.some((c) => scriptureMatch(ref, c))) {
-          matched.add(song.id);
-          break;
+          matchingRefs.push(ref);
         }
       }
+      if (matchingRefs.length > 0) {
+        matched.add(song.id);
+        refs.set(song.id, matchingRefs);
+      }
     }
-    return matched;
+    return { scriptureMatchedIds: matched, scriptureMatchedRefs: refs };
   }, [scriptureMatchMode, selectedDate, scriptureSubFilter, activeSongs]);
 
   const activeFilterCount =
     genreFilters.size +
     seasonFilters.size +
     resourceFilters.size +
+    topicFilters.size +
     (scriptureMatchedIds !== null ? 1 : calendarSongIds !== null ? 1 : 0);
 
   const filtered = useMemo(() => {
@@ -573,13 +594,15 @@ export default function SongLibraryShell({ songs, title = "Music Library", subti
       }
     }
 
-    // Search filter
+    // Search filter — includes title, composer, topics, and scripture refs
     if (search.trim()) {
       const q = search.toLowerCase();
       list = list.filter(
         (s) =>
           s.title.toLowerCase().includes(q) ||
-          (s.composer && s.composer.toLowerCase().includes(q))
+          (s.composer && s.composer.toLowerCase().includes(q)) ||
+          (s.topics && s.topics.some((t) => t.toLowerCase().includes(q))) ||
+          (s.scriptureRefs && s.scriptureRefs.some((r) => r.toLowerCase().includes(q)))
       );
     }
 
@@ -589,6 +612,14 @@ export default function SongLibraryShell({ songs, title = "Music Library", subti
         const genres = (s as unknown as Record<string, unknown>).genres as string[] | undefined;
         if (!genres || genres.length === 0) return false;
         return genres.some((g) => genreFilters.has(g));
+      });
+    }
+
+    // Topic filter (OR within group)
+    if (topicFilters.size > 0) {
+      list = list.filter((s) => {
+        if (!s.topics || s.topics.length === 0) return false;
+        return s.topics.some((t) => topicFilters.has(t));
       });
     }
 
@@ -653,7 +684,7 @@ export default function SongLibraryShell({ songs, title = "Music Library", subti
     }
 
     return list;
-  }, [activeSongs, activeTab, subFilter, psalmLens, selectedPsalmNumber, selectedBook, psalmSeasonFilter, psalmYearFilter, psalmTypeFilter, showCommonOnly, search, sort, genreFilters, seasonFilters, resourceFilters, calendarSongIds, calendarSongMeta, scriptureMatchedIds, occasionSeasonMap, tabCounts.subCounts]);
+  }, [activeSongs, activeTab, subFilter, psalmLens, selectedPsalmNumber, selectedBook, psalmSeasonFilter, psalmYearFilter, psalmTypeFilter, showCommonOnly, search, sort, genreFilters, seasonFilters, resourceFilters, topicFilters, calendarSongIds, calendarSongMeta, scriptureMatchedIds, occasionSeasonMap, tabCounts.subCounts]);
 
   // Build letter groups for alphabet jump
   const { availableLetters, letterIndices } = useMemo(() => {
@@ -1245,7 +1276,7 @@ export default function SongLibraryShell({ songs, title = "Music Library", subti
                 type="text"
                 value={search}
                 onChange={(e) => setSearch(e.target.value)}
-                placeholder="Search songs or composers..."
+                placeholder="Search songs, composers, topics, scripture..."
                 className="w-full pl-8 pr-3 py-1.5 text-sm border border-stone-200 rounded-md bg-white focus:outline-none focus:ring-1 focus:ring-stone-400"
               />
             </div>
@@ -1306,12 +1337,15 @@ export default function SongLibraryShell({ songs, title = "Music Library", subti
                 genreFilters={genreFilters}
                 seasonFilters={seasonFilters}
                 resourceFilters={resourceFilters}
+                topicFilters={topicFilters}
                 selectedDate={selectedDate}
                 selectedEnsemble={selectedEnsemble}
                 dateOccasionMap={dateOccasionMap}
+                topicCounts={topicCounts}
                 onGenreChange={setGenreFilters}
                 onSeasonChange={setSeasonFilters}
                 onResourceChange={setResourceFilters}
+                onTopicChange={setTopicFilters}
                 onDateSelect={setSelectedDate}
                 onEnsembleSelect={setSelectedEnsemble}
                 onClearAll={clearAllFilters}
@@ -1376,6 +1410,7 @@ export default function SongLibraryShell({ songs, title = "Music Library", subti
                         calendarMeta={calendarSongMeta?.get(song.id) ?? null}
                         isLent={isLent}
                         uploadedAudioUrl={uploadedAudio[song.id]}
+                        scriptureMatchRefs={scriptureMatchedRefs.get(song.id)}
                       />
                     </div>
                   );

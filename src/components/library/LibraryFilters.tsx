@@ -49,16 +49,55 @@ interface DateOccasion {
   name: string;
 }
 
+// Top topic categories for the filter UI (curated from 199 unique topics)
+const TOPIC_GROUPS: { label: string; topics: string[] }[] = [
+  {
+    label: "Liturgical",
+    topics: [
+      "Praise", "Gathering", "Sending Forth", "Thanksgiving",
+      "Eucharist", "Communion of Saints", "Lamb of God",
+      "Paschal Mystery", "Second Coming", "Reconciliation",
+    ],
+  },
+  {
+    label: "Thematic",
+    topics: [
+      "Love of God for Us", "Hope", "Faith", "Trust", "Peace",
+      "Joy", "Mercy", "Comfort", "Healing", "Light",
+      "Grace", "Salvation", "Freedom", "Courage",
+    ],
+  },
+  {
+    label: "Christian Life",
+    topics: [
+      "Discipleship", "Christian Life", "Love for Others", "Service",
+      "Justice", "Social Concern", "Mission", "Unity",
+      "Commitment", "Witness", "Challenge of Gospel",
+    ],
+  },
+  {
+    label: "Devotional",
+    topics: [
+      "Jesus Christ", "Holy Spirit", "Presence of God", "Petition / Prayer",
+      "Providence", "Word of God", "Cross", "Trinity",
+      "Kingdom / Reign of God", "Faithfulness of God",
+    ],
+  },
+];
+
 export interface LibraryFiltersProps {
   genreFilters: Set<string>;
   seasonFilters: Set<string>;
   resourceFilters: Set<string>;
+  topicFilters: Set<string>;
   selectedDate: string | null;
   selectedEnsemble: string | null;
   dateOccasionMap: Map<string, DateOccasion>;
+  topicCounts: Record<string, number>;
   onGenreChange: (filters: Set<string>) => void;
   onSeasonChange: (filters: Set<string>) => void;
   onResourceChange: (filters: Set<string>) => void;
+  onTopicChange: (filters: Set<string>) => void;
   onDateSelect: (date: string | null) => void;
   onEnsembleSelect: (ensemble: string | null) => void;
   onClearAll: () => void;
@@ -118,12 +157,15 @@ export default function LibraryFilters({
   genreFilters,
   seasonFilters,
   resourceFilters,
+  topicFilters,
   selectedDate,
   selectedEnsemble,
   dateOccasionMap,
+  topicCounts,
   onGenreChange,
   onSeasonChange,
   onResourceChange,
+  onTopicChange,
   onDateSelect,
   onEnsembleSelect,
   onClearAll,
@@ -347,7 +389,52 @@ export default function LibraryFilters({
         )}
       </div>
 
-      {/* 4. Resources */}
+      {/* 4. Topics */}
+      <div className="border-t border-stone-100 pt-1">
+        <SectionHeader
+          label={`Topics${topicFilters.size > 0 ? ` (${topicFilters.size})` : ""}`}
+          isOpen={openSections.has("topics")}
+          onToggle={() => toggleSection("topics")}
+        />
+        {openSections.has("topics") && (
+          <div className="space-y-2 pb-1">
+            {TOPIC_GROUPS.map((group) => (
+              <div key={group.label}>
+                <p className="text-[9px] font-semibold text-stone-400 uppercase tracking-wider px-1 mb-0.5">
+                  {group.label}
+                </p>
+                <div className="flex flex-wrap gap-1 px-1">
+                  {group.topics.map((topic) => {
+                    const count = topicCounts[topic] || 0;
+                    if (count === 0) return null;
+                    const isActive = topicFilters.has(topic);
+                    return (
+                      <button
+                        key={topic}
+                        onClick={() =>
+                          toggleInSet(topicFilters, topic, onTopicChange)
+                        }
+                        className={`text-[10px] px-1.5 py-0.5 rounded transition-colors ${
+                          isActive
+                            ? "bg-stone-800 text-white font-medium"
+                            : "bg-stone-100 text-stone-500 hover:bg-stone-200"
+                        }`}
+                      >
+                        {topic}
+                        <span className={`ml-0.5 ${isActive ? "text-stone-400" : "text-stone-300"}`}>
+                          {count}
+                        </span>
+                      </button>
+                    );
+                  })}
+                </div>
+              </div>
+            ))}
+          </div>
+        )}
+      </div>
+
+      {/* 5. Resources */}
       <div className="border-t border-stone-100 pt-1">
         <SectionHeader
           label="Resources"
