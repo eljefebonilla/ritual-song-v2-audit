@@ -1343,7 +1343,7 @@ export default function SongLibraryShell({ songs, title = "Music Library", subti
             {filtered.length === 0 ? (
               <div className="text-center text-stone-400 text-sm py-12">
                 {scriptureMatchedIds !== null
-                  ? "No scripture matches for this date. Only 145 of 2,600+ songs have scripture references tagged so far."
+                  ? "No scripture matches for this date. About 615 of 2,600+ songs have scripture references tagged so far."
                   : search || activeFilterCount > 0 || subFilter !== "all" || psalmSeasonFilter !== "all" || selectedPsalmNumber !== null || showCommonOnly
                   ? "No songs match your filters."
                   : activeTab === "antiphons"

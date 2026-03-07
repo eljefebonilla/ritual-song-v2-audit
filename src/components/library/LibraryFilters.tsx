@@ -218,6 +218,7 @@ export default function LibraryFilters({
                       [
                         { value: "all", label: "All Readings" },
                         { value: "first", label: "1st Reading" },
+                        { value: "psalm", label: "Psalm" },
                         { value: "second", label: "2nd Reading" },
                         { value: "gospel", label: "Gospel" },
                       ] as { value: ScriptureSubFilter; label: string }[]

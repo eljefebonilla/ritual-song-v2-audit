@@ -3,28 +3,110 @@ import lectionarySynopses from "@/data/lectionary-synopses.json";
 import usccbData from "@/data/usccb-2026.json";
 
 /**
+ * Canonical book name map.
+ * Maps every known variant (full name, abbreviation, USCCB short form)
+ * to a single canonical lowercase key.
+ */
+const BOOK_CANON: Record<string, string> = {
+  // Old Testament
+  genesis: "gen", gn: "gen", gen: "gen",
+  exodus: "exod", ex: "exod", exod: "exod",
+  leviticus: "lev", lv: "lev", lev: "lev",
+  numbers: "num", nm: "num", num: "num",
+  deuteronomy: "deut", dt: "deut", deut: "deut",
+  joshua: "josh", jos: "josh", josh: "josh",
+  judges: "judg", jgs: "judg", judg: "judg",
+  ruth: "ruth", ru: "ruth",
+  "1samuel": "1sam", "1sm": "1sam", "1sam": "1sam",
+  "2samuel": "2sam", "2sm": "2sam", "2sam": "2sam",
+  "1kings": "1kgs", "1kgs": "1kgs",
+  "2kings": "2kgs", "2kgs": "2kgs",
+  "1chronicles": "1chr", "1chr": "1chr",
+  "2chronicles": "2chr", "2chr": "2chr",
+  ezra: "ezra", ezr: "ezra",
+  nehemiah: "neh", neh: "neh",
+  tobit: "tob", tb: "tob", tob: "tob",
+  judith: "jdt", jdt: "jdt",
+  esther: "esth", est: "esth", esth: "esth",
+  "1maccabees": "1mc", "1mc": "1mc",
+  "2maccabees": "2mc", "2mc": "2mc",
+  job: "job", jb: "job",
+  psalms: "ps", psalm: "ps", ps: "ps", pss: "ps",
+  proverbs: "prov", prv: "prov", prov: "prov",
+  ecclesiastes: "eccl", eccl: "eccl",
+  songofsongs: "song", sg: "song", song: "song", canticles: "song",
+  wisdom: "wis", wis: "wis",
+  sirach: "sir", sir: "sir", ecclesiasticus: "sir",
+  isaiah: "isa", is: "isa", isa: "isa",
+  jeremiah: "jer", jer: "jer",
+  lamentations: "lam", lam: "lam",
+  baruch: "bar", bar: "bar",
+  ezekiel: "ezek", ez: "ezek", ezek: "ezek",
+  daniel: "dan", dn: "dan", dan: "dan",
+  hosea: "hos", hos: "hos",
+  joel: "joel", jl: "joel",
+  amos: "amos", am: "amos",
+  obadiah: "obad", ob: "obad", obad: "obad",
+  jonah: "jon", jon: "jon",
+  micah: "mic", mi: "mic", mic: "mic",
+  nahum: "nah", na: "nah", nah: "nah",
+  habakkuk: "hab", hb: "hab", hab: "hab",
+  zephaniah: "zeph", zep: "zeph", zeph: "zeph",
+  haggai: "hag", hg: "hag", hag: "hag",
+  zechariah: "zech", zec: "zech", zech: "zech",
+  malachi: "mal", mal: "mal",
+
+  // New Testament
+  matthew: "matt", mt: "matt", matt: "matt", mat: "matt",
+  mark: "mark", mk: "mark",
+  luke: "luke", lk: "luke",
+  john: "john", jn: "john",
+  acts: "acts",
+  romans: "rom", rm: "rom", rom: "rom",
+  "1corinthians": "1cor", "1cor": "1cor",
+  "2corinthians": "2cor", "2cor": "2cor",
+  galatians: "gal", gal: "gal",
+  ephesians: "eph", eph: "eph",
+  philippians: "phil", ph: "phil", phil: "phil",
+  colossians: "col", col: "col",
+  "1thessalonians": "1thes", "1thes": "1thes", "1thess": "1thes",
+  "2thessalonians": "2thes", "2thes": "2thes", "2thess": "2thes",
+  "1timothy": "1tim", "1tm": "1tim", "1tim": "1tim",
+  "2timothy": "2tim", "2tm": "2tim", "2tim": "2tim",
+  titus: "titus", ti: "titus",
+  philemon: "phlm", phlm: "phlm",
+  hebrews: "heb", heb: "heb",
+  james: "jas", jas: "jas",
+  "1peter": "1pet", "1pt": "1pet", "1pet": "1pet",
+  "2peter": "2pet", "2pt": "2pet", "2pet": "2pet",
+  "1john": "1jn", "1jn": "1jn",
+  "2john": "2jn", "2jn": "2jn",
+  "3john": "3jn", "3jn": "3jn",
+  jude: "jude",
+  revelation: "rev", rv: "rev", rev: "rev",
+};
+
+/**
  * Parse a scripture citation into book + chapter for matching.
- * e.g., "Mt 4:1-11" → { book: "mt", chapter: 4 }
- * e.g., "Gen 2:7-9; 3:1-7" → { book: "gen", chapter: 2 }
+ * e.g., "Mt 4:1-11" -> { book: "matt", chapter: 4 }
+ * e.g., "Isaiah 43:2-3" -> { book: "isa", chapter: 43 }
+ * e.g., "1 Cor 1:3-9" -> { book: "1cor", chapter: 1 }
+ * e.g., "Song of Songs 2:8-14" -> { book: "song", chapter: 2 }
  */
 export function parseCitation(citation: string): { book: string; chapter: number } | null {
-  const m = citation.match(/^(\d?\s*[A-Za-z]+)\s+(\d+)/);
+  // Match optional number prefix + book name (allowing multi-word like "Song of Songs")
+  // then chapter number
+  const m = citation.match(/^(\d?\s*[A-Za-z]+(?:\s+of\s+[A-Za-z]+)?)\s+(\d+)/);
   if (!m) return null;
-  return {
-    book: m[1].replace(/\s+/g, "").toLowerCase(),
-    chapter: parseInt(m[2], 10),
-  };
-}
 
-/** Normalize common book abbreviations to a canonical short form. */
-function normalizeBook(b: string): string {
-  return b
-    .replace(/^1/, "1").replace(/^2/, "2").replace(/^3/, "3")
-    .replace(/^gen$/, "gn").replace(/^exod$/, "ex").replace(/^deut$/, "dt")
-    .replace(/^matt?$/, "mt").replace(/^mark$/, "mk")
-    .replace(/^luke$/, "lk").replace(/^john$/, "jn")
-    .replace(/^rom$/, "rm").replace(/^phil$/, "ph")
-    .replace(/^rev$/, "rv").replace(/^isa?$/, "is");
+  const rawBook = m[1].replace(/\s+/g, "").toLowerCase();
+  const chapter = parseInt(m[2], 10);
+  const canonical = BOOK_CANON[rawBook];
+
+  return {
+    book: canonical || rawBook,
+    chapter,
+  };
 }
 
 /**
@@ -36,18 +118,16 @@ export function scriptureMatch(songRef: string, readingCitation: string): boolea
   const readParsed = parseCitation(readingCitation);
   if (!songParsed || !readParsed) return false;
 
-  const normSong = normalizeBook(songParsed.book);
-  const normRead = normalizeBook(readParsed.book);
-
-  return normSong === normRead && songParsed.chapter === readParsed.chapter;
+  return songParsed.book === readParsed.book && songParsed.chapter === readParsed.chapter;
 }
 
-export type ScriptureSubFilter = "all" | "first" | "second" | "gospel";
+export type ScriptureSubFilter = "all" | "first" | "second" | "gospel" | "psalm";
 
 export interface DayReadings {
   first?: string;
   second?: string;
   gospel?: string;
+  psalm?: string;
   all: string[];
 }
 
@@ -61,8 +141,11 @@ export function parseUSCCBCitations(raw: string): string[] {
   const cleaned = raw.replace(/\s*\(\d+[A-Z]?\)\s*(Pss\s+\w+)?$/, "").trim();
   if (!cleaned) return [];
 
+  // Strip "(second choice)" or similar parentheticals within parts
+  const withoutParens = cleaned.replace(/\s*\([^)]*\)/g, "");
+
   // Split on / to get individual readings
-  const parts = cleaned.split("/");
+  const parts = withoutParens.split("/");
   const citations: string[] = [];
 
   for (const part of parts) {
@@ -146,5 +229,6 @@ export function getCitationsForSubFilter(readings: DayReadings, subFilter: Scrip
     case "first": return readings.first ? [readings.first] : [];
     case "second": return readings.second ? [readings.second] : [];
     case "gospel": return readings.gospel ? [readings.gospel] : [];
+    case "psalm": return readings.psalm ? [readings.psalm] : [];
   }
 }
