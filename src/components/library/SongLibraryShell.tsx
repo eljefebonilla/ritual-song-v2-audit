@@ -37,6 +37,7 @@ import AlphabetJump from "./AlphabetJump";
 import LibraryFilters from "./LibraryFilters";
 import PsalmNumberPicker from "./PsalmNumberPicker";
 import SubFilterChips from "./SubFilterChips";
+import SongExplorer from "./SongExplorer";
 
 interface SongLibraryShellProps {
   songs: LibrarySong[];
@@ -239,6 +240,9 @@ export default function SongLibraryShell({ songs, title = "Music Library", subti
   // Scripture match filter state
   const [scriptureMatchMode, setScriptureMatchMode] = useState(false);
   const [scriptureSubFilter, setScriptureSubFilter] = useState<ScriptureSubFilter>("all");
+
+  // Song Explorer state
+  const [explorerOpen, setExplorerOpen] = useState(false);
 
   // Normalized title index for fuzzy matching
   const normalizedTitleIndex = useMemo(() => {
@@ -1281,6 +1285,26 @@ export default function SongLibraryShell({ songs, title = "Music Library", subti
               />
             </div>
 
+            {/* Explore button — shows when a date is selected */}
+            {selectedDate && (
+              <button
+                onClick={() => setExplorerOpen((v) => !v)}
+                className={`flex items-center gap-1.5 px-2.5 py-1.5 text-xs font-medium rounded-md transition-colors self-start ${
+                  explorerOpen
+                    ? "bg-amber-100 text-amber-800 border border-amber-300"
+                    : "bg-stone-100 text-stone-600 hover:bg-amber-50 hover:text-amber-700 border border-transparent"
+                }`}
+                title="Song Explorer — discover songs through readings and themes"
+              >
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                  <circle cx="12" cy="12" r="10" />
+                  <path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20" />
+                  <path d="M2 12h20" />
+                </svg>
+                Explore
+              </button>
+            )}
+
             {/* Sort */}
             <div className="flex bg-stone-100 rounded-lg p-0.5 self-start">
               {SORT_OPTIONS.map((opt) => (
@@ -1327,6 +1351,22 @@ export default function SongLibraryShell({ songs, title = "Music Library", subti
             </div>
           )}
         </div>
+
+        {/* Song Explorer vine visualization */}
+        {explorerOpen && selectedDate && (
+          <div className="border-b border-stone-200 bg-stone-50/50">
+            <SongExplorer
+              dateStr={selectedDate}
+              songs={activeSongs}
+              season={dateOccasionMap.get(selectedDate)?.season || "ordinary"}
+              onSelectSong={(songId) => {
+                setSelectedSongId(songId);
+                setExplorerOpen(false);
+              }}
+              onClose={() => setExplorerOpen(false)}
+            />
+          </div>
+        )}
 
         {/* Filter sidebar + song list */}
         <div className="flex-1 flex overflow-hidden">
