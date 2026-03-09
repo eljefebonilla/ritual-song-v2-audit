@@ -5,7 +5,6 @@ import type { LibrarySong } from "@/lib/types";
 import {
   buildExplorerGraph,
   type ExplorerNode,
-  type ExplorerGraph,
 } from "@/lib/song-explorer";
 
 interface SongExplorerProps {
@@ -17,255 +16,71 @@ interface SongExplorerProps {
   onClose: () => void;
 }
 
-// Layout constants
-const SVG_WIDTH = 720;
-const SVG_HEIGHT = 480;
-const CENTER_X = 100;
-const CENTER_Y = SVG_HEIGHT / 2;
-const READING_X = 60;
-const THEME_X = 260;
-const SONG_X = 480;
+// --- Layout constants ---
+const SVG_SIZE = 580;
+const CX = SVG_SIZE / 2;
+const CY = SVG_SIZE / 2;
+const READING_RADIUS = 60; // inner ring
+const THEME_RADIUS = 155; // middle ring
+const SONG_RADIUS = 265; // outer ring
 
-// Colors
-const READING_COLOR = "#92400e"; // amber-800
-const THEME_COLOR = "#78716c"; // stone-500
-const SONG_COLOR = "#1c1917"; // stone-900
-const VINE_COLOR = "#d6d3d1"; // stone-300
-const VINE_ACTIVE = "#a16207"; // amber-700
-const SCRIPTURE_BADGE = "#fef3c7"; // amber-100
+// --- Colors ---
+const AMBER_700 = "#a16207";
+const AMBER_800 = "#92400e";
+const STONE_300 = "#d6d3d1";
+const STONE_400 = "#a8a29e";
+const STONE_500 = "#78716c";
+const STONE_900 = "#1c1917";
 
-function VinePath({
+/** Place items in a circle around center */
+function radialPosition(
+  index: number,
+  total: number,
+  radius: number,
+  offsetAngle = -Math.PI / 2 // start from top
+): { x: number; y: number } {
+  const angle = offsetAngle + (2 * Math.PI * index) / total;
+  return {
+    x: CX + radius * Math.cos(angle),
+    y: CY + radius * Math.sin(angle),
+  };
+}
+
+/** Curved connection line between two points */
+function Connection({
   x1, y1, x2, y2,
   active = false,
+  scripture = false,
 }: {
   x1: number; y1: number; x2: number; y2: number;
   active?: boolean;
+  scripture?: boolean;
 }) {
-  // Cubic bezier with organic curve
-  const midX = (x1 + x2) / 2;
-  const cp1x = x1 + (midX - x1) * 0.6;
-  const cp2x = x2 - (x2 - midX) * 0.6;
-  // Add slight vertical offset for organic feel
-  const offsetY = (y2 - y1) * 0.1;
+  // Curve toward center for organic feel
+  const mx = (x1 + x2) / 2;
+  const my = (y1 + y2) / 2;
+  const dx = x2 - x1;
+  const dy = y2 - y1;
+  const dist = Math.sqrt(dx * dx + dy * dy);
+  // Pull control point toward center
+  const pullX = (CX - mx) * 0.15;
+  const pullY = (CY - my) * 0.15;
+  const cpx = mx + pullX;
+  const cpy = my + pullY;
 
-  const d = `M ${x1} ${y1} C ${cp1x} ${y1 + offsetY}, ${cp2x} ${y2 - offsetY}, ${x2} ${y2}`;
+  const strokeColor = scripture ? AMBER_700 : active ? AMBER_700 : STONE_300;
+  const opacity = active || scripture ? 0.7 : 0.2;
+  const width = active || scripture ? 1.5 : 0.8;
 
   return (
     <path
-      d={d}
+      d={`M ${x1} ${y1} Q ${cpx} ${cpy} ${x2} ${y2}`}
       fill="none"
-      stroke={active ? VINE_ACTIVE : VINE_COLOR}
-      strokeWidth={active ? 2 : 1}
-      strokeOpacity={active ? 0.9 : 0.35}
+      stroke={strokeColor}
+      strokeWidth={width}
+      strokeOpacity={opacity}
       className="transition-all duration-300"
     />
-  );
-}
-
-function ReadingNode({
-  node,
-  y,
-  isHovered,
-  onHover,
-}: {
-  node: ExplorerNode;
-  y: number;
-  isHovered: boolean;
-  onHover: (id: string | null) => void;
-}) {
-  return (
-    <g
-      onMouseEnter={() => onHover(node.id)}
-      onMouseLeave={() => onHover(null)}
-      className="cursor-pointer"
-    >
-      {/* Dot */}
-      <circle
-        cx={READING_X}
-        cy={y}
-        r={isHovered ? 6 : 4}
-        fill={READING_COLOR}
-        className="transition-all duration-200"
-      />
-      {/* Label */}
-      <text
-        x={READING_X - 12}
-        y={y - 10}
-        textAnchor="end"
-        fontSize="9"
-        fontWeight="600"
-        fill={isHovered ? READING_COLOR : "#78716c"}
-        className="transition-colors duration-200"
-      >
-        {node.sublabel}
-      </text>
-      <text
-        x={READING_X - 12}
-        y={y + 3}
-        textAnchor="end"
-        fontSize="10"
-        fontWeight="700"
-        fill={READING_COLOR}
-      >
-        {node.label}
-      </text>
-    </g>
-  );
-}
-
-function ThemeNode({
-  node,
-  x,
-  y,
-  isHovered,
-  isActive,
-  songCount,
-  onHover,
-  onClick,
-}: {
-  node: ExplorerNode;
-  x: number;
-  y: number;
-  isHovered: boolean;
-  isActive: boolean;
-  songCount: number;
-  onHover: (id: string | null) => void;
-  onClick: (id: string) => void;
-}) {
-  const radius = isActive ? 22 : isHovered ? 20 : 16;
-
-  return (
-    <g
-      onMouseEnter={() => onHover(node.id)}
-      onMouseLeave={() => onHover(null)}
-      onClick={() => onClick(node.id)}
-      className="cursor-pointer"
-    >
-      {/* Outer ring */}
-      <circle
-        cx={x}
-        cy={y}
-        r={radius + 2}
-        fill="none"
-        stroke={isActive ? VINE_ACTIVE : isHovered ? THEME_COLOR : "transparent"}
-        strokeWidth="1.5"
-        strokeOpacity="0.5"
-        className="transition-all duration-200"
-      />
-      {/* Main circle */}
-      <circle
-        cx={x}
-        cy={y}
-        r={radius}
-        fill={isActive ? "#fef3c7" : isHovered ? "#f5f5f4" : "#fafaf9"}
-        stroke={isActive ? VINE_ACTIVE : THEME_COLOR}
-        strokeWidth={isActive ? 1.5 : 1}
-        className="transition-all duration-200"
-      />
-      {/* Label */}
-      <text
-        x={x}
-        y={y - 2}
-        textAnchor="middle"
-        fontSize="9"
-        fontWeight={isActive ? "700" : "600"}
-        fill={isActive ? VINE_ACTIVE : THEME_COLOR}
-      >
-        {node.label}
-      </text>
-      {/* Count */}
-      <text
-        x={x}
-        y={y + 9}
-        textAnchor="middle"
-        fontSize="8"
-        fill={isActive ? "#92400e" : "#a8a29e"}
-      >
-        {songCount}
-      </text>
-    </g>
-  );
-}
-
-function SongNode({
-  node,
-  x,
-  y,
-  isHovered,
-  isScripture,
-  onHover,
-  onClick,
-}: {
-  node: ExplorerNode;
-  x: number;
-  y: number;
-  isHovered: boolean;
-  isScripture: boolean;
-  onHover: (id: string | null) => void;
-  onClick: (songId: string) => void;
-}) {
-  const maxLabelWidth = 200;
-
-  return (
-    <g
-      onMouseEnter={() => onHover(node.id)}
-      onMouseLeave={() => onHover(null)}
-      onClick={() => node.songId && onClick(node.songId)}
-      className="cursor-pointer"
-    >
-      {/* Background pill */}
-      <rect
-        x={x - 4}
-        y={y - 12}
-        width={maxLabelWidth + 8}
-        height={24}
-        rx="4"
-        fill={isHovered ? "#f5f5f4" : isScripture ? SCRIPTURE_BADGE : "transparent"}
-        stroke={isHovered ? VINE_ACTIVE : "transparent"}
-        strokeWidth="1"
-        className="transition-all duration-200"
-      />
-      {/* Dot */}
-      <circle
-        cx={x}
-        cy={y}
-        r={isScripture ? 4 : 3}
-        fill={isScripture ? VINE_ACTIVE : SONG_COLOR}
-        className="transition-all duration-200"
-      />
-      {/* Title */}
-      <text
-        x={x + 10}
-        y={y - 1}
-        fontSize="10"
-        fontWeight={isHovered || isScripture ? "600" : "500"}
-        fill={SONG_COLOR}
-      >
-        {node.label.length > 30 ? node.label.slice(0, 28) + "..." : node.label}
-      </text>
-      {/* Composer + usage */}
-      <text
-        x={x + 10}
-        y={y + 9}
-        fontSize="8"
-        fill="#a8a29e"
-      >
-        {node.sublabel ? (node.sublabel.length > 25 ? node.sublabel.slice(0, 23) + "..." : node.sublabel) : ""}
-        {node.usageCount ? ` · ${node.usageCount}x` : ""}
-      </text>
-      {/* Scripture badge */}
-      {isScripture && node.reasons && node.reasons.length > 0 && (
-        <text
-          x={x + 10}
-          y={y + 20}
-          fontSize="7"
-          fontWeight="600"
-          fill="#92400e"
-        >
-          {node.reasons[0]}
-        </text>
-      )}
-    </g>
   );
 }
 
@@ -296,48 +111,46 @@ export default function SongExplorer({
     [onSelectSong]
   );
 
-  // Layout positions
+  // --- Radial positions ---
   const readingPositions = useMemo(() => {
-    const nodes = graph.readingNodes;
-    const spacing = Math.min(80, (SVG_HEIGHT - 80) / Math.max(nodes.length, 1));
-    const startY = SVG_HEIGHT / 2 - ((nodes.length - 1) * spacing) / 2;
-    return nodes.map((n, i) => ({ node: n, y: startY + i * spacing }));
+    return graph.readingNodes.map((node, i) => ({
+      node,
+      ...radialPosition(i, graph.readingNodes.length, READING_RADIUS),
+    }));
   }, [graph.readingNodes]);
 
   const themePositions = useMemo(() => {
-    const nodes = graph.themeNodes;
-    const spacing = Math.min(55, (SVG_HEIGHT - 40) / Math.max(nodes.length, 1));
-    const startY = SVG_HEIGHT / 2 - ((nodes.length - 1) * spacing) / 2;
-    return nodes.map((n, i) => ({ node: n, x: THEME_X, y: startY + i * spacing }));
+    return graph.themeNodes.map((node, i) => ({
+      node,
+      ...radialPosition(i, graph.themeNodes.length, THEME_RADIUS),
+    }));
   }, [graph.themeNodes]);
 
   // Filter songs based on active theme
   const visibleSongs = useMemo(() => {
     if (!activeTheme) {
-      // Show scripture matches + top scored
-      return graph.songNodes.slice(0, 12);
+      return graph.songNodes.slice(0, 16);
     }
-    // Show songs connected to this theme
     const connectedIds = new Set(
       graph.edges
         .filter((e) => e.from === activeTheme)
         .map((e) => e.to)
     );
     const connected = graph.songNodes.filter((n) => connectedIds.has(n.id));
-    // Also include direct scripture matches
     const scriptureMatches = graph.songNodes.filter(
       (n) => n.reasons?.some((r) => r.startsWith("Scripture:")) && !connectedIds.has(n.id)
     );
-    return [...connected, ...scriptureMatches].slice(0, 12);
+    return [...connected, ...scriptureMatches].slice(0, 16);
   }, [graph, activeTheme]);
 
   const songPositions = useMemo(() => {
-    const spacing = Math.min(36, (SVG_HEIGHT - 40) / Math.max(visibleSongs.length, 1));
-    const startY = SVG_HEIGHT / 2 - ((visibleSongs.length - 1) * spacing) / 2;
-    return visibleSongs.map((n, i) => ({ node: n, x: SONG_X, y: startY + i * spacing }));
+    return visibleSongs.map((node, i) => ({
+      node,
+      ...radialPosition(i, visibleSongs.length, SONG_RADIUS),
+    }));
   }, [visibleSongs]);
 
-  // Count songs per theme
+  // Song counts per theme
   const themeSongCounts = useMemo(() => {
     const counts: Record<string, number> = {};
     for (const edge of graph.edges) {
@@ -348,8 +161,8 @@ export default function SongExplorer({
     return counts;
   }, [graph.edges]);
 
-  // Active edges based on hover/selection
-  const activeEdges = useMemo(() => {
+  // Active edges
+  const activeEdgeKeys = useMemo(() => {
     const active = new Set<string>();
     if (hoveredNode || activeTheme) {
       const target = hoveredNode || activeTheme;
@@ -362,14 +175,20 @@ export default function SongExplorer({
     return active;
   }, [hoveredNode, activeTheme, graph.edges]);
 
+  // Build position lookup maps
+  const posMap = useMemo(() => {
+    const m: Record<string, { x: number; y: number }> = {};
+    for (const p of readingPositions) m[p.node.id] = { x: p.x, y: p.y };
+    for (const p of themePositions) m[p.node.id] = { x: p.x, y: p.y };
+    for (const p of songPositions) m[p.node.id] = { x: p.x, y: p.y };
+    return m;
+  }, [readingPositions, themePositions, songPositions]);
+
   if (graph.readingNodes.length === 0) {
     return (
       <div className="bg-stone-50 rounded-lg p-6 text-center">
         <p className="text-sm text-stone-400">No readings found for this date.</p>
-        <button
-          onClick={onClose}
-          className="mt-2 text-xs text-stone-500 hover:text-stone-700"
-        >
+        <button onClick={onClose} className="mt-2 text-xs text-stone-500 hover:text-stone-700">
           Close
         </button>
       </div>
@@ -381,7 +200,7 @@ export default function SongExplorer({
       {/* Header */}
       <div className="flex items-center justify-between px-4 py-2.5 bg-stone-50 border-b border-stone-200">
         <div className="flex items-center gap-2">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#92400e" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke={AMBER_800} strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
             <circle cx="12" cy="12" r="10" />
             <path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20" />
             <path d="M2 12h20" />
@@ -395,10 +214,7 @@ export default function SongExplorer({
             </span>
           )}
         </div>
-        <button
-          onClick={onClose}
-          className="p-1 hover:bg-stone-200 rounded transition-colors"
-        >
+        <button onClick={onClose} className="p-1 hover:bg-stone-200 rounded transition-colors">
           <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-stone-400">
             <path d="M18 6 6 18" />
             <path d="m6 6 12 12" />
@@ -406,109 +222,245 @@ export default function SongExplorer({
         </button>
       </div>
 
-      {/* SVG Vine Visualization */}
-      <div className="overflow-x-auto">
+      {/* Radial Constellation */}
+      <div className="flex justify-center overflow-x-auto bg-stone-50/30">
         <svg
-          width={SVG_WIDTH}
-          height={SVG_HEIGHT}
-          viewBox={`0 0 ${SVG_WIDTH} ${SVG_HEIGHT}`}
+          width={SVG_SIZE}
+          height={SVG_SIZE}
+          viewBox={`0 0 ${SVG_SIZE} ${SVG_SIZE}`}
           className="select-none"
         >
-          {/* Column labels */}
-          <text x={READING_X} y={20} textAnchor="middle" fontSize="9" fontWeight="700" fill="#a8a29e" className="uppercase">
-            Readings
-          </text>
-          <text x={THEME_X} y={20} textAnchor="middle" fontSize="9" fontWeight="700" fill="#a8a29e" className="uppercase">
-            Themes
-          </text>
-          <text x={SONG_X + 60} y={20} textAnchor="middle" fontSize="9" fontWeight="700" fill="#a8a29e" className="uppercase">
-            Songs
-          </text>
+          <defs>
+            <radialGradient id="centerGlow" cx="50%" cy="50%" r="50%">
+              <stop offset="0%" stopColor={AMBER_700} stopOpacity="0.06" />
+              <stop offset="70%" stopColor={AMBER_700} stopOpacity="0.02" />
+              <stop offset="100%" stopColor={AMBER_700} stopOpacity="0" />
+            </radialGradient>
+          </defs>
 
-          {/* Vine paths: Reading → Theme */}
+          {/* Ambient glow */}
+          <circle cx={CX} cy={CY} r={THEME_RADIUS + 20} fill="url(#centerGlow)" />
+
+          {/* Orbit rings (subtle) */}
+          <circle cx={CX} cy={CY} r={READING_RADIUS} fill="none" stroke={STONE_300} strokeWidth="0.5" strokeOpacity="0.3" strokeDasharray="2 4" />
+          <circle cx={CX} cy={CY} r={THEME_RADIUS} fill="none" stroke={STONE_300} strokeWidth="0.5" strokeOpacity="0.2" strokeDasharray="2 4" />
+
+          {/* --- Connection lines --- */}
+          {/* Reading → Theme */}
           {graph.edges
             .filter((e) => e.from.startsWith("r-") && e.to.startsWith("t-"))
             .map((edge) => {
-              const rPos = readingPositions.find((p) => p.node.id === edge.from);
-              const tPos = themePositions.find((p) => p.node.id === edge.to);
-              if (!rPos || !tPos) return null;
-              const isActive = activeEdges.has(`${edge.from}->${edge.to}`);
+              const from = posMap[edge.from];
+              const to = posMap[edge.to];
+              if (!from || !to) return null;
               return (
-                <VinePath
+                <Connection
                   key={`${edge.from}-${edge.to}`}
-                  x1={READING_X + 8}
-                  y1={rPos.y}
-                  x2={tPos.x - 20}
-                  y2={tPos.y}
-                  active={isActive}
+                  x1={from.x} y1={from.y}
+                  x2={to.x} y2={to.y}
+                  active={activeEdgeKeys.has(`${edge.from}->${edge.to}`)}
                 />
               );
             })}
 
-          {/* Vine paths: Theme → Song */}
-          {songPositions.map(({ node: sNode, x: sx, y: sy }) => {
-            // Find which theme connects to this song
-            const connEdges = graph.edges.filter((e) => e.to === sNode.id);
-            return connEdges.map((edge) => {
-              const tPos = themePositions.find((p) => p.node.id === edge.from);
-              const rPos = readingPositions.find((p) => p.node.id === edge.from);
-              const fromPos = tPos || rPos;
-              if (!fromPos) return null;
-              const fromX = tPos ? tPos.x + 20 : READING_X + 8;
-              const fromY = "y" in fromPos ? fromPos.y : 0;
-              const isActive = activeEdges.has(`${edge.from}->${edge.to}`);
+          {/* Theme → Song */}
+          {graph.edges
+            .filter((e) => e.to.startsWith("s-") && posMap[e.from] && posMap[e.to])
+            .map((edge) => {
+              const from = posMap[edge.from];
+              const to = posMap[edge.to];
+              if (!from || !to) return null;
+              const isScripture = edge.from.startsWith("r-");
               return (
-                <VinePath
-                  key={`${edge.from}-${sNode.id}`}
-                  x1={fromX}
-                  y1={fromY}
-                  x2={sx - 6}
-                  y2={sy}
-                  active={isActive}
+                <Connection
+                  key={`${edge.from}-${edge.to}`}
+                  x1={from.x} y1={from.y}
+                  x2={to.x} y2={to.y}
+                  active={activeEdgeKeys.has(`${edge.from}->${edge.to}`)}
+                  scripture={isScripture}
                 />
               );
-            });
+            })}
+
+          {/* --- Center: Date label --- */}
+          <text x={CX} y={CY - 4} textAnchor="middle" fontSize="11" fontWeight="700" fill={STONE_500}>
+            {dateStr}
+          </text>
+          <text x={CX} y={CY + 10} textAnchor="middle" fontSize="8" fill={STONE_400}>
+            {graph.songNodes.length} songs
+          </text>
+
+          {/* --- Reading nodes (inner ring) --- */}
+          {readingPositions.map(({ node, x, y }) => {
+            const isHovered = hoveredNode === node.id;
+            const r = isHovered ? 8 : 6;
+            return (
+              <g
+                key={node.id}
+                onMouseEnter={() => setHoveredNode(node.id)}
+                onMouseLeave={() => setHoveredNode(null)}
+                className="cursor-pointer"
+              >
+                {/* Glow ring on hover */}
+                {isHovered && (
+                  <circle cx={x} cy={y} r={r + 4} fill={AMBER_700} fillOpacity="0.08" />
+                )}
+                <circle cx={x} cy={y} r={r} fill="white" stroke={AMBER_800} strokeWidth={isHovered ? 2 : 1.5} />
+                {/* Sublabel */}
+                <text
+                  x={x}
+                  y={y - r - 6}
+                  textAnchor="middle"
+                  fontSize="7"
+                  fontWeight="600"
+                  fill={STONE_400}
+                >
+                  {node.sublabel}
+                </text>
+                {/* Citation */}
+                <text
+                  x={x}
+                  y={y - r - 16}
+                  textAnchor="middle"
+                  fontSize="9"
+                  fontWeight="700"
+                  fill={AMBER_800}
+                >
+                  {node.label.length > 18 ? node.label.slice(0, 16) + "..." : node.label}
+                </text>
+              </g>
+            );
           })}
 
-          {/* Reading nodes */}
-          {readingPositions.map(({ node, y }) => (
-            <ReadingNode
-              key={node.id}
-              node={node}
-              y={y}
-              isHovered={hoveredNode === node.id}
-              onHover={setHoveredNode}
-            />
-          ))}
+          {/* --- Theme nodes (middle ring) --- */}
+          {themePositions.map(({ node, x, y }) => {
+            const isHovered = hoveredNode === node.id;
+            const isActive = activeTheme === node.id;
+            const r = isActive ? 24 : isHovered ? 22 : 18;
+            const count = themeSongCounts[node.id] || 0;
 
-          {/* Theme nodes */}
-          {themePositions.map(({ node, x, y }) => (
-            <ThemeNode
-              key={node.id}
-              node={node}
-              x={x}
-              y={y}
-              isHovered={hoveredNode === node.id}
-              isActive={activeTheme === node.id}
-              songCount={themeSongCounts[node.id] || 0}
-              onHover={setHoveredNode}
-              onClick={handleThemeClick}
-            />
-          ))}
+            return (
+              <g
+                key={node.id}
+                onMouseEnter={() => setHoveredNode(node.id)}
+                onMouseLeave={() => setHoveredNode(null)}
+                onClick={() => handleThemeClick(node.id)}
+                className="cursor-pointer"
+              >
+                {/* Hover/active glow */}
+                {(isHovered || isActive) && (
+                  <circle cx={x} cy={y} r={r + 6} fill={AMBER_700} fillOpacity="0.06" />
+                )}
+                {/* Outer ring */}
+                <circle
+                  cx={x} cy={y} r={r + 2}
+                  fill="none"
+                  stroke={isActive ? AMBER_700 : isHovered ? STONE_500 : "transparent"}
+                  strokeWidth="1"
+                  strokeOpacity="0.4"
+                />
+                {/* Main circle */}
+                <circle
+                  cx={x} cy={y} r={r}
+                  fill={isActive ? "#fef3c7" : "white"}
+                  stroke={isActive ? AMBER_700 : STONE_300}
+                  strokeWidth={isActive ? 1.5 : 1}
+                />
+                {/* Label */}
+                <text
+                  x={x} y={y - 2}
+                  textAnchor="middle"
+                  fontSize="9"
+                  fontWeight={isActive ? "700" : "600"}
+                  fill={isActive ? AMBER_700 : STONE_500}
+                >
+                  {node.label}
+                </text>
+                {/* Count */}
+                <text
+                  x={x} y={y + 9}
+                  textAnchor="middle"
+                  fontSize="7"
+                  fill={isActive ? AMBER_800 : STONE_400}
+                >
+                  {count}
+                </text>
+              </g>
+            );
+          })}
 
-          {/* Song nodes */}
-          {songPositions.map(({ node, x, y }) => (
-            <SongNode
-              key={node.id}
-              node={node}
-              x={x}
-              y={y}
-              isHovered={hoveredNode === node.id}
-              isScripture={!!node.reasons?.some((r) => r.startsWith("Scripture:"))}
-              onHover={setHoveredNode}
-              onClick={handleSongClick}
-            />
-          ))}
+          {/* --- Song nodes (outer ring) --- */}
+          {songPositions.map(({ node, x, y }) => {
+            const isHovered = hoveredNode === node.id;
+            const isScripture = !!node.reasons?.some((r) => r.startsWith("Scripture:"));
+            // Determine label anchor based on position
+            const angle = Math.atan2(y - CY, x - CX);
+            const isRight = Math.abs(angle) < Math.PI / 2;
+            const labelX = isRight ? x + 10 : x - 10;
+            const anchor = isRight ? "start" : "end";
+            // Truncate long titles
+            const maxLen = 28;
+            const title = node.label.length > maxLen
+              ? node.label.slice(0, maxLen - 2) + "..."
+              : node.label;
+
+            return (
+              <g
+                key={node.id}
+                onMouseEnter={() => setHoveredNode(node.id)}
+                onMouseLeave={() => setHoveredNode(null)}
+                onClick={() => node.songId && handleSongClick(node.songId)}
+                className="cursor-pointer"
+              >
+                {/* Hover glow */}
+                {isHovered && (
+                  <circle cx={x} cy={y} r={10} fill={AMBER_700} fillOpacity="0.08" />
+                )}
+                {/* Scripture highlight background */}
+                {isScripture && (
+                  <circle cx={x} cy={y} r={7} fill="#fef3c7" stroke="#fcd34d" strokeWidth="0.5" />
+                )}
+                {/* Dot */}
+                <circle
+                  cx={x} cy={y}
+                  r={isScripture ? 5 : isHovered ? 4 : 3}
+                  fill={isScripture ? AMBER_700 : isHovered ? STONE_500 : STONE_400}
+                />
+                {/* Title */}
+                <text
+                  x={labelX} y={y - 3}
+                  textAnchor={anchor}
+                  fontSize="9"
+                  fontWeight={isScripture || isHovered ? "600" : "500"}
+                  fill={isHovered ? STONE_900 : isScripture ? AMBER_800 : STONE_500}
+                >
+                  {title}
+                </text>
+                {/* Composer + usage */}
+                <text
+                  x={labelX} y={y + 7}
+                  textAnchor={anchor}
+                  fontSize="7"
+                  fill={STONE_400}
+                >
+                  {node.sublabel ? (node.sublabel.length > 20 ? node.sublabel.slice(0, 18) + "..." : node.sublabel) : ""}
+                  {node.usageCount ? ` · ${node.usageCount}x` : ""}
+                </text>
+                {/* Scripture ref badge */}
+                {isScripture && node.reasons && node.reasons.length > 0 && (
+                  <text
+                    x={labelX} y={y + 16}
+                    textAnchor={anchor}
+                    fontSize="7"
+                    fontWeight="600"
+                    fill={AMBER_700}
+                  >
+                    {node.reasons[0]}
+                  </text>
+                )}
+              </g>
+            );
+          })}
         </svg>
       </div>
 
@@ -520,7 +472,7 @@ export default function SongExplorer({
         {activeTheme && (
           <button
             onClick={() => setActiveTheme(null)}
-            className="text-[10px] text-stone-500 hover:text-stone-700 transition-colors"
+            className="text-[10px] text-amber-700 hover:text-amber-900 transition-colors"
           >
             Show all
           </button>
