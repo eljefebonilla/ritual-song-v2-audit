@@ -11,13 +11,14 @@ import CalendarToolbar from "./CalendarToolbar";
 import AgendaView from "./AgendaView";
 import MonthView from "./MonthView";
 import EventEditor from "./EventEditor";
+import { LS_HIDDEN_WEEKS } from "@/lib/storage-keys";
 
 interface CalendarShellProps {
   calendar: MinistryCalendar;
   liturgicalDays?: LiturgicalDay[];
 }
 
-const HIDDEN_WEEKS_KEY = "rs_hidden_weeks";
+const HIDDEN_WEEKS_KEY = LS_HIDDEN_WEEKS;
 
 export default function CalendarShell({ calendar, liturgicalDays }: CalendarShellProps) {
   const { isAdmin } = useUser();

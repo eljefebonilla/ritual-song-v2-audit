@@ -2,8 +2,9 @@
 
 import { useSyncExternalStore, useCallback } from "react";
 import { useUser } from "@/lib/user-context";
+import { LS_VIEW_MODE } from "@/lib/storage-keys";
 
-const STORAGE_KEY = "rs_view_mode";
+const STORAGE_KEY = LS_VIEW_MODE;
 type ViewMode = "director" | "member";
 
 // Module-level listeners for same-tab sync

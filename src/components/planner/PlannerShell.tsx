@@ -10,11 +10,12 @@ import {
 } from "@/lib/grid-data";
 import FilterToolbar from "./FilterToolbar";
 import PlannerGrid from "./PlannerGrid";
+import { LS_HIDE_PAST_WEEKS, LS_HIDE_MASS_PARTS, LS_HIDE_READINGS, LS_HIDE_SYNOPSES } from "@/lib/storage-keys";
 
-const HIDE_PAST_KEY = "rs_hide_past_weeks";
-const HIDE_MASS_PARTS_KEY = "rs_hide_mass_parts";
-const HIDE_READINGS_KEY = "rs_hide_readings";
-const HIDE_SYNOPSES_KEY = "rs_hide_synopses";
+const HIDE_PAST_KEY = LS_HIDE_PAST_WEEKS;
+const HIDE_MASS_PARTS_KEY = LS_HIDE_MASS_PARTS;
+const HIDE_READINGS_KEY = LS_HIDE_READINGS;
+const HIDE_SYNOPSES_KEY = LS_HIDE_SYNOPSES;
 
 export type PlannerViewMode = "grid" | "cards";
 

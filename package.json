@@ -1,6 +1,6 @@
 {
   "name": "ritualsong-app",
-  "version": "1.18.1",
+  "version": "1.19.0",
   "private": true,
   "scripts": {
     "dev": "next dev",
@@ -21,8 +21,7 @@
     "react-dom": "19.2.3",
     "resend": "^6.9.3",
     "soundtouchjs": "^0.3.0",
-    "twilio": "^5.12.2",
-    "xlsx": "^0.18.5"
+    "twilio": "^5.12.2"
   },
   "devDependencies": {
     "@tailwindcss/postcss": "^4",

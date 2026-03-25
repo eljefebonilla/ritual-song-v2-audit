@@ -29,8 +29,10 @@ function PendingBadge() {
 
 // --- Persistence ---
 
-const HIDDEN_NAV_KEY = "rs_hidden_nav";
-const NAV_ORDER_KEY = "rs_nav_order";
+import { LS_HIDDEN_NAV, LS_NAV_ORDER } from "@/lib/storage-keys";
+
+const HIDDEN_NAV_KEY = LS_HIDDEN_NAV;
+const NAV_ORDER_KEY = LS_NAV_ORDER;
 
 function getHiddenNav(): Set<string> {
   try {
@@ -431,7 +433,7 @@ export default function Sidebar({ open, onClose }: SidebarProps) {
           )}
           <div className="flex items-center justify-between">
             <p className="text-[10px] text-parish-gold/60 uppercase tracking-wider">St. Monica Catholic Community</p>
-            <span className="text-[9px] text-stone-500">v1.18.1</span>
+            <span className="text-[9px] text-stone-500">v{process.env.NEXT_PUBLIC_APP_VERSION}</span>
           </div>
         </div>
       )}

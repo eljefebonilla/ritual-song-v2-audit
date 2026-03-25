@@ -7,6 +7,7 @@ import type {
   SongResource,
 } from "@/lib/types";
 import { useUser } from "@/lib/user-context";
+import { LS_DISMISSED_RECS } from "@/lib/storage-keys";
 import { extractChartKeys } from "@/lib/key-utils";
 import { filterPsalmResourcesByEnsemble } from "@/lib/occasion-helpers";
 import {
@@ -88,7 +89,7 @@ interface SlimRec {
 
 function getDismissedRecs(): string[] {
   try {
-    const raw = localStorage.getItem("rs_dismissed_recs");
+    const raw = localStorage.getItem(LS_DISMISSED_RECS);
     return raw ? JSON.parse(raw) : [];
   } catch {
     return [];
@@ -99,7 +100,7 @@ function addDismissedRec(songId: string) {
   const current = getDismissedRecs();
   if (!current.includes(songId)) {
     current.push(songId);
-    localStorage.setItem("rs_dismissed_recs", JSON.stringify(current));
+    localStorage.setItem(LS_DISMISSED_RECS, JSON.stringify(current));
   }
 }
 

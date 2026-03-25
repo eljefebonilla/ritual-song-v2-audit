@@ -31,8 +31,14 @@ export function getCalendar() {
   return calendarData as { thisWeek: string | null; nextWeek: string | null };
 }
 
+// eslint-disable-next-line @typescript-eslint/no-require-imports
+const occasionCache = new Map<string, LiturgicalOccasion | null>();
+
 export function getOccasion(id: string): LiturgicalOccasion | null {
+  if (occasionCache.has(id)) return occasionCache.get(id)!;
   try {
+    // Server-only: webpack/turbopack resolves this at build time for generateStaticParams.
+    // Client bundles never reach this code path (occasions are passed as props from server components).
     const data = require(`../data/occasions/${id}.json`);
     // Normalize legacy communityId → ensembleId in music plans
     if (data.musicPlans) {
@@ -45,8 +51,11 @@ export function getOccasion(id: string): LiturgicalOccasion | null {
         }
       }
     }
-    return data as LiturgicalOccasion;
+    const occasion = data as LiturgicalOccasion;
+    occasionCache.set(id, occasion);
+    return occasion;
   } catch {
+    occasionCache.set(id, null);
     return null;
   }
 }

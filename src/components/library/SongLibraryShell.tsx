@@ -2,6 +2,7 @@
 
 import { useState, useMemo, useCallback, useRef, useEffect } from "react";
 import { useSearchParams } from "next/navigation";
+import { LS_PANEL_WIDTH } from "@/lib/storage-keys";
 import type { LibrarySong, LiturgicalOccasion, SongCategory, ExpandedSongCategory } from "@/lib/types";
 import {
   MASS_PART_CATEGORIES, GOSPEL_ACCLAMATION_CATEGORIES,
@@ -112,7 +113,7 @@ export default function SongLibraryShell({ songs, title = "Music Library", subti
   const PANEL_MIN = 320;
   const [panelWidth, setPanelWidth] = useState<number>(() => {
     if (typeof window === "undefined") return PANEL_MIN;
-    const saved = localStorage.getItem("rs_panel_width");
+    const saved = localStorage.getItem(LS_PANEL_WIDTH);
     return saved ? Math.max(PANEL_MIN, parseInt(saved, 10) || PANEL_MIN) : PANEL_MIN;
   });
   const isDragging = useRef(false);
@@ -124,7 +125,7 @@ export default function SongLibraryShell({ songs, title = "Music Library", subti
     setPanelWidth((w) => {
       if (w < PREVIEW_WIDTH) {
         const capped = Math.min(PREVIEW_WIDTH, Math.floor(window.innerWidth * 0.65));
-        localStorage.setItem("rs_panel_width", String(capped));
+        localStorage.setItem(LS_PANEL_WIDTH, String(capped));
         return capped;
       }
       return w;
@@ -155,7 +156,7 @@ export default function SongLibraryShell({ songs, title = "Music Library", subti
       document.body.style.cursor = "";
       // Persist — read current DOM-driven width via a microtask
       setPanelWidth((w) => {
-        localStorage.setItem("rs_panel_width", String(w));
+        localStorage.setItem(LS_PANEL_WIDTH, String(w));
         return w;
       });
     };

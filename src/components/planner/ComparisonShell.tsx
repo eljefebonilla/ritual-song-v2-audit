@@ -17,7 +17,9 @@ interface ComparisonShellProps {
 const YEAR_CYCLES: YearCycleFilter[] = ["A", "B", "C", "all"];
 const MAX_ENSEMBLES = 3;
 const PANEL_MIN = 320;
-const LS_PANEL_WIDTH = "rs_compare_panel_width";
+import { LS_COMPARE_PANEL_WIDTH } from "@/lib/storage-keys";
+
+const LS_PANEL_WIDTH = LS_COMPARE_PANEL_WIDTH;
 
 export default function ComparisonShell({ occasions, songs }: ComparisonShellProps) {
   const [yearCycle, setYearCycle] = useState<YearCycleFilter>("A");

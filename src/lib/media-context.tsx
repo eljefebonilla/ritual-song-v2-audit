@@ -40,9 +40,11 @@ interface MediaContextValue {
   setError: (e: string | null) => void;
 }
 
-const LS_SPEED = "rs-player-speed";
-const LS_PITCH = "rs-player-pitch";
-const LS_VOLUME = "rs-player-volume";
+import { LS_PLAYER_SPEED, LS_PLAYER_PITCH, LS_PLAYER_VOLUME } from "./storage-keys";
+
+const LS_SPEED = LS_PLAYER_SPEED;
+const LS_PITCH = LS_PLAYER_PITCH;
+const LS_VOLUME = LS_PLAYER_VOLUME;
 
 function readLS(key: string, fallback: number): number {
   if (typeof window === "undefined") return fallback;
