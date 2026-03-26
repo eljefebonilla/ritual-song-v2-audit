@@ -1,7 +1,7 @@
 import type { NextConfig } from "next";
-import { readFileSync } from "fs";
 
-const pkg = JSON.parse(readFileSync("./package.json", "utf-8"));
+// eslint-disable-next-line @typescript-eslint/no-require-imports
+const pkg = require("./package.json");
 
 const nextConfig: NextConfig = {
   env: {
