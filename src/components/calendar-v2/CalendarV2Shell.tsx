@@ -161,7 +161,7 @@ export default function CalendarV2Shell({
     for (const e of massEvents) {
       // Ensemble filter (Tier 1)
       if (ensembleFilter !== "all") {
-        if (e.ensemble && e.ensemble.toLowerCase() !== ensembleFilter) continue;
+        if (e.ensemble && e.ensemble.toLowerCase() !== ensembleFilter.toLowerCase()) continue;
       }
       // Event type filter (Tier 2)
       if (!filters.eventTypes.has(e.eventType)) continue;
