@@ -89,25 +89,23 @@ export function getLiturgicalSeason(dateStr: string): string {
   const baptism = jan6Day === 0 ? new Date(year, 0, 7) : addDays(jan6, 7 - jan6Day);
 
   // Season detection
+
+  // Lent, Holy Week, Easter (keyed off Easter)
   if (dateStr >= fmt(ashWed) && dateStr < fmt(palmSun)) return "Lent";
   if (dateStr >= fmt(palmSun) && dateStr <= fmt(holySat)) return "Holy Week";
   if (dateStr >= easterStr && dateStr <= fmt(pentecost)) return "Easter";
 
-  // Check if we're in the Advent that starts this year
-  if (dateStr >= adventStr) return "Advent";
-
-  // Check if we're in the Advent/Christmas from previous year
-  if (dateStr < fmt(baptism)) {
-    // Could be Christmas or Advent from previous year's cycle
-    const prevAdventStr = fmt(prevAdvent);
-    const dec25 = `${year - 1}-12-25`;
-    if (dateStr < prevAdventStr) return "Ordinary Time";
-    if (dateStr < dec25) return "Advent";
-    return "Christmas";
-  }
-
-  // Dec 25 through end of year
+  // Christmas: Dec 25 through Baptism of the Lord (early Jan)
+  const dec25 = `${year}-12-25`;
+  const dec25prev = `${year - 1}-12-25`;
   if (d.getMonth() === 11 && d.getDate() >= 25) return "Christmas";
+  if (dateStr < fmt(baptism) && dateStr >= dec25prev) return "Christmas";
+
+  // Advent: from First Sunday of Advent through Dec 24
+  if (dateStr >= adventStr && dateStr < dec25) return "Advent";
+  // Previous year's Advent (for dates in Nov/Dec before this year's Christmas)
+  const prevAdventStr = fmt(prevAdvent);
+  if (dateStr >= prevAdventStr && dateStr < dec25prev) return "Advent";
 
   return "Ordinary Time";
 }
