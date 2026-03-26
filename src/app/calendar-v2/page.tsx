@@ -2,6 +2,7 @@ import { createAdminClient } from "@/lib/supabase/admin";
 import usccbData from "@/data/usccb-2026.json";
 import CalendarV2Shell from "@/components/calendar-v2/CalendarV2Shell";
 import type { USCCBDay } from "@/components/calendar-v2/types";
+import { getLiturgicalYearRange } from "@/lib/liturgical-year";
 
 export const dynamic = "force-dynamic";
 
@@ -42,13 +43,14 @@ function formatTime12h(time24: string | null, time12h: string | null): string {
 
 export default async function CalendarV2Page() {
   const supabase = createAdminClient();
+  const dateRange = getLiturgicalYearRange();
 
   // Fetch mass events for the liturgical year
   const { data: massEventsRaw, error: meError } = await supabase
     .from("mass_events")
     .select("*")
-    .gte("event_date", "2025-11-30")
-    .lte("event_date", "2026-11-28")
+    .gte("event_date", dateRange.start)
+    .lte("event_date", dateRange.end)
     .order("event_date", { ascending: true })
     .order("start_time", { ascending: true });
 
@@ -103,6 +105,7 @@ export default async function CalendarV2Page() {
         liturgicalDays={liturgicalDays}
         massEvents={massEvents}
         bookings={bookings}
+        dateRange={dateRange}
       />
     </div>
   );

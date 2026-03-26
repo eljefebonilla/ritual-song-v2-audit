@@ -7,22 +7,8 @@ import MonthHeader from "./MonthHeader";
 import CalendarV2Toolbar from "./CalendarV2Toolbar";
 import CalendarV2FilterPanel from "./CalendarV2FilterPanel";
 import EventCreatorModal from "./EventCreatorModal";
-
-// ---------------------------------------------------------------------------
-// Season detection from date ranges (approximate for liturgical year 2025-26)
-// ---------------------------------------------------------------------------
-
-function getSeason(dateStr: string): string {
-  const d = dateStr;
-  if (d >= "2025-11-30" && d <= "2025-12-24") return "Advent";
-  if (d >= "2025-12-25" && d <= "2026-01-11") return "Christmas";
-  if (d >= "2026-01-12" && d <= "2026-02-17") return "Ordinary Time";
-  if (d >= "2026-02-18" && d <= "2026-03-28") return "Lent";
-  if (d >= "2026-03-29" && d <= "2026-04-04") return "Holy Week";
-  if (d >= "2026-04-05" && d <= "2026-05-24") return "Easter";
-  if (d >= "2026-05-25" && d <= "2026-11-28") return "Ordinary Time";
-  return "Ordinary Time";
-}
+import { getLiturgicalSeason } from "@/lib/liturgical-year";
+import { useUser } from "@/lib/user-context";
 
 // ---------------------------------------------------------------------------
 // Default filter values
@@ -73,14 +59,17 @@ interface CalendarV2ShellProps {
   liturgicalDays: USCCBDay[];
   massEvents: MassEventV2[];
   bookings: BookingPersonnel[];
+  dateRange: { start: string; end: string };
 }
 
 export default function CalendarV2Shell({
   liturgicalDays,
   massEvents,
   bookings,
+  dateRange,
 }: CalendarV2ShellProps) {
   const scrollRef = useRef<HTMLDivElement>(null);
+  const { isAdmin } = useUser();
 
   // Tier 1 state (toolbar)
   const [showFederalHolidays, setShowFederalHolidays] = useState(true);
@@ -88,6 +77,7 @@ export default function CalendarV2Shell({
   const [zipCode, setZipCode] = useState("");
   const [stateLabel, setStateLabel] = useState("");
   const [eventCreatorDate, setEventCreatorDate] = useState<string | null>(null);
+  const [editingEvent, setEditingEvent] = useState<MassEventV2 | undefined>(undefined);
   const [ensembleFilter, setEnsembleFilter] = useState("all");
   const [hidePast, setHidePast] = useState(false);
 
@@ -246,15 +236,15 @@ export default function CalendarV2Shell({
   // Generate all dates in range
   const allDates = useMemo(() => {
     const dates: string[] = [];
-    const start = new Date("2025-11-30");
-    const end = new Date("2026-11-28");
+    const start = new Date(dateRange.start + "T12:00:00");
+    const end = new Date(dateRange.end + "T12:00:00");
     const cursor = new Date(start);
     while (cursor <= end) {
       dates.push(cursor.toISOString().slice(0, 10));
       cursor.setDate(cursor.getDate() + 1);
     }
     return dates;
-  }, []);
+  }, [dateRange]);
 
   // Group dates by month
   const monthGroups = useMemo(() => {
@@ -274,7 +264,7 @@ export default function CalendarV2Shell({
           key: monthKey,
           label: monthLabel,
           year: d.getFullYear(),
-          season: getSeason(dateStr),
+          season: getLiturgicalSeason(dateStr),
           dates: [],
         };
         groups.push(current);
@@ -315,11 +305,19 @@ export default function CalendarV2Shell({
 
   // Handle event creation
   const handleAddEvent = useCallback((date: string) => {
+    setEditingEvent(undefined);
     setEventCreatorDate(date);
+  }, []);
+
+  // Handle event editing
+  const handleEditEvent = useCallback((event: MassEventV2) => {
+    setEditingEvent(event);
+    setEventCreatorDate(event.date);
   }, []);
 
   const handleCloseCreator = useCallback(() => {
     setEventCreatorDate(null);
+    setEditingEvent(undefined);
   }, []);
 
   return (
@@ -362,7 +360,8 @@ export default function CalendarV2Shell({
                       isToday={dateStr === today}
                       isPast={dateStr < today}
                       hidePast={hidePast}
-                      onAddEvent={handleAddEvent}
+                      onAddEvent={isAdmin ? handleAddEvent : undefined}
+                      onEditEvent={isAdmin ? handleEditEvent : undefined}
                     />
                   ))}
                 </div>
@@ -394,6 +393,7 @@ export default function CalendarV2Shell({
       {eventCreatorDate && (
         <EventCreatorModal
           date={eventCreatorDate}
+          event={editingEvent}
           onClose={handleCloseCreator}
         />
       )}

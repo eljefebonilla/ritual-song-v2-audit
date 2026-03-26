@@ -1,6 +1,8 @@
 "use client";
 
 import { useCallback, useEffect, useRef, useState } from "react";
+import { useRouter } from "next/navigation";
+import type { MassEventV2 } from "./types";
 
 // ---------------------------------------------------------------------------
 // Constants
@@ -64,25 +66,32 @@ function getDayOfWeek(dateStr: string): string {
 
 interface EventCreatorModalProps {
   date: string;
+  event?: MassEventV2;
   onClose: () => void;
 }
 
 export default function EventCreatorModal({
   date,
+  event,
   onClose,
 }: EventCreatorModalProps) {
+  const router = useRouter();
   const backdropRef = useRef<HTMLDivElement>(null);
   const titleRef = useRef<HTMLInputElement>(null);
+  const isEdit = !!event;
 
-  const [title, setTitle] = useState("");
-  const [startTime, setStartTime] = useState("");
-  const [endTime, setEndTime] = useState("");
-  const [eventType, setEventType] = useState("mass");
-  const [ensemble, setEnsemble] = useState("");
-  const [celebrant, setCelebrant] = useState("");
-  const [location, setLocation] = useState("");
-  const [notes, setNotes] = useState("");
+  const [title, setTitle] = useState(event?.title ?? "");
+  const [startTime, setStartTime] = useState(event?.startTime12h ?? "");
+  const [endTime, setEndTime] = useState(event?.endTime12h ?? "");
+  const [eventType, setEventType] = useState(event?.eventType ?? "mass");
+  const [ensemble, setEnsemble] = useState(event?.ensemble ?? "");
+  const [celebrant, setCelebrant] = useState(event?.celebrant ?? "");
+  const [location, setLocation] = useState(event?.location ?? "");
+  const [notes, setNotes] = useState(event?.notes ?? "");
+  const [hasMusic, setHasMusic] = useState(event?.hasMusic ?? true);
+  const [sidebarNote, setSidebarNote] = useState(event?.sidebarNote ?? "");
   const [saving, setSaving] = useState(false);
+  const [deleting, setDeleting] = useState(false);
   const [error, setError] = useState("");
 
   // Focus title on mount
@@ -107,7 +116,7 @@ export default function EventCreatorModal({
     [onClose]
   );
 
-  // Save
+  // Save (create or update)
   const handleSave = useCallback(async () => {
     if (!title.trim()) {
       setError("Title is required");
@@ -120,25 +129,30 @@ export default function EventCreatorModal({
     const start24 = to24h(startTime);
     const end24 = to24h(endTime);
 
+    const payload = {
+      title: title.trim(),
+      event_date: date,
+      start_time: start24,
+      end_time: end24,
+      start_time_12h: startTime || null,
+      end_time_12h: endTime || null,
+      event_type: eventType,
+      ensemble: ensemble || null,
+      celebrant: celebrant || null,
+      location: location || null,
+      notes: notes || null,
+      sidebar_note: sidebarNote || null,
+      day_of_week: getDayOfWeek(date),
+      has_music: hasMusic,
+    };
+
     try {
-      const res = await fetch("/api/calendar", {
-        method: "POST",
+      const url = isEdit ? `/api/calendar/${event.id}` : "/api/calendar";
+      const method = isEdit ? "PUT" : "POST";
+      const res = await fetch(url, {
+        method,
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          title: title.trim(),
-          event_date: date,
-          start_time: start24,
-          end_time: end24,
-          start_time_12h: startTime || null,
-          end_time_12h: endTime || null,
-          event_type: eventType,
-          ensemble: ensemble || null,
-          celebrant: celebrant || null,
-          location: location || null,
-          notes: notes || null,
-          day_of_week: getDayOfWeek(date),
-          has_music: eventType === "mass",
-        }),
+        body: JSON.stringify(payload),
       });
 
       if (!res.ok) {
@@ -147,14 +161,29 @@ export default function EventCreatorModal({
       }
 
       onClose();
-      // Reload to show new event
-      window.location.reload();
+      router.refresh();
     } catch (err) {
       setError(err instanceof Error ? err.message : "Save failed");
     } finally {
       setSaving(false);
     }
-  }, [title, startTime, endTime, eventType, ensemble, celebrant, location, notes, date, onClose]);
+  }, [title, startTime, endTime, eventType, ensemble, celebrant, location, notes, sidebarNote, hasMusic, date, isEdit, event, onClose, router]);
+
+  // Delete
+  const handleDelete = useCallback(async () => {
+    if (!isEdit || !confirm("Delete this event?")) return;
+    setDeleting(true);
+    try {
+      const res = await fetch(`/api/calendar/${event.id}`, { method: "DELETE" });
+      if (!res.ok) throw new Error("Delete failed");
+      onClose();
+      router.refresh();
+    } catch (err) {
+      setError(err instanceof Error ? err.message : "Delete failed");
+    } finally {
+      setDeleting(false);
+    }
+  }, [isEdit, event, onClose, router]);
 
   return (
     <div
@@ -167,7 +196,7 @@ export default function EventCreatorModal({
         <div className="flex items-center justify-between border-b border-stone-100 px-6 py-4">
           <div>
             <h2 className="font-serif text-lg font-light text-stone-700">
-              New Event
+              {isEdit ? "Edit Event" : "New Event"}
             </h2>
             <p className="mt-0.5 text-xs text-stone-400">
               {formatDateDisplay(date)}
@@ -310,6 +339,31 @@ export default function EventCreatorModal({
             />
           </div>
 
+          {/* Sidebar Note */}
+          <div>
+            <label className="mb-1 block text-xs font-medium uppercase tracking-wider text-stone-500">
+              Sidebar Note
+            </label>
+            <input
+              type="text"
+              value={sidebarNote}
+              onChange={(e) => setSidebarNote(e.target.value)}
+              placeholder="Brief annotation shown on calendar"
+              className="w-full rounded-lg border border-stone-200 bg-stone-50 px-3 py-2 text-sm text-stone-700 placeholder:text-stone-300 focus:border-stone-400 focus:bg-white focus:outline-none"
+            />
+          </div>
+
+          {/* Toggles */}
+          <label className="flex items-center gap-2 cursor-pointer">
+            <input
+              type="checkbox"
+              checked={hasMusic}
+              onChange={(e) => setHasMusic(e.target.checked)}
+              className="rounded border-stone-300 text-stone-800 focus:ring-stone-400"
+            />
+            <span className="text-sm text-stone-700">Has live music</span>
+          </label>
+
           {/* Error */}
           {error && (
             <p className="text-xs font-medium text-red-600">{error}</p>
@@ -317,20 +371,33 @@ export default function EventCreatorModal({
         </div>
 
         {/* Footer */}
-        <div className="flex items-center justify-end gap-3 border-t border-stone-100 px-6 py-4">
-          <button
-            onClick={onClose}
-            className="rounded-lg px-4 py-2 text-sm text-stone-500 transition-colors hover:bg-stone-100"
-          >
-            Cancel
-          </button>
-          <button
-            onClick={handleSave}
-            disabled={saving}
-            className="rounded-lg bg-stone-800 px-5 py-2 text-sm font-medium text-white transition-colors hover:bg-stone-700 disabled:opacity-50"
-          >
-            {saving ? "Saving..." : "Create Event"}
-          </button>
+        <div className="flex items-center justify-between border-t border-stone-100 px-6 py-4">
+          {isEdit ? (
+            <button
+              onClick={handleDelete}
+              disabled={deleting}
+              className="text-xs font-medium text-red-500 hover:text-red-700"
+            >
+              {deleting ? "Deleting..." : "Delete Event"}
+            </button>
+          ) : (
+            <div />
+          )}
+          <div className="flex items-center gap-3">
+            <button
+              onClick={onClose}
+              className="rounded-lg px-4 py-2 text-sm text-stone-500 transition-colors hover:bg-stone-100"
+            >
+              Cancel
+            </button>
+            <button
+              onClick={handleSave}
+              disabled={saving}
+              className="rounded-lg bg-stone-800 px-5 py-2 text-sm font-medium text-white transition-colors hover:bg-stone-700 disabled:opacity-50"
+            >
+              {saving ? "Saving..." : isEdit ? "Save Changes" : "Create Event"}
+            </button>
+          </div>
         </div>
       </div>
     </div>

@@ -87,6 +87,11 @@ function IconFor({ id }: { id: string }) {
         <rect width="18" height="18" x="3" y="4" rx="2" ry="2" /><line x1="16" x2="16" y1="2" y2="6" /><line x1="8" x2="8" y1="2" y2="6" /><line x1="3" x2="21" y1="10" y2="10" />
       </svg>
     );
+    case "calendar-v2": return (
+      <svg className={cls} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+        <rect width="18" height="18" x="3" y="4" rx="2" ry="2" /><line x1="16" x2="16" y1="2" y2="6" /><line x1="8" x2="8" y1="2" y2="6" /><line x1="3" x2="21" y1="10" y2="10" /><path d="m9 16 2 2 4-4" />
+      </svg>
+    );
     case "announcements": return (
       <svg className={cls} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
         <path d="m3 11 18-5v12L3 13v-2z" /><path d="M11.6 16.8a3 3 0 1 1-5.8-1.6" />
@@ -122,7 +127,7 @@ function IconFor({ id }: { id: string }) {
 }
 
 const DEFAULT_ORDER: string[] = [
-  "today", "calendar", "announcements", "choir",
+  "today", "calendar", "calendar-v2", "announcements", "choir",
   "planner-view", "compare", "library", "liturgies",
   ...SEASON_ITEMS.map((s) => s.id),
 ];
@@ -131,16 +136,18 @@ function buildOrderedItems(savedOrder: string[] | null): NavItemDef[] {
   const allItems: Record<string, NavItemDef> = {};
 
   // Non-season items
-  for (const id of ["today", "calendar", "announcements", "choir", "planner-view", "compare", "library", "liturgies"]) {
+  for (const id of ["today", "calendar", "calendar-v2", "announcements", "choir", "planner-view", "compare", "library", "liturgies"]) {
     const labels: Record<string, string> = {
-      today: "Today", calendar: "Calendar", announcements: "Announcements",
+      today: "Today", calendar: "Calendar", "calendar-v2": "Calendar V2",
+      announcements: "Announcements",
       choir: "Choir Sign-Up", "planner-view": "Planner View",
       compare: "Comparison View",
       library: "Music Library",
       liturgies: "Other Liturgies",
     };
     const hrefs: Record<string, string> = {
-      today: "/today", calendar: "/calendar", announcements: "/announcements",
+      today: "/today", calendar: "/calendar", "calendar-v2": "/calendar-v2",
+      announcements: "/announcements",
       choir: "/choir", "planner-view": "/planner", compare: "/planner/compare",
       library: "/library",
       liturgies: "/liturgies",
@@ -378,11 +385,6 @@ export default function Sidebar({ open, onClose }: SidebarProps) {
             <Link href="/admin/settings" onClick={onClose} className={`flex items-center gap-3 px-4 py-2.5 text-sm transition-colors ${pathname.startsWith("/admin/settings") ? "bg-stone-700 text-white" : "text-stone-300 hover:bg-stone-800 hover:text-white"}`}>
               <svg className="w-[18px] h-[18px] shrink-0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="12" r="3" /><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06A1.65 1.65 0 0 0 4.68 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06A1.65 1.65 0 0 0 9 4.68a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06A1.65 1.65 0 0 0 19.4 9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z" /></svg>
               <span>Settings</span>
-            </Link>
-            {/* Calendar V2 */}
-            <Link href="/calendar-v2" onClick={onClose} className={`flex items-center gap-3 px-4 py-2.5 text-sm transition-colors ${pathname.startsWith("/calendar-v2") ? "bg-stone-700 text-white" : "text-stone-300 hover:bg-stone-800 hover:text-white"}`}>
-              <svg className="w-[18px] h-[18px] shrink-0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect width="18" height="18" x="3" y="4" rx="2" ry="2" /><line x1="16" x2="16" y1="2" y2="6" /><line x1="8" x2="8" y1="2" y2="6" /><line x1="3" x2="21" y1="10" y2="10" /><path d="m9 16 2 2 4-4" /></svg>
-              <span>Calendar V2</span>
             </Link>
           </>
         )}

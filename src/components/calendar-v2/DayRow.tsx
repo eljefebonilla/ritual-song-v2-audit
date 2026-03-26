@@ -175,10 +175,12 @@ function EventCard({
   event,
   personnel,
   isPast,
+  onEdit,
 }: {
   event: MassEventV2;
   personnel: BookingPersonnel[];
   isPast: boolean;
+  onEdit?: (event: MassEventV2) => void;
 }) {
   const personnelGroups = groupPersonnelByRole(personnel);
   const ensembleStyle = getEnsembleStyle(event.ensemble);
@@ -212,6 +214,18 @@ function EventCard({
           <span className="rounded bg-stone-100 px-1.5 py-0.5 text-[10px] font-medium text-stone-500">
             Auto-Mix
           </span>
+        )}
+        {onEdit && (
+          <button
+            onClick={(e) => { e.preventDefault(); e.stopPropagation(); onEdit(event); }}
+            className="ml-auto rounded p-0.5 text-stone-300 opacity-0 transition-opacity group-hover/event:opacity-100 hover:text-stone-600"
+            aria-label="Edit event"
+          >
+            <svg className="h-3.5 w-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+              <path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7" />
+              <path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z" />
+            </svg>
+          </button>
         )}
         {hasOccasionLink && (
           <svg
@@ -566,10 +580,11 @@ interface DayRowProps {
   isToday: boolean;
   isPast: boolean;
   hidePast: boolean;
-  onAddEvent: (date: string) => void;
+  onAddEvent?: (date: string) => void;
+  onEditEvent?: (event: MassEventV2) => void;
 }
 
-export default function DayRow({ day, isToday, isPast, hidePast, onAddEvent }: DayRowProps) {
+export default function DayRow({ day, isToday, isPast, hidePast, onAddEvent, onEditEvent }: DayRowProps) {
   const [hovered, setHovered] = useState(false);
   const lit = day.liturgical;
   if (!lit) return null;
@@ -611,7 +626,7 @@ export default function DayRow({ day, isToday, isPast, hidePast, onAddEvent }: D
             [{lit.optionalMemorials.join("; ")}]
           </span>
         )}
-        {hovered && (
+        {hovered && onAddEvent && (
           <button
             onClick={() => onAddEvent(day.date)}
             className="absolute right-3 rounded-md border border-stone-200 bg-white px-2 py-0.5 text-xs text-stone-400 opacity-0 transition-opacity group-hover:opacity-100 hover:border-stone-300 hover:text-stone-600"
@@ -711,6 +726,7 @@ export default function DayRow({ day, isToday, isPast, hidePast, onAddEvent }: D
               event={event}
               personnel={day.personnel.get(event.id) ?? []}
               isPast={isPast}
+              onEdit={onEditEvent}
             />
           ))}
         </div>
@@ -727,8 +743,8 @@ export default function DayRow({ day, isToday, isPast, hidePast, onAddEvent }: D
         </div>
       )}
 
-      {/* Add event button (hover) */}
-      {hovered && (
+      {/* Add event button (hover, admin only) */}
+      {hovered && onAddEvent && (
         <button
           onClick={() => onAddEvent(day.date)}
           className="absolute right-3 bottom-3 rounded-md border border-stone-200 bg-white px-2 py-0.5 text-xs text-stone-400 opacity-0 transition-opacity group-hover:opacity-100 hover:border-stone-300 hover:text-stone-600"
