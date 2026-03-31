@@ -1,140 +1,112 @@
-import CalendarShell from "@/components/calendar/CalendarShell";
-import calendarData from "@/data/ministry-calendar.json";
-import { createClient } from "@/lib/supabase/server";
 import { createAdminClient } from "@/lib/supabase/admin";
-import type {
-  MinistryCalendar,
-  CalendarWeek,
-  CalendarEvent,
-  CalendarEventType,
-} from "@/lib/calendar-types";
-import type { LiturgicalSeason, LiturgicalDay } from "@/lib/types";
-import { rowToLiturgicalDay } from "@/lib/liturgical-helpers";
+import usccbData from "@/data/usccb-2026.json";
+import CalendarV2Shell from "@/components/calendar-v2/CalendarV2Shell";
+import type { USCCBDay } from "@/components/calendar-v2/types";
+import { getLiturgicalYearRange } from "@/lib/liturgical-year";
 
-const SEASON_EMOJI: Record<string, string> = {
-  advent: "\u{1F7E3}",
-  christmas: "\u2B50",
-  ordinary: "\u{1F7E2}",
-  lent: "\u{1F7E4}",
-  easter: "\u{1F7E1}",
-  solemnity: "\u26AA",
-  feast: "\u{1F534}",
-};
+export const dynamic = "force-dynamic";
 
-/**
- * Transform flat Supabase mass_events rows into MinistryCalendar grouped format.
- */
-function buildCalendarFromRows(
-  rows: Record<string, unknown>[]
-): MinistryCalendar {
-  const weekMap = new Map<string, CalendarWeek>();
+interface MassEventRow {
+  id: string;
+  event_date: string;
+  start_time: string | null;
+  end_time: string | null;
+  start_time_12h: string | null;
+  end_time_12h: string | null;
+  title: string;
+  ensemble: string | null;
+  event_type: string;
+  has_music: boolean;
+  celebrant: string | null;
+  location: string | null;
+  notes: string | null;
+  occasion_id: string | null;
+  sidebar_note: string | null;
+  is_auto_mix: boolean;
+}
 
-  for (const row of rows) {
-    const weekId = (row.liturgical_week as string) || "unknown";
+interface BookingRow {
+  mass_event_id: string;
+  person_name: string;
+  confirmation: string;
+  ministry_roles: { name: string };
+}
 
-    if (!weekMap.has(weekId)) {
-      const season = (row.season as string) || "ordinary";
-      weekMap.set(weekId, {
-        weekId,
-        liturgicalName:
-          (row.liturgical_name as string) || weekId.toUpperCase(),
-        theme: "",
-        season: season as LiturgicalSeason,
-        seasonEmoji: SEASON_EMOJI[season] || "\u26AA",
-        sundayDate: (row.event_date as string) || "",
-        events: [],
-      });
-    }
-
-    const week = weekMap.get(weekId)!;
-
-    const event: CalendarEvent = {
-      id: (row.id as string) || undefined,
-      date: (row.event_date as string) || "",
-      dayOfWeek: (row.day_of_week as string) || "",
-      startTime: (row.start_time as string) || null,
-      endTime: (row.end_time as string) || null,
-      startTime12h: (row.start_time_12h as string) || "",
-      endTime12h: (row.end_time_12h as string) || "",
-      title: (row.title as string) || "",
-      ensemble: (row.ensemble as string) || null,
-      eventType: ((row.event_type as string) || "mass") as CalendarEventType,
-      hasMusic: (row.has_music as boolean) ?? false,
-      isAutoMix: (row.is_auto_mix as boolean) ?? false,
-      celebrant: (row.celebrant as string) || null,
-      location: (row.location as string) || null,
-      notes: (row.notes as string) || null,
-      sidebarNote: (row.sidebar_note as string) || null,
-      occasionId: (row.occasion_id as string) || null,
-      needsVolunteers: (row.needs_volunteers as boolean) ?? false,
-    };
-
-    week.events.push(event);
-
-    // Use the earliest Sunday-like date as sundayDate for the week
-    if (
-      event.dayOfWeek === "Sunday" &&
-      (!week.sundayDate || event.date < week.sundayDate)
-    ) {
-      week.sundayDate = event.date;
-    }
-  }
-
-  const weeks = Array.from(weekMap.values()).sort((a, b) =>
-    a.sundayDate.localeCompare(b.sundayDate)
-  );
-
-  // Derive date range
-  const dates = weeks.map((w) => w.sundayDate).filter(Boolean);
-
-  return {
-    title: "Ministry Calendar",
-    yearCycle: "C",
-    startDate: dates[0] || "",
-    endDate: dates[dates.length - 1] || "",
-    weeks,
-  };
+function formatTime12h(time24: string | null, time12h: string | null): string {
+  if (time12h) return time12h;
+  if (!time24) return "";
+  const [h, m] = time24.split(":").map(Number);
+  const suffix = h >= 12 ? "p" : "a";
+  const hour = h === 0 ? 12 : h > 12 ? h - 12 : h;
+  return `${hour}:${String(m).padStart(2, "0")}${suffix}`;
 }
 
 export default async function CalendarPage() {
-  let calendar: MinistryCalendar;
-  let liturgicalDays: LiturgicalDay[] = [];
+  const supabase = createAdminClient();
+  const dateRange = getLiturgicalYearRange();
 
-  try {
-    const supabase = await createClient();
-    const adminClient = createAdminClient();
+  // Fetch mass events for the liturgical year
+  const { data: massEventsRaw, error: meError } = await supabase
+    .from("mass_events")
+    .select("*")
+    .gte("event_date", dateRange.start)
+    .lte("event_date", dateRange.end)
+    .order("event_date", { ascending: true })
+    .order("start_time", { ascending: true });
 
-    // Fetch mass_events and liturgical_days in parallel
-    const [eventsResult, litResult] = await Promise.all([
-      supabase
-        .from("mass_events")
-        .select("*")
-        .order("event_date", { ascending: true })
-        .order("start_time", { ascending: true }),
-      adminClient
-        .from("liturgical_days")
-        .select("*")
-        .order("date", { ascending: true }),
-    ]);
-
-    if (!eventsResult.error && eventsResult.data && eventsResult.data.length > 0) {
-      calendar = buildCalendarFromRows(eventsResult.data);
-    } else {
-      calendar = calendarData as MinistryCalendar;
-    }
-
-    if (!litResult.error && litResult.data) {
-      liturgicalDays = litResult.data.map((row: Record<string, unknown>) =>
-        rowToLiturgicalDay(row)
-      );
-    }
-  } catch {
-    calendar = calendarData as MinistryCalendar;
+  if (meError) {
+    console.error("Failed to fetch mass events:", meError.message);
   }
 
+  // Fetch booking slots with ministry roles
+  const { data: bookingsRaw, error: bkError } = await supabase
+    .from("booking_slots")
+    .select("mass_event_id, person_name, confirmation, ministry_roles(name)")
+    .neq("confirmation", "declined");
+
+  if (bkError) {
+    console.error("Failed to fetch bookings:", bkError.message);
+  }
+
+  // Transform mass events
+  const massEvents = ((massEventsRaw as MassEventRow[] | null) ?? []).map((e) => ({
+    id: e.id,
+    date: e.event_date,
+    startTime: e.start_time,
+    endTime: e.end_time,
+    startTime12h: formatTime12h(e.start_time, e.start_time_12h),
+    endTime12h: formatTime12h(e.end_time, e.end_time_12h),
+    title: e.title,
+    ensemble: e.ensemble,
+    eventType: e.event_type,
+    hasMusic: e.has_music,
+    celebrant: e.celebrant,
+    location: e.location,
+    notes: e.notes,
+    occasionId: e.occasion_id ?? null,
+    sidebarNote: e.sidebar_note ?? null,
+    isAutoMix: e.is_auto_mix ?? false,
+  }));
+
+  // Transform bookings
+  const bookings = ((bookingsRaw as unknown as BookingRow[] | null) ?? []).map((b) => ({
+    massEventId: b.mass_event_id,
+    personName: b.person_name,
+    roleName: (b.ministry_roles as unknown as { name: string })?.name ?? "Unknown",
+    confirmation: b.confirmation,
+  }));
+
+  // USCCB liturgical data
+  const liturgicalDays = (usccbData as USCCBDay[]).filter((d) => d.date);
+
   return (
-    <div className="min-h-screen">
-      <CalendarShell calendar={calendar} liturgicalDays={liturgicalDays} />
+    <div className="h-full overflow-hidden pt-2">
+      <CalendarV2Shell
+        liturgicalDays={liturgicalDays}
+        massEvents={massEvents}
+        bookings={bookings}
+        dateRange={dateRange}
+      />
     </div>
   );
 }

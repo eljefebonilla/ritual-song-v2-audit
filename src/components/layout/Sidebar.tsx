@@ -87,11 +87,6 @@ function IconFor({ id }: { id: string }) {
         <rect width="18" height="18" x="3" y="4" rx="2" ry="2" /><line x1="16" x2="16" y1="2" y2="6" /><line x1="8" x2="8" y1="2" y2="6" /><line x1="3" x2="21" y1="10" y2="10" />
       </svg>
     );
-    case "calendar-v2": return (
-      <svg className={cls} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-        <rect width="18" height="18" x="3" y="4" rx="2" ry="2" /><line x1="16" x2="16" y1="2" y2="6" /><line x1="8" x2="8" y1="2" y2="6" /><line x1="3" x2="21" y1="10" y2="10" /><path d="m9 16 2 2 4-4" />
-      </svg>
-    );
     case "announcements": return (
       <svg className={cls} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
         <path d="m3 11 18-5v12L3 13v-2z" /><path d="M11.6 16.8a3 3 0 1 1-5.8-1.6" />
@@ -127,7 +122,7 @@ function IconFor({ id }: { id: string }) {
 }
 
 const DEFAULT_ORDER: string[] = [
-  "today", "calendar", "calendar-v2", "announcements", "choir",
+  "today", "calendar", "announcements", "choir",
   "planner-view", "compare", "library", "liturgies",
   ...SEASON_ITEMS.map((s) => s.id),
 ];
@@ -136,9 +131,9 @@ function buildOrderedItems(savedOrder: string[] | null): NavItemDef[] {
   const allItems: Record<string, NavItemDef> = {};
 
   // Non-season items
-  for (const id of ["today", "calendar", "calendar-v2", "announcements", "choir", "planner-view", "compare", "library", "liturgies"]) {
+  for (const id of ["today", "calendar", "announcements", "choir", "planner-view", "compare", "library", "liturgies"]) {
     const labels: Record<string, string> = {
-      today: "Today", calendar: "Calendar", "calendar-v2": "Calendar V2",
+      today: "Today", calendar: "Calendar",
       announcements: "Announcements",
       choir: "Choir Sign-Up", "planner-view": "Planner View",
       compare: "Comparison View",
@@ -146,7 +141,7 @@ function buildOrderedItems(savedOrder: string[] | null): NavItemDef[] {
       liturgies: "Other Liturgies",
     };
     const hrefs: Record<string, string> = {
-      today: "/today", calendar: "/calendar", "calendar-v2": "/calendar-v2",
+      today: "/today", calendar: "/calendar",
       announcements: "/announcements",
       choir: "/choir", "planner-view": "/planner", compare: "/planner/compare",
       library: "/library",
