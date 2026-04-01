@@ -369,54 +369,5 @@
       }
     }
   ],
-  "occasionResources": [
-    {
-      "id": "psalms--psalms-advent-adv-03c-gospel-acclamations-advent-3abc-mp3",
-      "type": "audio",
-      "label": "Gospel Acclamation",
-      "filePath": "_psalms/Advent/Adv-03C/Gospel Acclamations/ADVENT_3ABC.mp3",
-      "source": "local",
-      "category": "gospel_acclamation"
-    },
-    {
-      "id": "psalms--psalms-advent-adv-03c-gospel-acclamations-adv-03c-gospel-acclamation-spirit-psa",
-      "type": "sheet_music",
-      "label": "Gospel Acclamation - Spirit & Psalm (Booth)",
-      "filePath": "_psalms/Advent/Adv-03C/Gospel Acclamations/Adv-03C_Gospel-Acclamation_Spirit&Psalm2025_Booth.pdf",
-      "source": "local",
-      "category": "gospel_acclamation"
-    },
-    {
-      "id": "psalms--psalms-advent-adv-03c-gospel-acclamations-adv-03c-gospelacc-alonso-pdf",
-      "type": "sheet_music",
-      "label": "Gospel Acclamation (Alonso)",
-      "filePath": "_psalms/Advent/Adv-03C/Gospel Acclamations/Adv-03C_GospelAcc_Alonso.pdf",
-      "source": "local",
-      "category": "gospel_acclamation"
-    },
-    {
-      "id": "psalms--psalms-advent-adv-03c-antiphons-adv-03c-antiphons-rejoice-pdf",
-      "type": "sheet_music",
-      "label": "REJOICE Antiphons",
-      "filePath": "_psalms/Advent/Adv-03C/Antiphons/Adv-03C_Antiphons_REJOICE.pdf",
-      "source": "local",
-      "category": "antiphon"
-    },
-    {
-      "id": "psalms--psalms-advent-adv-03c-antiphons-rejoice-a03-rejoice-in-the-lord-always-3rd-sund",
-      "type": "audio",
-      "label": "Entrance: Rejoice In The",
-      "filePath": "_psalms/Advent/Adv-03C/Antiphons/REJOICE_A03 Rejoice_In_The_Lord_Always_3rd_Sunday_Of_Advent_Entrance_Antiphon_10.mp3",
-      "source": "local",
-      "category": "antiphon"
-    },
-    {
-      "id": "psalms--psalms-advent-adv-03c-antiphons-rejoice-a03-say-to-the-faint-of-heart-3rd-sunda",
-      "type": "audio",
-      "label": "Communion: Say To The Faint",
-      "filePath": "_psalms/Advent/Adv-03C/Antiphons/REJOICE_A03 Say_To_The_Faint_Of_Heart_3rd_Sunday_Of_Advent_Communion_Antiphon_11.mp3",
-      "source": "local",
-      "category": "antiphon"
-    }
-  ]
+  "occasionResources": []
 }

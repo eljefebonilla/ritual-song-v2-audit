@@ -414,14 +414,5 @@
       }
     }
   ],
-  "occasionResources": [
-    {
-      "id": "psalms--psalms-christmas-chr-2nd-after-christmasa-antiphons-chr-2nd-after-christmasa-an",
-      "type": "sheet_music",
-      "label": "REJOICE Antiphons",
-      "filePath": "_psalms/Christmas/Chr-2nd-After-ChristmasA/Antiphons/Chr-2nd-After-ChristmasA_Antiphons_REJOICE.pdf",
-      "source": "local",
-      "category": "antiphon"
-    }
-  ]
+  "occasionResources": []
 }

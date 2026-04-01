@@ -156,54 +156,5 @@
       }
     }
   ],
-  "occasionResources": [
-    {
-      "id": "psalms--psalms-easter-eas-pentecostvigila-gospel-acclamations-eas-pentecostvigila-gospe",
-      "type": "sheet_music",
-      "label": "Gospel Acclamation - Spirit & Psalm (Hart)",
-      "filePath": "_psalms/Easter/Eas-PentecostVigilA/Gospel Acclamations/Eas-PentecostVigilA_Gospel-Acclamation_Spirit&Psalm2026_Hart.pdf",
-      "source": "local",
-      "category": "gospel_acclamation"
-    },
-    {
-      "id": "psalms--psalms-easter-eas-pentecostvigila-antiphons-eas-pentecostvigila-antiphons-rejoi",
-      "type": "sheet_music",
-      "label": "REJOICE Antiphons",
-      "filePath": "_psalms/Easter/Eas-PentecostVigilA/Antiphons/Eas-PentecostVigilA_Antiphons_REJOICE.pdf",
-      "source": "local",
-      "category": "antiphon"
-    },
-    {
-      "id": "psalms--psalms-easter-eas-pentecostvigila-antiphons-rejoice-e09-on-the-last-day-of-the-",
-      "type": "audio",
-      "label": "Communion: On The Last Day Of The Festival",
-      "filePath": "_psalms/Easter/Eas-PentecostVigilA/Antiphons/REJOICE_E09 On_The_Last_Day_Of_The_Festival_Pentecost_Vigil_Communion_Antiphon_111.mp3",
-      "source": "local",
-      "category": "antiphon"
-    },
-    {
-      "id": "psalms--psalms-easter-eas-pentecostvigila-antiphons-rejoice-e09-the-love-of-god-has-bee",
-      "type": "audio",
-      "label": "Entrance: The Love Of God Has Been Poured Pentecost Vigil Entrance",
-      "filePath": "_psalms/Easter/Eas-PentecostVigilA/Antiphons/REJOICE_E09 The_Love_Of_God_Has_Been_Poured_Pentecost_Vigil_Entrance_Antiphon_Pentecost_Entrance_Antiphon_Ii_110_113.mp3",
-      "source": "local",
-      "category": "antiphon"
-    },
-    {
-      "id": "psalms--psalms-easter-eas-pentecostvigilb-gospel-acclamations-eas-pentecostvigilb-gospe",
-      "type": "sheet_music",
-      "label": "Gospel Acclamation - Spirit & Psalm (Manibusan)",
-      "filePath": "_psalms/Easter/Eas-PentecostVigilB/Gospel Acclamations/Eas-PentecostVigilB_Gospel-Acclamation_Spirit&Psalm2024_Manibusan.pdf",
-      "source": "local",
-      "category": "gospel_acclamation"
-    },
-    {
-      "id": "psalms--psalms-easter-eas-pentecostvigilc-gospel-acclamations-eas-pentecostvigilc-gospe",
-      "type": "sheet_music",
-      "label": "Gospel Acclamation - Spirit & Psalm (Hart)",
-      "filePath": "_psalms/Easter/Eas-PentecostVigilC/Gospel Acclamations/Eas-PentecostVigilC_Gospel-Acclamation_Spirit&Psalm2025_Hart.pdf",
-      "source": "local",
-      "category": "gospel_acclamation"
-    }
-  ]
+  "occasionResources": []
 }

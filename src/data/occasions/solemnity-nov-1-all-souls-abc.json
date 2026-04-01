@@ -421,14 +421,5 @@
       }
     }
   ],
-  "occasionResources": [
-    {
-      "id": "psalms--psalms-solemnities-sol-all-soulsc-gospel-acclamations-sol-all-soulsc-gospel-acc",
-      "type": "sheet_music",
-      "label": "Gospel Acclamation - Spirit & Psalm (Stephan)",
-      "filePath": "_psalms/Solemnities/Sol-All-SoulsC/Gospel Acclamations/Sol-All-SoulsC_Gospel-Acclamation_Spirit&Psalm2025_Stephan.pdf",
-      "source": "local",
-      "category": "gospel_acclamation"
-    }
-  ]
+  "occasionResources": []
 }

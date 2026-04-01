@@ -415,30 +415,5 @@
       }
     }
   ],
-  "occasionResources": [
-    {
-      "id": "psalms--psalms-solemnities-sol-lateran-basilicaa-gospel-acclamations-ot-dedication-of-l",
-      "type": "audio",
-      "label": "Gospel Acclamation",
-      "filePath": "_psalms/Solemnities/Sol-Lateran-BasilicaA/Gospel Acclamations/OT Dedication of LB.mp3",
-      "source": "local",
-      "category": "gospel_acclamation"
-    },
-    {
-      "id": "psalms--psalms-solemnities-sol-lateran-basilicaa-gospel-acclamations-sol-lateran-basili",
-      "type": "sheet_music",
-      "label": "Gospel Acclamation (Alonso)",
-      "filePath": "_psalms/Solemnities/Sol-Lateran-BasilicaA/Gospel Acclamations/Sol-Lateran-BasilicaA_GospelAcc_Alonso.pdf",
-      "source": "local",
-      "category": "gospel_acclamation"
-    },
-    {
-      "id": "psalms--psalms-solemnities-sol-lateran-basilicac-gospel-acclamations-sol-lateran-basili",
-      "type": "sheet_music",
-      "label": "Gospel Acclamation - Spirit & Psalm (Stephan)",
-      "filePath": "_psalms/Solemnities/Sol-Lateran-BasilicaC/Gospel Acclamations/Sol-Lateran-BasilicaC_Gospel-Acclamation_Spirit&Psalm2025_Stephan.pdf",
-      "source": "local",
-      "category": "gospel_acclamation"
-    }
-  ]
+  "occasionResources": []
 }

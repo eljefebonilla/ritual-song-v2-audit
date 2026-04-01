@@ -208,54 +208,5 @@
       }
     }
   ],
-  "occasionResources": [
-    {
-      "id": "psalms--psalms-ordinary-time-ot-12c-gospel-acclamations-ot-12c-16b-20c-26a-mp3",
-      "type": "audio",
-      "label": "Gospel Acclamation",
-      "filePath": "_psalms/Ordinary Time/OT-12C/Gospel Acclamations/OT 12C 16B 20C 26A.mp3",
-      "source": "local",
-      "category": "gospel_acclamation"
-    },
-    {
-      "id": "psalms--psalms-ordinary-time-ot-12c-gospel-acclamations-ot-12c-gospelacc-ot-alonso-pdf",
-      "type": "sheet_music",
-      "label": "Gospel Acclamation (Alonso)",
-      "filePath": "_psalms/Ordinary Time/OT-12C/Gospel Acclamations/OT-12C_GospelAcc-OT_Alonso.pdf",
-      "source": "local",
-      "category": "gospel_acclamation"
-    },
-    {
-      "id": "psalms--psalms-ordinary-time-ot-12c-antiphons-ot-12c-antiphons-rejoice-pdf",
-      "type": "sheet_music",
-      "label": "REJOICE Antiphons",
-      "filePath": "_psalms/Ordinary Time/OT-12C/Antiphons/OT-12C_Antiphons_REJOICE.pdf",
-      "source": "local",
-      "category": "antiphon"
-    },
-    {
-      "id": "psalms--psalms-ordinary-time-ot-12c-antiphons-rejoice-ot12-i-am-the-good-shepherd-and-i",
-      "type": "audio",
-      "label": "Communion: I Am The Good Shepherd And I Lay Down",
-      "filePath": "_psalms/Ordinary Time/OT-12C/Antiphons/REJOICE_OT12 I_Am_The_Good_Shepherd_And_I_Lay_Down_My_Life_12th_Sunday_In_Ordinary_Time_Communion_Antiphon_Ii_135.mp3",
-      "source": "local",
-      "category": "antiphon"
-    },
-    {
-      "id": "psalms--psalms-ordinary-time-ot-12c-antiphons-rejoice-ot12-the-eyes-of-all-look-to-you-",
-      "type": "audio",
-      "label": "Communion: The Eyes Of All Look",
-      "filePath": "_psalms/Ordinary Time/OT-12C/Antiphons/REJOICE_OT12 The_Eyes_Of_All_Look_To_You_12th_Sunday_In_Ordinary_Time_Communion_Antiphon_I_134.mp3",
-      "source": "local",
-      "category": "antiphon"
-    },
-    {
-      "id": "psalms--psalms-ordinary-time-ot-12c-antiphons-rejoice-ot12-the-lord-is-the-strength-of-",
-      "type": "audio",
-      "label": "Entrance: The Lord Is The Strength Of",
-      "filePath": "_psalms/Ordinary Time/OT-12C/Antiphons/REJOICE_OT12 The_Lord_Is_The_Strength_Of_His_People_12th_Sunday_In_Ordinary_Time_Entrance_Antiphon_133.mp3",
-      "source": "local",
-      "category": "antiphon"
-    }
-  ]
+  "occasionResources": []
 }

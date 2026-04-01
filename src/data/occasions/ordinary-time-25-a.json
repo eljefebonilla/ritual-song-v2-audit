@@ -219,54 +219,5 @@
       }
     }
   ],
-  "occasionResources": [
-    {
-      "id": "psalms--psalms-ordinary-time-ot-25a-gospel-acclamations-ot-25a-mp3",
-      "type": "audio",
-      "label": "Gospel Acclamation",
-      "filePath": "_psalms/Ordinary Time/OT-25A/Gospel Acclamations/OT 25A.mp3",
-      "source": "local",
-      "category": "gospel_acclamation"
-    },
-    {
-      "id": "psalms--psalms-ordinary-time-ot-25a-gospel-acclamations-ot-25a-gospelacc-ot-alonso-pdf",
-      "type": "sheet_music",
-      "label": "Gospel Acclamation (Alonso)",
-      "filePath": "_psalms/Ordinary Time/OT-25A/Gospel Acclamations/OT-25A_GospelAcc-OT_Alonso.pdf",
-      "source": "local",
-      "category": "gospel_acclamation"
-    },
-    {
-      "id": "psalms--psalms-ordinary-time-ot-25a-antiphons-ot-25a-antiphons-rejoice-pdf",
-      "type": "sheet_music",
-      "label": "REJOICE Antiphons",
-      "filePath": "_psalms/Ordinary Time/OT-25A/Antiphons/OT-25A_Antiphons_REJOICE.pdf",
-      "source": "local",
-      "category": "antiphon"
-    },
-    {
-      "id": "psalms--psalms-ordinary-time-ot-25a-antiphons-rejoice-ot25-i-am-the-good-shepherd-says-",
-      "type": "audio",
-      "label": "Communion: I Am The Good Shepherd Says",
-      "filePath": "_psalms/Ordinary Time/OT-25A/Antiphons/REJOICE_OT25 I_Am_The_Good_Shepherd_Says_The_Lord_25th_Sunday_In_Ordinary_Time_Communion_Antiphon_Ii_174.mp3",
-      "source": "local",
-      "category": "antiphon"
-    },
-    {
-      "id": "psalms--psalms-ordinary-time-ot-25a-antiphons-rejoice-ot25-i-am-the-salvation-of-the-pe",
-      "type": "audio",
-      "label": "Entrance: I Am The Salvation Of",
-      "filePath": "_psalms/Ordinary Time/OT-25A/Antiphons/REJOICE_OT25 I_Am_The_Salvation_Of_The_People_25th_Sunday_In_Ordinary_Time_Entrance_Antiphon_172.mp3",
-      "source": "local",
-      "category": "antiphon"
-    },
-    {
-      "id": "psalms--psalms-ordinary-time-ot-25a-antiphons-rejoice-ot25-you-have-laid-down-your-prec",
-      "type": "audio",
-      "label": "Communion: You Have Laid Down",
-      "filePath": "_psalms/Ordinary Time/OT-25A/Antiphons/REJOICE_OT25 You_Have_Laid_Down_Your_Precepts_25th_Sunday_In_Ordinary_Time_Communion_Antiphon_I_173.mp3",
-      "source": "local",
-      "category": "antiphon"
-    }
-  ]
+  "occasionResources": []
 }

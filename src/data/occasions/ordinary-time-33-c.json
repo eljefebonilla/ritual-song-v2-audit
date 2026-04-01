@@ -419,46 +419,5 @@
       }
     }
   ],
-  "occasionResources": [
-    {
-      "id": "psalms--psalms-ordinary-time-ot-33c-gospel-acclamations-ot-33c-gospel-acclamation-spiri",
-      "type": "sheet_music",
-      "label": "Gospel Acclamation - Spirit & Psalm (Stephan)",
-      "filePath": "_psalms/Ordinary Time/OT-33C/Gospel Acclamations/OT-33C_Gospel-Acclamation_Spirit&Psalm2025_Stephan.pdf",
-      "source": "local",
-      "category": "gospel_acclamation"
-    },
-    {
-      "id": "psalms--psalms-ordinary-time-ot-33c-antiphons-ot-33c-antiphons-rejoice-pdf",
-      "type": "sheet_music",
-      "label": "REJOICE Antiphons",
-      "filePath": "_psalms/Ordinary Time/OT-33C/Antiphons/OT-33C_Antiphons_REJOICE.pdf",
-      "source": "local",
-      "category": "antiphon"
-    },
-    {
-      "id": "psalms--psalms-ordinary-time-ot-33c-antiphons-rejoice-ot33-amen-i-say-to-you-whatever-y",
-      "type": "audio",
-      "label": "Communion: Amen I Say To You Whatever",
-      "filePath": "_psalms/Ordinary Time/OT-33C/Antiphons/REJOICE_OT33 Amen_I_Say_To_You_Whatever_You_Ask_33rd_Sunday_In_Ordinary_Time_Communion_Antiphon_Ii_198.mp3",
-      "source": "local",
-      "category": "antiphon"
-    },
-    {
-      "id": "psalms--psalms-ordinary-time-ot-33c-antiphons-rejoice-ot33-the-lord-said-i-think-though",
-      "type": "audio",
-      "label": "Entrance: The Lord Said I Think Thoughts",
-      "filePath": "_psalms/Ordinary Time/OT-33C/Antiphons/REJOICE_OT33 The_Lord_Said_I_Think_Thoughts_Of_Peace_33rd_Sunday_In_Ordinary_Time_Entrance_Antiphon_196.mp3",
-      "source": "local",
-      "category": "antiphon"
-    },
-    {
-      "id": "psalms--psalms-ordinary-time-ot-33c-antiphons-rejoice-ot33-to-be-near-god-is-my-happine",
-      "type": "audio",
-      "label": "Communion: To Be Near God Is",
-      "filePath": "_psalms/Ordinary Time/OT-33C/Antiphons/REJOICE_OT33 To_Be_Near_God_Is_My_Happiness_33rd_Sunday_In_Ordinary_Time_Communion_Antiphon_I_197.mp3",
-      "source": "local",
-      "category": "antiphon"
-    }
-  ]
+  "occasionResources": []
 }

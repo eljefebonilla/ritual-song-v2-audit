@@ -383,54 +383,5 @@
       }
     }
   ],
-  "occasionResources": [
-    {
-      "id": "psalms--psalms-advent-adv-02a-gospel-acclamations-advent-2abc-mp3",
-      "type": "audio",
-      "label": "Gospel Acclamation",
-      "filePath": "_psalms/Advent/Adv-02A/Gospel Acclamations/ADVENT_2ABC.mp3",
-      "source": "local",
-      "category": "gospel_acclamation"
-    },
-    {
-      "id": "psalms--psalms-advent-adv-02a-gospel-acclamations-adv-02a-gospel-acclamation-spirit-psa",
-      "type": "sheet_music",
-      "label": "Gospel Acclamation - Spirit & Psalm (Hart)",
-      "filePath": "_psalms/Advent/Adv-02A/Gospel Acclamations/Adv-02A_Gospel-Acclamation_Spirit&Psalm2026_Hart.pdf",
-      "source": "local",
-      "category": "gospel_acclamation"
-    },
-    {
-      "id": "psalms--psalms-advent-adv-02a-gospel-acclamations-adv-02a-gospelacc-alonso-pdf",
-      "type": "sheet_music",
-      "label": "Gospel Acclamation (Alonso)",
-      "filePath": "_psalms/Advent/Adv-02A/Gospel Acclamations/Adv-02A_GospelAcc_Alonso.pdf",
-      "source": "local",
-      "category": "gospel_acclamation"
-    },
-    {
-      "id": "psalms--psalms-advent-adv-02a-antiphons-adv-02a-antiphons-rejoice-pdf",
-      "type": "sheet_music",
-      "label": "REJOICE Antiphons",
-      "filePath": "_psalms/Advent/Adv-02A/Antiphons/Adv-02A_Antiphons_REJOICE.pdf",
-      "source": "local",
-      "category": "antiphon"
-    },
-    {
-      "id": "psalms--psalms-advent-adv-02a-antiphons-rejoice-a02-jerusalem-arise-and-stand-upon-the-",
-      "type": "audio",
-      "label": "Communion: Jerusalem Arise And Stand Upon",
-      "filePath": "_psalms/Advent/Adv-02A/Antiphons/REJOICE_A02 Jerusalem_Arise_And_Stand_Upon_The_Heights_2nd_Sunday_Of_Advent_Communion_Antiphon_9.mp3",
-      "source": "local",
-      "category": "antiphon"
-    },
-    {
-      "id": "psalms--psalms-advent-adv-02a-antiphons-rejoice-a02-o-people-of-sion-behold-2nd-sunday-",
-      "type": "audio",
-      "label": "Entrance: O People Of",
-      "filePath": "_psalms/Advent/Adv-02A/Antiphons/REJOICE_A02 O_People_Of_Sion_Behold_2nd_Sunday_Of_Advent_Entrance_Antiphon_8.mp3",
-      "source": "local",
-      "category": "antiphon"
-    }
-  ]
+  "occasionResources": []
 }

@@ -266,46 +266,5 @@
       }
     }
   ],
-  "occasionResources": [
-    {
-      "id": "psalms--psalms-easter-eas-07a-gospel-acclamations-easter-7abc-mp3",
-      "type": "audio",
-      "label": "Gospel Acclamation",
-      "filePath": "_psalms/Easter/Eas-07A/Gospel Acclamations/EASTER_7ABC.mp3",
-      "source": "local",
-      "category": "gospel_acclamation"
-    },
-    {
-      "id": "psalms--psalms-easter-eas-07a-gospel-acclamations-eas-07a-gospelacc-alonso-pdf",
-      "type": "sheet_music",
-      "label": "Gospel Acclamation (Alonso)",
-      "filePath": "_psalms/Easter/Eas-07A/Gospel Acclamations/Eas-07A_GospelAcc_Alonso.pdf",
-      "source": "local",
-      "category": "gospel_acclamation"
-    },
-    {
-      "id": "psalms--psalms-easter-eas-07a-antiphons-eas-07a-antiphons-rejoice-pdf",
-      "type": "sheet_music",
-      "label": "REJOICE Antiphons",
-      "filePath": "_psalms/Easter/Eas-07A/Antiphons/Eas-07A_Antiphons_REJOICE.pdf",
-      "source": "local",
-      "category": "antiphon"
-    },
-    {
-      "id": "psalms--psalms-easter-eas-07a-antiphons-rejoice-e07-father-i-pray-that-they-may-be-one-",
-      "type": "audio",
-      "label": "Communion: Father I Pray That They May",
-      "filePath": "_psalms/Easter/Eas-07A/Antiphons/REJOICE_E07 Father_I_Pray_That_They_May_Be_One_7th_Sunday_Of_Easter_Communion_Antiphon_109.mp3",
-      "source": "local",
-      "category": "antiphon"
-    },
-    {
-      "id": "psalms--psalms-easter-eas-07a-antiphons-rejoice-e07-o-lord-hear-my-voice-for-i-have-cal",
-      "type": "audio",
-      "label": "Entrance: O Lord Hear My Voice For I Have Called",
-      "filePath": "_psalms/Easter/Eas-07A/Antiphons/REJOICE_E07 O_Lord_Hear_My_Voice_For_I_Have_Called_To_You_7th_Sunday_Of_Easter_Entrance_Antiphon_108.mp3",
-      "source": "local",
-      "category": "antiphon"
-    }
-  ]
+  "occasionResources": []
 }

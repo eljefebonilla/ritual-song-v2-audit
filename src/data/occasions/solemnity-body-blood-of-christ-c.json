@@ -412,46 +412,5 @@
       }
     }
   ],
-  "occasionResources": [
-    {
-      "id": "psalms--psalms-solemnities-sol-body-and-bloodc-gospel-acclamations-sol-body-and-blood-c",
-      "type": "sheet_music",
-      "label": "Gospel Acclamation (Alonso)",
-      "filePath": "_psalms/Solemnities/Sol-Body-And-BloodC/Gospel Acclamations/Sol-Body-And-Blood-C_GospelAcc-OT_Alonso.pdf",
-      "source": "local",
-      "category": "gospel_acclamation"
-    },
-    {
-      "id": "psalms--psalms-solemnities-sol-body-and-bloodc-gospel-acclamations-sol-body-and-bloodc-",
-      "type": "sheet_music",
-      "label": "Gospel Acclamation - Spirit & Psalm (Stephan)",
-      "filePath": "_psalms/Solemnities/Sol-Body-And-BloodC/Gospel Acclamations/Sol-Body-And-BloodC_Gospel-Acclamation_Spirit&Psalm2025_Stephan.pdf",
-      "source": "local",
-      "category": "gospel_acclamation"
-    },
-    {
-      "id": "psalms--psalms-solemnities-sol-body-and-bloodc-antiphons-rejoice-e09-he-fed-them-with-t",
-      "type": "audio",
-      "label": "Entrance: He Fed Them With The Finest Wheat Body And Blood",
-      "filePath": "_psalms/Solemnities/Sol-Body-And-BloodC/Antiphons/REJOICE_E09 He_Fed_Them_With_The_Finest_Wheat_Body_And_Blood_Corpus_Christi_Entrance_Antiphon_117.mp3",
-      "source": "local",
-      "category": "antiphon"
-    },
-    {
-      "id": "psalms--psalms-solemnities-sol-body-and-bloodc-antiphons-rejoice-e09-whoever-eats-my-fl",
-      "type": "audio",
-      "label": "Communion: Whoever Eats My Flesh Body And Blood Corpus Christi Communion Antiphon 15th Sun",
-      "filePath": "_psalms/Solemnities/Sol-Body-And-BloodC/Antiphons/REJOICE_E09 Whoever_Eats_My_Flesh_Body_And_Blood_Corpus_Christi_Communion_Antiphon_15th_Sun_In_Ot_Communion_Antiphon_Ii_118_144.mp3",
-      "source": "local",
-      "category": "antiphon"
-    },
-    {
-      "id": "psalms--psalms-solemnities-sol-body-and-bloodc-antiphons-sol-body-and-bloodc-antiphons-",
-      "type": "sheet_music",
-      "label": "REJOICE Antiphons",
-      "filePath": "_psalms/Solemnities/Sol-Body-And-BloodC/Antiphons/Sol-Body-And-BloodC_Antiphons_REJOICE.pdf",
-      "source": "local",
-      "category": "antiphon"
-    }
-  ]
+  "occasionResources": []
 }

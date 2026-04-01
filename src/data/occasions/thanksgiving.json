@@ -101,38 +101,5 @@
       ]
     }
   ],
-  "occasionResources": [
-    {
-      "id": "psalms--psalms-solemnities-sol-thanksgivinga-gospel-acclamations-sol-thanksgivinga-gosp",
-      "type": "sheet_music",
-      "label": "Gospel Acclamation - Spirit & Psalm (Booth)",
-      "filePath": "_psalms/Solemnities/Sol-ThanksgivingA/Gospel Acclamations/Sol-ThanksgivingA_Gospel-Acclamation_Spirit&Psalm2026_Booth.pdf",
-      "source": "local",
-      "category": "gospel_acclamation"
-    },
-    {
-      "id": "psalms--psalms-solemnities-sol-thanksgivinga-antiphons-sol-thanksgivinga-antiphons-rejo",
-      "type": "sheet_music",
-      "label": "REJOICE Antiphons",
-      "filePath": "_psalms/Solemnities/Sol-ThanksgivingA/Antiphons/Sol-ThanksgivingA_Antiphons_REJOICE.pdf",
-      "source": "local",
-      "category": "antiphon"
-    },
-    {
-      "id": "psalms--psalms-solemnities-sol-thanksgivingb-gospel-acclamations-sol-thanksgivingb-gosp",
-      "type": "sheet_music",
-      "label": "Gospel Acclamation - Spirit & Psalm (Booth)",
-      "filePath": "_psalms/Solemnities/Sol-ThanksgivingB/Gospel Acclamations/Sol-ThanksgivingB_Gospel-Acclamation_Spirit&Psalm2024_Booth.pdf",
-      "source": "local",
-      "category": "gospel_acclamation"
-    },
-    {
-      "id": "psalms--psalms-solemnities-sol-thanksgivingc-gospel-acclamations-sol-thanksgivingc-gosp",
-      "type": "sheet_music",
-      "label": "Gospel Acclamation - Spirit & Psalm (Stephan)",
-      "filePath": "_psalms/Solemnities/Sol-ThanksgivingC/Gospel Acclamations/Sol-ThanksgivingC_Gospel-Acclamation_Spirit&Psalm2025_Stephan.pdf",
-      "source": "local",
-      "category": "gospel_acclamation"
-    }
-  ]
+  "occasionResources": []
 }

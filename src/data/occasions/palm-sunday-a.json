@@ -427,30 +427,5 @@
       }
     }
   ],
-  "occasionResources": [
-    {
-      "id": "psalms--psalms-lent-len-palm-sundaya-gospel-acclamations-len-palm-sunday-a-palm-sunday-",
-      "type": "sheet_music",
-      "label": "Gospel Acclamation (Alonso)",
-      "filePath": "_psalms/Lent/Len-Palm-SundayA/Gospel Acclamations/Len-Palm-Sunday-A_Palm-Sunday-Of-The-Passion-Of-The-Lord_GospelAcc_Alonso.pdf",
-      "source": "local",
-      "category": "gospel_acclamation"
-    },
-    {
-      "id": "psalms--psalms-lent-len-palm-sundaya-gospel-acclamations-len-palm-sundaya-gospel-acclam",
-      "type": "sheet_music",
-      "label": "Gospel Acclamation - Spirit & Psalm (Hart)",
-      "filePath": "_psalms/Lent/Len-Palm-SundayA/Gospel Acclamations/Len-Palm-SundayA_Gospel-Acclamation_Spirit&Psalm2026_Hart.pdf",
-      "source": "local",
-      "category": "gospel_acclamation"
-    },
-    {
-      "id": "psalms--psalms-lent-len-palm-sundaya-antiphons-len-palm-sundaya-antiphons-rejoice-pdf",
-      "type": "sheet_music",
-      "label": "REJOICE Antiphons",
-      "filePath": "_psalms/Lent/Len-Palm-SundayA/Antiphons/Len-Palm-SundayA_Antiphons_REJOICE.pdf",
-      "source": "local",
-      "category": "antiphon"
-    }
-  ]
+  "occasionResources": []
 }

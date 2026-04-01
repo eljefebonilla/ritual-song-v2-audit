@@ -394,30 +394,5 @@
       }
     }
   ],
-  "occasionResources": [
-    {
-      "id": "psalms--psalms-lent-len-palm-sundayb-gospel-acclamations-len-palm-sunday-b-gospelacc-pd",
-      "type": "sheet_music",
-      "label": "Gospel Acclamation",
-      "filePath": "_psalms/Lent/Len-Palm-SundayB/Gospel Acclamations/Len-Palm-Sunday-B_GospelAcc.pdf",
-      "source": "local",
-      "category": "gospel_acclamation"
-    },
-    {
-      "id": "psalms--psalms-lent-len-palm-sundayb-gospel-acclamations-len-palm-sundayb-gospel-acclam",
-      "type": "sheet_music",
-      "label": "Gospel Acclamation - Spirit & Psalm (Hart)",
-      "filePath": "_psalms/Lent/Len-Palm-SundayB/Gospel Acclamations/Len-Palm-SundayB_Gospel-Acclamation_Spirit&Psalm2024_Hart.pdf",
-      "source": "local",
-      "category": "gospel_acclamation"
-    },
-    {
-      "id": "psalms--psalms-lent-len-palm-sundayb-antiphons-len-palm-sundayb-antiphons-rejoice-pdf",
-      "type": "sheet_music",
-      "label": "REJOICE Antiphons",
-      "filePath": "_psalms/Lent/Len-Palm-SundayB/Antiphons/Len-Palm-SundayB_Antiphons_REJOICE.pdf",
-      "source": "local",
-      "category": "antiphon"
-    }
-  ]
+  "occasionResources": []
 }

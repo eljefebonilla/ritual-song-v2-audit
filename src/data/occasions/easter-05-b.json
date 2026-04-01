@@ -257,54 +257,5 @@
       }
     }
   ],
-  "occasionResources": [
-    {
-      "id": "psalms--psalms-easter-eas-05b-gospel-acclamations-easter-5b-mp3",
-      "type": "audio",
-      "label": "Gospel Acclamation",
-      "filePath": "_psalms/Easter/Eas-05B/Gospel Acclamations/EASTER_5B.mp3",
-      "source": "local",
-      "category": "gospel_acclamation"
-    },
-    {
-      "id": "psalms--psalms-easter-eas-05b-gospel-acclamations-eas-05b-gospel-acclamation-spirit-psa",
-      "type": "sheet_music",
-      "label": "Gospel Acclamation - Spirit & Psalm (Hart)",
-      "filePath": "_psalms/Easter/Eas-05B/Gospel Acclamations/Eas-05B_Gospel-Acclamation_Spirit&Psalm2024_Hart.pdf",
-      "source": "local",
-      "category": "gospel_acclamation"
-    },
-    {
-      "id": "psalms--psalms-easter-eas-05b-gospel-acclamations-eas-05b-gospelacc-alonso-pdf",
-      "type": "sheet_music",
-      "label": "Gospel Acclamation (Alonso)",
-      "filePath": "_psalms/Easter/Eas-05B/Gospel Acclamations/Eas-05B_GospelAcc_Alonso.pdf",
-      "source": "local",
-      "category": "gospel_acclamation"
-    },
-    {
-      "id": "psalms--psalms-easter-eas-05b-antiphons-eas-05b-antiphons-rejoice-pdf",
-      "type": "sheet_music",
-      "label": "REJOICE Antiphons",
-      "filePath": "_psalms/Easter/Eas-05B/Antiphons/Eas-05B_Antiphons_REJOICE.pdf",
-      "source": "local",
-      "category": "antiphon"
-    },
-    {
-      "id": "psalms--psalms-easter-eas-05b-antiphons-rejoice-e05-i-am-the-true-vine-and-you-are-the-",
-      "type": "audio",
-      "label": "Communion: I Am The True Vine And You Are",
-      "filePath": "_psalms/Easter/Eas-05B/Antiphons/REJOICE_E05 I_Am_The_True_Vine_And_You_Are_The_Branches_5th_Sunday_Of_Easter_Communion_Antiphon_101.mp3",
-      "source": "local",
-      "category": "antiphon"
-    },
-    {
-      "id": "psalms--psalms-easter-eas-05b-antiphons-rejoice-e05-o-sing-a-new-song-to-the-lord-for-h",
-      "type": "audio",
-      "label": "Entrance: O Sing A New Song To The Lord For He Has",
-      "filePath": "_psalms/Easter/Eas-05B/Antiphons/REJOICE_E05 O_Sing_A_New_Song_To_The_Lord_For_He_Has_Worked_Wonders_5th_Sunday_Of_Easter_Entrance_Antiphon_100.mp3",
-      "source": "local",
-      "category": "antiphon"
-    }
-  ]
+  "occasionResources": []
 }

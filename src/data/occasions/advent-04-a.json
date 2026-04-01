@@ -393,54 +393,5 @@
       }
     }
   ],
-  "occasionResources": [
-    {
-      "id": "psalms--psalms-advent-adv-04a-gospel-acclamations-advent-4a-mp3",
-      "type": "audio",
-      "label": "Gospel Acclamation",
-      "filePath": "_psalms/Advent/Adv-04A/Gospel Acclamations/ADVENT_4A.mp3",
-      "source": "local",
-      "category": "gospel_acclamation"
-    },
-    {
-      "id": "psalms--psalms-advent-adv-04a-gospel-acclamations-adv-04a-gospel-acclamation-spirit-psa",
-      "type": "sheet_music",
-      "label": "Gospel Acclamation - Spirit & Psalm (Angrisano)",
-      "filePath": "_psalms/Advent/Adv-04A/Gospel Acclamations/Adv-04A_Gospel-Acclamation_Spirit&Psalm2026_Angrisano.pdf",
-      "source": "local",
-      "category": "gospel_acclamation"
-    },
-    {
-      "id": "psalms--psalms-advent-adv-04a-gospel-acclamations-adv-04a-gospelacc-alonso-pdf",
-      "type": "sheet_music",
-      "label": "Gospel Acclamation (Alonso)",
-      "filePath": "_psalms/Advent/Adv-04A/Gospel Acclamations/Adv-04A_GospelAcc_Alonso.pdf",
-      "source": "local",
-      "category": "gospel_acclamation"
-    },
-    {
-      "id": "psalms--psalms-advent-adv-04a-antiphons-adv-04a-antiphons-rejoice-pdf",
-      "type": "sheet_music",
-      "label": "REJOICE Antiphons",
-      "filePath": "_psalms/Advent/Adv-04A/Antiphons/Adv-04A_Antiphons_REJOICE.pdf",
-      "source": "local",
-      "category": "antiphon"
-    },
-    {
-      "id": "psalms--psalms-advent-adv-04a-antiphons-rejoice-a04-behold-a-virgin-shall-conceive-4th-",
-      "type": "audio",
-      "label": "Communion: Behold A Virgin",
-      "filePath": "_psalms/Advent/Adv-04A/Antiphons/REJOICE_A04 Behold_A_Virgin_Shall_Conceive_4th_Sunday_Of_Advent_Communion_Antiphon_13.mp3",
-      "source": "local",
-      "category": "antiphon"
-    },
-    {
-      "id": "psalms--psalms-advent-adv-04a-antiphons-rejoice-a04-drop-down-dew-from-above-4th-sunday",
-      "type": "audio",
-      "label": "Entrance: Drop Down Dew",
-      "filePath": "_psalms/Advent/Adv-04A/Antiphons/REJOICE_A04 Drop_Down_Dew_From_Above_4th_Sunday_Of_Advent_Entrance_Antiphon_12.mp3",
-      "source": "local",
-      "category": "antiphon"
-    }
-  ]
+  "occasionResources": []
 }

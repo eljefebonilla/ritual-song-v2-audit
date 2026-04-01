@@ -414,54 +414,5 @@
       }
     }
   ],
-  "occasionResources": [
-    {
-      "id": "psalms--psalms-christmas-chr-holy-familyc-gospel-acclamations-christmas-holyfamily-abc-",
-      "type": "audio",
-      "label": "Gospel Acclamation",
-      "filePath": "_psalms/Christmas/Chr-Holy-FamilyC/Gospel Acclamations/CHRISTMAS_HolyFamily_ABC.mp3",
-      "source": "local",
-      "category": "gospel_acclamation"
-    },
-    {
-      "id": "psalms--psalms-christmas-chr-holy-familyc-gospel-acclamations-chr-holy-family-c-gospela",
-      "type": "sheet_music",
-      "label": "Gospel Acclamation (Alonso)",
-      "filePath": "_psalms/Christmas/Chr-Holy-FamilyC/Gospel Acclamations/Chr-Holy-Family-C_GospelAcc_Alonso.pdf",
-      "source": "local",
-      "category": "gospel_acclamation"
-    },
-    {
-      "id": "psalms--psalms-christmas-chr-holy-familyc-gospel-acclamations-chr-holy-familyc-gospel-a",
-      "type": "sheet_music",
-      "label": "Gospel Acclamation - Spirit & Psalm (Blakesley)",
-      "filePath": "_psalms/Christmas/Chr-Holy-FamilyC/Gospel Acclamations/Chr-Holy-FamilyC_Gospel-Acclamation_Spirit&Psalm2025_Blakesley.pdf",
-      "source": "local",
-      "category": "gospel_acclamation"
-    },
-    {
-      "id": "psalms--psalms-christmas-chr-holy-familyc-antiphons-chr-holy-familyc-antiphons-rejoice-",
-      "type": "sheet_music",
-      "label": "REJOICE Antiphons",
-      "filePath": "_psalms/Christmas/Chr-Holy-FamilyC/Antiphons/Chr-Holy-FamilyC_Antiphons_REJOICE.pdf",
-      "source": "local",
-      "category": "antiphon"
-    },
-    {
-      "id": "psalms--psalms-christmas-chr-holy-familyc-antiphons-rejoice-christmas-our-god-has-appea",
-      "type": "audio",
-      "label": "Communion: Our God Has Appeared On The Earth",
-      "filePath": "_psalms/Christmas/Chr-Holy-FamilyC/Antiphons/REJOICE_CHRISTMAS Our_God_Has_Appeared_On_The_Earth_Holy_Family_Communion_Antiphon_24.mp3",
-      "source": "local",
-      "category": "antiphon"
-    },
-    {
-      "id": "psalms--psalms-christmas-chr-holy-familyc-antiphons-rejoice-christmas-the-shepherds-wen",
-      "type": "audio",
-      "label": "Entrance: The Shepherds Went In Haste",
-      "filePath": "_psalms/Christmas/Chr-Holy-FamilyC/Antiphons/REJOICE_CHRISTMAS The_Shepherds_Went_In_Haste_Holy_Family_Entrance_Antiphon_23.mp3",
-      "source": "local",
-      "category": "antiphon"
-    }
-  ]
+  "occasionResources": []
 }

@@ -183,46 +183,5 @@
       }
     }
   ],
-  "occasionResources": [
-    {
-      "id": "psalms--psalms-ordinary-time-ot-10c-gospel-acclamations-ot-10c-gospelacc-ot-alonso-pdf",
-      "type": "sheet_music",
-      "label": "Gospel Acclamation (Alonso)",
-      "filePath": "_psalms/Ordinary Time/OT-10C/Gospel Acclamations/OT-10C_GospelAcc-OT_Alonso.pdf",
-      "source": "local",
-      "category": "gospel_acclamation"
-    },
-    {
-      "id": "psalms--psalms-ordinary-time-ot-10c-antiphons-ot-10c-antiphons-rejoice-pdf",
-      "type": "sheet_music",
-      "label": "REJOICE Antiphons",
-      "filePath": "_psalms/Ordinary Time/OT-10C/Antiphons/OT-10C_Antiphons_REJOICE.pdf",
-      "source": "local",
-      "category": "antiphon"
-    },
-    {
-      "id": "psalms--psalms-ordinary-time-ot-10c-antiphons-rejoice-ot10-god-is-love-10th-sunday-in-o",
-      "type": "audio",
-      "label": "Communion: God",
-      "filePath": "_psalms/Ordinary Time/OT-10C/Antiphons/REJOICE_OT10 God_Is_Love_10th_Sunday_In_Ordinary_Time_Communion_Antiphon_Ii_129.mp3",
-      "source": "local",
-      "category": "antiphon"
-    },
-    {
-      "id": "psalms--psalms-ordinary-time-ot-10c-antiphons-rejoice-ot10-the-lord-is-my-light-and-my-",
-      "type": "audio",
-      "label": "Entrance: The Lord Is My Light And",
-      "filePath": "_psalms/Ordinary Time/OT-10C/Antiphons/REJOICE_OT10 The_Lord_Is_My_Light_And_My_Salvation_10th_Sunday_In_Ordinary_Time_Entrance_Antiphon_127.mp3",
-      "source": "local",
-      "category": "antiphon"
-    },
-    {
-      "id": "psalms--psalms-ordinary-time-ot-10c-antiphons-rejoice-ot10-the-lord-is-my-rock-10th-sun",
-      "type": "audio",
-      "label": "Communion: The Lord Is",
-      "filePath": "_psalms/Ordinary Time/OT-10C/Antiphons/REJOICE_OT10 The_Lord_Is_My_Rock_10th_Sunday_In_Ordinary_Time_Communion_Antiphon_I_128.mp3",
-      "source": "local",
-      "category": "antiphon"
-    }
-  ]
+  "occasionResources": []
 }
