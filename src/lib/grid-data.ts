@@ -93,7 +93,16 @@ export function extractCellData(
     }
     case "psalmText": {
       const r = occasion?.readings?.find((rd) => rd.type === "psalm");
-      if (r) return { title: r.citation, description: r.antiphon, isEmpty: false, isReading: true };
+      if (r) {
+        // Citation may contain "Ps 122:1-2, 3-4\nLet us go rejoicing..."
+        // Split at newline: first part is citation, rest is refrain
+        const parts = r.citation.split("\n");
+        const citation = parts[0];
+        const refrain = parts.length > 1
+          ? parts.slice(1).join(" ").trim()
+          : (r.antiphon && r.antiphon !== r.citation ? r.antiphon : null);
+        return { title: citation, description: refrain || undefined, isEmpty: false, isReading: true };
+      }
       return { title: "", isEmpty: true, isReading: true };
     }
     case "secondReading": {
