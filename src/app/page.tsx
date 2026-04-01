@@ -93,11 +93,15 @@ export default async function DashboardPage() {
   }
 
   return (
-    <div className="p-4 pt-14 md:p-8 md:pt-8 max-w-3xl">
-      <h1 className="text-2xl font-bold text-stone-900 mb-1">Dashboard</h1>
-      <p className="text-sm text-stone-500 mb-8">
-        {occasions.length} liturgical occasions across the 3-year lectionary cycle
-      </p>
+    <div className="max-w-3xl">
+      {/* Ombre hero */}
+      <div className="bg-gradient-to-b from-[color-mix(in_srgb,var(--liturgical-theme),transparent_85%)] to-background px-4 pt-14 md:px-8 md:pt-8 pb-6">
+        <h1 className="font-serif text-[1.375rem] font-semibold text-parish-charcoal mb-1">Dashboard</h1>
+        <p className="text-sm text-muted">
+          {occasions.length} liturgical occasions across the 3-year lectionary cycle
+        </p>
+      </div>
+      <div className="px-4 md:px-8">
 
       {/* Season transition alert */}
       {liturgicalDays.length > 0 && (
@@ -111,20 +115,20 @@ export default async function DashboardPage() {
         {thisWeek && (
           <Link
             href={`/occasion/${thisWeek.id}`}
-            className="border border-stone-200 rounded-lg p-5 bg-white hover:shadow-md transition-shadow"
+            className="border border-border rounded-lg p-5 bg-surface hover:shadow-md transition-shadow"
           >
             <div className="flex items-center justify-between mb-1">
-              <p className="text-[10px] uppercase tracking-widest text-stone-400 font-semibold">
+              <p className="text-[11px] uppercase tracking-widest text-muted font-medium">
                 This Week
               </p>
               {thisWeek.dates.length > 0 && (
-                <p className="text-[10px] text-stone-400">
+                <p className="text-[11px] text-muted">
                   {getNearestDate(thisWeek.dates)}
                 </p>
               )}
             </div>
-            <p className="text-lg font-bold text-stone-900">{thisWeek.name}</p>
-            <p className="text-sm text-stone-500 mt-1">
+            <p className="font-serif text-lg font-semibold text-parish-charcoal">{thisWeek.name}</p>
+            <p className="text-sm text-muted mt-1">
               {thisWeek.lectionary.thematicTag}
             </p>
             {thisWeekSynopsis?.logline && (
@@ -137,20 +141,20 @@ export default async function DashboardPage() {
         {nextWeek && (
           <Link
             href={`/occasion/${nextWeek.id}`}
-            className="border border-stone-200 rounded-lg p-5 bg-white hover:shadow-md transition-shadow"
+            className="border border-border rounded-lg p-5 bg-surface hover:shadow-md transition-shadow"
           >
             <div className="flex items-center justify-between mb-1">
-              <p className="text-[10px] uppercase tracking-widest text-stone-400 font-semibold">
+              <p className="text-[11px] uppercase tracking-widest text-muted font-medium">
                 Next Week
               </p>
               {nextWeek.dates.length > 0 && (
-                <p className="text-[10px] text-stone-400">
+                <p className="text-[11px] text-muted">
                   {getNearestDate(nextWeek.dates)}
                 </p>
               )}
             </div>
-            <p className="text-lg font-bold text-stone-900">{nextWeek.name}</p>
-            <p className="text-sm text-stone-500 mt-1">
+            <p className="font-serif text-lg font-semibold text-parish-charcoal">{nextWeek.name}</p>
+            <p className="text-sm text-muted mt-1">
               {nextWeek.lectionary.thematicTag}
             </p>
             {nextWeekSynopsis?.logline && (
@@ -166,20 +170,20 @@ export default async function DashboardPage() {
       <div className="flex gap-3 mb-10">
         <Link
           href="/planner"
-          className="px-4 py-2 bg-stone-900 text-white text-sm font-medium rounded-lg hover:bg-stone-800 transition-colors"
+          className="px-4 py-2 bg-parish-burgundy text-white text-sm font-medium rounded-lg hover:bg-parish-burgundy/90 transition-colors"
         >
           Open Planner
         </Link>
         <Link
           href="/library"
-          className="px-4 py-2 border border-stone-300 text-stone-700 text-sm font-medium rounded-lg hover:bg-stone-50 transition-colors"
+          className="px-4 py-2 border border-border bg-surface text-foreground text-sm font-medium rounded-lg hover:bg-subtle transition-colors"
         >
           Song Library
         </Link>
       </div>
 
       {/* Seasons overview — single column, liturgical order */}
-      <h2 className="text-lg font-bold text-stone-900 mb-4">
+      <h2 className="font-serif text-[1.125rem] font-semibold text-parish-charcoal mb-4">
         Liturgical Year
       </h2>
       <div className="flex flex-col gap-3">
@@ -197,21 +201,22 @@ export default async function DashboardPage() {
             <Link
               key={entry.key}
               href={`/season/${season.id}`}
-              className="border border-stone-200 rounded-lg overflow-hidden bg-white hover:shadow-md transition-shadow"
+              className="border border-border rounded-lg overflow-hidden bg-surface hover:shadow-md transition-shadow"
             >
               <div
-                className="h-2"
+                className="h-1.5"
                 style={{ backgroundColor: colors.primary }}
               />
               <div className="p-4 flex items-center justify-between">
-                <h3 className="font-bold text-stone-900">{entry.label}</h3>
-                <p className="text-xs text-stone-400">
+                <h3 className="font-serif font-semibold text-parish-charcoal">{entry.label}</h3>
+                <p className="text-[11px] text-muted font-medium">
                   {filteredOccasions.length} occasions
                 </p>
               </div>
             </Link>
           );
         })}
+      </div>
       </div>
     </div>
   );

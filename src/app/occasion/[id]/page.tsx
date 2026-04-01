@@ -35,77 +35,80 @@ export default async function OccasionPage({
   const nextOccasion = currentIdx >= 0 && currentIdx < sameSeasonYear.length - 1 ? sameSeasonYear[currentIdx + 1] : null;
 
   return (
-    <div className="p-4 pt-14 md:p-8 md:pt-8 max-w-5xl">
-      {/* Breadcrumb */}
-      <div className="flex items-center gap-2 text-xs text-stone-400 mb-4">
-        <Link href="/" className="hover:text-stone-600">
-          Dashboard
-        </Link>
-        <span>/</span>
-        <Link
-          href={`/season/${occasion.season}`}
-          className="hover:text-stone-600"
-        >
-          {occasion.seasonLabel}
-        </Link>
-        <span>/</span>
-        <span className="text-stone-600">{occasion.name}</span>
-      </div>
+    <div className="max-w-5xl">
+      {/* Ombre hero — colored by this occasion's season */}
+      <div
+        className="bg-gradient-to-b to-background px-4 pt-14 md:px-8 md:pt-8 pb-6"
+        style={{ backgroundImage: `linear-gradient(to bottom, color-mix(in srgb, ${occasionColor}, transparent 85%), var(--color-background))` }}
+      >
+        {/* Breadcrumb */}
+        <div className="flex items-center gap-2 text-xs text-muted mb-4">
+          <Link href="/" className="hover:text-foreground">
+            Dashboard
+          </Link>
+          <span>/</span>
+          <Link
+            href={`/season/${occasion.season}`}
+            className="hover:text-foreground"
+          >
+            {occasion.seasonLabel}
+          </Link>
+          <span>/</span>
+          <span className="text-foreground">{occasion.name}</span>
+        </div>
 
-      {/* Prev / Next navigation */}
-      {(prevOccasion || nextOccasion) && (
-        <div className="flex items-center justify-between mb-4">
-          {prevOccasion ? (
-            <Link
-              href={`/occasion/${prevOccasion.id}`}
-              className="flex items-center gap-1.5 text-xs text-stone-400 hover:text-stone-600 transition-colors"
-            >
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                <polyline points="15 18 9 12 15 6" />
-              </svg>
-              <span className="max-w-[200px] truncate">{prevOccasion.name}</span>
-            </Link>
-          ) : (
-            <span />
-          )}
-          {nextOccasion ? (
-            <Link
-              href={`/occasion/${nextOccasion.id}`}
-              className="flex items-center gap-1.5 text-xs text-stone-400 hover:text-stone-600 transition-colors"
-            >
-              <span className="max-w-[200px] truncate">{nextOccasion.name}</span>
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                <polyline points="9 18 15 12 9 6" />
-              </svg>
-            </Link>
-          ) : (
-            <span />
+        {/* Prev / Next navigation */}
+        {(prevOccasion || nextOccasion) && (
+          <div className="flex items-center justify-between mb-4">
+            {prevOccasion ? (
+              <Link
+                href={`/occasion/${prevOccasion.id}`}
+                className="flex items-center gap-1.5 text-xs text-muted hover:text-foreground transition-colors"
+              >
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                  <polyline points="15 18 9 12 15 6" />
+                </svg>
+                <span className="max-w-[200px] truncate">{prevOccasion.name}</span>
+              </Link>
+            ) : (
+              <span />
+            )}
+            {nextOccasion ? (
+              <Link
+                href={`/occasion/${nextOccasion.id}`}
+                className="flex items-center gap-1.5 text-xs text-muted hover:text-foreground transition-colors"
+              >
+                <span className="max-w-[200px] truncate">{nextOccasion.name}</span>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                  <polyline points="9 18 15 12 9 6" />
+                </svg>
+              </Link>
+            ) : (
+              <span />
+            )}
+          </div>
+        )}
+
+        {/* Header */}
+        <div>
+          <h1 className="font-serif text-[1.375rem] font-semibold text-parish-charcoal">{occasion.name}</h1>
+          <p className="text-sm text-muted mt-1">
+            {occasion.lectionary.number} &middot;{" "}
+            {occasion.lectionary.thematicTag}
+          </p>
+          {occasion.lectionary.gospelTitle && (
+            <p className="text-sm text-foreground/70 mt-1 font-serif italic">
+              {occasion.lectionary.gospelTitle}
+            </p>
           )}
         </div>
-      )}
-
-      {/* Header */}
-      <div className="mb-8">
-        <div
-          className="w-12 h-1 rounded-full mb-3"
-          style={{ backgroundColor: occasionColor }}
-        />
-        <h1 className="text-2xl font-bold text-stone-900">{occasion.name}</h1>
-        <p className="text-sm text-stone-500 mt-1">
-          {occasion.lectionary.number} &middot;{" "}
-          {occasion.lectionary.thematicTag}
-        </p>
-        {occasion.lectionary.gospelTitle && (
-          <p className="text-sm text-stone-600 mt-1 italic">
-            {occasion.lectionary.gospelTitle}
-          </p>
-        )}
       </div>
+      <div className="px-4 md:px-8 pt-6">
 
       {/* Dates */}
       {occasion.dates.length > 0 && (
         <div className="mb-6">
-          <h2 className="text-xs uppercase tracking-widest font-bold text-stone-400 mb-2">
+          <h2 className="text-[11px] uppercase tracking-widest font-medium text-muted mb-2">
             Dates
           </h2>
           <div className="flex flex-wrap gap-2">
@@ -124,7 +127,7 @@ export default async function OccasionPage({
       {/* Planning Notes */}
       {occasion.planningNotes.length > 0 && (
         <div className="mb-6">
-          <h2 className="text-xs uppercase tracking-widest font-bold text-stone-400 mb-2">
+          <h2 className="text-[11px] uppercase tracking-widest font-medium text-muted mb-2">
             Planning Notes
           </h2>
           <div className="border border-stone-200 rounded-lg p-3 bg-white">
@@ -144,7 +147,7 @@ export default async function OccasionPage({
             className="w-12 h-1 rounded-full mb-3"
             style={{ backgroundColor: occasionColor }}
           />
-          <h2 className="text-xs uppercase tracking-widest font-bold text-stone-400 mb-2">
+          <h2 className="text-[11px] uppercase tracking-widest font-medium text-muted mb-2">
             Lectionary Synopsis
           </h2>
           <p className="text-sm font-medium text-[#4A5568]">{synopsis.logline}</p>
@@ -172,6 +175,7 @@ export default async function OccasionPage({
           occasionDates={occasion.dates}
         />
       )}
+      </div>
     </div>
   );
 }

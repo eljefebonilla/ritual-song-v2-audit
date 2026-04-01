@@ -58,31 +58,31 @@ export default function TodayShell({
 
   return (
     <div className="max-w-3xl mx-auto pb-12">
-      {/* Full-width liturgical color bar */}
-      <div className="h-[6px]" style={{ backgroundColor: colorHex }} />
-
-      {/* Header section */}
-      <div className="px-6 pt-6 pb-4" style={{ backgroundColor: colorLight }}>
+      {/* Ombre hero — fades from liturgical color to parchment */}
+      <div
+        className="px-6 pt-8 pb-6"
+        style={{ backgroundImage: `linear-gradient(to bottom, color-mix(in srgb, ${colorHex}, transparent 85%), var(--color-background))` }}
+      >
         {/* Rank badge */}
         <div className="flex items-center gap-2 mb-2">
           <span
             className="w-3 h-3 rounded-full"
             style={{ backgroundColor: colorHex }}
           />
-          <span className="text-xs font-semibold uppercase tracking-wide" style={{ color: colorHex }}>
+          <span className="text-[11px] font-medium uppercase tracking-wide" style={{ color: colorHex }}>
             {rankLabel(liturgicalDay.rank)}
           </span>
-          <span className="text-xs text-stone-400">|</span>
-          <span className="text-xs text-stone-500">{colorName}</span>
+          <span className="text-[11px] text-muted">|</span>
+          <span className="text-[11px] text-muted">{colorName}</span>
         </div>
 
         {/* Celebration name */}
-        <h1 className="text-2xl font-bold text-stone-900 mb-1">
+        <h1 className="font-serif text-[1.375rem] font-semibold text-parish-charcoal mb-1">
           {liturgicalDay.celebrationName}
         </h1>
 
         {/* Season + date */}
-        <p className="text-sm text-stone-500">
+        <p className="text-sm text-muted">
           <span style={{ color: seasonInfo?.primary }}>{seasonInfo?.label || liturgicalDay.season}</span>
           {" \u2022 "}
           {formatDisplayDate(date)}

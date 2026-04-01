@@ -729,11 +729,11 @@ export default function SongLibraryShell({ songs, title = "Music Library", subti
       {/* Main content area */}
       <div className="flex-1 flex flex-col overflow-hidden">
         {/* Toolbar */}
-        <div className="bg-white border-b border-stone-200 px-4 md:px-6 py-4 shrink-0">
+        <div className="bg-gradient-to-b from-[color-mix(in_srgb,var(--color-parish-gold),transparent_85%)] to-surface border-b border-border px-4 md:px-6 py-4 shrink-0">
           <div className="flex items-center justify-between mb-3">
             <div>
-              <h1 className="text-lg font-bold text-stone-900">{title}</h1>
-              <p className="text-xs text-stone-400">
+              <h1 className="font-serif text-lg font-semibold text-parish-charcoal">{title}</h1>
+              <p className="text-[11px] text-muted">
                 {subtitle || `${filtered.length} of ${activeSongs.length} songs`}
               </p>
             </div>
