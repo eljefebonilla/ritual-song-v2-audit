@@ -10,7 +10,8 @@ export type LiturgicalSeason =
   | "easter"
   | "ordinary"
   | "solemnity"
-  | "feast";
+  | "feast"
+  | "holiday";
 
 export interface OccasionDate {
   date: string; // ISO date string

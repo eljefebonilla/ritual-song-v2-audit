@@ -2,8 +2,8 @@
   "id": "memorial-day",
   "name": "Memorial Day",
   "year": "ABC",
-  "season": "ordinary",
-  "seasonLabel": "Ordinary Time",
+  "season": "holiday",
+  "seasonLabel": "Holidays",
   "seasonOrder": 0,
   "dates": [],
   "lectionary": {

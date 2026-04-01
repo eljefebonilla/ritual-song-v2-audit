@@ -2,8 +2,8 @@
   "id": "thanksgiving",
   "name": "THANKSGIVING",
   "year": "ABC",
-  "season": "ordinary",
-  "seasonLabel": "Ordinary Time",
+  "season": "holiday",
+  "seasonLabel": "Holidays",
   "seasonOrder": 0,
   "dates": [
     {

@@ -2,8 +2,8 @@
   "id": "veteran-s-day",
   "name": "VETERAN'S DAY",
   "year": "ABC",
-  "season": "ordinary",
-  "seasonLabel": "Ordinary Time",
+  "season": "holiday",
+  "seasonLabel": "Holidays",
   "seasonOrder": 0,
   "dates": [
     {

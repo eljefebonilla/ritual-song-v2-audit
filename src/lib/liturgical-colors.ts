@@ -60,6 +60,13 @@ export const SEASON_COLORS: Record<
     text: "text-red-700",
     label: "Feast",
   },
+  holiday: {
+    primary: "#1e40af",
+    bg: "bg-blue-800",
+    bgLight: "bg-blue-50",
+    text: "text-blue-800",
+    label: "Holidays",
+  },
 };
 
 export function getSeasonColor(season: LiturgicalSeason) {
@@ -93,6 +100,10 @@ export const OCCASION_COLOR_OVERRIDES: Record<string, string> = {
   "pentecost-c": "#DC2626",
   "pentecost-vigil-abc": "#DC2626",
   "pentecost-ext-vigil-abc": "#DC2626",
+  // Easter Vigil — Burnt orange/ember (fire of the Easter candle)
+  "easter-vigil": "#C2410C",
+  // Easter Sunday — Gold (white vestments rendered as gold for visibility)
+  "easter-sunday-abc": "#D4A017",
 };
 
 /**

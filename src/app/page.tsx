@@ -13,29 +13,29 @@ import SeasonAlert from "@/components/ui/SeasonAlert";
  */
 const LITURGICAL_DISPLAY_ORDER: {
   key: string;
-  seasonId: string;
+  seasonIds: string[];
   label: string;
   filter?: (occ: { seasonOrder: number }) => boolean;
 }[] = [
-  { key: "advent", seasonId: "advent", label: "Advent" },
-  { key: "christmas", seasonId: "christmas", label: "Christmas" },
+  { key: "advent", seasonIds: ["advent"], label: "Advent" },
+  { key: "christmas", seasonIds: ["christmas"], label: "Christmas" },
   {
     key: "ordinary-i",
-    seasonId: "ordinary",
+    seasonIds: ["ordinary"],
     label: "Ordinary Time I",
     filter: (occ) => occ.seasonOrder > 0 && occ.seasonOrder <= 8,
   },
-  { key: "lent", seasonId: "lent", label: "Lent" },
-  { key: "holyweek", seasonId: "holyweek", label: "Holy Week" },
-  { key: "easter", seasonId: "easter", label: "Easter" },
+  { key: "lent", seasonIds: ["lent"], label: "Lent" },
+  { key: "holyweek", seasonIds: ["holyweek"], label: "Holy Week" },
+  { key: "easter", seasonIds: ["easter"], label: "Easter" },
   {
     key: "ordinary-ii",
-    seasonId: "ordinary",
+    seasonIds: ["ordinary"],
     label: "Ordinary Time II",
     filter: (occ) => occ.seasonOrder > 8,
   },
-  { key: "solemnity", seasonId: "solemnity", label: "Solemnities" },
-  { key: "feast", seasonId: "feast", label: "Feasts" },
+  { key: "holydays", seasonIds: ["solemnity", "feast"], label: "Holy Days" },
+  { key: "holidays", seasonIds: ["holiday"], label: "Holidays" },
 ];
 
 function getNearestDate(dates: { date: string; label: string }[]): string | null {
@@ -188,19 +188,34 @@ export default async function DashboardPage() {
       </h2>
       <div className="flex flex-col gap-3">
         {LITURGICAL_DISPLAY_ORDER.map((entry) => {
-          const season = seasonMap.get(entry.seasonId);
-          if (!season) return null;
+          // Collect occasions from seasons.json OR from all-occasions.json directly
+          const entryOccasions = entry.seasonIds.flatMap((sid) => {
+            const season = seasonMap.get(sid);
+            if (season) return season.occasions;
+            // Fallback: filter from all occasions (for seasons not in seasons.json like "holiday")
+            return occasions.filter((o) => o.season === sid);
+          });
+
+          if (entryOccasions.length === 0) return null;
 
           const filteredOccasions = entry.filter
-            ? season.occasions.filter(entry.filter)
-            : season.occasions;
+            ? entryOccasions.filter(entry.filter)
+            : entryOccasions;
 
-          const colors = SEASON_COLORS[season.id];
+          if (filteredOccasions.length === 0) return null;
+
+          // Use the first season's color, or the design system color
+          const firstSeason = seasonMap.get(entry.seasonIds[0]);
+          const colorKey = entry.seasonIds[0] as keyof typeof SEASON_COLORS;
+          const colors = firstSeason ? SEASON_COLORS[firstSeason.id] : (SEASON_COLORS[colorKey] || SEASON_COLORS.ordinary);
+
+          // Link to the first season page (if it exists in seasons.json)
+          const linkHref = `/season/${entry.seasonIds[0]}`;
 
           return (
             <Link
               key={entry.key}
-              href={`/season/${season.id}`}
+              href={linkHref}
               className="border border-border rounded-lg overflow-hidden bg-surface hover:shadow-md transition-shadow"
             >
               <div

@@ -27,16 +27,26 @@ export interface JunkEntry {
   reason: string;
 }
 
+// Categories where multiple entries with the same title are expected (e.g., different verses per Sunday)
+const EXEMPT_CATEGORIES = new Set(["gospel_acclamation", "antiphon"]);
+
 /**
  * Group songs by normalized title and classify duplicate confidence.
  * - high: composer names fuzzy-match (same person, different spelling)
  * - medium: same title, one has resources and other doesn't
  * - low: same title, genuinely different composers
+ *
+ * Gospel acclamations and antiphons are excluded: they intentionally share
+ * titles across Sundays (e.g., "Alleluia, Mass of Joy and Peace" with
+ * different verses for each liturgical day).
  */
 export function detectDuplicateGroups(songs: LibrarySong[]): DuplicateGroup[] {
+  // Exclude categories where same-title entries are expected
+  const candidateSongs = songs.filter((s) => !EXEMPT_CATEGORIES.has(s.category || ""));
+
   // Group by normalized title
   const groups = new Map<string, LibrarySong[]>();
-  for (const song of songs) {
+  for (const song of candidateSongs) {
     const key = normalizeTitle(song.title);
     const existing = groups.get(key);
     if (existing) {

@@ -56,10 +56,7 @@ export default function CalendarV2Toolbar({
         <h1 className="font-serif text-lg font-light tracking-wide text-stone-700">
           Calendar
         </h1>
-        <span className="rounded-full border border-amber-300 bg-amber-50 px-2 py-0.5 text-[10px] font-semibold uppercase tracking-wider text-amber-700">
-          Sandbox
-        </span>
-        <span className="text-[10px] tabular-nums text-stone-400">
+        <span className="text-[10px] tabular-nums text-muted">
           Day {elapsed} of {totalDays}
         </span>
       </div>

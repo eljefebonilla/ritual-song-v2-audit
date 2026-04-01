@@ -2,8 +2,8 @@
   "id": "independence-day",
   "name": "INDEPENDENCE DAY",
   "year": "ABC",
-  "season": "ordinary",
-  "seasonLabel": "Ordinary Time",
+  "season": "holiday",
+  "seasonLabel": "Holidays",
   "seasonOrder": 0,
   "dates": [
     {
