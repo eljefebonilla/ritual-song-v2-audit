@@ -117,16 +117,22 @@ export async function notifyRejection(userId: string) {
 // Send bulk SMS to a list of profile IDs (admin action)
 export async function sendBulkSMS(profileIds: string[], message: string) {
   const supabase = createAdminClient();
-  const { data: profiles } = await supabase
+
+  // Fetch all selected profiles (not just consented) to report skip reasons
+  const { data: allProfiles } = await supabase
     .from("profiles")
     .select("id, phone, sms_consent")
-    .in("id", profileIds)
-    .eq("sms_consent", true);
-  if (!profiles) return { sent: 0, skipped: 0 };
+    .in("id", profileIds);
+  if (!allProfiles) return { sent: 0, skipped: 0, noConsent: 0, noPhone: 0, failed: 0 };
 
   let sent = 0;
-  for (const p of profiles) {
-    if (!p.phone) continue;
+  let noConsent = 0;
+  let noPhone = 0;
+  let failed = 0;
+
+  for (const p of allProfiles) {
+    if (!p.sms_consent) { noConsent++; continue; }
+    if (!p.phone) { noPhone++; continue; }
     try {
       const sid = await sendSMS(p.phone, message);
       await supabase.from("notifications_log").insert({
@@ -139,9 +145,10 @@ export async function sendBulkSMS(profileIds: string[], message: string) {
       sent++;
     } catch (err) {
       console.error(`SMS to ${p.id} failed:`, err);
+      failed++;
     }
   }
-  return { sent, skipped: profileIds.length - sent };
+  return { sent, skipped: profileIds.length - sent, noConsent, noPhone, failed };
 }
 
 // Send bulk email to a list of profile IDs (admin action)

@@ -7,7 +7,7 @@ const SEASON_COLORS: Record<string, string> = {
   Christmas: "#CA8A04",
   Lent: "#581C87",
   "Holy Week": "#7F1D1D",
-  Easter: "#B45309",
+  Easter: "#D97706",
   "Ordinary Time": "#166534",
 };
 

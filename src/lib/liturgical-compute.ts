@@ -149,14 +149,23 @@ export function getSeasonForDate(
  * Gloria rules:
  * - YES: All Solemnities, all Feasts, all Sundays
  * - EXCEPT: Advent Sundays (no Gloria) and Lent Sundays (no Gloria)
- * - Solemnities during Advent/Lent DO get Gloria
+ * - EXCEPT: Good Friday and Holy Saturday (no Gloria, despite solemnity rank)
+ * - Solemnities during Advent/Lent DO get Gloria (unless Triduum)
  * - NO: weekday Memorials, all weekdays
  */
 export function computeGloria(
   rank: string,
   season: string,
-  dayOfWeek: string
+  dayOfWeek: string,
+  celebrationName?: string
 ): boolean {
+  // Triduum exception: Good Friday and Holy Saturday never have Gloria
+  if (celebrationName) {
+    const name = celebrationName.toLowerCase();
+    if (name.includes("good friday") || name.includes("passion of the lord")) return false;
+    if (name.includes("holy saturday")) return false;
+  }
+
   const isSunday = dayOfWeek.toUpperCase() === "SUN";
 
   if (rank === "solemnity") return true;

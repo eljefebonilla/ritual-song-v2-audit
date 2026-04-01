@@ -1,24 +1,55 @@
 @import "tailwindcss";
 
 @theme inline {
+  /* Brand */
+  --color-parish-gold: #B8A472;
+  --color-parish-burgundy: #800000;
+  --color-parish-charcoal: #3A3A3A;
+
+  /* Neutrals */
   --color-background: #fafaf9;
   --color-foreground: #1c1917;
+  --color-surface: #ffffff;
+  --color-border: #e7e5e3;
+  --color-muted: #a8a29e;
+  --color-subtle: #f5f5f4;
   --color-sidebar: #1c1917;
   --color-sidebar-text: #fafaf9;
+
+  /* Liturgical seasons */
   --color-advent: #6B21A8;
   --color-christmas: #CA8A04;
   --color-lent: #581C87;
-  --color-easter: #B45309;
+  --color-holyweek: #7F1D1D;
+  --color-easter: #D97706;
   --color-ordinary: #166534;
   --color-solemnity: #991B1B;
   --color-feast: #B91C1C;
   --color-rose: #DB2777;
-  /* Parish brand colors */
-  --color-parish-gold: #B8A472;
-  --color-parish-burgundy: #800000;
-  --color-parish-charcoal: #3A3A3A;
-  --font-sans: "Trebuchet MS", "Helvetica Neue", Helvetica, sans-serif;
-  --font-serif: "Garamond", "Georgia", "Times New Roman", serif;
+
+  /* Vestment day colors */
+  --color-vest-violet: #6B21A8;
+  --color-vest-white: #D4A017;
+  --color-vest-red: #B91C1C;
+  --color-vest-green: #166534;
+  --color-vest-rose: #DB2777;
+  --color-vest-black: #1C1917;
+
+  /* Semantic */
+  --color-success: #16a34a;
+  --color-warning: #d97706;
+  --color-error: #dc2626;
+  --color-info: #2563eb;
+
+  /* Typography */
+  --font-sans: var(--font-inter), "Trebuchet MS", "Helvetica Neue", sans-serif;
+  --font-serif: var(--font-lora), "Garamond", "Georgia", serif;
+}
+
+:root {
+  color-scheme: light;
+  --liturgical-theme: var(--color-ordinary);
+  --ombre-source: var(--liturgical-theme);
 }
 
 html, body {

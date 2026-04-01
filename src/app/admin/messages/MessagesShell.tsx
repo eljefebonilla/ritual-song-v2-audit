@@ -215,7 +215,11 @@ export default function MessagesShell({ profiles, ensembles, initialLogs }: Mess
         const parts: string[] = [];
         if (data.smsSent > 0) parts.push(`${data.smsSent} SMS`);
         if (data.emailSent > 0) parts.push(`${data.emailSent} emails`);
-        addToast(`Sent: ${parts.join(", ") || "0 messages"}. ${data.skipped > 0 ? `${data.skipped} skipped (no consent/contact).` : ""}`);
+        const skipParts: string[] = [];
+        if (data.noConsent > 0) skipParts.push(`${data.noConsent} no SMS consent`);
+        if (data.noPhone > 0) skipParts.push(`${data.noPhone} no phone number`);
+        if (data.skipped > 0 && skipParts.length === 0) skipParts.push(`${data.skipped} skipped`);
+        addToast(`Sent: ${parts.join(", ") || "0 messages"}.${skipParts.length > 0 ? ` Skipped: ${skipParts.join(", ")}.` : ""}`);
 
         // Reset form
         setSmsBody("");

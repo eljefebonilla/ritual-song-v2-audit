@@ -7,6 +7,7 @@ interface GridCellProps {
   data: GridCellData;
   isEven: boolean;
   onEdit?: (rect: DOMRect) => void;
+  onClear?: () => void;
   draggable?: boolean;
   onDragStart?: (e: React.DragEvent) => void;
   isDragOver?: boolean;
@@ -22,6 +23,7 @@ export default function GridCell({
   data,
   isEven,
   onEdit,
+  onClear,
   draggable,
   onDragStart,
   isDragOver,
@@ -67,12 +69,12 @@ export default function GridCell({
         title={data.description ? `${data.title} — ${data.description}` : data.title}
       >
         {data.title && (
-          <p className="text-[10px] font-semibold text-stone-600 leading-tight">
+          <p className="text-[10px] text-muted leading-tight">
             {data.title}
           </p>
         )}
         {data.description && (
-          <p className="text-[10px] italic text-stone-400 leading-tight">
+          <p className="text-[10px] font-serif text-parish-burgundy leading-tight mt-0.5">
             {data.description}
           </p>
         )}
@@ -114,30 +116,38 @@ export default function GridCell({
           {data.composer}
         </p>
       )}
-      {hasAudio && onPlay && (
-        <button
-          onClick={(e) => {
-            e.stopPropagation();
-            onPlay();
-          }}
-          className="absolute right-1.5 top-1/2 -translate-y-1/2 hidden group-hover:flex items-center justify-center w-6 h-6 rounded-full bg-stone-800/80 text-white hover:bg-stone-800 transition-colors"
-          title="Play"
-        >
-          <svg width="10" height="10" viewBox="0 0 24 24" fill="currentColor">
-            <polygon points="5,3 19,12 5,21" />
-          </svg>
-        </button>
-      )}
-      {role === "admin" && !onDetail && (
-        <span className="hidden group-hover:inline-block text-[9px] text-amber-500 mt-0.5">
-          edit
-        </span>
-      )}
-      {role === "member" && !data.isEmpty && (
-        <span className="hidden group-hover:inline-block text-[9px] text-blue-400 mt-0.5">
-          suggest
-        </span>
-      )}
+      {/* Hover actions — positioned absolutely to prevent overflow */}
+      <div className="absolute right-1 top-1 hidden group-hover:flex items-center gap-0.5">
+        {hasAudio && onPlay && (
+          <button
+            onClick={(e) => {
+              e.stopPropagation();
+              onPlay();
+            }}
+            className="flex items-center justify-center w-5 h-5 rounded-full bg-stone-800/80 text-white hover:bg-stone-800 transition-colors"
+            title="Play"
+          >
+            <svg width="8" height="8" viewBox="0 0 24 24" fill="currentColor">
+              <polygon points="5,3 19,12 5,21" />
+            </svg>
+          </button>
+        )}
+        {role === "admin" && onClear && !data.isEmpty && (
+          <button
+            onClick={(e) => {
+              e.stopPropagation();
+              onClear();
+            }}
+            className="flex items-center justify-center w-5 h-5 rounded-full bg-red-100 text-red-500 hover:bg-red-200 hover:text-red-700 transition-colors"
+            title="Clear"
+          >
+            <svg width="8" height="8" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round">
+              <line x1="6" y1="6" x2="18" y2="18" />
+              <line x1="18" y1="6" x2="6" y2="18" />
+            </svg>
+          </button>
+        )}
+      </div>
     </div>
   );
 }

@@ -81,7 +81,7 @@ export async function POST() {
     const { config, boundaries } = match;
     const season = getSeasonForDate(row.date, boundaries);
     const dayOfWeek = new Date(row.date + "T12:00:00").toLocaleDateString("en-US", { weekday: "short" }).toUpperCase().slice(0, 3);
-    const gloria = computeGloria(row.rank, season, dayOfWeek);
+    const gloria = computeGloria(row.rank, season, dayOfWeek, row.celebration_name as string);
     const alleluia = computeAlleluia(row.date, config.ashWednesday, config.holySaturday);
 
     updates.push({ id: row.id, season, gloria, alleluia });

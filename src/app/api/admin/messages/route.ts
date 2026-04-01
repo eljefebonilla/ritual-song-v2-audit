@@ -79,11 +79,15 @@ export async function POST(req: NextRequest) {
   let smsSent = 0;
   let emailSent = 0;
   let skipped = 0;
+  let noConsent = 0;
+  let noPhone = 0;
 
   if (channel === "sms" || channel === "both") {
     const result = await sendBulkSMS(resolvedIds, smsBody!);
     smsSent = result.sent;
     skipped += result.skipped;
+    noConsent = result.noConsent;
+    noPhone = result.noPhone;
   }
 
   if (channel === "email" || channel === "both") {
@@ -102,6 +106,8 @@ export async function POST(req: NextRequest) {
     smsSent,
     emailSent,
     skipped,
+    noConsent,
+    noPhone,
     total: resolvedIds.length,
   });
 }

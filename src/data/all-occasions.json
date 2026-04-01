@@ -1861,20 +1861,5 @@
       "b": "2027-03-27",
       "c": "2028-04-15"
     }
-  },
-  {
-    "id": "easter-sunday-resurrection",
-    "name": "EASTER SUNDAY\nTHE RESURRECTION OF THE LORD",
-    "year": "ABC",
-    "season": "holyweek",
-    "secondarySeason": "easter",
-    "seasonLabel": "Holy Week",
-    "seasonOrder": 4,
-    "nextDate": "2026-04-05",
-    "nextDates": {
-      "a": "2026-04-05",
-      "b": "2027-03-28",
-      "c": "2028-04-16"
-    }
   }
 ]

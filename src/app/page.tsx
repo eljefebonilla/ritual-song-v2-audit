@@ -4,7 +4,7 @@ import { SEASON_COLORS } from "@/lib/liturgical-colors";
 import type { SeasonGroup, LiturgicalDay } from "@/lib/types";
 import { createAdminClient } from "@/lib/supabase/admin";
 import { rowToLiturgicalDay } from "@/lib/liturgical-helpers";
-import SeasonAlert from "@/components/calendar/SeasonAlert";
+import SeasonAlert from "@/components/ui/SeasonAlert";
 
 /**
  * Liturgical year display order, splitting Ordinary Time into two halves:
