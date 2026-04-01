@@ -207,7 +207,7 @@ function ReadingRow({ slot, synopsis, isExpanded, onToggle }: {
             )}
           </div>
           {r.summary && (
-            <p className="text-xs text-stone-500 mt-0.5">{r.summary}</p>
+            <p className="text-xs text-[#374151] mt-0.5">{r.summary}</p>
           )}
           {psalmRefrain && (
             <p className="text-xs italic mt-0.5 text-parish-burgundy">
@@ -234,23 +234,23 @@ function AntiphonRow({ slot }: { slot: WorshipSlot }) {
   if (!slot.antiphon) return null;
   const a = slot.antiphon;
   return (
-    <div className="flex items-start gap-3 py-2 px-3 bg-stone-50/50 border-l-2 border-stone-200">
+    <div className="flex items-start gap-3 py-2 px-3 bg-stone-50/50 border-l-2 border-stone-200 overflow-hidden">
       <span className="text-[10px] uppercase tracking-wider font-semibold text-stone-400 w-28 shrink-0 pt-0.5">
         {slot.label}
       </span>
       <span className="w-7 shrink-0 flex items-start justify-center pt-0.5">
         <SlotPlayButton resources={slot.resources} />
       </span>
-      <div className="min-w-0 flex-1">
-        <p className="text-sm font-medium text-stone-700">
+      <div className="min-w-0 flex-1 overflow-hidden">
+        <p className="text-xs text-muted">
           {a.citation}
           {slot.optionNumber != null && (
-            <span className="text-stone-400 font-normal ml-1">
+            <span className="ml-1">
               (Option {slot.optionNumber})
             </span>
           )}
         </p>
-        <p className="text-xs italic mt-0.5 text-parish-burgundy">
+        <p className="text-sm font-serif italic mt-0.5 text-parish-burgundy line-clamp-3">
           &ldquo;{a.text}&rdquo;
         </p>
       </div>
@@ -1121,8 +1121,8 @@ export default function SlotList({
                                 <div className="min-w-0 flex-1">
                                   <p className="text-xs text-stone-500">{slot.reading.citation}</p>
                                   {slot.reading.summary && (
-                                    <p className="text-xs italic mt-0.5 text-parish-burgundy">
-                                      &ldquo;{slot.reading.summary}&rdquo;
+                                    <p className="text-xs italic mt-0.5 text-[#374151]">
+                                      {slot.reading.summary}
                                     </p>
                                   )}
                                 </div>
