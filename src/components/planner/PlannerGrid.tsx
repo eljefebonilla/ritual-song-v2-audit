@@ -512,12 +512,14 @@ export default function PlannerGrid({ columns, viewMode, hideMassParts = false, 
             return (
               <div
                 key={`section-${ri}`}
-                className="sticky left-0 z-10 bg-stone-100 border-b border-stone-200 flex items-center px-3 h-7"
+                className="bg-stone-100 border-b border-stone-200 h-7 relative"
                 style={{ width: totalWidth }}
               >
-                <span className="text-[10px] font-bold text-stone-500 uppercase tracking-wider whitespace-nowrap">
-                  {row.label}
-                </span>
+                <div className="sticky left-0 z-10 flex items-center px-3 h-full">
+                  <span className="text-[10px] font-bold text-stone-500 uppercase tracking-wider whitespace-nowrap">
+                    {row.label}
+                  </span>
+                </div>
               </div>
             );
           }
