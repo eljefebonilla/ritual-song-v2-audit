@@ -535,7 +535,7 @@ export default function PlannerGrid({ columns, viewMode, hideMassParts = false, 
           return (
             <div key={`row-${rowKey}`} className="flex">
               <div
-                className={`shrink-0 sticky left-0 z-10 border-b border-r border-stone-200 flex items-center px-3 ${
+                className={`shrink-0 sticky left-0 z-10 border-b border-r border-stone-200 flex items-center justify-end px-3 text-right ${
                   row.isReading ? "bg-stone-50" : row.isSubRow ? "bg-stone-50/70" : "bg-white"
                 }`}
                 style={{ width: LABEL_WIDTH, height: 44 }}

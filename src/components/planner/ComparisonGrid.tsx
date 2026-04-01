@@ -415,7 +415,7 @@ export default function ComparisonGrid({
             >
               {/* Row label */}
               <div
-                className={`border-b border-r border-stone-200 flex items-center px-3 ${
+                className={`border-b border-r border-stone-200 flex items-center justify-end px-3 text-right ${
                   row.isReading ? "h-auto min-h-[2.75rem]" : "h-11"
                 } ${
                   row.isReading ? "bg-stone-50" : row.isSubRow ? "bg-stone-50/70" : "bg-white"
