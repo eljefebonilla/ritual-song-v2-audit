@@ -63,9 +63,10 @@ export default function GridCell({
 
   // Reading rows: non-editable, no drag
   if (data.isReading) {
+    const descColor = data.isVerbatim ? "text-parish-burgundy" : "text-[#374151]";
     return (
       <div
-        className="px-2 py-1.5 h-full border-b border-r border-stone-100 bg-stone-50/80"
+        className="px-2 py-1.5 h-full border-b border-r border-stone-100 bg-stone-50/80 overflow-hidden"
         title={data.description ? `${data.title} — ${data.description}` : data.title}
       >
         <p className="text-[10px] leading-tight">
@@ -74,7 +75,7 @@ export default function GridCell({
           )}
           {data.title && data.description && " "}
           {data.description && (
-            <span className="text-parish-burgundy">{data.description}</span>
+            <span className={descColor}>{data.description}</span>
           )}
         </p>
       </div>

@@ -83,12 +83,12 @@ export function extractCellData(
   switch (rowKey) {
     case "entranceAntiphon": {
       const ant = occasion?.antiphons?.find((a) => a.type === "entrance");
-      if (ant) return { title: ant.text, description: ant.citation, isEmpty: false, isReading: true };
+      if (ant) return { title: ant.citation, description: ant.text, isEmpty: false, isReading: true, isVerbatim: true };
       return { title: "", isEmpty: true, isReading: true };
     }
     case "firstReading": {
       const r = occasion?.readings?.find((rd) => rd.type === "first");
-      if (r) return { title: r.citation, description: r.summary, isEmpty: false, isReading: true };
+      if (r) return { title: r.citation, description: r.summary, isEmpty: false, isReading: true, isVerbatim: false };
       return { title: "", isEmpty: true, isReading: true };
     }
     case "psalmText": {
@@ -101,23 +101,23 @@ export function extractCellData(
         const refrain = parts.length > 1
           ? parts.slice(1).join(" ").trim()
           : (r.antiphon && r.antiphon !== r.citation ? r.antiphon : null);
-        return { title: citation, description: refrain || undefined, isEmpty: false, isReading: true };
+        return { title: citation, description: refrain || undefined, isEmpty: false, isReading: true, isVerbatim: true };
       }
       return { title: "", isEmpty: true, isReading: true };
     }
     case "secondReading": {
       const r = occasion?.readings?.find((rd) => rd.type === "second");
-      if (r) return { title: r.citation, description: r.summary, isEmpty: false, isReading: true };
+      if (r) return { title: r.citation, description: r.summary, isEmpty: false, isReading: true, isVerbatim: false };
       return { title: "", isEmpty: true, isReading: true };
     }
     case "gospelVerse": {
       const r = occasion?.readings?.find((rd) => rd.type === "gospel_verse");
-      if (r) return { title: r.citation, description: r.summary, isEmpty: false, isReading: true };
+      if (r) return { title: r.citation, description: r.summary, isEmpty: false, isReading: true, isVerbatim: true };
       return { title: "", isEmpty: true, isReading: true };
     }
     case "gospel": {
       const r = occasion?.readings?.find((rd) => rd.type === "gospel");
-      if (r) return { title: r.citation, description: r.summary, isEmpty: false, isReading: true };
+      if (r) return { title: r.citation, description: r.summary, isEmpty: false, isReading: true, isVerbatim: false };
       return { title: "", isEmpty: true, isReading: true };
     }
   }

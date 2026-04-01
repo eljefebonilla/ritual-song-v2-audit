@@ -179,6 +179,7 @@ export interface GridCellData {
   description?: string;
   isEmpty: boolean;
   isReading?: boolean; // true for reading/antiphon rows (non-editable)
+  isVerbatim?: boolean; // true when description is verbatim liturgical text (burgundy), false for editorial synopses (blue-grey)
 }
 
 export const ENSEMBLE_OPTIONS: { id: EnsembleId; label: string }[] = [

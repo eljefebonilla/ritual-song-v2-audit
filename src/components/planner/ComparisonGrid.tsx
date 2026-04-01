@@ -419,7 +419,7 @@ export default function ComparisonGrid({
               {/* Row label */}
               <div
                 className={`border-b border-r border-stone-200 flex items-center px-3 ${
-                  isPsalmText ? "h-auto min-h-[2.75rem]" : "h-11"
+                  row.isReading ? "h-auto min-h-[2.75rem]" : "h-11"
                 } ${
                   row.isReading ? "bg-stone-50" : row.isSubRow ? "bg-stone-50/70" : "bg-white"
                 }`}
@@ -488,7 +488,7 @@ export default function ComparisonGrid({
                   <div
                     key={ci}
                     className={`border-b border-stone-100 ${
-                      isPsalmText ? "h-auto min-h-[2.75rem]" : "h-11"
+                      row.isReading ? "h-auto min-h-[2.75rem]" : "h-11"
                     } ${ci < colCount - 1 ? "border-r" : ""} ${diffClass}`}
                   >
                     <GridCell
