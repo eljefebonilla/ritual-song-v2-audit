@@ -120,8 +120,12 @@ export const GRID_ROW_LABELS: Record<GridRowKey, string> = {
 // Section groupings for visual dividers (interweaved with readings)
 export const GRID_SECTIONS = [
   {
+    label: "Before Mass",
+    rows: ["prelude"] as GridRowKey[],
+  },
+  {
     label: "Introductory Rites",
-    rows: ["prelude", "entranceAntiphon", "gathering", "penitentialAct", "gloria"] as GridRowKey[],
+    rows: ["entranceAntiphon", "gathering", "penitentialAct", "gloria"] as GridRowKey[],
   },
   {
     label: "Lit. of the Word",
