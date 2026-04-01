@@ -371,11 +371,17 @@ export default function ComparisonGrid({
             return (
               <div
                 key={`section-${ri}`}
-                className="bg-stone-100 border-b border-stone-200 flex items-center px-4 h-7"
+                className="grid border-b border-stone-200"
+                style={{ gridTemplateColumns: gridCols }}
               >
-                <span className="text-[10px] font-bold text-stone-500 uppercase tracking-wider">
-                  {row.label}
-                </span>
+                <div
+                  className="bg-stone-100 flex items-center px-3 h-7"
+                  style={{ gridColumn: `1 / -1` }}
+                >
+                  <span className="text-[10px] font-bold text-stone-500 uppercase tracking-wider whitespace-nowrap">
+                    {row.label}
+                  </span>
+                </div>
               </div>
             );
           }
