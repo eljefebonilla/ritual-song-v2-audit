@@ -68,16 +68,15 @@ export default function GridCell({
         className="px-2 py-1.5 h-full border-b border-r border-stone-100 bg-stone-50/80"
         title={data.description ? `${data.title} — ${data.description}` : data.title}
       >
-        {data.title && (
-          <p className="text-[10px] text-muted leading-tight">
-            {data.title}
-          </p>
-        )}
-        {data.description && (
-          <p className="text-[10px] font-serif text-parish-burgundy leading-tight mt-0.5">
-            {data.description}
-          </p>
-        )}
+        <p className="text-[10px] leading-tight">
+          {data.title && (
+            <span className="text-muted">{data.title}</span>
+          )}
+          {data.title && data.description && " "}
+          {data.description && (
+            <span className="text-parish-burgundy">{data.description}</span>
+          )}
+        </p>
       </div>
     );
   }
