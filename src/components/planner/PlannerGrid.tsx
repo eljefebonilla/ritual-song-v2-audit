@@ -421,7 +421,7 @@ export default function PlannerGrid({ columns, viewMode, hideMassParts = false, 
   }
 
   const COL_WIDTH = 300;
-  const LABEL_WIDTH = 130;
+  const LABEL_WIDTH = 160;
   const HEADER_HEIGHT = 110;
   const totalWidth = LABEL_WIDTH + columns.length * COL_WIDTH + (holyWeekDividerIndex >= 0 ? DIVIDER_WIDTH : 0);
 
@@ -512,7 +512,7 @@ export default function PlannerGrid({ columns, viewMode, hideMassParts = false, 
             return (
               <div key={`section-${ri}`} className="flex bg-stone-100 border-b border-stone-200" style={{ height: 28 }}>
                 <div
-                  className="shrink-0 sticky left-0 z-10 bg-stone-100 overflow-visible flex items-center px-3"
+                  className="shrink-0 sticky left-0 z-10 bg-stone-100 flex items-center px-3"
                   style={{ width: LABEL_WIDTH }}
                 >
                   <span className="text-[10px] font-bold text-stone-500 uppercase tracking-wider whitespace-nowrap">

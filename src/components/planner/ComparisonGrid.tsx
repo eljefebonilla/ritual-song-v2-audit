@@ -325,7 +325,7 @@ export default function ComparisonGrid({
     }
   }
 
-  const LABEL_WIDTH = 130;
+  const LABEL_WIDTH = 160;
   const COL_WIDTH = 300;
   const colCount = columns.length;
   const gridCols = `${LABEL_WIDTH}px ${`${COL_WIDTH}px `.repeat(colCount).trim()}`;

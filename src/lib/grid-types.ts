@@ -128,7 +128,7 @@ export const GRID_SECTIONS = [
     rows: ["entranceAntiphon", "gathering", "penitentialAct", "gloria"] as GridRowKey[],
   },
   {
-    label: "Liturgy of the Word",
+    label: "Lit. of the Word",
     rows: [
       "firstReading",
       "psalmText",
@@ -140,7 +140,7 @@ export const GRID_SECTIONS = [
     ] as GridRowKey[],
   },
   {
-    label: "Liturgy of the Eucharist",
+    label: "Lit. of the Eucharist",
     rows: [
       "offertory",
       "massSetting",
