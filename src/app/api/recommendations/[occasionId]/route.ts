@@ -3,6 +3,13 @@ import { getOccasion } from "@/lib/data";
 import { getSongLibrary } from "@/lib/song-library";
 import { recommendForOccasion } from "@/lib/recommendations";
 import { createAdminClient } from "@/lib/supabase/admin";
+import {
+  ConversationRuntime,
+  LayeredConfig,
+  PermissionPolicy,
+  DEFAULT_PERMISSION_RULES,
+} from "@/runtime";
+import { createRecommendationTools } from "@/tools/recommendation";
 
 interface SlimRec {
   id: string;
@@ -108,4 +115,122 @@ async function getCachedRecommendations(
   } catch {
     return null;
   }
+}
+
+/**
+ * POST /api/recommendations/[occasionId]
+ * Runtime-powered recommendation engine (Section 16 architecture).
+ * Uses ConversationRuntime + configurable weights + usage metadata.
+ *
+ * Body: { position, limit?, excludeSongIds? }
+ * Returns: ScoredSong[] with reasons, weeksSinceUsed, weeksUntilNext
+ */
+export async function POST(
+  request: NextRequest,
+  { params }: { params: Promise<{ occasionId: string }> }
+) {
+  const { occasionId } = await params;
+  const body = await request.json();
+  const {
+    position,
+    limit = 8,
+    excludeSongIds = [],
+  } = body;
+
+  if (!position) {
+    return NextResponse.json(
+      { error: "position is required (e.g. gathering, psalm, communion1)" },
+      { status: 400 }
+    );
+  }
+
+  // 1. Build layered config (single-tenant for now, multi-parish ready)
+  const config = LayeredConfig.forContext({ maxTokens: 128_000 });
+
+  // 2. Permissions
+  const permissions = new PermissionPolicy("allow");
+  permissions.setRules(DEFAULT_PERMISSION_RULES);
+
+  // 3. Register recommendation tools
+  const tools = new Map();
+  for (const tool of createRecommendationTools()) {
+    tools.set(tool.name, tool);
+  }
+
+  // 4. Create runtime
+  const runtime = new ConversationRuntime(config, permissions, tools);
+
+  // 5. Load occasion data
+  const occasion = getOccasion(occasionId);
+  if (!occasion) {
+    return NextResponse.json(
+      { error: `Occasion not found: ${occasionId}` },
+      { status: 404 }
+    );
+  }
+
+  // 6. Load songs
+  const allSongs = getSongLibrary();
+
+  // 7. Fetch usage records from Supabase (if table exists)
+  let usageRecords: Array<{
+    songId: string;
+    lastUsedDate: string;
+    nextScheduledDate: string | null;
+    timesUsedThisYear: number;
+  }> = [];
+
+  try {
+    const supabase = createAdminClient();
+    const { data } = await supabase
+      .from("song_usage")
+      .select("song_id, last_used_date, next_scheduled_date, times_used_this_year");
+
+    if (data) {
+      usageRecords = data.map((r: Record<string, unknown>) => ({
+        songId: r.song_id as string,
+        lastUsedDate: r.last_used_date as string,
+        nextScheduledDate: (r.next_scheduled_date as string) ?? null,
+        timesUsedThisYear: (r.times_used_this_year as number) ?? 0,
+      }));
+    }
+  } catch {
+    // song_usage table may not exist yet. Proceed without usage data.
+  }
+
+  // 8. Build candidate list from song library
+  const candidates = allSongs.map((s) => ({
+    id: s.id,
+    title: s.title,
+    composer: s.composer,
+    category: s.category,
+    scriptureRefs: s.scriptureRefs,
+    topics: s.topics,
+    liturgicalUse: s.liturgicalUse,
+    isHiddenGlobal: s.isHiddenGlobal,
+  }));
+
+  // 9. Run the recommendation tool via runtime
+  const toolResult = await runtime.executeTool({
+    name: "recommendation.score",
+    args: {
+      occasionId,
+      position,
+      season: occasion.season,
+      readings: (occasion.readings || []).map((r) => ({
+        citation: r.citation,
+        summary: r.summary,
+      })),
+      candidates,
+      usageRecords,
+      excludeSongIds,
+      limit,
+    },
+  });
+
+  if (toolResult.error) {
+    return NextResponse.json({ error: toolResult.error }, { status: 500 });
+  }
+
+  return NextResponse.json(toolResult.output);
 }
