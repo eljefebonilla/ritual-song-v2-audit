@@ -135,8 +135,8 @@ function buildOrderedItems(savedOrder: string[] | null): NavItemDef[] {
     const labels: Record<string, string> = {
       today: "Today", calendar: "Calendar",
       announcements: "Announcements",
-      choir: "Choir Sign-Up", "planner-view": "Planner View",
-      compare: "Comparison View",
+      choir: "Choir Sign-Up", "planner-view": "Multi-Week",
+      compare: "Multi-Mass",
       library: "Music Library",
       liturgies: "Other Liturgies",
     };
@@ -302,7 +302,11 @@ export default function Sidebar({ open, onClose }: SidebarProps) {
         {/* Reorderable items */}
         {orderedItems.map((item, idx) => {
           if (!shouldShow(item.id)) return null;
-          const isActive = item.href === "/" ? pathname === "/" : pathname.startsWith(item.href);
+          const isActive = item.href === "/"
+            ? pathname === "/"
+            : item.href === "/planner"
+              ? pathname === "/planner"
+              : pathname.startsWith(item.href);
           const isHidden = hiddenNav.has(item.id);
 
           return (
