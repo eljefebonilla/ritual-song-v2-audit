@@ -371,20 +371,11 @@ export default function ComparisonGrid({
             return (
               <div
                 key={`section-${ri}`}
-                className="grid"
-                style={{ gridTemplateColumns: gridCols }}
+                className="bg-stone-100 border-b border-stone-200 flex items-center px-4 h-7"
               >
-                <div className="bg-stone-100 border-b border-r border-stone-200 flex items-center px-3 h-7">
-                  <span className="text-[10px] font-bold text-stone-500 uppercase tracking-wider">
-                    {row.label}
-                  </span>
-                </div>
-                {columns.map((_, ci) => (
-                  <div
-                    key={ci}
-                    className={`bg-stone-100 border-b border-stone-100 h-7 ${ci < colCount - 1 ? "border-r" : ""}`}
-                  />
-                ))}
+                <span className="text-[10px] font-bold text-stone-500 uppercase tracking-wider">
+                  {row.label}
+                </span>
               </div>
             );
           }
