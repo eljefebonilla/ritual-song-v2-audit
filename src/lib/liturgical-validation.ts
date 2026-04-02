@@ -100,8 +100,10 @@ export function validateMusicPlan(
   }
 
   // Check: Solemnity/Feast/Sunday (outside Advent/Lent) — Gloria expected
+  // Never warn during Lent/Triduum (Good Friday is a solemnity without Gloria)
   if (
     day.gloria &&
+    !isLentenPeriod(day) &&
     (day.rank === "solemnity" || day.rank === "feast" || day.rank === "sunday")
   ) {
     warnings.push({
