@@ -113,8 +113,8 @@ export default function GridCell({
           {data.composer}
         </p>
       )}
-      {/* Hover actions — positioned absolutely to prevent overflow */}
-      <div className="absolute right-1 top-1 hidden group-hover:flex items-center gap-0.5">
+      {/* Hover actions — z-10 ensures buttons layer above the cell below */}
+      <div className="absolute right-1 top-1/2 -translate-y-1/2 z-10 hidden group-hover:flex items-center gap-0.5">
         {hasAudio && onPlay && (
           <button
             onClick={(e) => {
