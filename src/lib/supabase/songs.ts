@@ -114,6 +114,38 @@ export async function getSongsFromSupabase(): Promise<LibrarySong[]> {
 }
 
 /**
+ * Fetch all songs from Supabase WITHOUT resources (lightweight listing).
+ * Resources are loaded on-demand per song via getSongByIdFromSupabase().
+ */
+export async function getSongsLightweight(): Promise<LibrarySong[]> {
+  const supabase = createAdminClient();
+
+  const allSongs: Record<string, unknown>[] = [];
+  let offset = 0;
+  const pageSize = 1000;
+
+  while (true) {
+    const { data, error } = await supabase
+      .from("songs")
+      .select("id, legacy_id, title, composer, category, functions, recorded_key, psalm_number, mass_setting_id, catalogs, credits, tune_meter, first_line, refrain_first_line, languages, topics, scripture_refs, liturgical_use, usage_count, occasions, is_hidden_global")
+      .range(offset, offset + pageSize - 1)
+      .order("title");
+
+    if (error) {
+      console.error("Error fetching songs:", error.message);
+      break;
+    }
+
+    if (!data || data.length === 0) break;
+    allSongs.push(...data);
+    if (data.length < pageSize) break;
+    offset += pageSize;
+  }
+
+  return allSongs.map((row) => mapSongRow(row, []));
+}
+
+/**
  * Fetch a single song by legacy_id or UUID.
  */
 export async function getSongByIdFromSupabase(id: string): Promise<LibrarySong | null> {

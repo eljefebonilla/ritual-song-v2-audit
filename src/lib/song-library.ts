@@ -39,8 +39,8 @@ export async function loadSongLibrary(): Promise<LibrarySong[]> {
   }
 
   try {
-    const { getSongsFromSupabase } = await import("./supabase/songs");
-    songLibraryData = await getSongsFromSupabase();
+    const { getSongsLightweight } = await import("./supabase/songs");
+    songLibraryData = await getSongsLightweight();
     songLibraryCachedAt = now;
     return songLibraryData;
   } catch (err) {

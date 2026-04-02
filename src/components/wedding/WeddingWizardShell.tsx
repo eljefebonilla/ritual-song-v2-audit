@@ -1,8 +1,9 @@
 "use client";
 
-import { useState, useCallback } from "react";
+import { useState, useCallback, useRef } from "react";
 import { WEDDING_STEPS, TFL_PSALM_CODES } from "@/lib/wedding-steps";
 import type { WeddingStep } from "@/lib/wedding-steps";
+import WeddingChatPanel from "./WeddingChatPanel";
 
 // ─── Types ───────────────────────────────────────────────────────────────────
 
@@ -17,6 +18,9 @@ interface SacramentalSong {
   together_for_life_code: string | null;
   notes: string | null;
   song_id: string | null;
+  step_number: number;
+  audio_url?: string | null;
+  youtube_url?: string | null;
 }
 
 interface CantorProfile {
@@ -59,17 +63,20 @@ interface WeddingWizardShellProps {
   eventId?: string;
   initialSelections?: WeddingSelections;
   initialDetails?: Partial<WeddingDetails>;
+  isDirector?: boolean;
 }
 
 // ─── Component ───────────────────────────────────────────────────────────────
 
 export default function WeddingWizardShell({
-  songs,
+  songs: initialSongs,
   cantors,
   eventId,
   initialSelections,
   initialDetails,
+  isDirector = false,
 }: WeddingWizardShellProps) {
+  const [songs, setSongs] = useState<SacramentalSong[]>(initialSongs);
   const [currentStep, setCurrentStep] = useState(0); // 0 = details, 1-10 = music steps, 11 = review
   const [selections, setSelections] = useState<WeddingSelections>(
     initialSelections || {}
@@ -137,12 +144,113 @@ export default function WeddingWizardShell({
     []
   );
 
+  const [saving, setSaving] = useState(false);
+  const [savedEventId, setSavedEventId] = useState(eventId || null);
+  const [shareToken, setShareToken] = useState<string | null>(null);
+
   const songsForStep = useCallback(
     (stepNumber: number) =>
-      songs.filter((s) => s.category !== "" || s.together_for_life_code !== null)
-        .filter(() => true), // placeholder: filter by step_number when data is loaded
+      songs.filter((s) => s.step_number === stepNumber),
     [songs]
   );
+
+  const [exporting, setExporting] = useState(false);
+
+  const handleExportPDF = useCallback(async () => {
+    setExporting(true);
+    try {
+      const { pdf } = await import("@react-pdf/renderer");
+      const { default: WeddingPDF } = await import("./pdf/WeddingPDF");
+      const selectedCantor = cantors.find((c) => c.id === details.cantorId);
+      const blob = await pdf(
+        WeddingPDF({
+          details,
+          selections,
+          cantorName: selectedCantor?.display_name,
+        })
+      ).toBlob();
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement("a");
+      a.href = url;
+      const couple =
+        details.coupleName1 && details.coupleName2
+          ? `${details.coupleName1}-${details.coupleName2}`
+          : "Wedding";
+      a.download = `${couple}-Music-Selections.pdf`;
+      a.click();
+      URL.revokeObjectURL(url);
+    } catch (err) {
+      console.error("PDF export failed:", err);
+    } finally {
+      setExporting(false);
+    }
+  }, [details, selections, cantors]);
+
+  const handleSave = useCallback(async () => {
+    setSaving(true);
+    try {
+      const res = await fetch("/api/wedding", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          eventId: savedEventId,
+          details,
+          selections,
+        }),
+      });
+      const json = await res.json();
+      if (json.event) {
+        setSavedEventId(json.event.id);
+        setShareToken(json.event.share_token);
+      }
+    } catch (err) {
+      console.error("Save failed:", err);
+    } finally {
+      setSaving(false);
+    }
+  }, [savedEventId, details, selections]);
+
+  // ─── Director Actions ─────────────────────────────────────────────────────
+
+  const handleToggleStar = useCallback(async (songId: string) => {
+    const song = songs.find((s) => s.id === songId);
+    if (!song) return;
+    const newStarred = !song.is_starred;
+    setSongs((prev) => prev.map((s) => s.id === songId ? { ...s, is_starred: newStarred } : s));
+    await fetch("/api/wedding/songs", {
+      method: "PATCH",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ id: songId, is_starred: newStarred }),
+    });
+  }, [songs]);
+
+  const handleDeleteSong = useCallback(async (songId: string) => {
+    setSongs((prev) => prev.filter((s) => s.id !== songId));
+    await fetch("/api/wedding/songs", {
+      method: "DELETE",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ id: songId }),
+    });
+  }, []);
+
+  const handleAddSong = useCallback(async (stepNumber: number, title: string, composer: string, category: string) => {
+    const res = await fetch("/api/wedding/songs", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ step_number: stepNumber, title, composer, category }),
+    });
+    const { song } = await res.json();
+    if (song) setSongs((prev) => [...prev, song]);
+  }, []);
+
+  const handleUpdateSongMedia = useCallback(async (songId: string, field: "audio_url" | "youtube_url", value: string) => {
+    setSongs((prev) => prev.map((s) => s.id === songId ? { ...s, [field]: value } : s));
+    await fetch("/api/wedding/songs", {
+      method: "PATCH",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ id: songId, [field]: value }),
+    });
+  }, []);
 
   const isSelected = (stepNumber: number, songId: string) =>
     (selections[stepNumber] || []).some((s) => s.songId === songId);
@@ -245,6 +353,7 @@ export default function WeddingWizardShell({
 
         {currentStep >= 1 && currentStep <= WEDDING_STEPS.length && (
           <MusicStep
+            key={`step-${currentStep}`}
             step={WEDDING_STEPS[currentStep - 1]}
             songs={songsForStep(WEDDING_STEPS[currentStep - 1].number)}
             selections={selections[WEDDING_STEPS[currentStep - 1].number] || []}
@@ -254,6 +363,11 @@ export default function WeddingWizardShell({
             isSelected={(songId) =>
               isSelected(WEDDING_STEPS[currentStep - 1].number, songId)
             }
+            isDirector={isDirector}
+            onToggleStar={handleToggleStar}
+            onDeleteSong={handleDeleteSong}
+            onAddSong={handleAddSong}
+            onUpdateMedia={handleUpdateSongMedia}
           />
         )}
 
@@ -262,6 +376,8 @@ export default function WeddingWizardShell({
             details={details}
             selections={selections}
             cantors={cantors}
+            shareToken={shareToken}
+            savedEventId={savedEventId}
           />
         )}
       </div>
@@ -283,17 +399,27 @@ export default function WeddingWizardShell({
             Continue
           </button>
         ) : (
-          <button
-            onClick={() => {
-              // TODO: Save to Supabase + generate PDF
-              alert("Save and export coming soon");
-            }}
-            className="px-4 py-2 rounded-lg bg-parish-burgundy text-white font-medium text-sm hover:bg-parish-burgundy/90 transition-colors"
-          >
-            Save and Export PDF
-          </button>
+          <div className="flex items-center gap-2">
+            <button
+              onClick={handleExportPDF}
+              disabled={exporting}
+              className="px-4 py-2 rounded-lg border border-stone-300 bg-white text-stone-700 font-medium text-sm hover:bg-stone-50 transition-colors disabled:opacity-50"
+            >
+              {exporting ? "Generating..." : "Export PDF"}
+            </button>
+            <button
+              onClick={handleSave}
+              disabled={saving}
+              className="px-4 py-2 rounded-lg bg-parish-burgundy text-white font-medium text-sm hover:bg-parish-burgundy/90 transition-colors disabled:opacity-50"
+            >
+              {saving ? "Saving..." : "Save Selections"}
+            </button>
+          </div>
         )}
       </div>
+
+      {/* AI FAQ Chat */}
+      <WeddingChatPanel />
     </div>
   );
 }
@@ -488,6 +614,13 @@ function DetailsStep({
                     {cantor.bio}
                   </p>
                 )}
+                {cantor.audio_samples && cantor.audio_samples.length > 0 && (
+                  <div className="mt-2 space-y-1" onClick={(e) => e.stopPropagation()}>
+                    {cantor.audio_samples.map((sample, i) => (
+                      <AudioSample key={i} url={sample.url} title={sample.song_title} />
+                    ))}
+                  </div>
+                )}
               </button>
             ))}
           </div>
@@ -516,14 +649,34 @@ function MusicStep({
   selections,
   onSelect,
   isSelected,
+  isDirector = false,
+  onToggleStar,
+  onDeleteSong,
+  onAddSong,
+  onUpdateMedia,
 }: {
   step: WeddingStep;
   songs: SacramentalSong[];
   selections: { songId: string; songTitle: string }[];
   onSelect: (song: SacramentalSong) => void;
   isSelected: (songId: string) => boolean;
+  isDirector?: boolean;
+  onToggleStar?: (songId: string) => void;
+  onDeleteSong?: (songId: string) => void;
+  onAddSong?: (stepNumber: number, title: string, composer: string, category: string) => void;
+  onUpdateMedia?: (songId: string, field: "audio_url" | "youtube_url", value: string) => void;
 }) {
   const [activeCategory, setActiveCategory] = useState<string>("all");
+  const [showAddForm, setShowAddForm] = useState(false);
+  const [newTitle, setNewTitle] = useState("");
+  const [newComposer, setNewComposer] = useState("");
+  const [newCategory, setNewCategory] = useState(step.categories[0] || "");
+  const [editingMediaId, setEditingMediaId] = useState<string | null>(null);
+  const [mediaUrl, setMediaUrl] = useState("");
+  const [mediaType, setMediaType] = useState<"audio_url" | "youtube_url">("youtube_url");
+
+  // Derive unique categories from actual song data (not just step.categories)
+  const songCategories = [...new Set(songs.map((s) => s.category))];
 
   const filtered =
     activeCategory === "all"
@@ -590,8 +743,8 @@ function MusicStep({
         </div>
       )}
 
-      {/* Category filter */}
-      {step.categories.length > 1 && (
+      {/* Category filter - uses actual categories from song data */}
+      {songCategories.length > 1 && (
         <div className="ml-9 flex gap-1 flex-wrap">
           <button
             onClick={() => setActiveCategory("all")}
@@ -603,7 +756,7 @@ function MusicStep({
           >
             All
           </button>
-          {step.categories.map((cat) => (
+          {songCategories.map((cat) => (
             <button
               key={cat}
               onClick={() => setActiveCategory(cat)}
@@ -623,64 +776,222 @@ function MusicStep({
       <div className="ml-9 space-y-1.5">
         {filtered.length === 0 ? (
           <p className="text-sm text-stone-400 italic py-4">
-            No songs loaded for this step yet. Songs will be imported from the Wedding Music Guide.
+            No songs for this category yet.
           </p>
         ) : (
           filtered.map((song) => (
-            <button
+            <div
               key={song.id}
-              onClick={() => onSelect(song)}
-              className={`w-full text-left px-4 py-3 rounded-lg border transition-all ${
+              className={`rounded-lg border transition-all ${
                 isSelected(song.id)
                   ? "border-parish-gold bg-parish-gold/5 shadow-sm"
-                  : "border-stone-100 bg-white hover:border-stone-200 hover:shadow-sm"
+                  : "border-stone-100 bg-white hover:border-stone-200"
               }`}
             >
-              <div className="flex items-center justify-between">
-                <div>
-                  <p className="text-sm font-medium text-stone-800">
-                    {song.is_starred && (
-                      <span className="text-parish-gold mr-1">&#9733;</span>
-                    )}
-                    {song.title}
-                  </p>
-                  {song.composer && (
-                    <p className="text-xs text-stone-400 mt-0.5">
-                      {song.composer}
+              <button
+                onClick={() => onSelect(song)}
+                className="w-full text-left px-4 py-3"
+              >
+                <div className="flex items-center justify-between">
+                  <div className="flex-1 min-w-0">
+                    <p className="text-sm font-medium text-stone-800">
+                      {song.is_starred && (
+                        <span className="text-parish-gold mr-1">&#9733;</span>
+                      )}
+                      {song.title}
                     </p>
-                  )}
+                    <div className="flex items-center gap-2 mt-0.5">
+                      {song.composer && (
+                        <span className="text-xs text-stone-400">
+                          {song.composer}
+                        </span>
+                      )}
+                      {song.instrumentation && (
+                        <span className="text-[10px] text-stone-300">
+                          {song.instrumentation}
+                        </span>
+                      )}
+                    </div>
+                    {song.notes && (
+                      <p className="text-[10px] text-stone-400 mt-0.5 italic">{song.notes}</p>
+                    )}
+                  </div>
+                  <div className="flex items-center gap-2 shrink-0 ml-2">
+                    {song.together_for_life_code && (
+                      <span className="text-[10px] font-bold text-parish-burgundy bg-parish-burgundy/10 px-1.5 py-0.5 rounded">
+                        {song.together_for_life_code}
+                      </span>
+                    )}
+                    {isSelected(song.id) && (
+                      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#16a34a" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                        <polyline points="20 6 9 17 4 12" />
+                      </svg>
+                    )}
+                  </div>
                 </div>
-                <div className="flex items-center gap-2">
-                  {song.instrumentation && (
-                    <span className="text-[10px] text-stone-400">
-                      {song.instrumentation}
-                    </span>
+              </button>
+
+              {/* Audio/YouTube preview (visible to everyone) */}
+              {(song.audio_url || song.youtube_url) && (
+                <div className="px-4 pb-2" onClick={(e) => e.stopPropagation()}>
+                  {song.audio_url && (
+                    <AudioSample url={song.audio_url} title="Listen" />
                   )}
-                  {song.together_for_life_code && (
-                    <span className="text-[10px] font-bold text-parish-burgundy bg-parish-burgundy/10 px-1.5 py-0.5 rounded">
-                      {song.together_for_life_code}
-                    </span>
-                  )}
-                  {isSelected(song.id) && (
-                    <svg
-                      width="16"
-                      height="16"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="#16a34a"
-                      strokeWidth="2.5"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
+                  {song.youtube_url && !song.audio_url && (
+                    <a
+                      href={song.youtube_url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-1 text-xs text-red-600 hover:text-red-700"
                     >
-                      <polyline points="20 6 9 17 4 12" />
-                    </svg>
+                      <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0C.488 3.45.029 5.804 0 12c.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0C23.512 20.55 23.971 18.196 24 12c-.029-6.185-.484-8.549-4.385-8.816zM9 16V8l8 4-8 4z"/></svg>
+                      Preview on YouTube
+                    </a>
                   )}
                 </div>
-              </div>
-            </button>
+              )}
+
+              {/* Director controls */}
+              {isDirector && (
+                <div className="px-4 pb-2 flex items-center gap-2 border-t border-stone-50 pt-1.5" onClick={(e) => e.stopPropagation()}>
+                  <button
+                    onClick={() => onToggleStar?.(song.id)}
+                    className="text-[10px] text-stone-400 hover:text-parish-gold transition-colors"
+                    title={song.is_starred ? "Remove star" : "Add star"}
+                  >
+                    {song.is_starred ? "&#9733; Unstar" : "&#9734; Star"}
+                  </button>
+                  <span className="text-stone-200">|</span>
+                  <button
+                    onClick={() => {
+                      setEditingMediaId(editingMediaId === song.id ? null : song.id);
+                      setMediaUrl(song.audio_url || song.youtube_url || "");
+                      setMediaType(song.audio_url ? "audio_url" : "youtube_url");
+                    }}
+                    className="text-[10px] text-stone-400 hover:text-blue-600 transition-colors"
+                  >
+                    {song.audio_url || song.youtube_url ? "Edit Link" : "+ Audio/YouTube"}
+                  </button>
+                  <span className="text-stone-200">|</span>
+                  <button
+                    onClick={() => {
+                      if (confirm(`Remove "${song.title}" from this step?`)) {
+                        onDeleteSong?.(song.id);
+                      }
+                    }}
+                    className="text-[10px] text-stone-400 hover:text-red-600 transition-colors"
+                  >
+                    Remove
+                  </button>
+                </div>
+              )}
+
+              {/* Media URL editor (director only) */}
+              {isDirector && editingMediaId === song.id && (
+                <div className="px-4 pb-3 space-y-1.5" onClick={(e) => e.stopPropagation()}>
+                  <div className="flex gap-1">
+                    <button
+                      onClick={() => setMediaType("audio_url")}
+                      className={`px-2 py-0.5 text-[10px] rounded ${mediaType === "audio_url" ? "bg-stone-800 text-white" : "bg-stone-100 text-stone-500"}`}
+                    >
+                      Audio URL
+                    </button>
+                    <button
+                      onClick={() => setMediaType("youtube_url")}
+                      className={`px-2 py-0.5 text-[10px] rounded ${mediaType === "youtube_url" ? "bg-red-600 text-white" : "bg-stone-100 text-stone-500"}`}
+                    >
+                      YouTube
+                    </button>
+                  </div>
+                  <div className="flex gap-1">
+                    <input
+                      type="url"
+                      value={mediaUrl}
+                      onChange={(e) => setMediaUrl(e.target.value)}
+                      placeholder={mediaType === "audio_url" ? "https://...mp3 or storage URL" : "https://youtube.com/watch?v=..."}
+                      className="flex-1 px-2 py-1 text-xs rounded border border-stone-200 focus:outline-none focus:ring-1 focus:ring-parish-gold"
+                    />
+                    <button
+                      onClick={() => {
+                        if (mediaUrl.trim()) {
+                          onUpdateMedia?.(song.id, mediaType, mediaUrl.trim());
+                        }
+                        setEditingMediaId(null);
+                      }}
+                      className="px-2 py-1 text-xs bg-parish-burgundy text-white rounded hover:bg-parish-burgundy/90"
+                    >
+                      Save
+                    </button>
+                  </div>
+                </div>
+              )}
+            </div>
           ))
         )}
       </div>
+
+      {/* Director: Add song form */}
+      {isDirector && (
+        <div className="ml-9">
+          {!showAddForm ? (
+            <button
+              onClick={() => setShowAddForm(true)}
+              className="text-xs text-parish-burgundy hover:text-parish-burgundy/80 font-medium"
+            >
+              + Add a song to this step
+            </button>
+          ) : (
+            <div className="p-3 bg-stone-50 rounded-lg space-y-2 border border-stone-200">
+              <div className="grid grid-cols-2 gap-2">
+                <input
+                  type="text"
+                  value={newTitle}
+                  onChange={(e) => setNewTitle(e.target.value)}
+                  placeholder="Song title"
+                  className="px-2 py-1.5 text-xs rounded border border-stone-200 focus:outline-none focus:ring-1 focus:ring-parish-gold"
+                />
+                <input
+                  type="text"
+                  value={newComposer}
+                  onChange={(e) => setNewComposer(e.target.value)}
+                  placeholder="Composer"
+                  className="px-2 py-1.5 text-xs rounded border border-stone-200 focus:outline-none focus:ring-1 focus:ring-parish-gold"
+                />
+              </div>
+              <select
+                value={newCategory}
+                onChange={(e) => setNewCategory(e.target.value)}
+                className="w-full px-2 py-1.5 text-xs rounded border border-stone-200 focus:outline-none focus:ring-1 focus:ring-parish-gold"
+              >
+                {songCategories.map((cat) => (
+                  <option key={cat} value={cat}>{cat}</option>
+                ))}
+              </select>
+              <div className="flex gap-2">
+                <button
+                  onClick={() => {
+                    if (newTitle.trim()) {
+                      onAddSong?.(step.number, newTitle.trim(), newComposer.trim(), newCategory);
+                      setNewTitle("");
+                      setNewComposer("");
+                      setShowAddForm(false);
+                    }
+                  }}
+                  className="px-3 py-1 text-xs bg-parish-burgundy text-white rounded hover:bg-parish-burgundy/90 font-medium"
+                >
+                  Add
+                </button>
+                <button
+                  onClick={() => setShowAddForm(false)}
+                  className="px-3 py-1 text-xs text-stone-500 hover:text-stone-700"
+                >
+                  Cancel
+                </button>
+              </div>
+            </div>
+          )}
+        </div>
+      )}
 
       {/* Current selection summary */}
       {selections.length > 0 && (
@@ -698,10 +1009,14 @@ function ReviewStep({
   details,
   selections,
   cantors,
+  shareToken,
+  savedEventId,
 }: {
   details: WeddingDetails;
   selections: WeddingSelections;
   cantors: CantorProfile[];
+  shareToken: string | null;
+  savedEventId: string | null;
 }) {
   const selectedCantor = cantors.find((c) => c.id === details.cantorId);
 
@@ -793,6 +1108,74 @@ function ReviewStep({
           })}
         </div>
       </div>
+
+      {/* Share link (shown after save) */}
+      {shareToken && (
+        <div className="bg-green-50 border border-green-200 rounded-lg p-4">
+          <p className="text-sm font-medium text-green-800 mb-1">
+            Selections saved successfully
+          </p>
+          <p className="text-xs text-green-700 mb-2">
+            Share this link with the couple or wedding coordinator:
+          </p>
+          <div className="flex items-center gap-2">
+            <input
+              type="text"
+              readOnly
+              value={`${typeof window !== "undefined" ? window.location.origin : ""}/wedding/${shareToken}`}
+              className="flex-1 px-3 py-1.5 rounded border border-green-300 bg-white text-xs text-stone-700 font-mono"
+            />
+            <button
+              onClick={() => {
+                navigator.clipboard.writeText(
+                  `${window.location.origin}/wedding/${shareToken}`
+                );
+              }}
+              className="px-3 py-1.5 rounded bg-green-600 text-white text-xs font-medium hover:bg-green-700 transition-colors"
+            >
+              Copy
+            </button>
+          </div>
+        </div>
+      )}
     </div>
+  );
+}
+
+function AudioSample({ url, title }: { url: string; title: string }) {
+  const audioRef = useRef<HTMLAudioElement | null>(null);
+  const [playing, setPlaying] = useState(false);
+
+  const toggle = () => {
+    if (!audioRef.current) {
+      audioRef.current = new Audio(url);
+      audioRef.current.addEventListener("ended", () => setPlaying(false));
+    }
+    if (playing) {
+      audioRef.current.pause();
+      setPlaying(false);
+    } else {
+      audioRef.current.play();
+      setPlaying(true);
+    }
+  };
+
+  return (
+    <button
+      onClick={toggle}
+      className="flex items-center gap-1.5 text-xs text-parish-burgundy hover:text-parish-burgundy/80 transition-colors"
+    >
+      <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor">
+        {playing ? (
+          <>
+            <rect x="6" y="4" width="4" height="16" />
+            <rect x="14" y="4" width="4" height="16" />
+          </>
+        ) : (
+          <polygon points="5,3 19,12 5,21" />
+        )}
+      </svg>
+      <span>{title}</span>
+    </button>
   );
 }

@@ -6,10 +6,10 @@ export const dynamic = "force-dynamic";
 export default async function WeddingPage() {
   const supabase = createAdminClient();
 
-  // Fetch curated wedding songs
+  // Fetch curated wedding songs (including media links)
   const { data: songs } = await supabase
     .from("sacramental_songs")
-    .select("id, title, composer, category, subcategory, instrumentation, is_starred, together_for_life_code, notes, song_id")
+    .select("id, title, composer, category, subcategory, instrumentation, is_starred, together_for_life_code, notes, song_id, step_number, audio_url, youtube_url")
     .eq("liturgy_type", "wedding")
     .order("step_number")
     .order("sort_order");
@@ -25,6 +25,7 @@ export default async function WeddingPage() {
     <WeddingWizardShell
       songs={songs || []}
       cantors={cantors || []}
+      isDirector={true}
     />
   );
 }

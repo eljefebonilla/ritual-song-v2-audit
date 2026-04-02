@@ -2,6 +2,8 @@
 -- 017: Wedding Portal — events, songs, cantor profiles, selections
 -- ============================================================
 
+CREATE EXTENSION IF NOT EXISTS pgcrypto;
+
 -- Wedding/Funeral song catalog (curated picks per liturgical step)
 CREATE TABLE sacramental_songs (
   id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
@@ -75,7 +77,7 @@ CREATE TABLE sacramental_events (
   custom_notes TEXT,
 
   -- Sharing
-  share_token TEXT UNIQUE DEFAULT encode(gen_random_bytes(16), 'hex'),
+  share_token TEXT UNIQUE DEFAULT replace(gen_random_uuid()::text, '-', ''),
   created_by UUID REFERENCES auth.users(id),
   created_at TIMESTAMPTZ DEFAULT NOW(),
   updated_at TIMESTAMPTZ DEFAULT NOW()
