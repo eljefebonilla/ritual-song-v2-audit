@@ -622,6 +622,26 @@ export default function PlannerGrid({ columns, viewMode, hideMassParts = false, 
           onSave={handleCellSave}
           onClear={handleCellClear}
           onClose={() => setEditingCell(null)}
+          onBulkApply={async (rowKey, title, composer, scope) => {
+            try {
+              await fetch("/api/occasions/bulk-apply", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify({
+                  occasionId: editingCell.occasionId,
+                  position: rowKey,
+                  title,
+                  composer,
+                  scope,
+                  ensembleId,
+                }),
+              });
+              // Also save to current cell
+              handleCellSave(rowKey, title, composer);
+            } catch (err) {
+              console.error("Bulk apply failed:", err);
+            }
+          }}
         />
       )}
     </div>

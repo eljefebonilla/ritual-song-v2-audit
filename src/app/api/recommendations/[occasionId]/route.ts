@@ -135,6 +135,7 @@ export async function POST(
     position,
     limit = 8,
     excludeSongIds = [],
+    explain: explainSongId,
   } = body;
 
   if (!position) {
@@ -232,5 +233,23 @@ export async function POST(
     return NextResponse.json({ error: toolResult.error }, { status: 500 });
   }
 
-  return NextResponse.json(toolResult.output);
+  const scoredSongs = toolResult.output as Array<Record<string, unknown>>;
+
+  // If explain requested, run the explain tool for the specific song
+  if (explainSongId) {
+    const explainResult = await runtime.executeTool({
+      name: "recommendation.explain",
+      args: {
+        songId: explainSongId,
+        results: scoredSongs,
+      },
+    });
+
+    return NextResponse.json({
+      recommendations: scoredSongs,
+      explanation: explainResult.error ? null : explainResult.output,
+    });
+  }
+
+  return NextResponse.json(scoredSongs);
 }

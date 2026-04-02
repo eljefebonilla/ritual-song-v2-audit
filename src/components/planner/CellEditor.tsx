@@ -12,6 +12,42 @@ interface SongResult {
   usageCount: number;
 }
 
+interface ScoredRec {
+  songId: string;
+  title: string;
+  composer?: string;
+  score: number;
+  reasons: { type: string; detail: string; points: number }[];
+  weeksSinceUsed: number | null;
+  weeksUntilNext: number | null;
+}
+
+interface ExplainResult {
+  song: { title: string; composer?: string };
+  totalScore: number;
+  breakdown: { category: string; detail: string; points: number }[];
+  weeksSinceUsed: number | null;
+  weeksUntilNext: number | null;
+}
+
+// Map grid row keys to recommendation position names
+const ROW_TO_POSITION: Partial<Record<GridRowKey, string>> = {
+  prelude: "prelude",
+  gathering: "gathering",
+  penitentialAct: "penitential_act",
+  gloria: "gloria",
+  psalm: "psalm",
+  gospelAcclamation: "gospel_acclamation",
+  offertory: "offertory",
+  massSetting: "mass_setting",
+  lordsPrayer: "lords_prayer",
+  fractionRite: "fraction_rite",
+  communion1: "communion",
+  communion2: "communion",
+  communion3: "communion",
+  sending: "sending",
+};
+
 interface CellEditorProps {
   occasionId: string;
   ensembleId: string;
@@ -21,31 +57,66 @@ interface CellEditorProps {
   onSave: (rowKey: GridRowKey, title: string, composer: string) => void;
   onClear: (rowKey: GridRowKey) => void;
   onClose: () => void;
+  onBulkApply?: (rowKey: GridRowKey, title: string, composer: string, scope: "season" | "all") => void;
 }
 
 export default function CellEditor({
+  occasionId,
   rowKey,
   currentData,
   anchorRect,
   onSave,
   onClear,
   onClose,
+  onBulkApply,
 }: CellEditorProps) {
   const [query, setQuery] = useState("");
   const [results, setResults] = useState<SongResult[]>([]);
   const [searching, setSearching] = useState(false);
   const [title, setTitle] = useState(currentData.title || "");
   const [composer, setComposer] = useState(currentData.composer || "");
-  const [mode, setMode] = useState<"search" | "manual">("search");
+  const [mode, setMode] = useState<"suggest" | "search" | "manual">("suggest");
   const inputRef = useRef<HTMLInputElement>(null);
   const panelRef = useRef<HTMLDivElement>(null);
   const searchTimeout = useRef<ReturnType<typeof setTimeout>>(undefined);
 
-  useEffect(() => {
-    inputRef.current?.focus();
-  }, []);
+  // Recommendation state
+  const [recs, setRecs] = useState<ScoredRec[] | null>(null);
+  const [recsLoading, setRecsLoading] = useState(false);
+  const [explainSong, setExplainSong] = useState<ExplainResult | null>(null);
+  const [explainLoading, setExplainLoading] = useState(false);
+  const [showBulkApply, setShowBulkApply] = useState(false);
+  const [pendingBulkSong, setPendingBulkSong] = useState<{ title: string; composer: string } | null>(null);
 
-  // Close on Escape
+  const position = ROW_TO_POSITION[rowKey];
+  const isBulkEligible = rowKey === "gospelAcclamation" || rowKey === "massSetting";
+
+  // Auto-load suggestions when in suggest mode
+  useEffect(() => {
+    if (mode !== "suggest" || recs !== null || !position) return;
+    setRecsLoading(true);
+    fetch(`/api/recommendations/${occasionId}`, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ position, limit: 8 }),
+    })
+      .then((r) => r.json())
+      .then((data) => {
+        setRecs(Array.isArray(data) ? data : data.recommendations || []);
+      })
+      .catch(() => setRecs([]))
+      .finally(() => setRecsLoading(false));
+  }, [mode, recs, position, occasionId]);
+
+  // Fallback to search if no position mapping
+  useEffect(() => {
+    if (!position && mode === "suggest") setMode("search");
+  }, [position, mode]);
+
+  useEffect(() => {
+    if (mode === "search") inputRef.current?.focus();
+  }, [mode]);
+
   useEffect(() => {
     const handleKey = (e: KeyboardEvent) => {
       if (e.key === "Escape") onClose();
@@ -54,22 +125,14 @@ export default function CellEditor({
     return () => document.removeEventListener("keydown", handleKey);
   }, [onClose]);
 
-  // Search songs with debounce
   const searchSongs = useCallback(async (q: string) => {
-    if (!q.trim()) {
-      setResults([]);
-      return;
-    }
+    if (!q.trim()) { setResults([]); return; }
     setSearching(true);
     try {
       const res = await fetch(`/api/songs?q=${encodeURIComponent(q)}&limit=10`);
-      const data = await res.json();
-      setResults(data);
-    } catch {
-      setResults([]);
-    } finally {
-      setSearching(false);
-    }
+      setResults(await res.json());
+    } catch { setResults([]); }
+    finally { setSearching(false); }
   }, []);
 
   const handleQueryChange = (val: string) => {
@@ -78,9 +141,42 @@ export default function CellEditor({
     searchTimeout.current = setTimeout(() => searchSongs(val), 200);
   };
 
-  const handleSelectSong = (song: SongResult) => {
-    onSave(rowKey, song.title, song.composer || "");
+  const handleSelectSong = (songTitle: string, songComposer: string) => {
+    if (isBulkEligible) {
+      setPendingBulkSong({ title: songTitle, composer: songComposer });
+      setShowBulkApply(true);
+      return;
+    }
+    onSave(rowKey, songTitle, songComposer);
     onClose();
+  };
+
+  const handleBulkConfirm = (scope: "this" | "season" | "all") => {
+    if (!pendingBulkSong) return;
+    if (scope === "this") {
+      onSave(rowKey, pendingBulkSong.title, pendingBulkSong.composer);
+    } else {
+      onBulkApply?.(rowKey, pendingBulkSong.title, pendingBulkSong.composer, scope === "season" ? "season" : "all");
+    }
+    onClose();
+  };
+
+  const handleExplain = async (rec: ScoredRec) => {
+    if (explainSong?.song?.title === rec.title) {
+      setExplainSong(null);
+      return;
+    }
+    setExplainLoading(true);
+    try {
+      const res = await fetch(`/api/recommendations/${occasionId}`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ position, explain: rec.songId }),
+      });
+      const data = await res.json();
+      setExplainSong(data.explanation || null);
+    } catch { setExplainSong(null); }
+    finally { setExplainLoading(false); }
   };
 
   const handleManualSave = () => {
@@ -94,152 +190,272 @@ export default function CellEditor({
     onClose();
   };
 
-  // Position the popover relative to the anchor cell
-  const top = Math.min(anchorRect.bottom + 4, window.innerHeight - 400);
-  const left = Math.min(anchorRect.left, window.innerWidth - 320);
+  const top = Math.min(anchorRect.bottom + 4, window.innerHeight - 480);
+  const left = Math.min(anchorRect.left, window.innerWidth - 340);
+
+  // Reason type to label
+  const reasonLabel = (type: string) => {
+    const map: Record<string, string> = {
+      scripture_match: "Scripture",
+      topic_match: "Topic",
+      season_match: "Season",
+      function_match: "Function",
+      familiarity: "Familiar",
+      user_ranking: "Ranked",
+      recency_penalty: "Recent",
+    };
+    return map[type] || type;
+  };
+
+  const reasonColor = (type: string) => {
+    const map: Record<string, string> = {
+      scripture_match: "bg-blue-50 text-blue-600",
+      topic_match: "bg-purple-50 text-purple-600",
+      season_match: "bg-green-50 text-green-600",
+      function_match: "bg-amber-50 text-amber-600",
+      familiarity: "bg-stone-100 text-stone-500",
+      recency_penalty: "bg-red-50 text-red-500",
+    };
+    return map[type] || "bg-stone-100 text-stone-500";
+  };
 
   return (
     <>
-      {/* Backdrop */}
       <div className="fixed inset-0 z-40" onClick={onClose} />
 
-      {/* Popover */}
       <div
         ref={panelRef}
-        className="fixed z-50 w-80 bg-white border border-stone-200 rounded-lg shadow-xl"
+        className="fixed z-50 w-[340px] bg-white border border-stone-200 rounded-lg shadow-xl max-h-[460px] flex flex-col"
         style={{ top, left }}
       >
-        {/* Tabs */}
-        <div className="flex border-b border-stone-100">
-          <button
-            onClick={() => setMode("search")}
-            className={`flex-1 px-3 py-2 text-xs font-medium transition-colors ${
-              mode === "search"
-                ? "text-stone-900 border-b-2 border-stone-900"
-                : "text-stone-400 hover:text-stone-600"
-            }`}
-          >
-            Search Library
-          </button>
-          <button
-            onClick={() => setMode("manual")}
-            className={`flex-1 px-3 py-2 text-xs font-medium transition-colors ${
-              mode === "manual"
-                ? "text-stone-900 border-b-2 border-stone-900"
-                : "text-stone-400 hover:text-stone-600"
-            }`}
-          >
-            Manual Entry
-          </button>
-        </div>
+        {/* Bulk apply dialog */}
+        {showBulkApply && pendingBulkSong && (
+          <div className="p-4 space-y-3">
+            <p className="text-sm font-medium text-stone-800">
+              Apply &ldquo;{pendingBulkSong.title}&rdquo;
+            </p>
+            <p className="text-xs text-stone-500">
+              {rowKey === "gospelAcclamation" ? "Gospel Acclamation" : "Mass Setting"} selections can be applied in bulk.
+            </p>
+            <div className="space-y-1.5">
+              <button onClick={() => handleBulkConfirm("this")} className="w-full text-left px-3 py-2 rounded-lg border border-stone-200 hover:bg-stone-50 text-sm transition-colors">
+                This Sunday only
+              </button>
+              <button onClick={() => handleBulkConfirm("season")} className="w-full text-left px-3 py-2 rounded-lg border border-parish-gold/30 bg-parish-gold/5 hover:bg-parish-gold/10 text-sm transition-colors">
+                <span className="font-medium">Rest of this season</span>
+                <span className="text-xs text-stone-400 ml-1">(recommended)</span>
+              </button>
+              <button onClick={() => handleBulkConfirm("all")} className="w-full text-left px-3 py-2 rounded-lg border border-stone-200 hover:bg-stone-50 text-sm transition-colors">
+                All three year cycles
+              </button>
+            </div>
+            <button onClick={() => { setShowBulkApply(false); setPendingBulkSong(null); }} className="text-xs text-stone-400 hover:text-stone-600">
+              Cancel
+            </button>
+          </div>
+        )}
 
-        <div className="p-3">
-          {mode === "search" ? (
-            <>
-              <input
-                ref={inputRef}
-                type="text"
-                value={query}
-                onChange={(e) => handleQueryChange(e.target.value)}
-                placeholder="Search songs..."
-                className="w-full text-sm border border-stone-200 rounded-md px-3 py-2 focus:outline-none focus:ring-1 focus:ring-stone-400"
-              />
-              {searching && (
-                <p className="text-xs text-stone-400 mt-2 px-1">Searching...</p>
+        {/* Normal editor */}
+        {!showBulkApply && (
+          <>
+            {/* Tabs */}
+            <div className="flex border-b border-stone-100 shrink-0">
+              {position && (
+                <button
+                  onClick={() => setMode("suggest")}
+                  className={`flex-1 px-3 py-2 text-xs font-medium transition-colors ${
+                    mode === "suggest"
+                      ? "text-parish-gold border-b-2 border-parish-gold"
+                      : "text-stone-400 hover:text-stone-600"
+                  }`}
+                >
+                  Suggestions
+                </button>
               )}
-              {results.length > 0 && (
-                <div className="mt-2 max-h-48 overflow-y-auto divide-y divide-stone-50">
-                  {results.map((song) => (
-                    <button
-                      key={song.id}
-                      type="button"
-                      onClick={() => handleSelectSong(song)}
-                      className="w-full text-left px-2 py-2 hover:bg-stone-50 rounded transition-colors"
-                    >
-                      <p className="text-sm font-medium text-stone-800 truncate">
-                        {song.title}
-                      </p>
-                      {song.composer && (
-                        <p className="text-xs text-stone-400 truncate">
-                          {song.composer}
-                        </p>
+              <button
+                onClick={() => setMode("search")}
+                className={`flex-1 px-3 py-2 text-xs font-medium transition-colors ${
+                  mode === "search"
+                    ? "text-stone-900 border-b-2 border-stone-900"
+                    : "text-stone-400 hover:text-stone-600"
+                }`}
+              >
+                Search
+              </button>
+              <button
+                onClick={() => setMode("manual")}
+                className={`flex-1 px-3 py-2 text-xs font-medium transition-colors ${
+                  mode === "manual"
+                    ? "text-stone-900 border-b-2 border-stone-900"
+                    : "text-stone-400 hover:text-stone-600"
+                }`}
+              >
+                Manual
+              </button>
+            </div>
+
+            <div className="p-3 overflow-y-auto flex-1">
+              {/* ─── Suggestions Tab ──────────────────────────── */}
+              {mode === "suggest" && (
+                <div className="space-y-1">
+                  {recsLoading && (
+                    <div className="py-6 text-center">
+                      <span className="text-xs text-stone-400 animate-pulse">Analyzing readings and history...</span>
+                    </div>
+                  )}
+                  {recs && recs.length === 0 && (
+                    <p className="text-xs text-stone-400 italic py-4 text-center">
+                      No suggestions for this slot.{" "}
+                      <button onClick={() => setMode("search")} className="underline">Search instead</button>
+                    </p>
+                  )}
+                  {recs?.map((rec) => (
+                    <div key={rec.songId} className="rounded-lg border border-stone-100 hover:border-stone-200 transition-all">
+                      <button
+                        onClick={() => handleSelectSong(rec.title, rec.composer || "")}
+                        className="w-full text-left px-3 py-2.5"
+                      >
+                        <div className="flex items-start justify-between gap-2">
+                          <div className="flex-1 min-w-0">
+                            <p className="text-sm font-medium text-stone-800 truncate">{rec.title}</p>
+                            {rec.composer && (
+                              <p className="text-xs text-stone-400 truncate">{rec.composer}</p>
+                            )}
+                          </div>
+                          <div className="text-right shrink-0">
+                            <span className="text-[10px] font-bold text-parish-gold">{rec.score}</span>
+                            {rec.weeksSinceUsed !== null && (
+                              <p className="text-[9px] text-stone-400">
+                                {rec.weeksSinceUsed === 0 ? "used this week" : `${rec.weeksSinceUsed}w ago`}
+                              </p>
+                            )}
+                          </div>
+                        </div>
+                        {/* Reason badges */}
+                        <div className="flex flex-wrap gap-1 mt-1.5">
+                          {rec.reasons.filter((r) => r.points > 0).map((r, i) => (
+                            <span key={i} className={`inline-block px-1.5 py-0 text-[8px] font-medium rounded ${reasonColor(r.type)}`}>
+                              {reasonLabel(r.type)} +{r.points}
+                            </span>
+                          ))}
+                          {rec.reasons.filter((r) => r.points < 0).map((r, i) => (
+                            <span key={`neg-${i}`} className="inline-block px-1.5 py-0 text-[8px] font-medium rounded bg-red-50 text-red-500">
+                              {reasonLabel(r.type)} {r.points}
+                            </span>
+                          ))}
+                        </div>
+                      </button>
+                      {/* See more / explain */}
+                      <div className="px-3 pb-2 flex items-center gap-2">
+                        <button
+                          onClick={(e) => { e.stopPropagation(); handleExplain(rec); }}
+                          className="text-[9px] text-stone-400 hover:text-parish-gold transition-colors"
+                        >
+                          {explainSong?.song?.title === rec.title ? "Hide details" : "See more"}
+                        </button>
+                        {rec.weeksUntilNext !== null && (
+                          <span className="text-[9px] text-stone-300">
+                            next in {rec.weeksUntilNext}w
+                          </span>
+                        )}
+                      </div>
+                      {/* Explain panel */}
+                      {explainSong?.song?.title === rec.title && (
+                        <div className="px-3 pb-3 border-t border-stone-50 pt-2">
+                          <p className="text-[10px] font-medium text-stone-600 mb-1">
+                            Score breakdown ({explainSong.totalScore} pts)
+                          </p>
+                          <div className="space-y-0.5">
+                            {explainSong.breakdown.map((b, i) => (
+                              <div key={i} className="flex items-center justify-between text-[9px]">
+                                <span className="text-stone-500">{b.category}: {b.detail}</span>
+                                <span className={b.points >= 0 ? "text-green-600" : "text-red-500"}>
+                                  {b.points >= 0 ? "+" : ""}{b.points}
+                                </span>
+                              </div>
+                            ))}
+                          </div>
+                          {explainSong.weeksSinceUsed !== null && (
+                            <p className="text-[9px] text-stone-400 mt-1">
+                              Last used {explainSong.weeksSinceUsed} weeks ago
+                              {explainSong.weeksUntilNext !== null && ` · Next scheduled in ${explainSong.weeksUntilNext} weeks`}
+                            </p>
+                          )}
+                        </div>
                       )}
-                    </button>
+                      {explainLoading && explainSong === null && (
+                        <div className="px-3 pb-2">
+                          <span className="text-[9px] text-stone-400 animate-pulse">Loading explanation...</span>
+                        </div>
+                      )}
+                    </div>
                   ))}
                 </div>
               )}
-              {query.trim() && !searching && results.length === 0 && (
-                <p className="text-xs text-stone-400 mt-2 px-1">
-                  No songs found.{" "}
-                  <button
-                    onClick={() => {
-                      setMode("manual");
-                      setTitle(query);
-                    }}
-                    className="text-stone-600 underline"
-                  >
-                    Enter manually
-                  </button>
-                </p>
+
+              {/* ─── Search Tab ───────────────────────────────── */}
+              {mode === "search" && (
+                <>
+                  <input
+                    ref={inputRef}
+                    type="text"
+                    value={query}
+                    onChange={(e) => handleQueryChange(e.target.value)}
+                    placeholder="Search songs..."
+                    className="w-full text-sm border border-stone-200 rounded-md px-3 py-2 focus:outline-none focus:ring-1 focus:ring-stone-400"
+                  />
+                  {searching && <p className="text-xs text-stone-400 mt-2 px-1">Searching...</p>}
+                  {results.length > 0 && (
+                    <div className="mt-2 max-h-48 overflow-y-auto divide-y divide-stone-50">
+                      {results.map((song) => (
+                        <button
+                          key={song.id}
+                          type="button"
+                          onClick={() => handleSelectSong(song.title, song.composer || "")}
+                          className="w-full text-left px-2 py-2 hover:bg-stone-50 rounded transition-colors"
+                        >
+                          <p className="text-sm font-medium text-stone-800 truncate">{song.title}</p>
+                          {song.composer && <p className="text-xs text-stone-400 truncate">{song.composer}</p>}
+                        </button>
+                      ))}
+                    </div>
+                  )}
+                  {query.trim() && !searching && results.length === 0 && (
+                    <p className="text-xs text-stone-400 mt-2 px-1">
+                      No songs found.{" "}
+                      <button onClick={() => { setMode("manual"); setTitle(query); }} className="text-stone-600 underline">Enter manually</button>
+                    </p>
+                  )}
+                </>
               )}
-            </>
-          ) : (
-            <>
-              <div className="space-y-2">
-                <div>
-                  <label className="block text-[10px] font-medium text-stone-500 uppercase tracking-wide mb-0.5">
-                    Title
-                  </label>
-                  <input
-                    ref={mode === "manual" ? inputRef : undefined}
-                    type="text"
-                    value={title}
-                    onChange={(e) => setTitle(e.target.value)}
-                    className="w-full text-sm border border-stone-200 rounded-md px-3 py-1.5 focus:outline-none focus:ring-1 focus:ring-stone-400"
-                    placeholder="Song title"
-                  />
-                </div>
-                <div>
-                  <label className="block text-[10px] font-medium text-stone-500 uppercase tracking-wide mb-0.5">
-                    Composer
-                  </label>
-                  <input
-                    type="text"
-                    value={composer}
-                    onChange={(e) => setComposer(e.target.value)}
-                    className="w-full text-sm border border-stone-200 rounded-md px-3 py-1.5 focus:outline-none focus:ring-1 focus:ring-stone-400"
-                    placeholder="Composer/arranger"
-                  />
-                </div>
-              </div>
-              <div className="mt-3 flex items-center justify-between">
-                {!currentData.isEmpty && (
-                  <button
-                    onClick={handleClear}
-                    className="text-xs text-red-500 hover:text-red-700"
-                  >
-                    Clear
-                  </button>
-                )}
-                <div className="flex gap-2 ml-auto">
-                  <button
-                    onClick={onClose}
-                    className="px-3 py-1.5 text-xs text-stone-500 hover:bg-stone-100 rounded-md"
-                  >
-                    Cancel
-                  </button>
-                  <button
-                    onClick={handleManualSave}
-                    disabled={!title.trim()}
-                    className="px-3 py-1.5 text-xs font-medium text-white bg-stone-900 rounded-md hover:bg-stone-800 disabled:opacity-50"
-                  >
-                    Save
-                  </button>
-                </div>
-              </div>
-            </>
-          )}
-        </div>
+
+              {/* ─── Manual Tab ───────────────────────────────── */}
+              {mode === "manual" && (
+                <>
+                  <div className="space-y-2">
+                    <div>
+                      <label className="block text-[10px] font-medium text-stone-500 uppercase tracking-wide mb-0.5">Title</label>
+                      <input ref={mode === "manual" ? inputRef : undefined} type="text" value={title} onChange={(e) => setTitle(e.target.value)} className="w-full text-sm border border-stone-200 rounded-md px-3 py-1.5 focus:outline-none focus:ring-1 focus:ring-stone-400" placeholder="Song title" />
+                    </div>
+                    <div>
+                      <label className="block text-[10px] font-medium text-stone-500 uppercase tracking-wide mb-0.5">Composer</label>
+                      <input type="text" value={composer} onChange={(e) => setComposer(e.target.value)} className="w-full text-sm border border-stone-200 rounded-md px-3 py-1.5 focus:outline-none focus:ring-1 focus:ring-stone-400" placeholder="Composer/arranger" />
+                    </div>
+                  </div>
+                  <div className="mt-3 flex items-center justify-between">
+                    {!currentData.isEmpty && (
+                      <button onClick={handleClear} className="text-xs text-red-500 hover:text-red-700">Clear</button>
+                    )}
+                    <div className="flex gap-2 ml-auto">
+                      <button onClick={onClose} className="px-3 py-1.5 text-xs text-stone-500 hover:bg-stone-100 rounded-md">Cancel</button>
+                      <button onClick={handleManualSave} disabled={!title.trim()} className="px-3 py-1.5 text-xs font-medium text-white bg-stone-900 rounded-md hover:bg-stone-800 disabled:opacity-50">Save</button>
+                    </div>
+                  </div>
+                </>
+              )}
+            </div>
+          </>
+        )}
       </div>
     </>
   );
