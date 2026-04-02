@@ -1282,7 +1282,7 @@ export default function SongLibraryShell({ songs, title = "Music Library", subti
                 value={search}
                 onChange={(e) => setSearch(e.target.value)}
                 placeholder="Search songs, composers, topics, scripture..."
-                className="w-full pl-8 pr-3 py-1.5 text-sm border border-stone-200 rounded-md bg-white focus:outline-none focus:ring-1 focus:ring-stone-400"
+                className="w-full pl-8 pr-3 py-1.5 text-sm border border-stone-300 rounded-lg bg-white focus:outline-none focus:ring-2 focus:ring-parish-gold/50 focus:border-parish-gold placeholder:text-stone-400"
               />
             </div>
 

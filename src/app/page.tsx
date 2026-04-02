@@ -96,7 +96,8 @@ export default async function DashboardPage() {
     <div className="max-w-3xl">
       {/* Ombre hero */}
       <div className="bg-gradient-to-b from-[color-mix(in_srgb,var(--liturgical-theme),transparent_85%)] to-background px-4 pt-14 md:px-8 md:pt-8 pb-6">
-        <h1 className="font-serif text-[1.375rem] font-semibold text-parish-charcoal mb-1">Dashboard</h1>
+        <p className="text-[11px] uppercase tracking-[0.2em] text-muted font-medium mb-2">Ritual Song</p>
+        <h1 className="font-serif text-[1.75rem] font-light text-parish-charcoal mb-1">Dashboard</h1>
         <p className="text-sm text-muted">
           {occasions.length} liturgical occasions across the 3-year lectionary cycle
         </p>
@@ -115,7 +116,7 @@ export default async function DashboardPage() {
         {thisWeek && (
           <Link
             href={`/occasion/${thisWeek.id}`}
-            className="border border-border rounded-lg p-5 bg-surface hover:shadow-md transition-shadow"
+            className="border border-border rounded-lg p-5 bg-surface hover:shadow-md transition-shadow border-t-2 border-t-[var(--liturgical-theme)]"
           >
             <div className="flex items-center justify-between mb-1">
               <p className="text-[11px] uppercase tracking-widest text-muted font-medium">
@@ -141,7 +142,7 @@ export default async function DashboardPage() {
         {nextWeek && (
           <Link
             href={`/occasion/${nextWeek.id}`}
-            className="border border-border rounded-lg p-5 bg-surface hover:shadow-md transition-shadow"
+            className="border border-border rounded-lg p-5 bg-surface hover:shadow-md transition-shadow border-t-2 border-t-[var(--liturgical-theme)]"
           >
             <div className="flex items-center justify-between mb-1">
               <p className="text-[11px] uppercase tracking-widest text-muted font-medium">

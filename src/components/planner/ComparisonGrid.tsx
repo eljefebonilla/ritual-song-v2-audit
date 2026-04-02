@@ -416,7 +416,7 @@ export default function ComparisonGrid({
               {/* Row label */}
               <div
                 className={`border-b border-r border-stone-200 flex items-center justify-end px-3 text-right ${
-                  row.isReading ? "h-auto min-h-[2.75rem]" : "h-11"
+                  row.isReading ? "h-auto min-h-9" : "h-9"
                 } ${
                   row.isReading ? "bg-stone-50" : row.isSubRow ? "bg-stone-50/70" : "bg-white"
                 }`}
@@ -485,7 +485,7 @@ export default function ComparisonGrid({
                   <div
                     key={ci}
                     className={`border-b border-stone-100 ${
-                      row.isReading ? "h-auto min-h-[2.75rem]" : "h-11"
+                      row.isReading ? "h-auto min-h-9" : "h-9"
                     } ${ci < colCount - 1 ? "border-r" : ""} ${diffClass}`}
                   >
                     <GridCell

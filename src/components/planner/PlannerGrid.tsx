@@ -423,6 +423,7 @@ export default function PlannerGrid({ columns, viewMode, hideMassParts = false, 
   const COL_WIDTH = 300;
   const LABEL_WIDTH = 160;
   const HEADER_HEIGHT = 110;
+  const ROW_HEIGHT = 36;
   const totalWidth = LABEL_WIDTH + columns.length * COL_WIDTH + (holyWeekDividerIndex >= 0 ? DIVIDER_WIDTH : 0);
 
   return (
@@ -474,7 +475,7 @@ export default function PlannerGrid({ columns, viewMode, hideMassParts = false, 
             <div className="flex">
               <div
                 className="shrink-0 sticky left-0 z-10 bg-stone-50 border-b border-r border-stone-200 flex items-center px-3"
-                style={{ width: LABEL_WIDTH, minHeight: 44 }}
+                style={{ width: LABEL_WIDTH, minHeight: ROW_HEIGHT }}
               >
                 <span className="text-[11px] font-medium text-stone-400 italic uppercase tracking-wide">
                   Synopsis
@@ -485,13 +486,13 @@ export default function PlannerGrid({ columns, viewMode, hideMassParts = false, 
                 return (
                   <React.Fragment key={`${col.occasion.id}-synopsis`}>
                     {ci === holyWeekDividerIndex && (
-                      <div className="shrink-0 border-b border-r border-stone-100" style={{ width: DIVIDER_WIDTH, minHeight: 44, backgroundColor: HOLY_WEEK_COLOR }} />
+                      <div className="shrink-0 border-b border-r border-stone-100" style={{ width: DIVIDER_WIDTH, minHeight: ROW_HEIGHT, backgroundColor: HOLY_WEEK_COLOR }} />
                     )}
                     <div
                       className={`shrink-0 border-b border-r border-stone-100 px-2 py-1.5 flex items-center ${
                         ci % 2 === 0 ? "bg-stone-50/50" : "bg-white"
                       }`}
-                      style={{ width: COL_WIDTH, minHeight: 44 }}
+                      style={{ width: COL_WIDTH, minHeight: ROW_HEIGHT }}
                     >
                       {syn ? (
                         <p className="text-xs italic text-stone-500 line-clamp-2">
@@ -538,7 +539,7 @@ export default function PlannerGrid({ columns, viewMode, hideMassParts = false, 
                 className={`shrink-0 sticky left-0 z-10 border-b border-r border-stone-200 flex items-center justify-end px-3 text-right ${
                   row.isReading ? "bg-stone-50" : row.isSubRow ? "bg-stone-50/70" : "bg-white"
                 }`}
-                style={{ width: LABEL_WIDTH, height: 44 }}
+                style={{ width: LABEL_WIDTH, height: ROW_HEIGHT }}
               >
                 {row.isExpandable ? (
                   <button
@@ -575,11 +576,11 @@ export default function PlannerGrid({ columns, viewMode, hideMassParts = false, 
                 return (
                   <React.Fragment key={`${col.occasion.id}-${rowKey}`}>
                     {ci === holyWeekDividerIndex && (
-                      <div className="shrink-0 border-b border-r border-stone-100" style={{ width: DIVIDER_WIDTH, height: 44, backgroundColor: HOLY_WEEK_COLOR, opacity: 0.15 }} />
+                      <div className="shrink-0 border-b border-r border-stone-100" style={{ width: DIVIDER_WIDTH, height: ROW_HEIGHT, backgroundColor: HOLY_WEEK_COLOR, opacity: 0.15 }} />
                     )}
                     <div
                       className="shrink-0"
-                      style={{ width: COL_WIDTH, height: 44 }}
+                      style={{ width: COL_WIDTH, height: ROW_HEIGHT }}
                     >
                       <GridCell
                         data={cellData}
