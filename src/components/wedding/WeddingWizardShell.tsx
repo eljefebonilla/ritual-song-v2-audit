@@ -127,7 +127,10 @@ export default function WeddingWizardShell({
           };
         }
 
-        // Single selection: replace
+        // Single selection: toggle off if already selected, otherwise replace
+        if (existing.length === 1 && existing[0].songId === song.id) {
+          return { ...prev, [stepNumber]: [] };
+        }
         return {
           ...prev,
           [stepNumber]: [
@@ -859,7 +862,7 @@ function MusicStep({
                     className="text-[10px] text-stone-400 hover:text-parish-gold transition-colors"
                     title={song.is_starred ? "Remove star" : "Add star"}
                   >
-                    {song.is_starred ? "&#9733; Unstar" : "&#9734; Star"}
+                    {song.is_starred ? "\u2605 Unstar" : "\u2606 Star"}
                   </button>
                   <span className="text-stone-200">|</span>
                   <button
