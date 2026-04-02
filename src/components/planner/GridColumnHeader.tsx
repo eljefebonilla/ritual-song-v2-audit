@@ -23,7 +23,12 @@ export default function GridColumnHeader({ occasion, showTags = true }: GridColu
   const gospelShort = gospel ? abbreviateReading(gospel.citation, gospel.summary) : null;
 
   return (
-    <div className="px-2 py-2 h-full flex flex-col items-center text-center">
+    <div
+      className="px-2 py-2 h-full flex flex-col items-center text-center"
+      style={{
+        background: `linear-gradient(to bottom, color-mix(in srgb, ${occColor}, transparent 92%), transparent)`,
+      }}
+    >
       <div
         className="w-full h-1 rounded-full mb-1.5"
         style={{ backgroundColor: occColor }}

@@ -21,7 +21,12 @@ export default function MonthHeader({ month, year, season }: MonthHeaderProps) {
   const seasonColor = SEASON_COLORS[season] ?? SEASON_COLORS["Ordinary Time"];
 
   return (
-    <div className="sticky top-0 z-10 bg-white/95 backdrop-blur-sm pt-8 pb-4 px-3 border-b border-stone-100 shadow-[0_1px_3px_rgba(0,0,0,0.03)]">
+    <div
+      className="sticky top-0 z-10 backdrop-blur-sm pt-8 pb-4 px-3 border-b border-stone-100 shadow-[0_1px_3px_rgba(0,0,0,0.03)]"
+      style={{
+        background: `linear-gradient(to bottom, color-mix(in srgb, ${seasonColor}, transparent 90%), var(--color-background))`,
+      }}
+    >
       <h2 className="font-serif text-2xl font-light uppercase tracking-[0.2em] text-stone-700">
         {month} {year}
       </h2>
