@@ -120,6 +120,11 @@ export function extractCellData(
       if (r) return { title: r.citation, description: r.summary, isEmpty: false, isReading: true, isVerbatim: false };
       return { title: "", isEmpty: true, isReading: true };
     }
+    case "communionAntiphon": {
+      const ant = occasion?.antiphons?.find((a) => a.type === "communion");
+      if (ant) return { title: ant.citation, description: ant.text, isEmpty: false, isReading: true, isVerbatim: true };
+      return { title: "", isEmpty: true, isReading: true };
+    }
   }
 
   // Music rows — pull from plan

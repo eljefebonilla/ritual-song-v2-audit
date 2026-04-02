@@ -35,6 +35,7 @@ export const GRID_ROW_KEYS = [
   "massSettingAmen",
   "lordsPrayer",
   "fractionRite",
+  "communionAntiphon",
   "communion1",
   "communion2",
   "communion3",
@@ -58,6 +59,7 @@ export const READING_ROWS: Set<GridRowKey> = new Set([
   "secondReading",
   "gospelVerse",
   "gospel",
+  "communionAntiphon",
 ]);
 
 // Mass part rows — hideable via toggle
@@ -111,6 +113,7 @@ export const GRID_ROW_LABELS: Record<GridRowKey, string> = {
   massSettingAmen: "Great Amen",
   lordsPrayer: "Lord's Prayer",
   fractionRite: "Fraction Rite",
+  communionAntiphon: "Comm. Ant.",
   communion1: "Communion",
   communion2: "Comm. 2",
   communion3: "Comm. 3",
@@ -149,6 +152,7 @@ export const GRID_SECTIONS = [
       "massSettingAmen",
       "lordsPrayer",
       "fractionRite",
+      "communionAntiphon",
       "communion1",
       "communion2",
       "communion3",
