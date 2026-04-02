@@ -63,30 +63,28 @@ export default function TodayShell({
         className="px-6 pt-8 pb-6"
         style={{ backgroundImage: `linear-gradient(to bottom, color-mix(in srgb, ${colorHex}, transparent 85%), var(--color-background))` }}
       >
-        {/* Rank badge */}
-        <div className="flex items-center gap-2 mb-2">
-          <span
-            className="w-3 h-3 rounded-full"
-            style={{ backgroundColor: colorHex }}
-          />
-          <span className="text-[11px] font-medium uppercase tracking-wide" style={{ color: colorHex }}>
-            {rankLabel(liturgicalDay.rank)}
-          </span>
-          <span className="text-[11px] text-muted">|</span>
-          <span className="text-[11px] text-muted">{colorName}</span>
-        </div>
+        {/* Date eyebrow */}
+        <p className="text-[11px] uppercase tracking-[0.2em] text-muted font-medium mb-3">
+          {formatDisplayDate(date)}
+        </p>
 
-        {/* Celebration name */}
-        <h1 className="font-serif text-[1.375rem] font-semibold text-parish-charcoal mb-1">
+        {/* Celebration name — display weight per DESIGN.md */}
+        <h1 className="font-serif text-[1.75rem] font-light text-parish-charcoal mb-2">
           {liturgicalDay.celebrationName}
         </h1>
 
-        {/* Season + date */}
-        <p className="text-sm text-muted">
-          <span style={{ color: seasonInfo?.primary }}>{seasonInfo?.label || liturgicalDay.season}</span>
-          {" \u2022 "}
-          {formatDisplayDate(date)}
-        </p>
+        {/* Rank + season + color */}
+        <div className="flex items-center gap-2">
+          <span
+            className="w-2.5 h-2.5 rounded-full"
+            style={{ backgroundColor: colorHex }}
+          />
+          <span className="text-[11px] font-medium uppercase tracking-wide" style={{ color: seasonInfo?.primary }}>
+            {seasonInfo?.label || liturgicalDay.season}
+          </span>
+          <span className="text-[11px] text-muted">{rankLabel(liturgicalDay.rank)}</span>
+          <span className="text-[11px] text-muted">{colorName}</span>
+        </div>
       </div>
 
       {/* Quick stats row */}
@@ -158,7 +156,7 @@ export default function TodayShell({
       {/* Today's Masses */}
       {massEvents.length > 0 && (
         <div className="mx-6 mt-6">
-          <h2 className="text-sm font-semibold text-stone-700 uppercase tracking-wide mb-3">
+          <h2 className="font-serif text-base font-semibold text-parish-charcoal mb-3">
             Today&apos;s Masses
           </h2>
           <div className="space-y-2">
@@ -196,7 +194,7 @@ export default function TodayShell({
       {/* Cantor Briefing Cards */}
       {massesWithMusic.length > 0 && (
         <div className="mx-6 mt-8">
-          <h2 className="text-sm font-semibold text-stone-700 uppercase tracking-wide mb-3">
+          <h2 className="font-serif text-base font-semibold text-parish-charcoal mb-3">
             Cantor Briefing
           </h2>
           <div className="space-y-4">
