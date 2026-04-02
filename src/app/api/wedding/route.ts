@@ -8,10 +8,10 @@ import { createAdminClient } from "@/lib/supabase/admin";
 export async function POST(request: NextRequest) {
   const supabase = createAdminClient();
   const body = await request.json();
-  const { eventId, details, selections } = body;
+  const { eventId, details, selections, eventType } = body;
 
   const row = {
-    event_type: "wedding" as const,
+    event_type: (eventType || "wedding") as "wedding" | "funeral",
     status: "in_progress" as const,
     contact_name: details.coupleName1,
     contact_email: details.contactEmail || null,
@@ -20,6 +20,7 @@ export async function POST(request: NextRequest) {
       details.coupleName1 && details.coupleName2
         ? `${details.coupleName1} & ${details.coupleName2}`
         : null,
+    deceased_name: details.deceasedName || null,
     event_date: details.eventDate || null,
     event_time: details.eventTime || null,
     rehearsal_date: details.rehearsalDate || null,

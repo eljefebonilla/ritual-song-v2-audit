@@ -44,7 +44,7 @@ export async function POST(request: NextRequest) {
 
   const supabase = createAdminClient();
   const body = await request.json();
-  const { step_number, title, composer, category } = body;
+  const { step_number, title, composer, category, liturgy_type } = body;
 
   if (!step_number || !title) {
     return NextResponse.json(
@@ -72,7 +72,7 @@ export async function POST(request: NextRequest) {
     .insert({
       title,
       composer: composer || null,
-      liturgy_type: "wedding",
+      liturgy_type: liturgy_type || "wedding",
       step_number,
       step_label: stepLabels[step_number] || `Step ${step_number}`,
       category: category || "Other",
