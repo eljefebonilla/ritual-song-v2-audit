@@ -3,6 +3,7 @@
 import { useState, useCallback, useRef } from "react";
 import { WEDDING_STEPS, TFL_PSALM_CODES } from "@/lib/wedding-steps";
 import type { WeddingStep } from "@/lib/wedding-steps";
+import { useViewMode } from "@/hooks/useViewMode";
 import WeddingChatPanel from "./WeddingChatPanel";
 
 // ─── Types ───────────────────────────────────────────────────────────────────
@@ -74,8 +75,10 @@ export default function WeddingWizardShell({
   eventId,
   initialSelections,
   initialDetails,
-  isDirector = false,
+  isDirector: isDirectorProp = false,
 }: WeddingWizardShellProps) {
+  const { effectiveIsAdmin } = useViewMode();
+  const isDirector = isDirectorProp && effectiveIsAdmin;
   const [songs, setSongs] = useState<SacramentalSong[]>(initialSongs);
   const [currentStep, setCurrentStep] = useState(0); // 0 = details, 1-10 = music steps, 11 = review
   const [selections, setSelections] = useState<WeddingSelections>(
