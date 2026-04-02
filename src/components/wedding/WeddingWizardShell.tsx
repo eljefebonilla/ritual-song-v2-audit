@@ -843,16 +843,8 @@ function MusicStep({
                   {song.audio_url && (
                     <AudioSample url={song.audio_url} title="Listen" />
                   )}
-                  {song.youtube_url && !song.audio_url && (
-                    <a
-                      href={song.youtube_url}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="inline-flex items-center gap-1 text-xs text-red-600 hover:text-red-700"
-                    >
-                      <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0C.488 3.45.029 5.804 0 12c.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0C23.512 20.55 23.971 18.196 24 12c-.029-6.185-.484-8.549-4.385-8.816zM9 16V8l8 4-8 4z"/></svg>
-                      Preview on YouTube
-                    </a>
+                  {song.youtube_url && (
+                    <YouTubePreview url={song.youtube_url} />
                   )}
                 </div>
               )}
@@ -1183,5 +1175,67 @@ function AudioSample({ url, title }: { url: string; title: string }) {
       </svg>
       <span>{title}</span>
     </button>
+  );
+}
+
+function YouTubePreview({ url }: { url: string }) {
+  const [open, setOpen] = useState(false);
+
+  // Extract video ID from various YouTube URL formats
+  const getVideoId = (u: string): string | null => {
+    const patterns = [
+      /(?:youtube\.com\/watch\?v=|youtu\.be\/|youtube\.com\/embed\/)([a-zA-Z0-9_-]{11})/,
+      /youtube\.com\/shorts\/([a-zA-Z0-9_-]{11})/,
+    ];
+    for (const p of patterns) {
+      const m = u.match(p);
+      if (m) return m[1];
+    }
+    return null;
+  };
+
+  const videoId = getVideoId(url);
+
+  if (!open) {
+    return (
+      <button
+        onClick={() => setOpen(true)}
+        className="inline-flex items-center gap-1.5 text-xs text-red-600 hover:text-red-700 transition-colors"
+      >
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+          <path d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0C.488 3.45.029 5.804 0 12c.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0C23.512 20.55 23.971 18.196 24 12c-.029-6.185-.484-8.549-4.385-8.816zM9 16V8l8 4-8 4z" />
+        </svg>
+        Preview
+      </button>
+    );
+  }
+
+  return (
+    <div className="mt-1 space-y-1">
+      <div className="flex items-center justify-between">
+        <span className="text-[10px] text-stone-400">YouTube Preview</span>
+        <button
+          onClick={() => setOpen(false)}
+          className="text-[10px] text-stone-400 hover:text-stone-600"
+        >
+          Close
+        </button>
+      </div>
+      {videoId ? (
+        <div className="relative w-full rounded-lg overflow-hidden bg-black" style={{ paddingBottom: "56.25%" }}>
+          <iframe
+            className="absolute inset-0 w-full h-full"
+            src={`https://www.youtube-nocookie.com/embed/${videoId}?rel=0`}
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope"
+            allowFullScreen
+            title="YouTube preview"
+          />
+        </div>
+      ) : (
+        <a href={url} target="_blank" rel="noopener noreferrer" className="text-xs text-red-600 underline">
+          Open on YouTube
+        </a>
+      )}
+    </div>
   );
 }
