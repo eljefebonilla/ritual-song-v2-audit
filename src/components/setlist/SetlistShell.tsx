@@ -180,6 +180,13 @@ export default function SetlistShell({
                 Re-bootstrap
               </button>
             )}
+            <a
+              href={`/admin/setlist/${mass.id}/print`}
+              target="_blank"
+              className="text-xs px-3 py-1.5 border border-stone-300 text-stone-600 rounded-md hover:bg-stone-50"
+            >
+              Print / PDF
+            </a>
             <button
               onClick={handleSave}
               disabled={saving}

@@ -152,12 +152,22 @@ export default function BookingGrid({
                         {mass.celebrant}
                       </span>
                     )}
+                    <div className="mt-0.5 flex items-center gap-2">
+                    <a
+                      href={`/admin/setlist/${mass.id}`}
+                      onClick={(e) => e.stopPropagation()}
+                      className="inline-flex items-center gap-0.5 text-[10px] text-stone-300 hover:text-stone-500 transition-colors"
+                      title="Setlist"
+                    >
+                      <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M9 18V5l12-2v13" /><circle cx="6" cy="18" r="3" /><circle cx="18" cy="16" r="3" /></svg>
+                      setlist
+                    </a>
                     <button
                       onClick={(e) => {
                         e.stopPropagation();
                         setCommentMassId(commentMassId === mass.id ? null : mass.id);
                       }}
-                      className={`mt-0.5 inline-flex items-center gap-0.5 text-[10px] transition-colors ${
+                      className={`inline-flex items-center gap-0.5 text-[10px] transition-colors ${
                         commentMassId === mass.id
                           ? "text-stone-700"
                           : "text-stone-300 hover:text-stone-500"
@@ -178,6 +188,7 @@ export default function BookingGrid({
                       </svg>
                       notes
                     </button>
+                    </div>
                   </div>
                 </td>
 
