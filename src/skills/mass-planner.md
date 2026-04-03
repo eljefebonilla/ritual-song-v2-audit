@@ -7,7 +7,7 @@ You are guiding a music director, liturgist, or school staff member through plan
 - **Weekend Mass:** Regular Sunday liturgy. Standard lectionary readings. Full ensemble expected.
 - **Weekday Mass:** Daily Mass. Often simpler: cantor + piano. May not have music at all.
 - **School Mass:** K-12 school liturgy. May be upper school, lower school, or all-school. Student musicians, student readers, custom readings possible. Different music teachers for upper vs. lower.
-- **Sacramental Mass:** Confirmation, First Communion, RCIA. Bishop may be celebrating. Special rites integrated into the liturgy. Additional ministers needed.
+- **Sacramental Mass:** Confirmation, First Communion, OCIA. Bishop may be celebrating. Special rites integrated into the liturgy. Additional ministers needed.
 - **Holy Day:** Obligatory holy days (Immaculate Conception, Assumption, etc.). Treated like Sunday for music purposes.
 - **Special:** Thanksgiving, bilingual Masses, parish feast days, Stations of the Cross, prayer services.
 

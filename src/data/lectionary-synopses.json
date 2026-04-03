@@ -502,7 +502,7 @@
   "lent-01-a": {
     "occasion_id": "lent-01-a",
     "logline": "Lent begins in the desert: Adam and Eve fell to temptation, but Jesus stands firm against the devil's every test.",
-    "trajectory": "Lent A follows the great catechetical gospels used for RCIA scrutinies: Temptation → Transfiguration → Woman at the Well → Man Born Blind → Raising of Lazarus. Each week deepens the journey from sin to new life.",
+    "trajectory": "Lent A follows the great catechetical gospels used for OCIA scrutinies: Temptation → Transfiguration → Woman at the Well → Man Born Blind → Raising of Lazarus. Each week deepens the journey from sin to new life.",
     "readings": {
       "first": {
         "citation": "Genesis 2:7–9; 3:1–7",
@@ -562,7 +562,7 @@
   "lent-02-a": {
     "occasion_id": "lent-02-a",
     "logline": "God calls Abraham to leave everything behind, and Jesus is transfigured on the mountain — a flash of glory to sustain the long walk toward the cross.",
-    "trajectory": "Lent A follows the great catechetical gospels used for RCIA scrutinies: Temptation → Transfiguration → Woman at the Well → Man Born Blind → Raising of Lazarus. Each week deepens the journey from sin to new life.",
+    "trajectory": "Lent A follows the great catechetical gospels used for OCIA scrutinies: Temptation → Transfiguration → Woman at the Well → Man Born Blind → Raising of Lazarus. Each week deepens the journey from sin to new life.",
     "readings": {
       "first": {
         "citation": "Genesis 12:1–4a",
@@ -622,7 +622,7 @@
   "lent-03-a-first-scrutiny": {
     "occasion_id": "lent-03-a-first-scrutiny",
     "logline": "Israel thirsts in the desert and God strikes water from the rock; at Jacob's well, Jesus offers the Samaritan woman \"living water\" that wells up to eternal life.",
-    "trajectory": "Lent A follows the great catechetical gospels used for RCIA scrutinies: Temptation → Transfiguration → Woman at the Well → Man Born Blind → Raising of Lazarus. Each week deepens the journey from sin to new life.",
+    "trajectory": "Lent A follows the great catechetical gospels used for OCIA scrutinies: Temptation → Transfiguration → Woman at the Well → Man Born Blind → Raising of Lazarus. Each week deepens the journey from sin to new life.",
     "readings": {
       "first": {
         "citation": "Exodus 17:3–7",
@@ -682,7 +682,7 @@
   "lent-04-a-second-scrutiny": {
     "occasion_id": "lent-04-a-second-scrutiny",
     "logline": "God anoints the overlooked shepherd boy David as king, and Jesus opens the eyes of a man born blind — \"I was blind and now I see.\"",
-    "trajectory": "Lent A follows the great catechetical gospels used for RCIA scrutinies: Temptation → Transfiguration → Woman at the Well → Man Born Blind → Raising of Lazarus. Each week deepens the journey from sin to new life.",
+    "trajectory": "Lent A follows the great catechetical gospels used for OCIA scrutinies: Temptation → Transfiguration → Woman at the Well → Man Born Blind → Raising of Lazarus. Each week deepens the journey from sin to new life.",
     "readings": {
       "first": {
         "citation": "1 Samuel 16:1b, 6–7, 10–13a",
@@ -742,7 +742,7 @@
   "lent-05-a-third-scrutiny": {
     "occasion_id": "lent-05-a-third-scrutiny",
     "logline": "Ezekiel sees dry bones raised from their graves, and Jesus stands before the tomb of his friend and commands: \"Lazarus, come out!\"",
-    "trajectory": "Lent A follows the great catechetical gospels used for RCIA scrutinies: Temptation → Transfiguration → Woman at the Well → Man Born Blind → Raising of Lazarus. Each week deepens the journey from sin to new life.",
+    "trajectory": "Lent A follows the great catechetical gospels used for OCIA scrutinies: Temptation → Transfiguration → Woman at the Well → Man Born Blind → Raising of Lazarus. Each week deepens the journey from sin to new life.",
     "readings": {
       "first": {
         "citation": "Ezekiel 37:12–14",

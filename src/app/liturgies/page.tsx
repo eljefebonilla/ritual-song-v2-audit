@@ -20,7 +20,7 @@ const LITURGY_TYPES = [
     label: "Baptism",
     icon: "M12 22c5.52 0 10-4.48 10-10S17.52 2 12 2 2 6.48 2 12s4.48 10 10 10zM12 6v6l4 2",
     color: "bg-sky-50 text-sky-700 border-sky-200",
-    description: "Infant Baptism, OCIA (RCIA) Rites",
+    description: "Infant Baptism, OCIA Rites",
   },
   {
     id: "reconciliation",

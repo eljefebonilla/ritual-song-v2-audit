@@ -17,7 +17,7 @@ const MASS_TYPES: { value: MassType; label: string; description: string }[] = [
   { value: "weekend", label: "Weekend Mass", description: "Regular Sunday liturgy" },
   { value: "weekday", label: "Weekday Mass", description: "Daily Mass, often simpler" },
   { value: "school", label: "School Mass", description: "K-12 school liturgy" },
-  { value: "sacramental", label: "Sacramental Mass", description: "Confirmation, First Communion, RCIA" },
+  { value: "sacramental", label: "Sacramental Mass", description: "Confirmation, First Communion, OCIA" },
   { value: "holy_day", label: "Holy Day", description: "Obligatory holy day" },
   { value: "special", label: "Special Liturgy", description: "Thanksgiving, bilingual, prayer service" },
 ];
