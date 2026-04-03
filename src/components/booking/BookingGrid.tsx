@@ -152,42 +152,38 @@ export default function BookingGrid({
                         {mass.celebrant}
                       </span>
                     )}
-                    <div className="mt-0.5 flex items-center gap-2">
-                    <a
-                      href={`/admin/setlist/${mass.id}`}
-                      onClick={(e) => e.stopPropagation()}
-                      className="inline-flex items-center gap-0.5 text-[10px] text-stone-300 hover:text-stone-500 transition-colors"
-                      title="Setlist"
-                    >
-                      <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M9 18V5l12-2v13" /><circle cx="6" cy="18" r="3" /><circle cx="18" cy="16" r="3" /></svg>
-                      setlist
-                    </a>
-                    <button
-                      onClick={(e) => {
-                        e.stopPropagation();
-                        setCommentMassId(commentMassId === mass.id ? null : mass.id);
-                      }}
-                      className={`inline-flex items-center gap-0.5 text-[10px] transition-colors ${
-                        commentMassId === mass.id
-                          ? "text-stone-700"
-                          : "text-stone-300 hover:text-stone-500"
-                      }`}
-                      title="Comments"
-                    >
-                      <svg
-                        width="10"
-                        height="10"
-                        viewBox="0 0 24 24"
-                        fill="none"
-                        stroke="currentColor"
-                        strokeWidth="2"
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
+                    <div className="mt-1 flex items-center gap-1.5">
+                      <a
+                        href={`/admin/setlist/${mass.id}`}
+                        onClick={(e) => e.stopPropagation()}
+                        className="inline-flex items-center gap-1 text-[10px] px-1.5 py-0.5 rounded border border-stone-200 text-stone-500 hover:text-stone-700 hover:bg-stone-50 transition-colors"
                       >
-                        <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" />
-                      </svg>
-                      notes
-                    </button>
+                        <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M9 18V5l12-2v13" /><circle cx="6" cy="18" r="3" /><circle cx="18" cy="16" r="3" /></svg>
+                        Setlist
+                      </a>
+                      <a
+                        href={`/admin/setlist/${mass.id}/print`}
+                        target="_blank"
+                        onClick={(e) => e.stopPropagation()}
+                        className="inline-flex items-center gap-1 text-[10px] px-1.5 py-0.5 rounded border border-stone-200 text-stone-500 hover:text-stone-700 hover:bg-stone-50 transition-colors"
+                      >
+                        <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><polyline points="6 9 6 2 18 2 18 9" /><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2" /><rect x="6" y="14" width="12" height="8" /></svg>
+                        Print
+                      </a>
+                      <button
+                        onClick={(e) => {
+                          e.stopPropagation();
+                          setCommentMassId(commentMassId === mass.id ? null : mass.id);
+                        }}
+                        className={`inline-flex items-center gap-1 text-[10px] px-1.5 py-0.5 rounded border transition-colors ${
+                          commentMassId === mass.id
+                            ? "border-stone-400 text-stone-700 bg-stone-100"
+                            : "border-stone-200 text-stone-500 hover:text-stone-700 hover:bg-stone-50"
+                        }`}
+                      >
+                        <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" /></svg>
+                        Notes
+                      </button>
                     </div>
                   </div>
                 </td>
