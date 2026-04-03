@@ -100,7 +100,11 @@ function InviteModal({ onClose, onSuccess, onError }: InviteModalProps) {
       });
       const data = await res.json();
       if (res.ok) {
-        onSuccess(`Invitation sent! Code: ${data.code}`);
+        if (data.warnings?.length > 0) {
+          onError(`Invite created (code: ${data.code}) but delivery failed: ${data.warnings.join(", ")}. Share this link manually: ${data.joinUrl}`);
+        } else {
+          onSuccess(`Invitation sent! Code: ${data.code}`);
+        }
         onClose();
       } else {
         onError(data.error || "Failed to send invitation.");

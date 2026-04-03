@@ -45,6 +45,18 @@ export async function POST(req: NextRequest) {
     );
   }
 
+  // Normalize phone to E.164 format (+1XXXXXXXXXX)
+  let normalizedPhone = phone?.replace(/[\s\-\(\)\.]/g, "") || undefined;
+  if (normalizedPhone) {
+    if (normalizedPhone.startsWith("1") && normalizedPhone.length === 11) {
+      normalizedPhone = "+" + normalizedPhone;
+    } else if (/^\d{10}$/.test(normalizedPhone)) {
+      normalizedPhone = "+1" + normalizedPhone;
+    } else if (!normalizedPhone.startsWith("+")) {
+      normalizedPhone = "+1" + normalizedPhone;
+    }
+  }
+
   // Resolve inviting admin's ID
   let invitedBy: string | null = null;
   try {
@@ -63,7 +75,7 @@ export async function POST(req: NextRequest) {
   const { error: insertError } = await supabase.from("invitations").insert({
     code,
     invited_by: invitedBy,
-    invited_phone: phone ?? null,
+    invited_phone: normalizedPhone ?? null,
     invited_email: email ?? null,
     ensemble: ensemble ?? null,
     status: "pending",
@@ -77,15 +89,16 @@ export async function POST(req: NextRequest) {
   const errors: string[] = [];
 
   // Send SMS if phone provided
-  if (phone) {
+  if (normalizedPhone) {
     try {
       await sendSMS(
-        phone,
+        normalizedPhone,
         `St. Monica Music Ministry: You've been invited to join! Sign up here: ${joinUrl} Reply STOP to opt out.`
       );
     } catch (err) {
-      console.error("Invitation SMS failed:", err);
-      errors.push("SMS send failed");
+      const errMsg = err instanceof Error ? err.message : String(err);
+      console.error("Invitation SMS failed:", errMsg);
+      errors.push(`SMS failed: ${errMsg}`);
     }
   }
 
@@ -107,9 +120,11 @@ export async function POST(req: NextRequest) {
   }
 
   return NextResponse.json({
-    success: true,
+    success: errors.length === 0,
     code,
     joinUrl,
+    smsSent: normalizedPhone ? !errors.some((e) => e.includes("SMS")) : false,
+    emailSent: email ? !errors.some((e) => e.includes("Email")) : false,
     warnings: errors.length > 0 ? errors : undefined,
   });
 }
