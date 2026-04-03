@@ -26,7 +26,7 @@ SELECT
   me.event_date,
   me.start_time_12h,
   me.event_type,
-  me.community AS ensemble,
+  me.ensemble,
   me.celebrant,
   me.liturgical_name,
   me.season,
