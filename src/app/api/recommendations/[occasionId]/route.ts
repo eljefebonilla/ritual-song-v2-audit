@@ -199,7 +199,7 @@ export async function POST(
     // song_usage table may not exist yet. Proceed without usage data.
   }
 
-  // 8. Build candidate list from song library
+  // 8. Build candidate list from song library (include functions for slot-aware scoring)
   const candidates = allSongs.map((s) => ({
     id: s.id,
     title: s.title,
@@ -208,6 +208,7 @@ export async function POST(
     scriptureRefs: s.scriptureRefs,
     topics: s.topics,
     liturgicalUse: s.liturgicalUse,
+    functions: s.functions,
     isHiddenGlobal: s.isHiddenGlobal,
   }));
 

@@ -4,6 +4,8 @@ import { createAdminClient } from "@/lib/supabase/admin";
 import { notFound } from "next/navigation";
 import type { Setlist, SetlistSongRow, SetlistPersonnel, SetlistSafetySong } from "@/lib/booking-types";
 import PrintButton from "@/components/setlist/PrintButton";
+import SetlistExportButton from "@/components/setlist/SetlistExportButton";
+import WorshipAidExportButton from "@/components/setlist/WorshipAidExportButton";
 
 interface Props {
   params: Promise<{ massEventId: string }>;
@@ -269,6 +271,25 @@ export default async function SetlistPrintPage({ params }: Props) {
       `}</style>
 
       <PrintButton />
+      <SetlistExportButton
+        occasionName={typed.occasion_name || mass.liturgical_name || mass.title}
+        specialDesignation={typed.special_designation}
+        dateDisplay={formatPrintDate(mass.event_date)}
+        timeDisplay={mass.start_time_12h}
+        ensemble={mass.ensemble}
+        songs={songs}
+        personnel={personnel}
+        choirLabel={typed.choir_label}
+        safetySong={safetySong}
+      />
+      <WorshipAidExportButton
+        occasionName={typed.occasion_name || mass.liturgical_name || mass.title}
+        dateDisplay={formatPrintDate(mass.event_date)}
+        timeDisplay={mass.start_time_12h}
+        ensemble={mass.ensemble}
+        celebrant={mass.celebrant}
+        songs={songs}
+      />
 
       <div className="setlist-page">
         {/* Header */}

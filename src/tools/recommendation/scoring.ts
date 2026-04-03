@@ -28,7 +28,47 @@ interface SongCandidate {
   scriptureRefs?: string[];
   topics?: string[];
   liturgicalUse?: string[];
+  functions?: string[];
   isHiddenGlobal?: boolean;
+}
+
+/**
+ * Position-to-function mapping for slot-aware filtering.
+ * A psalm slot should ONLY show psalms. A gathering slot shows gathering songs.
+ */
+const POSITION_FUNCTIONS: Record<string, string[]> = {
+  gathering: ["gathering", "entrance"],
+  offertory: ["offertory", "preparation_of_gifts", "preparation of the gifts"],
+  communion1: ["communion"],
+  communion2: ["communion"],
+  communion3: ["communion"],
+  sending: ["sending", "recessional", "closing"],
+  prelude: ["prelude", "gathering", "meditation"],
+  psalm: ["psalm", "responsorial"],
+  gospelAcclamation: ["gospel_acclamation", "gospel acclamation"],
+  gospel_acclamation: ["gospel_acclamation", "gospel acclamation"],
+};
+
+/**
+ * Generate a liturgically intelligent explanation of why a song fits.
+ */
+function buildExplanation(type: string, detail: string, position: string): string {
+  switch (type) {
+    case "scripture_match":
+      return `This song draws directly from ${detail}, one of today's readings. The assembly will hear these words proclaimed and then sing them.`;
+    case "topic_match":
+      return `The theme of "${detail}" in today's readings resonates with this song's message.`;
+    case "season_match":
+      return `Well-suited for ${detail}. Using seasonal music helps the assembly enter into the liturgical time.`;
+    case "function_match":
+      return `Written as a ${detail} song. The music and text are composed for this moment in the liturgy.`;
+    case "familiarity":
+      return `Your community knows this song (${detail}). Familiar songs encourage full, active participation.`;
+    case "recency_penalty":
+      return `${detail}. Rotating songs prevents fatigue while building repertoire.`;
+    default:
+      return detail;
+  }
 }
 
 /**
@@ -65,7 +105,8 @@ export function scoreSong(
           total += pts;
           reasons.push({
             type: "scripture_match",
-            detail: `Matches ${reading.citation}`,
+            detail: reading.citation,
+            explanation: buildExplanation("scripture_match", reading.citation, request.position),
             points: pts,
           });
           break;
@@ -87,7 +128,8 @@ export function scoreSong(
         topicHits++;
         reasons.push({
           type: "topic_match",
-          detail: `Topic: ${topic}`,
+          detail: topic,
+          explanation: buildExplanation("topic_match", topic, request.position),
           points: pts,
         });
       }
@@ -102,9 +144,29 @@ export function scoreSong(
       total += pts;
       reasons.push({
         type: "season_match",
-        detail: `Season: ${request.season}`,
+        detail: request.season,
+        explanation: buildExplanation("season_match", request.season, request.position),
         points: pts,
       });
+    }
+  }
+
+  // Function match: does this song's purpose match the slot?
+  if (song.functions && song.functions.length > 0) {
+    const positionFns = POSITION_FUNCTIONS[request.position] || [];
+    const songFns = song.functions.map((f) => f.toLowerCase());
+    for (const fn of positionFns) {
+      if (songFns.some((sf) => sf.includes(fn) || fn.includes(sf))) {
+        const pts = weights.functionMatch;
+        total += pts;
+        reasons.push({
+          type: "function_match",
+          detail: fn,
+          explanation: buildExplanation("function_match", fn, request.position),
+          points: pts,
+        });
+        break;
+      }
     }
   }
 
@@ -118,6 +180,7 @@ export function scoreSong(
       reasons.push({
         type: "recency_penalty",
         detail: `Used ${weeksSinceUsed} week(s) ago`,
+        explanation: buildExplanation("recency_penalty", `Used ${weeksSinceUsed} week(s) ago`, request.position),
         points: -penalty,
       });
     }
@@ -129,7 +192,8 @@ export function scoreSong(
     total += pts;
     reasons.push({
       type: "familiarity",
-      detail: `Used ${usage.timesUsedThisYear}x this year (familiar to assembly)`,
+      detail: `Used ${usage.timesUsedThisYear}x this year`,
+      explanation: buildExplanation("familiarity", `used ${usage.timesUsedThisYear} times this year`, request.position),
       points: pts,
     });
   }

@@ -1,10 +1,13 @@
 import Link from "next/link";
+import { redirect } from "next/navigation";
 import { getAllOccasions, getSeasons, getCurrentWeekOccasions, getSynopsis } from "@/lib/data";
 import { SEASON_COLORS } from "@/lib/liturgical-colors";
 import type { SeasonGroup, LiturgicalDay } from "@/lib/types";
 import { createAdminClient } from "@/lib/supabase/admin";
+import { createClient } from "@/lib/supabase/server";
 import { rowToLiturgicalDay } from "@/lib/liturgical-helpers";
 import SeasonAlert from "@/components/ui/SeasonAlert";
+import WelcomeBanner from "@/components/ui/WelcomeBanner";
 
 /**
  * Liturgical year display order, splitting Ordinary Time into two halves:
@@ -59,7 +62,34 @@ function getNearestDate(dates: { date: string; label: string }[]): string | null
 
 export const dynamic = "force-dynamic";
 
-export default async function DashboardPage() {
+export default async function DashboardPage({
+  searchParams,
+}: {
+  searchParams: Promise<{ welcome?: string }>;
+}) {
+  const { welcome } = await searchParams;
+
+  // Check if authenticated user needs parish onboarding
+  try {
+    const supabase = await createClient();
+    const { data: { user } } = await supabase.auth.getUser();
+    if (user) {
+      const adminClient = createAdminClient();
+      const { data: profile } = await adminClient
+        .from("profiles")
+        .select("role, parish_id")
+        .eq("id", user.id)
+        .single();
+
+      // Admin without a parish: redirect to setup
+      if (profile?.role === "admin" && !profile.parish_id) {
+        redirect("/parish/setup");
+      }
+    }
+  } catch {
+    // Auth check failed: continue as unauthenticated (public dashboard)
+  }
+
   const occasions = getAllOccasions();
   const seasons = getSeasons();
   const { thisWeek, nextWeek } = getCurrentWeekOccasions();
@@ -103,6 +133,9 @@ export default async function DashboardPage() {
         </p>
       </div>
       <div className="px-4 md:px-8">
+
+      {/* Welcome banner for newly onboarded parishes */}
+      {welcome === "true" && <WelcomeBanner />}
 
       {/* Season transition alert */}
       {liturgicalDays.length > 0 && (
@@ -168,12 +201,18 @@ export default async function DashboardPage() {
       </div>
 
       {/* Quick links */}
-      <div className="flex gap-3 mb-10">
+      <div className="flex gap-3 mb-10 flex-wrap">
         <Link
           href="/planner"
           className="px-4 py-2 bg-parish-burgundy text-white text-sm font-medium rounded-lg hover:bg-parish-burgundy/90 transition-colors"
         >
           Open Planner
+        </Link>
+        <Link
+          href="/liturgies/plan-a-mass"
+          className="px-4 py-2 bg-green-600 text-white text-sm font-medium rounded-lg hover:bg-green-700 transition-colors"
+        >
+          Plan a Mass
         </Link>
         <Link
           href="/library"

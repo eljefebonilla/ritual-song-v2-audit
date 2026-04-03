@@ -23,6 +23,7 @@ export interface RecommendationReason {
     | "user_ranking"
     | "recency_penalty";
   detail: string;
+  explanation?: string;
   points: number;
 }
 
