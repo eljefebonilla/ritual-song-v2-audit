@@ -192,6 +192,123 @@ function InviteModal({ onClose, onSuccess, onError }: InviteModalProps) {
   );
 }
 
+// ─── Add / Edit Member Modal ─────────────────────────────────────────────────
+
+interface MemberFormModalProps {
+  profile?: Profile | null; // null = add mode, object = edit mode
+  onClose: () => void;
+  onSuccess: (message: string) => void;
+  onError: (message: string) => void;
+}
+
+function MemberFormModal({ profile, onClose, onSuccess, onError }: MemberFormModalProps) {
+  const isEdit = !!profile;
+  const [fullName, setFullName] = useState(profile?.full_name || "");
+  const [email, setEmail] = useState(profile?.email || "");
+  const [phone, setPhone] = useState(profile?.phone || "");
+  const [ensemble, setEnsemble] = useState(profile?.ensemble || "");
+  const [musicianRole, setMusicianRole] = useState(profile?.musician_role || "vocalist");
+  const [voicePart, setVoicePart] = useState(profile?.voice_part || "");
+  const [instrument, setInstrument] = useState(profile?.instrument || profile?.instrument_detail || "");
+  const [saving, setSaving] = useState(false);
+
+  const handleSubmit = async () => {
+    if (!fullName.trim()) { onError("Name is required."); return; }
+    setSaving(true);
+    try {
+      const body = isEdit
+        ? { id: profile.id, full_name: fullName.trim(), email: email.trim() || null, phone: phone.trim() || null, ensemble: ensemble || null, musician_role: musicianRole, voice_part: voicePart || null, instrument: instrument || null }
+        : { full_name: fullName.trim(), email: email.trim() || undefined, phone: phone.trim() || undefined, ensemble: ensemble || undefined, musician_role: musicianRole, voice_part: voicePart || undefined, instrument: instrument || undefined };
+
+      const res = await fetch("/api/admin/members", {
+        method: isEdit ? "PUT" : "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(body),
+      });
+      const data = await res.json();
+      if (res.ok) {
+        onSuccess(isEdit ? "Member updated." : "Member added.");
+        onClose();
+      } else {
+        onError(data.error || "Failed.");
+      }
+    } catch {
+      onError("Network error.");
+    } finally {
+      setSaving(false);
+    }
+  };
+
+  const inputClass = "w-full text-sm border border-stone-200 rounded-md px-3 py-2 focus:outline-none focus:ring-1 focus:ring-stone-400";
+
+  return (
+    <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/40 p-4">
+      <div className="bg-white rounded-xl shadow-xl w-full max-w-md max-h-[90vh] overflow-y-auto">
+        <div className="flex items-center justify-between px-5 py-4 border-b border-stone-100">
+          <h2 className="text-base font-semibold text-stone-900">{isEdit ? "Edit Member" : "Add Member"}</h2>
+          <button onClick={onClose} className="text-stone-400 hover:text-stone-600">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><line x1="18" y1="6" x2="6" y2="18" /><line x1="6" y1="6" x2="18" y2="18" /></svg>
+          </button>
+        </div>
+        <div className="p-5 space-y-3">
+          <div>
+            <label className="block text-xs font-medium text-stone-700 mb-1">Full Name *</label>
+            <input type="text" value={fullName} onChange={(e) => setFullName(e.target.value)} placeholder="John Blanda" className={inputClass} />
+          </div>
+          <div>
+            <label className="block text-xs font-medium text-stone-700 mb-1">Email</label>
+            <input type="email" value={email} onChange={(e) => setEmail(e.target.value)} placeholder="john@example.com" className={inputClass} />
+          </div>
+          <div>
+            <label className="block text-xs font-medium text-stone-700 mb-1">Phone</label>
+            <input type="tel" value={phone} onChange={(e) => setPhone(e.target.value)} placeholder="+1 310 555 0100" className={inputClass} />
+          </div>
+          <div>
+            <label className="block text-xs font-medium text-stone-700 mb-1">Ensemble</label>
+            <select value={ensemble} onChange={(e) => setEnsemble(e.target.value)} className={inputClass}>
+              <option value="">Not specified</option>
+              {ENSEMBLES.map((e) => <option key={e} value={e}>{e}</option>)}
+            </select>
+          </div>
+          <div>
+            <label className="block text-xs font-medium text-stone-700 mb-1">Role</label>
+            <select value={musicianRole} onChange={(e) => setMusicianRole(e.target.value)} className={inputClass}>
+              <option value="vocalist">Vocalist</option>
+              <option value="instrumentalist">Instrumentalist</option>
+              <option value="cantor">Cantor</option>
+              <option value="both">Vocalist + Instrumentalist</option>
+            </select>
+          </div>
+          {["vocalist", "cantor", "both"].includes(musicianRole) && (
+            <div>
+              <label className="block text-xs font-medium text-stone-700 mb-1">Voice Part</label>
+              <select value={voicePart} onChange={(e) => setVoicePart(e.target.value)} className={inputClass}>
+                <option value="">Not specified</option>
+                <option value="Soprano">Soprano</option>
+                <option value="Alto">Alto</option>
+                <option value="Tenor">Tenor</option>
+                <option value="Bass">Bass</option>
+              </select>
+            </div>
+          )}
+          {["instrumentalist", "both"].includes(musicianRole) && (
+            <div>
+              <label className="block text-xs font-medium text-stone-700 mb-1">Instrument</label>
+              <input type="text" value={instrument} onChange={(e) => setInstrument(e.target.value)} placeholder="Piano, Guitar, etc." className={inputClass} />
+            </div>
+          )}
+        </div>
+        <div className="flex items-center justify-end gap-2 px-5 py-4 border-t border-stone-100">
+          <button onClick={onClose} className="text-sm px-4 py-1.5 rounded-md text-stone-600 hover:bg-stone-100">Cancel</button>
+          <button onClick={handleSubmit} disabled={saving} className="text-sm px-4 py-1.5 rounded-md bg-stone-900 text-white hover:bg-stone-700 disabled:opacity-50">
+            {saving ? "Saving..." : isEdit ? "Save Changes" : "Add Member"}
+          </button>
+        </div>
+      </div>
+    </div>
+  );
+}
+
 // ─── Pending Member Card ──────────────────────────────────────────────────────
 
 interface PendingCardProps {
@@ -294,6 +411,10 @@ export default function MembersShell({ profiles: initialProfiles, pendingCount: 
 
   // Invite modal
   const [showInvite, setShowInvite] = useState(false);
+
+  // Add/Edit member modal
+  const [showAddMember, setShowAddMember] = useState(false);
+  const [editingMember, setEditingMember] = useState<Profile | null>(null);
 
   // Derived lists
   const pendingProfiles = useMemo(
@@ -537,15 +658,26 @@ export default function MembersShell({ profiles: initialProfiles, pendingCount: 
             {stats.total} active &middot; {stats.admins} admin{stats.admins !== 1 ? "s" : ""} &middot; {stats.vocalists} vocalist{stats.vocalists !== 1 ? "s" : ""} &middot; {stats.instrumentalists} instrumentalist{stats.instrumentalists !== 1 ? "s" : ""}
           </p>
         </div>
-        <button
-          onClick={() => setShowInvite(true)}
-          className="flex items-center gap-1.5 text-sm px-4 py-2 rounded-lg bg-stone-900 text-white hover:bg-stone-700 transition-colors"
-        >
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
-            <line x1="12" y1="5" x2="12" y2="19" /><line x1="5" y1="12" x2="19" y2="12" />
-          </svg>
-          Invite Member
-        </button>
+        <div className="flex items-center gap-2">
+          <button
+            onClick={() => setShowAddMember(true)}
+            className="flex items-center gap-1.5 text-sm px-4 py-2 rounded-lg border border-stone-300 text-stone-700 hover:bg-stone-50 transition-colors"
+          >
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+              <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" /><circle cx="9" cy="7" r="4" /><line x1="19" y1="8" x2="19" y2="14" /><line x1="22" y1="11" x2="16" y2="11" />
+            </svg>
+            Add Member
+          </button>
+          <button
+            onClick={() => setShowInvite(true)}
+            className="flex items-center gap-1.5 text-sm px-4 py-2 rounded-lg bg-stone-900 text-white hover:bg-stone-700 transition-colors"
+          >
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+              <line x1="12" y1="5" x2="12" y2="19" /><line x1="5" y1="12" x2="19" y2="12" />
+            </svg>
+            Invite Member
+          </button>
+        </div>
       </div>
 
       {/* ── Pending Approval Section ─────────────────────────────────────── */}
@@ -763,6 +895,12 @@ export default function MembersShell({ profiles: initialProfiles, pendingCount: 
                     </td>
                     <td className="px-4 py-3 hidden lg:table-cell">
                       <div className="flex items-center gap-1.5">
+                        <button
+                          onClick={(e) => { e.stopPropagation(); setEditingMember(p); }}
+                          className="text-[10px] px-2 py-0.5 rounded border border-stone-200 text-stone-600 hover:bg-stone-100 transition-colors"
+                        >
+                          Edit
+                        </button>
                         <a
                           href={`/admin/musician/${p.id}/history`}
                           onClick={(e) => e.stopPropagation()}
@@ -871,6 +1009,23 @@ export default function MembersShell({ profiles: initialProfiles, pendingCount: 
       {showInvite && (
         <InviteModal
           onClose={() => setShowInvite(false)}
+          onSuccess={(msg) => addToast(msg, "success")}
+          onError={(msg) => addToast(msg, "error")}
+        />
+      )}
+
+      {showAddMember && (
+        <MemberFormModal
+          onClose={() => { setShowAddMember(false); router.refresh(); }}
+          onSuccess={(msg) => addToast(msg, "success")}
+          onError={(msg) => addToast(msg, "error")}
+        />
+      )}
+
+      {editingMember && (
+        <MemberFormModal
+          profile={editingMember}
+          onClose={() => { setEditingMember(null); router.refresh(); }}
           onSuccess={(msg) => addToast(msg, "success")}
           onError={(msg) => addToast(msg, "error")}
         />
