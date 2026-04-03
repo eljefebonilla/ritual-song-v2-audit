@@ -26,9 +26,10 @@ function generateCode(): string {
  * Creates an invitation record and sends via SMS or email.
  */
 export async function POST(req: NextRequest) {
+  try {
   const isAdmin = await verifyAdmin();
   if (!isAdmin) {
-    return NextResponse.json({ error: "Unauthorized" }, { status: 403 });
+    return NextResponse.json({ error: "Unauthorized — admin check failed. Are you logged in?" }, { status: 403 });
   }
 
   const body = await req.json();
@@ -127,6 +128,11 @@ export async function POST(req: NextRequest) {
     emailSent: email ? !errors.some((e) => e.includes("Email")) : false,
     warnings: errors.length > 0 ? errors : undefined,
   });
+  } catch (err) {
+    const msg = err instanceof Error ? err.message : String(err);
+    console.error("Invitation endpoint crashed:", msg);
+    return NextResponse.json({ error: `Server error: ${msg}` }, { status: 500 });
+  }
 }
 
 /**
