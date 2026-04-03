@@ -820,7 +820,15 @@ export default function MembersShell({ profiles: initialProfiles, pendingCount: 
                           {p.full_name.charAt(0)}
                         </div>
                         <div className="min-w-0">
-                          <p className="text-sm font-medium text-stone-900 truncate">{p.full_name}</p>
+                          <div className="flex items-center gap-2">
+                            <p className="text-sm font-medium text-stone-900 truncate">{p.full_name}</p>
+                            <button
+                              onClick={(e) => { e.stopPropagation(); setEditingMember(p); }}
+                              className="text-[10px] px-1.5 py-0.5 rounded border border-stone-200 text-stone-400 hover:text-stone-700 hover:bg-stone-50 transition-colors shrink-0"
+                            >
+                              Edit
+                            </button>
+                          </div>
                           {isExpanded && (
                             <div className="mt-1 space-y-0.5 md:hidden">
                               {p.ensemble && (
