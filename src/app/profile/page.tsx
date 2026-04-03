@@ -181,6 +181,19 @@ export default function ProfilePage() {
         </div>
       )}
 
+      {/* Quick Links */}
+      <div className="flex gap-3">
+        <a
+          href="/musician/history"
+          className="flex items-center gap-2 px-4 py-2.5 bg-white rounded-lg border border-stone-200 text-sm font-medium text-stone-700 hover:bg-stone-50 transition-colors"
+        >
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+            <polyline points="22 12 18 12 15 21 9 3 6 12 2 12" />
+          </svg>
+          My History & Invoices
+        </a>
+      </div>
+
       {/* Profile Card */}
       <div className="bg-white rounded-xl border border-stone-200 shadow-sm">
         <div className="px-6 py-4 border-b border-stone-100 flex items-center justify-between">

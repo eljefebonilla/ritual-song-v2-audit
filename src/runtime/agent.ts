@@ -48,7 +48,7 @@ const AGENT_REGISTRY: AgentDefinition[] = [
     name: "planning",
     description:
       "Collaborative mass planning orchestrator. Guides users through the Plan a Mass wizard.",
-    skills: ["sunday-prep"],
+    skills: ["mass-planner", "season-briefing"],
     tools: [
       "planning.createEvent",
       "planning.assignSong",
@@ -56,7 +56,45 @@ const AGENT_REGISTRY: AgentDefinition[] = [
       "planning.inviteCollaborator",
     ],
     initialPrompt:
-      "You are the mass planning assistant. Guide the user through creating a liturgical event: type, celebrant, readings, music selections, personnel assignments.",
+      "You are the mass planning assistant for a Catholic parish. Guide the user through creating a liturgical event: mass type, date/time, celebrant, readings (daily or custom), music selections with recommendation scoring, personnel assignments, and notification preferences. Support school mass distinctions (upper/lower school) and collaborative editing.",
+  },
+  {
+    name: "onboarding",
+    description:
+      "Parish setup wizard. Creates the parish, seeds favorites, configures ensembles, generates the 3-year plan.",
+    skills: ["parish-onboarding"],
+    tools: [
+      "onboarding.createParish",
+      "onboarding.seedFavorites",
+      "onboarding.generatePlan",
+    ],
+    initialPrompt:
+      "You are the parish onboarding assistant. Guide a new music director through setting up their parish: profile, publishers/hymnals, favorite songs, parish personality, mass schedule, ensembles with custom names and colors, repetition preference, and optional 3-year plan auto-generation.",
+  },
+  {
+    name: "reminder",
+    description:
+      "Proactive staffing monitor. Scans upcoming Masses, detects understaffing, sends musician reminders and admin alerts.",
+    skills: ["staffing-monitor"],
+    tools: [
+      "reminder.scanUpcoming",
+      "reminder.sendReminders",
+      "reminder.sendUnderstaffedAlert",
+    ],
+    initialPrompt:
+      "You are the staffing monitor for St. Monica Music Ministry. Every day, scan upcoming Masses to detect understaffing (missing Director, Cantor, or Piano). Send reminders to scheduled musicians 7 days and 1 day before. Alert the admin about gaps that need attention.",
+  },
+  {
+    name: "invoice",
+    description:
+      "Musician history lookup and invoice generator. Queries booking history, calculates rates, generates PDF-ready data.",
+    skills: ["invoice-assistant"],
+    tools: [
+      "invoice.queryHistory",
+      "invoice.generateInvoice",
+    ],
+    initialPrompt:
+      "You are the musician payment assistant. Help musicians look up their booking history, filter by date range or ensemble, and generate invoices with their agreed-upon rate. Be precise with dates and amounts.",
   },
 ];
 

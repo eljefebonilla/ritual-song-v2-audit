@@ -5,6 +5,10 @@ import { validateTwilioSignature } from "@/lib/twilio";
 // Keywords that trigger a join invitation
 const JOIN_KEYWORDS = new Set(["JOIN", "STMONICA", "SIGNUP"]);
 
+// Cascade sub-request response keywords
+const ACCEPT_KEYWORDS = new Set(["YES", "ACCEPT", "Y"]);
+const DECLINE_KEYWORDS = new Set(["NO", "DECLINE", "N"]);
+
 function generateCode(): string {
   const chars = "ABCDEFGHJKLMNPQRSTUVWXYZ23456789"; // no I/O/0/1 for clarity
   let code = "";
@@ -84,6 +88,18 @@ export async function POST(req: NextRequest) {
     );
   }
 
+  // Handle cascade ACCEPT responses
+  if (ACCEPT_KEYWORDS.has(body)) {
+    const cascadeResult = await handleCascadeResponse(supabase, from, "accepted");
+    if (cascadeResult) return twiml(cascadeResult);
+  }
+
+  // Handle cascade DECLINE responses
+  if (DECLINE_KEYWORDS.has(body)) {
+    const cascadeResult = await handleCascadeResponse(supabase, from, "declined");
+    if (cascadeResult) return twiml(cascadeResult);
+  }
+
   // Default: unrecognized message
   return twiml(
     "St. Monica Music Ministry: Reply JOIN to sign up, HELP for info, or STOP to unsubscribe."
@@ -100,4 +116,83 @@ function twiml(message: string): NextResponse {
 
 function escapeXml(str: string): string {
   return str.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
+}
+
+/**
+ * Handle a cascade sub-request response (accept/decline).
+ * Looks up the active cascade candidate by phone number.
+ * Returns a TwiML message string, or null if no active cascade found.
+ */
+async function handleCascadeResponse(
+  supabase: ReturnType<typeof createAdminClient>,
+  phone: string,
+  response: "accepted" | "declined"
+): Promise<string | null> {
+  // Find the profile by phone
+  const { data: profile } = await supabase
+    .from("profiles")
+    .select("id, full_name")
+    .eq("phone", phone)
+    .single();
+
+  if (!profile) return null;
+
+  // Find an active cascade candidate for this profile with status "contacted"
+  const { data: candidate } = await supabase
+    .from("cascade_candidates")
+    .select("id, cascade_request_id")
+    .eq("profile_id", profile.id)
+    .eq("status", "contacted")
+    .order("contacted_at", { ascending: false })
+    .limit(1)
+    .single();
+
+  if (!candidate) return null;
+
+  // Update candidate status
+  await supabase
+    .from("cascade_candidates")
+    .update({
+      status: response,
+      responded_at: new Date().toISOString(),
+    })
+    .eq("id", candidate.id);
+
+  if (response === "accepted") {
+    // Mark cascade as filled
+    await supabase
+      .from("cascade_requests")
+      .update({
+        status: "filled",
+        filled_at: new Date().toISOString(),
+        filled_by: profile.id,
+      })
+      .eq("id", candidate.cascade_request_id);
+
+    // Update the booking slot
+    const { data: request } = await supabase
+      .from("cascade_requests")
+      .select("booking_slot_id")
+      .eq("id", candidate.cascade_request_id)
+      .single();
+
+    if (request) {
+      await supabase
+        .from("booking_slots")
+        .update({ profile_id: profile.id, confirmation: "confirmed" })
+        .eq("id", request.booking_slot_id);
+    }
+
+    // Skip remaining queued candidates
+    await supabase
+      .from("cascade_candidates")
+      .update({ status: "skipped" })
+      .eq("cascade_request_id", candidate.cascade_request_id)
+      .eq("status", "queued");
+
+    return `Thank you, ${profile.full_name}! You're confirmed as the sub. Check Ritual Song for details.`;
+  }
+
+  // Declined
+  return `Got it, ${profile.full_name}. We'll reach out to someone else. Thanks for the quick response!`;
 }

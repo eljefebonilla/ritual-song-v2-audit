@@ -21,6 +21,9 @@ interface SlotEditorProps {
   onSave: (data: Record<string, unknown>) => void;
   onDelete?: () => void;
   onClose: () => void;
+  massEventId?: string;
+  ministryRoleId?: string;
+  onRequestSub?: (slotId: string, massEventId: string, ministryRoleId: string, originalMusicianId?: string) => void;
 }
 
 const CONFIRMATION_OPTIONS: { value: ConfirmationStatus; label: string }[] = [
@@ -40,6 +43,9 @@ export default function SlotEditor({
   onSave,
   onDelete,
   onClose,
+  massEventId,
+  ministryRoleId,
+  onRequestSub,
 }: SlotEditorProps) {
   const [profileId, setProfileId] = useState(slot?.profile_id || "");
   const [personName, setPersonName] = useState(slot?.person_name || "");
@@ -203,7 +209,24 @@ export default function SlotEditor({
 
           {/* Actions */}
           <div className="flex items-center justify-between pt-2">
-            <div>
+            <div className="flex items-center gap-3">
+              {slot && onRequestSub && massEventId && ministryRoleId && (
+                <button
+                  type="button"
+                  onClick={() =>
+                    onRequestSub(
+                      slot.id,
+                      massEventId,
+                      ministryRoleId,
+                      slot.profile_id || undefined
+                    )
+                  }
+                  disabled={saving}
+                  className="text-xs px-2.5 py-1.5 bg-amber-50 text-amber-700 border border-amber-200 rounded-md hover:bg-amber-100 disabled:opacity-50"
+                >
+                  Need a Sub
+                </button>
+              )}
               {onDelete && (
                 <button
                   type="button"

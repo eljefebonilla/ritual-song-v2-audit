@@ -758,15 +758,24 @@ export default function MembersShell({ profiles: initialProfiles, pendingCount: 
                       </div>
                     </td>
                     <td className="px-4 py-3 hidden lg:table-cell">
-                      {!isSelf && (
-                        <button
-                          onClick={(e) => { e.stopPropagation(); deactivateOne(p.id); }}
-                          disabled={isProcessing}
-                          className="text-[10px] px-2 py-0.5 rounded border border-red-200 text-red-600 hover:bg-red-50 transition-colors disabled:opacity-40"
+                      <div className="flex items-center gap-1.5">
+                        <a
+                          href={`/admin/musician/${p.id}/history`}
+                          onClick={(e) => e.stopPropagation()}
+                          className="text-[10px] px-2 py-0.5 rounded border border-stone-200 text-stone-600 hover:bg-stone-100 transition-colors"
                         >
-                          {isProcessing ? "..." : "Deactivate"}
-                        </button>
-                      )}
+                          History
+                        </a>
+                        {!isSelf && (
+                          <button
+                            onClick={(e) => { e.stopPropagation(); deactivateOne(p.id); }}
+                            disabled={isProcessing}
+                            className="text-[10px] px-2 py-0.5 rounded border border-red-200 text-red-600 hover:bg-red-50 transition-colors disabled:opacity-40"
+                          >
+                            {isProcessing ? "..." : "Deactivate"}
+                          </button>
+                        )}
+                      </div>
                     </td>
                   </tr>
                 );

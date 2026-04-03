@@ -1,10 +1,11 @@
 "use client";
 
-import { useState, useCallback } from "react";
+import { useState, useCallback, useEffect } from "react";
 import { useRouter } from "next/navigation";
 import type { BookingSlot, BookingStatus, ChoirDescriptor } from "@/lib/booking-types";
 import BookingGrid from "./BookingGrid";
 import SlotEditor from "./SlotEditor";
+import CascadeStatusModal from "./CascadeStatusModal";
 
 interface MinistryRole {
   id: string;
@@ -65,6 +66,15 @@ export default function BookingShell({
   const router = useRouter();
   const [editor, setEditor] = useState<EditorState | null>(null);
   const [saving, setSaving] = useState(false);
+  const [cascadeId, setCascadeId] = useState<string | null>(null);
+  const [understaffedCount, setUnderstaffedCount] = useState(0);
+
+  useEffect(() => {
+    fetch("/api/staffing")
+      .then((r) => r.ok ? r.json() : null)
+      .then((d) => { if (d?.understaffedMasses) setUnderstaffedCount(d.understaffedMasses.length); })
+      .catch(() => {});
+  }, []);
 
   // Booking grid columns — filter to the ones used in the booking spreadsheet
   const gridRoles = roles.filter((r) =>
@@ -152,6 +162,43 @@ export default function BookingShell({
     [router]
   );
 
+  const handleRequestSub = useCallback(
+    async (
+      slotId: string,
+      massEventId: string,
+      ministryRoleId: string,
+      originalMusicianId?: string
+    ) => {
+      setEditor(null); // close the SlotEditor
+      try {
+        const res = await fetch("/api/cascade", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({
+            bookingSlotId: slotId,
+            massEventId,
+            ministryRoleId,
+            originalMusicianId,
+          }),
+        });
+        const json = await res.json();
+        if (!res.ok) {
+          // If there's already an active cascade, show it
+          if (res.status === 409 && json.cascadeId) {
+            setCascadeId(json.cascadeId);
+            return;
+          }
+          alert(json.error || "Failed to start cascade");
+          return;
+        }
+        setCascadeId(json.cascadeId);
+      } catch (err) {
+        alert("Failed to start sub request. Check your connection.");
+      }
+    },
+    []
+  );
+
   return (
     <div className="flex flex-col h-screen">
       {/* Header */}
@@ -163,6 +210,19 @@ export default function BookingShell({
               {initialFrom} to {initialTo}
             </p>
           </div>
+          {understaffedCount > 0 && (
+            <a
+              href="/admin/staffing"
+              className="flex items-center gap-2 px-3 py-1.5 rounded-lg bg-red-50 border border-red-200 text-red-700 text-xs font-medium hover:bg-red-100 transition-colors"
+            >
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                <path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z" />
+                <line x1="12" y1="9" x2="12" y2="13" />
+                <line x1="12" y1="17" x2="12.01" y2="17" />
+              </svg>
+              {understaffedCount} understaffed Mass{understaffedCount !== 1 ? "es" : ""}
+            </a>
+          )}
         </div>
       </div>
 
@@ -186,6 +246,20 @@ export default function BookingShell({
           onSave={handleSave}
           onDelete={editor.slot ? () => handleDelete(editor.slot!.id) : undefined}
           onClose={() => setEditor(null)}
+          massEventId={editor.massEventId}
+          ministryRoleId={editor.roleId}
+          onRequestSub={handleRequestSub}
+        />
+      )}
+
+      {/* Cascade Status Modal */}
+      {cascadeId && (
+        <CascadeStatusModal
+          cascadeId={cascadeId}
+          onClose={() => {
+            setCascadeId(null);
+            router.refresh();
+          }}
         />
       )}
     </div>

@@ -27,6 +27,26 @@ function PendingBadge() {
   );
 }
 
+function StaffingBadge() {
+  const [count, setCount] = useState<number | null>(null);
+
+  useEffect(() => {
+    fetch("/api/staffing")
+      .then((r) => r.ok ? r.json() : null)
+      .then((d) => {
+        if (d?.understaffedMasses) setCount(d.understaffedMasses.length);
+      })
+      .catch(() => {});
+  }, []);
+
+  if (!count) return null;
+  return (
+    <span className="ml-auto text-[9px] font-bold px-1.5 py-0.5 rounded-full bg-red-500 text-white leading-none">
+      {count}
+    </span>
+  );
+}
+
 // --- Persistence ---
 
 import { LS_HIDDEN_NAV, LS_NAV_ORDER } from "@/lib/storage-keys";
@@ -348,6 +368,12 @@ export default function Sidebar({ open, onClose }: SidebarProps) {
             <Link href="/admin/booking" onClick={onClose} className={`flex items-center gap-3 px-4 py-2.5 text-sm transition-colors ${pathname.startsWith("/admin/booking") ? "bg-stone-700 text-white" : "text-stone-300 hover:bg-stone-800 hover:text-white"}`}>
               <svg className="w-[18px] h-[18px] shrink-0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect x="3" y="3" width="18" height="18" rx="2" /><line x1="3" y1="9" x2="21" y2="9" /><line x1="3" y1="15" x2="21" y2="15" /><line x1="9" y1="3" x2="9" y2="21" /><line x1="15" y1="3" x2="15" y2="21" /></svg>
               <span>Booking Grid</span>
+            </Link>
+            {/* Staffing Monitor */}
+            <Link href="/admin/staffing" onClick={onClose} className={`flex items-center gap-3 px-4 py-2.5 text-sm transition-colors ${pathname.startsWith("/admin/staffing") ? "bg-stone-700 text-white" : "text-stone-300 hover:bg-stone-800 hover:text-white"}`}>
+              <svg className="w-[18px] h-[18px] shrink-0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z" /><line x1="12" y1="9" x2="12" y2="13" /><line x1="12" y1="17" x2="12.01" y2="17" /></svg>
+              <span>Staffing</span>
+              <StaffingBadge />
             </Link>
             {/* Members — with pending badge */}
             <Link href="/admin/members" onClick={onClose} className={`flex items-center gap-3 px-4 py-2.5 text-sm transition-colors ${pathname.startsWith("/admin/members") ? "bg-stone-700 text-white" : "text-stone-300 hover:bg-stone-800 hover:text-white"}`}>

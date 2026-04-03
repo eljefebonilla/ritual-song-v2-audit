@@ -52,6 +52,30 @@ const SKILL_REGISTRY: Omit<SkillDefinition, "instructions">[] = [
       "Seasonal planning overview with recommendation context and upcoming liturgical highlights",
     instructionPath: "season-briefing.md",
   },
+  {
+    name: "mass-planner",
+    description:
+      "Dynamic mass planning wizard with mass-type branching, school mass support, collaborative editing, and calendar integration",
+    instructionPath: "mass-planner.md",
+  },
+  {
+    name: "invoice-assistant",
+    description:
+      "Musician history lookup and invoice generation with date filtering and rate calculation",
+    instructionPath: "invoice-assistant.md",
+  },
+  {
+    name: "staffing-monitor",
+    description:
+      "Proactive staffing scan: understaffed Mass detection, musician reminders, admin alerts",
+    instructionPath: "staffing-monitor.md",
+  },
+  {
+    name: "parish-onboarding",
+    description:
+      "9-step parish setup wizard: profile, publishers, favorites, personality, ensembles, repetition, 3-year plan generation",
+    instructionPath: "parish-onboarding.md",
+  },
 ];
 
 export class SkillLoader {
