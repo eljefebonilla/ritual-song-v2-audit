@@ -25,7 +25,7 @@ interface ScoredRec {
 interface ExplainResult {
   song: { title: string; composer?: string };
   totalScore: number;
-  breakdown: { category: string; detail: string; points: number }[];
+  breakdown: { category: string; detail: string; explanation?: string; points: number }[];
   weeksSinceUsed: number | null;
   weeksUntilNext: number | null;
 }
@@ -299,8 +299,10 @@ export default function CellEditor({
               {mode === "suggest" && (
                 <div className="space-y-1">
                   {recsLoading && (
-                    <div className="py-6 text-center">
-                      <span className="text-xs text-stone-400 animate-pulse">Analyzing readings and history...</span>
+                    <div className="py-6 text-center space-y-1.5">
+                      <span className="text-xs text-parish-gold animate-pulse block">Checking lectionary readings...</span>
+                      <span className="text-[10px] text-stone-400 animate-pulse block" style={{ animationDelay: "0.3s" }}>Verifying against parish history...</span>
+                      <span className="text-[10px] text-stone-400 animate-pulse block" style={{ animationDelay: "0.6s" }}>Scoring familiarity and recency...</span>
                     </div>
                   )}
                   {recs && recs.length === 0 && (
@@ -351,7 +353,7 @@ export default function CellEditor({
                           onClick={(e) => { e.stopPropagation(); handleExplain(rec); }}
                           className="text-[9px] text-stone-400 hover:text-parish-gold transition-colors"
                         >
-                          {explainSong?.song?.title === rec.title ? "Hide details" : "See more"}
+                          {explainSong?.song?.title === rec.title ? "Hide" : "Why this song?"}
                         </button>
                         {rec.weeksUntilNext !== null && (
                           <span className="text-[9px] text-stone-300">
@@ -359,27 +361,46 @@ export default function CellEditor({
                           </span>
                         )}
                       </div>
-                      {/* Explain panel */}
+                      {/* "Why this song?" explanation panel */}
                       {explainSong?.song?.title === rec.title && (
-                        <div className="px-3 pb-3 border-t border-stone-50 pt-2">
-                          <p className="text-[10px] font-medium text-stone-600 mb-1">
-                            Score breakdown ({explainSong.totalScore} pts)
+                        <div className="px-3 pb-3 border-t border-stone-50 pt-2 space-y-2">
+                          <p className="text-[10px] font-semibold text-parish-gold uppercase tracking-wider">
+                            Why this song? ({explainSong.totalScore} pts)
                           </p>
-                          <div className="space-y-0.5">
+                          <div className="space-y-1.5">
                             {explainSong.breakdown.map((b, i) => (
-                              <div key={i} className="flex items-center justify-between text-[9px]">
-                                <span className="text-stone-500">{b.category}: {b.detail}</span>
-                                <span className={b.points >= 0 ? "text-green-600" : "text-red-500"}>
-                                  {b.points >= 0 ? "+" : ""}{b.points}
-                                </span>
+                              <div key={i} className="text-[10px]">
+                                <div className="flex items-center justify-between">
+                                  <span className={`font-medium ${b.points >= 0 ? "text-stone-700" : "text-red-500"}`}>
+                                    {b.category === "scripture_match" ? "Scripture Match" :
+                                     b.category === "topic_match" ? "Thematic Fit" :
+                                     b.category === "season_match" ? "Seasonal" :
+                                     b.category === "function_match" ? "Liturgical Function" :
+                                     b.category === "familiarity" ? "Community Familiarity" :
+                                     b.category === "recency_penalty" ? "Recency" :
+                                     b.category}
+                                  </span>
+                                  <span className={`text-[9px] font-mono ${b.points >= 0 ? "text-green-600" : "text-red-500"}`}>
+                                    {b.points >= 0 ? "+" : ""}{b.points}
+                                  </span>
+                                </div>
+                                {b.explanation ? (
+                                  <p className="text-stone-500 leading-snug mt-0.5">{b.explanation}</p>
+                                ) : (
+                                  <p className="text-stone-400 leading-snug mt-0.5">{b.detail}</p>
+                                )}
                               </div>
                             ))}
                           </div>
-                          {explainSong.weeksSinceUsed !== null && (
-                            <p className="text-[9px] text-stone-400 mt-1">
-                              Last used {explainSong.weeksSinceUsed} weeks ago
-                              {explainSong.weeksUntilNext !== null && ` · Next scheduled in ${explainSong.weeksUntilNext} weeks`}
-                            </p>
+                          {(explainSong.weeksSinceUsed !== null || explainSong.weeksUntilNext !== null) && (
+                            <div className="text-[9px] text-stone-400 pt-1 border-t border-stone-100 flex gap-3">
+                              {explainSong.weeksSinceUsed !== null && (
+                                <span>Last used {explainSong.weeksSinceUsed}w ago</span>
+                              )}
+                              {explainSong.weeksUntilNext !== null && (
+                                <span>Next in {explainSong.weeksUntilNext}w</span>
+                              )}
+                            </div>
                           )}
                         </div>
                       )}

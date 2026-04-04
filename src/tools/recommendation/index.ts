@@ -115,6 +115,7 @@ export function createRecommendationTools(): ToolDefinition[] {
           breakdown: match.reasons.map((r) => ({
             category: r.type,
             detail: r.detail,
+            explanation: r.explanation,
             points: r.points,
           })),
           weeksSinceUsed: match.weeksSinceUsed,
