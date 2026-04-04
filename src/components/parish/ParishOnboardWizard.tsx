@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useCallback } from "react";
+import { useState, useCallback, useEffect, useRef } from "react";
 import { useRouter } from "next/navigation";
 import {
   PUBLISHERS,
@@ -12,6 +12,55 @@ import type {
   FavoriteSongSeed,
   ParishSetupData,
 } from "@/tools/onboarding/types";
+
+// ─── Workflow State Machine ─────────────────────────────────────────────────
+
+const WORKFLOW_STAGES = [
+  { id: "welcome", label: "Welcome", step: 0 },
+  { id: "parish-profile", label: "Parish Profile", step: 1 },
+  { id: "resource-inventory", label: "Resource Inventory", step: 2 },
+  { id: "seeding-familiarity", label: "Seeding Favorites", step: 3 },
+  { id: "auto-populate-offer", label: "Auto-Populate", step: 4 },
+  { id: "parish-personality", label: "Parish Personality", step: 5 },
+  { id: "mass-schedule", label: "Mass Schedule", step: 6 },
+  { id: "ensemble-config", label: "Ensemble Setup", step: 7 },
+  { id: "repetition-slider-review", label: "Review & Launch", step: 8 },
+] as const;
+
+const STORAGE_KEY = "ritualsong-onboard-state";
+
+interface PersistedWizardState {
+  step: number;
+  stageId: string;
+  name: string;
+  location: string;
+  diocese: string;
+  selectedPublishers: string[];
+  selectedHymnals: string[];
+  usesScreens: boolean;
+  usesWorshipAids: boolean;
+  favorites: FavoriteSongSeed[];
+  generatePlan: boolean;
+  musicStyle: MusicStyle;
+  weekendMasses: number;
+  weekdayMasses: number;
+  ensembles: EnsembleSetup[];
+  repetition: number;
+  parishId: string | null;
+  savedAt: string;
+}
+
+function loadSavedState(): PersistedWizardState | null {
+  try {
+    const raw = localStorage.getItem(STORAGE_KEY);
+    if (!raw) return null;
+    return JSON.parse(raw);
+  } catch { return null; }
+}
+
+function clearSavedState() {
+  try { localStorage.removeItem(STORAGE_KEY); } catch {}
+}
 
 // ─── Constants ──────────────────────────────────────────────────────────────
 
@@ -54,28 +103,53 @@ interface ParishOnboardWizardProps {
 
 export default function ParishOnboardWizard({ songs, userId }: ParishOnboardWizardProps) {
   const router = useRouter();
-  const [step, setStep] = useState(0);
   const [saving, setSaving] = useState(false);
   const [generating, setGenerating] = useState(false);
-  const [parishId, setParishId] = useState<string | null>(null);
+  const [resumed, setResumed] = useState(false);
 
-  // Form state
-  const [name, setName] = useState("");
-  const [location, setLocation] = useState("");
-  const [diocese, setDiocese] = useState("");
-  const [selectedPublishers, setSelectedPublishers] = useState<string[]>([]);
-  const [selectedHymnals, setSelectedHymnals] = useState<string[]>([]);
-  const [usesScreens, setUsesScreens] = useState(false);
-  const [usesWorshipAids, setUsesWorshipAids] = useState(false);
-  const [favorites, setFavorites] = useState<FavoriteSongSeed[]>([]);
-  const [generatePlan, setGeneratePlan] = useState(true);
-  const [musicStyle, setMusicStyle] = useState<MusicStyle>("mixed");
-  const [weekendMasses, setWeekendMasses] = useState(4);
-  const [weekdayMasses, setWeekdayMasses] = useState(1);
-  const [ensembles, setEnsembles] = useState<EnsembleSetup[]>(DEFAULT_ENSEMBLE_PRESETS.slice(0, 2));
-  const [repetition, setRepetition] = useState(5);
+  // Restore from localStorage on mount
+  const saved = useRef(loadSavedState());
+
+  const [step, setStep] = useState(saved.current?.step ?? 0);
+  const [parishId, setParishId] = useState<string | null>(saved.current?.parishId ?? null);
+  const [name, setName] = useState(saved.current?.name ?? "");
+  const [location, setLocation] = useState(saved.current?.location ?? "");
+  const [diocese, setDiocese] = useState(saved.current?.diocese ?? "");
+  const [selectedPublishers, setSelectedPublishers] = useState<string[]>(saved.current?.selectedPublishers ?? []);
+  const [selectedHymnals, setSelectedHymnals] = useState<string[]>(saved.current?.selectedHymnals ?? []);
+  const [usesScreens, setUsesScreens] = useState(saved.current?.usesScreens ?? false);
+  const [usesWorshipAids, setUsesWorshipAids] = useState(saved.current?.usesWorshipAids ?? false);
+  const [favorites, setFavorites] = useState<FavoriteSongSeed[]>(saved.current?.favorites ?? []);
+  const [generatePlan, setGeneratePlan] = useState(saved.current?.generatePlan ?? true);
+  const [musicStyle, setMusicStyle] = useState<MusicStyle>(saved.current?.musicStyle ?? "mixed");
+  const [weekendMasses, setWeekendMasses] = useState(saved.current?.weekendMasses ?? 4);
+  const [weekdayMasses, setWeekdayMasses] = useState(saved.current?.weekdayMasses ?? 1);
+  const [ensembles, setEnsembles] = useState<EnsembleSetup[]>(saved.current?.ensembles ?? DEFAULT_ENSEMBLE_PRESETS.slice(0, 2));
+  const [repetition, setRepetition] = useState(saved.current?.repetition ?? 5);
 
   const totalSteps = WIZARD_STEPS.length;
+  const currentStage = WORKFLOW_STAGES[step] || WORKFLOW_STAGES[0];
+
+  // Show resume banner if we restored mid-wizard
+  useEffect(() => {
+    if (saved.current && saved.current.step > 0) {
+      setResumed(true);
+      const timer = setTimeout(() => setResumed(false), 6000);
+      return () => clearTimeout(timer);
+    }
+  }, []);
+
+  // Auto-save to localStorage on every state change
+  useEffect(() => {
+    const state: PersistedWizardState = {
+      step, stageId: currentStage.id,
+      name, location, diocese, selectedPublishers, selectedHymnals,
+      usesScreens, usesWorshipAids, favorites, generatePlan,
+      musicStyle, weekendMasses, weekdayMasses, ensembles, repetition,
+      parishId, savedAt: new Date().toISOString(),
+    };
+    try { localStorage.setItem(STORAGE_KEY, JSON.stringify(state)); } catch {}
+  }, [step, currentStage.id, name, location, diocese, selectedPublishers, selectedHymnals, usesScreens, usesWorshipAids, favorites, generatePlan, musicStyle, weekendMasses, weekdayMasses, ensembles, repetition, parishId]);
 
   const togglePublisher = (pubId: string) => {
     setSelectedPublishers((prev) =>
@@ -158,6 +232,7 @@ export default function ParishOnboardWizard({ songs, userId }: ParishOnboardWiza
       }
 
       // Redirect to dashboard with welcome toast
+      clearSavedState();
       router.push("/?welcome=true");
     } catch (err) {
       alert("Setup failed. Please try again.");
@@ -171,6 +246,19 @@ export default function ParishOnboardWizard({ songs, userId }: ParishOnboardWiza
 
   return (
     <div className="max-w-3xl mx-auto pb-16">
+      {/* Resume banner */}
+      {resumed && (
+        <div className="bg-parish-gold/10 border-b border-parish-gold/20 px-6 py-3 flex items-center gap-3">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-parish-gold shrink-0">
+            <polyline points="23 4 23 10 17 10" /><path d="M20.49 15a9 9 0 1 1-2.12-9.36L23 10" />
+          </svg>
+          <p className="text-sm text-stone-700">
+            Welcome back. Resuming from <strong>{currentStage.label}</strong>.
+          </p>
+          <button onClick={() => { setStep(0); setResumed(false); }} className="ml-auto text-xs text-stone-500 hover:text-stone-700">Start over</button>
+        </div>
+      )}
+
       {/* Hero */}
       <div
         className="px-6 pt-8 pb-6"
@@ -190,10 +278,11 @@ export default function ParishOnboardWizard({ songs, userId }: ParishOnboardWiza
         </p>
       </div>
 
-      {/* Progress */}
+      {/* Progress with workflow stage */}
       <div className="px-6 py-4 border-b border-border">
         <div className="flex items-center justify-between mb-2">
           <span className="text-xs text-muted">Step {step + 1} of {totalSteps}</span>
+          <span className="text-xs text-parish-gold font-medium">{currentStage.label}</span>
         </div>
         <div className="h-1.5 bg-stone-100 rounded-full overflow-hidden">
           <div
