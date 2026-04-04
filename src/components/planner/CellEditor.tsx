@@ -311,7 +311,10 @@ export default function CellEditor({
                       <button onClick={() => setMode("search")} className="underline">Search instead</button>
                     </p>
                   )}
-                  {recs?.map((rec) => (
+                  {recs?.map((rec) => {
+                    const maxScore = recs[0]?.score || 1;
+                    const normalized = Math.max(1, Math.round((rec.score / maxScore) * 10));
+                    return (
                     <div key={rec.songId} className="rounded-lg border border-stone-100 hover:border-stone-200 transition-all">
                       <button
                         onClick={() => handleSelectSong(rec.title, rec.composer || "")}
@@ -325,7 +328,7 @@ export default function CellEditor({
                             )}
                           </div>
                           <div className="text-right shrink-0">
-                            <span className="text-[10px] font-bold text-parish-gold">{rec.score}</span>
+                            <span className="text-[10px] font-bold text-parish-gold">{normalized}/10</span>
                             {rec.weeksSinceUsed !== null && (
                               <p className="text-[9px] text-stone-400">
                                 {rec.weeksSinceUsed === 0 ? "used this week" : `${rec.weeksSinceUsed}w ago`}
@@ -413,7 +416,7 @@ export default function CellEditor({
                         </div>
                       )}
                     </div>
-                  ))}
+                  );})}
                 </div>
               )}
 
