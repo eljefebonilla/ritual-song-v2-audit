@@ -162,12 +162,15 @@ export async function syncPlannerToSetlist(
       .eq("mass_event_id", me.id)
       .maybeSingle();
 
+    const occasionName = occasion?.name || null;
+
     if (existing) {
       await supabase
         .from("setlists")
         .update({
           songs: songRows,
           occasion_id: occasionId,
+          occasion_name: occasionName,
           updated_at: new Date().toISOString(),
           generation_status: "outdated",
         })
@@ -179,6 +182,7 @@ export async function syncPlannerToSetlist(
         .insert({
           mass_event_id: me.id,
           occasion_id: occasionId,
+          occasion_name: occasionName,
           songs: songRows,
           personnel: [],
           version: 1,
