@@ -4,6 +4,7 @@ import { createAdminClient } from "@/lib/supabase/admin";
 import { createClient } from "@/lib/supabase/server";
 import { notFound } from "next/navigation";
 import SetlistShell from "@/components/setlist/SetlistShell";
+import { syncPlannerToSetlist } from "@/lib/sync-planner-setlist";
 
 interface Props {
   params: Promise<{ massEventId: string }>;
@@ -36,11 +37,54 @@ export default async function SetlistPage({ params }: Props) {
   if (!mass) notFound();
 
   // Fetch existing setlist (if any)
-  const { data: setlist } = await supabase
+  let { data: setlist } = await supabase
     .from("setlists")
     .select("*")
     .eq("mass_event_id", massEventId)
     .maybeSingle();
+
+  // If no setlist exists, try syncing from planner data
+  if (!setlist && mass.ensemble) {
+    const ensembleId = mass.ensemble.toLowerCase();
+
+    // Try direct occasion_id first, then fuzzy match from title
+    let resolvedOccasionId = mass.occasion_id;
+
+    if (!resolvedOccasionId) {
+      // Fuzzy match: "02Easter_Div.Mercy" -> find "easter-02-divine-mercy-a" in music_plan_edits
+      // Extract key tokens from the mass title for matching
+      const { data: allEdits } = await supabase
+        .from("music_plan_edits")
+        .select("occasion_id")
+        .eq("ensemble_id", ensembleId);
+
+      if (allEdits) {
+        // Extract number + keywords: "02Easter_Div.Mercy" -> ["02", "easter", "mercy"]
+        const titleTokens = (mass.title || "")
+          .toLowerCase()
+          .split(/[^a-z0-9]+/)
+          .filter((t: string) => t.length > 1);
+
+        const uniqueOccasions = [...new Set(allEdits.map((e) => e.occasion_id))];
+        resolvedOccasionId = uniqueOccasions.find((occId: string) => {
+          const occTokens = occId.toLowerCase().split(/[^a-z0-9]+/).filter((t: string) => t.length > 1);
+          return titleTokens.every((tt: string) =>
+            occTokens.some((ot: string) => ot.includes(tt) || tt.includes(ot))
+          );
+        }) || null;
+      }
+    }
+
+    if (resolvedOccasionId) {
+      await syncPlannerToSetlist(resolvedOccasionId, ensembleId);
+      const { data: synced } = await supabase
+        .from("setlists")
+        .select("*")
+        .eq("mass_event_id", massEventId)
+        .maybeSingle();
+      setlist = synced;
+    }
+  }
 
   // Fetch booking slots for personnel
   const { data: slots } = await supabase

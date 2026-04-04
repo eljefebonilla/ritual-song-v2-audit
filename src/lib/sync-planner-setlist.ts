@@ -145,14 +145,24 @@ export async function syncPlannerToSetlist(
 
   if (!massEvents || massEvents.length === 0) return;
 
-  // Match by occasion_id if set, or by title pattern
-  const occasionCode = occasionId.replace(/-([abc])$/, "").replace(/-/g, "");
+  // Match by occasion_id if set, or by token-based fuzzy match
+  const occTokens = occasionId
+    .replace(/-([abc])$/, "")
+    .toLowerCase()
+    .split(/[^a-z0-9]+/)
+    .filter((t) => t.length > 1);
+
   const matching = massEvents.filter((me) => {
     if (me.occasion_id === occasionId) return true;
-    // Fuzzy match: "easter-02-divine-mercy-a" -> title contains "02Easter"
-    const titleNorm = (me.title || "").replace(/[^a-zA-Z0-9]/g, "").toLowerCase();
-    const codeNorm = occasionCode.replace(/[^a-zA-Z0-9]/g, "").toLowerCase();
-    return titleNorm.includes(codeNorm) || codeNorm.includes(titleNorm);
+    // Token match: "easter-02-divine-mercy-a" tokens ["easter","02","divine","mercy"]
+    // vs title "02Easter_Div.Mercy" tokens ["02","easter","div","mercy"]
+    const titleTokens = (me.title || "")
+      .toLowerCase()
+      .split(/[^a-z0-9]+/)
+      .filter((t: string) => t.length > 1);
+    return titleTokens.every((tt: string) =>
+      occTokens.some((ot: string) => ot.includes(tt) || tt.includes(ot))
+    );
   });
 
   if (matching.length === 0) return;
