@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useCallback } from "react";
+import { useState, useCallback, useEffect } from "react";
 import MassPlanChatPanel from "./MassPlanChatPanel";
 import type {
   MassType,
@@ -109,6 +109,15 @@ const DEFAULT_FORM: PlanFormData = {
 
 // ─── Component ──────────────────────────────────────────────────────────────
 
+const PLAN_STORAGE_KEY = "ritualsong-plan-a-mass-state";
+
+function loadPlanState(): { step: number; form: PlanFormData } | null {
+  try {
+    const raw = localStorage.getItem(PLAN_STORAGE_KEY);
+    return raw ? JSON.parse(raw) : null;
+  } catch { return null; }
+}
+
 export default function MassPlanWizardShell({
   songs,
   sessionId: initialSessionId,
@@ -116,13 +125,39 @@ export default function MassPlanWizardShell({
   shareToken: initialShareToken,
   isDirector = true,
 }: MassPlanWizardShellProps) {
-  const [currentStep, setCurrentStep] = useState(0);
-  const [form, setForm] = useState<PlanFormData>({ ...DEFAULT_FORM, ...initialData });
+  // Restore from localStorage if no server-side initial data
+  const savedLocal = !initialSessionId ? loadPlanState() : null;
+
+  const [currentStep, setCurrentStep] = useState(savedLocal?.step ?? 0);
+  const [form, setForm] = useState<PlanFormData>({ ...DEFAULT_FORM, ...initialData, ...savedLocal?.form });
   const [saving, setSaving] = useState(false);
   const [savedSessionId, setSavedSessionId] = useState(initialSessionId || null);
   const [shareToken, setShareToken] = useState(initialShareToken || null);
   const [creating, setCreating] = useState(false);
   const [created, setCreated] = useState(false);
+  const [resumed, setResumed] = useState(!!savedLocal && savedLocal.step > 0);
+
+  // Auto-save to localStorage
+  useEffect(() => {
+    if (!initialSessionId) {
+      try { localStorage.setItem(PLAN_STORAGE_KEY, JSON.stringify({ step: currentStep, form })); } catch {}
+    }
+  }, [currentStep, form, initialSessionId]);
+
+  // Clear on create
+  useEffect(() => {
+    if (created) {
+      try { localStorage.removeItem(PLAN_STORAGE_KEY); } catch {}
+    }
+  }, [created]);
+
+  // Dismiss resume banner after 5s
+  useEffect(() => {
+    if (resumed) {
+      const t = setTimeout(() => setResumed(false), 5000);
+      return () => clearTimeout(t);
+    }
+  }, [resumed]);
 
   const totalSteps = WIZARD_STEPS.length;
 
@@ -235,6 +270,18 @@ export default function MassPlanWizardShell({
 
   return (
     <div className="max-w-4xl mx-auto pb-16">
+      {/* Resume banner */}
+      {resumed && (
+        <div className="bg-green-50 border-b border-green-200 px-6 py-3 flex items-center gap-3">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-green-600 shrink-0">
+            <polyline points="23 4 23 10 17 10" /><path d="M20.49 15a9 9 0 1 1-2.12-9.36L23 10" />
+          </svg>
+          <p className="text-sm text-stone-700">
+            Welcome back. Resuming from step <strong>{currentStep + 1}</strong> of {totalSteps}.
+          </p>
+          <button onClick={() => { setCurrentStep(0); setForm({ ...DEFAULT_FORM }); setResumed(false); try { localStorage.removeItem(PLAN_STORAGE_KEY); } catch {} }} className="ml-auto text-xs text-stone-500 hover:text-stone-700">Start over</button>
+        </div>
+      )}
       {/* Ombre hero — green for planning (growth, preparation) */}
       <div
         className="px-6 pt-8 pb-6"
