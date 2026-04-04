@@ -1,6 +1,6 @@
 import { NextRequest, NextResponse } from "next/server";
 import { getOccasion } from "@/lib/data";
-import { getSongLibrary } from "@/lib/song-library";
+import { getSongLibrary, loadSongLibrary } from "@/lib/song-library";
 import { recommendForOccasion } from "@/lib/recommendations";
 import { createAdminClient } from "@/lib/supabase/admin";
 import { getScriptureSongsForOccasion } from "@/lib/supabase/scripture-mappings";
@@ -59,7 +59,7 @@ export async function GET(
   const excludeRaw = searchParams.get("exclude") || "";
   const excludeSongIds = excludeRaw ? excludeRaw.split(",").filter(Boolean) : [];
 
-  const allSongs = getSongLibrary();
+  const allSongs = await loadSongLibrary();
   const recommendations = recommendForOccasion(occasion, allSongs, {
     limit,
     excludeSongIds,
@@ -173,7 +173,7 @@ export async function POST(
   }
 
   // 6. Load songs
-  const allSongs = getSongLibrary();
+  const allSongs = await loadSongLibrary();
 
   // 7. Fetch usage records from Supabase (if table exists)
   let usageRecords: Array<{

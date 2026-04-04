@@ -40,6 +40,7 @@ interface SongCandidate {
 const POSITION_FUNCTIONS: Record<string, string[]> = {
   gathering: ["gathering", "entrance"],
   offertory: ["offertory", "preparation_of_gifts", "preparation of the gifts"],
+  communion: ["communion"],
   communion1: ["communion"],
   communion2: ["communion"],
   communion3: ["communion"],
@@ -48,6 +49,31 @@ const POSITION_FUNCTIONS: Record<string, string[]> = {
   psalm: ["psalm", "responsorial"],
   gospelAcclamation: ["gospel_acclamation", "gospel acclamation"],
   gospel_acclamation: ["gospel_acclamation", "gospel acclamation"],
+};
+
+/**
+ * Category gating: which song categories are eligible for each position.
+ * Prevents mass parts from appearing in communion suggestions, etc.
+ */
+const POSITION_ELIGIBLE_CATEGORIES: Record<string, Set<string>> = {
+  gathering: new Set(["song"]),
+  offertory: new Set(["song"]),
+  communion: new Set(["song"]),
+  communion1: new Set(["song"]),
+  communion2: new Set(["song"]),
+  communion3: new Set(["song"]),
+  sending: new Set(["song"]),
+  prelude: new Set(["song"]),
+  psalm: new Set(["psalm"]),
+  gospelAcclamation: new Set(["gospel_acclamation", "gospel_acclamation_refrain"]),
+  gospel_acclamation: new Set(["gospel_acclamation", "gospel_acclamation_refrain"]),
+  penitentialAct: new Set(["song", "mass_part"]),
+  penitential_act: new Set(["song", "mass_part"]),
+  gloria: new Set(["song", "mass_part"]),
+  fractionRite: new Set(["song", "mass_part"]),
+  fraction_rite: new Set(["song", "mass_part"]),
+  lordsPrayer: new Set(["song", "mass_part"]),
+  lords_prayer: new Set(["song", "mass_part"]),
 };
 
 /**
@@ -337,9 +363,13 @@ export function rankSongs(
 ): ScoredSong[] {
   const excludeSet = new Set(request.excludeSongIds ?? []);
 
+  const eligible = POSITION_ELIGIBLE_CATEGORIES[request.position];
+
   const scored = candidates
     .filter((s) => {
       if (excludeSet.has(s.id) || s.isHiddenGlobal) return false;
+      // Category gating: only allow eligible categories for this position
+      if (eligible && s.category && !eligible.has(s.category)) return false;
       // Exclude songs tagged for conflicting seasons
       if (s.occasions && s.occasions.length > 0) {
         const songSeasons = getSongSeasons(s.occasions);
