@@ -43,11 +43,18 @@ export async function GET(request: NextRequest) {
     return NextResponse.json({ error: error.message }, { status: 500 });
   }
 
-  // Find masses without setlists that might have planner data
+  // Find masses without setlists OR with empty setlists that might have planner data
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const needsSync = (data || []).filter((me: any) => {
     const setlist = Array.isArray(me.setlists) ? me.setlists[0] : me.setlists;
-    return !setlist && me.ensemble;
+    if (!me.ensemble) return false;
+    if (!setlist) return true;
+    // Also sync if setlist exists but has no filled songs
+    const songs = (setlist.songs || []) as SetlistSongRow[];
+    const hasFilled = songs.some(
+      (r: SetlistSongRow) => r.songs.length > 0 && r.songs.some((s) => s.title.trim() !== "")
+    );
+    return !hasFilled;
   });
 
   if (needsSync.length > 0) {
