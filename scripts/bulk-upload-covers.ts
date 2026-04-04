@@ -1,4 +1,8 @@
 #!/usr/bin/env npx tsx
+import "dotenv/config";
+import { config as dotenvConfig } from "dotenv";
+dotenvConfig({ path: ".env.local", override: true });
+
 /**
  * Bulk Upload Cover Art — St. Monica's worship aid cover images
  *

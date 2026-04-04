@@ -1,4 +1,8 @@
 #!/usr/bin/env npx tsx
+import "dotenv/config";
+import { config as dotenvConfig } from "dotenv";
+dotenvConfig({ path: ".env.local", override: true });
+
 /**
  * Upload parish brand fonts to Supabase storage.
  * Fonts are stored under fonts/{parish_id}/ and base64-inlined at generation time.
