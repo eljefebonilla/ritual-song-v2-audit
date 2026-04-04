@@ -137,13 +137,23 @@ function IconFor({ id }: { id: string }) {
         <path d="M12 2v20M2 12h20" /><circle cx="12" cy="12" r="10" />
       </svg>
     );
+    case "menus": return (
+      <svg className={cls} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+        <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" /><polyline points="14 2 14 8 20 8" /><line x1="16" y1="13" x2="8" y2="13" /><line x1="16" y1="17" x2="8" y2="17" /><polyline points="10 9 9 9 8 9" />
+      </svg>
+    );
+    case "worship-aids": return (
+      <svg className={cls} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+        <polyline points="6 9 6 2 18 2 18 9" /><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2" /><rect x="6" y="14" width="12" height="8" />
+      </svg>
+    );
     default: return null;
   }
 }
 
 const DEFAULT_ORDER: string[] = [
   "today", "calendar", "announcements", "choir",
-  "planner-view", "compare", "library", "liturgies",
+  "planner-view", "compare", "menus", "worship-aids", "library", "liturgies",
   ...SEASON_ITEMS.map((s) => s.id),
 ];
 
@@ -151,12 +161,14 @@ function buildOrderedItems(savedOrder: string[] | null): NavItemDef[] {
   const allItems: Record<string, NavItemDef> = {};
 
   // Non-season items
-  for (const id of ["today", "calendar", "announcements", "choir", "planner-view", "compare", "library", "liturgies"]) {
+  for (const id of ["today", "calendar", "announcements", "choir", "planner-view", "compare", "menus", "worship-aids", "library", "liturgies"]) {
     const labels: Record<string, string> = {
       today: "Today", calendar: "Calendar",
       announcements: "Announcements",
       choir: "Choir Sign-Up", "planner-view": "Multi-Week",
       compare: "Multi-Mass",
+      menus: "Menus",
+      "worship-aids": "Worship Aids",
       library: "Music Library",
       liturgies: "Other Liturgies",
     };
@@ -164,6 +176,8 @@ function buildOrderedItems(savedOrder: string[] | null): NavItemDef[] {
       today: "/today", calendar: "/calendar",
       announcements: "/announcements",
       choir: "/choir", "planner-view": "/planner", compare: "/planner/compare",
+      menus: "/menus",
+      "worship-aids": "/worship-aids",
       library: "/library",
       liturgies: "/liturgies",
     };

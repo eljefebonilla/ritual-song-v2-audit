@@ -1,6 +1,7 @@
 import { NextRequest, NextResponse } from "next/server";
 import { verifyAdmin } from "@/lib/admin";
 import { createClient } from "@/lib/supabase/server";
+import { triggerGenerationIfReady } from "@/lib/generators/auto-trigger";
 
 /**
  * GET /api/setlists — Fetch setlist(s)
@@ -100,6 +101,9 @@ export async function POST(request: NextRequest) {
     }
     return NextResponse.json({ error: error.message }, { status: 500 });
   }
+
+  // Fire-and-forget: trigger auto-generation if setlist is complete
+  triggerGenerationIfReady(data.id, data.songs).catch(() => {});
 
   return NextResponse.json(data, { status: 201 });
 }

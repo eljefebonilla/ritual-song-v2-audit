@@ -1,6 +1,7 @@
 import { NextRequest, NextResponse } from "next/server";
 import { verifyAdmin } from "@/lib/admin";
 import { createClient } from "@/lib/supabase/server";
+import { triggerGenerationIfReady } from "@/lib/generators/auto-trigger";
 
 /**
  * PUT /api/setlists/[id] — Update a setlist (admin only)
@@ -51,6 +52,9 @@ export async function PUT(
   if (error) {
     return NextResponse.json({ error: error.message }, { status: 500 });
   }
+
+  // Fire-and-forget: trigger auto-generation if setlist is complete
+  triggerGenerationIfReady(data.id, data.songs).catch(() => {});
 
   return NextResponse.json(data);
 }
