@@ -39,7 +39,7 @@ export default async function WorshipAidMobilePage({ params }: Props) {
   // Find mass event by occasion_id
   const { data: massEvents } = await supabase
     .from("mass_events")
-    .select("id, event_date, start_time_12h, community, liturgical_name, occasion_id")
+    .select("id, event_date, start_time_12h, ensemble, liturgical_name, occasion_id")
     .eq("occasion_id", parsed.occasionCode)
     .order("event_date", { ascending: false })
     .limit(5);

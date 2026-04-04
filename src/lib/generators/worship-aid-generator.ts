@@ -67,7 +67,7 @@ export async function generateWorshipAidPdf(
   // 1. Fetch mass event
   const { data: massEvent, error: massError } = await supabase
     .from("mass_events")
-    .select("id, event_date, start_time_12h, community, celebrant, liturgical_name, occasion_id, season")
+    .select("id, event_date, start_time_12h, ensemble, celebrant, liturgical_name, occasion_id, season")
     .eq("id", input.massEventId)
     .single();
 
@@ -213,7 +213,7 @@ export async function generateWorshipAidPdf(
     const pdfBytes = await assembleFinalPdf(finalDoc);
 
     // 12. Upload to Supabase storage
-    const ensemble = (massEvent.community || "all").toLowerCase().replace(/\s+/g, "-");
+    const ensemble = (massEvent.ensemble || "all").toLowerCase().replace(/\s+/g, "-");
     const contentHash = hashBytes(pdfBytes).slice(0, 8);
     const storagePath = `${input.parishId}/worship-aids/${occasionCode}_${ensemble}_${contentHash}.pdf`;
 

@@ -28,7 +28,7 @@ export async function generateSetlistPdf(
   // 1. Fetch mass event
   const { data: massEvent, error: massError } = await supabase
     .from("mass_events")
-    .select("id, event_date, start_time_12h, community, celebrant, liturgical_name, occasion_id, season")
+    .select("id, event_date, start_time_12h, ensemble, celebrant, liturgical_name, occasion_id, season")
     .eq("id", input.massEventId)
     .single();
 
@@ -93,7 +93,7 @@ export async function generateSetlistPdf(
     DESIGNATION_HTML: designationHtml,
     DATE: dateDisplay,
     MASS_TIME: massEvent.start_time_12h || "",
-    ENSEMBLE: massEvent.community || "",
+    ENSEMBLE: massEvent.ensemble || "",
     SONG_ROWS: songRowsHtml,
     PERSONNEL_HTML: personnelHtml,
     SAFETY_HTML: safetyHtml,
@@ -106,7 +106,7 @@ export async function generateSetlistPdf(
 
     // 6. Upload to Supabase storage
     const occasionCode = massEvent.occasion_id || "mass";
-    const ensemble = (massEvent.community || "all").toLowerCase().replace(/\s+/g, "-");
+    const ensemble = (massEvent.ensemble || "all").toLowerCase().replace(/\s+/g, "-");
     const storagePath = `${input.parishId}/setlists/${occasionCode}_${ensemble}.pdf`;
 
     const { error: uploadError } = await supabase.storage
