@@ -60,6 +60,7 @@ export default function BrandConfigPage() {
   const [loading, setLoading] = useState(true);
   const [saving, setSaving] = useState(false);
   const [message, setMessage] = useState<{ type: "success" | "error"; text: string } | null>(null);
+  const [uploadingLogo, setUploadingLogo] = useState(false);
 
   useEffect(() => {
     fetch("/api/brand-config")
@@ -148,6 +149,58 @@ export default function BrandConfigPage() {
             className="w-full max-w-md border border-stone-300 rounded-md px-3 py-2 text-sm"
           />
           <p className="text-xs text-stone-400 mt-1">Shown on generated PDFs and worship aids.</p>
+
+          {/* Logo Upload */}
+          <div className="mt-4">
+            <label className="block text-xs font-medium text-stone-600 mb-1">
+              Parish Logo
+            </label>
+            <div className="flex items-center gap-3">
+              {config.logo_url ? (
+                <img src={config.logo_url} alt="Logo" className="w-16 h-16 object-contain border border-stone-200 rounded" />
+              ) : (
+                <div className="w-16 h-16 border border-dashed border-stone-300 rounded flex items-center justify-center text-stone-300 text-xs">
+                  No logo
+                </div>
+              )}
+              <label className="cursor-pointer">
+                <input
+                  type="file"
+                  accept="image/png,image/jpeg,image/svg+xml,image/webp"
+                  className="hidden"
+                  onChange={async (e) => {
+                    const file = e.target.files?.[0];
+                    if (!file) return;
+                    setUploadingLogo(true);
+                    try {
+                      const fd = new FormData();
+                      fd.append("file", file);
+                      const res = await fetch("/api/brand-config/upload-logo", { method: "POST", body: fd });
+                      if (res.ok) {
+                        const data = await res.json();
+                        update("logo_url", data.logoUrl);
+                        update("logo_storage_path", data.storagePath);
+                      }
+                    } finally {
+                      setUploadingLogo(false);
+                      e.target.value = "";
+                    }
+                  }}
+                />
+                <span className="text-xs px-3 py-1.5 border border-stone-300 text-stone-600 rounded-md hover:bg-stone-50">
+                  {uploadingLogo ? "Uploading..." : "Upload Logo"}
+                </span>
+              </label>
+              {config.logo_url && (
+                <button
+                  onClick={() => { update("logo_url", null); update("logo_storage_path", null); }}
+                  className="text-xs text-red-500 hover:text-red-700"
+                >
+                  Remove
+                </button>
+              )}
+            </div>
+          </div>
         </section>
 
         {/* Colors */}

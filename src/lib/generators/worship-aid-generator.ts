@@ -6,6 +6,7 @@ import {
   copyPagesFrom,
   mergePuppeteerPdf,
   addBannerOverlay,
+  addReplaceOverlay,
   embedImagePage,
   addPageNumbers,
   assembleFinalPdf,
@@ -13,6 +14,7 @@ import {
 import { loadTemplate, loadBaseCss, injectBrandCss, injectData, applyLayoutPreset } from "./template-engine";
 import { resolveCoverImage, fetchCoverImageBytes } from "./cover-resolver";
 import { resolveWorshipAidReprint, fetchReprintBytes } from "./reprint-resolver";
+import { loadParishFonts } from "./font-loader";
 import type { BrandConfig, GenerationResult, ReprintResult } from "./types";
 import { DEFAULT_BRAND_CONFIG } from "./types";
 import type { SetlistSongRow, SetlistSongEntry } from "../booking-types";
@@ -116,7 +118,10 @@ export async function generateWorshipAidPdf(
   );
   await Promise.all(reprintPromises);
 
-  // 7. Render cover page via Puppeteer
+  // 7. Load parish fonts for inlining
+  const fonts = await loadParishFonts(input.parishId, brand.headingFont, brand.bodyFont);
+
+  // 8. Render cover page via Puppeteer
   const browser = await launchBrowser();
   try {
     const coverPdfBytes = await renderCoverPage(
@@ -124,16 +129,18 @@ export async function generateWorshipAidPdf(
       brand,
       coverImage,
       setlist.occasion_name || massEvent.liturgical_name || "Mass",
-      formatDate(massEvent.event_date)
+      formatDate(massEvent.event_date),
+      fonts
     );
 
-    // 8. Render content pages via Puppeteer
+    // 9. Render content pages via Puppeteer
     const contentPdfBytes = await renderContentPages(
       browser,
       brand,
       songRows,
       occasion,
-      songReprintMap
+      songReprintMap,
+      fonts
     );
 
     // 9. Close browser (done with Puppeteer)
@@ -166,13 +173,10 @@ export async function generateWorshipAidPdf(
             if (bytes) {
               await copyPagesFrom(finalDoc, bytes);
               // Add banner overlay to first reprint page
-              if (brand.headerOverlayMode === "banner") {
-                await addBannerOverlay(
-                  finalDoc,
-                  pagesBefore,
-                  brand,
-                  song.title
-                );
+              if (brand.headerOverlayMode === "replace") {
+                await addReplaceOverlay(finalDoc, pagesBefore, brand, song.title);
+              } else {
+                await addBannerOverlay(finalDoc, pagesBefore, brand, song.title);
               }
             } else {
               warnings.push(`Failed to fetch reprint for "${song.title}"`);
@@ -245,13 +249,14 @@ async function renderCoverPage(
   brand: BrandConfig,
   coverImage: Awaited<ReturnType<typeof resolveCoverImage>>,
   occasionName: string,
-  dateDisplay: string
+  dateDisplay: string,
+  fonts: import("./types").FontAsset[] = []
 ): Promise<Uint8Array> {
   let html = loadTemplate("worship-aid", "cover.html");
   const baseCss = loadBaseCss("worship-aid");
 
   html = html.replace("{{BASE_CSS}}", `<style>${baseCss}</style>`);
-  html = injectBrandCss(html, brand);
+  html = injectBrandCss(html, brand, fonts);
   html = applyLayoutPreset(html, brand.layoutPreset);
 
   // Cover background
@@ -293,13 +298,14 @@ async function renderContentPages(
   brand: BrandConfig,
   songRows: SetlistSongRow[],
   occasion: LiturgicalOccasion | null,
-  reprintMap: Map<string, { reprint: ReprintResult; title: string }>
+  reprintMap: Map<string, { reprint: ReprintResult; title: string }>,
+  fonts: import("./types").FontAsset[] = []
 ): Promise<Uint8Array> {
   let html = loadTemplate("worship-aid", "content.html");
   const baseCss = loadBaseCss("worship-aid");
 
   html = html.replace("{{BASE_CSS}}", `<style>${baseCss}</style>`);
-  html = injectBrandCss(html, brand);
+  html = injectBrandCss(html, brand, fonts);
   html = applyLayoutPreset(html, brand.layoutPreset);
 
   // Build content sections HTML

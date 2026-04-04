@@ -108,6 +108,59 @@ export async function addBannerOverlay(
 }
 
 /**
+ * Add a replace-mode header overlay to the first page of a reprint.
+ * Draws a white rectangle over the original title area, then draws branded text.
+ * replaceHeight controls how much of the top to cover (default 50pt).
+ */
+export async function addReplaceOverlay(
+  doc: PDFDocument,
+  pageIndex: number,
+  brand: BrandConfig,
+  songTitle: string,
+  replaceHeight: number = 50
+): Promise<void> {
+  const page = doc.getPage(pageIndex);
+  const { width, height } = page.getSize();
+
+  // White-out the original title area
+  page.drawRectangle({
+    x: 0,
+    y: height - replaceHeight,
+    width,
+    height: replaceHeight,
+    color: rgb(1, 1, 1),
+  });
+
+  // Draw branded replacement
+  const primaryRgb = hexToRgb(brand.primaryColor);
+  const font = await doc.embedFont(StandardFonts.HelveticaBold);
+  const fontSize = 12;
+  const textWidth = font.widthOfTextAtSize(songTitle, fontSize);
+
+  page.drawText(songTitle, {
+    x: (width - textWidth) / 2,
+    y: height - replaceHeight / 2 - fontSize / 2,
+    size: fontSize,
+    font,
+    color: rgb(primaryRgb.r, primaryRgb.g, primaryRgb.b),
+  });
+
+  // Parish name small below
+  if (brand.parishDisplayName) {
+    const smallFont = await doc.embedFont(StandardFonts.Helvetica);
+    const smallSize = 7;
+    const nameWidth = smallFont.widthOfTextAtSize(brand.parishDisplayName, smallSize);
+    page.drawText(brand.parishDisplayName, {
+      x: (width - nameWidth) / 2,
+      y: height - replaceHeight + 6,
+      size: smallSize,
+      font: smallFont,
+      color: rgb(0.6, 0.6, 0.6),
+    });
+  }
+}
+
+/**
  * Embed a GIF image as a full page in a PDF.
  * GIFs are converted to PNG-compatible raster pages.
  * Note: pdf-lib doesn't support GIF natively, so caller must

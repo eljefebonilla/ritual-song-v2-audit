@@ -123,18 +123,24 @@ export async function resolveSetlistReprint(
 
 /**
  * Fetch reprint PDF/image bytes from Supabase storage.
- * Returns null if fetch fails (caller should use a placeholder).
+ * Retries once on transient failures. Returns null if both attempts fail.
  */
 export async function fetchReprintBytes(
-  storagePath: string
+  storagePath: string,
+  retries = 1
 ): Promise<Uint8Array | null> {
   const supabase = createAdminClient();
 
-  const { data, error } = await supabase.storage
-    .from("song-resources")
-    .download(storagePath);
+  for (let attempt = 0; attempt <= retries; attempt++) {
+    const { data, error } = await supabase.storage
+      .from("song-resources")
+      .download(storagePath);
 
-  if (error || !data) return null;
+    if (data) return new Uint8Array(await data.arrayBuffer());
+    if (attempt < retries && error) {
+      await new Promise((r) => setTimeout(r, 300));
+    }
+  }
 
-  return new Uint8Array(await data.arrayBuffer());
+  return null;
 }

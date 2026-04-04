@@ -4,22 +4,32 @@ import type { FontAsset } from "./types";
 /**
  * Launch a headless Chromium browser for PDF rendering.
  * Uses @sparticuz/chromium for serverless (Vercel) compatibility.
+ * Retries once on cold-start failures (common in serverless).
  * Caller is responsible for closing the browser when done.
  */
-export async function launchBrowser(): Promise<Browser> {
+export async function launchBrowser(retries = 1): Promise<Browser> {
   const chromium = await import("@sparticuz/chromium");
   const puppeteer = await import("puppeteer-core");
 
   const executablePath = await chromium.default.executablePath();
 
-  const browser = await puppeteer.default.launch({
-    args: chromium.default.args,
-    defaultViewport: { width: 1280, height: 720 },
-    executablePath,
-    headless: true,
-  });
+  for (let attempt = 0; attempt <= retries; attempt++) {
+    try {
+      const browser = await puppeteer.default.launch({
+        args: chromium.default.args,
+        defaultViewport: { width: 1280, height: 720 },
+        executablePath,
+        headless: true,
+      });
+      return browser;
+    } catch (err) {
+      if (attempt === retries) throw err;
+      // Brief pause before retry on cold-start failure
+      await new Promise((r) => setTimeout(r, 500));
+    }
+  }
 
-  return browser;
+  throw new Error("launchBrowser: unreachable");
 }
 
 /**

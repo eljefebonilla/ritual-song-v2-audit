@@ -9,6 +9,7 @@ import {
 } from "@/runtime";
 import { createPlanningTools } from "@/tools/planning";
 import { createRecommendationTools } from "@/tools/recommendation";
+import { createGenerationTools } from "@/tools/generation";
 import type { ToolDefinition } from "@/runtime/types";
 
 /**
@@ -50,6 +51,9 @@ export async function POST(request: NextRequest) {
     tools.set(tool.name, tool);
   }
   for (const tool of createRecommendationTools()) {
+    tools.set(tool.name, tool);
+  }
+  for (const tool of createGenerationTools()) {
     tools.set(tool.name, tool);
   }
 

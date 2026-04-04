@@ -1,6 +1,7 @@
 import { createAdminClient } from "../supabase/admin";
-import { launchBrowser, renderPdf, buildFontFaceCss } from "./pdf-renderer";
+import { launchBrowser, renderPdf } from "./pdf-renderer";
 import { loadTemplate, loadBaseCss, injectBrandCss, injectData, applyLayoutPreset } from "./template-engine";
+import { loadParishFonts } from "./font-loader";
 import type { BrandConfig, GenerationResult } from "./types";
 import { DEFAULT_BRAND_CONFIG } from "./types";
 import type {
@@ -61,8 +62,9 @@ export async function generateSetlistPdf(
   // Inject base CSS
   html = html.replace("{{BASE_CSS}}", `<style>${baseCss}</style>`);
 
-  // Inject brand CSS
-  html = injectBrandCss(html, brand);
+  // Load parish fonts and inject brand CSS
+  const fonts = await loadParishFonts(input.parishId, brand.headingFont, brand.bodyFont);
+  html = injectBrandCss(html, brand, fonts);
 
   // Apply layout preset
   html = applyLayoutPreset(html, brand.layoutPreset);
