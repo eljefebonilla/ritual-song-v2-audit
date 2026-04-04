@@ -52,6 +52,16 @@ export default async function SetlistPage({ params }: Props) {
     `)
     .eq("mass_event_id", massEventId);
 
+  // Fetch choir signups for this mass
+  const { data: choirSignups } = await supabase
+    .from("choir_signups")
+    .select(`
+      *,
+      profile:profiles (id, full_name, avatar_url, ensemble)
+    `)
+    .eq("mass_event_id", massEventId)
+    .eq("status", "confirmed");
+
   // Fetch occasion JSON if available
   let occasion = null;
   if (mass.occasion_id) {
@@ -66,12 +76,33 @@ export default async function SetlistPage({ params }: Props) {
     }
   }
 
+  // Fetch verse counts for songs in the setlist
+  const verseCounts: Record<string, number> = {};
+  if (setlist?.songs) {
+    const songIds = (setlist.songs as { songs: { song_library_id?: string }[] }[])
+      .flatMap((r) => r.songs)
+      .map((s) => s.song_library_id)
+      .filter(Boolean) as string[];
+    if (songIds.length > 0) {
+      const { data: songsWithVerses } = await supabase
+        .from("songs")
+        .select("id, verse_count")
+        .in("id", songIds)
+        .not("verse_count", "is", null);
+      for (const s of songsWithVerses || []) {
+        verseCounts[s.id] = s.verse_count;
+      }
+    }
+  }
+
   return (
     <div className="min-h-screen">
       <SetlistShell
         mass={mass}
         existingSetlist={setlist}
         bookingSlots={slots || []}
+        choirSignups={choirSignups || []}
+        verseCounts={verseCounts}
         occasion={occasion}
         parishId={parishId}
       />

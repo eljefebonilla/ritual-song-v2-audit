@@ -1,6 +1,7 @@
 import { NextRequest, NextResponse } from "next/server";
 import { verifyAdmin } from "@/lib/admin";
 import { createAdminClient } from "@/lib/supabase/admin";
+import { syncPlannerToSetlist } from "@/lib/sync-planner-setlist";
 
 /**
  * GET /api/occasions/[id]/music-plan
@@ -87,6 +88,9 @@ export async function PUT(
     if (error) {
       return NextResponse.json({ error: error.message }, { status: 500 });
     }
+
+    // Fire-and-forget: sync planner data to setlist for menus/worship aids
+    syncPlannerToSetlist(id, ensembleId).catch(() => {});
 
     return NextResponse.json({ success: true });
   } catch (err) {

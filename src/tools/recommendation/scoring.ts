@@ -127,12 +127,37 @@ function weeksBetween(dateA: string, dateB: string): number {
 const SEASON_PREFIXES: Record<string, string> = {
   advent: "advent",
   christmas: "christmas",
+  "holy-family": "christmas",
+  "baptism-of-the-lord": "christmas",
+  "the-epiphany": "christmas",
+  "2nd-sun-after-christmas": "christmas",
   lent: "lent",
   "palm-sunday": "lent",
   easter: "easter",
   pentecost: "easter",
   ascension: "easter",
 };
+
+/** Title patterns that strongly indicate a seasonal song (for untagged songs) */
+const SEASONAL_TITLE_PATTERNS: Array<{ pattern: RegExp; season: string }> = [
+  { pattern: /\bchristmas\b/i, season: "christmas" },
+  { pattern: /\bnoel\b/i, season: "christmas" },
+  { pattern: /\bnativity\b/i, season: "christmas" },
+  { pattern: /\bmanger\b/i, season: "christmas" },
+  { pattern: /\binfant holy\b/i, season: "christmas" },
+  { pattern: /\bsilent night\b/i, season: "christmas" },
+  { pattern: /\bo holy night\b/i, season: "christmas" },
+  { pattern: /\baway in a\b/i, season: "christmas" },
+  { pattern: /\bangels we have heard\b/i, season: "christmas" },
+  { pattern: /\bhark.+herald\b/i, season: "christmas" },
+  { pattern: /\bjoy to the world\b/i, season: "christmas" },
+  { pattern: /\bo little town\b/i, season: "christmas" },
+  { pattern: /\bwhat child is this\b/i, season: "christmas" },
+  { pattern: /\bo come.*(emmanuel|faithful)\b/i, season: "advent" },
+  { pattern: /\badvent\b/i, season: "advent" },
+  { pattern: /\blenten\b/i, season: "lent" },
+  { pattern: /\bash wednesday\b/i, season: "lent" },
+];
 
 function seasonFromOccasionId(occasionId: string): string | null {
   for (const [prefix, season] of Object.entries(SEASON_PREFIXES)) {
@@ -379,10 +404,18 @@ export function rankSongs(
       if (excludeSet.has(s.id) || s.isHiddenGlobal) return false;
       // Category gating: only allow eligible categories for this position
       if (eligible && s.category && !eligible.has(s.category)) return false;
-      // Exclude songs tagged for conflicting seasons
+      // Exclude songs tagged for conflicting seasons (via occasion tags)
       if (s.occasions && s.occasions.length > 0) {
         const songSeasons = getSongSeasons(s.occasions);
         if (isSeasonConflict(songSeasons, request.season)) return false;
+      }
+      // Exclude songs with seasonal titles when in a conflicting season
+      for (const rule of SEASONAL_TITLE_PATTERNS) {
+        if (rule.pattern.test(s.title)) {
+          const fakeSeason = new Set([rule.season]);
+          if (isSeasonConflict(fakeSeason, request.season)) return false;
+          break;
+        }
       }
       return true;
     })

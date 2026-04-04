@@ -8,6 +8,7 @@ import type {
   SetlistPersonnel,
   SetlistSafetySong,
   BookingSlot,
+  ChoirSignup,
   ChoirDescriptor,
 } from "@/lib/booking-types";
 import type { LiturgicalOccasion } from "@/lib/types";
@@ -33,6 +34,8 @@ interface SetlistShellProps {
   mass: MassEvent;
   existingSetlist: Setlist | null;
   bookingSlots: BookingSlot[];
+  choirSignups: ChoirSignup[];
+  verseCounts: Record<string, number>;
   occasion: LiturgicalOccasion | null;
   parishId: string | null;
 }
@@ -50,10 +53,28 @@ export default function SetlistShell({
   mass,
   existingSetlist,
   bookingSlots,
+  choirSignups,
+  verseCounts,
   occasion,
   parishId,
 }: SetlistShellProps) {
   const router = useRouter();
+
+  // Derive personnel names from booking slots for assignment helpers
+  const personnelNames = useMemo(() => {
+    const names: { name: string; role: string }[] = [];
+    for (const slot of bookingSlots) {
+      const name = slot.profile?.full_name || slot.person_name;
+      const role = slot.role_label_override || slot.ministry_role?.name || "";
+      if (name) names.push({ name, role });
+    }
+    for (const signup of choirSignups) {
+      const name = signup.profile?.full_name;
+      const role = signup.voice_part || "Choir";
+      if (name) names.push({ name, role });
+    }
+    return names;
+  }, [bookingSlots, choirSignups]);
 
   // Bootstrap if no existing setlist
   const bootstrapped = useMemo(
@@ -276,6 +297,8 @@ export default function SetlistShell({
               <SetlistSongRowEditor
                 key={row.position}
                 row={row}
+                personnelNames={personnelNames}
+                verseCounts={verseCounts}
                 onChange={(updated) => handleSongChange(idx, updated)}
                 onRemove={
                   row.position.startsWith("custom_")
