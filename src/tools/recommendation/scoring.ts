@@ -130,9 +130,12 @@ export function scoreSong(
   }
 
   // Scripture match (from song's own scriptureRefs) -- skip if NPM already matched
+  // Only one scripture_match reason per song (first match wins)
   const hasNpmMatch = npmScripture && npmScripture.length > 0;
   if (!hasNpmMatch && song.scriptureRefs) {
+    let foundScriptureMatch = false;
     for (const ref of song.scriptureRefs) {
+      if (foundScriptureMatch) break;
       const refLower = ref.toLowerCase();
       for (const reading of request.readings) {
         if (reading.citation.toLowerCase().includes(refLower) ||
@@ -145,6 +148,7 @@ export function scoreSong(
             explanation: buildExplanation("scripture_match", reading.citation, request.position),
             points: pts,
           });
+          foundScriptureMatch = true;
           break;
         }
       }
