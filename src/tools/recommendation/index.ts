@@ -36,6 +36,7 @@ export function createRecommendationTools(): ToolDefinition[] {
             scriptureRefs?: string[];
             topics?: string[];
             liturgicalUse?: string[];
+            occasions?: string[];
             isHiddenGlobal?: boolean;
           }>;
           usageRecords: UsageRecord[];
@@ -77,6 +78,7 @@ export function createRecommendationTools(): ToolDefinition[] {
             scriptureRefs?: string[];
             topics?: string[];
             liturgicalUse?: string[];
+            occasions?: string[];
             isHiddenGlobal?: boolean;
           }>;
           usageRecords: UsageRecord[];
@@ -126,7 +128,7 @@ export function createRecommendationTools(): ToolDefinition[] {
         }
 
         return {
-          song: match.title,
+          song: { title: match.title, composer: match.composer },
           totalScore: match.score,
           breakdown: match.reasons.map((r) => ({
             category: r.type,

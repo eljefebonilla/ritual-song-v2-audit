@@ -210,6 +210,7 @@ export async function POST(
     scriptureRefs: s.scriptureRefs,
     topics: s.topics,
     liturgicalUse: s.liturgicalUse,
+    occasions: s.occasions,
     functions: s.functions,
     isHiddenGlobal: s.isHiddenGlobal,
   }));

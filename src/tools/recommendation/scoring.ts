@@ -28,6 +28,7 @@ interface SongCandidate {
   scriptureRefs?: string[];
   topics?: string[];
   liturgicalUse?: string[];
+  occasions?: string[];
   functions?: string[];
   isHiddenGlobal?: boolean;
 }
@@ -91,6 +92,52 @@ function weeksBetween(dateA: string, dateB: string): number {
   const a = new Date(dateA).getTime();
   const b = new Date(dateB).getTime();
   return Math.round(Math.abs(b - a) / msPerWeek);
+}
+
+/**
+ * Major liturgical seasons that conflict with each other.
+ * A song tagged for one should not appear during another.
+ */
+const SEASON_PREFIXES: Record<string, string> = {
+  advent: "advent",
+  christmas: "christmas",
+  lent: "lent",
+  "palm-sunday": "lent",
+  easter: "easter",
+  pentecost: "easter",
+  ascension: "easter",
+};
+
+function seasonFromOccasionId(occasionId: string): string | null {
+  for (const [prefix, season] of Object.entries(SEASON_PREFIXES)) {
+    if (occasionId.startsWith(prefix)) return season;
+  }
+  if (occasionId.startsWith("ordinary-time")) return "ordinary";
+  return null;
+}
+
+function getSongSeasons(occasions: string[]): Set<string> {
+  const seasons = new Set<string>();
+  for (const occ of occasions) {
+    const s = seasonFromOccasionId(occ);
+    if (s) seasons.add(s);
+  }
+  return seasons;
+}
+
+function isSeasonConflict(songSeasons: Set<string>, requestSeason: string): boolean {
+  if (songSeasons.size === 0) return false;
+  const targetSeason = requestSeason.toLowerCase();
+  // Map the request season string to our canonical names
+  let canonical = "ordinary";
+  if (targetSeason.includes("advent")) canonical = "advent";
+  else if (targetSeason.includes("christmas")) canonical = "christmas";
+  else if (targetSeason.includes("lent")) canonical = "lent";
+  else if (targetSeason.includes("easter")) canonical = "easter";
+  // Conflict if song is ONLY tagged for different major seasons (not ordinary)
+  const majorSeasons = new Set([...songSeasons].filter(s => s !== "ordinary"));
+  if (majorSeasons.size === 0) return false;
+  return !majorSeasons.has(canonical);
 }
 
 export interface NpmScriptureMatch {
@@ -176,19 +223,44 @@ export function scoreSong(
     }
   }
 
-  // Season match
-  if (song.liturgicalUse) {
+  // Season match (from liturgicalUse tags or derived from occasion tags)
+  let seasonMatched = false;
+  if (song.liturgicalUse && song.liturgicalUse.length > 0) {
     const seasonLower = request.season.toLowerCase();
     if (song.liturgicalUse.some((u) => u.toLowerCase().includes(seasonLower))) {
-      const pts = weights.seasonMatch;
+      seasonMatched = true;
+    }
+  }
+  if (!seasonMatched && song.occasions && song.occasions.length > 0) {
+    const songSeasons = getSongSeasons(song.occasions);
+    const targetSeason = request.season.toLowerCase();
+    let canonical = "ordinary";
+    if (targetSeason.includes("advent")) canonical = "advent";
+    else if (targetSeason.includes("christmas")) canonical = "christmas";
+    else if (targetSeason.includes("lent")) canonical = "lent";
+    else if (targetSeason.includes("easter")) canonical = "easter";
+    if (songSeasons.has(canonical)) seasonMatched = true;
+    // Extra boost: song is tagged for this exact occasion
+    if (song.occasions.includes(request.occasionId)) {
+      const pts = weights.seasonMatch * 2;
       total += pts;
       reasons.push({
         type: "season_match",
-        detail: request.season,
-        explanation: buildExplanation("season_match", request.season, request.position),
+        detail: `Tagged for this Sunday`,
+        explanation: `This song is specifically recommended for this liturgical occasion.`,
         points: pts,
       });
     }
+  }
+  if (seasonMatched) {
+    const pts = weights.seasonMatch;
+    total += pts;
+    reasons.push({
+      type: "season_match",
+      detail: request.season,
+      explanation: buildExplanation("season_match", request.season, request.position),
+      points: pts,
+    });
   }
 
   // Function match: does this song's purpose match the slot?
@@ -266,7 +338,15 @@ export function rankSongs(
   const excludeSet = new Set(request.excludeSongIds ?? []);
 
   const scored = candidates
-    .filter((s) => !excludeSet.has(s.id) && !s.isHiddenGlobal)
+    .filter((s) => {
+      if (excludeSet.has(s.id) || s.isHiddenGlobal) return false;
+      // Exclude songs tagged for conflicting seasons
+      if (s.occasions && s.occasions.length > 0) {
+        const songSeasons = getSongSeasons(s.occasions);
+        if (isSeasonConflict(songSeasons, request.season)) return false;
+      }
+      return true;
+    })
     .map((s) =>
       scoreSong(s, request, usageMap.get(s.id), weights, today, npmScriptureMap?.get(s.id))
     )
