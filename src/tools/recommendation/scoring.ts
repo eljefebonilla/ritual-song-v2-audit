@@ -169,6 +169,8 @@ function isSeasonConflict(songSeasons: Set<string>, requestSeason: string): bool
 export interface NpmScriptureMatch {
   readingType: string;
   readingReference: string | null;
+  matchedVerseLabel?: string | null;
+  matchedVerseExcerpt?: string | null;
 }
 
 /**
@@ -187,17 +189,24 @@ export function scoreSong(
 
   // NPM scripture match (from scripture_song_mappings table)
   if (npmScripture && npmScripture.length > 0) {
-    const best = npmScripture[0];
+    // Prefer the match that has a verse excerpt
+    const best = npmScripture.find((m) => m.matchedVerseExcerpt) || npmScripture[0];
     const label = formatReadingType(best.readingType);
     const detail = best.readingReference
       ? `${label} (${best.readingReference})`
       : label;
+    const verseTag = best.matchedVerseLabel
+      ? (best.matchedVerseLabel === "Refrain" ? "Ref" : `V${best.matchedVerseLabel}`)
+      : null;
+    const verseNote = verseTag && best.matchedVerseExcerpt
+      ? ` — ${verseTag}: "${best.matchedVerseExcerpt}"`
+      : "";
     const pts = weights.scriptureMatch;
     total += pts;
     reasons.push({
       type: "scripture_match",
       detail,
-      explanation: buildExplanation("scripture_match", detail, request.position),
+      explanation: buildExplanation("scripture_match", detail, request.position) + verseNote,
       points: pts,
     });
   }

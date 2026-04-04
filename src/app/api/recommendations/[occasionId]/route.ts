@@ -225,6 +225,8 @@ export async function POST(
     npmScriptureMap[key].push({
       readingType: m.readingType,
       readingReference: m.readingReference,
+      matchedVerseLabel: m.matchedVerseLabel,
+      matchedVerseExcerpt: m.matchedVerseExcerpt,
     });
   }
 

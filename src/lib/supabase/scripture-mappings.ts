@@ -7,6 +7,8 @@ export interface ScriptureSongMapping {
   legacyId: string | null;
   songTitle: string;
   matchMethod: string | null;
+  matchedVerseLabel: string | null;
+  matchedVerseExcerpt: string | null;
 }
 
 /**
@@ -21,7 +23,7 @@ export async function getScriptureSongsForOccasion(
 
   const { data, error } = await supabase
     .from("scripture_song_mappings")
-    .select("reading_type, reading_reference, song_id, song_title, match_method, songs!inner(legacy_id)")
+    .select("reading_type, reading_reference, song_id, song_title, match_method, matched_verse_label, matched_verse_excerpt, songs!inner(legacy_id)")
     .eq("occasion_id", occasionId)
     .not("song_id", "is", null);
 
@@ -36,6 +38,8 @@ export async function getScriptureSongsForOccasion(
       legacyId: song?.legacy_id ?? null,
       songTitle: row.song_title as string,
       matchMethod: (row.match_method as string) ?? null,
+      matchedVerseLabel: (row.matched_verse_label as string) ?? null,
+      matchedVerseExcerpt: (row.matched_verse_excerpt as string) ?? null,
     };
   });
 }
