@@ -3,6 +3,7 @@ import { getOccasion } from "@/lib/data";
 import { getSongLibrary } from "@/lib/song-library";
 import { recommendForOccasion } from "@/lib/recommendations";
 import { createAdminClient } from "@/lib/supabase/admin";
+import { getScriptureSongsForOccasion } from "@/lib/supabase/scripture-mappings";
 import {
   ConversationRuntime,
   LayeredConfig,
@@ -10,6 +11,7 @@ import {
   DEFAULT_PERMISSION_RULES,
 } from "@/runtime";
 import { createRecommendationTools } from "@/tools/recommendation";
+import type { NpmScriptureMatch } from "@/tools/recommendation/scoring";
 
 interface SlimRec {
   id: string;
@@ -212,7 +214,20 @@ export async function POST(
     isHiddenGlobal: s.isHiddenGlobal,
   }));
 
-  // 9. Run the recommendation tool via runtime
+  // 9. Fetch NPM scripture mappings for this occasion
+  const scriptureMappings = await getScriptureSongsForOccasion(occasionId);
+  const npmScriptureMap: Record<string, NpmScriptureMatch[]> = {};
+  for (const m of scriptureMappings) {
+    const key = m.legacyId;
+    if (!key) continue;
+    if (!npmScriptureMap[key]) npmScriptureMap[key] = [];
+    npmScriptureMap[key].push({
+      readingType: m.readingType,
+      readingReference: m.readingReference,
+    });
+  }
+
+  // 10. Run the recommendation tool via runtime
   const toolResult = await runtime.executeTool({
     name: "recommendation.score",
     args: {
@@ -227,6 +242,7 @@ export async function POST(
       usageRecords,
       excludeSongIds,
       limit,
+      npmScriptureMap,
     },
   });
 

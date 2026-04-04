@@ -1,5 +1,6 @@
 import { PDFDocument } from "pdf-lib";
 import { createAdminClient } from "../supabase/admin";
+import { getScriptureSongsForOccasion } from "../supabase/scripture-mappings";
 import { getOccasion } from "../data";
 import { launchBrowser, renderPdf } from "./pdf-renderer";
 import {
@@ -24,6 +25,15 @@ interface WorshipAidInput {
   massEventId: string;
   parishId: string;
 }
+
+const READING_TYPE_LABELS: Record<string, string> = {
+  entrance_antiphon: "Entrance Ant.",
+  first_reading: "1st Reading",
+  second_reading: "2nd Reading",
+  sequence: "Sequence",
+  gospel: "Gospel",
+  communion_antiphon: "Communion Ant.",
+};
 
 // Positions in Mass order, with their liturgical section
 const MASS_SECTIONS: { section: string; positions: string[] }[] = [
@@ -133,6 +143,21 @@ export async function generateWorshipAidPdf(
       fonts
     );
 
+    // 8b. Fetch scripture mappings for scripture notes
+    const scriptureNoteMap = new Map<string, string>();
+    if (massEvent.occasion_id) {
+      const mappings = await getScriptureSongsForOccasion(massEvent.occasion_id);
+      for (const m of mappings) {
+        if (m.legacyId && !scriptureNoteMap.has(m.legacyId)) {
+          const label = READING_TYPE_LABELS[m.readingType] || m.readingType;
+          scriptureNoteMap.set(
+            m.legacyId,
+            m.readingReference ? `${m.readingReference} (${label})` : label
+          );
+        }
+      }
+    }
+
     // 9. Render content pages via Puppeteer
     const contentPdfBytes = await renderContentPages(
       browser,
@@ -140,7 +165,8 @@ export async function generateWorshipAidPdf(
       songRows,
       occasion,
       songReprintMap,
-      fonts
+      fonts,
+      scriptureNoteMap
     );
 
     // 9. Close browser (done with Puppeteer)
@@ -299,7 +325,8 @@ async function renderContentPages(
   songRows: SetlistSongRow[],
   occasion: LiturgicalOccasion | null,
   reprintMap: Map<string, { reprint: ReprintResult; title: string }>,
-  fonts: import("./types").FontAsset[] = []
+  fonts: import("./types").FontAsset[] = [],
+  scriptureNoteMap?: Map<string, string>
 ): Promise<Uint8Array> {
   let html = loadTemplate("worship-aid", "content.html");
   const baseCss = loadBaseCss("worship-aid");
@@ -309,7 +336,7 @@ async function renderContentPages(
   html = applyLayoutPreset(html, brand.layoutPreset);
 
   // Build content sections HTML
-  const sectionsHtml = buildContentSectionsHtml(songRows, occasion, reprintMap);
+  const sectionsHtml = buildContentSectionsHtml(songRows, occasion, reprintMap, scriptureNoteMap);
 
   html = injectData(html, {
     CONTENT_SECTIONS: sectionsHtml,
@@ -321,7 +348,8 @@ async function renderContentPages(
 function buildContentSectionsHtml(
   songRows: SetlistSongRow[],
   occasion: LiturgicalOccasion | null,
-  reprintMap: Map<string, { reprint: ReprintResult; title: string }>
+  reprintMap: Map<string, { reprint: ReprintResult; title: string }>,
+  scriptureNoteMap?: Map<string, string>
 ): string {
   const parts: string[] = [];
 
@@ -365,15 +393,14 @@ function buildContentSectionsHtml(
         const hasReprint = song.song_library_id
           ? reprintMap.get(song.song_library_id)
           : null;
+        const scriptureNote = song.song_library_id && scriptureNoteMap?.get(song.song_library_id);
 
         if (hasReprint && (hasReprint.reprint.kind === "pdf" || hasReprint.reprint.kind === "gif")) {
-          // Will be merged as separate pages, show reference in content
-          sectionParts.push(buildSongEntryHtml(row.label, song, "(see sheet music)"));
+          sectionParts.push(buildSongEntryHtml(row.label, song, "(see sheet music)", scriptureNote || null));
         } else if (hasReprint && hasReprint.reprint.kind === "lyrics") {
-          sectionParts.push(buildSongEntryHtml(row.label, song, null));
-          // Could embed lyrics here in future
+          sectionParts.push(buildSongEntryHtml(row.label, song, null, scriptureNote || null));
         } else {
-          sectionParts.push(buildSongEntryHtml(row.label, song, null));
+          sectionParts.push(buildSongEntryHtml(row.label, song, null, scriptureNote || null));
         }
       }
 
@@ -412,13 +439,17 @@ function buildPsalmResponseHtml(response: string): string {
 function buildSongEntryHtml(
   positionLabel: string,
   song: SetlistSongEntry,
-  note: string | null
+  note: string | null,
+  scriptureNote?: string | null
 ): string {
   let html = `<div class="song-entry">
   <div class="song-entry__position">${escapeHtml(positionLabel)}</div>
   <div class="song-entry__title">${escapeHtml(song.title)}</div>`;
   if (song.composer) {
     html += `\n  <div class="song-entry__composer">${escapeHtml(song.composer)}</div>`;
+  }
+  if (scriptureNote) {
+    html += `\n  <div class="song-entry__scripture" style="font-style:italic;font-size:0.8em;color:#555;margin-top:2px;">Scripture: ${escapeHtml(scriptureNote)}</div>`;
   }
   if (note) {
     html += `\n  <div class="song-entry__lyrics-note">${escapeHtml(note)}</div>`;

@@ -71,6 +71,18 @@ function buildExplanation(type: string, detail: string, position: string): strin
   }
 }
 
+function formatReadingType(type: string): string {
+  const map: Record<string, string> = {
+    entrance_antiphon: "Entrance Ant.",
+    first_reading: "1st Reading",
+    second_reading: "2nd Reading",
+    sequence: "Sequence",
+    gospel: "Gospel",
+    communion_antiphon: "Communion Ant.",
+  };
+  return map[type] || type;
+}
+
 /**
  * Compute the number of weeks between two ISO date strings.
  */
@@ -81,6 +93,11 @@ function weeksBetween(dateA: string, dateB: string): number {
   return Math.round(Math.abs(b - a) / msPerWeek);
 }
 
+export interface NpmScriptureMatch {
+  readingType: string;
+  readingReference: string | null;
+}
+
 /**
  * Score a single song against a recommendation request.
  */
@@ -89,13 +106,32 @@ export function scoreSong(
   request: RecommendationRequest,
   usage: UsageRecord | undefined,
   weights: RecommendationWeights,
-  today: string
+  today: string,
+  npmScripture?: NpmScriptureMatch[]
 ): ScoredSong {
   const reasons: RecommendationReason[] = [];
   let total = 0;
 
-  // Scripture match
-  if (song.scriptureRefs) {
+  // NPM scripture match (from scripture_song_mappings table)
+  if (npmScripture && npmScripture.length > 0) {
+    const best = npmScripture[0];
+    const label = formatReadingType(best.readingType);
+    const detail = best.readingReference
+      ? `${label} (${best.readingReference})`
+      : label;
+    const pts = weights.scriptureMatch;
+    total += pts;
+    reasons.push({
+      type: "scripture_match",
+      detail,
+      explanation: buildExplanation("scripture_match", detail, request.position),
+      points: pts,
+    });
+  }
+
+  // Scripture match (from song's own scriptureRefs) -- skip if NPM already matched
+  const hasNpmMatch = npmScripture && npmScripture.length > 0;
+  if (!hasNpmMatch && song.scriptureRefs) {
     for (const ref of song.scriptureRefs) {
       const refLower = ref.toLowerCase();
       for (const reading of request.readings) {
@@ -213,19 +249,23 @@ export function scoreSong(
 
 /**
  * Score and rank all candidate songs for a recommendation request.
+ * npmScriptureMap: keyed by legacy song ID, value is array of reading matches.
  */
 export function rankSongs(
   candidates: SongCandidate[],
   request: RecommendationRequest,
   usageMap: Map<string, UsageRecord>,
   weights: RecommendationWeights,
-  today: string = new Date().toISOString().slice(0, 10)
+  today: string = new Date().toISOString().slice(0, 10),
+  npmScriptureMap?: Map<string, NpmScriptureMatch[]>
 ): ScoredSong[] {
   const excludeSet = new Set(request.excludeSongIds ?? []);
 
   const scored = candidates
     .filter((s) => !excludeSet.has(s.id) && !s.isHiddenGlobal)
-    .map((s) => scoreSong(s, request, usageMap.get(s.id), weights, today))
+    .map((s) =>
+      scoreSong(s, request, usageMap.get(s.id), weights, today, npmScriptureMap?.get(s.id))
+    )
     .filter((s) => s.score > 0)
     .sort((a, b) => b.score - a.score);
 

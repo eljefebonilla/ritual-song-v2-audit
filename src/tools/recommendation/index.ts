@@ -10,6 +10,8 @@
 
 import type { ToolDefinition, RuntimeContext } from "@/runtime/types";
 import { rankSongs } from "./scoring";
+import type { NpmScriptureMatch } from "./scoring";
+import { getScriptureSongsForOccasion } from "@/lib/supabase/scripture-mappings";
 import type { RecommendationRequest, UsageRecord, ScoredSong } from "./types";
 
 export type { ScoredSong, RecommendationRequest, UsageRecord } from "./types";
@@ -37,6 +39,7 @@ export function createRecommendationTools(): ToolDefinition[] {
             isHiddenGlobal?: boolean;
           }>;
           usageRecords: UsageRecord[];
+          npmScriptureMap?: Record<string, NpmScriptureMatch[]>;
         };
 
         const usageMap = new Map<string, UsageRecord>();
@@ -44,11 +47,17 @@ export function createRecommendationTools(): ToolDefinition[] {
           usageMap.set(record.songId, record);
         }
 
+        const npmMap = request.npmScriptureMap
+          ? new Map(Object.entries(request.npmScriptureMap))
+          : undefined;
+
         const results = rankSongs(
           request.candidates ?? [],
           request,
           usageMap,
-          ctx.config.recommendationWeights
+          ctx.config.recommendationWeights,
+          undefined,
+          npmMap
         );
 
         return results;
@@ -71,6 +80,7 @@ export function createRecommendationTools(): ToolDefinition[] {
             isHiddenGlobal?: boolean;
           }>;
           usageRecords: UsageRecord[];
+          npmScriptureMap?: Record<string, NpmScriptureMatch[]>;
         };
 
         const usageMap = new Map<string, UsageRecord>();
@@ -78,11 +88,17 @@ export function createRecommendationTools(): ToolDefinition[] {
           usageMap.set(record.songId, record);
         }
 
+        const npmMap = request.npmScriptureMap
+          ? new Map(Object.entries(request.npmScriptureMap))
+          : undefined;
+
         const results = rankSongs(
           request.candidates ?? [],
           { ...request, limit: (request.limit ?? 5) },
           usageMap,
-          ctx.config.recommendationWeights
+          ctx.config.recommendationWeights,
+          undefined,
+          npmMap
         );
 
         return results.map((r) => ({
@@ -121,6 +137,29 @@ export function createRecommendationTools(): ToolDefinition[] {
           weeksSinceUsed: match.weeksSinceUsed,
           weeksUntilNext: match.weeksUntilNext,
           configuredWeights: ctx.config.recommendationWeights,
+        };
+      },
+    },
+    {
+      name: "recommendation.scripture",
+      description:
+        "Look up scripture-based song recommendations for a liturgical occasion. Returns matched songs from NPM Liturgy Help data with reading type and scripture reference.",
+      permissionLevel: "allow",
+      handler: async (args) => {
+        const { occasionId } = args as { occasionId: string };
+        if (!occasionId) {
+          return { error: "occasionId is required" };
+        }
+        const mappings = await getScriptureSongsForOccasion(occasionId);
+        return {
+          occasionId,
+          totalMappings: mappings.length,
+          songs: mappings.map((m) => ({
+            songTitle: m.songTitle,
+            songId: m.legacyId,
+            readingType: m.readingType,
+            readingReference: m.readingReference,
+          })),
         };
       },
     },

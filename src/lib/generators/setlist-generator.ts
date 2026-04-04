@@ -1,4 +1,5 @@
 import { createAdminClient } from "../supabase/admin";
+import { getScriptureSongsForOccasion } from "../supabase/scripture-mappings";
 import { launchBrowser, renderPdf } from "./pdf-renderer";
 import { loadTemplate, loadBaseCss, injectBrandCss, injectData, applyLayoutPreset } from "./template-engine";
 import { loadParishFonts } from "./font-loader";
@@ -14,6 +15,15 @@ interface SetlistInput {
   massEventId: string;
   parishId: string;
 }
+
+const READING_TYPE_LABELS: Record<string, string> = {
+  entrance_antiphon: "Entrance Ant.",
+  first_reading: "1st Reading",
+  second_reading: "2nd Reading",
+  sequence: "Sequence",
+  gospel: "Gospel",
+  communion_antiphon: "Communion Ant.",
+};
 
 /**
  * Generate a setlist/menu PDF for a single mass event.
@@ -54,6 +64,21 @@ export async function generateSetlistPdf(
   // 3. Fetch parish brand config
   const brand = await fetchBrandConfig(supabase, input.parishId);
 
+  // 3b. Fetch scripture mappings for scripture notes in PDF
+  const scriptureNoteMap = new Map<string, string>();
+  if (massEvent.occasion_id) {
+    const mappings = await getScriptureSongsForOccasion(massEvent.occasion_id);
+    for (const m of mappings) {
+      if (m.legacyId && !scriptureNoteMap.has(m.legacyId)) {
+        const label = READING_TYPE_LABELS[m.readingType] || m.readingType;
+        scriptureNoteMap.set(
+          m.legacyId,
+          m.readingReference ? `${m.readingReference} (${label})` : label
+        );
+      }
+    }
+  }
+
   // 4. Build HTML
   const templateName = `${brand.layoutPreset}.html`;
   let html = loadTemplate("setlist", templateName);
@@ -70,7 +95,7 @@ export async function generateSetlistPdf(
   html = applyLayoutPreset(html, brand.layoutPreset);
 
   // Build song rows HTML
-  const songRowsHtml = buildSongRowsHtml(songRows);
+  const songRowsHtml = buildSongRowsHtml(songRows, scriptureNoteMap);
 
   // Build personnel HTML
   const personnelHtml = buildPersonnelHtml(personnel, setlist.choir_label);
@@ -165,7 +190,7 @@ async function fetchBrandConfig(
   };
 }
 
-function buildSongRowsHtml(rows: SetlistSongRow[]): string {
+function buildSongRowsHtml(rows: SetlistSongRow[], scriptureNoteMap?: Map<string, string>): string {
   return rows
     .map((row) => {
       const conditionalClass = row.is_conditional ? " song-row--conditional" : "";
@@ -193,6 +218,10 @@ function buildSongRowsHtml(rows: SetlistSongRow[]): string {
           let html = `<div class="song-row__title">${escapeHtml(s.title)}</div>`;
           if (s.composer) html += `<div class="song-row__composer">${escapeHtml(s.composer)}</div>`;
           if (s.hymnal_number) html += `<div class="song-row__hymnal">${escapeHtml(s.hymnal_number)}</div>`;
+          const scriptureNote = s.song_library_id && scriptureNoteMap?.get(s.song_library_id);
+          if (scriptureNote) {
+            html += `<div class="song-row__scripture" style="font-style:italic;font-size:0.7em;color:#666;margin-top:1px;">Scripture: ${escapeHtml(scriptureNote)}</div>`;
+          }
           return html;
         })
         .join("");
