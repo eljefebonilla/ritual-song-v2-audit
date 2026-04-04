@@ -103,6 +103,33 @@ export default async function OccasionPage({
           )}
         </div>
       </div>
+      {/* Action bar */}
+      <div className="px-4 md:px-8 pt-4 pb-2 flex flex-wrap gap-2 border-b border-border">
+        <Link
+          href={`/liturgies/plan-a-mass`}
+          className="inline-flex items-center gap-1.5 text-xs px-3 py-1.5 rounded-md bg-green-600 text-white hover:bg-green-700 transition-colors"
+        >
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><line x1="12" y1="5" x2="12" y2="19" /><line x1="5" y1="12" x2="19" y2="12" /></svg>
+          Plan a Mass
+        </Link>
+        <a
+          href={`/admin/setlist/${occasion.id}/print`}
+          target="_blank"
+          className="inline-flex items-center gap-1.5 text-xs px-3 py-1.5 rounded-md border border-stone-300 text-stone-600 hover:bg-stone-50 transition-colors"
+        >
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M9 18V5l12-2v13" /><circle cx="6" cy="18" r="3" /><circle cx="18" cy="16" r="3" /></svg>
+          Setlist PDF
+        </a>
+        <a
+          href={`/admin/setlist/${occasion.id}/print`}
+          target="_blank"
+          className="inline-flex items-center gap-1.5 text-xs px-3 py-1.5 rounded-md border border-parish-burgundy/30 text-parish-burgundy hover:bg-parish-burgundy/5 transition-colors"
+        >
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><polyline points="6 9 6 2 18 2 18 9" /><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2" /><rect x="6" y="14" width="12" height="8" /></svg>
+          Worship Aid
+        </a>
+      </div>
+
       <div className="px-4 md:px-8 pt-6">
 
       {/* Dates */}
