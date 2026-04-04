@@ -1,6 +1,8 @@
 import { createAdminClient } from "./supabase/admin";
 import type { SetlistSongRow, SetlistSongEntry } from "./booking-types";
-import type { SongEntry } from "./types";
+import type { SongEntry, MusicPlan } from "./types";
+import { getOccasion } from "./data";
+import { bootstrapSongsFromPlan } from "./setlist-utils";
 import { triggerGenerationIfReady } from "./generators/auto-trigger";
 
 /**
@@ -21,32 +23,6 @@ const FIELD_TO_POSITION: Record<string, { position: string; label: string }> = {
   sending: { position: "sending", label: "Sending Forth" },
 };
 
-const STANDARD_POSITIONS = [
-  "prelude", "gathering", "penitential_act", "gloria", "psalm",
-  "gospel_acclamation", "offertory", "holy", "memorial", "amen",
-  "lords_prayer", "fraction_rite", "communion_1", "communion_2",
-  "communion_3", "sending",
-];
-
-const POSITION_LABELS: Record<string, string> = {
-  prelude: "Prelude",
-  gathering: "Gathering",
-  penitential_act: "Penitential Act",
-  gloria: "Gloria",
-  psalm: "Responsorial Psalm",
-  gospel_acclamation: "Gospel Acclamation",
-  offertory: "Offertory",
-  holy: "Holy, Holy, Holy",
-  memorial: "Memorial Acclamation",
-  amen: "Great Amen",
-  lords_prayer: "The Lord's Prayer",
-  fraction_rite: "Lamb of God",
-  communion_1: "Communion",
-  communion_2: "Communion 2",
-  communion_3: "Communion 3",
-  sending: "Sending Forth",
-};
-
 function toSetlistEntry(value: unknown): SetlistSongEntry[] {
   if (!value) return [];
   const v = value as SongEntry;
@@ -55,12 +31,14 @@ function toSetlistEntry(value: unknown): SetlistSongEntry[] {
 }
 
 /**
- * Convert music_plan_edits rows into SetlistSongRow[].
+ * Apply DB overrides on top of bootstrapped song rows.
+ * Overrides replace matching positions entirely.
  */
-function planEditsToSongRows(
+function applyOverrides(
+  baseRows: SetlistSongRow[],
   edits: { field: string; value: unknown }[]
 ): SetlistSongRow[] {
-  const filled = new Map<string, SetlistSongRow>();
+  const overrides = new Map<string, SetlistSongRow>();
 
   for (const edit of edits) {
     const mapping = FIELD_TO_POSITION[edit.field];
@@ -69,7 +47,7 @@ function planEditsToSongRows(
     if (edit.field === "responsorialPsalm") {
       const ps = edit.value as { psalm?: string; setting?: string } | null;
       if (ps?.psalm) {
-        filled.set("psalm", {
+        overrides.set("psalm", {
           position: "psalm",
           label: "Responsorial Psalm",
           songs: [{ title: ps.psalm, composer: ps.setting }],
@@ -79,22 +57,22 @@ function planEditsToSongRows(
       const ea = edit.value as { massSettingName?: string; composer?: string } | null;
       if (ea?.massSettingName) {
         const entry: SetlistSongEntry = { title: ea.massSettingName, composer: ea.composer };
-        filled.set("holy", { position: "holy", label: "Holy, Holy, Holy", songs: [entry] });
-        filled.set("memorial", { position: "memorial", label: "Memorial Acclamation", songs: [entry] });
-        filled.set("amen", { position: "amen", label: "Great Amen", songs: [entry] });
+        overrides.set("holy", { position: "holy", label: "Holy, Holy, Holy", songs: [entry] });
+        overrides.set("memorial", { position: "memorial", label: "Memorial Acclamation", songs: [entry] });
+        overrides.set("amen", { position: "amen", label: "Great Amen", songs: [entry] });
       }
     } else if (edit.field === "communionSongs") {
       const songs = (edit.value || []) as SongEntry[];
       for (let i = 0; i < Math.min(songs.length, 3); i++) {
         const pos = `communion_${i + 1}`;
-        filled.set(pos, {
+        overrides.set(pos, {
           position: pos,
           label: i === 0 ? "Communion" : `Communion ${i + 1}`,
           songs: toSetlistEntry(songs[i]),
         });
       }
     } else {
-      filled.set(mapping.position, {
+      overrides.set(mapping.position, {
         position: mapping.position,
         label: mapping.label,
         songs: toSetlistEntry(edit.value),
@@ -102,20 +80,14 @@ function planEditsToSongRows(
     }
   }
 
-  // Build full list with empty positions for anything not filled
-  return STANDARD_POSITIONS.map(
-    (pos) =>
-      filled.get(pos) || {
-        position: pos,
-        label: POSITION_LABELS[pos] || pos,
-        songs: [],
-      }
-  );
+  // Merge: override replaces base for matching positions
+  return baseRows.map((row) => overrides.get(row.position) || row);
 }
 
 /**
  * Syncs planner data to setlists for all mass events matching an occasion + ensemble.
- * Called fire-and-forget from the music-plan PUT route.
+ * Merges the static occasion JSON base plan with DB overrides from music_plan_edits.
+ * Called from the music-plan PUT route and the upcoming-masses API.
  */
 export async function syncPlannerToSetlist(
   occasionId: string,
@@ -123,19 +95,36 @@ export async function syncPlannerToSetlist(
 ): Promise<void> {
   const supabase = createAdminClient();
 
-  // 1. Get all plan edits for this occasion+ensemble
+  // 1. Load base plan from static occasion JSON
+  const occasion = getOccasion(occasionId);
+  const basePlan: MusicPlan | null = occasion
+    ? occasion.musicPlans.find(
+        (p) => (p.ensembleId || "").toLowerCase() === ensembleId.toLowerCase()
+      ) || null
+    : null;
+
+  // Bootstrap from the base plan (gives us all positions with base songs)
+  const baseRows = bootstrapSongsFromPlan(basePlan);
+
+  // 2. Get DB overrides
   const { data: edits } = await supabase
     .from("music_plan_edits")
     .select("field, value")
     .eq("occasion_id", occasionId)
     .eq("ensemble_id", ensembleId);
 
-  if (!edits || edits.length === 0) return;
+  // 3. Merge: base plan + DB overrides
+  const songRows = edits && edits.length > 0
+    ? applyOverrides(baseRows, edits)
+    : baseRows;
 
-  const songRows = planEditsToSongRows(edits);
+  // Skip if nothing to sync (no base plan and no overrides)
+  const hasSongs = songRows.some(
+    (r) => r.songs.length > 0 && r.songs.some((s) => s.title.trim() !== "")
+  );
+  if (!hasSongs) return;
 
-  // 2. Find mass events matching this occasion + ensemble
-  //    occasion_id on mass_events may be null — match by title pattern or occasion_id
+  // 4. Find mass events matching this occasion + ensemble
   const ensembleName = ensembleId.charAt(0).toUpperCase() + ensembleId.slice(1);
 
   const { data: massEvents } = await supabase
@@ -150,12 +139,10 @@ export async function syncPlannerToSetlist(
     .replace(/-([abc])$/, "")
     .toLowerCase()
     .split(/[^a-z0-9]+/)
-    .filter((t) => t.length > 1);
+    .filter((t: string) => t.length > 1);
 
   const matching = massEvents.filter((me) => {
     if (me.occasion_id === occasionId) return true;
-    // Token match: "easter-02-divine-mercy-a" tokens ["easter","02","divine","mercy"]
-    // vs title "02Easter_Div.Mercy" tokens ["02","easter","div","mercy"]
     const titleTokens = (me.title || "")
       .toLowerCase()
       .split(/[^a-z0-9]+/)
@@ -167,7 +154,7 @@ export async function syncPlannerToSetlist(
 
   if (matching.length === 0) return;
 
-  // 3. Upsert setlists
+  // 5. Upsert setlists
   for (const me of matching) {
     const { data: existing } = await supabase
       .from("setlists")
@@ -180,7 +167,6 @@ export async function syncPlannerToSetlist(
         .from("setlists")
         .update({
           songs: songRows,
-          occasion_name: null,
           occasion_id: occasionId,
           updated_at: new Date().toISOString(),
           generation_status: "outdated",
