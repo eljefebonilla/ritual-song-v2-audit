@@ -14,6 +14,7 @@ import type { LiturgicalOccasion } from "@/lib/types";
 import { bootstrapSetlist } from "@/lib/setlist-utils";
 import SetlistSongRowEditor from "./SetlistSongRowEditor";
 import SetlistPersonnelFooter from "./SetlistPersonnelFooter";
+import GenerateButton from "../generators/GenerateButton";
 
 interface MassEvent {
   id: string;
@@ -33,6 +34,7 @@ interface SetlistShellProps {
   existingSetlist: Setlist | null;
   bookingSlots: BookingSlot[];
   occasion: LiturgicalOccasion | null;
+  parishId: string | null;
 }
 
 function formatDate(dateStr: string): string {
@@ -49,6 +51,7 @@ export default function SetlistShell({
   existingSetlist,
   bookingSlots,
   occasion,
+  parishId,
 }: SetlistShellProps) {
   const router = useRouter();
 
@@ -78,6 +81,7 @@ export default function SetlistShell({
   );
   const [saving, setSaving] = useState(false);
   const [saved, setSaved] = useState(false);
+  const [saveVersion, setSaveVersion] = useState(0);
 
   const handleSongChange = useCallback(
     (index: number, updated: SetlistSongRow) => {
@@ -137,6 +141,7 @@ export default function SetlistShell({
         });
       }
       setSaved(true);
+      setSaveVersion((v) => v + 1);
       router.refresh();
     } finally {
       setSaving(false);
@@ -179,6 +184,13 @@ export default function SetlistShell({
               >
                 Re-bootstrap
               </button>
+            )}
+            {parishId && (
+              <GenerateButton
+                setlistId={existingSetlist?.id || null}
+                parishId={parishId}
+                onSaveComplete={saveVersion > 0}
+              />
             )}
             <a
               href={`/admin/setlist/${mass.id}/print`}

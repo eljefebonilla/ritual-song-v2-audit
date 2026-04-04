@@ -1,8 +1,18 @@
 {
+  "functions": {
+    "src/app/api/generate/*/route.ts": {
+      "memory": 1536,
+      "maxDuration": 60
+    }
+  },
   "crons": [
     {
       "path": "/api/cron/staffing-check",
       "schedule": "0 14 * * *"
+    },
+    {
+      "path": "/api/cron/purge-cache",
+      "schedule": "0 3 * * *"
     }
   ]
 }

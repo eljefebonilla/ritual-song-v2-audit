@@ -1,0 +1,208 @@
+/* Worship Aid — Shared Print CSS */
+@page {
+  size: letter;
+  margin: 0;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  font-family: var(--brand-body-font);
+  font-size: 11pt;
+  color: #333;
+  line-height: 1.5;
+  -webkit-print-color-adjust: exact;
+  print-color-adjust: exact;
+}
+
+/* === COVER PAGE === */
+.cover {
+  width: 8.5in;
+  height: 11in;
+  position: relative;
+  overflow: hidden;
+  page-break-after: always;
+}
+.cover__bg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.cover__gradient {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+.cover__overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0.15) 0%,
+    rgba(0, 0, 0, 0.5) 100%
+  );
+}
+.cover__content {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1in;
+  text-align: center;
+  color: white;
+}
+.cover__logo {
+  max-width: 1.5in;
+  max-height: 1in;
+  margin-bottom: 0.3in;
+  object-fit: contain;
+}
+.cover__parish {
+  font-family: var(--brand-body-font);
+  font-size: 9pt;
+  letter-spacing: 4pt;
+  text-transform: uppercase;
+  opacity: 0.85;
+  margin-bottom: 0.2in;
+}
+.cover__occasion {
+  font-family: var(--brand-heading-font);
+  font-size: 28pt;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 0.15in;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+.cover__date {
+  font-size: 12pt;
+  opacity: 0.9;
+  border-top: 1pt solid rgba(255, 255, 255, 0.5);
+  padding-top: 0.1in;
+  margin-top: 0.1in;
+}
+
+/* === CONTENT PAGES === */
+.content-page {
+  width: 8.5in;
+  min-height: 11in;
+  padding: 0.6in 0.7in;
+  page-break-after: always;
+}
+.content-page:last-child {
+  page-break-after: auto;
+}
+
+/* Section headers (Introductory Rites, Liturgy of the Word, etc.) */
+.section-header {
+  font-family: var(--brand-heading-font);
+  font-size: 14pt;
+  font-weight: 700;
+  color: var(--brand-primary);
+  border-bottom: 1.5pt solid var(--brand-accent);
+  padding-bottom: 4pt;
+  margin: 16pt 0 10pt 0;
+}
+.section-header:first-child {
+  margin-top: 0;
+}
+
+/* Song entries in the Order of Mass */
+.song-entry {
+  margin: 8pt 0;
+  padding-left: 12pt;
+}
+.song-entry__position {
+  font-size: 8pt;
+  font-variant: small-caps;
+  letter-spacing: 1pt;
+  color: var(--brand-accent);
+  margin-bottom: 1pt;
+}
+.song-entry__title {
+  font-size: 12pt;
+  font-weight: 600;
+  color: #333;
+}
+.song-entry__composer {
+  font-size: 9pt;
+  color: #666;
+  font-style: italic;
+}
+.song-entry__lyrics-note {
+  font-size: 8pt;
+  color: #999;
+  font-style: italic;
+}
+
+/* Readings */
+.reading {
+  margin: 8pt 0;
+  padding-left: 12pt;
+}
+.reading__type {
+  font-size: 8pt;
+  font-variant: small-caps;
+  letter-spacing: 1pt;
+  color: var(--brand-accent);
+  margin-bottom: 1pt;
+}
+.reading__citation {
+  font-size: 11pt;
+  font-weight: 600;
+}
+.reading__summary {
+  font-size: 9pt;
+  color: #666;
+  font-style: italic;
+}
+
+/* Psalm response box */
+.psalm-response {
+  margin: 10pt 12pt;
+  padding: 8pt 12pt;
+  background: color-mix(in srgb, var(--brand-accent) 8%, white);
+  border-left: 3pt solid var(--brand-accent);
+  border-radius: 0 4pt 4pt 0;
+}
+.psalm-response__label {
+  font-size: 7pt;
+  text-transform: uppercase;
+  letter-spacing: 1pt;
+  color: var(--brand-accent);
+  margin-bottom: 2pt;
+}
+.psalm-response__text {
+  font-family: var(--brand-heading-font);
+  font-size: 12pt;
+  font-style: italic;
+  color: var(--brand-primary);
+}
+
+/* Reprint placeholder (when sheet music is unavailable) */
+.reprint-unavailable {
+  margin: 8pt 0;
+  padding: 12pt;
+  border: 1pt dashed #CCC;
+  border-radius: 4pt;
+  text-align: center;
+  color: #999;
+  font-size: 9pt;
+  font-style: italic;
+}
+
+/* === LAYOUT PRESETS === */
+.preset-classic .cover__occasion { font-size: 32pt; }
+.preset-classic .section-header { font-size: 15pt; border-bottom-width: 2pt; }
+
+.preset-modern .cover__occasion { font-size: 26pt; font-weight: 400; letter-spacing: 0.5pt; }
+.preset-modern .section-header { font-size: 13pt; border-bottom-width: 1pt; }
+.preset-modern .psalm-response { background: #F8F8F8; border-left-color: #DDD; }
+
+.preset-warm .cover__occasion { font-size: 27pt; }
+.preset-warm .section-header { border-bottom-style: dotted; }
+.preset-warm .psalm-response { border-left-style: dotted; }

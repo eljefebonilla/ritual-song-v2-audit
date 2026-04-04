@@ -1,6 +1,7 @@
 export const dynamic = "force-dynamic";
 
 import { createAdminClient } from "@/lib/supabase/admin";
+import { createClient } from "@/lib/supabase/server";
 import { notFound } from "next/navigation";
 import SetlistShell from "@/components/setlist/SetlistShell";
 
@@ -11,6 +12,19 @@ interface Props {
 export default async function SetlistPage({ params }: Props) {
   const { massEventId } = await params;
   const supabase = createAdminClient();
+
+  // Get current user's parish_id for generation
+  const userSupabase = await createClient();
+  const { data: { user } } = await userSupabase.auth.getUser();
+  let parishId: string | null = null;
+  if (user) {
+    const { data: profile } = await supabase
+      .from("profiles")
+      .select("parish_id")
+      .eq("id", user.id)
+      .single();
+    parishId = profile?.parish_id || null;
+  }
 
   // Fetch mass event
   const { data: mass } = await supabase
@@ -59,6 +73,7 @@ export default async function SetlistPage({ params }: Props) {
         existingSetlist={setlist}
         bookingSlots={slots || []}
         occasion={occasion}
+        parishId={parishId}
       />
     </div>
   );

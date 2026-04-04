@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>{{OCCASION_NAME}} — {{PARISH_NAME}}</title>
+{{BRAND_CSS}}
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+  font-family: var(--brand-body-font);
+  color: #333;
+  line-height: 1.6;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 1rem;
+  background: #FAFAF9;
+}
+.header {
+  text-align: center;
+  padding: 1.5rem 0 1rem;
+  border-bottom: 2px solid var(--brand-accent);
+  margin-bottom: 1.5rem;
+}
+.header__parish {
+  font-size: 0.65rem;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--brand-accent);
+  margin-bottom: 0.25rem;
+}
+.header__occasion {
+  font-family: var(--brand-heading-font);
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--brand-primary);
+}
+.header__date {
+  font-size: 0.8rem;
+  color: #888;
+  margin-top: 0.25rem;
+}
+.section {
+  margin-bottom: 1.5rem;
+}
+.section__title {
+  font-family: var(--brand-heading-font);
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--brand-primary);
+  border-bottom: 1px solid var(--brand-accent);
+  padding-bottom: 0.25rem;
+  margin-bottom: 0.75rem;
+}
+.song {
+  margin-bottom: 1rem;
+  padding-left: 0.75rem;
+}
+.song__position {
+  font-size: 0.65rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--brand-accent);
+  margin-bottom: 0.15rem;
+}
+.song__title {
+  font-size: 1rem;
+  font-weight: 600;
+}
+.song__composer {
+  font-size: 0.8rem;
+  color: #666;
+  font-style: italic;
+}
+.song__lyrics {
+  margin-top: 0.5rem;
+  font-size: 0.9rem;
+  white-space: pre-line;
+  color: #444;
+  line-height: 1.7;
+}
+.reading {
+  margin-bottom: 0.75rem;
+  padding-left: 0.75rem;
+}
+.reading__type {
+  font-size: 0.65rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--brand-accent);
+}
+.reading__citation {
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+.psalm-response {
+  margin: 0.75rem;
+  padding: 0.75rem 1rem;
+  background: color-mix(in srgb, var(--brand-accent) 8%, white);
+  border-left: 3px solid var(--brand-accent);
+  border-radius: 0 6px 6px 0;
+}
+.psalm-response__label {
+  font-size: 0.6rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--brand-accent);
+}
+.psalm-response__text {
+  font-family: var(--brand-heading-font);
+  font-size: 1.05rem;
+  font-style: italic;
+  color: var(--brand-primary);
+}
+.footer {
+  text-align: center;
+  font-size: 0.65rem;
+  color: #BBB;
+  padding: 1.5rem 0 1rem;
+  border-top: 1px solid #E8E8E8;
+}
+</style>
+</head>
+<body>
+
+<div class="header">
+  <div class="header__parish">{{PARISH_NAME}}</div>
+  <div class="header__occasion">{{OCCASION_NAME}}</div>
+  <div class="header__date">{{DATE}}</div>
+</div>
+
+{{CONTENT_SECTIONS}}
+
+<div class="footer">{{PARISH_NAME}} &bull; Powered by Ritual Song</div>
+
+</body>
+</html>
