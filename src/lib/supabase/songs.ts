@@ -42,6 +42,8 @@ function mapResourceRow(row: Record<string, unknown>): SongResource {
     value: (row.value as string) || undefined,
     source: (row.source as SongResource["source"]) || undefined,
     isHighlighted: (row.is_highlighted as boolean) || false,
+    tags: (row.tags as string[]) || undefined,
+    visibility: (row.visibility as "all" | "admin") || undefined,
   };
 }
 
