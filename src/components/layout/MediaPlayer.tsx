@@ -31,6 +31,130 @@ function formatTime(s: number): string {
 
 const ACCENT = "#4CAF50";
 
+// Note frequencies for octave 4 (A4=440)
+const NOTE_NAMES = ["C", "C#", "D", "D#", "E", "F", "F#", "G", "G#", "A", "A#", "B"];
+const BLACK_KEYS = new Set([1, 3, 6, 8, 10]); // indices of sharps/flats
+
+function noteFrequency(noteIndex: number, octave: number): number {
+  // C4 = MIDI 60 = 261.63 Hz. A4 = MIDI 69 = 440 Hz
+  const midi = 12 * (octave + 1) + noteIndex;
+  return 440 * Math.pow(2, (midi - 69) / 12);
+}
+
+function MiniPiano() {
+  const [octave, setOctave] = useState(4);
+  const [activeNote, setActiveNote] = useState<number | null>(null);
+  const audioCtxRef = useRef<AudioContext | null>(null);
+
+  const playNote = useCallback((noteIndex: number) => {
+    if (!audioCtxRef.current) {
+      audioCtxRef.current = new AudioContext();
+    }
+    const ctx = audioCtxRef.current;
+    const freq = noteFrequency(noteIndex, octave);
+
+    // Piano-like tone: fundamental + harmonics with fast attack, medium decay
+    const now = ctx.currentTime;
+    const gain = ctx.createGain();
+    gain.connect(ctx.destination);
+    gain.gain.setValueAtTime(0, now);
+    gain.gain.linearRampToValueAtTime(0.15, now + 0.01);
+    gain.gain.exponentialRampToValueAtTime(0.06, now + 0.3);
+    gain.gain.exponentialRampToValueAtTime(0.001, now + 1.2);
+
+    // Fundamental
+    const osc1 = ctx.createOscillator();
+    osc1.type = "triangle";
+    osc1.frequency.value = freq;
+    osc1.connect(gain);
+    osc1.start(now);
+    osc1.stop(now + 1.2);
+
+    // 2nd harmonic (quieter)
+    const gain2 = ctx.createGain();
+    gain2.connect(ctx.destination);
+    gain2.gain.setValueAtTime(0, now);
+    gain2.gain.linearRampToValueAtTime(0.04, now + 0.01);
+    gain2.gain.exponentialRampToValueAtTime(0.001, now + 0.6);
+    const osc2 = ctx.createOscillator();
+    osc2.type = "sine";
+    osc2.frequency.value = freq * 2;
+    osc2.connect(gain2);
+    osc2.start(now);
+    osc2.stop(now + 0.6);
+
+    setActiveNote(noteIndex);
+    setTimeout(() => setActiveNote(null), 200);
+  }, [octave]);
+
+  // White key positions (C D E F G A B = indices 0,2,4,5,7,9,11)
+  const whiteKeys = [0, 2, 4, 5, 7, 9, 11];
+  // Black key positions relative to white keys
+  const blackKeyPositions: { noteIndex: number; leftPct: string }[] = [
+    { noteIndex: 1, leftPct: "12.5%" },   // C#
+    { noteIndex: 3, leftPct: "26.8%" },   // D#
+    { noteIndex: 6, leftPct: "55.4%" },   // F#
+    { noteIndex: 8, leftPct: "69.6%" },   // G#
+    { noteIndex: 10, leftPct: "83.9%" },  // A#
+  ];
+
+  return (
+    <div className="flex items-center gap-2">
+      <span className="text-[10px] text-stone-400 w-10 shrink-0">Piano</span>
+      <button
+        onClick={() => setOctave((o) => Math.max(1, o - 1))}
+        className="w-6 h-6 rounded border border-stone-300 flex items-center justify-center text-stone-500 hover:bg-stone-50 text-[10px] font-bold"
+        title="Octave down"
+      >
+        ◀
+      </button>
+      <span className="text-[10px] text-stone-500 w-5 text-center">C{octave}</span>
+      <button
+        onClick={() => setOctave((o) => Math.min(7, o + 1))}
+        className="w-6 h-6 rounded border border-stone-300 flex items-center justify-center text-stone-500 hover:bg-stone-50 text-[10px] font-bold"
+        title="Octave up"
+      >
+        ▶
+      </button>
+      {/* Keyboard */}
+      <div className="relative h-10 flex-1 max-w-[280px] select-none">
+        {/* White keys */}
+        <div className="flex h-full gap-[1px]">
+          {whiteKeys.map((noteIdx) => (
+            <button
+              key={noteIdx}
+              onPointerDown={() => playNote(noteIdx)}
+              className="flex-1 rounded-b border border-stone-300 transition-colors flex items-end justify-center pb-0.5"
+              style={{
+                background: activeNote === noteIdx
+                  ? "linear-gradient(180deg, #e8e8e8, #d4d4d4)"
+                  : "linear-gradient(180deg, #fff, #f5f5f4)",
+              }}
+            >
+              <span className="text-[7px] text-stone-300">{NOTE_NAMES[noteIdx]}</span>
+            </button>
+          ))}
+        </div>
+        {/* Black keys */}
+        {blackKeyPositions.map(({ noteIndex, leftPct }) => (
+          <button
+            key={noteIndex}
+            onPointerDown={() => playNote(noteIndex)}
+            className="absolute top-0 w-[10%] h-[62%] rounded-b z-10 transition-colors"
+            style={{
+              left: leftPct,
+              background: activeNote === noteIndex
+                ? "linear-gradient(180deg, #555, #333)"
+                : "linear-gradient(180deg, #444, #222)",
+              border: "1px solid #111",
+            }}
+          />
+        ))}
+      </div>
+    </div>
+  );
+}
+
 export default function MediaPlayer() {
   const {
     current,
@@ -63,11 +187,84 @@ export default function MediaPlayer() {
   const [activeChartKey, setActiveChartKey] = useState<string | null>(null);
   const [savingKey, setSavingKey] = useState(false);
 
+  // Metronome state
+  const [metroBpm, setMetroBpm] = useState(120);
+  const [metroPlaying, setMetroPlaying] = useState(false);
+  const metroIntervalRef = useRef<ReturnType<typeof setInterval> | null>(null);
+  const metroAudioCtxRef = useRef<AudioContext | null>(null);
+  const tapTimesRef = useRef<number[]>([]);
+
   // Drag state for loop handles + scrub dragging
   const draggingRef = useRef<"A" | "B" | null>(null);
   const scrubbingRef = useRef(false);
   // Store the active scrub bar's rect on pointerDown so we always use the visible one
   const barRectRef = useRef<DOMRect | null>(null);
+
+  // Metronome tick
+  const metroTick = useCallback(() => {
+    if (!metroAudioCtxRef.current) {
+      metroAudioCtxRef.current = new AudioContext();
+    }
+    const ctx = metroAudioCtxRef.current;
+    const osc = ctx.createOscillator();
+    const gain = ctx.createGain();
+    osc.connect(gain);
+    gain.connect(ctx.destination);
+    osc.frequency.value = 880;
+    osc.type = "square";
+    gain.gain.value = 0.08;
+    gain.gain.exponentialRampToValueAtTime(0.001, ctx.currentTime + 0.06);
+    osc.start(ctx.currentTime);
+    osc.stop(ctx.currentTime + 0.06);
+  }, []);
+
+  const toggleMetronome = useCallback(() => {
+    if (metroPlaying) {
+      if (metroIntervalRef.current) clearInterval(metroIntervalRef.current);
+      metroIntervalRef.current = null;
+      setMetroPlaying(false);
+    } else {
+      metroTick();
+      metroIntervalRef.current = setInterval(metroTick, 60000 / metroBpm);
+      setMetroPlaying(true);
+    }
+  }, [metroPlaying, metroBpm, metroTick]);
+
+  // Restart interval when BPM changes while playing
+  useEffect(() => {
+    if (metroPlaying && metroIntervalRef.current) {
+      clearInterval(metroIntervalRef.current);
+      metroIntervalRef.current = setInterval(metroTick, 60000 / metroBpm);
+    }
+  }, [metroBpm, metroPlaying, metroTick]);
+
+  // Cleanup metronome on close
+  useEffect(() => {
+    if (!isOpen && metroIntervalRef.current) {
+      clearInterval(metroIntervalRef.current);
+      metroIntervalRef.current = null;
+      setMetroPlaying(false);
+    }
+  }, [isOpen]);
+
+  const handleTapTempo = useCallback(() => {
+    const now = Date.now();
+    const taps = tapTimesRef.current;
+    // Reset if last tap was > 2s ago
+    if (taps.length > 0 && now - taps[taps.length - 1] > 2000) {
+      tapTimesRef.current = [now];
+      return;
+    }
+    taps.push(now);
+    if (taps.length > 6) taps.shift();
+    if (taps.length >= 2) {
+      const intervals = [];
+      for (let i = 1; i < taps.length; i++) intervals.push(taps[i] - taps[i - 1]);
+      const avg = intervals.reduce((a, b) => a + b, 0) / intervals.length;
+      const bpm = Math.round(60000 / avg);
+      if (bpm >= 30 && bpm <= 300) setMetroBpm(bpm);
+    }
+  }, []);
 
   const pctFromPointer = useCallback((clientX: number) => {
     const rect = barRectRef.current;
@@ -790,7 +987,7 @@ export default function MediaPlayer() {
               {" ▾"}
             </button>
             {showKeyPicker && (
-              <div className="absolute right-0 top-full mt-1 z-50 bg-white border border-stone-200 rounded-lg shadow-lg p-2 w-[200px]">
+              <div className="absolute right-0 bottom-full mb-1 z-50 bg-white border border-stone-200 rounded-lg shadow-lg p-2 w-[200px]">
                 <div className="grid grid-cols-4 gap-1">
                   {CHROMATIC_KEYS.map((k) => (
                     <button
@@ -930,6 +1127,47 @@ export default function MediaPlayer() {
           </button>
         )}
       </div>
+
+      {/* Metronome */}
+      <div className="flex items-center gap-2">
+        <span className="text-[10px] text-stone-400 w-10 shrink-0">BPM</span>
+        <button
+          onClick={toggleMetronome}
+          className="w-7 h-7 rounded border flex items-center justify-center text-sm transition-colors"
+          style={{
+            borderColor: metroPlaying ? ACCENT : "#d6d3d1",
+            backgroundColor: metroPlaying ? ACCENT : "transparent",
+            color: metroPlaying ? "white" : "#78716c",
+          }}
+          title={metroPlaying ? "Stop metronome" : "Start metronome"}
+        >
+          {metroPlaying ? "■" : "▶"}
+        </button>
+        <button
+          onClick={() => setMetroBpm((b) => Math.max(30, b - 5))}
+          className="w-6 h-6 rounded border border-stone-300 flex items-center justify-center text-stone-500 hover:bg-stone-50 text-xs font-bold"
+        >
+          −
+        </button>
+        <span className="text-xs font-mono w-10 text-center text-stone-700 tabular-nums">
+          {metroBpm}
+        </span>
+        <button
+          onClick={() => setMetroBpm((b) => Math.min(300, b + 5))}
+          className="w-6 h-6 rounded border border-stone-300 flex items-center justify-center text-stone-500 hover:bg-stone-50 text-xs font-bold"
+        >
+          +
+        </button>
+        <button
+          onClick={handleTapTempo}
+          className="px-2 py-0.5 rounded text-[11px] font-medium border border-stone-300 text-stone-500 hover:bg-stone-100 transition-colors"
+        >
+          Tap
+        </button>
+      </div>
+
+      {/* Mini Piano — 1 octave, playable, octave-shiftable */}
+      <MiniPiano />
     </div>
   );
 
