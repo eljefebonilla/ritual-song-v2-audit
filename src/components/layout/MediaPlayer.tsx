@@ -933,78 +933,10 @@ export default function MediaPlayer() {
     </div>
   );
 
-  // --- Desktop side panel ---
-  const desktopPanel = (
+  // --- Unified bottom strip (all screen sizes) ---
+  const bottomStrip = (
     <div
-      className="hidden md:flex fixed inset-y-0 right-0 w-[400px] border-l border-stone-200 shadow-xl z-30 flex-col"
-      style={{ background: "linear-gradient(180deg, #fafaf9, #f5f5f4)" }}
-    >
-      {/* Header */}
-      <div className="px-4 py-3 border-b border-stone-200 flex items-center justify-between shrink-0 bg-stone-50/50">
-        <div className="min-w-0 flex-1">
-          <p className="text-sm font-bold text-stone-900 truncate">
-            {current.title}
-          </p>
-          {current.subtitle && (
-            <p className="text-xs text-stone-400 truncate">
-              {current.subtitle}
-            </p>
-          )}
-        </div>
-        <button
-          onClick={close}
-          className="p-1 text-stone-400 hover:text-stone-600 shrink-0 ml-2"
-        >
-          <svg
-            width="16"
-            height="16"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            strokeWidth="2"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-          >
-            <line x1="18" y1="6" x2="6" y2="18" />
-            <line x1="6" y1="6" x2="18" y2="18" />
-          </svg>
-        </button>
-      </div>
-
-      <div className="flex-1 flex items-center justify-center p-6">
-        {isYouTube && youtubeId ? (
-          <iframe
-            src={`https://www.youtube.com/embed/${youtubeId}?autoplay=1`}
-            className="w-full aspect-video rounded-lg"
-            allow="autoplay; encrypted-media"
-            allowFullScreen
-          />
-        ) : (
-          <div className="w-full flex flex-col items-center gap-4">
-            {/* Deck well */}
-            <div
-              className="w-full rounded-xl p-5 flex flex-col items-center gap-3"
-              style={{
-                background: "linear-gradient(180deg, #e7e5e4, #f5f5f4)",
-                boxShadow: "inset 0 2px 6px rgba(0,0,0,0.08)",
-              }}
-            >
-              {cassetteIcon}
-              {transportStrip}
-            </div>
-            {scrubBar}
-            {errorDisplay}
-            {practiceControls}
-          </div>
-        )}
-      </div>
-    </div>
-  );
-
-  // --- Mobile bottom sheet ---
-  const mobileSheet = (
-    <div
-      className="md:hidden fixed bottom-0 inset-x-0 border-t border-stone-200 shadow-xl z-30"
+      className="fixed bottom-0 inset-x-0 md:ml-64 border-t border-stone-200 shadow-xl z-30"
       style={{ background: "linear-gradient(180deg, #f5f5f4, #fafaf9)" }}
     >
       {isYouTube && youtubeId ? (
@@ -1014,10 +946,15 @@ export default function MediaPlayer() {
               <p className="text-xs font-bold text-stone-900 truncate">
                 {current.title}
               </p>
+              {current.subtitle && (
+                <p className="text-[10px] text-stone-400 truncate">
+                  {current.subtitle}
+                </p>
+              )}
             </div>
             <button
-              onClick={close}
-              className="p-1 text-stone-400 hover:text-stone-600 ml-2"
+              onClick={() => setMobileExpanded((e) => !e)}
+              className="p-1 text-stone-400 hover:text-stone-600 shrink-0"
             >
               <svg
                 width="14"
@@ -1028,25 +965,36 @@ export default function MediaPlayer() {
                 strokeWidth="2"
                 strokeLinecap="round"
                 strokeLinejoin="round"
+                className={`transition-transform ${mobileExpanded ? "rotate-180" : ""}`}
               >
+                <polyline points="18 15 12 9 6 15" />
+              </svg>
+            </button>
+            <button
+              onClick={close}
+              className="p-1 text-stone-400 hover:text-stone-600 ml-1 shrink-0"
+            >
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                 <line x1="18" y1="6" x2="6" y2="18" />
                 <line x1="6" y1="6" x2="18" y2="18" />
               </svg>
             </button>
           </div>
-          <div className="px-4 pb-4">
-            <iframe
-              src={`https://www.youtube.com/embed/${youtubeId}?autoplay=1`}
-              className="w-full aspect-video rounded-lg"
-              allow="autoplay; encrypted-media"
-              allowFullScreen
-            />
-          </div>
+          {mobileExpanded && (
+            <div className="px-4 pb-4">
+              <iframe
+                src={`https://www.youtube.com/embed/${youtubeId}?autoplay=1`}
+                className="w-full max-w-xl mx-auto aspect-video rounded-lg"
+                allow="autoplay; encrypted-media"
+                allowFullScreen
+              />
+            </div>
+          )}
         </>
       ) : (
-        <div className="px-4 py-3 space-y-2">
-          <div className="flex items-center gap-2">
-            {/* Transport group */}
+        <div className="px-4 py-2.5 space-y-2 max-w-4xl">
+          {/* Compact transport row */}
+          <div className="flex items-center gap-3">
             <div className="flex items-center gap-0.5 shrink-0">
               {transportBtn("rw", 16)}
               {playPauseBtn}
@@ -1085,16 +1033,7 @@ export default function MediaPlayer() {
               onClick={close}
               className="p-1 text-stone-400 hover:text-stone-600 shrink-0"
             >
-              <svg
-                width="14"
-                height="14"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="2"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              >
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                 <line x1="18" y1="6" x2="6" y2="18" />
                 <line x1="6" y1="6" x2="18" y2="18" />
               </svg>
@@ -1108,10 +1047,5 @@ export default function MediaPlayer() {
     </div>
   );
 
-  return (
-    <>
-      {desktopPanel}
-      {mobileSheet}
-    </>
-  );
+  return bottomStrip;
 }
