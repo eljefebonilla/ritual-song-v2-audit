@@ -30,13 +30,13 @@ function formatTime(s: number): string {
 }
 
 const ACCENT = "#4CAF50";
+const STRIP_BG = "#1e1e1e";
+const STRIP_BORDER = "#333";
 
 // Note frequencies for octave 4 (A4=440)
 const NOTE_NAMES = ["C", "C#", "D", "D#", "E", "F", "F#", "G", "G#", "A", "A#", "B"];
-const BLACK_KEYS = new Set([1, 3, 6, 8, 10]); // indices of sharps/flats
 
 function noteFrequency(noteIndex: number, octave: number): number {
-  // C4 = MIDI 60 = 261.63 Hz. A4 = MIDI 69 = 440 Hz
   const midi = 12 * (octave + 1) + noteIndex;
   return 440 * Math.pow(2, (midi - 69) / 12);
 }
@@ -52,104 +52,131 @@ function MiniPiano() {
     }
     const ctx = audioCtxRef.current;
     const freq = noteFrequency(noteIndex, octave);
-
-    // Piano-like tone: fundamental + harmonics with fast attack, medium decay
     const now = ctx.currentTime;
-    const gain = ctx.createGain();
-    gain.connect(ctx.destination);
-    gain.gain.setValueAtTime(0, now);
-    gain.gain.linearRampToValueAtTime(0.15, now + 0.01);
-    gain.gain.exponentialRampToValueAtTime(0.06, now + 0.3);
-    gain.gain.exponentialRampToValueAtTime(0.001, now + 1.2);
 
-    // Fundamental
-    const osc1 = ctx.createOscillator();
-    osc1.type = "triangle";
-    osc1.frequency.value = freq;
-    osc1.connect(gain);
-    osc1.start(now);
-    osc1.stop(now + 1.2);
+    // Piano tone: fundamental + 3 harmonics with hammer-like envelope
+    const master = ctx.createGain();
+    master.connect(ctx.destination);
+    master.gain.setValueAtTime(0, now);
+    master.gain.linearRampToValueAtTime(0.18, now + 0.005);
+    master.gain.exponentialRampToValueAtTime(0.08, now + 0.15);
+    master.gain.exponentialRampToValueAtTime(0.001, now + 1.5);
 
-    // 2nd harmonic (quieter)
-    const gain2 = ctx.createGain();
-    gain2.connect(ctx.destination);
-    gain2.gain.setValueAtTime(0, now);
-    gain2.gain.linearRampToValueAtTime(0.04, now + 0.01);
-    gain2.gain.exponentialRampToValueAtTime(0.001, now + 0.6);
-    const osc2 = ctx.createOscillator();
-    osc2.type = "sine";
-    osc2.frequency.value = freq * 2;
-    osc2.connect(gain2);
-    osc2.start(now);
-    osc2.stop(now + 0.6);
+    const harmonics = [
+      { type: "triangle" as OscillatorType, mult: 1, vol: 1 },
+      { type: "sine" as OscillatorType, mult: 2, vol: 0.3 },
+      { type: "sine" as OscillatorType, mult: 3, vol: 0.08 },
+    ];
+    for (const h of harmonics) {
+      const g = ctx.createGain();
+      g.gain.value = h.vol;
+      g.connect(master);
+      const o = ctx.createOscillator();
+      o.type = h.type;
+      o.frequency.value = freq * h.mult;
+      o.connect(g);
+      o.start(now);
+      o.stop(now + 1.5);
+    }
 
     setActiveNote(noteIndex);
-    setTimeout(() => setActiveNote(null), 200);
+    setTimeout(() => setActiveNote(null), 150);
   }, [octave]);
 
-  // White key positions (C D E F G A B = indices 0,2,4,5,7,9,11)
   const whiteKeys = [0, 2, 4, 5, 7, 9, 11];
-  // Black key positions relative to white keys
-  const blackKeyPositions: { noteIndex: number; leftPct: string }[] = [
-    { noteIndex: 1, leftPct: "12.5%" },   // C#
-    { noteIndex: 3, leftPct: "26.8%" },   // D#
-    { noteIndex: 6, leftPct: "55.4%" },   // F#
-    { noteIndex: 8, leftPct: "69.6%" },   // G#
-    { noteIndex: 10, leftPct: "83.9%" },  // A#
+  const blackKeyData: { noteIndex: number; afterWhite: number }[] = [
+    { noteIndex: 1, afterWhite: 0 },  // C#
+    { noteIndex: 3, afterWhite: 1 },  // D#
+    { noteIndex: 6, afterWhite: 3 },  // F#
+    { noteIndex: 8, afterWhite: 4 },  // G#
+    { noteIndex: 10, afterWhite: 5 }, // A#
   ];
 
+  const ww = 100 / 7; // white key width %
+
   return (
-    <div className="flex items-center gap-2">
-      <span className="text-[10px] text-stone-400 w-10 shrink-0">Piano</span>
-      <button
-        onClick={() => setOctave((o) => Math.max(1, o - 1))}
-        className="w-6 h-6 rounded border border-stone-300 flex items-center justify-center text-stone-500 hover:bg-stone-50 text-[10px] font-bold"
-        title="Octave down"
-      >
-        ◀
-      </button>
-      <span className="text-[10px] text-stone-500 w-5 text-center">C{octave}</span>
-      <button
-        onClick={() => setOctave((o) => Math.min(7, o + 1))}
-        className="w-6 h-6 rounded border border-stone-300 flex items-center justify-center text-stone-500 hover:bg-stone-50 text-[10px] font-bold"
-        title="Octave up"
-      >
-        ▶
-      </button>
+    <div className="space-y-1.5">
+      {/* Octave selector */}
+      <div className="flex items-center gap-1.5 justify-center">
+        <button
+          onClick={() => setOctave((o) => Math.max(2, o - 1))}
+          className="w-5 h-5 rounded border border-neutral-600 flex items-center justify-center text-neutral-400 hover:bg-neutral-700 text-[9px]"
+        >
+          ◀
+        </button>
+        <span className="text-[10px] text-neutral-400 font-medium">C{octave}</span>
+        <button
+          onClick={() => setOctave((o) => Math.min(6, o + 1))}
+          className="w-5 h-5 rounded border border-neutral-600 flex items-center justify-center text-neutral-400 hover:bg-neutral-700 text-[9px]"
+        >
+          ▶
+        </button>
+      </div>
       {/* Keyboard */}
-      <div className="relative h-10 flex-1 max-w-[280px] select-none">
+      <div
+        className="relative select-none"
+        style={{
+          height: 56,
+          borderRadius: "0 0 4px 4px",
+          boxShadow: "0 2px 8px rgba(0,0,0,0.15), inset 0 -1px 0 rgba(0,0,0,0.1)",
+          background: "#1a1a1a",
+          padding: "2px 2px 3px",
+        }}
+      >
         {/* White keys */}
-        <div className="flex h-full gap-[1px]">
-          {whiteKeys.map((noteIdx) => (
-            <button
-              key={noteIdx}
-              onPointerDown={() => playNote(noteIdx)}
-              className="flex-1 rounded-b border border-stone-300 transition-colors flex items-end justify-center pb-0.5"
-              style={{
-                background: activeNote === noteIdx
-                  ? "linear-gradient(180deg, #e8e8e8, #d4d4d4)"
-                  : "linear-gradient(180deg, #fff, #f5f5f4)",
-              }}
-            >
-              <span className="text-[7px] text-stone-300">{NOTE_NAMES[noteIdx]}</span>
-            </button>
-          ))}
+        <div className="flex h-full" style={{ gap: 1.5 }}>
+          {whiteKeys.map((noteIdx) => {
+            const pressed = activeNote === noteIdx;
+            return (
+              <button
+                key={noteIdx}
+                onPointerDown={() => playNote(noteIdx)}
+                className="flex-1 flex items-end justify-center"
+                style={{
+                  borderRadius: "0 0 3px 3px",
+                  background: pressed
+                    ? "linear-gradient(180deg, #d9d9d9 0%, #c8c8c8 100%)"
+                    : "linear-gradient(180deg, #fefefe 0%, #f0efe9 60%, #e8e6e0 100%)",
+                  boxShadow: pressed
+                    ? "inset 0 1px 3px rgba(0,0,0,0.2)"
+                    : "0 1px 0 rgba(0,0,0,0.15), inset 0 -1px 0 rgba(0,0,0,0.04), inset 0 0 0 0.5px rgba(0,0,0,0.08)",
+                  transform: pressed ? "translateY(1px)" : "none",
+                  paddingBottom: 3,
+                }}
+              >
+                <span style={{ fontSize: 7, color: pressed ? "#999" : "#bbb", lineHeight: 1 }}>
+                  {NOTE_NAMES[noteIdx]}
+                </span>
+              </button>
+            );
+          })}
         </div>
         {/* Black keys */}
-        {blackKeyPositions.map(({ noteIndex, leftPct }) => (
-          <button
-            key={noteIndex}
-            onPointerDown={() => playNote(noteIndex)}
-            className="absolute top-0 w-[10%] h-[62%] rounded-b z-10 transition-colors"
-            style={{
-              left: leftPct,
-              background: activeNote === noteIndex
-                ? "linear-gradient(180deg, #555, #333)"
-                : "linear-gradient(180deg, #444, #222)",
-              border: "1px solid #111",
-            }}
-          />
-        ))}
+        {blackKeyData.map(({ noteIndex, afterWhite }) => {
+          const pressed = activeNote === noteIndex;
+          const left = (afterWhite + 1) * ww - ww * 0.3;
+          return (
+            <button
+              key={noteIndex}
+              onPointerDown={() => playNote(noteIndex)}
+              className="absolute z-10"
+              style={{
+                left: `${left}%`,
+                width: `${ww * 0.6}%`,
+                top: 2,
+                height: "58%",
+                borderRadius: "0 0 2px 2px",
+                background: pressed
+                  ? "linear-gradient(180deg, #3a3a3a 0%, #2a2a2a 100%)"
+                  : "linear-gradient(180deg, #333 0%, #1a1a1a 70%, #111 100%)",
+                boxShadow: pressed
+                  ? "inset 0 1px 2px rgba(0,0,0,0.5)"
+                  : "0 2px 3px rgba(0,0,0,0.4), inset 0 -2px 1px rgba(255,255,255,0.05), inset 0 0 0 0.5px rgba(0,0,0,0.3)",
+                transform: pressed ? "translateY(1px)" : "none",
+              }}
+            />
+          );
+        })}
       </div>
     </div>
   );
@@ -581,7 +608,7 @@ export default function MediaPlayer() {
       onPointerUp={() => handleTransportUp(dir)}
       onPointerLeave={handleTransportLeave}
       aria-label={dir === "rw" ? "Rewind" : "Fast forward"}
-      className="w-8 h-8 flex items-center justify-center rounded text-stone-500 hover:bg-stone-300/50 transition-colors select-none touch-none"
+      className="w-8 h-8 flex items-center justify-center rounded text-neutral-400 hover:bg-neutral-700/60 transition-colors select-none touch-none"
     >
       <svg
         width={iconSize}
@@ -615,12 +642,12 @@ export default function MediaPlayer() {
       className="w-10 h-10 flex items-center justify-center rounded-full shrink-0 transition-all active:scale-95"
       style={{
         background: playing
-          ? `linear-gradient(145deg, ${ACCENT}20, ${ACCENT}10)`
-          : `linear-gradient(145deg, ${ACCENT}0a, transparent)`,
+          ? `linear-gradient(145deg, ${ACCENT}30, ${ACCENT}18)`
+          : `linear-gradient(145deg, ${ACCENT}15, transparent)`,
         border: `2px solid ${ACCENT}`,
         boxShadow: playing
-          ? `0 0 8px ${ACCENT}30, 0 1px 4px ${ACCENT}20`
-          : `0 1px 4px ${ACCENT}15`,
+          ? `0 0 12px ${ACCENT}40, 0 1px 4px ${ACCENT}30`
+          : `0 1px 4px ${ACCENT}20`,
       }}
     >
       {isLoading ? (
@@ -809,9 +836,9 @@ export default function MediaPlayer() {
     <div
       className="flex items-center justify-center gap-4 py-2 px-6 rounded-lg"
       style={{
-        background: "linear-gradient(180deg, #e7e5e4, #d6d3d1)",
+        background: "linear-gradient(180deg, #2a2a2a, #222)",
         boxShadow:
-          "inset 0 1px 3px rgba(0,0,0,0.12), inset 0 -1px 1px rgba(255,255,255,0.4)",
+          "inset 0 1px 3px rgba(0,0,0,0.3), inset 0 -1px 1px rgba(255,255,255,0.05)",
       }}
     >
       {transportBtn("rw")}
@@ -823,7 +850,7 @@ export default function MediaPlayer() {
   const scrubBar = (
     <div className="w-full space-y-1">
       <div
-        className="w-full h-2 bg-stone-200 rounded-full cursor-pointer group relative touch-none"
+        className="w-full h-2 bg-neutral-700 rounded-full cursor-pointer group relative touch-none"
         onPointerDown={handleScrubDown}
       >
         {/* A/B loop highlight */}
@@ -895,7 +922,7 @@ export default function MediaPlayer() {
           />
         </div>
       </div>
-      <div className="flex justify-between text-[10px] text-stone-400 tabular-nums">
+      <div className="flex justify-between text-[10px] text-neutral-500 tabular-nums">
         <span>{formatTime(currentTime)}</span>
         <span>{formatTime(duration)}</span>
       </div>
