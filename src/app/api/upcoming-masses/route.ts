@@ -31,6 +31,7 @@ export async function GET(request: NextRequest) {
       )
     `)
     .gte("event_date", from)
+    .not("ensemble", "is", null)
     .order("event_date", { ascending: true })
     .order("start_time_12h", { ascending: true });
 
@@ -115,6 +116,7 @@ export async function GET(request: NextRequest) {
             )
           `)
           .gte("event_date", from)
+          .not("ensemble", "is", null)
           .order("event_date", { ascending: true })
           .order("start_time_12h", { ascending: true });
 
