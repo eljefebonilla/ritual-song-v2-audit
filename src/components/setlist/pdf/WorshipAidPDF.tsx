@@ -69,21 +69,26 @@ interface WorshipAidProps {
   season?: string;
 }
 
-// Standard Order of Mass sections
+// Standard Order of Mass sections — keys must match setlist position values
 const MASS_ORDER = [
   { key: "prelude", label: "Prelude", type: "song" },
   { key: "gathering", label: "Introductory Rites", type: "song" },
-  { key: "penitentialAct", label: "Penitential Act", type: "song" },
+  { key: "penitential_act", label: "Penitential Act", type: "song" },
   { key: "gloria", label: "Gloria", type: "song" },
   { key: "first_reading", label: "First Reading", type: "reading" },
   { key: "psalm", label: "Responsorial Psalm", type: "song" },
   { key: "second_reading", label: "Second Reading", type: "reading" },
-  { key: "gospelAcclamation", label: "Gospel Acclamation", type: "song" },
+  { key: "gospel_acclamation", label: "Gospel Acclamation", type: "song" },
   { key: "gospel", label: "Gospel", type: "reading" },
   { key: "offertory", label: "Preparation of the Gifts", type: "song" },
-  { key: "communion1", label: "Communion", type: "song" },
-  { key: "communion2", label: "Communion II", type: "song" },
-  { key: "meditation", label: "Meditation", type: "song" },
+  { key: "holy", label: "Holy, Holy, Holy", type: "song" },
+  { key: "memorial", label: "Memorial Acclamation", type: "song" },
+  { key: "amen", label: "Great Amen", type: "song" },
+  { key: "lords_prayer", label: "The Lord's Prayer", type: "song" },
+  { key: "fraction_rite", label: "Lamb of God", type: "song" },
+  { key: "communion_1", label: "Communion", type: "song" },
+  { key: "communion_2", label: "Communion II", type: "song" },
+  { key: "communion_3", label: "Communion III", type: "song" },
   { key: "sending", label: "Sending Forth", type: "song" },
 ];
 
