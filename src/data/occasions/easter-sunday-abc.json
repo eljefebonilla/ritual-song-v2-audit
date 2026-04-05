@@ -46,142 +46,214 @@
     {
       "community": "Foundations",
       "communityId": "foundations",
-      "date": "Year C — Apr 23, 2028 (Sun)",
-      "presider": "NOT THIS YEAR",
-      "prelude": {
-        "title": "Regina Caeli / O Queen of Heaven",
-        "composer": "Mode VI Latin • 12th C",
-        "description": "Pope Leo XIV singing Regina Caeli"
+      "ensemble": "Foundations",
+      "ensembleId": "foundations",
+      "date": "Apr 05, 2026 (Sun)",
+      "gathering": {
+        "title": "Jesus Christ Is Risen Today",
+        "composer": "Praisecharts Arrangement"
+      },
+      "sprinklingRite": {
+        "title": "Lead Us to the Water",
+        "composer": "Tom Kendzia • Gary Daigle"
       },
       "gloria": {
         "title": "Glory to God (Mass of Joy & Peace)",
-        "composer": "Alonso • Arr. by Houze OR Arr. by Lockwood"
+        "composer": "Tony Alonso • Arranged by Dan Houze"
+      },
+      "responsorialPsalm": {
+        "psalm": "Ps 118 This is the day the Lord has made...",
+        "setting": "Bobby Fisher"
+      },
+      "gospelAcclamation": {
+        "title": "Halle, Halle, Halle",
+        "composer": "Marty Haugen",
+        "verse": "Christ, our paschal lamb, has been sacrificed; let us then feast with joy in the Lord."
+      },
+      "offertory": {
+        "title": "Hallelujah Is Our Song",
+        "composer": "Sarah Hart & Sarah Kroger"
       },
       "eucharisticAcclamations": {
         "massSettingName": "Mass of Glory",
-        "composer": "Bob Hurd & Ken Canedo"
-      },
-      "lordsPrayer": {
-        "title": "Chanted Our Father (Snow)",
-        "composer": "Jennings • Paregorius"
-      },
-      "fractionRite": {
-        "title": "Lamb of God (Mass of Glory)",
-        "composer": "Bob Hurd & Ken Canedo"
-      },
-      "communionSongs": [
-        {
-          "title": "Composer(s) • Arranger(s)"
-        },
-        {
-          "title": "Composer(s) • Arranger(s)"
-        }
-      ]
-    },
-    {
-      "community": "Generations",
-      "communityId": "generations",
-      "date": "Year C — Apr 23, 2028 (Sun)",
-      "presider": "NOT THIS YEAR",
-      "prelude": {
-        "title": "Regina Caeli / O Queen of Heaven",
-        "composer": "Mode VI Latin • 12th C",
-        "description": "Pope Leo XIV singing Regina Caeli"
-      },
-      "gloria": {
-        "title": "Glory to God (Mass of Joy & Peace)",
-        "composer": "Tony Alonso • Arr. by Dan Houze"
-      },
-      "eucharisticAcclamations": {
-        "massSettingName": "Mass of Glory",
-        "composer": "Jeffrey Bonilla & David Lockwood"
+        "composer": "Bob Hurd & Ken Canedo • Arranged by Dan Houze"
       },
       "lordsPrayer": {
         "title": "(Echo) Our Father",
         "composer": "Jerome Andrews • Arranged by Dan Houze"
       },
       "fractionRite": {
-        "title": "Lamb of God (Mass of Glory)"
+        "title": "Lamb of God (Mass of Glory)",
+        "composer": "Bob Hurd • Arranged by Dan Houze"
       },
       "communionSongs": [
-        {
-          "title": "Composer(s) • Arranger(s)"
-        },
-        {
-          "title": "Composer(s) • Arranger(s)"
-        },
-        {
-          "title": "Composer(s) • Arranger(s)"
-        },
-        {
-          "title": "Composer(s) • Arranger(s)"
-        }
-      ]
+        { "title": "Remembrance", "composer": "Hillsong" },
+        { "title": "I Am the Bread of Life", "composer": "Tom Kaczmarek" },
+        { "title": "In Christ Alone", "composer": "Keith Getty & Stuart Townend • Arranged by Micah Jones" }
+      ],
+      "sending": {
+        "title": "Oh Happy Day",
+        "composer": "Edwin Hawkins • Arranged by Micah Jones"
+      }
+    },
+    {
+      "community": "Generations",
+      "communityId": "generations",
+      "ensemble": "Generations",
+      "ensembleId": "generations",
+      "date": "Apr 05, 2026 (Sun)",
+      "gathering": {
+        "title": "Jesus Christ Is Risen Today",
+        "composer": "Praisecharts Arrangement"
+      },
+      "sprinklingRite": {
+        "title": "Lead Us to the Water",
+        "composer": "Tom Kendzia • Gary Daigle"
+      },
+      "gloria": {
+        "title": "Glory to God (Mass of Joy & Peace)",
+        "composer": "Tony Alonso • Arranged by Dan Houze"
+      },
+      "responsorialPsalm": {
+        "psalm": "Ps 118 This is the day the Lord has made...",
+        "setting": "Bobby Fisher"
+      },
+      "gospelAcclamation": {
+        "title": "Hallelujah",
+        "composer": "Leonard Cohen • Gary Denk • Dan Houze",
+        "verse": "Christians praise the paschal victim... — Verse by Gary Denk"
+      },
+      "offertory": {
+        "title": "He Is Not Here",
+        "composer": "Derek Cambell"
+      },
+      "eucharisticAcclamations": {
+        "massSettingName": "Mass of Glory",
+        "composer": "Bob Hurd & Ken Canedo • Arranged by Dan Houze"
+      },
+      "lordsPrayer": {
+        "title": "(Echo) Our Father",
+        "composer": "Jerome Andrews • Arranged by Dan Houze"
+      },
+      "fractionRite": {
+        "title": "Lamb of God (Mass of Glory)",
+        "composer": "Bob Hurd • Arranged by Dan Houze"
+      },
+      "communionSongs": [
+        { "title": "Remembrance", "composer": "Hillsong" },
+        { "title": "I Am the Bread of Life", "composer": "Tom Kaczmarek" },
+        { "title": "In Christ Alone", "composer": "Keith Getty & Stuart Townend • Arranged by Micah Jones" }
+      ],
+      "sending": {
+        "title": "Oh Happy Day",
+        "composer": "Edwin Hawkins • Arranged by Micah Jones"
+      }
     },
     {
       "community": "Heritage",
       "communityId": "heritage",
-      "date": "Year C — Apr 23, 2028 (Sun)",
-      "presider": "NOT THIS YEAR",
-      "prelude": {
-        "title": "Regina Caeli / O Queen of Heaven",
-        "composer": "Mode VI Latin • 12th C",
-        "description": "Pope Leo XIV singing Regina Caeli"
+      "ensemble": "Heritage",
+      "ensembleId": "heritage",
+      "date": "Apr 05, 2026 (Sun)",
+      "gathering": {
+        "title": "Jesus Christ Is Risen Today",
+        "composer": "Praisecharts Arrangement"
+      },
+      "sprinklingRite": {
+        "title": "Lead Us to the Water",
+        "composer": "Tom Kendzia • Gary Daigle"
       },
       "gloria": {
         "title": "Glory to God (Mass of Joy & Peace)",
-        "composer": "Tony Alonso, Thru Composed"
+        "composer": "Tony Alonso • Arranged by Dan Houze"
+      },
+      "responsorialPsalm": {
+        "psalm": "Ps 118 This is the day the Lord has made...",
+        "setting": "Bobby Fisher"
+      },
+      "gospelAcclamation": {
+        "title": "Hallelujah",
+        "composer": "Leonard Cohen • Gary Denk • Dan Houze",
+        "verse": "Christians praise the paschal victim... — Verse by Gary Denk"
+      },
+      "offertory": {
+        "title": "He Is Not Here",
+        "composer": "Derek Cambell"
       },
       "eucharisticAcclamations": {
-        "massSettingName": "Mass of Joy & Peace",
-        "composer": "Tony Alonso"
+        "massSettingName": "Mass of Glory",
+        "composer": "Bob Hurd & Ken Canedo • Arranged by Dan Houze"
       },
       "lordsPrayer": {
-        "title": "Chanted Our Father (Snow)",
-        "composer": "Jennings/Paregorius"
+        "title": "(Echo) Our Father",
+        "composer": "Jerome Andrews • Arranged by Dan Houze"
       },
       "fractionRite": {
-        "title": "Lamb of God (Mass of Joy & Peace)",
-        "composer": "Tony Alonso"
+        "title": "Lamb of God (Mass of Glory)",
+        "composer": "Bob Hurd • Arranged by Dan Houze"
       },
       "communionSongs": [
-        {
-          "title": "Composer(s) • Arranger(s)"
-        },
-        {
-          "title": "Composer(s) • Arranger(s)"
-        },
-        {
-          "title": "Composer(s) • Arranger(s)"
-        }
-      ]
+        { "title": "Remembrance", "composer": "Hillsong" },
+        { "title": "I Am the Bread of Life", "composer": "Tom Kaczmarek" },
+        { "title": "In Christ Alone", "composer": "Keith Getty & Stuart Townend • Arranged by Micah Jones" }
+      ],
+      "sending": {
+        "title": "Oh Happy Day",
+        "composer": "Edwin Hawkins • Arranged by Micah Jones"
+      }
     },
     {
       "community": "Elevations",
       "communityId": "elevations",
-      "date": "Year C — Apr 23, 2028 (Sun)",
-      "presider": "NOT THIS YEAR",
-      "prelude": {
-        "title": "Regina Caeli / O Queen of Heaven",
-        "composer": "Mode VI Latin • 12th C",
-        "description": "Pope Leo XIV singing Regina Caeli"
+      "ensemble": "Elevations",
+      "ensembleId": "elevations",
+      "date": "Apr 05, 2026 (Sun)",
+      "gathering": {
+        "title": "Jesus Christ Is Risen Today",
+        "composer": "Praisecharts Arrangement"
+      },
+      "sprinklingRite": {
+        "title": "Lead Us to the Water",
+        "composer": "Tom Kendzia • Gary Daigle"
       },
       "gloria": {
-        "title": "Glory to God (Joy & Peace)"
+        "title": "Glory to God (Mass of Joy & Peace)",
+        "composer": "Tony Alonso • Arranged by Dan Houze"
+      },
+      "responsorialPsalm": {
+        "psalm": "Ps 118 This is the day the Lord has made...",
+        "setting": "Bobby Fisher"
+      },
+      "gospelAcclamation": {
+        "title": "Hallelujah",
+        "composer": "Leonard Cohen • Gary Denk • Dan Houze",
+        "verse": "Christians praise the paschal victim... — Verse by Gary Denk"
+      },
+      "offertory": {
+        "title": "He Is Not Here",
+        "composer": "Derek Cambell"
       },
       "eucharisticAcclamations": {
-        "massSettingName": "Mass of Restoration",
-        "composer": "Joshua Blakesley"
+        "massSettingName": "Mass of Glory",
+        "composer": "Bob Hurd & Ken Canedo • Arranged by Dan Houze"
       },
       "lordsPrayer": {
-        "title": "Echo Our Father",
-        "composer": "Andrews, Arr. Bonilla • Lockwood • Fajardo"
+        "title": "(Echo) Our Father",
+        "composer": "Jerome Andrews • Arranged by Dan Houze"
       },
       "fractionRite": {
-        "title": "Lamb of God (Mass of Restoration)",
-        "composer": "Joshua Blakesley"
+        "title": "Lamb of God (Mass of Glory)",
+        "composer": "Bob Hurd • Arranged by Dan Houze"
       },
-      "communionSongs": null
+      "communionSongs": [
+        { "title": "Remembrance", "composer": "Hillsong" },
+        { "title": "I Am the Bread of Life", "composer": "Tom Kaczmarek" },
+        { "title": "In Christ Alone", "composer": "Keith Getty & Stuart Townend • Arranged by Micah Jones" }
+      ],
+      "sending": {
+        "title": "Oh Happy Day",
+        "composer": "Edwin Hawkins • Arranged by Micah Jones"
+      }
     },
     {
       "community": "Outdoor 9:30a",
