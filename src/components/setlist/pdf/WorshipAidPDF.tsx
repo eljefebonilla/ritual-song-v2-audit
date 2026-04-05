@@ -73,6 +73,7 @@ interface WorshipAidProps {
 const MASS_ORDER = [
   { key: "prelude", label: "Prelude", type: "song" },
   { key: "gathering", label: "Introductory Rites", type: "song" },
+  { key: "sprinkling_rite", label: "Sprinkling Rite", type: "song" },
   { key: "penitential_act", label: "Penitential Act", type: "song" },
   { key: "gloria", label: "Gloria", type: "song" },
   { key: "first_reading", label: "First Reading", type: "reading" },

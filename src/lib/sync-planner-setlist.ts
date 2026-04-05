@@ -11,6 +11,7 @@ import { triggerGenerationIfReady } from "./generators/auto-trigger";
 const FIELD_TO_POSITION: Record<string, { position: string; label: string }> = {
   prelude: { position: "prelude", label: "Prelude" },
   gathering: { position: "gathering", label: "Gathering" },
+  sprinklingRite: { position: "sprinkling_rite", label: "Sprinkling Rite" },
   penitentialAct: { position: "penitential_act", label: "Penitential Act" },
   gloria: { position: "gloria", label: "Gloria" },
   responsorialPsalm: { position: "psalm", label: "Responsorial Psalm" },

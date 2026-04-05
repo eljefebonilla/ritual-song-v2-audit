@@ -137,6 +137,8 @@ export function extractCellData(
       return songToCell(plan.prelude);
     case "gathering":
       return songToCell(plan.gathering);
+    case "sprinklingRite":
+      return songToCell(plan.sprinklingRite);
     case "penitentialAct":
       return songToCell(plan.penitentialAct);
     case "gloria":

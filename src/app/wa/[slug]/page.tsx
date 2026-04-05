@@ -149,7 +149,7 @@ function renderMassSections(
   headingFont: string
 ) {
   const sections: { section: string; positions: string[] }[] = [
-    { section: "Introductory Rites", positions: ["gathering", "penitential_act", "gloria"] },
+    { section: "Introductory Rites", positions: ["gathering", "sprinkling_rite", "penitential_act", "gloria"] },
     { section: "Liturgy of the Word", positions: ["psalm", "gospel_acclamation"] },
     { section: "Preparation of the Gifts", positions: ["offertory"] },
     { section: "Liturgy of the Eucharist", positions: ["holy", "memorial", "amen", "lords_prayer", "fraction_rite"] },

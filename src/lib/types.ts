@@ -47,6 +47,7 @@ export interface MusicPlan {
   massNotes?: string[];
   prelude?: SongEntry;
   gathering?: SongEntry;
+  sprinklingRite?: SongEntry;
   penitentialAct?: SongEntry;
   gloria?: SongEntry;
   responsorialPsalm?: {

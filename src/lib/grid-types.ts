@@ -19,6 +19,7 @@ export const GRID_ROW_KEYS = [
   "prelude",
   "entranceAntiphon",
   "gathering",
+  "sprinklingRite",
   "penitentialAct",
   "gloria",
   "firstReading",
@@ -64,6 +65,7 @@ export const READING_ROWS: Set<GridRowKey> = new Set([
 
 // Mass part rows — hideable via toggle
 export const MASS_PART_ROWS: Set<GridRowKey> = new Set([
+  "sprinklingRite",
   "penitentialAct",
   "gloria",
   "massSetting",
@@ -97,6 +99,7 @@ export const GRID_ROW_LABELS: Record<GridRowKey, string> = {
   prelude: "Prelude",
   entranceAntiphon: "Entrance Ant.",
   gathering: "Gathering",
+  sprinklingRite: "Sprinkling Rite",
   penitentialAct: "Penitential Act",
   gloria: "Gloria",
   firstReading: "1st Reading",
@@ -128,7 +131,7 @@ export const GRID_SECTIONS = [
   },
   {
     label: "Introductory Rites",
-    rows: ["entranceAntiphon", "gathering", "penitentialAct", "gloria"] as GridRowKey[],
+    rows: ["entranceAntiphon", "gathering", "sprinklingRite", "penitentialAct", "gloria"] as GridRowKey[],
   },
   {
     label: "Lit. of the Word",

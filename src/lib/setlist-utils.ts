@@ -25,6 +25,7 @@ function songEntryToSetlist(song?: SongEntry): SetlistSongEntry[] {
 const STANDARD_POSITIONS: { position: string; label: string }[] = [
   { position: "prelude", label: "Prelude" },
   { position: "gathering", label: "Gathering" },
+  { position: "sprinkling_rite", label: "Sprinkling Rite" },
   { position: "penitential_act", label: "Penitential Act" },
   { position: "gloria", label: "Gloria" },
   { position: "psalm", label: "Responsorial Psalm" },
@@ -67,6 +68,11 @@ export function bootstrapSongsFromPlan(
     position: "gathering",
     label: "Gathering",
     songs: songEntryToSetlist(plan.gathering),
+  });
+  rows.push({
+    position: "sprinkling_rite",
+    label: "Sprinkling Rite",
+    songs: songEntryToSetlist(plan.sprinklingRite),
   });
   rows.push({
     position: "penitential_act",
