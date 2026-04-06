@@ -2,6 +2,7 @@
 
 import { useState, useCallback, useRef } from "react";
 import { FUNERAL_STEPS, FUNERAL_PSALMS } from "@/lib/funeral-steps";
+import InlinePlayButton from "@/components/ui/InlinePlayButton";
 import type { FuneralStep } from "@/lib/funeral-steps";
 import { useViewMode } from "@/hooks/useViewMode";
 
@@ -686,10 +687,19 @@ function FuneralMusicStep({
               <button onClick={() => onSelect(song)} className="w-full text-left px-4 py-3">
                 <div className="flex items-center justify-between">
                   <div className="flex-1 min-w-0">
-                    <p className="text-sm font-medium text-stone-800">
-                      {song.is_starred && <span className="text-[#2C3E6B] mr-1">&#9733;</span>}
-                      {song.title}
-                    </p>
+                    <div className="flex items-center gap-1.5">
+                      <InlinePlayButton
+                        audioUrl={song.youtube_url || song.audio_url}
+                        audioType={song.youtube_url ? "youtube" : song.audio_url ? "audio" : null}
+                        title={song.title}
+                        subtitle={song.composer || undefined}
+                        size="sm"
+                      />
+                      <p className="text-sm font-medium text-stone-800">
+                        {song.is_starred && <span className="text-[#2C3E6B] mr-1">&#9733;</span>}
+                        {song.title}
+                      </p>
+                    </div>
                     <div className="flex items-center gap-2 mt-0.5">
                       {song.composer && <span className="text-xs text-stone-400">{song.composer}</span>}
                     </div>

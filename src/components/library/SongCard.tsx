@@ -5,6 +5,7 @@ import { getResourceDisplayCategory } from "@/lib/song-library";
 import { useMedia } from "@/lib/media-context";
 import { extractChartKeys } from "@/lib/key-utils";
 import { MASS_POSITION_LABELS, MASS_POSITION_ORDER, ENSEMBLE_BADGES } from "@/lib/occasion-helpers";
+import InlinePlayButton from "@/components/ui/InlinePlayButton";
 
 interface CalendarMeta {
   positions: Set<string>;
@@ -100,6 +101,16 @@ export default function SongCard({ song, isSelected, onClick, calendarMeta, hasA
     });
   }
 
+  // Derive audio info for inline play button
+  const audioResource = available.get("audio");
+  const inlineAudioUrl = audioResource ? resourceUrl(audioResource) : null;
+  const inlineAudioType: "audio" | "youtube" | null = audioResource
+    ? (audioResource.type === "youtube" ? "youtube" : "audio")
+    : null;
+  const sheetPaths = song.resources
+    .filter((r) => r.type === "sheet_music" && r.filePath)
+    .map((r) => r.filePath!);
+
   const handleResourceClick = (e: React.MouseEvent, cat: ResourceDisplayCategory, resource: SongResource) => {
     e.stopPropagation();
     const url = resourceUrl(resource);
@@ -178,9 +189,21 @@ export default function SongCard({ song, isSelected, onClick, calendarMeta, hasA
             })}
           </div>
         )}
-        <p className="text-sm font-semibold text-stone-800 leading-tight truncate">
-          {song.title}
-        </p>
+        <div className="flex items-center gap-1.5">
+          <InlinePlayButton
+            audioUrl={inlineAudioUrl}
+            audioType={inlineAudioType}
+            title={song.title}
+            subtitle={song.composer}
+            songId={song.id}
+            recordedKey={song.recordedKey}
+            chartKeys={extractChartKeys(sheetPaths)}
+            size="sm"
+          />
+          <p className="text-sm font-semibold text-stone-800 leading-tight truncate">
+            {song.title}
+          </p>
+        </div>
         <div className="flex items-center gap-2 mt-0.5">
           {song.composer && (
             <p className="text-xs text-stone-400 truncate">

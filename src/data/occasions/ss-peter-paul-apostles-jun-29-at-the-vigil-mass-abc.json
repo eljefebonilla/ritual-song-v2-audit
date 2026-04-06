@@ -148,5 +148,16 @@
         "description": "\"we are his people, the flock that he shepherds...\""
       }
     }
+  ],
+  "occasionResources": [
+    {
+      "id": "lyric-ga-verse-ss-peter-paul-apostles-jun-29-at-the-vigil-mass-abc",
+      "type": "audio",
+      "label": "Lyric Gospel Acclamation Verse",
+      "filePath": "https://kzziuepuepdcnvtexvxn.supabase.co/storage/v1/object/public/song-resources/lyric-ga/ss-peter-paul-apostles-jun-29-at-the-vigil-mass-abc_verse.mp3",
+      "source": "local",
+      "category": "gospel_acclamation",
+      "subcategory": "verse"
+    }
   ]
 }

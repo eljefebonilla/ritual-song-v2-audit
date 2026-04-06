@@ -310,5 +310,15 @@
       }
     }
   ],
-  "occasionResources": []
+  "occasionResources": [
+    {
+      "id": "lyric-ga-verse-ordinary-time-21-c",
+      "type": "audio",
+      "label": "Lyric Gospel Acclamation Verse",
+      "filePath": "https://kzziuepuepdcnvtexvxn.supabase.co/storage/v1/object/public/song-resources/lyric-ga/ordinary-time-21-c_verse.mp3",
+      "source": "local",
+      "category": "gospel_acclamation",
+      "subcategory": "verse"
+    }
+  ]
 }

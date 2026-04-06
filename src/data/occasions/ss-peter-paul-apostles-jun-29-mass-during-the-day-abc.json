@@ -361,5 +361,16 @@
         "description": "Vss 1, 2, 7 — 10 (as needed)"
       }
     }
+  ],
+  "occasionResources": [
+    {
+      "id": "lyric-ga-verse-ss-peter-paul-apostles-jun-29-mass-during-the-day-abc",
+      "type": "audio",
+      "label": "Lyric Gospel Acclamation Verse",
+      "filePath": "https://kzziuepuepdcnvtexvxn.supabase.co/storage/v1/object/public/song-resources/lyric-ga/ordinary-time-21-a_verse.mp3",
+      "source": "local",
+      "category": "gospel_acclamation",
+      "subcategory": "verse"
+    }
   ]
 }

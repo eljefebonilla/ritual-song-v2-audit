@@ -423,5 +423,15 @@
       }
     }
   ],
-  "occasionResources": []
+  "occasionResources": [
+    {
+      "id": "lyric-ga-verse-feast-the-exaltation-sep-14-of-the-holy-cross-abc",
+      "type": "audio",
+      "label": "Lyric Gospel Acclamation Verse",
+      "filePath": "https://kzziuepuepdcnvtexvxn.supabase.co/storage/v1/object/public/song-resources/lyric-ga/feast-the-exaltation-sep-14-of-the-holy-cross-abc_verse.mp3",
+      "source": "local",
+      "category": "gospel_acclamation",
+      "subcategory": "verse"
+    }
+  ]
 }

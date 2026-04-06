@@ -1,6 +1,6 @@
 {
   "id": "assumption-abc",
-  "name": "THE ASSUMPTION \u2014 During the Day [ABC]",
+  "name": "THE ASSUMPTION — During the Day [ABC]",
   "season": "ordinary",
   "seasonLabel": "Solemnities & Feasts",
   "year": "abc",
@@ -14,6 +14,25 @@
   "readings": [],
   "antiphons": [],
   "planningNotes": [],
-  "occasionResources": [],
+  "occasionResources": [
+    {
+      "id": "lyric-ga-verse-assumption-abc",
+      "type": "audio",
+      "label": "Lyric Gospel Acclamation Verse",
+      "filePath": "https://kzziuepuepdcnvtexvxn.supabase.co/storage/v1/object/public/song-resources/lyric-ga/assumption-abc_verse.mp3",
+      "source": "local",
+      "category": "gospel_acclamation",
+      "subcategory": "verse"
+    },
+    {
+      "id": "lyric-ga-verse-assumption-abc",
+      "type": "audio",
+      "label": "Lyric Gospel Acclamation Verse",
+      "filePath": "https://kzziuepuepdcnvtexvxn.supabase.co/storage/v1/object/public/song-resources/lyric-ga/assumption-abc_verse.mp3",
+      "source": "local",
+      "category": "gospel_acclamation",
+      "subcategory": "verse"
+    }
+  ],
   "musicPlans": []
 }

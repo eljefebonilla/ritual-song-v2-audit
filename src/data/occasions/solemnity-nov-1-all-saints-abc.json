@@ -44,6 +44,29 @@
     "Month of Remembrance",
     "NO OBLIGATION THIS YEAR"
   ],
-  "musicPlans": [],
-  "occasionResources": []
+  "musicPlans": [
+    {
+      "ensemble": "All Ensembles",
+      "ensembleId": "all-ensembles",
+      "responsorialPsalm": {
+        "psalm": "",
+        "youtubeUrl": "https://www.youtube.com/watch?v=r3Utu5jGMIs"
+      },
+      "gospelAcclamation": {
+        "title": "",
+        "youtubeUrl": "https://www.youtube.com/watch?v=Ko4lEU4qNAA"
+      }
+    }
+  ],
+  "occasionResources": [
+    {
+      "id": "lyric-ga-verse-solemnity-nov-1-all-saints-abc",
+      "type": "audio",
+      "label": "Lyric Gospel Acclamation Verse",
+      "filePath": "https://kzziuepuepdcnvtexvxn.supabase.co/storage/v1/object/public/song-resources/lyric-ga/solemnity-nov-1-all-saints-abc_verse.mp3",
+      "source": "local",
+      "category": "gospel_acclamation",
+      "subcategory": "verse"
+    }
+  ]
 }

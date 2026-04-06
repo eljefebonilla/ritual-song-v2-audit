@@ -2,6 +2,7 @@
 
 import type { GridCellData } from "@/lib/grid-types";
 import { useUser } from "@/lib/user-context";
+import InlinePlayButton from "@/components/ui/InlinePlayButton";
 
 interface GridCellProps {
   data: GridCellData;
@@ -95,40 +96,56 @@ export default function GridCell({
       } ${isDragOver ? "ring-2 ring-inset ring-amber-400" : ""}`}
       title={data.composer ? `${data.title} — ${data.composer}` : data.title}
     >
-      <p
-        className={`text-[11px] font-medium text-stone-800 leading-tight truncate ${
-          onDetail ? "hover:text-amber-700 hover:underline cursor-pointer" : ""
-        }`}
-        onClick={(e) => {
-          if (onDetail) {
-            e.stopPropagation();
-            onDetail();
-          }
-        }}
-      >
-        {data.title}
-      </p>
-      {data.composer && (
-        <p className="text-[10px] text-stone-400 leading-tight truncate">
-          {data.composer}
-        </p>
-      )}
-      {/* Hover actions — z-10 ensures buttons layer above the cell below */}
-      <div className="absolute right-1 top-1/2 -translate-y-1/2 z-10 hidden group-hover:flex items-center gap-0.5">
-        {hasAudio && onPlay && (
+      <div className="flex items-center gap-1">
+        {/* Play button — always visible */}
+        {hasAudio && onPlay ? (
           <button
             onClick={(e) => {
               e.stopPropagation();
               onPlay();
             }}
-            className="flex items-center justify-center w-5 h-5 rounded-full bg-stone-800/80 text-white hover:bg-stone-800 transition-colors"
+            className="shrink-0 flex items-center justify-center w-4 h-4 rounded-full bg-stone-800 transition-colors active:scale-95"
             title="Play"
+            style={{ boxShadow: "0 1px 3px rgba(0,0,0,0.2)" }}
           >
-            <svg width="8" height="8" viewBox="0 0 24 24" fill="currentColor">
-              <polygon points="5,3 19,12 5,21" />
+            <svg width="7" height="7" viewBox="0 0 24 24" fill="white" stroke="white" strokeWidth="2.5" strokeLinejoin="round">
+              <polygon points="6,3 20,12 6,21" />
             </svg>
           </button>
+        ) : (
+          <span
+            className="shrink-0 flex items-center justify-center w-4 h-4 rounded-full bg-stone-200 relative"
+            title="No audio"
+          >
+            <svg width="7" height="7" viewBox="0 0 24 24" fill="#a8a29e" stroke="#a8a29e" strokeWidth="2.5" strokeLinejoin="round">
+              <polygon points="6,3 20,12 6,21" />
+            </svg>
+            <svg className="absolute inset-0" width="16" height="16" viewBox="0 0 16 16">
+              <line x1="3" y1="13" x2="13" y2="3" stroke="#78716c" strokeWidth="1.5" strokeLinecap="round" />
+            </svg>
+          </span>
         )}
+        <p
+          className={`text-[11px] font-medium text-stone-800 leading-tight truncate ${
+            onDetail ? "hover:text-amber-700 hover:underline cursor-pointer" : ""
+          }`}
+          onClick={(e) => {
+            if (onDetail) {
+              e.stopPropagation();
+              onDetail();
+            }
+          }}
+        >
+          {data.title}
+        </p>
+      </div>
+      {data.composer && (
+        <p className="text-[10px] text-stone-400 leading-tight truncate pl-5">
+          {data.composer}
+        </p>
+      )}
+      {/* Hover actions — z-10 ensures buttons layer above the cell below */}
+      <div className="absolute right-1 top-1/2 -translate-y-1/2 z-10 hidden group-hover:flex items-center gap-0.5">
         {role === "admin" && onClear && !data.isEmpty && (
           <button
             onClick={(e) => {

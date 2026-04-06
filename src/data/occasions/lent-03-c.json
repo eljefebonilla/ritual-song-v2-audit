@@ -349,5 +349,15 @@
       }
     }
   ],
-  "occasionResources": []
+  "occasionResources": [
+    {
+      "id": "lyric-ga-verse-lent-03-c",
+      "type": "audio",
+      "label": "Lyric Gospel Acclamation Verse",
+      "filePath": "https://kzziuepuepdcnvtexvxn.supabase.co/storage/v1/object/public/song-resources/lyric-ga/lent-03-c_verse.mp3",
+      "source": "local",
+      "category": "gospel_acclamation",
+      "subcategory": "verse"
+    }
+  ]
 }

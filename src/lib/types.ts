@@ -104,11 +104,11 @@ export interface LiturgicalOccasion {
 
 export interface OccasionResource {
   id: string;
-  type: "sheet_music" | "audio";
+  type: "sheet_music" | "audio" | "youtube";
   label: string;
   filePath: string;
-  source: "local";
-  category: "antiphon" | "gospel_acclamation";
+  source: "local" | "youtube";
+  category: "antiphon" | "gospel_acclamation" | "vigil_psalm";
   subcategory?: "refrain" | "verse" | "combined";
 }
 

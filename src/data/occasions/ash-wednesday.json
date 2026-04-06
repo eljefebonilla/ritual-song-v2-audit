@@ -62,6 +62,29 @@
   "planningNotes": [
     "FEB - Black History Month"
   ],
-  "musicPlans": [],
-  "occasionResources": []
+  "musicPlans": [
+    {
+      "ensemble": "All Ensembles",
+      "ensembleId": "all-ensembles",
+      "responsorialPsalm": {
+        "psalm": "",
+        "youtubeUrl": "https://www.youtube.com/watch?v=6XEvKgBuTHg"
+      },
+      "gospelAcclamation": {
+        "title": "",
+        "youtubeUrl": "https://www.youtube.com/watch?v=bpWrlkLPVXs"
+      }
+    }
+  ],
+  "occasionResources": [
+    {
+      "id": "lyric-ga-verse-ash-wednesday",
+      "type": "audio",
+      "label": "Lyric Gospel Acclamation Verse",
+      "filePath": "https://kzziuepuepdcnvtexvxn.supabase.co/storage/v1/object/public/song-resources/lyric-ga/ash-wednesday_verse.mp3",
+      "source": "local",
+      "category": "gospel_acclamation",
+      "subcategory": "verse"
+    }
+  ]
 }

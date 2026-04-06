@@ -80,6 +80,38 @@
     }
   ],
   "planningNotes": [],
-  "musicPlans": [],
-  "occasionResources": []
+  "musicPlans": [
+    {
+      "ensemble": "All Ensembles",
+      "ensembleId": "all-ensembles",
+      "responsorialPsalm": {
+        "psalm": "",
+        "youtubeUrl": "https://www.youtube.com/watch?v=2l8CsCTjjBQ"
+      },
+      "gospelAcclamation": {
+        "title": "",
+        "youtubeUrl": "https://www.youtube.com/watch?v=z2KmVufMpbk"
+      }
+    }
+  ],
+  "occasionResources": [
+    {
+      "id": "lyric-ga-verse-solemnity-immaculate-conception",
+      "type": "audio",
+      "label": "Lyric Gospel Acclamation Verse",
+      "filePath": "https://kzziuepuepdcnvtexvxn.supabase.co/storage/v1/object/public/song-resources/lyric-ga/solemnity-immaculate-conception_verse.mp3",
+      "source": "local",
+      "category": "gospel_acclamation",
+      "subcategory": "verse"
+    },
+    {
+      "id": "lyric-ga-verse-solemnity-immaculate-conception",
+      "type": "audio",
+      "label": "Lyric Gospel Acclamation Verse",
+      "filePath": "https://kzziuepuepdcnvtexvxn.supabase.co/storage/v1/object/public/song-resources/lyric-ga/solemnity-immaculate-conception_verse.mp3",
+      "source": "local",
+      "category": "gospel_acclamation",
+      "subcategory": "verse"
+    }
+  ]
 }

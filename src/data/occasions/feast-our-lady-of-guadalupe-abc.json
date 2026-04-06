@@ -82,6 +82,19 @@
   "planningNotes": [
     "Not in 2027 and 2032 because it lands on a Sunday."
   ],
-  "musicPlans": [],
+  "musicPlans": [
+    {
+      "ensemble": "All Ensembles",
+      "ensembleId": "all-ensembles",
+      "responsorialPsalm": {
+        "psalm": "",
+        "youtubeUrl": "https://www.youtube.com/watch?v=gz9D2g9NPkI"
+      },
+      "gospelAcclamation": {
+        "title": "",
+        "youtubeUrl": "https://www.youtube.com/watch?v=k_e5S6MlHhY"
+      }
+    }
+  ],
   "occasionResources": []
 }

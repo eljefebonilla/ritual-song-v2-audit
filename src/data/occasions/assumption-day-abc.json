@@ -1,0 +1,32 @@
+{
+  "id": "assumption-day-abc",
+  "name": "The Assumption: Day of the Blessed Virgin Mary",
+  "year": "ABC",
+  "season": "solemnity",
+  "seasonLabel": "Solemnity",
+  "seasonOrder": 0,
+  "dates": [],
+  "lectionary": {
+    "number": "",
+    "gospelTitle": "",
+    "thematicTag": ""
+  },
+  "readings": [],
+  "antiphons": [],
+  "planningNotes": [],
+  "musicPlans": [
+    {
+      "ensemble": "All Ensembles",
+      "ensembleId": "all-ensembles",
+      "responsorialPsalm": {
+        "psalm": "",
+        "youtubeUrl": "https://www.youtube.com/watch?v=qYLHznuKwYY"
+      },
+      "gospelAcclamation": {
+        "title": "",
+        "youtubeUrl": "https://www.youtube.com/watch?v=3Ib07yy4le4"
+      }
+    }
+  ],
+  "occasionResources": []
+}

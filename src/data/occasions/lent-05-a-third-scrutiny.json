@@ -406,5 +406,15 @@
       }
     }
   ],
-  "occasionResources": []
+  "occasionResources": [
+    {
+      "id": "lyric-ga-verse-lent-05-a-third-scrutiny",
+      "type": "audio",
+      "label": "Lyric Gospel Acclamation Verse",
+      "filePath": "https://kzziuepuepdcnvtexvxn.supabase.co/storage/v1/object/public/song-resources/lyric-ga/lent-05-a-third-scrutiny_verse.mp3",
+      "source": "local",
+      "category": "gospel_acclamation",
+      "subcategory": "verse"
+    }
+  ]
 }

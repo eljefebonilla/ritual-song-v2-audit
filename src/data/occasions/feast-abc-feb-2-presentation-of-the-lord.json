@@ -421,5 +421,15 @@
       }
     }
   ],
-  "occasionResources": []
+  "occasionResources": [
+    {
+      "id": "lyric-ga-verse-feast-abc-feb-2-presentation-of-the-lord",
+      "type": "audio",
+      "label": "Lyric Gospel Acclamation Verse",
+      "filePath": "https://kzziuepuepdcnvtexvxn.supabase.co/storage/v1/object/public/song-resources/lyric-ga/feast-abc-feb-2-presentation-of-the-lord_verse.mp3",
+      "source": "local",
+      "category": "gospel_acclamation",
+      "subcategory": "verse"
+    }
+  ]
 }

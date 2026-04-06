@@ -40,6 +40,19 @@
   "readings": [],
   "antiphons": [],
   "planningNotes": [],
-  "musicPlans": [],
+  "musicPlans": [
+    {
+      "ensemble": "All Ensembles",
+      "ensembleId": "all-ensembles",
+      "responsorialPsalm": {
+        "psalm": "",
+        "youtubeUrl": "https://www.youtube.com/watch?v=Sl5OMe2gEHQ"
+      },
+      "gospelAcclamation": {
+        "title": "",
+        "youtubeUrl": "https://www.youtube.com/watch?v=AOFPxGKZUqc"
+      }
+    }
+  ],
   "occasionResources": []
 }

@@ -108,12 +108,14 @@
       },
       "responsorialPsalm": {
         "psalm": "Ps 104 Lord, send out your Spirit, and renew...",
-        "setting": "The Lyric Psalter • Tony Alonso & Marty Haugen"
+        "setting": "The Lyric Psalter • Tony Alonso & Marty Haugen",
+        "youtubeUrl": "https://www.youtube.com/watch?v=rK399sXaOuw"
       },
       "gospelAcclamation": {
         "title": "Pentecost Sequence (Archer)",
         "composer": "The Lyric Gospel Acclamations • Tony Alonso",
-        "verse": "Come, Holy Spirit, fill the hearts of your faithful\nand kindle in them the fire of your love."
+        "verse": "Come, Holy Spirit, fill the hearts of your faithful\nand kindle in them the fire of your love.",
+        "youtubeUrl": "https://www.youtube.com/watch?v=8JdBZV0xQms"
       },
       "offertory": {
         "title": "Send out Your Spirit",
@@ -156,5 +158,46 @@
       }
     }
   ],
-  "occasionResources": []
+  "occasionResources": [
+    {
+      "id": "pv-psalm-b0u7sqBi",
+      "type": "youtube",
+      "label": "Spirit & Psalm 2026 - After 1st Reading (Gen 11)",
+      "filePath": "https://www.youtube.com/watch?v=b0u7sqBizjo",
+      "source": "youtube",
+      "category": "vigil_psalm"
+    },
+    {
+      "id": "pv-psalm-uXO7lWHn",
+      "type": "youtube",
+      "label": "Spirit & Psalm 2026 - After 2nd Reading (Ex 19)",
+      "filePath": "https://www.youtube.com/watch?v=uXO7lWHn8bU",
+      "source": "youtube",
+      "category": "vigil_psalm"
+    },
+    {
+      "id": "pv-psalm-icHuls-W",
+      "type": "youtube",
+      "label": "Spirit & Psalm 2026 - After 2nd Reading, 2nd option",
+      "filePath": "https://www.youtube.com/watch?v=icHuls-W8tU",
+      "source": "youtube",
+      "category": "vigil_psalm"
+    },
+    {
+      "id": "pv-psalm-Ri3e6Hf2",
+      "type": "youtube",
+      "label": "Spirit & Psalm 2026 - After 3rd Reading (Ez 37)",
+      "filePath": "https://www.youtube.com/watch?v=Ri3e6Hf2Vd4",
+      "source": "youtube",
+      "category": "vigil_psalm"
+    },
+    {
+      "id": "pv-psalm-xj_hHIMB",
+      "type": "youtube",
+      "label": "Spirit & Psalm 2026 - After 4th Reading (Joel 3)",
+      "filePath": "https://www.youtube.com/watch?v=xj_hHIMBXvo",
+      "source": "youtube",
+      "category": "vigil_psalm"
+    }
+  ]
 }

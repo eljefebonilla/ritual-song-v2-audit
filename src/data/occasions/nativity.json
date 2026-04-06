@@ -42,6 +42,92 @@
   "planningNotes": [
     "Year C — Dec 25, 2025 (Thu)"
   ],
-  "musicPlans": [],
-  "occasionResources": []
+  "musicPlans": [
+    {
+      "ensemble": "Nativity: Vigil Mass",
+      "ensembleId": "nativity-vigil",
+      "responsorialPsalm": {
+        "psalm": "",
+        "youtubeUrl": "https://www.youtube.com/watch?v=Y_JwlKHVbQ4"
+      },
+      "gospelAcclamation": {
+        "title": "",
+        "youtubeUrl": "https://www.youtube.com/watch?v=4iSye_mG2Og"
+      }
+    },
+    {
+      "ensemble": "Nativity: Mass at Night",
+      "ensembleId": "nativity-night",
+      "responsorialPsalm": {
+        "psalm": "",
+        "youtubeUrl": "https://www.youtube.com/watch?v=zERgew3ZDwQ"
+      },
+      "gospelAcclamation": {
+        "title": "",
+        "youtubeUrl": "https://www.youtube.com/watch?v=3D0cyNq_X94"
+      }
+    },
+    {
+      "ensemble": "Nativity: Mass at Dawn",
+      "ensembleId": "nativity-dawn",
+      "responsorialPsalm": {
+        "psalm": "",
+        "youtubeUrl": "https://www.youtube.com/watch?v=irCSpKpHy6Q"
+      },
+      "gospelAcclamation": {
+        "title": "",
+        "youtubeUrl": "https://www.youtube.com/watch?v=1ETMah5OhgU"
+      }
+    },
+    {
+      "ensemble": "Nativity: Mass during the Day",
+      "ensembleId": "nativity-day",
+      "responsorialPsalm": {
+        "psalm": "",
+        "youtubeUrl": "https://www.youtube.com/watch?v=n6iYHOkJOX8"
+      },
+      "gospelAcclamation": {
+        "title": "",
+        "youtubeUrl": "https://www.youtube.com/watch?v=pwbk3qEsho0"
+      }
+    }
+  ],
+  "occasionResources": [
+    {
+      "id": "lyric-ga-verse-nativity",
+      "type": "audio",
+      "label": "Lyric Gospel Acclamation Verse",
+      "filePath": "https://kzziuepuepdcnvtexvxn.supabase.co/storage/v1/object/public/song-resources/lyric-ga/nativity_verse.mp3",
+      "source": "local",
+      "category": "gospel_acclamation",
+      "subcategory": "verse"
+    },
+    {
+      "id": "lyric-ga-verse-nativity",
+      "type": "audio",
+      "label": "Lyric Gospel Acclamation Verse",
+      "filePath": "https://kzziuepuepdcnvtexvxn.supabase.co/storage/v1/object/public/song-resources/lyric-ga/nativity_verse.mp3",
+      "source": "local",
+      "category": "gospel_acclamation",
+      "subcategory": "verse"
+    },
+    {
+      "id": "lyric-ga-verse-nativity",
+      "type": "audio",
+      "label": "Lyric Gospel Acclamation Verse",
+      "filePath": "https://kzziuepuepdcnvtexvxn.supabase.co/storage/v1/object/public/song-resources/lyric-ga/nativity_verse.mp3",
+      "source": "local",
+      "category": "gospel_acclamation",
+      "subcategory": "verse"
+    },
+    {
+      "id": "lyric-ga-verse-nativity",
+      "type": "audio",
+      "label": "Lyric Gospel Acclamation Verse",
+      "filePath": "https://kzziuepuepdcnvtexvxn.supabase.co/storage/v1/object/public/song-resources/lyric-ga/nativity_verse.mp3",
+      "source": "local",
+      "category": "gospel_acclamation",
+      "subcategory": "verse"
+    }
+  ]
 }

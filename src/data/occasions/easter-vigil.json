@@ -131,13 +131,15 @@
       },
       "responsorialPsalm": {
         "psalm": "Ps 118 This is the day the Lord has made",
-        "setting": "Refrain from Mass of New Beginnings — Clifford Petty, verses adapted by David Lockwood • BPM 138 — Choral Dir: Merrick — Track 06a"
+        "setting": "Refrain from Mass of New Beginnings — Clifford Petty, verses adapted by David Lockwood • BPM 138 — Choral Dir: Merrick — Track 06a",
+        "youtubeUrl": "https://www.youtube.com/watch?v=GblFET_y-iM"
       },
       "gospelAcclamation": {
         "title": "Gospel Acclamation from Mass of New Beginnings",
         "composer": "Clifford Petty",
         "description": "BPM 138 — Choral Dir: Merrick — Track 06a — Reprised after Gospel",
-        "verse": "Alleluia, alleluia!"
+        "verse": "Alleluia, alleluia!",
+        "youtubeUrl": "https://www.youtube.com/watch?v=GblFET_y-iM"
       },
       "offertory": {
         "title": "He Is Not Here",
@@ -180,5 +182,86 @@
       }
     }
   ],
-  "occasionResources": []
+  "occasionResources": [
+    {
+      "id": "ev-psalm-0NwPq24t",
+      "type": "youtube",
+      "label": "Spirit & Psalm 2026 - After 1st Reading (Gen 1)",
+      "filePath": "https://www.youtube.com/watch?v=0NwPq24t7xs",
+      "source": "youtube",
+      "category": "vigil_psalm"
+    },
+    {
+      "id": "ev-psalm-w_pSP0wJ",
+      "type": "youtube",
+      "label": "Spirit & Psalm 2026 - After 1st Reading, 2nd option",
+      "filePath": "https://www.youtube.com/watch?v=w_pSP0wJSvE",
+      "source": "youtube",
+      "category": "vigil_psalm"
+    },
+    {
+      "id": "ev-psalm-TuuXttby",
+      "type": "youtube",
+      "label": "Spirit & Psalm 2026 - After 2nd Reading (Gen 22)",
+      "filePath": "https://www.youtube.com/watch?v=TuuXttbyRqI",
+      "source": "youtube",
+      "category": "vigil_psalm"
+    },
+    {
+      "id": "ev-psalm-60MqROJb",
+      "type": "youtube",
+      "label": "Spirit & Psalm 2026 - After 3rd Reading (Ex 14)",
+      "filePath": "https://www.youtube.com/watch?v=60MqROJbmkw",
+      "source": "youtube",
+      "category": "vigil_psalm"
+    },
+    {
+      "id": "ev-psalm-KpWF6dn0",
+      "type": "youtube",
+      "label": "Spirit & Psalm 2026 - After 4th Reading (Is 54)",
+      "filePath": "https://www.youtube.com/watch?v=KpWF6dn0IV4",
+      "source": "youtube",
+      "category": "vigil_psalm"
+    },
+    {
+      "id": "ev-psalm-0YQhXHOn",
+      "type": "youtube",
+      "label": "Spirit & Psalm 2026 - After 5th Reading (Is 55)",
+      "filePath": "https://www.youtube.com/watch?v=0YQhXHOnEBs",
+      "source": "youtube",
+      "category": "vigil_psalm"
+    },
+    {
+      "id": "ev-psalm-0-8SiMMO",
+      "type": "youtube",
+      "label": "Spirit & Psalm 2026 - After 6th Reading (Bar 3)",
+      "filePath": "https://www.youtube.com/watch?v=0-8SiMMO9MY",
+      "source": "youtube",
+      "category": "vigil_psalm"
+    },
+    {
+      "id": "ev-psalm-ZckXGyoM",
+      "type": "youtube",
+      "label": "Spirit & Psalm 2026 - After 7th Reading - Baptismal",
+      "filePath": "https://www.youtube.com/watch?v=ZckXGyoMlOw",
+      "source": "youtube",
+      "category": "vigil_psalm"
+    },
+    {
+      "id": "ev-psalm-4tqXjwkw",
+      "type": "youtube",
+      "label": "Spirit & Psalm 2026 - After 7th Reading, 2nd option",
+      "filePath": "https://www.youtube.com/watch?v=4tqXjwkwrpI",
+      "source": "youtube",
+      "category": "vigil_psalm"
+    },
+    {
+      "id": "ev-psalm-3zTZS2rp",
+      "type": "youtube",
+      "label": "Spirit & Psalm 2026 - After 7th Reading, 3rd option",
+      "filePath": "https://www.youtube.com/watch?v=3zTZS2rpdEI",
+      "source": "youtube",
+      "category": "vigil_psalm"
+    }
+  ]
 }

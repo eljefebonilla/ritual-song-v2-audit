@@ -1,6 +1,6 @@
 {
   "id": "assumption-vigil-abc",
-  "name": "THE ASSUMPTION \u2014 Vigil Mass [ABC]",
+  "name": "THE ASSUMPTION — Vigil Mass [ABC]",
   "season": "ordinary",
   "seasonLabel": "Solemnities & Feasts",
   "year": "abc",
@@ -15,5 +15,18 @@
   "antiphons": [],
   "planningNotes": [],
   "occasionResources": [],
-  "musicPlans": []
+  "musicPlans": [
+    {
+      "ensemble": "All Ensembles",
+      "ensembleId": "all-ensembles",
+      "responsorialPsalm": {
+        "psalm": "",
+        "youtubeUrl": "https://www.youtube.com/watch?v=hppRkbQdeg4"
+      },
+      "gospelAcclamation": {
+        "title": "",
+        "youtubeUrl": "https://www.youtube.com/watch?v=jlKGDer5xi8"
+      }
+    }
+  ]
 }
