@@ -147,6 +147,8 @@ export async function POST(
     );
   }
 
+  const supabase = createAdminClient();
+
   // 1. Build layered config (single-tenant for now, multi-parish ready)
   const config = LayeredConfig.forContext({ maxTokens: 128_000 });
 
@@ -184,7 +186,6 @@ export async function POST(
   }> = [];
 
   try {
-    const supabase = createAdminClient();
     const { data } = await supabase
       .from("song_usage")
       .select("song_id, last_used_date, next_scheduled_date, times_used_this_year");
@@ -265,9 +266,40 @@ export async function POST(
       },
     });
 
+    // Fetch lyrics for the explained song
+    let lyricsVerses: { label: string; text: string }[] | null = null;
+    let matchedVerseLabel: string | null = null;
+    try {
+      const { data: meta } = await supabase
+        .from("song_metadata")
+        .select("lyrics_structured")
+        .eq("song_id", explainSongId)
+        .maybeSingle();
+      if (meta?.lyrics_structured) {
+        const parsed = meta.lyrics_structured as { verses: { label: string; text: string }[] };
+        lyricsVerses = parsed.verses || null;
+      }
+      // Find the matched verse label from scripture mappings
+      const scriptureMatch = npmScriptureMap[explainSongId]?.[0];
+      if (scriptureMatch?.matchedVerseLabel) {
+        matchedVerseLabel = scriptureMatch.matchedVerseLabel;
+      }
+    } catch {
+      // Lyrics not critical, proceed without
+    }
+
+    // Extract reading keywords for highlighting
+    const readingKeywords = (occasion?.readings || [])
+      .flatMap((r) => r.summary.toLowerCase().split(/\s+/))
+      .filter((w) => w.length > 4)
+      .slice(0, 20);
+
     return NextResponse.json({
       recommendations: scoredSongs,
       explanation: explainResult.error ? null : explainResult.output,
+      lyrics: lyricsVerses,
+      matchedVerseLabel,
+      readingKeywords: [...new Set(readingKeywords)],
     });
   }
 

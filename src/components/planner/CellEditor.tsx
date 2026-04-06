@@ -22,12 +22,20 @@ interface ScoredRec {
   weeksUntilNext: number | null;
 }
 
+interface LyricsVerse {
+  label: string;
+  text: string;
+}
+
 interface ExplainResult {
   song: { title: string; composer?: string };
   totalScore: number;
   breakdown: { category: string; detail: string; explanation?: string; points: number }[];
   weeksSinceUsed: number | null;
   weeksUntilNext: number | null;
+  lyrics?: LyricsVerse[] | null;
+  matchedVerseLabel?: string | null;
+  readingKeywords?: string[];
 }
 
 // Map grid row keys to recommendation position names
@@ -174,7 +182,13 @@ export default function CellEditor({
         body: JSON.stringify({ position, explain: rec.songId }),
       });
       const data = await res.json();
-      setExplainSong(data.explanation || null);
+      const explanation = data.explanation || null;
+      if (explanation) {
+        explanation.lyrics = data.lyrics || null;
+        explanation.matchedVerseLabel = data.matchedVerseLabel || null;
+        explanation.readingKeywords = data.readingKeywords || [];
+      }
+      setExplainSong(explanation);
     } catch { setExplainSong(null); }
     finally { setExplainLoading(false); }
   };
@@ -194,6 +208,18 @@ export default function CellEditor({
   const left = Math.min(anchorRect.left, window.innerWidth - 340);
 
   // Reason type to label
+  // Highlight reading keywords within verse text
+  const highlightKeywords = (text: string, keywords: string[]) => {
+    if (!keywords || keywords.length === 0) return text;
+    const pattern = new RegExp(`\\b(${keywords.map(k => k.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")).join("|")})`, "gi");
+    const parts = text.split(pattern);
+    return parts.map((part, i) =>
+      pattern.test(part)
+        ? <mark key={i} className="bg-parish-gold/20 text-stone-800 rounded-sm px-0.5">{part}</mark>
+        : part
+    );
+  };
+
   const reasonLabel = (type: string, detail?: string) => {
     if (type === "scripture_match" && detail) {
       // Extract reading type from detail like "Gospel (Mt 24:37-44)" or "1st Reading"
@@ -411,6 +437,38 @@ export default function CellEditor({
                               {explainSong.weeksUntilNext !== null && (
                                 <span>Next in {explainSong.weeksUntilNext}w</span>
                               )}
+                            </div>
+                          )}
+                          {/* Lyrics with reading highlights */}
+                          {explainSong.lyrics && explainSong.lyrics.length > 0 && (
+                            <div className="pt-2 border-t border-stone-100 space-y-2">
+                              <p className="text-[10px] font-semibold text-stone-500 uppercase tracking-wider">Lyrics</p>
+                              <div className="space-y-1.5 max-h-[180px] overflow-y-auto">
+                                {explainSong.lyrics.map((verse, vi) => {
+                                  const isMatched = explainSong.matchedVerseLabel === verse.label;
+                                  const verseLabel = verse.label === "Refrain" ? "Ref." : `${verse.label}.`;
+                                  return (
+                                    <div
+                                      key={vi}
+                                      className={`text-[9px] leading-relaxed rounded-md px-2 py-1.5 ${
+                                        isMatched
+                                          ? "bg-blue-50 border border-blue-100"
+                                          : "bg-stone-25"
+                                      }`}
+                                    >
+                                      <span className={`font-semibold mr-1 ${isMatched ? "text-blue-600" : "text-stone-400"}`}>
+                                        {verseLabel}
+                                      </span>
+                                      <span className={isMatched ? "text-blue-900" : "text-stone-600"}>
+                                        {highlightKeywords(
+                                          verse.text.replace(/\n/g, " / "),
+                                          explainSong.readingKeywords || []
+                                        )}
+                                      </span>
+                                    </div>
+                                  );
+                                })}
+                              </div>
                             </div>
                           )}
                         </div>
