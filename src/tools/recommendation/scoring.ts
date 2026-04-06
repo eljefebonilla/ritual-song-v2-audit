@@ -52,6 +52,18 @@ const POSITION_FUNCTIONS: Record<string, string[]> = {
 };
 
 /**
+ * Which antiphon type is most relevant for each position.
+ * Used for position-aware scripture weighting (double bonus when matched).
+ */
+const POSITION_ANTIPHON: Record<string, string> = {
+  gathering: "entrance_antiphon",
+  communion: "communion_antiphon",
+  communion1: "communion_antiphon",
+  communion2: "communion_antiphon",
+  communion3: "communion_antiphon",
+};
+
+/**
  * Category gating: which song categories are eligible for each position.
  * Prevents mass parts from appearing in communion suggestions, etc.
  */
@@ -157,6 +169,12 @@ const SEASONAL_TITLE_PATTERNS: Array<{ pattern: RegExp; season: string }> = [
   { pattern: /\badvent\b/i, season: "advent" },
   { pattern: /\blenten\b/i, season: "lent" },
   { pattern: /\bash wednesday\b/i, season: "lent" },
+  { pattern: /\beaster\b/i, season: "easter" },
+  { pattern: /\bresurrection\b/i, season: "easter" },
+  { pattern: /\bchrist.*(risen|arisen)\b/i, season: "easter" },
+  { pattern: /\brisen.*today\b/i, season: "easter" },
+  { pattern: /\balleluia.*risen\b/i, season: "easter" },
+  { pattern: /\bhe is risen\b/i, season: "easter" },
 ];
 
 function seasonFromOccasionId(occasionId: string): string | null {
@@ -176,16 +194,18 @@ function getSongSeasons(occasions: string[]): Set<string> {
   return seasons;
 }
 
+function getCanonicalSeason(seasonStr: string): string {
+  const lower = seasonStr.toLowerCase();
+  if (lower.includes("advent")) return "advent";
+  if (lower.includes("christmas")) return "christmas";
+  if (lower.includes("lent")) return "lent";
+  if (lower.includes("easter")) return "easter";
+  return "ordinary";
+}
+
 function isSeasonConflict(songSeasons: Set<string>, requestSeason: string): boolean {
   if (songSeasons.size === 0) return false;
-  const targetSeason = requestSeason.toLowerCase();
-  // Map the request season string to our canonical names
-  let canonical = "ordinary";
-  if (targetSeason.includes("advent")) canonical = "advent";
-  else if (targetSeason.includes("christmas")) canonical = "christmas";
-  else if (targetSeason.includes("lent")) canonical = "lent";
-  else if (targetSeason.includes("easter")) canonical = "easter";
-  // Conflict if song is ONLY tagged for different major seasons (not ordinary)
+  const canonical = getCanonicalSeason(requestSeason);
   const majorSeasons = new Set([...songSeasons].filter(s => s !== "ordinary"));
   if (majorSeasons.size === 0) return false;
   return !majorSeasons.has(canonical);
@@ -214,8 +234,13 @@ export function scoreSong(
 
   // NPM scripture match (from scripture_song_mappings table)
   if (npmScripture && npmScripture.length > 0) {
-    // Prefer the match that has a verse excerpt
-    const best = npmScripture.find((m) => m.matchedVerseExcerpt) || npmScripture[0];
+    // Prefer: 1) position-matching antiphon with verse excerpt, 2) any with verse excerpt, 3) first
+    const positionAntiphon = POSITION_ANTIPHON[request.position];
+    const best =
+      npmScripture.find((m) => m.readingType === positionAntiphon && m.matchedVerseExcerpt) ||
+      npmScripture.find((m) => m.readingType === positionAntiphon) ||
+      npmScripture.find((m) => m.matchedVerseExcerpt) ||
+      npmScripture[0];
     const label = formatReadingType(best.readingType);
     const detail = best.readingReference
       ? `${label} (${best.readingReference})`
@@ -226,7 +251,9 @@ export function scoreSong(
     const verseNote = verseTag && best.matchedVerseExcerpt
       ? ` — ${verseTag}: "${best.matchedVerseExcerpt}"`
       : "";
-    const pts = weights.scriptureMatch;
+    // Position-aware weighting: double if the reading type matches the slot's antiphon
+    const antiphonBoost = (positionAntiphon && best.readingType === positionAntiphon) ? 2 : 1;
+    const pts = weights.scriptureMatch * antiphonBoost;
     total += pts;
     reasons.push({
       type: "scripture_match",
@@ -269,7 +296,8 @@ export function scoreSong(
       .join(" ");
     let topicHits = 0;
     for (const topic of song.topics) {
-      if (readingText.includes(topic.toLowerCase()) && topicHits < 3) {
+      const topicPattern = new RegExp(`\\b${topic.toLowerCase().replace(/[.*+?^${}()|[\]\\]/g, "\\$&")}\\b`);
+      if (topicPattern.test(readingText) && topicHits < 3) {
         const pts = weights.topicMatch;
         total += pts;
         topicHits++;
@@ -283,26 +311,15 @@ export function scoreSong(
     }
   }
 
-  // Season match (from liturgicalUse tags or derived from occasion tags)
+  // Season match (derived from occasion tags)
   let seasonMatched = false;
-  if (song.liturgicalUse && song.liturgicalUse.length > 0) {
-    const seasonLower = request.season.toLowerCase();
-    if (song.liturgicalUse.some((u) => u.toLowerCase().includes(seasonLower))) {
-      seasonMatched = true;
-    }
-  }
-  if (!seasonMatched && song.occasions && song.occasions.length > 0) {
+  if (song.occasions && song.occasions.length > 0) {
     const songSeasons = getSongSeasons(song.occasions);
-    const targetSeason = request.season.toLowerCase();
-    let canonical = "ordinary";
-    if (targetSeason.includes("advent")) canonical = "advent";
-    else if (targetSeason.includes("christmas")) canonical = "christmas";
-    else if (targetSeason.includes("lent")) canonical = "lent";
-    else if (targetSeason.includes("easter")) canonical = "easter";
+    const canonical = getCanonicalSeason(request.season);
     if (songSeasons.has(canonical)) seasonMatched = true;
-    // Extra boost: song is tagged for this exact occasion
+    // Exact occasion bonus (capped at seasonMatch, not double)
     if (song.occasions.includes(request.occasionId)) {
-      const pts = weights.seasonMatch * 2;
+      const pts = weights.seasonMatch;
       total += pts;
       reasons.push({
         type: "season_match",
@@ -324,11 +341,12 @@ export function scoreSong(
   }
 
   // Function match: does this song's purpose match the slot?
-  if (song.functions && song.functions.length > 0) {
-    const positionFns = POSITION_FUNCTIONS[request.position] || [];
+  const positionFns = POSITION_FUNCTIONS[request.position] || [];
+  if (song.functions && song.functions.length > 0 && positionFns.length > 0) {
     const songFns = song.functions.map((f) => f.toLowerCase());
+    let matched = false;
     for (const fn of positionFns) {
-      if (songFns.some((sf) => sf.includes(fn) || fn.includes(sf))) {
+      if (songFns.includes(fn)) {
         const pts = weights.functionMatch;
         total += pts;
         reasons.push({
@@ -337,8 +355,20 @@ export function scoreSong(
           explanation: buildExplanation("function_match", fn, request.position),
           points: pts,
         });
+        matched = true;
         break;
       }
+    }
+    // Penalty: song IS tagged with a function but it's the WRONG one for this slot
+    if (!matched) {
+      const penalty = Math.round(weights.functionMatch * 0.6);
+      total -= penalty;
+      reasons.push({
+        type: "function_match",
+        detail: `Tagged as ${song.functions[0]}, not ${positionFns[0]}`,
+        explanation: `This song is written for a different moment in the liturgy.`,
+        points: -penalty,
+      });
     }
   }
 
@@ -368,6 +398,11 @@ export function scoreSong(
       explanation: buildExplanation("familiarity", `used ${usage.timesUsedThisYear} times this year`, request.position),
       points: pts,
     });
+  }
+
+  // Catalog baseline: ensure untagged songs aren't completely invisible
+  if (total === 0 && reasons.length === 0) {
+    total = 3;
   }
 
   return {
