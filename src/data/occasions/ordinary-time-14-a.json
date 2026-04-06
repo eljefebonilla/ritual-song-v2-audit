@@ -102,11 +102,13 @@
       },
       "responsorialPsalm": {
         "psalm": "Ps 145 I will praise your name for ever, my king and my God.",
-        "setting": "The Lyric Psalter • Tony Alonso & Marty Haugen"
+        "setting": "The Lyric Psalter • Tony Alonso & Marty Haugen",
+        "youtubeUrl": "https://www.youtube.com/watch?v=zwlBFAGB2KY"
       },
       "gospelAcclamation": {
         "title": "Alleluia (Mass of Joy & Peace)",
-        "composer": "Song Title"
+        "composer": "Song Title",
+        "youtubeUrl": "https://www.youtube.com/watch?v=ACO28VBSFLo"
       },
       "lordsPrayer": {
         "title": "Chanted Our Father (Snow)",
@@ -162,11 +164,13 @@
       },
       "responsorialPsalm": {
         "psalm": "Ps 145 I will praise your name for ever...",
-        "setting": "Spirit & Psalm • Composer/s"
+        "setting": "Spirit & Psalm • Composer/s",
+        "youtubeUrl": "https://www.youtube.com/watch?v=zwlBFAGB2KY"
       },
       "gospelAcclamation": {
         "title": "Setting from Mass of ???",
-        "composer": "Song Title"
+        "composer": "Song Title",
+        "youtubeUrl": "https://www.youtube.com/watch?v=ACO28VBSFLo"
       },
       "eucharisticAcclamations": {
         "massSettingName": "Mass of Restoration",
@@ -212,7 +216,8 @@
       },
       "gospelAcclamation": {
         "title": "Setting from Mass of ???",
-        "verse": "Song Title"
+        "verse": "Song Title",
+        "youtubeUrl": "https://www.youtube.com/watch?v=ACO28VBSFLo"
       },
       "eucharisticAcclamations": {
         "massSettingName": "Mass of Restoration • Joshua Blakesley"

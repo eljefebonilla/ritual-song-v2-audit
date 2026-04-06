@@ -57,11 +57,13 @@
       },
       "responsorialPsalm": {
         "psalm": "Ps 145 I will praise your name for ever...",
-        "setting": "Collection • Composer"
+        "setting": "Collection • Composer",
+        "youtubeUrl": "https://www.youtube.com/watch?v=vOBHwwdaM-A"
       },
       "gospelAcclamation": {
         "title": "Hallelujah",
-        "composer": "Leonard Cohen adapt. for Liturgy"
+        "composer": "Leonard Cohen adapt. for Liturgy",
+        "youtubeUrl": "https://www.youtube.com/watch?v=G66dHnwcBJI"
       },
       "offertory": {
         "title": "Give Thanks With A Grateful Heart",

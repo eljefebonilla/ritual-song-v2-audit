@@ -102,12 +102,14 @@
       },
       "responsorialPsalm": {
         "psalm": "Ps 89 For ever I will sing the goodness of the Lord.",
-        "setting": "The Lyric Psalter • Tony Alonso & Marty Haugen"
+        "setting": "The Lyric Psalter • Tony Alonso & Marty Haugen",
+        "youtubeUrl": "https://www.youtube.com/watch?v=daATIYbGpl8"
       },
       "gospelAcclamation": {
         "title": "Alleluia (Mass of Joy & Peace)",
         "composer": "Song Title",
-        "verse": "You are a chosen race, a royal priesthood, a holy nation;\nannounce the praises of him who called you out of darkness into his wonderful light."
+        "verse": "You are a chosen race, a royal priesthood, a holy nation;\nannounce the praises of him who called you out of darkness into his wonderful light.",
+        "youtubeUrl": "https://www.youtube.com/watch?v=Z8n9V-Hwf_s"
       },
       "lordsPrayer": {
         "title": "Chanted Our Father (Snow)",
@@ -156,7 +158,8 @@
       },
       "gospelAcclamation": {
         "title": "Setting from Mass of ???",
-        "composer": "Song Title"
+        "composer": "Song Title",
+        "youtubeUrl": "https://www.youtube.com/watch?v=Z8n9V-Hwf_s"
       },
       "eucharisticAcclamations": {
         "massSettingName": "Mass of Restoration",
@@ -202,7 +205,8 @@
       },
       "gospelAcclamation": {
         "title": "Setting from Mass of ???",
-        "verse": "Song Title"
+        "verse": "Song Title",
+        "youtubeUrl": "https://www.youtube.com/watch?v=Z8n9V-Hwf_s"
       },
       "eucharisticAcclamations": {
         "massSettingName": "Mass of ? • Composer"

@@ -110,7 +110,8 @@
       "gospelAcclamation": {
         "title": "Pentecost Sequence",
         "composer": "Refrain by Leonard Cohen • Adapted for Liturgy",
-        "verse": "Sequence music by Ed Archer"
+        "verse": "Sequence music by Ed Archer",
+        "youtubeUrl": "https://www.youtube.com/watch?v=FwNyPirVJ_M"
       },
       "eucharisticAcclamations": {
         "massSettingName": "Mass of Glory",
@@ -144,12 +145,14 @@
       },
       "responsorialPsalm": {
         "psalm": "Ps 104 Lord, send out your Spirit...",
-        "setting": "Spirit & Psalm • Steve Angrisano"
+        "setting": "Spirit & Psalm • Steve Angrisano",
+        "youtubeUrl": "https://www.youtube.com/watch?v=rK399sXaOuw"
       },
       "gospelAcclamation": {
         "title": "Pentecost Sequence",
         "composer": "Sequence music by Ed Archer",
-        "verse": "Refrain by Leonard Cohen • Adapted for Liturgy"
+        "verse": "Refrain by Leonard Cohen • Adapted for Liturgy",
+        "youtubeUrl": "https://www.youtube.com/watch?v=FwNyPirVJ_M"
       },
       "eucharisticAcclamations": {
         "massSettingName": "Mass of Glory",
@@ -179,7 +182,8 @@
       },
       "gospelAcclamation": {
         "title": "Pentecost Sequence",
-        "composer": "Sequence music by Ed Archer"
+        "composer": "Sequence music by Ed Archer",
+        "youtubeUrl": "https://www.youtube.com/watch?v=FwNyPirVJ_M"
       },
       "eucharisticAcclamations": {
         "massSettingName": "Mass of Joy & Peace",
@@ -212,11 +216,13 @@
       },
       "responsorialPsalm": {
         "psalm": "Ps 104 Lord, send out your Spirit...",
-        "setting": "Spirit & Psalm • Steve Angrisano"
+        "setting": "Spirit & Psalm • Steve Angrisano",
+        "youtubeUrl": "https://www.youtube.com/watch?v=rK399sXaOuw"
       },
       "gospelAcclamation": {
         "title": "Pentecost Sequence",
-        "verse": "Sequence music by Ed Archer"
+        "verse": "Sequence music by Ed Archer",
+        "youtubeUrl": "https://www.youtube.com/watch?v=FwNyPirVJ_M"
       },
       "eucharisticAcclamations": {
         "massSettingName": "Mass of Restoration",

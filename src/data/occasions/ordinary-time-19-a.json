@@ -102,7 +102,8 @@
       },
       "gospelAcclamation": {
         "title": "Alleluia (Mass of Joy & Peace)",
-        "composer": "Song Title"
+        "composer": "Song Title",
+        "youtubeUrl": "https://www.youtube.com/watch?v=e9rKmSPGhYc"
       },
       "lordsPrayer": {
         "title": "Chanted Our Father (Snow)",
@@ -151,7 +152,8 @@
       },
       "gospelAcclamation": {
         "title": "Setting from Mass of ???",
-        "composer": "Song Title"
+        "composer": "Song Title",
+        "youtubeUrl": "https://www.youtube.com/watch?v=e9rKmSPGhYc"
       },
       "eucharisticAcclamations": {
         "massSettingName": "Mass of Restoration",
@@ -203,7 +205,8 @@
       },
       "gospelAcclamation": {
         "title": "Setting from Mass of ???",
-        "verse": "Song Title"
+        "verse": "Song Title",
+        "youtubeUrl": "https://www.youtube.com/watch?v=e9rKmSPGhYc"
       },
       "eucharisticAcclamations": {
         "massSettingName": "Mass of Restoration • Joshua Blakesley"

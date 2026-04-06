@@ -63,12 +63,14 @@
       },
       "responsorialPsalm": {
         "psalm": "Ps 118 This is the day the Lord has made...",
-        "setting": "Bobby Fisher"
+        "setting": "Bobby Fisher",
+        "youtubeUrl": "https://www.youtube.com/watch?v=jsG4Serb310"
       },
       "gospelAcclamation": {
         "title": "Halle, Halle, Halle",
         "composer": "Marty Haugen",
-        "verse": "Christ, our paschal lamb, has been sacrificed; let us then feast with joy in the Lord."
+        "verse": "Christ, our paschal lamb, has been sacrificed; let us then feast with joy in the Lord.",
+        "youtubeUrl": "https://www.youtube.com/watch?v=Ni9Q3zq2r9M"
       },
       "offertory": {
         "title": "Hallelujah Is Our Song",
@@ -87,9 +89,18 @@
         "composer": "Bob Hurd • Arranged by Dan Houze"
       },
       "communionSongs": [
-        { "title": "Remembrance", "composer": "Hillsong" },
-        { "title": "I Am the Bread of Life", "composer": "Tom Kaczmarek" },
-        { "title": "In Christ Alone", "composer": "Keith Getty & Stuart Townend • Arranged by Micah Jones" }
+        {
+          "title": "Remembrance",
+          "composer": "Hillsong"
+        },
+        {
+          "title": "I Am the Bread of Life",
+          "composer": "Tom Kaczmarek"
+        },
+        {
+          "title": "In Christ Alone",
+          "composer": "Keith Getty & Stuart Townend • Arranged by Micah Jones"
+        }
       ],
       "sending": {
         "title": "Oh Happy Day",
@@ -116,12 +127,14 @@
       },
       "responsorialPsalm": {
         "psalm": "Ps 118 This is the day the Lord has made...",
-        "setting": "Bobby Fisher"
+        "setting": "Bobby Fisher",
+        "youtubeUrl": "https://www.youtube.com/watch?v=jsG4Serb310"
       },
       "gospelAcclamation": {
         "title": "Hallelujah",
         "composer": "Leonard Cohen • Gary Denk • Dan Houze",
-        "verse": "Christians praise the paschal victim... — Verse by Gary Denk"
+        "verse": "Christians praise the paschal victim... — Verse by Gary Denk",
+        "youtubeUrl": "https://www.youtube.com/watch?v=Ni9Q3zq2r9M"
       },
       "offertory": {
         "title": "He Is Not Here",
@@ -140,9 +153,18 @@
         "composer": "Bob Hurd • Arranged by Dan Houze"
       },
       "communionSongs": [
-        { "title": "Remembrance", "composer": "Hillsong" },
-        { "title": "I Am the Bread of Life", "composer": "Tom Kaczmarek" },
-        { "title": "In Christ Alone", "composer": "Keith Getty & Stuart Townend • Arranged by Micah Jones" }
+        {
+          "title": "Remembrance",
+          "composer": "Hillsong"
+        },
+        {
+          "title": "I Am the Bread of Life",
+          "composer": "Tom Kaczmarek"
+        },
+        {
+          "title": "In Christ Alone",
+          "composer": "Keith Getty & Stuart Townend • Arranged by Micah Jones"
+        }
       ],
       "sending": {
         "title": "Oh Happy Day",
@@ -169,12 +191,14 @@
       },
       "responsorialPsalm": {
         "psalm": "Ps 118 This is the day the Lord has made...",
-        "setting": "Bobby Fisher"
+        "setting": "Bobby Fisher",
+        "youtubeUrl": "https://www.youtube.com/watch?v=jsG4Serb310"
       },
       "gospelAcclamation": {
         "title": "Hallelujah",
         "composer": "Leonard Cohen • Gary Denk • Dan Houze",
-        "verse": "Christians praise the paschal victim... — Verse by Gary Denk"
+        "verse": "Christians praise the paschal victim... — Verse by Gary Denk",
+        "youtubeUrl": "https://www.youtube.com/watch?v=Ni9Q3zq2r9M"
       },
       "offertory": {
         "title": "He Is Not Here",
@@ -193,9 +217,18 @@
         "composer": "Bob Hurd • Arranged by Dan Houze"
       },
       "communionSongs": [
-        { "title": "Remembrance", "composer": "Hillsong" },
-        { "title": "I Am the Bread of Life", "composer": "Tom Kaczmarek" },
-        { "title": "In Christ Alone", "composer": "Keith Getty & Stuart Townend • Arranged by Micah Jones" }
+        {
+          "title": "Remembrance",
+          "composer": "Hillsong"
+        },
+        {
+          "title": "I Am the Bread of Life",
+          "composer": "Tom Kaczmarek"
+        },
+        {
+          "title": "In Christ Alone",
+          "composer": "Keith Getty & Stuart Townend • Arranged by Micah Jones"
+        }
       ],
       "sending": {
         "title": "Oh Happy Day",
@@ -222,12 +255,14 @@
       },
       "responsorialPsalm": {
         "psalm": "Ps 118 This is the day the Lord has made...",
-        "setting": "Bobby Fisher"
+        "setting": "Bobby Fisher",
+        "youtubeUrl": "https://www.youtube.com/watch?v=jsG4Serb310"
       },
       "gospelAcclamation": {
         "title": "Hallelujah",
         "composer": "Leonard Cohen • Gary Denk • Dan Houze",
-        "verse": "Christians praise the paschal victim... — Verse by Gary Denk"
+        "verse": "Christians praise the paschal victim... — Verse by Gary Denk",
+        "youtubeUrl": "https://www.youtube.com/watch?v=Ni9Q3zq2r9M"
       },
       "offertory": {
         "title": "He Is Not Here",
@@ -246,9 +281,18 @@
         "composer": "Bob Hurd • Arranged by Dan Houze"
       },
       "communionSongs": [
-        { "title": "Remembrance", "composer": "Hillsong" },
-        { "title": "I Am the Bread of Life", "composer": "Tom Kaczmarek" },
-        { "title": "In Christ Alone", "composer": "Keith Getty & Stuart Townend • Arranged by Micah Jones" }
+        {
+          "title": "Remembrance",
+          "composer": "Hillsong"
+        },
+        {
+          "title": "I Am the Bread of Life",
+          "composer": "Tom Kaczmarek"
+        },
+        {
+          "title": "In Christ Alone",
+          "composer": "Keith Getty & Stuart Townend • Arranged by Micah Jones"
+        }
       ],
       "sending": {
         "title": "Oh Happy Day",
@@ -274,12 +318,14 @@
       },
       "responsorialPsalm": {
         "psalm": "Ps 118 This is the day the Lord has made...",
-        "setting": "Bobby Fisher"
+        "setting": "Bobby Fisher",
+        "youtubeUrl": "https://www.youtube.com/watch?v=jsG4Serb310"
       },
       "gospelAcclamation": {
         "title": "Halle, Halle, Halle",
         "composer": "Marty Haugen",
-        "verse": "Christ, our paschal lamb, has been sacrificed; let us then feast with joy in the Lord."
+        "verse": "Christ, our paschal lamb, has been sacrificed; let us then feast with joy in the Lord.",
+        "youtubeUrl": "https://www.youtube.com/watch?v=Ni9Q3zq2r9M"
       },
       "offertory": {
         "title": "Hallelujah Is Our Song",
@@ -335,12 +381,14 @@
       },
       "responsorialPsalm": {
         "psalm": "Ps 118 This is the day the Lord has made...",
-        "setting": "Bobby Fisher"
+        "setting": "Bobby Fisher",
+        "youtubeUrl": "https://www.youtube.com/watch?v=jsG4Serb310"
       },
       "gospelAcclamation": {
         "title": "Halle, Halle, Halle",
         "composer": "Marty Haugen",
-        "verse": "Christ, our paschal lamb, has been sacrificed; let us then feast with joy in the Lord."
+        "verse": "Christ, our paschal lamb, has been sacrificed; let us then feast with joy in the Lord.",
+        "youtubeUrl": "https://www.youtube.com/watch?v=Ni9Q3zq2r9M"
       },
       "offertory": {
         "title": "Hallelujah Is Our Song",

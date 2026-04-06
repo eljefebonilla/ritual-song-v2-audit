@@ -97,7 +97,8 @@
       },
       "gospelAcclamation": {
         "title": "Alleluia (Mass of Joy & Peace)",
-        "composer": "Song Title"
+        "composer": "Song Title",
+        "youtubeUrl": "https://www.youtube.com/watch?v=UVLqoe-f9GU"
       },
       "lordsPrayer": {
         "title": "Chanted Our Father (Snow)",
@@ -127,12 +128,14 @@
       },
       "responsorialPsalm": {
         "psalm": "Ps 1 Blessed are they who hope in the Lord.",
-        "setting": "The Lyric Psalter • Tony Alonso & Marty Haugen"
+        "setting": "The Lyric Psalter • Tony Alonso & Marty Haugen",
+        "youtubeUrl": "https://www.youtube.com/watch?v=UGGo2A_ni-0"
       },
       "gospelAcclamation": {
         "title": "Alleluia! Give the Glory (Mass of Glory)",
         "composer": "Bob Hurd •  Ken Canedo • Craig Kingsbury",
-        "verse": "Blessed are you, Father, Lord of heaven and earth;\nyou have revealed to little ones\nthe mysteries of the kingdom."
+        "verse": "Blessed are you, Father, Lord of heaven and earth;\nyou have revealed to little ones\nthe mysteries of the kingdom.",
+        "youtubeUrl": "https://www.youtube.com/watch?v=UVLqoe-f9GU"
       },
       "offertory": {
         "title": "I Will Choose Christ",
@@ -182,7 +185,8 @@
       },
       "gospelAcclamation": {
         "title": "Setting from Mass of ???",
-        "composer": "Song Title"
+        "composer": "Song Title",
+        "youtubeUrl": "https://www.youtube.com/watch?v=UVLqoe-f9GU"
       },
       "eucharisticAcclamations": {
         "massSettingName": "Mass of Restoration",
@@ -234,7 +238,8 @@
       },
       "gospelAcclamation": {
         "title": "Setting from Mass of ???",
-        "verse": "Song Title"
+        "verse": "Song Title",
+        "youtubeUrl": "https://www.youtube.com/watch?v=UVLqoe-f9GU"
       },
       "eucharisticAcclamations": {
         "massSettingName": "Mass of Restoration • Joshua Blakesley"

@@ -108,12 +108,14 @@
       },
       "responsorialPsalm": {
         "psalm": "Ps 8 O Lord, our God, how wonderful...",
-        "setting": "The Lyric Psalter • Tony Alonso & Marty Haugen"
+        "setting": "The Lyric Psalter • Tony Alonso & Marty Haugen",
+        "youtubeUrl": "https://www.youtube.com/watch?v=TQ-r4y_tjNE"
       },
       "gospelAcclamation": {
         "title": "Alleluia (Mass of Joy & Peace)",
         "composer": "TRINITY | C — \"Glory to the Father,...\"",
-        "verse": "Glory to the Father, the Son, and the Holy Spirit;\nto God who is, who was, and who is to come."
+        "verse": "Glory to the Father, the Son, and the Holy Spirit;\nto God who is, who was, and who is to come.",
+        "youtubeUrl": "https://www.youtube.com/watch?v=19If1xWwMdQ"
       },
       "offertory": {
         "title": "Come, Holy Spirit",
@@ -175,12 +177,14 @@
       },
       "responsorialPsalm": {
         "psalm": "Ps 8 O Lord, our God, how wonderful...",
-        "setting": "Spirit & Psalm • Trevor Thomson"
+        "setting": "Spirit & Psalm • Trevor Thomson",
+        "youtubeUrl": "https://www.youtube.com/watch?v=TQ-r4y_tjNE"
       },
       "gospelAcclamation": {
         "title": "Alleluia! Give the Glory (Mass of Glory)",
         "composer": "Bob Hurd •  Ken Canedo • Craig Kingsbury",
-        "verse": "Gospel Verse"
+        "verse": "Gospel Verse",
+        "youtubeUrl": "https://www.youtube.com/watch?v=19If1xWwMdQ"
       },
       "offertory": {
         "title": "Where My Father Lives",
@@ -235,11 +239,13 @@
       },
       "responsorialPsalm": {
         "psalm": "Ps 8 O Lord, our God, how wonderful...",
-        "setting": "Spirit & Psalm • Trevor Thomson"
+        "setting": "Spirit & Psalm • Trevor Thomson",
+        "youtubeUrl": "https://www.youtube.com/watch?v=TQ-r4y_tjNE"
       },
       "gospelAcclamation": {
         "title": "Setting from Mass of the Desert",
-        "composer": "TRINITY | C — \"Glory to the Father,...\""
+        "composer": "TRINITY | C — \"Glory to the Father,...\"",
+        "youtubeUrl": "https://www.youtube.com/watch?v=19If1xWwMdQ"
       },
       "offertory": {
         "title": "Where My Father Lives",
@@ -310,11 +316,13 @@
       },
       "responsorialPsalm": {
         "psalm": "Ps 8 O Lord, our God, how wonderful...",
-        "setting": "Lyric Psalter • Tony Alonso & Marty Haugen"
+        "setting": "Lyric Psalter • Tony Alonso & Marty Haugen",
+        "youtubeUrl": "https://www.youtube.com/watch?v=TQ-r4y_tjNE"
       },
       "gospelAcclamation": {
         "title": "Alleluia (Mass of Joy & Peace)",
-        "composer": "TRINITY | C — \"Glory to the Father,...\""
+        "composer": "TRINITY | C — \"Glory to the Father,...\"",
+        "youtubeUrl": "https://www.youtube.com/watch?v=19If1xWwMdQ"
       },
       "offertory": {
         "title": "Where My Father Lives",
@@ -378,11 +386,13 @@
       },
       "responsorialPsalm": {
         "psalm": "Ps 8 O Lord, our God, how wonderful...",
-        "setting": "Spirit & Psalm • Trevor Thomson"
+        "setting": "Spirit & Psalm • Trevor Thomson",
+        "youtubeUrl": "https://www.youtube.com/watch?v=TQ-r4y_tjNE"
       },
       "gospelAcclamation": {
         "title": "Setting from Mass of the Desert",
-        "verse": "TRINITY | C — \"Glory to the Father,...\""
+        "verse": "TRINITY | C — \"Glory to the Father,...\"",
+        "youtubeUrl": "https://www.youtube.com/watch?v=19If1xWwMdQ"
       },
       "offertory": {
         "title": "Come, Holy Spirit",

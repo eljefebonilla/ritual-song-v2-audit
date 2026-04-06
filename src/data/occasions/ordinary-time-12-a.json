@@ -92,12 +92,14 @@
       },
       "responsorialPsalm": {
         "psalm": "Ps 69 Lord, in your great love, answer me.",
-        "setting": "The Lyric Psalter • Tony Alonso & Marty Haugen"
+        "setting": "The Lyric Psalter • Tony Alonso & Marty Haugen",
+        "youtubeUrl": "https://www.youtube.com/watch?v=VMyVQggypmU"
       },
       "gospelAcclamation": {
         "title": "Alleluia (Mass of Joy & Peace)",
         "composer": "Song Title",
-        "verse": "The Spirit of truth will testify to me, says the Lord;\nand you also will testify."
+        "verse": "The Spirit of truth will testify to me, says the Lord;\nand you also will testify.",
+        "youtubeUrl": "https://www.youtube.com/watch?v=qokxSRkmyTA"
       },
       "lordsPrayer": {
         "title": "Chanted Our Father (Snow)",
@@ -146,7 +148,8 @@
       },
       "gospelAcclamation": {
         "title": "Setting from Mass of ???",
-        "composer": "Song Title"
+        "composer": "Song Title",
+        "youtubeUrl": "https://www.youtube.com/watch?v=qokxSRkmyTA"
       },
       "eucharisticAcclamations": {
         "massSettingName": "Mass of Restoration",
@@ -192,7 +195,8 @@
       },
       "gospelAcclamation": {
         "title": "Setting from Mass of ???",
-        "verse": "Song Title"
+        "verse": "Song Title",
+        "youtubeUrl": "https://www.youtube.com/watch?v=qokxSRkmyTA"
       },
       "eucharisticAcclamations": {
         "massSettingName": "Mass of ? • Composer"

@@ -53,8 +53,9 @@ export interface MusicPlan {
   responsorialPsalm?: {
     psalm: string;
     setting?: string;
+    youtubeUrl?: string;
   };
-  gospelAcclamation?: SongEntry & { verse?: string };
+  gospelAcclamation?: SongEntry & { verse?: string; youtubeUrl?: string };
   offertory?: SongEntry;
   eucharisticAcclamations?: {
     massSettingName: string;

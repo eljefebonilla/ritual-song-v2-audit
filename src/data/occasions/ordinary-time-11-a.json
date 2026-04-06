@@ -102,12 +102,14 @@
       },
       "responsorialPsalm": {
         "psalm": "Ps 100 We are his people: the sheep of his flock.",
-        "setting": "The Lyric Psalter • Tony Alonso & Marty Haugen"
+        "setting": "The Lyric Psalter • Tony Alonso & Marty Haugen",
+        "youtubeUrl": "https://www.youtube.com/watch?v=w7A0L9tcZls"
       },
       "gospelAcclamation": {
         "title": "Alleluia (Mass of Joy & Peace)",
         "composer": "Song Title",
-        "verse": "The kingdom of God is at hand.\nRepent and believe in the Gospel."
+        "verse": "The kingdom of God is at hand.\nRepent and believe in the Gospel.",
+        "youtubeUrl": "https://www.youtube.com/watch?v=t_ZQVIUaC98"
       },
       "lordsPrayer": {
         "title": "Chanted Our Father (Snow)",
@@ -156,7 +158,8 @@
       },
       "gospelAcclamation": {
         "title": "Setting from Mass of ???",
-        "composer": "Song Title"
+        "composer": "Song Title",
+        "youtubeUrl": "https://www.youtube.com/watch?v=t_ZQVIUaC98"
       },
       "eucharisticAcclamations": {
         "massSettingName": "Mass of Restoration",
@@ -202,7 +205,8 @@
       },
       "gospelAcclamation": {
         "title": "Setting from Mass of ???",
-        "verse": "Song Title"
+        "verse": "Song Title",
+        "youtubeUrl": "https://www.youtube.com/watch?v=t_ZQVIUaC98"
       },
       "eucharisticAcclamations": {
         "massSettingName": "Mass of ? • Composer"

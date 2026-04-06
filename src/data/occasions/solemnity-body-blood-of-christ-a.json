@@ -101,12 +101,14 @@
       },
       "responsorialPsalm": {
         "psalm": "Ps 110 You are a priest for ever, in the line...",
-        "setting": "The Lyric Psalter • Tony Alonso & Marty Haugen"
+        "setting": "The Lyric Psalter • Tony Alonso & Marty Haugen",
+        "youtubeUrl": "https://www.youtube.com/watch?v=EiMf_D7xJ9A"
       },
       "gospelAcclamation": {
         "title": "Corpus Christi Sequence",
         "composer": "James Poppleton",
-        "verse": "I am the living bread that came down from heaven,\nsays the Lord; whoever eats this bread will live forever."
+        "verse": "I am the living bread that came down from heaven,\nsays the Lord; whoever eats this bread will live forever.",
+        "youtubeUrl": "https://www.youtube.com/watch?v=I565SlYf3pw"
       },
       "offertory": {
         "title": "Jesus, Living Bread",
@@ -168,12 +170,14 @@
       },
       "responsorialPsalm": {
         "psalm": "Ps 110 You are a priest for ever, in the line...",
-        "setting": "Francesca LaRosa"
+        "setting": "Francesca LaRosa",
+        "youtubeUrl": "https://www.youtube.com/watch?v=EiMf_D7xJ9A"
       },
       "gospelAcclamation": {
         "title": "Corpus Christi Sequence",
         "composer": "James Poppleton",
-        "verse": "Gospel Verse"
+        "verse": "Gospel Verse",
+        "youtubeUrl": "https://www.youtube.com/watch?v=I565SlYf3pw"
       },
       "offertory": {
         "title": "Jesus, Living Bread",
@@ -228,11 +232,13 @@
       },
       "responsorialPsalm": {
         "psalm": "Ps 110 You are a priest for ever, in the line...",
-        "setting": "Francesca LaRosa"
+        "setting": "Francesca LaRosa",
+        "youtubeUrl": "https://www.youtube.com/watch?v=EiMf_D7xJ9A"
       },
       "gospelAcclamation": {
         "title": "Corpus Christi Sequence",
-        "composer": "James Poppleton"
+        "composer": "James Poppleton",
+        "youtubeUrl": "https://www.youtube.com/watch?v=I565SlYf3pw"
       },
       "offertory": {
         "title": "Jesus, Living Bread",
@@ -303,11 +309,13 @@
       },
       "responsorialPsalm": {
         "psalm": "Ps 110 You are a priest for ever, in the line...",
-        "setting": "Lyric Psalter • Tony Alonso & Marty Haugen"
+        "setting": "Lyric Psalter • Tony Alonso & Marty Haugen",
+        "youtubeUrl": "https://www.youtube.com/watch?v=EiMf_D7xJ9A"
       },
       "gospelAcclamation": {
         "title": "Corpus Christi Sequence",
-        "composer": "James Poppleton"
+        "composer": "James Poppleton",
+        "youtubeUrl": "https://www.youtube.com/watch?v=I565SlYf3pw"
       },
       "offertory": {
         "title": "Jesus, Living Bread",
@@ -366,11 +374,13 @@
       },
       "responsorialPsalm": {
         "psalm": "Ps 110 You are a priest for ever, in the line...",
-        "setting": "Francesca LaRosa"
+        "setting": "Francesca LaRosa",
+        "youtubeUrl": "https://www.youtube.com/watch?v=EiMf_D7xJ9A"
       },
       "gospelAcclamation": {
         "title": "Corpus Christi Sequence",
-        "verse": "James Poppleton"
+        "verse": "James Poppleton",
+        "youtubeUrl": "https://www.youtube.com/watch?v=I565SlYf3pw"
       },
       "offertory": {
         "title": "Jesus, Living Bread",
