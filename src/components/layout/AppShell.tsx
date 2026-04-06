@@ -4,6 +4,7 @@ import { useState } from "react";
 import { usePathname } from "next/navigation";
 import Sidebar from "./Sidebar";
 import MediaPlayer from "./MediaPlayer";
+import { useMedia } from "@/lib/media-context";
 
 const FULL_SCREEN_PATHS = ["/gate", "/auth", "/join", "/onboard", "/pending", "/privacy", "/terms"];
 
@@ -11,6 +12,7 @@ export default function AppShell({ children }: { children: React.ReactNode }) {
   const pathname = usePathname();
   const isFullScreen = FULL_SCREEN_PATHS.some((p) => pathname.startsWith(p));
   const [sidebarOpen, setSidebarOpen] = useState(false);
+  const { isOpen } = useMedia();
 
   if (isFullScreen) {
     return <main className="min-h-screen">{children}</main>;
@@ -42,7 +44,7 @@ export default function AppShell({ children }: { children: React.ReactNode }) {
       </button>
 
       <Sidebar open={sidebarOpen} onClose={() => setSidebarOpen(false)} />
-      <main className="h-full overflow-auto md:ml-64">{children}</main>
+      <main className={`h-full overflow-auto md:ml-64 ${isOpen ? "pb-28" : ""}`}>{children}</main>
       <MediaPlayer />
     </div>
   );

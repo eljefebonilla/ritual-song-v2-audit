@@ -118,22 +118,18 @@ function SlotPlayButton({ resources }: { resources?: OccasionResource[] }) {
       onClick={handleToggle}
       className="w-6 h-6 flex items-center justify-center rounded-full transition-all active:scale-95"
       title={isPlaying ? "Stop" : "Play"}
-      style={isPlaying ? {
-        background: "linear-gradient(145deg, #4CAF5020, #4CAF5010)",
-        border: "2px solid #4CAF50",
-        boxShadow: "0 0 8px #4CAF5030, 0 1px 4px #4CAF5020",
-      } : {
-        background: "linear-gradient(145deg, #4CAF500a, transparent)",
-        border: "2px solid #4CAF50",
-        boxShadow: "0 1px 4px #4CAF5015",
+      style={{
+        background: isPlaying ? "linear-gradient(145deg, #292524, #1c1917)" : "#292524",
+        border: "none",
+        boxShadow: "0 2px 6px rgba(0,0,0,0.2)",
       }}
     >
       {isPlaying ? (
-        <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="#4CAF50" strokeWidth="3">
+        <svg width="10" height="10" viewBox="0 0 24 24" fill="white" stroke="white" strokeWidth="3">
           <rect x="4" y="4" width="16" height="16" rx="2" />
         </svg>
       ) : (
-        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#4CAF50" strokeWidth="2.5" strokeLinejoin="round">
+        <svg width="12" height="12" viewBox="0 0 24 24" fill="white" stroke="white" strokeWidth="2.5" strokeLinejoin="round">
           <polygon points="6,3 20,12 6,21" />
         </svg>
       )}
@@ -357,17 +353,41 @@ function MassSettingRow({ slot, isAdmin, onSlotEdit }: {
   onSlotEdit?: (role: string, anchorRect: DOMRect, currentSong?: { title: string; composer?: string; description?: string }) => void;
 }) {
   const rowRef = useRef<HTMLDivElement>(null);
-  if (!slot.massSetting) return null;
 
   const handleEditClick = (e: React.MouseEvent) => {
     e.stopPropagation();
     const el = rowRef.current;
     if (!el || !onSlotEdit) return;
-    onSlotEdit(slot.role, el.getBoundingClientRect(), {
-      title: slot.massSetting!.name,
-      composer: slot.massSetting!.composer,
-    });
+    onSlotEdit(slot.role, el.getBoundingClientRect(), slot.massSetting ? {
+      title: slot.massSetting.name,
+      composer: slot.massSetting.composer,
+    } : undefined);
   };
+
+  if (!slot.massSetting) {
+    return (
+      <div
+        ref={rowRef}
+        className={`flex items-center gap-3 py-2.5 px-3 ${
+          isAdmin && onSlotEdit ? "cursor-pointer hover:bg-stone-50 transition-colors group" : ""
+        }`}
+        onClick={isAdmin && onSlotEdit ? handleEditClick : undefined}
+      >
+        <span className="text-[10px] uppercase tracking-wider font-semibold text-stone-400 w-28 shrink-0">
+          {slot.label}
+        </span>
+        <span className="w-7 shrink-0" />
+        <span className="text-sm text-stone-300 italic flex-1">
+          {isAdmin ? "Pick a setting..." : "\u2014"}
+        </span>
+        {isAdmin && onSlotEdit && (
+          <span className="text-stone-300 group-hover:text-stone-500 transition-colors">
+            <IconEdit />
+          </span>
+        )}
+      </div>
+    );
+  }
 
   return (
     <div ref={rowRef} className="flex items-start gap-3 py-2 px-3">
@@ -439,8 +459,6 @@ function SongSlotRow({
 }) {
   const rowRef = useRef<HTMLDivElement>(null);
 
-  if (!slot.song) return null;
-
   const isLiturgicalText = slot.role === "gospel_acclamation";
 
   const handleEditClick = (e: React.MouseEvent) => {
@@ -449,6 +467,32 @@ function SongSlotRow({
     if (!el || !onSlotEdit) return;
     onSlotEdit(slot.role, el.getBoundingClientRect(), slot.song);
   };
+
+  // Empty slot — show placeholder with edit affordance
+  if (!slot.song) {
+    return (
+      <div
+        ref={rowRef}
+        className={`flex items-center gap-3 py-2.5 px-3 ${
+          isAdmin && onSlotEdit ? "cursor-pointer hover:bg-stone-50 transition-colors group" : ""
+        }`}
+        onClick={isAdmin && onSlotEdit ? handleEditClick : undefined}
+      >
+        <span className="text-[10px] uppercase tracking-wider font-semibold text-stone-400 w-28 shrink-0">
+          {slot.label}
+        </span>
+        <span className="w-7 shrink-0" />
+        <span className="text-sm text-stone-300 italic flex-1">
+          {isAdmin ? "Pick a song..." : "\u2014"}
+        </span>
+        {isAdmin && onSlotEdit && (
+          <span className="text-stone-300 group-hover:text-stone-500 transition-colors">
+            <IconEdit />
+          </span>
+        )}
+      </div>
+    );
+  }
 
   const editButton = isAdmin && onSlotEdit ? (
     <button

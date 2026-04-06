@@ -164,22 +164,18 @@ export default function InteractiveSongSlot({
             onClick={handleToggle}
             className="w-6 h-6 flex items-center justify-center rounded-full transition-all active:scale-95"
             title={isPlaying ? "Stop" : "Play"}
-            style={isPlaying ? {
-              background: `linear-gradient(145deg, ${accentColor}20, ${accentColor}10)`,
-              border: `2px solid ${accentColor}`,
-              boxShadow: `0 0 8px ${accentColor}30, 0 1px 4px ${accentColor}20`,
-            } : {
-              background: `linear-gradient(145deg, ${accentColor}0a, transparent)`,
-              border: `2px solid ${accentColor}`,
-              boxShadow: `0 1px 4px ${accentColor}15`,
+            style={{
+              background: isPlaying ? "linear-gradient(145deg, #292524, #1c1917)" : "#292524",
+              border: "none",
+              boxShadow: "0 2px 6px rgba(0,0,0,0.2)",
             }}
           >
             {isPlaying ? (
-              <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke={accentColor} strokeWidth="3">
+              <svg width="10" height="10" viewBox="0 0 24 24" fill="white" stroke="white" strokeWidth="3">
                 <rect x="4" y="4" width="16" height="16" rx="2" />
               </svg>
             ) : (
-              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke={accentColor} strokeWidth="2.5" strokeLinejoin="round">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="white" stroke="white" strokeWidth="2.5" strokeLinejoin="round">
                 <polygon points="6,3 20,12 6,21" />
               </svg>
             )}

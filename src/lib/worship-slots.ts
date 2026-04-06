@@ -88,18 +88,16 @@ export function planToSlots(
   }
 
   // --- PRE-MASS ---
-  if (plan.prelude) {
-    slots.push({
-      id: nextId(),
-      section: "pre_mass",
-      role: "prelude",
-      label: lbl("prelude", "Prelude"),
-      kind: "song",
-      order: 1000,
-      song: plan.prelude,
-      resolvedSong: resolve(plan.prelude.title),
-    });
-  }
+  slots.push({
+    id: nextId(),
+    section: "pre_mass",
+    role: "prelude",
+    label: lbl("prelude", "Prelude"),
+    kind: "song",
+    order: 1000,
+    song: plan.prelude,
+    resolvedSong: plan.prelude ? resolve(plan.prelude.title) : undefined,
+  });
 
   // --- INTRODUCTORY RITES ---
   // Entrance antiphons
@@ -138,44 +136,38 @@ export function planToSlots(
     }
   }
 
-  if (plan.gathering) {
-    slots.push({
-      id: nextId(),
-      section: "introductory",
-      role: "gathering",
-      label: lbl("gathering", "Gathering"),
-      kind: "song",
-      order: 2000,
-      song: plan.gathering,
-      resolvedSong: resolve(plan.gathering.title),
-    });
-  }
+  slots.push({
+    id: nextId(),
+    section: "introductory",
+    role: "gathering",
+    label: lbl("gathering", "Gathering"),
+    kind: "song",
+    order: 2000,
+    song: plan.gathering,
+    resolvedSong: plan.gathering ? resolve(plan.gathering.title) : undefined,
+  });
 
-  if (plan.penitentialAct) {
-    slots.push({
-      id: nextId(),
-      section: "introductory",
-      role: "penitential_act",
-      label: "Penitential Act",
-      kind: "song",
-      order: 2500,
-      song: plan.penitentialAct,
-      resolvedSong: resolve(plan.penitentialAct.title),
-    });
-  }
+  slots.push({
+    id: nextId(),
+    section: "introductory",
+    role: "penitential_act",
+    label: "Penitential Act",
+    kind: "song",
+    order: 2500,
+    song: plan.penitentialAct,
+    resolvedSong: plan.penitentialAct ? resolve(plan.penitentialAct.title) : undefined,
+  });
 
-  if (plan.gloria) {
-    slots.push({
-      id: nextId(),
-      section: "introductory",
-      role: "gloria",
-      label: "Gloria",
-      kind: "song",
-      order: 3000,
-      song: plan.gloria,
-      resolvedSong: resolve(plan.gloria.title),
-    });
-  }
+  slots.push({
+    id: nextId(),
+    section: "introductory",
+    role: "gloria",
+    label: "Gloria",
+    kind: "song",
+    order: 3000,
+    song: plan.gloria,
+    resolvedSong: plan.gloria ? resolve(plan.gloria.title) : undefined,
+  });
 
   // --- LITURGY OF THE WORD ---
   const firstReading = readings?.find((r) => r.type === "first");
@@ -280,6 +272,18 @@ export function planToSlots(
       resources: gaRefrainResources.length > 0 ? gaRefrainResources : undefined,
       reading: gospelVerse,
     });
+  } else {
+    // Always show gospel acclamation slot even when empty
+    slots.push({
+      id: nextId(),
+      section: "word",
+      role: "gospel_acclamation",
+      label: "Gospel Accl.",
+      kind: "song",
+      order: 7000,
+      song: undefined,
+      resolvedSong: undefined,
+    });
   }
 
   // Gospel Verse — separate row below the acclamation
@@ -311,59 +315,51 @@ export function planToSlots(
   }
 
   // --- LITURGY OF THE EUCHARIST ---
-  if (plan.offertory) {
-    slots.push({
-      id: nextId(),
-      section: "eucharist",
-      role: "offertory",
-      label: "Offertory",
-      kind: "song",
-      order: 10000,
-      song: plan.offertory,
-      resolvedSong: resolve(plan.offertory.title),
-    });
-  }
+  slots.push({
+    id: nextId(),
+    section: "eucharist",
+    role: "offertory",
+    label: "Offertory",
+    kind: "song",
+    order: 10000,
+    song: plan.offertory,
+    resolvedSong: plan.offertory ? resolve(plan.offertory.title) : undefined,
+  });
 
-  if (plan.eucharisticAcclamations) {
-    slots.push({
-      id: nextId(),
-      section: "eucharist",
-      role: "mass_setting",
-      label: "Mass Setting",
-      kind: "mass_setting",
-      order: 11000,
-      massSetting: {
-        name: plan.eucharisticAcclamations.massSettingName,
-        composer: plan.eucharisticAcclamations.composer,
-      },
-    });
-  }
+  slots.push({
+    id: nextId(),
+    section: "eucharist",
+    role: "mass_setting",
+    label: "Mass Setting",
+    kind: "mass_setting",
+    order: 11000,
+    massSetting: plan.eucharisticAcclamations ? {
+      name: plan.eucharisticAcclamations.massSettingName,
+      composer: plan.eucharisticAcclamations.composer,
+    } : undefined,
+  });
 
-  if (plan.lordsPrayer) {
-    slots.push({
-      id: nextId(),
-      section: "eucharist",
-      role: "lords_prayer",
-      label: "Lord's Prayer",
-      kind: "song",
-      order: 12000,
-      song: plan.lordsPrayer,
-      resolvedSong: resolve(plan.lordsPrayer.title),
-    });
-  }
+  slots.push({
+    id: nextId(),
+    section: "eucharist",
+    role: "lords_prayer",
+    label: "Lord's Prayer",
+    kind: "song",
+    order: 12000,
+    song: plan.lordsPrayer,
+    resolvedSong: plan.lordsPrayer ? resolve(plan.lordsPrayer.title) : undefined,
+  });
 
-  if (plan.fractionRite) {
-    slots.push({
-      id: nextId(),
-      section: "eucharist",
-      role: "fraction_rite",
-      label: "Fraction Rite",
-      kind: "song",
-      order: 13000,
-      song: plan.fractionRite,
-      resolvedSong: resolve(plan.fractionRite.title),
-    });
-  }
+  slots.push({
+    id: nextId(),
+    section: "eucharist",
+    role: "fraction_rite",
+    label: "Fraction Rite",
+    kind: "song",
+    order: 13000,
+    song: plan.fractionRite,
+    resolvedSong: plan.fractionRite ? resolve(plan.fractionRite.title) : undefined,
+  });
 
   // Communion antiphons (at top of communion, before communion songs)
   const communionAntiphons = antiphons?.filter((a) => a.type === "communion") ?? [];
@@ -389,7 +385,7 @@ export function planToSlots(
     }
   }
 
-  if (plan.communionSongs) {
+  if (plan.communionSongs && plan.communionSongs.length > 0) {
     for (let i = 0; i < plan.communionSongs.length; i++) {
       const s = plan.communionSongs[i];
       slots.push({
@@ -403,21 +399,31 @@ export function planToSlots(
         resolvedSong: resolve(s.title),
       });
     }
+  } else {
+    // Always show at least one empty communion slot
+    slots.push({
+      id: nextId(),
+      section: "eucharist",
+      role: "communion_0",
+      label: "Communion",
+      kind: "song",
+      order: 15000,
+      song: undefined,
+      resolvedSong: undefined,
+    });
   }
 
   // --- CONCLUDING RITES ---
-  if (plan.sending) {
-    slots.push({
-      id: nextId(),
-      section: "concluding",
-      role: "sending",
-      label: "Sending",
-      kind: "song",
-      order: 16000,
-      song: plan.sending,
-      resolvedSong: resolve(plan.sending.title),
-    });
-  }
+  slots.push({
+    id: nextId(),
+    section: "concluding",
+    role: "sending",
+    label: "Sending",
+    kind: "song",
+    order: 16000,
+    song: plan.sending,
+    resolvedSong: plan.sending ? resolve(plan.sending.title) : undefined,
+  });
 
   return slots;
 }

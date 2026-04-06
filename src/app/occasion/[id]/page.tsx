@@ -116,7 +116,7 @@ export default async function OccasionPage({
         <OccasionGenerateButtons occasionId={occasion.id} />
       </div>
 
-      <div className="px-4 md:px-8 pt-6">
+      <div className="px-4 md:px-8 pt-6 pb-24">
 
       {/* Dates */}
       {occasion.dates.length > 0 && (

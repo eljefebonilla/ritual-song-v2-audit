@@ -33,12 +33,12 @@ export default function ResourceItem({
           }
           className="w-6 h-6 flex items-center justify-center rounded-full shrink-0 transition-all active:scale-95"
           style={{
-            background: "linear-gradient(145deg, #4CAF500a, transparent)",
-            border: "2px solid #4CAF50",
-            boxShadow: "0 1px 4px #4CAF5015",
+            background: "#292524",
+            border: "none",
+            boxShadow: "0 2px 6px rgba(0,0,0,0.2)",
           }}
         >
-          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#4CAF50" strokeWidth="2.5" strokeLinejoin="round">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="white" stroke="white" strokeWidth="2.5" strokeLinejoin="round">
             <polygon points="6,3 20,12 6,21" />
           </svg>
         </button>
