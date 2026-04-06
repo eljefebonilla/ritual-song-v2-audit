@@ -384,11 +384,17 @@ export function resolveAllSongs(
     ?.find((r) => r.category === "gospel_acclamation" && r.type === "audio")
     ?.filePath;
 
-  function tryResolve(title: string, composerHint?: string, category?: "gospel_acclamation") {
+  function tryResolve(title: string, composerHint?: string, category?: "gospel_acclamation", youtubeUrl?: string) {
     const key = normalizeTitle(title);
     if (result[key]) return; // already resolved
     const candidates = index.get(key);
-    if (!candidates) return;
+    if (!candidates) {
+      // No library match — if we have a YouTube URL, create a synthetic entry
+      if (youtubeUrl) {
+        result[key] = { id: `plan-${key}`, title, audioUrl: youtubeUrl, audioType: "youtube" };
+      }
+      return;
+    }
     const song = pickBestMatch(candidates, composerHint);
     if (!song) return;
 
@@ -396,10 +402,20 @@ export function resolveAllSongs(
 
     // If no audio from song library and this is a GA, use occasion resource audio
     let audioUrl = playable?.url ?? null;
-    let audioType = playable?.type ?? null;
+    let audioType: "audio" | "youtube" | null = playable?.type ?? null;
     if (!audioUrl && category === "gospel_acclamation" && gaAudioUrl) {
-      audioUrl = `/api/music/${encodeURIComponent(gaAudioUrl)}`;
+      // Only wrap in /api/music/ if it's a local file path, not a full URL
+      if (gaAudioUrl.startsWith("http")) {
+        audioUrl = gaAudioUrl;
+      } else {
+        audioUrl = `/api/music/${encodeURIComponent(gaAudioUrl)}`;
+      }
       audioType = "audio";
+    }
+    // Fall back to YouTube URL from plan data (never overrides existing audio)
+    if (!audioUrl && youtubeUrl) {
+      audioUrl = youtubeUrl;
+      audioType = "youtube";
     }
 
     result[key] = {
@@ -424,14 +440,14 @@ export function resolveAllSongs(
       }
     }
 
-    // Gospel acclamation — pass category so occasion audio can be injected
+    // Gospel acclamation — pass category + youtubeUrl so both can be injected
     if (plan.gospelAcclamation?.title) {
-      tryResolve(plan.gospelAcclamation.title, plan.gospelAcclamation.composer, "gospel_acclamation");
+      tryResolve(plan.gospelAcclamation.title, plan.gospelAcclamation.composer, "gospel_acclamation", plan.gospelAcclamation.youtubeUrl);
     }
 
-    // Responsorial psalm
+    // Responsorial psalm — pass youtubeUrl
     if (plan.responsorialPsalm?.psalm) {
-      tryResolve(plan.responsorialPsalm.psalm, plan.responsorialPsalm.setting);
+      tryResolve(plan.responsorialPsalm.psalm, plan.responsorialPsalm.setting, undefined, plan.responsorialPsalm.youtubeUrl);
     }
 
     // Communion songs

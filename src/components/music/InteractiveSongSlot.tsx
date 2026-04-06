@@ -157,9 +157,9 @@ export default function InteractiveSongSlot({
       <span className="text-[10px] uppercase tracking-wider font-semibold text-stone-400 w-28 shrink-0 pt-0.5">
         {label}
       </span>
-      {/* Play button column */}
+      {/* Play button column — always visible */}
       <span className="w-7 shrink-0 flex items-start justify-center pt-0.5">
-        {effectiveAudioUrl && effectiveAudioType && (
+        {effectiveAudioUrl && effectiveAudioType ? (
           <button
             onClick={handleToggle}
             className="w-6 h-6 flex items-center justify-center rounded-full transition-all active:scale-95"
@@ -180,6 +180,19 @@ export default function InteractiveSongSlot({
               </svg>
             )}
           </button>
+        ) : (
+          <span
+            className="w-6 h-6 flex items-center justify-center rounded-full"
+            title="No audio available"
+            style={{ background: "#d6d3d1" }}
+          >
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="#a8a29e" stroke="#a8a29e" strokeWidth="2.5" strokeLinejoin="round">
+              <polygon points="6,3 20,12 6,21" />
+            </svg>
+            <svg className="absolute" width="24" height="24" viewBox="0 0 24 24" style={{ marginLeft: "-12px" }}>
+              <line x1="5" y1="19" x2="19" y2="5" stroke="#78716c" strokeWidth="2" strokeLinecap="round" />
+            </svg>
+          </span>
         )}
       </span>
       <div className="min-w-0 flex-1">
