@@ -29,8 +29,9 @@ interface InferredFunction {
 }
 
 const TITLE_RULES: Array<{ pattern: RegExp; fn: string }> = [
-  // Communion
+  // Communion (expanded from Grok swarm audit)
   { pattern: /\bbread of life\b/i, fn: "communion" },
+  { pattern: /\bbread of the world\b/i, fn: "communion" },
   { pattern: /\btable of plenty\b/i, fn: "communion" },
   { pattern: /\bbody of christ\b/i, fn: "communion" },
   { pattern: /\bcup of\b/i, fn: "communion" },
@@ -39,17 +40,34 @@ const TITLE_RULES: Array<{ pattern: RegExp; fn: string }> = [
   { pattern: /\beat this bread\b/i, fn: "communion" },
   { pattern: /\bbread.+broken\b/i, fn: "communion" },
   { pattern: /\bdraw near\b/i, fn: "communion" },
-  { pattern: /\bcome to the (table|feast|banquet)\b/i, fn: "communion" },
+  { pattern: /\bcome to (the|your) (table|feast|banquet)\b/i, fn: "communion" },
   { pattern: /\bblessed and broken\b/i, fn: "communion" },
   { pattern: /\bbread.+wine\b/i, fn: "communion" },
-  { pattern: /\bfeast\b.*\b(of|in|at)\b/i, fn: "communion" },
   { pattern: /\beucharist\b/i, fn: "communion" },
+  { pattern: /\bcommunion hymn\b/i, fn: "communion" },
+  { pattern: /\badoro te devote\b/i, fn: "communion" },
+  { pattern: /\bave verum\b/i, fn: "communion" },
+  { pattern: /\bwho hunger\b/i, fn: "communion" },
+  { pattern: /\bgift of finest wheat\b/i, fn: "communion" },
+  { pattern: /\bbreaking of the bread\b/i, fn: "communion" },
+  { pattern: /\bpan de vida\b/i, fn: "communion" },
+  { pattern: /\bseed.+scattered\b/i, fn: "communion" },
+  { pattern: /\btake and eat\b/i, fn: "communion" },
+  { pattern: /\bpartir el pan\b/i, fn: "communion" },
+  { pattern: /\bbreak this bread\b/i, fn: "communion" },
+  { pattern: /\bwe come to your feast\b/i, fn: "communion" },
+  { pattern: /\baltar of\b/i, fn: "communion" },
   // Gathering
   { pattern: /\bgather us\b/i, fn: "gathering" },
   { pattern: /\bgather your people\b/i, fn: "gathering" },
+  { pattern: /\bgather together\b/i, fn: "gathering" },
+  { pattern: /\bwe gather\b/i, fn: "gathering" },
   { pattern: /\ball are welcome\b/i, fn: "gathering" },
   { pattern: /\bcome.*worship\b/i, fn: "gathering" },
   { pattern: /\blet us enter\b/i, fn: "gathering" },
+  { pattern: /\bintroit\b/i, fn: "gathering" },
+  { pattern: /\bgathering song\b/i, fn: "gathering" },
+  { pattern: /\bgather us in\b/i, fn: "gathering" },
   // Sending
   { pattern: /\bgo forth\b/i, fn: "sending" },
   { pattern: /\bgo.*in peace\b/i, fn: "sending" },
@@ -57,10 +75,13 @@ const TITLE_RULES: Array<{ pattern: RegExp; fn: string }> = [
   { pattern: /\bsend (us|me)\b/i, fn: "sending" },
   { pattern: /\bgo.*to all the world\b/i, fn: "sending" },
   { pattern: /\bwe are called\b/i, fn: "sending" },
-  { pattern: /\bmission\b/i, fn: "sending" },
+  { pattern: /\bgo make a difference\b/i, fn: "sending" },
+  { pattern: /\bgreat commission\b/i, fn: "sending" },
+  { pattern: /\blet us go rejoicing\b/i, fn: "sending" },
   // Offertory
   { pattern: /\boffering\b/i, fn: "offertory" },
   { pattern: /\btake.*receive\b/i, fn: "offertory" },
+  { pattern: /\bperfect sacrifice\b/i, fn: "offertory" },
 ];
 
 const TOPIC_RULES: Array<{ topics: string[]; fn: string }> = [
