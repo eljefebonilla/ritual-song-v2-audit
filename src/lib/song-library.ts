@@ -384,22 +384,11 @@ export function resolveAllSongs(
     ?.find((r) => r.category === "gospel_acclamation" && r.type === "audio")
     ?.filePath;
 
-  function tryResolve(title: string, composerHint?: string, category?: "gospel_acclamation", youtubeUrlOverride?: string) {
+  function tryResolve(title: string, composerHint?: string, category?: "gospel_acclamation") {
     const key = normalizeTitle(title);
     if (result[key]) return; // already resolved
     const candidates = index.get(key);
-    if (!candidates) {
-      // No library match — if we have a YouTube URL from the plan, create a synthetic entry
-      if (youtubeUrlOverride) {
-        result[key] = {
-          id: `plan-${key}`,
-          title,
-          audioUrl: youtubeUrlOverride,
-          audioType: "youtube",
-        };
-      }
-      return;
-    }
+    if (!candidates) return;
     const song = pickBestMatch(candidates, composerHint);
     if (!song) return;
 
@@ -407,15 +396,10 @@ export function resolveAllSongs(
 
     // If no audio from song library and this is a GA, use occasion resource audio
     let audioUrl = playable?.url ?? null;
-    let audioType: "audio" | "youtube" | null = playable?.type ?? null;
+    let audioType = playable?.type ?? null;
     if (!audioUrl && category === "gospel_acclamation" && gaAudioUrl) {
       audioUrl = `/api/music/${encodeURIComponent(gaAudioUrl)}`;
       audioType = "audio";
-    }
-    // Fall back to YouTube URL from plan data
-    if (!audioUrl && youtubeUrlOverride) {
-      audioUrl = youtubeUrlOverride;
-      audioType = "youtube";
     }
 
     result[key] = {
@@ -442,12 +426,12 @@ export function resolveAllSongs(
 
     // Gospel acclamation — pass category so occasion audio can be injected
     if (plan.gospelAcclamation?.title) {
-      tryResolve(plan.gospelAcclamation.title, plan.gospelAcclamation.composer, "gospel_acclamation", plan.gospelAcclamation.youtubeUrl);
+      tryResolve(plan.gospelAcclamation.title, plan.gospelAcclamation.composer, "gospel_acclamation");
     }
 
     // Responsorial psalm
     if (plan.responsorialPsalm?.psalm) {
-      tryResolve(plan.responsorialPsalm.psalm, plan.responsorialPsalm.setting, undefined, plan.responsorialPsalm.youtubeUrl);
+      tryResolve(plan.responsorialPsalm.psalm, plan.responsorialPsalm.setting);
     }
 
     // Communion songs

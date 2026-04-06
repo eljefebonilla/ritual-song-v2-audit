@@ -4,7 +4,6 @@ import { useState, useRef } from "react";
 import type { RefObject } from "react";
 import type { SongEntry, ResolvedSong } from "@/lib/types";
 import { useMedia } from "@/lib/media-context";
-import InlinePlayButton from "@/components/ui/InlinePlayButton";
 
 interface InteractiveSongSlotProps {
   label: string;
@@ -160,7 +159,7 @@ export default function InteractiveSongSlot({
       </span>
       {/* Play button column */}
       <span className="w-7 shrink-0 flex items-start justify-center pt-0.5">
-        {effectiveAudioUrl && effectiveAudioType ? (
+        {effectiveAudioUrl && effectiveAudioType && (
           <button
             onClick={handleToggle}
             className="w-6 h-6 flex items-center justify-center rounded-full transition-all active:scale-95"
@@ -181,13 +180,6 @@ export default function InteractiveSongSlot({
               </svg>
             )}
           </button>
-        ) : (
-          <InlinePlayButton
-            audioUrl={null}
-            audioType={null}
-            title={resolved.title}
-            subtitle={label}
-          />
         )}
       </span>
       <div className="min-w-0 flex-1">
