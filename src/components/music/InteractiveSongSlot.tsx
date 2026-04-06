@@ -158,14 +158,37 @@ export default function InteractiveSongSlot({
       <span className="text-[10px] uppercase tracking-wider font-semibold text-stone-400 w-28 shrink-0 pt-0.5">
         {label}
       </span>
-      {/* Play button column — always visible */}
+      {/* Play button column */}
       <span className="w-7 shrink-0 flex items-start justify-center pt-0.5">
-        <InlinePlayButton
-          audioUrl={effectiveAudioUrl}
-          audioType={effectiveAudioType}
-          title={resolved.title}
-          subtitle={label}
-        />
+        {effectiveAudioUrl && effectiveAudioType ? (
+          <button
+            onClick={handleToggle}
+            className="w-6 h-6 flex items-center justify-center rounded-full transition-all active:scale-95"
+            title={isPlaying ? "Stop" : "Play"}
+            style={{
+              background: isPlaying ? "linear-gradient(145deg, #292524, #1c1917)" : "#292524",
+              border: "none",
+              boxShadow: "0 2px 6px rgba(0,0,0,0.2)",
+            }}
+          >
+            {isPlaying ? (
+              <svg width="10" height="10" viewBox="0 0 24 24" fill="white" stroke="white" strokeWidth="3">
+                <rect x="4" y="4" width="16" height="16" rx="2" />
+              </svg>
+            ) : (
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="white" stroke="white" strokeWidth="2.5" strokeLinejoin="round">
+                <polygon points="6,3 20,12 6,21" />
+              </svg>
+            )}
+          </button>
+        ) : (
+          <InlinePlayButton
+            audioUrl={null}
+            audioType={null}
+            title={resolved.title}
+            subtitle={label}
+          />
+        )}
       </span>
       <div className="min-w-0 flex-1">
         <p className="text-sm font-medium text-stone-800 leading-snug">
