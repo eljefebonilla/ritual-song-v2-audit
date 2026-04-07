@@ -1022,60 +1022,57 @@ export default function MediaPlayer() {
     </div>
   );
 
-  // --- Metronome block (controls only, no volume — volume added per-context) ---
-  const metronomeBlock = (
-    <div className="flex items-center gap-3">
-        {/* Play/stop button */}
+  // --- Metronome: compact for desktop, spacious for mobile ---
+  function MetronomeControls({ compact = false }: { compact?: boolean }) {
+    const btnSize = compact ? "w-7 h-6" : "w-9 h-9";
+    const playSize = compact ? "w-8 h-8" : "w-10 h-10";
+    const iconSize = compact ? 12 : 14;
+    const bpmText = compact ? "text-2xl" : "text-2xl";
+    const gap = compact ? "gap-1" : "gap-1.5";
+    return (
+      <div className={`flex items-center ${compact ? "gap-3" : "gap-3"}`}>
         <button
           onClick={toggleMetronome}
-          className="w-10 h-10 rounded-full flex items-center justify-center shrink-0 transition-all active:scale-95"
+          className={`${playSize} rounded-full flex items-center justify-center shrink-0 transition-all active:scale-95`}
           style={{
             background: metroPlaying ? ACCENT : "#44403c",
             boxShadow: metroPlaying ? `0 0 10px ${ACCENT}60` : "0 1px 3px rgba(0,0,0,0.3)",
           }}
-          title={metroPlaying ? "Stop metronome" : "Start metronome"}
         >
           {metroPlaying ? (
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="white" stroke="white" strokeWidth="3">
+            <svg width={iconSize} height={iconSize} viewBox="0 0 24 24" fill="white" stroke="white" strokeWidth="3">
               <rect x="6" y="4" width="4" height="16" rx="1" />
               <rect x="14" y="4" width="4" height="16" rx="1" />
             </svg>
           ) : (
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="white" stroke="white" strokeWidth="2.5" strokeLinejoin="round">
+            <svg width={iconSize} height={iconSize} viewBox="0 0 24 24" fill="white" stroke="white" strokeWidth="2.5" strokeLinejoin="round">
               <polygon points="6,3 20,12 6,21" />
             </svg>
           )}
         </button>
-        {/* BPM display */}
         <div className="flex flex-col items-center w-12">
-          <span className="text-2xl font-mono font-bold text-white leading-none tabular-nums text-center">
+          <span className={`${bpmText} font-mono font-bold text-white leading-none tabular-nums text-center`}>
             {metroBpm}
           </span>
           <span className="text-[8px] font-bold text-stone-400 uppercase tracking-widest mt-0.5">BPM</span>
         </div>
-        {/* -, +, TAP — three squares in a row */}
-        <div className="flex gap-1.5">
+        <div className={`flex ${gap}`}>
           <button
             onClick={() => setMetroBpm((b) => Math.max(30, b - 1))}
-            className="w-9 h-9 bg-stone-700 text-white text-sm rounded-md hover:bg-stone-600 font-bold flex items-center justify-center active:bg-stone-500"
-          >
-            -
-          </button>
+            className={`${btnSize} bg-stone-700 text-white text-sm rounded-md hover:bg-stone-600 font-bold flex items-center justify-center active:bg-stone-500`}
+          >-</button>
           <button
             onClick={() => setMetroBpm((b) => Math.min(300, b + 1))}
-            className="w-9 h-9 bg-stone-700 text-white text-sm rounded-md hover:bg-stone-600 font-bold flex items-center justify-center active:bg-stone-500"
-          >
-            +
-          </button>
+            className={`${btnSize} bg-stone-700 text-white text-sm rounded-md hover:bg-stone-600 font-bold flex items-center justify-center active:bg-stone-500`}
+          >+</button>
           <button
             onClick={handleTapTempo}
-            className="w-9 h-9 bg-stone-200 text-stone-900 text-[10px] font-black rounded-md hover:bg-white active:bg-stone-400 transition-colors flex items-center justify-center"
-          >
-            TAP
-          </button>
+            className={`${btnSize} bg-stone-200 text-stone-900 text-[10px] font-black rounded-md hover:bg-white active:bg-stone-400 transition-colors flex items-center justify-center`}
+          >TAP</button>
         </div>
-    </div>
-  );
+      </div>
+    );
+  }
 
   const metroVolumeSlider = (
     <div className="flex items-center gap-2">
@@ -1084,11 +1081,11 @@ export default function MediaPlayer() {
     </div>
   );
 
-  // --- Right column: Metronome + Piano (desktop layout) ---
+  // --- Right column: Metronome + Piano (desktop layout, compact) ---
   const rightControls = (
     <div className="flex items-stretch gap-3 shrink-0">
-      <div className="bg-stone-700/50 px-4 py-3 rounded-lg flex items-center">
-        {metronomeBlock}
+      <div className="bg-stone-700/50 px-3 py-3 rounded-lg flex items-center">
+        <MetronomeControls compact />
       </div>
       <div className="bg-stone-700/50 rounded-lg p-2 flex items-center">
         <MiniPiano volume={pianoVolume} />
@@ -1180,11 +1177,11 @@ export default function MediaPlayer() {
             <div className="bg-stone-800 rounded-lg p-3 mt-3">
               {/* Desktop: all panels side by side */}
               <div className="hidden md:flex items-stretch gap-3">
-                <div className="bg-stone-700/50 rounded-lg px-4 py-3 flex items-start gap-5 flex-1 min-w-0 overflow-hidden">
+                <div className="bg-stone-700/50 rounded-lg px-4 py-3 flex items-start gap-5 flex-1 min-w-0">
                   <div className="shrink-0">
                     {controlsStack}
                   </div>
-                  <div className="flex-1 min-w-0 overflow-hidden">
+                  <div className="flex-1 min-w-0">
                     {slidersStack}
                   </div>
                 </div>
@@ -1204,7 +1201,7 @@ export default function MediaPlayer() {
                     )},
                     { label: "Metronome", content: (
                       <div className="bg-stone-700/50 rounded-lg px-4 py-4 space-y-3">
-                        <div className="flex items-center justify-center">{metronomeBlock}</div>
+                        <div className="flex items-center justify-center"><MetronomeControls /></div>
                         {metroVolumeSlider}
                       </div>
                     )},
