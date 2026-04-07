@@ -350,6 +350,8 @@ export interface LibrarySong {
   scriptureRefs?: string[];
   liturgicalUse?: string[];
 
+  youtubeUrl?: string; // Song-level YouTube fallback from songs.youtube_url
+
   resources: SongResource[];
   usageCount: number; // how many times this song appears in music plans
   occasions: string[]; // occasion IDs where this song is used

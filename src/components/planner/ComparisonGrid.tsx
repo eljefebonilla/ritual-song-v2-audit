@@ -60,11 +60,15 @@ function findPlayable(song: LibrarySong): { url: string; type: "audio" | "youtub
       if (url) return { url, type: "audio", label: r.label };
     }
   }
-  // YouTube
+  // YouTube from resources
   for (const r of song.resources) {
     if (r.type === "youtube" && r.url) {
       return { url: r.url, type: "youtube", label: r.label };
     }
+  }
+  // Song-level YouTube URL fallback
+  if (song.youtubeUrl) {
+    return { url: song.youtubeUrl, type: "youtube" };
   }
   return null;
 }
@@ -512,6 +516,7 @@ export default function ComparisonGrid({
                         isDraggable ? (e) => handleDrop(e, ci, rowKey) : undefined
                       }
                       hasAudio={!!playable}
+                      audioType={playable?.type}
                       onPlay={
                         playable && matchedSong
                           ? () => {

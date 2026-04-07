@@ -317,11 +317,15 @@ function findPlayableResource(song: LibrarySong): { url: string; type: "audio" |
       if (url) return { url, type: "audio" };
     }
   }
-  // Then YouTube
+  // Then YouTube from resources
   for (const r of song.resources) {
     if (r.type === "youtube" && r.url) {
       return { url: r.url, type: "youtube" };
     }
+  }
+  // Song-level YouTube URL from DB
+  if (song.youtubeUrl) {
+    return { url: song.youtubeUrl, type: "youtube" };
   }
   return null;
 }

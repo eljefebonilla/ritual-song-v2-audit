@@ -167,6 +167,7 @@ export default function OccasionMusicSection({
   const [selectedSlotRole, setSelectedSlotRole] = useState<string | null>(null);
   const [panelOffset, setPanelOffset] = useState(0);
   const [audioOverrides, setAudioOverrides] = useState<Record<string, string>>({});
+  const [youtubeOverrides, setYoutubeOverrides] = useState<Record<string, string>>({});
   const [planOverrides, setPlanOverrides] = useState<Record<string, Record<string, unknown>>>({});
   const [liturgicalDay, setLiturgicalDay] = useState<LiturgicalDay | null>(null);
   const [editingSlot, setEditingSlot] = useState<{
@@ -600,8 +601,9 @@ export default function OccasionMusicSection({
     fetch(`/api/songs/batch-audio?ids=${allSongIds.join(",")}`)
       .then((res) => (res.ok ? res.json() : null))
       .then((data) => {
-        if (!cancelled && data?.audioUrls) {
-          setAudioOverrides((prev) => ({ ...prev, ...data.audioUrls }));
+        if (!cancelled) {
+          if (data?.audioUrls) setAudioOverrides((prev) => ({ ...prev, ...data.audioUrls }));
+          if (data?.youtubeUrls) setYoutubeOverrides((prev) => ({ ...prev, ...data.youtubeUrls }));
         }
       })
       .catch(() => {});
@@ -733,6 +735,7 @@ export default function OccasionMusicSection({
             onSongSelect={handleSongSelect}
             selectedRowRef={selectedRowRef}
             audioOverrides={audioOverrides}
+            youtubeOverrides={youtubeOverrides}
             presider={mergedPlan.presider}
             massNotes={mergedPlan.massNotes}
             synopsis={synopsis}

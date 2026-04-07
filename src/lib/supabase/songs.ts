@@ -24,6 +24,7 @@ function mapSongRow(row: Record<string, unknown>, resources: SongResource[] = []
     topics: (row.topics as string[]) || [],
     scriptureRefs: (row.scripture_refs as string[]) || [],
     liturgicalUse: (row.liturgical_use as string[]) || [],
+    youtubeUrl: (row.youtube_url as string) || undefined,
     resources,
     usageCount: (row.usage_count as number) || 0,
     occasions: (row.occasions as string[]) || [],
@@ -129,7 +130,7 @@ export async function getSongsLightweight(): Promise<LibrarySong[]> {
   while (true) {
     const { data, error } = await supabase
       .from("songs")
-      .select("id, legacy_id, title, composer, category, functions, recorded_key, psalm_number, mass_setting_id, catalogs, credits, tune_meter, first_line, refrain_first_line, languages, topics, scripture_refs, liturgical_use, usage_count, occasions, is_hidden_global")
+      .select("id, legacy_id, title, composer, category, functions, recorded_key, psalm_number, mass_setting_id, catalogs, credits, tune_meter, first_line, refrain_first_line, languages, topics, scripture_refs, liturgical_use, usage_count, occasions, is_hidden_global, youtube_url")
       .range(offset, offset + pageSize - 1)
       .order("title");
 

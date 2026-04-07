@@ -18,6 +18,7 @@ interface SlotListProps {
   onSongSelect?: (songId: string, slotRole: string) => void;
   selectedRowRef?: RefObject<HTMLDivElement | null>;
   audioOverrides?: Record<string, string>;
+  youtubeOverrides?: Record<string, string>;
   presider?: string;
   massNotes?: string[];
   synopsis?: LectionarySynopsis | null;
@@ -265,6 +266,7 @@ function GospelAcclamationRow({
   onSongSelect,
   selectedRowRef,
   audioOverrides,
+  youtubeOverrides,
 }: {
   slot: WorshipSlot;
   isAdmin?: boolean;
@@ -273,6 +275,7 @@ function GospelAcclamationRow({
   onSongSelect?: (songId: string, slotRole: string) => void;
   selectedRowRef?: RefObject<HTMLDivElement | null>;
   audioOverrides?: Record<string, string>;
+  youtubeOverrides?: Record<string, string>;
 }) {
   const rowRef = useRef<HTMLDivElement>(null);
   const ga = slot.gospelAcclamation;
@@ -292,8 +295,11 @@ function GospelAcclamationRow({
   const resolved = slot.resolvedSong;
   const isSelected = resolved ? selectedSongId === resolved.id : false;
   const overrideUrl = resolved ? audioOverrides?.[resolved.id] : undefined;
+  const ytOverrideUrl = resolved ? youtubeOverrides?.[resolved.id] : undefined;
   const finalResolved = resolved && overrideUrl
     ? { ...resolved, audioUrl: overrideUrl, audioType: "audio" as const }
+    : resolved && !resolved.audioUrl && ytOverrideUrl
+    ? { ...resolved, audioUrl: ytOverrideUrl, audioType: "youtube" as const }
     : resolved;
 
   return (
@@ -446,6 +452,7 @@ function SongSlotRow({
   onSongSelect,
   selectedRowRef,
   audioOverrides,
+  youtubeOverrides,
   hint,
   isAdmin,
   onSlotEdit,
@@ -455,6 +462,7 @@ function SongSlotRow({
   onSongSelect?: (songId: string, slotRole: string) => void;
   selectedRowRef?: RefObject<HTMLDivElement | null>;
   audioOverrides?: Record<string, string>;
+  youtubeOverrides?: Record<string, string>;
   hint?: string;
   isAdmin?: boolean;
   onSlotEdit?: (role: string, anchorRect: DOMRect, currentSong?: { title: string; composer?: string; description?: string }) => void;
@@ -519,8 +527,11 @@ function SongSlotRow({
   if (slot.resolvedSong) {
     const isSelected = selectedSongId === slot.resolvedSong.id;
     const overrideUrl = audioOverrides?.[slot.resolvedSong.id];
+    const ytOverrideUrl = youtubeOverrides?.[slot.resolvedSong.id];
     const resolved = overrideUrl
       ? { ...slot.resolvedSong, audioUrl: overrideUrl, audioType: "audio" as const }
+      : !slot.resolvedSong.audioUrl && ytOverrideUrl
+      ? { ...slot.resolvedSong, audioUrl: ytOverrideUrl, audioType: "youtube" as const }
       : slot.resolvedSong;
     return (
       <>
@@ -870,6 +881,7 @@ export default function SlotList({
   onSongSelect,
   selectedRowRef,
   audioOverrides,
+  youtubeOverrides,
   presider,
   massNotes,
   synopsis,
@@ -1053,6 +1065,7 @@ export default function SlotList({
                             onSongSelect={onSongSelect}
                             selectedRowRef={selectedRowRef}
                             audioOverrides={audioOverrides}
+                            youtubeOverrides={youtubeOverrides}
                           />
                         );
                         break;
@@ -1113,6 +1126,7 @@ export default function SlotList({
                               onSongSelect={onSongSelect}
                               selectedRowRef={selectedRowRef}
                               audioOverrides={audioOverrides}
+                              youtubeOverrides={youtubeOverrides}
                               hint={slotHint}
                               isAdmin={isAdmin}
                               onSlotEdit={onSlotEdit}
@@ -1128,6 +1142,7 @@ export default function SlotList({
                             onSongSelect={onSongSelect}
                             selectedRowRef={selectedRowRef}
                             audioOverrides={audioOverrides}
+                            youtubeOverrides={youtubeOverrides}
                             hint={slotHint}
                             isAdmin={isAdmin}
                             onSlotEdit={onSlotEdit}

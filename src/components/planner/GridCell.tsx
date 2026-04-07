@@ -18,6 +18,7 @@ interface GridCellProps {
   onDetail?: () => void;
   onPlay?: () => void;
   hasAudio?: boolean;
+  audioType?: "audio" | "youtube";
 }
 
 export default function GridCell({
@@ -34,6 +35,7 @@ export default function GridCell({
   onDetail,
   onPlay,
   hasAudio,
+  audioType,
 }: GridCellProps) {
   const { role } = useUser();
 
@@ -104,8 +106,10 @@ export default function GridCell({
               e.stopPropagation();
               onPlay();
             }}
-            className="shrink-0 flex items-center justify-center w-4 h-4 rounded-full bg-stone-800 transition-colors active:scale-95"
-            title="Play"
+            className={`shrink-0 flex items-center justify-center w-4 h-4 rounded-full transition-colors active:scale-95 ${
+              audioType === "youtube" ? "bg-red-600" : "bg-stone-800"
+            }`}
+            title={audioType === "youtube" ? "Play (YouTube)" : "Play"}
             style={{ boxShadow: "0 1px 3px rgba(0,0,0,0.2)" }}
           >
             <svg width="7" height="7" viewBox="0 0 24 24" fill="white" stroke="white" strokeWidth="2.5" strokeLinejoin="round">
