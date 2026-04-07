@@ -47,10 +47,13 @@ export function getFilteredOccasions(
     filtered = filtered.filter((o) => o.season === season);
   }
 
+  // Sort by liturgical calendar position.
+  // For season-based occasions (Advent, Lent, Easter, etc.), use season bucket + seasonOrder.
+  // For solemnities/feasts, interleave by their nearest date relative to the liturgical year.
   filtered.sort((a, b) => {
-    const seasonOrder = getSeasonSortOrder(a.season) - getSeasonSortOrder(b.season);
-    if (seasonOrder !== 0) return seasonOrder;
-    return a.seasonOrder - b.seasonOrder;
+    const aPos = getLiturgicalPosition(a);
+    const bPos = getLiturgicalPosition(b);
+    return aPos - bPos;
   });
 
   return filtered;
@@ -216,18 +219,63 @@ function songToCell(song?: SongEntry): GridCellData {
   };
 }
 
-function getSeasonSortOrder(season: string): number {
-  const order: Record<string, number> = {
+/**
+ * Assign a sortable position in the liturgical year.
+ * Season-based occasions: use bucket * 1000 + seasonOrder for stable ordering.
+ * Solemnities/feasts: interleave by month/day into the liturgical calendar.
+ *   - Advent starts the year (~Dec 1), so Dec dates = early positions.
+ *   - Mapping: Dec=0, Jan=1, Feb=2, ..., Nov=11 (liturgical year order).
+ */
+function getLiturgicalPosition(o: { season: string; seasonOrder: number; dates?: { date: string }[] }): number {
+  const seasonBuckets: Record<string, number> = {
     advent: 0,
     christmas: 1,
-    ordinary: 2,
+    ordinary: 2,    // OT before Lent (weeks 2-8ish)
     lent: 3,
     holyweek: 4,
     easter: 5,
-    solemnity: 6,
-    feast: 7,
+    // solemnity/feast: computed from date
   };
-  return order[season] ?? 99;
+
+  const bucket = seasonBuckets[o.season];
+  if (bucket !== undefined) {
+    return bucket * 1000 + o.seasonOrder;
+  }
+
+  // Solemnities and feasts: position by month/day in liturgical year order
+  // Find the canonical date (first date in the list, or nearest future)
+  const dateStr = o.dates?.[0]?.date;
+  if (!dateStr) return 9000 + o.seasonOrder; // fallback: end
+
+  const month = parseInt(dateStr.slice(5, 7), 10); // 1-12
+  const day = parseInt(dateStr.slice(8, 10), 10);
+
+  // Liturgical year starts in late November/early December.
+  // Map months to liturgical position: Dec=0, Jan=1, ..., Nov=11
+  const litMonth = month === 12 ? 0 : month;
+
+  // Interleave into calendar: find which season bucket this date falls into.
+  // Dec-Jan = advent/christmas area (bucket 0-1, positions 0-1999)
+  // Feb = early OT (bucket 2, ~2000s)
+  // Mar-Apr = lent/holy week (bucket 3-4, ~3000-4999)
+  // Apr-Jun = easter (bucket 5, ~5000s)
+  // Jun-Nov = ordinary time after Pentecost (bucket 6, ~6000s)
+  let position: number;
+  if (litMonth <= 1) {
+    // Dec-Jan: advent/christmas zone
+    position = litMonth * 100 + day;
+  } else if (litMonth <= 3) {
+    // Feb-Mar: lent zone
+    position = 3000 + (litMonth - 2) * 100 + day;
+  } else if (litMonth <= 6) {
+    // Apr-Jun: easter/pentecost zone
+    position = 5000 + (litMonth - 4) * 100 + day;
+  } else {
+    // Jul-Nov: ordinary time after pentecost
+    position = 6000 + (litMonth - 7) * 100 + day;
+  }
+
+  return position;
 }
 
 /**
