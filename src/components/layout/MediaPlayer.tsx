@@ -870,51 +870,7 @@ export default function MediaPlayer() {
             Reset
           </button>
         )}
-        {/* Admin recorded key picker */}
-        {isAdmin && current?.songId && (
-          <div className="relative ml-auto">
-            <button
-              onClick={() => setShowKeyPicker((v) => !v)}
-              className="px-2 py-0.5 rounded text-[10px] font-medium border border-stone-600 text-stone-400 hover:bg-stone-700 transition-colors"
-            >
-              {current.recordedKey ? `Rec: ${current.recordedKey}` : "Set key"}{" \u25BE"}
-            </button>
-            {showKeyPicker && (
-              <div className="absolute right-0 bottom-full mb-1 z-50 bg-stone-700 border border-stone-600 rounded-lg shadow-lg p-2 w-[200px]">
-                <div className="grid grid-cols-4 gap-1">
-                  {CHROMATIC_KEYS.map((k) => (
-                    <button
-                      key={k}
-                      disabled={savingKey}
-                      onClick={async () => {
-                        const newKey = k === current.recordedKey ? "" : k;
-                        setSavingKey(true);
-                        try {
-                          const res = await fetch(`/api/songs/${current.songId}`, {
-                            method: "PUT",
-                            headers: { "Content-Type": "application/json" },
-                            body: JSON.stringify({ recordedKey: newKey }),
-                          });
-                          if (res.ok) {
-                            updateCurrent({ recordedKey: newKey || undefined });
-                            setActiveChartKey(null);
-                            setPitchSemitones(0);
-                          }
-                        } finally {
-                          setSavingKey(false);
-                          setShowKeyPicker(false);
-                        }
-                      }}
-                      className={`px-1.5 py-1 rounded text-xs font-medium transition-colors ${
-                        k === current.recordedKey ? "bg-green-600 text-white" : "bg-stone-600 text-stone-200 hover:bg-stone-500"
-                      }`}
-                    >{k}</button>
-                  ))}
-                </div>
-              </div>
-            )}
-          </div>
-        )}
+        {/* Set key moved to song detail panel */}
       </div>
 
       {/* Chart key chips */}
