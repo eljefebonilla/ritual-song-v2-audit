@@ -1019,16 +1019,14 @@ export default function MediaPlayer() {
 
   // --- Metronome block (used standalone on mobile, combined on desktop) ---
   const metronomeBlock = (
-    <div className="flex items-center gap-4">
-        {/* Play/stop button — larger on mobile */}
+    <div className="flex items-center gap-3">
+        {/* Play/stop button */}
         <button
           onClick={toggleMetronome}
-          className="w-8 h-8 md:w-8 md:h-8 rounded-full flex items-center justify-center shrink-0 transition-all active:scale-95 mobile-metro-play"
+          className="w-10 h-10 rounded-full flex items-center justify-center shrink-0 transition-all active:scale-95"
           style={{
             background: metroPlaying ? ACCENT : "#44403c",
             boxShadow: metroPlaying ? `0 0 10px ${ACCENT}60` : "0 1px 3px rgba(0,0,0,0.3)",
-            width: typeof window !== "undefined" && window.innerWidth < 768 ? 44 : undefined,
-            height: typeof window !== "undefined" && window.innerWidth < 768 ? 44 : undefined,
           }}
           title={metroPlaying ? "Stop metronome" : "Start metronome"}
         >
@@ -1044,31 +1042,29 @@ export default function MediaPlayer() {
           )}
         </button>
         {/* BPM display */}
-        <div className="flex flex-col items-center w-14">
-          <span className="text-3xl font-mono font-bold text-white leading-none tabular-nums text-center">
+        <div className="flex flex-col items-center w-12">
+          <span className="text-2xl font-mono font-bold text-white leading-none tabular-nums text-center">
             {metroBpm}
           </span>
           <span className="text-[8px] font-bold text-stone-400 uppercase tracking-widest mt-0.5">BPM</span>
         </div>
-        {/* +/- 1 buttons + TAP */}
-        <div className="flex flex-col gap-1.5">
-          <div className="flex gap-1.5">
-            <button
-              onClick={() => setMetroBpm((b) => Math.max(30, b - 1))}
-              className="w-10 h-10 bg-stone-700 text-white text-sm rounded-md hover:bg-stone-600 font-bold flex items-center justify-center active:bg-stone-500"
-            >
-              -
-            </button>
-            <button
-              onClick={() => setMetroBpm((b) => Math.min(300, b + 1))}
-              className="w-10 h-10 bg-stone-700 text-white text-sm rounded-md hover:bg-stone-600 font-bold flex items-center justify-center active:bg-stone-500"
-            >
-              +
-            </button>
-          </div>
+        {/* -, +, TAP — three squares in a row */}
+        <div className="flex gap-1.5">
+          <button
+            onClick={() => setMetroBpm((b) => Math.max(30, b - 1))}
+            className="w-9 h-9 bg-stone-700 text-white text-sm rounded-md hover:bg-stone-600 font-bold flex items-center justify-center active:bg-stone-500"
+          >
+            -
+          </button>
+          <button
+            onClick={() => setMetroBpm((b) => Math.min(300, b + 1))}
+            className="w-9 h-9 bg-stone-700 text-white text-sm rounded-md hover:bg-stone-600 font-bold flex items-center justify-center active:bg-stone-500"
+          >
+            +
+          </button>
           <button
             onClick={handleTapTempo}
-            className="w-full h-10 bg-stone-200 text-stone-900 text-xs font-black rounded-md hover:bg-white active:bg-stone-400 transition-colors tracking-wide"
+            className="w-9 h-9 bg-stone-200 text-stone-900 text-[10px] font-black rounded-md hover:bg-white active:bg-stone-400 transition-colors flex items-center justify-center"
           >
             TAP
           </button>
