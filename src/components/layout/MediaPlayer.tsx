@@ -1212,8 +1212,8 @@ export default function MediaPlayer() {
                       </div>
                     )},
                     { label: "Metronome", content: (
-                      <div className="bg-stone-700/50 rounded-lg px-4 py-4 space-y-3">
-                        <div className="flex items-center justify-center"><MetronomeControls /></div>
+                      <div className="bg-stone-700/50 rounded-lg px-4 py-4 space-y-3 min-h-[140px] flex flex-col justify-between">
+                        <div className="flex items-center justify-center flex-1"><MetronomeControls /></div>
                         {metroVolumeSlider}
                       </div>
                     )},
