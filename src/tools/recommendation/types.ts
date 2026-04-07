@@ -21,7 +21,8 @@ export interface RecommendationReason {
     | "function_match"
     | "familiarity"
     | "user_ranking"
-    | "recency_penalty";
+    | "recency_penalty"
+    | "semantic_similarity";
   detail: string;
   explanation?: string;
   points: number;

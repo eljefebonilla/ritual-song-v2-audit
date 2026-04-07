@@ -217,7 +217,7 @@ async function main() {
   const legacyIds = candidateSongs.map((s) => s.legacy_id);
 
   // Fetch in chunks to avoid URL length limits
-  const CHUNK = 500;
+  const CHUNK = 80;
   const lyricsMap = new Map<string, string>(); // legacy_id -> lyrics_text
 
   for (let i = 0; i < legacyIds.length; i += CHUNK) {

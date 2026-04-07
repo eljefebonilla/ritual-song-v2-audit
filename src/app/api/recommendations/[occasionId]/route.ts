@@ -4,6 +4,7 @@ import { getSongLibrary, loadSongLibrary } from "@/lib/song-library";
 import { recommendForOccasion } from "@/lib/recommendations";
 import { createAdminClient } from "@/lib/supabase/admin";
 import { getScriptureSongsForOccasion } from "@/lib/supabase/scripture-mappings";
+import { findSimilarSongs } from "@/lib/supabase/song-embeddings";
 import {
   ConversationRuntime,
   LayeredConfig,
@@ -231,22 +232,31 @@ export async function POST(
     });
   }
 
-  // 10. Run the recommendation tool via runtime
+  // 10. Fetch semantic similarity from pgvector (embed readings, find similar songs)
+  const readings = (occasion.readings || []).map((r) => ({
+    citation: r.citation,
+    summary: r.summary,
+  }));
+  const similarityMap = await findSimilarSongs(supabase, readings);
+  const semanticSimilarityMap: Record<string, number> = {};
+  for (const [songId, score] of similarityMap) {
+    semanticSimilarityMap[songId] = score;
+  }
+
+  // 11. Run the recommendation tool via runtime
   const toolResult = await runtime.executeTool({
     name: "recommendation.score",
     args: {
       occasionId,
       position,
       season: occasion.season,
-      readings: (occasion.readings || []).map((r) => ({
-        citation: r.citation,
-        summary: r.summary,
-      })),
+      readings,
       candidates,
       usageRecords,
       excludeSongIds,
       limit,
       npmScriptureMap,
+      semanticSimilarityMap,
     },
   });
 

@@ -41,6 +41,7 @@ export function createRecommendationTools(): ToolDefinition[] {
           }>;
           usageRecords: UsageRecord[];
           npmScriptureMap?: Record<string, NpmScriptureMatch[]>;
+          semanticSimilarityMap?: Record<string, number>;
         };
 
         const usageMap = new Map<string, UsageRecord>();
@@ -52,13 +53,18 @@ export function createRecommendationTools(): ToolDefinition[] {
           ? new Map(Object.entries(request.npmScriptureMap))
           : undefined;
 
+        const semMap = request.semanticSimilarityMap
+          ? new Map(Object.entries(request.semanticSimilarityMap))
+          : undefined;
+
         const results = rankSongs(
           request.candidates ?? [],
           request,
           usageMap,
           ctx.config.recommendationWeights,
           undefined,
-          npmMap
+          npmMap,
+          semMap
         );
 
         return results;
@@ -83,6 +89,7 @@ export function createRecommendationTools(): ToolDefinition[] {
           }>;
           usageRecords: UsageRecord[];
           npmScriptureMap?: Record<string, NpmScriptureMatch[]>;
+          semanticSimilarityMap?: Record<string, number>;
         };
 
         const usageMap = new Map<string, UsageRecord>();
@@ -94,13 +101,18 @@ export function createRecommendationTools(): ToolDefinition[] {
           ? new Map(Object.entries(request.npmScriptureMap))
           : undefined;
 
+        const semMap = request.semanticSimilarityMap
+          ? new Map(Object.entries(request.semanticSimilarityMap))
+          : undefined;
+
         const results = rankSongs(
           request.candidates ?? [],
           { ...request, limit: (request.limit ?? 5) },
           usageMap,
           ctx.config.recommendationWeights,
           undefined,
-          npmMap
+          npmMap,
+          semMap
         );
 
         return results.map((r) => ({

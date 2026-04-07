@@ -2046,7 +2046,7 @@
     "title": "The Feast Meant for Everyone",
     "composer": "Tom Booth & Sarah Hart",
     "resources": [],
-    "usageCount": 31,
+    "usageCount": 35,
     "occasions": [
       "baptism-of-the-lord-a",
       "ordinary-time-03-a-word-of-god-sunday",
@@ -2055,7 +2055,9 @@
       "solemnity-most-holy-trinity-c",
       "ordinary-time-15-c",
       "ordinary-time-17-c",
-      "thanksgiving"
+      "thanksgiving",
+      "ordinary-time-03-c-word-of-god-sunday",
+      "ordinary-time-08-c"
     ],
     "category": "song",
     "functions": [
@@ -2246,30 +2248,6 @@
     ]
   },
   {
-    "id": "be-though-my-vision--slane-arranged-by-assad",
-    "title": "Be Though My Vision",
-    "composer": "SLANE • Arranged by Assad",
-    "resources": [],
-    "usageCount": 27,
-    "occasions": [
-      "ordinary-time-06-a",
-      "lent-02-b",
-      "lent-02-c",
-      "lent-04-a-second-scrutiny",
-      "ordinary-time-20-a",
-      "ordinary-time-23-c",
-      "feast-the-exaltation-sep-14-of-the-holy-cross-abc",
-      "ordinary-time-24-a",
-      "ordinary-time-26-c"
-    ],
-    "category": "song",
-    "functions": [
-      "communion",
-      "gathering",
-      "offertory"
-    ]
-  },
-  {
     "id": "lamb-of-god-mass-of-creation",
     "title": "Lamb of God (Mass of Creation)",
     "resources": [],
@@ -2431,51 +2409,6 @@
       "advent-04-c"
     ],
     "category": "song"
-  },
-  {
-    "id": "be-not-afraid--bob-dufford-sj",
-    "title": "Be Not Afraid",
-    "composer": "Bob Dufford, SJ",
-    "resources": [],
-    "usageCount": 25,
-    "occasions": [
-      "ordinary-time-04-a",
-      "ascension-a",
-      "ascension-b",
-      "ascension-c",
-      "ordinary-time-14-c",
-      "ordinary-time-19-c"
-    ],
-    "category": "song",
-    "functions": [
-      "communion",
-      "gathering",
-      "offertory"
-    ],
-    "catalogs": {
-      "bb2026": 563,
-      "gather4": 754,
-      "spiritSong": 271
-    },
-    "scriptureRefs": [
-      "Isaiah 43:2-3",
-      "Matthew 5:3-4,10",
-      "Matthew 5:5",
-      "Matthew 5:15",
-      "Ephesians 5:3-4,10",
-      "Luke 6:20"
-    ],
-    "topics": [
-      "Providence",
-      "Courage",
-      "Discipleship",
-      "Fear",
-      "Hope",
-      "Mission",
-      "Rest",
-      "Sending Forth",
-      "Trust"
-    ]
   },
   {
     "id": "advent-christmas-2-missa-pacem--l-randolph-babin",
@@ -2801,40 +2734,6 @@
     "category": "song"
   },
   {
-    "id": "glory-to-god-joy-peace",
-    "title": "Glory to God (Joy & Peace)",
-    "resources": [],
-    "usageCount": 22,
-    "occasions": [
-      "easter-sunday-abc",
-      "easter-02-divine-mercy-a",
-      "easter-02-divine-mercy-b",
-      "easter-02-divine-mercy-c",
-      "easter-03-a",
-      "easter-03-b",
-      "easter-03-c",
-      "easter-04-a",
-      "easter-04-b",
-      "easter-04-c",
-      "easter-05-a",
-      "easter-05-b",
-      "easter-05-c",
-      "easter-06-a",
-      "easter-06-b",
-      "easter-06-c",
-      "easter-07-a",
-      "easter-07-b",
-      "easter-07-c",
-      "ascension-a",
-      "ascension-b",
-      "ascension-c"
-    ],
-    "category": "song",
-    "functions": [
-      "gloria"
-    ]
-  },
-  {
     "id": "you-are-welcome-here--chris-muglia",
     "title": "You Are Welcome Here",
     "composer": "Chris Muglia",
@@ -2886,14 +2785,20 @@
     "title": "Be Not Afraid",
     "composer": "Robert J. Dufford, SJ",
     "resources": [],
-    "usageCount": 21,
+    "usageCount": 46,
     "occasions": [
       "baptism-of-the-lord-b",
       "baptism-of-the-lord-c",
       "ordinary-time-03-c-word-of-god-sunday",
       "lent-01-a",
       "lent-01-b",
-      "lent-01-c"
+      "lent-01-c",
+      "ordinary-time-04-a",
+      "ascension-a",
+      "ascension-b",
+      "ascension-c",
+      "ordinary-time-14-c",
+      "ordinary-time-19-c"
     ],
     "category": "song",
     "functions": [
@@ -3541,7 +3446,7 @@
     "title": "The Servant Song",
     "composer": "Richard Gillard • Arranged by Ed Archer",
     "resources": [],
-    "usageCount": 16,
+    "usageCount": 19,
     "occasions": [
       "ordinary-time-07-a",
       "ordinary-time-07-b",
@@ -7396,41 +7301,6 @@
     ]
   },
   {
-    "id": "i-will-choose-christ--tom-booth",
-    "title": "I Will Choose Christ",
-    "composer": "Tom Booth",
-    "resources": [],
-    "usageCount": 7,
-    "occasions": [
-      "ordinary-time-05-c",
-      "ordinary-time-06-a",
-      "ss-peter-paul-apostles-jun-29-mass-during-the-day-abc",
-      "ordinary-time-20-a",
-      "feast-the-exaltation-sep-14-of-the-holy-cross-abc",
-      "ordinary-time-24-a"
-    ],
-    "category": "song",
-    "functions": [
-      "communion",
-      "offertory"
-    ],
-    "catalogs": {
-      "bb2026": 495,
-      "spiritSong": 220
-    },
-    "scriptureRefs": [
-      "Luke 12:2–3"
-    ],
-    "topics": [
-      "Commissioning",
-      "Darkness",
-      "Discipleship",
-      "Faith",
-      "Hope",
-      "Ministry/Mission"
-    ]
-  },
-  {
     "id": "lift-every-voice-and-sing",
     "title": "Lift Every Voice and Sing",
     "resources": [],
@@ -10127,9 +9997,18 @@
     "title": "Be Though My Vision",
     "composer": "SLANE • Arr. by Audrey Assad • Adapt. by Bonilla & Phan",
     "resources": [],
-    "usageCount": 5,
+    "usageCount": 32,
     "occasions": [
-      "ordinary-time-18-c"
+      "ordinary-time-18-c",
+      "ordinary-time-06-a",
+      "lent-02-b",
+      "lent-02-c",
+      "lent-04-a-second-scrutiny",
+      "ordinary-time-20-a",
+      "ordinary-time-23-c",
+      "feast-the-exaltation-sep-14-of-the-holy-cross-abc",
+      "ordinary-time-24-a",
+      "ordinary-time-26-c"
     ],
     "category": "song",
     "functions": [
@@ -10628,22 +10507,6 @@
       "lent-02-c"
     ],
     "category": "psalm"
-  },
-  {
-    "id": "the-feast-meant-for-everyone--tom-booth-sarah-hart-1",
-    "title": "The Feast Meant for Everyone",
-    "composer": "Tom Booth • Sarah Hart",
-    "resources": [],
-    "usageCount": 4,
-    "occasions": [
-      "ordinary-time-03-a-word-of-god-sunday",
-      "ordinary-time-03-c-word-of-god-sunday",
-      "ordinary-time-08-c"
-    ],
-    "category": "song",
-    "functions": [
-      "communion"
-    ]
   },
   {
     "id": "take-the-word-of-god-with-you--christopher-walker-james-harrison",
@@ -15623,21 +15486,6 @@
     "category": "psalm"
   },
   {
-    "id": "the-servant-song--gillard-arr-by-micah-jones-sean-mahon",
-    "title": "The Servant Song",
-    "composer": "Gillard • Arr. by  Micah Jones & Sean Mahon",
-    "resources": [],
-    "usageCount": 2,
-    "occasions": [
-      "ordinary-time-08-c"
-    ],
-    "category": "song",
-    "functions": [
-      "communion",
-      "offertory"
-    ]
-  },
-  {
     "id": "as-christ-is-for-us--jan-t-sullivan-whitaker",
     "title": "As Christ Is for Us",
     "composer": "Janèt Sullivan Whitaker",
@@ -16490,10 +16338,16 @@
     "title": "I Will Choose Christ",
     "composer": "Tom Booth",
     "resources": [],
-    "usageCount": 2,
+    "usageCount": 9,
     "occasions": [
       "ordinary-time-16-c",
-      "ordinary-time-23-c"
+      "ordinary-time-23-c",
+      "ordinary-time-05-c",
+      "ordinary-time-06-a",
+      "ss-peter-paul-apostles-jun-29-mass-during-the-day-abc",
+      "ordinary-time-20-a",
+      "feast-the-exaltation-sep-14-of-the-holy-cross-abc",
+      "ordinary-time-24-a"
     ],
     "category": "song",
     "functions": [
@@ -19322,9 +19176,30 @@
     "title": "Glory to God (Joy & Peace)",
     "composer": "Tony Alonso • Arr. by Dan Houze",
     "resources": [],
-    "usageCount": 1,
+    "usageCount": 23,
     "occasions": [
-      "ascension-c"
+      "ascension-c",
+      "easter-sunday-abc",
+      "easter-02-divine-mercy-a",
+      "easter-02-divine-mercy-b",
+      "easter-02-divine-mercy-c",
+      "easter-03-a",
+      "easter-03-b",
+      "easter-03-c",
+      "easter-04-a",
+      "easter-04-b",
+      "easter-04-c",
+      "easter-05-a",
+      "easter-05-b",
+      "easter-05-c",
+      "easter-06-a",
+      "easter-06-b",
+      "easter-06-c",
+      "easter-07-a",
+      "easter-07-b",
+      "easter-07-c",
+      "ascension-a",
+      "ascension-b"
     ],
     "category": "song",
     "functions": [
@@ -20133,21 +20008,6 @@
       "ordinary-time-21-c"
     ],
     "category": "psalm"
-  },
-  {
-    "id": "the-servant-song--richard-gillard-arranged-by-micah-jones",
-    "title": "The Servant Song",
-    "composer": "Richard Gillard • Arranged by Micah Jones",
-    "resources": [],
-    "usageCount": 1,
-    "occasions": [
-      "feast-of-st-monica"
-    ],
-    "category": "song",
-    "functions": [
-      "communion",
-      "offertory"
-    ]
   },
   {
     "id": "halle-halle-halle",

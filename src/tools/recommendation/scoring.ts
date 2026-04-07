@@ -105,6 +105,8 @@ function buildExplanation(type: string, detail: string, position: string): strin
       return `Your community knows this song (${detail}). Familiar songs encourage full, active participation.`;
     case "recency_penalty":
       return `${detail}. Rotating songs prevents fatigue while building repertoire.`;
+    case "semantic_similarity":
+      return `This song's lyrics echo the themes and language of today's readings (${detail}).`;
     default:
       return detail;
   }
@@ -227,7 +229,8 @@ export function scoreSong(
   usage: UsageRecord | undefined,
   weights: RecommendationWeights,
   today: string,
-  npmScripture?: NpmScriptureMatch[]
+  npmScripture?: NpmScriptureMatch[],
+  semanticSimilarity?: number
 ): ScoredSong {
   const reasons: RecommendationReason[] = [];
   let total = 0;
@@ -400,6 +403,22 @@ export function scoreSong(
     });
   }
 
+  // Semantic similarity: pre-computed vector similarity from pgvector
+  if (semanticSimilarity && semanticSimilarity > 0.3 && weights.semanticSimilarity) {
+    // Scale: 0.3-1.0 similarity maps to partial-to-full weight
+    const scale = Math.min(1, (semanticSimilarity - 0.3) / 0.5);
+    const pts = Math.round(weights.semanticSimilarity * scale);
+    if (pts > 0) {
+      total += pts;
+      reasons.push({
+        type: "semantic_similarity",
+        detail: `${Math.round(semanticSimilarity * 100)}% thematic match`,
+        explanation: `This song's lyrics echo the themes and language of today's readings.`,
+        points: pts,
+      });
+    }
+  }
+
   // Catalog baseline: ensure untagged songs aren't completely invisible
   if (total === 0 && reasons.length === 0) {
     total = 3;
@@ -428,7 +447,8 @@ export function rankSongs(
   usageMap: Map<string, UsageRecord>,
   weights: RecommendationWeights,
   today: string = new Date().toISOString().slice(0, 10),
-  npmScriptureMap?: Map<string, NpmScriptureMatch[]>
+  npmScriptureMap?: Map<string, NpmScriptureMatch[]>,
+  semanticSimilarityMap?: Map<string, number>
 ): ScoredSong[] {
   const excludeSet = new Set(request.excludeSongIds ?? []);
 
@@ -455,7 +475,7 @@ export function rankSongs(
       return true;
     })
     .map((s) =>
-      scoreSong(s, request, usageMap.get(s.id), weights, today, npmScriptureMap?.get(s.id))
+      scoreSong(s, request, usageMap.get(s.id), weights, today, npmScriptureMap?.get(s.id), semanticSimilarityMap?.get(s.id))
     )
     .filter((s) => s.score > 0)
     .sort((a, b) => b.score - a.score);

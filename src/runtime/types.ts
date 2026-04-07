@@ -122,6 +122,7 @@ export interface RecommendationWeights {
   recencyPenalty: number;
   familiarityBoost: number;
   userRankingBoost: number;
+  semanticSimilarity: number;
 }
 
 // ---------------------------------------------------------------------------
@@ -175,6 +176,7 @@ export const DEFAULT_RECOMMENDATION_WEIGHTS: RecommendationWeights = {
   recencyPenalty: 5,
   familiarityBoost: 10,
   userRankingBoost: 15,
+  semanticSimilarity: 20,
 };
 
 export const DEFAULT_CONFIG: RuntimeConfig = {
