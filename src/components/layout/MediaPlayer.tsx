@@ -1175,32 +1175,13 @@ export default function MediaPlayer() {
           {/* Expanded: swipeable panels on mobile, side-by-side on desktop */}
           {mobileExpanded && (
             <div className="bg-stone-800 rounded-lg p-3 mt-3">
-              {/* Desktop: three equal panels */}
+              {/* Desktop: original two-half layout (controls | metronome+piano) */}
               <div className="hidden md:flex items-stretch gap-3">
-                {/* Panel 1: Player controls */}
-                <div className="bg-stone-700/50 rounded-lg px-4 py-3 flex-1 min-w-0">
-                  <div className="flex items-start gap-4">
-                    <div className="shrink-0">{controlsStack}</div>
-                    <div className="flex-1 min-w-0">{slidersStack}</div>
-                  </div>
+                <div className="bg-stone-700/50 rounded-lg px-4 py-3 flex items-start gap-5 flex-1 min-w-0">
+                  <div className="shrink-0">{controlsStack}</div>
+                  <div className="flex-1 min-w-0">{slidersStack}</div>
                 </div>
-                {/* Panel 2: Metronome + volume */}
-                <div className="bg-stone-700/50 rounded-lg px-4 py-3 flex-1 flex flex-col justify-between">
-                  <div className="flex items-center justify-center flex-1">
-                    <MetronomeControls />
-                  </div>
-                  <div className="mt-2">{metroVolumeSlider}</div>
-                </div>
-                {/* Panel 3: Keyboard + volume */}
-                <div className="bg-stone-700/50 rounded-lg p-3 flex-1 flex flex-col justify-between">
-                  <div className="flex items-center justify-center flex-1">
-                    <MiniPiano volume={pianoVolume} />
-                  </div>
-                  <div className="flex items-center gap-2 mt-2">
-                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#a8a29e" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5" /><path d="M15.54 8.46a5 5 0 0 1 0 7.07" /></svg>
-                    <input type="range" min={0} max={1} step={0.05} value={pianoVolume} onChange={(e) => setPianoVolume(parseFloat(e.target.value))} className="flex-1 h-1 accent-stone-400" />
-                  </div>
-                </div>
+                {rightControls}
               </div>
               {/* Mobile: swipeable panels */}
               <div className="md:hidden">
