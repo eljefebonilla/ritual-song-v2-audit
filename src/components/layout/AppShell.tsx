@@ -44,7 +44,7 @@ export default function AppShell({ children }: { children: React.ReactNode }) {
       </button>
 
       <Sidebar open={sidebarOpen} onClose={() => setSidebarOpen(false)} />
-      <main className={`h-full overflow-auto md:ml-64 ${isOpen ? "pb-28" : ""}`}>{children}</main>
+      <main className={`h-full overflow-auto md:ml-64 ${isOpen ? "pb-72" : ""}`}>{children}</main>
       <MediaPlayer />
     </div>
   );
