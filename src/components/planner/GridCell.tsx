@@ -67,7 +67,7 @@ export default function GridCell({
     const descColor = data.isVerbatim ? "text-parish-burgundy" : "text-[#374151]";
     return (
       <div
-        className="px-2 py-1.5 border-b border-r border-stone-100 bg-stone-50/80"
+        className="px-2 py-1.5 h-full border-b border-r border-stone-100 bg-stone-50/80"
         title={data.description ? `${data.title} — ${data.description}` : data.title}
       >
         {data.title && (
