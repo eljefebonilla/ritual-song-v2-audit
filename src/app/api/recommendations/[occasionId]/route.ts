@@ -1,10 +1,9 @@
 import { NextRequest, NextResponse } from "next/server";
 import { getOccasion } from "@/lib/data";
-import { getSongLibrary, loadSongLibrary } from "@/lib/song-library";
-import { recommendForOccasion } from "@/lib/recommendations";
+import { loadSongLibrary } from "@/lib/song-library";
 import { createAdminClient } from "@/lib/supabase/admin";
 import { getScriptureSongsForOccasion } from "@/lib/supabase/scripture-mappings";
-import { findSimilarSongs } from "@/lib/supabase/song-embeddings";
+import { findSimilarSongs, findSimilarSongsByLegacyId } from "@/lib/supabase/song-embeddings";
 import {
   ConversationRuntime,
   LayeredConfig,
@@ -12,6 +11,7 @@ import {
   DEFAULT_PERMISSION_RULES,
 } from "@/runtime";
 import { createRecommendationTools } from "@/tools/recommendation";
+import { rankSongs } from "@/tools/recommendation/scoring";
 import type { NpmScriptureMatch } from "@/tools/recommendation/scoring";
 
 interface SlimRec {
@@ -48,7 +48,7 @@ export async function GET(
     }
   }
 
-  // Fallback: compute live
+  // Fallback: compute live with full scoring engine (including semantic similarity)
   const occasion = getOccasion(occasionId);
   if (!occasion) {
     return NextResponse.json(
@@ -60,22 +60,86 @@ export async function GET(
   const excludeRaw = searchParams.get("exclude") || "";
   const excludeSongIds = excludeRaw ? excludeRaw.split(",").filter(Boolean) : [];
 
+  const supabase = createAdminClient();
   const allSongs = await loadSongLibrary();
-  const recommendations = recommendForOccasion(occasion, allSongs, {
-    limit,
-    excludeSongIds,
-  });
+  const readings = (occasion.readings || []).map((r) => ({
+    citation: r.citation,
+    summary: r.summary,
+  }));
 
-  // Slim down the response
+  // Fetch semantic similarity + NPM scripture in parallel
+  const [similarityMap, scriptureMappings] = await Promise.all([
+    findSimilarSongsByLegacyId(supabase, readings),
+    getScriptureSongsForOccasion(occasionId),
+  ]);
+
+  // Build NPM scripture map keyed by legacy_id
+  const npmMap = new Map<string, NpmScriptureMatch[]>();
+  for (const m of scriptureMappings) {
+    if (!m.legacyId) continue;
+    if (!npmMap.has(m.legacyId)) npmMap.set(m.legacyId, []);
+    npmMap.get(m.legacyId)!.push({
+      readingType: m.readingType,
+      readingReference: m.readingReference,
+      matchedVerseLabel: m.matchedVerseLabel,
+      matchedVerseExcerpt: m.matchedVerseExcerpt,
+    });
+  }
+
+  // Build candidates from song library
+  const candidates = allSongs.map((s) => ({
+    id: s.id,
+    title: s.title,
+    composer: s.composer,
+    category: s.category,
+    scriptureRefs: s.scriptureRefs,
+    topics: s.topics,
+    liturgicalUse: s.liturgicalUse,
+    occasions: s.occasions,
+    functions: s.functions,
+    isHiddenGlobal: s.isHiddenGlobal,
+  }));
+
+  // Run rankSongs per position with full scoring engine
+  const { DEFAULT_RECOMMENDATION_WEIGHTS } = await import("@/runtime/types");
+  const positions = [
+    "gathering", "offertory", "communion1", "communion2",
+    "sending", "prelude", "psalm", "gospelAcclamation",
+  ];
+
   const slimmed: Record<string, SlimRec[]> = {};
-  for (const [position, recs] of Object.entries(recommendations)) {
-    slimmed[position] = recs.map((r) => ({
-      id: r.song.id,
-      title: r.song.title,
-      composer: r.song.composer,
+  const usedSongIds = new Set(excludeSongIds);
+
+  for (const pos of positions) {
+    const results = rankSongs(
+      candidates,
+      {
+        occasionId,
+        position: pos,
+        season: occasion.season,
+        readings,
+        excludeSongIds: [...usedSongIds],
+        limit,
+      },
+      new Map(),
+      DEFAULT_RECOMMENDATION_WEIGHTS,
+      undefined,
+      npmMap,
+      similarityMap
+    );
+
+    slimmed[pos] = results.map((r) => ({
+      id: r.songId,
+      title: r.title,
+      composer: r.composer,
       score: r.score,
-      reasons: r.reasons,
+      reasons: r.reasons.map((reason) => reason.explanation || reason.detail),
     }));
+
+    // Track top pick per position to avoid duplicates
+    if (results.length > 0) {
+      usedSongIds.add(results[0].songId);
+    }
   }
 
   return NextResponse.json(slimmed);

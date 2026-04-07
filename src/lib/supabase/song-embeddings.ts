@@ -83,3 +83,33 @@ export async function findSimilarSongs(
 
   return similarityMap;
 }
+
+/**
+ * Same as findSimilarSongs but returns legacy_id keys instead of UUIDs.
+ * Used by the GET recommendation path where songs are keyed by legacy slug.
+ */
+export async function findSimilarSongsByLegacyId(
+  supabase: SupabaseClient,
+  readings: { citation: string; summary: string }[],
+  threshold: number = 0.3,
+  limit: number = 50
+): Promise<Map<string, number>> {
+  const uuidMap = await findSimilarSongs(supabase, readings, threshold, limit);
+  if (uuidMap.size === 0) return uuidMap;
+
+  const uuids = [...uuidMap.keys()];
+  const { data } = await supabase
+    .from("songs")
+    .select("id, legacy_id")
+    .in("id", uuids);
+
+  const legacyMap = new Map<string, number>();
+  for (const row of data || []) {
+    const sim = uuidMap.get(row.id);
+    if (sim !== undefined && row.legacy_id) {
+      legacyMap.set(row.legacy_id, sim);
+    }
+  }
+
+  return legacyMap;
+}
