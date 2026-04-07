@@ -351,6 +351,15 @@ export interface LibrarySong {
   liturgicalUse?: string[];
 
   youtubeUrl?: string; // Song-level YouTube fallback from songs.youtube_url
+  songForm?: {
+    form?: string;
+    sections?: { type: string; label: string; soloSuitable?: boolean }[];
+    totalSections?: number;
+    hasSoloOpportunity?: boolean;
+    soloSections?: string[];
+    assemblyParts?: string[];
+    notes?: string;
+  };
 
   resources: SongResource[];
   usageCount: number; // how many times this song appears in music plans

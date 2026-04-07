@@ -330,6 +330,28 @@ function SongMetadataSection({ song }: { song: LibrarySong }) {
           </div>
         )}
 
+        {/* Song Form */}
+        {song.songForm && (
+          <div className="flex items-start gap-1.5">
+            <span className="text-[10px] font-medium text-stone-400 w-16 shrink-0 mt-0.5">Form</span>
+            <div className="flex flex-wrap gap-1 items-center">
+              <span className="text-[10px] px-1.5 py-0.5 bg-violet-50 text-violet-700 rounded font-medium">
+                {song.songForm.form}
+              </span>
+              {song.songForm.hasSoloOpportunity && (
+                <span className="text-[10px] px-1.5 py-0.5 bg-amber-50 text-amber-700 rounded">
+                  solo opportunities
+                </span>
+              )}
+              {song.songForm.totalSections && (
+                <span className="text-[10px] text-stone-400">
+                  {song.songForm.totalSections} sections
+                </span>
+              )}
+            </div>
+          </div>
+        )}
+
         {/* First Line / Refrain First Line */}
         {song.firstLine && (
           <div className="flex items-start gap-1.5">
