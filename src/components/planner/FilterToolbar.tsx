@@ -111,8 +111,8 @@ export default function FilterToolbar({
           </span>
         </h1>
         <div className="flex items-center gap-2">
-          {/* View mode toggle */}
-          <div className="flex bg-stone-100 rounded-lg p-0.5">
+          {/* View mode toggle — hidden on mobile (mobile gets swipe view automatically) */}
+          <div className="hidden md:flex bg-stone-100 rounded-lg p-0.5">
             <button
               onClick={() => setViewMode("grid")}
               className={`p-1.5 rounded-md transition-colors ${

@@ -10,6 +10,7 @@ import {
 } from "@/lib/grid-data";
 import FilterToolbar from "./FilterToolbar";
 import PlannerGrid from "./PlannerGrid";
+import MobileWeekView from "./MobileWeekView";
 import { LS_HIDE_PAST_WEEKS, LS_HIDE_MASS_PARTS, LS_HIDE_READINGS, LS_HIDE_SYNOPSES } from "@/lib/storage-keys";
 
 const HIDE_PAST_KEY = LS_HIDE_PAST_WEEKS;
@@ -230,7 +231,14 @@ export default function PlannerShell({ occasions }: PlannerShellProps) {
         onShowAllHidden={showAllHidden}
       />
       <div className="flex-1 overflow-hidden">
-        <PlannerGrid columns={columns} viewMode={viewMode} hideMassParts={hideMassParts} hideReadings={hideReadings} hideSynopses={hideSynopses} ensembleId={ensembleId} onPlanChange={handlePlanChange} onHideOccasion={hideOccasion} />
+        {/* Mobile: single-week swipeable view */}
+        <div className="block md:hidden h-full">
+          <MobileWeekView columns={columns} hideMassParts={hideMassParts} hideReadings={hideReadings} ensembleId={ensembleId} onHideOccasion={hideOccasion} />
+        </div>
+        {/* Desktop: full grid */}
+        <div className="hidden md:block h-full">
+          <PlannerGrid columns={columns} viewMode={viewMode} hideMassParts={hideMassParts} hideReadings={hideReadings} hideSynopses={hideSynopses} ensembleId={ensembleId} onPlanChange={handlePlanChange} onHideOccasion={hideOccasion} />
+        </div>
       </div>
     </div>
   );
