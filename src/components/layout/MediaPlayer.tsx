@@ -1131,10 +1131,10 @@ export default function MediaPlayer() {
           {/* Expanded: swipeable panels on mobile, side-by-side on desktop */}
           {mobileExpanded && (
             <div className="bg-stone-800 rounded-lg p-3 mt-3">
-              {/* Desktop: three panels with individual volumes */}
-              <div className="hidden md:flex items-stretch gap-3">
+              {/* Desktop: three equal panels with individual volumes */}
+              <div className="hidden md:grid grid-cols-3 gap-3">
                 {/* Controls panel: scrub on top, key+loop inline, speed+vol below */}
-                <div className="bg-stone-700/50 rounded-lg px-4 py-3 flex-1 min-w-0 space-y-1.5">
+                <div className="bg-stone-700/50 rounded-lg px-4 py-4 space-y-2">
                   {/* Scrub bar across full width */}
                   {scrubBar}
                   {/* Key + Loop in one row */}
@@ -1153,30 +1153,30 @@ export default function MediaPlayer() {
                   {/* Speed + Volume */}
                   <div className="flex items-center gap-2">
                     <span className="text-[10px] font-bold text-stone-400 uppercase w-10 shrink-0">Speed</span>
-                    <input type="range" min={0.6} max={1} step={0.01} value={speed} onChange={(e) => setSpeed(parseFloat(e.target.value))} className="flex-1 h-1 accent-[#B8A472]" />
+                    <input type="range" min={0.6} max={1} step={0.01} value={speed} onChange={(e) => setSpeed(parseFloat(e.target.value))} className="flex-1 h-1.5 accent-[#B8A472]" />
                     <span className="text-[10px] font-bold text-[#B8A472] tabular-nums w-10 text-right shrink-0">{speed < 1 ? `${speed.toFixed(2)}x` : "1x"}</span>
                   </div>
                   <div className="flex items-center gap-2">
                     <span className="text-[10px] font-bold text-stone-400 uppercase w-10 shrink-0">Vol</span>
-                    <input type="range" min={0} max={1} step={0.01} value={volume} onChange={(e) => setVolume(parseFloat(e.target.value))} className="flex-1 h-1 accent-stone-500" />
+                    <input type="range" min={0} max={1} step={0.01} value={volume} onChange={(e) => setVolume(parseFloat(e.target.value))} className="flex-1 h-1.5 accent-stone-500" />
                     <span className="text-[10px] text-stone-400 w-10 text-right tabular-nums shrink-0">{Math.round(volume * 100)}%</span>
                   </div>
                 </div>
                 {/* Metronome panel with volume */}
-                <div className="bg-stone-700/50 rounded-lg px-3 py-3 shrink-0 flex flex-col justify-between">
+                <div className="bg-stone-700/50 rounded-lg px-4 py-4 flex flex-col justify-between">
                   <div className="flex items-center justify-center flex-1">
-                    <MetronomeControls compact />
+                    <MetronomeControls />
                   </div>
-                  <div className="mt-2">{metroVolumeSlider}</div>
+                  <div className="mt-3">{metroVolumeSlider}</div>
                 </div>
                 {/* Piano panel with volume */}
-                <div className="bg-stone-700/50 rounded-lg p-2 shrink-0 flex flex-col justify-between">
+                <div className="bg-stone-700/50 rounded-lg p-3 flex flex-col justify-between">
                   <div className="flex items-center justify-center flex-1">
                     <MiniPiano volume={pianoVolume} />
                   </div>
-                  <div className="flex items-center gap-2 mt-2 px-1">
+                  <div className="flex items-center gap-2 mt-3 px-1">
                     <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#a8a29e" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5" /><path d="M15.54 8.46a5 5 0 0 1 0 7.07" /></svg>
-                    <input type="range" min={0} max={1} step={0.05} value={pianoVolume} onChange={(e) => setPianoVolume(parseFloat(e.target.value))} className="flex-1 h-1 accent-stone-400" />
+                    <input type="range" min={0} max={1} step={0.05} value={pianoVolume} onChange={(e) => setPianoVolume(parseFloat(e.target.value))} className="flex-1 h-1.5 accent-stone-400" />
                   </div>
                 </div>
               </div>
