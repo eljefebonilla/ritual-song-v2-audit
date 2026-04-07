@@ -30,6 +30,8 @@ interface FilterToolbarProps {
   setHideSynopses: (v: boolean) => void;
   viewMode: PlannerViewMode;
   setViewMode: (v: PlannerViewMode) => void;
+  hiddenCount?: number;
+  onShowAllHidden?: () => void;
 }
 
 const YEAR_CYCLES: { id: YearCycleFilter; label: string }[] = [
@@ -68,6 +70,8 @@ export default function FilterToolbar({
   setHideSynopses,
   viewMode,
   setViewMode,
+  hiddenCount,
+  onShowAllHidden,
 }: FilterToolbarProps) {
   const { role } = useUser();
   const [filtersExpanded, setFiltersExpanded] = useState(false);
@@ -325,6 +329,19 @@ export default function FilterToolbar({
             />
             <span className="text-xs text-stone-600">Show synopses</span>
           </label>
+
+          {/* Show hidden weeks */}
+          {hiddenCount !== undefined && hiddenCount > 0 && onShowAllHidden && (
+            <button
+              onClick={onShowAllHidden}
+              className="flex items-center gap-1 text-xs text-amber-700 hover:text-amber-900 bg-amber-50 px-2 py-0.5 rounded transition-colors"
+            >
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z" /><circle cx="12" cy="12" r="3" />
+              </svg>
+              Show {hiddenCount} hidden week{hiddenCount > 1 ? "s" : ""}
+            </button>
+          )}
         </div>
       </div>
     </div>

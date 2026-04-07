@@ -16,6 +16,7 @@ const HIDE_PAST_KEY = LS_HIDE_PAST_WEEKS;
 const HIDE_MASS_PARTS_KEY = LS_HIDE_MASS_PARTS;
 const HIDE_READINGS_KEY = LS_HIDE_READINGS;
 const HIDE_SYNOPSES_KEY = LS_HIDE_SYNOPSES;
+const LS_HIDDEN_OCCASIONS = "rs:hiddenOccasions";
 
 export type PlannerViewMode = "grid" | "cards";
 
@@ -29,6 +30,31 @@ export default function PlannerShell({ occasions }: PlannerShellProps) {
   const [ensembleId, setEnsembleId] = useState<EnsembleId>("reflections");
   const [rangeStart, setRangeStart] = useState(0);
   const [rangeEnd, setRangeEnd] = useState(12);
+
+  // Selectively hidden occasion IDs (persisted to localStorage)
+  const [hiddenOccasionIds, setHiddenOccasionIds] = useState<Set<string>>(() => {
+    if (typeof window === "undefined") return new Set();
+    try {
+      const stored = localStorage.getItem(LS_HIDDEN_OCCASIONS);
+      return stored ? new Set(JSON.parse(stored)) : new Set();
+    } catch {
+      return new Set();
+    }
+  });
+
+  const hideOccasion = useCallback((id: string) => {
+    setHiddenOccasionIds(prev => {
+      const next = new Set(prev);
+      next.add(id);
+      localStorage.setItem(LS_HIDDEN_OCCASIONS, JSON.stringify([...next]));
+      return next;
+    });
+  }, []);
+
+  const showAllHidden = useCallback(() => {
+    setHiddenOccasionIds(new Set());
+    localStorage.removeItem(LS_HIDDEN_OCCASIONS);
+  }, []);
 
   // View mode: auto-detect mobile on mount
   const [viewMode, setViewMode] = useState<PlannerViewMode>(() => {
@@ -117,8 +143,8 @@ export default function PlannerShell({ occasions }: PlannerShellProps) {
   const clampedEnd = Math.min(effectiveEnd, maxEnd);
 
   const visibleOccasions = useMemo(
-    () => filteredOccasions.slice(clampedStart, clampedEnd),
-    [filteredOccasions, clampedStart, clampedEnd]
+    () => filteredOccasions.slice(clampedStart, clampedEnd).filter(o => !hiddenOccasionIds.has(o.id)),
+    [filteredOccasions, clampedStart, clampedEnd, hiddenOccasionIds]
   );
 
   // Fetch Supabase music plan overrides for visible occasions
@@ -200,9 +226,11 @@ export default function PlannerShell({ occasions }: PlannerShellProps) {
         setHideSynopses={setHideSynopses}
         viewMode={viewMode}
         setViewMode={setViewMode}
+        hiddenCount={hiddenOccasionIds.size}
+        onShowAllHidden={showAllHidden}
       />
       <div className="flex-1 overflow-hidden">
-        <PlannerGrid columns={columns} viewMode={viewMode} hideMassParts={hideMassParts} hideReadings={hideReadings} hideSynopses={hideSynopses} ensembleId={ensembleId} onPlanChange={handlePlanChange} />
+        <PlannerGrid columns={columns} viewMode={viewMode} hideMassParts={hideMassParts} hideReadings={hideReadings} hideSynopses={hideSynopses} ensembleId={ensembleId} onPlanChange={handlePlanChange} onHideOccasion={hideOccasion} />
       </div>
     </div>
   );

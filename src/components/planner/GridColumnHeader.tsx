@@ -6,9 +6,10 @@ import { getOccasionDisplayDate } from "@/lib/grid-data";
 interface GridColumnHeaderProps {
   occasion: LiturgicalOccasion;
   showTags?: boolean;
+  onHide?: () => void;
 }
 
-export default function GridColumnHeader({ occasion, showTags = true }: GridColumnHeaderProps) {
+export default function GridColumnHeader({ occasion, showTags = true, onHide }: GridColumnHeaderProps) {
   const colors = SEASON_COLORS[occasion.season] || SEASON_COLORS.ordinary;
   const occColor = getOccasionColor(occasion.id, occasion.season);
   const displayDate = getOccasionDisplayDate(occasion);
@@ -24,7 +25,7 @@ export default function GridColumnHeader({ occasion, showTags = true }: GridColu
 
   return (
     <div
-      className="px-2 py-2 h-full flex flex-col items-center text-center"
+      className="px-2 py-2 h-full flex flex-col items-center text-center relative group/col"
       style={{
         background: `linear-gradient(to bottom, color-mix(in srgb, ${occColor}, transparent 92%), transparent)`,
       }}
@@ -49,6 +50,18 @@ export default function GridColumnHeader({ occasion, showTags = true }: GridColu
         <span className="text-[9px] font-bold text-stone-400 mt-0.5">
           {occasion.year}
         </span>
+      )}
+      {/* Hide button */}
+      {onHide && (
+        <button
+          onClick={(e) => { e.preventDefault(); e.stopPropagation(); onHide(); }}
+          className="absolute top-1 right-1 p-0.5 text-stone-300 hover:text-stone-500 opacity-0 group-hover/col:opacity-100 transition-opacity"
+          title="Hide this week"
+        >
+          <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+            <line x1="18" y1="6" x2="6" y2="18" /><line x1="6" y1="6" x2="18" y2="18" />
+          </svg>
+        </button>
       )}
       {/* Season + reading tags */}
       {showTags && (

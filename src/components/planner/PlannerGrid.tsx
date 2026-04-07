@@ -37,6 +37,7 @@ interface PlannerGridProps {
   hideSynopses?: boolean;
   ensembleId?: string;
   onPlanChange?: () => void;
+  onHideOccasion?: (id: string) => void;
 }
 
 interface EditingCell {
@@ -214,7 +215,7 @@ function findPlayable(song: LibrarySong): { url: string; type: "audio" | "youtub
   return null;
 }
 
-export default function PlannerGrid({ columns, viewMode, hideMassParts = false, hideReadings = false, hideSynopses = true, ensembleId, onPlanChange }: PlannerGridProps) {
+export default function PlannerGrid({ columns, viewMode, hideMassParts = false, hideReadings = false, hideSynopses = true, ensembleId, onPlanChange, onHideOccasion }: PlannerGridProps) {
   const { isAdmin } = useUser();
   const { play } = useMedia();
   const [massSettingExpanded, setMassSettingExpanded] = useState(false);
@@ -543,7 +544,7 @@ export default function PlannerGrid({ columns, viewMode, hideMassParts = false, 
                 }`}
                 style={{ width: COL_WIDTH }}
               >
-                <GridColumnHeader occasion={col.occasion} />
+                <GridColumnHeader occasion={col.occasion} onHide={onHideOccasion ? () => onHideOccasion(col.occasion.id) : undefined} />
               </div>
             </React.Fragment>
           ))}
