@@ -1,8 +1,9 @@
 "use client";
 
-import React, { useState, useCallback } from "react";
+import React, { useState, useCallback, useMemo, useEffect } from "react";
 import Link from "next/link";
 import type { GridColumn, SongDragPayload } from "@/lib/grid-types";
+import type { LibrarySong } from "@/lib/types";
 import {
   GRID_SECTIONS,
   GRID_ROW_LABELS,
@@ -15,8 +16,11 @@ import {
 } from "@/lib/grid-types";
 import { extractCellData, getOccasionDisplayDate } from "@/lib/grid-data";
 import { SEASON_COLORS } from "@/lib/liturgical-colors";
+import { normalizeTitle } from "@/lib/occasion-helpers";
 import { getAllSynopses } from "@/lib/data";
+import { getTitleIndex, pickBestMatch, resourceUrl } from "@/lib/song-library";
 import { useUser } from "@/lib/user-context";
+import { useMedia } from "@/lib/media-context";
 import GridColumnHeader from "./GridColumnHeader";
 import GridCell from "./GridCell";
 import CellEditor from "./CellEditor";
@@ -185,11 +189,87 @@ function OccasionCard({ column, hideMassParts = false, hideReadings = false, hid
   );
 }
 
+/** Find the best playable audio/youtube resource for a song */
+function findPlayable(song: LibrarySong): { url: string; type: "audio" | "youtube"; label?: string } | null {
+  for (const r of song.resources) {
+    if (r.type === "audio" && (r.url || r.storagePath)) {
+      const url = resourceUrl(r);
+      if (url) return { url, type: "audio", label: r.label };
+    }
+  }
+  for (const r of song.resources) {
+    if (r.type === "audio" && r.filePath && !r.url && !r.storagePath) {
+      const url = resourceUrl(r);
+      if (url) return { url, type: "audio", label: r.label };
+    }
+  }
+  for (const r of song.resources) {
+    if (r.type === "youtube" && r.url) {
+      return { url: r.url, type: "youtube", label: r.label };
+    }
+  }
+  if (song.youtubeUrl) {
+    return { url: song.youtubeUrl, type: "youtube" };
+  }
+  return null;
+}
+
 export default function PlannerGrid({ columns, viewMode, hideMassParts = false, hideReadings = false, hideSynopses = true, ensembleId, onPlanChange }: PlannerGridProps) {
   const { isAdmin } = useUser();
+  const { play } = useMedia();
   const [massSettingExpanded, setMassSettingExpanded] = useState(false);
   const [editingCell, setEditingCell] = useState<EditingCell | null>(null);
   const [dragOverCell, setDragOverCell] = useState<{ occasionId: string; rowKey: GridRowKey } | null>(null);
+
+  // Song lookup for play buttons
+  const songIndex = useMemo(() => getTitleIndex(), [columns]); // eslint-disable-line react-hooks/exhaustive-deps
+  const lookupSong = useCallback((title: string, composer?: string): LibrarySong | null => {
+    const key = normalizeTitle(title);
+    const candidates = songIndex.get(key);
+    if (!candidates) return null;
+    return pickBestMatch(candidates, composer);
+  }, [songIndex]);
+
+  // Batch-fetch audio URLs for all songs in visible columns
+  const [audioOverrides, setAudioOverrides] = useState<Record<string, string>>({});
+  const [youtubeOverrides, setYoutubeOverrides] = useState<Record<string, string>>({});
+
+  const allSongIds = useMemo(() => {
+    const ids = new Set<string>();
+    for (const col of columns) {
+      if (!col.plan) continue;
+      const fields = ["prelude", "gathering", "penitentialAct", "gloria", "offertory", "lordsPrayer", "fractionRite", "sending", "responsorialPsalm", "gospelAcclamation"] as const;
+      for (const f of fields) {
+        const val = col.plan[f as keyof typeof col.plan];
+        if (val && typeof val === "object" && "title" in val) {
+          const song = lookupSong((val as { title: string }).title, (val as { composer?: string }).composer);
+          if (song) ids.add(song.id);
+        }
+      }
+      if (col.plan.communionSongs) {
+        for (const s of col.plan.communionSongs) {
+          const song = lookupSong(s.title, s.composer);
+          if (song) ids.add(song.id);
+        }
+      }
+    }
+    return [...ids];
+  }, [columns, lookupSong]);
+
+  useEffect(() => {
+    if (allSongIds.length === 0) return;
+    let cancelled = false;
+    fetch(`/api/songs/batch-audio?ids=${allSongIds.join(",")}`)
+      .then((res) => (res.ok ? res.json() : null))
+      .then((data) => {
+        if (!cancelled) {
+          if (data?.audioUrls) setAudioOverrides(data.audioUrls);
+          if (data?.youtubeUrls) setYoutubeOverrides(data.youtubeUrls);
+        }
+      })
+      .catch(() => {});
+    return () => { cancelled = true; };
+  }, [allSongIds]);
 
   // Map rowKey to the MusicPlan field name for the API
   const rowKeyToField = useCallback((key: GridRowKey): string => {
@@ -574,6 +654,26 @@ export default function PlannerGrid({ columns, viewMode, hideMassParts = false, 
                 const isDraggable = isAdmin && SONG_DRAG_ROWS.has(rowKey);
                 const isOver = dragOverCell?.occasionId === col.occasion.id && dragOverCell?.rowKey === rowKey;
 
+                // Lookup song for play button
+                let matchedSong: LibrarySong | null = null;
+                let playable: ReturnType<typeof findPlayable> = null;
+                if (!row.isReading && !cellData.isEmpty && cellData.title) {
+                  matchedSong = lookupSong(cellData.title, cellData.composer);
+                  if (matchedSong) {
+                    // Check batch-audio overrides first
+                    const overrideUrl = audioOverrides[matchedSong.id];
+                    const ytOverrideUrl = youtubeOverrides[matchedSong.id];
+                    if (overrideUrl) {
+                      playable = { url: overrideUrl, type: "audio" };
+                    } else {
+                      playable = findPlayable(matchedSong);
+                      if (!playable && ytOverrideUrl) {
+                        playable = { url: ytOverrideUrl, type: "youtube" };
+                      }
+                    }
+                  }
+                }
+
                 return (
                   <React.Fragment key={`${col.occasion.id}-${rowKey}`}>
                     {ci === holyWeekDividerIndex && (
@@ -586,6 +686,17 @@ export default function PlannerGrid({ columns, viewMode, hideMassParts = false, 
                       <GridCell
                         data={cellData}
                         isEven={ci % 2 === 0}
+                        hasAudio={!!playable}
+                        audioType={playable?.type}
+                        onPlay={playable && matchedSong ? () => {
+                          play({
+                            type: playable!.type,
+                            url: playable!.url,
+                            title: matchedSong!.title,
+                            subtitle: playable!.label,
+                            songId: matchedSong!.id,
+                          });
+                        } : undefined}
                         onEdit={isAdmin ? (rect) => setEditingCell({
                           occasionId: col.occasion.id,
                           rowKey,
