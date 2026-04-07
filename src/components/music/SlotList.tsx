@@ -94,7 +94,9 @@ function SlotPlayButton({ resources }: { resources?: OccasionResource[] }) {
   const audioResource = resources?.find((r) => r.type === "audio");
   if (!audioResource) return null;
 
-  const url = `/api/music/${encodeURIComponent(audioResource.filePath)}`;
+  const url = audioResource.filePath.startsWith("http")
+    ? audioResource.filePath
+    : `/api/music/${encodeURIComponent(audioResource.filePath)}`;
   const isPlaying = current?.url === url;
 
   const handleToggle = (e: React.MouseEvent) => {
