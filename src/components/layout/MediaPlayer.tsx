@@ -1019,53 +1019,56 @@ export default function MediaPlayer() {
 
   // --- Metronome block (used standalone on mobile, combined on desktop) ---
   const metronomeBlock = (
-    <div className="flex items-center gap-3">
-        {/* Play/stop button */}
+    <div className="flex items-center gap-4">
+        {/* Play/stop button — larger on mobile */}
         <button
           onClick={toggleMetronome}
-          className="w-8 h-8 rounded-full flex items-center justify-center shrink-0 transition-all active:scale-95"
+          className="w-8 h-8 md:w-8 md:h-8 rounded-full flex items-center justify-center shrink-0 transition-all active:scale-95 mobile-metro-play"
           style={{
             background: metroPlaying ? ACCENT : "#44403c",
             boxShadow: metroPlaying ? `0 0 10px ${ACCENT}60` : "0 1px 3px rgba(0,0,0,0.3)",
+            width: typeof window !== "undefined" && window.innerWidth < 768 ? 44 : undefined,
+            height: typeof window !== "undefined" && window.innerWidth < 768 ? 44 : undefined,
           }}
           title={metroPlaying ? "Stop metronome" : "Start metronome"}
         >
           {metroPlaying ? (
-            <svg width="12" height="12" viewBox="0 0 24 24" fill="white" stroke="white" strokeWidth="3">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="white" stroke="white" strokeWidth="3">
               <rect x="6" y="4" width="4" height="16" rx="1" />
               <rect x="14" y="4" width="4" height="16" rx="1" />
             </svg>
           ) : (
-            <svg width="12" height="12" viewBox="0 0 24 24" fill="white" stroke="white" strokeWidth="2.5" strokeLinejoin="round">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="white" stroke="white" strokeWidth="2.5" strokeLinejoin="round">
               <polygon points="6,3 20,12 6,21" />
             </svg>
           )}
         </button>
-        {/* BPM display -- fixed width so layout doesn't shift */}
-        <div className="flex flex-col items-center w-12">
-          <span className="text-2xl font-mono font-bold text-white leading-none tabular-nums text-center">
+        {/* BPM display */}
+        <div className="flex flex-col items-center w-14">
+          <span className="text-3xl font-mono font-bold text-white leading-none tabular-nums text-center">
             {metroBpm}
           </span>
           <span className="text-[8px] font-bold text-stone-400 uppercase tracking-widest mt-0.5">BPM</span>
         </div>
-        <div className="flex flex-col gap-1">
-          <div className="flex gap-1">
+        {/* +/- 1 buttons + TAP */}
+        <div className="flex flex-col gap-1.5">
+          <div className="flex gap-1.5">
             <button
-              onClick={() => setMetroBpm((b) => Math.max(30, b - 5))}
-              className="w-7 h-6 bg-stone-700 text-white text-[10px] rounded hover:bg-stone-600 font-bold"
+              onClick={() => setMetroBpm((b) => Math.max(30, b - 1))}
+              className="w-10 h-10 bg-stone-700 text-white text-sm rounded-md hover:bg-stone-600 font-bold flex items-center justify-center active:bg-stone-500"
             >
-              -5
+              -
             </button>
             <button
-              onClick={() => setMetroBpm((b) => Math.min(300, b + 5))}
-              className="w-7 h-6 bg-stone-700 text-white text-[10px] rounded hover:bg-stone-600 font-bold"
+              onClick={() => setMetroBpm((b) => Math.min(300, b + 1))}
+              className="w-10 h-10 bg-stone-700 text-white text-sm rounded-md hover:bg-stone-600 font-bold flex items-center justify-center active:bg-stone-500"
             >
-              +5
+              +
             </button>
           </div>
           <button
             onClick={handleTapTempo}
-            className="w-full h-7 bg-stone-200 text-stone-900 text-[10px] font-black rounded hover:bg-white active:bg-stone-400 transition-colors tracking-tighter"
+            className="w-full h-10 bg-stone-200 text-stone-900 text-xs font-black rounded-md hover:bg-white active:bg-stone-400 transition-colors tracking-wide"
           >
             TAP
           </button>
