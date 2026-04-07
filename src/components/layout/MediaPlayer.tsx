@@ -10,6 +10,55 @@ import {
   transposedKeyName,
 } from "@/lib/key-utils";
 
+/** Swipeable panel container for mobile media player */
+function SwipeablePanels({ panels }: { panels: { label: string; content: React.ReactNode }[] }) {
+  const [active, setActive] = useState(0);
+  const touchRef = useRef<{ x: number; time: number } | null>(null);
+
+  const onTouchStart = (e: React.TouchEvent) => {
+    touchRef.current = { x: e.touches[0].clientX, time: Date.now() };
+  };
+  const onTouchEnd = (e: React.TouchEvent) => {
+    if (!touchRef.current) return;
+    const dx = e.changedTouches[0].clientX - touchRef.current.x;
+    const dt = Date.now() - touchRef.current.time;
+    touchRef.current = null;
+    if (Math.abs(dx) < 40 || dt > 400) return;
+    if (dx < 0 && active < panels.length - 1) setActive(a => a + 1);
+    if (dx > 0 && active > 0) setActive(a => a - 1);
+  };
+
+  return (
+    <div onTouchStart={onTouchStart} onTouchEnd={onTouchEnd}>
+      {/* Tab labels */}
+      <div className="flex items-center justify-center gap-3 mb-2">
+        {panels.map((p, i) => (
+          <button
+            key={i}
+            onClick={() => setActive(i)}
+            className={`text-[10px] font-bold uppercase tracking-wider transition-colors ${
+              i === active ? "text-white" : "text-stone-500"
+            }`}
+          >
+            {p.label}
+          </button>
+        ))}
+      </div>
+      {/* Active panel */}
+      {panels[active]?.content}
+      {/* Dots */}
+      <div className="flex items-center justify-center gap-1.5 mt-2">
+        {panels.map((_, i) => (
+          <div
+            key={i}
+            className={`rounded-full transition-all ${i === active ? "w-1.5 h-1.5 bg-white" : "w-1 h-1 bg-stone-600"}`}
+          />
+        ))}
+      </div>
+    </div>
+  );
+}
+
 function extractYouTubeId(url: string): string | null {
   const patterns = [
     /(?:youtube\.com\/watch\?v=|youtu\.be\/|youtube\.com\/embed\/)([a-zA-Z0-9_-]{11})/,
@@ -1111,11 +1160,11 @@ export default function MediaPlayer() {
           {!mobileExpanded && scrubBar}
           {errorDisplay}
 
-          {/* Expanded: unified module with inset panels */}
+          {/* Expanded: swipeable panels on mobile, side-by-side on desktop */}
           {mobileExpanded && (
             <div className="bg-stone-800 rounded-lg p-3 mt-3">
-              <div className="flex items-stretch gap-3">
-                {/* Controls panel: Key + Loop | Scrub + Speed + Vol */}
+              {/* Desktop: all panels side by side */}
+              <div className="hidden md:flex items-stretch gap-3">
                 <div className="bg-stone-700/50 rounded-lg px-4 py-3 flex items-start gap-5 flex-1 min-w-0">
                   <div className="shrink-0">
                     {controlsStack}
@@ -1124,8 +1173,30 @@ export default function MediaPlayer() {
                     {slidersStack}
                   </div>
                 </div>
-                {/* Metronome + Piano */}
                 {rightControls}
+              </div>
+              {/* Mobile: swipeable panels */}
+              <div className="md:hidden">
+                <SwipeablePanels
+                  panels={[
+                    { label: "Controls", content: (
+                      <div className="bg-stone-700/50 rounded-lg px-4 py-3 flex items-start gap-4">
+                        <div className="shrink-0">{controlsStack}</div>
+                        <div className="flex-1 min-w-0">{slidersStack}</div>
+                      </div>
+                    )},
+                    { label: "Metronome", content: (
+                      <div className="bg-stone-700/50 rounded-lg px-4 py-3 flex items-center justify-center">
+                        {rightControls}
+                      </div>
+                    )},
+                    { label: "Keyboard", content: (
+                      <div className="bg-stone-700/50 rounded-lg p-3 flex items-center justify-center">
+                        <MiniPiano />
+                      </div>
+                    )},
+                  ]}
+                />
               </div>
             </div>
           )}
