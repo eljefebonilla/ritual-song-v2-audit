@@ -375,7 +375,7 @@ export default function PlannerGrid({ columns, viewMode, hideMassParts = false, 
   // Card view (mobile)
   if (viewMode === "cards") {
     return (
-      <div className="h-full overflow-y-auto p-4 space-y-3">
+      <div className="h-full overflow-y-auto p-4 pb-24 space-y-3">
         {columns.map((col, ci) => (
           <React.Fragment key={col.occasion.id}>
             {ci === holyWeekDividerIndex && (
@@ -433,6 +433,7 @@ export default function PlannerGrid({ columns, viewMode, hideMassParts = false, 
         style={{
           width: totalWidth,
           minHeight: "100%",
+          paddingBottom: 96,
         }}
       >
         {/* Column headers */}
