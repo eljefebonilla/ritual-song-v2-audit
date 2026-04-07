@@ -55,10 +55,10 @@ export default function GridColumnHeader({ occasion, showTags = true, onHide }: 
       {onHide && (
         <button
           onClick={(e) => { e.preventDefault(); e.stopPropagation(); onHide(); }}
-          className="absolute top-1 right-1 p-0.5 text-stone-300 hover:text-stone-500 opacity-0 group-hover/col:opacity-100 transition-opacity"
+          className="absolute top-1.5 right-1.5 w-5 h-5 flex items-center justify-center rounded-full bg-stone-200 text-stone-500 hover:bg-red-100 hover:text-red-600 opacity-0 group-hover/col:opacity-100 transition-all"
           title="Hide this week"
         >
-          <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+          <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
             <line x1="18" y1="6" x2="6" y2="18" /><line x1="6" y1="6" x2="18" y2="18" />
           </svg>
         </button>
