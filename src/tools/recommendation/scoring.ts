@@ -49,6 +49,13 @@ const POSITION_FUNCTIONS: Record<string, string[]> = {
   psalm: ["psalm", "responsorial"],
   gospelAcclamation: ["gospel_acclamation", "gospel acclamation"],
   gospel_acclamation: ["gospel_acclamation", "gospel acclamation"],
+  fractionRite: ["fraction_rite", "lamb_of_god"],
+  fraction_rite: ["fraction_rite", "lamb_of_god"],
+  gloria: ["gloria"],
+  penitentialAct: ["penitential_act", "kyrie"],
+  penitential_act: ["penitential_act", "kyrie"],
+  lordsPrayer: ["lords_prayer"],
+  lords_prayer: ["lords_prayer"],
 };
 
 /**
@@ -87,6 +94,20 @@ const POSITION_ELIGIBLE_CATEGORIES: Record<string, Set<string>> = {
   lordsPrayer: new Set(["song", "mass_part"]),
   lords_prayer: new Set(["song", "mass_part"]),
 };
+
+/**
+ * Positions where function match is a HARD GATE, not a soft penalty.
+ * These are liturgical-structural slots where only songs with the correct
+ * function tag should appear. Without this, high scripture/topic/semantic
+ * scores let general hymns overwhelm the function penalty.
+ */
+const FUNCTION_REQUIRED_POSITIONS = new Set([
+  "psalm", "gospelAcclamation", "gospel_acclamation",
+  "fractionRite", "fraction_rite",
+  "gloria",
+  "lordsPrayer", "lords_prayer",
+  "penitentialAct", "penitential_act",
+]);
 
 /**
  * Generate a liturgically intelligent explanation of why a song fits.
@@ -459,6 +480,16 @@ export function rankSongs(
       if (excludeSet.has(s.id) || s.isHiddenGlobal) return false;
       // Category gating: only allow eligible categories for this position
       if (eligible && s.category && !eligible.has(s.category)) return false;
+      // Function hard gate: structural slots (psalm, GA, Lamb of God, Gloria, etc.)
+      // require a matching function tag. Without this, high scripture/semantic scores
+      // let general hymns appear in slots where only specific Mass parts belong.
+      if (FUNCTION_REQUIRED_POSITIONS.has(request.position)) {
+        const requiredFns = POSITION_FUNCTIONS[request.position] || [];
+        if (requiredFns.length > 0) {
+          const songFns = (s.functions || []).map((f) => f.toLowerCase());
+          if (!requiredFns.some((fn) => songFns.includes(fn))) return false;
+        }
+      }
       // Exclude songs tagged for conflicting seasons (via occasion tags)
       if (s.occasions && s.occasions.length > 0) {
         const songSeasons = getSongSeasons(s.occasions);

@@ -177,7 +177,7 @@ async function main() {
 
     if (processed % 20 === 0 || targetOccasion) {
       const semHits = rows.filter((r) =>
-        r.match_reasons.some((reason) => reason.includes("thematic match"))
+        r.match_reasons.some((reason) => reason.includes("echo the themes") || reason.includes("thematic match"))
       ).length;
       console.log(
         `  ${occ.id}: ${rows.length} recs (${semHits} with semantic similarity)`
