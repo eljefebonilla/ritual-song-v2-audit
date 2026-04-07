@@ -1180,15 +1180,17 @@ export default function MediaPlayer() {
             <div className="bg-stone-800 rounded-lg p-3 mt-3">
               {/* Desktop: all panels side by side */}
               <div className="hidden md:flex items-stretch gap-3">
-                <div className="bg-stone-700/50 rounded-lg px-4 py-3 flex items-start gap-5 flex-1 min-w-0">
+                <div className="bg-stone-700/50 rounded-lg px-4 py-3 flex items-start gap-5 flex-1 min-w-0 overflow-hidden">
                   <div className="shrink-0">
                     {controlsStack}
                   </div>
-                  <div className="flex-1 min-w-0">
+                  <div className="flex-1 min-w-0 overflow-hidden">
                     {slidersStack}
                   </div>
                 </div>
-                {rightControls}
+                <div className="shrink-0">
+                  {rightControls}
+                </div>
               </div>
               {/* Mobile: swipeable panels */}
               <div className="md:hidden">
