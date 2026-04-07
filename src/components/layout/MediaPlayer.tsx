@@ -1137,8 +1137,51 @@ export default function MediaPlayer() {
           {/* Expanded: swipeable panels on mobile, side-by-side on desktop */}
           {mobileExpanded && (
             <div className="bg-stone-800 rounded-lg p-3 mt-3">
-              {/* Unified: cycleable panels (swipe on mobile, arrows on both) */}
-              <div>
+              {/* Wide desktop: three panels side by side */}
+              <div className="hidden lg:grid grid-cols-3 gap-3">
+                {/* Controls */}
+                <div className="bg-stone-700/50 rounded-lg px-4 py-4 space-y-2">
+                  {scrubBar}
+                  <div className="flex items-center gap-3 flex-wrap">
+                    <span className="text-[10px] font-bold text-stone-400 uppercase shrink-0">Key</span>
+                    <button onClick={(e) => { setPitchSemitones(pitchSemitones - 1); setActiveChartKey(null); (e.currentTarget as HTMLElement).blur(); }} disabled={pitchSemitones <= -12} className="w-6 h-6 rounded border border-stone-600 flex items-center justify-center text-stone-300 hover:bg-stone-700 disabled:opacity-30 text-sm font-bold">−</button>
+                    <span className="text-xs font-mono w-6 text-center text-stone-200 tabular-nums">{current?.recordedKey ? (transposedKeyName(current.recordedKey, pitchSemitones) || String(pitchSemitones)) : pitchSemitones > 0 ? `+${pitchSemitones}` : String(pitchSemitones)}</span>
+                    <button onClick={(e) => { setPitchSemitones(pitchSemitones + 1); setActiveChartKey(null); (e.currentTarget as HTMLElement).blur(); }} disabled={pitchSemitones >= 12} className="w-6 h-6 rounded border border-stone-600 flex items-center justify-center text-stone-300 hover:bg-stone-700 disabled:opacity-30 text-sm font-bold">+</button>
+                    {pitchSemitones !== 0 && <button onClick={() => { setPitchSemitones(0); setActiveChartKey(null); }} className="text-[10px] text-stone-500 hover:text-stone-300 underline">Reset</button>}
+                    <div className="w-px h-4 bg-stone-600 mx-1" />
+                    <span className="text-[10px] font-bold text-stone-400 uppercase shrink-0">Loop</span>
+                    <button onClick={handleSetA} className="w-8 h-8 rounded-md text-xs font-bold transition-colors flex items-center justify-center" style={{ backgroundColor: loopStart !== null ? ACCENT : "transparent", color: loopStart !== null ? "white" : "#a8a29e", border: `1.5px solid ${loopStart !== null ? ACCENT : "#57534e"}` }}>A</button>
+                    <button onClick={handleSetB} disabled={loopStart === null} className="w-8 h-8 rounded-md text-xs font-bold transition-colors disabled:opacity-30 flex items-center justify-center" style={{ backgroundColor: loopEnd !== null ? ACCENT : "transparent", color: loopEnd !== null ? "white" : "#a8a29e", border: `1.5px solid ${loopEnd !== null ? ACCENT : "#57534e"}` }}>B</button>
+                    {(loopStart !== null || loopEnd !== null) && <button onClick={handleClearLoop} className="text-[10px] text-stone-500 hover:text-stone-300 underline">Clear</button>}
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <span className="text-[10px] font-bold text-stone-400 uppercase w-10 shrink-0">Speed</span>
+                    <input type="range" min={0.6} max={1} step={0.01} value={speed} onChange={(e) => setSpeed(parseFloat(e.target.value))} className="flex-1 h-1.5 accent-[#B8A472]" />
+                    <span className="text-[10px] font-bold text-[#B8A472] tabular-nums w-10 text-right shrink-0">{speed < 1 ? `${speed.toFixed(2)}x` : "1x"}</span>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <span className="text-[10px] font-bold text-stone-400 uppercase w-10 shrink-0">Vol</span>
+                    <input type="range" min={0} max={1} step={0.01} value={volume} onChange={(e) => setVolume(parseFloat(e.target.value))} className="flex-1 h-1.5 accent-stone-500" />
+                    <span className="text-[10px] text-stone-400 w-10 text-right tabular-nums shrink-0">{Math.round(volume * 100)}%</span>
+                  </div>
+                </div>
+                {/* Metronome */}
+                <div className="bg-stone-700/50 rounded-lg px-4 py-4 flex flex-col justify-between">
+                  <div className="flex items-center justify-center flex-1"><MetronomeControls /></div>
+                  <div className="mt-3">{metroVolumeSlider}</div>
+                </div>
+                {/* Keyboard */}
+                <div className="bg-stone-700/50 rounded-lg p-3 flex flex-col justify-between">
+                  <div className="flex items-center justify-center flex-1"><MiniPiano volume={pianoVolume} /></div>
+                  <div className="flex items-center gap-2 mt-3 px-1">
+                    <span className="text-[10px] font-bold text-stone-400 uppercase w-10 shrink-0">Vol</span>
+                    <input type="range" min={0} max={1} step={0.05} value={pianoVolume} onChange={(e) => setPianoVolume(parseFloat(e.target.value))} className="flex-1 h-1.5 accent-stone-500" />
+                    <span className="text-[10px] text-stone-400 w-10 text-right tabular-nums shrink-0">{Math.round(pianoVolume * 100)}%</span>
+                  </div>
+                </div>
+              </div>
+              {/* Narrow/mobile: cycleable panels with arrows + swipe */}
+              <div className="lg:hidden">
                 <SwipeablePanels
                   panels={[
                     { label: "Controls", content: (
