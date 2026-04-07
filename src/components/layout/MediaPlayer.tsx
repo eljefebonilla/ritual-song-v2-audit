@@ -143,9 +143,9 @@ function MiniPiano({ volume = 0.5 }: { volume?: number }) {
   ];
 
   const WHITE_LABELS = ["C", "D", "E", "F", "G", "A", "B"];
-  const keyW = 32; // px per white key
+  const keyW = 36; // px per white key
   const totalW = whiteKeys.length * keyW + (whiteKeys.length - 1) * 1.5; // keys + gaps
-  const keyH = 72; // px tall
+  const keyH = 84; // px tall
 
   return (
     <div className="flex items-center gap-1.5">
@@ -980,10 +980,10 @@ export default function MediaPlayer() {
 
   // --- Metronome: compact for desktop, spacious for mobile ---
   function MetronomeControls({ compact = false }: { compact?: boolean }) {
-    const btnSize = compact ? "w-7 h-6" : "w-9 h-9";
-    const playSize = compact ? "w-8 h-8" : "w-10 h-10";
-    const iconSize = compact ? 12 : 14;
-    const bpmText = compact ? "text-2xl" : "text-2xl";
+    const btnSize = compact ? "w-7 h-6" : "w-11 h-11";
+    const playSize = compact ? "w-8 h-8" : "w-12 h-12";
+    const iconSize = compact ? 12 : 16;
+    const bpmText = compact ? "text-2xl" : "text-3xl";
     const gap = compact ? "gap-1" : "gap-1.5";
     return (
       <div className={`flex items-center ${compact ? "gap-3" : "gap-3"}`}>
@@ -1032,8 +1032,9 @@ export default function MediaPlayer() {
 
   const metroVolumeSlider = (
     <div className="flex items-center gap-2">
-      <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#a8a29e" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5" /><path d="M15.54 8.46a5 5 0 0 1 0 7.07" /></svg>
-      <input type="range" min={0} max={1} step={0.05} value={metroVolume} onChange={(e) => setMetroVolume(parseFloat(e.target.value))} className="flex-1 h-1 accent-stone-400" />
+      <span className="text-[10px] font-bold text-stone-400 uppercase w-10 shrink-0">Vol</span>
+      <input type="range" min={0} max={1} step={0.05} value={metroVolume} onChange={(e) => setMetroVolume(parseFloat(e.target.value))} className="flex-1 h-1.5 accent-stone-500" />
+      <span className="text-[10px] text-stone-400 w-10 text-right tabular-nums shrink-0">{Math.round(metroVolume * 100)}%</span>
     </div>
   );
 
@@ -1175,8 +1176,9 @@ export default function MediaPlayer() {
                     <MiniPiano volume={pianoVolume} />
                   </div>
                   <div className="flex items-center gap-2 mt-3 px-1">
-                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#a8a29e" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5" /><path d="M15.54 8.46a5 5 0 0 1 0 7.07" /></svg>
-                    <input type="range" min={0} max={1} step={0.05} value={pianoVolume} onChange={(e) => setPianoVolume(parseFloat(e.target.value))} className="flex-1 h-1.5 accent-stone-400" />
+                    <span className="text-[10px] font-bold text-stone-400 uppercase w-10 shrink-0">Vol</span>
+                    <input type="range" min={0} max={1} step={0.05} value={pianoVolume} onChange={(e) => setPianoVolume(parseFloat(e.target.value))} className="flex-1 h-1.5 accent-stone-500" />
+                    <span className="text-[10px] text-stone-400 w-10 text-right tabular-nums shrink-0">{Math.round(pianoVolume * 100)}%</span>
                   </div>
                 </div>
               </div>
