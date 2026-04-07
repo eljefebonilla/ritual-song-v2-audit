@@ -1017,11 +1017,9 @@ export default function MediaPlayer() {
     </div>
   );
 
-  // --- Right column: Metronome + Piano ---
-  const rightControls = (
-    <div className="flex items-stretch gap-3 shrink-0">
-      {/* Metronome block */}
-      <div className="flex items-center gap-3 bg-stone-700/50 px-4 py-3 rounded-lg">
+  // --- Metronome block (used standalone on mobile, combined on desktop) ---
+  const metronomeBlock = (
+    <div className="flex items-center gap-3">
         {/* Play/stop button */}
         <button
           onClick={toggleMetronome}
@@ -1072,9 +1070,15 @@ export default function MediaPlayer() {
             TAP
           </button>
         </div>
-      </div>
+    </div>
+  );
 
-      {/* Piano */}
+  // --- Right column: Metronome + Piano (desktop layout) ---
+  const rightControls = (
+    <div className="flex items-stretch gap-3 shrink-0">
+      <div className="bg-stone-700/50 px-4 py-3 rounded-lg flex items-center">
+        {metronomeBlock}
+      </div>
       <div className="bg-stone-700/50 rounded-lg p-2 flex items-center">
         <MiniPiano />
       </div>
@@ -1186,8 +1190,8 @@ export default function MediaPlayer() {
                       </div>
                     )},
                     { label: "Metronome", content: (
-                      <div className="bg-stone-700/50 rounded-lg px-4 py-3 flex items-center justify-center">
-                        {rightControls}
+                      <div className="bg-stone-700/50 rounded-lg px-4 py-4 flex items-center justify-center">
+                        {metronomeBlock}
                       </div>
                     )},
                     { label: "Keyboard", content: (
