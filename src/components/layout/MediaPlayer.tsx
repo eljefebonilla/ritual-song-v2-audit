@@ -557,6 +557,15 @@ export default function MediaPlayer() {
     cancelHold();
   }
 
+  // Auto-expand for YouTube so the iframe renders immediately
+  const prevCurrentRef = useState<string | null>(null);
+  if (current?.url !== prevCurrentRef[0]) {
+    prevCurrentRef[1](current?.url ?? null);
+    if (current?.type === "youtube") {
+      setMobileExpanded(true);
+    }
+  }
+
   if (!isOpen || !current) return null;
 
   const isYouTube = current.type === "youtube";
