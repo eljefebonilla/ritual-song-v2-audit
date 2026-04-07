@@ -953,21 +953,21 @@ export default function MediaPlayer() {
         <span className="text-[10px] font-bold text-stone-400 uppercase w-10 shrink-0">Loop</span>
         <button
           onClick={handleSetA}
-          className="w-7 h-7 rounded-md text-[11px] font-bold transition-colors flex items-center justify-center"
+          className="w-8 h-8 rounded-md text-xs font-bold transition-colors flex items-center justify-center"
           style={{
             backgroundColor: loopStart !== null ? ACCENT : "transparent",
             color: loopStart !== null ? "white" : "#a8a29e",
-            border: `1px solid ${loopStart !== null ? ACCENT : "#57534e"}`,
+            border: `1.5px solid ${loopStart !== null ? ACCENT : "#57534e"}`,
           }}
         >A</button>
         <button
           onClick={handleSetB}
           disabled={loopStart === null}
-          className="w-7 h-7 rounded-md text-[11px] font-bold transition-colors disabled:opacity-30 flex items-center justify-center"
+          className="w-8 h-8 rounded-md text-xs font-bold transition-colors disabled:opacity-30 flex items-center justify-center"
           style={{
             backgroundColor: loopEnd !== null ? ACCENT : "transparent",
             color: loopEnd !== null ? "white" : "#a8a29e",
-            border: `1px solid ${loopEnd !== null ? ACCENT : "#57534e"}`,
+            border: `1.5px solid ${loopEnd !== null ? ACCENT : "#57534e"}`,
           }}
         >B</button>
         {loopActive && <span className="text-[10px] text-stone-500 italic">drag to adjust</span>}
@@ -1022,9 +1022,8 @@ export default function MediaPlayer() {
     </div>
   );
 
-  // --- Metronome block (used standalone on mobile, combined on desktop) ---
+  // --- Metronome block (controls only, no volume — volume added per-context) ---
   const metronomeBlock = (
-    <div className="flex flex-col gap-2">
     <div className="flex items-center gap-3">
         {/* Play/stop button */}
         <button
@@ -1076,11 +1075,12 @@ export default function MediaPlayer() {
           </button>
         </div>
     </div>
-    {/* Volume */}
+  );
+
+  const metroVolumeSlider = (
     <div className="flex items-center gap-2">
       <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#a8a29e" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5" /><path d="M15.54 8.46a5 5 0 0 1 0 7.07" /></svg>
       <input type="range" min={0} max={1} step={0.05} value={metroVolume} onChange={(e) => setMetroVolume(parseFloat(e.target.value))} className="flex-1 h-1 accent-stone-400" />
-    </div>
     </div>
   );
 
@@ -1201,8 +1201,9 @@ export default function MediaPlayer() {
                       </div>
                     )},
                     { label: "Metronome", content: (
-                      <div className="bg-stone-700/50 rounded-lg px-4 py-4 flex items-center justify-center">
-                        {metronomeBlock}
+                      <div className="bg-stone-700/50 rounded-lg px-4 py-4 space-y-3">
+                        <div className="flex items-center justify-center">{metronomeBlock}</div>
+                        {metroVolumeSlider}
                       </div>
                     )},
                     { label: "Keyboard", content: (
