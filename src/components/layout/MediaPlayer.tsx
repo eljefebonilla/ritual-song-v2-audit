@@ -558,13 +558,11 @@ export default function MediaPlayer() {
   }
 
   // Auto-expand for YouTube so the iframe renders immediately
-  const prevCurrentRef = useState<string | null>(null);
-  if (current?.url !== prevCurrentRef[0]) {
-    prevCurrentRef[1](current?.url ?? null);
+  useEffect(() => {
     if (current?.type === "youtube") {
       setMobileExpanded(true);
     }
-  }
+  }, [current?.url]); // eslint-disable-line react-hooks/exhaustive-deps
 
   if (!isOpen || !current) return null;
 
