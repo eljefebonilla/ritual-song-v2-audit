@@ -5,6 +5,7 @@ import { SEASON_COLORS, getOccasionColor } from "@/lib/liturgical-colors";
 import { resolveAllSongs, resolveFullSongs } from "@/lib/song-library";
 import OccasionMusicSection from "@/components/music/OccasionMusicSection";
 import OccasionGenerateButtons from "@/components/generators/OccasionGenerateButtons";
+import PlanningNotesEditor from "@/components/music/PlanningNotesEditor";
 
 export function generateStaticParams() {
   return getAllOccasions().map((o) => ({ id: o.id }));
@@ -137,21 +138,8 @@ export default async function OccasionPage({
         </div>
       )}
 
-      {/* Planning Notes */}
-      {occasion.planningNotes.length > 0 && (
-        <div className="mb-6">
-          <h2 className="text-[11px] uppercase tracking-widest font-medium text-muted mb-2">
-            Planning Notes
-          </h2>
-          <div className="border border-stone-200 rounded-lg p-3 bg-white">
-            {occasion.planningNotes.map((note, i) => (
-              <p key={i} className="text-sm text-stone-600">
-                {note}
-              </p>
-            ))}
-          </div>
-        </div>
-      )}
+      {/* Planning Notes — editable by admin */}
+      <PlanningNotesEditor occasionId={id} initialNotes={occasion.planningNotes} />
 
       {/* Lectionary Synopsis — logline + invites-us-to (per-reading synopses live in SlotList reading rows) */}
       {synopsis && (
