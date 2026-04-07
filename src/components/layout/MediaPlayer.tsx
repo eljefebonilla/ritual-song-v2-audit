@@ -948,7 +948,7 @@ export default function MediaPlayer() {
         <span className="text-[10px] font-bold text-stone-400 uppercase w-10 shrink-0">Loop</span>
         <button
           onClick={handleSetA}
-          className="px-2 py-0.5 rounded text-[11px] font-medium transition-colors"
+          className="w-7 h-7 rounded-md text-[11px] font-bold transition-colors flex items-center justify-center"
           style={{
             backgroundColor: loopStart !== null ? ACCENT : "transparent",
             color: loopStart !== null ? "white" : "#a8a29e",
@@ -958,7 +958,7 @@ export default function MediaPlayer() {
         <button
           onClick={handleSetB}
           disabled={loopStart === null}
-          className="px-2 py-0.5 rounded text-[11px] font-medium transition-colors disabled:opacity-30"
+          className="w-7 h-7 rounded-md text-[11px] font-bold transition-colors disabled:opacity-30 flex items-center justify-center"
           style={{
             backgroundColor: loopEnd !== null ? ACCENT : "transparent",
             color: loopEnd !== null ? "white" : "#a8a29e",
@@ -993,7 +993,7 @@ export default function MediaPlayer() {
           onChange={(e) => setSpeed(parseFloat(e.target.value))}
           className="flex-1 h-1 accent-[#B8A472]"
         />
-        <span className="text-[10px] font-bold text-[#B8A472] tabular-nums w-8 text-right">
+        <span className="text-[10px] font-bold text-[#B8A472] tabular-nums w-10 text-right shrink-0">
           {speed < 1 ? `${speed.toFixed(2)}x` : "1x"}
         </span>
       </div>
@@ -1010,7 +1010,7 @@ export default function MediaPlayer() {
           onChange={(e) => setVolume(parseFloat(e.target.value))}
           className="flex-1 h-1 accent-stone-500"
         />
-        <span className="text-[10px] text-stone-400 w-8 text-right tabular-nums">
+        <span className="text-[10px] text-stone-400 w-10 text-right tabular-nums shrink-0">
           {Math.round(volume * 100)}%
         </span>
       </div>
