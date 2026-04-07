@@ -88,7 +88,7 @@ function noteFrequency(noteIndex: number, octave: number): number {
   return 440 * Math.pow(2, (midi - 69) / 12);
 }
 
-function MiniPiano() {
+function MiniPiano({ volume = 0.5 }: { volume?: number }) {
   const [octave, setOctave] = useState(4);
   const [activeNote, setActiveNote] = useState<number | null>(null);
   const audioCtxRef = useRef<AudioContext | null>(null);
@@ -101,12 +101,15 @@ function MiniPiano() {
     const freq = noteFrequency(noteIndex, octave);
     const now = ctx.currentTime;
 
+    const peakGain = 0.35 * volume;
+    const sustainGain = Math.max(0.001, 0.15 * volume);
+
     // Piano tone: fundamental + 3 harmonics with hammer-like envelope
     const master = ctx.createGain();
     master.connect(ctx.destination);
     master.gain.setValueAtTime(0, now);
-    master.gain.linearRampToValueAtTime(0.18, now + 0.005);
-    master.gain.exponentialRampToValueAtTime(0.08, now + 0.15);
+    master.gain.linearRampToValueAtTime(peakGain, now + 0.005);
+    master.gain.exponentialRampToValueAtTime(sustainGain, now + 0.15);
     master.gain.exponentialRampToValueAtTime(0.001, now + 1.5);
 
     const harmonics = [
@@ -128,7 +131,7 @@ function MiniPiano() {
 
     setActiveNote(noteIndex);
     setTimeout(() => setActiveNote(null), 150);
-  }, [octave]);
+  }, [octave, volume]);
 
   const whiteKeys = [0, 2, 4, 5, 7, 9, 11];
   const blackKeyData: { noteIndex: number; afterWhite: number }[] = [
@@ -270,6 +273,8 @@ export default function MediaPlayer() {
   // Metronome state
   const [metroBpm, setMetroBpm] = useState(120);
   const [metroPlaying, setMetroPlaying] = useState(false);
+  const [metroVolume, setMetroVolume] = useState(0.5);
+  const [pianoVolume, setPianoVolume] = useState(0.5);
   const metroIntervalRef = useRef<ReturnType<typeof setInterval> | null>(null);
   const metroAudioCtxRef = useRef<AudioContext | null>(null);
   const tapTimesRef = useRef<number[]>([]);
@@ -292,11 +297,11 @@ export default function MediaPlayer() {
     gain.connect(ctx.destination);
     osc.frequency.value = 880;
     osc.type = "square";
-    gain.gain.value = 0.08;
+    gain.gain.value = 0.15 * metroVolume;
     gain.gain.exponentialRampToValueAtTime(0.001, ctx.currentTime + 0.06);
     osc.start(ctx.currentTime);
     osc.stop(ctx.currentTime + 0.06);
-  }, []);
+  }, [metroVolume]);
 
   const toggleMetronome = useCallback(() => {
     if (metroPlaying) {
@@ -1019,6 +1024,7 @@ export default function MediaPlayer() {
 
   // --- Metronome block (used standalone on mobile, combined on desktop) ---
   const metronomeBlock = (
+    <div className="flex flex-col gap-2">
     <div className="flex items-center gap-3">
         {/* Play/stop button */}
         <button
@@ -1070,6 +1076,12 @@ export default function MediaPlayer() {
           </button>
         </div>
     </div>
+    {/* Volume */}
+    <div className="flex items-center gap-2">
+      <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#a8a29e" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5" /><path d="M15.54 8.46a5 5 0 0 1 0 7.07" /></svg>
+      <input type="range" min={0} max={1} step={0.05} value={metroVolume} onChange={(e) => setMetroVolume(parseFloat(e.target.value))} className="flex-1 h-1 accent-stone-400" />
+    </div>
+    </div>
   );
 
   // --- Right column: Metronome + Piano (desktop layout) ---
@@ -1079,7 +1091,7 @@ export default function MediaPlayer() {
         {metronomeBlock}
       </div>
       <div className="bg-stone-700/50 rounded-lg p-2 flex items-center">
-        <MiniPiano />
+        <MiniPiano volume={pianoVolume} />
       </div>
     </div>
   );
@@ -1194,8 +1206,14 @@ export default function MediaPlayer() {
                       </div>
                     )},
                     { label: "Keyboard", content: (
-                      <div className="bg-stone-700/50 rounded-lg p-3 flex items-center justify-center">
-                        <MiniPiano />
+                      <div className="bg-stone-700/50 rounded-lg p-3 space-y-2">
+                        <div className="flex items-center justify-center">
+                          <MiniPiano volume={pianoVolume} />
+                        </div>
+                        <div className="flex items-center gap-2">
+                          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#a8a29e" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5" /><path d="M15.54 8.46a5 5 0 0 1 0 7.07" /></svg>
+                          <input type="range" min={0} max={1} step={0.05} value={pianoVolume} onChange={(e) => setPianoVolume(parseFloat(e.target.value))} className="flex-1 h-1 accent-stone-400" />
+                        </div>
                       </div>
                     )},
                   ]}
