@@ -93,6 +93,8 @@ const POSITION_ELIGIBLE_CATEGORIES: Record<string, Set<string>> = {
   fraction_rite: new Set(["song", "mass_part"]),
   lordsPrayer: new Set(["song", "mass_part"]),
   lords_prayer: new Set(["song", "mass_part"]),
+  massSetting: new Set(["mass_part"]),
+  mass_setting: new Set(["mass_part"]),
 };
 
 /**
