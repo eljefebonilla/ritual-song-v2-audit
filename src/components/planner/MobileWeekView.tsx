@@ -230,7 +230,7 @@ export default function MobileWeekView({
       </div>
 
       {/* Rows */}
-      <div className="px-2 pb-24">
+      <div className="px-2 pb-80">
         {rows.map((row, ri) => {
           if (row.type === "header") {
             return (
