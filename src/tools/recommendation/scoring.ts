@@ -19,6 +19,7 @@ import type {
   RecommendationRequest,
   UsageRecord,
 } from "./types";
+import { extractPsalmNumber, extractPsalmNumberFromTitle } from "@/lib/psalm-coverage";
 
 interface SongCandidate {
   id: string;
@@ -477,6 +478,19 @@ export function rankSongs(
 
   const eligible = POSITION_ELIGIBLE_CATEGORIES[request.position];
 
+  // For psalm positions, extract the prescribed psalm number from the readings.
+  // Scan all reading citations for "Ps XX" since only the psalm reading will match.
+  let prescribedPsalm: number | null = null;
+  if (request.position === "psalm" || request.position === "responsorialPsalm") {
+    for (const r of request.readings) {
+      const num = extractPsalmNumber(r.citation);
+      if (num !== null) {
+        prescribedPsalm = num;
+        break;
+      }
+    }
+  }
+
   const scored = candidates
     .filter((s) => {
       if (excludeSet.has(s.id) || s.isHiddenGlobal) return false;
@@ -491,6 +505,13 @@ export function rankSongs(
           const songFns = (s.functions || []).map((f) => f.toLowerCase());
           if (!requiredFns.some((fn) => songFns.includes(fn))) return false;
         }
+      }
+      // Psalm hard gate: only show settings of the prescribed psalm.
+      // The Responsorial Psalm is dictated by the Lectionary; music directors
+      // choose a setting of THAT psalm, not any psalm they like.
+      if ((request.position === "psalm" || request.position === "responsorialPsalm") && prescribedPsalm !== null) {
+        const songPsalm = extractPsalmNumberFromTitle(s.title);
+        if (songPsalm !== prescribedPsalm) return false;
       }
       // Exclude songs tagged for conflicting seasons (via occasion tags)
       if (s.occasions && s.occasions.length > 0) {
