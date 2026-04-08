@@ -154,10 +154,22 @@ export async function DELETE(
   try {
     const supabase = createAdminClient();
 
-    // Delete orphaned song_resources_v2 (UUID FK)
+    // Delete all FK-dependent rows before deleting the song
     const songUuid = await resolveSongUuid(supabase, id);
     if (songUuid) {
-      await supabase.from("song_resources_v2").delete().eq("song_id", songUuid);
+      await Promise.all([
+        supabase.from("song_resources_v2").delete().eq("song_id", songUuid),
+        supabase.from("song_rankings").delete().eq("song_id", songUuid),
+        supabase.from("song_visibility").delete().eq("song_id", songUuid),
+        supabase.from("song_recommendations").delete().eq("song_id", songUuid),
+        supabase.from("sacramental_songs").delete().eq("song_id", songUuid),
+        supabase.from("parish_favorites").delete().eq("song_id", songUuid),
+        supabase.from("scripture_song_mappings").delete().eq("song_id", songUuid),
+        supabase.from("enrichment_queue").delete().eq("song_id", songUuid),
+        supabase.from("enrichment_log").delete().eq("song_id", songUuid),
+        supabase.from("song_embeddings").delete().eq("song_id", songUuid),
+        supabase.from("verse_embeddings").delete().eq("song_id", songUuid),
+      ]);
     }
 
     // Delete from Supabase (try by legacy_id first, fall back to UUID)
