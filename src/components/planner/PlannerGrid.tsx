@@ -302,7 +302,7 @@ export default function PlannerGrid({ columns, viewMode, hideMassParts = false, 
   };
 
   // Helper: build the communion array value for a save at a specific index
-  const buildCommunionValue = (plan: import("@/lib/types").MusicPlan | null, idx: number, entry: { title: string; composer?: string } | null) => {
+  const buildCommunionValue = (plan: import("@/lib/types").MusicPlan | null, idx: number, entry: { title: string; composer?: string; description?: string } | null) => {
     const current = plan?.communionSongs ? [...plan.communionSongs] : [];
     // Extend array if needed
     while (current.length <= idx) current.push({ title: "" });
