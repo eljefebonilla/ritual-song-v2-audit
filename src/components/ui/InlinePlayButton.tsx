@@ -71,15 +71,16 @@ export default function InlinePlayButton({
   }
 
   if (hasAudio) {
+    const isYouTube = audioType === "youtube";
     return (
       <button
         onClick={handleClick}
         className="shrink-0 flex items-center justify-center rounded-full transition-all active:scale-95"
-        title="Play"
+        title={isYouTube ? "Play (YouTube)" : "Play"}
         style={{
           width: dim,
           height: dim,
-          background: "#292524",
+          background: isYouTube ? "#dc2626" : "#292524",
           boxShadow: "0 2px 6px rgba(0,0,0,0.2)",
         }}
       >
