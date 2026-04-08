@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState, useCallback, useMemo } from "react";
+import React, { useState, useCallback, useMemo, useEffect } from "react";
 import type { LiturgicalOccasion, MusicPlan, LibrarySong } from "@/lib/types";
 import type { GridColumn, SongDragPayload, EnsembleId } from "@/lib/grid-types";
 import {
@@ -129,6 +129,63 @@ export default function ComparisonGrid({
     },
     [songIndex, psalmIndex]
   );
+
+  // Batch-fetch audio for all songs in columns
+  const [audioOverrides, setAudioOverrides] = useState<Record<string, string>>({});
+  const [youtubeOverrides, setYoutubeOverrides] = useState<Record<string, string>>({});
+
+  const allSongIds = useMemo(() => {
+    const ids = new Set<string>();
+    for (const cc of columns) {
+      const plan = cc.column.plan;
+      if (!plan) continue;
+      const fields = ["prelude", "gathering", "penitentialAct", "gloria", "offertory", "lordsPrayer", "fractionRite", "sending"] as const;
+      for (const f of fields) {
+        const val = plan[f];
+        if (val && typeof val === "object" && "title" in val) {
+          const s = lookupSong((val as { title: string }).title, (val as { composer?: string }).composer);
+          if (s) ids.add(s.id);
+        }
+      }
+      if (plan.responsorialPsalm?.psalm) {
+        const s = lookupSong(plan.responsorialPsalm.psalm, plan.responsorialPsalm.setting);
+        if (s) ids.add(s.id);
+      }
+      if (plan.gospelAcclamation?.title) {
+        const s = lookupSong(plan.gospelAcclamation.title, plan.gospelAcclamation.composer);
+        if (s) ids.add(s.id);
+      }
+      if (plan.communionSongs) {
+        for (const cs of plan.communionSongs) {
+          const s = lookupSong(cs.title, cs.composer);
+          if (s) ids.add(s.id);
+        }
+      }
+    }
+    return [...ids];
+  }, [columns, lookupSong]);
+
+  useEffect(() => {
+    if (allSongIds.length === 0) return;
+    let cancelled = false;
+    const BATCH = 100;
+    const batches: string[][] = [];
+    for (let i = 0; i < allSongIds.length; i += BATCH) batches.push(allSongIds.slice(i, i + BATCH));
+    Promise.all(batches.map(ids =>
+      fetch(`/api/songs/batch-audio?ids=${ids.join(",")}`).then(r => r.ok ? r.json() : null).catch(() => null)
+    )).then(results => {
+      if (cancelled) return;
+      const audio: Record<string, string> = {};
+      const yt: Record<string, string> = {};
+      for (const d of results) {
+        if (d?.audioUrls) Object.assign(audio, d.audioUrls);
+        if (d?.youtubeUrls) Object.assign(yt, d.youtubeUrls);
+      }
+      setAudioOverrides(audio);
+      setYoutubeOverrides(yt);
+    });
+    return () => { cancelled = true; };
+  }, [allSongIds]);
 
   const rowKeyToField = useCallback((key: GridRowKey): string => {
     switch (key) {
@@ -504,7 +561,16 @@ export default function ComparisonGrid({
                 if (!row.isReading && !cellIsEmpty && cellData.title) {
                   matchedSong = lookupSong(cellData.title, cellData.composer);
                   if (matchedSong) {
-                    playable = findPlayable(matchedSong);
+                    const overrideUrl = audioOverrides[matchedSong.id];
+                    const ytOverrideUrl = youtubeOverrides[matchedSong.id];
+                    if (overrideUrl) {
+                      playable = { url: overrideUrl, type: "audio" };
+                    } else {
+                      playable = findPlayable(matchedSong);
+                      if (!playable && ytOverrideUrl) {
+                        playable = { url: ytOverrideUrl, type: "youtube" };
+                      }
+                    }
                   }
                 }
 
