@@ -97,13 +97,23 @@ export default function MobileWeekView({
   useEffect(() => {
     if (!currentCol?.plan) return;
     const ids = new Set<string>();
-    const fields = ["prelude", "gathering", "penitentialAct", "gloria", "offertory", "lordsPrayer", "fractionRite", "sending", "responsorialPsalm", "gospelAcclamation"] as const;
+    const fields = ["prelude", "gathering", "penitentialAct", "gloria", "offertory", "lordsPrayer", "fractionRite", "sending"] as const;
     for (const f of fields) {
       const val = currentCol.plan[f as keyof typeof currentCol.plan];
       if (val && typeof val === "object" && "title" in val) {
         const song = lookupSong((val as { title: string }).title, (val as { composer?: string }).composer);
         if (song) ids.add(song.id);
       }
+    }
+    // Psalm has {psalm, setting} not {title}
+    if (currentCol.plan.responsorialPsalm?.psalm) {
+      const song = lookupSong(currentCol.plan.responsorialPsalm.psalm, currentCol.plan.responsorialPsalm.setting);
+      if (song) ids.add(song.id);
+    }
+    // Gospel acclamation
+    if (currentCol.plan.gospelAcclamation?.title) {
+      const song = lookupSong(currentCol.plan.gospelAcclamation.title, currentCol.plan.gospelAcclamation.composer);
+      if (song) ids.add(song.id);
     }
     if (currentCol.plan.communionSongs) {
       for (const s of currentCol.plan.communionSongs) {
