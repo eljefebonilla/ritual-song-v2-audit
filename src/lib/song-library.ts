@@ -252,12 +252,13 @@ export function pickBestMatch(candidates: LibrarySong[], composerHint?: string):
     if (exact) return exact;
 
     // Fuzzy composer match — pick highest score above threshold
+    // When scores tie, prefer the song with more resources (audio > none)
     let bestScore = 0;
     let bestMatch: LibrarySong | null = null;
     for (const c of candidates) {
       if (!c.composer) continue;
       const score = composerSimilarity(composerHint, c.composer);
-      if (score > bestScore) {
+      if (score > bestScore || (score === bestScore && bestMatch && c.usageCount > bestMatch.usageCount)) {
         bestScore = score;
         bestMatch = c;
       }
