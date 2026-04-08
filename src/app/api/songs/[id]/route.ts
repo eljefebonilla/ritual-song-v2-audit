@@ -27,6 +27,8 @@ const FIELD_MAP: Record<string, string> = {
   tuneMeter: "tune_meter",
   isHiddenGlobal: "is_hidden_global",
   occasions: "occasions",
+  youtubeUrl: "youtube_url",
+  youtubeUrlSource: "youtube_url_source",
 };
 
 /**
