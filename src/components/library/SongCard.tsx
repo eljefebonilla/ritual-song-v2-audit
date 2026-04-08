@@ -20,6 +20,7 @@ interface SongRowProps {
   hasAlleluia?: boolean;
   isLent?: boolean;
   uploadedAudioUrl?: string;
+  youtubeUrl?: string;
   scriptureMatchRefs?: string[];
 }
 
@@ -78,7 +79,7 @@ function titleContainsAlleluia(title: string): boolean {
   return lower.includes("alleluia") || lower.includes("hallelujah");
 }
 
-export default function SongCard({ song, isSelected, onClick, calendarMeta, hasAlleluia, isLent, uploadedAudioUrl, scriptureMatchRefs }: SongRowProps) {
+export default function SongCard({ song, isSelected, onClick, calendarMeta, hasAlleluia, isLent, uploadedAudioUrl, youtubeUrl, scriptureMatchRefs }: SongRowProps) {
   // If hasAlleluia not explicitly passed, infer from title
   const showAlleluiaBadge = hasAlleluia ?? titleContainsAlleluia(song.title);
   const { play } = useMedia();
@@ -98,6 +99,17 @@ export default function SongCard({ song, isSelected, onClick, calendarMeta, hasA
       label: "Uploaded Audio",
       url: uploadedAudioUrl,
       source: "supabase",
+    });
+  }
+
+  // YouTube fallback (from batch-audio API or song.youtubeUrl)
+  const ytUrl = youtubeUrl || song.youtubeUrl;
+  if (!available.has("audio") && ytUrl) {
+    available.set("audio", {
+      id: `youtube-${song.id}`,
+      type: "youtube",
+      label: "YouTube",
+      url: ytUrl,
     });
   }
 

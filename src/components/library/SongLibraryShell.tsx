@@ -202,17 +202,36 @@ export default function SongLibraryShell({ songs, title = "Music Library", subti
     [songs, removedSongIds]
   );
 
-  // Supabase-uploaded audio URLs: songId → audioUrl
+  // Supabase-uploaded audio URLs: songId → audioUrl (paginated to avoid URL length limits)
   const [uploadedAudio, setUploadedAudio] = useState<Record<string, string>>({});
+  const [youtubeAudio, setYoutubeAudio] = useState<Record<string, string>>({});
   useEffect(() => {
-    const ids = activeSongs.map((s) => s.id).join(",");
-    if (!ids) return;
-    fetch(`/api/songs/batch-audio?ids=${ids}`)
-      .then((res) => (res.ok ? res.json() : null))
-      .then((data) => {
-        if (data?.audioUrls) setUploadedAudio(data.audioUrls);
-      })
-      .catch(() => {});
+    const allIds = activeSongs.map((s) => s.id);
+    if (allIds.length === 0) return;
+    let cancelled = false;
+    const BATCH = 100;
+    const batches: string[][] = [];
+    for (let i = 0; i < allIds.length; i += BATCH) {
+      batches.push(allIds.slice(i, i + BATCH));
+    }
+    Promise.all(
+      batches.map((ids) =>
+        fetch(`/api/songs/batch-audio?ids=${ids.join(",")}`)
+          .then((res) => (res.ok ? res.json() : null))
+          .catch(() => null)
+      )
+    ).then((results) => {
+      if (cancelled) return;
+      const audio: Record<string, string> = {};
+      const youtube: Record<string, string> = {};
+      for (const data of results) {
+        if (data?.audioUrls) Object.assign(audio, data.audioUrls);
+        if (data?.youtubeUrls) Object.assign(youtube, data.youtubeUrls);
+      }
+      setUploadedAudio(audio);
+      setYoutubeAudio(youtube);
+    });
+    return () => { cancelled = true; };
   }, [activeSongs]);
 
   // Determine if we're in Lent
@@ -1430,7 +1449,7 @@ export default function SongLibraryShell({ songs, title = "Music Library", subti
               </div>
             ) : activeTab === "service_music" && groupBySetting ? (
               // Grouped by mass setting
-              <MassSettingGroups songs={filtered} selectedSongId={selectedSongId} onSelectSong={setSelectedSongId} isLent={isLent} uploadedAudio={uploadedAudio} calendarSongMeta={calendarSongMeta} />
+              <MassSettingGroups songs={filtered} selectedSongId={selectedSongId} onSelectSong={setSelectedSongId} isLent={isLent} uploadedAudio={uploadedAudio} youtubeAudio={youtubeAudio} calendarSongMeta={calendarSongMeta} />
             ) : (
               <div className="flex flex-col pb-8">
                 {filtered.map((song) => {
@@ -1452,6 +1471,7 @@ export default function SongLibraryShell({ songs, title = "Music Library", subti
                         calendarMeta={calendarSongMeta?.get(song.id) ?? null}
                         isLent={isLent}
                         uploadedAudioUrl={uploadedAudio[song.id]}
+                        youtubeUrl={youtubeAudio[song.id]}
                         scriptureMatchRefs={scriptureMatchedRefs.get(song.id)}
                       />
                     </div>
@@ -1600,6 +1620,7 @@ function MassSettingGroups({
   onSelectSong,
   isLent,
   uploadedAudio,
+  youtubeAudio,
   calendarSongMeta,
 }: {
   songs: LibrarySong[];
@@ -1607,6 +1628,7 @@ function MassSettingGroups({
   onSelectSong: (id: string | null) => void;
   isLent: boolean;
   uploadedAudio: Record<string, string>;
+  youtubeAudio: Record<string, string>;
   calendarSongMeta: Map<string, { positions: Set<string>; ensembles: Set<string> }> | null;
 }) {
   // Group by mass setting name
@@ -1679,6 +1701,7 @@ function MassSettingGroups({
               calendarMeta={calendarSongMeta?.get(song.id) ?? null}
               isLent={isLent}
               uploadedAudioUrl={uploadedAudio[song.id]}
+                        youtubeUrl={youtubeAudio[song.id]}
             />
           ))}
         </div>
@@ -1699,6 +1722,7 @@ function MassSettingGroups({
               calendarMeta={calendarSongMeta?.get(song.id) ?? null}
               isLent={isLent}
               uploadedAudioUrl={uploadedAudio[song.id]}
+                        youtubeUrl={youtubeAudio[song.id]}
             />
           ))}
         </>
