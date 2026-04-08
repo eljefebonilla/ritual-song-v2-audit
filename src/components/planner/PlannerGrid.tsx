@@ -224,12 +224,40 @@ export default function PlannerGrid({ columns, viewMode, hideMassParts = false, 
 
   // Song lookup for play buttons
   const songIndex = useMemo(() => getTitleIndex(), [columns]); // eslint-disable-line react-hooks/exhaustive-deps
+
+  // Build a psalm lookup: psalmNumber → LibrarySong[] for fallback matching
+  const psalmIndex = useMemo(() => {
+    const map = new Map<number, LibrarySong[]>();
+    for (const candidates of songIndex.values()) {
+      for (const s of candidates) {
+        if (s.psalmNumber && s.category === "psalm") {
+          const arr = map.get(s.psalmNumber) || [];
+          arr.push(s);
+          map.set(s.psalmNumber, arr);
+        }
+      }
+    }
+    return map;
+  }, [songIndex]);
+
   const lookupSong = useCallback((title: string, composer?: string): LibrarySong | null => {
     const key = normalizeTitle(title);
     const candidates = songIndex.get(key);
-    if (!candidates) return null;
-    return pickBestMatch(candidates, composer);
-  }, [songIndex]);
+    if (candidates) {
+      const match = pickBestMatch(candidates, composer);
+      if (match) return match;
+    }
+    // Fallback: for psalm titles like "Ps 118 Give thanks..." extract psalm number
+    const psalmMatch = title.match(/^Ps(?:alm)?\s+(\d+)/i);
+    if (psalmMatch && composer) {
+      const psalmNum = parseInt(psalmMatch[1], 10);
+      const psalmCandidates = psalmIndex.get(psalmNum);
+      if (psalmCandidates) {
+        return pickBestMatch(psalmCandidates, composer);
+      }
+    }
+    return null;
+  }, [songIndex, psalmIndex]);
 
   // Batch-fetch audio URLs for all songs in visible columns
   const [audioOverrides, setAudioOverrides] = useState<Record<string, string>>({});

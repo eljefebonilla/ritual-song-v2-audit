@@ -60,12 +60,34 @@ export default function MobileWeekView({
 
   // Audio
   const songIndex = useMemo(() => getTitleIndex(), [columns]); // eslint-disable-line react-hooks/exhaustive-deps
+  const psalmIndex = useMemo(() => {
+    const map = new Map<number, LibrarySong[]>();
+    for (const candidates of songIndex.values()) {
+      for (const s of candidates) {
+        if (s.psalmNumber && s.category === "psalm") {
+          const arr = map.get(s.psalmNumber) || [];
+          arr.push(s);
+          map.set(s.psalmNumber, arr);
+        }
+      }
+    }
+    return map;
+  }, [songIndex]);
   const lookupSong = useCallback((title: string, composer?: string): LibrarySong | null => {
     const key = normalizeTitle(title);
     const candidates = songIndex.get(key);
-    if (!candidates) return null;
-    return pickBestMatch(candidates, composer);
-  }, [songIndex]);
+    if (candidates) {
+      const match = pickBestMatch(candidates, composer);
+      if (match) return match;
+    }
+    const psalmMatch = title.match(/^Ps(?:alm)?\s+(\d+)/i);
+    if (psalmMatch && composer) {
+      const psalmNum = parseInt(psalmMatch[1], 10);
+      const psalmCandidates = psalmIndex.get(psalmNum);
+      if (psalmCandidates) return pickBestMatch(psalmCandidates, composer);
+    }
+    return null;
+  }, [songIndex, psalmIndex]);
 
   const [audioOverrides, setAudioOverrides] = useState<Record<string, string>>({});
   const [youtubeOverrides, setYoutubeOverrides] = useState<Record<string, string>>({});
