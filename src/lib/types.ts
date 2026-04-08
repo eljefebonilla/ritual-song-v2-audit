@@ -221,6 +221,7 @@ export const SONG_CATEGORY_LABELS: Record<ExpandedSongCategory, string> = {
   lamb_of_god: "Lamb of God",
   lords_prayer: "Lord's Prayer",
   sequence: "Sequence",
+  mass_setting: "Mass Setting",
 };
 
 /** Sub-filter chips for Songs tab (by liturgical function) */
