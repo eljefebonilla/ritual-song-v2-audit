@@ -692,6 +692,11 @@ export default function SongDetailPanel({
       });
       if (res.ok) {
         setEditing(false);
+        // Update the song object in-place so UI reflects changes immediately
+        // (server cache may take up to 5 min to refresh)
+        (song as Record<string, unknown>).title = editTitle.trim();
+        (song as Record<string, unknown>).composer = editComposer.trim() || undefined;
+        (song as Record<string, unknown>).category = editCategory;
         // If category changed, remove from current list so UI updates instantly
         if (editCategory !== (song.category || "song")) {
           onSongRemoved?.(song.id);
