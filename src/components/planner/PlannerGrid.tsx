@@ -267,13 +267,24 @@ export default function PlannerGrid({ columns, viewMode, hideMassParts = false, 
     const ids = new Set<string>();
     for (const col of columns) {
       if (!col.plan) continue;
-      const fields = ["prelude", "gathering", "penitentialAct", "gloria", "offertory", "lordsPrayer", "fractionRite", "sending", "responsorialPsalm", "gospelAcclamation"] as const;
+      // Standard song fields (have {title, composer})
+      const fields = ["prelude", "gathering", "penitentialAct", "gloria", "offertory", "lordsPrayer", "fractionRite", "sending"] as const;
       for (const f of fields) {
         const val = col.plan[f as keyof typeof col.plan];
         if (val && typeof val === "object" && "title" in val) {
           const song = lookupSong((val as { title: string }).title, (val as { composer?: string }).composer);
           if (song) ids.add(song.id);
         }
+      }
+      // Psalm has {psalm, setting} not {title, composer}
+      if (col.plan.responsorialPsalm?.psalm) {
+        const song = lookupSong(col.plan.responsorialPsalm.psalm, col.plan.responsorialPsalm.setting);
+        if (song) ids.add(song.id);
+      }
+      // Gospel acclamation has {title, composer}
+      if (col.plan.gospelAcclamation?.title) {
+        const song = lookupSong(col.plan.gospelAcclamation.title, col.plan.gospelAcclamation.composer);
+        if (song) ids.add(song.id);
       }
       if (col.plan.communionSongs) {
         for (const s of col.plan.communionSongs) {
