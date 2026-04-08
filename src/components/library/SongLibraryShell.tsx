@@ -69,7 +69,7 @@ const LIBRARY_TABS: { id: LibraryTab; label: string }[] = [
 function getCategoriesForTab(tab: LibraryTab): SongCategory[] {
   switch (tab) {
     case "songs": return ["song"];
-    case "service_music": return [...MASS_PART_CATEGORIES, "mass_part"] as SongCategory[];
+    case "service_music": return [...MASS_PART_CATEGORIES, "mass_part", "mass_setting"] as SongCategory[];
     case "psalms": return ["psalm"];
     case "gospel_acclamations": return [...GOSPEL_ACCLAMATION_CATEGORIES, "gospel_acclamation"] as SongCategory[];
     case "antiphons": return ["antiphon"] as SongCategory[];
@@ -306,7 +306,7 @@ export default function SongLibraryShell({ songs, title = "Music Library", subti
             subCounts[fn] = (subCounts[fn] || 0) + 1;
           }
         }
-      } else if (MASS_PART_CATEGORIES.includes(cat as ExpandedSongCategory) || cat === "mass_part") {
+      } else if (MASS_PART_CATEGORIES.includes(cat as ExpandedSongCategory) || cat === "mass_part" || cat === "mass_setting") {
         counts.service_music++;
         subCounts[cat] = (subCounts[cat] || 0) + 1;
       } else if (cat === "psalm") {

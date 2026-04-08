@@ -184,20 +184,20 @@ export type SongCategory =
   | "holy_holy" | "memorial_acclamation" | "great_amen"
   | "lamb_of_god" | "lords_prayer" | "sequence"
   // Legacy categories (kept for backward compat with existing code)
-  | "mass_part" | "gospel_acclamation";
+  | "mass_part" | "gospel_acclamation" | "mass_setting";
 
 /** New expanded categories (14 values, no legacy) */
 export type ExpandedSongCategory =
   | "song" | "antiphon" | "kyrie" | "gloria" | "sprinkling_rite"
   | "psalm" | "gospel_acclamation_refrain" | "gospel_acclamation_verse"
   | "holy_holy" | "memorial_acclamation" | "great_amen"
-  | "lamb_of_god" | "lords_prayer" | "sequence";
+  | "lamb_of_god" | "lords_prayer" | "sequence" | "mass_setting";
 
 /** Mass parts = all expanded categories that are parts of the Mass Ordinary/Proper */
 export const MASS_PART_CATEGORIES: ExpandedSongCategory[] = [
   "kyrie", "gloria", "sprinkling_rite", "holy_holy",
   "memorial_acclamation", "great_amen", "lamb_of_god",
-  "lords_prayer", "sequence",
+  "lords_prayer", "sequence", "mass_setting",
 ];
 
 /** Gospel acclamation categories */

@@ -102,7 +102,7 @@ export default function SongCard({ song, isSelected, onClick, calendarMeta, hasA
     });
   }
 
-  // YouTube fallback (from batch-audio API or song.youtubeUrl)
+  // YouTube fallback — only if no MP3 audio exists
   const ytUrl = youtubeUrl || song.youtubeUrl;
   if (!available.has("audio") && ytUrl) {
     available.set("audio", {
@@ -259,6 +259,8 @@ export default function SongCard({ song, isSelected, onClick, calendarMeta, hasA
             {CATEGORY_ORDER.map((cat) => {
               const resource = available.get(cat);
               if (!resource) return null;
+              // Skip audio resource button — the inline play button already handles it
+              if (cat === "audio") return null;
               const style = BUTTON_STYLES[cat];
               return (
                 <button
