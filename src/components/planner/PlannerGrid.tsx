@@ -316,7 +316,7 @@ export default function PlannerGrid({ columns, viewMode, hideMassParts = false, 
     return current.length > 0 ? current : null;
   };
 
-  const handleCellSave = useCallback(async (rk: GridRowKey, title: string, composer: string) => {
+  const handleCellSave = useCallback(async (rk: GridRowKey, title: string, composer: string, description?: string) => {
     if (!editingCell || !ensembleId) return;
     const field = rowKeyToField(rk);
     let value: unknown;
@@ -324,13 +324,13 @@ export default function PlannerGrid({ columns, viewMode, hideMassParts = false, 
     const cIdx = communionIndex(rk);
     if (cIdx !== null) {
       const plan = columns[editingCell.columnIndex]?.plan ?? null;
-      value = buildCommunionValue(plan, cIdx, { title, composer: composer || undefined });
+      value = buildCommunionValue(plan, cIdx, { title, composer: composer || undefined, description: description || undefined });
     } else if (rk === "psalm") {
-      value = { psalm: title, setting: composer || undefined };
+      value = { psalm: title, setting: composer || undefined, description: description || undefined };
     } else if (rk === "massSetting") {
-      value = { massSettingName: title, composer: composer || undefined };
+      value = { massSettingName: title, composer: composer || undefined, description: description || undefined };
     } else {
-      value = { title, composer: composer || undefined };
+      value = { title, composer: composer || undefined, description: description || undefined };
     }
 
     try {

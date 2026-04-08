@@ -62,7 +62,7 @@ interface CellEditorProps {
   rowKey: GridRowKey;
   currentData: GridCellData;
   anchorRect: DOMRect;
-  onSave: (rowKey: GridRowKey, title: string, composer: string) => void;
+  onSave: (rowKey: GridRowKey, title: string, composer: string, description?: string) => void;
   onClear: (rowKey: GridRowKey) => void;
   onClose: () => void;
   onBulkApply?: (rowKey: GridRowKey, title: string, composer: string, scope: "season" | "all") => void;
@@ -83,6 +83,7 @@ export default function CellEditor({
   const [searching, setSearching] = useState(false);
   const [title, setTitle] = useState(currentData.title || "");
   const [composer, setComposer] = useState(currentData.composer || "");
+  const [description, setDescription] = useState(currentData.description || "");
   const [mode, setMode] = useState<"suggest" | "search" | "manual">("suggest");
   const inputRef = useRef<HTMLInputElement>(null);
   const panelRef = useRef<HTMLDivElement>(null);
@@ -195,7 +196,7 @@ export default function CellEditor({
 
   const handleManualSave = () => {
     if (!title.trim()) return;
-    onSave(rowKey, title.trim(), composer.trim());
+    onSave(rowKey, title.trim(), composer.trim(), description.trim() || undefined);
     onClose();
   };
 
@@ -530,6 +531,10 @@ export default function CellEditor({
                     <div>
                       <label className="block text-[10px] font-medium text-stone-500 uppercase tracking-wide mb-0.5">Composer</label>
                       <input type="text" value={composer} onChange={(e) => setComposer(e.target.value)} className="w-full text-sm border border-stone-200 rounded-md px-3 py-1.5 focus:outline-none focus:ring-1 focus:ring-stone-400" placeholder="Composer/arranger" />
+                    </div>
+                    <div>
+                      <label className="text-[10px] font-medium text-stone-400 uppercase">Note</label>
+                      <input type="text" value={description} onChange={(e) => setDescription(e.target.value)} className="w-full text-sm border border-stone-200 rounded-md px-3 py-1.5 focus:outline-none focus:ring-1 focus:ring-stone-400" placeholder="Optional note (e.g. key, occasion)" />
                     </div>
                   </div>
                   <div className="mt-3 flex items-center justify-between">
