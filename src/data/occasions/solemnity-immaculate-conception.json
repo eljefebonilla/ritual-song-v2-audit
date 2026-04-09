@@ -40,14 +40,14 @@
   "readings": [
     {
       "type": "first",
-      "citation": "Verse",
-      "summary": "Text"
+      "citation": "Gn 3:9-15, 20",
+      "summary": "I will put enmity between your offspring and hers."
     },
     {
       "type": "psalm",
-      "citation": "Responsorial Psalm Verse and Text",
+      "citation": "Ps 98:1, 2-3ab, 3cd-4\nSing to the Lord a new song, for he has done marvelous deeds.",
       "summary": "",
-      "antiphon": "Responsorial Psalm Verse and Text"
+      "antiphon": "Ps 98:1, 2-3ab, 3cd-4\nSing to the Lord a new song, for he has done marvelous deeds."
     },
     {
       "type": "second",
