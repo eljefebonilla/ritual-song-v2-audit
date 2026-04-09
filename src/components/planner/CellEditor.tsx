@@ -42,6 +42,7 @@ interface ExplainResult {
 const ROW_TO_POSITION: Partial<Record<GridRowKey, string>> = {
   prelude: "prelude",
   gathering: "gathering",
+  sprinklingRite: "sprinkling_rite",
   penitentialAct: "penitential_act",
   gloria: "gloria",
   psalm: "psalm",

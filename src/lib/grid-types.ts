@@ -80,7 +80,7 @@ export const MASS_PART_ROWS: Set<GridRowKey> = new Set([
 // Song rows eligible for drag-and-copy (title+composer format)
 // Excludes psalm (psalm+setting) and massSetting (massSettingName+composer)
 export const SONG_DRAG_ROWS: Set<GridRowKey> = new Set([
-  "prelude", "gathering", "penitentialAct", "gloria", "gospelAcclamation",
+  "prelude", "gathering", "sprinklingRite", "penitentialAct", "gloria", "gospelAcclamation",
   "offertory", "massSetting", "massSettingHoly", "massSettingMemorial", "massSettingAmen",
   "lordsPrayer", "fractionRite", "communion1", "communion2",
   "communion3", "communion4", "sending",

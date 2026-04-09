@@ -99,7 +99,7 @@ export default function MobileWeekView({
   useEffect(() => {
     if (!currentCol?.plan) return;
     const ids = new Set<string>();
-    const fields = ["prelude", "gathering", "penitentialAct", "gloria", "offertory", "lordsPrayer", "fractionRite", "sending"] as const;
+    const fields = ["prelude", "gathering", "sprinklingRite", "penitentialAct", "gloria", "offertory", "lordsPrayer", "fractionRite", "sending"] as const;
     for (const f of fields) {
       const val = currentCol.plan[f as keyof typeof currentCol.plan];
       if (val && typeof val === "object" && "title" in val) {

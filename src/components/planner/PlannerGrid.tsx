@@ -264,7 +264,7 @@ export default function PlannerGrid({ columns, viewMode, hideMassParts = false, 
     for (const col of columns) {
       if (!col.plan) continue;
       // Standard song fields (have {title, composer})
-      const fields = ["prelude", "gathering", "penitentialAct", "gloria", "offertory", "lordsPrayer", "fractionRite", "sending"] as const;
+      const fields = ["prelude", "gathering", "sprinklingRite", "penitentialAct", "gloria", "offertory", "lordsPrayer", "fractionRite", "sending"] as const;
       for (const f of fields) {
         const val = col.plan[f as keyof typeof col.plan];
         if (val && typeof val === "object" && "title" in val) {

@@ -133,7 +133,7 @@ export default function ComparisonGrid({
     for (const cc of columns) {
       const plan = cc.column.plan;
       if (!plan) continue;
-      const fields = ["prelude", "gathering", "penitentialAct", "gloria", "offertory", "lordsPrayer", "fractionRite", "sending"] as const;
+      const fields = ["prelude", "gathering", "sprinklingRite", "penitentialAct", "gloria", "offertory", "lordsPrayer", "fractionRite", "sending"] as const;
       for (const f of fields) {
         const val = plan[f];
         if (val && typeof val === "object" && "title" in val) {
