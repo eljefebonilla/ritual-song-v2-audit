@@ -1083,82 +1083,6 @@
     ]
   },
   {
-    "id": "lamb-of-god-setting",
-    "title": "Lamb of God Setting",
-    "resources": [],
-    "usageCount": 64,
-    "occasions": [
-      "easter-02-divine-mercy-a",
-      "easter-02-divine-mercy-b",
-      "ascension-a",
-      "ascension-b",
-      "ordinary-time-09-a",
-      "ordinary-time-09-b",
-      "ordinary-time-09-c",
-      "ordinary-time-10-a",
-      "ordinary-time-10-b",
-      "ordinary-time-10-c",
-      "ordinary-time-11-a",
-      "ordinary-time-11-b",
-      "ordinary-time-11-c",
-      "ordinary-time-12-a",
-      "ordinary-time-12-b",
-      "ordinary-time-12-c",
-      "ordinary-time-13-a",
-      "ordinary-time-13-b",
-      "ordinary-time-13-c",
-      "ordinary-time-14-a",
-      "ordinary-time-14-b",
-      "ordinary-time-15-a",
-      "ordinary-time-15-b",
-      "ordinary-time-16-a",
-      "ordinary-time-16-b",
-      "ordinary-time-17-a",
-      "ordinary-time-17-b",
-      "ordinary-time-18-a",
-      "ordinary-time-18-b",
-      "ordinary-time-19-a",
-      "ordinary-time-19-b",
-      "ordinary-time-20-a",
-      "ordinary-time-20-b",
-      "ordinary-time-21-a",
-      "ordinary-time-21-b",
-      "ordinary-time-22-a",
-      "ordinary-time-22-b",
-      "ordinary-time-23-a",
-      "ordinary-time-23-b",
-      "ordinary-time-24-a",
-      "ordinary-time-24-b",
-      "ordinary-time-24-c",
-      "ordinary-time-25-a",
-      "ordinary-time-25-b",
-      "ordinary-time-26-a",
-      "ordinary-time-26-b",
-      "ordinary-time-27-a",
-      "ordinary-time-27-b",
-      "ordinary-time-28-a",
-      "ordinary-time-28-b",
-      "ordinary-time-29-a",
-      "ordinary-time-29-b",
-      "ordinary-time-30-a",
-      "ordinary-time-30-b",
-      "ordinary-time-31-a",
-      "ordinary-time-31-b",
-      "ordinary-time-31-c",
-      "ordinary-time-32-a",
-      "ordinary-time-32-b",
-      "ordinary-time-32-c",
-      "ordinary-time-33-a",
-      "ordinary-time-33-b",
-      "solemnity-christ-the-king-a",
-      "solemnity-christ-the-king-b"
-    ],
-    "category": "mass_part",
-    "functions": [
-      "fraction_rite"
-    ]
-  },
-  {
     "id": "lamb-of-god-mass-of-christ-the-savior",
     "title": "Lamb of God (Mass of Christ the Savior)",
     "resources": [],
@@ -1413,7 +1337,7 @@
     "id": "mass-of-glory-bob-hurd-arr-by-dan-houze",
     "title": "Mass of Glory • Bob Hurd • Arr. by Dan Houze",
     "resources": [],
-    "usageCount": 60,
+    "usageCount": 61,
     "occasions": [
       "solemnity-most-holy-trinity-a",
       "solemnity-most-holy-trinity-b",
@@ -1474,9 +1398,11 @@
       "solemnity-nov-1-all-souls-abc",
       "the-dedication-of-nov-9-the-lateran-basilica-abc",
       "ordinary-time-33-c",
-      "solemnity-christ-the-king-c"
+      "solemnity-christ-the-king-c",
+      "pentecost-c"
     ],
-    "category": "song"
+    "category": "song",
+    "composer": "Bob Hurd & Ken Canedo"
   },
   {
     "id": "alleluia-mass-of-joy-peace--song-title",
@@ -2004,7 +1930,7 @@
     "title": "Mass of Joy & Peace",
     "composer": "Tony Alonso",
     "resources": [],
-    "usageCount": 32,
+    "usageCount": 38,
     "occasions": [
       "ordinary-time-02-a",
       "ordinary-time-03-a-word-of-god-sunday",
@@ -2037,7 +1963,13 @@
       "ascension-c",
       "pentecost-a",
       "pentecost-b",
-      "pentecost-c"
+      "pentecost-c",
+      "solemnity-most-holy-trinity-a",
+      "solemnity-most-holy-trinity-b",
+      "solemnity-most-holy-trinity-c",
+      "solemnity-body-blood-of-christ-a",
+      "solemnity-body-blood-of-christ-b",
+      "solemnity-body-blood-of-christ-c"
     ],
     "category": "song"
   },
@@ -2099,7 +2031,7 @@
     "title": "Lamb of God (Mass of Joy & Peace)",
     "composer": "Tony Alonso",
     "resources": [],
-    "usageCount": 29,
+    "usageCount": 36,
     "occasions": [
       "ordinary-time-02-a",
       "ordinary-time-03-a-word-of-god-sunday",
@@ -2129,7 +2061,14 @@
       "easter-07-c",
       "ascension-a",
       "ascension-b",
-      "ascension-c"
+      "ascension-c",
+      "pentecost-c",
+      "solemnity-most-holy-trinity-a",
+      "solemnity-most-holy-trinity-b",
+      "solemnity-most-holy-trinity-c",
+      "solemnity-body-blood-of-christ-a",
+      "solemnity-body-blood-of-christ-b",
+      "solemnity-body-blood-of-christ-c"
     ],
     "category": "mass_part",
     "functions": [
@@ -2174,7 +2113,7 @@
     "title": "Mass of the Incarnate Word",
     "composer": "Bob Hurd • Traditional Arrangement",
     "resources": [],
-    "usageCount": 28,
+    "usageCount": 59,
     "occasions": [
       "advent-01-a",
       "advent-02-a",
@@ -2190,7 +2129,12 @@
       "the-epiphany-of-the-lord-abc",
       "baptism-of-the-lord-a",
       "baptism-of-the-lord-b",
-      "baptism-of-the-lord-c"
+      "baptism-of-the-lord-c",
+      "advent-01-b",
+      "advent-01-c",
+      "advent-02-b",
+      "advent-02-c",
+      "advent-04-b"
     ],
     "category": "song"
   },
@@ -2348,65 +2292,6 @@
       "ordinary-time-20-a",
       "feast-the-exaltation-sep-14-of-the-holy-cross-abc",
       "ordinary-time-24-a"
-    ],
-    "category": "song"
-  },
-  {
-    "id": "lamb-of-god-mass-of",
-    "title": "Lamb of God (Mass of ???)",
-    "resources": [],
-    "usageCount": 26,
-    "occasions": [
-      "ordinary-time-23-a",
-      "ordinary-time-23-b",
-      "ordinary-time-24-b",
-      "ordinary-time-24-c",
-      "ordinary-time-25-a",
-      "ordinary-time-25-b",
-      "ordinary-time-26-a",
-      "ordinary-time-26-b",
-      "ordinary-time-27-a",
-      "ordinary-time-27-b",
-      "ordinary-time-28-a",
-      "ordinary-time-28-b",
-      "ordinary-time-29-a",
-      "ordinary-time-29-b",
-      "ordinary-time-30-a",
-      "ordinary-time-30-b",
-      "ordinary-time-31-a",
-      "ordinary-time-31-b",
-      "ordinary-time-31-c",
-      "ordinary-time-32-a",
-      "ordinary-time-32-b",
-      "ordinary-time-32-c",
-      "ordinary-time-33-a",
-      "ordinary-time-33-b",
-      "solemnity-christ-the-king-a",
-      "solemnity-christ-the-king-b"
-    ],
-    "category": "mass_part",
-    "functions": [
-      "fraction_rite"
-    ]
-  },
-  {
-    "id": "mass-of-the-incarnate-word",
-    "title": "Mass of the Incarnate Word",
-    "resources": [],
-    "usageCount": 25,
-    "occasions": [
-      "advent-01-a",
-      "advent-01-b",
-      "advent-01-c",
-      "advent-02-a",
-      "advent-02-b",
-      "advent-02-c",
-      "advent-03-a",
-      "advent-03-b",
-      "advent-03-c",
-      "advent-04-a",
-      "advent-04-b",
-      "advent-04-c"
     ],
     "category": "song"
   },
@@ -3002,14 +2887,16 @@
     "title": "Dwell in the Midst of Us",
     "composer": "Jeffrey Bonilla & David Lockwood",
     "resources": [],
-    "usageCount": 18,
+    "usageCount": 25,
     "occasions": [
       "advent-01-a",
       "advent-01-b",
       "advent-01-c",
       "advent-03-a",
       "advent-03-b",
-      "advent-03-c"
+      "advent-03-c",
+      "advent-04-b",
+      "advent-04-c"
     ],
     "category": "song",
     "functions": [
@@ -3907,12 +3794,15 @@
     "title": "Hail Mary: Gentle Woman",
     "composer": "Carey Landrey",
     "resources": [],
-    "usageCount": 14,
+    "usageCount": 27,
     "occasions": [
       "advent-04-a",
       "advent-04-b",
       "advent-04-c",
-      "ordinary-time-02-c"
+      "ordinary-time-02-c",
+      "ordinary-time-30-c",
+      "ordinary-time-02-b",
+      "easter-04-c"
     ],
     "category": "song",
     "functions": [
@@ -4196,29 +4086,6 @@
     ]
   },
   {
-    "id": "jesus-i-trust-in-you--josh-blakesley-sarah-kroger-sarah-hart",
-    "title": "Jesus I Trust In You",
-    "composer": "Josh Blakesley • Sarah Kroger • Sarah Hart",
-    "resources": [],
-    "usageCount": 14,
-    "occasions": [
-      "easter-02-divine-mercy-a",
-      "easter-02-divine-mercy-b",
-      "easter-02-divine-mercy-c",
-      "easter-04-a",
-      "easter-04-b",
-      "ordinary-time-16-c",
-      "ordinary-time-17-c",
-      "ordinary-time-27-c"
-    ],
-    "category": "song",
-    "functions": [
-      "communion",
-      "offertory",
-      "prelude"
-    ]
-  },
-  {
     "id": "remembrance-of-you--sarah-hart-sarah-kroger",
     "title": "Remembrance of You",
     "composer": "Sarah Hart & Sarah Kroger",
@@ -4396,44 +4263,6 @@
     "topics": [
       "Love for Others",
       "Unity"
-    ]
-  },
-  {
-    "id": "on-eagle-s-wings--michael-joncas-craig-kingsbury",
-    "title": "On Eagle's Wings",
-    "composer": "Michael Joncas • Craig Kingsbury",
-    "resources": [],
-    "usageCount": 13,
-    "occasions": [
-      "ordinary-time-02-b",
-      "ordinary-time-02-c",
-      "ordinary-time-22-c",
-      "solemnity-nov-1-all-souls-abc"
-    ],
-    "category": "song",
-    "functions": [
-      "communion",
-      "offertory"
-    ],
-    "catalogs": {
-      "gather4": 749,
-      "spiritSong": 333
-    },
-    "scriptureRefs": [
-      "Exodus 19:4",
-      "Psalm 91",
-      "Psalm 91:"
-    ],
-    "topics": [
-      "Angels",
-      "Comfort",
-      "Courage",
-      "Faith",
-      "Faithfulness of God",
-      "Fear",
-      "Hope",
-      "Refuge",
-      "Trust"
     ]
   },
   {
@@ -4907,7 +4736,7 @@
     "id": "mass-of-glory-lockwood-christmas-intro",
     "title": "Mass of Glory (Lockwood Christmas Intro)",
     "resources": [],
-    "usageCount": 11,
+    "usageCount": 14,
     "occasions": [
       "advent-01-b",
       "holy-family-b",
@@ -4916,9 +4745,11 @@
       "the-epiphany-of-the-lord-abc",
       "baptism-of-the-lord-a",
       "baptism-of-the-lord-b",
-      "baptism-of-the-lord-c"
+      "baptism-of-the-lord-c",
+      "holy-family-a"
     ],
-    "category": "song"
+    "category": "song",
+    "composer": "Bob Hurd • Arr. by Dan Houze"
   },
   {
     "id": "incarnate-word-bob-hurd-arr-by-lockwood--bob-hurd-arr-by-lockwood",
@@ -4979,13 +4810,20 @@
     "title": "Jesus I Trust In You",
     "composer": "Sarah Hart • Josh Blakesley • Sarah Kroger",
     "resources": [],
-    "usageCount": 11,
+    "usageCount": 25,
     "occasions": [
       "ordinary-time-02-a",
       "easter-02-divine-mercy-c",
       "easter-04-c",
       "ordinary-time-22-c",
-      "ordinary-time-29-c"
+      "ordinary-time-29-c",
+      "easter-02-divine-mercy-a",
+      "easter-02-divine-mercy-b",
+      "easter-04-a",
+      "easter-04-b",
+      "ordinary-time-16-c",
+      "ordinary-time-17-c",
+      "ordinary-time-27-c"
     ],
     "category": "song",
     "functions": [
@@ -5616,16 +5454,19 @@
     "id": "mass-of-glory-christmas-intro",
     "title": "Mass of Glory (Christmas Intro)",
     "resources": [],
-    "usageCount": 9,
+    "usageCount": 11,
     "occasions": [
       "holy-family-a",
       "holy-family-b",
       "holy-family-c",
       "2nd-sun-after-christmas-abc-epiphany-replaces-in-adla",
       "baptism-of-the-lord-b",
-      "baptism-of-the-lord-c"
+      "baptism-of-the-lord-c",
+      "the-epiphany-of-the-lord-abc",
+      "baptism-of-the-lord-a"
     ],
-    "category": "song"
+    "category": "song",
+    "composer": "Bob Hurd • Ken Canedo"
   },
   {
     "id": "i-send-you-out--john-angotti",
@@ -6630,7 +6471,7 @@
   {
     "id": "we-walk-by-faith--marty-haugen-arranged-by-david-lockwood",
     "title": "We Walk By Faith",
-    "composer": "Marty Haugen • Arranged by David Lockwood",
+    "composer": "Marty Haugen",
     "resources": [],
     "usageCount": 8,
     "occasions": [
@@ -7000,28 +6841,6 @@
       "Sin",
       "Spirituals",
       "Trust"
-    ]
-  },
-  {
-    "id": "dwell-in-the-midst-of-us--jeffrey-bonilla-david-lockwood-1",
-    "title": "Dwell in the Midst of Us",
-    "composer": "Jeffrey Bonilla · David Lockwood",
-    "resources": [],
-    "usageCount": 7,
-    "occasions": [
-      "advent-01-b",
-      "advent-01-c",
-      "advent-03-a",
-      "advent-03-b",
-      "advent-03-c",
-      "advent-04-b",
-      "advent-04-c"
-    ],
-    "category": "song",
-    "functions": [
-      "gathering",
-      "offertory",
-      "prelude"
     ]
   },
   {
@@ -7528,25 +7347,6 @@
     "category": "psalm"
   },
   {
-    "id": "lamb-of-god-mass-of-joy-peace",
-    "title": "Lamb of God (Mass of Joy & Peace)",
-    "resources": [],
-    "usageCount": 7,
-    "occasions": [
-      "pentecost-c",
-      "solemnity-most-holy-trinity-a",
-      "solemnity-most-holy-trinity-b",
-      "solemnity-most-holy-trinity-c",
-      "solemnity-body-blood-of-christ-a",
-      "solemnity-body-blood-of-christ-b",
-      "solemnity-body-blood-of-christ-c"
-    ],
-    "category": "mass_part",
-    "functions": [
-      "fraction_rite"
-    ]
-  },
-  {
     "id": "pan-de-vida-4-4--bob-hurd-arranged-by-ed-archer",
     "title": "Pan de Vida (4/4)",
     "composer": "Bob Hurd • Arranged by Ed Archer",
@@ -7700,22 +7500,6 @@
       "Sin",
       "Trust"
     ]
-  },
-  {
-    "id": "mass-of-the-incarnate-word--bob-hurd-arr-lockwood",
-    "title": "Mass of the Incarnate Word",
-    "composer": "Bob Hurd • Arr. Lockwood",
-    "resources": [],
-    "usageCount": 6,
-    "occasions": [
-      "advent-01-b",
-      "advent-01-c",
-      "advent-02-b",
-      "advent-02-c",
-      "advent-04-b",
-      "advent-04-c"
-    ],
-    "category": "song"
   },
   {
     "id": "say-to-the-frightened-heart--bob-hurd",
@@ -8701,21 +8485,6 @@
     "functions": [
       "gospel_acclamation"
     ]
-  },
-  {
-    "id": "mass-of-joy-peace-tony-alonso",
-    "title": "Mass of Joy & Peace • Tony Alonso",
-    "resources": [],
-    "usageCount": 6,
-    "occasions": [
-      "solemnity-most-holy-trinity-a",
-      "solemnity-most-holy-trinity-b",
-      "solemnity-most-holy-trinity-c",
-      "solemnity-body-blood-of-christ-a",
-      "solemnity-body-blood-of-christ-b",
-      "solemnity-body-blood-of-christ-c"
-    ],
-    "category": "song"
   },
   {
     "id": "pan-del-cielo-bread-from-heaven--iv-n-d-az",
@@ -10168,41 +9937,6 @@
     ]
   },
   {
-    "id": "hail-mary-gentle-woman--carey-landry",
-    "title": "Hail Mary: Gentle Woman",
-    "composer": "Carey Landry",
-    "resources": [],
-    "usageCount": 5,
-    "occasions": [
-      "ordinary-time-30-c"
-    ],
-    "category": "song",
-    "functions": [
-      "communion",
-      "offertory",
-      "prelude"
-    ],
-    "catalogs": {
-      "bb2026": 684,
-      "spiritSong": 305
-    },
-    "scriptureRefs": [
-      "Luke 1:28,42",
-      "Job 19",
-      "Psalm 27:4",
-      "Isaiah 25",
-      "Isaiah 25:8"
-    ],
-    "topics": [
-      "Comfort",
-      "Eternal Life/Heaven",
-      "Faith",
-      "Hope",
-      "Resurrection",
-      "Trust"
-    ]
-  },
-  {
     "id": "ps-34-the-lord-hears-the-cry-of-the-poor--the-lyric-psalter-tony-alonso-marty-haugen",
     "title": "Ps 34 The Lord hears the cry of the poor.",
     "composer": "The Lyric Psalter • Tony Alonso & Marty Haugen",
@@ -10218,7 +9952,7 @@
     "title": "Mass of the Incarnate Word",
     "composer": "Bob Hurd • Arr. by Lockwood",
     "resources": [],
-    "usageCount": 4,
+    "usageCount": 5,
     "occasions": [
       "advent-01-a",
       "advent-02-a",
@@ -10238,24 +9972,6 @@
       "advent-03-c"
     ],
     "category": "song"
-  },
-  {
-    "id": "hail-mary-gentle-woman",
-    "title": "Hail Mary: Gentle Woman",
-    "resources": [],
-    "usageCount": 4,
-    "occasions": [
-      "advent-04-b",
-      "advent-04-c",
-      "ordinary-time-02-b",
-      "ordinary-time-02-c"
-    ],
-    "category": "song",
-    "functions": [
-      "communion",
-      "offertory",
-      "prelude"
-    ]
   },
   {
     "id": "glory-glory-gloria-christmas-edition--bonilla-wilson-vocal-arr-by-lockwood-phan",
@@ -12185,19 +11901,6 @@
     "topics": [
       "Peace"
     ]
-  },
-  {
-    "id": "mass-of-glory-lockwood-christmas-intro--bob-hurd-arr-by-dan-houze",
-    "title": "Mass of Glory (Lockwood Christmas Intro)",
-    "composer": "Bob Hurd • Arr. by Dan Houze",
-    "resources": [],
-    "usageCount": 3,
-    "occasions": [
-      "holy-family-a",
-      "the-epiphany-of-the-lord-abc",
-      "baptism-of-the-lord-a"
-    ],
-    "category": "song"
   },
   {
     "id": "ps-84-blessed-are-they-who-dwell--the-lyric-psaltes-tony-alonso-marty-haugen",
@@ -14699,18 +14402,6 @@
     "category": "psalm"
   },
   {
-    "id": "mass-of-glory-christmas-intro--bob-hurd-ken-canedo",
-    "title": "Mass of Glory (Christmas Intro)",
-    "composer": "Bob Hurd • Ken Canedo",
-    "resources": [],
-    "usageCount": 2,
-    "occasions": [
-      "the-epiphany-of-the-lord-abc",
-      "baptism-of-the-lord-a"
-    ],
-    "category": "song"
-  },
-  {
     "id": "spirit-and-grace--ricky-manalo-csp",
     "title": "Spirit and Grace",
     "composer": "Ricky Manalo, CSP",
@@ -14878,23 +14569,6 @@
     "category": "song",
     "functions": [
       "sending"
-    ]
-  },
-  {
-    "id": "hail-mary-gentle-woman--carey-landry-jeffrey-honor-tom-kendzia",
-    "title": "Hail Mary: Gentle Woman",
-    "composer": "Carey Landry • Jeffrey Honoré • Tom Kendzia",
-    "resources": [],
-    "usageCount": 2,
-    "occasions": [
-      "ordinary-time-02-b",
-      "ordinary-time-02-c"
-    ],
-    "category": "song",
-    "functions": [
-      "communion",
-      "offertory",
-      "prelude"
     ]
   },
   {
@@ -17449,17 +17123,6 @@
     ]
   },
   {
-    "id": "mass-of-the-incarnate-word--bob-hurd-arr-by-lockwood-1",
-    "title": "Mass of the Incarnate Word",
-    "composer": "Bob Hurd , Arr. by Lockwood",
-    "resources": [],
-    "usageCount": 1,
-    "occasions": [
-      "advent-01-a"
-    ],
-    "category": "song"
-  },
-  {
     "id": "to-you-o-lord-psalm-25--timothy-smith",
     "title": "To You, O Lord (Psalm 25)",
     "composer": "Timothy Smith",
@@ -17644,22 +17307,6 @@
     "category": "psalm"
   },
   {
-    "id": "hail-mary-gentle-woman--carey-landry-jeffrey-honor-tom-kendzia-1",
-    "title": "Hail Mary: Gentle Woman",
-    "composer": "Carey Landry · Jeffrey Honoré, Tom Kendzia",
-    "resources": [],
-    "usageCount": 1,
-    "occasions": [
-      "ordinary-time-02-c"
-    ],
-    "category": "song",
-    "functions": [
-      "communion",
-      "offertory",
-      "prelude"
-    ]
-  },
-  {
     "id": "come-to-me-and-drink--bob-hurd",
     "title": "Come to Me and Drink",
     "composer": "Bob Hurd",
@@ -17721,9 +17368,12 @@
     "title": "On Eagle's Wings",
     "composer": "Michael Joncas · Craig Kingsbury",
     "resources": [],
-    "usageCount": 1,
+    "usageCount": 14,
     "occasions": [
-      "ordinary-time-02-c"
+      "ordinary-time-02-c",
+      "ordinary-time-02-b",
+      "ordinary-time-22-c",
+      "solemnity-nov-1-all-souls-abc"
     ],
     "category": "song",
     "functions": [
@@ -19061,22 +18711,6 @@
     ]
   },
   {
-    "id": "hail-mary-gentle-woman--carey-landry-carol-jean-kinghorn-landry",
-    "title": "Hail Mary: Gentle Woman",
-    "composer": "Carey Landry & Carol Jean Kinghorn-Landry",
-    "resources": [],
-    "usageCount": 1,
-    "occasions": [
-      "easter-04-c"
-    ],
-    "category": "song",
-    "functions": [
-      "communion",
-      "offertory",
-      "prelude"
-    ]
-  },
-  {
     "id": "ubi-caritas--taiz-jacques-berthier",
     "title": "Ubi Caritas",
     "composer": "Taizé •  Jacques Berthier",
@@ -19316,17 +18950,6 @@
       "Trinity",
       "Praise"
     ]
-  },
-  {
-    "id": "mass-of-glory-bob-hurd-arr-by-dan-houze--bob-hurd-ken-canedo",
-    "title": "Mass of Glory • Bob Hurd • Arr. by Dan Houze",
-    "composer": "Bob Hurd & Ken Canedo",
-    "resources": [],
-    "usageCount": 1,
-    "occasions": [
-      "pentecost-c"
-    ],
-    "category": "song"
   },
   {
     "id": "creator-spirit-by-whose-aid--lasst-uns-erfreuen",
@@ -69276,16 +68899,6 @@
     "usageCount": 0
   },
   {
-    "id": "amen-mass-of-glory",
-    "title": "Amen (Mass of Glory)",
-    "composer": "",
-    "category": "song",
-    "resources": [],
-    "functions": [],
-    "occasions": [],
-    "usageCount": 0
-  },
-  {
     "id": "amen-mass-of-spirit-and-grace",
     "title": "Amen (Mass of Spirit and Grace)",
     "composer": "",
@@ -69758,16 +69371,6 @@
   {
     "id": "come-to-us",
     "title": "Come to Us",
-    "composer": "",
-    "category": "song",
-    "resources": [],
-    "functions": [],
-    "occasions": [],
-    "usageCount": 0
-  },
-  {
-    "id": "come-to-the-river-mass-of-glory",
-    "title": "Come to the River (Mass of Glory)",
     "composer": "",
     "category": "song",
     "resources": [],
@@ -70306,16 +69909,6 @@
     "usageCount": 0
   },
   {
-    "id": "glory-to-god-mass-of-glory",
-    "title": "Glory to God (Mass of Glory)",
-    "composer": "",
-    "category": "song",
-    "resources": [],
-    "functions": [],
-    "occasions": [],
-    "usageCount": 0
-  },
-  {
     "id": "glory-to-god-mass-of-spirit-and-grace",
     "title": "Glory to God (Mass of Spirit and Grace)",
     "composer": "",
@@ -70548,16 +70141,6 @@
   {
     "id": "holy-mass-of-christ-the-savior",
     "title": "Holy (Mass of Christ the Savior)",
-    "composer": "",
-    "category": "song",
-    "resources": [],
-    "functions": [],
-    "occasions": [],
-    "usageCount": 0
-  },
-  {
-    "id": "holy-mass-of-glory",
-    "title": "Holy (Mass of Glory)",
     "composer": "",
     "category": "song",
     "resources": [],
@@ -71026,16 +70609,6 @@
     "usageCount": 0
   },
   {
-    "id": "lenten-gospel-acclamation-mass-of-glory",
-    "title": "Lenten Gospel Acclamation (Mass of Glory)",
-    "composer": "",
-    "category": "song",
-    "resources": [],
-    "functions": [],
-    "occasions": [],
-    "usageCount": 0
-  },
-  {
     "id": "lenten-gospel-acclamation-mass-of-spirit-and-grace",
     "title": "Lenten Gospel Acclamation (Mass of Spirit and Grace)",
     "composer": "",
@@ -71448,16 +71021,6 @@
   {
     "id": "mass-of-christ-the-savior-full-setting",
     "title": "Mass of Christ the Savior (Full Setting)",
-    "composer": "",
-    "category": "song",
-    "resources": [],
-    "functions": [],
-    "occasions": [],
-    "usageCount": 0
-  },
-  {
-    "id": "mass-of-glory-full-setting",
-    "title": "Mass of Glory (Full Setting)",
     "composer": "",
     "category": "song",
     "resources": [],
@@ -72028,16 +71591,6 @@
   {
     "id": "penitential-act-with-invocations-english-chant-mass",
     "title": "Penitential Act with Invocations (English Chant Mass)",
-    "composer": "",
-    "category": "song",
-    "resources": [],
-    "functions": [],
-    "occasions": [],
-    "usageCount": 0
-  },
-  {
-    "id": "penitential-act-with-invocations-mass-of-glory",
-    "title": "Penitential Act with Invocations (Mass of Glory)",
     "composer": "",
     "category": "song",
     "resources": [],
@@ -72816,16 +72369,6 @@
     "usageCount": 0
   },
   {
-    "id": "save-us-savior-mass-of-glory",
-    "title": "Save Us, Savior (Mass of Glory)",
-    "composer": "",
-    "category": "song",
-    "resources": [],
-    "functions": [],
-    "occasions": [],
-    "usageCount": 0
-  },
-  {
     "id": "save-us-savior-mass-of-spirit-and-grace",
     "title": "Save Us, Savior (Mass of Spirit and Grace)",
     "composer": "",
@@ -73566,16 +73109,6 @@
     "usageCount": 0
   },
   {
-    "id": "we-proclaim-your-death-mass-of-glory",
-    "title": "We Proclaim Your Death (Mass of Glory)",
-    "composer": "",
-    "category": "song",
-    "resources": [],
-    "functions": [],
-    "occasions": [],
-    "usageCount": 0
-  },
-  {
     "id": "we-proclaim-your-death-mass-of-spirit-and-grace",
     "title": "We Proclaim Your Death (Mass of Spirit and Grace)",
     "composer": "",
@@ -73688,16 +73221,6 @@
   {
     "id": "when-we-eat-this-bread-mass-of-christ-the-savior",
     "title": "When We Eat This Bread (Mass of Christ the Savior)",
-    "composer": "",
-    "category": "song",
-    "resources": [],
-    "functions": [],
-    "occasions": [],
-    "usageCount": 0
-  },
-  {
-    "id": "when-we-eat-this-bread-mass-of-glory",
-    "title": "When We Eat This Bread (Mass of Glory)",
     "composer": "",
     "category": "song",
     "resources": [],
