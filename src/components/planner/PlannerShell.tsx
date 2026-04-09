@@ -26,8 +26,19 @@ interface PlannerShellProps {
 }
 
 export default function PlannerShell({ occasions }: PlannerShellProps) {
-  const [yearCycle, setYearCycle] = useState<YearCycleFilter>("A");
-  const [season, setSeason] = useState<LiturgicalSeason | "all">("all");
+  // Defaults from the next upcoming Sunday — keeps the planner aligned to "now"
+  const { initialSeason, initialYearCycle } = useMemo(() => {
+    const idx = findNextUpcomingSundayIndex(occasions);
+    if (idx < 0) return { initialSeason: "all" as const, initialYearCycle: "A" as YearCycleFilter };
+    const occ = occasions[idx];
+    const season = (occ?.season || "all") as LiturgicalSeason | "all";
+    const year = occ?.year;
+    const yearCycle: YearCycleFilter = year === "A" || year === "B" || year === "C" ? year : "A";
+    return { initialSeason: season, initialYearCycle: yearCycle };
+  }, [occasions]);
+
+  const [yearCycle, setYearCycle] = useState<YearCycleFilter>(initialYearCycle);
+  const [season, setSeason] = useState<LiturgicalSeason | "all">(initialSeason);
   const [ensembleId, setEnsembleId] = useState<EnsembleId>("reflections");
   const [rangeStart, setRangeStart] = useState(0);
   const [rangeEnd, setRangeEnd] = useState(12);
