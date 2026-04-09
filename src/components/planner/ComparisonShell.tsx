@@ -21,10 +21,24 @@ import { LS_COMPARE_PANEL_WIDTH } from "@/lib/storage-keys";
 
 const LS_PANEL_WIDTH = LS_COMPARE_PANEL_WIDTH;
 
+function findNextOccasion(occasions: LiturgicalOccasion[]): LiturgicalOccasion | null {
+  const today = new Date().toISOString().split("T")[0];
+  let best: { occ: LiturgicalOccasion; date: string } | null = null;
+  for (const occ of occasions) {
+    for (const d of occ.dates) {
+      if (d.date >= today && (!best || d.date < best.date)) {
+        best = { occ, date: d.date };
+      }
+    }
+  }
+  return best?.occ ?? null;
+}
+
 export default function ComparisonShell({ occasions, songs }: ComparisonShellProps) {
-  const [yearCycle, setYearCycle] = useState<YearCycleFilter>("A");
-  const [season, setSeason] = useState<LiturgicalSeason | "all">("all");
-  const [occasionId, setOccasionId] = useState<string>("");
+  const nextOcc = useMemo(() => findNextOccasion(occasions), [occasions]);
+  const [yearCycle, setYearCycle] = useState<YearCycleFilter>(() => (nextOcc?.year as YearCycleFilter) || "A");
+  const [season, setSeason] = useState<LiturgicalSeason | "all">(() => nextOcc?.season || "all");
+  const [occasionId, setOccasionId] = useState<string>(() => nextOcc?.id || "");
   const [ensembles, setEnsembles] = useState<EnsembleId[]>(["reflections", "foundations"]);
   const [hideMassParts, setHideMassParts] = useState(false);
   const [hideReadings, setHideReadings] = useState(false);

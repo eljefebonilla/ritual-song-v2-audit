@@ -46,6 +46,29 @@ const UserContext = createContext<UserContextType>({
   signOut: async () => {},
 });
 
+/**
+ * Shared-view viewer provider: force role="viewer" and isAdmin=false so that
+ * every existing `useUser()` consumer (grid cells, admin buttons, edit UIs)
+ * automatically renders read-only without needing code changes downstream.
+ */
+export function ViewerUserProvider({ children }: { children: ReactNode }) {
+  return (
+    <UserContext.Provider
+      value={{
+        role: "viewer",
+        displayName: "Guest",
+        user: null,
+        profile: null,
+        isAuthenticated: false,
+        isAdmin: false,
+        signOut: async () => {},
+      }}
+    >
+      {children}
+    </UserContext.Provider>
+  );
+}
+
 export function UserProvider({ children }: { children: ReactNode }) {
   const [user, setUser] = useState<User | null>(null);
   const [profile, setProfile] = useState<Profile | null>(null);

@@ -37,6 +37,7 @@ export interface SongEntry {
   title: string;
   composer?: string;
   description?: string;
+  youtubeUrl?: string;
 }
 
 export interface MusicPlan {
@@ -55,7 +56,7 @@ export interface MusicPlan {
     setting?: string;
     youtubeUrl?: string;
   };
-  gospelAcclamation?: SongEntry & { verse?: string; youtubeUrl?: string };
+  gospelAcclamation?: SongEntry & { verse?: string; youtubeUrl?: string; verseStoragePath?: string };
   offertory?: SongEntry;
   eucharisticAcclamations?: {
     massSettingName: string;
@@ -431,6 +432,7 @@ export interface WorshipSlot {
     title: string;
     composer?: string;
     verse?: string;
+    verseStoragePath?: string;
   };
 
   // Mass setting slots

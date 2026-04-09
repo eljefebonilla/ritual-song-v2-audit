@@ -12,17 +12,25 @@ export async function verifyAdmin(): Promise<boolean> {
     return true;
   }
 
-  // Check Supabase auth (full account users)
-  const supabase = await createClient();
-  const { data: { user } } = await supabase.auth.getUser();
-  if (user) {
-    const { data: profile } = await supabase
-      .from("profiles")
-      .select("role")
-      .eq("id", user.id)
-      .single();
-    return profile?.role === "admin";
-  }
+  return verifyAdminStrict();
+}
 
-  return false;
+/**
+ * Strict admin verification that ALWAYS requires a real Supabase session
+ * with role=admin, regardless of NODE_ENV. Use this in endpoints that
+ * publish or affect public surfaces (e.g. shared view CRUD).
+ */
+export async function verifyAdminStrict(): Promise<boolean> {
+  const supabase = await createClient();
+  const {
+    data: { user },
+  } = await supabase.auth.getUser();
+  if (!user) return false;
+
+  const { data: profile } = await supabase
+    .from("profiles")
+    .select("role")
+    .eq("id", user.id)
+    .single();
+  return profile?.role === "admin";
 }

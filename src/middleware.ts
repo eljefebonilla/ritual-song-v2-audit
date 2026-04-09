@@ -14,6 +14,11 @@ const GATE_BYPASS_PATHS = [
   "/terms",
 ];
 
+// Allow /share/<uuid>/... (and exactly /share/<uuid>) through the gate.
+// Defence-in-depth: do NOT bypass for arbitrary /share/* paths, so that any
+// future route accidentally placed under /share/ is not silently exposed.
+const SHARE_PATH_RE = /^\/share\/[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}(\/|$)/i;
+
 const STATIC_PREFIXES = ["/_next/", "/api/", "/favicon.ico"];
 
 export async function middleware(request: NextRequest) {
@@ -31,7 +36,8 @@ export async function middleware(request: NextRequest) {
 
   // Gate-bypass paths — skip access code, but still refresh auth session
   const bypassGate =
-    GATE_BYPASS_PATHS.some((p) => pathname === p || pathname.startsWith(p + "/"));
+    GATE_BYPASS_PATHS.some((p) => pathname === p || pathname.startsWith(p + "/"))
+    || SHARE_PATH_RE.test(pathname);
 
   // Refresh Supabase auth session (keeps cookies fresh)
   let response = NextResponse.next({

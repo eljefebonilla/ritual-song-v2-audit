@@ -1,6 +1,7 @@
 import { NextRequest, NextResponse } from "next/server";
 import { getSongLibrary, invalidateSongLibraryCache } from "@/lib/song-library";
 import { createAdminClient, resolveSongUuid } from "@/lib/supabase/admin";
+import { verifyAdmin } from "@/lib/admin";
 import { detectDuplicateGroups, detectJunkEntries } from "@/lib/duplicate-detection";
 import { getAllFullOccasions } from "@/lib/data";
 import { extractSongEntries, normalizeTitle } from "@/lib/occasion-helpers";
@@ -10,29 +11,6 @@ import path from "path";
 export const runtime = "nodejs";
 
 const SONG_LIBRARY_PATH = path.join(process.cwd(), "src/data/song-library.json");
-
-/**
- * Verify admin via Supabase service role (works on Vercel unlike verifyAdmin).
- */
-async function checkAdmin(request: NextRequest): Promise<boolean> {
-  if (process.env.NODE_ENV === "development") return true;
-
-  // Check for Supabase auth token in cookie
-  const supabase = createAdminClient();
-  const authHeader = request.headers.get("authorization");
-  if (authHeader?.startsWith("Bearer ")) {
-    const { data: { user } } = await supabase.auth.getUser(authHeader.replace("Bearer ", ""));
-    if (!user) return false;
-    const { data: profile } = await supabase
-      .from("profiles")
-      .select("role")
-      .eq("id", user.id)
-      .single();
-    return profile?.role === "admin";
-  }
-
-  return false;
-}
 
 /**
  * GET /api/songs/duplicates — Returns duplicate groups and junk entries
@@ -156,7 +134,7 @@ export async function GET() {
  * Body: { primaryId, secondaryId }
  */
 export async function POST(request: NextRequest) {
-  if (!(await checkAdmin(request))) {
+  if (!(await verifyAdmin())) {
     return NextResponse.json({ error: "Admin access required" }, { status: 403 });
   }
 
@@ -288,7 +266,7 @@ export async function POST(request: NextRequest) {
  * Body: { songIds: string[] }
  */
 export async function DELETE(request: NextRequest) {
-  if (!(await checkAdmin(request))) {
+  if (!(await verifyAdmin())) {
     return NextResponse.json({ error: "Admin access required" }, { status: 403 });
   }
 

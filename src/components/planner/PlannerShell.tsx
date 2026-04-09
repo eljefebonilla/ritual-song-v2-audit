@@ -3,6 +3,7 @@
 import { useState, useMemo, useEffect, useCallback } from "react";
 import type { LiturgicalOccasion, LiturgicalSeason, MusicPlan } from "@/lib/types";
 import type { YearCycleFilter, EnsembleId } from "@/lib/grid-types";
+import type { SharedViewConfig } from "@/lib/shared-view";
 import {
   getFilteredOccasions,
   buildGridColumns,
@@ -23,9 +24,12 @@ export type PlannerViewMode = "grid" | "cards";
 
 interface PlannerShellProps {
   occasions: LiturgicalOccasion[];
+  viewerMode?: boolean;
+  viewerConfig?: SharedViewConfig;
+  viewerName?: string;
 }
 
-export default function PlannerShell({ occasions }: PlannerShellProps) {
+export default function PlannerShell({ occasions, viewerMode = false, viewerConfig, viewerName }: PlannerShellProps) {
   // Defaults from the next upcoming Sunday — used only when nothing is persisted yet
   const { initialSeason, initialYearCycle } = useMemo(() => {
     const idx = findNextUpcomingSundayIndex(occasions);
@@ -37,8 +41,10 @@ export default function PlannerShell({ occasions }: PlannerShellProps) {
     return { initialSeason: season, initialYearCycle: yearCycle };
   }, [occasions]);
 
-  // yearCycle: persisted, falling back to current liturgical year
+  // yearCycle: persisted, falling back to current liturgical year.
+  // In viewer mode, forced from viewerConfig and never read/write localStorage.
   const [yearCycle, setYearCycle] = useState<YearCycleFilter>(() => {
+    if (viewerMode && viewerConfig) return viewerConfig.yearCycle;
     if (typeof window === "undefined") return initialYearCycle;
     try {
       const stored = localStorage.getItem(LS_YEAR_CYCLE);
@@ -49,6 +55,7 @@ export default function PlannerShell({ occasions }: PlannerShellProps) {
 
   // season: persisted, falling back to current season
   const [season, setSeason] = useState<LiturgicalSeason | "all">(() => {
+    if (viewerMode && viewerConfig) return viewerConfig.season;
     if (typeof window === "undefined") return initialSeason;
     try {
       const stored = localStorage.getItem(LS_SEASON);
@@ -59,6 +66,7 @@ export default function PlannerShell({ occasions }: PlannerShellProps) {
 
   // ensembleId: persisted, defaulting to reflections
   const [ensembleId, setEnsembleId] = useState<EnsembleId>(() => {
+    if (viewerMode && viewerConfig) return viewerConfig.ensembleId;
     if (typeof window === "undefined") return "reflections";
     try {
       const stored = localStorage.getItem(LS_ENSEMBLE);
@@ -69,8 +77,12 @@ export default function PlannerShell({ occasions }: PlannerShellProps) {
   const [rangeStart, setRangeStart] = useState(0);
   const [rangeEnd, setRangeEnd] = useState(12);
 
-  // Selectively hidden occasion IDs (persisted to localStorage)
+  // Selectively hidden occasion IDs (persisted to localStorage in admin mode,
+  // sourced from viewerConfig in viewer mode).
   const [hiddenOccasionIds, setHiddenOccasionIds] = useState<Set<string>>(() => {
+    if (viewerMode && viewerConfig) {
+      return new Set(viewerConfig.hiddenOccasionIds || []);
+    }
     if (typeof window === "undefined") return new Set();
     try {
       const stored = localStorage.getItem(LS_HIDDEN_OCCASIONS);
@@ -81,18 +93,20 @@ export default function PlannerShell({ occasions }: PlannerShellProps) {
   });
 
   const hideOccasion = useCallback((id: string) => {
+    if (viewerMode) return; // No-op: viewers cannot modify hidden set
     setHiddenOccasionIds(prev => {
       const next = new Set(prev);
       next.add(id);
-      localStorage.setItem(LS_HIDDEN_OCCASIONS, JSON.stringify([...next]));
+      try { localStorage.setItem(LS_HIDDEN_OCCASIONS, JSON.stringify([...next])); } catch { /* ignore */ }
       return next;
     });
-  }, []);
+  }, [viewerMode]);
 
   const showAllHidden = useCallback(() => {
+    if (viewerMode) return;
     setHiddenOccasionIds(new Set());
-    localStorage.removeItem(LS_HIDDEN_OCCASIONS);
-  }, []);
+    try { localStorage.removeItem(LS_HIDDEN_OCCASIONS); } catch { /* ignore */ }
+  }, [viewerMode]);
 
   // View mode: auto-detect mobile on mount
   const [viewMode, setViewMode] = useState<PlannerViewMode>(() => {
@@ -102,6 +116,7 @@ export default function PlannerShell({ occasions }: PlannerShellProps) {
 
   // Hide past weeks state (persisted to localStorage — lazy init)
   const [hidePastWeeks, setHidePastWeeks] = useState(() => {
+    if (viewerMode) return Boolean(viewerConfig?.hidePastWeeks);
     if (typeof window === "undefined") return true;
     try {
       const stored = localStorage.getItem(HIDE_PAST_KEY);
@@ -113,6 +128,7 @@ export default function PlannerShell({ occasions }: PlannerShellProps) {
 
   // Hide mass parts toggle (persisted to localStorage — lazy init)
   const [hideMassParts, setHideMassParts] = useState(() => {
+    if (viewerMode) return Boolean(viewerConfig?.hideMassParts);
     if (typeof window === "undefined") return false;
     try {
       const stored = localStorage.getItem(HIDE_MASS_PARTS_KEY);
@@ -124,6 +140,7 @@ export default function PlannerShell({ occasions }: PlannerShellProps) {
 
   // Hide readings toggle (persisted to localStorage — lazy init)
   const [hideReadings, setHideReadings] = useState(() => {
+    if (viewerMode) return Boolean(viewerConfig?.hideReadings);
     if (typeof window === "undefined") return false;
     try {
       const stored = localStorage.getItem(HIDE_READINGS_KEY);
@@ -135,6 +152,7 @@ export default function PlannerShell({ occasions }: PlannerShellProps) {
 
   // Hide synopses toggle (hidden by default, persisted to localStorage)
   const [hideSynopses, setHideSynopses] = useState(() => {
+    if (viewerMode) return viewerConfig?.hideSynopses ?? true;
     if (typeof window === "undefined") return true;
     try {
       const stored = localStorage.getItem(HIDE_SYNOPSES_KEY);
@@ -144,8 +162,9 @@ export default function PlannerShell({ occasions }: PlannerShellProps) {
     }
   });
 
-  // Persist to localStorage when changed
+  // Persist to localStorage when changed (skipped in viewer mode)
   useEffect(() => {
+    if (viewerMode) return;
     try {
       localStorage.setItem(HIDE_PAST_KEY, String(hidePastWeeks));
       localStorage.setItem(HIDE_MASS_PARTS_KEY, String(hideMassParts));
@@ -154,10 +173,11 @@ export default function PlannerShell({ occasions }: PlannerShellProps) {
     } catch {
       // ignore
     }
-  }, [hidePastWeeks, hideMassParts, hideReadings, hideSynopses]);
+  }, [hidePastWeeks, hideMassParts, hideReadings, hideSynopses, viewerMode]);
 
-  // Persist primary filters (year cycle, season, ensemble)
+  // Persist primary filters (year cycle, season, ensemble) — skipped in viewer mode
   useEffect(() => {
+    if (viewerMode) return;
     try {
       localStorage.setItem(LS_YEAR_CYCLE, yearCycle);
       localStorage.setItem(LS_SEASON, season);
@@ -165,7 +185,7 @@ export default function PlannerShell({ occasions }: PlannerShellProps) {
     } catch {
       // ignore
     }
-  }, [yearCycle, season, ensembleId]);
+  }, [yearCycle, season, ensembleId, viewerMode]);
 
   const filteredOccasions = useMemo(
     () => getFilteredOccasions(occasions, yearCycle, season),
@@ -179,11 +199,30 @@ export default function PlannerShell({ occasions }: PlannerShellProps) {
     [filteredOccasions, hidePastWeeks]
   );
 
+  // In viewer mode, derive a fixed range from startOccasionId/endOccasionId.
+  // Outside viewer mode, honor the existing hidePastWeeks + rangeStart/rangeEnd logic.
+  const viewerRange = useMemo(() => {
+    if (!viewerMode || !viewerConfig) return null;
+    const startIdxRaw = viewerConfig.startOccasionId
+      ? filteredOccasions.findIndex((o) => o.id === viewerConfig.startOccasionId)
+      : -1;
+    const endIdxRaw = viewerConfig.endOccasionId
+      ? filteredOccasions.findIndex((o) => o.id === viewerConfig.endOccasionId)
+      : -1;
+    const startIdx = startIdxRaw >= 0 ? startIdxRaw : 0;
+    const endIdx = endIdxRaw >= 0 ? endIdxRaw + 1 : filteredOccasions.length;
+    return { start: Math.min(startIdx, filteredOccasions.length), end: Math.min(endIdx, filteredOccasions.length) };
+  }, [viewerMode, viewerConfig, filteredOccasions]);
+
   // Apply offset when hiding past weeks
-  const effectiveStart = hidePastWeeks
+  const effectiveStart = viewerRange
+    ? viewerRange.start
+    : hidePastWeeks
     ? futureStartIndex + rangeStart
     : rangeStart;
-  const effectiveEnd = hidePastWeeks
+  const effectiveEnd = viewerRange
+    ? viewerRange.end
+    : hidePastWeeks
     ? futureStartIndex + (rangeEnd - rangeStart)
     : rangeEnd;
 
@@ -246,46 +285,63 @@ export default function PlannerShell({ occasions }: PlannerShellProps) {
     setRangeEnd(12);
   };
 
+  const viewerHideOccasion = useCallback((_id: string) => {
+    // no-op in viewer mode
+  }, []);
+  const effectiveHideOccasion = viewerMode ? viewerHideOccasion : hideOccasion;
+
   return (
     <div className="flex flex-col h-screen bg-white">
-      <FilterToolbar
-        yearCycle={yearCycle}
-        setYearCycle={setYearCycle}
-        season={season}
-        setSeason={setSeason}
-        ensembleId={ensembleId}
-        setEnsembleId={setEnsembleId}
-        rangeStart={rangeStart}
-        rangeEnd={Math.min(rangeEnd - rangeStart + rangeStart, maxEnd - (hidePastWeeks ? futureStartIndex : 0))}
-        setRangeStart={setRangeStart}
-        setRangeEnd={setRangeEnd}
-        totalOccasions={
-          hidePastWeeks
-            ? filteredOccasions.length - futureStartIndex
-            : filteredOccasions.length
-        }
-        occasions={filteredOccasions}
-        hidePastWeeks={hidePastWeeks}
-        setHidePastWeeks={handleHidePastToggle}
-        hideMassParts={hideMassParts}
-        setHideMassParts={setHideMassParts}
-        hideReadings={hideReadings}
-        setHideReadings={setHideReadings}
-        hideSynopses={hideSynopses}
-        setHideSynopses={setHideSynopses}
-        viewMode={viewMode}
-        setViewMode={setViewMode}
-        hiddenCount={hiddenOccasionIds.size}
-        onShowAllHidden={showAllHidden}
-      />
+      {viewerMode ? (
+        <div className="px-4 py-3 border-b bg-white flex items-center justify-between gap-4 flex-shrink-0">
+          <div className="flex flex-col">
+            <div className="font-serif text-lg leading-tight text-stone-900">{viewerName || "Ritual Song"}</div>
+            <div className="text-xs text-stone-500 capitalize">
+              {season} · Year {yearCycle} · {ensembleId}
+            </div>
+          </div>
+          <div className="text-xs text-stone-400 hidden sm:block">Read-only preview</div>
+        </div>
+      ) : (
+        <FilterToolbar
+          yearCycle={yearCycle}
+          setYearCycle={setYearCycle}
+          season={season}
+          setSeason={setSeason}
+          ensembleId={ensembleId}
+          setEnsembleId={setEnsembleId}
+          rangeStart={rangeStart}
+          rangeEnd={Math.min(rangeEnd - rangeStart + rangeStart, maxEnd - (hidePastWeeks ? futureStartIndex : 0))}
+          setRangeStart={setRangeStart}
+          setRangeEnd={setRangeEnd}
+          totalOccasions={
+            hidePastWeeks
+              ? filteredOccasions.length - futureStartIndex
+              : filteredOccasions.length
+          }
+          occasions={filteredOccasions}
+          hidePastWeeks={hidePastWeeks}
+          setHidePastWeeks={handleHidePastToggle}
+          hideMassParts={hideMassParts}
+          setHideMassParts={setHideMassParts}
+          hideReadings={hideReadings}
+          setHideReadings={setHideReadings}
+          hideSynopses={hideSynopses}
+          setHideSynopses={setHideSynopses}
+          viewMode={viewMode}
+          setViewMode={setViewMode}
+          hiddenCount={hiddenOccasionIds.size}
+          onShowAllHidden={showAllHidden}
+        />
+      )}
       <div className="flex-1 overflow-hidden">
         {/* Mobile: single-week swipeable view */}
         <div className="block md:hidden h-full">
-          <MobileWeekView columns={columns} hideMassParts={hideMassParts} hideReadings={hideReadings} ensembleId={ensembleId} onHideOccasion={hideOccasion} />
+          <MobileWeekView columns={columns} hideMassParts={hideMassParts} hideReadings={hideReadings} ensembleId={ensembleId} onHideOccasion={effectiveHideOccasion} />
         </div>
         {/* Desktop: full grid */}
         <div className="hidden md:block h-full">
-          <PlannerGrid columns={columns} viewMode={viewMode} hideMassParts={hideMassParts} hideReadings={hideReadings} hideSynopses={hideSynopses} ensembleId={ensembleId} onPlanChange={handlePlanChange} onHideOccasion={hideOccasion} />
+          <PlannerGrid columns={columns} viewMode={viewMode} hideMassParts={hideMassParts} hideReadings={hideReadings} hideSynopses={hideSynopses} ensembleId={ensembleId} onPlanChange={handlePlanChange} onHideOccasion={effectiveHideOccasion} />
         </div>
       </div>
     </div>

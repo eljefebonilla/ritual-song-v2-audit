@@ -11,7 +11,7 @@ export type EnsembleId =
   | "heritage"
   | "elevations";
 
-export type UserRole = "admin" | "member";
+export type UserRole = "admin" | "member" | "viewer";
 
 // The row labels for the grid (left-hand column)
 // Includes both music rows and reading rows

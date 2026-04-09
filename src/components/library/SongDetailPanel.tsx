@@ -569,6 +569,7 @@ export default function SongDetailPanel({
   const [editTitle, setEditTitle] = useState(song.title);
   const [editComposer, setEditComposer] = useState(song.composer || "");
   const [editCategory, setEditCategory] = useState<string>(song.category || "song");
+  const [editYoutubeUrl, setEditYoutubeUrl] = useState(song.youtubeUrl || "");
   const [editSaving, setEditSaving] = useState(false);
   const [editError, setEditError] = useState<string | null>(null);
 
@@ -688,6 +689,7 @@ export default function SongDetailPanel({
           title: editTitle.trim(),
           composer: editComposer.trim() || undefined,
           category: editCategory,
+          youtubeUrl: editYoutubeUrl.trim() || null,
         }),
       });
       if (res.ok) {
@@ -698,6 +700,7 @@ export default function SongDetailPanel({
         s.title = editTitle.trim();
         s.composer = editComposer.trim() || undefined;
         s.category = editCategory;
+        s.youtubeUrl = editYoutubeUrl.trim() || undefined;
         // If category changed, remove from current list so UI updates instantly
         if (editCategory !== (song.category || "song")) {
           onSongRemoved?.(song.id);
@@ -969,6 +972,13 @@ export default function SongDetailPanel({
                     <option value="lamb_of_god">Lamb of God</option>
                     <option value="lords_prayer">Lord&apos;s Prayer</option>
                   </select>
+                  <input
+                    type="url"
+                    value={editYoutubeUrl}
+                    onChange={(e) => setEditYoutubeUrl(e.target.value)}
+                    placeholder="YouTube URL"
+                    className="w-full text-xs text-stone-500 border border-stone-300 rounded px-1.5 py-0.5"
+                  />
                   {editError && (
                     <p className="text-[10px] text-red-600">{editError}</p>
                   )}
@@ -986,6 +996,7 @@ export default function SongDetailPanel({
                         setEditTitle(song.title);
                         setEditComposer(song.composer || "");
                         setEditCategory(song.category || "song");
+                        setEditYoutubeUrl(song.youtubeUrl || "");
                         setEditError(null);
                       }}
                       className="px-2 py-0.5 text-[10px] font-medium text-stone-500 rounded hover:bg-stone-100"

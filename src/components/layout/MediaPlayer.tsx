@@ -66,7 +66,7 @@ function SwipeablePanels({ panels }: { panels: { label: string; content: React.R
 
 function extractYouTubeId(url: string): string | null {
   const patterns = [
-    /(?:youtube\.com\/watch\?v=|youtu\.be\/|youtube\.com\/embed\/)([a-zA-Z0-9_-]{11})/,
+    /(?:youtube\.com\/watch\?v=|youtu\.be\/|youtube\.com\/embed\/|youtube\.com\/live\/)([a-zA-Z0-9_-]{11})/,
     /youtube\.com\/shorts\/([a-zA-Z0-9_-]{11})/,
   ];
   for (const p of patterns) {
@@ -74,6 +74,11 @@ function extractYouTubeId(url: string): string | null {
     if (match) return match[1];
   }
   return null;
+}
+
+function extractYouTubeStart(url: string): number | null {
+  const match = url.match(/[?&]t=(\d+)/);
+  return match ? parseInt(match[1], 10) : null;
 }
 
 function formatTime(s: number): string {
@@ -627,6 +632,7 @@ export default function MediaPlayer() {
 
   const isYouTube = current.type === "youtube";
   const youtubeId = isYouTube ? extractYouTubeId(current.url) : null;
+  const youtubeStart = isYouTube ? extractYouTubeStart(current.url) : null;
   const progress = percentPlayed;
 
   // --- Handlers ---
@@ -1096,7 +1102,7 @@ export default function MediaPlayer() {
           {mobileExpanded && (
             <div className="px-6 pb-4">
               <iframe
-                src={`https://www.youtube.com/embed/${youtubeId}?autoplay=1`}
+                src={`https://www.youtube.com/embed/${youtubeId}?autoplay=1${youtubeStart ? `&start=${youtubeStart}` : ""}`}
                 className="w-full max-w-xl mx-auto aspect-video rounded-lg"
                 allow="autoplay; encrypted-media"
                 allowFullScreen

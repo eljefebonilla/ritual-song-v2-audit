@@ -6,7 +6,7 @@ import Sidebar from "./Sidebar";
 import MediaPlayer from "./MediaPlayer";
 import { useMedia } from "@/lib/media-context";
 
-const FULL_SCREEN_PATHS = ["/gate", "/auth", "/join", "/onboard", "/pending", "/privacy", "/terms"];
+const FULL_SCREEN_PATHS = ["/gate", "/auth", "/join", "/onboard", "/pending", "/privacy", "/terms", "/share"];
 
 export default function AppShell({ children }: { children: React.ReactNode }) {
   const pathname = usePathname();
