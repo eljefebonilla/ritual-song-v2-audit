@@ -29,11 +29,13 @@ interface MobileWeekViewProps {
 }
 
 function findPlayable(song: LibrarySong): { url: string; type: "audio" | "youtube"; label?: string } | null {
-  for (const r of song.resources) {
-    if (r.type === "audio" && (r.url || r.storagePath)) {
-      const url = resourceUrl(r);
-      if (url) return { url, type: "audio", label: r.label };
-    }
+  // Prefer non-S&S audio (Breaking Bread is the primary hymnal)
+  const audioResources = song.resources.filter(r => r.type === "audio" && (r.url || r.storagePath));
+  const bbAudio = audioResources.find(r => !r.label?.includes("S&S") && !r.label?.includes("Spirit & Song"));
+  const anyAudio = bbAudio || audioResources[0];
+  if (anyAudio) {
+    const url = resourceUrl(anyAudio);
+    if (url) return { url, type: "audio", label: anyAudio.label };
   }
   for (const r of song.resources) {
     if (r.type === "youtube" && r.url) {
@@ -280,19 +282,45 @@ export default function MobileWeekView({
           // Song lookup for audio
           let matchedSong: LibrarySong | null = null;
           let playable: ReturnType<typeof findPlayable> = null;
-          if (!row.isReading && !cellData.isEmpty && cellData.title) {
+          // Plan-level youtubeUrl takes priority (skip massSetting parent — sub-rows carry links)
+          if (!row.isReading && rowKey !== "massSetting" && col.plan) {
+            let planYt: string | undefined;
+            if (rowKey === "psalm") planYt = col.plan.responsorialPsalm?.youtubeUrl;
+            else if (rowKey === "gospelAcclamation") planYt = col.plan.gospelAcclamation?.youtubeUrl;
+            else if (rowKey.startsWith("communion")) {
+              const cIdx = rowKey === "communion1" ? 0 : rowKey === "communion2" ? 1 : rowKey === "communion3" ? 2 : rowKey === "communion4" ? 3 : null;
+              if (cIdx !== null) planYt = col.plan.communionSongs?.[cIdx]?.youtubeUrl;
+            } else {
+              const v = col.plan[rowKey as keyof typeof col.plan];
+              if (v && typeof v === "object" && "youtubeUrl" in v) planYt = (v as { youtubeUrl?: string }).youtubeUrl;
+            }
+            if (planYt) playable = { url: planYt, type: "youtube" };
+          }
+          // Song library lookup (if no plan-level override)
+          if (!playable && !row.isReading && !cellData.isEmpty && cellData.title) {
             matchedSong = lookupSong(cellData.title, cellData.composer);
             if (matchedSong) {
-              const overrideUrl = audioOverrides[matchedSong.id];
               const ytOverrideUrl = youtubeOverrides[matchedSong.id];
-              if (overrideUrl) {
-                playable = { url: overrideUrl, type: "audio" };
+              if (matchedSong.youtubeUrl) {
+                playable = { url: matchedSong.youtubeUrl, type: "youtube" };
+              } else if (ytOverrideUrl) {
+                playable = { url: ytOverrideUrl, type: "youtube" };
               } else {
-                playable = findPlayable(matchedSong);
-                if (!playable && ytOverrideUrl) {
-                  playable = { url: ytOverrideUrl, type: "youtube" };
+                const overrideUrl = audioOverrides[matchedSong.id];
+                if (overrideUrl) {
+                  playable = { url: overrideUrl, type: "audio" };
+                } else {
+                  playable = findPlayable(matchedSong);
                 }
               }
+            }
+          }
+          // Gospel verse audio from storage path
+          if (rowKey === "gospelVerse" && col.plan?.gospelAcclamation?.verseStoragePath) {
+            const sp = col.plan.gospelAcclamation.verseStoragePath;
+            const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL;
+            if (supabaseUrl) {
+              playable = { url: `${supabaseUrl}/storage/v1/object/public/song-resources/${sp}`, type: "audio" };
             }
           }
 
@@ -324,13 +352,14 @@ export default function MobileWeekView({
                   isEven={false}
                   hasAudio={!!playable}
                   audioType={playable?.type}
-                  onPlay={playable && matchedSong ? () => {
+                  hideAudioIcon={rowKey === "massSetting"}
+                  onPlay={playable ? () => {
                     play({
                       type: playable!.type,
                       url: playable!.url,
-                      title: matchedSong!.title,
-                      subtitle: playable!.label,
-                      songId: matchedSong!.id,
+                      title: matchedSong?.title || cellData.title || "Gospel Verse",
+                      subtitle: playable!.label || (rowKey === "gospelVerse" ? "Lyric Gospel Acclamation" : undefined),
+                      songId: matchedSong?.id,
                     });
                   } : undefined}
                 />

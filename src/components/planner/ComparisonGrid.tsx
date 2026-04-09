@@ -584,7 +584,10 @@ export default function ComparisonGrid({
                   let planYt: string | undefined;
                   if (rowKey === "psalm") planYt = cc.column.plan.responsorialPsalm?.youtubeUrl;
                   else if (rowKey === "gospelAcclamation") planYt = cc.column.plan.gospelAcclamation?.youtubeUrl;
-                  else {
+                  else if (rowKey.startsWith("communion")) {
+                    const cIdx = communionIndex(rowKey);
+                    if (cIdx !== null) planYt = cc.column.plan.communionSongs?.[cIdx]?.youtubeUrl;
+                  } else {
                     const v = cc.column.plan[rowKey as keyof typeof cc.column.plan];
                     if (v && typeof v === "object" && "youtubeUrl" in v) planYt = (v as { youtubeUrl?: string }).youtubeUrl;
                   }
@@ -594,14 +597,17 @@ export default function ComparisonGrid({
                 if (!playable && !row.isReading && !cellIsEmpty && cellData.title) {
                   matchedSong = lookupSong(cellData.title, cellData.composer);
                   if (matchedSong) {
-                    const overrideUrl = audioOverrides[matchedSong.id];
                     const ytOverrideUrl = youtubeOverrides[matchedSong.id];
-                    if (overrideUrl) {
-                      playable = { url: overrideUrl, type: "audio" };
+                    if (matchedSong.youtubeUrl) {
+                      playable = { url: matchedSong.youtubeUrl, type: "youtube" };
+                    } else if (ytOverrideUrl) {
+                      playable = { url: ytOverrideUrl, type: "youtube" };
                     } else {
-                      playable = findPlayable(matchedSong);
-                      if (!playable && ytOverrideUrl) {
-                        playable = { url: ytOverrideUrl, type: "youtube" };
+                      const overrideUrl = audioOverrides[matchedSong.id];
+                      if (overrideUrl) {
+                        playable = { url: overrideUrl, type: "audio" };
+                      } else {
+                        playable = findPlayable(matchedSong);
                       }
                     }
                   }

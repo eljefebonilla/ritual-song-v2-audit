@@ -728,7 +728,11 @@ export default function PlannerGrid({ columns, viewMode, hideMassParts = false, 
                   let planYt: string | undefined;
                   if (rowKey === "psalm") planYt = col.plan.responsorialPsalm?.youtubeUrl;
                   else if (rowKey === "gospelAcclamation") planYt = col.plan.gospelAcclamation?.youtubeUrl;
-                  else {
+                  else if (rowKey.startsWith("communion")) {
+                    // Communion rows: read from communionSongs array
+                    const cIdx = communionIndex(rowKey);
+                    if (cIdx !== null) planYt = col.plan.communionSongs?.[cIdx]?.youtubeUrl;
+                  } else {
                     const v = col.plan[rowKey as keyof typeof col.plan];
                     if (v && typeof v === "object" && "youtubeUrl" in v) planYt = (v as { youtubeUrl?: string }).youtubeUrl;
                   }
@@ -738,14 +742,20 @@ export default function PlannerGrid({ columns, viewMode, hideMassParts = false, 
                 if (!playable && !row.isReading && !cellData.isEmpty && cellData.title) {
                   matchedSong = lookupSong(cellData.title, cellData.composer);
                   if (matchedSong) {
-                    const overrideUrl = audioOverrides[matchedSong.id];
                     const ytOverrideUrl = youtubeOverrides[matchedSong.id];
-                    if (overrideUrl) {
-                      playable = { url: overrideUrl, type: "audio" };
+                    // Explicit YouTube URL on the song takes priority over uploaded audio.
+                    // This lets a user say "use this YouTube link" by setting youtubeUrl
+                    // on the song in the library or in Supabase songs.youtube_url.
+                    if (matchedSong.youtubeUrl) {
+                      playable = { url: matchedSong.youtubeUrl, type: "youtube" };
+                    } else if (ytOverrideUrl) {
+                      playable = { url: ytOverrideUrl, type: "youtube" };
                     } else {
-                      playable = findPlayable(matchedSong);
-                      if (!playable && ytOverrideUrl) {
-                        playable = { url: ytOverrideUrl, type: "youtube" };
+                      const overrideUrl = audioOverrides[matchedSong.id];
+                      if (overrideUrl) {
+                        playable = { url: overrideUrl, type: "audio" };
+                      } else {
+                        playable = findPlayable(matchedSong);
                       }
                     }
                   }
