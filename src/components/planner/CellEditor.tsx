@@ -101,7 +101,7 @@ export default function CellEditor({
 
   const position = ROW_TO_POSITION[rowKey];
   const isBulkEligible = true; // All song rows support "This Sunday" / "All Sundays" scope
-  const isCommunionRow = rowKey.startsWith("communion");
+  const isCommunionRow = /^communion[1-4]$/.test(rowKey);
 
   // Auto-load suggestions when in suggest mode
   useEffect(() => {

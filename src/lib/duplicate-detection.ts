@@ -11,7 +11,7 @@ import { normalizeComposer, composerSimilarity } from "./song-library";
 function normalizeTitleForDuplicates(title: string): string {
   let t = title;
   // Remove parenthetical suffixes: (Traditional), (My Lord and God), etc.
-  t = t.replace(/\s*\(.*?\)\s*/g, " ");
+  t = t.replace(/\s*\((.*?)\)\s*/g, (_match, inner) => /mass\s+of/i.test(inner) ? ` (${inner}) ` : " ");
   // Remove dash-separated suffixes: " - Haugen", " - Traditional Arrangement"
   t = t.replace(/\s*[-\u2013\u2014]\s+.*$/, "");
   return normalizeTitle(t);

@@ -342,7 +342,7 @@ export default function PlannerGrid({ columns, viewMode, hideMassParts = false, 
   };
 
   // Helper: build the communion array value for a save at a specific index
-  const buildCommunionValue = (plan: import("@/lib/types").MusicPlan | null, idx: number, entry: { title: string; composer?: string; description?: string } | null) => {
+  const buildCommunionValue = (plan: import("@/lib/types").MusicPlan | null, idx: number, entry: { title: string; composer?: string; description?: string; youtubeUrl?: string } | null) => {
     const current = plan?.communionSongs ? [...plan.communionSongs] : [];
     // Extend array if needed
     while (current.length <= idx) current.push({ title: "" });
@@ -364,7 +364,7 @@ export default function PlannerGrid({ columns, viewMode, hideMassParts = false, 
     const cIdx = communionIndex(rk);
     if (cIdx !== null) {
       const plan = columns[editingCell.columnIndex]?.plan ?? null;
-      value = buildCommunionValue(plan, cIdx, { title, composer: composer || undefined, description: description || undefined });
+      value = buildCommunionValue(plan, cIdx, { title, composer: composer || undefined, description: description || undefined, youtubeUrl: youtubeUrl || undefined });
     } else if (rk === "psalm") {
       value = { psalm: title, setting: composer || undefined, description: description || undefined, youtubeUrl: youtubeUrl || undefined };
     } else if (rk === "massSetting") {

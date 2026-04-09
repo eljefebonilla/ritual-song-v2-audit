@@ -213,7 +213,7 @@ export default function ComparisonGrid({
   const buildCommunionValue = (
     plan: MusicPlan | null,
     idx: number,
-    entry: { title: string; composer?: string } | null
+    entry: { title: string; composer?: string; youtubeUrl?: string } | null
   ) => {
     const current = plan?.communionSongs ? [...plan.communionSongs] : [];
     while (current.length <= idx) current.push({ title: "" });
@@ -237,7 +237,7 @@ export default function ComparisonGrid({
 
       const cIdx = communionIndex(rk);
       if (cIdx !== null) {
-        value = buildCommunionValue(plan, cIdx, { title, composer: composer || undefined });
+        value = buildCommunionValue(plan, cIdx, { title, composer: composer || undefined, youtubeUrl: youtubeUrl || undefined });
       } else if (rk === "psalm") {
         value = { psalm: title, setting: composer || undefined, youtubeUrl: youtubeUrl || undefined };
       } else if (rk === "massSetting") {
