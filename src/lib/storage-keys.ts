@@ -18,6 +18,9 @@ export const LS_HIDE_PAST_WEEKS = "rs_hide_past_weeks";
 export const LS_HIDE_MASS_PARTS = "rs_hide_mass_parts";
 export const LS_HIDE_READINGS = "rs_hide_readings";
 export const LS_HIDE_SYNOPSES = "rs_hide_synopses";
+export const LS_YEAR_CYCLE = "rs_year_cycle";
+export const LS_SEASON = "rs_season";
+export const LS_ENSEMBLE = "rs_ensemble";
 
 // Media player
 export const LS_PLAYER_SPEED = "rs-player-speed";

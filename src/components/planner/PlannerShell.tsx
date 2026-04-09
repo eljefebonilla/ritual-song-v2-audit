@@ -11,7 +11,7 @@ import {
 import FilterToolbar from "./FilterToolbar";
 import PlannerGrid from "./PlannerGrid";
 import MobileWeekView from "./MobileWeekView";
-import { LS_HIDE_PAST_WEEKS, LS_HIDE_MASS_PARTS, LS_HIDE_READINGS, LS_HIDE_SYNOPSES } from "@/lib/storage-keys";
+import { LS_HIDE_PAST_WEEKS, LS_HIDE_MASS_PARTS, LS_HIDE_READINGS, LS_HIDE_SYNOPSES, LS_YEAR_CYCLE, LS_SEASON, LS_ENSEMBLE } from "@/lib/storage-keys";
 
 const HIDE_PAST_KEY = LS_HIDE_PAST_WEEKS;
 const HIDE_MASS_PARTS_KEY = LS_HIDE_MASS_PARTS;
@@ -26,7 +26,7 @@ interface PlannerShellProps {
 }
 
 export default function PlannerShell({ occasions }: PlannerShellProps) {
-  // Defaults from the next upcoming Sunday — keeps the planner aligned to "now"
+  // Defaults from the next upcoming Sunday — used only when nothing is persisted yet
   const { initialSeason, initialYearCycle } = useMemo(() => {
     const idx = findNextUpcomingSundayIndex(occasions);
     if (idx < 0) return { initialSeason: "all" as const, initialYearCycle: "A" as YearCycleFilter };
@@ -37,9 +37,35 @@ export default function PlannerShell({ occasions }: PlannerShellProps) {
     return { initialSeason: season, initialYearCycle: yearCycle };
   }, [occasions]);
 
-  const [yearCycle, setYearCycle] = useState<YearCycleFilter>(initialYearCycle);
-  const [season, setSeason] = useState<LiturgicalSeason | "all">(initialSeason);
-  const [ensembleId, setEnsembleId] = useState<EnsembleId>("reflections");
+  // yearCycle: persisted, falling back to current liturgical year
+  const [yearCycle, setYearCycle] = useState<YearCycleFilter>(() => {
+    if (typeof window === "undefined") return initialYearCycle;
+    try {
+      const stored = localStorage.getItem(LS_YEAR_CYCLE);
+      if (stored === "A" || stored === "B" || stored === "C" || stored === "all") return stored;
+    } catch { /* ignore */ }
+    return initialYearCycle;
+  });
+
+  // season: persisted, falling back to current season
+  const [season, setSeason] = useState<LiturgicalSeason | "all">(() => {
+    if (typeof window === "undefined") return initialSeason;
+    try {
+      const stored = localStorage.getItem(LS_SEASON);
+      if (stored) return stored as LiturgicalSeason | "all";
+    } catch { /* ignore */ }
+    return initialSeason;
+  });
+
+  // ensembleId: persisted, defaulting to reflections
+  const [ensembleId, setEnsembleId] = useState<EnsembleId>(() => {
+    if (typeof window === "undefined") return "reflections";
+    try {
+      const stored = localStorage.getItem(LS_ENSEMBLE);
+      if (stored) return stored as EnsembleId;
+    } catch { /* ignore */ }
+    return "reflections";
+  });
   const [rangeStart, setRangeStart] = useState(0);
   const [rangeEnd, setRangeEnd] = useState(12);
 
@@ -129,6 +155,17 @@ export default function PlannerShell({ occasions }: PlannerShellProps) {
       // ignore
     }
   }, [hidePastWeeks, hideMassParts, hideReadings, hideSynopses]);
+
+  // Persist primary filters (year cycle, season, ensemble)
+  useEffect(() => {
+    try {
+      localStorage.setItem(LS_YEAR_CYCLE, yearCycle);
+      localStorage.setItem(LS_SEASON, season);
+      localStorage.setItem(LS_ENSEMBLE, ensembleId);
+    } catch {
+      // ignore
+    }
+  }, [yearCycle, season, ensembleId]);
 
   const filteredOccasions = useMemo(
     () => getFilteredOccasions(occasions, yearCycle, season),
