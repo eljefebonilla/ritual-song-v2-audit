@@ -2,6 +2,21 @@ import type { LibrarySong } from "./types";
 import { normalizeTitle } from "./occasion-helpers";
 import { normalizeComposer, composerSimilarity } from "./song-library";
 
+/**
+ * Aggressive title normalization for duplicate detection.
+ * Strips parenthetical suffixes, dash-separated composer hints, and arrangement notes
+ * so that "We Walk By Faith", "We Walk By Faith - Haugen (Traditional)",
+ * and "We Walk by Faith (My Lord and God)" all map to the same key.
+ */
+function normalizeTitleForDuplicates(title: string): string {
+  let t = title;
+  // Remove parenthetical suffixes: (Traditional), (My Lord and God), etc.
+  t = t.replace(/\s*\(.*?\)\s*/g, " ");
+  // Remove dash-separated suffixes: " - Haugen", " - Traditional Arrangement"
+  t = t.replace(/\s*[-\u2013\u2014]\s+.*$/, "");
+  return normalizeTitle(t);
+}
+
 export type DuplicateConfidence = "high" | "medium" | "low";
 
 export interface DuplicateGroup {
@@ -44,10 +59,10 @@ export function detectDuplicateGroups(songs: LibrarySong[]): DuplicateGroup[] {
   // Exclude categories where same-title entries are expected
   const candidateSongs = songs.filter((s) => !EXEMPT_CATEGORIES.has(s.category || ""));
 
-  // Group by normalized title
+  // Group by aggressively normalized title (strips parentheticals, dash suffixes)
   const groups = new Map<string, LibrarySong[]>();
   for (const song of candidateSongs) {
-    const key = normalizeTitle(song.title);
+    const key = normalizeTitleForDuplicates(song.title);
     const existing = groups.get(key);
     if (existing) {
       existing.push(song);
@@ -79,9 +94,13 @@ export function detectDuplicateGroups(songs: LibrarySong[]): DuplicateGroup[] {
     });
   }
 
-  // Sort: high confidence first, then medium, then low
+  // Sort: high confidence first, then medium, then low; alphabetical within each level
   const order: Record<DuplicateConfidence, number> = { high: 0, medium: 1, low: 2 };
-  result.sort((a, b) => order[a.confidence] - order[b.confidence]);
+  result.sort((a, b) => {
+    const c = order[a.confidence] - order[b.confidence];
+    if (c !== 0) return c;
+    return a.displayTitle.localeCompare(b.displayTitle);
+  });
 
   return result;
 }
