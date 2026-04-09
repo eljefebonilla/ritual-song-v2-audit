@@ -152,6 +152,7 @@ export function extractCellData(
           title: plan.responsorialPsalm.psalm,
           composer: plan.responsorialPsalm.setting,
           isEmpty: false,
+          youtubeUrl: plan.responsorialPsalm.youtubeUrl,
         };
       }
       return { title: "", isEmpty: true };
@@ -160,8 +161,8 @@ export function extractCellData(
         return {
           title: plan.gospelAcclamation.title,
           composer: plan.gospelAcclamation.composer,
-          description: plan.gospelAcclamation.verse,
           isEmpty: false,
+          youtubeUrl: plan.gospelAcclamation.youtubeUrl,
         };
       }
       return { title: "", isEmpty: true };
@@ -178,8 +179,13 @@ export function extractCellData(
       return { title: "", isEmpty: true };
     case "massSettingHoly":
     case "massSettingMemorial":
-    case "massSettingAmen":
-      // Sub-rows inherit from the mass setting
+    case "massSettingAmen": {
+      // Check for individual sub-row override first
+      const subVal = plan[rowKey as keyof typeof plan];
+      if (subVal && typeof subVal === "object" && "title" in subVal) {
+        return songToCell(subVal as SongEntry);
+      }
+      // Fall back to parent mass setting
       if (plan.eucharisticAcclamations) {
         return {
           title: plan.eucharisticAcclamations.massSettingName,
@@ -187,6 +193,7 @@ export function extractCellData(
         };
       }
       return { title: "", isEmpty: true };
+    }
     case "lordsPrayer":
       return songToCell(plan.lordsPrayer);
     case "fractionRite":
@@ -197,6 +204,8 @@ export function extractCellData(
       return songToCell(plan.communionSongs?.[1]);
     case "communion3":
       return songToCell(plan.communionSongs?.[2]);
+    case "communion4":
+      return songToCell(plan.communionSongs?.[3]);
     case "sending":
       return songToCell(plan.sending);
     default:
@@ -216,6 +225,7 @@ function songToCell(song?: SongEntry): GridCellData {
         ? song.description
         : undefined,
     isEmpty: false,
+    youtubeUrl: song.youtubeUrl,
   };
 }
 

@@ -192,17 +192,13 @@ function OccasionCard({ column, hideMassParts = false, hideReadings = false, hid
 
 /** Find the best playable audio/youtube resource for a song */
 function findPlayable(song: LibrarySong): { url: string; type: "audio" | "youtube"; label?: string } | null {
-  for (const r of song.resources) {
-    if (r.type === "audio" && (r.url || r.storagePath)) {
-      const url = resourceUrl(r);
-      if (url) return { url, type: "audio", label: r.label };
-    }
-  }
-  for (const r of song.resources) {
-    if (r.type === "audio" && r.filePath && !r.url && !r.storagePath) {
-      const url = resourceUrl(r);
-      if (url) return { url, type: "audio", label: r.label };
-    }
+  // Prefer non-S&S audio (Breaking Bread is the primary hymnal)
+  const audioResources = song.resources.filter(r => r.type === "audio" && (r.url || r.storagePath));
+  const bbAudio = audioResources.find(r => !r.label?.includes("S&S") && !r.label?.includes("Spirit & Song"));
+  const anyAudio = bbAudio || audioResources[0];
+  if (anyAudio) {
+    const url = resourceUrl(anyAudio);
+    if (url) return { url, type: "audio", label: anyAudio.label };
   }
   for (const r of song.resources) {
     if (r.type === "youtube" && r.url) {
@@ -322,11 +318,15 @@ export default function PlannerGrid({ columns, viewMode, hideMassParts = false, 
       case "gospelAcclamation": return "gospelAcclamation";
       case "offertory": return "offertory";
       case "massSetting": return "eucharisticAcclamations";
+      case "massSettingHoly": return "massSettingHoly";
+      case "massSettingMemorial": return "massSettingMemorial";
+      case "massSettingAmen": return "massSettingAmen";
       case "lordsPrayer": return "lordsPrayer";
       case "fractionRite": return "fractionRite";
       case "communion1": return "communionSongs";
       case "communion2": return "communionSongs";
       case "communion3": return "communionSongs";
+      case "communion4": return "communionSongs";
       case "sending": return "sending";
       default: return key;
     }
@@ -337,6 +337,7 @@ export default function PlannerGrid({ columns, viewMode, hideMassParts = false, 
     if (rk === "communion1") return 0;
     if (rk === "communion2") return 1;
     if (rk === "communion3") return 2;
+    if (rk === "communion4") return 3;
     return null;
   };
 
@@ -355,7 +356,7 @@ export default function PlannerGrid({ columns, viewMode, hideMassParts = false, 
     return current.length > 0 ? current : null;
   };
 
-  const handleCellSave = useCallback(async (rk: GridRowKey, title: string, composer: string, description?: string) => {
+  const handleCellSave = useCallback(async (rk: GridRowKey, title: string, composer: string, description?: string, youtubeUrl?: string) => {
     if (!editingCell || !ensembleId) return;
     const field = rowKeyToField(rk);
     let value: unknown;
@@ -365,11 +366,11 @@ export default function PlannerGrid({ columns, viewMode, hideMassParts = false, 
       const plan = columns[editingCell.columnIndex]?.plan ?? null;
       value = buildCommunionValue(plan, cIdx, { title, composer: composer || undefined, description: description || undefined });
     } else if (rk === "psalm") {
-      value = { psalm: title, setting: composer || undefined, description: description || undefined };
+      value = { psalm: title, setting: composer || undefined, description: description || undefined, youtubeUrl: youtubeUrl || undefined };
     } else if (rk === "massSetting") {
       value = { massSettingName: title, composer: composer || undefined, description: description || undefined };
     } else {
-      value = { title, composer: composer || undefined, description: description || undefined };
+      value = { title, composer: composer || undefined, description: description || undefined, youtubeUrl: youtubeUrl || undefined };
     }
 
     try {
@@ -408,10 +409,11 @@ export default function PlannerGrid({ columns, viewMode, hideMassParts = false, 
   }, [editingCell, ensembleId, rowKeyToField, columns, onPlanChange]);
 
   // --- Drag-and-copy handlers ---
-  const handleDragStart = useCallback((e: React.DragEvent, occasionId: string, rowKey: GridRowKey, cellData: { title: string; composer?: string }) => {
+  const handleDragStart = useCallback((e: React.DragEvent, occasionId: string, rowKey: GridRowKey, cellData: { title: string; composer?: string; youtubeUrl?: string }) => {
     const payload: SongDragPayload = {
       title: cellData.title,
       composer: cellData.composer,
+      youtubeUrl: cellData.youtubeUrl,
       sourceOccasionId: occasionId,
       sourceRowKey: rowKey,
     };
@@ -446,13 +448,17 @@ export default function PlannerGrid({ columns, viewMode, hideMassParts = false, 
     }
 
     const field = rowKeyToField(targetRowKey);
-    const entry = { title: payload.title, composer: payload.composer };
+    const entry = { title: payload.title, composer: payload.composer, youtubeUrl: payload.youtubeUrl };
 
     const cIdx = communionIndex(targetRowKey);
     let value: unknown;
     if (cIdx !== null) {
       const plan = columns[targetColumnIndex]?.plan ?? null;
-      value = buildCommunionValue(plan, cIdx, entry);
+      value = buildCommunionValue(plan, cIdx, { title: payload.title, composer: payload.composer });
+    } else if (targetRowKey === "massSetting") {
+      value = { massSettingName: payload.title, composer: payload.composer };
+    } else if (targetRowKey === "psalm") {
+      value = { psalm: payload.title, setting: payload.composer, youtubeUrl: payload.youtubeUrl };
     } else {
       value = entry;
     }
@@ -463,6 +469,26 @@ export default function PlannerGrid({ columns, viewMode, hideMassParts = false, 
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ ensembleId, field, value }),
       });
+
+      // Cascade mass setting sub-rows when dragging the parent
+      if (targetRowKey === "massSetting") {
+        const srcCol = columns.find(c => c.occasion.id === payload.sourceOccasionId);
+        const srcPlan = srcCol?.plan;
+        if (srcPlan) {
+          const subRows = ["massSettingHoly", "massSettingMemorial", "massSettingAmen"] as const;
+          for (const sub of subRows) {
+            const subVal = srcPlan[sub as keyof typeof srcPlan];
+            if (subVal && typeof subVal === "object" && "title" in subVal) {
+              await fetch(`/api/occasions/${targetOccasionId}/music-plan`, {
+                method: "PUT",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify({ ensembleId, field: sub, value: subVal }),
+              });
+            }
+          }
+        }
+      }
+
       onPlanChange?.();
     } catch {
       // Silent
@@ -694,13 +720,24 @@ export default function PlannerGrid({ columns, viewMode, hideMassParts = false, 
                 const isDraggable = isAdmin && SONG_DRAG_ROWS.has(rowKey);
                 const isOver = dragOverCell?.occasionId === col.occasion.id && dragOverCell?.rowKey === rowKey;
 
-                // Lookup song for play button
+                // Lookup song for play button (skip massSetting parent — sub-rows carry links)
                 let matchedSong: LibrarySong | null = null;
                 let playable: ReturnType<typeof findPlayable> = null;
-                if (!row.isReading && !cellData.isEmpty && cellData.title) {
+                // Plan-level youtubeUrl takes priority (user override from editor)
+                if (!row.isReading && rowKey !== "massSetting" && col.plan) {
+                  let planYt: string | undefined;
+                  if (rowKey === "psalm") planYt = col.plan.responsorialPsalm?.youtubeUrl;
+                  else if (rowKey === "gospelAcclamation") planYt = col.plan.gospelAcclamation?.youtubeUrl;
+                  else {
+                    const v = col.plan[rowKey as keyof typeof col.plan];
+                    if (v && typeof v === "object" && "youtubeUrl" in v) planYt = (v as { youtubeUrl?: string }).youtubeUrl;
+                  }
+                  if (planYt) playable = { url: planYt, type: "youtube" };
+                }
+                // Song library lookup (if no plan-level override)
+                if (!playable && !row.isReading && !cellData.isEmpty && cellData.title) {
                   matchedSong = lookupSong(cellData.title, cellData.composer);
                   if (matchedSong) {
-                    // Check batch-audio overrides first
                     const overrideUrl = audioOverrides[matchedSong.id];
                     const ytOverrideUrl = youtubeOverrides[matchedSong.id];
                     if (overrideUrl) {
@@ -711,6 +748,14 @@ export default function PlannerGrid({ columns, viewMode, hideMassParts = false, 
                         playable = { url: ytOverrideUrl, type: "youtube" };
                       }
                     }
+                  }
+                }
+                // Gospel verse audio from storage path
+                if (rowKey === "gospelVerse" && col.plan?.gospelAcclamation?.verseStoragePath) {
+                  const sp = col.plan.gospelAcclamation.verseStoragePath;
+                  const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL;
+                  if (supabaseUrl) {
+                    playable = { url: `${supabaseUrl}/storage/v1/object/public/song-resources/${sp}`, type: "audio" };
                   }
                 }
 
@@ -728,13 +773,14 @@ export default function PlannerGrid({ columns, viewMode, hideMassParts = false, 
                         isEven={ci % 2 === 0}
                         hasAudio={!!playable}
                         audioType={playable?.type}
-                        onPlay={playable && matchedSong ? () => {
+                        hideAudioIcon={rowKey === "massSetting"}
+                        onPlay={playable ? () => {
                           play({
                             type: playable!.type,
                             url: playable!.url,
-                            title: matchedSong!.title,
-                            subtitle: playable!.label,
-                            songId: matchedSong!.id,
+                            title: matchedSong?.title || cellData.title || "Gospel Verse",
+                            subtitle: playable!.label || (rowKey === "gospelVerse" ? "Lyric Gospel Acclamation" : undefined),
+                            songId: matchedSong?.id,
                           });
                         } : undefined}
                         onEdit={isAdmin ? (rect) => setEditingCell({
@@ -774,8 +820,13 @@ export default function PlannerGrid({ columns, viewMode, hideMassParts = false, 
           onSave={handleCellSave}
           onClear={handleCellClear}
           onClose={() => setEditingCell(null)}
-          onBulkApply={async (rowKey, title, composer, scope) => {
+          onBulkApply={async (rowKey, title, composer, scope, youtubeUrl) => {
             try {
+              const currentCellData = extractCellData(
+                columns[editingCell.columnIndex]?.plan ?? null,
+                editingCell.rowKey,
+                columns[editingCell.columnIndex]?.occasion
+              );
               await fetch("/api/occasions/bulk-apply", {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
@@ -786,10 +837,12 @@ export default function PlannerGrid({ columns, viewMode, hideMassParts = false, 
                   composer,
                   scope,
                   ensembleId,
+                  youtubeUrl,
+                  originalTitle: currentCellData.title,
                 }),
               });
               // Also save to current cell
-              handleCellSave(rowKey, title, composer);
+              handleCellSave(rowKey, title, composer, undefined, youtubeUrl);
             } catch (err) {
               console.error("Bulk apply failed:", err);
             }

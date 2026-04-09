@@ -26,8 +26,8 @@ export const GRID_ROW_KEYS = [
   "psalmText",
   "psalm",
   "secondReading",
-  "gospelVerse",
   "gospelAcclamation",
+  "gospelVerse",
   "gospel",
   "offertory",
   "massSetting",
@@ -40,6 +40,7 @@ export const GRID_ROW_KEYS = [
   "communion1",
   "communion2",
   "communion3",
+  "communion4",
   "sending",
 ] as const;
 
@@ -80,8 +81,9 @@ export const MASS_PART_ROWS: Set<GridRowKey> = new Set([
 // Excludes psalm (psalm+setting) and massSetting (massSettingName+composer)
 export const SONG_DRAG_ROWS: Set<GridRowKey> = new Set([
   "prelude", "gathering", "penitentialAct", "gloria", "gospelAcclamation",
-  "offertory", "lordsPrayer", "fractionRite", "communion1", "communion2",
-  "communion3", "sending",
+  "offertory", "massSetting", "massSettingHoly", "massSettingMemorial", "massSettingAmen",
+  "lordsPrayer", "fractionRite", "communion1", "communion2",
+  "communion3", "communion4", "sending",
 ]);
 
 export const SONG_COPY_MIME = "text/x-song-copy";
@@ -89,6 +91,7 @@ export const SONG_COPY_MIME = "text/x-song-copy";
 export interface SongDragPayload {
   title: string;
   composer?: string;
+  youtubeUrl?: string;
   sourceOccasionId: string;
   sourceRowKey: GridRowKey;
   sourceEnsembleId?: string;
@@ -112,7 +115,7 @@ export const GRID_ROW_LABELS: Record<GridRowKey, string> = {
   offertory: "Offertory",
   massSetting: "Mass Setting",
   massSettingHoly: "Holy, Holy",
-  massSettingMemorial: "Memorial Accl.",
+  massSettingMemorial: "Mystery of Faith",
   massSettingAmen: "Great Amen",
   lordsPrayer: "Lord's Prayer",
   fractionRite: "Fraction Rite",
@@ -120,6 +123,7 @@ export const GRID_ROW_LABELS: Record<GridRowKey, string> = {
   communion1: "Communion",
   communion2: "Comm. 2",
   communion3: "Comm. 3",
+  communion4: "Comm. 4",
   sending: "Sending",
 };
 
@@ -140,8 +144,8 @@ export const GRID_SECTIONS = [
       "psalmText",
       "psalm",
       "secondReading",
-      "gospelVerse",
       "gospelAcclamation",
+      "gospelVerse",
       "gospel",
     ] as GridRowKey[],
   },
@@ -159,6 +163,7 @@ export const GRID_SECTIONS = [
       "communion1",
       "communion2",
       "communion3",
+      "communion4",
     ] as GridRowKey[],
   },
   {
@@ -187,6 +192,7 @@ export interface GridCellData {
   isEmpty: boolean;
   isReading?: boolean; // true for reading/antiphon rows (non-editable)
   isVerbatim?: boolean; // true when description is verbatim liturgical text (burgundy), false for editorial synopses (blue-grey)
+  youtubeUrl?: string; // YouTube URL from plan value (for inline editing)
 }
 
 export const ENSEMBLE_OPTIONS: { id: EnsembleId; label: string }[] = [

@@ -53,6 +53,7 @@ const ROW_TO_POSITION: Partial<Record<GridRowKey, string>> = {
   communion1: "communion",
   communion2: "communion",
   communion3: "communion",
+  communion4: "communion",
   sending: "sending",
 };
 
@@ -62,10 +63,10 @@ interface CellEditorProps {
   rowKey: GridRowKey;
   currentData: GridCellData;
   anchorRect: DOMRect;
-  onSave: (rowKey: GridRowKey, title: string, composer: string, description?: string) => void;
+  onSave: (rowKey: GridRowKey, title: string, composer: string, description?: string, youtubeUrl?: string) => void;
   onClear: (rowKey: GridRowKey) => void;
   onClose: () => void;
-  onBulkApply?: (rowKey: GridRowKey, title: string, composer: string, scope: "season" | "all") => void;
+  onBulkApply?: (rowKey: GridRowKey, title: string, composer: string, scope: "season" | "season-all" | "all", youtubeUrl?: string) => void;
 }
 
 export default function CellEditor({
@@ -84,6 +85,7 @@ export default function CellEditor({
   const [title, setTitle] = useState(currentData.title || "");
   const [composer, setComposer] = useState(currentData.composer || "");
   const [description, setDescription] = useState(currentData.description || "");
+  const [youtubeUrl, setYoutubeUrl] = useState(currentData.youtubeUrl || "");
   const [mode, setMode] = useState<"suggest" | "search" | "manual">("suggest");
   const inputRef = useRef<HTMLInputElement>(null);
   const panelRef = useRef<HTMLDivElement>(null);
@@ -95,10 +97,11 @@ export default function CellEditor({
   const [explainSong, setExplainSong] = useState<ExplainResult | null>(null);
   const [explainLoading, setExplainLoading] = useState(false);
   const [showBulkApply, setShowBulkApply] = useState(false);
-  const [pendingBulkSong, setPendingBulkSong] = useState<{ title: string; composer: string } | null>(null);
+  const [pendingBulkSong, setPendingBulkSong] = useState<{ title: string; composer: string; youtubeUrl?: string; description?: string } | null>(null);
 
   const position = ROW_TO_POSITION[rowKey];
-  const isBulkEligible = rowKey === "gospelAcclamation" || rowKey === "massSetting";
+  const isBulkEligible = true; // All song rows support "This Sunday" / "All Sundays" scope
+  const isCommunionRow = rowKey.startsWith("communion");
 
   // Auto-load suggestions when in suggest mode
   useEffect(() => {
@@ -150,22 +153,19 @@ export default function CellEditor({
     searchTimeout.current = setTimeout(() => searchSongs(val), 200);
   };
 
-  const handleSelectSong = (songTitle: string, songComposer: string) => {
-    if (isBulkEligible) {
-      setPendingBulkSong({ title: songTitle, composer: songComposer });
-      setShowBulkApply(true);
-      return;
-    }
-    onSave(rowKey, songTitle, songComposer);
-    onClose();
+  const handleSelectSong = (songTitle: string, songComposer: string, songYoutubeUrl?: string) => {
+    setPendingBulkSong({ title: songTitle, composer: songComposer, youtubeUrl: songYoutubeUrl });
+    setShowBulkApply(true);
   };
 
-  const handleBulkConfirm = (scope: "this" | "season" | "all") => {
+  const handleBulkConfirm = (scope: "this" | "season" | "season-all" | "all") => {
     if (!pendingBulkSong) return;
+    const yt = pendingBulkSong.youtubeUrl;
+    const desc = pendingBulkSong.description;
     if (scope === "this") {
-      onSave(rowKey, pendingBulkSong.title, pendingBulkSong.composer);
+      onSave(rowKey, pendingBulkSong.title, pendingBulkSong.composer, desc, yt);
     } else {
-      onBulkApply?.(rowKey, pendingBulkSong.title, pendingBulkSong.composer, scope === "season" ? "season" : "all");
+      onBulkApply?.(rowKey, pendingBulkSong.title, pendingBulkSong.composer, scope, yt);
     }
     onClose();
   };
@@ -196,8 +196,8 @@ export default function CellEditor({
 
   const handleManualSave = () => {
     if (!title.trim()) return;
-    onSave(rowKey, title.trim(), composer.trim(), description.trim() || undefined);
-    onClose();
+    setPendingBulkSong({ title: title.trim(), composer: composer.trim(), youtubeUrl: youtubeUrl.trim() || undefined, description: description.trim() || undefined });
+    setShowBulkApply(true);
   };
 
   const handleClear = () => {
@@ -267,18 +267,21 @@ export default function CellEditor({
               Apply &ldquo;{pendingBulkSong.title}&rdquo;
             </p>
             <p className="text-xs text-stone-500">
-              {rowKey === "gospelAcclamation" ? "Gospel Acclamation" : "Mass Setting"} selections can be applied in bulk.
+              Apply to just this Sunday, or make it the new default?
             </p>
             <div className="space-y-1.5">
               <button onClick={() => handleBulkConfirm("this")} className="w-full text-left px-3 py-2 rounded-lg border border-stone-200 hover:bg-stone-50 text-sm transition-colors">
                 This Sunday only
               </button>
-              <button onClick={() => handleBulkConfirm("season")} className="w-full text-left px-3 py-2 rounded-lg border border-parish-gold/30 bg-parish-gold/5 hover:bg-parish-gold/10 text-sm transition-colors">
-                <span className="font-medium">Rest of this season</span>
-                <span className="text-xs text-stone-400 ml-1">(recommended)</span>
+              <button onClick={() => handleBulkConfirm("season")} className="w-full text-left px-3 py-2 rounded-lg border border-stone-200 hover:bg-stone-50 text-sm transition-colors">
+                All instances this season, this mass
               </button>
-              <button onClick={() => handleBulkConfirm("all")} className="w-full text-left px-3 py-2 rounded-lg border border-stone-200 hover:bg-stone-50 text-sm transition-colors">
-                All three year cycles
+              <button onClick={() => handleBulkConfirm("season-all")} className="w-full text-left px-3 py-2 rounded-lg border border-stone-200 hover:bg-stone-50 text-sm transition-colors">
+                All instances this season, every mass
+              </button>
+              <button onClick={() => handleBulkConfirm("all")} className="w-full text-left px-3 py-2 rounded-lg border border-parish-gold/30 bg-parish-gold/5 hover:bg-parish-gold/10 text-sm transition-colors">
+                <span className="font-medium">All instances</span>
+                <span className="text-xs text-stone-400 ml-1">(new default)</span>
               </button>
             </div>
             <button onClick={() => { setShowBulkApply(false); setPendingBulkSong(null); }} className="text-xs text-stone-400 hover:text-stone-600">
@@ -325,6 +328,19 @@ export default function CellEditor({
                 Manual
               </button>
             </div>
+
+            {/* N/A quick action for communion rows */}
+            {isCommunionRow && (
+              <div className="px-3 pt-2 pb-0 shrink-0">
+                <button
+                  onClick={() => handleSelectSong("N/A", "")}
+                  className="w-full flex items-center justify-center gap-1.5 px-3 py-1.5 text-xs font-medium text-stone-500 bg-stone-50 border border-stone-200 rounded-md hover:bg-stone-100 transition-colors"
+                >
+                  <span className="text-stone-400">Mark as</span>
+                  <span className="px-1.5 py-0.5 bg-stone-200 text-stone-600 rounded text-[10px] font-semibold">N/A</span>
+                </button>
+              </div>
+            )}
 
             <div className="p-3 overflow-y-auto flex-1">
               {/* ─── Suggestions Tab ──────────────────────────── */}
@@ -535,6 +551,10 @@ export default function CellEditor({
                     <div>
                       <label className="text-[10px] font-medium text-stone-400 uppercase">Note</label>
                       <input type="text" value={description} onChange={(e) => setDescription(e.target.value)} className="w-full text-sm border border-stone-200 rounded-md px-3 py-1.5 focus:outline-none focus:ring-1 focus:ring-stone-400" placeholder="Optional note (e.g. key, occasion)" />
+                    </div>
+                    <div>
+                      <label className="text-[10px] font-medium text-stone-400 uppercase">YouTube URL</label>
+                      <input type="url" value={youtubeUrl} onChange={(e) => setYoutubeUrl(e.target.value)} className="w-full text-sm border border-stone-200 rounded-md px-3 py-1.5 focus:outline-none focus:ring-1 focus:ring-stone-400" placeholder="https://youtube.com/watch?v=..." />
                     </div>
                   </div>
                   <div className="mt-3 flex items-center justify-between">

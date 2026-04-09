@@ -46,19 +46,13 @@ interface EditingCell {
 
 /** Find the best playable audio/youtube resource for a song */
 function findPlayable(song: LibrarySong): { url: string; type: "audio" | "youtube"; label?: string } | null {
-  // Supabase-hosted audio first
-  for (const r of song.resources) {
-    if (r.type === "audio" && (r.url || r.storagePath)) {
-      const url = resourceUrl(r);
-      if (url) return { url, type: "audio", label: r.label };
-    }
-  }
-  // Local audio
-  for (const r of song.resources) {
-    if (r.type === "audio" && r.filePath && !r.url && !r.storagePath) {
-      const url = resourceUrl(r);
-      if (url) return { url, type: "audio", label: r.label };
-    }
+  // Prefer non-S&S audio (Breaking Bread is the primary hymnal)
+  const audioResources = song.resources.filter(r => r.type === "audio" && (r.url || r.storagePath));
+  const bbAudio = audioResources.find(r => !r.label?.includes("S&S") && !r.label?.includes("Spirit & Song"));
+  const anyAudio = bbAudio || audioResources[0];
+  if (anyAudio) {
+    const url = resourceUrl(anyAudio);
+    if (url) return { url, type: "audio", label: anyAudio.label };
   }
   // YouTube from resources
   for (const r of song.resources) {
@@ -202,6 +196,7 @@ export default function ComparisonGrid({
       case "communion1": return "communionSongs";
       case "communion2": return "communionSongs";
       case "communion3": return "communionSongs";
+      case "communion4": return "communionSongs";
       case "sending": return "sending";
       default: return key;
     }
@@ -211,6 +206,7 @@ export default function ComparisonGrid({
     if (rk === "communion1") return 0;
     if (rk === "communion2") return 1;
     if (rk === "communion3") return 2;
+    if (rk === "communion4") return 3;
     return null;
   };
 
@@ -231,7 +227,7 @@ export default function ComparisonGrid({
   };
 
   const handleCellSave = useCallback(
-    async (rk: GridRowKey, title: string, composer: string) => {
+    async (rk: GridRowKey, title: string, composer: string, description?: string, youtubeUrl?: string) => {
       if (!editingCell) return;
       const { columnIndex } = editingCell;
       const ensembleId = columns[columnIndex].ensembleId;
@@ -243,11 +239,11 @@ export default function ComparisonGrid({
       if (cIdx !== null) {
         value = buildCommunionValue(plan, cIdx, { title, composer: composer || undefined });
       } else if (rk === "psalm") {
-        value = { psalm: title, setting: composer || undefined };
+        value = { psalm: title, setting: composer || undefined, youtubeUrl: youtubeUrl || undefined };
       } else if (rk === "massSetting") {
         value = { massSettingName: title, composer: composer || undefined };
       } else {
-        value = { title, composer: composer || undefined };
+        value = { title, composer: composer || undefined, description: description || undefined, youtubeUrl: youtubeUrl || undefined };
       }
 
       try {
@@ -296,10 +292,11 @@ export default function ComparisonGrid({
 
   // --- Drag-and-drop between columns ---
   const handleDragStart = useCallback(
-    (e: React.DragEvent, colIdx: number, rowKey: GridRowKey, cellData: { title: string; composer?: string }) => {
+    (e: React.DragEvent, colIdx: number, rowKey: GridRowKey, cellData: { title: string; composer?: string; youtubeUrl?: string }) => {
       const payload: SongDragPayload = {
         title: cellData.title,
         composer: cellData.composer,
+        youtubeUrl: cellData.youtubeUrl,
         sourceOccasionId: occasion.id,
         sourceRowKey: rowKey,
         sourceEnsembleId: columns[colIdx].ensembleId,
@@ -351,13 +348,17 @@ export default function ComparisonGrid({
       }
 
       const field = rowKeyToField(targetRowKey);
-      const entry = { title: payload.title, composer: payload.composer };
+      const entry = { title: payload.title, composer: payload.composer, youtubeUrl: payload.youtubeUrl };
 
       const cIdx = communionIndex(targetRowKey);
       let value: unknown;
       if (cIdx !== null) {
         const plan = columns[targetColIdx].column.plan;
-        value = buildCommunionValue(plan, cIdx, entry);
+        value = buildCommunionValue(plan, cIdx, { title: payload.title, composer: payload.composer });
+      } else if (targetRowKey === "massSetting") {
+        value = { massSettingName: payload.title, composer: payload.composer };
+      } else if (targetRowKey === "psalm") {
+        value = { psalm: payload.title, setting: payload.composer, youtubeUrl: payload.youtubeUrl };
       } else {
         value = entry;
       }
@@ -368,6 +369,26 @@ export default function ComparisonGrid({
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify({ ensembleId: targetEnsembleId, field, value }),
         });
+
+        // Cascade mass setting sub-rows when dragging the parent
+        if (targetRowKey === "massSetting" && payload.sourceEnsembleId) {
+          const srcCol = columns.find(c => c.ensembleId === payload.sourceEnsembleId);
+          const srcPlan = srcCol?.column.plan;
+          if (srcPlan) {
+            const subRows = ["massSettingHoly", "massSettingMemorial", "massSettingAmen"] as const;
+            for (const sub of subRows) {
+              const subVal = srcPlan[sub as keyof typeof srcPlan];
+              if (subVal && typeof subVal === "object" && "title" in subVal) {
+                await fetch(`/api/occasions/${occasion.id}/music-plan`, {
+                  method: "PUT",
+                  headers: { "Content-Type": "application/json" },
+                  body: JSON.stringify({ ensembleId: targetEnsembleId, field: sub, value: subVal }),
+                });
+              }
+            }
+          }
+        }
+
         onPlanChange?.();
       } catch {
         // Silent
@@ -423,7 +444,7 @@ export default function ComparisonGrid({
 
   return (
     <div className="h-full overflow-auto">
-      <div className="min-w-[500px]">
+      <div className="min-w-[500px] pb-80">
         {/* Column headers */}
         <div
           className="sticky top-0 z-20 grid bg-white border-b border-stone-200"
@@ -500,7 +521,7 @@ export default function ComparisonGrid({
               {/* Row label */}
               <div
                 className={`border-b border-r border-stone-200 flex items-center justify-end px-3 text-right ${
-                  row.isReading ? "h-auto min-h-9" : "h-9"
+                  row.isReading ? "h-auto min-h-9" : "h-auto min-h-9"
                 } ${
                   row.isReading ? "bg-stone-50" : row.isSubRow ? "bg-stone-50/70" : "bg-white"
                 }`}
@@ -558,7 +579,19 @@ export default function ComparisonGrid({
                 // Lookup song for music rows
                 let matchedSong: LibrarySong | null = null;
                 let playable: ReturnType<typeof findPlayable> = null;
-                if (!row.isReading && !cellIsEmpty && cellData.title) {
+                // Plan-level youtubeUrl takes priority (skip massSetting parent — sub-rows carry links)
+                if (!row.isReading && rowKey !== "massSetting" && cc.column.plan) {
+                  let planYt: string | undefined;
+                  if (rowKey === "psalm") planYt = cc.column.plan.responsorialPsalm?.youtubeUrl;
+                  else if (rowKey === "gospelAcclamation") planYt = cc.column.plan.gospelAcclamation?.youtubeUrl;
+                  else {
+                    const v = cc.column.plan[rowKey as keyof typeof cc.column.plan];
+                    if (v && typeof v === "object" && "youtubeUrl" in v) planYt = (v as { youtubeUrl?: string }).youtubeUrl;
+                  }
+                  if (planYt) playable = { url: planYt, type: "youtube" };
+                }
+                // Song library lookup (if no plan-level override)
+                if (!playable && !row.isReading && !cellIsEmpty && cellData.title) {
                   matchedSong = lookupSong(cellData.title, cellData.composer);
                   if (matchedSong) {
                     const overrideUrl = audioOverrides[matchedSong.id];
@@ -573,12 +606,20 @@ export default function ComparisonGrid({
                     }
                   }
                 }
+                // Gospel verse audio from storage path
+                if (rowKey === "gospelVerse" && cc.column.plan?.gospelAcclamation?.verseStoragePath) {
+                  const sp = cc.column.plan.gospelAcclamation.verseStoragePath;
+                  const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL;
+                  if (supabaseUrl) {
+                    playable = { url: `${supabaseUrl}/storage/v1/object/public/song-resources/${sp}`, type: "audio" };
+                  }
+                }
 
                 return (
                   <div
                     key={ci}
                     className={`border-b border-stone-100 ${
-                      row.isReading ? "h-auto min-h-9" : "h-9"
+                      row.isReading ? "h-auto min-h-9" : "h-auto min-h-9"
                     } ${ci < colCount - 1 ? "border-r" : ""} ${diffClass}`}
                   >
                     <GridCell
@@ -606,15 +647,16 @@ export default function ComparisonGrid({
                       }
                       hasAudio={!!playable}
                       audioType={playable?.type}
+                      hideAudioIcon={rowKey === "massSetting"}
                       onPlay={
-                        playable && matchedSong
+                        playable
                           ? () => {
                               play({
                                 type: playable!.type,
                                 url: playable!.url,
-                                title: matchedSong!.title,
-                                subtitle: playable!.label,
-                                songId: matchedSong!.id,
+                                title: matchedSong?.title || cellData.title || "Gospel Verse",
+                                subtitle: playable!.label || (rowKey === "gospelVerse" ? "Lyric Gospel Acclamation" : undefined),
+                                songId: matchedSong?.id,
                               });
                             }
                           : undefined
@@ -644,6 +686,34 @@ export default function ComparisonGrid({
           onSave={handleCellSave}
           onClear={handleCellClear}
           onClose={() => setEditingCell(null)}
+          onBulkApply={async (rowKey, title, composer, scope, youtubeUrl) => {
+            if (!editingCell) return;
+            const ensembleId = columns[editingCell.columnIndex].ensembleId;
+            const currentCellData = extractCellData(
+              columns[editingCell.columnIndex].column.plan ?? null,
+              editingCell.rowKey,
+              occasion
+            );
+            try {
+              await fetch("/api/occasions/bulk-apply", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify({
+                  occasionId: occasion.id,
+                  position: rowKey,
+                  title,
+                  composer,
+                  scope,
+                  ensembleId,
+                  youtubeUrl,
+                  originalTitle: currentCellData.title,
+                }),
+              });
+              handleCellSave(rowKey, title, composer, undefined, youtubeUrl);
+            } catch (err) {
+              console.error("Bulk apply failed:", err);
+            }
+          }}
         />
       )}
     </div>

@@ -19,6 +19,7 @@ interface GridCellProps {
   onPlay?: () => void;
   hasAudio?: boolean;
   audioType?: "audio" | "youtube";
+  hideAudioIcon?: boolean;
 }
 
 export default function GridCell({
@@ -36,6 +37,7 @@ export default function GridCell({
   onPlay,
   hasAudio,
   audioType,
+  hideAudioIcon,
 }: GridCellProps) {
   const { role } = useUser();
 
@@ -72,12 +74,68 @@ export default function GridCell({
         className="px-2 py-1.5 h-full border-b border-r border-stone-100 bg-stone-50/80"
         title={data.description ? `${data.title} — ${data.description}` : data.title}
       >
-        {data.title && (
-          <p className="text-[10px] leading-tight text-stone-400">{data.title}</p>
-        )}
-        {data.description && (
-          <p className={`text-[10px] leading-tight font-medium ${descColor}`}>{data.description}</p>
-        )}
+        <div className="flex items-start gap-1">
+          {hasAudio && onPlay ? (
+            <button
+              onClick={(e) => {
+                e.stopPropagation();
+                onPlay();
+              }}
+              className="shrink-0 flex items-center justify-center w-4 h-4 rounded-full bg-stone-800 transition-colors active:scale-95 mt-0.5"
+              title="Play verse audio"
+              style={{ boxShadow: "0 1px 3px rgba(0,0,0,0.2)" }}
+            >
+              <svg width="7" height="7" viewBox="0 0 24 24" fill="white" stroke="white" strokeWidth="2.5" strokeLinejoin="round">
+                <polygon points="6,3 20,12 6,21" />
+              </svg>
+            </button>
+          ) : null}
+          <div className="min-w-0">
+            {data.title && (
+              <p className="text-[10px] leading-tight text-stone-400">{data.title}</p>
+            )}
+            {data.description && (
+              <p className={`text-[10px] leading-tight font-medium ${descColor}`}>{data.description}</p>
+            )}
+          </div>
+        </div>
+      </div>
+    );
+  }
+
+  // N/A sentinel — styled badge, still editable (click to change)
+  if (data.title === "N/A") {
+    return (
+      <div
+        onClick={handleClick}
+        onDragOver={onDragOver}
+        onDragLeave={onDragLeave}
+        onDrop={onDrop}
+        className={`px-2 py-1.5 h-full flex items-center border-b border-r border-stone-100 group relative ${
+          isEven ? "bg-stone-50/50" : "bg-white"
+        } ${role === "admin" ? "hover:bg-amber-50/60 cursor-pointer" : ""} ${
+          isDragOver ? "ring-2 ring-inset ring-amber-400" : ""
+        }`}
+        title="Not applicable"
+      >
+        <span className="px-2 py-0.5 bg-stone-100 text-stone-400 rounded text-[10px] font-semibold tracking-wide">
+          N/A
+        </span>
+        {/* Hover clear */}
+        <div className="absolute right-1 top-1/2 -translate-y-1/2 z-10 hidden group-hover:flex items-center gap-0.5">
+          {role === "admin" && onClear && (
+            <button
+              onClick={(e) => { e.stopPropagation(); onClear(); }}
+              className="flex items-center justify-center w-5 h-5 rounded-full bg-red-100 text-red-500 hover:bg-red-200 hover:text-red-700 transition-colors"
+              title="Clear"
+            >
+              <svg width="8" height="8" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round">
+                <line x1="6" y1="6" x2="18" y2="18" />
+                <line x1="18" y1="6" x2="6" y2="18" />
+              </svg>
+            </button>
+          )}
+        </div>
       </div>
     );
   }
@@ -116,7 +174,7 @@ export default function GridCell({
               <polygon points="6,3 20,12 6,21" />
             </svg>
           </button>
-        ) : (
+        ) : hideAudioIcon ? null : (
           <span
             className="shrink-0 flex items-center justify-center w-4 h-4 rounded-full bg-stone-200 relative"
             title="No audio"
@@ -144,8 +202,18 @@ export default function GridCell({
         </p>
       </div>
       {data.composer && (
-        <p className="text-[10px] text-stone-400 leading-tight truncate pl-5">
+        <p className={`text-[10px] text-stone-400 leading-tight truncate ${hideAudioIcon ? "" : "pl-5"}`}>
           {data.composer}
+          {data.youtubeUrl && (
+            <span className="inline-block ml-1 text-red-400" title={`Custom link: ${data.youtubeUrl}`}>
+              <svg width="9" height="9" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" className="inline -mt-0.5"><path d="M10 13a5 5 0 007.54.54l3-3a5 5 0 00-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 00-7.54-.54l-3 3a5 5 0 007.07 7.07l1.71-1.71"/></svg>
+            </span>
+          )}
+        </p>
+      )}
+      {data.description && !data.isReading && (
+        <p className={`text-[9px] text-amber-600/70 leading-snug italic ${hideAudioIcon ? "" : "pl-5"}`}>
+          {data.description}
         </p>
       )}
       {/* Hover actions — z-10 ensures buttons layer above the cell below */}
