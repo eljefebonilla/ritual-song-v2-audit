@@ -597,17 +597,19 @@ export default function ComparisonGrid({
                 if (!playable && !row.isReading && !cellIsEmpty && cellData.title) {
                   matchedSong = lookupSong(cellData.title, cellData.composer);
                   if (matchedSong) {
-                    const ytOverrideUrl = youtubeOverrides[matchedSong.id];
-                    if (matchedSong.youtubeUrl) {
-                      playable = { url: matchedSong.youtubeUrl, type: "youtube" };
-                    } else if (ytOverrideUrl) {
-                      playable = { url: ytOverrideUrl, type: "youtube" };
+                    // Audio wins when it exists. YouTube is fallback for songs without audio.
+                    const overrideUrl = audioOverrides[matchedSong.id];
+                    if (overrideUrl) {
+                      playable = { url: overrideUrl, type: "audio" };
                     } else {
-                      const overrideUrl = audioOverrides[matchedSong.id];
-                      if (overrideUrl) {
-                        playable = { url: overrideUrl, type: "audio" };
-                      } else {
-                        playable = findPlayable(matchedSong);
+                      playable = findPlayable(matchedSong);
+                      if (!playable) {
+                        const ytOverrideUrl = youtubeOverrides[matchedSong.id];
+                        if (matchedSong.youtubeUrl) {
+                          playable = { url: matchedSong.youtubeUrl, type: "youtube" };
+                        } else if (ytOverrideUrl) {
+                          playable = { url: ytOverrideUrl, type: "youtube" };
+                        }
                       }
                     }
                   }
