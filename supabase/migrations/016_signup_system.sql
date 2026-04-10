@@ -27,7 +27,6 @@ BEGIN
       CHECK (status IN ('pending', 'active', 'inactive'));
   END IF;
 END $$;
-
 DO $$
 BEGIN
   IF NOT EXISTS (
@@ -37,7 +36,6 @@ BEGIN
     ALTER TABLE public.profiles ADD COLUMN sms_consent boolean DEFAULT false;
   END IF;
 END $$;
-
 DO $$
 BEGIN
   IF NOT EXISTS (
@@ -47,7 +45,6 @@ BEGIN
     ALTER TABLE public.profiles ADD COLUMN sms_consent_at timestamptz;
   END IF;
 END $$;
-
 DO $$
 BEGIN
   IF NOT EXISTS (
@@ -58,7 +55,6 @@ BEGIN
     ALTER TABLE public.profiles ADD COLUMN sms_consent_method text;
   END IF;
 END $$;
-
 -- ============================================================
 -- 2. HELPER FUNCTION: is_active_user
 -- ============================================================
@@ -73,7 +69,6 @@ RETURNS boolean AS $$
     SELECT 1 FROM public.profiles WHERE id = uid AND status = 'active'
   );
 $$ LANGUAGE sql SECURITY DEFINER STABLE;
-
 -- ============================================================
 -- 3. INVITATIONS TABLE
 -- ============================================================
@@ -94,9 +89,7 @@ CREATE TABLE IF NOT EXISTS public.invitations (
   expires_at  timestamptz NOT NULL DEFAULT (now() + interval '30 days'),
   created_at  timestamptz NOT NULL DEFAULT now()
 );
-
 ALTER TABLE public.invitations ENABLE ROW LEVEL SECURITY;
-
 -- Admins can view all invitations
 DO $$
 BEGIN
@@ -114,7 +107,6 @@ BEGIN
       );
   END IF;
 END $$;
-
 -- Admins can create invitations
 DO $$
 BEGIN
@@ -132,7 +124,6 @@ BEGIN
       );
   END IF;
 END $$;
-
 -- Admins can update any invitation; claiming user can update their own claimed row
 DO $$
 BEGIN
@@ -151,12 +142,10 @@ BEGIN
       );
   END IF;
 END $$;
-
 -- Index: look up by code (claim flow) and by invited_by (admin dashboard)
 CREATE INDEX IF NOT EXISTS idx_invitations_code ON public.invitations(code);
 CREATE INDEX IF NOT EXISTS idx_invitations_invited_by ON public.invitations(invited_by);
 CREATE INDEX IF NOT EXISTS idx_invitations_status ON public.invitations(status);
-
 -- ============================================================
 -- 4. NOTIFICATIONS_LOG TABLE
 -- ============================================================
@@ -173,9 +162,7 @@ CREATE TABLE IF NOT EXISTS public.notifications_log (
   status        text    NOT NULL DEFAULT 'sent',
   created_at    timestamptz NOT NULL DEFAULT now()
 );
-
 ALTER TABLE public.notifications_log ENABLE ROW LEVEL SECURITY;
-
 -- Admins can read the log
 DO $$
 BEGIN
@@ -193,7 +180,6 @@ BEGIN
       );
   END IF;
 END $$;
-
 -- No INSERT policy for authenticated users: all writes go through
 -- server-side code using the service role key (bypasses RLS).
 -- A policy is intentionally omitted here to enforce that constraint.
@@ -201,7 +187,6 @@ END $$;
 -- Index: look up by recipient (notification history per user)
 CREATE INDEX IF NOT EXISTS idx_notifications_log_recipient ON public.notifications_log(recipient_id);
 CREATE INDEX IF NOT EXISTS idx_notifications_log_channel ON public.notifications_log(channel);
-
 -- ============================================================
 -- 5. UPDATE EXISTING SELECT POLICIES TO BLOCK PENDING USERS
 -- ============================================================
@@ -217,7 +202,6 @@ CREATE INDEX IF NOT EXISTS idx_notifications_log_channel ON public.notifications
 
 -- ---- mass_events ----
 DROP POLICY IF EXISTS "Anyone authenticated can view mass events" ON public.mass_events;
-
 DO $$
 BEGIN
   IF NOT EXISTS (
@@ -235,10 +219,8 @@ BEGIN
       );
   END IF;
 END $$;
-
 -- ---- booking_slots ----
 DROP POLICY IF EXISTS "Anyone authenticated can view booking slots" ON public.booking_slots;
-
 DO $$
 BEGIN
   IF NOT EXISTS (
@@ -256,10 +238,8 @@ BEGIN
       );
   END IF;
 END $$;
-
 -- ---- choir_signups ----
 DROP POLICY IF EXISTS "Anyone authenticated can view choir signups" ON public.choir_signups;
-
 DO $$
 BEGIN
   IF NOT EXISTS (
@@ -277,7 +257,6 @@ BEGIN
       );
   END IF;
 END $$;
-
 -- ============================================================
 -- NOTE: Pending user access model
 -- ============================================================
@@ -290,4 +269,4 @@ END $$;
 -- users may eventually need to see the members directory, and
 -- the app layer controls what UI they reach. If stricter profile
 -- isolation is needed, add is_active_user() to that policy too.
--- ============================================================
+-- ============================================================;

@@ -23,7 +23,6 @@ BEGIN
       CHECK (musician_role IN ('vocalist', 'instrumentalist', 'cantor', 'both'));
   END IF;
 END $$;
-
 -- ============================================================
 -- 2. ADD instrument_detail TO profiles
 -- ============================================================
@@ -37,7 +36,6 @@ BEGIN
     ALTER TABLE public.profiles ADD COLUMN instrument_detail text;
   END IF;
 END $$;
-
 -- ============================================================
 -- 3. ENSURE phone column exists (should already from schema.sql)
 -- ============================================================
@@ -51,7 +49,6 @@ BEGIN
     ALTER TABLE public.profiles ADD COLUMN phone text;
   END IF;
 END $$;
-
 -- ============================================================
 -- 4. ADMIN_EMAILS table — stores emails that auto-promote to admin
 -- ============================================================
@@ -61,10 +58,8 @@ CREATE TABLE IF NOT EXISTS public.admin_emails (
   added_by text,          -- who added this email (for audit trail)
   created_at timestamptz DEFAULT now()
 );
-
 -- RLS: only admins can see/manage admin_emails
 ALTER TABLE public.admin_emails ENABLE ROW LEVEL SECURITY;
-
 DO $$
 BEGIN
   IF NOT EXISTS (
@@ -81,7 +76,6 @@ BEGIN
       );
   END IF;
 END $$;
-
 -- ============================================================
 -- 5. TRIGGER: auto-promote profiles whose email matches admin_emails
 -- ============================================================
@@ -95,7 +89,6 @@ BEGIN
   RETURN NEW;
 END;
 $$ LANGUAGE plpgsql SECURITY DEFINER;
-
 -- Drop and recreate to ensure it's up to date
 DROP TRIGGER IF EXISTS promote_admin_on_insert ON public.profiles;
 CREATE TRIGGER promote_admin_on_insert

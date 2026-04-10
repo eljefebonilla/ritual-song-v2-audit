@@ -3,7 +3,6 @@
 -- ============================================================
 
 CREATE EXTENSION IF NOT EXISTS pgcrypto;
-
 -- Wedding/Funeral song catalog (curated picks per liturgical step)
 CREATE TABLE sacramental_songs (
   id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
@@ -25,10 +24,8 @@ CREATE TABLE sacramental_songs (
   sort_order INT DEFAULT 0,
   created_at TIMESTAMPTZ DEFAULT NOW()
 );
-
 CREATE INDEX idx_sacramental_songs_type ON sacramental_songs(liturgy_type);
 CREATE INDEX idx_sacramental_songs_step ON sacramental_songs(liturgy_type, step_number);
-
 -- Cantor profiles (for wedding/funeral selection)
 CREATE TABLE cantor_profiles (
   id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
@@ -44,7 +41,6 @@ CREATE TABLE cantor_profiles (
   created_at TIMESTAMPTZ DEFAULT NOW(),
   updated_at TIMESTAMPTZ DEFAULT NOW()
 );
-
 -- Wedding/Funeral event planning
 CREATE TABLE sacramental_events (
   id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
@@ -82,51 +78,41 @@ CREATE TABLE sacramental_events (
   created_at TIMESTAMPTZ DEFAULT NOW(),
   updated_at TIMESTAMPTZ DEFAULT NOW()
 );
-
 CREATE INDEX idx_sacramental_events_type ON sacramental_events(event_type);
 CREATE INDEX idx_sacramental_events_date ON sacramental_events(event_date);
 CREATE INDEX idx_sacramental_events_token ON sacramental_events(share_token);
-
 -- RLS
 ALTER TABLE sacramental_songs ENABLE ROW LEVEL SECURITY;
 ALTER TABLE cantor_profiles ENABLE ROW LEVEL SECURITY;
 ALTER TABLE sacramental_events ENABLE ROW LEVEL SECURITY;
-
 -- Songs: everyone can read
 CREATE POLICY "Anyone can view sacramental songs"
   ON sacramental_songs FOR SELECT USING (true);
-
 CREATE POLICY "Admins manage sacramental songs"
   ON sacramental_songs FOR ALL USING (
     EXISTS (SELECT 1 FROM profiles WHERE profiles.id = auth.uid() AND profiles.role = 'admin')
   );
-
 -- Cantor profiles: everyone can read active
 CREATE POLICY "Anyone can view active cantors"
   ON cantor_profiles FOR SELECT USING (is_active = true);
-
 CREATE POLICY "Admins manage cantor profiles"
   ON cantor_profiles FOR ALL USING (
     EXISTS (SELECT 1 FROM profiles WHERE profiles.id = auth.uid() AND profiles.role = 'admin')
   );
-
 -- Events: creator + admins + anyone with share token
 CREATE POLICY "Creators and admins can view events"
   ON sacramental_events FOR SELECT USING (
     created_by = auth.uid() OR
     EXISTS (SELECT 1 FROM profiles WHERE profiles.id = auth.uid() AND profiles.role = 'admin')
   );
-
 CREATE POLICY "Admins manage events"
   ON sacramental_events FOR ALL USING (
     EXISTS (SELECT 1 FROM profiles WHERE profiles.id = auth.uid() AND profiles.role = 'admin')
   );
-
 -- Trigger for updated_at
 CREATE TRIGGER set_updated_at_sacramental_events
   BEFORE UPDATE ON sacramental_events
   FOR EACH ROW EXECUTE FUNCTION public.handle_updated_at();
-
 CREATE TRIGGER set_updated_at_cantor_profiles
   BEFORE UPDATE ON cantor_profiles
   FOR EACH ROW EXECUTE FUNCTION public.handle_updated_at();

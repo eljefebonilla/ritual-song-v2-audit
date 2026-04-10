@@ -1,8 +1,5 @@
--- ============================================================
 -- 025: Generation Tracking — status columns on setlists for PDF generation
--- ============================================================
 
--- Track generation state on the setlist itself
 alter table public.setlists
   add column if not exists generation_status text
     default 'idle'
@@ -15,7 +12,6 @@ alter table public.setlists
   add column if not exists generation_error text,
   add column if not exists content_hash text;
 
--- Index for polling generation status
 create index if not exists idx_setlists_generation_status
   on public.setlists(generation_status)
-  where generation_status in ('generating', 'outdated');
+  where generation_status in ('generating', 'outdated');;

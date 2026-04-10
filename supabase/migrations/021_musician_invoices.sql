@@ -6,10 +6,8 @@
 -- Add pay rate to profiles (admin-set per musician)
 ALTER TABLE profiles ADD COLUMN IF NOT EXISTS pay_rate_per_mass DECIMAL(10,2);
 ALTER TABLE profiles ADD COLUMN IF NOT EXISTS payment_notes TEXT;
-
 COMMENT ON COLUMN profiles.pay_rate_per_mass IS 'Agreed-upon rate per Mass for contractor musicians. NULL = volunteer.';
 COMMENT ON COLUMN profiles.payment_notes IS 'Admin notes about payment arrangement (e.g., "Paid monthly", "Special rate for weddings")';
-
 -- Materialized view for fast history queries (booking_slots + mass_events + roles)
 -- Not a real materialized view (those need REFRESH), just a handy view
 CREATE OR REPLACE VIEW musician_history AS

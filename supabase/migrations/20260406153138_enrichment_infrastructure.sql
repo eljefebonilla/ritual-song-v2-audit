@@ -1,15 +1,12 @@
--- Migration 029: Enrichment infrastructure
--- Adds enrichment_queue, enrichment_log, and ai_enriched_tags to songs
-
 CREATE TABLE enrichment_queue (
   id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
   song_id UUID REFERENCES songs(id),
-  task_type TEXT NOT NULL, -- 'classify_function', 'extract_topics', 'embed_song', 'embed_verses', 'match_scripture'
-  status TEXT NOT NULL DEFAULT 'pending', -- pending, processing, verified, written, failed, human_review
+  task_type TEXT NOT NULL,
+  status TEXT NOT NULL DEFAULT 'pending',
   priority INTEGER DEFAULT 5,
-  payload JSONB, -- task-specific data
-  result JSONB, -- AI output before verification
-  verifier_result JSONB, -- verification harness output
+  payload JSONB,
+  result JSONB,
+  verifier_result JSONB,
   model_used TEXT,
   created_at TIMESTAMPTZ DEFAULT NOW(),
   processed_at TIMESTAMPTZ,
@@ -35,5 +32,4 @@ CREATE TABLE enrichment_log (
 
 CREATE INDEX idx_el_song ON enrichment_log(song_id);
 
--- AI-generated tags stored separately from human-curated fields
-ALTER TABLE songs ADD COLUMN IF NOT EXISTS ai_enriched_tags JSONB DEFAULT '{}';
+ALTER TABLE songs ADD COLUMN IF NOT EXISTS ai_enriched_tags JSONB DEFAULT '{}';;

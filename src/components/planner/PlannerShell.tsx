@@ -294,13 +294,26 @@ export default function PlannerShell({ occasions, viewerMode = false, viewerConf
     <div className="flex flex-col h-screen bg-white">
       {viewerMode ? (
         <div className="px-4 py-3 border-b bg-white flex items-center justify-between gap-4 flex-shrink-0">
-          <div className="flex flex-col">
-            <div className="font-serif text-lg leading-tight text-stone-900">{viewerName || "Ritual Song"}</div>
-            <div className="text-xs text-stone-500 capitalize">
-              {season} · Year {yearCycle} · {ensembleId}
+          <div className="flex flex-col min-w-0">
+            <div className="font-serif text-lg leading-tight text-stone-900 truncate">{viewerName || "Ritual Song"}</div>
+            <div className="text-[10px] text-stone-500 capitalize">
+              {season} · Year {yearCycle}
             </div>
           </div>
-          <div className="text-xs text-stone-400 hidden sm:block">Read-only preview</div>
+          <div className="flex items-center gap-2">
+            <label className="text-[10px] font-medium text-stone-500 uppercase tracking-wide hidden sm:block">Mass</label>
+            <select
+              value={ensembleId}
+              onChange={(e) => setEnsembleId(e.target.value as EnsembleId)}
+              className="text-sm border border-stone-300 rounded-md px-2 py-1.5 bg-white text-stone-800 focus:outline-none focus:ring-1 focus:ring-stone-400"
+            >
+              <option value="reflections">Reflections</option>
+              <option value="foundations">Foundations</option>
+              <option value="generations">Generations</option>
+              <option value="heritage">Heritage</option>
+              <option value="elevations">Elevations</option>
+            </select>
+          </div>
         </div>
       ) : (
         <FilterToolbar

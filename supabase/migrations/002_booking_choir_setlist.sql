@@ -21,7 +21,6 @@ ALTER TABLE public.mass_events
     CHECK (choir_descriptor IN (
       'Volunteers', 'SMPREP', 'Volunteers + SMPREP', 'Cancelled', 'N/A'
     ));
-
 -- ============================================================
 -- 2. SEED ADDITIONAL ministry_roles
 -- ============================================================
@@ -47,7 +46,6 @@ INSERT INTO public.ministry_roles (name, description, sort_order) VALUES
   ('Other', 'Other instrument (violin, woodwinds, etc.)', 21),
   ('Livestream TD', 'Livestream technical director', 22)
 ON CONFLICT (name) DO NOTHING;
-
 -- ============================================================
 -- 3. BOOKING SLOTS
 -- ============================================================
@@ -106,14 +104,11 @@ CREATE TABLE public.booking_slots (
     OR confirmation = 'auto'
   )
 );
-
 -- RLS
 ALTER TABLE public.booking_slots ENABLE ROW LEVEL SECURITY;
-
 CREATE POLICY "Anyone authenticated can view booking slots"
   ON public.booking_slots FOR SELECT
   USING (auth.role() = 'authenticated');
-
 CREATE POLICY "Admins can manage booking slots"
   ON public.booking_slots FOR ALL
   USING (
@@ -122,21 +117,17 @@ CREATE POLICY "Admins can manage booking slots"
       WHERE profiles.id = auth.uid() AND profiles.role = 'admin'
     )
   );
-
 CREATE POLICY "Users can update own booking confirmation"
   ON public.booking_slots FOR UPDATE
   USING (auth.uid() = profile_id)
   WITH CHECK (auth.uid() = profile_id);
-
 -- Trigger
 CREATE TRIGGER set_updated_at BEFORE UPDATE ON public.booking_slots
   FOR EACH ROW EXECUTE FUNCTION public.handle_updated_at();
-
 -- Indexes
 CREATE INDEX idx_booking_slots_mass ON public.booking_slots(mass_event_id);
 CREATE INDEX idx_booking_slots_profile ON public.booking_slots(profile_id);
 CREATE INDEX idx_booking_slots_mass_role ON public.booking_slots(mass_event_id, ministry_role_id);
-
 -- ============================================================
 -- 4. CHOIR SIGNUPS
 -- ============================================================
@@ -155,26 +146,20 @@ CREATE TABLE public.choir_signups (
   updated_at timestamptz DEFAULT now(),
   UNIQUE(mass_event_id, user_id)
 );
-
 -- RLS
 ALTER TABLE public.choir_signups ENABLE ROW LEVEL SECURITY;
-
 CREATE POLICY "Anyone authenticated can view choir signups"
   ON public.choir_signups FOR SELECT
   USING (auth.role() = 'authenticated');
-
 CREATE POLICY "Users can insert own choir signup"
   ON public.choir_signups FOR INSERT
   WITH CHECK (auth.uid() = user_id);
-
 CREATE POLICY "Users can update own choir signup"
   ON public.choir_signups FOR UPDATE
   USING (auth.uid() = user_id);
-
 CREATE POLICY "Users can delete own choir signup"
   ON public.choir_signups FOR DELETE
   USING (auth.uid() = user_id);
-
 CREATE POLICY "Admins can manage all choir signups"
   ON public.choir_signups FOR ALL
   USING (
@@ -183,16 +168,13 @@ CREATE POLICY "Admins can manage all choir signups"
       WHERE profiles.id = auth.uid() AND profiles.role = 'admin'
     )
   );
-
 -- Trigger
 CREATE TRIGGER set_updated_at BEFORE UPDATE ON public.choir_signups
   FOR EACH ROW EXECUTE FUNCTION public.handle_updated_at();
-
 -- Indexes
 CREATE INDEX idx_choir_signups_mass ON public.choir_signups(mass_event_id);
 CREATE INDEX idx_choir_signups_user ON public.choir_signups(user_id);
 CREATE INDEX idx_choir_signups_part ON public.choir_signups(mass_event_id, voice_part);
-
 -- ============================================================
 -- 5. MASS COMMENTS
 -- ============================================================
@@ -208,26 +190,20 @@ CREATE TABLE public.mass_comments (
   created_at timestamptz DEFAULT now(),
   updated_at timestamptz DEFAULT now()
 );
-
 -- RLS
 ALTER TABLE public.mass_comments ENABLE ROW LEVEL SECURITY;
-
 CREATE POLICY "Anyone authenticated can view mass comments"
   ON public.mass_comments FOR SELECT
   USING (auth.role() = 'authenticated');
-
 CREATE POLICY "Authenticated users can post mass comments"
   ON public.mass_comments FOR INSERT
   WITH CHECK (auth.uid() = author_id);
-
 CREATE POLICY "Users can update own mass comments"
   ON public.mass_comments FOR UPDATE
   USING (auth.uid() = author_id);
-
 CREATE POLICY "Users can delete own mass comments"
   ON public.mass_comments FOR DELETE
   USING (auth.uid() = author_id);
-
 CREATE POLICY "Admins can manage all mass comments"
   ON public.mass_comments FOR ALL
   USING (
@@ -236,15 +212,12 @@ CREATE POLICY "Admins can manage all mass comments"
       WHERE profiles.id = auth.uid() AND profiles.role = 'admin'
     )
   );
-
 -- Trigger
 CREATE TRIGGER set_updated_at BEFORE UPDATE ON public.mass_comments
   FOR EACH ROW EXECUTE FUNCTION public.handle_updated_at();
-
 -- Indexes
 CREATE INDEX idx_mass_comments_event ON public.mass_comments(mass_event_id);
 CREATE INDEX idx_mass_comments_author ON public.mass_comments(author_id);
-
 -- ============================================================
 -- 6. SETLISTS
 -- ============================================================
@@ -276,14 +249,11 @@ CREATE TABLE public.setlists (
   created_at timestamptz DEFAULT now(),
   updated_at timestamptz DEFAULT now()
 );
-
 -- RLS
 ALTER TABLE public.setlists ENABLE ROW LEVEL SECURITY;
-
 CREATE POLICY "Anyone authenticated can view setlists"
   ON public.setlists FOR SELECT
   USING (auth.role() = 'authenticated');
-
 CREATE POLICY "Admins can manage setlists"
   ON public.setlists FOR ALL
   USING (
@@ -292,34 +262,27 @@ CREATE POLICY "Admins can manage setlists"
       WHERE profiles.id = auth.uid() AND profiles.role = 'admin'
     )
   );
-
 -- Trigger
 CREATE TRIGGER set_updated_at BEFORE UPDATE ON public.setlists
   FOR EACH ROW EXECUTE FUNCTION public.handle_updated_at();
-
 -- Indexes
 CREATE INDEX idx_setlists_mass ON public.setlists(mass_event_id);
 CREATE INDEX idx_setlists_occasion ON public.setlists(occasion_id);
 CREATE INDEX idx_setlists_songs_gin ON public.setlists USING gin(songs);
-
 -- ============================================================
 -- 7. AVATAR STORAGE BUCKET
 -- ============================================================
 
 INSERT INTO storage.buckets (id, name, public) VALUES ('avatars', 'avatars', true);
-
 CREATE POLICY "Users can upload own avatar"
   ON storage.objects FOR INSERT
   WITH CHECK (bucket_id = 'avatars' AND auth.uid()::text = (storage.foldername(name))[1]);
-
 CREATE POLICY "Anyone can view avatars"
   ON storage.objects FOR SELECT
   USING (bucket_id = 'avatars');
-
 CREATE POLICY "Users can update own avatar"
   ON storage.objects FOR UPDATE
   USING (bucket_id = 'avatars' AND auth.uid()::text = (storage.foldername(name))[1]);
-
 CREATE POLICY "Users can delete own avatar"
   ON storage.objects FOR DELETE
   USING (bucket_id = 'avatars' AND auth.uid()::text = (storage.foldername(name))[1]);

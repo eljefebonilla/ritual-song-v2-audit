@@ -1,8 +1,3 @@
--- ============================================================
--- 023: Parish Brand Config — per-parish branding for generated documents
--- ============================================================
-
--- Parish brand configuration for setlist/menu and worship aid generation
 create table public.parish_brand_config (
   id uuid default gen_random_uuid() primary key,
   parish_id uuid not null references public.parishes(id) on delete cascade,
@@ -24,7 +19,6 @@ create table public.parish_brand_config (
 
 alter table public.parish_brand_config enable row level security;
 
--- Authenticated users can view their parish's brand config
 create policy "Members can view parish brand config"
   on public.parish_brand_config for select
   using (
@@ -35,7 +29,6 @@ create policy "Members can view parish brand config"
     )
   );
 
--- Only owners/admins can manage brand config
 create policy "Admins can manage parish brand config"
   on public.parish_brand_config for all
   using (
@@ -48,4 +41,4 @@ create policy "Admins can manage parish brand config"
   );
 
 create trigger set_updated_at before update on public.parish_brand_config
-  for each row execute function public.handle_updated_at();
+  for each row execute function public.handle_updated_at();;

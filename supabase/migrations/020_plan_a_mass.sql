@@ -60,7 +60,6 @@ CREATE TABLE IF NOT EXISTS planning_sessions (
   created_at TIMESTAMPTZ DEFAULT NOW(),
   updated_at TIMESTAMPTZ DEFAULT NOW()
 );
-
 -- Collaborator invitation records
 CREATE TABLE IF NOT EXISTS planning_collaborators (
   id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
@@ -73,7 +72,6 @@ CREATE TABLE IF NOT EXISTS planning_collaborators (
   accepted_at TIMESTAMPTZ,
   UNIQUE(session_id, profile_id)
 );
-
 -- Indexes
 CREATE INDEX IF NOT EXISTS idx_planning_sessions_date ON planning_sessions(event_date);
 CREATE INDEX IF NOT EXISTS idx_planning_sessions_status ON planning_sessions(status);
@@ -81,41 +79,33 @@ CREATE INDEX IF NOT EXISTS idx_planning_sessions_token ON planning_sessions(shar
 CREATE INDEX IF NOT EXISTS idx_planning_sessions_creator ON planning_sessions(created_by);
 CREATE INDEX IF NOT EXISTS idx_planning_collaborators_session ON planning_collaborators(session_id);
 CREATE INDEX IF NOT EXISTS idx_planning_collaborators_profile ON planning_collaborators(profile_id);
-
 -- RLS
 ALTER TABLE planning_sessions ENABLE ROW LEVEL SECURITY;
 ALTER TABLE planning_collaborators ENABLE ROW LEVEL SECURITY;
-
 -- Admins full access
 CREATE POLICY planning_sessions_admin ON planning_sessions
   FOR ALL USING (
     EXISTS (SELECT 1 FROM profiles WHERE id = auth.uid() AND role = 'admin')
   );
-
 -- Creator can manage their sessions
 CREATE POLICY planning_sessions_creator ON planning_sessions
   FOR ALL USING (created_by = auth.uid());
-
 -- Collaborators can view/edit
 CREATE POLICY planning_sessions_collaborator ON planning_sessions
   FOR SELECT USING (
     auth.uid() = ANY(collaborators)
   );
-
 CREATE POLICY planning_sessions_collaborator_update ON planning_sessions
   FOR UPDATE USING (
     auth.uid() = ANY(collaborators)
   );
-
 -- Collaborator records
 CREATE POLICY planning_collaborators_admin ON planning_collaborators
   FOR ALL USING (
     EXISTS (SELECT 1 FROM profiles WHERE id = auth.uid() AND role = 'admin')
   );
-
 CREATE POLICY planning_collaborators_own ON planning_collaborators
   FOR SELECT USING (profile_id = auth.uid());
-
 -- Auto-update timestamp
 CREATE TRIGGER planning_sessions_updated
   BEFORE UPDATE ON planning_sessions

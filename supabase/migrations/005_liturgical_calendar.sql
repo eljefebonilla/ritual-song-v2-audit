@@ -32,16 +32,13 @@ CREATE TABLE IF NOT EXISTS public.liturgical_days (
   created_at timestamptz DEFAULT now(),
   updated_at timestamptz DEFAULT now()
 );
-
 -- Unique constraint: date + province (allows dual Ascension entries)
 CREATE UNIQUE INDEX IF NOT EXISTS liturgical_days_date_province_idx
   ON public.liturgical_days (date, COALESCE(ecclesiastical_province, '__universal__'));
-
 -- Index for common queries
 CREATE INDEX IF NOT EXISTS liturgical_days_date_idx ON public.liturgical_days (date);
 CREATE INDEX IF NOT EXISTS liturgical_days_season_idx ON public.liturgical_days (season);
 CREATE INDEX IF NOT EXISTS liturgical_days_occasion_id_idx ON public.liturgical_days (occasion_id);
-
 -- Readings: one row per reading per day
 CREATE TABLE IF NOT EXISTS public.liturgical_day_readings (
   id uuid DEFAULT gen_random_uuid() PRIMARY KEY,
@@ -52,10 +49,8 @@ CREATE TABLE IF NOT EXISTS public.liturgical_day_readings (
   chapter_verse text NOT NULL,
   full_citation text NOT NULL
 );
-
 CREATE INDEX IF NOT EXISTS liturgical_day_readings_day_idx
   ON public.liturgical_day_readings (liturgical_day_id);
-
 -- App-level settings (diocese, zip, transfers)
 CREATE TABLE IF NOT EXISTS public.app_settings (
   key text PRIMARY KEY,
@@ -63,7 +58,6 @@ CREATE TABLE IF NOT EXISTS public.app_settings (
   updated_at timestamptz DEFAULT now(),
   updated_by uuid REFERENCES public.profiles(id)
 );
-
 -- Default settings
 INSERT INTO public.app_settings (key, value) VALUES
   ('parish_name', '"St. Monica Catholic Community"'),
@@ -73,7 +67,6 @@ INSERT INTO public.app_settings (key, value) VALUES
   ('epiphany_transferred_to_sunday', 'true'),
   ('assumption_obligation_abrogated_on_saturday', 'true')
 ON CONFLICT (key) DO NOTHING;
-
 -- Saints reference data
 CREATE TABLE IF NOT EXISTS public.saints (
   id uuid DEFAULT gen_random_uuid() PRIMARY KEY,
@@ -86,9 +79,7 @@ CREATE TABLE IF NOT EXISTS public.saints (
   patron_of text,                    -- for relevance to parish/school
   created_at timestamptz DEFAULT now()
 );
-
 CREATE UNIQUE INDEX IF NOT EXISTS saints_name_idx ON public.saints (name);
-
 -- Song lyrics + alleluia detection
 CREATE TABLE IF NOT EXISTS public.song_metadata (
   song_id text PRIMARY KEY,          -- matches song-library.json slug
@@ -97,78 +88,62 @@ CREATE TABLE IF NOT EXISTS public.song_metadata (
   lyrics_source text,                -- manual|auto_scanned|title_match
   updated_at timestamptz DEFAULT now()
 );
-
 -- Add needs_volunteers column to mass_events
 ALTER TABLE public.mass_events ADD COLUMN IF NOT EXISTS needs_volunteers boolean DEFAULT false;
-
 -- ============================================================
 -- Row Level Security
 -- ============================================================
 
 -- liturgical_days: public read, admin write
 ALTER TABLE public.liturgical_days ENABLE ROW LEVEL SECURITY;
-
 CREATE POLICY "liturgical_days_public_read"
   ON public.liturgical_days
   FOR SELECT
   USING (true);
-
 CREATE POLICY "liturgical_days_admin_write"
   ON public.liturgical_days
   FOR ALL
   USING (auth.role() = 'service_role')
   WITH CHECK (auth.role() = 'service_role');
-
 -- liturgical_day_readings: public read, admin write
 ALTER TABLE public.liturgical_day_readings ENABLE ROW LEVEL SECURITY;
-
 CREATE POLICY "liturgical_day_readings_public_read"
   ON public.liturgical_day_readings
   FOR SELECT
   USING (true);
-
 CREATE POLICY "liturgical_day_readings_admin_write"
   ON public.liturgical_day_readings
   FOR ALL
   USING (auth.role() = 'service_role')
   WITH CHECK (auth.role() = 'service_role');
-
 -- app_settings: authenticated read, admin write
 ALTER TABLE public.app_settings ENABLE ROW LEVEL SECURITY;
-
 CREATE POLICY "app_settings_authenticated_read"
   ON public.app_settings
   FOR SELECT
   USING (auth.role() = 'authenticated' OR auth.role() = 'service_role');
-
 CREATE POLICY "app_settings_admin_write"
   ON public.app_settings
   FOR ALL
   USING (auth.role() = 'service_role')
   WITH CHECK (auth.role() = 'service_role');
-
 -- saints: public read, admin write
 ALTER TABLE public.saints ENABLE ROW LEVEL SECURITY;
-
 CREATE POLICY "saints_public_read"
   ON public.saints
   FOR SELECT
   USING (true);
-
 CREATE POLICY "saints_admin_write"
   ON public.saints
   FOR ALL
   USING (auth.role() = 'service_role')
   WITH CHECK (auth.role() = 'service_role');
-
 -- song_metadata: authenticated read, admin write
 ALTER TABLE public.song_metadata ENABLE ROW LEVEL SECURITY;
-
 CREATE POLICY "song_metadata_authenticated_read"
   ON public.song_metadata
   FOR SELECT
   USING (auth.role() = 'authenticated' OR auth.role() = 'service_role');
-
 CREATE POLICY "song_metadata_admin_write"
   ON public.song_metadata
   FOR ALL
