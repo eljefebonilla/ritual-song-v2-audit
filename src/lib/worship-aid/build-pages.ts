@@ -76,7 +76,16 @@ function storageUrl(storagePath: string): string {
 
 function reprintImageUrl(reprint: ReprintResult): string | null {
   if (reprint.kind === "pdf" || reprint.kind === "gif") {
-    return storageUrl(reprint.storagePath);
+    const sp = reprint.storagePath;
+    if (!sp) return null;
+    // If it's already a full URL, use as-is
+    if (sp.startsWith("http://") || sp.startsWith("https://")) return sp;
+    // If it's a local filesystem path, serve through our resource API
+    if (sp.startsWith("/Users/") || sp.startsWith("/home/")) {
+      return `/api/worship-aids/resource?path=${encodeURIComponent(sp)}`;
+    }
+    // Otherwise it's a Supabase storage path
+    return storageUrl(sp);
   }
   return null;
 }
