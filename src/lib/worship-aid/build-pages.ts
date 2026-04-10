@@ -91,7 +91,15 @@ async function fetchBrandConfig(parishId: string): Promise<BrandConfig> {
     .eq("parish_id", parishId)
     .maybeSingle();
 
-  if (!data) return { parishId, ...DEFAULT_BRAND_CONFIG };
+  if (!data) {
+    // Fallback: St. Monica defaults until parish_brand_config is seeded
+    return {
+      parishId,
+      ...DEFAULT_BRAND_CONFIG,
+      parishDisplayName: "St. Monica Catholic Community",
+      logoUrl: "/logo-stmonica.png",
+    };
+  }
 
   return {
     parishId,
@@ -231,6 +239,50 @@ async function buildSongPage(
   };
 }
 
+// ─── Title → Supabase UUID lookup ─────────────────────────────────────────────
+
+function normalizeForMatch(s: string): string {
+  return s.toLowerCase().replace(/[^a-z0-9]/g, "").trim();
+}
+
+/**
+ * Look up Supabase song UUIDs by title matching against the songs table.
+ * Returns a map of normalized-title → UUID.
+ */
+async function lookupSongIds(titles: string[]): Promise<Map<string, string>> {
+  if (titles.length === 0) return new Map();
+  const supabase = createAdminClient();
+
+  // Fetch all songs with matching titles (case-insensitive via ilike)
+  // We do a broad search and match client-side for fuzzy tolerance
+  const { data } = await supabase
+    .from("songs")
+    .select("id, title, legacy_id")
+    .limit(5000);
+
+  const result = new Map<string, string>();
+  if (!data) return result;
+
+  // Build a lookup map: normalized title → UUID
+  const dbMap = new Map<string, string>();
+  for (const row of data) {
+    const norm = normalizeForMatch(row.title as string);
+    dbMap.set(norm, row.id as string);
+    // Also index by legacy_id slug
+    if (row.legacy_id) {
+      dbMap.set(normalizeForMatch(row.legacy_id as string), row.id as string);
+    }
+  }
+
+  for (const title of titles) {
+    const norm = normalizeForMatch(title);
+    const uuid = dbMap.get(norm);
+    if (uuid) result.set(title, uuid);
+  }
+
+  return result;
+}
+
 // ─── Song entries from plan ────────────────────────────────────────────────────
 
 type SongWithId = SongEntry & { songId?: string };
@@ -302,11 +354,21 @@ export async function buildPages(config: WorshipAidConfig): Promise<WorshipAid> 
 
   // 3. Song pages from the matching ensemble plan
   const plan = occasion.musicPlans.find(
-    (p) => p.ensembleId === config.ensembleId
+    (p) => p.ensembleId === config.ensembleId || (p as MusicPlan & { communityId?: string }).communityId === config.ensembleId
   );
 
   if (plan) {
     const songs = planSongs(plan);
+
+    // Resolve Supabase UUIDs for all songs by title
+    const titles = songs.map(({ song }) => song.title);
+    const songIdMap = await lookupSongIds(titles);
+
+    // Attach songId to each entry
+    for (const entry of songs) {
+      entry.song.songId = songIdMap.get(entry.song.title);
+    }
+
     const songPages = await Promise.all(
       songs.map(({ position, song }) =>
         buildSongPage(position, POSITION_LABELS[position] ?? position, song)
