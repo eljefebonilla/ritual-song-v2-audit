@@ -13,6 +13,7 @@ import { rankSongs } from "./scoring";
 import type { NpmScriptureMatch } from "./scoring";
 import { getScriptureSongsForOccasion } from "@/lib/supabase/scripture-mappings";
 import type { RecommendationRequest, UsageRecord, ScoredSong } from "./types";
+import { createAdvisorTools } from "@/tools/advisor";
 
 export type { ScoredSong, RecommendationRequest, UsageRecord } from "./types";
 
@@ -152,6 +153,41 @@ export function createRecommendationTools(): ToolDefinition[] {
           weeksUntilNext: match.weeksUntilNext,
           configuredWeights: ctx.config.recommendationWeights,
         };
+      },
+    },
+    {
+      name: "recommendation.verify",
+      description:
+        "Verify the top song recommendation using the liturgical advisor (strong model). Only call this when explicitly requested — it incurs LLM cost. Returns confidence, approval, issues, and alternatives.",
+      permissionLevel: "allow",
+      handler: async (args) => {
+        // Delegate to advisor.verify — locate it from the advisor tool array
+        const advisorTools = createAdvisorTools();
+        const verifyTool = advisorTools.find((t) => t.name === "advisor.verify");
+        if (!verifyTool) {
+          return { error: "advisor.verify tool not found" };
+        }
+        // advisor.verify does not use RuntimeContext, so we pass a minimal stub
+        return verifyTool.handler(args, {
+          config: {
+            maxTokens: 128_000,
+            compactionThreshold: 0.7,
+            recommendationWeights: {
+              scriptureMatch: 30,
+              topicMatch: 20,
+              seasonMatch: 15,
+              functionMatch: 25,
+              recencyPenalty: 5,
+              familiarityBoost: 10,
+              userRankingBoost: 15,
+              semanticSimilarity: 20,
+            },
+            repetitionPreference: 5,
+            toolServers: [],
+          },
+          conversationId: "",
+          isAdmin: false,
+        });
       },
     },
     {

@@ -1513,7 +1513,7 @@
     "title": "Hallelujah (adapted for Liturgy)",
     "composer": "Leonard Cohen",
     "resources": [],
-    "usageCount": 53,
+    "usageCount": 54,
     "occasions": [
       "advent-01-a",
       "advent-01-b",
@@ -1546,9 +1546,10 @@
       "ordinary-time-06-b",
       "ordinary-time-06-c",
       "ordinary-time-07-a",
-      "ordinary-time-08-a"
+      "ordinary-time-08-a",
+      "thanksgiving"
     ],
-    "category": "song",
+    "category": "gospel_acclamation_refrain",
     "functions": [
       "gospel_acclamation"
     ]
@@ -4686,53 +4687,6 @@
     ]
   },
   {
-    "id": "god-of-day-and-god-of-darkness--beach-spring-marty-haugen",
-    "title": "God of Day and God of Darkness",
-    "composer": "BEACH SPRING • Marty Haugen",
-    "resources": [],
-    "usageCount": 11,
-    "occasions": [
-      "advent-01-a",
-      "advent-01-b",
-      "advent-01-c",
-      "ordinary-time-08-c",
-      "lent-02-a",
-      "lent-02-b",
-      "lent-02-c",
-      "lent-05-a-third-scrutiny",
-      "lent-05-b",
-      "lent-05-c"
-    ],
-    "category": "song",
-    "functions": [
-      "sending"
-    ],
-    "catalogs": {
-      "bb2026": 631,
-      "gather4": 932
-    },
-    "scriptureRefs": [
-      "Matthew 25:39–40",
-      "Matthew 25:39-40"
-    ],
-    "topics": [
-      "Commissioning",
-      "Darkness",
-      "Discipleship",
-      "Justice",
-      "Light",
-      "Social Concern",
-      "Alienation",
-      "Complacency",
-      "Evening",
-      "God, Expanded Images Of",
-      "Peace",
-      "Petition / Prayer",
-      "Poverty",
-      "Presence of God"
-    ]
-  },
-  {
     "id": "mass-of-glory-lockwood-christmas-intro",
     "title": "Mass of Glory (Lockwood Christmas Intro)",
     "resources": [],
@@ -5080,12 +5034,13 @@
     "title": "In Christ There Is No East Or West",
     "composer": "Adapt. by Burleigh • Oxenham • Arr. by Lockwood",
     "resources": [],
-    "usageCount": 10,
+    "usageCount": 12,
     "occasions": [
       "ordinary-time-02-a",
       "ordinary-time-02-b",
       "ordinary-time-02-c",
-      "ordinary-time-17-c"
+      "ordinary-time-17-c",
+      "ordinary-time-06-c"
     ],
     "category": "song",
     "functions": [
@@ -5256,23 +5211,6 @@
     ]
   },
   {
-    "id": "i-am-yours-consume-me-completely--trevor-thomson",
-    "title": "I Am Yours - Consume Me Completely",
-    "composer": "Trevor Thomson",
-    "resources": [],
-    "usageCount": 10,
-    "occasions": [
-      "solemnity-body-blood-of-christ-a",
-      "solemnity-body-blood-of-christ-b",
-      "solemnity-body-blood-of-christ-c",
-      "ordinary-time-29-c"
-    ],
-    "category": "song",
-    "functions": [
-      "communion"
-    ]
-  },
-  {
     "id": "bread-for-the-world--bernadette-farrell",
     "title": "Bread for the World",
     "composer": "Bernadette Farrell",
@@ -5322,25 +5260,6 @@
     "functions": [
       "communion",
       "prelude"
-    ]
-  },
-  {
-    "id": "god-of-day-and-god-of-darkness--beach-spring-marty-haugen-1",
-    "title": "God of Day and God of Darkness",
-    "composer": "BEACH SPRING · Marty Haugen",
-    "resources": [],
-    "usageCount": 9,
-    "occasions": [
-      "advent-01-a",
-      "advent-01-b",
-      "advent-01-c",
-      "advent-03-a",
-      "advent-03-b",
-      "advent-03-c"
-    ],
-    "category": "song",
-    "functions": [
-      "sending"
     ]
   },
   {
@@ -5566,11 +5485,13 @@
     "title": "Build A Family",
     "composer": "Ed Bolduc • Arranged by Dan Houze",
     "resources": [],
-    "usageCount": 9,
+    "usageCount": 11,
     "occasions": [
       "ordinary-time-03-a-word-of-god-sunday",
       "feast-of-st-monica",
-      "the-dedication-of-nov-9-the-lateran-basilica-abc"
+      "the-dedication-of-nov-9-the-lateran-basilica-abc",
+      "baptism-of-the-lord-c",
+      "feast-the-exaltation-sep-14-of-the-holy-cross-abc"
     ],
     "category": "song",
     "functions": [
@@ -5672,7 +5593,7 @@
     "title": "Make Us True Servants",
     "composer": "SLANE • Susan G Wente",
     "resources": [],
-    "usageCount": 9,
+    "usageCount": 11,
     "occasions": [
       "ordinary-time-06-b",
       "ordinary-time-06-c",
@@ -6105,10 +6026,13 @@
     "title": "Peace on Earth (Larghetto)",
     "composer": "Dvořák • adapted by Bob Hurd",
     "resources": [],
-    "usageCount": 9,
+    "usageCount": 12,
     "occasions": [
       "ordinary-time-14-c",
-      "ordinary-time-23-c"
+      "ordinary-time-23-c",
+      "ordinary-time-02-a",
+      "ordinary-time-02-b",
+      "ordinary-time-02-c"
     ],
     "category": "song",
     "functions": [
@@ -6240,80 +6164,6 @@
     ]
   },
   {
-    "id": "come-worship-the-lord--john-michael-talbot",
-    "title": "Come, Worship the Lord",
-    "composer": "John Michael Talbot",
-    "resources": [],
-    "usageCount": 8,
-    "occasions": [
-      "ordinary-time-02-a",
-      "ordinary-time-06-a",
-      "easter-04-a",
-      "easter-04-b",
-      "easter-04-c"
-    ],
-    "category": "song",
-    "functions": [
-      "gathering"
-    ],
-    "catalogs": {
-      "bb2026": 306
-    },
-    "scriptureRefs": [
-      "Psalm 95:1–7"
-    ],
-    "topics": [
-      "Gathering",
-      "Meditation",
-      "Praise",
-      "Retreats"
-    ]
-  },
-  {
-    "id": "we-belong-to-you--trevor-thomson",
-    "title": "We Belong To You",
-    "composer": "Trevor Thomson",
-    "resources": [],
-    "usageCount": 8,
-    "occasions": [
-      "ordinary-time-02-a",
-      "ordinary-time-05-c",
-      "easter-04-c",
-      "ss-peter-paul-apostles-jun-29-at-the-vigil-mass-abc",
-      "ordinary-time-16-c",
-      "ordinary-time-19-c",
-      "feast-of-st-monica",
-      "ordinary-time-28-c"
-    ],
-    "category": "song",
-    "functions": [
-      "communion",
-      "sending"
-    ],
-    "catalogs": {
-      "gather4": 833,
-      "spiritSong": 368
-    },
-    "topics": [
-      "Blessing",
-      "Christian Life",
-      "Community",
-      "Daily Life and Work",
-      "Discipleship",
-      "Evangelization",
-      "Holy Spirit",
-      "Journey",
-      "Mercy",
-      "New Creation",
-      "Paschal Mystery",
-      "Providence",
-      "Seeking",
-      "Sharing",
-      "Unity",
-      "Water"
-    ]
-  },
-  {
     "id": "immaculate-mary-lowered--lourdes-hymn-arr-by-randall-debruyn",
     "title": "Immaculate Mary (Lowered)",
     "composer": "LOURDES HYMN • Arr. by Randall DeBruyn",
@@ -6386,11 +6236,13 @@
     "title": "All Who Enter Here",
     "composer": "John Angotti • Dan Houze",
     "resources": [],
-    "usageCount": 8,
+    "usageCount": 12,
     "occasions": [
       "ordinary-time-04-a",
       "lent-05-c",
-      "easter-05-c"
+      "easter-05-c",
+      "ordinary-time-05-c",
+      "ordinary-time-08-c"
     ],
     "category": "song",
     "functions": [
@@ -6473,12 +6325,15 @@
     "title": "We Walk By Faith",
     "composer": "Marty Haugen",
     "resources": [],
-    "usageCount": 8,
+    "usageCount": 15,
     "occasions": [
       "ordinary-time-05-c",
       "easter-02-divine-mercy-c",
       "ordinary-time-14-c",
-      "ordinary-time-27-c"
+      "ordinary-time-27-c",
+      "easter-02-divine-mercy-a",
+      "easter-02-divine-mercy-b",
+      "ordinary-time-05-b"
     ],
     "category": "song",
     "functions": [
@@ -6524,58 +6379,6 @@
       "ordinary-time-11-b"
     ],
     "category": "psalm"
-  },
-  {
-    "id": "lord-i-need-you--matt-maher",
-    "title": "Lord I Need You",
-    "composer": "Matt Maher",
-    "resources": [],
-    "usageCount": 8,
-    "occasions": [
-      "lent-01-a",
-      "lent-01-b",
-      "lent-01-c",
-      "lent-03-b",
-      "lent-03-c"
-    ],
-    "category": "song",
-    "functions": [
-      "communion"
-    ]
-  },
-  {
-    "id": "jesus-remember-me--taiz-jacques-berthier",
-    "title": "Jesus, Remember Me",
-    "composer": "Taizé — Jacques Berthier",
-    "resources": [],
-    "usageCount": 8,
-    "occasions": [
-      "palm-sunday-a",
-      "palm-sunday-b",
-      "palm-sunday-c",
-      "solemnity-christ-the-king-c"
-    ],
-    "category": "song",
-    "functions": [
-      "gathering",
-      "offertory"
-    ],
-    "catalogs": {
-      "bb2026": 415,
-      "aahh": 230
-    },
-    "scriptureRefs": [
-      "Luke 23:42",
-      "Psalm 104"
-    ],
-    "topics": [
-      "Creation",
-      "Jesus Christ/Atonement",
-      "Kingdom",
-      "Love of God for Us",
-      "Salvation",
-      "Trust"
-    ]
   },
   {
     "id": "we-walk-by-faith--marty-haugen-arranged-by-david-lockwood-1",
@@ -6646,12 +6449,14 @@
     "title": "We Are Many Parts",
     "composer": "Marty Haugen • Arr. by Dan Houze",
     "resources": [],
-    "usageCount": 8,
+    "usageCount": 12,
     "occasions": [
       "easter-05-c",
       "ordinary-time-20-c",
       "feast-of-st-monica",
-      "the-dedication-of-nov-9-the-lateran-basilica-abc"
+      "the-dedication-of-nov-9-the-lateran-basilica-abc",
+      "ordinary-time-02-c",
+      "ss-peter-paul-apostles-jun-29-mass-during-the-day-abc"
     ],
     "category": "song",
     "functions": [
@@ -6977,10 +6782,11 @@
     "title": "We Place Our Trust In You",
     "composer": "THAXTED • Jeffrey Bonilla",
     "resources": [],
-    "usageCount": 7,
+    "usageCount": 12,
     "occasions": [
       "baptism-of-the-lord-c",
-      "ordinary-time-03-c-word-of-god-sunday"
+      "ordinary-time-03-c-word-of-god-sunday",
+      "ordinary-time-22-c"
     ],
     "category": "song",
     "functions": [
@@ -7700,47 +7506,6 @@
     ]
   },
   {
-    "id": "o-come-o-come-emmanuel--veni-veni-emmanuel-latin-9th-c",
-    "title": "O Come, O Come Emmanuel",
-    "composer": "\"Veni, veni Emmanuel\"; Latin 9th C;",
-    "resources": [],
-    "usageCount": 6,
-    "occasions": [
-      "advent-04-a",
-      "advent-04-b",
-      "advent-04-c"
-    ],
-    "category": "song",
-    "functions": [
-      "communion",
-      "gathering"
-    ],
-    "catalogs": {
-      "bb2026": 39
-    },
-    "scriptureRefs": [
-      "Exodus 6:6",
-      "Exodus 19:16",
-      "Proverbs 1:20",
-      "Wisdom 8:1",
-      "Sirach 24:3",
-      "Isaiah 7:14",
-      "Isaiah 11:1–12",
-      "Isaiah 22:2, 22",
-      "Micah 5:2",
-      "Matthew 1:23",
-      "Luke 1:78–79",
-      "John 8:12",
-      "Romans 15:11–12",
-      "1 Corinthians 1:30",
-      "Ephesians 2:14, 20",
-      "Hebrews 1:3",
-      "James 3:17",
-      "Revelation 3:7",
-      "Revelation 15:3"
-    ]
-  },
-  {
     "id": "always-carry-you--matt-maher",
     "title": "Always Carry You",
     "composer": "Matt Maher",
@@ -8156,45 +7921,6 @@
     ]
   },
   {
-    "id": "we-are-the-light-of-the-world--jean-anthony-greif",
-    "title": "We Are the Light of the World",
-    "composer": "Jean Anthony Greif",
-    "resources": [],
-    "usageCount": 6,
-    "occasions": [
-      "ordinary-time-04-a",
-      "ordinary-time-06-a",
-      "ordinary-time-06-b",
-      "ordinary-time-06-c"
-    ],
-    "category": "song",
-    "functions": [
-      "communion",
-      "offertory"
-    ],
-    "catalogs": {
-      "bb2026": 520,
-      "spiritSong": 237
-    },
-    "scriptureRefs": [
-      "Matthew 5:3-12,14-16",
-      "Ephesians 5:3-12,14-16",
-      "Psalm 23"
-    ],
-    "topics": [
-      "Care of the Sick",
-      "Comfort",
-      "Eternal Life/Heaven",
-      "Faith",
-      "Good Shepherd",
-      "Holy Spirit",
-      "Hope",
-      "Petition/Prayer",
-      "Refuge",
-      "Retreats"
-    ]
-  },
-  {
     "id": "jesus-the-bread-of-life--grayson-warren-brown",
     "title": "Jesus, the Bread of Life",
     "composer": "Grayson Warren Brown",
@@ -8279,62 +8005,6 @@
     "functions": [
       "communion"
     ]
-  },
-  {
-    "id": "crux-fidelis--steven-c-warner-adapt-from",
-    "title": "Crux Fidelis",
-    "composer": "Steven C. Warner - Adapt. from",
-    "resources": [],
-    "usageCount": 6,
-    "occasions": [
-      "palm-sunday-a",
-      "palm-sunday-b",
-      "palm-sunday-c"
-    ],
-    "category": "song",
-    "functions": [
-      "communion"
-    ],
-    "catalogs": {
-      "gather4": 969
-    },
-    "topics": [
-      "Christian Life",
-      "Community",
-      "Compassion",
-      "Courage",
-      "Cross",
-      "Discipleship",
-      "Hope",
-      "Jesus Christ",
-      "Journey",
-      "Joy",
-      "Justice",
-      "Love of God for Us",
-      "Offering",
-      "Service",
-      "Song",
-      "Suffering"
-    ]
-  },
-  {
-    "id": "god-of-mercy--rick-manalo-csp-bob-hurd",
-    "title": "God of Mercy",
-    "composer": "Rick Manalo, CSP &  Bob Hurd",
-    "resources": [],
-    "usageCount": 6,
-    "occasions": [
-      "easter-02-divine-mercy-a",
-      "easter-02-divine-mercy-b",
-      "easter-02-divine-mercy-c"
-    ],
-    "category": "song",
-    "functions": [
-      "communion"
-    ],
-    "catalogs": {
-      "bb2026": 501
-    }
   },
   {
     "id": "go-make-of-all-disciples--ellacombe-leon-m-adkins",
@@ -8852,40 +8522,6 @@
     ]
   },
   {
-    "id": "let-there-be-peace-on-earth--jill-jackson-sy-miller",
-    "title": "Let There Be Peace on Earth",
-    "composer": "Jill Jackson • Sy Miller",
-    "resources": [],
-    "usageCount": 5,
-    "occasions": [
-      "ordinary-time-02-a",
-      "ordinary-time-02-b",
-      "ordinary-time-02-c",
-      "ordinary-time-14-c"
-    ],
-    "category": "song",
-    "functions": [
-      "sending"
-    ],
-    "catalogs": {
-      "bb2026": 508,
-      "aahh": 498
-    },
-    "topics": [
-      "Aspiration",
-      "Brotherhood/World Peace",
-      "Church/Family of Believers",
-      "Discipleship",
-      "God/The Father",
-      "Ministry/Mission",
-      "Peace",
-      "Sending Forth"
-    ],
-    "scriptureRefs": [
-      "Hebrews 12:14"
-    ]
-  },
-  {
     "id": "mass-of-communion-lower-key--matt-maher",
     "title": "Mass of Communion (Lower Key)",
     "composer": "Matt Maher",
@@ -8977,7 +8613,7 @@
     "title": "What A Beautiful Name (Gospel Version)",
     "composer": "Hillsong Worship",
     "resources": [],
-    "usageCount": 5,
+    "usageCount": 6,
     "occasions": [
       "ordinary-time-03-a-word-of-god-sunday",
       "ordinary-time-03-b-word-of-god-sunday",
@@ -9043,12 +8679,13 @@
     "title": "This Is the Kingdom",
     "composer": "Elevation Worship • Pat Barrett • Arr. by E. Fajardo",
     "resources": [],
-    "usageCount": 5,
+    "usageCount": 6,
     "occasions": [
       "ordinary-time-04-a",
       "ordinary-time-18-c",
       "ordinary-time-25-c",
-      "ordinary-time-30-c"
+      "ordinary-time-30-c",
+      "ordinary-time-17-c"
     ],
     "category": "song",
     "functions": [
@@ -9116,10 +8753,12 @@
     "title": "This Little Light of Mine",
     "composer": "Spiritual",
     "resources": [],
-    "usageCount": 5,
+    "usageCount": 9,
     "occasions": [
       "ordinary-time-05-a",
-      "ordinary-time-19-c"
+      "ordinary-time-19-c",
+      "feast-abc-feb-2-presentation-of-the-lord",
+      "ordinary-time-08-c"
     ],
     "category": "song",
     "functions": [
@@ -9236,48 +8875,6 @@
       "Harvest",
       "Love of God for Us",
       "Trust",
-      "Welcome"
-    ]
-  },
-  {
-    "id": "all-are-welcome--marty-haugen",
-    "title": "All Are Welcome",
-    "composer": "Marty Haugen",
-    "resources": [],
-    "usageCount": 5,
-    "occasions": [
-      "ordinary-time-08-a",
-      "ordinary-time-08-b",
-      "ordinary-time-08-c",
-      "feast-of-st-monica"
-    ],
-    "category": "song",
-    "functions": [
-      "gathering"
-    ],
-    "catalogs": {
-      "bb2026": 443,
-      "gather4": 915
-    },
-    "scriptureRefs": [
-      "Psalm 46"
-    ],
-    "topics": [
-      "Confidence",
-      "Gathering",
-      "Love of God for Us",
-      "Power of God",
-      "Praise",
-      "Refuge",
-      "Trust",
-      "Christian Life",
-      "Church",
-      "Community",
-      "Feast",
-      "Love for Others",
-      "Reconciliation",
-      "Service",
-      "Unity",
       "Welcome"
     ]
   },
@@ -9684,34 +9281,6 @@
     ]
   },
   {
-    "id": "when-the-saints-go-marching-in--traditional-arr-bonilla-rubato-intro",
-    "title": "When the Saints Go Marching In",
-    "composer": "TRADITIONAL Arr. Bonilla (Rubato Intro)",
-    "resources": [],
-    "usageCount": 5,
-    "occasions": [
-      "ss-peter-paul-apostles-jun-29-mass-during-the-day-abc",
-      "solemnity-nov-1-all-souls-abc",
-      "ordinary-time-33-c"
-    ],
-    "category": "song",
-    "functions": [
-      "gathering",
-      "sending"
-    ],
-    "catalogs": {
-      "aahh": 595
-    },
-    "scriptureRefs": [
-      "Jude 14-15"
-    ],
-    "topics": [
-      "Church/Family of Believers",
-      "Eternal Life",
-      "Jesus Christ/Lordship"
-    ]
-  },
-  {
     "id": "lift-high-the-cross--crucifer-sydney-h-nicholson",
     "title": "Lift High the Cross",
     "composer": "CRUCIFER • Sydney H. Nicholson",
@@ -9745,20 +9314,6 @@
       "Jesus Christ/His Name",
       "Praise",
       "Sunday, the Lord's Day"
-    ]
-  },
-  {
-    "id": "all-are-welcome-vs-4-rubato-vss-1-2--two-oaks-marty-haugen",
-    "title": "All Are Welcome - Vs 4 (Rubato), Vss 1 - 2",
-    "composer": "TWO OAKS • Marty Haugen",
-    "resources": [],
-    "usageCount": 5,
-    "occasions": [
-      "ordinary-time-16-c"
-    ],
-    "category": "song",
-    "functions": [
-      "gathering"
     ]
   },
   {
@@ -9828,20 +9383,6 @@
       "feast-of-st-monica"
     ],
     "category": "psalm"
-  },
-  {
-    "id": "we-place-our-trust-in-you--thaxted-o-god-beyond-all-praising-jeff-bonilla",
-    "title": "We Place Our Trust In You",
-    "composer": "THAXTED (O God Beyond All Praising) • Jeff Bonilla",
-    "resources": [],
-    "usageCount": 5,
-    "occasions": [
-      "ordinary-time-22-c"
-    ],
-    "category": "song",
-    "functions": [
-      "sending"
-    ]
   },
   {
     "id": "loved--ben-smith-pat-barrett",
@@ -10032,21 +9573,6 @@
     ]
   },
   {
-    "id": "the-first-noel-nowell--arranged-by-matt-maher-adapt-by-arielle-phan",
-    "title": "The First Noel (Nowell)",
-    "composer": "Arranged by Matt Maher • Adapt. by Arielle Phan",
-    "resources": [],
-    "usageCount": 4,
-    "occasions": [
-      "2nd-sun-after-christmas-abc-epiphany-replaces-in-adla",
-      "the-epiphany-of-the-lord-abc"
-    ],
-    "category": "song",
-    "functions": [
-      "communion"
-    ]
-  },
-  {
     "id": "go-tell-it-on-the-mountain--arrangement-by-david-lockwood",
     "title": "Go Tell It On the Mountain",
     "composer": "Arrangement by David Lockwood",
@@ -10154,21 +9680,6 @@
       "Hope",
       "Peace",
       "Petition / Prayer"
-    ]
-  },
-  {
-    "id": "we-are-many-parts--marty-haugen",
-    "title": "We Are Many Parts",
-    "composer": "Marty Haugen",
-    "resources": [],
-    "usageCount": 4,
-    "occasions": [
-      "ordinary-time-02-c",
-      "ss-peter-paul-apostles-jun-29-mass-during-the-day-abc"
-    ],
-    "category": "song",
-    "functions": [
-      "communion"
     ]
   },
   {
@@ -10299,21 +9810,6 @@
     "functions": [
       "communion",
       "offertory"
-    ]
-  },
-  {
-    "id": "i-am-yours-consume-me-completely--danielle-rose-hesley-trevor-thomson",
-    "title": "I Am Yours (Consume Me, Completely)",
-    "composer": "Danielle Rose Hesley • Trevor Thomson",
-    "resources": [],
-    "usageCount": 4,
-    "occasions": [
-      "feast-abc-feb-2-presentation-of-the-lord",
-      "ordinary-time-16-c"
-    ],
-    "category": "song",
-    "functions": [
-      "communion"
     ]
   },
   {
@@ -10490,22 +9986,6 @@
     ]
   },
   {
-    "id": "lord-i-need-you--matt-maher-1",
-    "title": "Lord, I Need You",
-    "composer": "Matt Maher",
-    "resources": [],
-    "usageCount": 4,
-    "occasions": [
-      "ordinary-time-05-a",
-      "ordinary-time-17-c"
-    ],
-    "category": "song",
-    "functions": [
-      "communion",
-      "offertory"
-    ]
-  },
-  {
     "id": "ps-138-in-the-sight-of-the-angels-i-will-sing--the-lyric-psalter-tony-alonso-marty-haugen",
     "title": "Ps 138 In the sight of the angels I will sing...",
     "composer": "The Lyric Psalter • Tony Alonso & Marty Haugen",
@@ -10516,21 +9996,6 @@
       "ordinary-time-05-c"
     ],
     "category": "psalm"
-  },
-  {
-    "id": "all-who-enter-here--dan-houze-john-angotti",
-    "title": "All Who Enter Here",
-    "composer": "Dan Houze & John Angotti",
-    "resources": [],
-    "usageCount": 4,
-    "occasions": [
-      "ordinary-time-05-c",
-      "ordinary-time-08-c"
-    ],
-    "category": "song",
-    "functions": [
-      "gathering"
-    ]
   },
   {
     "id": "here-i-am-lord--dan-schutte-arranged-by-lockwood-bonilla",
@@ -10765,12 +10230,15 @@
     "title": "God of Mercy",
     "composer": "Ricky Manalo, CSP • Bob Hurd",
     "resources": [],
-    "usageCount": 4,
+    "usageCount": 10,
     "occasions": [
       "lent-02-a",
       "lent-02-b",
       "lent-02-c",
-      "lent-05-c"
+      "lent-05-c",
+      "easter-02-divine-mercy-a",
+      "easter-02-divine-mercy-b",
+      "easter-02-divine-mercy-c"
     ],
     "category": "song",
     "functions": [
@@ -10821,23 +10289,6 @@
       "Justice",
       "Love for Others",
       "Peace"
-    ]
-  },
-  {
-    "id": "we-walk-by-faith--marty-haugen-original-arrangement",
-    "title": "We Walk By Faith",
-    "composer": "Marty Haugen • Original Arrangement",
-    "resources": [],
-    "usageCount": 4,
-    "occasions": [
-      "easter-02-divine-mercy-a",
-      "easter-02-divine-mercy-b",
-      "easter-02-divine-mercy-c"
-    ],
-    "category": "song",
-    "functions": [
-      "communion",
-      "offertory"
     ]
   },
   {
@@ -11147,28 +10598,6 @@
     ]
   },
   {
-    "id": "jesus-the-lord--roc-o-connor-sj-john-foley-sj",
-    "title": "Jesus the Lord",
-    "composer": "Roc O’Connor SJ  • John Foley SJ",
-    "resources": [],
-    "usageCount": 4,
-    "occasions": [
-      "feast-the-exaltation-sep-14-of-the-holy-cross-abc",
-      "solemnity-christ-the-king-c"
-    ],
-    "category": "song",
-    "functions": [
-      "communion"
-    ],
-    "catalogs": {
-      "bb2026": 419
-    },
-    "topics": [
-      "Longing for God",
-      "Unity"
-    ]
-  },
-  {
     "id": "all-creatures-of-our-god-and-king--lasst-uns-erfreuen-arr-by-david-lockwood",
     "title": "All Creatures of Our God and King",
     "composer": "LASST UNS ERFREUEN • Arr. by David Lockwood",
@@ -11243,22 +10672,6 @@
     ]
   },
   {
-    "id": "when-the-saints-go-marching-in--traditional-arr-bonilla",
-    "title": "When the Saints Go Marching In",
-    "composer": "TRADITIONAL Arr. Bonilla",
-    "resources": [],
-    "usageCount": 4,
-    "occasions": [
-      "solemnity-nov-1-all-souls-abc",
-      "ordinary-time-33-c"
-    ],
-    "category": "song",
-    "functions": [
-      "gathering",
-      "sending"
-    ]
-  },
-  {
     "id": "ps-122-let-us-go-rejoicing-to-the-house--the-lyric-psalter-tony-alonso-marty-haugen",
     "title": "Ps 122 Let us go rejoicing to the house...",
     "composer": "The Lyric Psalter • Tony Alonso & Marty Haugen",
@@ -11268,23 +10681,6 @@
       "solemnity-christ-the-king-c"
     ],
     "category": "psalm"
-  },
-  {
-    "id": "wait-for-the-lord--jacques-berthier-taiz-community",
-    "title": "Wait for the Lord",
-    "composer": "Jacques Berthier · Taizé Community",
-    "resources": [],
-    "usageCount": 3,
-    "occasions": [
-      "advent-01-a",
-      "advent-01-b",
-      "advent-01-c"
-    ],
-    "category": "song",
-    "functions": [
-      "communion",
-      "offertory"
-    ]
   },
   {
     "id": "jesus-hope-of-the-world--paul-tate",
@@ -11450,44 +10846,6 @@
     "category": "psalm"
   },
   {
-    "id": "creator-of-the-stars-of-night--conditor-alme-siderum-lm-mode-iv",
-    "title": "Creator of the Stars of Night",
-    "composer": "CONDITOR ALME SIDERUM, LM; Mode IV",
-    "resources": [],
-    "usageCount": 3,
-    "occasions": [
-      "advent-03-a",
-      "advent-03-b",
-      "advent-03-c"
-    ],
-    "category": "song",
-    "functions": [
-      "communion",
-      "gathering"
-    ],
-    "catalogs": {
-      "bb2026": 67
-    },
-    "scriptureRefs": [
-      "Wisdom 18:14–15",
-      "Isaiah 9:1–2",
-      "Amos 5:8",
-      "Matthew 4:16",
-      "Luke 1:31",
-      "Luke 2:5",
-      "Romans 4:25",
-      "Romans 5:4, 13",
-      "Romans 8:19–20",
-      "Philippians 2:10–11",
-      "Colossians 1:16",
-      "Hebrews 1:2"
-    ],
-    "topics": [
-      "Second Coming",
-      "Salvation"
-    ]
-  },
-  {
     "id": "rejoice-the-lord-is-king--darwall-s-148th-charles-wesley",
     "title": "Rejoice, the Lord Is King",
     "composer": "DARWALL'S 148TH · Charles Wesley",
@@ -11583,7 +10941,7 @@
     "title": "Creator of the Stars of Night",
     "composer": "CONDITOR ALME SIDERUM",
     "resources": [],
-    "usageCount": 3,
+    "usageCount": 6,
     "occasions": [
       "advent-03-a",
       "advent-03-b",
@@ -11646,7 +11004,7 @@
     "title": "The Angel Gabriel from Heaven Came",
     "composer": "GABRIEL'S MESSAGE • Basque Carol",
     "resources": [],
-    "usageCount": 3,
+    "usageCount": 6,
     "occasions": [
       "advent-04-a",
       "advent-04-b",
@@ -11705,22 +11063,6 @@
     ]
   },
   {
-    "id": "the-angel-gabriel-from-heaven-came--trad-basque-carol-tr-by-sabine-baring-gould",
-    "title": "The Angel Gabriel from Heaven Came",
-    "composer": "trad. Basque Carol • tr. by Sabine Baring-Gould",
-    "resources": [],
-    "usageCount": 3,
-    "occasions": [
-      "advent-04-a",
-      "advent-04-b",
-      "advent-04-c"
-    ],
-    "category": "song",
-    "functions": [
-      "gathering"
-    ]
-  },
-  {
     "id": "people-look-east--eleanor-farjeon-arr-by-marty-haugen",
     "title": "People Look East",
     "composer": "Eleanor Farjeon • Arr. by Marty Haugen",
@@ -11759,7 +11101,7 @@
     "title": "O Come, O Come Emmanuel",
     "composer": "VENI, VENI, EMMANUEL",
     "resources": [],
-    "usageCount": 3,
+    "usageCount": 9,
     "occasions": [
       "advent-04-a",
       "advent-04-b",
@@ -12155,23 +11497,6 @@
     "category": "psalm"
   },
   {
-    "id": "peace-on-earth-larghetto--dvo-k-adapted-by-bob-hurd-1",
-    "title": "Peace on Earth (Larghetto)",
-    "composer": "Dvořák adapted by Bob Hurd",
-    "resources": [],
-    "usageCount": 3,
-    "occasions": [
-      "ordinary-time-02-a",
-      "ordinary-time-02-b",
-      "ordinary-time-02-c"
-    ],
-    "category": "song",
-    "functions": [
-      "offertory",
-      "prelude"
-    ]
-  },
-  {
     "id": "ps-96-proclaim-his-marvelous-deeds--spirit-psalm-cooper-ray",
     "title": "Ps 96 Proclaim his marvelous deeds...",
     "composer": "Spirit & Psalm • Cooper Ray",
@@ -12245,21 +11570,6 @@
     ]
   },
   {
-    "id": "this-little-light-of-mine--spiritual-black-history-month",
-    "title": "This Little Light of Mine",
-    "composer": "Spiritual • Black History Month",
-    "resources": [],
-    "usageCount": 3,
-    "occasions": [
-      "feast-abc-feb-2-presentation-of-the-lord"
-    ],
-    "category": "song",
-    "functions": [
-      "prelude",
-      "sending"
-    ]
-  },
-  {
     "id": "ps-24-who-is-this-king-of-glory-it-is-the-lord--spirit-psalm-josh-blakesley",
     "title": "Ps 24 Who is this king of glory? It is the Lord!",
     "composer": "Spirit & Psalm • Josh Blakesley",
@@ -12269,32 +11579,6 @@
       "feast-abc-feb-2-presentation-of-the-lord"
     ],
     "category": "psalm"
-  },
-  {
-    "id": "i-am-yours--trevor-thomson",
-    "title": "I Am Yours",
-    "composer": "Trevor Thomson",
-    "resources": [],
-    "usageCount": 3,
-    "occasions": [
-      "ordinary-time-05-a"
-    ],
-    "category": "song",
-    "functions": [
-      "communion"
-    ],
-    "catalogs": {
-      "novum": 80
-    },
-    "topics": [
-      "Christian Life",
-      "Discipleship",
-      "Grace",
-      "Jesus Christ",
-      "Love for God",
-      "Mercy",
-      "Peace"
-    ]
   },
   {
     "id": "ps-112-the-just-man-is-a-light-in-darkness--spirit-psalm-steve-angrisano",
@@ -12401,11 +11685,13 @@
     "title": "As We Gather at Your Table",
     "composer": "NETTLETON  • Carl P. Daw Jr.",
     "resources": [],
-    "usageCount": 3,
+    "usageCount": 5,
     "occasions": [
       "ordinary-time-07-a",
       "ordinary-time-07-b",
-      "ordinary-time-07-c"
+      "ordinary-time-07-c",
+      "ordinary-time-05-b",
+      "ordinary-time-05-c"
     ],
     "category": "song",
     "functions": [
@@ -12705,36 +11991,6 @@
     ]
   },
   {
-    "id": "jesus-the-lord--roc-o-connor-sj",
-    "title": "Jesus, the Lord",
-    "composer": "Roc O’Connor, SJ",
-    "resources": [],
-    "usageCount": 3,
-    "occasions": [
-      "lent-02-a",
-      "lent-02-b",
-      "lent-02-c"
-    ],
-    "category": "song",
-    "functions": [
-      "communion"
-    ]
-  },
-  {
-    "id": "belovedness--sarah-kroger",
-    "title": "Belovedness",
-    "composer": "Sarah Kroger",
-    "resources": [],
-    "usageCount": 3,
-    "occasions": [
-      "lent-03-a-first-scrutiny"
-    ],
-    "category": "song",
-    "functions": [
-      "communion"
-    ]
-  },
-  {
     "id": "ps-95-if-today-you-hear-his-voice-harden-not--the-lyric-psalter-tony-alonso-marty-haugen",
     "title": "Ps 95 If today you hear his voice harden not...",
     "composer": "The Lyric Psalter • Tony Alonso & Marty Haugen",
@@ -12880,9 +12136,17 @@
     "title": "We Belong to You",
     "composer": "Trevor Thomson • Victoria Thomson",
     "resources": [],
-    "usageCount": 3,
+    "usageCount": 11,
     "occasions": [
-      "lent-05-a-third-scrutiny"
+      "lent-05-a-third-scrutiny",
+      "ordinary-time-02-a",
+      "ordinary-time-05-c",
+      "easter-04-c",
+      "ss-peter-paul-apostles-jun-29-at-the-vigil-mass-abc",
+      "ordinary-time-16-c",
+      "ordinary-time-19-c",
+      "feast-of-st-monica",
+      "ordinary-time-28-c"
     ],
     "category": "song",
     "functions": [
@@ -13034,58 +12298,6 @@
     "category": "song",
     "functions": [
       "offertory"
-    ]
-  },
-  {
-    "id": "the-king-of-love-my-shepherd-is--loch-lomond-baker-edward-eicker",
-    "title": "The King of Love My Shepherd Is",
-    "composer": "LOCH LOMOND • Baker • Edward Eicker",
-    "resources": [],
-    "usageCount": 3,
-    "occasions": [
-      "easter-04-c",
-      "ss-peter-paul-apostles-jun-29-at-the-vigil-mass-abc"
-    ],
-    "category": "song",
-    "functions": [
-      "communion"
-    ],
-    "catalogs": {
-      "bb2026": 450,
-      "gather4": 786
-    },
-    "scriptureRefs": [
-      "Deuteronomy 8:3",
-      "Matthew 4:4",
-      "Matthew 6:33",
-      "Luke 11:9–10",
-      "Luke 12:31",
-      "Psalm 23:",
-      "Matthew 18:10-14",
-      "Luke 15:3-7",
-      "John 10:"
-    ],
-    "topics": [
-      "Christian Life",
-      "Confidence",
-      "Holy Spirit",
-      "Kingdom/Reign of God",
-      "Petition/Prayer",
-      "Comfort",
-      "Courage",
-      "Cross",
-      "Guidance",
-      "Homecoming",
-      "Hope",
-      "Journey",
-      "Love of God for Us",
-      "Mercy",
-      "Petition / Prayer",
-      "Praise",
-      "Providence",
-      "Reconciliation",
-      "Shepherd",
-      "Trust"
     ]
   },
   {
@@ -13724,22 +12936,6 @@
     ]
   },
   {
-    "id": "center-of-my-life--paul-inwood",
-    "title": "Center of My Life",
-    "composer": "Paul Inwood",
-    "resources": [],
-    "usageCount": 3,
-    "occasions": [
-      "ordinary-time-25-c",
-      "ordinary-time-30-c"
-    ],
-    "category": "song",
-    "functions": [
-      "communion",
-      "offertory"
-    ]
-  },
-  {
     "id": "i-want-to-walk-as-a-child-of-the-light--houston-kathleen-thomerson",
     "title": "I Want to Walk as a Child of the Light",
     "composer": "HOUSTON • Kathleen Thomerson",
@@ -14173,21 +13369,6 @@
     "category": "psalm"
   },
   {
-    "id": "christ-be-our-light-welcome--b-farrell-adapted-by-j-bonilla-d-lockwood",
-    "title": "Christ Be Our Light (Welcome)",
-    "composer": "B. Farrell · Adapted by J. Bonilla & D. Lockwood",
-    "resources": [],
-    "usageCount": 2,
-    "occasions": [
-      "advent-02-a",
-      "advent-02-c"
-    ],
-    "category": "song",
-    "functions": [
-      "gathering"
-    ]
-  },
-  {
     "id": "8-second-sunday-of-advent--let-us-all-rejoice-angrisano-hart-stephan",
     "title": "8 – Second Sunday of Advent",
     "composer": "Let Us All REJOICE! Angrisano, Hart, & Stephan",
@@ -14376,21 +13557,6 @@
     ]
   },
   {
-    "id": "the-first-noel-nowell--arr-by-matt-maher-adapt-by-arielle-phan",
-    "title": "The First Noel (Nowell)",
-    "composer": "Arr. by Matt Maher • Adapt. by Arielle Phan",
-    "resources": [],
-    "usageCount": 2,
-    "occasions": [
-      "2nd-sun-after-christmas-abc-epiphany-replaces-in-adla",
-      "the-epiphany-of-the-lord-abc"
-    ],
-    "category": "song",
-    "functions": [
-      "communion"
-    ]
-  },
-  {
     "id": "ps-72-lord-every-nation-on-earth-will-adore-you--the-lyric-psalter-tony-alonso-marty-haugen",
     "title": "Ps 72 Lord, every nation on earth will adore you.",
     "composer": "The Lyric Psalter • Tony Alonso & Marty Haugen",
@@ -14554,21 +13720,6 @@
     "category": "psalm",
     "functions": [
       "communion"
-    ]
-  },
-  {
-    "id": "let-there-be-peace-on-earth--jill-jackson-sy-miller-1",
-    "title": "Let There Be Peace on Earth",
-    "composer": "Jill Jackson, Sy Miller",
-    "resources": [],
-    "usageCount": 2,
-    "occasions": [
-      "ordinary-time-02-b",
-      "ordinary-time-02-c"
-    ],
-    "category": "song",
-    "functions": [
-      "sending"
     ]
   },
   {
@@ -14780,36 +13931,6 @@
     ]
   },
   {
-    "id": "all-are-welcome-vss-1-2-4--two-oaks-marty-haugen",
-    "title": "All Are Welcome (Vss 1, 2, 4)",
-    "composer": "TWO OAKS • Marty Haugen",
-    "resources": [],
-    "usageCount": 2,
-    "occasions": [
-      "ordinary-time-04-a"
-    ],
-    "category": "song",
-    "functions": [
-      "gathering"
-    ]
-  },
-  {
-    "id": "we-are-the-light-of-the-world--jean-anthony-greif-traditional-arrangement",
-    "title": "We Are the Light of the World",
-    "composer": "Jean Anthony Greif (Traditional Arrangement)",
-    "resources": [],
-    "usageCount": 2,
-    "occasions": [
-      "ordinary-time-04-a",
-      "ordinary-time-06-a"
-    ],
-    "category": "song",
-    "functions": [
-      "communion",
-      "offertory"
-    ]
-  },
-  {
     "id": "ps-146-blessed-the-poor-in-spirit--the-lyric-psalter-tony-alonso-marty-haugen",
     "title": "Ps 146 Blessed the poor in spirit...",
     "composer": "The Lyric Psalter • Tony Alonso & Marty Haugen",
@@ -14961,51 +14082,6 @@
     "category": "psalm"
   },
   {
-    "id": "come-worship-the-lord--john-michael-talbot-1",
-    "title": "Come Worship The Lord",
-    "composer": "John Michael Talbot",
-    "resources": [],
-    "usageCount": 2,
-    "occasions": [
-      "ordinary-time-05-b",
-      "ordinary-time-05-c"
-    ],
-    "category": "song",
-    "functions": [
-      "gathering"
-    ]
-  },
-  {
-    "id": "as-we-gather-at-your-table--nettleton-carl-p-daw-ocp",
-    "title": "As We Gather at Your Table",
-    "composer": "NETTLETON • Carl P. Daw • OCP",
-    "resources": [],
-    "usageCount": 2,
-    "occasions": [
-      "ordinary-time-05-b",
-      "ordinary-time-05-c"
-    ],
-    "category": "song",
-    "functions": [
-      "gathering"
-    ]
-  },
-  {
-    "id": "we-walk-by-faith-haugen-traditional--marty-haugen-arranged-by-carol-browning",
-    "title": "We Walk By Faith - Haugen (Traditional)",
-    "composer": "Marty Haugen • Arranged by Carol Browning",
-    "resources": [],
-    "usageCount": 2,
-    "occasions": [
-      "ordinary-time-05-b",
-      "ordinary-time-05-c"
-    ],
-    "category": "song",
-    "functions": [
-      "offertory"
-    ]
-  },
-  {
     "id": "ordinary-time-05c--the-lyric-gospel-acclamations-tony-alonso",
     "title": "ORDINARY TIME • 05C",
     "composer": "The Lyric Gospel Acclamations • Tony Alonso",
@@ -15066,34 +14142,6 @@
     "category": "song",
     "functions": [
       "gospel_acclamation"
-    ]
-  },
-  {
-    "id": "make-us-true-servants-text--slane-susan-g-wente",
-    "title": "Make Us True Servants (Text)",
-    "composer": "SLANE • Susan G Wente",
-    "resources": [],
-    "usageCount": 2,
-    "occasions": [
-      "ordinary-time-06-c"
-    ],
-    "category": "song",
-    "functions": [
-      "gathering"
-    ]
-  },
-  {
-    "id": "in-christ-there-is-no-east-or-west--william-a-dunkerley-arranged-by-david-lockwood",
-    "title": "in Christ There Is No East or West",
-    "composer": "William A. Dunkerley • Arranged by David Lockwood",
-    "resources": [],
-    "usageCount": 2,
-    "occasions": [
-      "ordinary-time-06-c"
-    ],
-    "category": "song",
-    "functions": [
-      "sending"
     ]
   },
   {
@@ -15663,9 +14711,16 @@
     "title": "I Am Yours (Consume Me Completely )",
     "composer": "Trevor Thomson",
     "resources": [],
-    "usageCount": 2,
+    "usageCount": 19,
     "occasions": [
-      "easter-04-c"
+      "easter-04-c",
+      "solemnity-body-blood-of-christ-a",
+      "solemnity-body-blood-of-christ-b",
+      "solemnity-body-blood-of-christ-c",
+      "ordinary-time-29-c",
+      "feast-abc-feb-2-presentation-of-the-lord",
+      "ordinary-time-16-c",
+      "ordinary-time-05-a"
     ],
     "category": "song",
     "functions": [
@@ -16200,20 +15255,6 @@
     ]
   },
   {
-    "id": "the-king-of-love-my-shepherd-is-hymn--loch-lomond-baker-edward-eicker",
-    "title": "The King of Love My Shepherd Is (Hymn)",
-    "composer": "LOCH LOMOND • Baker • Edward Eicker",
-    "resources": [],
-    "usageCount": 2,
-    "occasions": [
-      "ordinary-time-20-c"
-    ],
-    "category": "song",
-    "functions": [
-      "communion"
-    ]
-  },
-  {
     "id": "ps-40-lord-come-to-my-aid--the-lyric-psalter-tony-alonso-marty-haugen",
     "title": "Ps 40 Lord, come to my aid!",
     "composer": "The Lyric Psalter • Tony Alonso & Marty Haugen",
@@ -16337,9 +15378,12 @@
     "title": "Crux Fidelis",
     "composer": "Steven C. Warner",
     "resources": [],
-    "usageCount": 2,
+    "usageCount": 8,
     "occasions": [
-      "feast-the-exaltation-sep-14-of-the-holy-cross-abc"
+      "feast-the-exaltation-sep-14-of-the-holy-cross-abc",
+      "palm-sunday-a",
+      "palm-sunday-b",
+      "palm-sunday-c"
     ],
     "category": "song",
     "functions": [
@@ -17252,22 +16296,6 @@
     ]
   },
   {
-    "id": "build-a-family--ed-bolduc-arr-by-dan-houze",
-    "title": "Build A Family",
-    "composer": "Ed Bolduc • Arr. by Dan Houze",
-    "resources": [],
-    "usageCount": 1,
-    "occasions": [
-      "baptism-of-the-lord-c"
-    ],
-    "category": "song",
-    "functions": [
-      "communion",
-      "offertory",
-      "prelude"
-    ]
-  },
-  {
     "id": "lamb-of-god-what-wondrous-love--faure-kane-arr-allan-robert-petker",
     "title": "Lamb of God, What Wondrous Love",
     "composer": "Faure • Kane • arr. Allan Robert Petker",
@@ -17340,9 +16368,10 @@
     "title": "Broken Vessels (Amazing Grace)",
     "composer": "Hillsong Worship",
     "resources": [],
-    "usageCount": 1,
+    "usageCount": 2,
     "occasions": [
-      "ordinary-time-02-c"
+      "ordinary-time-02-c",
+      "lent-04-a-second-scrutiny"
     ],
     "category": "song",
     "functions": [
@@ -17931,50 +16960,6 @@
     ]
   },
   {
-    "id": "this-little-light-of-mine",
-    "title": "This Little Light of Mine",
-    "resources": [],
-    "usageCount": 1,
-    "occasions": [
-      "ordinary-time-08-c"
-    ],
-    "category": "song",
-    "functions": [
-      "prelude",
-      "sending"
-    ],
-    "catalogs": {
-      "aahh": 549,
-      "gather4": 651
-    },
-    "scriptureRefs": [
-      "Matthew 5:14-16",
-      "Matthew 5:16"
-    ],
-    "topics": [
-      "Challenge of Gospel",
-      "Children's Hymns",
-      "Christian Life",
-      "Cleansing",
-      "Comfort",
-      "Courage",
-      "Discipleship",
-      "Evangelization",
-      "God/Glory and Power",
-      "Holiness/Purity",
-      "Jesus Christ/Glory and Power",
-      "Life",
-      "Light",
-      "Mission",
-      "Peace",
-      "Praise",
-      "Sanctification",
-      "Sending Forth",
-      "Spirituals",
-      "Strength"
-    ]
-  },
-  {
     "id": "mass-of-endless-mercy--ordinary-time-08c",
     "title": "Mass of Endless Mercy",
     "composer": "ORDINARY TIME • 08C",
@@ -18177,20 +17162,6 @@
     "topics": [
       "Conversion",
       "Sin"
-    ]
-  },
-  {
-    "id": "broken-vessels--hillsong-worship",
-    "title": "Broken Vessels",
-    "composer": "Hillsong Worship",
-    "resources": [],
-    "usageCount": 1,
-    "occasions": [
-      "lent-04-a-second-scrutiny"
-    ],
-    "category": "song",
-    "functions": [
-      "communion"
     ]
   },
   {
@@ -18400,9 +17371,10 @@
     "title": "Belovedness",
     "composer": "Sarah Kroger • Arranged by Arielle Phan",
     "resources": [],
-    "usageCount": 1,
+    "usageCount": 4,
     "occasions": [
-      "lent-05-c"
+      "lent-05-c",
+      "lent-03-a-first-scrutiny"
     ],
     "category": "song",
     "functions": [
@@ -18838,35 +17810,6 @@
     "category": "song",
     "functions": [
       "gloria"
-    ]
-  },
-  {
-    "id": "in-christ-alone--keith-getty-and-stuart-townend",
-    "title": "In Christ Alone",
-    "composer": "Keith Getty and Stuart Townend",
-    "resources": [],
-    "usageCount": 1,
-    "occasions": [
-      "ascension-c"
-    ],
-    "category": "song",
-    "functions": [
-      "communion",
-      "offertory"
-    ],
-    "catalogs": {
-      "bb2026": 414,
-      "spiritSong": 320
-    },
-    "scriptureRefs": [
-      "Psalm 104:30",
-      "John 14:24–26"
-    ],
-    "topics": [
-      "Holy Spirit",
-      "Justice",
-      "Social Concern",
-      "Stewardship"
     ]
   },
   {
@@ -19512,21 +18455,6 @@
     ]
   },
   {
-    "id": "this-is-the-kingdom--elevation-worship-pat-barrett-fajardo-jones-arr",
-    "title": "This Is the Kingdom",
-    "composer": "Elevation Worship • Pat Barrett • (Fajardo-Jones Arr.)",
-    "resources": [],
-    "usageCount": 1,
-    "occasions": [
-      "ordinary-time-17-c"
-    ],
-    "category": "song",
-    "functions": [
-      "communion",
-      "prelude"
-    ]
-  },
-  {
     "id": "setting-from-mass-of-st-mary-magdalene--o-t-18-c-blessed-are-the-poor",
     "title": "Setting from Mass of St. Mary Magdalene",
     "composer": "O.T. • 18 | C — \"Blessed are the poor...\"",
@@ -19558,9 +18486,12 @@
     "title": "Wait for the Lord",
     "composer": "Taizé • Jacques Berthier",
     "resources": [],
-    "usageCount": 1,
+    "usageCount": 4,
     "occasions": [
-      "ordinary-time-19-c"
+      "ordinary-time-19-c",
+      "advent-01-a",
+      "advent-01-b",
+      "advent-01-c"
     ],
     "category": "song",
     "functions": [
@@ -19732,22 +18663,6 @@
     ]
   },
   {
-    "id": "build-a-family--ed-bolduc-arranged-by-daniel-houze",
-    "title": "Build a Family",
-    "composer": "Ed Bolduc • Arranged by Daniel Houze",
-    "resources": [],
-    "usageCount": 1,
-    "occasions": [
-      "feast-the-exaltation-sep-14-of-the-holy-cross-abc"
-    ],
-    "category": "song",
-    "functions": [
-      "communion",
-      "offertory",
-      "prelude"
-    ]
-  },
-  {
     "id": "setting-from-mass-of-st-kilian--exaltation-of-the-holy-cross-we-adore",
     "title": "Setting from Mass of St. Kilian",
     "composer": "Exaltation of the Holy Cross — \"We adore...\"",
@@ -19838,9 +18753,11 @@
     "title": "Christ Be Our Light (Welcome)",
     "composer": "Farrell • Arr. by Bonilla • Adapt. for Rite with Lockwood",
     "resources": [],
-    "usageCount": 1,
+    "usageCount": 3,
     "occasions": [
-      "ordinary-time-26-c"
+      "ordinary-time-26-c",
+      "advent-02-a",
+      "advent-02-c"
     ],
     "category": "song",
     "functions": [
@@ -19873,21 +18790,6 @@
     "category": "song",
     "functions": [
       "gospel_acclamation"
-    ]
-  },
-  {
-    "id": "we-walk-by-faith--marty-haugen",
-    "title": "We Walk By Faith",
-    "composer": "Marty Haugen",
-    "resources": [],
-    "usageCount": 1,
-    "occasions": [
-      "ordinary-time-27-c"
-    ],
-    "category": "song",
-    "functions": [
-      "communion",
-      "offertory"
     ]
   },
   {
@@ -19981,9 +18883,15 @@
     "title": "All Are Welcome",
     "composer": "TWO OAKS • Marty Haugen",
     "resources": [],
-    "usageCount": 1,
+    "usageCount": 13,
     "occasions": [
-      "ordinary-time-28-c"
+      "ordinary-time-28-c",
+      "ordinary-time-08-a",
+      "ordinary-time-08-b",
+      "ordinary-time-08-c",
+      "feast-of-st-monica",
+      "ordinary-time-16-c",
+      "ordinary-time-04-a"
     ],
     "category": "song",
     "functions": [
@@ -20128,9 +19036,13 @@
     "title": "Jesus, Remember Me",
     "composer": "Taizé • Jacques Berthier",
     "resources": [],
-    "usageCount": 1,
+    "usageCount": 9,
     "occasions": [
-      "solemnity-nov-1-all-souls-abc"
+      "solemnity-nov-1-all-souls-abc",
+      "palm-sunday-a",
+      "palm-sunday-b",
+      "palm-sunday-c",
+      "solemnity-christ-the-king-c"
     ],
     "category": "song",
     "functions": [
@@ -20247,32 +19159,16 @@
     "title": "In Christ Alone",
     "composer": "Keith & Kristyn Getty",
     "resources": [],
-    "usageCount": 1,
+    "usageCount": 2,
     "occasions": [
-      "solemnity-christ-the-king-c"
+      "solemnity-christ-the-king-c",
+      "ascension-c"
     ],
     "category": "song",
     "functions": [
       "communion",
       "offertory"
     ]
-  },
-  {
-    "id": "what-a-beautiful-name--hillsong-worship-original-version-key-of-d",
-    "title": "What A Beautiful Name",
-    "composer": "Hillsong Worship •  (Original Version) Key of D",
-    "resources": [],
-    "usageCount": 1,
-    "occasions": [
-      "solemnity-christ-the-king-c"
-    ],
-    "category": "song",
-    "functions": [
-      "communion"
-    ],
-    "catalogs": {
-      "voices": 296
-    }
   },
   {
     "id": "ps-122-let-us-go-rejoicing-to-the-house--spirit-psalm-steve-angrisano",
@@ -20336,20 +19232,6 @@
       "thanksgiving"
     ],
     "category": "psalm"
-  },
-  {
-    "id": "hallelujah--leonard-cohen-adapt-for-liturgy",
-    "title": "Hallelujah",
-    "composer": "Leonard Cohen adapt. for Liturgy",
-    "resources": [],
-    "usageCount": 1,
-    "occasions": [
-      "thanksgiving"
-    ],
-    "category": "song",
-    "functions": [
-      "gospel_acclamation"
-    ]
   },
   {
     "id": "a-charge-to-keep-i-have--charles-wesley-lowell-mason",
@@ -26921,107 +25803,6 @@
       "tuneName": "CWM RHONDDA",
       "meter": "8.7.8.7.8.7.7",
       "incipit": "565117123231643"
-    },
-    "firstLine": "Guide me, O Thou great Jehovah",
-    "languages": [
-      "English"
-    ],
-    "scriptureRefs": [
-      "Isaiah 58:11"
-    ],
-    "topics": [
-      "Burdens",
-      "Comfort",
-      "God/Care and Guidance",
-      "Guidance",
-      "Healing",
-      "Heaven",
-      "Praise",
-      "Refuge"
-    ]
-  },
-  {
-    "id": "guide-me-o-thou-great-jehovah--william-williams-peter-williams-betty-gadling",
-    "title": "Guide Me, O Thou Great Jehovah",
-    "composer": "William Williams • Peter Williams • Betty Gadling",
-    "category": "song",
-    "catalogs": {
-      "aahh": 139
-    },
-    "resources": [],
-    "usageCount": 0,
-    "occasions": [],
-    "credits": {
-      "textAuthors": [
-        {
-          "name": "William Williams",
-          "dates": "1717-1791"
-        },
-        {
-          "name": "Peter Williams",
-          "dates": "1722-1796"
-        }
-      ],
-      "composers": [
-        {
-          "name": "Betty Gadling"
-        }
-      ],
-      "tuneSources": [
-        "Traditional"
-      ]
-    },
-    "firstLine": "Guide me, O Thou great Jehovah",
-    "languages": [
-      "English"
-    ],
-    "scriptureRefs": [
-      "Isaiah 58:11"
-    ],
-    "topics": [
-      "Burdens",
-      "Comfort",
-      "God/Care and Guidance",
-      "Guidance",
-      "Healing",
-      "Heaven",
-      "Praise",
-      "Refuge"
-    ]
-  },
-  {
-    "id": "guide-me-o-thou-great-jehovah--william-williams-peter-williams-thomas-hastings",
-    "title": "Guide Me, O Thou Great Jehovah",
-    "composer": "William Williams • Peter Williams • Thomas Hastings",
-    "category": "song",
-    "catalogs": {
-      "aahh": 140
-    },
-    "resources": [],
-    "usageCount": 0,
-    "occasions": [],
-    "credits": {
-      "textAuthors": [
-        {
-          "name": "William Williams",
-          "dates": "1717-1791"
-        },
-        {
-          "name": "Peter Williams",
-          "dates": "1722-1796"
-        }
-      ],
-      "composers": [
-        {
-          "name": "Thomas Hastings",
-          "dates": "1784-1872"
-        }
-      ]
-    },
-    "tuneMeter": {
-      "tuneName": "ZION",
-      "meter": "8.7.8.7.4.7.4.7",
-      "incipit": "555315651122171"
     },
     "firstLine": "Guide me, O Thou great Jehovah",
     "languages": [
@@ -36419,58 +35200,6 @@
       "God/Worthiness",
       "Praise",
       "Worship/Adoration"
-    ]
-  },
-  {
-    "id": "o-come-o-come-emmanuel--john-mason-neale-henry-sloane-coffin-thomas-helmore",
-    "title": "O Come, O Come, Emmanuel",
-    "composer": "John Mason Neale • Henry Sloane Coffin • Thomas Helmore",
-    "category": "song",
-    "catalogs": {
-      "aahh": 188
-    },
-    "resources": [],
-    "usageCount": 0,
-    "occasions": [],
-    "credits": {
-      "textAuthors": [
-        {
-          "name": "John Mason Neale",
-          "dates": "1818-1866"
-        },
-        {
-          "name": "Henry Sloane Coffin",
-          "dates": "1877-1954"
-        }
-      ],
-      "composers": [
-        {
-          "name": "Thomas Helmore",
-          "dates": "1811-1890"
-        }
-      ],
-      "textSources": [
-        "Latin 9th C."
-      ]
-    },
-    "tuneMeter": {
-      "tuneName": "VENI EMMANUEL",
-      "meter": "8.8.8.8 with refrain",
-      "incipit": "13555465434531"
-    },
-    "firstLine": "O come, O come, Emmanuel",
-    "refrainFirstLine": "Rejoice! Rejoice! Emmanuel",
-    "languages": [
-      "English"
-    ],
-    "scriptureRefs": [
-      "Matthew 1:23"
-    ],
-    "topics": [
-      "Advent",
-      "Church/Family of Believers",
-      "Conflict",
-      "Heaven"
     ]
   },
   {
@@ -46956,36 +45685,6 @@
     ]
   },
   {
-    "id": "all-hail-the-power-of-jesus-name--perronet-edward-primitive-baptist-hymn-and-tune-book-proulx-richard-rippon-margaret",
-    "title": "All Hail the Power of Jesus' Name!",
-    "composer": "Perronet, Edward • Primitive Baptist Hymn and Tune Book • Proulx, Richard • Rippon, Margaret",
-    "category": "song",
-    "catalogs": {
-      "gather4": 616
-    },
-    "resources": [],
-    "usageCount": 0,
-    "occasions": [],
-    "scriptureRefs": [
-      "Isaiah 6:2-3",
-      "Isaiah 11:1",
-      "Isaiah 62:3",
-      "Ephesians 2:8-10",
-      "Philippians 2:9-10",
-      "Revelation 5:11-14",
-      "Revelation 6:9-11"
-    ],
-    "topics": [
-      "Angels",
-      "Communion of Saints",
-      "Majesty and Power",
-      "Name of Jesus",
-      "People of God",
-      "Praise",
-      "Song"
-    ]
-  },
-  {
     "id": "all-is-holy--cotter-jeanne",
     "title": "All Is Holy",
     "composer": "Cotter, Jeanne",
@@ -47567,36 +46266,6 @@
     ],
     "topics": [
       "Unity"
-    ]
-  },
-  {
-    "id": "as-we-gather-at-your-table-nettleton--daw-carl-p-jr-wyeth-s-repository-of-sacred-music",
-    "title": "As We Gather at Your Table (NETTLETON)",
-    "composer": "Daw, Carl P., Jr. • Wyeth's Repository of Sacred Music",
-    "category": "song",
-    "catalogs": {
-      "gather4": 922
-    },
-    "resources": [],
-    "usageCount": 0,
-    "occasions": [],
-    "scriptureRefs": [
-      "Matthew 22:1-14",
-      "Matthew 25:31-46",
-      "Luke 14:21-24",
-      "Ephesians 2:14-17",
-      "Ephesians 4:32"
-    ],
-    "topics": [
-      "Evangelization",
-      "Feast",
-      "Gathering",
-      "Presence of God",
-      "Reconciliation",
-      "Service",
-      "Welcome",
-      "Witness",
-      "Word of God"
     ]
   },
   {
@@ -56159,33 +54828,6 @@
     ]
   },
   {
-    "id": "o-come-o-come-emmanuel--chant-helmore-thomas-latin-neale-john-m-proulx-richard",
-    "title": "O Come, O Come, Emmanuel",
-    "composer": "Chant • Helmore, Thomas • Latin • Neale, John M. • Proulx, Richard",
-    "category": "song",
-    "catalogs": {
-      "gather4": 444
-    },
-    "resources": [],
-    "usageCount": 0,
-    "occasions": [],
-    "scriptureRefs": [
-      "Exodus 20:",
-      "Isaiah 11:1",
-      "Isaiah 22:22",
-      "Isaiah 7:14",
-      "Luke 1:78-79",
-      "Proverbs 8:22",
-      "Zephaniah 2:7"
-    ],
-    "topics": [
-      "Exile",
-      "Joy",
-      "Justice",
-      "Peace"
-    ]
-  },
-  {
     "id": "o-dawn-of-all-creation--dufner-delores-osb-hurd-david",
     "title": "O Dawn of All Creation",
     "composer": "Dufner, Delores, OSB • Hurd, David",
@@ -59684,25 +58326,6 @@
       "Seeking",
       "Sin",
       "Witness"
-    ]
-  },
-  {
-    "id": "what-child-is-this--dix-william-c-english-melody-stainer-john",
-    "title": "What Child Is This",
-    "composer": "Dix, William C. • English melody • Stainer, John",
-    "category": "song",
-    "catalogs": {
-      "gather4": 508
-    },
-    "resources": [],
-    "usageCount": 0,
-    "occasions": [],
-    "scriptureRefs": [
-      "Matthew 2:11",
-      "Luke 2:6-18"
-    ],
-    "topics": [
-      "Offering"
     ]
   },
   {
@@ -71570,16 +70193,6 @@
     "usageCount": 0
   },
   {
-    "id": "peace-on-earth",
-    "title": "Peace on Earth",
-    "composer": "",
-    "category": "song",
-    "resources": [],
-    "functions": [],
-    "occasions": [],
-    "usageCount": 0
-  },
-  {
     "id": "peace",
     "title": "Peace",
     "composer": "",
@@ -71691,8 +70304,8 @@
   },
   {
     "id": "prayer-of-st-francis-oracin-de-san-francisco",
-    "title": "Prayer of St. Francis-Oración de San Francisco",
-    "composer": "",
+    "title": "Prayer of St. Francis",
+    "composer": "Sebastian Temple",
     "category": "song",
     "resources": [],
     "functions": [],
@@ -73568,5 +72181,21 @@
     "functions": [],
     "occasions": [],
     "usageCount": 0
+  },
+  {
+    "id": "center-of-my-life--paul-inwood",
+    "title": "Center of My Life",
+    "composer": "Paul Inwood",
+    "resources": [],
+    "usageCount": 3,
+    "occasions": [
+      "ordinary-time-25-c",
+      "ordinary-time-30-c"
+    ],
+    "category": "song",
+    "functions": [
+      "communion",
+      "offertory"
+    ]
   }
 ]
