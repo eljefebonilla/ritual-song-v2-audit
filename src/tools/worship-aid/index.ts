@@ -48,11 +48,10 @@ export function createWorshipAidTools(): ToolDefinition[] {
           throw new Error("occasionId and ensembleId are required");
         }
         const fullConfig: WorshipAidConfig = {
-          ...config,
-          parishName: config.parishName ?? "St. Monica Catholic Community",
+          occasionId: config.occasionId,
+          ensembleId: config.ensembleId,
+          parishId: (config as unknown as { parishId?: string }).parishId ?? "st-monica",
           includeReadings: config.includeReadings ?? true,
-          includeMusicalNotation: config.includeMusicalNotation ?? true,
-          pageSize: config.pageSize ?? "half-letter",
           layout: config.layout ?? "fit-page",
         };
         return buildPages(fullConfig);

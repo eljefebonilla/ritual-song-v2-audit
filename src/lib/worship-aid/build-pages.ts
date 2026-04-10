@@ -1,37 +1,31 @@
 /**
  * Page builder for the Worship Aid Builder.
- * Loads an occasion, finds the matching music plan, resolves resources,
- * and assembles the full WorshipAid object.
+ * Loads an occasion via getOccasion(), resolves reprints from Supabase,
+ * resolves cover art, fetches brand config, and builds the WorshipAid.
  *
- * SERVER-SIDE ONLY — reads from the local filesystem.
+ * SERVER-SIDE ONLY.
  */
 
-import fs from "node:fs";
-import path from "node:path";
 import { randomUUID } from "node:crypto";
-import { resolveResource } from "./resolve-resource";
+import { getOccasion } from "@/lib/data";
+import { resolveWorshipAidReprint } from "@/lib/generators/reprint-resolver";
+import { resolveCoverImage } from "@/lib/generators/cover-resolver";
+import { createAdminClient } from "@/lib/supabase/admin";
+import { DEFAULT_BRAND_CONFIG } from "@/lib/generators/types";
+import type { BrandConfig, ReprintResult } from "@/lib/generators/types";
+import type { MusicPlan, SongEntry, Reading } from "@/lib/types";
 import type {
   WorshipAidConfig,
   WorshipAidPage,
   WorshipAid,
-  MusicPlan,
-  MusicPlanEntry,
-  ResourceTier,
+  CoverPageData,
+  ReadingPageData,
+  SongPageData,
+  LinkItem,
 } from "./types";
+import { renderPageContent } from "./render-page";
 
-const OCCASIONS_DIR = path.join(process.cwd(), "src/data/occasions");
-
-// ─── Occasion loader ───────────────────────────────────────────────────────────
-
-function loadOccasion(occasionId: string): Record<string, unknown> {
-  const filePath = path.join(OCCASIONS_DIR, `${occasionId}.json`);
-  if (!fs.existsSync(filePath)) {
-    throw new Error(`Occasion not found: ${occasionId}`);
-  }
-  return JSON.parse(fs.readFileSync(filePath, "utf-8"));
-}
-
-// ─── Season colors ─────────────────────────────────────────────────────────────
+// ─── Season colors ──────────────────────────────────────────────────────────────
 
 const SEASON_COLORS: Record<string, string> = {
   advent: "#6B21A8",
@@ -43,189 +37,15 @@ const SEASON_COLORS: Record<string, string> = {
 };
 
 function seasonColor(season: string): string {
-  return SEASON_COLORS[season?.toLowerCase() ?? ""] ?? "#1C1917";
+  return SEASON_COLORS[season?.toLowerCase() ?? ""] ?? "#B45309";
 }
 
-// ─── Date formatter ────────────────────────────────────────────────────────────
-
-function formatDate(dateStr: string): string {
-  if (!dateStr) return "";
-  const d = new Date(dateStr + "T12:00:00");
-  return d.toLocaleDateString("en-US", {
-    weekday: "long",
-    year: "numeric",
-    month: "long",
-    day: "numeric",
-  });
-}
-
-// ─── Cover page ────────────────────────────────────────────────────────────────
-
-function buildCoverPage(
-  occasion: Record<string, unknown>,
-  config: WorshipAidConfig,
-  displayDate: string
-): WorshipAidPage {
-  const season = (occasion.season as string) ?? "";
-  const accentColor = seasonColor(season);
-  const seasonLabel = (occasion.seasonLabel as string) ?? "";
-  const occasionName = (occasion.name as string) ?? config.occasionId;
-
-  const content = `
-    <div class="cover-page" style="border-top: 6px solid ${accentColor};">
-      <div class="cover-inner">
-        ${config.parishLogo ? `<img src="${config.parishLogo}" alt="${config.parishName} logo" class="parish-logo" />` : ""}
-        <p class="parish-name">${config.parishName}</p>
-        <div class="cover-divider" style="background:${accentColor};"></div>
-        <h1 class="occasion-name">${occasionName}</h1>
-        ${seasonLabel ? `<p class="season-label">${seasonLabel}</p>` : ""}
-        ${displayDate ? `<p class="occasion-date">${displayDate}</p>` : ""}
-      </div>
-    </div>
-  `.trim();
-
-  return {
-    id: randomUUID(),
-    type: "cover",
-    title: occasionName,
-    subtitle: displayDate,
-    content,
-    position: "cover",
-    editable: false,
-  };
-}
-
-// ─── Reading page ──────────────────────────────────────────────────────────────
-
-function buildReadingPage(
-  readings: Array<Record<string, unknown>>
-): WorshipAidPage {
-  const typeLabels: Record<string, string> = {
-    first: "First Reading",
-    second: "Second Reading",
-    psalm: "Responsorial Psalm",
-    gospel_verse: "Gospel Verse",
-    gospel: "Gospel",
-  };
-
-  const items = readings
-    .filter((r) => r.type !== "gospel_verse")
-    .map((r) => {
-      const label = typeLabels[r.type as string] ?? String(r.type);
-      return `
-        <div class="reading-item">
-          <p class="reading-label">${label}</p>
-          <p class="reading-citation">${r.citation ?? ""}</p>
-          ${r.summary ? `<p class="reading-summary">${r.summary}</p>` : ""}
-        </div>
-      `;
-    })
-    .join("\n");
-
-  const content = `<div class="readings-page"><h2>Scripture Readings</h2>${items}</div>`;
-
-  return {
-    id: randomUUID(),
-    type: "reading",
-    title: "Scripture Readings",
-    content,
-    position: "readings",
-    editable: false,
-  };
-}
-
-// ─── Song page ─────────────────────────────────────────────────────────────────
-
-function resourceTypeFromTier(tier: ResourceTier): WorshipAidPage["resourceType"] {
-  const map: Record<ResourceTier, WorshipAidPage["resourceType"]> = {
-    "ocp-gif": "gif",
-    "wa-gif": "gif",
-    "tiff": "tiff",
-    "pdf": "pdf",
-    "placeholder": "placeholder",
-  };
-  return map[tier];
-}
-
-async function buildSongPage(
-  position: string,
-  positionLabel: string,
-  entry: MusicPlanEntry
-): Promise<WorshipAidPage> {
-  const resource = await resolveResource({
-    title: entry.title,
-    composer: entry.composer,
-  });
-
-  // OCP GIFs need 12% top crop to remove publisher header
-  const cropTop = resource.tier === "ocp-gif" ? 12 : undefined;
-
-  // Build a web-accessible URL for the resource so it works in both the
-  // browser preview (iframe) and the final rendered HTML (no file:// URLs).
-  const resourceApiUrl = resource.path && resource.tier !== "placeholder"
-    ? `/api/worship-aids/resource?path=${encodeURIComponent(resource.path)}`
-    : null;
-
-  let content: string;
-  if (resourceApiUrl) {
-    const cropStyle = cropTop && cropTop > 0
-      ? ` style="margin-top: -${cropTop}%;"`
-      : "";
-    const imgHtml = `<div class="resource-image-wrap">
-          <img src="${resourceApiUrl}" alt="Sheet music for ${entry.title}"${cropStyle} />
-        </div>`;
-    content = `
-      <div class="song-page">
-        <div class="song-header">
-          <div>
-            <p class="position-label">${positionLabel}</p>
-            <h2 class="song-title">${entry.title}</h2>
-            ${entry.composer ? `<p class="song-composer">${entry.composer}</p>` : ""}
-          </div>
-        </div>
-        <div class="song-resource" data-resource-path="${resource.path}" data-crop-top="${cropTop ?? 0}">
-          <p class="resource-note">Sheet music: ${resource.tier} (${resource.confidence} confidence)</p>
-          ${imgHtml}
-        </div>
-      </div>
-    `.trim();
-  } else {
-    content = `
-      <div class="song-page song-placeholder">
-        <div class="song-header">
-          <div>
-            <p class="position-label">${positionLabel}</p>
-            <h2 class="song-title">${entry.title}</h2>
-            ${entry.composer ? `<p class="song-composer">${entry.composer}</p>` : ""}
-          </div>
-        </div>
-        <div class="placeholder-block">
-          <p>Sheet music not yet available.</p>
-          <p class="placeholder-note">${resource.reason}</p>
-        </div>
-      </div>
-    `.trim();
-  }
-
-  return {
-    id: randomUUID(),
-    type: "song",
-    title: entry.title,
-    subtitle: entry.composer,
-    content,
-    resourcePath: resource.path ?? undefined,
-    resourceType: resourceTypeFromTier(resource.tier),
-    position,
-    editable: true,
-    cropTop,
-  };
-}
-
-// ─── Position label map ────────────────────────────────────────────────────────
+// ─── Position labels ───────────────────────────────────────────────────────────
 
 const POSITION_LABELS: Record<string, string> = {
   gathering: "Gathering Song",
   penitentialAct: "Penitential Act",
+  gloria: "Gloria",
   psalm: "Responsorial Psalm",
   gospelAcclamation: "Gospel Acclamation",
   offertory: "Preparation of the Gifts",
@@ -235,88 +55,271 @@ const POSITION_LABELS: Record<string, string> = {
   sending: "Sending Forth",
 };
 
+// ─── Date formatter ────────────────────────────────────────────────────────────
+
+function formatDate(dateStr: string): string {
+  if (!dateStr) return "";
+  return new Date(dateStr + "T12:00:00").toLocaleDateString("en-US", {
+    weekday: "long",
+    year: "numeric",
+    month: "long",
+    day: "numeric",
+  });
+}
+
+// ─── Supabase storage URL builder ──────────────────────────────────────────────
+
+function storageUrl(storagePath: string): string {
+  const base = process.env.NEXT_PUBLIC_SUPABASE_URL ?? "";
+  return `${base}/storage/v1/object/public/song-resources/${storagePath}`;
+}
+
+function reprintImageUrl(reprint: ReprintResult): string | null {
+  if (reprint.kind === "pdf" || reprint.kind === "gif") {
+    return storageUrl(reprint.storagePath);
+  }
+  return null;
+}
+
+// ─── Brand config loader ───────────────────────────────────────────────────────
+
+async function fetchBrandConfig(parishId: string): Promise<BrandConfig> {
+  const supabase = createAdminClient();
+  const { data } = await supabase
+    .from("parish_brand_config")
+    .select("*")
+    .eq("parish_id", parishId)
+    .maybeSingle();
+
+  if (!data) return { parishId, ...DEFAULT_BRAND_CONFIG };
+
+  return {
+    parishId,
+    logoUrl: data.logo_url ?? null,
+    logoStoragePath: data.logo_storage_path ?? null,
+    parishDisplayName: data.parish_display_name ?? "",
+    primaryColor: data.primary_color ?? DEFAULT_BRAND_CONFIG.primaryColor,
+    secondaryColor: data.secondary_color ?? DEFAULT_BRAND_CONFIG.secondaryColor,
+    accentColor: data.accent_color ?? DEFAULT_BRAND_CONFIG.accentColor,
+    headingFont: data.heading_font ?? DEFAULT_BRAND_CONFIG.headingFont,
+    bodyFont: data.body_font ?? DEFAULT_BRAND_CONFIG.bodyFont,
+    layoutPreset: (data.layout_preset as BrandConfig["layoutPreset"]) ?? DEFAULT_BRAND_CONFIG.layoutPreset,
+    coverStyle: (data.cover_style as BrandConfig["coverStyle"]) ?? DEFAULT_BRAND_CONFIG.coverStyle,
+    headerOverlayMode: (data.header_overlay_mode as BrandConfig["headerOverlayMode"]) ?? DEFAULT_BRAND_CONFIG.headerOverlayMode,
+  };
+}
+
+// ─── Cover page builder ────────────────────────────────────────────────────────
+
+async function buildCoverPage(
+  parishId: string,
+  brand: BrandConfig,
+  occasionName: string,
+  displayDate: string,
+  season: string,
+  seasonLabel: string,
+  occasionCode: string,
+  cycle: string
+): Promise<WorshipAidPage> {
+  const coverImage = await resolveCoverImage(parishId, occasionCode, cycle, brand);
+
+  let coverArtUrl: string | null = null;
+  if (coverImage.kind === "image") {
+    coverArtUrl = coverImage.url || (coverImage.storagePath ? storageUrl(coverImage.storagePath) : null);
+  }
+
+  const accentColor = seasonColor(season);
+
+  const coverData: CoverPageData = {
+    parishName: brand.parishDisplayName || "St. Monica Catholic Community",
+    occasionName,
+    date: displayDate,
+    seasonLabel,
+    seasonColor: accentColor,
+    logoUrl: brand.logoUrl ?? null,
+    coverArtUrl,
+  };
+
+  return {
+    id: randomUUID(),
+    type: "cover",
+    title: occasionName,
+    subtitle: displayDate,
+    position: "cover",
+    content: renderPageContent({ type: "cover", coverData, cropTop: 0, customLinks: [], givingBlock: false }),
+    coverData,
+    removed: false,
+    cropTop: 0,
+    customLinks: [],
+    givingBlock: false,
+  };
+}
+
+// ─── Reading page builder ──────────────────────────────────────────────────────
+
+function buildReadingPage(readings: Reading[]): WorshipAidPage {
+  const mapped = readings.map((r) => ({
+    type: r.type,
+    citation: r.citation,
+    summary: r.summary,
+  }));
+
+  const readingData: ReadingPageData = { readings: mapped };
+
+  return {
+    id: randomUUID(),
+    type: "reading",
+    title: "Scripture Readings",
+    position: "readings",
+    content: renderPageContent({ type: "reading", readingData, cropTop: 0, customLinks: [], givingBlock: false }),
+    readingData,
+    removed: false,
+    cropTop: 0,
+    customLinks: [],
+    givingBlock: false,
+  };
+}
+
+// ─── Song page builder ─────────────────────────────────────────────────────────
+
+async function buildSongPage(
+  position: string,
+  positionLabel: string,
+  song: SongEntry & { songId?: string }
+): Promise<WorshipAidPage> {
+  const songId = song.songId ?? "";
+  let reprint: ReprintResult = { kind: "title_only" };
+
+  if (songId) {
+    reprint = await resolveWorshipAidReprint(songId);
+  }
+
+  const imgUrl = reprintImageUrl(reprint);
+  const lyrics = reprint.kind === "lyrics" ? reprint.text : null;
+
+  // Default OCP header crop: 12% for GIF resources
+  const defaultCrop = reprint.kind === "gif" ? 12 : 0;
+
+  const songData: SongPageData = {
+    songId,
+    title: song.title,
+    composer: song.composer ?? null,
+    positionLabel,
+    reprint,
+    reprintUrl: imgUrl,
+    lyrics,
+  };
+
+  return {
+    id: randomUUID(),
+    type: "song",
+    title: song.title,
+    subtitle: song.composer,
+    position,
+    content: renderPageContent({
+      type: "song",
+      songData,
+      cropTop: defaultCrop,
+      customLinks: [],
+      givingBlock: false,
+    }),
+    songData,
+    removed: false,
+    cropTop: defaultCrop,
+    customLinks: [],
+    givingBlock: false,
+  };
+}
+
+// ─── Song entries from plan ────────────────────────────────────────────────────
+
+type SongWithId = SongEntry & { songId?: string };
+
+function planSongs(plan: MusicPlan): Array<{ position: string; song: SongWithId }> {
+  const entries: Array<{ position: string; song: SongWithId }> = [];
+
+  if (plan.gathering) entries.push({ position: "gathering", song: plan.gathering });
+  if (plan.gloria) entries.push({ position: "gloria", song: plan.gloria });
+
+  // Psalm: use setting string as title if no songId
+  if (plan.responsorialPsalm?.setting) {
+    const psalmTitle = plan.responsorialPsalm.setting.split("•")[0].trim();
+    entries.push({ position: "psalm", song: { title: psalmTitle } });
+  }
+
+  if (plan.gospelAcclamation) entries.push({ position: "gospelAcclamation", song: plan.gospelAcclamation });
+  if (plan.offertory) entries.push({ position: "offertory", song: plan.offertory });
+
+  const communion = plan.communionSongs ?? [];
+  for (let i = 0; i < communion.length; i++) {
+    entries.push({ position: `communion_${i + 1}`, song: communion[i] });
+  }
+
+  if (plan.sending) entries.push({ position: "sending", song: plan.sending });
+
+  return entries;
+}
+
 // ─── Main builder ──────────────────────────────────────────────────────────────
 
 export async function buildPages(config: WorshipAidConfig): Promise<WorshipAid> {
-  const occasion = loadOccasion(config.occasionId);
+  const occasion = getOccasion(config.occasionId);
+  if (!occasion) throw new Error(`Occasion not found: ${config.occasionId}`);
 
-  // Find the matching music plan for the requested ensemble
-  const musicPlans = (occasion.musicPlans as MusicPlan[]) ?? [];
-  const plan = musicPlans.find(
-    (p) => (p.communityId ?? p.ensembleId) === config.ensembleId
-  );
+  const brand = await fetchBrandConfig(config.parishId);
 
-  // Resolve display date from occasion dates array
+  // Resolve display date (next upcoming date)
   const today = new Date().toISOString().slice(0, 10);
-  const dates = (occasion.dates as Array<{ date: string }>) ?? [];
-  const upcomingDates = dates
+  const upcomingDate = occasion.dates
     .map((d) => d.date)
     .filter((d) => typeof d === "string" && d >= today)
-    .sort();
-  const displayDate = upcomingDates[0]
-    ? formatDate(upcomingDates[0])
-    : "";
+    .sort()[0];
+  const displayDate = upcomingDate ? formatDate(upcomingDate) : "";
+
+  const occasionCode = occasion.id;
+  const cycle = occasion.year ?? "A";
 
   const pages: WorshipAidPage[] = [];
 
   // 1. Cover
-  pages.push(buildCoverPage(occasion, config, displayDate));
+  pages.push(
+    await buildCoverPage(
+      config.parishId,
+      brand,
+      occasion.name,
+      displayDate,
+      occasion.season,
+      occasion.seasonLabel,
+      occasionCode,
+      cycle
+    )
+  );
 
-  // 2. Readings (optional)
-  if (config.includeReadings) {
-    const readings = (occasion.readings as Array<Record<string, unknown>>) ?? [];
-    if (readings.length > 0) {
-      pages.push(buildReadingPage(readings));
-    }
+  // 2. Readings page
+  if (config.includeReadings && occasion.readings.length > 0) {
+    pages.push(buildReadingPage(occasion.readings));
   }
 
-  // 3. Song pages (only if we have a plan)
-  if (plan && config.includeMusicalNotation) {
-    // Gathering
-    if (plan.gathering) {
-      pages.push(await buildSongPage("gathering", POSITION_LABELS.gathering, plan.gathering));
-    }
+  // 3. Song pages from the matching ensemble plan
+  const plan = occasion.musicPlans.find(
+    (p) => p.ensembleId === config.ensembleId
+  );
 
-    // Psalm
-    if (plan.responsorialPsalm?.setting) {
-      const psalmTitle = plan.responsorialPsalm.setting.split("•")[0].trim();
-      pages.push(
-        await buildSongPage("psalm", POSITION_LABELS.psalm, { title: psalmTitle })
-      );
-    }
-
-    // Gospel Acclamation
-    if (plan.gospelAcclamation) {
-      pages.push(
-        await buildSongPage("gospelAcclamation", POSITION_LABELS.gospelAcclamation, plan.gospelAcclamation)
-      );
-    }
-
-    // Offertory
-    if (plan.offertory) {
-      pages.push(await buildSongPage("offertory", POSITION_LABELS.offertory, plan.offertory));
-    }
-
-    // Communion songs
-    const communionSongs = plan.communionSongs ?? [];
-    for (let i = 0; i < communionSongs.length; i++) {
-      const pos = `communion_${i + 1}`;
-      const label = POSITION_LABELS[pos] ?? "Communion Song";
-      pages.push(await buildSongPage(pos, label, communionSongs[i]));
-    }
-
-    // Sending
-    if (plan.sending) {
-      pages.push(await buildSongPage("sending", POSITION_LABELS.sending, plan.sending));
-    }
+  if (plan) {
+    const songs = planSongs(plan);
+    const songPages = await Promise.all(
+      songs.map(({ position, song }) =>
+        buildSongPage(position, POSITION_LABELS[position] ?? position, song)
+      )
+    );
+    pages.push(...songPages);
   }
 
-  const now = new Date().toISOString();
   return {
     id: randomUUID(),
     config,
     pages,
-    createdAt: now,
-    updatedAt: now,
+    brand,
+    createdAt: new Date().toISOString(),
   };
 }

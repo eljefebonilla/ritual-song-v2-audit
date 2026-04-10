@@ -1,39 +1,83 @@
 /**
  * Core types for the Worship Aid Builder module.
- * Ported from the standalone builder at ~/Desktop/Claude/worship-aid-builder/.
+ * Pages carry both rendered HTML (for preview iframes) and
+ * structured data (for interactive editing controls).
  */
+
+import type { BrandConfig, ReprintResult } from "@/lib/generators/types";
 
 export interface WorshipAidConfig {
   occasionId: string;
   ensembleId: string;
-  parishName: string;
-  parishLogo?: string; // URL or path
+  parishId: string;
   includeReadings: boolean;
-  includeMusicalNotation: boolean;
-  pageSize: "letter" | "half-letter"; // 8.5x11 or 5.5x8.5
-  layout: "fit-page" | "flow"; // fit-page clips to one page per song, flow lets content run
+  layout: "fit-page" | "flow";
 }
 
 export interface WorshipAidPage {
   id: string;
-  type: "cover" | "song" | "reading" | "prayer" | "blank";
+  type: "cover" | "song" | "reading" | "giving" | "links";
   title: string;
   subtitle?: string;
-  content: string; // HTML content for this page
-  resourcePath?: string; // Path to the resolved image/PDF
-  resourceType?: "gif" | "tiff" | "pdf" | "placeholder";
-  position: string; // liturgical position (gathering, communion1, etc.)
-  editable: boolean;
-  cropTop?: number; // percentage to crop from top (for removing baked-in headers)
+  position: string;
+
+  // Pre-rendered HTML for iframe preview (rebuilt when edits occur)
+  content: string;
+
+  // Structured data per page type
+  coverData?: CoverPageData;
+  readingData?: ReadingPageData;
+  songData?: SongPageData;
+
+  // Edit state (mutable by UI)
+  removed: boolean;
+  cropTop: number;        // 0–30, percent clipped from image top
+  customLinks: LinkItem[];
+  givingBlock: boolean;   // show QR giving block on this page
+}
+
+export interface CoverPageData {
+  parishName: string;
+  occasionName: string;
+  date: string;
+  seasonLabel: string;
+  seasonColor: string;
+  logoUrl: string | null;
+  coverArtUrl: string | null;
+}
+
+export interface ReadingPageData {
+  readings: { type: string; citation: string; summary: string }[];
+}
+
+export interface SongPageData {
+  songId: string;
+  title: string;
+  composer: string | null;
+  positionLabel: string;
+  reprint: ReprintResult;
+  reprintUrl: string | null; // Supabase storage URL for image (null for lyrics/title_only)
+  lyrics: string | null;
+}
+
+export interface LinkItem {
+  label: string;
+  url: string;
+  icon?: string;
 }
 
 export interface WorshipAid {
   id: string;
   config: WorshipAidConfig;
   pages: WorshipAidPage[];
+  brand: BrandConfig;
   createdAt: string;
-  updatedAt: string;
 }
+
+// Kept for render-html.ts backward compat (maps to WorshipAid)
+export type { BrandConfig };
+
+// ─── Legacy types (kept for resolve-resource.ts and tools/worship-aid/) ────────
 
 export type ResourceTier = "ocp-gif" | "wa-gif" | "tiff" | "pdf" | "placeholder";
 

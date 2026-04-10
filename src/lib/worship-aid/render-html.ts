@@ -3,7 +3,7 @@
  * Produces a full Paged.js document from a WorshipAid object.
  *
  * Design system: Crimson Pro + Source Sans 3 (output only, not the admin UI).
- * Page dimensions: 7" × 8.5" (half-letter landscape / hymnal format).
+ * Page dimensions: 7" x 8.5" (half-letter landscape / hymnal format).
  * Margins: Van de Graaf adjusted (inner 0.80", outer 1.20", top 0.75", bottom 1.05").
  */
 
@@ -27,7 +27,7 @@ const PAGE_CSS = `
   }
 `;
 
-const BASE_CSS = `
+export const BASE_CSS = `
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
   body {
@@ -38,7 +38,7 @@ const BASE_CSS = `
     background: white;
   }
 
-  /* ── Page shells ───────────────────────────────────────────────────── */
+  /* ── Page shells ─────────────────────────────────────────────────── */
   .wa-page {
     page-break-after: always;
     break-after: page;
@@ -50,7 +50,7 @@ const BASE_CSS = `
     break-after: avoid;
   }
 
-  /* ── Cover ─────────────────────────────────────────────────────────── */
+  /* ── Cover ───────────────────────────────────────────────────────── */
   .cover-page {
     display: flex;
     flex-direction: column;
@@ -59,9 +59,22 @@ const BASE_CSS = `
     text-align: center;
     min-height: 6.5in;
     padding-top: 0.5in;
+    position: relative;
+    overflow: hidden;
+  }
+  .cover-art {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 0;
+    opacity: 0.18;
   }
   .cover-inner {
     max-width: 5in;
+    position: relative;
+    z-index: 1;
   }
   .parish-logo {
     max-height: 1.2in;
@@ -103,8 +116,12 @@ const BASE_CSS = `
 
   /* ── Readings ─────────────────────────────────────────────────────── */
   .readings-page h2 {
-    font-size: 14pt;
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 9pt;
     font-weight: 600;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: #78716c;
     border-bottom: 1px solid #e7e5e4;
     padding-bottom: 0.1in;
     margin-bottom: 0.2in;
@@ -156,6 +173,7 @@ const BASE_CSS = `
     font-size: 17pt;
     font-weight: 600;
     line-height: 1.2;
+    font-variant: small-caps;
   }
   .song-composer {
     font-size: 10.5pt;
@@ -182,6 +200,18 @@ const BASE_CSS = `
     object-position: top;
   }
 
+  /* ── Lyrics ───────────────────────────────────────────────────────── */
+  .lyrics-block {
+    margin-top: 0.15in;
+  }
+  .lyrics-text {
+    font-family: 'Crimson Pro', Georgia, serif;
+    font-size: 11pt;
+    line-height: 1.6;
+    white-space: pre-wrap;
+    color: #1c1917;
+  }
+
   /* ── Placeholder block ────────────────────────────────────────────── */
   .placeholder-block {
     margin-top: 0.3in;
@@ -198,7 +228,70 @@ const BASE_CSS = `
     color: #c4b5b0;
   }
 
-  /* ── Resource meta note (shown in HTML, hidden in print) ─────────── */
+  /* ── Custom links ────────────────────────────────────────────────── */
+  .custom-links {
+    list-style: none;
+    margin-top: 0.15in;
+  }
+  .custom-link-item {
+    display: flex;
+    align-items: center;
+    gap: 6pt;
+    font-size: 10pt;
+    color: #1c1917;
+    margin-bottom: 4pt;
+  }
+  .custom-link-icon {
+    font-size: 9pt;
+    color: #78716c;
+    flex-shrink: 0;
+  }
+  .custom-link-label {
+    color: #1d4ed8;
+    text-decoration: underline;
+  }
+
+  /* ── OneLicense footer ───────────────────────────────────────────── */
+  .onelicense-footer {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 6.5pt;
+    color: #a8a29e;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    border-top: 0.5pt solid #e7e5e4;
+    padding-top: 4pt;
+    margin-top: 0.2in;
+    line-height: 1.4;
+  }
+  .onelicense-contact {
+    font-size: 6pt;
+  }
+
+  /* ── Giving block ────────────────────────────────────────────────── */
+  .giving-block {
+    display: flex;
+    align-items: center;
+    gap: 0.15in;
+    border-top: 1px solid #e7e5e4;
+    margin-top: 0.15in;
+    padding-top: 0.1in;
+  }
+  .giving-qr img {
+    width: 0.6in;
+    height: 0.6in;
+  }
+  .giving-headline {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 10pt;
+    font-weight: 600;
+    margin-bottom: 2pt;
+  }
+  .giving-body {
+    font-size: 9.5pt;
+    color: #57534e;
+  }
+
+  /* ── Resource note (visible in preview, hidden in print) ─────────── */
   .resource-note {
     font-size: 8pt;
     color: #a8a29e;
@@ -210,22 +303,17 @@ const BASE_CSS = `
   }
 `;
 
-// ─── Page renderers ────────────────────────────────────────────────────────────
+// ─── Page renderer ──────────────────────────────────────────────────────────────
 
 function renderPage(page: WorshipAidPage, layout: "fit-page" | "flow"): string {
   const layoutClass = layout === "fit-page" ? " fit-page" : "";
-
-  // The content HTML already includes the resource image (via /api/worship-aids/resource?path=...)
-  // built by build-pages.ts. No further injection needed here.
-  const enhancedContent = page.content;
-
   return `
   <div class="wa-page${layoutClass}" data-page-id="${page.id}" data-page-type="${page.type}">
-    ${enhancedContent}
+    ${page.content}
   </div>`;
 }
 
-// ─── HTML escape ───────────────────────────────────────────────────────────────
+// ─── HTML escape ────────────────────────────────────────────────────────────────
 
 function escapeHtml(text: string): string {
   return text
@@ -235,15 +323,18 @@ function escapeHtml(text: string): string {
     .replace(/"/g, "&quot;");
 }
 
-// ─── Main renderer ─────────────────────────────────────────────────────────────
+// ─── Main renderer ──────────────────────────────────────────────────────────────
 
 export function renderHtml(worshipAid: WorshipAid): string {
   const { config, pages } = worshipAid;
   const layout = config.layout ?? "fit-page";
 
-  const pagesHtml = pages.map((p) => renderPage(p, layout)).join("\n");
+  const activePagesHtml = pages
+    .filter((p) => !p.removed)
+    .map((p) => renderPage(p, layout))
+    .join("\n");
 
-  const title = `${config.occasionId} — ${config.parishName}`;
+  const title = `${config.occasionId} — Worship Aid`;
 
   return `<!DOCTYPE html>
 <html lang="en">
@@ -258,7 +349,7 @@ export function renderHtml(worshipAid: WorshipAid): string {
   </style>
 </head>
 <body>
-${pagesHtml}
+${activePagesHtml}
   <script src="https://unpkg.com/pagedjs/dist/paged.polyfill.js"><\/script>
 </body>
 </html>`;
