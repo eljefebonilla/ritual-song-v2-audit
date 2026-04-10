@@ -168,7 +168,7 @@ function buildOrderedItems(savedOrder: string[] | null): NavItemDef[] {
       choir: "Choir Sign-Up", "planner-view": "Multi-Week",
       compare: "Multi-Mass",
       menus: "Menus",
-      "worship-aids": "Worship Aids",
+      "worship-aids": "Worship Aid Builder",
       library: "Music Library",
       liturgies: "Other Liturgies",
     };
@@ -177,7 +177,7 @@ function buildOrderedItems(savedOrder: string[] | null): NavItemDef[] {
       announcements: "/announcements",
       choir: "/choir", "planner-view": "/planner", compare: "/planner/compare",
       menus: "/menus",
-      "worship-aids": "/worship-aids",
+      "worship-aids": "/admin/worship-aids",
       library: "/library",
       liturgies: "/liturgies",
     };
