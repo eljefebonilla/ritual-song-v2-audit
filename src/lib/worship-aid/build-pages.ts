@@ -160,8 +160,20 @@ async function buildSongPage(
   // OCP GIFs need 12% top crop to remove publisher header
   const cropTop = resource.tier === "ocp-gif" ? 12 : undefined;
 
+  // Build a web-accessible URL for the resource so it works in both the
+  // browser preview (iframe) and the final rendered HTML (no file:// URLs).
+  const resourceApiUrl = resource.path && resource.tier !== "placeholder"
+    ? `/api/worship-aids/resource?path=${encodeURIComponent(resource.path)}`
+    : null;
+
   let content: string;
-  if (resource.path && resource.tier !== "placeholder") {
+  if (resourceApiUrl) {
+    const cropStyle = cropTop && cropTop > 0
+      ? ` style="margin-top: -${cropTop}%;"`
+      : "";
+    const imgHtml = `<div class="resource-image-wrap">
+          <img src="${resourceApiUrl}" alt="Sheet music for ${entry.title}"${cropStyle} />
+        </div>`;
     content = `
       <div class="song-page">
         <div class="song-header">
@@ -173,6 +185,7 @@ async function buildSongPage(
         </div>
         <div class="song-resource" data-resource-path="${resource.path}" data-crop-top="${cropTop ?? 0}">
           <p class="resource-note">Sheet music: ${resource.tier} (${resource.confidence} confidence)</p>
+          ${imgHtml}
         </div>
       </div>
     `.trim();

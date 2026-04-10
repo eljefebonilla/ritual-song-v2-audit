@@ -215,32 +215,9 @@ const BASE_CSS = `
 function renderPage(page: WorshipAidPage, layout: "fit-page" | "flow"): string {
   const layoutClass = layout === "fit-page" ? " fit-page" : "";
 
-  // Build the resource image HTML if we have a path
-  let resourceHtml = "";
-  if (page.resourcePath && page.resourceType !== "placeholder") {
-    const cropStyle =
-      page.cropTop && page.cropTop > 0
-        ? ` style="margin-top: -${page.cropTop}%;"`
-        : "";
-    // Use file:// protocol for local paths
-    const src = page.resourcePath.startsWith("/")
-      ? `file://${page.resourcePath}`
-      : page.resourcePath;
-
-    resourceHtml = `
-      <div class="resource-image-wrap">
-        <img src="${src}" alt="Sheet music for ${escapeHtml(page.title)}"${cropStyle} />
-      </div>
-    `;
-  }
-
-  // Inject resource image into content
-  const enhancedContent = resourceHtml
-    ? page.content.replace(
-        /<div class="song-resource"[^>]*>[\s\S]*?<\/div>/,
-        `<div class="song-resource">${resourceHtml}</div>`
-      )
-    : page.content;
+  // The content HTML already includes the resource image (via /api/worship-aids/resource?path=...)
+  // built by build-pages.ts. No further injection needed here.
+  const enhancedContent = page.content;
 
   return `
   <div class="wa-page${layoutClass}" data-page-id="${page.id}" data-page-type="${page.type}">
