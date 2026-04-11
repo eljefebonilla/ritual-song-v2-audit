@@ -741,15 +741,30 @@ export default function WorshipAidPreviewPage() {
                         <button onClick={() => setMobilePreview(false)} className="absolute top-4 right-4 text-white text-lg">x</button>
                       )}
                       <p className="text-[10px] text-stone-400 mb-1 uppercase tracking-wider">Live Preview</p>
-                      <div className="bg-white rounded shadow-md overflow-hidden" style={{ width: mobilePreview ? 320 : 280, height: mobilePreview ? 390 : 340 }}>
-                        <iframe
-                          srcDoc={previewSrcdoc}
-                          sandbox="allow-same-origin"
-                          className="border-0 pointer-events-none"
-                          style={{ width: "200%", height: "200%", transform: "scale(0.5)", transformOrigin: "top left" }}
-                          title="Live preview"
-                        />
-                      </div>
+                      {(() => {
+                        const currentPage = editorDoc.pages.find(p => p.id === selectedPageId);
+                        const containerW = mobilePreview ? 320 : 280;
+                        const pageNaturalW = (currentPage?.pageSize.width ?? 177.8) * 3.7795;
+                        const pageNaturalH = (currentPage?.pageSize.height ?? 215.9) * 3.7795;
+                        const previewScale = containerW / pageNaturalW;
+                        const containerH = pageNaturalH * previewScale;
+                        return (
+                          <div className="bg-white rounded shadow-md overflow-hidden" style={{ width: containerW, height: containerH }}>
+                            <iframe
+                              srcDoc={previewSrcdoc}
+                              sandbox="allow-same-origin"
+                              className="border-0 pointer-events-none"
+                              style={{
+                                width: pageNaturalW,
+                                height: pageNaturalH,
+                                transform: `scale(${previewScale})`,
+                                transformOrigin: "top left",
+                              }}
+                              title="Live preview"
+                            />
+                          </div>
+                        );
+                      })()}
                     </div>
                   )}
                 </div>
