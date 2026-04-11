@@ -174,74 +174,70 @@ function migrateSongPage(v1: WorshipAidPage): PageElement[] {
   const elements: PageElement[] = [];
   let z = 0;
 
+  // Song title (17pt Crimson Pro small-caps per publisher convention)
+  elements.push(textEl({
+    geometry: { x: LX, y: MARGINS.top, width: LW, height: 12 },
+    content: song.title,
+    fontSize: 17,
+    fontFamily: FONT_FAMILIES.body,
+    fontWeight: FONT_WEIGHTS.regular,
+    textTransform: "small-caps",
+    letterSpacing: LETTER_SPACING.wide,
+    zIndex: z++,
+  }));
+
+  // Composer (10.5pt italic)
+  if (song.composer) {
+    elements.push(textEl({
+      geometry: { x: LX, y: MARGINS.top + 13, width: LW, height: 5 },
+      content: `<em>${song.composer}</em>`,
+      fontSize: 10.5,
+      fontFamily: FONT_FAMILIES.body,
+      fontWeight: FONT_WEIGHTS.regular,
+      color: "#57534E",
+      zIndex: z++,
+    }));
+  }
+
+  // Position label (7.5pt Source Sans 3 uppercase tracked)
+  elements.push(textEl({
+    geometry: { x: LX, y: MARGINS.top + 19, width: LW, height: 4 },
+    content: song.positionLabel || v1.position || "",
+    fontSize: 7.5,
+    fontFamily: FONT_FAMILIES.heading,
+    textAlign: "left",
+    letterSpacing: LETTER_SPACING.extraWide,
+    textTransform: "uppercase",
+    color: "#8C8581",
+    zIndex: z++,
+  }));
+
+  // Divider
+  elements.push({
+    id: uid(), type: "divider", zIndex: z++, locked: false, visible: true,
+    geometry: { x: LX, y: MARGINS.top + 22, width: LW, height: 0, rotation: 0 },
+    stroke: "var(--wa-border, #E7E5E4)", strokeWidth: 0.3, strokeStyle: "solid" as const,
+  });
+
+  // Reprint image, lyrics, or title card
   if (song.reprintUrl) {
-    // Reprint image exists: it already contains the title, composer, and music.
-    // Just show: position label + reprint image + copyright. No duplicate title.
-
-    // Position label (small tag above the reprint)
-    const posLabel = song.positionLabel || v1.position || "";
-    if (posLabel) {
-      elements.push(textEl({
-        geometry: { x: LX, y: MARGINS.top, width: LW, height: 4 },
-        content: posLabel,
-        fontSize: 7.5,
-        fontFamily: FONT_FAMILIES.heading,
-        textAlign: "left",
-        letterSpacing: LETTER_SPACING.extraWide,
-        textTransform: "uppercase",
-        color: "#8C8581",
-        zIndex: z++,
-      }));
-    }
-
-    // Reprint image: fills the page from just below the position label to above copyright
-    const imgTop = posLabel ? MARGINS.top + 6 : MARGINS.top;
-    const imgHeight = COPYRIGHT_ZONE.y - imgTop - 2;
     const cropTop = v1.cropTop ? v1.cropTop / 100 : 0;
-
     elements.push(imageEl({
-      geometry: { x: LX, y: imgTop, width: LW, height: imgHeight },
+      geometry: { x: LX, y: MARGINS.top + 25, width: LW, height: 150 },
       src: song.reprintUrl,
       cropTop,
       objectFit: "contain",
       zIndex: z++,
     }));
   } else if (song.lyrics) {
-    // Lyrics text: show styled title + lyrics
     elements.push(textEl({
-      geometry: { x: LX, y: MARGINS.top, width: LW, height: 12 },
-      content: song.title,
-      fontSize: 17,
-      fontFamily: FONT_FAMILIES.body,
-      fontWeight: FONT_WEIGHTS.regular,
-      textTransform: "small-caps",
-      letterSpacing: LETTER_SPACING.wide,
-      zIndex: z++,
-    }));
-    if (song.composer) {
-      elements.push(textEl({
-        geometry: { x: LX, y: MARGINS.top + 13, width: LW, height: 5 },
-        content: `<em>${song.composer}</em>`,
-        fontSize: 10.5,
-        fontFamily: FONT_FAMILIES.body,
-        color: "#57534E",
-        zIndex: z++,
-      }));
-    }
-    elements.push({
-      id: uid(), type: "divider", zIndex: z++, locked: false, visible: true,
-      geometry: { x: LX, y: MARGINS.top + 20, width: LW, height: 0, rotation: 0 },
-      stroke: "var(--wa-border, #E7E5E4)", strokeWidth: 0.3, strokeStyle: "solid" as const,
-    });
-    elements.push(textEl({
-      geometry: { x: LX, y: MARGINS.top + 23, width: LW, height: 150 },
+      geometry: { x: LX, y: MARGINS.top + 25, width: LW, height: 150 },
       content: song.lyrics,
       fontSize: FONT_SIZES.body,
       lineHeight: LINE_HEIGHTS.tight,
       zIndex: z++,
     }));
   } else {
-    // Title card fallback: big centered title
     elements.push(textEl({
       geometry: { x: LX + 10, y: MARGINS.top + 60, width: LW - 20, height: 30 },
       content: song.title,
