@@ -16,6 +16,7 @@ import { useEditorStore } from "@/store/editorStore";
 import { useDebouncedPreview } from "@/hooks/useDebouncedPreview";
 import { ThemeProvider } from "@/core/design-system/ThemeProvider";
 import { ALL_TEMPLATES } from "@/core/templates/definitions";
+import { ImpositionPreview } from "@/components/editor/ImpositionPreview";
 import { instantiateTemplate } from "@/core/templates/schema";
 import type { FoldFormat } from "@/imposition/types";
 import { migrateV1ToV2 } from "@/utils/migrateV1ToV2";
@@ -705,6 +706,13 @@ export default function WorshipAidPreviewPage() {
                 {exporting ? "Exporting..." : "Export PDF"}
               </button>
             </div>
+
+            {/* Imposition preview (when non-flat format selected) */}
+            {foldFormat !== "FLAT" && editorDoc.pages.length > 0 && (
+              <div className="shrink-0 px-3 py-2 border-b border-stone-200 bg-stone-50">
+                <ImpositionPreview format={foldFormat} pageCount={editorDoc.pages.length} />
+              </div>
+            )}
 
             {/* Guardrails warnings */}
             {warnings.length > 0 && (

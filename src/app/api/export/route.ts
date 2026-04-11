@@ -2,7 +2,7 @@ import { NextResponse } from "next/server";
 import type { EditorDocument } from "@/types/schema";
 import type { FoldFormat } from "@/imposition/types";
 import { elementToHTML } from "@/utils/elementToCSS";
-import { renderHtmlToSinglePagePdf } from "@/imposition/puppeteer";
+import { renderHtmlToSinglePagePdf, launchBrowser } from "@/imposition/puppeteer";
 import { generateImposedPDF } from "@/imposition/impose";
 import { SEASON_COLORS, BASE_COLORS } from "@/core/design-system/tokens/colors";
 
@@ -90,27 +90,26 @@ export async function POST(request: Request) {
     }
 
     // Launch browser once, reuse for all pages
-    const puppeteer = await import("puppeteer-core");
-    const chromium = await import("@sparticuz/chromium");
-    const browser = await puppeteer.default.launch({
-      executablePath: await chromium.default.executablePath(),
-      headless: true,
-      args: ["--no-sandbox", "--disable-setuid-sandbox", "--font-render-hinting=none"],
-    });
+    const browser = await launchBrowser();
 
     try {
-      // Render each page to a single-page PDF
+      // Render each page to a single-page PDF (reuse one browser tab for speed)
       const pagePdfs: Uint8Array[] = [];
+      const tab = await browser.newPage();
       for (const page of doc.pages) {
         const html = pageToHtml(page, doc.globalStyles.season);
-        const pdf = await renderHtmlToSinglePagePdf(html, {
-          widthIn: mmToIn(page.pageSize.width),
-          heightIn: mmToIn(page.pageSize.height),
+        await tab.setContent(html, { waitUntil: ["load"] });
+        const pdf = await tab.pdf({
+          printBackground: true,
           preferCSSPageSize: true,
-          browser,
+          width: `${mmToIn(page.pageSize.width)}in`,
+          height: `${mmToIn(page.pageSize.height)}in`,
+          margin: { top: "0in", right: "0in", bottom: "0in", left: "0in" },
+          pageRanges: "1",
         });
-        pagePdfs.push(pdf);
+        pagePdfs.push(new Uint8Array(pdf));
       }
+      await tab.close();
 
       let finalPdf: Uint8Array;
 

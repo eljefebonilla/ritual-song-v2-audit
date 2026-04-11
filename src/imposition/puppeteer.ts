@@ -8,10 +8,40 @@ let chromiumPath: string | null = null;
 
 async function getChromiumPath(): Promise<string> {
   if (chromiumPath) return chromiumPath;
-  // @sparticuz/chromium provides a serverless-compatible Chromium binary
+
+  // Local development: use installed Chrome
+  if (process.env.NODE_ENV === "development") {
+    const candidates = [
+      "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome",
+      "/Applications/Chromium.app/Contents/MacOS/Chromium",
+      process.env.CHROME_PATH,
+    ].filter(Boolean) as string[];
+
+    const { existsSync } = await import("node:fs");
+    for (const p of candidates) {
+      if (existsSync(p)) { chromiumPath = p; return p; }
+    }
+  }
+
+  // Serverless: @sparticuz/chromium
   const chromium = await import("@sparticuz/chromium");
   chromiumPath = await chromium.default.executablePath();
   return chromiumPath;
+}
+
+/**
+ * Launch a browser instance using the resolved Chrome path.
+ */
+export async function launchBrowser(): Promise<Browser> {
+  const executablePath = await getChromiumPath();
+  const isDev = process.env.NODE_ENV === "development";
+  return puppeteer.launch({
+    executablePath,
+    headless: true,
+    args: isDev
+      ? ["--no-sandbox", "--disable-gpu", "--disable-dev-shm-usage"]
+      : ["--no-sandbox", "--disable-setuid-sandbox", "--font-render-hinting=none"],
+  });
 }
 
 export interface HtmlToPdfOptions {
