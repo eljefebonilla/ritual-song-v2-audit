@@ -136,14 +136,23 @@ function reprintImageUrl(reprint: ReprintResult): string | null {
   if (reprint.kind === "pdf" || reprint.kind === "gif" || reprint.kind === "image") {
     const sp = reprint.storagePath;
     if (!sp) return null;
-    // If it's already a full URL, use as-is
-    if (sp.startsWith("http://") || sp.startsWith("https://")) return sp;
-    // If it's a local filesystem path, serve through our resource API
-    if (sp.startsWith("/Users/") || sp.startsWith("/home/")) {
-      return `/api/worship-aids/resource?path=${encodeURIComponent(sp)}`;
+
+    let rawUrl: string;
+    if (sp.startsWith("http://") || sp.startsWith("https://")) {
+      rawUrl = sp;
+    } else if (sp.startsWith("/Users/") || sp.startsWith("/home/")) {
+      rawUrl = `/api/worship-aids/resource?path=${encodeURIComponent(sp)}`;
+    } else {
+      rawUrl = storageUrl(sp);
     }
-    // Otherwise it's a Supabase storage path
-    return storageUrl(sp);
+
+    // PDFs and TIFFs can't render in <img> tags: route through render-reprint
+    const lower = sp.toLowerCase();
+    if (lower.endsWith(".pdf") || lower.endsWith(".tif") || lower.endsWith(".tiff")) {
+      return `/api/worship-aids/render-reprint?url=${encodeURIComponent(rawUrl)}`;
+    }
+
+    return rawUrl;
   }
   return null;
 }
