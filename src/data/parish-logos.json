@@ -1,0 +1,146 @@
+[
+  {
+    "folder": "1Deck",
+    "folderLabel": "1-Line Logo",
+    "file": "cos_1d_1sc.png",
+    "variant": "1sc",
+    "variantLabel": "One-Color",
+    "storagePath": "parish-logos/1deck/cos_1d_1sc.png",
+    "url": "https://kzziuepuepdcnvtexvxn.supabase.co/storage/v1/object/public/song-resources/parish-logos/1deck/cos_1d_1sc.png"
+  },
+  {
+    "folder": "1Deck",
+    "folderLabel": "1-Line Logo",
+    "file": "cos_1d_bw.png",
+    "variant": "bw",
+    "variantLabel": "Black & White",
+    "storagePath": "parish-logos/1deck/cos_1d_bw.png",
+    "url": "https://kzziuepuepdcnvtexvxn.supabase.co/storage/v1/object/public/song-resources/parish-logos/1deck/cos_1d_bw.png"
+  },
+  {
+    "folder": "1Deck",
+    "folderLabel": "1-Line Logo",
+    "file": "cos_1d_la.png",
+    "variant": "la",
+    "variantLabel": "Light (Gold)",
+    "storagePath": "parish-logos/1deck/cos_1d_la.png",
+    "url": "https://kzziuepuepdcnvtexvxn.supabase.co/storage/v1/object/public/song-resources/parish-logos/1deck/cos_1d_la.png"
+  },
+  {
+    "folder": "1Deck",
+    "folderLabel": "1-Line Logo",
+    "file": "cos_1d_rev.png",
+    "variant": "rev",
+    "variantLabel": "Reversed (White)",
+    "storagePath": "parish-logos/1deck/cos_1d_rev.png",
+    "url": "https://kzziuepuepdcnvtexvxn.supabase.co/storage/v1/object/public/song-resources/parish-logos/1deck/cos_1d_rev.png"
+  },
+  {
+    "folder": "1Deck",
+    "folderLabel": "1-Line Logo",
+    "file": "crosses.png",
+    "variant": "crosses",
+    "variantLabel": "Crosses Only",
+    "storagePath": "parish-logos/1deck/crosses.png",
+    "url": "https://kzziuepuepdcnvtexvxn.supabase.co/storage/v1/object/public/song-resources/parish-logos/1deck/crosses.png"
+  },
+  {
+    "folder": "1Deck",
+    "folderLabel": "1-Line Logo",
+    "file": "text only.png",
+    "variant": "text",
+    "variantLabel": "Text Only",
+    "storagePath": "parish-logos/1deck/text_only.png",
+    "url": "https://kzziuepuepdcnvtexvxn.supabase.co/storage/v1/object/public/song-resources/parish-logos/1deck/text_only.png"
+  },
+  {
+    "folder": "2Deck",
+    "folderLabel": "2-Line Logo",
+    "file": "cos_2d_2sc.png",
+    "variant": "2sc",
+    "variantLabel": "Two-Color",
+    "storagePath": "parish-logos/2deck/cos_2d_2sc.png",
+    "url": "https://kzziuepuepdcnvtexvxn.supabase.co/storage/v1/object/public/song-resources/parish-logos/2deck/cos_2d_2sc.png"
+  },
+  {
+    "folder": "2Deck",
+    "folderLabel": "2-Line Logo",
+    "file": "cos_2d_bw.png",
+    "variant": "bw",
+    "variantLabel": "Black & White",
+    "storagePath": "parish-logos/2deck/cos_2d_bw.png",
+    "url": "https://kzziuepuepdcnvtexvxn.supabase.co/storage/v1/object/public/song-resources/parish-logos/2deck/cos_2d_bw.png"
+  },
+  {
+    "folder": "2Deck",
+    "folderLabel": "2-Line Logo",
+    "file": "cos_2d_cmyk.png",
+    "variant": "cmyk",
+    "variantLabel": "Full Color",
+    "storagePath": "parish-logos/2deck/cos_2d_cmyk.png",
+    "url": "https://kzziuepuepdcnvtexvxn.supabase.co/storage/v1/object/public/song-resources/parish-logos/2deck/cos_2d_cmyk.png"
+  },
+  {
+    "folder": "2Deck",
+    "folderLabel": "2-Line Logo",
+    "file": "cos_2d_la.png",
+    "variant": "la",
+    "variantLabel": "Light (Gold)",
+    "storagePath": "parish-logos/2deck/cos_2d_la.png",
+    "url": "https://kzziuepuepdcnvtexvxn.supabase.co/storage/v1/object/public/song-resources/parish-logos/2deck/cos_2d_la.png"
+  },
+  {
+    "folder": "2Deck",
+    "folderLabel": "2-Line Logo",
+    "file": "cos_2d_rev.png",
+    "variant": "rev",
+    "variantLabel": "Reversed (White)",
+    "storagePath": "parish-logos/2deck/cos_2d_rev.png",
+    "url": "https://kzziuepuepdcnvtexvxn.supabase.co/storage/v1/object/public/song-resources/parish-logos/2deck/cos_2d_rev.png"
+  },
+  {
+    "folder": "3Deck",
+    "folderLabel": "3-Line Logo",
+    "file": "cos_3d_2sc.png",
+    "variant": "2sc",
+    "variantLabel": "Two-Color",
+    "storagePath": "parish-logos/3deck/cos_3d_2sc.png",
+    "url": "https://kzziuepuepdcnvtexvxn.supabase.co/storage/v1/object/public/song-resources/parish-logos/3deck/cos_3d_2sc.png"
+  },
+  {
+    "folder": "3Deck",
+    "folderLabel": "3-Line Logo",
+    "file": "cos_3d_bw.png",
+    "variant": "bw",
+    "variantLabel": "Black & White",
+    "storagePath": "parish-logos/3deck/cos_3d_bw.png",
+    "url": "https://kzziuepuepdcnvtexvxn.supabase.co/storage/v1/object/public/song-resources/parish-logos/3deck/cos_3d_bw.png"
+  },
+  {
+    "folder": "3Deck",
+    "folderLabel": "3-Line Logo",
+    "file": "cos_3d_cmyk.png",
+    "variant": "cmyk",
+    "variantLabel": "Full Color",
+    "storagePath": "parish-logos/3deck/cos_3d_cmyk.png",
+    "url": "https://kzziuepuepdcnvtexvxn.supabase.co/storage/v1/object/public/song-resources/parish-logos/3deck/cos_3d_cmyk.png"
+  },
+  {
+    "folder": "3Deck",
+    "folderLabel": "3-Line Logo",
+    "file": "cos_3d_la.png",
+    "variant": "la",
+    "variantLabel": "Light (Gold)",
+    "storagePath": "parish-logos/3deck/cos_3d_la.png",
+    "url": "https://kzziuepuepdcnvtexvxn.supabase.co/storage/v1/object/public/song-resources/parish-logos/3deck/cos_3d_la.png"
+  },
+  {
+    "folder": "3Deck",
+    "folderLabel": "3-Line Logo",
+    "file": "cos_3d_rev.png",
+    "variant": "rev",
+    "variantLabel": "Reversed (White)",
+    "storagePath": "parish-logos/3deck/cos_3d_rev.png",
+    "url": "https://kzziuepuepdcnvtexvxn.supabase.co/storage/v1/object/public/song-resources/parish-logos/3deck/cos_3d_rev.png"
+  }
+]

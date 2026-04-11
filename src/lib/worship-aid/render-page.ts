@@ -76,8 +76,16 @@ function renderCoverContent(data: CoverPageData): string {
   const coverBg = data.coverArtUrl
     ? `<img class="cover-art" src="${esc(data.coverArtUrl)}" alt="" />`
     : "";
+
+  const scale = data.logoScale ?? 1;
+  const offsetY = data.logoOffsetY ?? 0;
+  const logoStyle = `max-height: ${scale * 1.2}in; margin-bottom: 0.4in; transform: translateY(${offsetY}%);`;
   const logo = data.logoUrl
-    ? `<img class="parish-logo" src="${esc(data.logoUrl)}" alt="${esc(data.parishName)} logo" />`
+    ? `<img class="parish-logo" src="${esc(data.logoUrl)}" alt="${esc(data.parishName)} logo" style="${logoStyle}" />`
+    : "";
+
+  const subtitle = data.occasionSubtitle
+    ? `<p class="occasion-subtitle">${esc(data.occasionSubtitle)}</p>`
     : "";
 
   return `
@@ -88,6 +96,7 @@ function renderCoverContent(data: CoverPageData): string {
         <p class="parish-name">${esc(data.parishName)}</p>
         <div class="cover-divider" style="background:${data.seasonColor};"></div>
         <h1 class="occasion-name">${esc(data.occasionName)}</h1>
+        ${subtitle}
         ${data.seasonLabel ? `<p class="season-label">${esc(data.seasonLabel)}</p>` : ""}
         ${data.date ? `<p class="occasion-date">${esc(data.date)}</p>` : ""}
       </div>
@@ -135,9 +144,12 @@ function renderSongContent(
     resourceHtml = `<div class="lyrics-block"><pre class="lyrics-text">${esc(data.lyrics)}</pre></div>`;
   } else {
     resourceHtml = `
-      <div class="placeholder-block">
-        <p>Sheet music not yet available.</p>
-        <p class="placeholder-note">No reprint resource found in database.</p>
+      <div class="title-card-block">
+        <div class="title-card-inner">
+          <p class="title-card-position">${esc(data.positionLabel)}</p>
+          <p class="title-card-title">${esc(data.title)}</p>
+          ${data.composer ? `<p class="title-card-composer">${esc(data.composer)}</p>` : ""}
+        </div>
       </div>`;
   }
 

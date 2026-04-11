@@ -5,7 +5,7 @@
  * Handles: crop slider, links, giving block toggle, swap resource.
  */
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import type { WorshipAidPage, LinkItem } from "@/lib/worship-aid/types";
 
 // ─── Swap resource modal ──────────────────────────────────────────────────────
@@ -144,6 +144,152 @@ function AddLinkForm({ onAdd }: AddLinkFormProps) {
   );
 }
 
+// ─── Logo picker for cover page ──────────────────────────────────────────────
+
+interface LogoOption {
+  folder: string;
+  folderLabel: string;
+  file: string;
+  variant: string;
+  variantLabel: string;
+  url: string;
+}
+
+function CoverEditPanel({ page, onUpdate }: PageEditPanelProps) {
+  const [logos, setLogos] = useState<LogoOption[] | null>(null);
+
+  useEffect(() => {
+    fetch("/api/worship-aids/logos")
+      .then((res) => res.json())
+      .then((data) => setLogos(data.logos))
+      .catch(() => setLogos([]));
+  }, []);
+
+  const currentLogo = page.coverData?.logoUrl ?? null;
+  const logoScale = page.coverData?.logoScale ?? 1;
+  const logoOffsetY = page.coverData?.logoOffsetY ?? 0;
+
+  const updateCover = (patch: Record<string, unknown>) => {
+    if (!page.coverData) return;
+    onUpdate({ coverData: { ...page.coverData, ...patch } });
+  };
+
+  // Group logos by folder
+  const folders = logos
+    ? [...new Set(logos.map((l) => l.folder))].map((f) => ({
+        key: f,
+        label: logos.find((l) => l.folder === f)?.folderLabel ?? f,
+        items: logos.filter((l) => l.folder === f),
+      }))
+    : [];
+
+  const [openFolder, setOpenFolder] = useState<string | null>(null);
+
+  const checkerBg = {
+    backgroundImage: "linear-gradient(45deg, #e5e5e5 25%, transparent 25%), linear-gradient(-45deg, #e5e5e5 25%, transparent 25%), linear-gradient(45deg, transparent 75%, #e5e5e5 75%), linear-gradient(-45deg, transparent 75%, #e5e5e5 75%)",
+    backgroundSize: "10px 10px",
+    backgroundPosition: "0 0, 0 5px, 5px -5px, -5px 0px",
+  };
+
+  return (
+    <div className="w-full space-y-3">
+      {/* Logo picker with folders */}
+      <div className="bg-white border border-stone-200 rounded-lg px-3 py-3">
+        <p className="text-xs font-medium text-stone-600 mb-2">Parish Logo</p>
+        {!logos ? (
+          <p className="text-xs text-stone-400">Loading...</p>
+        ) : (
+          <div className="space-y-1.5">
+            {folders.map((folder) => {
+              const isOpen = openFolder === folder.key;
+              const hasActive = folder.items.some((l) => l.url === currentLogo);
+              return (
+                <div key={folder.key}>
+                  <button
+                    onClick={() => setOpenFolder(isOpen ? null : folder.key)}
+                    className={`w-full flex items-center justify-between px-2 py-1.5 rounded-md text-xs transition-colors ${
+                      hasActive ? "bg-stone-100 font-semibold text-stone-800" : "hover:bg-stone-50 text-stone-600"
+                    }`}
+                  >
+                    <span>{folder.label}</span>
+                    <span className="text-[10px] text-stone-400">{isOpen ? "▾" : "▸"} {folder.items.length}</span>
+                  </button>
+                  {isOpen && (
+                    <div className="grid grid-cols-3 gap-1 mt-1 mb-1">
+                      {folder.items.map((logo) => {
+                        const isActive = currentLogo === logo.url;
+                        return (
+                          <button
+                            key={logo.url}
+                            onClick={() => updateCover({ logoUrl: logo.url })}
+                            className={`relative flex flex-col items-center gap-0.5 p-1 rounded border transition-all ${
+                              isActive
+                                ? "border-stone-800 ring-1 ring-stone-800"
+                                : "border-stone-200 hover:border-stone-400"
+                            }`}
+                          >
+                            <div className="w-full aspect-square flex items-center justify-center rounded overflow-hidden" style={checkerBg}>
+                              <img
+                                src={logo.url}
+                                alt={logo.variantLabel}
+                                className="max-w-full max-h-full object-contain"
+                              />
+                            </div>
+                            <span className="text-[7px] text-stone-500 leading-tight text-center truncate w-full">
+                              {logo.variantLabel}
+                            </span>
+                            {isActive && (
+                              <div className="absolute top-0.5 right-0.5 w-2.5 h-2.5 bg-stone-800 rounded-full flex items-center justify-center">
+                                <span className="text-white text-[6px] leading-none">&#10003;</span>
+                              </div>
+                            )}
+                          </button>
+                        );
+                      })}
+                    </div>
+                  )}
+                </div>
+              );
+            })}
+          </div>
+        )}
+      </div>
+
+      {/* Logo size */}
+      <div className="bg-white border border-stone-200 rounded-lg px-3 py-3">
+        <div className="flex items-center justify-between mb-1">
+          <label className="text-xs font-medium text-stone-600">Logo size</label>
+          <span className="text-xs text-stone-400">{Math.round(logoScale * 100)}%</span>
+        </div>
+        <input
+          type="range"
+          min={30}
+          max={200}
+          value={Math.round(logoScale * 100)}
+          onChange={(e) => updateCover({ logoScale: Number(e.target.value) / 100 })}
+          className="w-full accent-stone-700"
+        />
+      </div>
+
+      {/* Logo vertical position */}
+      <div className="bg-white border border-stone-200 rounded-lg px-3 py-3">
+        <div className="flex items-center justify-between mb-1">
+          <label className="text-xs font-medium text-stone-600">Logo position</label>
+          <span className="text-xs text-stone-400">{logoOffsetY > 0 ? "+" : ""}{logoOffsetY}%</span>
+        </div>
+        <input
+          type="range"
+          min={-50}
+          max={50}
+          value={logoOffsetY}
+          onChange={(e) => updateCover({ logoOffsetY: Number(e.target.value) })}
+          className="w-full accent-stone-700"
+        />
+      </div>
+    </div>
+  );
+}
+
 // ─── Main edit panel ─────────────────────────────────────────────────────────
 
 export interface PageEditPanelProps {
@@ -154,8 +300,12 @@ export interface PageEditPanelProps {
 export function PageEditPanel({ page, onUpdate }: PageEditPanelProps) {
   const [showSwap, setShowSwap] = useState(false);
 
-  if (page.type === "cover" || page.type === "reading") {
-    return null; // No edit controls for these types yet
+  if (page.type === "cover") {
+    return <CoverEditPanel page={page} onUpdate={onUpdate} />;
+  }
+
+  if (page.type === "reading") {
+    return null;
   }
 
   if (page.type !== "song") return null;
@@ -192,7 +342,7 @@ export function PageEditPanel({ page, onUpdate }: PageEditPanelProps) {
   };
 
   return (
-    <div className="w-full max-w-[560px] mt-3 space-y-3">
+    <div className="w-full space-y-3">
       {/* Crop slider */}
       <div className="bg-white border border-stone-200 rounded-lg px-4 py-3">
         <div className="flex items-center justify-between mb-1">

@@ -101,6 +101,14 @@ export const BASE_CSS = `
     line-height: 1.2;
     margin-bottom: 0.15in;
   }
+  .occasion-subtitle {
+    font-family: 'Crimson Pro', Georgia, serif;
+    font-size: 14pt;
+    font-style: italic;
+    color: #57534e;
+    margin-top: 0.05in;
+    margin-bottom: 0.1in;
+  }
   .season-label {
     font-size: 11pt;
     font-style: italic;
@@ -212,20 +220,42 @@ export const BASE_CSS = `
     color: #1c1917;
   }
 
-  /* ── Placeholder block ────────────────────────────────────────────── */
-  .placeholder-block {
-    margin-top: 0.3in;
-    padding: 0.25in;
-    border: 1.5px dashed #d6d3d1;
-    border-radius: 4px;
-    color: #a8a29e;
-    font-size: 10.5pt;
-    font-style: italic;
+  /* ── Title card (no reprint available) ───────────────────────────── */
+  .title-card-block {
+    margin-top: 0.5in;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 3in;
   }
-  .placeholder-note {
-    font-size: 9pt;
-    margin-top: 0.05in;
-    color: #c4b5b0;
+  .title-card-inner {
+    text-align: center;
+    padding: 0.4in 0.6in;
+    border: 1px solid #e7e5e4;
+    border-radius: 6px;
+    background: #fafaf9;
+  }
+  .title-card-position {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 8pt;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: #a8a29e;
+    margin-bottom: 6pt;
+  }
+  .title-card-title {
+    font-size: 22pt;
+    font-weight: 600;
+    font-variant: small-caps;
+    line-height: 1.25;
+    color: #1c1917;
+  }
+  .title-card-composer {
+    font-size: 11pt;
+    font-style: italic;
+    color: #78716c;
+    margin-top: 4pt;
   }
 
   /* ── Custom links ────────────────────────────────────────────────── */

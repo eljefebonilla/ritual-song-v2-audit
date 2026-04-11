@@ -55,6 +55,21 @@ export async function resolveWorshipAidReprint(
     return { kind: "gif", storagePath: path! };
   }
 
+  // 2b. Look for CONG image (TIFF, PNG, JPG)
+  const imageExts = [".tif", ".tiff", ".png", ".jpg", ".jpeg"];
+  const congImage = resources.find(
+    (r) =>
+      Array.isArray(r.tags) &&
+      r.tags.includes("CONG") &&
+      r.type === "sheet_music" &&
+      imageExts.some((ext) => r.storage_path?.endsWith(ext) || r.file_path?.endsWith(ext))
+  );
+
+  if (congImage) {
+    const path = congImage.storage_path || congImage.file_path;
+    return { kind: "image", storagePath: path! };
+  }
+
   // 3. Look for lyrics
   const lyrics = resources.find(
     (r) =>
@@ -115,6 +130,20 @@ export async function resolveSetlistReprint(
     if (gif) {
       const path = gif.storage_path || gif.file_path;
       return { kind: "gif", storagePath: path! };
+    }
+
+    // Other image formats (TIFF, PNG, JPG)
+    const imageExts = [".tif", ".tiff", ".png", ".jpg", ".jpeg"];
+    const img = resources.find(
+      (r) =>
+        Array.isArray(r.tags) &&
+        r.tags.includes(tag) &&
+        r.type === "sheet_music" &&
+        imageExts.some((ext) => r.storage_path?.endsWith(ext) || r.file_path?.endsWith(ext))
+    );
+    if (img) {
+      const path = img.storage_path || img.file_path;
+      return { kind: "image", storagePath: path! };
     }
   }
 

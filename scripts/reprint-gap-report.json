@@ -1,0 +1,2597 @@
+{
+  "generated": "2026-04-10T15:41:58.529Z",
+  "summary": {
+    "totalTitles": 860,
+    "withCongReprint": 227,
+    "withOtherResources": 1,
+    "noResources": 202,
+    "notInLibrary": 430,
+    "coveragePercent": 53
+  },
+  "gapList": [
+    {
+      "title": "Kyrie • Misa Del Mundo",
+      "legacyId": "kyrie-misa-del-mundo--only-if-needed-talk-to-presider",
+      "variants": 1,
+      "occurrences": 406
+    },
+    {
+      "title": "Glory to God (Mass of Joy & Peace)",
+      "legacyId": "glory-to-god-mass-of-joy-peace--tony-alonso-thru-composed",
+      "variants": 3,
+      "occurrences": 182
+    },
+    {
+      "title": "Glory, Glory, Gloria!",
+      "legacyId": "glory-glory-gloria--bonilla-wilson-vocal-arr-by-lockwood-phan",
+      "variants": 1,
+      "occurrences": 148
+    },
+    {
+      "title": "Alleluia (Mass of Joy & Peace)",
+      "legacyId": "alleluia-mass-of-joy-peace--song-title",
+      "variants": 47,
+      "occurrences": 143
+    },
+    {
+      "title": "Glory to God (Through-composed Setting)",
+      "legacyId": "glory-to-god-through-composed-setting--mass-of-renewal-curtis-stephan",
+      "variants": 1,
+      "occurrences": 134
+    },
+    {
+      "title": "Kyrie (Gift of God) • Adapted Version",
+      "legacyId": "kyrie-gift-of-god-adapted-version--marty-haugen-arranged-by-david-locwood",
+      "variants": 1,
+      "occurrences": 128
+    },
+    {
+      "title": "Easter Alleluia (Refrain)",
+      "legacyId": "easter-alleluia-refrain--the-lyric-gospel-acclamations-tony-alonso",
+      "variants": 2,
+      "occurrences": 105
+    },
+    {
+      "title": "Kyrie (Mass of Colour) — optional tropes",
+      "legacyId": "kyrie-mass-of-colour-optional-tropes--jeffrey-bonilla-david-lockwood",
+      "variants": 1,
+      "occurrences": 90
+    },
+    {
+      "title": "Warm the Time of WInter",
+      "legacyId": "warm-the-time-of-winter--lori-true",
+      "variants": 1,
+      "occurrences": 63
+    },
+    {
+      "title": "Praise to You, Lord Jesus Christ",
+      "legacyId": "praise-to-you-lord-jesus-christ--ed-archer",
+      "variants": 1,
+      "occurrences": 56
+    },
+    {
+      "title": "Hallelujah (adapted for Liturgy)",
+      "legacyId": "hallelujah-adapted-for-liturgy--leonard-cohen",
+      "variants": 1,
+      "occurrences": 53
+    },
+    {
+      "title": "Kyrie (Misa Del Mundo)",
+      "legacyId": "kyrie-misa-del-mundo--only-if-needed-talk-to-presider",
+      "variants": 1,
+      "occurrences": 45
+    },
+    {
+      "title": "Mass of Joy & Peace (Gospel Version)",
+      "legacyId": "mass-of-joy-peace-gospel-version--tony-alonso-arrangement-by-david-lockwood",
+      "variants": 1,
+      "occurrences": 33
+    },
+    {
+      "title": "Bethlehem (House of Bread)",
+      "legacyId": "bethlehem-house-of-bread--alan-j-hommerding-ed-bolduc",
+      "variants": 1,
+      "occurrences": 33
+    },
+    {
+      "title": "Be Though My Vision",
+      "legacyId": "be-though-my-vision--slane-arr-by-audrey-assad-adapt-by-bonilla-phan",
+      "variants": 1,
+      "occurrences": 32
+    },
+    {
+      "title": "Bread of Life (Advent/Christmas)",
+      "legacyId": "bread-of-life-advent-christmas--bernadette-farrell",
+      "variants": 1,
+      "occurrences": 29
+    },
+    {
+      "title": "Where My Father Lives",
+      "legacyId": "where-my-father-lives--m-d-ridge",
+      "variants": 1,
+      "occurrences": 27
+    },
+    {
+      "title": "Psalm 23: Shepherd Me, O God",
+      "legacyId": "psalm-23-shepherd-me-o-god--marty-haugen",
+      "variants": 1,
+      "occurrences": 27
+    },
+    {
+      "title": "Advent/Christmas 2 — Missa Pacem",
+      "legacyId": "advent-christmas-2-missa-pacem--l-randolph-babin",
+      "variants": 1,
+      "occurrences": 24
+    },
+    {
+      "title": "Hallelujah, Hallelu!",
+      "legacyId": "hallelujah-hallelu--michael-mahler",
+      "variants": 2,
+      "occurrences": 24
+    },
+    {
+      "title": "Dwell in the Midst of Us",
+      "legacyId": "dwell-in-the-midst-of-us--jeffrey-bonilla-david-lockwood",
+      "variants": 1,
+      "occurrences": 23
+    },
+    {
+      "title": "Glory to God (Joy & Peace)",
+      "legacyId": "glory-to-god-joy-peace--tony-alonso-arr-by-david-lockwood",
+      "variants": 2,
+      "occurrences": 23
+    },
+    {
+      "title": "Every Mother, Every Father",
+      "legacyId": "every-mother-every-father--andy-bast-bruce-benedict",
+      "variants": 1,
+      "occurrences": 23
+    },
+    {
+      "title": "Act Justly, Love Mercy, Walk Humbly",
+      "legacyId": "act-justly-love-mercy-walk-humbly--pat-barrett",
+      "variants": 1,
+      "occurrences": 22
+    },
+    {
+      "title": "Your Peace Will Make Us One",
+      "legacyId": "your-peace-will-make-us-one--audrey-assad",
+      "variants": 1,
+      "occurrences": 20
+    },
+    {
+      "title": "In Days to Come",
+      "legacyId": "in-days-to-come--sarah-hart",
+      "variants": 1,
+      "occurrences": 19
+    },
+    {
+      "title": "Gather Us in Mercy, Lord",
+      "legacyId": "gather-us-in-mercy-lord--gabe-huck-adapted-and-arr-by-tony-alonso",
+      "variants": 1,
+      "occurrences": 18
+    },
+    {
+      "title": "Glory (Let There Be Peace)",
+      "legacyId": "glory-let-there-be-peace--matt-maher",
+      "variants": 1,
+      "occurrences": 16
+    },
+    {
+      "title": "Hosea (Choral)",
+      "legacyId": "hosea-choral--gregory-norbet-arranged-by-ed-archer",
+      "variants": 1,
+      "occurrences": 16
+    },
+    {
+      "title": "We Place Our Trust In You",
+      "legacyId": "we-place-our-trust-in-you--thaxted-jeffrey-bonilla",
+      "variants": 1,
+      "occurrences": 15
+    },
+    {
+      "title": "It Came Upon A Midnight Clear",
+      "legacyId": "it-came-upon-a-midnight-clear--praise-charts-ocp-arrangements",
+      "variants": 1,
+      "occurrences": 15
+    },
+    {
+      "title": "Setting from Mass of Restoration",
+      "legacyId": "setting-from-mass-of-restoration",
+      "variants": 8,
+      "occurrences": 15
+    },
+    {
+      "title": "Corpus Christi Sequence",
+      "legacyId": "corpus-christi-sequence--james-poppleton",
+      "variants": 2,
+      "occurrences": 15
+    },
+    {
+      "title": "Make the Love of God Known",
+      "legacyId": "make-the-love-of-god-known--rick-modlin-arranged-by-david-lockwood",
+      "variants": 1,
+      "occurrences": 14
+    },
+    {
+      "title": "Remembrance of You",
+      "legacyId": "remembrance-of-you--sarah-hart-sarah-kroger",
+      "variants": 1,
+      "occurrences": 14
+    },
+    {
+      "title": "Hark! The Herald Angel Sings",
+      "legacyId": "hark-the-herald-angel-sings--mendelssohn-arranged-by-tony-alonso",
+      "variants": 1,
+      "occurrences": 14
+    },
+    {
+      "title": "Turn Our Hearts Around",
+      "legacyId": "turn-our-hearts-around--trevor-thomson",
+      "variants": 1,
+      "occurrences": 14
+    },
+    {
+      "title": "Setting from Mass of Renewal",
+      "legacyId": "setting-from-mass-of-renewal",
+      "variants": 7,
+      "occurrences": 13
+    },
+    {
+      "title": "Eat This Bread",
+      "legacyId": "eat-this-bread--taiz-jacques-berthier",
+      "variants": 2,
+      "occurrences": 13
+    },
+    {
+      "title": "Awake To The Day",
+      "legacyId": "awake-to-the-day--ed-bolduc",
+      "variants": 1,
+      "occurrences": 12
+    },
+    {
+      "title": "Oh Happy Day",
+      "legacyId": "oh-happy-day--edwin-hawkins-arranged-by-micah-jones",
+      "variants": 1,
+      "occurrences": 12
+    },
+    {
+      "title": "All Who Enter Here",
+      "legacyId": "all-who-enter-here--john-angotti-dan-houze",
+      "variants": 1,
+      "occurrences": 12
+    },
+    {
+      "title": "Hosanna!",
+      "legacyId": "hosanna--francis-patrick-o-brien",
+      "variants": 2,
+      "occurrences": 12
+    },
+    {
+      "title": "This Little Light of Mine",
+      "legacyId": "this-little-light-of-mine--spiritual",
+      "variants": 1,
+      "occurrences": 11
+    },
+    {
+      "title": "Caminemos con Jesús",
+      "legacyId": "caminemos-con-jes-s--tony-alonso",
+      "variants": 1,
+      "occurrences": 11
+    },
+    {
+      "title": "Prepare Ye the Way",
+      "legacyId": "prepare-ye-the-way--john-angotti",
+      "variants": 1,
+      "occurrences": 10
+    },
+    {
+      "title": "Setting from Mass of the Desert",
+      "legacyId": "setting-from-mass-of-the-desert",
+      "variants": 4,
+      "occurrences": 10
+    },
+    {
+      "title": "I Am Yours - Consume Me Completely",
+      "legacyId": "i-am-yours-consume-me-completely--trevor-thomson-1",
+      "variants": 1,
+      "occurrences": 10
+    },
+    {
+      "title": "Glory, Glory, Gloria! Christmas Edition",
+      "legacyId": "glory-glory-gloria-christmas-edition",
+      "variants": 2,
+      "occurrences": 9
+    },
+    {
+      "title": "Daily Bread",
+      "legacyId": "daily-bread--pat-barrett-kari-jobe",
+      "variants": 1,
+      "occurrences": 9
+    },
+    {
+      "title": "Crux Fidelis",
+      "legacyId": "crux-fidelis--steven-c-warner",
+      "variants": 1,
+      "occurrences": 9
+    },
+    {
+      "title": "At The Cross (Love Ran Red)",
+      "legacyId": "at-the-cross-love-ran-red--chris-tomlin",
+      "variants": 1,
+      "occurrences": 9
+    },
+    {
+      "title": "Setting from Mass of Endless Mercy",
+      "legacyId": "setting-from-mass-of-endless-mercy",
+      "variants": 3,
+      "occurrences": 9
+    },
+    {
+      "title": "Make Us True Servants",
+      "legacyId": "make-us-true-servants--slane-susan-g-wente",
+      "variants": 1,
+      "occurrences": 9
+    },
+    {
+      "title": "As the Bread of Life Is Broken",
+      "legacyId": "as-the-bread-of-life-is-broken--thaxted-jeffrey-bonilla",
+      "variants": 1,
+      "occurrences": 9
+    },
+    {
+      "title": "Comfort My People",
+      "legacyId": "comfort-my-people--ian-callanan",
+      "variants": 1,
+      "occurrences": 8
+    },
+    {
+      "title": "This Is My Beloved Son",
+      "legacyId": "this-is-my-beloved-son--john-angotti",
+      "variants": 1,
+      "occurrences": 8
+    },
+    {
+      "title": "Hold on to Love",
+      "legacyId": "hold-on-to-love--jesse-manibusan",
+      "variants": 1,
+      "occurrences": 8
+    },
+    {
+      "title": "Make Us One",
+      "legacyId": "make-us-one--jeffrey-bonilla-david-lockwood",
+      "variants": 1,
+      "occurrences": 8
+    },
+    {
+      "title": "Take, Lord, Receive",
+      "legacyId": "take-lord-receive--john-foley-sj",
+      "variants": 1,
+      "occurrences": 8
+    },
+    {
+      "title": "It Is Well With My Soul",
+      "legacyId": "it-is-well-with-my-soul--ville-du-havre-chris-rice",
+      "variants": 1,
+      "occurrences": 8
+    },
+    {
+      "title": "How Beautiful",
+      "legacyId": "how-beautiful",
+      "variants": 2,
+      "occurrences": 8
+    },
+    {
+      "title": "Go into the World",
+      "legacyId": "go-into-the-world--tom-booth",
+      "variants": 1,
+      "occurrences": 7
+    },
+    {
+      "title": "Build A Family",
+      "legacyId": "build-a-family--ed-bolduc-arranged-by-dan-houze",
+      "variants": 1,
+      "occurrences": 7
+    },
+    {
+      "title": "Jesus Christ, Yesterday, Today, and Forever",
+      "legacyId": "jesus-christ-yesterday-today-and-forever--suzanne-toolan-rsm",
+      "variants": 1,
+      "occurrences": 7
+    },
+    {
+      "title": "Halle, Halle, Halle",
+      "legacyId": "halle-halle-halle--marty-haugen",
+      "variants": 3,
+      "occurrences": 7
+    },
+    {
+      "title": "Create In Me",
+      "legacyId": "create-in-me--rend-collective",
+      "variants": 1,
+      "occurrences": 7
+    },
+    {
+      "title": "Loved",
+      "legacyId": "loved--ben-smith-pat-barrett",
+      "variants": 2,
+      "occurrences": 7
+    },
+    {
+      "title": "O Word of God",
+      "legacyId": "o-word-of-god--ricky-manalo-csp",
+      "variants": 1,
+      "occurrences": 7
+    },
+    {
+      "title": "This Is the Kingdom",
+      "legacyId": "this-is-the-kingdom--elevation-worship-pat-barrett-arr-by-e-fajardo",
+      "variants": 2,
+      "occurrences": 7
+    },
+    {
+      "title": "Give Thanks With A Grateful Heart",
+      "legacyId": "give-thanks-with-a-grateful-heart--cece-winans",
+      "variants": 2,
+      "occurrences": 7
+    },
+    {
+      "title": "Pan de Vida (4/4)",
+      "legacyId": "pan-de-vida-4-4--bob-hurd-arranged-by-ed-archer",
+      "variants": 1,
+      "occurrences": 7
+    },
+    {
+      "title": "Veni, Creator Spiritus",
+      "legacyId": "veni-creator-spiritus--john-angotti",
+      "variants": 1,
+      "occurrences": 7
+    },
+    {
+      "title": "Epiphany Carol",
+      "legacyId": "epiphany-carol--beach-spring-patrick-o-brien",
+      "variants": 1,
+      "occurrences": 6
+    },
+    {
+      "title": "Goodness of God",
+      "legacyId": "goodness-of-god--bethel-jenn-johnson",
+      "variants": 3,
+      "occurrences": 6
+    },
+    {
+      "title": "My Soul in Stillness Waits",
+      "legacyId": "my-soul-in-stillness-waits--marty-haugen",
+      "variants": 1,
+      "occurrences": 6
+    },
+    {
+      "title": "Always Carry You",
+      "legacyId": "always-carry-you--matt-maher",
+      "variants": 1,
+      "occurrences": 6
+    },
+    {
+      "title": "Our New Day",
+      "legacyId": "our-new-day--sarah-hart",
+      "variants": 1,
+      "occurrences": 6
+    },
+    {
+      "title": "Jesus, the Bread of Life",
+      "legacyId": "jesus-the-bread-of-life--grayson-warren-brown",
+      "variants": 1,
+      "occurrences": 6
+    },
+    {
+      "title": "Give Us Peace",
+      "legacyId": "give-us-peace--leon-c-roberts",
+      "variants": 1,
+      "occurrences": 6
+    },
+    {
+      "title": "Setting from Mass of St. Kilian",
+      "legacyId": "setting-from-mass-of-st-kilian",
+      "variants": 4,
+      "occurrences": 6
+    },
+    {
+      "title": "Advent and Christmastide Gospel Acclamation",
+      "legacyId": "advent-and-christmastide-gospel-acclamation--christmas-holy-family-abc-option",
+      "variants": 3,
+      "occurrences": 6
+    },
+    {
+      "title": "Lead Me to the Desert",
+      "legacyId": "lead-me-to-the-desert--sarah-hart-dwight-liles",
+      "variants": 1,
+      "occurrences": 6
+    },
+    {
+      "title": "The Lord's Prayer (It's Yours)",
+      "legacyId": "the-lord-s-prayer-it-s-yours--matt-maher",
+      "variants": 1,
+      "occurrences": 6
+    },
+    {
+      "title": "Unless a Grain Wheat",
+      "legacyId": "unless-a-grain-wheat--bob-hurd",
+      "variants": 1,
+      "occurrences": 6
+    },
+    {
+      "title": "Be Though My Vision SLANE",
+      "legacyId": "be-though-my-vision-slane--vs-1-byrne-vs-2-wente-vs-3-belle-adapt",
+      "variants": 1,
+      "occurrences": 6
+    },
+    {
+      "title": "Father, Let Your Kingdom Come",
+      "legacyId": "father-let-your-kingdom-come--the-porter-s-gate-urban-doxology",
+      "variants": 1,
+      "occurrences": 6
+    },
+    {
+      "title": "Heart of Jesus",
+      "legacyId": "heart-of-jesus--bob-hurd",
+      "variants": 1,
+      "occurrences": 5
+    },
+    {
+      "title": "Go Into the World",
+      "legacyId": "go-into-the-world--tom-booth",
+      "variants": 1,
+      "occurrences": 5
+    },
+    {
+      "title": "Do Not Be Afraid",
+      "legacyId": "do-not-be-afraid--jeanne-cotter",
+      "variants": 1,
+      "occurrences": 5
+    },
+    {
+      "title": "We Are Marching (Siyahamba)",
+      "legacyId": "we-are-marching-siyahamba--south-african-hymn",
+      "variants": 1,
+      "occurrences": 5
+    },
+    {
+      "title": "What A Beautiful Name (Gospel Version)",
+      "legacyId": "what-a-beautiful-name-gospel-version--hillsong-worship",
+      "variants": 1,
+      "occurrences": 5
+    },
+    {
+      "title": "Word of Our God",
+      "legacyId": "word-of-our-god--dan-schutte",
+      "variants": 1,
+      "occurrences": 5
+    },
+    {
+      "title": "Where Your Treasure Is",
+      "legacyId": "where-your-treasure-is--mary-haugen",
+      "variants": 1,
+      "occurrences": 5
+    },
+    {
+      "title": "Take, O Take Me As I Am",
+      "legacyId": "take-o-take-me-as-i-am--john-bell",
+      "variants": 1,
+      "occurrences": 5
+    },
+    {
+      "title": "Partners in the Mission",
+      "legacyId": "partners-in-the-mission--beams-of-love-peter-fisher-hesed",
+      "variants": 1,
+      "occurrences": 5
+    },
+    {
+      "title": "Make Me a Channel of Your Peace",
+      "legacyId": "make-me-a-channel-of-your-peace--john-angotti",
+      "variants": 1,
+      "occurrences": 5
+    },
+    {
+      "title": "Breathe",
+      "legacyId": "breathe--hillsong-worship",
+      "variants": 1,
+      "occurrences": 5
+    },
+    {
+      "title": "Pentecost Sequence (Archer)",
+      "legacyId": "pentecost-sequence-archer--pent-abc-come-holy-spirit-fill",
+      "variants": 3,
+      "occurrences": 5
+    },
+    {
+      "title": "Reunited in Everlasting Life",
+      "legacyId": "reunited-in-everlasting-life--jan-t-sullivan-whitaker",
+      "variants": 1,
+      "occurrences": 5
+    },
+    {
+      "title": "Will not be led by Cantor",
+      "legacyId": "will-not-be-led-by-cantor",
+      "variants": 1,
+      "occurrences": 4
+    },
+    {
+      "title": "Wait for the Lord",
+      "legacyId": "wait-for-the-lord--taiz-jacques-berthier",
+      "variants": 1,
+      "occurrences": 4
+    },
+    {
+      "title": "This Is How",
+      "legacyId": "this-is-how--chris-de-silva",
+      "variants": 1,
+      "occurrences": 4
+    },
+    {
+      "title": "I Am Yours (Consume Me, Completely)",
+      "legacyId": "i-am-yours-consume-me-completely--trevor-thomson-1",
+      "variants": 1,
+      "occurrences": 4
+    },
+    {
+      "title": "I Lift My Soul to You",
+      "legacyId": "i-lift-my-soul-to-you--lori-true",
+      "variants": 1,
+      "occurrences": 4
+    },
+    {
+      "title": "Lift High the Cross [NEW]",
+      "legacyId": "lift-high-the-cross-new--crucifer-nicholson-arr-by-david-lockwood",
+      "variants": 1,
+      "occurrences": 4
+    },
+    {
+      "title": "Strength for the Journey",
+      "legacyId": "strength-for-the-journey--michael-john-poirier",
+      "variants": 1,
+      "occurrences": 4
+    },
+    {
+      "title": "Belovedness",
+      "legacyId": "belovedness--sarah-kroger-arranged-by-arielle-phan",
+      "variants": 1,
+      "occurrences": 4
+    },
+    {
+      "title": "Build My Life",
+      "legacyId": "build-my-life--pat-barrett",
+      "variants": 1,
+      "occurrences": 4
+    },
+    {
+      "title": "What You Have Done for Me",
+      "legacyId": "what-you-have-done-for-me--tony-alonso",
+      "variants": 1,
+      "occurrences": 4
+    },
+    {
+      "title": "Simple Kingdom",
+      "legacyId": "simple-kingdom--bryan-katie-torwaltwith-with-cody-carnes",
+      "variants": 1,
+      "occurrences": 4
+    },
+    {
+      "title": "The Road of Mercy",
+      "legacyId": "the-road-of-mercy--maureen-briare",
+      "variants": 1,
+      "occurrences": 4
+    },
+    {
+      "title": "Bring Forth the Kingdom",
+      "legacyId": "bring-forth-the-kingdom--marty-haugen",
+      "variants": 1,
+      "occurrences": 4
+    },
+    {
+      "title": "Where He Leads Me",
+      "legacyId": "where-he-leads-me--ernest-w-blandy",
+      "variants": 1,
+      "occurrences": 4
+    },
+    {
+      "title": "Taste and See (Gospel Version)",
+      "legacyId": "taste-and-see-gospel-version--james-e-moore-vallimar-jansen",
+      "variants": 1,
+      "occurrences": 4
+    },
+    {
+      "title": "Misa del Mundo",
+      "legacyId": "misa-del-mundo",
+      "variants": 2,
+      "occurrences": 4
+    },
+    {
+      "title": "Mass of Endless Mercy",
+      "legacyId": "mass-of-endless-mercy",
+      "variants": 2,
+      "occurrences": 4
+    },
+    {
+      "title": "So Longs My Soul",
+      "legacyId": "so-longs-my-soul--liam-lawton",
+      "variants": 1,
+      "occurrences": 4
+    },
+    {
+      "title": "The Church of Christ in Every Age",
+      "legacyId": "the-church-of-christ-in-every-age--dunedin-fred-pratt-green-vernon-griffiths",
+      "variants": 1,
+      "occurrences": 4
+    },
+    {
+      "title": "Litany of Saints",
+      "legacyId": "litany-of-saints--litany-of-saints-john-d-becker",
+      "variants": 1,
+      "occurrences": 4
+    },
+    {
+      "title": "Composer(s) • Arranger(s)",
+      "legacyId": "composer-s-arranger-s",
+      "variants": 1,
+      "occurrences": 4
+    },
+    {
+      "title": "A Joyful Christmas Gloria",
+      "legacyId": "a-joyful-christmas-gloria--arr-jeanne-cotter-tony-alonso",
+      "variants": 1,
+      "occurrences": 3
+    },
+    {
+      "title": "Prepare Ye the Way of the Lord",
+      "legacyId": "prepare-ye-the-way-of-the-lord--james-moore",
+      "variants": 1,
+      "occurrences": 3
+    },
+    {
+      "title": "Christ Be Our Light (Welcome)",
+      "legacyId": "christ-be-our-light-welcome--farrell-arr-by-bonilla-adapt-for-rite-with-lockwood",
+      "variants": 1,
+      "occurrences": 3
+    },
+    {
+      "title": "Even So Come",
+      "legacyId": "even-so-come--chris-tomlin",
+      "variants": 1,
+      "occurrences": 3
+    },
+    {
+      "title": "Come Jesus Come",
+      "legacyId": "come-jesus-come--cece-winans",
+      "variants": 1,
+      "occurrences": 3
+    },
+    {
+      "title": "O Come, O Come Emmanuael",
+      "legacyId": "o-come-o-come-emmanuael--for-king-country-cm",
+      "variants": 1,
+      "occurrences": 3
+    },
+    {
+      "title": "CHRISTMAS — Baptism • ABC",
+      "legacyId": "christmas-baptism-abc--the-lyric-gospel-acclamations-tony-alonso",
+      "variants": 1,
+      "occurrences": 3
+    },
+    {
+      "title": "A Home of Grace",
+      "legacyId": "a-home-of-grace--joseph-m-martin",
+      "variants": 1,
+      "occurrences": 3
+    },
+    {
+      "title": "Day by Day (The Porters Gate)",
+      "legacyId": "day-by-day-the-porters-gate--lowana-wallace-isaac-wardell",
+      "variants": 1,
+      "occurrences": 3
+    },
+    {
+      "title": "Holy Spirit, Flow Through Me",
+      "legacyId": "holy-spirit-flow-through-me--walt-mills-lead-me-guide-me-2",
+      "variants": 1,
+      "occurrences": 3
+    },
+    {
+      "title": "Lamb of God, What Wondrous Love",
+      "legacyId": "lamb-of-god-what-wondrous-love--faure-kane-arr-allan-robert-petker",
+      "variants": 1,
+      "occurrences": 3
+    },
+    {
+      "title": "—",
+      "legacyId": "",
+      "variants": 1,
+      "occurrences": 3
+    },
+    {
+      "title": "Be Forgiven",
+      "legacyId": "be-forgiven--tom-booth",
+      "variants": 1,
+      "occurrences": 3
+    },
+    {
+      "title": "Immaculate Mary (Lowered)",
+      "legacyId": "immaculate-mary-lowered--lourdes-hymn-arr-by-randall-debruyn",
+      "variants": 1,
+      "occurrences": 3
+    },
+    {
+      "title": "A Generous Heart",
+      "legacyId": "a-generous-heart--chris-de-silva",
+      "variants": 1,
+      "occurrences": 3
+    },
+    {
+      "title": "Feed Us, Lord",
+      "legacyId": "feed-us-lord--w-clifford-petty",
+      "variants": 1,
+      "occurrences": 3
+    },
+    {
+      "title": "Pastures of the Lord",
+      "legacyId": "pastures-of-the-lord--curtis-stephan",
+      "variants": 1,
+      "occurrences": 3
+    },
+    {
+      "title": "In the Fields of the Lord",
+      "legacyId": "in-the-fields-of-the-lord--audrey-assad-isaac-wardell",
+      "variants": 1,
+      "occurrences": 3
+    },
+    {
+      "title": "Hosanna",
+      "legacyId": "hosanna--francis-patrick-o-brien",
+      "variants": 2,
+      "occurrences": 3
+    },
+    {
+      "title": "For All the Saints Who’ve Shown Your Love",
+      "legacyId": "for-all-the-saints-who-ve-shown-your-love--o-waly-waly-john-l-bell-gia",
+      "variants": 2,
+      "occurrences": 3
+    },
+    {
+      "title": "33 – The Epiphany of the Lord - Day",
+      "legacyId": "33-the-epiphany-of-the-lord-day--let-us-all-rejoice-angrisano-hart-stephan",
+      "variants": 1,
+      "occurrences": 2
+    },
+    {
+      "title": "CHRISTMAS — Epiphany • ABC",
+      "legacyId": "christmas-epiphany-abc--the-lyric-gospel-acclamations-tony-alonso",
+      "variants": 1,
+      "occurrences": 2
+    },
+    {
+      "title": "Jesus, Hope Of The World",
+      "legacyId": "jesus-hope-of-the-world--paul-tate",
+      "variants": 1,
+      "occurrences": 2
+    },
+    {
+      "title": "Spirit of God",
+      "legacyId": "spirit-of-god--james-e-moore",
+      "variants": 1,
+      "occurrences": 2
+    },
+    {
+      "title": "Rest On Us [NEW SONG]",
+      "legacyId": "rest-on-us-new-song--maverick-city-music-brandon-lake-eniola-abioye",
+      "variants": 1,
+      "occurrences": 2
+    },
+    {
+      "title": "His Mercy Is More",
+      "legacyId": "his-mercy-is-more--keith-kristyn-getty",
+      "variants": 1,
+      "occurrences": 2
+    },
+    {
+      "title": "I Love You Lord",
+      "legacyId": "i-love-you-lord--steffany-gretzinger",
+      "variants": 1,
+      "occurrences": 2
+    },
+    {
+      "title": "Christ the Good Shepherd",
+      "legacyId": "christ-the-good-shepherd--bob-hurd",
+      "variants": 1,
+      "occurrences": 2
+    },
+    {
+      "title": "The House of the Lord (sans bridge)",
+      "legacyId": "the-house-of-the-lord-sans-bridge--phil-wickham",
+      "variants": 1,
+      "occurrences": 2
+    },
+    {
+      "title": "I Am Yours (Consume Me Completely )",
+      "legacyId": "i-am-yours-consume-me-completely--trevor-thomson-1",
+      "variants": 1,
+      "occurrences": 2
+    },
+    {
+      "title": "Forth in the Peace of Christ We Go",
+      "legacyId": "forth-in-the-peace-of-christ-we-go--luke-d-rosen-james-quinn-sj",
+      "variants": 1,
+      "occurrences": 2
+    },
+    {
+      "title": "Glory, Glory, Gloria",
+      "legacyId": "glory-glory-gloria--bonilla-wilson-vocal-arr-by-lockwood-phan",
+      "variants": 1,
+      "occurrences": 2
+    },
+    {
+      "title": "Breastplate",
+      "legacyId": "breastplate--liam-lawton-arranged-by-chris-de-silva",
+      "variants": 1,
+      "occurrences": 2
+    },
+    {
+      "title": "Amazing Grace (My Chains Are Gone)",
+      "legacyId": "amazing-grace-my-chains-are-gone--chris-tomlin-louie-giglio-john-newton",
+      "variants": 1,
+      "occurrences": 2
+    },
+    {
+      "title": "Return to the Lord",
+      "legacyId": "return-to-the-lord--paul-tate",
+      "variants": 1,
+      "occurrences": 2
+    },
+    {
+      "title": "Return to God",
+      "legacyId": "return-to-god--marty-haugen",
+      "variants": 1,
+      "occurrences": 2
+    },
+    {
+      "title": "Run To The Father",
+      "legacyId": "run-to-the-father--matt-maher",
+      "variants": 1,
+      "occurrences": 2
+    },
+    {
+      "title": "ORDINARY TIME • 02C",
+      "legacyId": "ordinary-time-02c--the-lyric-gospel-acclamations-tony-alonso",
+      "variants": 1,
+      "occurrences": 2
+    },
+    {
+      "title": "Hold On to Love",
+      "legacyId": "hold-on-to-love--jesse-manibusan",
+      "variants": 1,
+      "occurrences": 2
+    },
+    {
+      "title": "Sing a New Church",
+      "legacyId": "sing-a-new-church--nettleton-delores-dufner-osb",
+      "variants": 1,
+      "occurrences": 2
+    },
+    {
+      "title": "ORDINARY TIME • 05C",
+      "legacyId": "ordinary-time-05c--the-lyric-gospel-acclamations-tony-alonso",
+      "variants": 1,
+      "occurrences": 2
+    },
+    {
+      "title": "ORDINARY TIME • 06C",
+      "legacyId": "ordinary-time-06c--the-lyric-gospel-acclamations-tony-alonso",
+      "variants": 1,
+      "occurrences": 2
+    },
+    {
+      "title": "Setting from Mass of St. Mary Magdalene",
+      "legacyId": "setting-from-mass-of-st-mary-magdalene--o-t-18-c-blessed-are-the-poor",
+      "variants": 2,
+      "occurrences": 2
+    },
+    {
+      "title": "Loved (NEW SONG)",
+      "legacyId": "loved-new-song--ben-smith-pat-barrett",
+      "variants": 1,
+      "occurrences": 2
+    },
+    {
+      "title": "The Clouds’ Veil [NEW]",
+      "legacyId": "the-clouds-veil-new--liam-lawton",
+      "variants": 1,
+      "occurrences": 2
+    },
+    {
+      "title": "Malo! Malo! Thanks be to God [NEW]",
+      "legacyId": "malo-malo-thanks-be-to-god-new--jesse-manibusan",
+      "variants": 1,
+      "occurrences": 2
+    },
+    {
+      "title": "Simple Kingdom [NEW]",
+      "legacyId": "simple-kingdom-new--bryan-katie-torwaltwith-with-cody-carnes",
+      "variants": 1,
+      "occurrences": 2
+    },
+    {
+      "title": "The Clouds’ Veil",
+      "legacyId": "the-clouds-veil--liam-lawton",
+      "variants": 1,
+      "occurrences": 2
+    },
+    {
+      "title": "Scars in Heaven",
+      "legacyId": "scars-in-heaven--casting-crowns",
+      "variants": 1,
+      "occurrences": 2
+    },
+    {
+      "title": "Setting from Mass of Misa del Mundo",
+      "legacyId": "setting-from-mass-of-misa-del-mundo--c-t-k-abc-blessed-is-he",
+      "variants": 2,
+      "occurrences": 2
+    },
+    {
+      "title": "It Is Well With My Soul [NEW]",
+      "legacyId": "it-is-well-with-my-soul-new--ville-du-havre-chris-rice",
+      "variants": 1,
+      "occurrences": 2
+    },
+    {
+      "title": "I Can Only Imagine",
+      "legacyId": "i-can-only-imagine--mercyme",
+      "variants": 1,
+      "occurrences": 2
+    },
+    {
+      "title": "TUNE • Author • Arr.",
+      "legacyId": "tune-author-arr--notes",
+      "variants": 1,
+      "occurrences": 2
+    },
+    {
+      "title": "Well Done",
+      "legacyId": "well-done--the-afters",
+      "variants": 1,
+      "occurrences": 2
+    },
+    {
+      "title": "Jesus, Hope of The World",
+      "legacyId": "jesus-hope-of-the-world--paul-tate",
+      "variants": 1,
+      "occurrences": 1
+    },
+    {
+      "title": "I AM THEY - King Of Love",
+      "legacyId": "i-am-they-king-of-love",
+      "variants": 1,
+      "occurrences": 1
+    },
+    {
+      "title": "If You Love Me",
+      "legacyId": "if-you-love-me--joel-raney",
+      "variants": 1,
+      "occurrences": 1
+    },
+    {
+      "title": "Mass of St. Mary Magdalene",
+      "legacyId": "mass-of-st-mary-magdalene",
+      "variants": 1,
+      "occurrences": 1
+    },
+    {
+      "title": "FEBRUARY 2: PRESENTATION OF THE LORD",
+      "legacyId": "february-2-presentation-of-the-lord--the-lyric-gospel-acclamations-tony-alonso",
+      "variants": 1,
+      "occurrences": 1
+    },
+    {
+      "title": "Build a Family",
+      "legacyId": "build-a-family--ed-bolduc-arranged-by-dan-houze",
+      "variants": 1,
+      "occurrences": 1
+    },
+    {
+      "title": "Song of St. Patrick",
+      "legacyId": "song-of-st-patrick--marty-haugen",
+      "variants": 1,
+      "occurrences": 1
+    },
+    {
+      "title": "May We See You",
+      "legacyId": "may-we-see-you--gerard-chiusano",
+      "variants": 1,
+      "occurrences": 1
+    },
+    {
+      "title": "Lord of All Hopefulness (Text only)",
+      "legacyId": "lord-of-all-hopefulness-text-only--slane-jan-struther-assad-arrangement",
+      "variants": 1,
+      "occurrences": 1
+    },
+    {
+      "title": "Great Are You Lord",
+      "legacyId": "great-are-you-lord--all-sons-daughters",
+      "variants": 1,
+      "occurrences": 1
+    },
+    {
+      "title": "God of Peace",
+      "legacyId": "god-of-peace--jeffrey-bonilla-david-lockwood",
+      "variants": 1,
+      "occurrences": 1
+    },
+    {
+      "title": "The Word Became Flesh",
+      "legacyId": "the-word-became-flesh--orin-johnson",
+      "variants": 1,
+      "occurrences": 1
+    },
+    {
+      "title": "Broken Vessels (Amazing Grace)",
+      "legacyId": "broken-vessels-amazing-grace--hillsong-worship",
+      "variants": 1,
+      "occurrences": 1
+    },
+    {
+      "title": "New Wine",
+      "legacyId": "new-wine--hillsong-worship",
+      "variants": 1,
+      "occurrences": 1
+    },
+    {
+      "title": "ORDINARY TIME • 03C",
+      "legacyId": "ordinary-time-03c--the-lyric-gospel-acclamations-tony-alonso",
+      "variants": 1,
+      "occurrences": 1
+    },
+    {
+      "title": "Lux Mundi",
+      "legacyId": "lux-mundi--trevor-thomson",
+      "variants": 1,
+      "occurrences": 1
+    },
+    {
+      "title": "Come and Gather Beneath the Tree of Life",
+      "legacyId": "come-and-gather-beneath-the-tree-of-life--marty-haugen",
+      "variants": 1,
+      "occurrences": 1
+    },
+    {
+      "title": "Teach Us How To Pray",
+      "legacyId": "teach-us-how-to-pray--john-angotti",
+      "variants": 1,
+      "occurrences": 1
+    },
+    {
+      "title": "The Kingdom of God",
+      "legacyId": "the-kingdom-of-god--taiz-jacques-berthier",
+      "variants": 1,
+      "occurrences": 1
+    },
+    {
+      "title": "Hold On",
+      "legacyId": "hold-on--adam-tice-arranged-by-sally-ann-morris",
+      "variants": 1,
+      "occurrences": 1
+    },
+    {
+      "title": "This Is the Kingdom [NEW]",
+      "legacyId": "this-is-the-kingdom-new--elevation-worship-pat-barrett-arr-by-e-fajardo",
+      "variants": 1,
+      "occurrences": 1
+    },
+    {
+      "title": "Healer of My Soul",
+      "legacyId": "healer-of-my-soul--john-michael-talbot",
+      "variants": 1,
+      "occurrences": 1
+    },
+    {
+      "title": "I Cannot Tell it All",
+      "legacyId": "i-cannot-tell-it-all--tom-booth-helena-buscema",
+      "variants": 1,
+      "occurrences": 1
+    },
+    {
+      "title": "Litany of Humility",
+      "legacyId": "litany-of-humility--thomas-muglia",
+      "variants": 1,
+      "occurrences": 1
+    },
+    {
+      "title": "Endless Praise",
+      "legacyId": "endless-praise--charity-gayle",
+      "variants": 1,
+      "occurrences": 1
+    },
+    {
+      "title": "In the Fields of the Lord [NEW]",
+      "legacyId": "in-the-fields-of-the-lord-new--audrey-assad-isaac-wardell",
+      "variants": 1,
+      "occurrences": 1
+    },
+    {
+      "title": "Light of the World",
+      "legacyId": "light-of-the-world--bolduc-ed-thomson-trevor",
+      "variants": 1,
+      "occurrences": 1
+    }
+  ],
+  "hasOtherOnly": [
+    {
+      "title": "Ps 23 The Lord Is My Shepherd",
+      "legacyId": "ps-23-the-lord-is-my-shepherd--the-lyric-psalter-tony-alonso-marty-haugen",
+      "variants": 3,
+      "occurrences": 6
+    }
+  ],
+  "covered": [
+    {
+      "title": "The Lord's Prayer",
+      "legacyId": "the-lord-s-prayer--albert-hay-malotte-evelyn-simpson-currenton",
+      "variants": 2,
+      "occurrences": 798
+    },
+    {
+      "title": "Glory to God (Mass of Christ the Savior)",
+      "legacyId": "glory-to-god-mass-of-christ-the-savior--dan-schutte",
+      "variants": 1,
+      "occurrences": 100
+    },
+    {
+      "title": "Jesus, Living Bread",
+      "legacyId": "jesus-living-bread--tom-booth",
+      "variants": 1,
+      "occurrences": 46
+    },
+    {
+      "title": "Be Not Afraid",
+      "legacyId": "be-not-afraid--robert-j-dufford-sj",
+      "variants": 1,
+      "occurrences": 46
+    },
+    {
+      "title": "Beyond the Days",
+      "legacyId": "beyond-the-days--ricky-manalo-csp",
+      "variants": 1,
+      "occurrences": 43
+    },
+    {
+      "title": "I Am the Bread of Life",
+      "legacyId": "i-am-the-bread-of-life--john-michael-talbot",
+      "variants": 2,
+      "occurrences": 36
+    },
+    {
+      "title": "The Feast Meant for Everyone",
+      "legacyId": "the-feast-meant-for-everyone--tom-booth-sarah-hart",
+      "variants": 1,
+      "occurrences": 35
+    },
+    {
+      "title": "Christ Be Our Light",
+      "legacyId": "christ-be-our-light--bernadette-farrell-arr-by-jeffrey-bonilla",
+      "variants": 1,
+      "occurrences": 34
+    },
+    {
+      "title": "Come to the Water",
+      "legacyId": "come-to-the-water--john-b-foley-sj-arranged-by-arielle-phan",
+      "variants": 1,
+      "occurrences": 32
+    },
+    {
+      "title": "Alleluia! Give the Glory (Mass of Glory)",
+      "legacyId": "alleluia-give-the-glory-mass-of-glory",
+      "variants": 2,
+      "occurrences": 29
+    },
+    {
+      "title": "We Remember",
+      "legacyId": "we-remember--marty-haugen",
+      "variants": 1,
+      "occurrences": 24
+    },
+    {
+      "title": "40 Days",
+      "legacyId": "40-days--matt-maher",
+      "variants": 1,
+      "occurrences": 24
+    },
+    {
+      "title": "Abba! Father!",
+      "legacyId": "abba-father--carey-landry-arr-by-david-lockwood",
+      "variants": 1,
+      "occurrences": 23
+    },
+    {
+      "title": "Hail the Day That Sees Him Rise",
+      "legacyId": "hail-the-day-that-sees-him-rise--llanfair-trevor-thomson",
+      "variants": 2,
+      "occurrences": 22
+    },
+    {
+      "title": "We Walk By Faith",
+      "legacyId": "we-walk-by-faith--marty-haugen-arranged-by-david-lockwood",
+      "variants": 2,
+      "occurrences": 21
+    },
+    {
+      "title": "Prayer of St Francis",
+      "legacyId": "prayer-of-st-francis--sebastian-temple-arranged-by-ed-archer",
+      "variants": 2,
+      "occurrences": 21
+    },
+    {
+      "title": "Jesus I Trust In You",
+      "legacyId": "jesus-i-trust-in-you--bolduc-ed-ruis-david",
+      "variants": 2,
+      "occurrences": 21
+    },
+    {
+      "title": "One Bread, One Body",
+      "legacyId": "one-bread-one-body--john-foley-sj-upbeat",
+      "variants": 3,
+      "occurrences": 21
+    },
+    {
+      "title": "How Great Thou Art",
+      "legacyId": "how-great-thou-art--paul-baloche",
+      "variants": 2,
+      "occurrences": 20
+    },
+    {
+      "title": "The Servant Song",
+      "legacyId": "the-servant-song--richard-gillard-arranged-by-ed-archer",
+      "variants": 1,
+      "occurrences": 19
+    },
+    {
+      "title": "On Eagle's Wings",
+      "legacyId": "on-eagle-s-wings--michael-joncas-craig-kingsbury-1",
+      "variants": 3,
+      "occurrences": 19
+    },
+    {
+      "title": "Remembrance",
+      "legacyId": "remembrance--hillsong",
+      "variants": 1,
+      "occurrences": 18
+    },
+    {
+      "title": "In Every Age",
+      "legacyId": "in-every-age--jan-t-sullivan-whitaker",
+      "variants": 1,
+      "occurrences": 18
+    },
+    {
+      "title": "Angels We Have Heard On High",
+      "legacyId": "angels-we-have-heard-on-high--praise-charts-ocp-arrangements",
+      "variants": 1,
+      "occurrences": 18
+    },
+    {
+      "title": "Were You There?",
+      "legacyId": "were-you-there--scott-soper",
+      "variants": 1,
+      "occurrences": 18
+    },
+    {
+      "title": "O Come, O Come Emmanuel",
+      "legacyId": "o-come-o-come-emmanuel--veni-veni-emmanuel",
+      "variants": 4,
+      "occurrences": 17
+    },
+    {
+      "title": "Ubi Caritas",
+      "legacyId": "ubi-caritas--bob-hurd",
+      "variants": 2,
+      "occurrences": 16
+    },
+    {
+      "title": "Precious Lord, Take My Hand",
+      "legacyId": "precious-lord-take-my-hand--thomas-a-dorsey",
+      "variants": 1,
+      "occurrences": 16
+    },
+    {
+      "title": "O Little Town of Bethlehem",
+      "legacyId": "o-little-town-of-bethlehem--praise-charts-ocp-arrangements",
+      "variants": 1,
+      "occurrences": 15
+    },
+    {
+      "title": "Here At This Table",
+      "legacyId": "here-at-this-table--janet-sullivan-whitaker",
+      "variants": 2,
+      "occurrences": 15
+    },
+    {
+      "title": "Holy, Holy, Holy",
+      "legacyId": "holy-holy-holy--timothy-smith-reginald-heber-arr-by-david-lockwood",
+      "variants": 1,
+      "occurrences": 15
+    },
+    {
+      "title": "There Is A Longing",
+      "legacyId": "there-is-a-longing--anne-quigley",
+      "variants": 1,
+      "occurrences": 14
+    },
+    {
+      "title": "Transfigure Us, O Lord",
+      "legacyId": "transfigure-us-o-lord--bob-hurd",
+      "variants": 1,
+      "occurrences": 14
+    },
+    {
+      "title": "The King Shall Come",
+      "legacyId": "the-king-shall-come--trevor-thomson",
+      "variants": 1,
+      "occurrences": 13
+    },
+    {
+      "title": "Creator of the Stars of Night",
+      "legacyId": "creator-of-the-stars-of-night--ed-bolduc-karen-bolduc-john-carrozza",
+      "variants": 2,
+      "occurrences": 13
+    },
+    {
+      "title": "I Send You Out",
+      "legacyId": "i-send-you-out--john-angotti",
+      "variants": 1,
+      "occurrences": 13
+    },
+    {
+      "title": "A Rightful Place",
+      "legacyId": "a-rightful-place--steve-angrisano",
+      "variants": 1,
+      "occurrences": 13
+    },
+    {
+      "title": "Turn To Me",
+      "legacyId": "turn-to-me--john-foley-sj",
+      "variants": 1,
+      "occurrences": 13
+    },
+    {
+      "title": "In Christ There Is No East Or West",
+      "legacyId": "in-christ-there-is-no-east-or-west--william-a-dunkerley",
+      "variants": 2,
+      "occurrences": 13
+    },
+    {
+      "title": "A Place At Your Table",
+      "legacyId": "a-place-at-your-table--ben-walther",
+      "variants": 1,
+      "occurrences": 13
+    },
+    {
+      "title": "Bread for the World",
+      "legacyId": "bread-for-the-world--bernadette-farrell",
+      "variants": 1,
+      "occurrences": 13
+    },
+    {
+      "title": "Waiting in Silence",
+      "legacyId": "waiting-in-silence--carey-landry",
+      "variants": 1,
+      "occurrences": 12
+    },
+    {
+      "title": "Come Lord Jesus",
+      "legacyId": "come-lord-jesus--john-angotti",
+      "variants": 1,
+      "occurrences": 12
+    },
+    {
+      "title": "Holy Is His Name",
+      "legacyId": "holy-is-his-name--john-michael-talbot",
+      "variants": 1,
+      "occurrences": 12
+    },
+    {
+      "title": "Hail Mary: Gentle Woman",
+      "legacyId": "hail-mary-gentle-woman--carey-landrey",
+      "variants": 1,
+      "occurrences": 12
+    },
+    {
+      "title": "Bread of Life",
+      "legacyId": "bread-of-life--michael-john-poirier",
+      "variants": 3,
+      "occurrences": 12
+    },
+    {
+      "title": "We Are Many Parts",
+      "legacyId": "we-are-many-parts--marty-haugen-arr-by-dan-houze",
+      "variants": 1,
+      "occurrences": 12
+    },
+    {
+      "title": "Away in a Manger",
+      "legacyId": "away-in-a-manger--praise-charts-ocp-arrangements",
+      "variants": 1,
+      "occurrences": 12
+    },
+    {
+      "title": "You Are the Light",
+      "legacyId": "you-are-the-light--sarah-hart",
+      "variants": 1,
+      "occurrences": 12
+    },
+    {
+      "title": "O God, You Search Me",
+      "legacyId": "o-god-you-search-me--bernadette-farrell",
+      "variants": 1,
+      "occurrences": 12
+    },
+    {
+      "title": "As We Gather at Your Table",
+      "legacyId": "as-we-gather-at-your-table--nettleton-carl-p-daw-arr-by-j-bonilla",
+      "variants": 2,
+      "occurrences": 12
+    },
+    {
+      "title": "Act Justly",
+      "legacyId": "act-justly--bernadette-farrell",
+      "variants": 1,
+      "occurrences": 12
+    },
+    {
+      "title": "Christ the Lord",
+      "legacyId": "christ-the-lord--sarah-hart-robert-feduccia",
+      "variants": 1,
+      "occurrences": 11
+    },
+    {
+      "title": "The Supper of the Lord",
+      "legacyId": "the-supper-of-the-lord--laurence-rosania",
+      "variants": 1,
+      "occurrences": 11
+    },
+    {
+      "title": "Gift of Finest Wheat",
+      "legacyId": "gift-of-finest-wheat--bicentennial-robert-kreutz-omer-westendorf",
+      "variants": 1,
+      "occurrences": 11
+    },
+    {
+      "title": "Above All",
+      "legacyId": "above-all--lenny-leblanc",
+      "variants": 1,
+      "occurrences": 11
+    },
+    {
+      "title": "We Three Kings",
+      "legacyId": "we-three-kings--john-h-hopkins-jr-arranged-by-tom-booth",
+      "variants": 1,
+      "occurrences": 10
+    },
+    {
+      "title": "Find Us Ready",
+      "legacyId": "find-us-ready--tom-booth",
+      "variants": 1,
+      "occurrences": 10
+    },
+    {
+      "title": "In Christ Alone",
+      "legacyId": "in-christ-alone--keith-kristyn-getty-arr-by-micah-jones",
+      "variants": 2,
+      "occurrences": 10
+    },
+    {
+      "title": "God of Mercy",
+      "legacyId": "god-of-mercy--ricky-manalo-csp-bob-hurd",
+      "variants": 1,
+      "occurrences": 10
+    },
+    {
+      "title": "Lead Me, Guide Me",
+      "legacyId": "lead-me-guide-me--doris-akers-richard-smallwood",
+      "variants": 2,
+      "occurrences": 10
+    },
+    {
+      "title": "All Creatures of Our God and King",
+      "legacyId": "all-creatures-of-our-god-and-king--lasst-uns-erfreuen",
+      "variants": 2,
+      "occurrences": 10
+    },
+    {
+      "title": "Your Light Will Come, Jerusalem",
+      "legacyId": "your-light-will-come-jerusalem--bob-hurd",
+      "variants": 1,
+      "occurrences": 9
+    },
+    {
+      "title": "Age to Age",
+      "legacyId": "age-to-age--janet-vogt-jeff-mclemore-skip-kroner",
+      "variants": 2,
+      "occurrences": 9
+    },
+    {
+      "title": "By Our Love",
+      "legacyId": "by-our-love--tom-kendzia",
+      "variants": 2,
+      "occurrences": 9
+    },
+    {
+      "title": "Holy Spirit",
+      "legacyId": "holy-spirit--bryan-katie-torwalt",
+      "variants": 1,
+      "occurrences": 9
+    },
+    {
+      "title": "Give Us Your Peace",
+      "legacyId": "give-us-your-peace--jesse-manibusan-sarah-hart",
+      "variants": 1,
+      "occurrences": 9
+    },
+    {
+      "title": "Lift High the Cross",
+      "legacyId": "lift-high-the-cross--crucifer-sydney-h-nicholson",
+      "variants": 2,
+      "occurrences": 9
+    },
+    {
+      "title": "I Will Choose Christ",
+      "legacyId": "i-will-choose-christ--tom-booth-1",
+      "variants": 1,
+      "occurrences": 9
+    },
+    {
+      "title": "Led by the Spirit",
+      "legacyId": "led-by-the-spirit--kingsfold-bob-hurd",
+      "variants": 1,
+      "occurrences": 9
+    },
+    {
+      "title": "Change Our Hearts",
+      "legacyId": "change-our-hearts--rory-cooney",
+      "variants": 1,
+      "occurrences": 9
+    },
+    {
+      "title": "For the Beauty of the Earth",
+      "legacyId": "for-the-beauty-of-the-earth--dix-folliott-sandford-pierpoint-arr-by-dan-houze",
+      "variants": 2,
+      "occurrences": 9
+    },
+    {
+      "title": "Come, Holy Spirit",
+      "legacyId": "come-holy-spirit--tom-booth-robert-feduccia",
+      "variants": 1,
+      "occurrences": 9
+    },
+    {
+      "title": "Jesus, Remember Me",
+      "legacyId": "jesus-remember-me--taiz-jacques-berthier-1",
+      "variants": 1,
+      "occurrences": 9
+    },
+    {
+      "title": "Make Your Home In Me",
+      "legacyId": "make-your-home-in-me--ben-walther",
+      "variants": 1,
+      "occurrences": 8
+    },
+    {
+      "title": "Shelter Me, O God",
+      "legacyId": "shelter-me-o-god--bob-hurd-arranged-by-david-lockwood",
+      "variants": 2,
+      "occurrences": 8
+    },
+    {
+      "title": "Jesus Is Risen",
+      "legacyId": "jesus-is-risen--lasst-uns-erfreuen-lm-with-alleluias",
+      "variants": 1,
+      "occurrences": 8
+    },
+    {
+      "title": "Christ in Me Arise",
+      "legacyId": "christ-in-me-arise--trevor-thomson",
+      "variants": 1,
+      "occurrences": 8
+    },
+    {
+      "title": "You Are Welcome Here",
+      "legacyId": "you-are-welcome-here--chris-muglia",
+      "variants": 1,
+      "occurrences": 8
+    },
+    {
+      "title": "Only This I Want",
+      "legacyId": "only-this-i-want--dan-schutte",
+      "variants": 1,
+      "occurrences": 8
+    },
+    {
+      "title": "Pan del Cielo / Bread from Heaven",
+      "legacyId": "pan-del-cielo-bread-from-heaven--iv-n-d-az",
+      "variants": 2,
+      "occurrences": 8
+    },
+    {
+      "title": "The Summons",
+      "legacyId": "the-summons--john-l-bell",
+      "variants": 2,
+      "occurrences": 8
+    },
+    {
+      "title": "God, We Praise You",
+      "legacyId": "god-we-praise-you--nettleton-christopher-idle",
+      "variants": 1,
+      "occurrences": 8
+    },
+    {
+      "title": "Pentecost Sequence",
+      "legacyId": "pentecost-sequence--sequence-music-by-ed-archer",
+      "variants": 4,
+      "occurrences": 8
+    },
+    {
+      "title": "Go In Peace",
+      "legacyId": "go-in-peace--sarah-hart-arr-by-dan-houze",
+      "variants": 1,
+      "occurrences": 8
+    },
+    {
+      "title": "What Child Is This?",
+      "legacyId": "what-child-is-this--greensleeves-william-dix-arr-by-alonso",
+      "variants": 4,
+      "occurrences": 7
+    },
+    {
+      "title": "Emmanuel",
+      "legacyId": "emmanuel--steve-angrisano",
+      "variants": 1,
+      "occurrences": 7
+    },
+    {
+      "title": "O Breathe on Me, O Breath of God",
+      "legacyId": "o-breathe-on-me-o-breath-of-god--st-columba-traditional-irish-edwin-hatch",
+      "variants": 1,
+      "occurrences": 7
+    },
+    {
+      "title": "Alleluia! Love Is Alive",
+      "legacyId": "alleluia-love-is-alive--steve-angrisano-jesse-manibusan-sarah-hart",
+      "variants": 1,
+      "occurrences": 7
+    },
+    {
+      "title": "We Belong To You",
+      "legacyId": "we-belong-to-you--trevor-thomson-victoria-thomson",
+      "variants": 1,
+      "occurrences": 7
+    },
+    {
+      "title": "Gather Your People",
+      "legacyId": "gather-your-people--bob-hurd",
+      "variants": 1,
+      "occurrences": 7
+    },
+    {
+      "title": "They'll Know We Are Christians",
+      "legacyId": "theyll-know-we-are-christians",
+      "variants": 3,
+      "occurrences": 7
+    },
+    {
+      "title": "Bread of Angels",
+      "legacyId": "bread-of-angels--curtis-stephan",
+      "variants": 1,
+      "occurrences": 7
+    },
+    {
+      "title": "Be Still and Know That I Am God",
+      "legacyId": "be-still-and-know-that-i-am-god--christopher-walker-sr-paule-freeburg-dc",
+      "variants": 1,
+      "occurrences": 7
+    },
+    {
+      "title": "Center of My Life",
+      "legacyId": "center-of-my-life--paul-inwood-arranged-by-david-lockwood",
+      "variants": 2,
+      "occurrences": 7
+    },
+    {
+      "title": "Christ Before Us",
+      "legacyId": "christ-before-us--jan-t-sullivan-whitaker-mark-j-sullivan",
+      "variants": 1,
+      "occurrences": 7
+    },
+    {
+      "title": "Angels from the Realms of Glory",
+      "legacyId": "angels-from-the-realms-of-glory--regent-square-smart-montgomery",
+      "variants": 1,
+      "occurrences": 6
+    },
+    {
+      "title": "Go Tell It On the Mountain",
+      "legacyId": "go-tell-it-on-the-mountain--arrangement-by-david-lockwood",
+      "variants": 1,
+      "occurrences": 6
+    },
+    {
+      "title": "To You, O God, I Lift Up My Soul",
+      "legacyId": "to-you-o-god-i-lift-up-my-soul--bob-hurd",
+      "variants": 1,
+      "occurrences": 6
+    },
+    {
+      "title": "Say to the Frightened Heart",
+      "legacyId": "say-to-the-frightened-heart--bob-hurd",
+      "variants": 1,
+      "occurrences": 6
+    },
+    {
+      "title": "Soon and Very Soon",
+      "legacyId": "soon-and-very-soon--andrae-crouch-and-the-disciples",
+      "variants": 1,
+      "occurrences": 6
+    },
+    {
+      "title": "Rejoice, the Lord Is King",
+      "legacyId": "rejoice-the-lord-is-king--darwall-s-148th-charles-wesley",
+      "variants": 2,
+      "occurrences": 6
+    },
+    {
+      "title": "The Angel Gabriel from Heaven Came",
+      "legacyId": "the-angel-gabriel-from-heaven-came--gabriel-s-message-basque-carol",
+      "variants": 1,
+      "occurrences": 6
+    },
+    {
+      "title": "Go Make of All Disciples",
+      "legacyId": "go-make-of-all-disciples--ellacombe-leon-m-adkins",
+      "variants": 1,
+      "occurrences": 6
+    },
+    {
+      "title": "One Sacrifice of Christ",
+      "legacyId": "one-sacrifice-of-christ--rick-modlin-robert-feduccia",
+      "variants": 1,
+      "occurrences": 6
+    },
+    {
+      "title": "Eye Has Not Seen",
+      "legacyId": "eye-has-not-seen--marty-haugen",
+      "variants": 1,
+      "occurrences": 6
+    },
+    {
+      "title": "Jesus Christ Is Risen Today",
+      "legacyId": "jesus-christ-is-risen-today--compliant-psalmodist-the-lyra-davidica-wesley-charles",
+      "variants": 1,
+      "occurrences": 6
+    },
+    {
+      "title": "All Are Welcome",
+      "legacyId": "all-are-welcome--two-oaks-marty-haugen",
+      "variants": 1,
+      "occurrences": 6
+    },
+    {
+      "title": "Give Me Jesus",
+      "legacyId": "give-me-jesus--spiritual-sara-watkins",
+      "variants": 1,
+      "occurrences": 6
+    },
+    {
+      "title": "Many and Great",
+      "legacyId": "many-and-great--ricky-manalo-csp",
+      "variants": 1,
+      "occurrences": 6
+    },
+    {
+      "title": "As Christ to the World",
+      "legacyId": "as-christ-to-the-world--tom-kendzia",
+      "variants": 1,
+      "occurrences": 6
+    },
+    {
+      "title": "in Christ There Is No East or West",
+      "legacyId": "in-christ-there-is-no-east-or-west--william-a-dunkerley",
+      "variants": 2,
+      "occurrences": 6
+    },
+    {
+      "title": "Creator Spirit, by Whose Aid",
+      "legacyId": "creator-spirit-by-whose-aid--arr-by-david-lockwood",
+      "variants": 2,
+      "occurrences": 6
+    },
+    {
+      "title": "Ready The Way",
+      "legacyId": "ready-the-way--bob-hurd-craig-kingsbury",
+      "variants": 1,
+      "occurrences": 5
+    },
+    {
+      "title": "At the Name of Jesus",
+      "legacyId": "at-the-name-of-jesus--christopher-walker",
+      "variants": 2,
+      "occurrences": 5
+    },
+    {
+      "title": "Go Out, Go Out",
+      "legacyId": "go-out-go-out--curtis-stephan",
+      "variants": 1,
+      "occurrences": 5
+    },
+    {
+      "title": "When Jesus Comes to Jordan's Stream [NEW]",
+      "legacyId": "when-jesus-comes-to-jordan-s-stream-new--text-by-michael-joncas-music-by-casey-mckinley",
+      "variants": 1,
+      "occurrences": 5
+    },
+    {
+      "title": "Tend the Ground",
+      "legacyId": "tend-the-ground--curtis-stephan-based-on-laudato-si",
+      "variants": 1,
+      "occurrences": 5
+    },
+    {
+      "title": "Peace I Leave with You",
+      "legacyId": "peace-i-leave-with-you--barbara-bridge",
+      "variants": 1,
+      "occurrences": 5
+    },
+    {
+      "title": "All That Is Hidden",
+      "legacyId": "all-that-is-hidden--bernadette-farrell",
+      "variants": 1,
+      "occurrences": 5
+    },
+    {
+      "title": "Here I Am, Lord",
+      "legacyId": "here-i-am-lord--dan-schutte-arranged-by-lockwood-bonilla",
+      "variants": 2,
+      "occurrences": 5
+    },
+    {
+      "title": "Christ In Me Arise",
+      "legacyId": "christ-in-me-arise--trevor-thomson",
+      "variants": 1,
+      "occurrences": 5
+    },
+    {
+      "title": "I Have Loved You",
+      "legacyId": "i-have-loved-you--michael-joncas",
+      "variants": 1,
+      "occurrences": 5
+    },
+    {
+      "title": "Endless Is Your Love",
+      "legacyId": "endless-is-your-love--tom-kendzia",
+      "variants": 1,
+      "occurrences": 5
+    },
+    {
+      "title": "Unless A Grain Of Wheat",
+      "legacyId": "unless-a-grain-of-wheat--bernadette-farrell-barbara-bridge-kevin-walsh",
+      "variants": 2,
+      "occurrences": 5
+    },
+    {
+      "title": "Rain Down",
+      "legacyId": "rain-down--jaime-cortez",
+      "variants": 1,
+      "occurrences": 5
+    },
+    {
+      "title": "Open My Eyes/Abre Mis Ojos",
+      "legacyId": "open-my-eyes-abre-mis-ojos--jesse-manibusan",
+      "variants": 1,
+      "occurrences": 5
+    },
+    {
+      "title": "The First Nowell",
+      "legacyId": "the-first-nowell--english-melody-and-carol-17th-c",
+      "variants": 1,
+      "occurrences": 4
+    },
+    {
+      "title": "Our Life Is Hidden with Christ",
+      "legacyId": "our-life-is-hidden-with-christ--bob-hurd-arranged-by-rick-modlin",
+      "variants": 1,
+      "occurrences": 4
+    },
+    {
+      "title": "Hallelujah Is Our Song",
+      "legacyId": "hallelujah-is-our-song--sarah-hart-sarah-kroger",
+      "variants": 1,
+      "occurrences": 4
+    },
+    {
+      "title": "New Creation",
+      "legacyId": "new-creation--jackie-fran-ois",
+      "variants": 1,
+      "occurrences": 4
+    },
+    {
+      "title": "Lord, You Give the Great Commission",
+      "legacyId": "lord-you-give-the-great-commission--abbot-s-leigh-taylor-rowthorn",
+      "variants": 3,
+      "occurrences": 4
+    },
+    {
+      "title": "One Bread, One Cup",
+      "legacyId": "one-bread-one-cup--fisher-canedo-lee-aven",
+      "variants": 1,
+      "occurrences": 4
+    },
+    {
+      "title": "We Belong to You",
+      "legacyId": "we-belong-to-you--trevor-thomson-victoria-thomson",
+      "variants": 1,
+      "occurrences": 4
+    },
+    {
+      "title": "Day of Peace",
+      "legacyId": "day-of-peace--jan-t-sullivan-whitaker",
+      "variants": 1,
+      "occurrences": 4
+    },
+    {
+      "title": "Take the Word of God with You",
+      "legacyId": "take-the-word-of-god-with-you--christopher-walker-james-harrison",
+      "variants": 2,
+      "occurrences": 4
+    },
+    {
+      "title": "I Received the Living God",
+      "legacyId": "i-received-the-living-god--traditional",
+      "variants": 2,
+      "occurrences": 4
+    },
+    {
+      "title": "Gather Us In",
+      "legacyId": "gather-us-in--marty-haugen",
+      "variants": 1,
+      "occurrences": 4
+    },
+    {
+      "title": "Taste and See",
+      "legacyId": "taste-and-see--bob-hurd",
+      "variants": 2,
+      "occurrences": 4
+    },
+    {
+      "title": "Your Grace Is Enough",
+      "legacyId": "your-grace-is-enough--matt-maher",
+      "variants": 1,
+      "occurrences": 4
+    },
+    {
+      "title": "Go Make a Difference",
+      "legacyId": "go-make-a-difference--steve-angrisano-tom-tomaszek",
+      "variants": 1,
+      "occurrences": 4
+    },
+    {
+      "title": "Healed in Christ",
+      "legacyId": "healed-in-christ--sarah-hart",
+      "variants": 2,
+      "occurrences": 4
+    },
+    {
+      "title": "We are his people!",
+      "legacyId": "we-are-his-people",
+      "variants": 1,
+      "occurrences": 4
+    },
+    {
+      "title": "In the Day of the Lord",
+      "legacyId": "in-the-day-of-the-lord--m-d-ridge",
+      "variants": 1,
+      "occurrences": 3
+    },
+    {
+      "title": "On Jordan's Bank",
+      "legacyId": "on-jordans-bank",
+      "variants": 2,
+      "occurrences": 3
+    },
+    {
+      "title": "Christ Circle Round Us",
+      "legacyId": "christ-circle-round-us--dan-schutte",
+      "variants": 1,
+      "occurrences": 3
+    },
+    {
+      "title": "People Look East",
+      "legacyId": "people-look-east--eleanor-farjeon-arr-by-marty-haugen",
+      "variants": 1,
+      "occurrences": 3
+    },
+    {
+      "title": "Ave Maria",
+      "legacyId": "ave-maria--franz-schubert",
+      "variants": 1,
+      "occurrences": 3
+    },
+    {
+      "title": "Send out Your Spirit",
+      "legacyId": "send-out-your-spirit--bernadette-farrell-jo-routh-kevin-walsh",
+      "variants": 1,
+      "occurrences": 3
+    },
+    {
+      "title": "Now the Green Blade Rises",
+      "legacyId": "now-the-green-blade-rises--noel-nouvelet-french-carol-john-m-c-crum",
+      "variants": 2,
+      "occurrences": 3
+    },
+    {
+      "title": "Christians, Let Us Love One Another",
+      "legacyId": "christians-let-us-love-one-another--picardy-claudia-foltz-snjm-armand-nigro-sj",
+      "variants": 1,
+      "occurrences": 3
+    },
+    {
+      "title": "Come to the Feast | Ven al Banquete",
+      "legacyId": "come-to-the-feast-ven-al-banquete--bob-hurd-arranged-by-david-lockwood",
+      "variants": 1,
+      "occurrences": 3
+    },
+    {
+      "title": "Lord, You Give The Great Commission",
+      "legacyId": "lord-you-give-the-great-commission--abbot-s-leigh-taylor-rowthorn",
+      "variants": 3,
+      "occurrences": 3
+    },
+    {
+      "title": "Canticle of the Sun",
+      "legacyId": "canticle-of-the-sun--marty-haugen-arr-by-david-lockwood",
+      "variants": 1,
+      "occurrences": 3
+    },
+    {
+      "title": "Praise To the Lord, the Almighty",
+      "legacyId": "praise-to-the-lord-the-almighty--lobe-den-herren-gesangbuch-ed-archer",
+      "variants": 1,
+      "occurrences": 3
+    },
+    {
+      "title": "Silent Night",
+      "legacyId": "silent-night--arrangement-by-chris-tomlin",
+      "variants": 1,
+      "occurrences": 3
+    },
+    {
+      "title": "The House that Love Is Building",
+      "legacyId": "the-house-that-love-is-building--sarah-hart-arranged-by-arielle-phan",
+      "variants": 1,
+      "occurrences": 3
+    },
+    {
+      "title": "From Dust We Came, to Dust Return",
+      "legacyId": "from-dust-we-came-to-dust-return--scot-crandal-michael-joncas",
+      "variants": 1,
+      "occurrences": 3
+    },
+    {
+      "title": "Into the Desert",
+      "legacyId": "into-the-desert--curtis-stephan-sarah-hart",
+      "variants": 1,
+      "occurrences": 3
+    },
+    {
+      "title": "Hosea",
+      "legacyId": "hosea--weston-priory-gregory-norbet",
+      "variants": 1,
+      "occurrences": 3
+    },
+    {
+      "title": "In These Days of Lenten Journey",
+      "legacyId": "in-these-days-of-lenten-journey--ricky-manalo-csp-gerard-chiusano",
+      "variants": 1,
+      "occurrences": 3
+    },
+    {
+      "title": "Open My Eyes",
+      "legacyId": "open-my-eyes--jesse-manibusan",
+      "variants": 2,
+      "occurrences": 3
+    },
+    {
+      "title": "Lord of All Hopefulness",
+      "legacyId": "lord-of-all-hopefulness--slane-jan-struther-randall-debruyn",
+      "variants": 1,
+      "occurrences": 3
+    },
+    {
+      "title": "Worthy Is the Lamb",
+      "legacyId": "worthy-is-the-lamb--ricky-manalo-csp",
+      "variants": 1,
+      "occurrences": 3
+    },
+    {
+      "title": "Peace on Earth (Larghetto)",
+      "legacyId": "peace-on-earth-larghetto--dvo-k-adapted-by-bob-hurd",
+      "variants": 1,
+      "occurrences": 3
+    },
+    {
+      "title": "Here I Am Lord",
+      "legacyId": "here-i-am-lord--dan-schutte-arranged-by-lockwood-bonilla",
+      "variants": 2,
+      "occurrences": 3
+    },
+    {
+      "title": "The House That Love Is Building",
+      "legacyId": "the-house-that-love-is-building--sarah-hart-arranged-by-arielle-phan",
+      "variants": 1,
+      "occurrences": 3
+    },
+    {
+      "title": "For the Fruits of This Creation",
+      "legacyId": "for-the-fruits-of-this-creation--green-debruyn",
+      "variants": 1,
+      "occurrences": 3
+    },
+    {
+      "title": "I Heard the Voice of Jesus Say",
+      "legacyId": "i-heard-the-voice-of-jesus-say--kingsfold-horatius-bonar",
+      "variants": 2,
+      "occurrences": 3
+    },
+    {
+      "title": "I Want to Walk as a Child of the Light",
+      "legacyId": "i-want-to-walk-as-a-child-of-the-light--houston-kathleen-thomerson",
+      "variants": 1,
+      "occurrences": 3
+    },
+    {
+      "title": "Lord, Whose Love in Humble Service",
+      "legacyId": "lord-whose-love-in-humble-service--beach-spring-albert-f-bayly",
+      "variants": 1,
+      "occurrences": 3
+    },
+    {
+      "title": "Seed, Scattered and Sown",
+      "legacyId": "seed-scattered-and-sown--dan-feiten-arranged-by-david-lockwood",
+      "variants": 2,
+      "occurrences": 3
+    },
+    {
+      "title": "Humbly, Lord, We Worship You",
+      "legacyId": "humbly-lord-we-worship-you--sr-jeanne-frolick-sfcc",
+      "variants": 1,
+      "occurrences": 3
+    },
+    {
+      "title": "Holy God, We Praise Thy Name",
+      "legacyId": "holy-god-we-praise-thy-name--robert-e-kreutz",
+      "variants": 1,
+      "occurrences": 3
+    },
+    {
+      "title": "May the Angels Lead You Home",
+      "legacyId": "may-the-angels-lead-you-home--sarah-hart-and-francesca-larosa",
+      "variants": 1,
+      "occurrences": 3
+    },
+    {
+      "title": "What Child Is This",
+      "legacyId": "what-child-is-this--greensleeves-william-dix-arr-by-alonso",
+      "variants": 4,
+      "occurrences": 3
+    },
+    {
+      "title": "Go out, Go Out",
+      "legacyId": "go-out-go-out--curtis-stephan",
+      "variants": 1,
+      "occurrences": 2
+    },
+    {
+      "title": "Spirit and Grace",
+      "legacyId": "spirit-and-grace--ricky-manalo-csp",
+      "variants": 1,
+      "occurrences": 2
+    },
+    {
+      "title": "The Body of Christ",
+      "legacyId": "the-body-of-christ--sarah-hart",
+      "variants": 1,
+      "occurrences": 2
+    },
+    {
+      "title": "Only in God",
+      "legacyId": "only-in-god--john-michael-talbot",
+      "variants": 1,
+      "occurrences": 2
+    },
+    {
+      "title": "Love Divine, All Loves Excelling",
+      "legacyId": "love-divine-all-loves-excelling--hyfrydol-pritchard-wesley",
+      "variants": 2,
+      "occurrences": 2
+    },
+    {
+      "title": "Three Days",
+      "legacyId": "three-days--gustav-t-holst-m-d-ridge-jeffrey-honor",
+      "variants": 1,
+      "occurrences": 2
+    },
+    {
+      "title": "Love Never Fails",
+      "legacyId": "love-never-fails--brandon-heath",
+      "variants": 2,
+      "occurrences": 2
+    },
+    {
+      "title": "Song of Simeon",
+      "legacyId": "song-of-simeon--jan-t-sullivan-whitaker",
+      "variants": 1,
+      "occurrences": 2
+    },
+    {
+      "title": "Light of Christ, Burn Bright",
+      "legacyId": "light-of-christ-burn-bright--text-by-john-t-kyler-music-by-orin-johnson",
+      "variants": 1,
+      "occurrences": 2
+    },
+    {
+      "title": "In His Temple Now Behold Him",
+      "legacyId": "in-his-temple-now-behold-him--st-thomas-wade-pye-cooke-debruyn",
+      "variants": 1,
+      "occurrences": 2
+    },
+    {
+      "title": "Behold the Cross",
+      "legacyId": "behold-the-cross--bolduc-ed-hart-sarah-ubowski-adam-ubowski-lori",
+      "variants": 1,
+      "occurrences": 2
+    },
+    {
+      "title": "The Table of the Lord",
+      "legacyId": "the-table-of-the-lord",
+      "variants": 1,
+      "occurrences": 2
+    },
+    {
+      "title": "'Tis Good, Lord, to Be Here",
+      "legacyId": "tis-good-lord-to-be-here",
+      "variants": 2,
+      "occurrences": 2
+    },
+    {
+      "title": "As the Deer Longs",
+      "legacyId": "as-the-deer-longs--bob-hurd",
+      "variants": 1,
+      "occurrences": 2
+    },
+    {
+      "title": "Healed In Christ",
+      "legacyId": "healed-in-christ--sarah-hart",
+      "variants": 2,
+      "occurrences": 2
+    },
+    {
+      "title": "I Am the Bread of Life (Come and Follow Me)",
+      "legacyId": "i-am-the-bread-of-life-come-and-follow-me--steve-angrisano-tom-booth",
+      "variants": 1,
+      "occurrences": 2
+    },
+    {
+      "title": "Praise to You, O Christ Our Savior",
+      "legacyId": "praise-to-you-o-christ-our-savior--bernadette-farrell",
+      "variants": 1,
+      "occurrences": 2
+    },
+    {
+      "title": "In Christ There Is No East or West",
+      "legacyId": "in-christ-there-is-no-east-or-west--william-a-dunkerley",
+      "variants": 2,
+      "occurrences": 2
+    },
+    {
+      "title": "All Are Welcome (All Belong)",
+      "legacyId": "all-are-welcome-all-belong--jesse-manibusan-jennah-manibusan",
+      "variants": 1,
+      "occurrences": 2
+    },
+    {
+      "title": "As Christ Is for Us",
+      "legacyId": "as-christ-is-for-us--jan-t-sullivan-whitaker",
+      "variants": 1,
+      "occurrences": 2
+    },
+    {
+      "title": "In This Place",
+      "legacyId": "in-this-place--trevor-thomson",
+      "variants": 1,
+      "occurrences": 2
+    },
+    {
+      "title": "Restless",
+      "legacyId": "restless--audrey-assad",
+      "variants": 1,
+      "occurrences": 2
+    },
+    {
+      "title": "Holy Is Your Name",
+      "legacyId": "holy-is-your-name--chris-tomlin",
+      "variants": 1,
+      "occurrences": 2
+    },
+    {
+      "title": "God of the Hungry",
+      "legacyId": "god-of-the-hungry--scott-soper",
+      "variants": 1,
+      "occurrences": 2
+    },
+    {
+      "title": "Miracle of Grace",
+      "legacyId": "miracle-of-grace--curtis-stephan",
+      "variants": 1,
+      "occurrences": 2
+    },
+    {
+      "title": "Canticle of the Turning",
+      "legacyId": "canticle-of-the-turning--liam-lawton",
+      "variants": 1,
+      "occurrences": 2
+    },
+    {
+      "title": "Jesus Christ, You Are My Life",
+      "legacyId": "jesus-christ-you-are-my-life--marco-frisina",
+      "variants": 1,
+      "occurrences": 2
+    },
+    {
+      "title": "I, The Lord",
+      "legacyId": "i-the-lord--tom-kendzia",
+      "variants": 1,
+      "occurrences": 2
+    },
+    {
+      "title": "Hymn to Christ the King",
+      "legacyId": "hymn-to-christ-the-king--hart-kroger-ndolo-blakesley",
+      "variants": 1,
+      "occurrences": 2
+    },
+    {
+      "title": "Take and Eat",
+      "legacyId": "take-and-eat--michael-joncas",
+      "variants": 1,
+      "occurrences": 2
+    },
+    {
+      "title": "Give Me Ears to Listen",
+      "legacyId": "give-me-ears-to-listen--timothy-r-smith",
+      "variants": 1,
+      "occurrences": 1
+    },
+    {
+      "title": "Alleluia! Alleluia! Let the Holy Anthem Rise",
+      "legacyId": "alleluia-alleluia-let-the-holy-anthem-rise--traditional",
+      "variants": 1,
+      "occurrences": 1
+    },
+    {
+      "title": "Immaculate Mary",
+      "legacyId": "immaculate-mary--lourdes-hymn",
+      "variants": 1,
+      "occurrences": 1
+    },
+    {
+      "title": "O God, You Search Me ·",
+      "legacyId": "o-god-you-search-me--bernadette-farrell",
+      "variants": 1,
+      "occurrences": 1
+    },
+    {
+      "title": "God Is Love",
+      "legacyId": "god-is-love--cyril-vincent-taylor-timothy-rees",
+      "variants": 1,
+      "occurrences": 1
+    },
+    {
+      "title": "Put On Christ",
+      "legacyId": "put-on-christ--yackley-david",
+      "variants": 1,
+      "occurrences": 1
+    },
+    {
+      "title": "Take the Word of God With You",
+      "legacyId": "take-the-word-of-god-with-you--christopher-walker-james-harrison",
+      "variants": 2,
+      "occurrences": 1
+    },
+    {
+      "title": "Glory in the Cross",
+      "legacyId": "glory-in-the-cross--dan-schutte",
+      "variants": 1,
+      "occurrences": 1
+    },
+    {
+      "title": "Do This In Memory of Me",
+      "legacyId": "do-this-in-memory-of-me--byrd-marc-hart-sarah-stephan-curtis",
+      "variants": 1,
+      "occurrences": 1
+    },
+    {
+      "title": "Blessed Be Your Name",
+      "legacyId": "blessed-be-your-name--matt-redman",
+      "variants": 1,
+      "occurrences": 1
+    },
+    {
+      "title": "Save Your People",
+      "legacyId": "save-your-people--jim-farrell",
+      "variants": 1,
+      "occurrences": 1
+    },
+    {
+      "title": "Healing River of the Spirit",
+      "legacyId": "healing-river-of-the-spirit--ruth-duck",
+      "variants": 1,
+      "occurrences": 1
+    },
+    {
+      "title": "Softly and Tenderly Jesus Is Calling",
+      "legacyId": "softly-and-tenderly-jesus-is-calling--will-l-thompson",
+      "variants": 1,
+      "occurrences": 1
+    },
+    {
+      "title": "You Are the Healing",
+      "legacyId": "you-are-the-healing--scott-soper",
+      "variants": 1,
+      "occurrences": 1
+    },
+    {
+      "title": "Come to Me and Drink",
+      "legacyId": "come-to-me-and-drink--bob-hurd",
+      "variants": 1,
+      "occurrences": 1
+    },
+    {
+      "title": "The Lord Is My Shepherd",
+      "legacyId": "the-lord-is-my-shepherd--josh-blakesley-subtle-reharm-version",
+      "variants": 1,
+      "occurrences": 1
+    },
+    {
+      "title": "Amazing Grace",
+      "legacyId": "amazing-grace--amazing-grace-john-newton",
+      "variants": 2,
+      "occurrences": 1
+    },
+    {
+      "title": "Thanks be to God",
+      "legacyId": "thanks-be-to-god--stephen-dean",
+      "variants": 1,
+      "occurrences": 1
+    },
+    {
+      "title": "How Firm a Foundation",
+      "legacyId": "how-firm-a-foundation--foundation-russell-woollen",
+      "variants": 1,
+      "occurrences": 1
+    },
+    {
+      "title": "Come, Holy Ghost",
+      "legacyId": "come-holy-ghost--louis-lambillotte-sj",
+      "variants": 1,
+      "occurrences": 1
+    },
+    {
+      "title": "Unless a Grain of Wheat",
+      "legacyId": "unless-a-grain-of-wheat--bernadette-farrell-barbara-bridge-kevin-walsh",
+      "variants": 2,
+      "occurrences": 1
+    }
+  ]
+}

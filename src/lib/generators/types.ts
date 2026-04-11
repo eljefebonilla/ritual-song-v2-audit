@@ -101,6 +101,7 @@ export interface WorshipAidReading {
 export type ReprintResult =
   | { kind: "pdf"; storagePath: string; pageCount?: number }
   | { kind: "gif"; storagePath: string }
+  | { kind: "image"; storagePath: string }
   | { kind: "lyrics"; text: string }
   | { kind: "title_only" };
 

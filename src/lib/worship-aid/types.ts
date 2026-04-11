@@ -39,11 +39,14 @@ export interface WorshipAidPage {
 export interface CoverPageData {
   parishName: string;
   occasionName: string;
+  occasionSubtitle?: string;
   date: string;
   seasonLabel: string;
   seasonColor: string;
   logoUrl: string | null;
   coverArtUrl: string | null;
+  logoScale?: number;     // 0.3–2.0, default 1
+  logoOffsetY?: number;   // -50 to 50 percent, default 0
 }
 
 export interface ReadingPageData {

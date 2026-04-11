@@ -25,6 +25,64 @@ import type {
 } from "./types";
 import { renderPageContent } from "./render-page";
 
+// ─── Occasion name formatter ────────────────────────────────────────────────────
+
+const ORDINALS: Record<string, string> = {
+  "01": "First", "02": "Second", "03": "Third", "04": "Fourth", "05": "Fifth",
+  "06": "Sixth", "07": "Seventh", "08": "Eighth", "09": "Ninth", "10": "Tenth",
+  "11": "Eleventh", "12": "Twelfth", "13": "Thirteenth", "14": "Fourteenth",
+  "15": "Fifteenth", "16": "Sixteenth", "17": "Seventeenth", "18": "Eighteenth",
+  "19": "Nineteenth", "20": "Twentieth", "21": "Twenty-First", "22": "Twenty-Second",
+  "23": "Twenty-Third", "24": "Twenty-Fourth", "25": "Twenty-Fifth",
+  "26": "Twenty-Sixth", "27": "Twenty-Seventh", "28": "Twenty-Eighth",
+  "29": "Twenty-Ninth", "30": "Thirtieth", "31": "Thirty-First",
+  "32": "Thirty-Second", "33": "Thirty-Third", "34": "Thirty-Fourth",
+};
+
+const SEASON_DISPLAY: Record<string, string> = {
+  advent: "Advent",
+  christmas: "Christmas",
+  lent: "Lent",
+  easter: "Easter",
+  "ordinary-time": "Ordinary Time",
+  ordinary: "Ordinary Time",
+};
+
+/**
+ * Convert internal occasion names like "EASTER 02 DIVINE MERCY [A]"
+ * to display names like "Second Sunday of Easter" with subtitle "Divine Mercy Sunday".
+ */
+function formatOccasionName(raw: string): { name: string; subtitle?: string } {
+  // Strip cycle year bracket: [A], [B], [C], [ABC]
+  let cleaned = raw.replace(/\s*\[.*?\]\s*$/, "").trim();
+
+  // Match pattern: "SEASON NN EXTRA"
+  const match = cleaned.match(/^(ADVENT|CHRISTMAS|LENT|EASTER|ORDINARY[- ]?TIME?)\s+(\d{2})\s*(.*)?$/i);
+  if (match) {
+    const seasonKey = match[1].toLowerCase().replace(/\s+/g, "-").replace("ordinary-time", "ordinary-time");
+    const num = match[2];
+    const extra = (match[3] || "").trim();
+
+    const seasonDisplay = SEASON_DISPLAY[seasonKey] ?? SEASON_DISPLAY[seasonKey.replace("-time", "")] ?? match[1];
+    const ordinal = ORDINALS[num] ?? num;
+
+    const name = `${ordinal} Sunday of ${seasonDisplay}`;
+    const subtitle = extra ? extra.split(/\s+/).map(w =>
+      w.length <= 2 ? w.toLowerCase() : w.charAt(0).toUpperCase() + w.slice(1).toLowerCase()
+    ).join(" ").replace(/\b(Of|The|And|In|For|To|A)\b/g, m => m.toLowerCase()) + " Sunday" : undefined;
+
+    return { name, subtitle };
+  }
+
+  // Fallback: title-case the raw name
+  const titleCased = cleaned
+    .toLowerCase()
+    .replace(/\b\w/g, (c) => c.toUpperCase())
+    .replace(/\b(Of|The|And|In|For|To|A)\b/g, (m) => m.toLowerCase());
+
+  return { name: titleCased };
+}
+
 // ─── Season colors ──────────────────────────────────────────────────────────────
 
 const SEASON_COLORS: Record<string, string> = {
@@ -75,7 +133,7 @@ function storageUrl(storagePath: string): string {
 }
 
 function reprintImageUrl(reprint: ReprintResult): string | null {
-  if (reprint.kind === "pdf" || reprint.kind === "gif") {
+  if (reprint.kind === "pdf" || reprint.kind === "gif" || reprint.kind === "image") {
     const sp = reprint.storagePath;
     if (!sp) return null;
     // If it's already a full URL, use as-is
@@ -147,9 +205,12 @@ async function buildCoverPage(
 
   const accentColor = seasonColor(season);
 
+  const formatted = formatOccasionName(occasionName);
+
   const coverData: CoverPageData = {
     parishName: brand.parishDisplayName || "St. Monica Catholic Community",
-    occasionName,
+    occasionName: formatted.name,
+    occasionSubtitle: formatted.subtitle,
     date: displayDate,
     seasonLabel,
     seasonColor: accentColor,
@@ -202,26 +263,33 @@ function buildReadingPage(readings: Reading[]): WorshipAidPage {
 async function buildSongPage(
   position: string,
   positionLabel: string,
-  song: SongEntry & { songId?: string; supabaseId?: string }
+  song: SongEntry & { songId?: string; supabaseId?: string; variants?: Array<{ legacyId: string; supabaseId?: string }> }
 ): Promise<WorshipAidPage> {
   let reprint: ReprintResult = { kind: "title_only" };
+  let resolvedId = song.supabaseId || song.songId || "";
 
-  // Try Supabase UUID first (song_resources_v2.song_id is a UUID)
-  const resolveId = song.supabaseId || song.songId || "";
-  if (resolveId) {
-    reprint = await resolveWorshipAidReprint(resolveId);
-  }
+  const supabase = createAdminClient();
+  const variants = song.variants ?? (song.songId ? [{ legacyId: song.songId, supabaseId: song.supabaseId }] : []);
 
-  // If UUID lookup failed but we have a legacy ID, try looking up the UUID via songs table
-  if (reprint.kind === "title_only" && song.songId && !song.supabaseId) {
-    const supabase = createAdminClient();
+  // Try each variant until one resolves a reprint with actual content
+  for (const variant of variants) {
+    // Try Supabase UUID first
+    const tryId = variant.supabaseId || "";
+    if (tryId) {
+      reprint = await resolveWorshipAidReprint(tryId);
+      if (reprint.kind !== "title_only") { resolvedId = tryId; break; }
+    }
+
+    // Fall back to legacy_id → UUID lookup
     const { data } = await supabase
       .from("songs")
       .select("id")
-      .eq("legacy_id", song.songId)
+      .eq("legacy_id", variant.legacyId)
       .maybeSingle();
     if (data?.id) {
       reprint = await resolveWorshipAidReprint(data.id);
+      if (reprint.kind !== "title_only") { resolvedId = data.id; break; }
+      if (!resolvedId) resolvedId = data.id;
     }
   }
 
@@ -229,10 +297,10 @@ async function buildSongPage(
   const lyrics = reprint.kind === "lyrics" ? reprint.text : null;
 
   // Default OCP header crop: 12% for GIF resources
-  const defaultCrop = reprint.kind === "gif" ? 12 : 0;
+  const defaultCrop = (reprint.kind === "gif" || reprint.kind === "image") ? 12 : 0;
 
   const songData: SongPageData = {
-    songId: resolveId,
+    songId: resolvedId,
     title: song.title,
     composer: song.composer ?? null,
     positionLabel,
@@ -273,24 +341,27 @@ function normalizeForMatch(s: string): string {
 /**
  * Look up song IDs (legacy slug + supabaseId) by title matching.
  * Uses the in-memory song library (3,045 songs from song-library.json).
- * Returns a map of title → { legacyId, supabaseId }.
+ * Returns ALL variants per normalized title so the caller can try each
+ * until one resolves a reprint (handles duplicate titles from different arrangements).
  */
-function lookupSongIds(titles: string[]): Map<string, { legacyId: string; supabaseId?: string }> {
+function lookupSongIds(titles: string[]): Map<string, Array<{ legacyId: string; supabaseId?: string }>> {
   if (titles.length === 0) return new Map();
   const library = getSongLibrary();
 
-  // Build a lookup map: normalized title → song
-  const libMap = new Map<string, { legacyId: string; supabaseId?: string }>();
+  // Build a lookup map: normalized title → all matching songs
+  const libMap = new Map<string, Array<{ legacyId: string; supabaseId?: string }>>();
   for (const song of library) {
     const norm = normalizeForMatch(song.title);
-    libMap.set(norm, { legacyId: song.id, supabaseId: song.supabaseId });
+    const existing = libMap.get(norm) ?? [];
+    existing.push({ legacyId: song.id, supabaseId: song.supabaseId });
+    libMap.set(norm, existing);
   }
 
-  const result = new Map<string, { legacyId: string; supabaseId?: string }>();
+  const result = new Map<string, Array<{ legacyId: string; supabaseId?: string }>>();
   for (const title of titles) {
     const norm = normalizeForMatch(title);
-    const match = libMap.get(norm);
-    if (match) result.set(title, match);
+    const matches = libMap.get(norm);
+    if (matches) result.set(title, matches);
   }
 
   return result;
@@ -373,16 +444,18 @@ export async function buildPages(config: WorshipAidConfig): Promise<WorshipAid> 
   if (plan) {
     const songs = planSongs(plan);
 
-    // Resolve song IDs (legacy slug + Supabase UUID) for all songs by title
+    // Resolve song IDs (legacy slug + Supabase UUID) for all songs by title.
+    // Returns all variants per title so buildSongPage can try each.
     const titles = songs.map(({ song }) => song.title);
     const songIdMap = lookupSongIds(titles);
 
-    // Attach songId (legacy) and supabaseId to each entry
+    // Attach first variant's IDs + full variants array to each entry
     for (const entry of songs) {
-      const match = songIdMap.get(entry.song.title);
-      if (match) {
-        (entry.song as SongWithId).songId = match.legacyId;
-        (entry.song as SongWithId & { supabaseId?: string }).supabaseId = match.supabaseId;
+      const variants = songIdMap.get(entry.song.title);
+      if (variants && variants.length > 0) {
+        (entry.song as SongWithId).songId = variants[0].legacyId;
+        (entry.song as SongWithId & { supabaseId?: string }).supabaseId = variants[0].supabaseId;
+        (entry.song as SongWithId & { variants?: Array<{ legacyId: string; supabaseId?: string }> }).variants = variants;
       }
     }
 
