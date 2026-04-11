@@ -1,17 +1,19 @@
 "use client";
 
-import { useRef, useCallback, useState } from "react";
+import { useRef, useCallback, useState, useMemo } from "react";
 import { useEditorStore } from "@/store/editorStore";
 import { mmToPx } from "@/utils/coordinates";
 import { useSelection } from "@/hooks/useSelection";
 import { useDrag } from "@/hooks/useDrag";
 import { useResize } from "@/hooks/useResize";
 import { SelectionOverlay } from "./SelectionOverlay";
-import { TextRenderer } from "./elements/TextRenderer";
-import { ImageRenderer } from "./elements/ImageRenderer";
-import { ShapeRenderer, QRRenderer, DividerRenderer } from "./elements/ShapeRenderer";
-import type { PageElement } from "@/types/schema";
+import { CropOverlay } from "./CropOverlay";
+import { elementToHTML } from "@/utils/elementToCSS";
+import { SEASON_COLORS, BASE_COLORS } from "@/core/design-system/tokens/colors";
+import type { PageElement, ImageElement } from "@/types/schema";
 import type { HandlePosition } from "@/hooks/useResize";
+
+const PREVIEW_FONTS = `@import url('https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,400;0,600;1,400&family=Source+Sans+3:wght@300;400;600&display=swap');`;
 
 interface EditorCanvasProps {
   pageId: string;
@@ -19,22 +21,24 @@ interface EditorCanvasProps {
 
 export function EditorCanvas({ pageId }: EditorCanvasProps) {
   const page = useEditorStore((s) => s.document.pages.find((p) => p.id === pageId));
+  const season = useEditorStore((s) => s.document.globalStyles.season);
   const zoom = useEditorStore((s) => s.zoom);
   const { handleElementPointerDown, handleCanvasPointerDown, selectedIds } = useSelection();
   const { startDrag } = useDrag(pageId);
   const { startResize } = useResize(pageId);
+  const updateElement = useEditorStore((s) => s.updateElement);
+  const selectedPageId = useEditorStore((s) => s.selectedPageId);
   const canvasRef = useRef<HTMLDivElement>(null);
   const [hoveredElementId, setHoveredElementId] = useState<string | null>(null);
+  const [croppingElementId, setCroppingElementId] = useState<string | null>(null);
 
   const handleElementDown = useCallback(
     (e: React.PointerEvent, elementId: string) => {
       handleElementPointerDown(e, elementId);
-
-      // Start drag on the element
-      const el = (e.currentTarget as HTMLElement);
       const element = page?.elements.find((x) => x.id === elementId);
       if (element && !element.locked) {
-        startDrag(e, elementId, element.geometry.x, element.geometry.y, el);
+        const el = canvasRef.current?.querySelector(`[data-overlay-id="${elementId}"]`) as HTMLElement | null;
+        if (el) startDrag(e, elementId, element.geometry.x, element.geometry.y, el);
       }
     },
     [handleElementPointerDown, startDrag, page?.elements],
@@ -42,15 +46,46 @@ export function EditorCanvas({ pageId }: EditorCanvasProps) {
 
   const handleResizeStart = useCallback(
     (e: React.PointerEvent, handle: HandlePosition, element: PageElement) => {
-      const el = canvasRef.current?.querySelector(
-        `[data-element-id="${element.id}"]`,
-      ) as HTMLElement | null;
-      if (el) {
-        startResize(e, element.id, handle, element.geometry, el, element.type === "image");
-      }
+      const el = canvasRef.current?.querySelector(`[data-overlay-id="${element.id}"]`) as HTMLElement | null;
+      if (el) startResize(e, element.id, handle, element.geometry, el, element.type === "image");
     },
     [startResize],
   );
+
+  // Build the page HTML (same as preview/print) using shared elementToHTML
+  const pageSrcdoc = useMemo(() => {
+    if (!page) return "";
+    const c = SEASON_COLORS[season] ?? SEASON_COLORS["ordinary-time"];
+    const themeCss = `:root {
+      --wa-primary: ${c.primary}; --wa-secondary: ${c.secondary};
+      --wa-text-accent: ${c.text}; --wa-on-primary: ${c.onPrimary};
+      --wa-text: ${BASE_COLORS.text}; --wa-border: ${BASE_COLORS.border};
+      --wa-surface: ${BASE_COLORS.surface}; --wa-copyright: ${BASE_COLORS.copyright};
+    }`;
+
+    const elements = page.elements
+      .filter((el) => el.visible)
+      .sort((a, b) => a.zIndex - b.zIndex)
+      .map(elementToHTML)
+      .join("\n");
+
+    return `<!DOCTYPE html><html><head><meta charset="UTF-8"><style>
+${PREVIEW_FONTS}
+${themeCss}
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+  width: ${page.pageSize.width}mm;
+  height: ${page.pageSize.height}mm;
+  position: relative;
+  overflow: hidden;
+  background: ${page.backgroundColor};
+  font-family: 'Crimson Pro', Georgia, serif;
+  color: #1A1A1A;
+  -webkit-print-color-adjust: exact;
+  print-color-adjust: exact;
+}
+</style></head><body>${elements}</body></html>`;
+  }, [page, season]);
 
   if (!page) return null;
 
@@ -64,27 +99,68 @@ export function EditorCanvas({ pageId }: EditorCanvasProps) {
   return (
     <div
       ref={canvasRef}
-      className="relative bg-white shadow-xl rounded"
+      className="relative shadow-xl rounded"
       style={{
         width: canvasW,
         height: canvasH,
-        backgroundColor: page.backgroundColor,
-        overflow: "hidden",
         flexShrink: 0,
+        overflow: "hidden",
       }}
       onPointerDown={handleCanvasPointerDown}
     >
+      {/* WYSIWYG layer: iframe with the exact same HTML as print/preview */}
+      <iframe
+        srcDoc={pageSrcdoc}
+        sandbox="allow-same-origin"
+        style={{
+          position: "absolute",
+          inset: 0,
+          width: canvasW,
+          height: canvasH,
+          border: "none",
+          pointerEvents: "none",
+          transformOrigin: "top left",
+          // Scale the mm-based page to fit the px-based canvas
+          transform: `scale(${canvasW / (page.pageSize.width * 3.7795)})`,
+        }}
+        title="Editor WYSIWYG"
+      />
+
+      {/* Interactive overlay layer: transparent hit targets for selection/drag/resize */}
       {sortedElements.map((element) => {
         const isSelected = selectedIds.includes(element.id);
         const isHovered = hoveredElementId === element.id && !isSelected;
+        const left = mmToPx(element.geometry.x, zoom);
+        const top = mmToPx(element.geometry.y, zoom);
+        const width = mmToPx(element.geometry.width, zoom);
+        const height = mmToPx(element.geometry.height, zoom);
 
         return (
-          <ElementWrapper
-            key={element.id}
-            onMouseEnter={() => setHoveredElementId(element.id)}
-            onMouseLeave={() => setHoveredElementId((prev) => prev === element.id ? null : prev)}
-          >
-            {renderElement(element, isSelected, handleElementDown)}
+          <div key={element.id}>
+            {/* Hit target overlay (transparent, positioned over the element) */}
+            <div
+              data-overlay-id={element.id}
+              style={{
+                position: "absolute",
+                left, top, width, height,
+                cursor: element.locked ? "default" : "move",
+                zIndex: element.zIndex + 100,
+                pointerEvents: element.locked ? "none" : "auto",
+              }}
+              onPointerDown={(e) => {
+                if (!element.locked) handleElementDown(e, element.id);
+              }}
+              onDoubleClick={(e) => {
+                e.stopPropagation();
+                if (element.type === "image" && !element.locked) {
+                  setCroppingElementId(element.id);
+                }
+              }}
+              onMouseEnter={() => setHoveredElementId(element.id)}
+              onMouseLeave={() => setHoveredElementId((prev) => prev === element.id ? null : prev)}
+            />
+
+            {/* Selection overlay */}
             {isSelected && (
               <SelectionOverlay
                 geometry={element.geometry}
@@ -100,7 +176,19 @@ export function EditorCanvas({ pageId }: EditorCanvasProps) {
                 isHover
               />
             )}
-          </ElementWrapper>
+
+            {/* Crop overlay */}
+            {croppingElementId === element.id && element.type === "image" && (
+              <CropOverlay
+                element={element as ImageElement}
+                zoom={zoom}
+                onCropChange={(crop) => {
+                  if (selectedPageId) updateElement(selectedPageId, element.id, crop);
+                }}
+                onClose={() => setCroppingElementId(null)}
+              />
+            )}
+          </div>
         );
       })}
 
@@ -108,10 +196,6 @@ export function EditorCanvas({ pageId }: EditorCanvasProps) {
       <SnapGuideLines zoom={zoom} pageWidth={page.pageSize.width} pageHeight={page.pageSize.height} />
     </div>
   );
-}
-
-function ElementWrapper({ children, onMouseEnter, onMouseLeave }: { children: React.ReactNode; onMouseEnter?: () => void; onMouseLeave?: () => void }) {
-  return <div onMouseEnter={onMouseEnter} onMouseLeave={onMouseLeave} style={{ display: "contents" }}>{children}</div>;
 }
 
 function SnapGuideLines({ zoom, pageWidth, pageHeight }: { zoom: number; pageWidth: number; pageHeight: number }) {
@@ -156,25 +240,4 @@ function SnapGuideLines({ zoom, pageWidth, pageHeight }: { zoom: number; pageWid
       })}
     </>
   );
-}
-
-function renderElement(
-  element: PageElement,
-  isSelected: boolean,
-  onPointerDown: (e: React.PointerEvent, id: string) => void,
-) {
-  switch (element.type) {
-    case "text":
-      return <TextRenderer element={element} isSelected={isSelected} onPointerDown={onPointerDown} />;
-    case "image":
-      return <ImageRenderer element={element} isSelected={isSelected} onPointerDown={onPointerDown} />;
-    case "shape":
-      return <ShapeRenderer element={element} isSelected={isSelected} onPointerDown={onPointerDown} />;
-    case "qr":
-      return <QRRenderer element={element} isSelected={isSelected} onPointerDown={onPointerDown} />;
-    case "divider":
-      return <DividerRenderer element={element} isSelected={isSelected} onPointerDown={onPointerDown} />;
-    default:
-      return null;
-  }
 }
