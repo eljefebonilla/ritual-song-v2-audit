@@ -184,7 +184,7 @@ export const songReprintTemplate: TemplateDefinition = {
         fontSize: 7.5,
         fontFamily: FONT_FAMILIES.heading,
         fontWeight: FONT_WEIGHTS.regular,
-        color: "#A8A29E",
+        color: "#8C8581",
         textAlign: "left",
         lineHeight: LINE_HEIGHTS.tight,
         letterSpacing: LETTER_SPACING.extraWide,

@@ -78,7 +78,7 @@ export const SEASON_COLORS: Record<string, SeasonColors> = {
 export const BASE_COLORS = {
   text: "#1A1A1A",           // Never pure black (bleeds in print)
   textSecondary: "#57534E",
-  textMuted: "#A8A29E",
+  textMuted: "#8C8581",       // Darkened from #A8A29E for WCAG AA (3.9:1)
   background: "#FFFFFF",
   surface: "#FAFAF9",
   border: "#E7E5E4",

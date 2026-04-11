@@ -208,7 +208,7 @@ function migrateSongPage(v1: WorshipAidPage): PageElement[] {
     textAlign: "left",
     letterSpacing: LETTER_SPACING.extraWide,
     textTransform: "uppercase",
-    color: "#A8A29E",
+    color: "#8C8581",
     zIndex: z++,
   }));
 
