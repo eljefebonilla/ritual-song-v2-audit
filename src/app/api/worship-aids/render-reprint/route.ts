@@ -76,13 +76,11 @@ export async function GET(request: NextRequest) {
       png = new Uint8Array(await res.arrayBuffer());
     }
 
+    // Apply user crop first (if any), then auto-trim remaining whitespace
     if (hasCrop) {
-      // User explicitly cropping: skip auto-trim, apply crop directly on the converted image
       png = await applyCrop(png, cropTop, cropLeft, cropWidth, cropHeight);
-    } else {
-      // No explicit crop: auto-trim whitespace for uniform alignment
-      png = await autoTrimWhitespace(png);
     }
+    png = await autoTrimWhitespace(png);
 
     // Cache with crop params in key
     const cacheKey = hasCrop ? `${url}|ct=${cropTop}|cl=${cropLeft}|cw=${cropWidth}|ch=${cropHeight}` : url;
