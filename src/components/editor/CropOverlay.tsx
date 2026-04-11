@@ -99,15 +99,8 @@ export function CropOverlay({ element, zoom, onCropChange, onClose }: CropOverla
   }, [crop, elW, elH]);
 
   const apply = useCallback(() => {
-    const g = element.geometry;
-
-    // Compute new frame geometry: shrink to match visible crop area
-    const newX = g.x + g.width * crop.left;
-    const newY = g.y + g.height * crop.top;
-    const newW = g.width * crop.width;
-    const newH = g.height * crop.height;
-
-    // Build server-side crop URL: bake crop into the image so the frame can resize
+    // Build server-side crop URL: bake crop into the image pixels
+    // The element frame stays locked to margins; server crops + auto-trims whitespace
     let newSrc = element.src;
     if (crop.top > 0.001 || crop.left > 0.001 || crop.width < 0.999 || crop.height < 0.999) {
       // Strip existing crop params if re-cropping
@@ -118,12 +111,12 @@ export function CropOverlay({ element, zoom, onCropChange, onClose }: CropOverla
       newSrc = `${base}${sep}ct=${crop.top.toFixed(4)}&cl=${crop.left.toFixed(4)}&cw=${crop.width.toFixed(4)}&ch=${crop.height.toFixed(4)}`;
     }
 
+    // Only update the image src; frame stays at page margins
     onCropChange({
       cropTop: 0,
       cropLeft: 0,
       cropWidth: 1,
       cropHeight: 1,
-      geometry: { x: newX, y: newY, width: newW, height: newH },
       src: newSrc,
     });
     onClose();
