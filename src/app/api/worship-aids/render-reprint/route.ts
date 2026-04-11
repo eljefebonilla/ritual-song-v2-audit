@@ -53,21 +53,25 @@ export async function GET(request: NextRequest) {
       png = await renderPdfToPng(url);
     } else if (lower.endsWith(".tif") || lower.endsWith(".tiff")) {
       png = await renderTiffToPng(url);
+    } else if (lower.endsWith(".gif")) {
+      // GIFs need conversion to PNG for consistent handling
+      const res = await fetch(url);
+      if (!res.ok) throw new Error(`Fetch failed: ${res.status}`);
+      const sharp = (await import("sharp")).default;
+      const buf = Buffer.from(await res.arrayBuffer());
+      const trimmed = await sharp(buf).png().toBuffer();
+      png = new Uint8Array(trimmed);
     } else {
-      // For regular images, just proxy them
+      // For regular images (PNG, JPG), fetch and auto-trim
       const res = await fetch(url);
       if (!res.ok) throw new Error(`Fetch failed: ${res.status}`);
       png = new Uint8Array(await res.arrayBuffer());
-      return new NextResponse(Buffer.from(png), {
-        status: 200,
-        headers: {
-          "Content-Type": res.headers.get("content-type") || "image/png",
-          "Cache-Control": "private, max-age=3600",
-        },
-      });
     }
 
-    // Cache the rendered PNG
+    // Auto-trim whitespace: remove surrounding white margins for uniform alignment
+    png = await autoTrimWhitespace(png);
+
+    // Cache the rendered + trimmed PNG
     cache.set(url, { png, ts: Date.now() });
 
     return new NextResponse(Buffer.from(png), {
@@ -145,8 +149,46 @@ async function renderTiffToPng(tiffUrl: string): Promise<Uint8Array> {
   if (!res.ok) throw new Error(`Fetch TIFF failed: ${res.status}`);
   const buffer = Buffer.from(await res.arrayBuffer());
 
-  // Use sharp for TIFF -> PNG conversion
   const sharp = (await import("sharp")).default;
   const png = await sharp(buffer).png().toBuffer();
   return new Uint8Array(png);
+}
+
+/**
+ * Auto-trim whitespace from reprint images.
+ * Detects near-white margins and removes them, then adds a small
+ * uniform padding so all reprints align consistently.
+ */
+async function autoTrimWhitespace(input: Uint8Array): Promise<Uint8Array> {
+  const sharp = (await import("sharp")).default;
+  const PADDING_PX = 20; // uniform padding after trim
+
+  try {
+    // sharp.trim() removes borders matching the top-left pixel color
+    // threshold: how much color difference to tolerate (0-255)
+    const trimmed = await sharp(Buffer.from(input))
+      .trim({ threshold: 30 })
+      .toBuffer();
+
+    // Add uniform padding back
+    const metadata = await sharp(trimmed).metadata();
+    const w = metadata.width ?? 600;
+    const h = metadata.height ?? 800;
+
+    const padded = await sharp(trimmed)
+      .extend({
+        top: PADDING_PX,
+        bottom: PADDING_PX,
+        left: PADDING_PX,
+        right: PADDING_PX,
+        background: { r: 255, g: 255, b: 255, alpha: 1 },
+      })
+      .png()
+      .toBuffer();
+
+    return new Uint8Array(padded);
+  } catch {
+    // If trim fails (e.g., fully white image), return original
+    return input;
+  }
 }
