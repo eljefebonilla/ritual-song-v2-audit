@@ -114,14 +114,14 @@ body {
         sandbox="allow-same-origin"
         style={{
           position: "absolute",
-          inset: 0,
-          width: canvasW,
-          height: canvasH,
+          top: 0,
+          left: 0,
+          width: mmToPx(page.pageSize.width, 1),
+          height: mmToPx(page.pageSize.height, 1),
           border: "none",
           pointerEvents: "none",
           transformOrigin: "top left",
-          // Scale the mm-based page to fit the px-based canvas
-          transform: `scale(${canvasW / (page.pageSize.width * 3.7795)})`,
+          transform: zoom !== 1 ? `scale(${zoom})` : undefined,
         }}
         title="Editor WYSIWYG"
       />
