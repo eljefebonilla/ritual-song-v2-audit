@@ -184,12 +184,7 @@ body {
                 zoom={zoom}
                 onCropChange={(update) => {
                   if (!selectedPageId) return;
-                  const { geometry, ...rest } = update;
-                  if (geometry) {
-                    updateElement(selectedPageId, element.id, { ...rest, geometry });
-                  } else {
-                    updateElement(selectedPageId, element.id, rest);
-                  }
+                  updateElement(selectedPageId, element.id, update);
                 }}
                 onClose={() => setCroppingElementId(null)}
               />
