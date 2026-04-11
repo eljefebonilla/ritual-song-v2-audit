@@ -76,12 +76,12 @@ export async function GET(request: NextRequest) {
       png = new Uint8Array(await res.arrayBuffer());
     }
 
-    // Auto-trim whitespace: remove surrounding white margins for uniform alignment
-    png = await autoTrimWhitespace(png);
-
-    // Server-side crop: actually remove pixels so the frame can resize
     if (hasCrop) {
+      // User explicitly cropping: skip auto-trim, apply crop directly on the converted image
       png = await applyCrop(png, cropTop, cropLeft, cropWidth, cropHeight);
+    } else {
+      // No explicit crop: auto-trim whitespace for uniform alignment
+      png = await autoTrimWhitespace(png);
     }
 
     // Cache with crop params in key
