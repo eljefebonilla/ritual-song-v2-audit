@@ -85,57 +85,55 @@ export async function GET(request: NextRequest) {
 }
 
 /**
- * Render first page of a PDF to PNG using Puppeteer.
+ * Render first page of a PDF to PNG.
+ * Uses macOS sips in dev (no dependencies), Puppeteer in production.
  */
 async function renderPdfToPng(pdfUrl: string): Promise<Uint8Array> {
-  const browser = await launchBrowser();
+  const res = await fetch(pdfUrl);
+  if (!res.ok) throw new Error(`Fetch PDF failed: ${res.status}`);
+  const pdfBuffer = Buffer.from(await res.arrayBuffer());
+
+  const { writeFileSync, readFileSync, unlinkSync } = await import("node:fs");
+  const { execFileSync } = await import("node:child_process");
+  const { join } = await import("node:path");
+  const { tmpdir } = await import("node:os");
+
+  const id = `reprint-${Date.now()}-${Math.random().toString(36).slice(2, 6)}`;
+  const tmpPdf = join(tmpdir(), `${id}.pdf`);
+  const tmpPng = join(tmpdir(), `${id}.png`);
+
   try {
-    const page = await browser.newPage();
-    await page.setViewport({ width: 1200, height: 1600, deviceScaleFactor: 2 });
+    writeFileSync(tmpPdf, pdfBuffer);
 
-    // Embed the PDF in an iframe and screenshot it
-    // Better approach: use pdf.js to render in a canvas
-    const html = `<!DOCTYPE html>
-<html><head>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/4.0.379/pdf.min.mjs" type="module"></script>
-<style>
-  * { margin: 0; padding: 0; }
-  body { background: white; }
-  canvas { display: block; width: 100%; }
-</style>
-</head><body>
-<canvas id="pdf-canvas"></canvas>
-<script type="module">
-  const pdfjsLib = await import('https://cdnjs.cloudflare.com/ajax/libs/pdf.js/4.0.379/pdf.min.mjs');
-  pdfjsLib.GlobalWorkerOptions.workerSrc = 'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/4.0.379/pdf.worker.min.mjs';
+    if (process.platform === "darwin") {
+      // macOS: sips for fast PDF->PNG (no shell injection: execFileSync with array args)
+      execFileSync("sips", [
+        "-s", "format", "png",
+        "-s", "dpiHeight", "200",
+        "-s", "dpiWidth", "200",
+        tmpPdf,
+        "--out", tmpPng,
+      ], { timeout: 10000 });
+    } else {
+      // Linux/serverless: Puppeteer fallback
+      const browser = await launchBrowser();
+      try {
+        const page = await browser.newPage();
+        await page.setViewport({ width: 1200, height: 1600, deviceScaleFactor: 2 });
+        await page.goto(`file://${tmpPdf}`, { waitUntil: ["load"] });
+        const screenshot = await page.screenshot({ type: "png", fullPage: true });
+        writeFileSync(tmpPng, screenshot);
+        await page.close();
+      } finally {
+        await browser.close();
+      }
+    }
 
-  const pdf = await pdfjsLib.getDocument('${pdfUrl}').promise;
-  const pg = await pdf.getPage(1);
-  const scale = 3;
-  const viewport = pg.getViewport({ scale });
-  const canvas = document.getElementById('pdf-canvas');
-  canvas.width = viewport.width;
-  canvas.height = viewport.height;
-  const ctx = canvas.getContext('2d');
-  await pg.render({ canvasContext: ctx, viewport }).promise;
-  document.title = 'DONE';
-</script>
-</body></html>`;
-
-    await page.setContent(html, { waitUntil: ["load"] });
-
-    // Wait for PDF.js to finish rendering
-    await page.waitForFunction(() => document.title === "DONE", { timeout: 15000 });
-
-    // Get the canvas dimensions and screenshot just the canvas
-    const canvasHandle = await page.$("#pdf-canvas");
-    if (!canvasHandle) throw new Error("Canvas not found after PDF render");
-
-    const screenshot = await canvasHandle.screenshot({ type: "png" });
-    await page.close();
-    return new Uint8Array(screenshot);
+    const png = readFileSync(tmpPng);
+    return new Uint8Array(png);
   } finally {
-    await browser.close();
+    try { unlinkSync(tmpPdf); } catch {}
+    try { unlinkSync(tmpPng); } catch {}
   }
 }
 
