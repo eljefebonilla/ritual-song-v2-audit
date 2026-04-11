@@ -305,8 +305,8 @@ async function buildSongPage(
   const imgUrl = reprintImageUrl(reprint);
   const lyrics = reprint.kind === "lyrics" ? reprint.text : null;
 
-  // Default OCP header crop: 12% for GIF resources
-  const defaultCrop = (reprint.kind === "gif" || reprint.kind === "image") ? 12 : 0;
+  // Default header crop: 12% to remove publisher title from reprint images/PDFs
+  const defaultCrop = (reprint.kind === "gif" || reprint.kind === "image" || reprint.kind === "pdf") ? 12 : 0;
 
   const songData: SongPageData = {
     songId: resolvedId,

@@ -707,6 +707,40 @@ export default function WorshipAidPreviewPage() {
               </button>
             </div>
 
+            {/* Crop control for selected image element */}
+            {(() => {
+              if (selectedElementIds.length !== 1 || !selectedPageId) return null;
+              const pg = editorDoc.pages.find(p => p.id === selectedPageId);
+              const el = pg?.elements.find(e => e.id === selectedElementIds[0]);
+              if (!el || el.type !== "image") return null;
+              const imgEl = el as import("@/types/schema").ImageElement;
+              return (
+                <div className="shrink-0 px-3 py-2 border-b border-stone-200 bg-white flex items-center gap-3">
+                  <label className="text-xs text-stone-500 shrink-0">Crop Top</label>
+                  <input
+                    type="range"
+                    min={0}
+                    max={40}
+                    value={Math.round(imgEl.cropTop * 100)}
+                    onChange={(e) => updateElement(selectedPageId, el.id, { cropTop: Number(e.target.value) / 100 })}
+                    className="w-32 accent-stone-700"
+                  />
+                  <span className="text-xs text-stone-400 w-8">{Math.round(imgEl.cropTop * 100)}%</span>
+                  <div className="h-4 w-px bg-stone-200" />
+                  <label className="text-xs text-stone-500 shrink-0">Crop Bottom</label>
+                  <input
+                    type="range"
+                    min={0}
+                    max={40}
+                    value={Math.round((1 - imgEl.cropHeight) * 100)}
+                    onChange={(e) => updateElement(selectedPageId, el.id, { cropHeight: 1 - Number(e.target.value) / 100 })}
+                    className="w-32 accent-stone-700"
+                  />
+                  <span className="text-xs text-stone-400 w-8">{Math.round((1 - imgEl.cropHeight) * 100)}%</span>
+                </div>
+              );
+            })()}
+
             {/* Imposition preview (when non-flat format selected) */}
             {foldFormat !== "FLAT" && editorDoc.pages.length > 0 && (
               <div className="shrink-0 px-3 py-2 border-b border-stone-200 bg-stone-50">
