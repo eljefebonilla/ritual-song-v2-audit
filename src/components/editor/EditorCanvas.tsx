@@ -182,8 +182,14 @@ body {
               <CropOverlay
                 element={element as ImageElement}
                 zoom={zoom}
-                onCropChange={(crop) => {
-                  if (selectedPageId) updateElement(selectedPageId, element.id, crop);
+                onCropChange={(update) => {
+                  if (!selectedPageId) return;
+                  const { geometry, ...rest } = update;
+                  if (geometry) {
+                    updateElement(selectedPageId, element.id, { ...rest, geometry });
+                  } else {
+                    updateElement(selectedPageId, element.id, rest);
+                  }
                 }}
                 onClose={() => setCroppingElementId(null)}
               />

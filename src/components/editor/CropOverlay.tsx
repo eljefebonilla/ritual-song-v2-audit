@@ -7,7 +7,11 @@ import { mmToPx } from "@/utils/coordinates";
 interface CropOverlayProps {
   element: ImageElement;
   zoom: number;
-  onCropChange: (crop: { cropTop: number; cropLeft: number; cropWidth: number; cropHeight: number }) => void;
+  onCropChange: (update: {
+    cropTop: number; cropLeft: number; cropWidth: number; cropHeight: number;
+    geometry?: { x: number; y: number; width: number; height: number };
+    src?: string;
+  }) => void;
   onClose: () => void;
 }
 
@@ -95,14 +99,35 @@ export function CropOverlay({ element, zoom, onCropChange, onClose }: CropOverla
   }, [crop, elW, elH]);
 
   const apply = useCallback(() => {
+    const g = element.geometry;
+
+    // Compute new frame geometry: shrink to match visible crop area
+    const newX = g.x + g.width * crop.left;
+    const newY = g.y + g.height * crop.top;
+    const newW = g.width * crop.width;
+    const newH = g.height * crop.height;
+
+    // Build server-side crop URL: bake crop into the image so the frame can resize
+    let newSrc = element.src;
+    if (crop.top > 0.001 || crop.left > 0.001 || crop.width < 0.999 || crop.height < 0.999) {
+      // Strip existing crop params if re-cropping
+      const base = element.src.includes("/render-reprint?")
+        ? element.src.replace(/&c[tlwh]=[^&]*/g, "")
+        : element.src;
+      const sep = base.includes("?") ? "&" : "?";
+      newSrc = `${base}${sep}ct=${crop.top.toFixed(4)}&cl=${crop.left.toFixed(4)}&cw=${crop.width.toFixed(4)}&ch=${crop.height.toFixed(4)}`;
+    }
+
     onCropChange({
-      cropTop: crop.top,
-      cropLeft: crop.left,
-      cropWidth: crop.width,
-      cropHeight: crop.height,
+      cropTop: 0,
+      cropLeft: 0,
+      cropWidth: 1,
+      cropHeight: 1,
+      geometry: { x: newX, y: newY, width: newW, height: newH },
+      src: newSrc,
     });
     onClose();
-  }, [crop, onCropChange, onClose]);
+  }, [crop, element, onCropChange, onClose]);
 
   // Keyboard: Enter to apply, Escape to cancel
   const handleKeyDown = useCallback((e: React.KeyboardEvent) => {

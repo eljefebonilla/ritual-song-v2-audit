@@ -32,8 +32,16 @@ export async function GET(request: NextRequest) {
     return NextResponse.json({ error: "url query param required" }, { status: 400 });
   }
 
-  // Check cache
-  const cached = cache.get(url);
+  // Optional server-side crop parameters (fractions 0-1)
+  const cropTop = parseFloat(searchParams.get("ct") || "0");
+  const cropLeft = parseFloat(searchParams.get("cl") || "0");
+  const cropWidth = parseFloat(searchParams.get("cw") || "1");
+  const cropHeight = parseFloat(searchParams.get("ch") || "1");
+  const hasCrop = cropTop > 0 || cropLeft > 0 || cropWidth < 1 || cropHeight < 1;
+
+  // Check cache (include crop params in key)
+  const cacheKey = hasCrop ? `${url}|ct=${cropTop}|cl=${cropLeft}|cw=${cropWidth}|ch=${cropHeight}` : url;
+  const cached = cache.get(cacheKey);
   if (cached && isCacheValid(cached)) {
     return new NextResponse(Buffer.from(cached.png), {
       status: 200,
@@ -71,8 +79,14 @@ export async function GET(request: NextRequest) {
     // Auto-trim whitespace: remove surrounding white margins for uniform alignment
     png = await autoTrimWhitespace(png);
 
-    // Cache the rendered + trimmed PNG
-    cache.set(url, { png, ts: Date.now() });
+    // Server-side crop: actually remove pixels so the frame can resize
+    if (hasCrop) {
+      png = await applyCrop(png, cropTop, cropLeft, cropWidth, cropHeight);
+    }
+
+    // Cache with crop params in key
+    const cacheKey = hasCrop ? `${url}|ct=${cropTop}|cl=${cropLeft}|cw=${cropWidth}|ch=${cropHeight}` : url;
+    cache.set(cacheKey, { png, ts: Date.now() });
 
     return new NextResponse(Buffer.from(png), {
       status: 200,
@@ -152,6 +166,36 @@ async function renderTiffToPng(tiffUrl: string): Promise<Uint8Array> {
   const sharp = (await import("sharp")).default;
   const png = await sharp(buffer).png().toBuffer();
   return new Uint8Array(png);
+}
+
+/**
+ * Server-side crop: extract a region from the image and return only that region.
+ * Crop values are fractions 0-1 relative to the image dimensions.
+ */
+async function applyCrop(
+  input: Uint8Array,
+  top: number, left: number, width: number, height: number,
+): Promise<Uint8Array> {
+  const sharp = (await import("sharp")).default;
+  const metadata = await sharp(Buffer.from(input)).metadata();
+  const imgW = metadata.width ?? 600;
+  const imgH = metadata.height ?? 800;
+
+  const extractLeft = Math.round(left * imgW);
+  const extractTop = Math.round(top * imgH);
+  const extractWidth = Math.round(width * imgW);
+  const extractHeight = Math.round(height * imgH);
+
+  // Clamp to valid dimensions
+  const safeW = Math.max(1, Math.min(extractWidth, imgW - extractLeft));
+  const safeH = Math.max(1, Math.min(extractHeight, imgH - extractTop));
+
+  const cropped = await sharp(Buffer.from(input))
+    .extract({ left: extractLeft, top: extractTop, width: safeW, height: safeH })
+    .png()
+    .toBuffer();
+
+  return new Uint8Array(cropped);
 }
 
 /**
